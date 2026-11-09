@@ -279,10 +279,27 @@ const SCHEMA = {
   },
 };
 
-function makeClassifier(env, fetchImpl, log) {
-  const models = (env.GEMINI_MODELS || "gemini-3.5-flash,gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((s) => s.trim()).filter(Boolean);
+// modèles Flash réellement disponibles pour cette clé (les anciens sont retirés régulièrement)
+async function discoverModels(env, fetchImpl) {
+  const r = await fetchImpl("https://generativelanguage.googleapis.com/v1beta/models?pageSize=200", { headers: { "x-goog-api-key": env.GEMINI_API_KEY }, signal: AbortSignal.timeout(20000) });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  const j = JSON.parse(await r.text());
+  const ver = (n) => +(n.match(/gemini-(\d+(?:\.\d+)?)/) || [0, 0])[1];
+  return (j.models || []).filter((m) => (m.supportedGenerationMethods || []).includes("generateContent") && /gemini-[\d.]+-flash/.test(m.name) && !/image|tts|live|audio|embed|robotics|computer|exp|thinking|8b/.test(m.name))
+    .map((m) => m.name.replace(/^models\//, ""))
+    .sort((a, b) => (ver(b) - ver(a)) || (/preview/.test(a) - /preview/.test(b)) || (/lite/.test(a) - /lite/.test(b)));
+}
+async function makeClassifier(env, fetchImpl, log) {
+  let models = (env.GEMINI_MODELS || "").split(",").map((s) => s.trim()).filter(Boolean);
+  let discovered = null;
+  if (!models.length) {
+    try { discovered = await discoverModels(env, fetchImpl); } catch (e) { discovered = []; log("Gemini · liste des modèles indisponible : " + e.message); }
+    models = discovered.slice(0, 4);
+    if (!models.length) models = ["gemini-3.5-flash"];
+  }
   let mi = 0, last = 0, calls = 0; const minGap = +env.GEMINI_MIN_GAP_MS || 4500; const backoff = +env.GEMINI_BACKOFF_MS || 20000;
   const state = { error: null, model: null, fatal: false, diag: [], get calls() { return calls; } };
+  if (discovered) { log("Gemini · modèles retenus : " + models.join(", ")); state.diag.push("modèles disponibles : " + (discovered.slice(0, 8).join(", ") || "aucun détecté")); }
   const note = (m) => { log("Gemini · " + m); if (state.diag.length < 40) state.diag.push(m); };
   // mi : modèles abandonnés pour de bon (404, quota). k : modèle essayé pour cet appel (une saturation 5xx est passagère).
   async function call(list) {
@@ -306,8 +323,8 @@ function makeClassifier(env, fetchImpl, log) {
           state.model = model; state.error = null; return arr;
         } catch (e) { note(`${model} : réponse illisible (${e.message})`); if (++tries <= 1) continue; state.error = `réponse Gemini illisible (${model}) : ${e.message}`; return null; }
       }
-      const msg = body.slice(0, 220).replace(/\s+/g, " ");
-      note(`${model} : HTTP ${r.status} ${msg.slice(0, 140)}`);
+      const msg = body.slice(0, 600).replace(/\s+/g, " ");
+      note(`${model} : HTTP ${r.status} ${msg.slice(0, r.status === 429 ? 450 : 140)}`);
       if (/API_KEY_INVALID|API key not valid/i.test(body)) { state.error = "clé Gemini invalide (API_KEY_INVALID)"; state.fatal = true; return null; }
       if (r.status === 429) {
         const m = body.match(/"retryDelay":\s*"(\d+)/); const delay = m ? +m[1] : 30;
@@ -403,8 +420,8 @@ export async function run(opts = {}) {
   // classement Gemini
   const added = []; let rejectedNow = 0; let classifier = null; let calls = 0;
   if (queue.length && env.GEMINI_API_KEY) {
-    classifier = makeClassifier(env, fetchImpl, log);
-    const BATCH = +env.GEMINI_BATCH || 25; const maxCalls = +env.GEMINI_MAX_CALLS || 8;
+    classifier = await makeClassifier(env, fetchImpl, log);
+    const BATCH = +env.GEMINI_BATCH || 50; const maxCalls = +env.GEMINI_MAX_CALLS || 3;
     const batches = []; for (let b = 0; b < queue.length; b += BATCH) batches.push(queue.slice(b, b + BATCH));
     const failed = []; const maxTotal = maxCalls + 2;
     for (let bi = 0; bi < batches.length || (failed.length && calls < maxTotal); bi++) {

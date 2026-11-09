@@ -14,6 +14,7 @@ const gn = `<rss><channel><item><title>Nvidia unveils new AI chip and HBM4 plan 
 let geminiCalls = 0;
 const fetchImpl = async (url, init = {}) => {
   const u = String(url); const ok = (body, status = 200) => ({ ok: status < 400, status, text: async () => typeof body === "string" ? body : JSON.stringify(body) });
+  if (u.includes("generativelanguage") && u.includes("/models?")) return ok({ models: [{ name: "models/gemini-3.5-flash", supportedGenerationMethods: ["generateContent"] }, { name: "models/gemini-2.5-flash", supportedGenerationMethods: ["generateContent"] }, { name: "models/embedding-001", supportedGenerationMethods: ["embedContent"] }] });
   if (u.includes("generativelanguage")) {
     geminiCalls++;
     if (u.includes("gemini-3.5-flash")) return ok({ error: { message: "model not found" } }, 404);

@@ -2,7 +2,7 @@ name: Collecte AI Radar
 
 on:
   schedule:
-    - cron: "17 */2 * * *"
+    - cron: "17 */3 * * *"
   workflow_dispatch:
   push:
     paths:
