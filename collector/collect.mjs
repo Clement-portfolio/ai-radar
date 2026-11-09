@@ -348,6 +348,29 @@ async function makeClassifier(env, fetchImpl, log, deadInit = []) {
   return { call, state };
 }
 
+/* ---------- classement de secours, sans IA (titre d'origine conservé) ---------- */
+const GULF_DOM = /thenationalnews|arabnews|saudigazette|gulfnews|khaleejtimes|zawya|aljazeera|alarabiya|spa\.gov\.sa|wam\.ae|aawsat|argaam|arabianbusiness|agbi/;
+export function ruleClassify(c) {
+  const t = `${c.title} ${c.snippet || ""}`; const d = c.domain || "";
+  let country = c.hint && COUNTRIES.includes(c.hint) ? c.hint : null;
+  if (!country) {
+    if (/\.(cn|hk)$/.test(d) || /scmp|caixin|xinhua|chinadaily|globaltimes|cgtn|yicai|36kr|technode|pandaily|kr-asia|sixthtone|thepaper|chinatalk/.test(d) || /DeepSeek|Qwen|Alibaba|Baidu|Huawei|Tencent|Moonshot|Kimi|ByteDance|SMIC|China|Chinese|Beijing/i.test(t)) country = "CN";
+    else if (GULF_DOM.test(d) || /Humain|G42|Saudi|\bUAE\b|Emirates|Abu Dhabi|Qatar|Gulf/i.test(t)) country = "GULF";
+    else if (/\.(fr|de|uk|eu|it|es|nl)$/.test(d) || /euractiv|euronews|sifted|handelsblatt|lemonde|lesechos/.test(d) || /Mistral|ASML|European|\bEU\b|Brussels|Europe|\bUK\b|Britain/i.test(t)) country = "EU";
+    else if (/\.(jp|kr|tw|in|sg)$/.test(d) || /nikkei|koreaherald|straitstimes|channelnewsasia|taipei|focustaiwan|digitimes|hindu|livemint/.test(d) || /Japan|Korea|Taiwan|India|Singapore|TSMC|Samsung|SK hynix/i.test(t)) country = "OTHER";
+    else country = "US";
+  }
+  const category = c.research ? "recherche"
+    : /HBM|TSMC|foundry|semiconductor|\bchips?\b|GPUs?|Nvidia|export control|Blackwell|Ascend/i.test(t) ? "puces"
+    : /electric|\bpower\b|energy|nuclear|gigawatt|\bgrid\b|cooling|turbine/i.test(t) ? "energie"
+    : /billion|funding|raises?|valuation|capex|earnings|revenue|\bIPO\b|invest|stock|shares/i.test(t) ? "capex"
+    : /regulat|\blaws?\b|\bact\b|\bban\b|lawsuit|court|policy|commission|sanction|tariff/i.test(t) ? "regul"
+    : /model|GPT|Claude|Gemini|Llama|Qwen|DeepSeek|launch|release|unveil/i.test(t) ? "modeles" : "adoption";
+  const layer = /HBM/i.test(t) ? "Mémoire HBM" : /TSMC|foundry/i.test(t) ? "Fonderie" : /data ?cent/i.test(t) ? "Datacenters"
+    : { puces: "Puces", energie: "Énergie", capex: "Financement", regul: "Régulation", recherche: "Recherche", modeles: "Modèles", adoption: "Applications" }[category];
+  return { country, category, layer };
+}
+
 /* ---------- exécution ---------- */
 export async function run(opts = {}) {
   const env = opts.env || process.env;
@@ -414,10 +437,14 @@ export async function run(opts = {}) {
     if ((cntSrc[ks] || 0) >= perSource || (cntKind[c.via] || 0) >= (KIND_CAP[c.via] ?? 999)) continue;
     cntSrc[ks] = (cntSrc[ks] || 0) + 1; cntKind[c.via] = (cntKind[c.via] || 0) + 1; queue.push(c);
   }
+  // articles publiés sans IA lors d'un passage précédent : on retente leur classement en priorité
+  const pendingOld = feedDoc.items.filter((x) => x.pending).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 100)
+    .map((x) => ({ id: x.id, url: x.url, title: x.orig || x.title, snippet: x.summary || "", source: x.source, ts: x.ts, tier: x.confidence === "haute" ? "primary" : "press", conf: x.confidence, domain: hostOf(x.url), pendingOld: true, research: x.category === "recherche" }));
+  queue.unshift(...pendingOld);
   log(`À classer : ${queue.length} (sur ${uniq.length} nouveaux uniques ; ${untrusted} écartés car média hors liste de confiance)`);
 
   // classement Gemini
-  const added = []; let rejectedNow = 0; let classifier = null; let calls = 0;
+  const added = []; let rejectedNow = 0; let classifier = null; let calls = 0; const handled = new Set(); const dropIds = new Set();
   if (queue.length && env.GEMINI_API_KEY) {
     const pacificDay = new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10);
     const gs = state.gemini && state.gemini.date === pacificDay ? state.gemini : { date: pacificDay, dead: [] };
@@ -442,8 +469,9 @@ export async function run(opts = {}) {
       const by = new Map(res.map((r) => [r.i, r]));
       slice.forEach((c, i) => {
         const r = by.get(i); if (!r) return;
-        if (!r.relevant) { rejected[c.id] = nowMs; rejectedNow++; return; }
-        const conf = (c.tier === "primary" || domainIn(c.domain, Q.primaryDomains || [])) ? "haute" : "moyenne";
+        handled.add(c.id);
+        if (!r.relevant) { rejected[c.id] = nowMs; rejectedNow++; if (c.pendingOld) dropIds.add(c.id); return; }
+        const conf = c.conf || ((c.tier === "primary" || domainIn(c.domain, Q.primaryDomains || [])) ? "haute" : "moyenne");
         const country = COUNTRIES.includes(r.country) ? r.country : (c.hint && COUNTRIES.includes(c.hint) ? c.hint : "OTHER");
         added.push({
           id: c.id, ts: c.ts, title: (r.title_fr || c.title).trim(), orig: c.title.slice(0, 200), summary: (r.summary_fr || "").trim().slice(0, 300),
@@ -455,9 +483,20 @@ export async function run(opts = {}) {
     }
   } else if (queue.length) log("GEMINI_API_KEY absente : aucun article classé");
 
+  // secours : les articles non classés par l'IA sont publiés tels quels (titre d'origine), à reclasser plus tard
+  let fallback = 0;
+  for (const c of queue) {
+    if (handled.has(c.id) || c.pendingOld) continue;
+    if (!(AI_RE.test(`${c.title} ${c.snippet || ""}`) || AI_CJK.test(`${c.title} ${c.snippet || ""}`))) continue;
+    const rc = ruleClassify(c);
+    added.push({ id: c.id, ts: c.ts, title: c.title.trim(), orig: c.title.slice(0, 200), summary: (c.snippet || "").slice(0, 260), country: rc.country, category: rc.category, importance: 1, layer: rc.layer, source: c.source, url: c.url, confidence: (c.tier === "primary" || domainIn(c.domain, Q.primaryDomains || [])) ? "haute" : "moyenne", pending: true });
+    fallback++;
+  }
+
   // fusion et purge
   const byId = new Map();
   for (const it of [...feedDoc.items, ...added]) byId.set(it.id, it);
+  for (const id of dropIds) byId.delete(id);
   const keep = [...byId.values()].filter((it) => nowMs - new Date(it.ts).getTime() < (it.importance >= 3 ? 180 : it.importance === 2 ? 120 : 45) * 86400000)
     .sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 1500);
 
@@ -469,7 +508,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, rejected: rejectedNow, total_items: keep.length, errors, gemini: classifier?.state.diag || [], sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, gemini: classifier?.state.diag || [], sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();

@@ -23,7 +23,7 @@ function rowHTML(it){
    '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.title)+'</a>'+
    '<span class="rsrc">'+esc(it.source)+cdot(it.confidence)+'</span>'+
    '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+
-   '<div class="sum"><p>'+esc(it.summary)+'</p><div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
+   '<div class="sum"><p>'+(it.summary?esc(it.summary):'Résumé indisponible : ouvrez l\'article.')+(it.pending?' <i class="small">(titre d\'origine, non classé par l\'IA)</i>':'')+'</p><div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
 }
 function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s.u))+'" target="_blank" rel="noopener">'+esc(s.t)+'</a>'}).join("")}
 

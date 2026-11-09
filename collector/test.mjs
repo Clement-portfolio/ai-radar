@@ -93,7 +93,14 @@ assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).
   await fs.writeFile(path.join(d4, "feed.json"), JSON.stringify({ items: [] }));
   const fAll = async (url, init = {}) => String(url).includes("generativelanguage") ? { ok: false, status: 503, text: async () => "{}" } : fetchImpl(url, init);
   const s4 = await run({ dataDir: d4, sourcesFile: cfgFile, fetchImpl: fAll, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1" }, log: () => {} });
-  assert.equal(s4.last_run.added, 0); assert.ok(s4.last_run.errors.some((e) => /saturé/.test(e)), "saturation signalée");
+  assert.ok(s4.last_run.errors.some((e) => /saturé/.test(e)), "saturation signalée");
+  const feed4 = JSON.parse(await fs.readFile(path.join(d4, "feed.json"), "utf8")).items;
+  assert.ok(s4.last_run.fallback > 0 && feed4.length === s4.last_run.added && feed4.every((x) => x.pending && x.importance === 1), "secours : articles publiés sans IA");
+  assert.ok(feed4.some((x) => /Nvidia unveils/.test(x.title)), "titre d'origine conservé");
+  // Gemini revient : les articles en attente sont reclassés (plus de drapeau)
+  const s5 = await run({ dataDir: d4, sourcesFile: cfgFile, fetchImpl, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1" }, log: () => {} });
+  const feed5 = JSON.parse(await fs.readFile(path.join(d4, "feed.json"), "utf8")).items;
+  assert.ok(feed5.every((x) => !x.pending) && feed5.some((x) => /^FR /.test(x.title)), "reclassement des articles en attente");
 }
 // source hors liste de confiance (Google News) écartée
 assert.ok(logs.some((l) => /écartés car média hors liste/.test(l) && !/ 0 écartés/.test(l)), "médias hors liste écartés");
