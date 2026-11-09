@@ -1,6 +1,146 @@
 {
  "items": [
   {
+   "id": "033426cd1fa4",
+   "ts": "2026-11-09T18:55:43.000Z",
+   "title": "Comment CrossnoKaye ancre l'IA physique avec Amazon Bedrock AgentCore",
+   "orig": "How CrossnoKaye grounds physical AI with Amazon Bedrock AgentCore",
+   "summary": "CrossnoKaye intègre l'IA physique dans l'industrie lourde grâce au système agentique AURA et à Amazon Bedrock AgentCore.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/how-crossnokaye-grounds-physical-ai-with-amazon-bedrock-agentcore/",
+   "confidence": "haute"
+  },
+  {
+   "id": "94ba02b8438e",
+   "ts": "2026-11-09T18:50:19.000Z",
+   "title": "Google ajoute les puces TPU 8tx et 8i Max pour l'IA d'entreprise",
+   "orig": "Google Adds TPU 8tx, 8i Max for Enterprise AI",
+   "summary": "Google Cloud élargit sa gamme de puces TPU avec de nouveaux modèles dédiés aux charges de travail sécurisées et à l'inférence.",
+   "country": "US",
+   "category": "puces",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "Data Center Knowledge",
+   "url": "https://www.datacenterknowledge.com/data-center-chips/google-adds-tpu-8tx-8i-max-for-enterprise-ai",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "9015c3069685",
+   "ts": "2026-11-09T18:43:30.000Z",
+   "title": "Les outils professionnels méritent des outils professionnels. Voici AWS Quick.",
+   "orig": "Professional work deserves professional tools. Meet AWS Quick.",
+   "summary": "AWS présente Quick, un espace de travail propulsé par l'IA pour permettre aux équipes de rechercher et d'agir sur leurs données.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/professional-work-deserves-professional-tools-meet-aws-quick/",
+   "confidence": "haute"
+  },
+  {
+   "id": "5bbcf15959cc",
+   "ts": "2026-11-09T18:14:47.000Z",
+   "title": "Le PDG de Goldman, Solomon, déclare que le financement de l'IA reste solide malgré les turbulences du marché",
+   "orig": "Goldman CEO Solomon says AI financing remains strong despite market jitters",
+   "summary": "L'appétit des investisseurs pour l'infrastructure d'IA reste solide malgré un réajustement des actions technologiques.",
+   "country": "US",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Financement",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/09/goldman-ceo-ai-financing-market.html",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "faa2c8a3a820",
+   "ts": "2026-11-09T18:09:52.000Z",
+   "title": "L'affaire de Jensen Huang avec une espionne chinoise présumée place les ambitions de Nvidia en Chine sous surveillance",
+   "orig": "Jensen Huang’s affair with alleged Chinese spy puts Nvidia’s China ambitions under scrutiny",
+   "summary": "Une liaison présumée de Jensen Huang menace de compliquer les efforts de lobbying de Nvidia pour alléger les restrictions américaines.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/09/jensen-huangs-affair-with-alleged-chinese-spy-puts-nvidias-china-ambitions-under-scrutiny/",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "e596647c7083",
+   "ts": "2026-11-09T18:07:43.000Z",
+   "title": "Mistral Large 4 : Comment une start-up française de l'IA veut préserver l'Europe de la dépendance",
+   "orig": "Mistral Large 4: Wie ein französisches KI-Start-up Europa vor der Abhängigkeit bewahren will",
+   "summary": "Mistral Large 4 illustre la volonté de l'Europe de développer ses propres technologies d'intelligence artificielle.",
+   "country": "EU",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "SZ.de",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZl9meVpDSmtCaE5UbUg3RmhZeHpYMXBqb3VLbEgxaXBNNjhoeVVuWHVZUkNiRkNaaTFFbzZqMEFPeGlMSG9KNmZCRHRMaEFIYmVlLVhtN0REZmVPcWlnVUUxQ0N2cFpaN05iZ20xOW9Ca1o2eWVON3YtNFp0ak92cVhWQ3pNNTJ1Y210VkFjWk83TTIxWHZjaXNPVHpXYzYwNEdtX2ZGeERRODNmNWNIUw?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "24fbdd6b452d",
+   "ts": "2026-11-09T18:07:23.000Z",
+   "title": "L'Effect Builder d'Instagram crée de nouveaux filtres à partir de prompts d'IA",
+   "orig": "Instagram’s Effect Builder makes new filters from AI prompts",
+   "summary": "Instagram lance l'Effect Builder, un outil générant des filtres personnalisés pour les Stories grâce à l'intelligence artificielle.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "d08c10a622cd",
+   "ts": "2026-11-09T18:06:49.000Z",
+   "title": "Google réorganise ses accélérateurs TPU pour élargir le travail d'inférence en IA",
+   "orig": "Google Rejiggers TPU Accelerators For Broader AI Inference Work",
+   "summary": "Google fait évoluer ses puces TPU pour répondre à la demande croissante d'inférence en intelligence artificielle.",
+   "country": "US",
+   "category": "puces",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "The Next Platform",
+   "url": "https://www.nextplatform.com/compute/2026/11/09/google-rejiggers-tpu-accelerators-for-broader-ai-inference-work/5308534",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "8e9a140df718",
+   "ts": "2026-11-09T18:00:38.000Z",
+   "title": "Le gouvernement va probablement pousser à l'utilisation de modèles d'IA nationaux dans les secteurs critiques",
+   "orig": "Govt likely to push for use of domestic AI models in critical sectors",
+   "summary": "Les autorités envisagent d'imposer des modèles d'intelligence artificielle locaux pour les infrastructures et secteurs stratégiques.",
+   "country": "OTHER",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPNVdMNzlmUUFxRlNYNDFoY1RGTl9ldlJMMGVRd2NXQ2V5bXJ1U1BwaGoxd3ZyXzgyMVppQWt0WXdXdzhza21sNml3TGtZVTRsZkJlUEcydXZOTmVRdUxMTlRFZ0YwcVJUQXA1N205dE1oSWduMS1uUGVVZ3JlY2J3d19kUnhZOERGVE90dS04OHlhZkR1UU12UWtrR2FIalM1aVdlczNzeWp5YmV3UzdBQWdmQzB0MkE4Nm1mdUVTYXhPUnJ3b2pQMVQ3TW1UR3BLV2dCVzkyUlVsN1g0eVpCLVRHUThWMzI2QzV0Qzhna9IB9AFBVV95cUxNTmYzRTZTUlZzbXcyd0c5MEFpcW82UC05ZVN0MTljNFc3dzRGX0N6dFpnV0M2S2ZfWVdiX2F4S1FrcWphQWoyWUxUUkFRNU5GTkNmZi14WTh5UDh3MDR4b1YyYlFnQnVRbXBSekY4MXVtN0FMMFg3S3FiYUxLc1lmQi13clJVYmF1eGN2eXJuWjdWRnJDdTZCaFVvdnhkQmt5TndNSEMtWUpFZUNVcnk3XzM4c3ZBWDIwS0hQY1FGeHZCTTFMemdSbDZhd2NfZXlqNjFRYm5qUlZOWXRfSWtRREFyQmJrX2VEdXo5T3ZVMi1CMkR6?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "99d632aaa416",
+   "ts": "2026-11-09T18:00:00.000Z",
+   "title": "Meta publie Muse Ember, un nouveau modèle léger pour l'exécution d'agents",
+   "orig": "Meta releases Muse Ember, a new lightweight model for agent execution",
+   "summary": "Meta lance Ember, un modèle économique conçu pour l'exécution de tâches par des agents conversationnels.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/",
+   "confidence": "moyenne"
+  },
+  {
    "id": "83f111edac66",
    "ts": "2026-11-09T17:59:48.588Z",
    "title": "Nvidia émerge comme le premier test de la politique technologique plus dure des démocrates envers la Chine",
@@ -12,6 +152,34 @@
    "layer": "Régulation",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/politics/u.s.-midterm-elections/nvidia-emerges-as-early-test-of-democrats-tougher-china-tech-policy",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "55a54eff8d6a",
+   "ts": "2026-11-09T17:56:23.000Z",
+   "title": "Nvidia enquête sur les liens de Huang alors que l'industrie de l'IA évalue les retombées",
+   "orig": "Nvidia Probes Huang Ties as AI Industry Weighs the Fallout",
+   "summary": "Des préoccupations émergent concernant la direction de Nvidia et son influence sur le marché suite aux récentes révélations.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "Data Center Knowledge",
+   "url": "https://www.datacenterknowledge.com/data-center-chips/nvidia-probes-huang-ties-as-ai-industry-weighs-the-fallout",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "b10155318ba5",
+   "ts": "2026-11-09T17:54:25.000Z",
+   "title": "Prêt pour un agent IA Siri ? Apple subit des pressions pour améliorer son assistant plus rapidement",
+   "orig": "Ready for a Siri AI agent? Apple under pressure to upgrade its assistant faster",
+   "summary": "Apple fait face à des tensions internes pour accélérer le développement et la mise à jour de son assistant doté d'IA.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "ZDNet IA",
+   "url": "https://www.zdnet.com/home-and-office/apple-siri-ai-agentic-strategy/",
    "confidence": "moyenne"
   },
   {
@@ -110,6 +278,20 @@
    "layer": "Puces",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/politics/international-relations/malaysia-taiwan-fraying-ties-threaten-future-chip-investments",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "1f917ef42e11",
+   "ts": "2026-11-09T17:24:26.000Z",
+   "title": "Claude Code expose accidentellement des secrets partout sur GitHub",
+   "orig": "Claude Code is accidentally exposing secrets all over GitHub",
+   "summary": "Un comportement de l'assistant de code de l'entreprise entraîne le partage involontaire de mots de passe et clés API.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
    "confidence": "moyenne"
   },
   {
@@ -239,6 +421,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "273d7db17a98",
+   "ts": "2026-11-09T16:25:06.000Z",
+   "title": "Les agents IA testent les limites de la sécurité zéro-confiance",
+   "orig": "AI Agents Are Testing the Limits of Zero-Trust Security",
+   "summary": "Des équipes déploient des flottes d'agents pilotés par des orchestrateurs pour automatiser l'évaluation des risques.",
+   "country": "EU",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "IEEE Spectrum",
+   "url": "https://spectrum.ieee.org/zero-trust-agentic-ai-architecture",
+   "confidence": "moyenne"
+  },
+  {
    "id": "dbd9680f73cb",
    "ts": "2026-11-09T16:12:28.000Z",
    "title": "La nouvelle application TK de Medium intègre l'assistance IA directement dans le processus d'écriture",
@@ -309,6 +505,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "c4393688b1a7",
+   "ts": "2026-11-09T16:00:00.000Z",
+   "title": "Les bénéfices de Msscorps s'envolent grâce à la demande en IA",
+   "orig": "Msscorps profits surging with help from AI demand",
+   "summary": "L'entreprise enregistre une forte hausse de ses profits portée par la demande croissante en technologies d'IA.",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Taipei Times",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE40WFZhZzhlLW9sWmFEQU9ZT3BLV2VZVjgzaWhkTTVSWGJDQTQtc1loS2Y0dXBDTk9TMi12Mm5aTWkyaTFJOHBFVF94dXo0OUw5MzRWc09mTEtWdW0yVzdJSEJfNXYwdEVhbGhoUWd5M3hDZ1VGRnc?oc=5",
+   "confidence": "moyenne"
+  },
+  {
    "id": "3b7b5f928a23",
    "ts": "2026-11-09T15:57:38.000Z",
    "title": "Qu'est-ce que Megaspeed ? L'acheteur de puces Nvidia sous les projecteurs après l'affaire Jensen Huang",
@@ -334,6 +544,20 @@
    "layer": "Puces",
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-ceo-jensen-huang-summoned-to-congressional-committee-over-affair-with-alleged-chinese-spy-says-recent-reports-raise-concerns-over-security-protocols-and-ties-to-chinese-intelligence",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "0637ad0b7246",
+   "ts": "2026-11-09T15:52:08.000Z",
+   "title": "Puces Nvidia, liens avec Alibaba et scandale de Jensen Huang : les coulisses du projet de levée de fonds d'Alice Huang",
+   "orig": "Nvidia chips, Alibaba ties and Jensen Huang scandal: Inside Alice Huang's $100 million-plus pitch",
+   "summary": "Des documents lèvent le voile sur les détails entourant une levée de fonds majeure impliquant des puces et des acteurs de l'IA.",
+   "country": "US",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "Livemint",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQQnhIcUlzeE96N1BybDhIOW9WZ2JMQzhITnpQMGxNaFJjY0NQeTVBYjVjblhONGJSaEdDLWNFSXZJR0hraXBBS2RuX2c3SHFvU2tIbGxRQkhQUjllTUl3TGZsdHVWckdLR1pVSER2WkhtSlVuc3JXQVkwdXFZYUlDa1RfQ3M4R1Roc05IOHNIWlpXTnc4QUgxV0ViWHFPNml0VWlleFZxa29tYm9XaTl1Nk5UeVlNb3NKTUVUUmJjR3NKcm5yWG9wLVA3V0N4TFZWUFljSS1EQlQ2T3ZnZmZLSk13bGxXNkht0gHuAUFVX3lxTE1BOVFDS0lfV1pvVXpzX2t0X3Q2RWE3VEI0VEptMzJQS3ctczQzSWR3WXVPRm50TnVvUmlCRkhqZUlwR0JJd1RKYnJoM0NsQXVrTlBXcnUwUHd1M1FESFlxb1EzSWJEZk1OWjFGNFBzRmJvWWNqWENiaWZaZEYyS2g1UVdoYWk3Vm8tUkpGUmc2cUJvSGViZGd2N094Q2ZmUUtTeUZvRmxxODAzNUh3NmRVeUV4R1VjT3hTX2JQNS1GSXE0a2NFZlF3Z3VESDVRamRiOFhmMno4MXNfUG8yZkZVdEJFYVl0YXZBYVgxUHc?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -558,6 +782,20 @@
    "layer": "Financement",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/tech/big-tech/article/3373825/nvidia-faces-defining-test-jensen-huang-probe-adds-chip-stock-turbulence",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "61621a0d9253",
+   "ts": "2026-11-09T14:22:23.000Z",
+   "title": "Le scandale Nvidia et les allégations sur les puces en Chine placent l'entreprise singapourienne Megaspeed sous surveillance",
+   "orig": "Nvidia scandal, China chip claims put Singapore firm Megaspeed under scrutiny",
+   "summary": "Megaspeed fait l'objet d'enquêtes liées à des flux de puces et des scandales concernant le secteur des semi-conducteurs.",
+   "country": "OTHER",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "South China Morning Post",
+   "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQMUNjNnI5WE1CbjRsYVpDRGZnb0lNR3h4YjI3SkFwdEthb2UyeHBzUlRFcmtpamtISWVBc1liM2VRYzZTWGdBeVRPeXdMMy0tMmlBYllJaWxPQ1NoTEtWYk9GU0xPaVc0WjI4T0w2QlI3UldUNXcwSjBtRy1KcWNOSjBJY0Q3WFEwYk9nbGZlQ0RpdmJHYUZxdDhLRUhjM2ltVjdfVEpRMmVxZHFVOG1pMk50VjVKX2xQcnVTSGd4V0FTNUJ1ZXQwVTdYbUR0Q2tBZWxYZNIB1AFBVV95cUxNOU14bENHRlA2SkZfbFVJNjUtOTBrbWxFUmZmaTN2a2xzcHJwT2tEeFBjSzl0RnJ3eFFUYWRjY095QXg0andMWTZFYi1uQ0UzcUlISG5GRFJBTmU3ajY5RVVUTU50b0sxQXhQb09TTXJueFI5WHMzQnZ2czFJVDA5a1lPMWJpUlhITVBfWWllOXBUTGFJWC1CYnZiZXF5WlRBWUlETjhLN1Y3cGpsVW9LaXFJaVVOSW1neW1qLWg3R2xtVUdZUV9MTjhwMDcwTWVXTHRHSA?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -867,6 +1105,20 @@
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/tech-industry/huawei-develops-entirely-chinese-homegrown-desktop-pc-system-features-10-core-20-thread-kirin-x90-consumer-cpu-and-huaweis-own-harmonyos-operating-system-but-western-supply-chain-lingers",
    "confidence": "moyenne"
+  },
+  {
+   "id": "cea798ebf456",
+   "ts": "2026-11-09T12:21:41.000Z",
+   "title": "Le robot conversationnel B-Bot propulsé par l'IA aide davantage de résidents à obtenir des réponses immédiates",
+   "orig": "AI-powered B-Bot helping more Barnsley residents get answers first time",
+   "summary": "Un conseil municipal déploie un outil d'intelligence artificielle pour automatiser et accélérer les réponses aux administrés.",
+   "country": "EU",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Barnsley Council",
+   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOWGZHZXFpMzE3LTFZeTk2OG4wdjh0YndTV2o5WXdfOHltbjV3SjhtZDR1V0FJRUZaUEFOSm9PNGhpQkFRb0dYR3NDaDBVakN1ai1CQnpuTzBGMFNDQ2tDVU9tQzRkd0U0TzRNSVpWZFdZS3hFT2VmNEVVaV9XcE5wS0o1dlRmVFRza2tPY0EtRE5XY0dRVVVBNXBENTVzRDhaa1ZWS2VqZzI?oc=5",
+   "confidence": "haute"
   },
   {
    "id": "81bf65c7110b",
@@ -1275,6 +1527,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "6f2bdc6b38c2",
+   "ts": "2026-11-09T07:00:00.000Z",
+   "title": "La véritable histoire de l'IA chez Keppel n'est pas le robot humanoïde",
+   "orig": "Keppel’s real AI story isn’t the humanoid robot",
+   "summary": "Keppel déploie avec succès des agents d'IA pour identifier des sites de datacenters et repérer les pannes.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "The Business Times",
+   "url": "https://www.businesstimes.com.sg/companies-markets/keppels-real-ai-story-isnt-humanoid-robot",
+   "confidence": "moyenne"
+  },
+  {
    "id": "42d8200543ac",
    "ts": "2026-11-09T06:54:54.000Z",
    "title": "Goke prévoit la série de puces Edge AI GK6950 pour les robots incarnés",
@@ -1286,6 +1552,34 @@
    "layer": "Puces",
    "source": "Pandaily",
    "url": "https://pandaily.com/goke-gk6950-edge-ai-chip-embodied-robots-10-tops-vla",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "ba1a64644f0e",
+   "ts": "2026-11-09T06:54:40.000Z",
+   "title": "Les banques kenyanes misent sur le mobile pour conquérir des dépôts grâce à l'IA",
+   "orig": "Kenyan banks ride on 'mobile first' in race for deposits",
+   "summary": "Les principales banques de détail intègrent l'intelligence artificielle et le marketing numérique pour acquérir des clients.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Zawya",
+   "url": "https://www.zawya.com/en/business/kenyan-banks-ride-on-mobile-first-in-race-for-deposits-2126231",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "bf520141643f",
+   "ts": "2026-11-09T06:54:24.000Z",
+   "title": "L'armée britannique lance une chasse mondiale aux hackers face à la menace de l'IA",
+   "orig": "British military launches global hunt for hackers amid AI threat",
+   "summary": "Face aux risques accrus liés à l'intelligence artificielle, l'armée recherche de nouveaux talents en cybersécurité.",
+   "country": "EU",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "The Independent",
+   "url": "https://www.independent.co.uk/bulletin/news/ai-hackers-cyber-attack-uk-military-b3081442.html",
    "confidence": "moyenne"
   },
   {
@@ -1303,6 +1597,34 @@
    "confidence": "moyenne"
   },
   {
+   "id": "b2c87a1de7c5",
+   "ts": "2026-11-09T06:52:24.000Z",
+   "title": "Le TIER relève les prévisions de croissance de Taïwan pour 2026 à 12,34 % grâce à la demande en IA",
+   "orig": "TIER raises Taiwan's 2026 growth forecast to 12.34% on AI demand",
+   "summary": "L'institut taïwanais revoit fortement à la hausse sa croissance, porté par l'explosion de la demande en matériel d'intelligence artificielle.",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "Focus Taiwan",
+   "url": "https://focustaiwan.tw/business/202611090009",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "7800326bba28",
+   "ts": "2026-11-09T06:51:32.000Z",
+   "title": "Samsung, SK Hynix et Micron forment une alliance rare pour ouvrir la voie aux usines de puces automatisées",
+   "orig": "Samsung, SK Hynix, Micron forge rare alliance to pave way for unmanned chip fabs",
+   "summary": "Les géants de la mémoire s'allient pour standardiser la robotique mobile et accélérer l'automatisation des usines de semi-conducteurs.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 3,
+   "layer": "Fonderie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261109PD252/sk-hynix-samsung-micron-ic-manufacturing-robot.html",
+   "confidence": "moyenne"
+  },
+  {
    "id": "913ed88b2f74",
    "ts": "2026-11-09T06:47:26.000Z",
    "title": "DeepX lance sa puce de deuxième génération avec des gains de performance prononcés grâce à la LPDDR5x-PIM",
@@ -1317,6 +1639,48 @@
    "confidence": "moyenne"
   },
   {
+   "id": "59778445a1f2",
+   "ts": "2026-11-09T06:47:03.000Z",
+   "title": "SK Shieldus vise 100 % d'électricité renouvelable cette année",
+   "orig": "SK Shieldus targets 100% renewable electricity this year",
+   "summary": "L'entreprise de sécurité intensifie ses efforts de réduction des émissions de carbone en s'approvisionnant en énergies renouvelables.",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Énergie",
+   "source": "The Korea Times",
+   "url": "https://www.koreatimes.co.kr/business/companies/20261109/sk-shieldus-targets-100-renewable-electricity-this-year",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "195f01263491",
+   "ts": "2026-11-09T06:45:39.000Z",
+   "title": "La défaite de Trump aux élections de mi-mandat : les gagnants et perdants de la bourse en Europe",
+   "orig": "Trump's midterm defeat: Europe's biggest stock winners and losers",
+   "summary": "Un changement politique aux États-Unis provoque de fortes variations sur les actions technologiques et les puces en Europe.",
+   "country": "EU",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Financement",
+   "source": "Euronews",
+   "url": "https://www.euronews.com/2026/11/09/trumps-midterm-defeat-europes-biggest-stock-winners-and-losers",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "abdcef4a9f88",
+   "ts": "2026-11-09T06:41:43.000Z",
+   "title": "Quatre cas de triche utilisant des lunettes IA détectés dans les collèges et lycées cette année",
+   "orig": "4 cheating cases using AI glasses caught at middle, high schools this year",
+   "summary": "Les autorités scolaires recensent des infractions commises par des élèves équipés de lunettes connectées à l'intelligence artificielle.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Yonhap News Agency",
+   "url": "https://en.yna.co.kr/view/AEN20261109005800315",
+   "confidence": "moyenne"
+  },
+  {
    "id": "169364049bed",
    "ts": "2026-11-09T06:36:00.000Z",
    "title": "Qui est Alice Huang, la dirigeante chinoise accusée d'espionnage sur le PDG de Nvidia Jensen Huang ?",
@@ -1328,6 +1692,62 @@
    "layer": "Puces",
    "source": "The Straits Times",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUzlVUmZJZWg5bFBVVUZXOUxXb3NWVzI0dHZ2UVRjdTg3QjUtWVNTallMdldnSGNwTzJqUGNtZEluWnhndWpBRE54WHhFNDFqaTI5blV0bXJ6MU1zSlRrQ3hGQTRlNmpBUUpvZXJmMXBrSWs5Wm5oZzNUcnRNUzA5RzdaOXluVDh6cVkzQ0ZkU0l4aHo0UVJPcUJpV0UzenZUc2k5OQ?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "4527525fd901",
+   "ts": "2026-11-09T06:35:36.000Z",
+   "title": "AIQ et Siemens Energy annoncent une collaboration pour faire progresser les capacités numériques autonomes",
+   "orig": "AIQ and Siemens Energy announce collaboration to advance autonomous digital capabilities for energy and process industries",
+   "summary": "Ce partenariat associe l'IA opérationnelle d'AIQ à l'expertise de Siemens Energy pour accélérer l'adoption du secteur.",
+   "country": "GULF",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Énergie",
+   "source": "Zawya",
+   "url": "https://www.zawya.com/en/press-release/aiq-and-siemens-energy-announce-collaboration-to-advance-autonomous-digital-capabilities-for-energy-and-process-industries-2127040",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "31fa68f7e89a",
+   "ts": "2026-11-09T06:34:28.000Z",
+   "title": "Les valeurs technologiques rebondissent après la correction des élections de mi-mandat alors que Nvidia est au centre de l'attention",
+   "orig": "Tech stocks recover after midterms rout as Nvidia takes centre stage",
+   "summary": "Les marchés technologiques se reprennent bien que les investisseurs surveillent l'enquête visant le PDG de Nvidia.",
+   "country": "US",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Financement",
+   "source": "Euronews",
+   "url": "https://www.euronews.com/2026/11/09/tech-stocks-recover-after-midterms-rout-as-nvidia-takes-centre-stage",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "a1916734f626",
+   "ts": "2026-11-09T06:13:03.000Z",
+   "title": "La ruée vers l'énergie de l'IA pousse les datacenters à rechercher des turbines et des réacteurs d'occasion",
+   "orig": "Analysis:AI power rush sends data centres hunting for used turbines and jet engines",
+   "summary": "Les promoteurs de centres de données recherchent des turbines à gaz et des réacteurs d'avion pour faire face aux délais d'équipement.",
+   "country": "US",
+   "category": "energie",
+   "importance": 3,
+   "layer": "Énergie",
+   "source": "Channel Newsasia",
+   "url": "https://www.channelnewsasia.com/business/analysisai-power-rush-sends-data-centres-hunting-used-turbines-and-jet-engines-6535516",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "845fbbabc555",
+   "ts": "2026-11-09T05:57:41.000Z",
+   "title": "Dans la course des datacenters IA entre les États-Unis et la Chine, la capacité américaine prévue de 118 GW fait face à l'expansion rapide de la Chine d'ici 2030",
+   "orig": "In US-China AI data center race, America's 118 GW capacity forecast faces China's rapid expansion by 2030",
+   "summary": "La demande fulgurante en calcul alimente la construction de datacenters, les États-Unis conservant une avance en capacité d'ici 2030.",
+   "country": "US",
+   "category": "capex",
+   "importance": 3,
+   "layer": "Datacenters",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261109PD224/usa-data-center-capacity-expansion-china-2030.html",
    "confidence": "moyenne"
   },
   {
@@ -1611,6 +2031,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "f4c34ada8524",
+   "ts": "2026-11-09T00:00:00.000Z",
+   "title": "Indice de performance d'inférence : changer la façon dont nous mesurons la capacité d'inférence",
+   "orig": "Inference Performance Index: changing the way we measure inference capacity",
+   "summary": "Epoch AI introduit un nouvel indice pour évaluer les puces d'IA en fonction de leur mémoire et de leurs capacités de communication.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 2,
+   "layer": "Recherche",
+   "source": "Epoch AI",
+   "url": "https://epoch.ai/publications/inference-performance-index",
+   "confidence": "haute"
+  },
+  {
    "id": "a093866ee1ef",
    "ts": "2026-11-08T23:10:49.000Z",
    "title": "La bourse de Tokyo ouvre en hausse portée par le marché technologique américain et les valeurs de l'IA",
@@ -1804,6 +2238,20 @@
    "layer": "Applications",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/08/ai-recruitment-agency-fees.html",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "c435ce439832",
+   "ts": "2026-11-08T02:02:38.000Z",
+   "title": "Les fabricants d'appareils portables utilisent des données cérébrales pour entraîner l'IA à l'insu des utilisateurs",
+   "orig": "Wearable device makers are using brain data to train AI without telling users",
+   "summary": "Des fabricants exploitent des données issues de capteurs cérébraux sur des wearables pour alimenter des modèles d'intelligence artificielle.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "Hacker News",
+   "url": "https://www.science.org/content/article/wearable-device-makers-are-harvesting-brain-data-train-ai-without-telling-users",
    "confidence": "moyenne"
   },
   {
@@ -2014,6 +2462,20 @@
    "layer": "Autre",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/06/openai-bugging-alfozan-saudi.html",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "c899b2bfcb58",
+   "ts": "2026-11-06T21:07:07.000Z",
+   "title": "Les investisseurs se préparent à une valorisation inférieure pour Anthropic, qualifiant les 1 500 milliards de dollars d'",
+   "orig": "Investors brace for lower Anthropic valuation, calling $1.5 trillion a 'stretch'",
+   "summary": "La valorisation d'Anthropic pourrait s'avérer inférieure aux attentes initiales dans un contexte de ralentissement des investissements en IA.",
+   "country": "US",
+   "category": "capex",
+   "importance": 3,
+   "layer": "Financement",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/06/investors-brace-for-anthropic-valuation-1point5-trillion-a-stretch.html",
    "confidence": "moyenne"
   },
   {

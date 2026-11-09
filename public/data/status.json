@@ -1,18 +1,18 @@
 {
- "updated_at": "2026-11-09T18:03:02.989Z",
+ "updated_at": "2026-11-09T19:01:20.519Z",
  "mode": "live",
  "last_run": {
-  "started_at": "2026-11-09T17:59:48.588Z",
-  "duration_s": 194,
-  "candidates": 1204,
-  "new_unique": 182,
-  "queued": 145,
-  "classified_calls": 3,
+  "started_at": "2026-11-09T18:59:34.292Z",
+  "duration_s": 106,
+  "candidates": 1205,
+  "new_unique": 44,
+  "queued": 44,
+  "classified_calls": 1,
   "model": "gemini-3.5-flash-lite",
-  "added": 117,
+  "added": 33,
   "fallback": 0,
-  "rejected": 28,
-  "total_items": 268,
+  "rejected": 11,
+  "total_items": 301,
   "errors": [],
   "gemini": [
    "modèles disponibles : gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemini-3.1-flash-lite-preview, gemini-3-flash-preview, gemini-2.5-flash, gemini-2.5-flash-lite",
@@ -20,19 +20,13 @@
   ],
   "sources": [
    {
-    "name": "Google DeepMind",
+    "name": "OpenAI",
     "kind": "rss",
     "ok": true,
     "n": 25
    },
    {
-    "name": "NVIDIA blog",
-    "kind": "rss",
-    "ok": true,
-    "n": 18
-   },
-   {
-    "name": "Hugging Face blog",
+    "name": "Google DeepMind",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -44,7 +38,13 @@
     "n": 20
    },
    {
-    "name": "OpenAI",
+    "name": "TechCrunch IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Hugging Face blog",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -56,10 +56,10 @@
     "n": 20
    },
    {
-    "name": "TechCrunch IA",
+    "name": "NVIDIA blog",
     "kind": "rss",
     "ok": true,
-    "n": 20
+    "n": 18
    },
    {
     "name": "The Verge IA",
@@ -86,25 +86,19 @@
     "n": 10
    },
    {
-    "name": "Tom's Hardware",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "CNBC Tech",
     "kind": "rss",
     "ok": true,
     "n": 25
    },
    {
-    "name": "EE Times",
+    "name": "DatacenterDynamics",
     "kind": "rss",
     "ok": true,
-    "n": 10
+    "n": 20
    },
    {
-    "name": "The Register IA",
+    "name": "Tom's Hardware",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -116,16 +110,22 @@
     "n": 10
    },
    {
-    "name": "DatacenterDynamics",
+    "name": "The Register IA",
     "kind": "rss",
     "ok": true,
-    "n": 20
+    "n": 25
    },
    {
     "name": "The Next Platform",
     "kind": "rss",
     "ok": true,
     "n": 25
+   },
+   {
+    "name": "EE Times",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
    },
    {
     "name": "Pandaily",
@@ -140,7 +140,7 @@
     "n": 24
    },
    {
-    "name": "SCMP Tech",
+    "name": "Euractiv",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -152,10 +152,11 @@
     "n": 10
    },
    {
-    "name": "Euractiv",
+    "name": "VentureBeat IA",
     "kind": "rss",
-    "ok": true,
-    "n": 25
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 429"
    },
    {
     "name": "Interconnects",
@@ -164,11 +165,10 @@
     "n": 20
    },
    {
-    "name": "VentureBeat IA",
+    "name": "SCMP Tech",
     "kind": "rss",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 429"
+    "ok": true,
+    "n": 25
    },
    {
     "name": "Epoch AI",
@@ -183,40 +183,16 @@
     "n": 20
    },
    {
-    "name": "Meta Newsroom",
-    "kind": "rss",
-    "ok": true,
-    "n": 10
-   },
-   {
-    "name": "Mistral AI",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "Microsoft News (IA)",
     "kind": "rss",
     "ok": true,
     "n": 10
    },
    {
-    "name": "Arab News",
+    "name": "Meta Newsroom",
     "kind": "rss",
     "ok": true,
-    "n": 25
-   },
-   {
-    "name": "The National",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
-    "name": "Nikkei Asia",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
+    "n": 10
    },
    {
     "name": "TechNode",
@@ -233,13 +209,37 @@
     "err": "HTTP 403"
    },
    {
-    "name": "Digitimes",
+    "name": "Mistral AI",
     "kind": "rss",
     "ok": true,
     "n": 25
    },
    {
-    "name": "Data Center Knowledge",
+    "name": "Nikkei Asia",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Arab News",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "The National",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "ServeTheHome",
+    "kind": "rss",
+    "ok": true,
+    "n": 6
+   },
+   {
+    "name": "Digitimes",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -251,10 +251,10 @@
     "n": 25
    },
    {
-    "name": "ServeTheHome",
+    "name": "IEEE Spectrum",
     "kind": "rss",
     "ok": true,
-    "n": 6
+    "n": 25
    },
    {
     "name": "SemiAnalysis",
@@ -271,25 +271,19 @@
     "err": "HTTP 403"
    },
    {
-    "name": "IEEE Spectrum",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "TrendForce",
     "kind": "rss",
     "ok": true,
     "n": 20
    },
    {
-    "name": "Google News États-Unis · OpenAI Anthropic Google Gemini",
-    "kind": "googlenews",
+    "name": "Data Center Knowledge",
+    "kind": "rss",
     "ok": true,
-    "n": 12
+    "n": 25
    },
    {
-    "name": "Google News États-Unis · AI chips Nvidia data center",
+    "name": "Google News États-Unis · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -307,7 +301,7 @@
     "n": 12
    },
    {
-    "name": "Google News Royaume-Uni · OpenAI Anthropic Google Gemini",
+    "name": "Google News États-Unis · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -320,6 +314,12 @@
    },
    {
     "name": "Google News France · IA puces datacenter",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Royaume-Uni · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -343,19 +343,13 @@
     "n": 12
    },
    {
-    "name": "Google News Émirats · artificial intelligence",
-    "kind": "googlenews",
-    "ok": true,
-    "n": 12
-   },
-   {
     "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Japon · 人工知能 半導体",
+    "name": "Google News Émirats · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -367,19 +361,19 @@
     "n": 12
    },
    {
-    "name": "Google News Corée · 인공지능 반도체",
-    "kind": "googlenews",
-    "ok": true,
-    "n": 12
-   },
-   {
     "name": "Google News Taïwan · 人工智慧 晶片",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
+    "name": "Google News Corée · 인공지능 반도체",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Japon · 人工知能 半導体",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -391,13 +385,13 @@
     "n": 12
    },
    {
-    "name": "Google News Inde · artificial intelligence",
+    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Singapour · AI chips Nvidia data center",
+    "name": "Google News Inde · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -415,11 +409,17 @@
     "n": 12
    },
    {
+    "name": "Google News Singapour · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
     "name": "GDELT Monde",
     "kind": "gdelt",
     "ok": false,
     "n": 0,
-    "err": "fetch failed"
+    "err": "HTTP 429"
    },
    {
     "name": "GDELT Chine",
@@ -545,7 +545,7 @@
     "name": "Hacker News · LLM",
     "kind": "hn",
     "ok": true,
-    "n": 4
+    "n": 5
    },
    {
     "name": "Hacker News · OpenAI",
@@ -645,5 +645,5 @@
    }
   ]
  },
- "last_attempt": "2026-11-09T18:03:02.989Z"
+ "last_attempt": "2026-11-09T19:01:20.519Z"
 }
