@@ -297,7 +297,7 @@ async function makeClassifier(env, fetchImpl, log) {
     models = discovered.slice(0, 4);
     if (!models.length) models = ["gemini-3.5-flash"];
   }
-  let mi = 0, last = 0, calls = 0; const minGap = +env.GEMINI_MIN_GAP_MS || 4500; const backoff = +env.GEMINI_BACKOFF_MS || 20000;
+  let mi = 0, last = 0, calls = 0; const minGap = +env.GEMINI_MIN_GAP_MS || 4500; const backoff = +env.GEMINI_BACKOFF_MS || 8000;
   const state = { error: null, model: null, fatal: false, diag: [], get calls() { return calls; } };
   if (discovered) { log("Gemini · modèles retenus : " + models.join(", ")); state.diag.push("modèles disponibles : " + (discovered.slice(0, 8).join(", ") || "aucun détecté")); }
   const note = (m) => { log("Gemini · " + m); if (state.diag.length < 40) state.diag.push(m); };
@@ -423,19 +423,21 @@ export async function run(opts = {}) {
     classifier = await makeClassifier(env, fetchImpl, log);
     const BATCH = +env.GEMINI_BATCH || 50; const maxCalls = +env.GEMINI_MAX_CALLS || 3;
     const batches = []; for (let b = 0; b < queue.length; b += BATCH) batches.push(queue.slice(b, b + BATCH));
-    const failed = []; const maxTotal = maxCalls + 2;
+    const failed = []; const maxTotal = maxCalls + 2; const budgetMs = (+env.RUN_BUDGET_S || 840) * 1000; let consecFail = 0;
     for (let bi = 0; bi < batches.length || (failed.length && calls < maxTotal); bi++) {
       const slice = bi < batches.length ? batches[bi] : failed.shift();
+      if (Date.now() - started > budgetMs) { log("Budget de temps atteint : arrêt du classement"); classifier.state.diag.push("budget de temps atteint, reste à classer au prochain passage"); break; }
       if (!slice || calls >= maxTotal || (bi < batches.length && calls >= maxCalls)) break;
       const res = await classifier.call(slice.map((c, i) => ({ i, source: c.source, title: c.title, snippet: (c.snippet || "").slice(0, 400), date: c.ts.slice(0, 10) })));
       calls++;
       if (!res) {
         log("Gemini : " + classifier.state.error);
-        if (classifier.state.fatal) break;
+        if (classifier.state.fatal || ++consecFail >= 2) break;
         if (!slice.retried) { slice.retried = true; failed.push(slice); }
         await sleep(+env.GEMINI_PAUSE_MS || 30000);
         continue;
       }
+      consecFail = 0;
       const by = new Map(res.map((r) => [r.i, r]));
       slice.forEach((c, i) => {
         const r = by.get(i); if (!r) return;
