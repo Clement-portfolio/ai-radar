@@ -289,62 +289,61 @@ async function discoverModels(env, fetchImpl) {
     .map((m) => m.name.replace(/^models\//, ""))
     .sort((a, b) => (ver(b) - ver(a)) || (/preview/.test(a) - /preview/.test(b)) || (/lite/.test(a) - /lite/.test(b)));
 }
-async function makeClassifier(env, fetchImpl, log) {
+async function makeClassifier(env, fetchImpl, log, deadInit = []) {
   let models = (env.GEMINI_MODELS || "").split(",").map((s) => s.trim()).filter(Boolean);
   let discovered = null;
   if (!models.length) {
     try { discovered = await discoverModels(env, fetchImpl); } catch (e) { discovered = []; log("Gemini · liste des modèles indisponible : " + e.message); }
-    models = discovered.slice(0, 4);
+    models = discovered.slice(0, 8);
     if (!models.length) models = ["gemini-3.5-flash"];
   }
-  let mi = 0, last = 0, calls = 0; const minGap = +env.GEMINI_MIN_GAP_MS || 4500; const backoff = +env.GEMINI_BACKOFF_MS || 8000;
-  const state = { error: null, model: null, fatal: false, diag: [], get calls() { return calls; } };
-  if (discovered) { log("Gemini · modèles retenus : " + models.join(", ")); state.diag.push("modèles disponibles : " + (discovered.slice(0, 8).join(", ") || "aucun détecté")); }
+  let last = 0, calls = 0; const minGap = +env.GEMINI_MIN_GAP_MS || 4500; const backoff = +env.GEMINI_BACKOFF_MS || 8000;
+  const dead = new Set(deadInit.filter((m) => models.includes(m))); // modèles sans quota ou retirés : écartés pour la journée
+  const state = { error: null, model: null, fatal: false, diag: [], dead, get calls() { return calls; } };
   const note = (m) => { log("Gemini · " + m); if (state.diag.length < 40) state.diag.push(m); };
-  // mi : modèles abandonnés pour de bon (404, quota). k : modèle essayé pour cet appel (une saturation 5xx est passagère).
+  if (discovered) state.diag.push("modèles disponibles : " + (discovered.slice(0, 10).join(", ") || "aucun détecté"));
+  if (dead.size) state.diag.push("écartés aujourd'hui (quota ou retirés) : " + [...dead].join(", "));
+  const exhausted = () => { state.error = "quota Gemini épuisé sur tous les modèles (le quota gratuit se renouvelle vers 11 h, heure d'Arabie saoudite)"; state.fatal = true; return null; };
+  // Une saturation 5xx est passagère : on passe au modèle suivant, puis on refait un tour après une pause.
   async function call(list) {
-    let k = mi, tries = 0, transient = false;
-    while (k < models.length) {
+    let k = 0, cycles = 0, tries = 0;
+    while (true) {
+      while (k < models.length && dead.has(models[k])) k++;
+      if (k >= models.length) {
+        if (models.every((m) => dead.has(m))) return exhausted();
+        if (cycles < 2) { cycles++; await sleep(backoff * cycles); k = 0; tries = 0; continue; }
+        state.error = "Gemini saturé (erreur 5xx) sur tous les modèles disponibles"; return null;
+      }
       const wait = last + minGap - Date.now(); if (wait > 0) await sleep(wait);
       last = Date.now(); calls++;
       const model = models[k];
       let r, body;
       try {
         r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-          method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY }, signal: AbortSignal.timeout(90000),
+          method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY }, signal: AbortSignal.timeout(60000),
           body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM }] }, contents: [{ role: "user", parts: [{ text: JSON.stringify(list) }] }], generationConfig: { temperature: 0.1, responseMimeType: "application/json", responseSchema: SCHEMA } }),
         });
         body = await r.text();
-      } catch (e) { note(`${model} : réseau (${e.message})`); transient = true; if (++tries <= 2) { await sleep(3000 * tries); continue; } state.error = "réseau Gemini : " + e.message; return null; }
+      } catch (e) { note(`${model} : réseau (${e.message})`); k++; tries = 0; continue; }
       if (r.ok) {
         try {
           const j = JSON.parse(body); const txt = j.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
           const arr = JSON.parse(txt); if (!Array.isArray(arr)) throw new Error("pas un tableau");
           state.model = model; state.error = null; return arr;
-        } catch (e) { note(`${model} : réponse illisible (${e.message})`); if (++tries <= 1) continue; state.error = `réponse Gemini illisible (${model}) : ${e.message}`; return null; }
+        } catch (e) { note(`${model} : réponse illisible (${e.message})`); k++; tries = 0; continue; }
       }
       const msg = body.slice(0, 600).replace(/\s+/g, " ");
       note(`${model} : HTTP ${r.status} ${msg.slice(0, r.status === 429 ? 450 : 140)}`);
       if (/API_KEY_INVALID|API key not valid/i.test(body)) { state.error = "clé Gemini invalide (API_KEY_INVALID)"; state.fatal = true; return null; }
       if (r.status === 429) {
         const m = body.match(/"retryDelay":\s*"(\d+)/); const delay = m ? +m[1] : 30;
-        if (/PerDay|per day/i.test(body) || delay > 70 || tries >= 2) { note(`${model} : quota épuisé, modèle suivant`); if (k === mi) mi++; k++; tries = 0; continue; }
+        if (/PerDay|per day|limit: 0/i.test(body) || delay > 70 || tries >= 2) { dead.add(model); k++; tries = 0; continue; }
         tries++; await sleep((delay + 2) * 1000); continue;
       }
-      if (r.status === 404 || r.status === 400 || r.status === 403) {
-        if (r.status === 403 && /API key|PERMISSION|leaked/i.test(body)) { state.error = "clé Gemini refusée : " + msg; state.fatal = true; return null; }
-        if (k === mi) mi++; k++; tries = 0; continue;
-      }
-      if (r.status >= 500) {
-        transient = true;
-        if (++tries <= 3) { await sleep(backoff * tries); continue; }
-        note(`${model} saturé : modèle suivant pour ce lot`); k++; tries = 0; continue;
-      }
-      state.error = `Gemini HTTP ${r.status} : ${msg}`; return null;
+      if (r.status === 403 && /API key|PERMISSION|leaked/i.test(body)) { state.error = "clé Gemini refusée : " + msg; state.fatal = true; return null; }
+      if (r.status === 404 || r.status === 400 || r.status === 403) { dead.add(model); k++; tries = 0; continue; }
+      k++; tries = 0; // 5xx
     }
-    if (mi >= models.length) { state.error = "tous les modèles Gemini sont indisponibles ou à quota épuisé"; state.fatal = true; }
-    else state.error = "Gemini saturé (erreur 5xx) sur tous les modèles disponibles";
-    return null;
   }
   return { call, state };
 }
@@ -420,7 +419,9 @@ export async function run(opts = {}) {
   // classement Gemini
   const added = []; let rejectedNow = 0; let classifier = null; let calls = 0;
   if (queue.length && env.GEMINI_API_KEY) {
-    classifier = await makeClassifier(env, fetchImpl, log);
+    const pacificDay = new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10);
+    const gs = state.gemini && state.gemini.date === pacificDay ? state.gemini : { date: pacificDay, dead: [] };
+    classifier = await makeClassifier(env, fetchImpl, log, gs.dead);
     const BATCH = +env.GEMINI_BATCH || 50; const maxCalls = +env.GEMINI_MAX_CALLS || 3;
     const batches = []; for (let b = 0; b < queue.length; b += BATCH) batches.push(queue.slice(b, b + BATCH));
     const failed = []; const maxTotal = maxCalls + 2; const budgetMs = (+env.RUN_BUDGET_S || 840) * 1000; let consecFail = 0;
@@ -475,7 +476,7 @@ export async function run(opts = {}) {
   if (!opts.dry) {
     await fs.mkdir(dataDir, { recursive: true });
     if (okCount > 0 && (added.length || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
-    await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ newsdata: nd, rejected }));
+    await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     await fs.writeFile(path.join(dataDir, "status.json"), JSON.stringify(out, null, 1));
   }
   log(`Terminé : +${added.length} articles, ${rejectedNow} écartés, ${keep.length} au total, ${errors.length} alerte(s)`);
