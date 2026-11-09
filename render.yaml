@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ai-radar
+    runtime: node
+    plan: free
+    buildCommand: echo "rien à construire"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NEWSDATA_API_KEY
+        sync: false

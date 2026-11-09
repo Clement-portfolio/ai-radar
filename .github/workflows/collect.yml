@@ -1,0 +1,46 @@
+name: Collecte AI Radar
+
+on:
+  schedule:
+    - cron: "17 */2 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - "collector/**"
+      - ".github/workflows/collect.yml"
+
+concurrency:
+  group: collecte
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: node collector/test.mjs
+      - name: Collecte
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+          SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
+          GDELT_TIMESPAN: ${{ github.event_name == 'schedule' && '3h' || '1d' }}
+          MAX_AGE_DAYS: ${{ github.event_name == 'schedule' && '3' || '5' }}
+        run: node collector/collect.mjs
+      - name: Enregistrer les données
+        run: |
+          git config user.name "ai-radar-bot"
+          git config user.email "ai-radar-bot@users.noreply.github.com"
+          git add public/data
+          if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
+          git commit -m "Données du $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

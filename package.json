@@ -1,0 +1,13 @@
+{
+  "name": "ai-radar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI Radar — actualités classées par pays et état du marché de l'IA",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js",
+    "collect": "node collector/collect.mjs",
+    "test": "node collector/test.mjs"
+  }
+}

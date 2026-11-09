@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Radar — l'état de l'IA, en continu</title>
+<meta name="description" content="Actualités classées par pays, marché, infrastructure et course États-Unis–Chine.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <span class="date" id="today"></span>
+  <span class="spacer"></span>
+  <span id="status"><span class="dot stale"></span>Chargement…</span>
+  <button class="btn primary" id="refresh"><span class="spin"></span><span id="refreshLabel">Mettre à jour</span></button>
+</div></div>
+
+<header class="wrap brand">
+  <h1>AI<span>·</span>Radar</h1>
+  <p>Toute l'actualité de l'IA, classée par pays, et l'état du marché : qui dépense, qui gagne, où sont les goulots, qui mène entre les États-Unis et la Chine.</p>
+</header>
+
+<nav class="nav"><div class="wrap">
+  <button class="tab" data-tab="une">À la une</button>
+  <button class="tab" data-tab="actualites">Actualités</button>
+  <button class="tab" data-tab="marche">Marché</button>
+  <button class="tab" data-tab="infrastructure">Infrastructure</button>
+  <button class="tab" data-tab="usa-chine">USA–Chine</button>
+  <button class="tab" data-tab="methode">Méthode</button>
+  <span class="navsp"></span>
+  <div class="filter" id="filter"><label>Pays</label><span id="chips"></span></div>
+</div></nav>
+
+<main class="wrap">
+  <section class="view" id="v-une"></section>
+  <section class="view" id="v-actualites"></section>
+  <section class="view" id="v-marche"></section>
+  <section class="view" id="v-infrastructure"></section>
+  <section class="view" id="v-usa-chine"></section>
+  <section class="view" id="v-methode"></section>
+</main>
+<footer><div class="wrap">AI Radar · Données collectées automatiquement, classées par IA et à vérifier à la source. Ne constitue pas un conseil en investissement.</div></footer>
+<script src="app.js"></script>
+</body>
+</html>
