@@ -40,6 +40,7 @@ assert.equal(canonicalUrl("https://www.Ex.com/a/?utm_source=x#f"), "https://ex.c
 
 const dir = await fs.mkdtemp(path.join(os.tmpdir(), "radar-"));
 await fs.cp(new URL("../public/data/", import.meta.url), dir, { recursive: true });
+await fs.rm(path.join(dir, "state.json"), { force: true }); // test hermétique : indépendant de l'état réel
 const before = JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).items.length;
 const cfgFile = path.join(dir, "src.json");
 const cfg = JSON.parse(await fs.readFile(new URL("./sources.json", import.meta.url), "utf8"));
@@ -73,6 +74,7 @@ assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).
 {
   const d3 = await fs.mkdtemp(path.join(os.tmpdir(), "radar3-"));
   await fs.cp(new URL("../public/data/", import.meta.url), d3, { recursive: true });
+  await fs.rm(path.join(d3, "state.json"), { force: true });
   await fs.writeFile(path.join(d3, "feed.json"), JSON.stringify({ items: [] }));
   const seen3 = [];
   const f503 = async (url, init = {}) => {
@@ -90,6 +92,7 @@ assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).
   // saturation totale : pas de crash, rien d'ajouté, erreur signalée, les articles restent à classer au prochain passage
   const d4 = await fs.mkdtemp(path.join(os.tmpdir(), "radar4-"));
   await fs.cp(new URL("../public/data/", import.meta.url), d4, { recursive: true });
+  await fs.rm(path.join(d4, "state.json"), { force: true });
   await fs.writeFile(path.join(d4, "feed.json"), JSON.stringify({ items: [] }));
   const fAll = async (url, init = {}) => String(url).includes("generativelanguage") ? { ok: false, status: 503, text: async () => "{}" } : fetchImpl(url, init);
   const s4 = await run({ dataDir: d4, sourcesFile: cfgFile, fetchImpl: fAll, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1" }, log: () => {} });
