@@ -1,1 +1,598 @@
-{"updated_at":"2026-11-09T14:50:00Z","mode":"seed"}
+{
+ "updated_at": "2026-11-09T16:08:25.831Z",
+ "mode": "live",
+ "last_run": {
+  "started_at": "2026-11-09T16:04:23.588Z",
+  "duration_s": 242,
+  "candidates": 1293,
+  "new_unique": 503,
+  "queued": 150,
+  "classified_calls": 2,
+  "model": "gemini-3.5-flash",
+  "added": 23,
+  "rejected": 2,
+  "total_items": 41,
+  "errors": [
+   "Gemini HTTP 503 : { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.\", \"status\": \"UNAVAILABLE\" } } "
+  ],
+  "sources": [
+   {
+    "name": "Google DeepMind",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "NVIDIA blog",
+    "kind": "rss",
+    "ok": true,
+    "n": 18
+   },
+   {
+    "name": "TechCrunch IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "AWS Machine Learning",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Hugging Face blog",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "OpenAI",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Ars Technica",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "The Verge IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Google AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "MIT Technology Review IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Wired IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "CNBC Tech",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Tom's Hardware",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "DatacenterDynamics",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "EE Times",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Utility Dive",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "The Next Platform",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "The Register IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Semiconductor Engineering",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "SCMP Tech",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Pandaily",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Sifted",
+    "kind": "rss",
+    "ok": true,
+    "n": 24
+   },
+   {
+    "name": "Euractiv",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Interconnects",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Last Week in AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "VentureBeat IA",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 429"
+   },
+   {
+    "name": "ChinaTalk",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Microsoft News (IA)",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "TechNode",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
+   },
+   {
+    "name": "Meta Newsroom",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Mistral AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Epoch AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "The National",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Arab News",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Nikkei Asia",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Digitimes",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Rest of World",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
+   },
+   {
+    "name": "Data Center Knowledge",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "ZDNet IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "SemiAnalysis",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
+   },
+   {
+    "name": "IEEE Spectrum",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "ServeTheHome",
+    "kind": "rss",
+    "ok": true,
+    "n": 6
+   },
+   {
+    "name": "Import AI",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
+   },
+   {
+    "name": "TrendForce",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Google News États-Unis · OpenAI Anthropic Google Gemini",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News États-Unis · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Royaume-Uni · artificial intelligence",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News États-Unis · artificial intelligence",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Royaume-Uni · OpenAI Anthropic Google Gemini",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Royaume-Uni · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News France · IA puces datacenter",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Google News France · intelligence artificielle",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Émirats · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Allemagne · künstliche Intelligenz",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Émirats · artificial intelligence",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Inde · artificial intelligence",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Taïwan · 人工智慧 晶片",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Japon · 人工知能 半導体",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Corée · 인공지능 반도체",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Inde · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Singapour · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Singapour · artificial intelligence",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Singapour · OpenAI Anthropic Google Gemini",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "GDELT Monde",
+    "kind": "gdelt",
+    "ok": true,
+    "n": 75
+   },
+   {
+    "name": "GDELT Chine",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "fetch failed"
+   },
+   {
+    "name": "GDELT Chine (zh)",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 429"
+   },
+   {
+    "name": "GDELT Golfe",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "ignoré (GDELT indisponible)"
+   },
+   {
+    "name": "GDELT Europe",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "ignoré (GDELT indisponible)"
+   },
+   {
+    "name": "GDELT Asie",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "ignoré (GDELT indisponible)"
+   },
+   {
+    "name": "GDELT Énergie",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "ignoré (GDELT indisponible)"
+   },
+   {
+    "name": "NewsData CN",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData AE",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData SA",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData FR",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData DE",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData KR",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData JP",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData IN",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData GB",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData US",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData TW",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "NewsData SG",
+    "kind": "newsdata",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Hacker News · AI",
+    "kind": "hn",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Hacker News · LLM",
+    "kind": "hn",
+    "ok": true,
+    "n": 4
+   },
+   {
+    "name": "Hacker News · OpenAI",
+    "kind": "hn",
+    "ok": true,
+    "n": 2
+   },
+   {
+    "name": "Hacker News · Nvidia",
+    "kind": "hn",
+    "ok": true,
+    "n": 3
+   },
+   {
+    "name": "Hacker News · DeepSeek",
+    "kind": "hn",
+    "ok": true,
+    "n": 2
+   },
+   {
+    "name": "Hugging Face Daily Papers",
+    "kind": "hf",
+    "ok": true,
+    "n": 5
+   },
+   {
+    "name": "arXiv",
+    "kind": "arxiv",
+    "ok": true,
+    "n": 15
+   },
+   {
+    "name": "SEC EDGAR",
+    "kind": "edgar",
+    "ok": false,
+    "n": 0,
+    "err": "SEC_USER_AGENT absente (la SEC exige un contact dans l'en-tête User-Agent)"
+   },
+   {
+    "name": "Federal Register",
+    "kind": "fedreg",
+    "ok": true,
+    "n": 15
+   }
+  ]
+ },
+ "last_attempt": "2026-11-09T16:08:25.831Z"
+}
