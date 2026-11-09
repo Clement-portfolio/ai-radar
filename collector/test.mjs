@@ -68,4 +68,33 @@ assert.equal(s2.last_run.added, 0);
 const off = await run({ dataDir: dir, sourcesFile: cfgFile, fetchImpl: async () => { throw new Error("offline"); }, now, env: { GEMINI_API_KEY: "k", GEMINI_MIN_GAP_MS: "1" }, log: () => {} });
 assert.equal(off.updated_at, s2.updated_at); assert.ok(off.last_run.errors.includes("aucune source n'a répondu"));
 assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).items.length, feed.length);
+// Gemini saturé (503) sur le 1er modèle : le lot passe par le modèle suivant, sans abandonner la collecte
+{
+  const d3 = await fs.mkdtemp(path.join(os.tmpdir(), "radar3-"));
+  await fs.cp(new URL("../public/data/", import.meta.url), d3, { recursive: true });
+  await fs.writeFile(path.join(d3, "feed.json"), JSON.stringify({ items: [] }));
+  const seen3 = [];
+  const f503 = async (url, init = {}) => {
+    const u = String(url);
+    if (u.includes("generativelanguage")) {
+      const m = u.match(/models\/([^:]+):/)[1]; seen3.push(m);
+      if (m === "gemini-3.5-flash") return { ok: false, status: 503, text: async () => '{"error":{"code":503,"status":"UNAVAILABLE"}}' };
+    }
+    return fetchImpl(url, init);
+  };
+  const s3 = await run({ dataDir: d3, sourcesFile: cfgFile, fetchImpl: f503, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", SEC_USER_AGENT: "test", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1", GEMINI_MODELS: "gemini-3.5-flash,gemini-2.5-flash" }, log: () => {} });
+  assert.ok(s3.last_run.added > 0, "classement réussi malgré le 503 du 1er modèle");
+  assert.equal(s3.last_run.model, "gemini-2.5-flash");
+  assert.ok(s3.last_run.gemini.some((x) => /503/.test(x)), "diagnostic Gemini conservé");
+  // saturation totale : pas de crash, rien d'ajouté, erreur signalée, les articles restent à classer au prochain passage
+  const d4 = await fs.mkdtemp(path.join(os.tmpdir(), "radar4-"));
+  await fs.cp(new URL("../public/data/", import.meta.url), d4, { recursive: true });
+  await fs.writeFile(path.join(d4, "feed.json"), JSON.stringify({ items: [] }));
+  const fAll = async (url, init = {}) => String(url).includes("generativelanguage") ? { ok: false, status: 503, text: async () => "{}" } : fetchImpl(url, init);
+  const s4 = await run({ dataDir: d4, sourcesFile: cfgFile, fetchImpl: fAll, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1" }, log: () => {} });
+  assert.equal(s4.last_run.added, 0); assert.ok(s4.last_run.errors.some((e) => /saturé/.test(e)), "saturation signalée");
+}
+// source hors liste de confiance (Google News) écartée
+assert.ok(logs.some((l) => /écartés car média hors liste/.test(l) && !/ 0 écartés/.test(l)), "médias hors liste écartés");
+assert.ok(!feed.some((x) => /cn\.example|ae\.example/.test(x.url || "")), "GDELT/NewsData hors liste non publiés");
 console.log("TOUS LES TESTS PASSENT");
