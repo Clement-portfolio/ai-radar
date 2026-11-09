@@ -33,7 +33,7 @@ jobs:
           NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
           SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
           GDELT_TIMESPAN: ${{ github.event_name == 'schedule' && '3h' || '1d' }}
-          MAX_AGE_DAYS: ${{ github.event_name == 'schedule' && '3' || '5' }}
+          MAX_AGE_DAYS: ${{ github.event_name == 'schedule' && '3' || '7' }}
         run: node collector/collect.mjs
       - name: Enregistrer les données
         run: |

@@ -11,11 +11,15 @@ const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Geck
 const COUNTRIES = ["US", "CN", "EU", "GULF", "OTHER"];
 const CATEGORIES = ["modeles", "puces", "energie", "capex", "regul", "adoption", "recherche"];
 const LAYERS = ["Applications", "Modèles", "Datacenters", "Puces", "Mémoire HBM", "Fonderie", "Énergie", "Financement", "Régulation", "Recherche", "Autre"];
-const CONF = { primary: "haute", press: "moyenne", aggregator: "faible" };
+const CONF = { primary: "haute", press: "moyenne" };
 const TIER_RANK = { primary: 0, press: 1, aggregator: 2 };
 
 const AI_RE = /\b(AI|A\.I\.|artificial intelligence|machine learning|deep learning|LLMs?|GPT-?\d*|OpenAI|Anthropic|Claude|Gemini|DeepSeek|Qwen|Mistral|Nvidia|GPUs?|TPUs?|HBM\d*|TSMC|data ?cent(?:er|re)s?|chatbots?|neural|generative|foundation models?|semiconductors?|chips?|inference|agentic|copilot|Ascend|Moonshot|Kimi|xAI|Grok|Llama|hyperscalers?|gigawatts?)\b/i;
 const AI_CJK = /人工智能|人工智慧|大模型|大語言模型|算力|芯片|晶片|半導體|半导体|인공지능|반도체|人工知能|半導体|الذكاء الاصطناعي|KI-|künstliche Intelligenz|intelligence artificielle/;
+
+const hostOf = (u) => { try { return new URL(u).hostname.toLowerCase().replace(/^www\./, ""); } catch { return ""; } };
+const domainIn = (host, list) => !!host && list.some((d) => host === d || host.endsWith("." + d));
+const DISCOVERY = new Set(["googlenews", "gdelt", "newsdata", "hn"]);
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const sha = (s) => crypto.createHash("sha1").update(s).digest("hex").slice(0, 12);
@@ -72,13 +76,14 @@ export function parseFeed(xml) {
     if (!link) { const t = tag("link"); if (t.trim()) link = stripTags(t); }
     if (!link) { const h = b.match(/<link[^>]*href=["']([^"']+)["']/i); if (h) link = h[1]; }
     if (!link) { const g = tag("guid"); if (/^https?:/i.test(g.trim())) link = g.trim(); }
-    const src = b.match(/<source[^>]*>([\s\S]*?)<\/source>/i);
+    const src = b.match(/<source([^>]*)>([\s\S]*?)<\/source>/i);
     out.push({
       title: stripTags(tag("title")),
       link: decodeEntities(link).trim(),
       date: stripTags(tag("pubDate") || tag("published") || tag("updated") || tag("dc:date")),
       summary: stripTags(tag("description") || tag("summary") || tag("content:encoded") || tag("content")).slice(0, 600),
-      source: src ? stripTags(src[1]) : "",
+      source: src ? stripTags(src[2]) : "",
+      sourceUrl: src ? ((src[1].match(/url=["']([^"']+)["']/i) || [])[1] || "") : "",
     });
   }
   return out.filter((x) => x.title && x.link);
@@ -118,7 +123,7 @@ async function collectAll(cfg, env, http, now, log) {
   await pool(cfg.rss, 6, async (s) => {
     try {
       const items = parseFeed(await http(s.url, { retries: 1 })).slice(0, 25);
-      for (const it of items) cands.push({ url: it.link, title: it.title, snippet: it.summary, date: it.date, source: s.name, tier: s.tier, hint: s.hint, filter: s.filter, via: "rss" });
+      for (const it of items) cands.push({ url: it.link, title: it.title, snippet: it.summary, date: it.date, source: s.name, tier: s.tier, hint: s.hint, filter: s.filter, via: "rss", domain: hostOf(it.link) });
       add(s.name, "rss", true, items.length);
     } catch (e) { add(s.name, "rss", false, 0, e); }
   });
@@ -135,7 +140,7 @@ async function collectAll(cfg, env, http, now, log) {
         const items = parseFeed(await http(u)).slice(0, gn.maxPerFeed || 12);
         for (const it of items) {
           const m = it.title.match(/^(.*) - ([^-]+)$/);
-          cands.push({ url: it.link, title: m ? m[1] : it.title, snippet: "", date: it.date, source: it.source || (m ? m[2] : "Google News"), tier: "press", via: "googlenews", edition: ed.gl });
+          cands.push({ url: it.link, title: m ? m[1] : it.title, snippet: "", date: it.date, source: it.source || (m ? m[2] : "Google News"), tier: "press", via: "googlenews", edition: ed.gl, domain: hostOf(it.sourceUrl) });
         }
         add(name, "googlenews", true, items.length);
       } catch (e) { add(name, "googlenews", false, 0, e); }
@@ -153,7 +158,7 @@ async function collectAll(cfg, env, http, now, log) {
         let j;
         try { j = await http(u, { json: true, retries: 0 }); } catch (e) { await sleep(7000); j = await http(u, { json: true, retries: 0 }); }
         const arts = j.articles || [];
-        for (const a of arts) cands.push({ url: a.url, title: a.title, snippet: "", date: a.seendate, source: a.domain, tier: "press", via: "gdelt", lang: a.language, edition: a.sourcecountry });
+        for (const a of arts) cands.push({ url: a.url, title: a.title, snippet: "", date: a.seendate, source: a.domain, tier: "press", via: "gdelt", lang: a.language, edition: a.sourcecountry, domain: String(a.domain || hostOf(a.url)).toLowerCase().replace(/^www\./, "") });
         gFails = 0; add(name, "gdelt", true, arts.length);
       } catch (e) { gFails++; add(name, "gdelt", false, 0, e); }
       await sleep(5500);
@@ -172,7 +177,7 @@ async function collectAll(cfg, env, http, now, log) {
         const j = await http(u, { json: true, retries: 0, headers: { "X-ACCESS-KEY": env.NEWSDATA_API_KEY } });
         used++; env.__ndUsedOut = used;
         if (j.status !== "success") { const msg = j.results?.message || j.results?.code || "erreur"; if (/rate|limit|quota/i.test(msg)) stop = true; throw new Error(msg); }
-        for (const a of j.results || []) cands.push({ url: a.link, title: a.title, snippet: (a.description || "").slice(0, 500), date: a.pubDate, source: a.source_name || a.source_id || "NewsData", tier: "press", via: "newsdata", lang: a.language, edition: c.toUpperCase() });
+        for (const a of j.results || []) cands.push({ url: a.link, title: a.title, snippet: (a.description || "").slice(0, 500), date: a.pubDate, source: a.source_name || a.source_id || "NewsData", tier: "press", via: "newsdata", lang: a.language, edition: c.toUpperCase(), domain: hostOf(a.link) });
         add(name, "newsdata", true, (j.results || []).length);
       } catch (e) { used++; env.__ndUsedOut = used; if (/HTTP 429|HTTP 401|HTTP 403/.test(String(e.message))) stop = true; add(name, "newsdata", false, 0, e); }
     }
@@ -186,7 +191,7 @@ async function collectAll(cfg, env, http, now, log) {
       try {
         const u = `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(q)}&tags=story&numericFilters=${encodeURIComponent(`points>${cfg.hackernews.minPoints},created_at_i>${since}`)}&hitsPerPage=${cfg.hackernews.perQuery}`;
         const j = await http(u, { json: true });
-        for (const h of j.hits || []) cands.push({ url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, title: h.title, snippet: `${h.points} points sur Hacker News`, date: h.created_at, source: "Hacker News", tier: "aggregator", via: "hn" });
+        for (const h of j.hits || []) cands.push({ url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, title: h.title, snippet: `${h.points} points sur Hacker News`, date: h.created_at, source: "Hacker News", tier: "press", via: "hn", domain: hostOf(h.url) });
         add(name, "hn", true, (j.hits || []).length);
       } catch (e) { add(name, "hn", false, 0, e); }
     }
@@ -252,6 +257,7 @@ async function collectAll(cfg, env, http, now, log) {
 const SYSTEM = `Tu es l'analyste d'un radar d'actualité sur l'intelligence artificielle et son économie. Pour chaque article fourni (champ i, source, title, snippet, date), renvoie un objet JSON.
 Règles :
 - relevant : true seulement si l'article porte sur l'IA, les puces/mémoire/fonderie pour l'IA, les datacenters ou l'énergie pour l'IA, le financement/les résultats d'acteurs de l'IA, ou la régulation de l'IA. Sinon false.
+- relevant = false aussi pour : newsletters, digests ou récapitulatifs hebdomadaires, listes « top N », tutoriels, contenus promotionnels ou de référencement, conseils boursiers, et billets d'opinion sans fait nouveau. Seuls comptent les articles qui rapportent un fait, une décision, un chiffre, un produit ou une analyse sourcée.
 - title_fr : titre en français, fidèle à l'original, sans ajout.
 - summary_fr : 1 à 2 phrases en français, 260 caractères maximum, UNIQUEMENT à partir des faits présents dans le titre et l'extrait. N'ajoute aucun chiffre, aucune date, aucun nom absent du texte. Si l'extrait est vide, reformule le titre.
 - country : pays de l'acteur principal dont parle l'information (pas le pays du média). US, CN, EU (Europe, Royaume-Uni inclus), GULF (Arabie saoudite, Émirats, Qatar...), OTHER (Taïwan, Corée, Japon, Inde, reste du monde).
@@ -276,7 +282,7 @@ const SCHEMA = {
 function makeClassifier(env, fetchImpl, log) {
   const models = (env.GEMINI_MODELS || "gemini-3.5-flash,gemini-2.5-flash,gemini-2.5-flash-lite").split(",").map((s) => s.trim()).filter(Boolean);
   let mi = 0, last = 0, calls = 0; const minGap = +env.GEMINI_MIN_GAP_MS || 4500;
-  const state = { error: null, model: null, get calls() { return calls; } };
+  const state = { error: null, model: null, fatal: false, get calls() { return calls; } };
   async function call(list) {
     let tries = 0;
     while (mi < models.length) {
@@ -299,17 +305,20 @@ function makeClassifier(env, fetchImpl, log) {
         } catch (e) { if (++tries <= 1) continue; state.error = `réponse Gemini illisible (${model}) : ${e.message}`; return null; }
       }
       const msg = body.slice(0, 300).replace(/\s+/g, " ");
-      if (/API_KEY_INVALID|API key not valid/i.test(body)) { state.error = "clé Gemini invalide (API_KEY_INVALID)"; return null; }
+      if (/API_KEY_INVALID|API key not valid/i.test(body)) { state.error = "clé Gemini invalide (API_KEY_INVALID)"; state.fatal = true; return null; }
       if (r.status === 429) {
         const m = body.match(/"retryDelay":\s*"(\d+)/); const delay = m ? +m[1] : 30;
         if (/PerDay|per day/i.test(body) || delay > 70 || tries >= 2) { log(`Gemini ${model} : quota épuisé, modèle suivant`); mi++; tries = 0; continue; }
         tries++; await sleep((delay + 2) * 1000); continue;
       }
-      if (r.status === 404 || r.status === 400 || r.status === 403) { log(`Gemini ${model} indisponible (${r.status}) : ${msg}`); if (r.status === 403 && /API key|PERMISSION|leaked/i.test(body)) { state.error = "clé Gemini refusée : " + msg; return null; } mi++; tries = 0; continue; }
-      if (r.status >= 500 && ++tries <= 2) { await sleep(4000 * tries); continue; }
+      if (r.status === 404 || r.status === 400 || r.status === 403) { log(`Gemini ${model} indisponible (${r.status}) : ${msg}`); if (r.status === 403 && /API key|PERMISSION|leaked/i.test(body)) { state.error = "clé Gemini refusée : " + msg; state.fatal = true; return null; } mi++; tries = 0; continue; }
+      if (r.status >= 500) {
+        if (++tries <= 2) { await sleep(12000 * tries); continue; }
+        log(`Gemini ${model} saturé (${r.status}) : modèle suivant`); state.error = `Gemini HTTP ${r.status} (${model}) : ${msg}`; mi++; tries = 0; continue;
+      }
       state.error = `Gemini HTTP ${r.status} : ${msg}`; return null;
     }
-    state.error = state.error || "tous les modèles Gemini sont indisponibles ou à quota épuisé"; return null;
+    state.error = state.error || "tous les modèles Gemini sont indisponibles ou à quota épuisé"; state.fatal = true; return null;
   }
   return { call, state };
 }
@@ -347,9 +356,12 @@ export async function run(opts = {}) {
   }
   const rejected = state.rejected || {};
   for (const [k, ts] of Object.entries(rejected)) if (nowMs - ts > 30 * 86400000) delete rejected[k];
-  const fresh = []; const seen = new Set();
+  const Q = cfg.quality || {}; const allow = Q.allowDomains || []; const blockPaths = Q.blockPaths || [];
+  const fresh = []; const seen = new Set(); let untrusted = 0;
   for (const c of cands) {
     if (!c.url || !c.title) continue;
+    if (DISCOVERY.has(c.via) && allow.length && !domainIn(c.domain, allow)) { untrusted++; continue; }
+    if (blockPaths.some((b) => `${c.domain}${(() => { try { return new URL(c.url).pathname; } catch { return ""; } })()}`.includes(b))) { untrusted++; continue; }
     const cu = canonicalUrl(c.url); const id = sha(cu);
     if (known.has(cu) || known.has(id) || rejected[id] || seen.has(cu)) continue;
     const text = `${c.title} ${c.snippet || ""}`;
@@ -361,31 +373,47 @@ export async function run(opts = {}) {
     seen.add(cu);
     fresh.push({ ...c, id, ts, cu, tok: tokens(c.title) });
   }
-  fresh.sort((a, b) => (TIER_RANK[a.tier] - TIER_RANK[b.tier]) || b.ts.localeCompare(a.ts));
+  fresh.sort((a, b) => b.ts.localeCompare(a.ts));
   const uniq = [];
   for (const c of fresh) {
     if (uniq.some((u) => jaccard(u.tok, c.tok) >= 0.6)) continue;
     uniq.push(c);
   }
-  const cap = +env.MAX_CLASSIFY || 150;
-  const queue = uniq.slice(0, cap);
-  log(`À classer : ${queue.length} (sur ${uniq.length} nouveaux uniques)`);
+  // file d'attente équilibrée : plafonds par source et par type (évite qu'arXiv ou un blog n'occupe tout)
+  const cap = +env.MAX_CLASSIFY || 200;
+  const KIND_CAP = { arxiv: 8, hf: 5, fedreg: 8, hn: 8 }; const perSource = +env.MAX_PER_SOURCE || 8;
+  const cntSrc = {}, cntKind = {}; const queue = [];
+  for (const c of uniq) {
+    if (queue.length >= cap) break;
+    const ks = String(c.source).toLowerCase();
+    if ((cntSrc[ks] || 0) >= perSource || (cntKind[c.via] || 0) >= (KIND_CAP[c.via] ?? 999)) continue;
+    cntSrc[ks] = (cntSrc[ks] || 0) + 1; cntKind[c.via] = (cntKind[c.via] || 0) + 1; queue.push(c);
+  }
+  log(`À classer : ${queue.length} (sur ${uniq.length} nouveaux uniques ; ${untrusted} écartés car média hors liste de confiance)`);
 
   // classement Gemini
   const added = []; let rejectedNow = 0; let classifier = null; let calls = 0;
   if (queue.length && env.GEMINI_API_KEY) {
     classifier = makeClassifier(env, fetchImpl, log);
     const BATCH = +env.GEMINI_BATCH || 25; const maxCalls = +env.GEMINI_MAX_CALLS || 8;
-    for (let b = 0; b < queue.length && calls < maxCalls; b += BATCH) {
-      const slice = queue.slice(b, b + BATCH);
+    const batches = []; for (let b = 0; b < queue.length; b += BATCH) batches.push(queue.slice(b, b + BATCH));
+    const failed = []; const maxTotal = maxCalls + 2;
+    for (let bi = 0; bi < batches.length || (failed.length && calls < maxTotal); bi++) {
+      const slice = bi < batches.length ? batches[bi] : failed.shift();
+      if (!slice || calls >= maxTotal || (bi < batches.length && calls >= maxCalls)) break;
       const res = await classifier.call(slice.map((c, i) => ({ i, source: c.source, title: c.title, snippet: (c.snippet || "").slice(0, 400), date: c.ts.slice(0, 10) })));
       calls++;
-      if (!res) { log("Gemini : " + classifier.state.error); break; }
+      if (!res) {
+        log("Gemini : " + classifier.state.error);
+        if (classifier.state.fatal) break;
+        if (!slice.retried) { slice.retried = true; failed.push(slice); }
+        continue;
+      }
       const by = new Map(res.map((r) => [r.i, r]));
       slice.forEach((c, i) => {
         const r = by.get(i); if (!r) return;
         if (!r.relevant) { rejected[c.id] = nowMs; rejectedNow++; return; }
-        const conf = c.conf || CONF[c.tier] || "moyenne";
+        const conf = (c.tier === "primary" || domainIn(c.domain, Q.primaryDomains || [])) ? "haute" : "moyenne";
         const country = COUNTRIES.includes(r.country) ? r.country : (c.hint && COUNTRIES.includes(c.hint) ? c.hint : "OTHER");
         added.push({
           id: c.id, ts: c.ts, title: (r.title_fr || c.title).trim(), orig: c.title.slice(0, 200), summary: (r.summary_fr || "").trim().slice(0, 300),
