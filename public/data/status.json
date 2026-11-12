@@ -1,24 +1,27 @@
 {
- "updated_at": "2026-11-12T10:14:40.152Z",
+ "updated_at": "2026-11-12T13:22:52.614Z",
  "mode": "live",
  "last_run": {
-  "started_at": "2026-11-12T10:09:04.381Z",
-  "duration_s": 336,
-  "candidates": 1211,
-  "new_unique": 56,
-  "queued": 52,
+  "started_at": "2026-11-12T13:19:09.358Z",
+  "duration_s": 223,
+  "candidates": 1206,
+  "new_unique": 51,
+  "queued": 51,
   "classified_calls": 2,
   "model": "gemini-3.6-flash",
-  "added": 31,
+  "added": 46,
   "fallback": 0,
-  "rejected": 21,
-  "total_items": 1046,
+  "rejected": 5,
+  "total_items": 1092,
   "errors": [],
   "gemini": [
    "modèles disponibles : gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemini-3.1-flash-lite-preview, gemini-3-flash-preview, gemini-2.5-flash, gemini-2.5-flash-lite",
-   "gemini-3.8-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
    "gemini-3.8-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
+   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
+   "gemini-3.6-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
+   "gemini-3.5-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
+   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
+   "gemini-3.8-flash : réseau (The operation was aborted due to timeout)",
    "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a"
   ],
   "sources": [
@@ -35,7 +38,13 @@
     "n": 18
    },
    {
-    "name": "AWS Machine Learning",
+    "name": "Google DeepMind",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "TechCrunch IA",
     "kind": "rss",
     "ok": true,
     "n": 20
@@ -47,25 +56,7 @@
     "n": 25
    },
    {
-    "name": "Google AI",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
-    "name": "Ars Technica",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
-    "name": "Wired IA",
-    "kind": "rss",
-    "ok": true,
-    "n": 10
-   },
-   {
-    "name": "TechCrunch IA",
+    "name": "AWS Machine Learning",
     "kind": "rss",
     "ok": true,
     "n": 20
@@ -77,16 +68,34 @@
     "n": 10
    },
    {
-    "name": "CNBC Tech",
+    "name": "Ars Technica",
     "kind": "rss",
     "ok": true,
-    "n": 25
+    "n": 20
    },
    {
     "name": "MIT Technology Review IA",
     "kind": "rss",
     "ok": true,
     "n": 10
+   },
+   {
+    "name": "Google AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Wired IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "CNBC Tech",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
    },
    {
     "name": "DatacenterDynamics",
@@ -101,19 +110,19 @@
     "n": 25
    },
    {
-    "name": "Google DeepMind",
+    "name": "The Register IA",
     "kind": "rss",
     "ok": true,
     "n": 25
    },
    {
-    "name": "EE Times",
+    "name": "Utility Dive",
     "kind": "rss",
     "ok": true,
     "n": 10
    },
    {
-    "name": "Utility Dive",
+    "name": "EE Times",
     "kind": "rss",
     "ok": true,
     "n": 10
@@ -125,22 +134,16 @@
     "n": 25
    },
    {
-    "name": "The Register IA",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
-    "name": "Pandaily",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
     "name": "SCMP Tech",
     "kind": "rss",
     "ok": true,
     "n": 25
+   },
+   {
+    "name": "Semiconductor Engineering",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
    },
    {
     "name": "Sifted",
@@ -153,12 +156,6 @@
     "kind": "rss",
     "ok": true,
     "n": 25
-   },
-   {
-    "name": "Semiconductor Engineering",
-    "kind": "rss",
-    "ok": true,
-    "n": 10
    },
    {
     "name": "VentureBeat IA",
@@ -180,6 +177,19 @@
     "n": 20
    },
    {
+    "name": "Pandaily",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "TechNode",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
+   },
+   {
     "name": "Epoch AI",
     "kind": "rss",
     "ok": true,
@@ -198,17 +208,11 @@
     "n": 10
    },
    {
-    "name": "TechNode",
+    "name": "Rest of World",
     "kind": "rss",
     "ok": false,
     "n": 0,
     "err": "HTTP 403"
-   },
-   {
-    "name": "Mistral AI",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
    },
    {
     "name": "Arab News",
@@ -229,11 +233,10 @@
     "n": 25
    },
    {
-    "name": "Rest of World",
+    "name": "Mistral AI",
     "kind": "rss",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 403"
+    "ok": true,
+    "n": 25
    },
    {
     "name": "SemiAnalysis",
@@ -241,6 +244,12 @@
     "ok": false,
     "n": 0,
     "err": "HTTP 403"
+   },
+   {
+    "name": "Digitimes",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
    },
    {
     "name": "ServeTheHome",
@@ -255,6 +264,12 @@
     "n": 25
    },
    {
+    "name": "ZDNet IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
     "name": "Import AI",
     "kind": "rss",
     "ok": false,
@@ -262,13 +277,7 @@
     "err": "HTTP 403"
    },
    {
-    "name": "Digitimes",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
-    "name": "ZDNet IA",
+    "name": "Data Center Knowledge",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -278,12 +287,6 @@
     "kind": "rss",
     "ok": true,
     "n": 20
-   },
-   {
-    "name": "Data Center Knowledge",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
    },
    {
     "name": "Google News États-Unis · OpenAI Anthropic Google Gemini",
@@ -298,13 +301,13 @@
     "n": 12
    },
    {
-    "name": "Google News États-Unis · artificial intelligence",
+    "name": "Google News Royaume-Uni · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Royaume-Uni · artificial intelligence",
+    "name": "Google News États-Unis · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -334,7 +337,7 @@
     "n": 12
    },
    {
-    "name": "Google News Émirats · AI chips Nvidia data center",
+    "name": "Google News Allemagne · künstliche Intelligenz",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -346,13 +349,19 @@
     "n": 12
    },
    {
+    "name": "Google News Émirats · AI chips Nvidia data center",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
     "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Allemagne · künstliche Intelligenz",
+    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -376,19 +385,13 @@
     "n": 12
    },
    {
-    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
+    "name": "Google News Inde · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
     "name": "Google News Inde · OpenAI Anthropic Google Gemini",
-    "kind": "googlenews",
-    "ok": true,
-    "n": 12
-   },
-   {
-    "name": "Google News Inde · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -406,13 +409,13 @@
     "n": 12
    },
    {
-    "name": "Google News Singapour · AI chips Nvidia data center",
+    "name": "Google News Singapour · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Singapour · OpenAI Anthropic Google Gemini",
+    "name": "Google News Singapour · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -422,27 +425,28 @@
     "kind": "gdelt",
     "ok": false,
     "n": 0,
-    "err": "The operation was aborted due to timeout"
+    "err": "HTTP 429"
    },
    {
     "name": "GDELT Chine",
-    "kind": "gdelt",
-    "ok": true,
-    "n": 0
-   },
-   {
-    "name": "GDELT Chine (zh)",
     "kind": "gdelt",
     "ok": false,
     "n": 0,
     "err": "fetch failed"
    },
    {
+    "name": "GDELT Chine (zh)",
+    "kind": "gdelt",
+    "ok": false,
+    "n": 0,
+    "err": "ignoré (GDELT indisponible)"
+   },
+   {
     "name": "GDELT Golfe",
     "kind": "gdelt",
     "ok": false,
     "n": 0,
-    "err": "HTTP 429"
+    "err": "ignoré (GDELT indisponible)"
    },
    {
     "name": "GDELT Europe",
@@ -547,7 +551,7 @@
     "name": "Hacker News · LLM",
     "kind": "hn",
     "ok": true,
-    "n": 8
+    "n": 7
    },
    {
     "name": "Hacker News · OpenAI",
@@ -571,7 +575,7 @@
     "name": "Hugging Face Daily Papers",
     "kind": "hf",
     "ok": true,
-    "n": 3
+    "n": 2
    },
    {
     "name": "arXiv",
@@ -589,13 +593,13 @@
     "name": "SEC Microsoft",
     "kind": "edgar",
     "ok": true,
-    "n": 1
+    "n": 0
    },
    {
     "name": "SEC Alphabet",
     "kind": "edgar",
     "ok": true,
-    "n": 1
+    "n": 0
    },
    {
     "name": "SEC Amazon",
@@ -607,13 +611,13 @@
     "name": "SEC Meta",
     "kind": "edgar",
     "ok": true,
-    "n": 1
+    "n": 0
    },
    {
     "name": "SEC TSMC",
     "kind": "edgar",
     "ok": true,
-    "n": 2
+    "n": 3
    },
    {
     "name": "SEC AMD",
@@ -631,7 +635,7 @@
     "name": "SEC Micron",
     "kind": "edgar",
     "ok": true,
-    "n": 1
+    "n": 0
    },
    {
     "name": "SEC Oracle",
@@ -647,5 +651,5 @@
    }
   ]
  },
- "last_attempt": "2026-11-12T10:14:40.152Z"
+ "last_attempt": "2026-11-12T13:22:52.614Z"
 }
