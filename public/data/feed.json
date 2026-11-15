@@ -1,6 +1,34 @@
 {
  "items": [
   {
+   "id": "cdf34d438f12",
+   "ts": "2026-11-15T00:08:07.000Z",
+   "title": "Où était l'équipe de sécurité de Nvidia ?",
+   "orig": "Where was Nvidia’s security team?",
+   "summary": "Le chef de la sécurité de Nvidia est parti en août après le départ du PDG Jensen Huang, lié à des relations avec un cadre suspecté d'acheminer des puces vers la Chine.",
+   "country": "US",
+   "category": "puces",
+   "importance": 3,
+   "layer": "Puces",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "c25ba603a7ac",
+   "ts": "2026-11-15T00:06:00.000Z",
+   "title": "Une enquête menée par le Japon identifie 1 000 serveurs utilisés pour des cyberattaques par IA",
+   "orig": "Japan-led probe finds 1,000 servers likely used for AI-driven cyberattacks",
+   "summary": "Une enquête dirigée par le Japon a découvert 1 000 serveurs susceptibles d'être utilisés pour exécuter des cyberattaques alimentées par l'intelligence artificielle.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "The Straits Times",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQWXhQRVFhUFJLUXhvcTVybFNCREZpNnRVRnZhM3FKZXJlMDctZXQ2YWFsX3VSNTR3RVNMMzVsUWRQUGdZTjFMeGNNaldSYUxRY1RDQ1RmZG1FNXdUQzBoWW5EVW1adFFZOV9nMnlZYUY4UmhKTlpmOUM1X2RWQnk4aFphU3plOEZobVFBM1RvWXp0NGdRdG1HUlptYUNmVFJKUDZrRUFsUkFOTHFRYmxKWVBxWnJxRkdY?oc=5",
+   "confidence": "moyenne"
+  },
+  {
    "id": "00af6c53bcab",
    "ts": "2026-11-14T21:43:17.127Z",
    "title": "Digital Realty Trust va dépenser 10 milliards de dollars de plus pour les centres de données au Japon : PDG",
@@ -379,6 +407,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "ddae6c038d13",
+   "ts": "2026-11-14T13:09:19.000Z",
+   "title": "Le scandale Nvidia met la rivalité IA sino-américaine sous les projecteurs avant la rencontre Trump-Xi",
+   "orig": "Nvidia scandal puts US-China AI rivalry under spotlight ahead of Trump-Xi meeting",
+   "summary": "Des parlementaires profitent du scandale Nvidia pour réclamer un durcissement des restrictions sur les exportations de technologies avant le sommet entre Donald Trump et Xi Jinping.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "Hindustan Times",
+   "url": "https://www.hindustantimes.com/world-news/nvidia-scandal-puts-us-china-ai-rivalry-under-spotlight-ahead-of-trump-xi-meeting-101794661314647.html",
+   "confidence": "moyenne"
+  },
+  {
    "id": "2d0b073c833d",
    "ts": "2026-11-14T13:01:26.000Z",
    "title": "Neousys Technology affiche un trimestre record porté par la défense et l'IA embarquée",
@@ -404,6 +446,20 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD222/gemtek-networking-ic-equipment-business-growth-2027.html",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "31b9d10a6406",
+   "ts": "2026-11-14T13:00:06.000Z",
+   "title": "5 grandes questions alors que les PDG se réunissent en Chine",
+   "orig": "5 Big Questions as C.E.O.s Meet in China",
+   "summary": "Donald Trump et des dirigeants américains de la tech doivent se réunir à Shenzhen pour aborder la guerre commerciale, les contrôles d'exportation et des affaires d'espionnage.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "The New York Times",
+   "url": "https://www.nytimes.com/2026/11/14/business/dealbook/questions-china-us-apec-summit.html",
    "confidence": "moyenne"
   },
   {
@@ -435,6 +491,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "7365e96d4808",
+   "ts": "2026-11-14T12:11:33.000Z",
+   "title": "L'IA réduit le temps de développement des parfums jusqu'à 30 %, selon des experts",
+   "orig": "AI cuts perfume development time by up to 30%, industry experts say",
+   "summary": "L'intelligence artificielle aide les géants de la cosmétique à concevoir des parfums en réduisant les délais de développement de près de 30 %.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Gulf News",
+   "url": "https://gulfnews.com/technology/ai-cuts-perfume-development-time-by-up-to-30-industry-experts-say-1.500747314",
+   "confidence": "moyenne"
+  },
+  {
    "id": "df871c83a9d3",
    "ts": "2026-11-14T11:00:55.000Z",
    "title": "AirTrunk signe un protocole d'accord pour 1,8 GW de capacité de datacenters en Andhra Pradesh, en Inde",
@@ -446,6 +516,34 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/airtrunk-signs-mou-for-18gw-of-data-center-capacity-in-andhra-pradesh-india/",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "746b89795702",
+   "ts": "2026-11-14T10:12:58.000Z",
+   "title": "136,5 milliards de dollars de pertes dues aux escroqueries en Asie : alerte sur la menace de l'IA",
+   "orig": "Scam losses across Asia estimated at US$136.5b in past year; experts warn of growing AI threat",
+   "summary": "La Global Anti-Scam Alliance met en garde contre la menace croissante de l'IA utilisée par les réseaux criminels, responsable de 136,5 milliards de dollars de pertes en Asie.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "Channel Newsasia",
+   "url": "https://www.channelnewsasia.com/asia/asia-scams-136-billion-global-anti-scam-alliance-summit-ai-threat-6549101",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "db8c2d037cb1",
+   "ts": "2026-11-14T09:24:57.000Z",
+   "title": "Tesla invite certains clients à acheter le Cybercab pour un usage personnel",
+   "orig": "Tesla Invites Select Customers to Buy Cybercab for Personal Use",
+   "summary": "Tesla invite des clients sélectionnés à acheter le robotaxi Cybercab au prix de 29 990 dollars avec un abonnement à l'autonomie de 299 dollars par mois.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "Al-sharq Al-awsat",
+   "url": "https://english.aawsat.com/node/5341084",
    "confidence": "moyenne"
   },
   {
@@ -20900,104 +20998,6 @@
    "layer": "Recherche",
    "source": "arXiv",
    "url": "https://arxiv.org/abs/2611.09872v1",
-   "confidence": "haute"
-  },
-  {
-   "id": "6754b11ac93c",
-   "ts": "2026-11-06T18:48:20.000Z",
-   "title": "Cosmic au SEMICON Europa 2026 : faire progresser les solutions de test de semi-conducteurs à haute complexité",
-   "orig": "Cosmic at SEMICON Europa 2026: Advancing High-Complexity Semiconductor Test Solutions",
-   "summary": "Cosmic présente ses solutions de test pour semi-conducteurs lors du salon SEMICON Europa.",
-   "country": "EU",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Fonderie",
-   "source": "EE Times",
-   "url": "https://www.eetimes.com/cosmic-at-semicon-europa-2026-advancing-high-complexity-semiconductor-test-solutions/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "788793853b60",
-   "ts": "2026-11-06T18:48:04.000Z",
-   "title": "CodeQuant2 : atténuation renforcée des valeurs aberrantes et regroupement adaptatif pour modèles de raisonnement à faible précision",
-   "orig": "CodeQuant2: Enhanced Outlier Mitigation and Adaptive Clustering for Low-Precision LRMs",
-   "summary": "Présentation de CodeQuant2 pour réduire les coûts d'inférence des grands modèles de raisonnement grâce à une quantification à faible précision optimisée.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.09868v1",
-   "confidence": "haute"
-  },
-  {
-   "id": "2a740f2ceb56",
-   "ts": "2026-11-06T18:47:23.000Z",
-   "title": "GRAC : légendage basé sur le graphe et la génération augmentée par récupération pour la description de scènes chirurgicales",
-   "orig": "GRAC: Graph-Based Retrieval-Augmented Captioning for Surgical Scene Description",
-   "summary": "Les auteurs proposent GRAC, une méthode basée sur les graphes et la RAG pour automatiser les descriptions de scènes chirurgicales.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.09866v1",
-   "confidence": "haute"
-  },
-  {
-   "id": "29c568495a81",
-   "ts": "2026-11-06T18:44:38.000Z",
-   "title": "Des centaines d'outils de piratage Artex AI trouvés exposés publiquement sur le web",
-   "orig": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
-   "summary": "Des chercheurs en sécurité ont découvert des centaines de serveurs hébergeant des outils de test d'intrusion exposés en ligne.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "f4e16ceb961b",
-   "ts": "2026-11-06T18:44:33.000Z",
-   "title": "Grasp-TAGS : sélection de prise consciente de la tâche par distillation du critique pour la loco-manipulation préhensile",
-   "orig": "Grasp-TAGS: Task-Aware Grasp Selection via Critic Distillation for Prehensile Loco-Manipulation",
-   "summary": "Cette étude propose une méthode de sélection de prise destinée aux robots manipulateurs mobiles effectuant des tâches de réorganisation à long horizon.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.09864v1",
-   "confidence": "haute"
-  },
-  {
-   "id": "016e849ea3ab",
-   "ts": "2026-11-06T18:44:20.000Z",
-   "title": "Meta présente Spaces, une nouvelle façon de collaborer avec votre agent Muse",
-   "orig": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
-   "summary": "Meta introduit Spaces pour offrir une nouvelle méthode d'interaction avec ses agents conversationnels Muse.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Modèles",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "1b6dcdb41621",
-   "ts": "2026-11-06T18:44:08.000Z",
-   "title": "Alignement guidé par le flux de l'espace cible via la cohérence des chemins",
-   "orig": "Flow-Guided Target-Space Alignment via Path Consistency",
-   "summary": "Cet article traite des problèmes d'alignement multimodal en proposant une méthode préservant la structure globale et la correspondance des paires.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.09863v1",
    "confidence": "haute"
   }
  ]
