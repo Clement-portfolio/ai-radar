@@ -256,8 +256,7 @@ async function collectAll(cfg, env, http, now, log) {
 /* ---------- Gemini ---------- */
 const SYSTEM = `Tu es l'analyste d'un radar d'actualité sur l'intelligence artificielle et son économie. Pour chaque article fourni (champ i, source, title, snippet, date), renvoie un objet JSON.
 Règles :
-- relevant : true seulement si l'article porte sur l'IA, les puces/mémoire/fonderie pour l'IA, les datacenters ou l'énergie pour l'IA, le financement/les résultats d'acteurs de l'IA, ou la régulation de l'IA. Sinon false.
-- relevant = false aussi pour : newsletters, digests ou récapitulatifs hebdomadaires, listes « top N », tutoriels, contenus promotionnels ou de référencement, conseils boursiers, et billets d'opinion sans fait nouveau. Seuls comptent les articles qui rapportent un fait, une décision, un chiffre, un produit ou une analyse sourcée.
+- relevant : true si l'article se rattache à l'IA ou à son économie : modèles et produits d'IA, puces/mémoire/fonderie, datacenters, énergie pour l'IA, financement et résultats des acteurs de l'IA, régulation, usages, adoption, recherche. En cas de doute, mets true avec importance 1. Mets false seulement si l'article n'a clairement aucun rapport avec l'IA (autre sujet, publicité, bons de réduction, conseils boursiers sans fait) et donne alors, dans reason, la raison en 8 mots maximum.
 - title_fr : titre en français, fidèle à l'original, sans ajout.
 - summary_fr : 1 à 2 phrases en français, 260 caractères maximum, UNIQUEMENT à partir des faits présents dans le titre et l'extrait. N'ajoute aucun chiffre, aucune date, aucun nom absent du texte. Si l'extrait est vide, reformule le titre.
 - country : pays de l'acteur principal dont parle l'information (pas le pays du média). US, CN, EU (Europe, Royaume-Uni inclus), GULF (Arabie saoudite, Émirats, Qatar...), OTHER (Taïwan, Corée, Japon, Inde, reste du monde).
@@ -273,7 +272,7 @@ const SCHEMA = {
     properties: {
       i: { type: "INTEGER" }, relevant: { type: "BOOLEAN" }, title_fr: { type: "STRING" }, summary_fr: { type: "STRING" },
       country: { type: "STRING", enum: COUNTRIES }, category: { type: "STRING", enum: CATEGORIES },
-      importance: { type: "INTEGER" }, layer: { type: "STRING", enum: LAYERS },
+      importance: { type: "INTEGER" }, layer: { type: "STRING", enum: LAYERS }, reason: { type: "STRING" },
     },
     required: ["i", "relevant", "title_fr", "summary_fr", "country", "category", "importance", "layer"],
   },
@@ -402,7 +401,10 @@ export async function run(opts = {}) {
     known.add(canonicalUrl(it.url)); known.add(it.id);
     if (nowMs - new Date(it.ts).getTime() < 10 * 86400000) { knownTok.push(tokens(it.title)); if (it.orig) knownTok.push(tokens(it.orig)); }
   }
-  const rejected = state.rejected || {};
+  const PROMPT_V = 2; // changer cette valeur relance le jugement des articles précédemment écartés
+  const rejected = state.promptV === PROMPT_V ? (state.rejected || {}) : {};
+  const yieldStats = state.yield || {}; const rejSamples = state.rejSamples || [];
+  const yk = (c) => (c.via === "rss" ? c.source : `${c.via}${c.edition ? " · " + c.edition : ""}`);
   for (const [k, ts] of Object.entries(rejected)) if (nowMs - ts > 30 * 86400000) delete rejected[k];
   const Q = cfg.quality || {}; const allow = Q.allowDomains || []; const blockPaths = Q.blockPaths || [];
   const fresh = []; const seen = new Set(); let untrusted = 0;
@@ -413,7 +415,7 @@ export async function run(opts = {}) {
     const cu = canonicalUrl(c.url); const id = sha(cu);
     if (known.has(cu) || known.has(id) || rejected[id] || seen.has(cu)) continue;
     const text = `${c.title} ${c.snippet || ""}`;
-    if ((c.filter || c.via === "gdelt" || c.via === "googlenews") && !(AI_RE.test(text) || AI_CJK.test(text))) continue;
+    if ((c.filter || c.via === "gdelt" || c.via === "googlenews" || c.via === "newsdata") && !(AI_RE.test(text) || AI_CJK.test(text))) continue;
     const ts = parseDate(c.date, new Date(nowMs).toISOString());
     if (nowMs - new Date(ts).getTime() > maxAgeFor(c, maxAge)) continue;
     if (new Date(ts).getTime() > nowMs + 86400000) continue;
@@ -470,7 +472,13 @@ export async function run(opts = {}) {
       slice.forEach((c, i) => {
         const r = by.get(i); if (!r) return;
         handled.add(c.id);
-        if (!r.relevant) { rejected[c.id] = nowMs; rejectedNow++; if (c.pendingOld) dropIds.add(c.id); return; }
+        const y = c.pendingOld ? null : (yieldStats[yk(c)] ||= { k: 0, r: 0 });
+        if (!r.relevant) {
+          rejected[c.id] = nowMs; rejectedNow++; if (c.pendingOld) dropIds.add(c.id); else y.r++;
+          rejSamples.push({ ti: c.title.slice(0, 110), s: c.source, r: String(r.reason || "").slice(0, 70), d: new Date(nowMs).toISOString().slice(0, 10) }); if (rejSamples.length > 60) rejSamples.shift();
+          return;
+        }
+        if (y) y.k++;
         const conf = c.conf || ((c.tier === "primary" || domainIn(c.domain, Q.primaryDomains || [])) ? "haute" : "moyenne");
         const country = COUNTRIES.includes(r.country) ? r.country : (c.hint && COUNTRIES.includes(c.hint) ? c.hint : "OTHER");
         added.push({
@@ -508,14 +516,14 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, gemini: classifier?.state.diag || [], sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
   if (!opts.dry) {
     await fs.mkdir(dataDir, { recursive: true });
     if (okCount > 0 && (added.length || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
-    await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
+    await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     await fs.writeFile(path.join(dataDir, "status.json"), JSON.stringify(out, null, 1));
   }
   log(`Terminé : +${added.length} articles, ${rejectedNow} écartés, ${keep.length} au total, ${errors.length} alerte(s)`);

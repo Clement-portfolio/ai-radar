@@ -269,13 +269,29 @@
     "name": "États-Unis",
     "hl": "en-US",
     "gl": "US",
-    "ceid": "US:en"
+    "ceid": "US:en",
+    "queries": [
+     "artificial intelligence",
+     "AI chips Nvidia data center",
+     "OpenAI Anthropic Google Gemini",
+     "AI data center electricity power",
+     "AI regulation law",
+     "AI startup funding valuation",
+     "chip export controls China"
+    ]
    },
    {
     "name": "Royaume-Uni",
     "hl": "en-GB",
     "gl": "GB",
-    "ceid": "GB:en"
+    "ceid": "GB:en",
+    "queries": [
+     "artificial intelligence",
+     "AI chips Nvidia data center",
+     "OpenAI Anthropic Google Gemini",
+     "AI data center electricity power",
+     "AI regulation law"
+    ]
    },
    {
     "name": "France",
