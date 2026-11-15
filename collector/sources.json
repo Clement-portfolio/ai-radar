@@ -45,7 +45,8 @@
   {
    "name": "The Verge IA",
    "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-   "tier": "press"
+   "tier": "press",
+   "filter": true
   },
   {
    "name": "Ars Technica",
@@ -255,7 +256,8 @@
   {
    "name": "ZDNet IA",
    "url": "https://www.zdnet.com/topic/artificial-intelligence/rss.xml",
-   "tier": "press"
+   "tier": "press",
+   "filter": true
   }
  ],
  "googleNews": {

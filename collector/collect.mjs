@@ -415,7 +415,7 @@ export async function run(opts = {}) {
     const cu = canonicalUrl(c.url); const id = sha(cu);
     if (known.has(cu) || known.has(id) || rejected[id] || seen.has(cu)) continue;
     const text = `${c.title} ${c.snippet || ""}`;
-    if ((c.filter || c.via === "gdelt" || c.via === "googlenews" || c.via === "newsdata") && !(AI_RE.test(text) || AI_CJK.test(text))) continue;
+    if ((c.filter || c.via === "gdelt" || c.via === "googlenews" || c.via === "newsdata" || c.via === "fedreg") && !(AI_RE.test(text) || AI_CJK.test(text))) continue;
     const ts = parseDate(c.date, new Date(nowMs).toISOString());
     if (nowMs - new Date(ts).getTime() > maxAgeFor(c, maxAge)) continue;
     if (new Date(ts).getTime() > nowMs + 86400000) continue;
