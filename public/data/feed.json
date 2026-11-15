@@ -1,6 +1,20 @@
 {
  "items": [
   {
+   "id": "75a94a8a43cc",
+   "ts": "2026-11-15T18:15:13.000Z",
+   "title": "Affaire Nvidia : Lutnick aurait fait pression pour assouplir les règles sur les puces liées à des intérêts familiaux",
+   "orig": "Nvidia row: Lutnick pushed to weaken chip rules linked to family business",
+   "summary": "Howard Lutnick est mis en cause pour avoir exercé des pressions visant à assouplir les règles d'exportation de puces électroniques liées à l'entreprise de sa famille.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "Business Standard",
+   "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxON3VXeE5uYzZrcVdEd1gtOUlwMUpzRkF0YWNIWHp3ZUVkN2cyTUxPeWt5YVBWZ0VhN2U1eHlYNTJxemJYTjVhWkplY0tkRHJaeDIwV2pEMUtHeWJDS2NQTnIta2hQVlFiaHRQWUExeGxFM1hOSTc1NFpYUFFpbXpZMGtPY2hybmNtdWprWXRJUGI3SHZIcG40MTJZbkhRaFVnRUFuTVEzWmdZZVNZRWgwUWNzUDZia0F5S0p0ME9MblB0cWZBNUlvNlBGd2dwZlpSWDdR0gHYAUFVX3lxTFAzQ3c2Y3dWTExSSUVZazI1SDdmd0ZhcjRyRkswQkVYVkNkWW9Jb3dVajU3cjBYSmNDWXJLWUh2a1V5N0taQTg0N3luUmpUaENFbTU0VUxBYnRCdk1yRHZMV2pGZDFIajFTUXUtbGdFdy1KNXdIWmdFMV9UaDkzTHlISXhHdXh3cEdTWDhIY3lXYmFXV3NYQWVMRmk2eHlSN1BKenR0WlRCYnpnLWNCOEtxa2hDcGdfc2tHczNQa2hQbG1OdGRPeC11Z1NWRDBYbUhSYVB1ajBwTw?oc=5",
+   "confidence": "moyenne"
+  },
+  {
    "id": "ac2a2d7d52b3",
    "ts": "2026-11-15T18:10:18.000Z",
    "title": "Bessent appelle à une réorganisation drastique chez Nvidia et réclame un PDG externe",
@@ -180,6 +194,20 @@
    "layer": "Énergie",
    "source": "The Information",
    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdTlsNk9obzRYRlc2RGU5M2NfU0QycHljVTYySnd4eHJTUzRwa3N2Y2QzQmNWVm5RYnNlei1ybVJIZ3FTMG9RbV9PNkw0RERIcDRQSVMzNFYwX2ppWHVfdlg1WGc2amI4V3BLTVBvcktUeGtQREo1UVNqVjl5NUlVeDdvSHU4REtvSFZoVjVwclprVHppcVdzeDhXcVZfb0pRTWx4SGx5eERFZjhRM3lweWVYV0piX3JZ?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "aa8fff4f7458",
+   "ts": "2026-11-15T16:08:02.000Z",
+   "title": "Un centre de données économe en énergie ? Construisez-le sous l'eau",
+   "orig": "Want an Energy-Efficient Data Center? Build It Underwater",
+   "summary": "L'article étudie la viabilité et les avantages énergétiques de la construction de centres de données sous-marins.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "IEEE Spectrum",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1YVFB2Y2U0dXdsRmx4QzgzSUJFdmVVZGw1dXh1QWdjeC0ybTN2cGNWNHVCbTZRcHZJUnlnVTlmV3hkYmV1OG9rRjZaS1FjMldST1lrRXYxZ0dNaHBKWkEzMGxNRlFaTGJlNjdSdl9R?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -6511,6 +6539,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "e9b2308e4ac3",
+   "ts": "2026-11-12T20:51:55.000Z",
+   "title": "Quatre choix d'inférence sur Amazon Bedrock qui influent sur les coûts",
+   "orig": "Four Amazon Bedrock inference choices that affect cost",
+   "summary": "Quatre paramètres de requête (durée de cache, niveau de service, effort de raisonnement et nombre max de jetons) modifient le coût final d'inférence sur Amazon Bedrock.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/four-amazon-bedrock-inference-choices-that-affect-cost/",
+   "confidence": "haute"
+  },
+  {
    "id": "08689a2848f5",
    "ts": "2026-11-12T20:51:47.000Z",
    "title": "La faille Nvidia : les entreprises chinoises peuvent louer des puces de pointe en ligne",
@@ -6761,6 +6803,20 @@
    "source": "Le Monde.fr",
    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQM2xMdmZYOHF1QzViaWZzRjlnTHdtWVAyQ1F1UVlJN0xDZmZGWVZTZ3ZtUXdLWFZvMU9fVFNfdW9YV2RIV00wS2hPYUdia3ZNQkpGOTU1WWQtTzlYTU9vUUNNWGtvMVBCSFBBYjBUeHRsNGJtLWVrRjlWUm5xSXhVWDdlX25scXhFWjNiNnJDRDhXVGJuSHN2Y2IxUkxNb01tdnlVYWFqeVZtVDZMUXZHOTJrYnJTVmlpQ0xmcVhaLXQyZDA?oc=5",
    "confidence": "moyenne"
+  },
+  {
+   "id": "c8c5dc29297d",
+   "ts": "2026-11-12T19:29:55.000Z",
+   "title": "Tokenomics à l'échelle : suivre et plafonner les dépenses Amazon Bedrock par principal IAM",
+   "orig": "Tokenomics at scale: Track and cap Amazon Bedrock spend per IAM principal with CUR 2.0 and AWS Budgets",
+   "summary": "AWS explique comment utiliser la visibilité des coûts par identité et appliquer des limites strictes sur Amazon Bedrock sans modifier le code applicatif.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/tokenomics-at-scale-track-and-cap-amazon-bedrock-spend-per-iam-principal-with-cur-2-0-and-aws-budgets/",
+   "confidence": "haute"
   },
   {
    "id": "875637b2c34d",
@@ -7113,6 +7169,20 @@
    "confidence": "haute"
   },
   {
+   "id": "4e46e49750fb",
+   "ts": "2026-11-12T18:43:19.000Z",
+   "title": "Optimiser le coût par tâche et prouver le ROI des agents sur Amazon Bedrock",
+   "orig": "Optimizing cost per task and proving agent ROI on Amazon Bedrock",
+   "summary": "Présentation d'une méthode pour calculer le coût réel par tâche sur Amazon Bedrock en réduisant les coûts cachés via la mise en cache et le routage.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/optimizing-cost-per-task-and-proving-agent-roi-on-amazon-bedrock/",
+   "confidence": "haute"
+  },
+  {
    "id": "ea6880e80fda",
    "ts": "2026-11-12T18:42:07.000Z",
    "title": "La machine Nvidia est auto-suffisante – et faisait déjà face à un avenir plus difficile",
@@ -7125,6 +7195,20 @@
    "source": "The Next Platform",
    "url": "https://www.nextplatform.com/ai/2026/11/12/the-nvidia-machine-is-self-sustaining-and-was-already-facing-a-tougher-future/5309473",
    "confidence": "moyenne"
+  },
+  {
+   "id": "83054ecb029e",
+   "ts": "2026-11-12T18:41:12.000Z",
+   "title": "Créer une passerelle LLM en libre-service avec Amazon Bedrock et LiteLLM",
+   "orig": "Building a self-service LLM gateway with Amazon Bedrock and LiteLLM",
+   "summary": "Guide pour déployer une passerelle LLM sur AWS Fargate plaçant les modèles d'Amazon Bedrock derrière une API compatible OpenAI avec contrôle des coûts.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/building-a-self-service-llm-gateway-with-amazon-bedrock-and-litellm/",
+   "confidence": "haute"
   },
   {
    "id": "3903c89c61e5",
@@ -7685,6 +7769,20 @@
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/tech-industry/president-trump-says-apples-tim-cook-is-the-only-man-to-replace-jensen-huang-as-nvidia-ceo-proposes-a-legend-replaces-a-legend-in-call-for-apples-executive-chairman-of-its-board",
    "confidence": "moyenne"
+  },
+  {
+   "id": "6d29ea24a6e6",
+   "ts": "2026-11-12T16:16:45.000Z",
+   "title": "Migrer vers la base de connaissances gérée d'Amazon Bedrock avec votre agent de codage",
+   "orig": "Migrate to Amazon Bedrock Managed Knowledge Base with your coding agent",
+   "summary": "Utilisation d'un agent de codage pour planifier et exécuter la migration d'une base de connaissances Amazon Bedrock vers sa version gérée.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/migrate-to-amazon-bedrock-managed-knowledge-base-with-your-coding-agent/",
+   "confidence": "haute"
   },
   {
    "id": "3c15afc3f80c",
@@ -9549,6 +9647,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "9ad98cf872e6",
+   "ts": "2026-11-12T08:03:25.000Z",
+   "title": "Introduction aux formats FP8 : Partie 1",
+   "orig": "Introduction To FP8 Formats: Part 1",
+   "summary": "Explication des fondements des formats de données en virgule flottante 8 bits, de leur dynamique d'écosystème et de leur support matériel.",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Semiconductor Engineering",
+   "url": "https://semiengineering.com/introduction-to-fp8-formats-part-1/",
+   "confidence": "moyenne"
+  },
+  {
    "id": "9c7495a9aa90",
    "ts": "2026-11-12T08:01:23.000Z",
    "title": "IP de base pour l'ère de l'IA : pourquoi l'exécution façonne le coût du SoC ─ eBook",
@@ -10485,6 +10597,20 @@
    "source": "Channel Newsasia",
    "url": "https://www.channelnewsasia.com/advertorial/how-sensory-menus-can-make-dining-out-easier-people-autism-6486211",
    "confidence": "moyenne"
+  },
+  {
+   "id": "a0a8bd68435e",
+   "ts": "2026-11-12T01:18:23.000Z",
+   "title": "Construire des agents IA autonomes avec Amazon Bedrock et Spring AI",
+   "orig": "Build autonomous AI agents with Amazon Bedrock and Spring AI",
+   "summary": "Présentation des étapes pour développer et déployer des agents IA autonomes en environnement de production Java avec Amazon Bedrock et Spring AI.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "AWS Machine Learning",
+   "url": "https://aws.amazon.com/blogs/machine-learning/build-autonomous-ai-agents-with-amazon-bedrock-and-spring-ai/",
+   "confidence": "haute"
   },
   {
    "id": "52d21c78a75b",
@@ -16185,6 +16311,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "1e25da223a51",
+   "ts": "2026-11-10T13:03:52.000Z",
+   "title": "Comment les failles de sécurité de l'IA mettent en danger votre chaîne d'approvisionnement",
+   "orig": "How AI security failures are endangering your supply chain – and what you can do",
+   "summary": "Une étude met en lumière les risques émergents liés à la sécurité dans la chaîne d'approvisionnement des technologies d'intelligence artificielle.",
+   "country": "US",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "ZDNet IA",
+   "url": "https://www.zdnet.com/tech/ai-security-failures-supply-chain-risks-black-kite-research/",
+   "confidence": "moyenne"
+  },
+  {
    "id": "107f7ea31eb5",
    "ts": "2026-11-10T13:03:50.000Z",
    "title": "MISO-BR: An Open Corpus for Misogyny Detection in Brazilian Portuguese",
@@ -20859,146 +20999,6 @@
    "source": "Bloomberg.com",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE14NGpWa3lTenphd1FrbTZsWlA1bkRVeXlCbWxrdFk4UzN1OFlDcVNIWFByeXlQSkcyM2tSUzlhWV9QUHZ2bnFUaXBhX0VGeVNKeWQ1QWRRZUJidUpvQ1p4RFBKcnEzY0dSN1FZbU9pMERYeHJWN01j?oc=5",
    "confidence": "moyenne"
-  },
-  {
-   "id": "887bab30a2b4",
-   "ts": "2026-11-09T13:31:00.000Z",
-   "title": "Nvidia ouvre une enquête sur la relation entre Jensen Huang et une espionne chinoise présumée",
-   "orig": "Nvidia Opens Investigation Into Jensen Huang’s Relationship With Suspected Chinese Spy",
-   "summary": "Le conseil d'administration de Nvidia a lancé une enquête sur les liens entre Jensen Huang et une personne soupçonnée d'être une espionne chinoise.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "The New York Times",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaHdZZkpucG9aOVF5R2JPeHljWV85XzlhbUxnbUREYWlKQzBiR1UzeWxwaF9EMnpDajI1aXlmMlo0aENzeGdyRzJDSEtJR0xVanhFSkN3bXE0R1FYV2VWZHdIV1A1MmFlczN4VnRZcVZ5QV9xdUlxZXVlZVl3eHRqVWxsVmE1dktHZzdnelB0ZjUwejJj?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "ef7becb96eb7",
-   "ts": "2026-11-09T13:30:30.000Z",
-   "title": "Orbital et Orca Aerospace signent un accord pour de l'IA embarquée de guidage et d'évitement de collision pour satellites",
-   "orig": "Orbital and Orca Aerospace sign deal for onboard satellite GNC and collision-avoidance AI",
-   "summary": "Orbital et Orca Aerospace ont conclu un accord pouvant atteindre 20 millions de dollars pour embarquer de l'IA de guidage et d'évitement de collision sur des satellites.",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/orbital-and-orca-aerospace-sign-deal-for-onboard-satellite-gnc-and-collision-avoidance-ai/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "4b6e4a16930e",
-   "ts": "2026-11-09T13:20:00.000Z",
-   "title": "Un avocat construit un serveur IA privé avec huit GPU Nvidia V100 d'occasion",
-   "orig": "Lawyer builds private AI server with eight used Nvidia V100 GPUs",
-   "summary": "Un avocat déploie un serveur IA local utilisant des GPU Nvidia V100 pour traiter des documents confidentiels.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "Tom's Hardware",
-   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/lawyer-builds-private-ai-server-with-eight-used-nvidia-v100-gpus-up-to-215-tokens-per-second-to-keep-legal-files-offline-costing-about-usd2-400-per-four-gpu-board",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "b616e9c4d62e",
-   "ts": "2026-11-09T13:10:32.000Z",
-   "title": "Jensen Huang : Ce que nous savons sur l'affaire du PDG de Nvidia avec une espionne chinoise présumée",
-   "orig": "Jensen Huang: What we know about Nvidia CEO's affair with suspected Chinese spy",
-   "summary": "Synthèse des faits connus concernant l'enquête sur le PDG de Nvidia et ses liens avec une espionne présumée.",
-   "country": "US",
-   "category": "regul",
-   "importance": 3,
-   "layer": "Puces",
-   "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLdVRudVhSejZlMXpvRlVhd1B0UlhUdmtmanU3NjNHNFhVVi1TUEMwVmpaZktkNG5XeV9CZ0ZOQ2duOEt2UlE5YWxSUkdwVU1acHBJTS13NndtS0U?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "cc8956f1b107",
-   "ts": "2026-11-09T13:08:53.000Z",
-   "title": "Google dévoile deux produits supplémentaires basés sur sa propre puce TPU... quatre lancés en un an",
-   "orig": "구글, 자체 칩 TPU 기반 제품 2종 추가 공개… 한 해 4종 쏟아냈다",
-   "summary": "Google accélère le déploiement de produits basés sur ses puces propriétaires TPU.",
-   "country": "US",
-   "category": "puces",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "조선일보",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPQl9MWUhzWE01c2FvZ2FxV29vUUpMcGdzeVdBRTNMcTBFVWtpRHhMSFg0Tl9SS1RSV09PUVkzRGVIaFd1WkRINmtJbUtBdEozaWFPRk9oRW5tekJHS2d6NGlvbk55Wnp6QjB2d1ZRbTRWZHN6TXNha3ZLa3hTWjBlZ2diYw?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "a6750878f95e",
-   "ts": "2026-11-09T13:02:33.000Z",
-   "title": "L'enquête de Nvidia sur la liaison du PDG Jensen Huang soulève des questions troublantes pour l'IA",
-   "orig": "Nvidia probe into CEO Jensen Huang’s affair raises troubling questions for AI",
-   "summary": "L'enquête interne ouverte par Nvidia sur son dirigeant pose des questions inédites sur la gouvernance des géants de l'IA.",
-   "country": "US",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Régulation",
-   "source": "Hindustan Times",
-   "url": "https://www.hindustantimes.com/world-news/nvidia-probe-into-ceo-jensen-huang-s-affair-raises-troubling-questions-for-ai-101794225863202.html",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "05bd9f0351a0",
-   "ts": "2026-11-09T13:00:00.000Z",
-   "title": "Innover avec l'IA dans l'industrie des produits chimiques spéciaux",
-   "orig": "Innovating with AI in the special chemicals industry",
-   "summary": "Lubrizol utilise l'IA et le cloud pour accélérer la recherche et le développement dans le secteur chimique.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "MIT Technology Review IA",
-   "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "0b7e204b218c",
-   "ts": "2026-11-09T13:00:00.000Z",
-   "title": "La Chine construit un campus de centres de données IA massif de 800 mégawatts pour rivaliser avec le projet Stargate américain",
-   "orig": "China builds massive 800-megawatt AI data center campus to rival US Stargate project",
-   "summary": "La Chine développe un centre de données massif intégrant des énergies renouvelables pour soutenir ses capacités IA.",
-   "country": "CN",
-   "category": "energie",
-   "importance": 3,
-   "layer": "Datacenters",
-   "source": "Tom's Hardware",
-   "url": "https://www.tomshardware.com/tech-industry/data-centers/china-builds-massive-800-megawatt-ai-data-center-campus-to-rival-us-stargate-project-galaxy-campus-delivers-first-120-megawatts-in-a-year-at-one-fifth-the-cost",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "a6e5ad5a8aba",
-   "ts": "2026-11-09T13:00:00.000Z",
-   "title": "La croissance de ChatGPT rebondit, et les rivaux ont toujours moins de 10 % du trafic des chatbots IA chacun",
-   "orig": "ChatGPT's growth is bouncing back, and rivals still have less than 10% of AI chatbot traffic each",
-   "summary": "ChatGPT maintient une position dominante sur le marché des chatbots malgré la concurrence.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Modèles",
-   "source": "Business Insider",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQdDF3M1NLLUNWOXprcDFzM1hBdWlMME9WNzFHOFN1RHpzTUl6RU1SazB3UnBBZmo2aXN2bjJsM09JS2NVQjhfSU1Jc1hrREpUMVFNcWJTaWgxQWxhUDhWTTFxR2pQdzFLY3YyenVnR2pLWnRXV29JMUliLV9IT2hyVHQwQXJ5a1RhUElwQnVZcUpSaVRxVUE4bg?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "5d57e1aa0817",
-   "ts": "2026-11-09T13:00:00.000Z",
-   "title": "Présentation de Control Room : le contrôle humain sur les charges de travail de l'IA",
-   "orig": "Introducing Control Room: Human control over AI workloads",
-   "summary": "OpenAI dévoile Control Room pour suivre les charges de travail des modèles et les interrompre rapidement en cas de risque de sécurité.",
-   "country": "US",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Modèles",
-   "source": "OpenAI",
-   "url": "https://openai.com/index/introducing-control-room",
-   "confidence": "haute"
   }
  ]
 }
