@@ -41,11 +41,12 @@ assert.equal(canonicalUrl("https://www.Ex.com/a/?utm_source=x#f"), "https://ex.c
 const dir = await fs.mkdtemp(path.join(os.tmpdir(), "radar-"));
 await fs.cp(new URL("../public/data/", import.meta.url), dir, { recursive: true });
 await fs.rm(path.join(dir, "state.json"), { force: true }); // test hermétique : indépendant de l'état réel
+{ const fp = path.join(dir, "feed.json"); const fd = JSON.parse(await fs.readFile(fp, "utf8")); fd.items = fd.items.slice(0, 20); await fs.writeFile(fp, JSON.stringify(fd)); } // flux réduit : le plafond de 1 500 articles ne fausse pas le test
 const before = JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).items.length;
 const cfgFile = path.join(dir, "src.json");
 const cfg = JSON.parse(await fs.readFile(new URL("./sources.json", import.meta.url), "utf8"));
 cfg.gdelt.queries = cfg.gdelt.queries.slice(0, 1); cfg.newsdata.countries = ["ae"]; cfg.hackernews.queries = ["AI"]; cfg.edgar.companies = cfg.edgar.companies.slice(0, 1);
-cfg.googleNews.editions = cfg.googleNews.editions.slice(0, 1); cfg.googleNews.queries = ["artificial intelligence"];
+cfg.googleNews.editions = cfg.googleNews.editions.slice(0, 1); cfg.googleNews.queries = ["artificial intelligence"]; delete cfg.googleNews.editions[0].queries;
 await fs.writeFile(cfgFile, JSON.stringify(cfg));
 process.env.GEMINI_MIN_GAP_MS = "1";
 const logs = [];
