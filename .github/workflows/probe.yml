@@ -7,18 +7,29 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Counterpoint
+      - name: Counterpoint tables
         run: |
-          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o cp.html -w "counterpoint http=%{http_code} bytes=%{size_download}\n" "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share" || echo "counterpoint curl failed"
-          echo "contient SK Hynix: $(grep -c 'SK Hynix' cp.html)  contient Micron: $(grep -c 'Micron' cp.html)  tables: $(grep -o '<table' cp.html | wc -l)"
-          grep -o '[^<>]\{0,60\}50%[^<>]\{0,60\}' cp.html | head -3
-      - name: TrendForce communique
-        run: |
-          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tf.html -w "trendforce http=%{http_code} bytes=%{size_download}\n" "https://www.trendforce.com/presscenter/news/20260909-13225.html" || echo "trendforce curl failed"
-          echo "contient 72.5%: $(grep -c '72.5%' tf.html)"
-          grep -o '[^<>]\{0,80\}72.5%[^<>]\{0,40\}' tf.html | head -2
+          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o cp.html "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
+          python3 - <<'PY'
+          import re
+          h=open("cp.html",encoding="utf8",errors="ignore").read()
+          for i,m in enumerate(re.finditer(r"<table.*?</table>",h,re.S)):
+              t=m.group(0)
+              print("TABLE",i,"len",len(t))
+              print(t[:700].replace("\n"," "))
+              rows=re.findall(r"<tr.*?</tr>",t,re.S)
+              for r in rows[:6]:
+                  print("ROW:", [re.sub(r"<[^>]+>","",c).strip() for c in re.findall(r"<t[hd].*?</t[hd]>",r,re.S)])
+              s=h[max(0,m.start()-400):m.start()]
+              print("AVANT:",re.sub(r"<[^>]+>"," ",s)[-250:].replace("\n"," "))
+          PY
       - name: TrendForce liste
         run: |
-          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tfl.html -w "trendforce-liste http=%{http_code} bytes=%{size_download}\n" "https://www.trendforce.com/presscenter/news" || echo "liste curl failed"
-          echo "liens communiques: $(grep -o '/presscenter/news/[0-9]\{8\}-[0-9]*\.html' tfl.html | sort -u | wc -l)"
-          grep -o '[^<>]\{0,60\}[Ff]oundry[^<>]\{0,80\}' tfl.html | head -3
+          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tfl.html "https://www.trendforce.com/presscenter/news"
+          python3 - <<'PY'
+          import re
+          h=open("tfl.html",encoding="utf8",errors="ignore").read()
+          for m in re.finditer(r'<a[^>]+href="([^"]*/presscenter/news/\d{8}-\d+\.html)"[^>]*>(.*?)</a>',h,re.S):
+              print("LIEN",m.group(1),"|",re.sub(r"<[^>]+>","",m.group(2)).strip()[:120])
+          print("pagination:",set(re.findall(r'href="([^"]*(?:page|p)=\d+[^"]*)"',h)))
+          PY
