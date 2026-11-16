@@ -1,0 +1,35 @@
+name: Sonde sources de séries
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Epoch CSV
+        run: |
+          for f in ai_chip_sales_timelines_by_chip ai_chip_sales_organizations ai_chip_owners_cumulative_by_designer ai_chip_owners_quarters_by_chip_type all_ai_models; do
+            curl -sS -L -m 60 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o "$f.csv" -w "EPOCH $f http=%{http_code} bytes=%{size_download}\n" "https://epoch.ai/data/$f.csv" || echo "EPOCH $f curl failed"
+            echo "HEAD $f: $(head -c 700 $f.csv | head -3 | tr '\n' '|')"
+            echo "LINES $f: $(wc -l < $f.csv)"
+          done
+      - name: Epoch owners/organizations extra
+        run: |
+          python3 - <<'PY'
+          import csv
+          for f in ["ai_chip_owners_cumulative_by_designer","ai_chip_sales_organizations","ai_chip_sales_timelines_by_chip"]:
+              try:
+                  rows=list(csv.DictReader(open(f+".csv",encoding="utf8")))
+                  print("COLS",f,list(rows[0].keys()))
+                  print("LAST",f,rows[-1])
+                  for k in rows[0].keys():
+                      vals=sorted({r[k] for r in rows})
+                      if len(vals)<=14: print("VALS",f,k,vals)
+              except Exception as e: print("ERR",f,e)
+          PY
+      - name: Census BTOS
+        run: |
+          curl -sS -L -m 40 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o btos.html -w "BTOS page http=%{http_code} bytes=%{size_download}\n" "https://www.census.gov/hfp/btos/data_downloads"
+          grep -oE 'href="[^"]*\.(xlsx|csv|xls|zip)[^"]*"' btos.html | sort -u | head -30
+          grep -oiE 'artificial intelligence[^<]{0,120}' btos.html | head -5
