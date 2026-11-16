@@ -4,8 +4,8 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Capex & finance",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
-var FILTERED={"une":1,"actualites":1,"marche":1};
-var S={feed:[],market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null};
+var FILTERED={"actualites":1,"marche":1};
+var S={feed:[],brief:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null};
 
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
@@ -30,9 +30,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json")]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];
   });
 }
 function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
@@ -86,26 +86,37 @@ function storyHTML(it,cls){
   return '<article class="'+(cls||"story")+'"><div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span></div>'+
   '<h4>'+esc(it.title)+'</h4><p>'+esc(it.summary)+'</p><div class="meta"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.source)+'</a><span>'+esc(fmtDay(it.ts).replace(/^\S+\s/,""))+'</span>'+conf(it.confidence)+'</div></article>';
 }
+function essHTML(it,n){
+  return '<article class="e"><span class="n">'+(n<10?"0":"")+n+'</span><div><h3><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.title)+'</a></h3>'+
+   (it.summary?'<p>'+esc(it.summary)+'</p>':'')+
+   '<div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span><span>'+esc(it.source)+'</span>'+conf(it.confidence)+'<span>'+esc(ago(it.ts))+'</span></div></div></article>';
+}
 function rUne(){
-  var items=S.feed.filter(byCountry);
-  var el=$("v-une");
-  if(!items.length){el.innerHTML='<div class="empty">Aucune actualité pour ce filtre.</div>';return}
-  var ranked=items.slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)});
-  var lead=ranked[0];
-  var rest=items.filter(function(x){return x.id!==lead.id}).sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,18);
-  var tiles=(S.market.tiles||[]).slice(0,5);
-  var top=S.layers.layers.slice().sort(function(a,b){return b.tension-a.tension}).slice(0,3);
-  var rows=S.race.rows,us=rows.filter(function(r){return r.lead>0}).length,cn=rows.filter(function(r){return r.lead<0}).length;
-  el.innerHTML='<div class="home"><div>'+
-    '<article class="lead"><div class="meta"><span class="kicker">À la une</span>'+ctag(lead.country)+'<span class="cat">'+esc(CATS[lead.category]||lead.category)+'</span></div>'+
-    '<h3>'+esc(lead.title)+'</h3><p>'+esc(lead.summary)+'</p><div class="meta"><a href="'+esc(link(lead.url))+'" target="_blank" rel="noopener">'+esc(lead.source)+'</a><span>'+esc(fmtDay(lead.ts))+'</span>'+conf(lead.confidence)+'</div></article>'+
-    '<hr class="rule thick"><div class="dense">'+rest.map(rowHTML).join("")+'</div>'+
-    '<button class="more" data-go="actualites">Toutes les actualités →</button></div>'+
-    '<aside class="rail">'+
-      '<div class="box"><h5>Chiffres clés</h5>'+tiles.map(function(t){return'<div class="fig"><span>'+esc(t.label)+'</span><b>'+esc(t.value)+'</b></div>'}).join("")+'<button class="more" data-go="marche">État du marché →</button></div>'+
-      '<div class="box"><h5>Goulots les plus tendus</h5>'+top.map(function(l){return'<div style="padding:8px 0;border-bottom:1px solid var(--rule)"><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:5px"><span>'+esc(l.name)+'</span><span class="small">'+esc(l.tension_label)+'</span></div>'+meter(l.tension)+'</div>'}).join("")+'<button class="more" data-go="infrastructure">Toute la pile →</button></div>'+
-      '<div class="box"><h5>Course USA–Chine</h5><div class="score" style="margin:0 0 14px;gap:22px"><div><div class="n us" style="font-size:44px">'+us+'</div><div class="lb">avance USA</div></div><div><div class="n cn" style="font-size:44px">'+cn+'</div><div class="lb">avance Chine</div></div></div>'+raceRows(true)+'<button class="more" data-go="usa-chine">Détail par couche →</button></div>'+
-    '</aside></div>';
+  var el=$("v-une"),byId={};
+  S.feed.forEach(function(x){byId[x.id]=x});
+  var B=S.brief,top=[],fallback=false;
+  if(B&&B.top)B.top.forEach(function(t){if(byId[t.id])top.push(byId[t.id])});
+  if(top.length<3){
+    fallback=true;
+    top=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,10);
+  }
+  var u=S.status&&S.status.updated_at;
+  var bullets=(B&&B.bullets||[]).map(function(b){
+    var srcs=(b.ids||[]).map(function(id){return byId[id]}).filter(Boolean);
+    return srcs.length?{text:b.text,srcs:srcs}:null;
+  }).filter(Boolean);
+  var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span><span>'+S.feed.length+' articles en base</span></div>';
+  if(bullets.length){
+    h+='<section class="brief"><h2>Brief du jour</h2><ol>'+bullets.map(function(b){
+      return'<li><p>'+esc(b.text)+'</p><div class="by">'+b.srcs.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+'</div></li>';
+    }).join("")+'</ol><div class="foot">Rédigé par IA à partir des seuls articles collectés (généré '+esc(ago(B.generated_at))+(B.model?', '+esc(B.model):'')+'). Chaque puce renvoie à ses sources ; les chiffres sont vérifiés dans les articles cités.</div></section>';
+  }else{
+    h+='<section class="brief"><h2>Brief du jour</h2><p class="small" style="padding:12px 0">Pas encore de brief : il est généré par l\'IA lors de la prochaine collecte, dès que le quota Gemini le permet.</p></section>';
+  }
+  h+='<section class="ess"><h2>'+(fallback?'Les plus importants (sélection provisoire)':'Les 10 essentiels')+'</h2>'+
+    (top.length?top.map(function(it,i){return essHTML(it,i+1)}).join(""):'<div class="empty">Aucune actualité pour le moment.</div>')+
+    '</section><button class="more" data-go="actualites">Tout le fil →</button></div>';
+  el.innerHTML=h;
 }
 
 function rFeed(){
@@ -216,7 +227,7 @@ function rMethod(){
   S.feed.forEach(function(f){add(f.source,f.url)});
   list.sort(function(a,b){return a[0].localeCompare(b[0])});
   $("v-methode").innerHTML='<h2 class="sec">Méthode et sources</h2><p class="lede">Ce que ce site fait, ce qu\'il ne fait pas, et d\'où viennent les chiffres.</p>'+
-   '<div class="method"><div><span class="kicker">Fonctionnement</span><ol class="steps"><li><b>Collecte</b><span>Un agent récupère toutes les deux heures les flux de presse et de newsletters spécialisées dans le monde.</span></li><li><b>Classement</b><span>Chaque article reçoit un pays, un thème, une importance de 1 à 3, une couche de la pile et un résumé en français.</span></li><li><b>Publication</b><span>Les données sont enregistrées dans le dépôt GitHub puis affichées ici. À l\'ouverture et via « Mettre à jour », le site recharge les dernières données.</span></li></ol></div>'+
+   '<div class="method"><div><span class="kicker">Fonctionnement</span><ol class="steps"><li><b>Collecte</b><span>Un agent récupère toutes les trois heures les flux de médias et de sources officielles, dans le monde. Seuls les domaines d\'une liste de confiance sont retenus.</span></li><li><b>Classement</b><span>Chaque article reçoit un pays, un thème, une importance de 1 à 3, une couche de la pile et un résumé en français. Sans IA disponible, le titre d\'origine est publié tel quel.</span></li><li><b>Les 10 essentiels et le brief</b><span>Sélection par importance, fraîcheur, source primaire et nombre de médias qui couvrent le sujet, avec un minimum de diversité par zone et par couche. Le brief en 5 puces est rédigé par l\'IA à partir de ces seuls articles ; une puce dont les chiffres ne figurent pas dans ses sources est écartée.</span></li><li><b>Publication</b><span>Les données sont enregistrées dans le dépôt GitHub puis affichées ici. À l\'ouverture et via « Mettre à jour », le site recharge les dernières données.</span></li></ol></div>'+
    '<div><span class="kicker">Lire avec prudence</span><ol class="steps"><li><b>Sources</b><span>Source primaire : document officiel (SEC, registre fédéral, communiqué, blog d\'une entreprise). Presse : média figurant sur une liste de confiance. Les newsletters, blogs personnels et sites de recopie sont écartés.</span></li><li><b>Estimations</b><span>Les scores USA–Chine et les tensions des couches sont des estimations éditoriales, pas des mesures.</span></li><li><b>Run-rates</b><span>Les revenus des laboratoires privés ne sont pas audités et ne sont pas calculés de la même façon.</span></li></ol></div></div>'+
    health()+
    '<hr class="rule thick" style="margin-top:34px"><span class="kicker">Sources citées ('+list.length+')</span><div class="src-list">'+list.map(function(s){return'<a href="'+esc(link(s[1]))+'" target="_blank" rel="noopener">'+esc(s[0])+' ↗</a>'}).join("")+'</div>';
@@ -227,11 +238,12 @@ function renderAll(){
   renderChips();rUne();rFeed();rMarket();rInfra();rRace();rMethod();
 }
 function show(tab){
+  if(tab==="infrastructure")tab="marche";
   if(TABS.indexOf(tab)<0)tab="une";
   S.tab=tab;
-  TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});
+  TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab||(tab==="marche"&&t==="infrastructure"))});
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
-  $("filter").style.visibility=FILTERED[tab]?"visible":"hidden";
+  $("filter").style.display=FILTERED[tab]?"":"none";
   window.scrollTo(0,0);
 }
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
@@ -249,7 +261,6 @@ document.addEventListener("click",function(e){
 });
 $("refresh").addEventListener("click",function(){refresh(true)});
 window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
-$("today").textContent=new Date().toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
 show(location.hash.slice(1));
 refresh(false);
 })();
