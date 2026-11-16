@@ -1,56 +1,55 @@
 {
- "style": "paragraph",
  "generated_at": "2026-11-16T19:26:05.677Z",
  "model": "gemini-3.5-flash-lite",
  "top": [
   {
-   "id": "6e3dfd038e5d",
-   "score": 39.1,
+   "id": "6fd4401d69f5",
+   "score": 39.8,
    "media": 3
   },
   {
-   "id": "6cab091c059a",
-   "score": 38.6,
-   "media": 1
+   "id": "6e3dfd038e5d",
+   "score": 39,
+   "media": 3
   },
   {
    "id": "772ccdf8e8c7",
-   "score": 37.5,
+   "score": 37.3,
    "media": 2
   },
   {
-   "id": "b1da22f7bd68",
-   "score": 36,
+   "id": "f819d90d809d",
+   "score": 35.9,
    "media": 1
   },
   {
    "id": "f75fe1d019b0",
-   "score": 34.6,
+   "score": 34.4,
    "media": 1
   },
   {
    "id": "7048d748b81e",
-   "score": 34.2,
+   "score": 34,
    "media": 1
   },
   {
    "id": "9d728296cb7a",
-   "score": 34.2,
+   "score": 34,
    "media": 1
   },
   {
    "id": "91e58e2ea930",
-   "score": 27.7,
+   "score": 27.5,
    "media": 1
   },
   {
    "id": "2debb24ecad6",
-   "score": 26.1,
+   "score": 25.9,
    "media": 2
   },
   {
    "id": "18dffcdb5ac3",
-   "score": 25.9,
+   "score": 25.8,
    "media": 1
   }
  ],
@@ -97,5 +96,6 @@
     "2debb24ecad6"
    ]
   }
- ]
+ ],
+ "style": "paragraph"
 }

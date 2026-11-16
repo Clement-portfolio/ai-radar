@@ -1,0 +1,35 @@
+{
+ "generated_at": "2026-11-16T20:58:31.361Z",
+ "model": "gemini-3.5-flash-lite",
+ "picks": [
+  "f819d90d809d",
+  "6fd4401d69f5",
+  "6e3dfd038e5d"
+ ],
+ "items": [
+  {
+   "id": "f819d90d809d",
+   "why": "Cette étude montre que la consommation électrique des centres de données repose encore largement sur les énergies fossiles, ce qui pèse sur l'environnement.",
+   "context": "",
+   "ctx_ids": []
+  },
+  {
+   "id": "6fd4401d69f5",
+   "why": "Ces mesures visent à restreindre l'utilisation des technologies d'intelligence artificielle avancées par la Chine, modifiant les équilibres mondiaux.",
+   "context": "Les États-Unis prévoyaient d'étendre leurs contrôles d'exportation de puces d'intelligence artificielle et de limiter l'accès à distance pour la Chine.",
+   "ctx_ids": [
+    "dad468239d15"
+   ]
+  },
+  {
+   "id": "6e3dfd038e5d",
+   "why": "Ce possible retour du dirigeant pourrait stabiliser ou bouleverser à nouveau la direction de Nvidia après une période de turbulences.",
+   "context": "Jensen Huang avait démissionné de ses fonctions de PDG et de chef de Nvidia, marquant une chute rapide et la fin de son mandat.",
+   "ctx_ids": [
+    "90eda980a32c",
+    "bb998c7e0633",
+    "7aaeb16f016b"
+   ]
+  }
+ ]
+}
