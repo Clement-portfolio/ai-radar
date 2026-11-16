@@ -280,3 +280,8 @@ details.why .sc{margin-top:6px}
 .etage>.sub2{margin-top:2px}.etage>.kicker{display:block}
 .share .sbody{align-items:flex-start}
 .share h4 .mode,.share .sm .mode{margin-left:6px;vertical-align:1px}
+
+/* alignement : titre, sous-titre, graphe, source, relecture, limites sur la même ligne d'une carte à l'autre */
+.fr{display:block}
+@supports(grid-template-rows:subgrid){.cards3>.share{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}.cards3>.share>details.why{align-self:start}.cards3>.share .sbody{align-self:center}}
+@media(max-width:620px){.cards3>.share{display:flex;grid-row:auto}}

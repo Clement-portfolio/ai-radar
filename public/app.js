@@ -167,7 +167,7 @@ function shareCard(c){
   var leg=c.segments.map(function(x,i){return'<li><i style="background:'+DONUT[Math.min(i,DONUT.length-1)]+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
   return'<div class="share"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.metric)+' · '+esc(c.period)+'</div>'+
    '<div class="sbody">'+donut(c.segments)+'<ul class="leg">'+leg+'</ul></div>'+
-   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>'+shareFresh(c)+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div><div class="fr">'+shareFresh(c)+'</div>'+
    '<details class="why"><summary>Limites</summary><div class="sc">'+esc(c.caveat)+'</div></details></div>';
 }
 var ETAGES=[
@@ -253,8 +253,8 @@ function pointList(c){
   return rows.length?'<ul class="pl">'+rows.join("")+'</ul>':"";
 }
 function curveCard(c){
-  return'<div class="share curve"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.unit)+' <span class="mode">'+(c.auto?"auto":"semi-auto")+'</span></div>'+lineChart(c)+
-   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div>'+curveFresh(c)+
+  return'<div class="share curve"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.unit)+' <span class="mode">'+(c.auto?"auto":"semi-auto")+'</span></div><div class="lcw">'+lineChart(c)+'</div>'+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div><div class="fr">'+curveFresh(c)+'</div>'+
    '<details class="why"><summary>Limites'+(c.auto?'':' et points sourcés')+'</summary><div class="sc">'+esc(c.caveat)+'</div>'+pointList(c)+'</details></div>';
 }
 function etages(){
