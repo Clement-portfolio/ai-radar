@@ -1,0 +1,22 @@
+name: Garder le site éveillé
+
+# Le plan gratuit de Render endort le site après 15 min sans visite (première ouverture lente).
+# Un ping toutes les 10 min l'évite. Renseigne la variable SITE_URL (Settings › Variables › Actions).
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Ping
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: |
+          if [ -z "$SITE_URL" ]; then echo "SITE_URL non renseignée : rien à faire"; exit 0; fi
+          curl -fsS -m 60 --retry 2 "${SITE_URL%/}/healthz" || echo "Site injoignable"

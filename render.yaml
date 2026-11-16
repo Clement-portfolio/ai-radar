@@ -10,7 +10,3 @@ services:
     envVars:
       - key: NODE_VERSION
         value: "22"
-      - key: GEMINI_API_KEY
-        sync: false
-      - key: NEWSDATA_API_KEY
-        sync: false

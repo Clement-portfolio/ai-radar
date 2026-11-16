@@ -1,35 +1,49 @@
-// AI Radar — serveur web (Render). Sert le site, les données, et lance une collecte à la demande.
+// AI Radar — serveur web (Render). Sert le site et les données.
+// La collecte tourne uniquement sur GitHub Actions (toutes les 3 h) ; ici, on ne fait que servir les dernières données
+// (lues sur GitHub avec un cache court, sinon celles du dernier déploiement). Ouvrir le site ne lance aucune collecte.
 import http from "node:http";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { run } from "./collector/collect.mjs";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(ROOT, "public");
-const DATA = process.env.RUNTIME_DATA_DIR || path.join(process.env.TMPDIR || "/tmp", "ai-radar-data");
 const PORT = +process.env.PORT || 3000;
-const TTL_MS = (+process.env.REFRESH_TTL_MIN || 30) * 60000;
-const MIN_GAP_MS = 90000;
+const DATA_URL = (process.env.DATA_SOURCE_URL || "https://raw.githubusercontent.com/Clement-portfolio/ai-radar/main/public/data/").replace(/\/?$/, "/");
+const CACHE_MS = (+process.env.DATA_CACHE_S || 120) * 1000;
 const DATA_FILES = new Set(["feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "sec.json"]);
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".png": "image/png", ".txt": "text/plain; charset=utf-8" };
 
-let running = false, lastStart = 0, lastError = null;
+const cache = new Map(); // nom -> { at, buf }
+const inflight = new Map();
 
-async function readStatus() { try { return JSON.parse(await fs.readFile(path.join(DATA, "status.json"), "utf8")); } catch { return {}; } }
-
-async function startRun() {
-  running = true; lastStart = Date.now(); lastError = null;
-  run({ dataDir: DATA, log: (m) => console.log("[collecte] " + m) })
-    .catch((e) => { lastError = String(e.message || e); console.error(e); })
-    .finally(() => { running = false; });
+/** Dernière version publiée sur GitHub ; en cas d'échec, dernière copie connue, puis fichiers du déploiement. */
+async function readData(name) {
+  const hit = cache.get(name);
+  if (hit && Date.now() - hit.at < CACHE_MS) return hit.buf;
+  if (!inflight.has(name)) {
+    inflight.set(name, (async () => {
+      try {
+        const r = await fetch(DATA_URL + name, { signal: AbortSignal.timeout(5000), headers: { "cache-control": "no-cache" } });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const buf = Buffer.from(await r.arrayBuffer());
+        JSON.parse(buf.toString("utf8")); // refuse une réponse tronquée ou une page d'erreur
+        cache.set(name, { at: Date.now(), buf });
+        return buf;
+      } catch (e) {
+        console.error(`données ${name} : ${e.message}`);
+        if (hit) return hit.buf;
+        try { return await fs.readFile(path.join(PUBLIC, "data", name)); } catch { return null; }
+      } finally { inflight.delete(name); }
+    })());
+  }
+  return inflight.get(name);
 }
 
 function send(res, code, body, headers = {}) {
   res.writeHead(code, { "x-content-type-options": "nosniff", "referrer-policy": "no-referrer", ...headers });
   res.end(body);
 }
-const json = (res, code, obj) => send(res, code, JSON.stringify(obj), { "content-type": MIME[".json"], "cache-control": "no-store" });
 
 const server = http.createServer(async (req, res) => {
   try {
@@ -37,37 +51,16 @@ const server = http.createServer(async (req, res) => {
     const p = decodeURIComponent(url.pathname);
 
     if (p === "/healthz") return send(res, 200, "ok", { "content-type": MIME[".txt"] });
-
-    if (p === "/api/status" && req.method === "GET") {
-      const s = await readStatus();
-      return json(res, 200, { running, updated_at: s.updated_at || null, last_attempt: s.last_attempt || null, errors: lastError ? [lastError] : (s.last_run?.errors || []), added: s.last_run?.added ?? null });
-    }
-
-    if (p === "/api/refresh" && req.method === "POST") {
-      const force = url.searchParams.get("force") === "1";
-      const s = await readStatus();
-      const age = s.updated_at ? Date.now() - new Date(s.updated_at).getTime() : Infinity;
-      if (running) return json(res, 200, { running: true });
-      if (!process.env.GEMINI_API_KEY) return json(res, 200, { running: false, skipped: "GEMINI_API_KEY absente sur le serveur" });
-      if (Date.now() - lastStart < MIN_GAP_MS) return json(res, 200, { running: false, skipped: "collecte récente" });
-      if (!force && age < TTL_MS) return json(res, 200, { running: false, skipped: "données fraîches" });
-      startRun();
-      return json(res, 200, { running: true });
-    }
-
     if (req.method !== "GET" && req.method !== "HEAD") return send(res, 405, "Method Not Allowed");
 
-    // données : dossier d'exécution (collecte à la demande), sinon fichiers du dépôt
     if (p.startsWith("/data/")) {
       const name = p.slice(6);
       if (!DATA_FILES.has(name)) return send(res, 404, "Not found");
-      for (const dir of [DATA, path.join(PUBLIC, "data")]) {
-        try { return send(res, 200, await fs.readFile(path.join(dir, name)), { "content-type": MIME[".json"], "cache-control": "no-store" }); } catch {}
-      }
-      return send(res, 404, "Not found");
+      const buf = await readData(name);
+      return buf ? send(res, 200, buf, { "content-type": MIME[".json"], "cache-control": "no-store" }) : send(res, 404, "Not found");
     }
 
-    let rel = p === "/" ? "/index.html" : p;
+    const rel = p === "/" ? "/index.html" : p;
     const file = path.normalize(path.join(PUBLIC, rel));
     if (!file.startsWith(PUBLIC + path.sep)) return send(res, 403, "Forbidden");
     if (file.startsWith(path.join(PUBLIC, "data") + path.sep)) return send(res, 404, "Not found");
@@ -78,6 +71,6 @@ const server = http.createServer(async (req, res) => {
   } catch (e) { console.error(e); send(res, 500, "Erreur serveur"); }
 });
 
-await fs.mkdir(DATA, { recursive: true });
-await fs.cp(path.join(PUBLIC, "data"), DATA, { recursive: true, force: true });
 server.listen(PORT, () => console.log(`AI Radar sur le port ${PORT}`));
+// Réchauffe le cache : la première ouverture du site n'attend pas GitHub.
+for (const n of DATA_FILES) readData(n);

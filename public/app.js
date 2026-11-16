@@ -35,16 +35,6 @@ function loadData(){
     S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];
   });
 }
-function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
-function triggerRefresh(force){
-  return fetch("api/refresh"+(force?"?force=1":""),{method:"POST"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null});
-}
-function pollStatus(deadline){
-  return fetch("api/status",{cache:"no-store"}).then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(s){
-    if(s&&s.running&&Date.now()<deadline)return wait(4000).then(function(){return pollStatus(deadline)});
-    return s;
-  });
-}
 function setStatus(kind,txt,title){
   var cls=kind==="ok"?"":(kind==="err"?"err":"stale");
   $("status").innerHTML='<span class="dot '+cls+'"></span>'+esc(txt);
@@ -56,22 +46,11 @@ function freshness(extra){
   var errs=(S.status&&S.status.last_run&&S.status.last_run.errors)||[];
   setStatus(stale||errs.length?"stale":"ok","Données "+ago(u)+(S.status&&S.status.mode==="seed"?" · jeu initial":"")+(extra||""),errs.join(" · "));
 }
-function busy(on){
-  var b=$("refresh");b.classList.toggle("loading",on);b.disabled=on;$("refreshLabel").textContent=on?"Collecte en cours…":"Mettre à jour";
-}
-function refresh(force){
+function refresh(){
   if(S.run)return S.run;
+  var b=$("refresh");b.disabled=true;
   S.run=loadData().then(function(){freshness();renderAll()}).catch(function(e){setStatus("err","Données indisponibles");console.error(e)})
-  .then(function(){return triggerRefresh(force)})
-  .then(function(r){
-    if(r&&r.running){
-      busy(true);setStatus("stale","Collecte en cours… (1 à 5 min)");
-      return pollStatus(Date.now()+8*60000).then(function(st){
-        return loadData().then(function(){freshness(st&&st.added!=null?" · +"+st.added+" articles":"");renderAll()});
-      });
-    }
-    if(r&&r.skipped&&force){var el=$("status");el.title=r.skipped}
-  }).catch(function(e){console.error(e)}).then(function(){busy(false);S.run=null});
+  .then(function(){b.disabled=false;S.run=null});
   return S.run;
 }
 
@@ -246,7 +225,7 @@ function rMethod(){
   S.feed.forEach(function(f){add(f.source,f.url)});
   list.sort(function(a,b){return a[0].localeCompare(b[0])});
   $("v-methode").innerHTML='<h2 class="sec">Méthode et sources</h2><p class="lede">Ce que ce site fait, ce qu\'il ne fait pas, et d\'où viennent les chiffres.</p>'+
-   '<div class="method"><div><span class="kicker">Fonctionnement</span><ol class="steps"><li><b>Collecte</b><span>Un agent récupère toutes les trois heures les flux de médias et de sources officielles, dans le monde. Seuls les domaines d\'une liste de confiance sont retenus.</span></li><li><b>Classement</b><span>Chaque article reçoit un pays, un thème, une importance de 1 à 3, une couche de la pile et un résumé en français. Sans IA disponible, le titre d\'origine est publié tel quel.</span></li><li><b>Les 10 essentiels et le brief</b><span>Sélection par importance, fraîcheur, source primaire et nombre de médias qui couvrent le sujet, avec un minimum de diversité par zone et par couche. Le brief en 5 puces est rédigé par l\'IA à partir de ces seuls articles ; une puce dont les chiffres ne figurent pas dans ses sources est écartée.</span></li><li><b>Publication</b><span>Les données sont enregistrées dans le dépôt GitHub puis affichées ici. À l\'ouverture et via « Mettre à jour », le site recharge les dernières données.</span></li></ol></div>'+
+   '<div class="method"><div><span class="kicker">Fonctionnement</span><ol class="steps"><li><b>Collecte</b><span>Un agent récupère toutes les trois heures les flux de médias et de sources officielles, dans le monde. Seuls les domaines d\'une liste de confiance sont retenus.</span></li><li><b>Classement</b><span>Chaque article reçoit un pays, un thème, une importance de 1 à 3, une couche de la pile et un résumé en français. Sans IA disponible, le titre d\'origine est publié tel quel.</span></li><li><b>Les 10 essentiels et le brief</b><span>Sélection par importance, fraîcheur, source primaire et nombre de médias qui couvrent le sujet, avec un minimum de diversité par zone et par couche. Le brief en 5 puces est rédigé par l\'IA à partir de ces seuls articles ; une puce dont les chiffres ne figurent pas dans ses sources est écartée.</span></li><li><b>Publication</b><span>Les données sont enregistrées dans le dépôt GitHub puis affichées ici. À chaque ouverture, et via « Actualiser », le site affiche immédiatement les dernières données publiées ; il ne lance aucune collecte.</span></li></ol></div>'+
    '<div><span class="kicker">Lire avec prudence</span><ol class="steps"><li><b>Sources</b><span>Source primaire : document officiel (SEC, registre fédéral, communiqué, blog d\'une entreprise). Presse : média figurant sur une liste de confiance. Les newsletters, blogs personnels et sites de recopie sont écartés.</span></li><li><b>Estimations</b><span>Les scores USA–Chine et les tensions des couches sont des estimations éditoriales, pas des mesures.</span></li><li><b>Run-rates</b><span>Les revenus des laboratoires privés ne sont pas audités et ne sont pas calculés de la même façon.</span></li><li><b>Chiffres de la SEC</b><span>Capex et revenus des cinq géants américains sont relus automatiquement dans les dépôts officiels. Au-delà de 30 jours sans relecture, une alerte s\'affiche. Le reste de la page Marché reste saisi à la main.</span></li><li><b>Revue hebdomadaire</b><span>Chaque lundi, le robot relit les pages saisies à la main à la lumière des articles collectés et propose des mises à jour sourcées. Rien ne change sans validation du propriétaire du site.</span></li></ol></div></div>'+
    health()+
    '<hr class="rule thick" style="margin-top:34px"><span class="kicker">Sources citées ('+list.length+')</span><div class="src-list">'+list.map(function(s){return'<a href="'+esc(link(s[1]))+'" target="_blank" rel="noopener">'+esc(s[0])+' ↗</a>'}).join("")+'</div>';
@@ -278,8 +257,8 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-ls")){S.layerSort=t.getAttribute("data-ls");renderAll();return}
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
-$("refresh").addEventListener("click",function(){refresh(true)});
+$("refresh").addEventListener("click",function(){refresh()});
 window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
 show(location.hash.slice(1));
-refresh(false);
+refresh();
 })();
