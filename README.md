@@ -1,4 +1,4 @@
-# AI Radar
+# What's Going On? (dépôt : ai-radar)
 
 Site de veille sur l'IA : actualités classées par pays, état du marché, infrastructure, course USA–Chine.
 

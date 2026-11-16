@@ -38,6 +38,9 @@ const r1 = await makeBrief({ items, now, prev: null, generate: five, modelName: 
 assert.ok(r1.regenerated && r1.doc.bullets.length === 5 && r1.doc.bullets.every((b) => b.ids.every((id) => byId.has(id))), "brief généré avec identifiants d'articles");
 const r2 = await makeBrief({ items, now: now + 3600e3, prev: r1.doc, generate: five });
 assert.ok(!r2.regenerated && calls === 1, "essentiel inchangé : pas d'appel Gemini");
+const oldDoc = { ...r1.doc }; delete oldDoc.style;
+const rOld = await makeBrief({ items, now: now + 3600e3, prev: oldDoc, generate: five, modelName: () => "m" });
+assert.ok(rOld.regenerated && rOld.doc.style === "paragraph", "ancien brief en puces : régénéré une fois en paragraphe");
 const r3 = await makeBrief({ items, now: now + 7 * 3600e3, prev: r1.doc, generate: null });
 assert.ok(!r3.regenerated && r3.doc.bullets.length === 5, "Gemini indisponible : dernier brief conservé");
 const r4 = await makeBrief({ items, now: now + 7 * 3600e3, prev: r1.doc, generate: () => [{ text: "Invention de 777.", sources: [1] }] });

@@ -1,4 +1,4 @@
-// AI Radar — serveur web (Render). Sert le site et les données.
+// What's Going On? — serveur web (Render). Sert le site et les données.
 // La collecte tourne uniquement sur GitHub Actions (toutes les 3 h) ; ici, on ne fait que servir les dernières données
 // (lues sur GitHub avec un cache court, sinon celles du dernier déploiement). Ouvrir le site ne lance aucune collecte.
 import http from "node:http";
@@ -71,6 +71,6 @@ const server = http.createServer(async (req, res) => {
   } catch (e) { console.error(e); send(res, 500, "Erreur serveur"); }
 });
 
-server.listen(PORT, () => console.log(`AI Radar sur le port ${PORT}`));
+server.listen(PORT, () => console.log(`What's Going On? sur le port ${PORT}`));
 // Réchauffe le cache : la première ouverture du site n'attend pas GitHub.
 for (const n of DATA_FILES) readData(n);

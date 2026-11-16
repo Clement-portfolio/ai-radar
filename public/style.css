@@ -1,10 +1,10 @@
 /* AI Radar — rendu sobre (noir, blanc, filets fins, chiffres en mono) */
 :root{
-  --bg:#FFFFFF; --ink:#000000; --ink2:#333333; --mute:#767676; --hair:#D9D9D9; --fill:#F4F4F4; --pos:#0A7A3D; --neg:#C11414;
+  --bg:#FFFFFF; --ink:#000000; --ink2:#333333; --mute:#767676; --hair:#D9D9D9; --fill:#F4F4F4; --pos:#0A7A3D; --neg:#C11414; --c1:#2F5BEA; --c2:#E8830C; --c3:#0E9F8E; --c4:#8A5CD6; --c5:#D6457B; --c6:#6B7A1E; --cg:#C4C4C4;
   --rule:var(--hair); --display:"Bricolage Grotesque","Archivo",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; --serif:var(--display);
   --ui:"Archivo",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 }
-@media(prefers-color-scheme:dark){:root{--bg:#000000;--ink:#FFFFFF;--ink2:#CCCCCC;--mute:#8A8A8A;--hair:#333333;--fill:#141414;--pos:#3DDC84;--neg:#FF6B6B}}
+@media(prefers-color-scheme:dark){:root{--bg:#000000;--ink:#FFFFFF;--ink2:#CCCCCC;--mute:#8A8A8A;--hair:#333333;--fill:#141414;--pos:#3DDC84;--neg:#FF6B6B;--c1:#6C8CFF;--c2:#FFA03A;--c3:#35D0BA;--c4:#B391FF;--c5:#FF7AA8;--c6:#B5C84A;--cg:#5A5A5A}}
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:15px;line-height:1.5}
@@ -263,7 +263,7 @@ footer{border-top:1px solid var(--hair);padding:18px 0 40px;font-family:var(--mo
 .lc{width:100%;height:auto;display:block}
 .lc .gl{stroke:var(--hair);stroke-width:1}.lc .gl2{stroke:var(--mute);stroke-width:1}
 .lc .ax{font-family:var(--mono);font-size:9.5px;fill:var(--mute)}
-.leg.lg{margin-top:8px}.leg.lg li{display:grid;grid-template-columns:26px 1fr auto;gap:6px;align-items:center}
+.leg.lg{margin-top:8px}.leg.lg li{display:grid;grid-template-columns:26px 1fr auto 68px;gap:6px;align-items:center}
 details.why{margin-top:8px;font-size:11.5px}
 details.why summary{cursor:pointer;color:var(--mute);font-size:11.5px;list-style:none}
 details.why summary::before{content:"+ ";font-family:var(--mono)}details.why[open] summary::before{content:"– "}
@@ -285,3 +285,10 @@ details.why .sc{margin-top:6px}
 .fr{display:block}
 @supports(grid-template-rows:subgrid){.cards3>.share{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}.cards3>.share>details.why{align-self:start}.cards3>.share .sbody{align-self:center}}
 @media(max-width:620px){.cards3>.share{display:flex;grid-row:auto}}
+
+.brief .lede{font-family:var(--display);font-size:19px;line-height:1.55;letter-spacing:-.01em;padding:10px 0 12px;max-width:68ch}
+.brief>.by{font-family:var(--mono);font-size:11px;color:var(--mute);display:flex;flex-wrap:wrap;gap:2px 12px}
+.brief>.by a{text-decoration:none;border-bottom:1px solid var(--hair)}.brief>.by a:hover{color:var(--ink);border-color:var(--ink)}
+@media(max-width:620px){.brief .lede{font-size:17px}}
+
+.leg .dl{font-style:normal;font-family:var(--mono);font-size:10.5px;text-align:right;white-space:nowrap}.dl.up{color:var(--pos)}.dl.dn{color:var(--neg)}

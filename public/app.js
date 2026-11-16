@@ -87,11 +87,10 @@ function rUne(){
   }).filter(Boolean);
   var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span><span>'+S.feed.length+' articles en base</span></div>';
   if(bullets.length){
-    h+='<section class="brief"><h2>Brief du jour</h2><ol>'+bullets.map(function(b){
-      return'<li><p>'+esc(b.text)+'</p><div class="by">'+b.srcs.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+'</div></li>';
-    }).join("")+'</ol><div class="foot">Rédigé par IA à partir des seuls articles collectés (généré '+esc(ago(B.generated_at))+(B.model?', '+esc(B.model):'')+'). Chaque puce renvoie à ses sources ; les chiffres sont vérifiés dans les articles cités.</div></section>';
+    var seen={},refs=[];bullets.forEach(function(b){b.srcs.forEach(function(a){if(!seen[a.id]){seen[a.id]=1;refs.push(a)}})});
+    h+='<section class="brief"><h2>Le briefing du jour</h2><p class="lede">'+bullets.map(function(b){return esc(b.text)}).join(" ")+'</p><div class="by">Sources : '+refs.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+'</div><div class="foot">Rédigé par IA à partir des seuls articles collectés (généré '+esc(ago(B.generated_at))+(B.model?', '+esc(B.model):'')+'). Les chiffres sont vérifiés dans les articles cités.</div></section>';
   }else{
-    h+='<section class="brief"><h2>Brief du jour</h2><p class="small" style="padding:12px 0">Pas encore de brief : il est généré par l\'IA lors de la prochaine collecte, dès que le quota Gemini le permet.</p></section>';
+    h+='<section class="brief"><h2>Le briefing du jour</h2><p class="small" style="padding:12px 0">Pas encore de brief : il est généré par l\'IA lors de la prochaine collecte, dès que le quota Gemini le permet.</p></section>';
   }
   h+='<section class="ess"><h2>'+(fallback?'Les plus importants (sélection provisoire)':'Les 10 essentiels')+'</h2>'+
     (top.length?top.map(function(it,i){return essHTML(it,i+1)}).join(""):'<div class="empty">Aucune actualité pour le moment.</div>')+
@@ -143,7 +142,7 @@ function rMarket(){
 }
 
 
-var DONUT=["#000000","#4D4D4D","#767676","#9E9E9E","#BDBDBD","#D9D9D9","#EBEBEB"];
+function dcol(i,label){return/^(autres?|other)/i.test(label||"")?"var(--cg)":"var(--c"+(Math.min(i,5)+1)+")"}
 function fmtPct(v){return String(v).replace(".",",")+" %"}
 function donut(segs){
   var tot=segs.reduce(function(a,x){return a+x.pct},0),R=52,r=32,c=60,a0=-Math.PI/2,out="";
@@ -151,7 +150,7 @@ function donut(segs){
     var a1=a0+x.pct/tot*2*Math.PI,big=(a1-a0)>Math.PI?1:0;
     var P=function(rad,a){return(c+rad*Math.cos(a)).toFixed(2)+" "+(c+rad*Math.sin(a)).toFixed(2)};
     var d=segs.length===1?"":"M"+P(R,a0)+" A"+R+" "+R+" 0 "+big+" 1 "+P(R,a1)+" L"+P(r,a1)+" A"+r+" "+r+" 0 "+big+" 0 "+P(r,a0)+" Z";
-    out+='<path d="'+d+'" fill="'+DONUT[Math.min(i,DONUT.length-1)]+'" stroke="var(--bg)" stroke-width="1.5"><title>'+esc(x.label)+' : '+fmtPct(x.pct)+'</title></path>';
+    out+='<path d="'+d+'" style="fill:'+dcol(i,x.label)+'" stroke="var(--bg)" stroke-width="1.5"><title>'+esc(x.label)+' : '+fmtPct(x.pct)+'</title></path>';
     a0=a1;
   });
   return'<svg class="donut" viewBox="0 0 120 120" role="img" aria-label="Camembert">'+out+'</svg>';
@@ -164,7 +163,7 @@ function shareFresh(c){
   return t;
 }
 function shareCard(c){
-  var leg=c.segments.map(function(x,i){return'<li><i style="background:'+DONUT[Math.min(i,DONUT.length-1)]+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
+  var leg=c.segments.map(function(x,i){return'<li><i style="background:'+dcol(i,x.label)+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
   return'<div class="share"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.metric)+' · '+esc(c.period)+'</div>'+
    '<div class="sbody">'+donut(c.segments)+'<ul class="leg">'+leg+'</ul></div>'+
    '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div><div class="fr">'+shareFresh(c)+'</div>'+
@@ -219,19 +218,30 @@ function lineChart(c){
   var mm0=new Date(t0).getUTCFullYear()*12+new Date(t0).getUTCMonth();
   for(var mm=Math.ceil((mm0+1)/stepM)*stepM;;mm+=stepM){var tt=Date.UTC(Math.floor(mm/12),mm%12,1);if(tt>t1)break;xt.push([tt,stepM>=12?String(Math.floor(mm/12)):fmtM(tt)])}
   xt.forEach(function(x){var xx=X(x[0]).toFixed(1);g+='<line x1="'+xx+'" x2="'+xx+'" y1="'+(H-B)+'" y2="'+(H-B+3)+'" class="gl2"/><text x="'+xx+'" y="'+(H-6)+'" text-anchor="middle" class="ax">'+esc(x[1])+'</text>'});
-  var col=function(i){return["#000000","#4D4D4D","#767676","#9E9E9E","#BDBDBD"][Math.min(i,4)]};
+  var col=function(i){return"var(--c"+(Math.min(i,5)+1)+")"};
   ser.forEach(function(x,i){
     var pts=x.points.slice().sort(function(a,b){return ms(a.d)-ms(b.d)}),d="";
     pts.forEach(function(p,k){var px=X(ms(p.d)).toFixed(1),py=Y(p.v).toFixed(1);d+=(k?(x.step?'H'+px+'V'+py:'L'+px+' '+py):'M'+px+' '+py)});
     if(x.step&&pts.length){d+='H'+(W-R)}
-    g+='<path d="'+d+'" fill="none" stroke="'+col(i)+'" stroke-width="1.7" stroke-linejoin="round"'+((x.dashed?"4 3":DASH[i])?' stroke-dasharray="'+(x.dashed?"4 3":DASH[i])+'"':'')+'/>';
+    g+='<path d="'+d+'" fill="none" style="stroke:'+col(i)+'" stroke-width="1.7" stroke-linejoin="round"'+((x.dashed?"4 3":DASH[i])?' stroke-dasharray="'+(x.dashed?"4 3":DASH[i])+'"':'')+'/>';
     var dots=pts.length<=12;
-    pts.forEach(function(p,k){if(dots||k===pts.length-1){g+='<circle cx="'+X(ms(p.d)).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="'+(k===pts.length-1?2.8:2)+'" fill="'+col(i)+'"><title>'+esc(x.name+(p.name?" — "+p.name:"")+" · "+fmtD(p.d)+" : "+fmtVal(c,p.v)+(p.src?" ("+p.src+")":""))+'</title></circle>'}});
+    pts.forEach(function(p,k){if(dots||k===pts.length-1){g+='<circle cx="'+X(ms(p.d)).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="'+(k===pts.length-1?2.8:2)+'" style="fill:'+col(i)+'"><title>'+esc(x.name+(p.name?" — "+p.name:"")+" · "+fmtD(p.d)+" : "+fmtVal(c,p.v)+(p.src?" ("+p.src+")":""))+'</title></circle>'}});
   });
   var leg=ser.map(function(x,i){
     var last=x.points.slice().sort(function(a,b){return ms(a.d)-ms(b.d)}).pop(),ds=x.dashed?"4 3":DASH[i];
-    return'<li><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M0 4H22" stroke="'+col(i)+'" stroke-width="2"'+(ds?' stroke-dasharray="'+ds+'"':'')+' fill="none"/></svg><span>'+esc(x.name)+'</span><b>'+esc(fmtVal(c,last.v))+'</b></li>'}).join("");
+    return'<li><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M0 4H22" style="stroke:'+col(i)+'" stroke-width="2"'+(ds?' stroke-dasharray="'+ds+'"':'')+' fill="none"/></svg><span>'+esc(x.name)+'</span><b>'+esc(fmtVal(c,last.v))+'</b>'+deltaChip(c,x)+'</li>'}).join("");
   return'<svg class="lc" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(c.title)+'">'+g+'</svg><ul class="leg lg">'+leg+'</ul>';
+}
+function deltaChip(c,x){
+  var p=x.points.slice().sort(function(a,b){return ms(a.d)-ms(b.d)});
+  if(p.length<2)return'<em class="dl"></em>';
+  var a=p[p.length-2].v,b=p[p.length-1].v,t;
+  if(!(a>0)||a===b)return'<em class="dl"></em>';
+  if(c.scale==="log")t="×"+String(Math.round(b/a*10)/10).replace(".",",");
+  else if(/%/.test(c.unit||""))t=String(Math.abs(Math.round((b-a)*10)/10)).replace(".",",")+" pt";
+  else t=String(Math.abs(Math.round((b/a-1)*100)))+" %";
+  if(t==="0 pt"||t==="0 %")return'<em class="dl"></em>';
+  return'<em class="dl '+(b>a?"up":"dn")+'" title="Variation depuis le point précédent">'+(b>a?"▲ ":"▼ ")+t+'</em>';
 }
 function curveFresh(c){
   var all=[];(c.series||[]).forEach(function(x){(x.points||[]).forEach(function(p){all.push(p.d)})});

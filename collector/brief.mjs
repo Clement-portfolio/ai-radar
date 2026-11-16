@@ -39,12 +39,12 @@ export function selectTop(items, now, n = 10) {
 }
 
 export const BRIEF_SYSTEM = `Tu rédiges le brief du jour d'un radar d'actualité sur l'intelligence artificielle et son économie, en français. On te donne des articles numérotés (i, title, summary, source, country, layer).
-Écris exactement 5 puces, de la plus importante à la moins importante.
-- Chaque puce : une seule phrase de 220 caractères maximum, factuelle, fondée sur 1 à 3 articles, cités par leur numéro i dans le champ sources.
+Écris un briefing, comme un chroniqueur qui résume la journée à voix haute : un paragraphe continu de exactement 5 phrases enchaînées (connecteurs naturels : « Du côté de… », « Par ailleurs », « Enfin »), de la plus importante à la moins importante, dans un français simple et fluide. Chaque phrase est un objet du tableau : elles seront recollées dans l'ordre pour former le paragraphe.
+- Chaque phrase : 240 caractères maximum, une seule idée, factuelle, fondée sur 1 à 3 articles, cités par leur numéro i dans le champ sources.
 - N'utilise AUCUN chiffre, date, nom propre ou fait absent des articles cités. N'invente rien, ne complète pas avec tes connaissances.
 - Écris tous les nombres en chiffres, jamais en toutes lettres (« 7 milliards de dollars », « 60 % », pas « sept milliards » ni « soixante pour cent »).
 - Pas de prédiction, pas d'opinion, aucune recommandation d'investissement.
-- Varie les sujets : ne consacre pas deux puces à la même histoire.
+- Varie les sujets : ne consacre pas deux phrases à la même histoire.
 Réponds uniquement par un tableau JSON de 5 objets {text, sources}.`;
 
 export const BRIEF_SCHEMA = {
@@ -84,11 +84,11 @@ export async function makeBrief({ items, now, prev, generate, modelName }) {
   const top = selectTop(items, now);
   const ids = top.map((t) => t.id);
   const byId = new Map(items.map((i) => [i.id, i]));
-  const base = { generated_at: prev?.generated_at || null, model: prev?.model || null, top, top_at_brief: prev?.top_at_brief || [], bullets: prev?.bullets || [] };
+  const base = { generated_at: prev?.generated_at || null, model: prev?.model || null, top, top_at_brief: prev?.top_at_brief || [], bullets: prev?.bullets || [], style: prev?.style || null };
   const prevTop = new Set(prev?.top_at_brief || []);
   const changed = ids.filter((id) => !prevTop.has(id)).length;
   const age = prev?.generated_at ? now - Date.parse(prev.generated_at) : Infinity;
-  const need = !base.bullets.length || changed >= 3 || age > 6 * H;
+  const need = !base.bullets.length || prev?.style !== "paragraph" || changed >= 3 || age > 6 * H;
   if (!top.length) return { doc: base, regenerated: false, reason: "aucun article récent" };
   if (!need) return { doc: base, regenerated: false, reason: "essentiel inchangé" };
   if (!generate) return { doc: base, regenerated: false, reason: "Gemini indisponible : dernier brief conservé" };
@@ -98,7 +98,7 @@ export async function makeBrief({ items, now, prev, generate, modelName }) {
   const bullets = validateBullets(res, inputs);
   if (!bullets) return { doc: base, regenerated: false, reason: res ? "brief rejeté : puces non conformes aux articles" : "Gemini indisponible : dernier brief conservé" };
   return {
-    doc: { generated_at: new Date(now).toISOString(), model: modelName ? modelName() : null, top, top_at_brief: ids, bullets: bullets.map((b) => ({ text: b.text, ids: b.sources.map((s) => ids[s - 1]) })) },
+    doc: { style: "paragraph", generated_at: new Date(now).toISOString(), model: modelName ? modelName() : null, top, top_at_brief: ids, bullets: bullets.map((b) => ({ text: b.text, ids: b.sources.map((s) => ids[s - 1]) })) },
     regenerated: true, reason: "brief régénéré",
   };
 }
