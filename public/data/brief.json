@@ -1,0 +1,101 @@
+{
+ "generated_at": "2026-11-16T16:27:34.172Z",
+ "model": "gemini-3.5-flash-lite",
+ "top": [
+  {
+   "id": "6e3dfd038e5d",
+   "score": 39.5,
+   "media": 3
+  },
+  {
+   "id": "6cab091c059a",
+   "score": 38.9,
+   "media": 1
+  },
+  {
+   "id": "1be23d8f3902",
+   "score": 35,
+   "media": 1
+  },
+  {
+   "id": "f75fe1d019b0",
+   "score": 34.9,
+   "media": 1
+  },
+  {
+   "id": "7048d748b81e",
+   "score": 34.6,
+   "media": 1
+  },
+  {
+   "id": "9d728296cb7a",
+   "score": 34.5,
+   "media": 1
+  },
+  {
+   "id": "4d2342aec4b0",
+   "score": 34.4,
+   "media": 1
+  },
+  {
+   "id": "91e58e2ea930",
+   "score": 28.1,
+   "media": 1
+  },
+  {
+   "id": "23a99366b5f2",
+   "score": 26,
+   "media": 1
+  },
+  {
+   "id": "2745e145bb51",
+   "score": 25.9,
+   "media": 1
+  }
+ ],
+ "top_at_brief": [
+  "6e3dfd038e5d",
+  "6cab091c059a",
+  "1be23d8f3902",
+  "f75fe1d019b0",
+  "7048d748b81e",
+  "9d728296cb7a",
+  "4d2342aec4b0",
+  "91e58e2ea930",
+  "23a99366b5f2",
+  "2745e145bb51"
+ ],
+ "bullets": [
+  {
+   "text": "Alibaba a dévoilé un modèle d'intelligence artificielle avancé rivalisant avec les leaders du secteur et réduisant le coût des tâches de soixante pour cent.",
+   "ids": [
+    "7048d748b81e",
+    "4d2342aec4b0"
+   ]
+  },
+  {
+   "text": "Amazon Web Services investit sept milliards de dollars dans la construction d'un nouveau centre de données dans l'Indiana.",
+   "ids": [
+    "1be23d8f3902"
+   ]
+  },
+  {
+   "text": "Nvidia a annoncé le lancement du GPU Rubin HPC pour accélérer les simulations et le traitement de données des agents pour la science et l'ingénierie.",
+   "ids": [
+    "6cab091c059a"
+   ]
+  },
+  {
+   "text": "La division Média de LVMH s'est associée à OpenAI pour soutenir le journalisme et rendre ses publications accessibles via ChatGPT.",
+   "ids": [
+    "91e58e2ea930"
+   ]
+  },
+  {
+   "text": "La startup DeepSeek limite l'accès à son application d'intelligence artificielle en raison de difficultés liées à des capacités de calcul insuffisantes.",
+   "ids": [
+    "f75fe1d019b0"
+   ]
+  }
+ ]
+}
