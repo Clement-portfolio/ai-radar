@@ -1,0 +1,24 @@
+name: Sonde sources parts de marché
+on: workflow_dispatch
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Counterpoint
+        run: |
+          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o cp.html -w "counterpoint http=%{http_code} bytes=%{size_download}\n" "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share" || echo "counterpoint curl failed"
+          echo "contient SK Hynix: $(grep -c 'SK Hynix' cp.html)  contient Micron: $(grep -c 'Micron' cp.html)  tables: $(grep -o '<table' cp.html | wc -l)"
+          grep -o '[^<>]\{0,60\}50%[^<>]\{0,60\}' cp.html | head -3
+      - name: TrendForce communique
+        run: |
+          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tf.html -w "trendforce http=%{http_code} bytes=%{size_download}\n" "https://www.trendforce.com/presscenter/news/20260909-13225.html" || echo "trendforce curl failed"
+          echo "contient 72.5%: $(grep -c '72.5%' tf.html)"
+          grep -o '[^<>]\{0,80\}72.5%[^<>]\{0,40\}' tf.html | head -2
+      - name: TrendForce liste
+        run: |
+          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tfl.html -w "trendforce-liste http=%{http_code} bytes=%{size_download}\n" "https://www.trendforce.com/presscenter/news" || echo "liste curl failed"
+          echo "liens communiques: $(grep -o '/presscenter/news/[0-9]\{8\}-[0-9]*\.html' tfl.html | sort -u | wc -l)"
+          grep -o '[^<>]\{0,60\}[Ff]oundry[^<>]\{0,80\}' tfl.html | head -3
