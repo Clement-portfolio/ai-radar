@@ -20,7 +20,17 @@ export function pickFocus(items, now, n = 5) {
   const ranked = top.filter((i) => i.importance >= 2).sort((a, b) => (b.importance - a.importance) || (Date.parse(b.ts) - Date.parse(a.ts)));
   const out = [], cats = new Set();
   for (const it of ranked) { if (out.length >= n) break; if (cats.has(it.category) && ranked.length > n + 1) continue; cats.add(it.category); out.push(it); }
-  return out;
+  // Politique et Finance doivent avoir leur place dès qu'une actualité notable existe (sans doublon d'un sujet déjà retenu)
+  const must = ["politique", "capex"];
+  for (const cat of must) {
+    if (out.some((i) => i.category === cat)) continue;
+    const cand = items.filter((i) => !i.pending && i.category === cat && i.importance >= 2 && now - Date.parse(i.ts) < 2 * DAY && !out.some((o) => overlap(tokens(o.title), tokens(i.title)) >= 0.35))
+      .sort((a, b) => (b.importance - a.importance) || (Date.parse(b.ts) - Date.parse(a.ts)))[0];
+    if (!cand) continue;
+    if (out.length >= n) { let k = out.length - 1; while (k >= 0 && must.includes(out[k].category)) k--; if (k < 0) continue; out.splice(k, 1); }
+    out.push(cand);
+  }
+  return out.sort((a, b) => (b.importance - a.importance) || (Date.parse(b.ts) - Date.parse(a.ts)));
 }
 
 /** Articles plus anciens sur le même sujet (jusqu'à 4), pour la remise en contexte. */

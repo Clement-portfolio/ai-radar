@@ -20,6 +20,23 @@ const picks = pickFocus(items, now, 3);
 assert.ok(picks.length >= 2 && picks.length <= 3 && picks.every((p) => p.importance >= 2), "2 à 3 actualités importantes");
 assert.equal(new Set(picks.map((p) => p.category)).size, picks.length, "catégories distinctes");
 
+// Politique et Finance ont leur place même quand d'autres sujets dominent ; pas de doublon de sujet
+const pol = [
+  mk("p1", 4, "Trump soutient le retour de Jensen Huang chez Nvidia", "Le président soutient ce retour.", { category: "politique", layer: "Régulation", importance: 2 }),
+  mk("p2", 5, "Trump ouvert au retour de Jensen Huang chez Nvidia", "Le président est ouvert à ce retour.", { category: "politique", layer: "Régulation", importance: 2 }),
+  mk("m1", 2, "Nouveau modèle de pointe annoncé par un grand laboratoire", "Un modèle.", { category: "modeles", layer: "Modèles" }),
+  mk("m2", 2, "Panne mondiale d'un grand service d'IA", "Une panne.", { category: "adoption", layer: "Applications" }),
+  mk("m3", 2, "Record de consommation électrique des centres de données", "Énergie.", { category: "energie", layer: "Énergie" }),
+  mk("m4", 2, "Nouvelle puce mémoire pour accélérateurs", "Mémoire.", { category: "puces", layer: "Puces" }),
+  mk("m5", 2, "Recherche sur l'alignement des modèles", "Recherche.", { category: "recherche", layer: "Recherche" }),
+  mk("m6", 2, "Nouvelle règle européenne sur l'IA", "Règle.", { category: "regul", layer: "Régulation" }),
+];
+const pp = pickFocus([...items, ...pol], now, 5);
+assert.equal(pp.length, 5);
+assert.ok(pp.some((x) => x.category === "politique"), "une actualité politique est retenue");
+assert.ok(pp.some((x) => x.category === "capex"), "une actualité financière est retenue");
+assert.equal(pp.filter((x) => x.category === "politique").length, 1, "un seul article par sujet politique");
+
 // remise en contexte : articles plus anciens sur le même sujet seulement
 const rel = relatedFor(items[0], items, now);
 assert.deepEqual(rel.map((o) => o.id), ["a1", "a0"], "plus anciens, même sujet, du plus ancien au plus récent");
