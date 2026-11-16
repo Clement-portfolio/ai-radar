@@ -283,7 +283,7 @@ details.why .sc{margin-top:6px}
 
 /* alignement : titre, sous-titre, graphe, source, relecture, limites sur la même ligne d'une carte à l'autre */
 .fr{display:block}
-@supports(grid-template-rows:subgrid){.cards3>.share{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}.cards3>.share>details.why{align-self:start}.cards3>.share .sbody{align-self:center}}
+@supports(grid-template-rows:subgrid){.cards3>.share{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}.cards3>.share>details.why{align-self:start}.cards3>.share .sbody{align-self:start}}
 @media(max-width:620px){.cards3>.share{display:flex;grid-row:auto}}
 
 .brief .lede{font-family:var(--display);font-size:19px;line-height:1.55;letter-spacing:-.01em;padding:10px 0 12px;max-width:none;margin:0;color:var(--ink)}
