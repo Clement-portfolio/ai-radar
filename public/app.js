@@ -48,8 +48,9 @@ function freshness(extra){
 }
 function refresh(){
   if(S.run)return S.run;
-  var b=$("refresh");b.disabled=true;
-  S.run=loadData().then(function(){freshness();renderAll()}).catch(function(e){setStatus("err","Données indisponibles");console.error(e)})
+  var b=$("refresh"),was=S.status&&S.status.updated_at,label=b.textContent;b.disabled=true;
+  var note=function(txt){b.textContent=txt;setTimeout(function(){b.textContent=label},2600)};
+  S.run=loadData().then(function(){freshness();renderAll();var now=S.status&&S.status.updated_at;note(was&&now&&now!==was?"Nouvelles données":"Déjà à jour")}).catch(function(e){setStatus("err","Données indisponibles");console.error(e);note("Échec")})
   .then(function(){b.disabled=false;S.run=null});
   return S.run;
 }

@@ -22,6 +22,8 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }} # toujours le dernier état de la branche, même si ce lancement a été déclenché par un ancien commit
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -42,5 +44,5 @@ jobs:
           git add public/data
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Données du $(date -u +'%Y-%m-%d %H:%M') UTC"
-          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" # en cas de collision avec une autre collecte, nos données du jour l'emportent
           git push origin "HEAD:${GITHUB_REF_NAME}"
