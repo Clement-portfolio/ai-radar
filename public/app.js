@@ -94,7 +94,7 @@ function rUne(){
   }
   h+='<section class="ess"><h2>'+(fallback?'Les plus importants (sélection provisoire)':'Les 10 essentiels')+'</h2>'+
     (top.length?top.map(function(it,i){return essHTML(it,i+1)}).join(""):'<div class="empty">Aucune actualité pour le moment.</div>')+
-    '</section><button class="more" data-go="actualites">Tout le fil →</button></div>';
+    '</section><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
   el.innerHTML=h;
 }
 
