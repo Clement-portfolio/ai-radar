@@ -299,7 +299,7 @@ function secPanel(){
    '<div class="note"><b>À lire avant de comparer.</b> Le capex est la sortie de trésorerie pour immobilisations corporelles telle que déclarée dans les données XBRL ; il n\'inclut pas toujours les contrats de location-financement, d\'où un écart possible avec les guidances ci-dessus. Les exercices sont décalés : Oracle (mai), Microsoft (juin) ; les périodes affichées sont donc propres à chaque société.</div>';
 }
 function meter(t){
-  var cls=t>=7?"":(t>=5?"m":"l");
+  var cls=t>=8?"hi":(t>=6?"mid":"lo");
   var s='';for(var i=1;i<=10;i++)s+='<i class="'+(i<=t?'f':'')+'"></i>';
   return'<div class="meter '+cls+'">'+s+'</div>';
 }
@@ -307,11 +307,11 @@ function rInfra(){
   var L=S.layers.layers.slice();
   if(S.layerSort==="tension")L.sort(function(a,b){return b.tension-a.tension});else L.sort(function(a,b){return a.order-b.order});
   var el=$("v-infrastructure");
-  el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">La pile de l\'IA, des applications à l\'énergie. Pour chaque couche : qui domine, où ça coince, et à quel point (tension de 0 à 10, estimation éditoriale).</p>'+
+  el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">La pile de l\'IA, des applications à l\'énergie. Pour chaque couche : qui domine, où ça coince, et à quel point (tension de 0 à 10, estimation éditoriale).</p><div class="tleg"><span><i class="hi"></i>Critique (8 à 10)</span><span><i class="mid"></i>Élevé (6 à 7)</span><span><i class="lo"></i>Modéré ou faible (0 à 5)</span></div>'+
    '<div class="toolbar"><button class="chip'+(S.layerSort==="pile"?' on':'')+'" data-ls="pile">Ordre de la pile</button><button class="chip'+(S.layerSort==="tension"?' on':'')+'" data-ls="tension">Par tension</button></div><div class="stack">'+
    L.map(function(l){
      var open=S.open["l"+l.id]?" open":"";
-     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span><span class="lm">'+meter(l.tension)+'<span class="mlabel"><span>Tension</span><span>'+esc(l.tension_label)+' · '+l.tension+'/10</span></span></span><span class="chev">›</span></button>'+
+     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span><span class="lm">'+meter(l.tension)+'<span class="mlabel"><span>Tension</span><span class="tv '+(l.tension>=8?"hi":(l.tension>=6?"mid":"lo"))+'">'+esc(l.tension_label)+' · '+l.tension+'/10</span></span></span><span class="chev">›</span></button>'+
       '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+esc(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p><div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
    }).join("")+'</div>';
 }
