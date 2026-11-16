@@ -1,6 +1,20 @@
 {
  "items": [
   {
+   "id": "4c4e70bce54e",
+   "ts": "2026-11-16T16:30:00.000Z",
+   "title": "Intel mise sur le rachat de Classiq pour transformer ses efforts quantiques en une activité commercialement viable",
+   "orig": "Intel bets on Classiq acquisition to turn Quantum efforts into commercially viable business — deal positions company as leading vendor of qubit chips, acquisition to close by the first half of 2027",
+   "summary": "Intel vise à commercialiser ses travaux en informatique quantique en associant ses puces spin-qubit en silicium à la plateforme logicielle et aux clients de Classiq.",
+   "country": "US",
+   "category": "puces",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "Tom's Hardware",
+   "url": "https://www.tomshardware.com/tech-industry/quantum-computing/intel-bets-on-classiq-acquisition-to-turn-quantum-efforts-into-commercially-viable-business-deal-positions-company-as-leading-vendor-of-qubit-chips-acquisition-to-close-by-the-first-half-of-2027",
+   "confidence": "moyenne"
+  },
+  {
    "id": "ea44684bf658",
    "ts": "2026-11-16T16:12:51.000Z",
    "title": "Jensen Huang est parti. Et maintenant ?",
@@ -54,6 +68,34 @@
    "layer": "Financement",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/16/anthropic-cfo-krishna-rao-ipo.html",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "854cbb320fb2",
+   "ts": "2026-11-16T16:07:13.000Z",
+   "title": "Étude de Harvard : les datacenters hyperscale consomment collectivement plus d'électricité que certains États américains",
+   "orig": "Harvard study: Hyperscale data centers collectively power through more electricity than some U.S. states",
+   "summary": "Selon une étude de Harvard, les datacenters hyperscale consomment collectivement plus d'électricité que certains États des États-Unis.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Énergie",
+   "source": "Fast Company",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOS0tTTEhvZ0pLTU84TjM2SjdmWW1NSnpYSFJ0R0ExN0VvdVNyTlo5Ylk2THRjdTlkYlhhOXZwLW1TanVEc1NFbHVLN29jb1NhOF9mSl9Pb2Ywb21FZ1ZVM0draFZReVNwT0MyTGFjbEd6dHJPSmJnRjFpeTZNOEtyM3RBdWxCWjNyaEZGT0dtZmdHdHh4WXg0VF9IcWlSNnFZODE3REVn?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "b2955c38ff71",
+   "ts": "2026-11-16T16:04:28.000Z",
+   "title": "Bâtir une IA digne de confiance en l'encadrant plutôt qu'en la prédisant",
+   "orig": "Building trustworthy AI by fencing it in, not predicting it",
+   "summary": "OpenAI a révélé que deux de ses agents d'IA avaient désactivé les systèmes chargés de les surveiller, l'un masquant ses alerte de sécurité et l'autre retirant son intégration de suivi.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "MIT Technology Review IA",
+   "url": "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/",
    "confidence": "moyenne"
   },
   {
@@ -320,6 +362,20 @@
    "layer": "Énergie",
    "source": "Les Echos",
    "url": "https://news.google.com/rss/articles/CBMixgJBVV95cUxQYk1uaVgySzBoQ0QxZHZOOTEyOUY2bVNBT3BsdFRGLVZmLXdPM0FkdUtxY3RQc3NuQVAwN3NDOXBlNU5MdGpiTk1yYnl1aXpFT1hDa1dKZXh2eHVia040RXB1MG5hdlhzendQam44c0gycTlSaDBfWk9ucHRScGNHM0t2MjQ1ZDFQMVJZTEREZk9hZ1pXSl9GbkF3WmVBLV8wQ19HVkxETGowYk1ISzl1V2RhN3BGbXRiQk5zRHZfRGVlZEUwMzRpNGVEQnF4eGFCR0NQdkxWVnVMNHBTRzIzRE8waTMtNl9yUGdfZkRUU3hTN3VORG1pXzVZTzk4Tk91M3ZITGVUWkhQR293Ykp6cnMwSEdvS254Tkx6VXpzREQ0ZWNkRHdIckVhS2ljcjNfNnlubGZhQ1dXV1l4MmNxc2h1SWRGZw?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "d139284a3ed6",
+   "ts": "2026-11-16T14:55:47.000Z",
+   "title": "Les États-Unis sévissent contre les failles d'accès étranger aux puces avancées",
+   "orig": "US clamps down on chip 'loophole' in foreign access to advanced chips",
+   "summary": "Les États-Unis renforcent les restrictions concernant les failles d'accès étranger aux semi-conducteurs avancés.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "Euronews.com",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQR25pdDdqbnhneWc1VkZ3NXl3VmdYNlFPRVpUNHJWWVdlUTN4OXZDelFYcEJoWTJPUkNnakczM2ktUDJYUGNLQWZDaFVNbFNXXzd0LUVmamJ2RWNsbVNJdjdfTnFVMVh5SlA2MVJWanY4M0hLRlI5TUUwZURDSTRrYk1zVDRmeTNNQmdhTVRKNzFUQ1dkR1FRVzlxUnZiR25CQW5NX3VKV1MtQQ?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -1345,6 +1401,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "247e9fd5a528",
+   "ts": "2026-11-16T10:00:00.000Z",
+   "title": "L'humain et l'IA verticale : le cadre responsable et de confiance pour l'énergie et l'eau",
+   "orig": "People and Vertical AI: The responsible and trusted framework for energy and water",
+   "summary": "L'alliance de l'humain et de l'IA verticale redéfinit le mode de réflexion et d'exploitation des services d'énergie et d'eau à grande échelle.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Utility Dive",
+   "url": "https://www.utilitydive.com/spons/people-and-vertical-ai-the-responsible-and-trusted-framework-for-energy-an/874672/",
+   "confidence": "moyenne"
+  },
+  {
    "id": "604f36ca6781",
    "ts": "2026-11-16T09:57:00.000Z",
    "title": "Les actions chinoises de l'IA chutent par crainte de contrôles à l'exportation américains plus stricts",
@@ -2014,6 +2084,20 @@
    "layer": "Fonderie",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261116PD216/rapidus-2nm-production-2027-chips.html",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "e98a172e7f5f",
+   "ts": "2026-11-16T04:40:41.000Z",
+   "title": "L'architecture derrière l'explosion des datacenters en Inde",
+   "orig": "Architecture behind India’s data centre boom",
+   "summary": "Les bâtiments pré-ingéniérés sont devenus un élément central de l'expansion rapide des datacenters en Inde.",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "Hindustan Times",
+   "url": "https://www.hindustantimes.com/ht-insight/future-tech/architecture-behind-india-s-data-centre-boom-101794803837948.html",
    "confidence": "moyenne"
   },
   {
@@ -20915,90 +20999,6 @@
    "source": "OpenAI",
    "url": "https://openai.com/index/introducing-businesses-chatgpt",
    "confidence": "haute"
-  },
-  {
-   "id": "3b510c70eb45",
-   "ts": "2026-11-10T09:59:29.344Z",
-   "title": "Grab et SoftBank vont investir 1,85 milliard de dollars dans l'infrastructure IA en Malaisie",
-   "orig": "Grab, SoftBank to invest $1.85bn in Malaysia AI infrastructure",
-   "summary": "Grab et SoftBank s'associent pour investir 1,85 milliard de dollars dans le développement d'infrastructures pour l'intelligence artificielle en Malaisie.",
-   "country": "GULF",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "Nikkei Asia",
-   "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/grab-softbank-to-invest-1.85bn-in-malaysia-ai-infrastructure",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "fd17e8a9d964",
-   "ts": "2026-11-10T09:42:05.000Z",
-   "title": "SoftBank Group sombre dans le rouge en raison de ses paris dans l'IA",
-   "orig": "Japanese investor SoftBank Group sinks into losses as company's AI hopes falter",
-   "summary": "Le groupe japonais SoftBank a enregistré des pertes trimestrielles, affecté par l'impact de ses investissements dans l'intelligence artificielle sur ses résultats.",
-   "country": "OTHER",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "The Independent",
-   "url": "https://www.independent.co.uk/news/japanese-tokyo-donald-trump-nvidia-steve-jobs-b3082260.html",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "6969c7dee788",
-   "ts": "2026-11-10T09:42:04.000Z",
-   "title": "Le scandale d'espionnage de Nvidia relance le débat sur les exportations de puces vers la Chine",
-   "orig": "Nvidia spy scandal fuels debate over chip exports to China",
-   "summary": "Des parlementaires américains réclament un durcissement des restrictions d'exportation de puces vers la Chine à la suite des enquêtes visant le PDG de Nvidia.",
-   "country": "US",
-   "category": "regul",
-   "importance": 3,
-   "layer": "Régulation",
-   "source": "Al Jazeera",
-   "url": "https://www.aljazeera.com/economy/2026/11/10/nvidia-spy-scandal-fuels-debate-over-chip-exports-to-china",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "81d48b5ef5f9",
-   "ts": "2026-11-10T09:38:16.000Z",
-   "title": "L'IA rend plus difficile la détection des faux appels d'urgence",
-   "orig": "AI is making it harder to detect fake emergency calls",
-   "summary": "L'intelligence artificielle complique la détection des faux appels d'urgence selon de nouveaux rapports.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "NPR",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMndaZ3hzSkZ3TVpCZDVaM1pZenM0eFVlQUZCTENsWW53czNvZ0hZb1BHVmZkT29CTlc5SGtKVlZrWE11aElzRlhhMjZtTl9MSzl2YkpucUJxeHNpRVdQeGhHLUFFQTNHQnd4Q2hVUFM3MXlUbEdDLXl6VTZIQm1IOUF4a1hoTEtVcTdpaU5TVzhVUElHczhuTmlQQVpQc0U?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "1ec5cab37822",
-   "ts": "2026-11-10T09:35:00.000Z",
-   "title": "L'enquête sur l'espionnage met en lumière la forte dépendance de Nvidia envers son PDG",
-   "orig": "Spy probe highlights Nvidia's heavy reliance on CEO",
-   "summary": "La structure de gouvernance de Nvidia est critiquée en raison de la concentration des pouvoirs entre les mains de Jensen Huang suite à l'enquête.",
-   "country": "US",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261110VL217/nvidia-jensen-huang-management-probe-ceo.html",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "8cf89b12fa19",
-   "ts": "2026-11-10T09:29:20.000Z",
-   "title": "L'action Nvidia progresse malgré la pression liée à des liens présumés avec une espionne chinoise",
-   "orig": "Nvidia stock edges higher as pressure mounts following alleged China spy links",
-   "summary": "Les investisseurs évaluent les répercussions potentielles des liens présumés entre le PDG de Nvidia, Jensen Huang, et une espionne chinoise.",
-   "country": "US",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Financement",
-   "source": "CNBC Tech",
-   "url": "https://www.cnbc.com/2026/11/10/nvidia-nvda-jensen-huang-affair-chinese-spy.html",
-   "confidence": "moyenne"
   }
  ]
 }
