@@ -1,10 +1,11 @@
 {
- "generated_at": "2026-11-16T19:10:26.386Z",
+ "style": "paragraph",
+ "generated_at": "2026-11-16T19:26:05.677Z",
  "model": "gemini-3.5-flash-lite",
  "top": [
   {
    "id": "6e3dfd038e5d",
-   "score": 39.2,
+   "score": 39.1,
    "media": 3
   },
   {
@@ -49,7 +50,7 @@
   },
   {
    "id": "18dffcdb5ac3",
-   "score": 26,
+   "score": 25.9,
    "media": 1
   }
  ],
@@ -67,31 +68,31 @@
  ],
  "bullets": [
   {
-   "text": "NVIDIA a annoncé le GPU Rubin HPC pour accélérer les simulations et le traitement de données pour les agents IA dans la recherche scientifique et l'ingénierie.",
-   "ids": [
-    "6cab091c059a"
-   ]
-  },
-  {
-   "text": "Les États-Unis imposent de nouvelles exigences de licence pour l'exportation de puces IA afin de bloquer l'accès distant des entreprises chinoises à la puissance de calcul.",
+   "text": "Les États-Unis renforcent les contrôles à l'exportation de puces IA pour empêcher les entreprises chinoises d'accéder au calcul à distance.",
    "ids": [
     "772ccdf8e8c7"
    ]
   },
   {
-   "text": "Plus de 400 centres de données d'IA américains affichent une consommation d'électricité équivalente à celle d'États entiers comme le Wisconsin, le Michigan ou l'Indiana.",
+   "text": "Du côté de l'énergie, plus de 400 centres de données d'IA américains consomment autant d'électricité que des États entiers.",
    "ids": [
     "b1da22f7bd68"
    ]
   },
   {
-   "text": "La division Média de LVMH s'associe à OpenAI pour intégrer ses publications dans ChatGPT et soutenir le journalisme grâce à l'intelligence artificielle.",
+   "text": "Par ailleurs, la division Média de LVMH annonce un partenariat stratégique avec OpenAI pour soutenir le journalisme.",
    "ids": [
     "91e58e2ea930"
    ]
   },
   {
-   "text": "LS Electric a décroché un contrat de 94 millions de dollars pour fournir des équipements destinés à des centres de données d'intelligence artificielle aux États-Unis.",
+   "text": "De plus, Alibaba dévoile un modèle d'intelligence artificielle affirmant rivaliser avec les produits d'Anthropic et d'OpenAI.",
+   "ids": [
+    "7048d748b81e"
+   ]
+  },
+  {
+   "text": "Enfin, LS Electric décroche un contrat de 94 millions de dollars pour des équipements de datacenters d'IA aux États-Unis.",
    "ids": [
     "2debb24ecad6"
    ]

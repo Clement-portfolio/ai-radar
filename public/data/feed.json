@@ -1,6 +1,34 @@
 {
  "items": [
   {
+   "id": "45451d9f3b42",
+   "ts": "2026-11-16T19:24:40.000Z",
+   "title": "Apple teste des limites d'utilisation quotidienne pour des interactions complexes avec l'IA de Siri",
+   "orig": "Apple is testing daily usage limits for more complex Siri AI interactions",
+   "summary": "Apple expérimente des plafonds d'utilisation quotidienne pour certaines fonctionnalités avancées de Siri et d'Apple Intelligence via ses mises à jour logicielles.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/tech/1034581/apple-intelligence-siri-ai-daily-usage-limits-icloud-subscription",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "1931521e6b01",
+   "ts": "2026-11-16T19:23:45.000Z",
+   "title": "OpenAI veut empêcher les deepfakes de submerger les lignes de signalement d'abus sur mineurs",
+   "orig": "OpenAI wants to stop deepfakes from overwhelming child abuse tiplines",
+   "summary": "OpenAI lance un outil de classification capable de mieux détecter les images abusives, y compris celles générées par IA, pour aider les enquêteurs.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/policy/1034527/openai-csam-classifier",
+   "confidence": "moyenne"
+  },
+  {
    "id": "bbd0a8d53741",
    "ts": "2026-11-16T19:12:17.000Z",
    "title": "Et si la connectivité Internet mondiale était perturbée ? Une opportunité saoudienne de renforcer la résilience numérique",
@@ -911,6 +939,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "6e834fc4bc29",
+   "ts": "2026-11-16T15:56:26.000Z",
+   "title": "Les émissions de carbone des plus grands centres de données américains rivalisent déjà avec des pays entiers, selon une étude",
+   "orig": "Carbon Emissions of Biggest U.S. Data Centers Already Rival Entire Countries, Study Reveals",
+   "summary": "Une étude révèle que l'empreinte carbone des principaux centres de données aux États-Unis atteint désormais le niveau de celle de nations entières.",
+   "country": "US",
+   "category": "energie",
+   "importance": 3,
+   "layer": "Énergie",
+   "source": "The New York Times",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQZDd0S0d2cHBIYVB2cEdqWnJPY1RsNUtYRERsS2FMbHliakxRQ0dObzVJUlg2aFJIM25EY2dKT1FoRlBVLXZ5REpod3hJQ2t5RVRaTTBjbEdPT1ZKd2U5QnlVTzJ5aWhxVHNmbU52cjNXQ2QzaUZjU0V5UUU3dzRmbHpNVGNYbENfelNFVkY3RVZPaDJWMlFLa0pSenJrR2E2QXR3?oc=5",
+   "confidence": "moyenne"
+  },
+  {
    "id": "6516c6696195",
    "ts": "2026-11-16T15:52:19.000Z",
    "title": "Audible utilise l'IA pour aider les utilisateurs à découvrir des livres audio",
@@ -1356,6 +1398,20 @@
    "layer": "Applications",
    "source": "BBC",
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9SSDcwc3FheVB5VlNTZFM3ajBKbFI0SnlieWN1RjZlRDE3X0xadGxMNmJYcm1IS0tJdWNuSTdKLUNjRGtXNDhhbEZWWFBYVVBkdV9sU3JwOWtZTFE?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "862f2dd49595",
+   "ts": "2026-11-16T14:01:15.000Z",
+   "title": "Import AI 481 : sous-traitants en IA ; un laboratoire humide pour l'IA ; et subterfuges pendant le développement",
+   "orig": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development",
+   "summary": "Le bulletin traite de la sous-traitance dans l'IA, de l'intégration de laboratoires biologiques et des tactiques de dissimulation lors du développement.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "Import AI",
+   "url": "https://importai.substack.com/p/import-ai-481-ai-sub-contractors",
    "confidence": "moyenne"
   },
   {
@@ -2281,6 +2337,20 @@
    "source": "OpenAI",
    "url": "https://openai.com/index/lvmh-media-division-partnership",
    "confidence": "haute"
+  },
+  {
+   "id": "0cee514c7f3d",
+   "ts": "2026-11-16T09:00:00.000Z",
+   "title": "Que faudra-t-il pour que les superpuissances mondiales s'accordent sur des réglementations de l'IA en temps de guerre ?",
+   "orig": "What will it take for the world's superpowers to agree on AI regulations in war?",
+   "summary": "Le débat porte sur les conditions nécessaires à un consensus international concernant l'encadrement de l'usage de l'IA dans les conflits armés.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "CBC",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQlZBTDZfQWtNR1VBdG1kRDJyWTN6OUg4ZVZVbHpaTTR1SUNZN216S3AxdXJrcS1vV21aSFE2MGVlR01WMXdoZnpLdjVHR09Xb1VrOHdMdkVXcnFuNDlLZkY5anBORmI1QlBLQU82dlFVcDdjbGR6NlBiSDMxUWNINEtn?oc=5",
+   "confidence": "moyenne"
   },
   {
    "id": "691f3b1a8cef",
@@ -20928,76 +20998,6 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/germanys-deutsche-telekom-to-expand-munich-ai-data-center-by-20mw/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "1df0e02daff8",
-   "ts": "2026-11-10T14:40:58.000Z",
-   "title": "Les marchés peuvent-ils se protéger contre le risque de l'intelligence artificielle ?",
-   "orig": "هل يمكن للأسواق التحوط من خطر الذكاء الاصطناعي؟ - ارقام : اخبار ومعلومات سوق الأسهم السعودي",
-   "summary": "Analyse des risques financiers posés par l'intelligence artificielle sur les marchés boursiers.",
-   "country": "GULF",
-   "category": "capex",
-   "importance": 1,
-   "layer": "Financement",
-   "source": "ارقام : اخبار ومعلومات سوق الأسهم السعودي - تاسي",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBldFVjQ2xIVGdWeHRZWDVQeTdRMHlESVRLZUZ6ZGZkMEN1X0lPSmpIdzhuTmZ3eEJTd0lHWWZmQ2tpQjJaTmZydktqc3J1M0lsRnE1ckFYQWVlZ3NVbGJqd0ViR0NIenlUZWc?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "b4f23b1b2355",
-   "ts": "2026-11-10T14:38:36.000Z",
-   "title": "5 applications avec lesquelles je souhaite que Siri IA fonctionne maintenant qu'il est ouvert aux développeurs tiers",
-   "orig": "5 apps I need Siri AI to work with now that it’s open to third-party developers",
-   "summary": "Siri IA s'ouvre aux développeurs tiers dans les dernières versions bêta d'Apple, permettant une intégration complète au sein des applications.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "ZDNet IA",
-   "url": "https://www.zdnet.com/home-and-office/third-party-app-developers-siri-ai-integration/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "d46ef5e89bcc",
-   "ts": "2026-11-10T14:38:23.000Z",
-   "title": "IA : Anthropic maintient le timing de son entrée en Bourse et vise jusqu'à 1 400 milliards de dollars de valorisation",
-   "orig": "IA : Anthropic maintient le timing de son entrée en Bourse et vise jusqu’à 1 400 milliards de dollars de valorisation",
-   "summary": "Anthropic confirme son calendrier d'introduction en bourse avec une valorisation ciblée pouvant atteindre 1 400 milliards de dollars.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "Le Monde.fr",
-   "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOREdJY3dQR2NULVgtNlVoSURKdVJ0aWRWaHNIaFRBRU82emdmcjNyYWlkRUlHM0xraDJMeUZZaXVQRnRwTDZTa285RVhVY3VOc3pnWEQwdHJmbzFNaWJycTduSDZXdmgzMjE2Vk83eEZCZ2lvQlFlZGpydkF1R0ZrOVZGbTZLV1drNURuWk5KSDJaWWZOZlRROXFmTWJYNlB3MFBrT3RlOVFiUU5aUzljLVFwSUUxODF3em85Zk1lOVJrY2VRWTVkQmNMcF9mUzJUVHluUVp4M2F0V2JmbGtkSkxhTGwzam5sNTBuRkdmQkJwS1NydXUwNlRPMXZ3Q21VTEExUTh3NFc2RTE4VmcwNGJn?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "07c154c91873",
-   "ts": "2026-11-10T14:37:36.000Z",
-   "title": "Sparxity lève 90 millions de dollars à la suite d'un tour de table de série A",
-   "orig": "Sparxity raises $90m following Series A funding round",
-   "summary": "La société de calcul éparse Sparxity lève 90 millions de dollars pour financer le développement de ses puces.",
-   "country": "US",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/sparxity-raises-90m-following-series-a-funding-round/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "7d72c5979777",
-   "ts": "2026-11-10T14:35:30.000Z",
-   "title": "AMD vs Intel : quelle est la meilleure action de puces d'IA à acheter en ce moment ?",
-   "orig": "AMD vs. Intel: Which Is the Better Artificial Intelligence (AI) Chip Stock to Buy Right Now?",
-   "summary": "Comparaison boursière entre les fabricants de puces AMD et Intel sur le marché de l'intelligence artificielle.",
-   "country": "US",
-   "category": "capex",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "The Globe and Mail",
-   "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQSThwMTIyUWZjTjljN0VzUE1rU2RNcGtlR19QaFh4LV9iQ1pVLWc1dEFvVnlXUkVJOE9MMk1wdkZWRkdRa083LXJnTVRaOEdUOU9heHVqSy1PZERnOEVscnZ2TEIyQUpoTDl1eDZOSTZuU19oOG4xSFVlcHM5UnpFV0JZQVNkQkJCeHhxbXZRS0FIYzhxT2VtZE1wS1o4bnMxYVdTM1I5d2hxd09FWlNlbEVWOXlEdDJKS3I1dHpqeW4xOGRvVy1lWnpDSkdIbHlnUEQtbm1hRUp4em4zeFZlOHkxcW91MXQ3R0plS3ZhODF1YlVsWWdvUkhYWjFackl0QUE?oc=5",
    "confidence": "moyenne"
   }
  ]
