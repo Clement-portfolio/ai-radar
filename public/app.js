@@ -30,9 +30,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];
   });
 }
 function setStatus(kind,txt,title){
@@ -130,14 +130,16 @@ function rMarket(){
   var maxR=Math.max.apply(null,m.revenue.map(function(r){return r.num}));
   var rv=rev.length?rev.map(function(r){return'<div class="bar"><div class="nm">'+esc(r.name)+'</div><div class="track"><div class="fill'+(r.country==="CN"?' cn':'')+'" style="width:'+Math.max(2,r.num/maxR*100)+'%"></div></div><div class="val">'+esc(r.value)+' Md$</div><div class="nt">'+esc(r.note)+' · <a href="'+esc(link(r.url))+'" target="_blank" rel="noopener">'+esc(r.source)+'</a>, '+esc(r.as_of)+' · '+conf(r.confidence)+'</div></div>'}).join(""):'<div class="empty">Aucune donnée de revenus pour ce pays.</div>';
   var act=m.actors.filter(byCountry);
-  el.innerHTML='<h2 class="sec">Marché</h2><p class="lede">Qui dépense, qui gagne de l\'argent, qui compte. Chiffres sourcés ; la date et la source figurent sous chaque donnée.</p>'+
-   '<div class="tiles">'+m.tiles.map(function(t){return'<div class="tile"><div class="l">'+esc(t.label)+'</div><div class="v">'+esc(t.value)+'</div><div class="s">'+esc(t.sub)+'</div><div class="src"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></div></div>'}).join("")+'</div>'+
-   '<div class="two"><div class="panel"><span class="kicker">Qui dépense</span><h3>Capex 2026, États-Unis</h3><div class="sub">Guidance annuelle, en milliards de dollars. Zone claire = fourchette.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Guidance</th><th>Détail</th></tr></thead><tbody>'+cu+'</tbody></table></div>'+
+  var det='<div class="two"><div class="panel"><span class="kicker">Qui dépense</span><h3>Capex 2026, États-Unis</h3><div class="sub">Guidance annuelle, en milliards de dollars. Zone claire = fourchette.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Guidance</th><th>Détail</th></tr></thead><tbody>'+cu+'</tbody></table></div>'+
    '<div class="panel"><span class="kicker">Qui dépense</span><h3>Capex, Chine</h3><div class="sub">Montants en yuans, comparables au capex américain à un facteur de 5 à 7 près.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Montant</th><th>Détail</th></tr></thead><tbody>'+cc+'</tbody></table></div></div>'+
    '<div class="two"><div class="panel"><span class="kicker">Qui gagne</span><h3>Revenus de l\'IA</h3><div class="sub">Run-rate annualisé, en milliards de dollars.</div>'+rv+'</div>'+
    '<div class="note"><b>À lire avant de comparer.</b> '+esc(m.caveat)+'</div></div>'+
-   sharesPanel()+secPanel()+'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
+   secPanel()+'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
    (act.length?'<table class="table"><thead><tr><th>Acteur</th><th>Pays</th><th>Rôle</th><th>Repère</th></tr></thead><tbody>'+act.map(function(a){return'<tr><td>'+esc(a.name)+'</td><td>'+ctag(a.country)+'</td><td>'+esc(a.role)+'</td><td>'+esc(a.note)+' <a class="small" href="'+esc(link(a.u))+'" target="_blank" rel="noopener">'+esc(a.src)+'</a></td></tr>'}).join("")+'</tbody></table>':'<div class="empty">Aucun acteur pour ce filtre.</div>');
+  el.innerHTML='<h2 class="sec">Marché</h2><p class="lede">Qui dépense, qui gagne de l\'argent, qui compte. Chiffres sourcés ; la date et la source figurent sous chaque donnée.</p>'+
+   '<div class="tiles">'+m.tiles.map(function(t){return'<div class="tile"><div class="l">'+esc(t.label)+'</div><div class="v">'+esc(t.value)+'</div><div class="s">'+esc(t.sub)+'</div><div class="src"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></div></div>'}).join("")+'</div>'+
+   sommaire()+etages()+
+   '<details class="details" id="m-details"><summary><span>Détails</span><em>Capex annoncé, revenus, dépôts SEC, principaux acteurs</em></summary>'+det+'</details>';
 }
 
 
@@ -166,16 +168,106 @@ function shareCard(c){
   return'<div class="share"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.metric)+' · '+esc(c.period)+'</div>'+
    '<div class="sbody">'+donut(c.segments)+'<ul class="leg">'+leg+'</ul></div>'+
    '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>'+shareFresh(c)+
-   '<div class="sc">'+esc(c.caveat)+'</div></div>';
+   '<details class="why"><summary>Limites</summary><div class="sc">'+esc(c.caveat)+'</div></details></div>';
 }
-function sharesPanel(){
-  var d=S.shares;if(!d||!d.charts||!d.charts.length)return"";
-  var groups=[["Compute","Compute et chaîne d\'approvisionnement"],["Modèles","Modèles et usages"]];
-  return'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui domine</span><h3 class="sub2" style="margin-top:2px">Parts de marché</h3><p class="lede" style="margin-bottom:6px">'+esc(d.note)+' Données arrêtées au '+esc(d.as_of)+'.</p>'+
-   groups.map(function(g){
-     var cs=d.charts.filter(function(c){return c.group===g[0]});
-     return cs.length?'<div class="sgroup">'+esc(g[1])+'</div><div class="shares">'+cs.map(shareCard).join("")+'</div>':"";
-   }).join("");
+var ETAGES=[
+  [1,"Compute","Qui construit et possède la puissance de calcul ?"],
+  [2,"Modèles","Qui fabrique les modèles, à quelle échelle, et qui les utilise sur le web ?"],
+  [3,"Adoption et argent","Qui utilise l\'IA en entreprise, et quel argent y entre ?"]
+];
+function sommaire(){
+  return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
+   '<li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC, principaux acteurs</span></a></li></ol></nav>';
+}
+function capexPie(){
+  var d=S.sec;if(!d||!d.companies)return null;
+  var cs=d.companies.filter(function(c){return c.capex&&c.capex.value>0});
+  if(cs.length<3)return null;
+  var tot=cs.reduce(function(a,c){return a+c.capex.value},0),end=cs.reduce(function(a,c){return c.capex.end>a?c.capex.end:a},"");
+  var segs=cs.map(function(c){return{label:c.name,pct:Math.round(1000*c.capex.value/tot)/10}}).sort(function(a,b){return b.pct-a.pct});
+  return{id:"capex_geants",etage:3,rank:2,title:"Qui dépense le plus en capex",metric:"Part du capex des cinq géants sur les douze derniers mois",period:"Périodes propres à chaque société, jusqu\'à fin "+fmtD(end),segments:segs,source:"SEC (10-K et 10-Q)",url:"https://www.sec.gov/edgar/search/",confidence:"haute",caveat:"Parts calculées entre ces cinq sociétés seulement : ce n\'est pas leur part du capex mondial. Capex déclaré (immobilisations corporelles) ; les exercices sont décalés (Oracle, Microsoft).",auto:true,checked_at:d.updated_at};
+}
+function piesFor(pred){
+  var out={};
+  ((S.shares&&S.shares.charts)||[]).forEach(function(c){if(pred(c))out[c.id]=c});
+  ((S.series&&S.series.pies)||[]).forEach(function(c){if(pred(c)&&c.segments&&c.segments.length)out[c.id]=c});
+  var k=capexPie();if(k&&pred(k))out[k.id]=k;
+  return Object.keys(out).map(function(i){return out[i]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
+}
+var DASH=["","6 3","2 3","8 3 2 3","1 2.5"];
+function shortUnit(u){return/%/.test(u)?" %":/dollars/.test(u)?" Md$":/H100/.test(u)?" M H100e":/utilisateurs/.test(u)?" M":/FLOP/.test(u)?" FLOP":""}
+function fmtVal(c,v){
+  if(c.scale==="log"){var e=Math.floor(Math.log10(v)),m=v/Math.pow(10,e);return String(Math.round(m*10)/10).replace(".",",")+"e"+e}
+  var n=Math.abs(v)>=100?Math.round(v):Math.round(v*10)/10;
+  return n.toLocaleString("fr-FR")+shortUnit(c.unit)
+}
+function ms(d){return Date.parse(String(d).slice(0,10)+"T00:00:00Z")}
+function fmtM(t){return new Date(t).toLocaleDateString("fr-FR",{month:"short",year:"2-digit",timeZone:"UTC"})}
+function lineChart(c){
+  var W=340,H=196,L=40,R=10,T=10,B=24,ser=(c.series||[]).filter(function(x){return x.points&&x.points.length});
+  if(!ser.length)return'<div class="empty small">Données en cours de collecte.</div>';
+  var log=c.scale==="log",all=[];ser.forEach(function(x){x.points.forEach(function(p){all.push(p)})});
+  var t0=Math.min.apply(null,all.map(function(p){return ms(p.d)})),t1=Math.max.apply(null,all.map(function(p){return ms(p.d)}));
+  if(t1===t0)t1=t0+86400000*30;
+  var vmax=Math.max.apply(null,all.map(function(p){return p.v})),vmin=log?Math.min.apply(null,all.map(function(p){return p.v})):0,y0,y1,ticks=[];
+  if(log){y0=Math.floor(Math.log10(vmin));y1=Math.ceil(Math.log10(vmax));if(y1-y0<2)y1=y0+2;var st=Math.ceil((y1-y0)/4);for(var e=y0;e<=y1;e+=st)ticks.push(e)}
+  else{var raw=vmax*1.05,mag=Math.pow(10,Math.floor(Math.log10(raw))),cand=[];[mag/10,mag].forEach(function(b){[1,2,2.5,5].forEach(function(k){cand.push(k*b)})});cand.push(mag*10);var stp=cand.filter(function(k){return raw/k<=5})[0]||mag*10;y1=Math.ceil(raw/stp)*stp;y0=0;for(var v=0;v<=y1+1e-9;v+=stp)ticks.push(v)}
+  var X=function(t){return L+(t-t0)/(t1-t0)*(W-L-R)},Y=function(v){var q=log?(Math.log10(v)-y0)/(y1-y0):(v-y0)/(y1-y0);return T+(1-q)*(H-T-B)};
+  var g='';
+  ticks.forEach(function(k){var yy=Y(log?Math.pow(10,k):k).toFixed(1);g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-5)+'" y="'+(+yy+3)+'" text-anchor="end" class="ax">'+(log?'1e'+k:(k>=1000?k.toLocaleString("fr-FR"):String(k).replace(".",",")))+'</text>'});
+  var xt=[],span=t1-t0,yrsSpan=span/(365.25*86400000),stepM=yrsSpan<=1.3?3:(yrsSpan<=3.3?6:(yrsSpan<=7?12:24));
+  var mm0=new Date(t0).getUTCFullYear()*12+new Date(t0).getUTCMonth();
+  for(var mm=Math.ceil((mm0+1)/stepM)*stepM;;mm+=stepM){var tt=Date.UTC(Math.floor(mm/12),mm%12,1);if(tt>t1)break;xt.push([tt,stepM>=12?String(Math.floor(mm/12)):fmtM(tt)])}
+  xt.forEach(function(x){var xx=X(x[0]).toFixed(1);g+='<line x1="'+xx+'" x2="'+xx+'" y1="'+(H-B)+'" y2="'+(H-B+3)+'" class="gl2"/><text x="'+xx+'" y="'+(H-6)+'" text-anchor="middle" class="ax">'+esc(x[1])+'</text>'});
+  var col=function(i){return["#000000","#4D4D4D","#767676","#9E9E9E","#BDBDBD"][Math.min(i,4)]};
+  ser.forEach(function(x,i){
+    var pts=x.points.slice().sort(function(a,b){return ms(a.d)-ms(b.d)}),d="";
+    pts.forEach(function(p,k){var px=X(ms(p.d)).toFixed(1),py=Y(p.v).toFixed(1);d+=(k?(x.step?'H'+px+'V'+py:'L'+px+' '+py):'M'+px+' '+py)});
+    if(x.step&&pts.length){d+='H'+(W-R)}
+    g+='<path d="'+d+'" fill="none" stroke="'+col(i)+'" stroke-width="1.7" stroke-linejoin="round"'+((x.dashed?"4 3":DASH[i])?' stroke-dasharray="'+(x.dashed?"4 3":DASH[i])+'"':'')+'/>';
+    var dots=pts.length<=12;
+    pts.forEach(function(p,k){if(dots||k===pts.length-1){g+='<circle cx="'+X(ms(p.d)).toFixed(1)+'" cy="'+Y(p.v).toFixed(1)+'" r="'+(k===pts.length-1?2.8:2)+'" fill="'+col(i)+'"><title>'+esc(x.name+(p.name?" — "+p.name:"")+" · "+fmtD(p.d)+" : "+fmtVal(c,p.v)+(p.src?" ("+p.src+")":""))+'</title></circle>'}});
+  });
+  var leg=ser.map(function(x,i){
+    var last=x.points.slice().sort(function(a,b){return ms(a.d)-ms(b.d)}).pop(),ds=x.dashed?"4 3":DASH[i];
+    return'<li><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M0 4H22" stroke="'+col(i)+'" stroke-width="2"'+(ds?' stroke-dasharray="'+ds+'"':'')+' fill="none"/></svg><span>'+esc(x.name)+'</span><b>'+esc(fmtVal(c,last.v))+'</b></li>'}).join("");
+  return'<svg class="lc" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="'+esc(c.title)+'">'+g+'</svg><ul class="leg lg">'+leg+'</ul>';
+}
+function curveFresh(c){
+  var all=[];(c.series||[]).forEach(function(x){(x.points||[]).forEach(function(p){all.push(p.d)})});
+  var last=all.sort().pop(),t='';
+  if(c.auto){
+    var days=c.checked_at?Math.floor((Date.now()-new Date(c.checked_at).getTime())/86400000):null;
+    t='<div class="sf small">Relu automatiquement'+(c.checked_at?' le '+esc(fmtD(c.checked_at)):'')+(last?' · dernier point : '+esc(fmtD(last)):'')+'</div>';
+    if(c.check_error||(days!=null&&days>14))t+='<div class="sf small warn">'+(c.check_error?'Dernière relecture impossible : courbe conservée, à vérifier.':'Non relu depuis '+days+' jours : à vérifier.')+'</div>';
+  }else{
+    var age=last?Math.floor((Date.now()-ms(last))/86400000):null;
+    t='<div class="sf small">Points ajoutés après validation'+(last?' · dernier point : '+esc(fmtD(last)):'')+'</div>';
+    if(age!=null&&age>120)t+='<div class="sf small warn">Dernier point vieux de '+age+' jours : à actualiser.</div>';
+  }
+  return t;
+}
+function pointList(c){
+  if(c.auto)return"";
+  var rows=[];(c.series||[]).forEach(function(x){(x.points||[]).slice().sort(function(a,b){return ms(a.d)-ms(b.d)}).forEach(function(p){rows.push('<li><b>'+esc(x.name)+'</b> · '+esc(fmtD(p.d))+' : '+esc(fmtVal(c,p.v))+' · '+(p.url?'<a href="'+esc(link(p.url))+'" target="_blank" rel="noopener">'+esc(p.src||"source")+' ↗</a>':esc(p.src||""))+'</li>')})});
+  return rows.length?'<ul class="pl">'+rows.join("")+'</ul>':"";
+}
+function curveCard(c){
+  return'<div class="share curve"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.unit)+' <span class="mode">'+(c.auto?"auto":"semi-auto")+'</span></div>'+lineChart(c)+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div>'+curveFresh(c)+
+   '<details class="why"><summary>Limites'+(c.auto?'':' et points sourcés')+'</summary><div class="sc">'+esc(c.caveat)+'</div>'+pointList(c)+'</details></div>';
+}
+function etages(){
+  return ETAGES.map(function(e){
+    var pies=piesFor(function(c){return c.etage===e[0]}),cur=((S.series&&S.series.curves)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
+    return'<section class="etage" id="m-e'+e[0]+'"><span class="kicker">Étage '+e[0]+' sur 3</span><h3 class="sub2">'+esc(e[1])+'</h3><p class="lede" style="margin-bottom:0">'+esc(e[2])+'</p>'+
+     '<div class="sgroup">Qui domine <em>parts de marché, chaque camembert est une mesure différente</em></div>'+(pies.length?'<div class="cards3">'+pies.map(shareCard).join("")+'</div>':'<div class="empty small">Aucun camembert disponible.</div>')+
+     '<div class="sgroup">Comment ça évolue <em>courbes dans le temps</em></div>'+(cur.length?'<div class="cards3">'+cur.map(curveCard).join("")+'</div>':'<div class="empty small">Courbes en cours de collecte.</div>')+'</section>';
+  }).join("");
+}
+function sharesRace(){
+  var cs=piesFor(function(c){return c.tab==="usachine"});
+  return cs.length?'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui domine</span><h3 class="sub2" style="margin-top:2px">Parts de marché : où est le compute, qui fabrique</h3><div class="cards3">'+cs.map(shareCard).join("")+'</div>':"";
 }
 function fmtD(iso){return new Date(String(iso).slice(0,10)+"T00:00:00Z").toLocaleDateString("fr-FR",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
 function mdUsd(v){return (v/1e9).toFixed(1).replace(".",",")+" Md$"}
@@ -240,7 +332,7 @@ function rRace(){
   var rows=S.race.rows,us=rows.filter(function(r){return r.lead>0}).length,cn=rows.filter(function(r){return r.lead<0}).length,eq=rows.length-us-cn;
   $("v-usa-chine").innerHTML='<h2 class="sec">USA–Chine</h2><p class="lede">'+esc(S.race.summary)+'</p>'+
    '<div class="score"><div><div class="n us">'+us+'</div><div class="lb">couches : avance USA</div></div><div><div class="n cn">'+cn+'</div><div class="lb">couches : avance Chine</div></div>'+(eq?'<div><div class="n" style="color:var(--mute)">'+eq+'</div><div class="lb">à égalité</div></div>':'')+'</div>'+
-   raceRows(false)+'<div class="note"><b>Méthode.</b> '+esc(S.race.method)+'</div>';
+   raceRows(false)+'<div class="note"><b>Méthode.</b> '+esc(S.race.method)+'</div>'+sharesRace();
 }
 
 function health(){
@@ -264,7 +356,7 @@ function rMethod(){
   list.sort(function(a,b){return a[0].localeCompare(b[0])});
   $("v-methode").innerHTML='<h2 class="sec">Méthode et sources</h2><p class="lede">Ce que ce site fait, ce qu\'il ne fait pas, et d\'où viennent les chiffres.</p>'+
    '<div class="method"><div><span class="kicker">Fonctionnement</span><ol class="steps"><li><b>Collecte</b><span>Un agent récupère toutes les trois heures les flux de médias et de sources officielles, dans le monde. Seuls les domaines d\'une liste de confiance sont retenus.</span></li><li><b>Classement</b><span>Chaque article reçoit un pays, un thème, une importance de 1 à 3, une couche de la pile et un résumé en français. Sans IA disponible, le titre d\'origine est publié tel quel.</span></li><li><b>Les 10 essentiels et le brief</b><span>Sélection par importance, fraîcheur, source primaire et nombre de médias qui couvrent le sujet, avec un minimum de diversité par zone et par couche. Le brief en 5 puces est rédigé par l\'IA à partir de ces seuls articles ; une puce dont les chiffres ne figurent pas dans ses sources est écartée.</span></li><li><b>Publication</b><span>Les données sont enregistrées dans le dépôt GitHub puis affichées ici. À chaque ouverture, et via « Actualiser », le site affiche immédiatement les dernières données publiées ; il ne lance aucune collecte.</span></li></ol></div>'+
-   '<div><span class="kicker">Lire avec prudence</span><ol class="steps"><li><b>Sources</b><span>Source primaire : document officiel (SEC, registre fédéral, communiqué, blog d\'une entreprise). Presse : média figurant sur une liste de confiance. Les newsletters, blogs personnels et sites de recopie sont écartés.</span></li><li><b>Estimations</b><span>Les scores USA–Chine et les tensions des couches sont des estimations éditoriales, pas des mesures.</span></li><li><b>Run-rates</b><span>Les revenus des laboratoires privés ne sont pas audités et ne sont pas calculés de la même façon.</span></li><li><b>Chiffres de la SEC</b><span>Capex et revenus des cinq géants américains sont relus automatiquement dans les dépôts officiels. Au-delà de 30 jours sans relecture, une alerte s\'affiche. Le reste de la page Marché reste saisi à la main.</span></li><li><b>Revue hebdomadaire</b><span>Chaque lundi, le robot relit les pages saisies à la main à la lumière des articles collectés et propose des mises à jour sourcées. Rien ne change sans validation du propriétaire du site.</span></li><li><b>Parts de marché</b><span>Le HBM (Counterpoint) et les fonderies (TrendForce) sont relus automatiquement à la source à chaque nouveau classement trimestriel. Si la page change et que la lecture échoue, l\'ancien chiffre reste affiché avec sa date et une alerte apparaît. Les autres camemberts sont mis à jour à la main.</span></li></ol></div></div>'+
+   '<div><span class="kicker">Lire avec prudence</span><ol class="steps"><li><b>Sources</b><span>Source primaire : document officiel (SEC, registre fédéral, communiqué, blog d\'une entreprise). Presse : média figurant sur une liste de confiance. Les newsletters, blogs personnels et sites de recopie sont écartés.</span></li><li><b>Estimations</b><span>Les scores USA–Chine et les tensions des couches sont des estimations éditoriales, pas des mesures.</span></li><li><b>Run-rates</b><span>Les revenus des laboratoires privés ne sont pas audités et ne sont pas calculés de la même façon.</span></li><li><b>Chiffres de la SEC</b><span>Capex et revenus des cinq géants américains sont relus automatiquement dans les dépôts officiels. Au-delà de 30 jours sans relecture, une alerte s\'affiche. Le reste de la page Marché reste saisi à la main.</span></li><li><b>Revue hebdomadaire</b><span>Chaque lundi, le robot relit les pages saisies à la main à la lumière des articles collectés et propose des mises à jour sourcées. Rien ne change sans validation du propriétaire du site.</span></li><li><b>Parts de marché</b><span>Le HBM (Counterpoint), les fonderies (TrendForce), les propriétaires du compute et les concepteurs de puces (Epoch AI) sont relus automatiquement à la source. Si la page ou le fichier change et que la lecture échoue, l\'ancien chiffre reste affiché avec sa date et une alerte apparaît. Les autres camemberts sont mis à jour à la main.</span></li><li><b>Évolution</b><span>Les courbes marquées « auto » (capex des géants à la SEC, compute vendu et records d\'entraînement chez Epoch AI, parts HBM chez Counterpoint, adoption en entreprise au Census Bureau) sont relues à chaque collecte, avec les mêmes garde-fous. Les courbes « semi-auto » (utilisateurs, trafic web, revenu annualisé) n\'ont pas de source lisible par un robot : la revue du lundi propose de nouveaux points avec leur source, et rien n\'est ajouté sans validation. Chaque point est daté et sourcé.</span></li></ol></div></div>'+
    health()+
    '<hr class="rule thick" style="margin-top:34px"><span class="kicker">Sources citées ('+list.length+')</span><div class="src-list">'+list.map(function(s){return'<a href="'+esc(link(s[1]))+'" target="_blank" rel="noopener">'+esc(s[0])+' ↗</a>'}).join("")+'</div>';
 }
@@ -285,6 +377,8 @@ function show(tab){
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 
 document.addEventListener("click",function(e){
+  var j=e.target.closest("[data-jump]");
+  if(j){e.preventDefault();var id=j.getAttribute("data-jump"),el=$(id);if(el){if(el.tagName==="DETAILS")el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}return}
   var t=e.target.closest("[data-tab],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
   if(t.hasAttribute("data-tab"))return go(t.getAttribute("data-tab"));
   if(t.hasAttribute("data-go"))return go(t.getAttribute("data-go"));

@@ -7,8 +7,8 @@ export const SEC_COMPANIES = [
   { name: "Meta", cik: "1326801" },
   { name: "Oracle", cik: "1341439" },
 ];
-const CAPEX = ["PaymentsToAcquirePropertyPlantAndEquipment", "PaymentsToAcquireProductiveAssets"];
-const REVENUE = ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "SalesRevenueNet", "RevenueFromContractWithCustomerIncludingAssessedTax"];
+export const CAPEX = ["PaymentsToAcquirePropertyPlantAndEquipment", "PaymentsToAcquireProductiveAssets"];
+export const REVENUE = ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "SalesRevenueNet", "RevenueFromContractWithCustomerIncludingAssessedTax"];
 
 const DAY = 86400000;
 const ms = (d) => Date.parse(d + "T00:00:00Z");
@@ -35,7 +35,7 @@ export function trailing(entries) {
   return pick(A.val, "annual", A.start, A.end, A);
 }
 
-async function getConcept(c, concept, { ua, fetchImpl, sleep }) {
+export async function getConcept(c, concept, { ua, fetchImpl, sleep }) {
   const url = `https://data.sec.gov/api/xbrl/companyconcept/CIK${String(c.cik).padStart(10, "0")}/us-gaap/${concept}.json`;
   let err;
   for (let a = 0; a < 2; a++) {
@@ -48,6 +48,32 @@ async function getConcept(c, concept, { ua, fetchImpl, sleep }) {
     } catch (e) { err = e; await sleep(1500); }
   }
   throw err;
+}
+
+
+/**
+ * Valeurs trimestrielles (une par fin de trimestre) : trimestre publié tel quel, sinon cumul de l'exercice moins le cumul précédent
+ * (6 mois − 3 mois, 9 mois − 6 mois, exercice 10-K − 9 mois). Rien d'estimé : pas de cumul précédent, pas de trimestre.
+ */
+export function quarterly(entries) {
+  const byPeriod = new Map();
+  for (const e of entries || []) {
+    if (!e || !e.start || !e.end || typeof e.val !== "number") continue;
+    const k = e.start + "|" + e.end, o = byPeriod.get(k);
+    if (!o || String(e.filed) > String(o.filed)) byPeriod.set(k, e);
+  }
+  const all = [...byPeriod.values()], out = new Map();
+  const has = (end) => [...out.keys()].some((k) => Math.abs(ms(k) - ms(end)) <= 7 * DAY);
+  for (const e of all) if (dur(e) >= 80 && dur(e) <= 100) out.set(e.end, { end: e.end, value: e.val, basis: "trimestre", form: e.form, filed: e.filed });
+  const steps = [[170, 190, 90], [260, 280, 180], [350, 380, 270]];
+  for (const y of all) {
+    for (const [lo, hi, prevDur] of steps) {
+      if (dur(y) < lo || dur(y) > hi || (lo === 350 && !/^10-K/.test(y.form || ""))) continue;
+      const prev = all.find((p) => p.start === y.start && Math.abs(dur(p) - prevDur) <= 12);
+      if (prev && !has(y.end)) out.set(y.end, { end: y.end, value: y.val - prev.val, basis: "cumul", form: y.form, filed: y.filed });
+    }
+  }
+  return [...out.values()].sort((a, b) => a.end.localeCompare(b.end));
 }
 
 async function metric(c, concepts, ctx, nowMs) {

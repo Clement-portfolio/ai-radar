@@ -112,5 +112,6 @@ assert.ok(!feed.some((x) => /cn\.example|ae\.example/.test(x.url || "")), "GDELT
 await import("./test-brief.mjs");
 await import("./test-sec.mjs");
 await import("./test-shares.mjs");
+await import("./test-evolution.mjs");
 await import("./test-review.mjs");
 console.log("TOUS LES TESTS PASSENT");

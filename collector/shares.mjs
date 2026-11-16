@@ -20,6 +20,32 @@ export function parseTables(html) {
   });
 }
 
+/** Historique du tableau HBM : les cinq dernières colonnes « Qn yyyy », une série par fournisseur. */
+export function parseHbmHistory(html) {
+  const need = ["sk hynix", "samsung", "micron"];
+  const t = parseTables(html).find((x) => {
+    const names = x.rows.map((r) => (r[0] || "").toLowerCase());
+    return need.every((n) => names.includes(n)) && !names.includes("cxmt") && !names.includes("nanya");
+  });
+  if (!t) throw new Error("tableau HBM introuvable (la page a changé ?)");
+  const cols = t.header.map((h, i) => ({ i, m: String(h).match(/^Q([1-4])\s*(\d{4})$/i) })).filter((c) => c.m).slice(-5);
+  if (cols.length < 3) throw new Error("moins de trois trimestres lisibles dans le tableau HBM");
+  const names = { "sk hynix": "SK hynix", samsung: "Samsung", micron: "Micron" };
+  const series = need.map((n) => ({ name: names[n], points: [] }));
+  for (const c of cols) {
+    const d = new Date(quarterEnd(keyOf(+c.m[1], +c.m[2]))).toISOString().slice(0, 10);
+    let sum = 0;
+    need.forEach((n, k) => {
+      const row = t.rows.find((r) => (r[0] || "").toLowerCase() === n);
+      const m = (row?.[c.i] || "").match(/^(\d+(?:[.,]\d+)?)\s*%$/);
+      if (!m) throw new Error(`valeur illisible pour ${n} (${c.m[0]})`);
+      const v = num(m[1]); sum += v; series[k].points.push({ d, v });
+    });
+    if (sum < 98 || sum > 102) throw new Error(`somme des parts HBM douteuse pour ${c.m[0]} : ${sum}`);
+  }
+  return series;
+}
+
 /** Tableau HBM de Counterpoint : celui qui contient SK Hynix, Samsung et Micron mais ni CXMT ni Nanya (c'est la DRAM). */
 export function parseHbm(html) {
   const need = ["sk hynix", "samsung", "micron"];

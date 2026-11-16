@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 import { makeBrief, BRIEF_SYSTEM, BRIEF_SCHEMA } from "./brief.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
+import { collectEvolution } from "./evolution.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -380,6 +381,12 @@ function fmtShares(d) {
   return JSON.stringify(head).slice(0, -1) + ',\n"charts":[\n' + charts.map((c) => JSON.stringify(c)).join(",\n") + "\n]}\n";
 }
 
+// Séries d'évolution : une courbe ou un camembert par ligne
+function fmtSeries(d) {
+  const { curves, pies, ...head } = d;
+  return JSON.stringify(head).slice(0, -1) + ',\n"curves":[\n' + (curves || []).map((c) => JSON.stringify(c)).join(",\n") + '\n],\n"pies":[\n' + (pies || []).map((c) => JSON.stringify(c)).join(",\n") + "\n]}\n";
+}
+
 export async function run(opts = {}) {
   const env = opts.env || process.env;
   const fetchImpl = opts.fetchImpl || fetch;
@@ -539,8 +546,14 @@ export async function run(opts = {}) {
   try { sharesRes = await collectShares({ prev: sharesPrev, fetchImpl, now: nowMs, sleep: opts.sleep, log }); }
   catch (e) { sharesRes.summary.reason = String(e.message || e); log("Parts de marché : " + sharesRes.summary.reason); }
 
+  // Courbes et camemberts d'évolution (Epoch, SEC, Census, Counterpoint) : même règle, l'ancien résultat reste en cas d'échec
+  const seriesPrev = await readJson("series.json", null);
+  let evoRes = { doc: null, summary: { refreshed: false, reason: "erreur" }, alerts: [] };
+  try { evoRes = await collectEvolution({ prev: seriesPrev, ua: env.SEC_USER_AGENT, fetchImpl, now: nowMs, sleep: opts.sleep, log }); }
+  catch (e) { evoRes.summary.reason = String(e.message || e); log("Évolution : " + evoRes.summary.reason); }
+
   const status = await readJson("status.json", {});
-  const errors = [];
+  const errors = [...evoRes.alerts];
   for (const c of sharesRes.doc?.charts || []) if (c.auto && c.check_error) errors.push(`Parts de marché « ${c.title} » : lecture impossible, ancien chiffre conservé (${c.check_error})`);
   if (okCount === 0) errors.push("aucune source n'a répondu");
   if (classifier?.state.error) errors.push(classifier.state.error);
@@ -548,7 +561,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, sec: secRes.summary, shares: sharesRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -559,6 +572,7 @@ export async function run(opts = {}) {
     await fs.writeFile(path.join(dataDir, "brief.json"), JSON.stringify(brief.doc, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
+    if (evoRes.doc && JSON.stringify(evoRes.doc) !== JSON.stringify(seriesPrev)) await fs.writeFile(path.join(dataDir, "series.json"), fmtSeries(evoRes.doc));
     await fs.writeFile(path.join(dataDir, "status.json"), JSON.stringify(out, null, 1));
   }
   log(`Terminé : +${added.length} articles, ${rejectedNow} écartés, ${keep.length} au total, ${errors.length} alerte(s)`);
