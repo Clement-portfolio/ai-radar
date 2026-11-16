@@ -1,4 +1,4 @@
-// What's Going On? — « À retenir » : les 2 à 3 actualités majeures du jour, avec « pourquoi c'est important »
+// What's Going On? — « Aujourd'hui » : les 5 actualités majeures du jour, en puces, avec « pourquoi c'est important »
 // et une remise en contexte tirée UNIQUEMENT des articles déjà collectés. Aucune dépendance.
 import { selectTop, hasNumberWords, digitsOf } from "./brief.mjs";
 
@@ -14,9 +14,9 @@ function overlap(a, b) {
 }
 
 /** Jusqu'à n articles majeurs du jour : importance la plus haute d'abord, une seule place par catégorie. */
-export function pickFocus(items, now, n = 3) {
+export function pickFocus(items, now, n = 5) {
   const byId = new Map(items.map((i) => [i.id, i]));
-  const top = selectTop(items, now, 10).map((t) => byId.get(t.id)).filter(Boolean);
+  const top = selectTop(items, now, 15).map((t) => byId.get(t.id)).filter(Boolean);
   const ranked = top.filter((i) => i.importance >= 2).sort((a, b) => (b.importance - a.importance) || (Date.parse(b.ts) - Date.parse(a.ts)));
   const out = [], cats = new Set();
   for (const it of ranked) { if (out.length >= n) break; if (cats.has(it.category) && ranked.length > n + 1) continue; cats.add(it.category); out.push(it); }
@@ -40,10 +40,10 @@ export function relatedFor(it, items, now, max = 4) {
   return out.sort((a, b) => a.ts.localeCompare(b.ts));
 }
 
-export const FOCUS_SYSTEM = `Tu es le rédacteur d'une page « À retenir » d'un site d'actualité sur l'intelligence artificielle et son économie, en français, pour un lecteur non spécialiste. On te donne 2 ou 3 actualités majeures numérotées (i, title, summary, source, date), chacune avec des articles plus anciens sur le même sujet (background, numérotés j).
+export const FOCUS_SYSTEM = `Tu es le rédacteur d'une page « À retenir » d'un site d'actualité sur l'intelligence artificielle et son économie, en français, pour un lecteur non spécialiste. On te donne jusqu'à 5 actualités majeures numérotées (i, title, summary, source, date), chacune avec des articles plus anciens sur le même sujet (background, numérotés j).
 Pour chaque actualité, renvoie :
-- why : 1 ou 2 phrases (260 caractères maximum) qui expliquent pourquoi c'est important : l'enjeu, ce que cela change, pour qui. Français simple, sans jargon.
-- context : 1 ou 2 phrases (300 caractères maximum) qui remettent en contexte : ce qui s'est passé avant, d'après UNIQUEMENT les articles du background. Si le background est vide, laisse la chaîne vide.
+- why : UNE phrase courte (180 caractères maximum) qui dit pourquoi c'est important : l'enjeu, ce que cela change, pour qui. Français simple, sans jargon.
+- context : UNE phrase courte (200 caractères maximum) qui remet en contexte : ce qui s'est passé avant, d'après UNIQUEMENT les articles du background. Si le background est vide, laisse la chaîne vide.
 - ctx : les numéros j des articles du background utilisés pour le context.
 Règles impératives :
 - N'utilise AUCUN chiffre, date, nom propre ou fait absent des articles fournis. N'invente rien, ne complète pas avec tes connaissances.
@@ -73,12 +73,12 @@ export function validateFocus(arr, inputs) {
     const own = `${inp.title} ${inp.summary}`;
     const bg = inp.background || [];
     const pool = new Set(digitsOf(own + " " + bg.map((b) => `${b.title} ${b.summary}`).join(" ")));
-    if (!why || why.length > 300 || hasNumberWords(why) || digitsOf(why).some((d) => !pool.has(d))) continue;
+    if (!why || why.length > 220 || hasNumberWords(why) || digitsOf(why).some((d) => !pool.has(d))) continue;
     let context = clean(r.context), ctx = [...new Set((Array.isArray(r.ctx) ? r.ctx : []).map(Number))].filter((j) => bg.some((b) => b.j === j));
     if (context) {
       const refs = new Set(digitsOf(bg.filter((b) => ctx.includes(b.j)).map((b) => `${b.title} ${b.summary}`).join(" ")));
       const ownDigits = new Set(digitsOf(own));
-      if (!ctx.length || context.length > 360 || hasNumberWords(context) || digitsOf(context).some((d) => !refs.has(d) && !ownDigits.has(d))) { context = ""; ctx = []; }
+      if (!ctx.length || context.length > 260 || hasNumberWords(context) || digitsOf(context).some((d) => !refs.has(d) && !ownDigits.has(d))) { context = ""; ctx = []; }
     } else ctx = [];
     out.push({ i: inp.i, why, context, ctx });
   }

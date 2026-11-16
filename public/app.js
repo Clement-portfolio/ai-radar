@@ -2,7 +2,7 @@
 "use strict";
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
-var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Capex & finance",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
+var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
 var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null};
 
@@ -86,40 +86,21 @@ function essHTML(it,n){
 function rUne(){
   var el=$("v-une"),byId={};
   S.feed.forEach(function(x){byId[x.id]=x});
-  var B=S.brief,top=[],fallback=false;
-  if(B&&B.top)B.top.forEach(function(t){if(byId[t.id])top.push(byId[t.id])});
-  if(top.length<3){
-    fallback=true;
-    top=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,10);
-  }
   var u=S.status&&S.status.updated_at;
-  var bullets=(B&&B.bullets||[]).map(function(b){
-    var srcs=(b.ids||[]).map(function(id){return byId[id]}).filter(Boolean);
-    return srcs.length?{text:b.text,srcs:srcs}:null;
-  }).filter(Boolean);
-  var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span></div>';
-  if(bullets.length){
-    var seen={},refs=[];bullets.forEach(function(b){b.srcs.forEach(function(a){if(!seen[a.id]){seen[a.id]=1;refs.push(a)}})});
-    h+='<section class="brief"><h2>Le briefing du jour</h2><p class="lede">'+bullets.map(function(b){return esc(b.text)}).join(" ")+'</p><div class="by">Sources : '+refs.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+'</div><div class="foot">Rédigé par IA à partir des articles collectés · généré '+esc(ago(B.generated_at))+'.</div></section>';
-  }else{
-    h+='<section class="brief"><h2>Le briefing du jour</h2><p class="small" style="padding:12px 0">Pas encore de brief : il est généré par l\'IA lors de la prochaine collecte, dès que le quota Gemini le permet.</p></section>';
-  }
   var F=S.focus,fi=((F&&F.items)||[]).map(function(f){var it=byId[f.id];return it?{f:f,it:it}:null}).filter(Boolean);
-  if(fi.length){
-    h+='<section class="focus"><h2>À retenir aujourd\'hui</h2>'+fi.map(function(x,i){
-      var ctx=(x.f.ctx_ids||[]).map(function(id){return byId[id]}).filter(Boolean);
-      return'<article class="fc"><span class="n">'+(i+1)+'</span><div><div class="meta">'+ctag(x.it.country)+'<span class="cat">'+esc(CATS[x.it.category]||x.it.category)+'</span><span>'+esc(ago(x.it.ts))+'</span></div>'+
-       '<h3><a href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.title)+'</a></h3>'+
-       '<p class="why"><b>Pourquoi c\'est important</b> '+esc(x.f.why)+'</p>'+
-       (x.f.context&&ctx.length?'<p class="ctx"><b>Remise en contexte</b> '+esc(x.f.context)+'</p><div class="by">'+ctx.map(function(c){return'<a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(fmtD(c.ts))+' · '+esc(c.source)+' ↗</a>'}).join("")+'</div>':'')+
-       '<div class="by"><a href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.source)+' ↗</a></div></div></article>';
-    }).join("")+'</section>';
-    var used={};fi.forEach(function(x){used[x.it.id]=1});
-    top=top.filter(function(it){return!used[it.id]});
+  var fallback=!fi.length;
+  if(fallback){
+    fi=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,5).map(function(it){return{f:{why:it.why||it.summary||"",ctx_ids:[]},it:it}});
   }
-  h+='<section class="ess"><h2>'+(fi.length?'Aussi aujourd\'hui':(fallback?'Les plus importants (sélection provisoire)':'Les 10 essentiels'))+'</h2>'+
-    (top.length?top.map(function(it,i){return essHTML(it,i+1)}).join(""):'<div class="empty">Aucune actualité pour le moment.</div>')+
-    '</section><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
+  var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span></div>';
+  h+='<section class="focus"><h2>À retenir'+(fallback?' (sélection provisoire)':'')+'</h2>'+(fi.length?'<ul class="bl">'+fi.map(function(x){
+    var ctx=(x.f.ctx_ids||[]).map(function(id){return byId[id]}).filter(Boolean);
+    return'<li><div class="meta">'+ctag(x.it.country)+'<span class="cat">'+esc(CATS[x.it.category]||x.it.category)+'</span><span>'+esc(ago(x.it.ts))+'</span></div>'+
+     '<a class="bt" href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.title)+'</a>'+
+     (x.f.why?'<p class="why">'+esc(x.f.why)+'</p>':'')+
+     (x.f.context&&ctx.length?'<p class="ctx"><b>Avant</b> '+esc(x.f.context)+'</p>':'')+
+     '<div class="by"><a href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.source)+' ↗</a>'+ctx.map(function(c){return'<a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(fmtD(c.ts))+' · '+esc(c.source)+' ↗</a>'}).join("")+'</div></li>';
+  }).join("")+'</ul>':'<div class="empty">Aucune actualité pour le moment.</div>')+'</section><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
   el.innerHTML=h;
 }
 

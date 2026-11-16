@@ -279,7 +279,14 @@
      "AI data center electricity power",
      "AI regulation law",
      "AI startup funding valuation",
-     "chip export controls China"
+     "chip export controls China",
+     "Trump administration AI",
+     "Lutnick Commerce Department chips",
+     "Jensen Huang Trump",
+     "White House AI policy",
+     "Congress AI bill Senate",
+     "Nvidia earnings stock AI",
+     "AI bubble stocks market"
     ]
    },
    {
@@ -292,7 +299,9 @@
      "AI chips Nvidia data center",
      "OpenAI Anthropic Google Gemini",
      "AI data center electricity power",
-     "AI regulation law"
+     "AI regulation law",
+     "Trump AI chips Nvidia China",
+     "AI stocks market investors"
     ]
    },
    {
@@ -402,6 +411,10 @@
    {
     "label": "Énergie",
     "q": "(\"data center\" OR datacenter) (electricity OR \"power grid\" OR gigawatt) \"AI\""
+   },
+   {
+    "label": "Politique US",
+    "q": "(\"artificial intelligence\" OR Nvidia OR OpenAI OR \"AI chips\") (Trump OR \"White House\" OR Lutnick OR \"Commerce Department\" OR Congress OR Senate)"
    }
   ]
  },
@@ -705,7 +718,10 @@
    "yicaiglobal.com",
    "yna.co.kr",
    "zawya.com",
-   "zdnet.com"
+   "zdnet.com",
+   "thehill.com",
+   "cnn.com",
+   "foxbusiness.com"
   ],
   "primaryDomains": [
    "ai.google",
