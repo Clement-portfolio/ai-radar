@@ -1,6 +1,62 @@
 {
  "items": [
   {
+   "id": "988998fded65",
+   "ts": "2026-11-16T18:49:26.000Z",
+   "title": "Les États-Unis renforcent les contrôles sur l'accès à distance à la technologie IA suite aux retombées de Nvidia",
+   "orig": "U.S. tightens controls on remote access to AI technology amid Nvidia fallout",
+   "summary": "Les autorités américaines durcissent les restrictions sur l'accès distant aux technologies d'intelligence artificielle, en réponse aux récents événements concernant Nvidia.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "NPR",
+   "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObWZfUU1JVEVmLVN3WGtNQi1GejRsTHFIeFBIamVtcDMzNGg0WV96R0VFSGF4ODYzYkZhQVVJWGFsT3pmT1RDZXFMUkJ0Z3pEdFYtVlZIOGRYM3pETGwwVEQwM1IyZlNBajJYOVdvLWc3MVdzVE9zN04tSDZoZGk0V21YSEpoWmE0SnNoMQ?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "06c70ce20939",
+   "ts": "2026-11-16T18:47:01.000Z",
+   "title": "Les grands centres de données aux États-Unis consomment déjà autant d'énergie que tout le Chili",
+   "orig": "Large data centers in the US already consume as much energy as the whole of Chile",
+   "summary": "La consommation électrique des centres de données américains atteint désormais un niveau équivalent à celle d'un pays entier comme le Chili.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Énergie",
+   "source": "EL PAÍS English",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOLUhBdGpTOFY4TGd5M3I1YlA4TGN3TFRZODZvb0RPbnROZW9QOERlYkNUY2NVY2psbTh3YUJTMmdkbFNYM1hyanBHUWlUTE9TU3cwLUotdWZiZHhaaEZESHV0c2trWl9jMElGMVdKc0RvNzctc0dLb1ZlLUY3N0tySVgySnB6WXpPT0I2eG8weldneUhkU01OZ1lROFVpb0ZQWFpGVDBjZVlwZDJLN3d3ZGJHWGtTaktfWVMtc3B0cGQwQ2pMcXZWQy14amt5Mk5I0gHkAUFVX3lxTE50MzNoalY0cDUzcWNSQmVEdnVsVnVxZ0lmeVZqWkxYeGhtSHRZYTA3WGxteXlBMjc2cHprdTlVM1ZPZURYOHR0VG9WVGFzWkszWVUwVEFYVkhBaHpkN09zQjNoYWF1MkttSl9oVE5sRnZSZ0ZDS2J1NzFWSnZaQTRyVDRxNmVhZ2I0ajA1OURDS2hzaFR1alVIZWdwa3ltYkNCMHliZlFfWG92M0JTV1JNZW5GR2VUSUNxR01veFhyNV9BNGpwRXJZMFJBQ3RyNGNoTmFuYV9kd0R4SDRJekNpbmQwTw?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "1d568fb033a7",
+   "ts": "2026-11-16T18:44:17.000Z",
+   "title": "Les États-Unis ferment une faille permettant aux entreprises chinoises d'utiliser des puces IA avancées dans des centres de données étrangers",
+   "orig": "U.S. closes loophole that let Chinese companies use top AI chips in foreign data centers",
+   "summary": "Le gouvernement américain bloque une brèche réglementaire qui autorisait des sociétés chinoises à accéder à des puces d'intelligence artificielle performantes via des infrastructures situées à l'étranger.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "NBC News",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNaFRzaVkzeUVkOFR4azB4c1FnQkdYSE5pVmNCYmRfVXh2RjVBWW04VjJqMGQ4SGFlVlFkSW5kaGtRaHBvWmlORlJnUFd6SU1IcUlmdVBkVWk4SnV6R3dhZ3FvTW1TbzVuaS1oMHJSVFRhMl9TQjdtdlZOd05xc19KakZBRjNZZkVxMzByQk14Vi1TY3FrQVRXUi1Rb0ZEUHpFMWJfeTJCOG1aOEE?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "c24f64cfec57",
+   "ts": "2026-11-16T18:43:35.000Z",
+   "title": "Le conseil d'administration de Nvidia ne prévoirait pas de faire revenir Jensen Huang",
+   "orig": "Nvidia’s board is reportedly ‘not considering’ hiring Jensen Huang back",
+   "summary": "Le conseil d'administration de Nvidia se concentre sur une enquête concernant Jensen Huang et n'envisage pas son retour au poste de directeur général.",
+   "country": "US",
+   "category": "capex",
+   "importance": 3,
+   "layer": "Financement",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
+   "confidence": "moyenne"
+  },
+  {
    "id": "e467ddd1ee72",
    "ts": "2026-11-16T18:39:30.000Z",
    "title": "L'administration Trump ordonne au Commerce de fermer la faille des puces au cœur du scandale Nvidia",
@@ -12,6 +68,20 @@
    "layer": "Régulation",
    "source": "The Washington Post",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQeFlDQ0VJUFBIZS1nQTJUN281Z2JRbmJ4N3JFSEo2cDJYdlpXOWhIWkw4Mm95ZXZXWkQ1MjJGRnZCVkVKUWlVakVub2ZwU0dhVUJKeGtJclFVa2pMZFVMZjRmYUhTbFBZV1BGdENBdGkzMV9nZGRaUkhFcVJMYUtITkN3M0pwRFlsQmkxUXNIaEpPanZIRll1TVNXRFJpVzlDOTNLUTVaNDY1Ql9TVXdV?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "5e4e9816b432",
+   "ts": "2026-11-16T18:35:45.000Z",
+   "title": "L'équilibre délicat de la guerre des puces IA entre l'Amérique et la Chine",
+   "orig": "The delicate balance in America’s AI chip war with China",
+   "summary": "Analyse des enjeux stratégiques et de l'équilibre complexe dans la compétition technologique sur les semi-conducteurs pour l'intelligence artificielle entre les États-Unis et la Chine.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "Financial Times",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTHhFdVFnWVI1cVRKdHE1N295Ymk2dXotUm4yb2RQeFJRSXdDMjZlYU1TbUkzZWlVRHdVVUIwZzR0NzJqMjgwdDhTVE85TjQycGtRVnVVMFZIRWlYMEd3RTRGUDZDTnJaa1RiX2VZOWkteEJBd0NYLUJVZ1hfdmFQYmhUX28?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -223,6 +293,20 @@
    "source": "AWS Machine Learning",
    "url": "https://aws.amazon.com/blogs/machine-learning/modernizing-mainframe-assembler-to-java-using-amazon-bedrock-and-aws-transform/",
    "confidence": "haute"
+  },
+  {
+   "id": "ea46f6e5faa1",
+   "ts": "2026-11-16T17:26:45.000Z",
+   "title": "Vice-président de la BCE : L'intelligence artificielle et la dette souveraine parmi les principaux risques pour la stabilité financière",
+   "orig": "نائب رئيس «المركزي الأوروبي»: الذكاء الاصطناعي والديون السيادية من أبرز مخاطر الاستقرار المالي",
+   "summary": "La Banque centrale européenne identifie l'intelligence artificielle comme un facteur de risque majeur pour la stabilité financière mondiale.",
+   "country": "EU",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "الشرق الأوسط",
+   "url": "https://news.google.com/rss/articles/CBMijwVBVV95cUxQX0R1OVlFMk5lMzBtZUw5cEpyRTEzenAtSHlib3RGRUx1c3Q1dGxsTGJId29vVmJFeUpOWnl4dDlMZk1Qa2NFSXd5U2haMURGUzg2Wk42QzY1bVNOM1R3N0w5TUlMZVR1eW9NeUcyY3hmMVRKUnA1YjJqMlBKWnM2U1NCX3pqXzRuSTRVNEctMlFPNGRjV2sxZ3dZa0hrc2JoVlRhZVR5UWJ1NW1IczUyR25sbE1iQ1BQWGpkU0xSWUpOZ2RFaDNfMTZ4WlNFOVRlTFpCNUdUS0dWdE1lZ043VjNtOF9hVGtrTEswSWN4U1FGazJYRjB0dFRMUkJrSlFDUE8zWnExaF9iMEh4bVFVT3lUU2hRREpDa1JOQUJRRWFidmtfV3BiMjVTYzlZN2o5a241ZjhpS0RNU3lCWnNOMUJxWmtsYngzWnY3d0VNMmhhYUhsWXJjWDFvUmY5Zzl6Sl9yZkc2STJFYnNtMkVlbG9FRXJmUzZYWlZQUzdYRUNXdm9naU1pejhrZ1FrcXdMZmpCQ19ZckFPWkhONDJiMjVGTWxITlhwV2VYQ0d0endDS3l5WVcydmt1SnBrWlUxOVczOFhseTlKSV9BbW90SUJBQjAxLTlxek9QZDg0R3NSYUVmc0NsRTY1UktIUDZqV2hMdWItcHhHTzJSY3JRZTJueFNzem5FVFloTUdqazM3RW9HWl9CREExcWRodmZWYnREZ2lsWUhQLTRZaEUzdjZUeE10V3QwX21XUDlNb2VlUmNFUFZVb05QakNkVC14LXF3NGszeHBXaHFvWFBhV0o3cDJSVFVlU2dKdTdJUlVOYmxJcDdGWDE0WDJjSVpoZWRkY2xjcWUtbTZBVlo0?oc=5",
+   "confidence": "moyenne"
   },
   {
    "id": "b855579b0a02",
@@ -20915,90 +20999,6 @@
    "source": "Channel Newsasia",
    "url": "https://www.channelnewsasia.com/business/germanys-helsing-unveil-ai-based-military-software-rival-palantir-6539761",
    "confidence": "moyenne"
-  },
-  {
-   "id": "6fc61b1b264f",
-   "ts": "2026-11-10T13:46:55.000Z",
-   "title": "Alibaba : la division semi-conducteurs dépose une demande d'introduction en bourse à Hong Kong et se classe troisième sur le marché de l'IA en Chine",
-   "orig": "アリババ、半導体部門が香港で上場申請 中国でAI向けシェア3位",
-   "summary": "La filiale de puces d'Alibaba demande son assignation à Hong Kong, s'affirmant comme le troisième acteur des semi-conducteurs pour l'IA en Chine.",
-   "country": "CN",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "日本経済新聞",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1wX2UwOHdrQ0FDQ1hneUpCTjJ3YkJxZXpSMFBsaW1jUDFpenFvVVVJaDduNkVxaVpUaHlQWUxwU2dlREd3S3RYRm5NVUVsWlJVYk1WNjZTbzIxNjhMZnhqR2ZUb1dHVE0zdWpMVw?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "8f1d22c1540d",
-   "ts": "2026-11-10T13:45:00.000Z",
-   "title": "L'enquête sur le PDG de Nvidia et les liens avec Singapour : les futures commandes de puces vont-elles souffrir ?",
-   "orig": "Nvidia’s CEO probe and Singapore ties: Will future chip orders suffer?",
-   "summary": "Analyse des répercussions potentielles des turbulences politiques autour de Nvidia sur ses livraisons de puces en Asie, notamment à Singapour.",
-   "country": "US",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "The Straits Times",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNbU1uVGtpZlVncUhDUkN4czhHWlFXZnF1NG5ZN0llZmhLbFNWdTV6OUFNODZQMGJPUWJESFhIM0dSMC1ydWpWR0RSZFZHWE1icGJKUGlFb1lnRGFmcjlCNlAtMmcwTlB4RkhDaGE1Z0hrOVo0bmZmVXNHWWZFSVZ0OTl2TWdxekRaYVM1S0hNcGF5c1dFalhZd1ZFQ0JRTWlnNXJN?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "c79b68e19c35",
-   "ts": "2026-11-10T13:43:00.000Z",
-   "title": "« Google » développe une variété de puces d'intelligence artificielle",
-   "orig": "\"غوغل\" تطور مجموعة متنوعة من رقائق الذكاء الاصطناعي",
-   "summary": "Google poursuit le développement de ses propres processeurs spécialisés pour l'intelligence artificielle.",
-   "country": "US",
-   "category": "puces",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "العربية",
-   "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxPRm1DRkpwbUJ6NkltcnJnUmxFVi1xekZxbnhPX3hJNXlNX0QzWVJjMmtoRGxmbmU3dTNqbTh6RUJ4OXBPRTVuWmJla0NVOGhlWTY3aC1FQjBQNk9EcUZTV213ZVE2OVZQWWZrUDJ0aF9HRmJtdUMxbzZNQV8yQlhFa0ZfcFluTElIVVgxczdsWW5CLTRJdFhjMmpLaDZaV3h0ejlYNDNIMGZYdktrWDJwMnRGZk1ka09KZGlYUG41aGp0VEQyQWprSEFMb1puclJOUEdMc2FxbkFuQktWOUZxZmZWeEFZR1h4bjA1cXVyNGxaRnFtM2JENkNTaTI4LS00NmJ3d0FQeGJUbmZaREtGOHJVRFA0ckZyNTZJNXdudkY1U0ltc1VzcV9RczRyZzAxemJBeDhOMDJHMzJ4YnZ3VkROQVpCMHhuZV9jbkJWTThONzdhM1FyY0RqSGdmOU1mc09MRGtyNzVtcjRkUldWUEd3WXY0N3pPLUxRVm5jQnZCS2hBYmpKZWVyZV9JVjVwVlhDTDRuU05iTVp4eF9kOVBmVFZ5TThLYlhlMFFTc2ZvMXIzODR6VmRIelFGRlg2MnfSAcIDQVVfeXFMT0ZtQ0ZKcG1CejZJbXJyZ1JsRVYtcXpGcW54T194STV5TV9EM1lSYzJraERsZm5lN3Uzam04ekVCeDlwT0U1blpiZWtDVThoZVk2N2gtRUIwUDZPRHFGU1dtd2VRNjlWUFlma1AydGhfR0ZibXVDMW82TUFfMkJYRWtGX3BZbkxJSFVYMXM3bFluQi00SXRYYzJqS2g2Wld4dHo5WDQzSDBmWHZLa1gycDJ0RmZNZGtPSmRpWFBuNWhqdFREMkFqa0hBTG9abnJSTlBHTHNhcW5BbkJLVjlGcWZmVnhBWUdYeG4wNXF1cjRsWkZxbTNiRDZDU2kyOC0tNDZid3dBUHhiVG5mWkRLRjhyVURQNHJGcjU2STV3bnZGNVNJbXNVc3FfUXM0cmcwMXpiQXg4TjAyRzMyeGJ2d1ZETkFaQjB4bmVfY25CVk04Tjc3YTNRcmNEakhnZjlNZnNPTERrcjc1bXI0ZFJXVlBHd1l2NDd6Ty1MUVZuY0J2QktoQWJqSmVlcmVfSVY1cFZYQ0w0blNOYk1aeHhfZDlQZlRWeU04S2JYZTBRU3NmbzFyMzg0elZkSHpRRkZYNjJ3?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "24d798a24b77",
-   "ts": "2026-11-10T13:42:41.000Z",
-   "title": "Les fabricants de puces préviennent que la demande en IA crée des goulots d'étranglement dans l'automobile",
-   "orig": "Chipmakers warn AI demand is creating bottlenecks in automotive supply chain",
-   "summary": "Nexperia indique que ses capacités de production sont détournées vers les centres de données d'IA au détriment des puces matures pour l'automobile.",
-   "country": "EU",
-   "category": "puces",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "Channel Newsasia",
-   "url": "https://www.channelnewsasia.com/business/chipmakers-warn-ai-demand-creating-bottlenecks-in-automotive-supply-chain-6539751",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "030ac88a1311",
-   "ts": "2026-11-10T13:40:00.000Z",
-   "title": "Un nouveau cadre évalue les évasions d'IA selon les gains de capacités, la portée et la facilité de déploiement",
-   "orig": "New framework grades AI jailbreaks across capability gains, scope, and how easy they are to deploy",
-   "summary": "Le Frontier Model Forum publie un cadre pour estimer la facilité avec laquelle les modèles d'IA peuvent contourner leurs barrières de sécurité et les risques associés.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Modèles",
-   "source": "Tom's Hardware",
-   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/new-framework-grades-ai-jailbreaks-across-capability-gains-scope-and-how-easy-they-are-to-deploy-frontier-model-forum-proposes-cvss-style-rating-system-for-new-ai-models",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "204079fe8e80",
-   "ts": "2026-11-10T13:30:06.000Z",
-   "title": "Generalizing Causal Decision-Making: Markov Equivalence, Transportability and Counterfactuals",
-   "orig": "Generalizing Causal Decision-Making: Markov Equivalence, Transportability and Counterfactuals",
-   "summary": "Des chercheurs développent des critères graphiques pour les ensembles d'intervention minimale sous équivalence de Markov.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.14066v1",
-   "confidence": "haute"
   }
  ]
 }
