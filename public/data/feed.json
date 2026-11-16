@@ -1,6 +1,36 @@
 {
  "items": [
   {
+   "id": "e5f17b0d9b63",
+   "ts": "2026-11-16T22:23:00.000Z",
+   "title": "Warsh de la Réserve fédérale affirme que les technologies émergentes comme l'IA auront un « impact significatif », mais qu'il existe des risques",
+   "orig": "Federal Reserve's Warsh says emerging technologies like AI to have 'significant impact', but there are risks",
+   "summary": "Les technologies émergentes comme l'IA auront un impact significatif, mais comportent des risques selon Warsh de la Réserve fédérale.",
+   "country": "US",
+   "category": "politique",
+   "importance": 2,
+   "layer": "Autre",
+   "source": "The Business Times",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPMzBvU0JEMWtkY3JDTllBUlpyd0xabFB5MmZTc3dhcVBwWEZLWDhmTTZhbTducGo1ZXBsVWN1ek9CV19peVdHVkZjS2ZGZWxwcW52ZC1GbU10aWxLRFFHVzFDYTQtY29KOHJ0Mzk0VmlCNDNEeWh3aEpPSHhaQjJaMFNvaHpnZ2J4aWx0ZUdSNGV4S2pWaXhVZzNqWHBFSThTNHMxSnVCOUljSWpkOE5kTUV6czJ4T1cyem1EU0JTcW5yRUhMNHJ5OUZqa1V3US1LY2VxVVN3?oc=5",
+   "confidence": "moyenne",
+   "why": "Il met en lumière les tensions entre l'adoption massive de l'IA et l'évaluation des risques économiques par les autorités financières."
+  },
+  {
+   "id": "b2d5ba8f9528",
+   "ts": "2026-11-16T22:17:02.000Z",
+   "title": "La Chine conserve la couronne du supercalculateur le plus rapide du monde alors que les centres de données IA absorbent du nouveau matériel",
+   "orig": "China retains fastest supercomputer in the world crown as AI data centers soak up new hardware",
+   "summary": "La Chine garde le supercalculateur le plus rapide du monde tandis que les investissements en infrastructure se déplacent vers les usines d'IA.",
+   "country": "CN",
+   "category": "puces",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "Tom's Hardware",
+   "url": "https://www.tomshardware.com/tech-industry/supercomputers/china-retains-fastest-supercomputer-in-the-world-crown-as-ai-data-centers-soak-up-new-hardware-top500-records-fewest-new-systems-in-33-years",
+   "confidence": "moyenne",
+   "why": "Cela illustre la bascule mondiale des investissements informatiques vers les infrastructures dédiées à l'intelligence artificielle."
+  },
+  {
    "id": "e3432992cba2",
    "ts": "2026-11-16T22:11:00.000Z",
    "title": "Le département du Commerce prend des mesures pour sévir contre l'exportation de puces",
@@ -21028,34 +21058,6 @@
    "source": "arXiv",
    "url": "https://arxiv.org/abs/2611.14514v1",
    "confidence": "haute"
-  },
-  {
-   "id": "0559af4649f3",
-   "ts": "2026-11-10T18:58:21.021Z",
-   "title": "Un fabricant de métaux japonais prévoit une usine de feuilles de cuivre de 1,2 milliard de dollars en Malaisie pour répondre à la demande en IA",
-   "orig": "Japan metals maker plans $1.2bn Malaysia copper foil plant on AI demand",
-   "summary": "Une entreprise japonaise investit dans une nouvelle usine en Malaisie pour produire des feuilles de cuivre essentielles aux composants d'IA.",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 3,
-   "layer": "Puces",
-   "source": "Nikkei Asia",
-   "url": "https://asia.nikkei.com/business/materials/japan-metals-maker-plans-1.2bn-malaysia-copper-foil-plant-on-ai-demand",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "e68ddea15d15",
-   "ts": "2026-11-10T18:58:21.021Z",
-   "title": "Sea, basé à Singapour, cible le boom de l'IA avec une poussée de services cloud légers",
-   "orig": "Singapore's Sea targets AI boom with asset-light cloud services push",
-   "summary": "L'entreprise singapourienne Sea développe ses services cloud pour tirer profit de la croissance de l'intelligence artificielle.",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "Nikkei Asia",
-   "url": "https://asia.nikkei.com/business/technology/singapore-s-sea-targets-ai-boom-with-asset-light-cloud-services-push",
-   "confidence": "moyenne"
   }
  ]
 }
