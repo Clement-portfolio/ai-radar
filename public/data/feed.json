@@ -1,6 +1,20 @@
 {
  "items": [
   {
+   "id": "adc690e60e20",
+   "ts": "2026-11-16T18:11:10.000Z",
+   "title": "Sam Altman sur Nvidia sans Jensen Huang : l'industrie ira bien",
+   "orig": "Sam Altman on Nvidia without Jensen Huang: the industry will be ‘fine’",
+   "summary": "Le PDG d'OpenAI estime que l'industrie de l'IA restera solide même sans la direction de Jensen Huang chez Nvidia.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
+   "confidence": "moyenne"
+  },
+  {
    "id": "d9acf0061fbe",
    "ts": "2026-11-16T18:03:29.023Z",
    "title": "Le développeur d'IA vocale américain ElevenLabs va racheter son homologue japonais Kotoba",
@@ -12,6 +26,20 @@
    "layer": "Modèles",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/business-deals/us-voice-ai-developer-elevenlabs-to-buy-japanese-focused-peer-kotoba",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "99adb1c1605d",
+   "ts": "2026-11-16T18:02:29.000Z",
+   "title": "Les États-Unis bloquent l'accès à distance aux puces IA chinoises et contrôlent les exportations vers l'Asie du Sud-Est",
+   "orig": "美, AI반도체 中원격접속 차단…동남아 수출땐 사전허가 통제",
+   "summary": "Les États-Unis renforcent les restrictions sur l'accès aux puces IA pour la Chine et imposent des autorisations préalables pour les exportations vers l'Asie du Sud-Est.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBHU3VNM1c2dzZKRGRPRDQtMG9yMEJlZEhWd3VGeS1tQVEwQ3BIZjluS0NHaGdoQk5yNElSWHdfeU5Jb1BkRlhQUVI0X1N1Z1R1Y1BtQmVsWFJXQmPSAWBBVV95cUxPel92eVVrcWEybkx4aXBXOUVtaXd5Z2hKWXZXbGJUdFdwRjJENnRGX2NqbDJaeUdQN2ZsNWZ5d3pueG9Wa3hYMjNQUFJYSGg5RTdiQVFzdi1oMnh6RUFiRFk?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -2269,6 +2297,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "f2cb078cb73a",
+   "ts": "2026-11-16T06:18:38.000Z",
+   "title": "L'IIT Madras développe le jumeau numérique SEANAV pour entraîner des navires autonomes et prévenir les collisions en mer",
+   "orig": "IIT Madras develops SEANAV digital twin to train autonomous ships and prevent collisions at sea",
+   "summary": "L'IIT Madras a créé une plateforme de jumeau numérique pour simuler les conditions océaniques et entraîner des navires autonomes à éviter les collisions grâce à l'IA.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "Moneycontrol",
+   "url": "https://www.moneycontrol.com/education/iit-madras-develops-seanav-digital-twin-to-train-autonomous-ships-and-prevent-collisions-at-sea-article-14081011.html",
+   "confidence": "moyenne"
+  },
+  {
    "id": "23b9bf55bacf",
    "ts": "2026-11-16T06:10:59.000Z",
    "title": "Les étudiants doivent s'adapter à l'intelligence artificielle, selon un responsable de l'éducation",
@@ -2280,6 +2322,20 @@
    "layer": "Applications",
    "source": "BBC",
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFAyVUhFdFB4QndYTXEtdWlTU0dIaFFMU2NoOGFLQV9yOTdLdXJoM0RLRWlQYUFqT0t1Q2dyaXlMLXhyUFpLbmdma1RQb0h0X3U0b0cwQlJuVEZfVU0?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "7ff63c73c53d",
+   "ts": "2026-11-16T06:08:53.000Z",
+   "title": "SK Hynix prévoit un centre de test de puces pour renforcer la compétitivité mondiale des petits acteurs sud-coréens",
+   "orig": "SK Hynix plans chip testing hub to boost global competitiveness of smaller South Korean players",
+   "summary": "SK Hynix prévoit l'ouverture d'une installation de test de puces pour soutenir la compétitivité des entreprises sud-coréennes.",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "The Business Times",
+   "url": "https://www.businesstimes.com.sg/companies-markets/sk-hynix-plans-chip-testing-hub-boost-global-competitiveness-smaller-south-korean-players",
    "confidence": "moyenne"
   },
   {
@@ -20942,62 +20998,6 @@
    "layer": "Régulation",
    "source": "ZDNet IA",
    "url": "https://www.zdnet.com/tech/ai-security-failures-supply-chain-risks-black-kite-research/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "107f7ea31eb5",
-   "ts": "2026-11-10T13:03:50.000Z",
-   "title": "MISO-BR: An Open Corpus for Misogyny Detection in Brazilian Portuguese",
-   "orig": "MISO-BR: An Open Corpus for Misogyny Detection in Brazilian Portuguese",
-   "summary": "Publication de MISO-BR, un corpus ouvert de textes en portugais brésilien annoté pour la détection de la misogynie en ligne.",
-   "country": "EU",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.14036v1",
-   "confidence": "haute"
-  },
-  {
-   "id": "712c6586ccec",
-   "ts": "2026-11-10T13:03:41.000Z",
-   "title": "ScaleBrain: A Scale-Consistent Framework for EEG Foundation Models",
-   "orig": "ScaleBrain: A Scale-Consistent Framework for EEG Foundation Models",
-   "summary": "Présentation de ScaleBrain, un cadre cohérent en échelle pour les modèles de fondation basés sur l'électroencéphalographie.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "arXiv",
-   "url": "https://arxiv.org/abs/2611.14035v1",
-   "confidence": "haute"
-  },
-  {
-   "id": "09db582df3fb",
-   "ts": "2026-11-10T13:01:33.000Z",
-   "title": "Anthropic vise une valorisation d'environ 1,3 billion de dollars lors de son introduction en bourse",
-   "orig": "Anthropic seeks valuation of about $1.3 trillion when it becomes a publicly traded company",
-   "summary": "Le géant de l'intelligence artificielle Anthropic cible une valorisation boursière avoisinant 1,3 billion de dollars pour son introduction.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "The Independent",
-   "url": "https://www.independent.co.uk/news/anthropic-spacex-claude-google-wall-street-b3082398.html",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "9b3bf7006a3a",
-   "ts": "2026-11-10T13:01:08.000Z",
-   "title": "La Commission met à jour les lignes directrices électorales pour l'IA et les risques de deepfakes",
-   "orig": "Commission updates election guidelines for AI, deepfake risks",
-   "summary": "La Commission européenne propose de renforcer les obligations des plateformes face aux risques de deepfakes politiques.",
-   "country": "EU",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Régulation",
-   "source": "Euractiv",
-   "url": "https://www.rapporteur.com/news/commission-updates-election-guidelines-for-ai-deepfake-risks/",
    "confidence": "moyenne"
   }
  ]
