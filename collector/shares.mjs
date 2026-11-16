@@ -62,7 +62,14 @@ export function parseFoundry(html) {
   const sentences = text.split(/(?<=[a-z0-9%)])\.\s+(?=[A-Z])/);
   const values = {};
   for (const [name, re] of COMPANIES) {
-    for (const s of sentences) { if (!re.test(s)) continue; const v = shareIn(s); if (v != null) { values[name] = v; break; } }
+    for (let i = 0; i < sentences.length && values[name] == null; i++) {
+      if (!re.test(sentences[i])) continue;
+      let v = shareIn(sentences[i]);
+      // la part est parfois dans la phrase suivante, qui commence par « Its market share… » (c'est le cas du communiqué du T2 2026)
+      const nx = sentences[i + 1];
+      if (v == null && nx && /^(Its|Their|The company['’]s)\b/.test(nx) && /share/i.test(nx)) v = shareIn(nx);
+      if (v != null) values[name] = v;
+    }
     if (values[name] == null) throw new Error("part de " + name + " introuvable ou ambiguë");
   }
   const vals = Object.values(values), sum = vals.reduce((a, b) => a + b, 0);

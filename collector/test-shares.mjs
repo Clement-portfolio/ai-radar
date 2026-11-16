@@ -19,11 +19,12 @@ assert.throws(() => parseHbm(page(hbm(undefined, "Dernier"))), /illisible/, "en-
 assert.throws(() => parseHbm("<html>coquille vide</html>"), /introuvable/);
 
 // TrendForce : le classement est dans le texte
-const rel = (extra = "") => `<h1>Global Foundry Revenue 3Q26</h1><p>TrendForce&rsquo;s research shows the top 10 foundries rose 4.1% QoQ to US$55.7 billion in 3Q26. TSMC maintained its lead with 3Q26 revenue nearing $42.0 billion, a 4.5% increase QoQ, capturing a 73.1% market share. Samsung Foundry ranked second, with revenue of $3.30 billion, up 1.2% QoQ, with its market share declining from 5.9% to 5.7%. SMIC ranked third, with revenue exceeding $3.1 billion, up 3.0% QoQ, raising its market share to 5.5%. UMC maintained fourth place with a 3.9% market share. ${extra}</p>`;
+const rel = (extra = "") => `<h1>Global Foundry Revenue 3Q26</h1><p>TrendForce&rsquo;s research shows the top 10 foundries rose 4.1% QoQ to US$55.7 billion in 3Q26. TSMC maintained its lead with 3Q26 revenue nearing $42.0 billion, a 4.5% increase QoQ, capturing a 73.1% market share. Strong demand kept capacity booked. Samsung Foundry ranked second. New orders ramped up during the quarter. Revenue edged up 1.2% QoQ to $3.30 billion. However, Samsung&rsquo;s market share declined from 5.9% to 5.7% as competitors grew faster. SMIC ranked third, with revenue rising 3.0% QoQ to more than $3.1 billion. Its market share edged up to 5.5%, narrowing the gap with Samsung. Growth was supported by consumer orders. UMC maintained fourth place with a 3.9% market share. The company benefited from PC demand. GlobalFoundries ranked fifth, lifting revenue 9.3% QoQ. Its market share stood at 3.2%. ${extra}</p>`;
 let f = parseFoundry(rel());
 assert.equal(f.key, "2026Q3"); assert.deepEqual(f.values, { TSMC: 73.1, Samsung: 5.7, SMIC: 5.5, UMC: 3.9 }, "« de 5,9 % à 5,7 % » : on prend la valeur d'arrivée, pas celle de départ");
 assert.throws(() => parseFoundry(rel().replace("capturing a 73.1% market share", "capturing the market")), /TSMC/, "part introuvable : échec, pas de devinette");
 assert.throws(() => parseFoundry(rel().replace("a 3.9% market share", "a 1.8% QoQ rise")), /UMC/);
+assert.throws(() => parseFoundry(rel().replace("Its market share edged up to 5.5%, narrowing", "Growth was strong, narrowing")), /SMIC/, "sans part citée pour SMIC : échec, on ne prend pas celle de GlobalFoundries");
 assert.throws(() => parseFoundry(rel().replace("73.1%", "13.1%")), /en tête|douteuse/);
 assert.throws(() => parseFoundry("<p>Rien sur les fonderies</p>"), /trimestre/);
 
@@ -63,7 +64,7 @@ assert.equal(by(out, "owners").segments[0].pct, 24.8, "un camembert manuel n'est
 assert.equal(by(out, "hbm").check_error, undefined);
 
 // SMIC dépasse Samsung : l'ordre est recalculé, aucun ordre n'est supposé
-const swap = rel().replace("declining from 5.9% to 5.7%", "declining to 5.2%");
+const swap = rel().replace("declined from 5.9% to 5.7%", "declined to 5.2%");
 out = await collectShares({ prev: base(), fetchImpl: mk({ ...pagesQ3, "https://www.trendforce.com/presscenter/news/20261209-13390.html": swap }), now: dec, sleep: noSleep });
 assert.deepEqual(by(out, "foundry").segments.map((s) => s.label).slice(0, 3), ["TSMC", "SMIC", "Samsung"]);
 
