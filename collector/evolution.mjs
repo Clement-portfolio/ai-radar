@@ -139,12 +139,20 @@ export function salesCurve(csv, now, last = 9) {
 }
 
 /** Records du compute d'entraînement (FLOP) : à chaque date, le plus gros modèle publié jusqu'ici. */
-export function trainRecords(csv, now, from = "2018-01-01") {
-  const rows = parseCsv(csv).map((r) => ({ d: String(r["Publication date"] || "").slice(0, 10), m: r.Model, v: parseFloat(r["Training compute (FLOP)"]) }))
-    .filter((r) => /^\d{4}-\d{2}-\d{2}$/.test(r.d) && r.v > 0 && r.v < 1e30 && Date.parse(r.d) <= now + DAY).sort((a, b) => a.d.localeCompare(b.d));
+/** Pays d'une ligne : « us » ou « cn » seulement si tous les pays cités sont les mêmes (sinon null : consortium ou inconnu). */
+export function countryOf(raw) {
+  const set = new Set(String(raw || "").split(",").map((x) => x.trim()).filter(Boolean));
+  if (set.size !== 1) return null;
+  const c = [...set][0];
+  return c === "United States of America" ? "us" : c === "China" ? "cn" : null;
+}
+
+export function trainRecords(csv, now, from = "2018-01-01", country = null, min = 6) {
+  const rows = parseCsv(csv).map((r) => ({ d: String(r["Publication date"] || "").slice(0, 10), m: r.Model, v: parseFloat(r["Training compute (FLOP)"]), c: countryOf(r["Country (of organization)"]) }))
+    .filter((r) => (!country || r.c === country) && /^\d{4}-\d{2}-\d{2}$/.test(r.d) && r.v > 0 && r.v < 1e30 && Date.parse(r.d) <= now + DAY).sort((a, b) => a.d.localeCompare(b.d));
   let cur = 0; const rec = [];
   for (const r of rows) if (r.v > cur) { cur = r.v; if (r.d >= from) rec.push({ d: r.d, v: r.v, name: r.m }); }
-  if (rec.length < 6) throw new Error("trop peu de records lisibles : " + rec.length);
+  if (rec.length < min) throw new Error("trop peu de records lisibles" + (country ? " (" + country + ")" : "") + " : " + rec.length);
   return rec;
 }
 
@@ -204,7 +212,7 @@ const META = {
   sales: { kind: "curve", etage: 1, rank: 2, title: "Compute IA vendu chaque trimestre", unit: "millions d'équivalents H100", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", caveat: "Estimations d'Epoch ; seuls les trimestres complets sont tracés. Cambricon (moins de 1 %) n'est pas tracé." },
   capex: { kind: "curve", etage: 1, rank: 1, title: "Capex trimestriel des cinq géants", unit: "milliards de dollars", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Dépenses d'investissement déclarées (immobilisations corporelles). Les trimestres des sociétés ne coïncident pas : Oracle clôt en août, novembre, février et mai. Chaque trimestre est publié ou calculé par différence de cumuls, jamais estimé." },
   hbm: { kind: "curve", etage: 1, rank: 3, title: "Parts du marché HBM, cinq trimestres", unit: "% du chiffre d'affaires HBM", source: "Counterpoint Research", url: COUNTERPOINT_URL, caveat: "Parts relues sur le tableau de la page Counterpoint ; arrondis publiés (la somme peut différer de 100 %)." },
-  train: { kind: "curve", etage: 2, rank: 1, title: "Compute d'entraînement du plus gros modèle", unit: "FLOP (échelle logarithmique)", scale: "log", source: "Epoch AI (AI Models)", url: "https://epoch.ai/data/ai-models", caveat: "Chaque point est un nouveau record parmi les modèles recensés par Epoch ; beaucoup de laboratoires ne publient pas leur compute, donc le vrai maximum peut être plus haut. Données Epoch AI, licence CC-BY 4.0." },
+  train: { kind: "curve", etage: 2, rank: 1, title: "Plus gros entraînement connu : USA contre Chine", unit: "FLOP (échelle logarithmique)", scale: "log", source: "Epoch AI (AI Models)", url: "https://epoch.ai/data/ai-models", caveat: "Chaque marche est un nouveau record du pays parmi les modèles recensés par Epoch. Seuls les modèles dont tous les laboratoires sont du même pays sont comptés. Beaucoup de laboratoires ne publient pas leur compute : le vrai maximum peut être plus haut, surtout en Chine. Données Epoch AI, licence CC-BY 4.0." },
   btos: { kind: "curve", etage: 3, rank: 1, title: "Entreprises américaines qui utilisent l'IA", unit: "% des entreprises", source: "U.S. Census Bureau (BTOS)", url: "https://www.census.gov/hfp/btos/data_downloads", caveat: "Enquête auprès des entreprises américaines, une vague toutes les deux semaines. Rupture de série : Census a changé la formulation de la question en novembre 2025 ; seuls les points de la nouvelle formulation sont tracés, les anciens ne sont pas comparables." },
   capex_rev: { kind: "curve", etage: 3, rank: 2, title: "Capex rapporté aux revenus, par géant", unit: "% du revenu trimestriel", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Capex du trimestre divisé par le revenu total du même trimestre : pas seulement le revenu IA, que les sociétés ne publient pas." },
 };
@@ -235,7 +243,7 @@ export async function collectEvolution({ prev = null, ua, fetchImpl = fetch, now
     owners: async () => { const r = ownersPie(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { period: `Fin ${qLabel(r.end)}`, period_key: r.end, segments: r.segments }; },
     designers: async () => { const r = designersPie(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { period: qLabel(r.end), period_key: r.end, segments: r.segments }; },
     sales: async () => { const r = salesCurve(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { series: r.series, last_point: r.last }; },
-    train: async () => ({ series: [{ name: "Plus gros compute d'entraînement connu", points: trainRecords(await text(EPOCH + "all_ai_models.csv"), now), step: true }] }),
+    train: async () => { const t = await text(EPOCH + "all_ai_models.csv"); return { series: [{ name: "États-Unis", points: trainRecords(t, now, "2018-01-01", "us"), step: true }, { name: "Chine", points: trainRecords(t, now, "2018-01-01", "cn", 4), step: true, dashed: true }] }; },
     hbm: async () => ({ series: parseHbmHistory(await text(COUNTERPOINT_URL)) }),
     btos: async () => { const r = btosSeries(await get("https://www.census.gov/hfp/btos/downloads/National.xlsx"), now); return { series: r.series, wording: r.question }; },
   };

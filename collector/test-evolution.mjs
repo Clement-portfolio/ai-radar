@@ -1,7 +1,7 @@
 // Tests hors ligne de la section Évolution : lecture de CSV et de .xlsx, calculs, contrôles, repli et cadence.
 import assert from "node:assert/strict";
 import zlib from "node:zlib";
-import { parseCsv, unzip, readXlsx, ownersPie, designersPie, salesCurve, trainRecords, btosSeries, secCurves, collectEvolution } from "./evolution.mjs";
+import { parseCsv, unzip, readXlsx, ownersPie, designersPie, salesCurve, trainRecords, countryOf, btosSeries, secCurves, collectEvolution } from "./evolution.mjs";
 import { quarterly } from "./sec.mjs";
 import { parseHbmHistory } from "./shares.mjs";
 
@@ -95,6 +95,14 @@ const rec = trainRecords(mcsv([mdl("2019-02-14", "1.5e21", "GPT-2"), mdl("2020-0
 assert.deepEqual(rec.map((x) => x.name), ["GPT-2", "GPT-3", "PaLM", "GPT-4", "Grok 3", "GPT-6"], "uniquement les records, rien dans le futur");
 assert.throws(() => trainRecords(mcsv([mdl("2020-05-28", "3.1e23", "GPT-3")]), NOW), /trop peu/);
 
+assert.equal(countryOf("United States of America,United States of America"), "us");
+assert.equal(countryOf("China"), "cn");
+assert.equal(countryOf("China,United States of America"), null);
+assert.equal(countryOf(""), null);
+const ccsv = "Model,Publication date,Training compute (FLOP),Country (of organization)\n" + [["A","2020-01-01","1e22","China"],["B","2021-01-01","1e23","United States of America"],["C","2022-01-01","1e24","China,China"],["D","2023-01-01","1e25","China,United States of America"],["E","2024-01-01","1e23","China"],["F","2025-01-01","5e25","China"]].map((r) => r.slice(0, 3).join(",") + ",\"" + r[3] + "\"").join("\n");
+assert.deepEqual(trainRecords(ccsv, NOW, "2018-01-01", "cn", 3).map((x) => x.name), ["A", "C", "F"], "Chine : consortium exclu, seuls les records");
+assert.throws(() => trainRecords(ccsv, NOW, "2018-01-01", "us", 4), /\(us\)/);
+
 // ── SEC : trimestres publiés ou différence de cumuls, jamais estimés
 const E = (start, end, val, form = "10-Q", filed = "2026-01-01") => ({ start, end, val, form, filed });
 const q = quarterly([
@@ -142,7 +150,8 @@ const net = async (url) => {
   if (down && !u.includes("sec.gov")) return { ok: false, status: 503, text: async () => "" };
   if (u.includes("ai_chip_owners_cumulative")) return ok(csv);
   if (u.includes("ai_chip_sales_timelines")) return ok(salesCsv());
-  if (u.includes("all_ai_models")) return ok(mcsv([mdl("2019-02-14", "1.5e21", "A"), mdl("2020-05-28", "3.1e23", "B"), mdl("2022-04-04", "2.5e24", "C"), mdl("2023-03-15", "2.1e25", "D"), mdl("2025-02-17", "3.5e26", "E"), mdl("2026-03-03", "9.4e26", "F")]));
+  if (u.includes("all_ai_models")) { const us = [["A", "2019-02-14", "1.5e21"], ["B", "2020-05-28", "3.1e23"], ["C", "2022-04-04", "2.5e24"], ["D", "2023-03-15", "2.1e25"], ["E", "2025-02-17", "3.5e26"], ["F", "2026-03-03", "9.4e26"]], cn = [["G", "2020-01-01", "1e22"], ["H", "2021-01-01", "1e23"], ["I", "2023-01-01", "1e24"], ["J", "2025-01-01", "5e25"]];
+    return ok("Model,Publication date,Training compute (FLOP),Country (of organization)\n" + us.map((r) => r.join(",") + ",United States of America").concat(cn.map((r) => r.join(",") + ",China")).join("\n")); }
   if (u.includes("counterpoint")) return ok("<html>" + hbmHtml + "</html>");
   if (u.includes("National.xlsx")) return ok(xlsx());
   if (u.includes("data.sec.gov")) return secFetch(u);
