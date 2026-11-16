@@ -42,7 +42,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 
 main.wrap{padding-top:32px;padding-bottom:64px;min-height:60vh}
 .view{display:none}.view.on{display:block}
-.col{max-width:820px}
+.col{max-width:none}
 h1.page,h2.sec{font-family:var(--display);font-size:clamp(24px,2.7vw,36px);font-weight:600;letter-spacing:-.02em;line-height:1.1}
 h3.sub2{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:-.01em;margin:36px 0 2px}
 .lede{color:var(--ink2);max-width:700px;margin:8px 0 22px;font-size:14.5px}
@@ -286,7 +286,7 @@ details.why .sc{margin-top:6px}
 @supports(grid-template-rows:subgrid){.cards3>.share{display:grid;grid-row:span 6;grid-template-rows:subgrid;row-gap:0}.cards3>.share>details.why{align-self:start}.cards3>.share .sbody{align-self:center}}
 @media(max-width:620px){.cards3>.share{display:flex;grid-row:auto}}
 
-.brief .lede{font-family:var(--display);font-size:19px;line-height:1.55;letter-spacing:-.01em;padding:10px 0 12px;max-width:68ch}
+.brief .lede{font-family:var(--display);font-size:19px;line-height:1.55;letter-spacing:-.01em;padding:10px 0 12px;max-width:none;margin:0;color:var(--ink)}
 .brief>.by{font-family:var(--mono);font-size:11px;color:var(--mute);display:flex;flex-wrap:wrap;gap:2px 12px}
 .brief>.by a{text-decoration:none;border-bottom:1px solid var(--hair)}.brief>.by a:hover{color:var(--ink);border-color:var(--ink)}
 @media(max-width:620px){.brief .lede{font-size:17px}}
