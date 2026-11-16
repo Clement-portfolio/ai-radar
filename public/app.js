@@ -30,9 +30,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];
   });
 }
 function setStatus(kind,txt,title){
@@ -122,7 +122,7 @@ function rMarket(){
     var lo=c.low/maxUS*100,hi=c.high/maxUS*100;
     var val=c.low===c.high?c.low:c.low+"–"+c.high;
     var fill=c.low===c.high?'<div class="fill" style="width:'+hi+'%"></div>':'<div class="fill" style="width:'+lo+'%"></div><div class="rng" style="left:'+lo+'%;width:'+(hi-lo)+'%"></div>';
-    return'<div class="bar"><div class="nm">'+esc(c.name)+'</div><div class="track">'+fill+'</div><div class="val">'+val+' Md$</div><div class="nt">'+esc(c.note)+' · <a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+'</a>, '+esc(c.as_of)+'</div></div>';
+    return'<tr><td>'+esc(c.name)+'</td><td><div class="cv">'+val+' Md$</div><div class="track">'+fill+'</div></td><td>'+esc(c.note)+' <a href="'+esc(link(c.url))+'" target="_blank" rel="noopener" class="small">'+esc(c.source)+'</a>, '+esc(c.as_of)+'</td></tr>';
   }).join("");
   var cc=m.capex_cn.map(function(c){return'<tr><td>'+esc(c.name)+'</td><td>'+esc(c.value)+'</td><td>'+esc(c.note)+' <a href="'+esc(link(c.url))+'" target="_blank" rel="noopener" class="small">'+esc(c.source)+'</a></td></tr>'}).join("");
   var rev=m.revenue.filter(byCountry);
@@ -131,14 +131,44 @@ function rMarket(){
   var act=m.actors.filter(byCountry);
   el.innerHTML='<h2 class="sec">Marché</h2><p class="lede">Qui dépense, qui gagne de l\'argent, qui compte. Chiffres sourcés ; la date et la source figurent sous chaque donnée.</p>'+
    '<div class="tiles">'+m.tiles.map(function(t){return'<div class="tile"><div class="l">'+esc(t.label)+'</div><div class="v">'+esc(t.value)+'</div><div class="s">'+esc(t.sub)+'</div><div class="src"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></div></div>'}).join("")+'</div>'+
-   '<div class="two"><div class="panel"><span class="kicker">Qui dépense</span><h3>Capex 2026, États-Unis</h3><div class="sub">Guidance annuelle, en milliards de dollars. Zone claire = fourchette.</div>'+cu+'</div>'+
-   '<div class="panel"><span class="kicker">Qui dépense</span><h3>Capex, Chine</h3><div class="sub">Montants en yuans, comparables au capex américain à un facteur de 5 à 7 près.</div><table class="table"><thead><tr><th>Société</th><th>Montant</th><th>Détail</th></tr></thead><tbody>'+cc+'</tbody></table></div></div>'+
+   '<div class="two"><div class="panel"><span class="kicker">Qui dépense</span><h3>Capex 2026, États-Unis</h3><div class="sub">Guidance annuelle, en milliards de dollars. Zone claire = fourchette.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Guidance</th><th>Détail</th></tr></thead><tbody>'+cu+'</tbody></table></div>'+
+   '<div class="panel"><span class="kicker">Qui dépense</span><h3>Capex, Chine</h3><div class="sub">Montants en yuans, comparables au capex américain à un facteur de 5 à 7 près.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Montant</th><th>Détail</th></tr></thead><tbody>'+cc+'</tbody></table></div></div>'+
    '<div class="two"><div class="panel"><span class="kicker">Qui gagne</span><h3>Revenus de l\'IA</h3><div class="sub">Run-rate annualisé, en milliards de dollars.</div>'+rv+'</div>'+
    '<div class="note"><b>À lire avant de comparer.</b> '+esc(m.caveat)+'</div></div>'+
-   secPanel()+'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
+   sharesPanel()+secPanel()+'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
    (act.length?'<table class="table"><thead><tr><th>Acteur</th><th>Pays</th><th>Rôle</th><th>Repère</th></tr></thead><tbody>'+act.map(function(a){return'<tr><td>'+esc(a.name)+'</td><td>'+ctag(a.country)+'</td><td>'+esc(a.role)+'</td><td>'+esc(a.note)+' <a class="small" href="'+esc(link(a.u))+'" target="_blank" rel="noopener">'+esc(a.src)+'</a></td></tr>'}).join("")+'</tbody></table>':'<div class="empty">Aucun acteur pour ce filtre.</div>');
 }
 
+
+var DONUT=["#000000","#4D4D4D","#767676","#9E9E9E","#BDBDBD","#D9D9D9","#EBEBEB"];
+function fmtPct(v){return String(v).replace(".",",")+" %"}
+function donut(segs){
+  var tot=segs.reduce(function(a,x){return a+x.pct},0),R=52,r=32,c=60,a0=-Math.PI/2,out="";
+  segs.forEach(function(x,i){
+    var a1=a0+x.pct/tot*2*Math.PI,big=(a1-a0)>Math.PI?1:0;
+    var P=function(rad,a){return(c+rad*Math.cos(a)).toFixed(2)+" "+(c+rad*Math.sin(a)).toFixed(2)};
+    var d=segs.length===1?"":"M"+P(R,a0)+" A"+R+" "+R+" 0 "+big+" 1 "+P(R,a1)+" L"+P(r,a1)+" A"+r+" "+r+" 0 "+big+" 0 "+P(r,a0)+" Z";
+    out+='<path d="'+d+'" fill="'+DONUT[Math.min(i,DONUT.length-1)]+'" stroke="var(--bg)" stroke-width="1.5"><title>'+esc(x.label)+' : '+fmtPct(x.pct)+'</title></path>';
+    a0=a1;
+  });
+  return'<svg class="donut" viewBox="0 0 120 120" role="img" aria-label="Camembert">'+out+'</svg>';
+}
+function shareCard(c){
+  var leg=c.segments.map(function(x,i){return'<li><i style="background:'+DONUT[Math.min(i,DONUT.length-1)]+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
+  return'<div class="share"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.metric)+' · '+esc(c.period)+'</div>'+
+   '<div class="sbody">'+donut(c.segments)+'<ul class="leg">'+leg+'</ul></div>'+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>'+
+   '<div class="sc">'+esc(c.caveat)+'</div></div>';
+}
+function sharesPanel(){
+  var d=S.shares;if(!d||!d.charts||!d.charts.length)return"";
+  var groups=[["Compute","Compute et chaîne d\'approvisionnement"],["Modèles","Modèles et usages"]];
+  return'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui domine</span><h3 class="sub2" style="margin-top:2px">Parts de marché</h3><p class="lede" style="margin-bottom:6px">'+esc(d.note)+' Données arrêtées au '+esc(d.as_of)+'.</p>'+
+   groups.map(function(g){
+     var cs=d.charts.filter(function(c){return c.group===g[0]});
+     return cs.length?'<div class="sgroup">'+esc(g[1])+'</div><div class="shares">'+cs.map(shareCard).join("")+'</div>':"";
+   }).join("");
+}
 function fmtD(iso){return new Date(String(iso).slice(0,10)+"T00:00:00Z").toLocaleDateString("fr-FR",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
 function mdUsd(v){return (v/1e9).toFixed(1).replace(".",",")+" Md$"}
 function secCell(m){

@@ -218,3 +218,31 @@ footer{border-top:1px solid var(--hair);padding:18px 0 40px;font-family:var(--mo
 .table.sec td{line-height:1.4}
 .table.sec .small a{text-decoration:none;border-bottom:1px solid var(--hair)}.table.sec .small a:hover{color:var(--ink);border-color:var(--ink)}
 .warn{color:var(--neg)}
+
+/* Capex : deux tableaux de même structure, donc alignés ligne à ligne */
+
+.table.cx{table-layout:fixed}
+.table.cx td:first-child{white-space:normal}
+.table.cx .cv{font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;margin-bottom:5px}
+.table.cx .track{height:8px;background:var(--fill);position:relative}
+.table.cx .fill{position:absolute;top:0;bottom:0;left:0;background:var(--ink)}
+.table.cx .rng{position:absolute;top:0;bottom:0;background:var(--ink);opacity:.3}
+.table.cx td{line-height:1.4}
+.table.cx td .small{font-size:11px;color:var(--mute)}
+
+/* Parts de marché */
+.sgroup{font-family:var(--mono);font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:26px 0 0;padding-bottom:6px;border-bottom:1px solid var(--hair)}
+.shares{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:0 36px}
+.share{padding:18px 0 20px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column}
+.share h4{font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:-.01em;margin-bottom:2px}
+.share .sm{font-size:11.5px;color:var(--mute);margin-bottom:12px;min-height:32px}
+.sbody{display:flex;align-items:center;gap:18px}
+.donut{width:118px;height:118px;flex:none}
+.leg{list-style:none;flex:1;font-size:12.5px}
+.leg li{display:grid;grid-template-columns:10px 1fr auto;gap:8px;align-items:center;padding:3px 0}
+.leg i{width:10px;height:10px;display:inline-block;border:1px solid var(--hair)}
+.leg b{font-family:var(--mono);font-weight:500;font-size:12px;font-variant-numeric:tabular-nums}
+.share .sf{margin-top:12px;font-size:11.5px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.share .sf a{text-decoration:none;border-bottom:1px solid var(--hair)}.share .sf a:hover{border-color:var(--ink)}
+.share .sc{font-size:11.5px;color:var(--mute);margin-top:8px;line-height:1.45}
+@media(max-width:620px){.shares{grid-template-columns:1fr}.sbody{gap:14px}.table.cx col:first-child{width:30%}}
