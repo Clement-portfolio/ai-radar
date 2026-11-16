@@ -14,14 +14,16 @@ jobs:
           python3 - <<'PY'
           import openpyxl
           wb=openpyxl.load_workbook("National.xlsx",read_only=True,data_only=True)
-          print("SHEETS",wb.sheetnames)
-          for ws in wb.worksheets:
-              print("SHEET",ws.title,ws.max_row,ws.max_column)
-              for i,row in enumerate(ws.iter_rows(values_only=True)):
-                  if i<3: print("ROW",ws.title,i,[str(c)[:40] for c in row[:8]], "...", [str(c)[:12] for c in row[-3:]])
-          for ws in wb.worksheets:
-              for i,row in enumerate(ws.iter_rows(values_only=True)):
-                  t=" ".join(str(c) for c in row[:3] if c is not None)
-                  if "Artificial" in t or "AI" in t.split() or "Question ID" in t:
-                      print("AIROW",ws.title,i,[str(c)[:60] for c in row[:6]], "LAST", [str(c)[:8] for c in row[-4:]])
+          ws=wb["Response Estimates"]
+          rows=list(ws.iter_rows(values_only=True))
+          hdr=rows[0]
+          seen=set()
+          for r in rows[1:]:
+              if r[0] not in seen:
+                  seen.add(r[0]); print("Q",r[0],str(r[1])[:230])
+          for r in rows[1:]:
+              if r[3]=="Yes" and r[1] and ("Intelligence" in str(r[1]) or " AI" in str(r[1])):
+                  print("SERIES",r[0],str(r[1])[:90],"|",[(hdr[i],r[i]) for i in range(4,len(r)) if r[i] not in (None,".")][:3],"...",[(hdr[i],r[i]) for i in range(4,len(r)) if r[i] not in (None,".")][-3:])
+          dates=list(wb["Collection and Reference Dates"].iter_rows(values_only=True))
+          for d in dates[:2]+dates[-3:]: print("DATES",d[:9])
           PY
