@@ -477,6 +477,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "a47b858e85df",
+   "ts": "2026-11-16T16:04:51.000Z",
+   "title": "Évaluation des émissions de carbone et de la consommation énergétique des datacenters hyperscale américains",
+   "orig": "Assessing the carbon emissions and energy consumption of US hyperscale data centres",
+   "summary": "Évaluation des émissions de carbone et de la consommation énergétique des grands centres de données américains.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Énergie",
+   "source": "Nature",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9TcEd6QjFFZ1pDc19WSVo2R1U5T3pqUlpyeGUxdDFvcGhwRkMwU1hNdG9vY1hiT0VxX2FMQ3BCODhLak1wOXlYeC1MdGs1d1lwZEZDbmJRMkwzZ1NkeU00?oc=5",
+   "confidence": "moyenne"
+  },
+  {
    "id": "b2955c38ff71",
    "ts": "2026-11-16T16:04:28.000Z",
    "title": "Bâtir une IA digne de confiance en l'encadrant plutôt qu'en la prédisant",
@@ -20984,20 +20998,6 @@
    "layer": "Applications",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/news/hong-kong/society/article/3373984/ai-microdramas-cause-aesthetic-fatigue-professor-tells-macau-forum",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "310173fdff21",
-   "ts": "2026-11-10T13:26:58.000Z",
-   "title": "Pourquoi l'IA pourrait être à l'origine de la recrudescence des cas d'intoxication par les champignons",
-   "orig": "Why AI might be behind surge in cases of mushroom poisoning",
-   "summary": "L'identification des champignons sauvages s'avère trop complexe pour les outils actuels d'intelligence artificielle, entraînant des risques d'intoxication.",
-   "country": "EU",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "Euractiv",
-   "url": "https://www.rapporteur.com/news/why-ai-might-be-behind-surge-in-cases-of-mushroom-poisoning/",
    "confidence": "moyenne"
   }
  ]
