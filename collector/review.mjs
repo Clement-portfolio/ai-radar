@@ -6,6 +6,7 @@ import { digitsOf, hasNumberWords } from "./brief.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA = path.join(HERE, "..", "public", "data");
+const DAY = 86400000;
 
 /** Champs que le robot peut proposer de modifier, par type d'élément. Les jugements éditoriaux (tension, avance) sont exclus. */
 export const KINDS = {
@@ -33,6 +34,52 @@ export const REVIEW_SCHEMA = {
   type: "ARRAY",
   items: { type: "OBJECT", properties: { k: { type: "STRING" }, changes: { type: "ARRAY", items: { type: "OBJECT", properties: { field: { type: "STRING" }, value: { type: "STRING" } }, required: ["field", "value"] } }, sources: { type: "ARRAY", items: { type: "INTEGER" } }, reason: { type: "STRING" } }, required: ["k", "changes", "sources", "reason"] },
 };
+
+export const POINT_SYSTEM = `Tu mets à jour des courbes d'un radar sur l'IA. On te donne (1) des séries {k, name, unit, last_date, last_value}, (2) des articles récents numérotés {i, title, summary, source, ts}.
+Propose UN nouveau point pour une série UNIQUEMENT si un article donne, pour CE MÊME indicateur et la même entité, une mesure plus récente que last_date.
+- La date (YYYY-MM-DD) est celle de la mesure si l'article la donne (fin de mois ou date d'annonce), sinon la date de l'article.
+- La valeur est un nombre dans l'unité de la série (ex. milliards de dollars, millions d'utilisateurs, % ). Convertis si besoin, sans inventer.
+- N'invente rien : le nombre doit figurer dans les articles cités. Ne mélange pas deux mesures différentes (hebdomadaire contre mensuel, revenu contre run-rate).
+- Cite 1 à 3 articles (numéros i dans sources) et explique en une phrase (reason).
+- Si rien ne justifie un nouveau point, réponds par un tableau vide.
+Réponds uniquement par un tableau JSON d'objets {k, date, value, sources, reason}.`;
+export const POINT_SCHEMA = {
+  type: "ARRAY",
+  items: { type: "OBJECT", properties: { k: { type: "STRING" }, date: { type: "STRING" }, value: { type: "STRING" }, sources: { type: "ARRAY", items: { type: "INTEGER" } }, reason: { type: "STRING" } }, required: ["k", "date", "value", "sources"] },
+};
+
+/** Séries des courbes semi-automatiques : clé « point:id:indice de série ». */
+export function flattenPoints(series) {
+  const out = [];
+  for (const c of series?.curves || []) {
+    if (c.auto !== false) continue;
+    (c.series || []).forEach((s, si) => {
+      const last = [...(s.points || [])].sort((a, b) => a.d.localeCompare(b.d)).pop();
+      if (last) out.push({ k: `point:${c.id}:${si}`, kind: "point", name: `${c.title} › ${s.name}`, unit: c.unit, last });
+    });
+  }
+  return out;
+}
+
+/** Nouveau point : date postérieure au dernier, valeur plausible dont les chiffres figurent dans les articles cités. */
+export function validatePoints(raw, items, articles, now = Date.now()) {
+  if (!Array.isArray(raw)) return [];
+  const byK = new Map(items.map((x) => [x.k, x])), out = [], seen = new Set(), trim = (d) => d.replace(/0+$/, "") || "0";
+  for (const p of raw) {
+    const it = byK.get(String(p?.k)); if (!it || seen.has(it.k)) continue;
+    const src = [...new Set((Array.isArray(p.sources) ? p.sources : []).map(Number))].filter((n) => Number.isInteger(n) && n >= 1 && n <= articles.length).slice(0, 3);
+    const d = String(p.date || "").slice(0, 10), raws = String(p.value ?? ""), v = Number(raws.replace(/\s/g, "").replace(",", "."));
+    if (!src.length || !/^\d{4}-\d{2}-\d{2}$/.test(d) || !(Date.parse(d) > Date.parse(it.last.d)) || Date.parse(d) > now + DAY) continue;
+    if (!(v > 0) || hasNumberWords(raws)) continue;
+    if (v < it.last.v / 4 || v > it.last.v * 4) continue; // unité probablement confondue
+    if (/%/.test(it.unit) && v > 100) continue;
+    const ev = src.map((n) => articles[n - 1]), known = set(digitsOf(ev.map((a) => a.title + " " + a.summary).join(" ")).map(trim));
+    if (digitsOf(raws).some((x) => !known.has(trim(x)))) continue;
+    seen.add(it.k);
+    out.push({ k: it.k, kind: "point", label: `Évolution › ${it.name}`, point: { d, v }, changes: [{ field: "nouveau point", old: `${it.last.d} : ${it.last.v}`, new: `${d} : ${v}` }], reason: norm(p.reason).slice(0, 240), evidence: ev.map((a) => ({ title: a.title, source: a.source, url: a.url, ts: a.ts })) });
+  }
+  return out;
+}
 
 /** Liste plate des éléments révisables : clé « kind:index ». */
 export function flatten(files) {
@@ -96,6 +143,13 @@ export function applyProposals(files, proposals, pick, today = new Date()) {
   const applied = [], skipped = [], touched = new Set();
   proposals.forEach((p, idx) => {
     const n = idx + 1; if (pick && !pick.includes(n)) return;
+    if (p.point) {
+      const [, id, si] = p.k.split(":"), ser = files.series?.curves?.find((c) => c.id === id)?.series?.[+si];
+      if (!ser) return skipped.push({ n, why: "courbe introuvable" });
+      if (ser.points.some((q) => q.d >= p.point.d)) return skipped.push({ n, why: "un point plus récent existe déjà" });
+      const e = p.evidence[0]; ser.points.push({ d: p.point.d, v: p.point.v, src: e.source, url: e.url });
+      touched.add("series"); applied.push(n); return;
+    }
     const [kind, i] = p.k.split(":"), def = KINDS[kind], item = def && files[def.file]?.[def.path]?.[+i];
     if (!item) return skipped.push({ n, why: "élément introuvable" });
     if (p.changes.some((c) => norm(item[c.field]) !== norm(c.old))) return skipped.push({ n, why: "la valeur a changé depuis la proposition" });
@@ -106,7 +160,7 @@ export function applyProposals(files, proposals, pick, today = new Date()) {
     if (def.asOf) item[def.asOf] = frDate(ev.ts);
     touched.add(def.file); applied.push(n);
   });
-  for (const f of touched) files[f].as_of = frDate(today);
+  for (const f of touched) if (files[f]) files[f].as_of = frDate(today);
   return { applied, skipped, touched: [...touched] };
 }
 
@@ -153,6 +207,13 @@ export async function review({ files, feed, generate, now = Date.now(), log = ()
     if (raw == null) { failed++; continue; }
     proposals.push(...validate(raw, sub, articles));
   }
+  if (files.series) {
+    const pts = flattenPoints(files.series);
+    if (pts.length) {
+      const raw = await generate({ mode: "points", items: pts.map(({ k, name, unit, last }) => ({ k, name, unit, last_date: last.d, last_value: last.v })), articles: articles.map(({ i, title, summary, source, ts }) => ({ i, title, summary, source, ts })) });
+      if (raw == null) failed++; else proposals.push(...validatePoints(raw, pts, articles, now));
+    }
+  }
   return { proposals: proposals.slice(0, 15), failed };
 }
 
@@ -160,13 +221,13 @@ export async function review({ files, feed, generate, now = Date.now(), log = ()
 if (import.meta.url === `file://${process.argv[1]}`) {
   const { makeClassifier } = await import("./collect.mjs");
   const read = async (f) => JSON.parse(await fs.readFile(path.join(DATA, f), "utf8"));
-  const files = { market: await read("market.json"), layers: await read("layers.json"), race: await read("race.json") };
+  const files = { market: await read("market.json"), layers: await read("layers.json"), race: await read("race.json"), series: await read("series.json").catch(() => null) };
   const feed = (await read("feed.json")).items;
   const state = await read("state.json").catch(() => ({}));
   if (!process.env.GEMINI_API_KEY) { console.log("GEMINI_API_KEY absente : revue annulée"); process.exit(0); }
   const pacific = new Date(Date.now() - 8 * 3600e3).toISOString().slice(0, 10);
   const clf = await makeClassifier(process.env, fetch, (m) => console.log(m), state.gemini?.date === pacific ? state.gemini.dead : []);
-  const generate = async (input) => (clf.state.fatal ? null : clf.call(input, { system: REVIEW_SYSTEM, schema: REVIEW_SCHEMA }));
+  const generate = async (input) => (clf.state.fatal ? null : input.mode === "points" ? clf.call({ items: input.items, articles: input.articles }, { system: POINT_SYSTEM, schema: POINT_SCHEMA }) : clf.call(input, { system: REVIEW_SYSTEM, schema: REVIEW_SCHEMA }));
   const r = await review({ files, feed, generate, log: console.log });
   console.log(`Propositions retenues : ${r.proposals.length}${r.failed ? ` (${r.failed} appel(s) IA en échec)` : ""}${r.note ? " · " + r.note : ""}`);
   const out = process.env.REVIEW_OUT || "/tmp/review-body.md";

@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { makeBrief, BRIEF_SYSTEM, BRIEF_SCHEMA } from "./brief.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
-import { collectEvolution } from "./evolution.mjs";
+import { collectEvolution, fmtSeries } from "./evolution.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -379,12 +379,6 @@ export function ruleClassify(c) {
 function fmtShares(d) {
   const { charts, ...head } = d;
   return JSON.stringify(head).slice(0, -1) + ',\n"charts":[\n' + charts.map((c) => JSON.stringify(c)).join(",\n") + "\n]}\n";
-}
-
-// Séries d'évolution : une courbe ou un camembert par ligne
-function fmtSeries(d) {
-  const { curves, pies, ...head } = d;
-  return JSON.stringify(head).slice(0, -1) + ',\n"curves":[\n' + (curves || []).map((c) => JSON.stringify(c)).join(",\n") + '\n],\n"pies":[\n' + (pies || []).map((c) => JSON.stringify(c)).join(",\n") + "\n]}\n";
 }
 
 export async function run(opts = {}) {

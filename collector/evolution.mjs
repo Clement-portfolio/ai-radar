@@ -272,3 +272,9 @@ export async function collectEvolution({ prev = null, ua, fetchImpl = fetch, now
   log(`Évolution : ${refreshed} lue(s), ${Object.values(tasks).filter((t) => t === "déjà à jour").length} déjà à jour, ${alerts.length} échec(s)`);
   return { doc, summary: { refreshed: refreshed > 0, tasks }, alerts };
 }
+
+/** Mise en page de series.json : une courbe ou un camembert par ligne (différences Git lisibles). */
+export function fmtSeries(d) {
+  const { curves, pies, ...head } = d;
+  return JSON.stringify(head).slice(0, -1) + ',\n"curves":[\n' + (curves || []).map((c) => JSON.stringify(c)).join(",\n") + '\n],\n"pies":[\n' + (pies || []).map((c) => JSON.stringify(c)).join(",\n") + "\n]}\n";
+}
