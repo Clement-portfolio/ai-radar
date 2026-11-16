@@ -40,6 +40,11 @@ const bad = [
   { k: "revenue:0", changes: [{ field: "num", value: "quatre-vingts" }], sources: [1], reason: "lettres" },
 ];
 assert.equal(validate(bad, items, arts).length, 0);
+// hors sujet : une description remplacée par un autre chiffre (cas réel de la première revue)
+const offTopic = [{ k: "tiles:0", changes: [{ field: "sub", value: "financement circulaire de 80 Md$ (FMI)" }], sources: [1], reason: "hors sujet" }];
+assert.equal(validate(offTopic, items, arts).length, 0, "changement de sujet rejeté");
+assert.equal(validate([{ k: "tiles:0", changes: [{ field: "sub", value: "fin octobre 2026, annualisé à 80 Md$" }], sources: [1], reason: "ok" }], items, arts).length, 0, "aucun mot commun : rejeté");
+assert.equal(validate([{ k: "tiles:0", changes: [{ field: "sub", value: "run-rate annualisé à 80 Md$" }], sources: [1], reason: "ok" }], items, arts).length, 1, "même sujet : accepté");
 assert.equal(validate("pas un tableau", items, arts).length, 0);
 
 // application

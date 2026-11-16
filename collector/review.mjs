@@ -21,6 +21,7 @@ const GROUPS = { market: ["tiles", "capex_us", "capex_cn", "revenue", "actors"],
 
 export const REVIEW_SYSTEM = `Tu relis des pages d'un radar sur l'IA et son économie, saisies à la main. On te donne (1) des éléments {k, name, fields} avec leur valeur actuelle, (2) des articles récents numérotés {i, title, summary, source, ts}.
 Propose une mise à jour d'un élément UNIQUEMENT si un article apporte un chiffre ou un fait plus récent, plus précis ou contradictoire pour CE MÊME élément.
+- La nouvelle valeur doit mesurer la même grandeur, pour la même entité, que l'actuelle (ex. run-rate d'OpenAI → nouveau run-rate d'OpenAI). Ne remplace jamais un indicateur ou une description par un autre sujet, même chiffré.
 - N'invente rien. Aucun chiffre, nom ou fait absent des articles cités. Ne complète pas avec tes connaissances.
 - Ne propose que les champs fournis dans fields. Garde le format et la langue (français) de la valeur actuelle ; les champs low, high et num sont des nombres en milliards de dollars, écrits sans unité.
 - Écris les nombres en chiffres, jamais en toutes lettres. Pas de prédiction ni d'opinion.
@@ -49,6 +50,9 @@ export function pickArticles(feed, now, days = 10, cap = 120) {
     .map((a, n) => ({ i: n + 1, id: a.id, title: a.title, summary: a.summary || "", source: a.source, url: a.url, ts: a.ts }));
 }
 
+const words = (t) => new Set(String(t).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().match(/[a-z]{4,}/g) || []);
+/** Un texte proposé doit rester sur le même sujet : au moins un mot de la valeur actuelle ou du nom de l'élément. */
+const sameSubject = (oldText, name, newText) => { const ref = new Set([...words(oldText), ...words(name)]); if (!ref.size) return true; const n = words(newText); return [...ref].some((w) => n.has(w)); };
 const norm = (v) => String(v ?? "").trim();
 const set = (s) => new Set(s);
 
@@ -68,6 +72,7 @@ export function validate(raw, items, articles) {
       if (!def.fields.includes(field) || !value || value.length > 300 || value === old) continue;
       if (def.numeric.includes(field) && !(Number.isFinite(Number(value.replace(",", "."))) && Number(value.replace(",", ".")) > 0)) continue;
       if (def.numeric.includes(field) && hasNumberWords(value)) continue;
+      if (!def.numeric.includes(field) && old && !sameSubject(old, it.name, value)) continue;
       const oldDigits = set(digitsOf(old));
       if (digitsOf(value).some((d) => !oldDigits.has(d) && !evDigits.has(d))) continue;
       changes.push({ field, old: it.fields[field] ?? null, new: def.numeric.includes(field) ? Number(value.replace(",", ".")) : value });
