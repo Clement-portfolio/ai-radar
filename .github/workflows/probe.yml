@@ -1,0 +1,19 @@
+name: probe
+on: workflow_dispatch
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          curl -sSL -A "ai-radar" https://epoch.ai/data/all_ai_models.csv -o m.csv
+          python3 - <<'PY'
+          import csv
+          r=list(csv.DictReader(open('m.csv',encoding='utf-8')))
+          print("COLS",list(r[0].keys()))
+          from collections import Counter
+          for k in r[0].keys():
+              if 'ountr' in k: print(k,Counter(x[k] for x in r).most_common(12))
+          big=[x for x in r if x.get('Training compute (FLOP)')]
+          big.sort(key=lambda x:-float(x['Training compute (FLOP)']))
+          for x in big[:8]: print(x['Model'],x['Publication date'],x['Training compute (FLOP)'],[x[k] for k in r[0] if 'ountr' in k])
+          PY
