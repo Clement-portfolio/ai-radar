@@ -11,7 +11,7 @@ const DATA = process.env.RUNTIME_DATA_DIR || path.join(process.env.TMPDIR || "/t
 const PORT = +process.env.PORT || 3000;
 const TTL_MS = (+process.env.REFRESH_TTL_MIN || 30) * 60000;
 const MIN_GAP_MS = 90000;
-const DATA_FILES = new Set(["feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json"]);
+const DATA_FILES = new Set(["feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "sec.json"]);
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".png": "image/png", ".txt": "text/plain; charset=utf-8" };
 
 let running = false, lastStart = 0, lastError = null;

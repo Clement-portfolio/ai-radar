@@ -50,7 +50,7 @@ cfg.googleNews.editions = cfg.googleNews.editions.slice(0, 1); cfg.googleNews.qu
 await fs.writeFile(cfgFile, JSON.stringify(cfg));
 process.env.GEMINI_MIN_GAP_MS = "1";
 const logs = [];
-const s = await run({ dataDir: dir, sourcesFile: cfgFile, fetchImpl, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", SEC_USER_AGENT: "test", GEMINI_MIN_GAP_MS: "1" }, log: (m) => logs.push(m) });
+const s = await run({ dataDir: dir, sourcesFile: cfgFile, fetchImpl, now, sleep: async () => {}, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", SEC_USER_AGENT: "test", GEMINI_MIN_GAP_MS: "1" }, log: (m) => logs.push(m) });
 const feed = JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).items;
 console.log(logs.join("\n"));
 console.log("ajoutés:", feed.length - before, "| appels Gemini:", geminiCalls, "| modèle:", s.last_run.model);
@@ -86,7 +86,7 @@ assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).
     }
     return fetchImpl(url, init);
   };
-  const s3 = await run({ dataDir: d3, sourcesFile: cfgFile, fetchImpl: f503, now, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", SEC_USER_AGENT: "test", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1", GEMINI_MODELS: "gemini-3.5-flash,gemini-2.5-flash" }, log: () => {} });
+  const s3 = await run({ dataDir: d3, sourcesFile: cfgFile, fetchImpl: f503, now, sleep: async () => {}, env: { ...process.env, GEMINI_API_KEY: "k", NEWSDATA_API_KEY: "n", SEC_USER_AGENT: "test", GEMINI_MIN_GAP_MS: "1", GEMINI_BACKOFF_MS: "1", GEMINI_PAUSE_MS: "1", GEMINI_MODELS: "gemini-3.5-flash,gemini-2.5-flash" }, log: () => {} });
   assert.ok(s3.last_run.added > 0, "classement réussi malgré le 503 du 1er modèle");
   assert.equal(s3.last_run.model, "gemini-2.5-flash");
   assert.ok(s3.last_run.gemini.some((x) => /503/.test(x)), "diagnostic Gemini conservé");
@@ -110,4 +110,5 @@ assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).
 assert.ok(logs.some((l) => /écartés car média hors liste/.test(l) && !/ 0 écartés/.test(l)), "médias hors liste écartés");
 assert.ok(!feed.some((x) => /cn\.example|ae\.example/.test(x.url || "")), "GDELT/NewsData hors liste non publiés");
 await import("./test-brief.mjs");
+await import("./test-sec.mjs");
 console.log("TOUS LES TESTS PASSENT");

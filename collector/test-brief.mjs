@@ -1,6 +1,6 @@
 // Tests de la sélection des essentiels et du brief (hors réseau).
 import assert from "node:assert/strict";
-import { selectTop, validateBullets, makeBrief } from "./brief.mjs";
+import { selectTop, validateBullets, makeBrief, hasNumberWords } from "./brief.mjs";
 
 const now = Date.parse("2026-11-16T12:00:00Z");
 const zones = ["US", "US", "US", "US", "US", "CN", "EU", "GULF", "OTHER"];
@@ -26,6 +26,9 @@ assert.ok(new Set(top.map((t) => t.id)).size === 10, "pas de doublon d'identifia
 const inputs = [{ i: 1, title: "Nvidia investit 500 milliards", summary: "", source: "A" }, { i: 2, title: "Loi sur l'IA adoptée", summary: "Vote de 320 élus", source: "B" }, { i: 3, title: "Nouveau modèle publié", summary: "", source: "C" }, { i: 4, title: "Datacenter annoncé", summary: "", source: "D" }];
 const good = [{ text: "Nvidia annonce 500 milliards d'investissements.", sources: [1] }, { text: "Une loi est adoptée par 320 élus.", sources: [2] }, { text: "Un nouveau modèle est publié.", sources: [3] }, { text: "Un datacenter est annoncé.", sources: [4] }];
 assert.equal(validateBullets(good, inputs).length, 4);
+assert.ok(hasNumberWords("AWS investit sept milliards de dollars") && hasNumberWords("soixante pour cent") && hasNumberWords("Cinq pays signent"), "nombres en lettres détectés");
+assert.ok(!hasNumberWords("AWS investit 7 milliards de dollars") && !hasNumberWords("Hausse de 12 pour cent") && !hasNumberWords("3 millions d'utilisateurs"), "chiffres + échelle acceptés");
+assert.equal(validateBullets([...good.slice(0, 3), { text: "Nvidia vend cinq millions de puces.", sources: [1] }], inputs).length, 3, "puce à nombre en lettres rejetée");
 assert.equal(validateBullets([...good.slice(0, 2), { text: "Nvidia annonce 900 milliards.", sources: [1] }, { text: "Source inexistante.", sources: [9] }], inputs), null, "chiffre inventé et source inconnue rejetés");
 
 // régénération : seulement si l'essentiel change ou si le brief a plus de 6 h

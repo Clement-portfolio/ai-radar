@@ -42,6 +42,7 @@ export const BRIEF_SYSTEM = `Tu rédiges le brief du jour d'un radar d'actualit�
 Écris exactement 5 puces, de la plus importante à la moins importante.
 - Chaque puce : une seule phrase de 220 caractères maximum, factuelle, fondée sur 1 à 3 articles, cités par leur numéro i dans le champ sources.
 - N'utilise AUCUN chiffre, date, nom propre ou fait absent des articles cités. N'invente rien, ne complète pas avec tes connaissances.
+- Écris tous les nombres en chiffres, jamais en toutes lettres (« 7 milliards de dollars », « 60 % », pas « sept milliards » ni « soixante pour cent »).
 - Pas de prédiction, pas d'opinion, aucune recommandation d'investissement.
 - Varie les sujets : ne consacre pas deux puces à la même histoire.
 Réponds uniquement par un tableau JSON de 5 objets {text, sources}.`;
@@ -51,6 +52,12 @@ export const BRIEF_SCHEMA = {
   items: { type: "OBJECT", properties: { text: { type: "STRING" }, sources: { type: "ARRAY", items: { type: "INTEGER" } } }, required: ["text", "sources"] },
 };
 
+/** Nombres écrits en toutes lettres (invérifiables) : numéraux, « pour cent », ou million/milliard sans chiffre devant. */
+const NUM_WORDS = /(^|[^\p{L}])(deux|trois|quatre|cinq|six|sept|huit|neuf|dix|onze|douze|treize|quatorze|quinze|seize|vingts?|trente|quarante|cinquante|soixante|cents?|mille|dizaines?|centaines?|milliers)(?![\p{L}])/iu;
+export function hasNumberWords(text) {
+  const t = String(text).replace(/pour\s+cent/gi, "%").replace(/\d[\d.,\s]*(millions?|milliards?|billions?|trillions?)/gi, "N");
+  return NUM_WORDS.test(t) || /(^|[^\p{L}])(millions?|milliards?|billions?|trillions?)(?![\p{L}])/iu.test(t);
+}
 const digitsOf = (s) => (String(s).match(/\d[\d.,]*/g) || []).map((x) => x.replace(/[^\d]/g, "")).filter((x) => x.length);
 
 /** Garde les puces dont les sources existent et dont aucun nombre n'est absent des articles cités. */
@@ -60,7 +67,7 @@ export function validateBullets(arr, inputs) {
   for (const b of arr) {
     const text = String(b?.text || "").trim();
     const src = [...new Set((Array.isArray(b?.sources) ? b.sources : []).map(Number))].filter((i) => Number.isInteger(i) && i >= 1 && i <= inputs.length).slice(0, 3);
-    if (!text || text.length > 280 || !src.length) continue;
+    if (!text || text.length > 280 || !src.length || hasNumberWords(text)) continue;
     const ref = src.map((i) => `${inputs[i - 1].title} ${inputs[i - 1].summary}`).join(" ");
     const known = new Set(digitsOf(ref));
     if (digitsOf(text).some((d) => !known.has(d))) continue;

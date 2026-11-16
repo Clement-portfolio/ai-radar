@@ -5,7 +5,7 @@ var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Capex & finance",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
 var FILTERED={"actualites":1,"marche":1};
-var S={feed:[],brief:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null};
+var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null};
 
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
@@ -30,9 +30,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];
   });
 }
 function wait(ms){return new Promise(function(r){setTimeout(r,ms)})}
@@ -156,10 +156,29 @@ function rMarket(){
    '<div class="panel"><span class="kicker">Qui dépense</span><h3>Capex, Chine</h3><div class="sub">Montants en yuans, comparables au capex américain à un facteur de 5 à 7 près.</div><table class="table"><thead><tr><th>Société</th><th>Montant</th><th>Détail</th></tr></thead><tbody>'+cc+'</tbody></table></div></div>'+
    '<div class="two"><div class="panel"><span class="kicker">Qui gagne</span><h3>Revenus de l\'IA</h3><div class="sub">Run-rate annualisé, en milliards de dollars.</div>'+rv+'</div>'+
    '<div class="note"><b>À lire avant de comparer.</b> '+esc(m.caveat)+'</div></div>'+
-   '<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
+   secPanel()+'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
    (act.length?'<table class="table"><thead><tr><th>Acteur</th><th>Pays</th><th>Rôle</th><th>Repère</th></tr></thead><tbody>'+act.map(function(a){return'<tr><td>'+esc(a.name)+'</td><td>'+ctag(a.country)+'</td><td>'+esc(a.role)+'</td><td>'+esc(a.note)+' <a class="small" href="'+esc(link(a.u))+'" target="_blank" rel="noopener">'+esc(a.src)+'</a></td></tr>'}).join("")+'</tbody></table>':'<div class="empty">Aucun acteur pour ce filtre.</div>');
 }
 
+function fmtD(iso){return new Date(String(iso).slice(0,10)+"T00:00:00Z").toLocaleDateString("fr-FR",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
+function mdUsd(v){return (v/1e9).toFixed(1).replace(".",",")+" Md$"}
+function secCell(m){
+  if(!m)return '<td><span class="small">indisponible</span></td>';
+  var days=Math.floor((Date.now()-new Date(m.fetched_at).getTime())/86400000),stale=days>30;
+  return '<td><div class="sv">'+mdUsd(m.value)+'</div><div class="small">'+(m.basis==="ttm"?'12 mois à fin '+esc(fmtD(m.end)):'dernier exercice clos le '+esc(fmtD(m.end))+' (12 mois comparables indisponibles)')+'</div>'+
+   '<div class="small"><a href="'+esc(link(m.url))+'" target="_blank" rel="noopener">'+esc(m.form)+' déposé le '+esc(fmtD(m.filed))+' ↗</a></div>'+
+   (stale?'<div class="small warn">Non relu depuis '+days+' jours : à vérifier</div>':'')+'</td>';
+}
+function secPanel(){
+  var d=S.sec;if(!d||!d.companies||!d.companies.length)return"";
+  var rows=d.companies.map(function(c){
+    var ratio=c.capex&&c.revenue&&c.capex.end===c.revenue.end&&c.capex.basis===c.revenue.basis?Math.round(100*c.capex.value/c.revenue.value)+" %":"–";
+    return '<tr><td>'+esc(c.name)+'</td>'+secCell(c.capex)+secCell(c.revenue)+'<td class="sv">'+ratio+'</td></tr>';
+  }).join("");
+  return '<h3 class="sub2">Réalisé : ce que les géants ont déjà dépensé</h3><p class="lede" style="margin-bottom:6px">Capex et revenus des 12 derniers mois, lus automatiquement dans les dépôts officiels à la SEC (10-K et 10-Q). Aucun chiffre n\'est estimé : chacun porte sa période, sa date de dépôt et son lien.</p>'+
+   '<table class="table sec"><thead><tr><th>Société</th><th>Capex</th><th>Revenus</th><th>Capex / revenus</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+   '<div class="note"><b>À lire avant de comparer.</b> Le capex est la sortie de trésorerie pour immobilisations corporelles telle que déclarée dans les données XBRL ; il n\'inclut pas toujours les contrats de location-financement, d\'où un écart possible avec les guidances ci-dessus. Les exercices sont décalés : Oracle (mai), Microsoft (juin) ; les périodes affichées sont donc propres à chaque société.</div>';
+}
 function meter(t){
   var cls=t>=7?"":(t>=5?"m":"l");
   var s='';for(var i=1;i<=10;i++)s+='<i class="'+(i<=t?'f':'')+'"></i>';
@@ -228,7 +247,7 @@ function rMethod(){
   list.sort(function(a,b){return a[0].localeCompare(b[0])});
   $("v-methode").innerHTML='<h2 class="sec">Méthode et sources</h2><p class="lede">Ce que ce site fait, ce qu\'il ne fait pas, et d\'où viennent les chiffres.</p>'+
    '<div class="method"><div><span class="kicker">Fonctionnement</span><ol class="steps"><li><b>Collecte</b><span>Un agent récupère toutes les trois heures les flux de médias et de sources officielles, dans le monde. Seuls les domaines d\'une liste de confiance sont retenus.</span></li><li><b>Classement</b><span>Chaque article reçoit un pays, un thème, une importance de 1 à 3, une couche de la pile et un résumé en français. Sans IA disponible, le titre d\'origine est publié tel quel.</span></li><li><b>Les 10 essentiels et le brief</b><span>Sélection par importance, fraîcheur, source primaire et nombre de médias qui couvrent le sujet, avec un minimum de diversité par zone et par couche. Le brief en 5 puces est rédigé par l\'IA à partir de ces seuls articles ; une puce dont les chiffres ne figurent pas dans ses sources est écartée.</span></li><li><b>Publication</b><span>Les données sont enregistrées dans le dépôt GitHub puis affichées ici. À l\'ouverture et via « Mettre à jour », le site recharge les dernières données.</span></li></ol></div>'+
-   '<div><span class="kicker">Lire avec prudence</span><ol class="steps"><li><b>Sources</b><span>Source primaire : document officiel (SEC, registre fédéral, communiqué, blog d\'une entreprise). Presse : média figurant sur une liste de confiance. Les newsletters, blogs personnels et sites de recopie sont écartés.</span></li><li><b>Estimations</b><span>Les scores USA–Chine et les tensions des couches sont des estimations éditoriales, pas des mesures.</span></li><li><b>Run-rates</b><span>Les revenus des laboratoires privés ne sont pas audités et ne sont pas calculés de la même façon.</span></li></ol></div></div>'+
+   '<div><span class="kicker">Lire avec prudence</span><ol class="steps"><li><b>Sources</b><span>Source primaire : document officiel (SEC, registre fédéral, communiqué, blog d\'une entreprise). Presse : média figurant sur une liste de confiance. Les newsletters, blogs personnels et sites de recopie sont écartés.</span></li><li><b>Estimations</b><span>Les scores USA–Chine et les tensions des couches sont des estimations éditoriales, pas des mesures.</span></li><li><b>Run-rates</b><span>Les revenus des laboratoires privés ne sont pas audités et ne sont pas calculés de la même façon.</span></li><li><b>Chiffres de la SEC</b><span>Capex et revenus des cinq géants américains sont relus automatiquement dans les dépôts officiels. Au-delà de 30 jours sans relecture, une alerte s\'affiche. Le reste de la page Marché reste saisi à la main.</span></li></ol></div></div>'+
    health()+
    '<hr class="rule thick" style="margin-top:34px"><span class="kicker">Sources citées ('+list.length+')</span><div class="src-list">'+list.map(function(s){return'<a href="'+esc(link(s[1]))+'" target="_blank" rel="noopener">'+esc(s[0])+' ↗</a>'}).join("")+'</div>';
 }
