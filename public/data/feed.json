@@ -1,6 +1,62 @@
 {
  "items": [
   {
+   "id": "bbd0a8d53741",
+   "ts": "2026-11-16T19:12:17.000Z",
+   "title": "Et si la connectivité Internet mondiale était perturbée ? Une opportunité saoudienne de renforcer la résilience numérique",
+   "orig": "What if global internet connectivity is disrupted? A Saudi opportunity to strengthen digital resilience",
+   "summary": "L'infrastructure numérique et la reprise après sinistre nécessitent une résilience démontrée lorsque la connexion est perdue, comme l'a rappelé un avertissement de Microsoft.",
+   "country": "GULF",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/the-space/what-if-global-internet-connectivity-is-disrupted-a-saudi-opportunity-to-strengthen-digital-resilience-3012242",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "668b96b1a125",
+   "ts": "2026-11-16T19:12:02.000Z",
+   "title": "Trump affirme que la liaison entre l'ex-PDG de Nvidia Jensen Huang et une espionne chinoise présumée ne menaçait pas la sécurité nationale",
+   "orig": "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy did not threaten national security",
+   "summary": "Trump a contredit les services de renseignement de son propre gouvernement, qui auraient conclu qu'Alice Huang est une espionne chinoise.",
+   "country": "US",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "4d4c69fd3f5b",
+   "ts": "2026-11-16T19:11:40.000Z",
+   "title": "Les États-Unis vont restreindre davantage l'accès de la Chine aux puces d'IA d'entreprises comme Nvidia",
+   "orig": "US to further curb China's access to AI chips from companies like Nvidia",
+   "summary": "Les États-Unis prévoient de limiter plus strictement l'accès de la Chine aux puces d'intelligence artificielle de fabricants tels que Nvidia.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Puces",
+   "source": "Sky News",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQcWNxUlVueUVLS0ZjOFptV1JKZl9PUGUxbFFFSjN6ZERnSFQzTlA4eDhsSVllWHlndEtGaER4VEdCX2d4aHByUDVma0RwOVB4ZVVoY0JFdkZPcjlxTXlFTGN2LTZLRm9RTXZLZDZqUlphUUNlbFJyZl9heDNGaEhLMkFhZ1hxaGZrTnU0c0RRVk1SRVU0VGhPc1hQMzUtLVpqSWxGY04tMUh0Rzg?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "6fd4401d69f5",
+   "ts": "2026-11-16T19:10:09.000Z",
+   "title": "Les États-Unis agissent pour couper l'accès à distance de la Chine aux puces d'IA",
+   "orig": "US moves to cut China’s remote access to AI chips",
+   "summary": "L'administration américaine prend des mesures pour bloquer l'accès à distance de la Chine aux puces d'intelligence artificielle.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Puces",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/",
+   "confidence": "moyenne"
+  },
+  {
    "id": "84a52c245a95",
    "ts": "2026-11-16T19:05:24.000Z",
    "title": "Nvidia annonce le GPU HPC Rubin avec un \"nombre record de cœurs CUDA\" à Supercomputing 2026",
@@ -124,6 +180,20 @@
    "layer": "Financement",
    "source": "The Verge IA",
    "url": "https://www.theverge.com/tech/1034501/nvidia-board-jensen-huang-not-bringing-back",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "cb041b6bc606",
+   "ts": "2026-11-16T18:42:49.000Z",
+   "title": "La Californie poursuit OpenAI en justice, alléguant qu'elle a mis le public en danger en développant l'IA sans garanties",
+   "orig": "California sues OpenAI, alleging it endangered public by developing AI without safeguards",
+   "summary": "La Californie engage des poursuites contre OpenAI, affirmant que le développement de l'IA sans protections suffisantes met en danger le public.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "Los Angeles Times",
+   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOVDUyUWJxQ21xTm9UblI2QmZKc2JBajhidWVtTXRvbDYxdDBmZF9KYUdiNExtMUlIZUo0LTlfTjNrNUN6RGxvMG94N2xyRXhIMGhHWGI5MWRBcmJDa3QxUG45VWh2ZkVvMzhGLWt4cm5VbTh4elR6S1E3eE9IUWFvUXVvc0hQT2lvQWxaRUJERHhCTEEyT192bW9zUW9jQnNFSDM0RmJ6RDA1a3l0Ykh6MThXNGYxRGh2WFRVT2lFanBvWnpwNWpqVURMS2k5SGVhbnAxQzU3TQ?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -292,6 +362,20 @@
    "layer": "Régulation",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/us-dept-of-commerce-issues-rule-to-restrict-remote-access-to-advanced-ai-chips/",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "a2bc04fede09",
+   "ts": "2026-11-16T17:58:39.000Z",
+   "title": "Les États-Unis s'apprêtent à combler une faille concernant les puces d'IA avant la rencontre de Trump avec Xi",
+   "orig": "U.S. to Clamp Down On AI Chip Loophole Ahead Of Trump Meeting With Xi",
+   "summary": "Le gouvernement américain cherche à resserrer les contrôles sur les puces d'IA pour combler une faille avant une réunion officielle.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Puces",
+   "source": "Time Magazine",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYU5GWVh2bE4xM0M3OE1Ca2ZEZFlKUzFWWDBSSHBnbElDRHowLVk4N0pMNEt4ZlJ0anR3Qlk3Z3JEUlNFc2tFT2YwN2dsMzJfa1ZVRzhnWXY2SFFmalVONW4zeXVGcG9MVGU3TDYtM3VUTWExU1ZreWdNNHZPTE01dmV5MXB4Zw?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -866,6 +950,20 @@
    "layer": "Puces",
    "source": "조선일보",
    "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUUJENEZCMjM5YVdla1I5T2UyVHcwcWtzOGZGTW5HSEcxRWswNERDNzBCZkNmZndYdVFMMlF1b0l4VnhvaTN0SldBV181OVM4ZkF4MGVIVmc2dTZ5bEhBNFBIU1habFF3VjA3T1RUUkQxYVYtUU5zS3lKaFhBMnBxWHY3Zw?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "48884d9b5e71",
+   "ts": "2026-11-16T15:47:00.000Z",
+   "title": "Nvidia sans Jensen Huang : le marché des puces d'IA et l'écosystème CUDA également ébranlés",
+   "orig": "ジェンスン・フアン氏なきエヌビディア、AIチップ市場握るクーダも揺らぐ",
+   "summary": "Le marché des puces d'intelligence artificielle et l'écosystème CUDA font face à des incertitudes en l'absence de Jensen Huang.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNYUhuNVc3X1JnWVk5c0tNSVZqVjVRcl8xeEtSak14ZGxyNURlYlpFMEhmXzFZVHVySWVGTUgxM21wZVFocGRfY2VLeUZPVll2NWpJak92SW4zV1F1YWxvWG9zVzJuWndMcHhnRGhOa0szVms1SnNlb2JPRElvOXItNw?oc=5",
    "confidence": "moyenne"
   },
   {
@@ -20901,104 +20999,6 @@
    "source": "The Globe and Mail",
    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQSThwMTIyUWZjTjljN0VzUE1rU2RNcGtlR19QaFh4LV9iQ1pVLWc1dEFvVnlXUkVJOE9MMk1wdkZWRkdRa083LXJnTVRaOEdUOU9heHVqSy1PZERnOEVscnZ2TEIyQUpoTDl1eDZOSTZuU19oOG4xSFVlcHM5UnpFV0JZQVNkQkJCeHhxbXZRS0FIYzhxT2VtZE1wS1o4bnMxYVdTM1I5d2hxd09FWlNlbEVWOXlEdDJKS3I1dHpqeW4xOGRvVy1lWnpDSkdIbHlnUEQtbm1hRUp4em4zeFZlOHkxcW91MXQ3R0plS3ZhODF1YlVsWWdvUkhYWjFackl0QUE?oc=5",
    "confidence": "moyenne"
-  },
-  {
-   "id": "99de16d01a47",
-   "ts": "2026-11-10T14:30:22.000Z",
-   "title": "Comment les turbulences du PDG de Nvidia et les élections de mi-mandat aux États-Unis pourraient durcir les restrictions sur les puces en Chine",
-   "orig": "‘Adding fuel to fire’: how Nvidia CEO’s troubles, US midterms may tighten China chip curbs",
-   "summary": "Des rapports suggérant qu'une enquête vise le PDG de Nvidia pourraient donner au Congrès américain l'élan nécessaire pour renforcer le blocus technologique contre la Chine.",
-   "country": "US",
-   "category": "regul",
-   "importance": 3,
-   "layer": "Régulation",
-   "source": "SCMP Tech",
-   "url": "https://www.scmp.com/tech/big-tech/article/3373977/adding-fuel-fire-how-nvidia-ceos-troubles-us-midterms-may-tighten-china-chip-curbs",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "06c34be0a2ca",
-   "ts": "2026-11-10T14:06:54.000Z",
-   "title": "Anthropic vise une introduction en bourse à 1 400 milliards de dollars",
-   "orig": "Anthropic targets $1.4 trillion IPO",
-   "summary": "Anthropic confirme que son introduction en bourse pourrait s'avérer l'une des plus importantes de l'histoire avec un prix par action fixé entre 70 et 78 dollars.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "The Verge IA",
-   "url": "https://www.theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "f9ddc69f8317",
-   "ts": "2026-11-10T14:05:10.000Z",
-   "title": "Adobe intègre des agents d'IA et de nouveaux outils créatifs dans Photoshop, Premiere et Firefly",
-   "orig": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
-   "summary": "Adobe déploie de nouveaux assistants d'IA et un outil de prototypage dans sa suite logicielle créative pour concurrencer Figma.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "26f6a6cf9916",
-   "ts": "2026-11-10T14:04:41.000Z",
-   "title": "Intel et Altera simplifient l'intégration des capteurs pour la périphérie et l'IA physique",
-   "orig": "Intel and Altera simplify sensor integration for edge and physical AI",
-   "summary": "Intel et Altera annoncent des solutions pour simplifier l'intégration de capteurs dans les environnements d'IA en périphérie de réseau.",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Intel",
-   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNR1BROThuNVFhTkV4ZEdaTjdnbTVEeUF0NzdJV0RZZXBybVFUYVl3UWY3SVNLX2pLQnZsUnZ0YUpHOGdWbVhMVmxOV2R2Z3RLeG5jWFc1OGFEcGdvVV9pQXNsbDZJN1NVZ0xtZ2xJYkVGd0V2NHZwS1ltajBkWkdERVdyVkljUUlUUFY2Q05vc2J5V253Y3ZVd0xWU25VQjBxM2oyTEc3a2huNjBaVUhlYUc5aDFqMWdjd2ttZ0l6Rl9IbkE?oc=5",
-   "confidence": "haute"
-  },
-  {
-   "id": "08e42f7239d8",
-   "ts": "2026-11-10T14:03:59.000Z",
-   "title": "Agence fédérale pour l'emploi : 800 000 emplois menacés en Allemagne à cause de l'IA",
-   "orig": "الوكالة الاتحادية للعمل: 800 ألف وظيفة مهددة في ألمانيا بسبب الذكاء الاصطناعي",
-   "summary": "L'agence allemande pour l'emploi estime qu'une large part des postes pourrait être impactée par l'automatisation via l'IA.",
-   "country": "EU",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "Deutsche Welle",
-   "url": "https://news.google.com/rss/articles/CBMiywRBVV95cUxORHlsT0dIbjVFc3hkNVNmS1BfeTZnTjBOV1RvN0FxMkNUMG1jeERoc3VfMDJRTUJPbWhfcDZLdnEyUlJDdlF3TDEyU1B3ME15QnFVSzk4R3pyWGwzQUZMVU5ab3Vpd0IzZDFMRXdTNmxjLVVBYTZpbHdwRDAyd3FBZVdEdzZ5TDZ4d2stTDl1eHRKN2twMl9qbTBsS2Z4dHZwaWlSTi1BTkhZOWVjaU10UTRDc0xpWlFpc3ROdkpiMXQ3a0lvRFMxaWw3VDdHNnpXVnNDWWZWTDJ6UmF4MzNmT0ZKQmJlZndFeHBLWU4wSVFJZkJJa2FyLVFjUVFfRjZrR3QydE1qODlQR2N5Vm1KUDJYZVlYMjlvNmNRRUFOV0RiM2pnblQ1aUtReVRFaVgyXzhBeHJOUjVNeERhM1ZnUUs0N1VyekQ1NWpJVmMzY1VXcXA0cm1GZG9abXNtdmYzb2JQd3FkN3dTMXhZV2ljZjBkX0tWTjE0bDVEX1EzeVBLWlRIMC1yQlhNXzFQX0RwNjZxNlR1YzJaUG5hTVhZYm56cGJpRXdOSmdsQnZYNFdta0ptUUE0eExsVEFkNlFoQ1ZwQ2F2b3ZEY25FTmtqUmRVWEFjMXg1VlpzTG1WWkF3Y3JSb052MmxnQldBOGYwaENYbTZLYXZTRU1CUmdwMVd2czhXdDkzOGJVcU5ua3BsY01GaWU5bWRVdVg2RkczMnVVMFh6TzRkQkdPZUtXNWdPR1I5R1g2aENoeTJFWHBfaGxtZGx3VE5mUdIBywRBVV95cUxORHlsT0dIbjVFc3hkNVNmS1BfeTZnTjBOV1RvN0FxMkNUMG1jeERoc3VfMDJRTUJPbWhfcDZLdnEyUlJDdlF3TDEyU1B3ME15QnFVSzk4R3pyWGwzQUZMVU5ab3Vpd0IzZDFMRXdTNmxjLVVBYTZpbHdwRDAyd3FBZVdEdzZ5TDZ4d2stTDl1eHRKN2twMl9qbTBsS2Z4dHZwaWlSTi1BTkhZOWVjaU10UTRDc0xpWlFpc3ROdkpiMXQ3a0lvRFMxaWw3VDdHNnpXVnNDWWZWTDJ6UmF4MzNmT0ZKQmJlZndFeHBLWU4wSVFJZkJJa2FyLVFjUVFfRjZrR3QydE1qODlQR2N5Vm1KUDJYZVlYMjlvNmNRRUFOV0RiM2pnblQ1aUtReVRFaVgyXzhBeHJOUjVNeERhM1ZnUUs0N1VyekQ1NWpJVmMzY1VXcXA0cm1GZG9abXNtdmYzb2JQd3FkN3dTMXhZV2ljZjBkX0tWTjE0bDVEX1EzeVBLWlRIMC1yQlhNXzFQX0RwNjZxNlR1YzJaUG5hTVhZYm56cGJpRXdOSmdsQnZYNFdta0ptUUE0eExsVEFkNlFoQ1ZwQ2F2b3ZEY25FTmtqUmRVWEFjMXg1VlpzTG1WWkF3Y3JSb052MmxnQldBOGYwaENYbTZLYXZTRU1CUmdwMVd2czhXdDkzOGJVcU5ua3BsY01GaWU5bWRVdVg2RkczMnVVMFh6TzRkQkdPZUtXNWdPR1I5R1g2aENoeTJFWHBfaGxtZGx3VE5mUQ?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "9871791e1b1f",
-   "ts": "2026-11-10T14:01:39.000Z",
-   "title": "Anthropic fixe une fourchette de prix d'introduction en bourse de 70 à 78 dollars par action pour atteindre une valorisation de 1 404 milliards de dollars",
-   "orig": "Anthropic sets IPO price range of $70 to $78 per share to reach an implied valuation of $1.404 trillion",
-   "summary": "La valorisation d'Anthropic pourrait atteindre 1 ,404 billion de dollars si ses actions se placent en haut de la fourchette prévue pour son introduction en bourse.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "66ed14c6418f",
-   "ts": "2026-11-10T14:00:00.000Z",
-   "title": "Nous rapprochons les outils de création et de productivité d'Adobe de vos applications Google de tous les jours",
-   "orig": "We’re bringing Adobe’s creative and productivity tools closer to your everyday Google apps.",
-   "summary": "Google et Adobe annoncent un partenariat pour intégrer l'édition de PDF dans Drive et les fonctionnalités d'IA d'Adobe dans Gemini.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "Google AI",
-   "url": "https://blog.google/company-news/inside-google/company-announcements/adobe-google-partnership-integration/",
-   "confidence": "haute"
   }
  ]
 }
