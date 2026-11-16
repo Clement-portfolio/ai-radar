@@ -7,29 +7,45 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
-      - name: Epoch CSV
+      - name: Epoch calculs
         run: |
-          for f in ai_chip_sales_timelines_by_chip ai_chip_sales_organizations ai_chip_owners_cumulative_by_designer ai_chip_owners_quarters_by_chip_type all_ai_models; do
-            curl -sS -L -m 60 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o "$f.csv" -w "EPOCH $f http=%{http_code} bytes=%{size_download}\n" "https://epoch.ai/data/$f.csv" || echo "EPOCH $f curl failed"
-            echo "HEAD $f: $(head -c 700 $f.csv | head -3 | tr '\n' '|')"
-            echo "LINES $f: $(wc -l < $f.csv)"
-          done
-      - name: Epoch owners/organizations extra
-        run: |
+          curl -sS -L -m 60 -o own.csv "https://epoch.ai/data/ai_chip_owners_cumulative_by_designer.csv"
+          curl -sS -L -m 60 -o sales.csv "https://epoch.ai/data/ai_chip_sales_timelines_by_chip.csv"
+          curl -sS -L -m 90 -o models.csv "https://epoch.ai/data/all_ai_models.csv"
           python3 - <<'PY'
-          import csv
-          for f in ["ai_chip_owners_cumulative_by_designer","ai_chip_sales_organizations","ai_chip_sales_timelines_by_chip"]:
-              try:
-                  rows=list(csv.DictReader(open(f+".csv",encoding="utf8")))
-                  print("COLS",f,list(rows[0].keys()))
-                  print("LAST",f,rows[-1])
-                  for k in rows[0].keys():
-                      vals=sorted({r[k] for r in rows})
-                      if len(vals)<=14: print("VALS",f,k,vals)
-              except Exception as e: print("ERR",f,e)
+          import csv, collections
+          rows=list(csv.DictReader(open("own.csv",encoding="utf8")))
+          ends=sorted({r["End date"] for r in rows}); print("OWN ends",ends[-6:])
+          for E in ends[-3:]:
+              tot=collections.Counter()
+              inc=collections.Counter()
+              for r in rows:
+                  if r["End date"]==E:
+                      tot[r["Owner"]]+=float(r["Compute estimate in H100e (median)"] or 0)
+                      if r["Incomplete"]: inc[r["Owner"]]+=1
+              T=sum(tot.values())
+              print("OWN",E,"total",round(T), {k:round(100*v/T,1) for k,v in tot.most_common()}, "incomplete rows",dict(inc))
+          s=list(csv.DictReader(open("sales.csv",encoding="utf8")))
+          q=collections.defaultdict(lambda: collections.Counter()); flag=collections.defaultdict(set)
+          for r in s:
+              if not r["End date"]: continue
+              q[r["End date"]][r["Chip manufacturer"]]+=float(r["Compute estimate in H100e (median)"] or 0)
+              if r["Incomplete"]: flag[r["End date"]].add(r["Chip manufacturer"])
+          for E in sorted(q)[-8:]:
+              T=sum(q[E].values()); print("SALES",E,round(T),{k:round(100*v/T,1) for k,v in q[E].most_common()},"incomplete:",sorted(flag[E]))
+          m=list(csv.DictReader(open("models.csv",encoding="utf8")))
+          best=[]
+          cur=0
+          for r in sorted([r for r in m if r["Training compute (FLOP)"] and r["Publication date"]],key=lambda r:r["Publication date"]):
+              v=float(r["Training compute (FLOP)"])
+              if v>cur: cur=v; best.append((r["Publication date"],r["Model"],"%.2e"%v))
+          print("MODELS records",len(best)); [print("REC",b) for b in best[-8:]]
           PY
-      - name: Census BTOS
+      - name: BTOS candidats
         run: |
-          curl -sS -L -m 40 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o btos.html -w "BTOS page http=%{http_code} bytes=%{size_download}\n" "https://www.census.gov/hfp/btos/data_downloads"
-          grep -oE 'href="[^"]*\.(xlsx|csv|xls|zip)[^"]*"' btos.html | sort -u | head -30
-          grep -oiE 'artificial intelligence[^<]{0,120}' btos.html | head -5
+          for u in "https://www.census.gov/hfp/btos/downloads/National.xlsx" "https://www.census.gov/hfp/btos/downloads/National_Data.xlsx" "https://www2.census.gov/programs-surveys/btos/data/National.xlsx" "https://www.census.gov/hfp/btos/downloads/btos_national.xlsx"; do
+            curl -sS -L -m 40 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o /dev/null -w "BTOSURL $u http=%{http_code} bytes=%{size_download} type=%{content_type}\n" "$u"
+          done
+          curl -sS -L -m 40 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o btos.html "https://www.census.gov/hfp/btos/data_downloads"
+          echo "BTOSPAGE $(sed 's/<[^>]*>/ /g' btos.html | tr -s ' \n' ' ' | head -c 1500)"
+          grep -oE '(href|src|data-[a-z-]+)="[^"]*(btos|BTOS)[^"]*"' btos.html | sort -u | head -20
