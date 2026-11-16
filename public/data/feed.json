@@ -785,6 +785,20 @@
    "confidence": "moyenne"
   },
   {
+   "id": "54d6bbb0ceee",
+   "ts": "2026-11-16T13:47:25.000Z",
+   "title": "Les États-Unis édictent une réglementation visant à empêcher l'accès de pays tiers aux puces d'IA avancées",
+   "orig": "أمريكا تصدر لائحة تحمي من وصول دول ثالثة لرقائق الذكاء الاصطناعي المتطورة",
+   "summary": "Les États-Unis ont publié une réglementation visant à empêcher l'accès de pays tiers aux puces d'intelligence artificielle les plus avancées.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE41ZF9XcndiWXFkWDlLNGxQcThsVGNTaElsN3k5cV9MSVBaYWNVQ0lqcGZCc3ExNGV5anV1cEVuZ3FDM1Q2R3Bfay1LeDFsbktrZEVYci1Xcl8xRzhBeWpUdmViQWdaSUpPVTBZek12Qy1BRjZ5QjVxVk80QUo0cWM?oc=5",
+   "confidence": "moyenne"
+  },
+  {
    "id": "a93b307335d8",
    "ts": "2026-11-16T13:45:00.000Z",
    "title": "« Nvidia » pourrait continuer à financer le boom de l'IA après Huang... mais avec moins d'appétit pour le risque",
@@ -2070,6 +2084,20 @@
    "layer": "Énergie",
    "source": "The Korea Times",
    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZmtYNHVaOURWUTYxSXZCSUpOZERaUXNKbFpBSXdMRG1DMml6M2JhXzRVWkwyd2ZBdDVNZmttS0wwT1RfZTF5R2lGN1lRWm5OQlNHblVEQ3g5S1VYRDNlUlgwY0F2eVp3azlIak9jQ0xUOWNVTGYyMnZEUV9IOFIxM2RneEJaS0pYZ2RwLXFJazdvZFNCNDFFMGJXekNucE0wQmdQWXNNTXZZcjloM0hVZHdZUkhSTnBsV3RyaGtWZjNlY1V4OGQ5WkNzb3TSAcwBQVVfeXFMTWZrWDR1WjlEVlE2MUl2QklKTmREWlFzSmxaQUl3TERtQzJpejNiYV80VVpMMndmQXQ1TWZrbUtMME9UX2UxeUdpRjdZUVpuTkJTR25VREN4OUtVWEQzZVJYMGNBdnlad2s5SGpPY0NMVDljVUxmMjJ2RFFfSDhSMTNkZ3hCWktKWGdkcC1xSWs3b2RTQjQxRTBiV3pDbnBNMEJnUFlzTU12WXI5aDNIVWR3WVJIUk5wbFd0cmhrVmYzZWNVeDhkOVpDc290?oc=5",
+   "confidence": "moyenne"
+  },
+  {
+   "id": "befecca6eec4",
+   "ts": "2026-11-16T04:43:06.000Z",
+   "title": "La BCE met en garde contre les risques de marché si le boom de l'IA ralentit",
+   "orig": "ECB warns of market risks if AI boom stalls",
+   "summary": "Le vice-président de la BCE, Boris Vujcic, avertit des risques de marché si le boom de l'IA stagne, alors que les investisseurs s'interrogent sur la rentabilité des dépenses massives dans le secteur.",
+   "country": "EU",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Financement",
+   "source": "The Economic Times",
+   "url": "https://economictimes.indiatimes.com/tech/artificial-intelligence/ecb-warns-of-market-risks-if-ai-boom-stalls/articleshow/135883216.cms",
    "confidence": "moyenne"
   },
   {
@@ -20970,34 +20998,6 @@
    "layer": "Applications",
    "source": "IBM",
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0ydUhmMDB3SnF4RE1peDh5MzBqRG1ESlhaNEYzQ3hwdDh3TlJhRldtYkw2azB1UEVFZ2xsNURzTlI4LWlvMmJqOEtRNnZPYWxBYmx0aGlGbnd1ZzlrOTRZTDI4VHU5ZzRvNElxWkZfSlJNUQ?oc=5",
-   "confidence": "haute"
-  },
-  {
-   "id": "a3398729f464",
-   "ts": "2026-11-10T10:06:29.000Z",
-   "title": "Confronté à des problèmes de conception automobile ? L'intelligence artificielle aide à trouver des solutions",
-   "orig": "هل تواجه مشكلات في تصميم السيارات؟ الذكاء الاصطناعي يساعد في إيجاد الحلول",
-   "summary": "L'intelligence artificielle est présentée comme un outil d'aide à la conception et à la résolution de problèmes dans l'industrie automobile.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "IBM",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5mZm9DbFRGRGZCZ1JZR0NDYVdhS1JxV0tON3hvOEEySDktb0s3djhPQ2tFd1MzTmVSVzU3UDVrcEtOaHRvallJSE1Gb3ZsZEVCWVl5MjdPRkQ2Y1NHQkJpY3VqV3VPaHNjN0pscFF4VlhSejJhaUhuY2VzWHZvc1E?oc=5",
-   "confidence": "haute"
-  },
-  {
-   "id": "5ca4dc7b6d88",
-   "ts": "2026-11-10T10:00:00.000Z",
-   "title": "Présentation des entreprises dans ChatGPT",
-   "orig": "Introducing Businesses in ChatGPT",
-   "summary": "OpenAI permet aux entreprises de gérer leurs informations et leur visibilité directement au sein de ChatGPT.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "OpenAI",
-   "url": "https://openai.com/index/introducing-businesses-chatgpt",
    "confidence": "haute"
   }
  ]
