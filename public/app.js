@@ -45,14 +45,30 @@ function freshness(extra){
   var errs=(S.status&&S.status.last_run&&S.status.last_run.errors)||[];
   setStatus(stale||errs.length?"stale":"ok","Données "+ago(u)+(S.status&&S.status.mode==="seed"?" · jeu initial":"")+(extra||""),errs.join(" · "));
 }
+function toast(txt){var t=$("toast");t.textContent=txt;t.classList.add("on");clearTimeout(toast.k);toast.k=setTimeout(function(){t.classList.remove("on")},2200)}
 function refresh(){
   if(S.run)return S.run;
-  var b=$("refresh"),was=S.status&&S.status.updated_at,label=b.textContent;b.disabled=true;
-  var note=function(txt){b.textContent=txt;setTimeout(function(){b.textContent=label},2600)};
-  S.run=loadData().then(function(){freshness();renderAll();var now=S.status&&S.status.updated_at;note(was&&now&&now!==was?"Nouvelles données":"Déjà à jour")}).catch(function(e){setStatus("err","Données indisponibles");console.error(e);note("Échec")})
-  .then(function(){b.disabled=false;S.run=null});
+  var b=$("refresh"),was=S.status&&S.status.updated_at;b.disabled=true;b.classList.add("spin");$("ptr").classList.add("spin","show");
+  S.run=loadData().then(function(){freshness();renderAll();var now=S.status&&S.status.updated_at;toast(was&&now&&now!==was?"Nouvelles données":"Déjà à jour")}).catch(function(e){setStatus("err","Données indisponibles");console.error(e);toast("Échec de l'actualisation")})
+  .then(function(){b.disabled=false;b.classList.remove("spin");var p=$("ptr");p.classList.remove("spin","show");p.style.transform="";S.run=null});
   return S.run;
 }
+/* tirer vers le bas depuis le haut de la page = actualiser */
+(function(){
+  var y0=null,dy=0,p=$("ptr");
+  window.addEventListener("touchstart",function(e){y0=(window.scrollY<=0&&e.touches.length===1)?e.touches[0].clientY:null;dy=0},{passive:true});
+  window.addEventListener("touchmove",function(e){
+    if(y0===null||S.run)return;
+    dy=e.touches[0].clientY-y0;
+    if(dy<=0){p.classList.remove("show");return}
+    var k=Math.min(dy,110);p.classList.add("show");p.style.transform="translate(-50%,"+(k*0.6)+"px) rotate("+(k*3)+"deg)";p.style.opacity=Math.min(1,k/70);
+  },{passive:true});
+  window.addEventListener("touchend",function(){
+    if(y0===null)return;
+    var go=dy>=80;y0=null;
+    if(go){p.style.opacity="";refresh()}else{p.classList.remove("show");p.style.transform="";p.style.opacity=""}
+  },{passive:true});
+})();
 
 /* filters */
 function byCountry(x){return S.country==="ALL"||x.country===S.country}

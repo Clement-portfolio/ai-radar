@@ -316,3 +316,13 @@ button.logo{background:none;border:0;padding:0;color:var(--ink);cursor:pointer;t
 .frow .chip[data-top]{padding:6px 12px;font-size:12px}
 .fpanel{display:flex;flex-wrap:wrap;gap:6px;padding:12px 0 4px;border-top:1px solid var(--hair);margin-top:10px}
 .fpanel .chip{padding:5px 12px;font-size:12px}
+
+/* actualiser : simple flèche en cercle ; tirer vers le bas pour actualiser */
+.rbtn{background:none;border:0;padding:8px;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;border-radius:50%;cursor:pointer}
+.rbtn:hover{background:var(--fill)}.rbtn[disabled]{opacity:1;pointer-events:none}
+.rbtn.spin svg,#ptr.spin svg{animation:sp .8s linear infinite}
+#ptr{position:fixed;top:56px;left:50%;transform:translate(-50%,0);z-index:30;width:34px;height:34px;border-radius:50%;background:var(--bg);border:1px solid var(--hair);box-shadow:0 2px 8px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .15s}
+#ptr.show{opacity:1}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:12px;padding:8px 14px;opacity:0;pointer-events:none;transition:.25s;z-index:40}
+#toast.on{opacity:1;transform:translateX(-50%)}
+html{overscroll-behavior-y:contain}
