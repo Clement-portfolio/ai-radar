@@ -306,3 +306,5 @@ details.why .sc{margin-top:6px}
 .tleg{display:flex;flex-wrap:wrap;gap:4px 18px;font-family:var(--mono);font-size:11px;color:var(--mute);margin:-10px 0 14px}
 .tleg i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
 .tleg i.hi{background:var(--neg)}.tleg i.mid{background:var(--warn)}.tleg i.lo{background:var(--pos)}
+
+button.logo{background:none;border:0;padding:0;color:var(--ink);cursor:pointer;text-align:left}button.logo:hover span{color:var(--ink)}
