@@ -4,6 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
+import { makeBrief, BRIEF_SYSTEM, BRIEF_SCHEMA } from "./brief.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -304,7 +305,7 @@ async function makeClassifier(env, fetchImpl, log, deadInit = []) {
   if (dead.size) state.diag.push("écartés aujourd'hui (quota ou retirés) : " + [...dead].join(", "));
   const exhausted = () => { state.error = "quota Gemini épuisé sur tous les modèles (le quota gratuit se renouvelle vers 11 h, heure d'Arabie saoudite)"; state.fatal = true; return null; };
   // Une saturation 5xx est passagère : on passe au modèle suivant, puis on refait un tour après une pause.
-  async function call(list) {
+  async function call(list, opts = {}) {
     let k = 0, cycles = 0, tries = 0;
     while (true) {
       while (k < models.length && dead.has(models[k])) k++;
@@ -320,7 +321,7 @@ async function makeClassifier(env, fetchImpl, log, deadInit = []) {
       try {
         r = await fetchImpl(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
           method: "POST", headers: { "content-type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY }, signal: AbortSignal.timeout(60000),
-          body: JSON.stringify({ systemInstruction: { parts: [{ text: SYSTEM }] }, contents: [{ role: "user", parts: [{ text: JSON.stringify(list) }] }], generationConfig: { temperature: 0.1, responseMimeType: "application/json", responseSchema: SCHEMA } }),
+          body: JSON.stringify({ systemInstruction: { parts: [{ text: opts.system || SYSTEM }] }, contents: [{ role: "user", parts: [{ text: JSON.stringify(list) }] }], generationConfig: { temperature: 0.1, responseMimeType: "application/json", responseSchema: opts.schema || SCHEMA } }),
         });
         body = await r.text();
       } catch (e) { note(`${model} : réseau (${e.message})`); k++; tries = 0; continue; }
@@ -508,6 +509,17 @@ export async function run(opts = {}) {
   const keep = [...byId.values()].filter((it) => nowMs - new Date(it.ts).getTime() < (it.importance >= 3 ? 180 : it.importance === 2 ? 120 : 45) * 86400000)
     .sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 1500);
 
+  // 10 essentiels du jour + brief en 5 puces
+  const pacificNow = new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10);
+  const briefPrev = await readJson("brief.json", null);
+  const generate = env.GEMINI_API_KEY && !classifier?.state.fatal ? async (inputs) => {
+    classifier ||= await makeClassifier(env, fetchImpl, log, state.gemini && state.gemini.date === pacificNow ? state.gemini.dead : []);
+    if (classifier.state.fatal) return null;
+    return classifier.call(inputs, { system: BRIEF_SYSTEM, schema: BRIEF_SCHEMA });
+  } : null;
+  const brief = await makeBrief({ items: keep, now: nowMs, prev: briefPrev, generate, modelName: () => classifier?.state.model || null });
+  log("Brief : " + brief.reason);
+
   const status = await readJson("status.json", {});
   const errors = [];
   if (okCount === 0) errors.push("aucune source n'a répondu");
@@ -516,7 +528,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -524,6 +536,7 @@ export async function run(opts = {}) {
     await fs.mkdir(dataDir, { recursive: true });
     if (okCount > 0 && (added.length || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
+    await fs.writeFile(path.join(dataDir, "brief.json"), JSON.stringify(brief.doc, null, 1));
     await fs.writeFile(path.join(dataDir, "status.json"), JSON.stringify(out, null, 1));
   }
   log(`Terminé : +${added.length} articles, ${rejectedNow} écartés, ${keep.length} au total, ${errors.length} alerte(s)`);

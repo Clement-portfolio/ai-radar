@@ -109,4 +109,5 @@ assert.equal(JSON.parse(await fs.readFile(path.join(dir, "feed.json"), "utf8")).
 // source hors liste de confiance (Google News) écartée
 assert.ok(logs.some((l) => /écartés car média hors liste/.test(l) && !/ 0 écartés/.test(l)), "médias hors liste écartés");
 assert.ok(!feed.some((x) => /cn\.example|ae\.example/.test(x.url || "")), "GDELT/NewsData hors liste non publiés");
+await import("./test-brief.mjs");
 console.log("TOUS LES TESTS PASSENT");
