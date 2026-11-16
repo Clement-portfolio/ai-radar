@@ -5,23 +5,17 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Lecture réelle (sans écriture)
+      - name: Texte du communiqué
         run: |
-          node -e '
-          import("./collector/shares.mjs").then(async (m) => {
-            const fs = await import("node:fs");
-            const prev = JSON.parse(fs.readFileSync("public/data/shares.json", "utf8"));
-            // force la lecture : on ignore la date de dernière tentative
-            for (const c of prev.charts) delete c.attempted_at;
-            prev.charts.find((c) => c.id === "foundry").period_key = "2026Q1"; // on refait chercher le classement du T2 pour valider la lecture réelle
-            const r = await m.collectShares({ prev, now: Date.now(), log: console.log });
-            console.log("RESUME", JSON.stringify(r.summary));
-            for (const c of r.doc.charts.filter((x) => x.auto)) console.log("CHART", c.id, c.period, JSON.stringify(c.segments), c.url, c.check_error || "");
-          });
-          '
+          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tf.html "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+          python3 - <<'PY'
+          import re
+          h=open("tf.html",encoding="utf8",errors="ignore").read()
+          h=re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>"," ",h)
+          t=re.sub(r"\s+"," ",re.sub(r"<[^>]+>"," ",h))
+          i=t.find("TrendForce’s latest foundry")
+          if i<0: i=t.find("TSMC maintained")-300
+          print("TEXTE:",t[i:i+3800])
+          PY
