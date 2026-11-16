@@ -58,7 +58,7 @@ export function hasNumberWords(text) {
   const t = String(text).replace(/pour\s+cent/gi, "%").replace(/\d[\d.,\s]*(millions?|milliards?|billions?|trillions?)/gi, "N");
   return NUM_WORDS.test(t) || /(^|[^\p{L}])(millions?|milliards?|billions?|trillions?)(?![\p{L}])/iu.test(t);
 }
-const digitsOf = (s) => (String(s).match(/\d[\d.,]*/g) || []).map((x) => x.replace(/[^\d]/g, "")).filter((x) => x.length);
+export const digitsOf = (s) => (String(s).match(/\d[\d.,]*/g) || []).map((x) => x.replace(/[^\d]/g, "")).filter((x) => x.length);
 
 /** Garde les puces dont les sources existent et dont aucun nombre n'est absent des articles cités. */
 export function validateBullets(arr, inputs) {

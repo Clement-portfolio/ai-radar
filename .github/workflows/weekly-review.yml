@@ -1,0 +1,44 @@
+name: Revue hebdomadaire des pages fixes
+
+# Chaque lundi, le robot relit Marché, Infrastructure et USA–Chine à la lumière des articles collectés
+# et ouvre une issue de propositions. Il ne modifie rien : la validation se fait en commentant « /appliquer ».
+on:
+  schedule:
+    - cron: "23 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: revue-hebdo
+  cancel-in-progress: false
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests
+        run: node collector/test.mjs
+      - name: Revue
+        id: review
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          REVIEW_OUT: ${{ runner.temp }}/review-body.md
+        run: node collector/review.mjs
+      - name: Ouvrir l'issue de propositions
+        if: steps.review.outputs.count != '' && steps.review.outputs.count != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create revue-hebdo --color 000000 --description "Propositions de mise à jour des pages fixes" 2>/dev/null || true
+          for n in $(gh issue list --label revue-hebdo --state open --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Remplacée par la revue de cette semaine." || true
+          done
+          gh issue create --label revue-hebdo --title "Revue hebdomadaire des pages fixes — $(date -u +%Y-%m-%d)" --body-file "${{ steps.review.outputs.body }}"

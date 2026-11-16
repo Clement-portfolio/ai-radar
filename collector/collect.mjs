@@ -290,7 +290,7 @@ async function discoverModels(env, fetchImpl) {
     .map((m) => m.name.replace(/^models\//, ""))
     .sort((a, b) => (ver(b) - ver(a)) || (/preview/.test(a) - /preview/.test(b)) || (/lite/.test(a) - /lite/.test(b)));
 }
-async function makeClassifier(env, fetchImpl, log, deadInit = []) {
+export async function makeClassifier(env, fetchImpl, log, deadInit = []) {
   let models = (env.GEMINI_MODELS || "").split(",").map((s) => s.trim()).filter(Boolean);
   let discovered = null;
   if (!models.length) {
