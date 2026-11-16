@@ -111,5 +111,6 @@ assert.ok(logs.some((l) => /écartés car média hors liste/.test(l) && !/ 0 éc
 assert.ok(!feed.some((x) => /cn\.example|ae\.example/.test(x.url || "")), "GDELT/NewsData hors liste non publiés");
 await import("./test-brief.mjs");
 await import("./test-sec.mjs");
+await import("./test-shares.mjs");
 await import("./test-review.mjs");
 console.log("TOUS LES TESTS PASSENT");

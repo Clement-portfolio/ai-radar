@@ -6,6 +6,7 @@ import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { makeBrief, BRIEF_SYSTEM, BRIEF_SCHEMA } from "./brief.mjs";
 import { collectSec } from "./sec.mjs";
+import { collectShares } from "./shares.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -373,6 +374,12 @@ export function ruleClassify(c) {
 }
 
 /* ---------- exécution ---------- */
+// Même mise en page que le fichier écrit à la main : un camembert par ligne (diffs lisibles)
+function fmtShares(d) {
+  const { charts, ...head } = d;
+  return JSON.stringify(head).slice(0, -1) + ',\n"charts":[\n' + charts.map((c) => JSON.stringify(c)).join(",\n") + "\n]}\n";
+}
+
 export async function run(opts = {}) {
   const env = opts.env || process.env;
   const fetchImpl = opts.fetchImpl || fetch;
@@ -526,15 +533,22 @@ export async function run(opts = {}) {
   try { secRes = await collectSec({ ua: env.SEC_USER_AGENT, fetchImpl, prev: await readJson("sec.json", null), now: nowMs, sleep: opts.sleep, log }); }
   catch (e) { secRes.summary.reason = String(e.message || e); log("SEC XBRL : " + secRes.summary.reason); }
 
+  // Parts de marché relues à la source (Counterpoint, TrendForce) : ne bloque jamais la collecte, garde l'ancien chiffre en cas d'échec
+  const sharesPrev = await readJson("shares.json", null);
+  let sharesRes = { doc: null, summary: { refreshed: false, reason: "erreur" } };
+  try { sharesRes = await collectShares({ prev: sharesPrev, fetchImpl, now: nowMs, sleep: opts.sleep, log }); }
+  catch (e) { sharesRes.summary.reason = String(e.message || e); log("Parts de marché : " + sharesRes.summary.reason); }
+
   const status = await readJson("status.json", {});
   const errors = [];
+  for (const c of sharesRes.doc?.charts || []) if (c.auto && c.check_error) errors.push(`Parts de marché « ${c.title} » : lecture impossible, ancien chiffre conservé (${c.check_error})`);
   if (okCount === 0) errors.push("aucune source n'a répondu");
   if (classifier?.state.error) errors.push(classifier.state.error);
   if (!env.GEMINI_API_KEY) errors.push("GEMINI_API_KEY absente");
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, sec: secRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, sec: secRes.summary, shares: sharesRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -544,6 +558,7 @@ export async function run(opts = {}) {
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     await fs.writeFile(path.join(dataDir, "brief.json"), JSON.stringify(brief.doc, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
+    if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
     await fs.writeFile(path.join(dataDir, "status.json"), JSON.stringify(out, null, 1));
   }
   log(`Terminé : +${added.length} articles, ${rejectedNow} écartés, ${keep.length} au total, ${errors.length} alerte(s)`);

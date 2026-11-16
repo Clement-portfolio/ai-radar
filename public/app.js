@@ -153,11 +153,18 @@ function donut(segs){
   });
   return'<svg class="donut" viewBox="0 0 120 120" role="img" aria-label="Camembert">'+out+'</svg>';
 }
+function shareFresh(c){
+  if(!c.auto)return'<div class="sf small">Mise à jour manuelle</div>';
+  var days=c.checked_at?Math.floor((Date.now()-new Date(c.checked_at).getTime())/86400000):null;
+  var t='<div class="sf small">Relu automatiquement à la source'+(c.checked_at?' le '+esc(fmtD(c.checked_at)):'')+'</div>';
+  if(c.check_error||(days!=null&&days>14))t+='<div class="sf small warn">'+(c.check_error?'Dernière relecture impossible : chiffre conservé, à vérifier.':'Non relu depuis '+days+' jours : à vérifier.')+'</div>';
+  return t;
+}
 function shareCard(c){
   var leg=c.segments.map(function(x,i){return'<li><i style="background:'+DONUT[Math.min(i,DONUT.length-1)]+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
   return'<div class="share"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.metric)+' · '+esc(c.period)+'</div>'+
    '<div class="sbody">'+donut(c.segments)+'<ul class="leg">'+leg+'</ul></div>'+
-   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>'+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>'+shareFresh(c)+
    '<div class="sc">'+esc(c.caveat)+'</div></div>';
 }
 function sharesPanel(){

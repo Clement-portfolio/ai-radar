@@ -5,31 +5,23 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 8
     steps:
-      - name: Counterpoint tables
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Lecture réelle (sans écriture)
         run: |
-          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o cp.html "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
-          python3 - <<'PY'
-          import re
-          h=open("cp.html",encoding="utf8",errors="ignore").read()
-          for i,m in enumerate(re.finditer(r"<table.*?</table>",h,re.S)):
-              t=m.group(0)
-              print("TABLE",i,"len",len(t))
-              print(t[:700].replace("\n"," "))
-              rows=re.findall(r"<tr.*?</tr>",t,re.S)
-              for r in rows[:6]:
-                  print("ROW:", [re.sub(r"<[^>]+>","",c).strip() for c in re.findall(r"<t[hd].*?</t[hd]>",r,re.S)])
-              s=h[max(0,m.start()-400):m.start()]
-              print("AVANT:",re.sub(r"<[^>]+>"," ",s)[-250:].replace("\n"," "))
-          PY
-      - name: TrendForce liste
-        run: |
-          curl -sS -L -m 30 -A "Mozilla/5.0 (compatible; AIRadar/1.0)" -o tfl.html "https://www.trendforce.com/presscenter/news"
-          python3 - <<'PY'
-          import re
-          h=open("tfl.html",encoding="utf8",errors="ignore").read()
-          for m in re.finditer(r'<a[^>]+href="([^"]*/presscenter/news/\d{8}-\d+\.html)"[^>]*>(.*?)</a>',h,re.S):
-              print("LIEN",m.group(1),"|",re.sub(r"<[^>]+>","",m.group(2)).strip()[:120])
-          print("pagination:",set(re.findall(r'href="([^"]*(?:page|p)=\d+[^"]*)"',h)))
-          PY
+          node -e '
+          import("./collector/shares.mjs").then(async (m) => {
+            const fs = await import("node:fs");
+            const prev = JSON.parse(fs.readFileSync("public/data/shares.json", "utf8"));
+            // force la lecture : on ignore la date de dernière tentative
+            for (const c of prev.charts) delete c.attempted_at;
+            prev.charts.find((c) => c.id === "foundry").period_key = "2026Q1"; // on refait chercher le classement du T2 pour valider la lecture réelle
+            const r = await m.collectShares({ prev, now: Date.now(), log: console.log });
+            console.log("RESUME", JSON.stringify(r.summary));
+            for (const c of r.doc.charts.filter((x) => x.auto)) console.log("CHART", c.id, c.period, JSON.stringify(c.segments), c.url, c.check_error || "");
+          });
+          '
