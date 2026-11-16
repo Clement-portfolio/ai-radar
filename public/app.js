@@ -4,8 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Capex & finance",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
-var FILTERED={"actualites":1};
-var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null};
+var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null};
 
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
@@ -57,9 +56,6 @@ function refresh(){
 
 /* filters */
 function byCountry(x){return S.country==="ALL"||x.country===S.country}
-function renderChips(){
-  $("chips").innerHTML=COUNTRIES.map(function(c){return'<button class="chip'+(S.country===c[0]?' on':'')+'" data-c="'+c[0]+'">'+c[1]+'</button>'}).join(" ");
-}
 
 /* views */
 function storyHTML(it,cls){
@@ -85,10 +81,10 @@ function rUne(){
     var srcs=(b.ids||[]).map(function(id){return byId[id]}).filter(Boolean);
     return srcs.length?{text:b.text,srcs:srcs}:null;
   }).filter(Boolean);
-  var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span><span>'+S.feed.length+' articles en base</span></div>';
+  var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span></div>';
   if(bullets.length){
     var seen={},refs=[];bullets.forEach(function(b){b.srcs.forEach(function(a){if(!seen[a.id]){seen[a.id]=1;refs.push(a)}})});
-    h+='<section class="brief"><h2>Le briefing du jour</h2><p class="lede">'+bullets.map(function(b){return esc(b.text)}).join(" ")+'</p><div class="by">Sources : '+refs.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+'</div><div class="foot">Rédigé par IA à partir des seuls articles collectés (généré '+esc(ago(B.generated_at))+(B.model?', '+esc(B.model):'')+'). Les chiffres sont vérifiés dans les articles cités.</div></section>';
+    h+='<section class="brief"><h2>Le briefing du jour</h2><p class="lede">'+bullets.map(function(b){return esc(b.text)}).join(" ")+'</p><div class="by">Sources : '+refs.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+'</div><div class="foot">Rédigé par IA à partir des articles collectés · généré '+esc(ago(B.generated_at))+'.</div></section>';
   }else{
     h+='<section class="brief"><h2>Le briefing du jour</h2><p class="small" style="padding:12px 0">Pas encore de brief : il est généré par l\'IA lors de la prochaine collecte, dès que le quota Gemini le permet.</p></section>';
   }
@@ -102,8 +98,12 @@ function rFeed(){
   var el=$("v-actualites");
   var cats=[["ALL","Toutes"]].concat(Object.keys(CATS).map(function(k){return[k,CATS[k]]}));
   var items=S.feed.filter(byCountry).filter(function(x){return S.cat==="ALL"||x.category===S.cat}).filter(function(x){return!S.top||x.importance>=3});
-  var h='<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, classées par pays et par thème, de la plus récente à la plus ancienne. Chaque article renvoie à sa source d\'origine : « Source primaire » pour un document officiel ou le blog de l\'entreprise, « Presse » pour un média reconnu. Cliquez sur un titre pour lire l\'article, sur la flèche pour le résumé.</p>'+
-   '<div class="toolbar">'+cats.map(function(c){return'<button class="chip'+(S.cat===c[0]?' on':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'}).join("")+'<span class="sp"></span><button class="chip'+(S.top?' on':'')+'" data-top="1">Essentiel seulement</button></div>';
+  var cn=COUNTRIES.filter(function(c){return c[0]===S.country})[0][1],cl=S.cat==="ALL"?"Toutes":CATS[S.cat];
+  var panel="";
+  if(S.fo==="pays")panel='<div class="fpanel">'+COUNTRIES.map(function(c){return'<button class="chip'+(S.country===c[0]?' on':'')+'" data-c="'+c[0]+'">'+c[1]+'</button>'}).join("")+'</div>';
+  if(S.fo==="cat")panel='<div class="fpanel">'+cats.map(function(c){return'<button class="chip'+(S.cat===c[0]?' on':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'}).join("")+'</div>';
+  var h='<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l\'article.</p>'+
+   '<div class="toolbar frow"><button class="chip fb'+(S.fo==="pays"?' open':'')+(S.country!=="ALL"?' set':'')+'" data-fo="pays">Pays : '+esc(cn)+' <span>▾</span></button><button class="chip fb'+(S.fo==="cat"?' open':'')+(S.cat!=="ALL"?' set':'')+'" data-fo="cat">Catégorie : '+esc(cl)+' <span>▾</span></button><span class="sp"></span><button class="chip'+(S.top?' on':'')+'" data-top="1">Essentiel seulement</button></div>'+panel;
   if(!items.length)h+='<div class="empty">Aucune actualité pour ces filtres.</div>';
   var dayCount={};items.forEach(function(x){var d=x.ts.slice(0,10);dayCount[d]=(dayCount[d]||0)+1});var day="";var total=items.length;items=items.slice(0,S.limit);
   items.forEach(function(it){
@@ -156,9 +156,8 @@ function donut(segs){
   return'<svg class="donut" viewBox="0 0 120 120" role="img" aria-label="Camembert">'+out+'</svg>';
 }
 function shareFresh(c){
-  if(!c.auto)return'<div class="sf small">Mise à jour manuelle</div>';
   var days=c.checked_at?Math.floor((Date.now()-new Date(c.checked_at).getTime())/86400000):null;
-  var t='<div class="sf small">Relu automatiquement à la source'+(c.checked_at?' le '+esc(fmtD(c.checked_at)):'')+'</div>';
+  var t='';
   if(c.check_error||(days!=null&&days>14))t+='<div class="sf small warn">'+(c.check_error?'Dernière relecture impossible : chiffre conservé, à vérifier.':'Non relu depuis '+days+' jours : à vérifier.')+'</div>';
   return t;
 }
@@ -248,11 +247,11 @@ function curveFresh(c){
   var last=all.sort().pop(),t='';
   if(c.auto){
     var days=c.checked_at?Math.floor((Date.now()-new Date(c.checked_at).getTime())/86400000):null;
-    t='<div class="sf small">Relu automatiquement'+(c.checked_at?' le '+esc(fmtD(c.checked_at)):'')+(last?' · dernier point : '+esc(fmtD(last)):'')+'</div>';
+    t=last?'<div class="sf small">Dernier point : '+esc(fmtD(last))+'</div>':'';
     if(c.check_error||(days!=null&&days>14))t+='<div class="sf small warn">'+(c.check_error?'Dernière relecture impossible : courbe conservée, à vérifier.':'Non relu depuis '+days+' jours : à vérifier.')+'</div>';
   }else{
     var age=last?Math.floor((Date.now()-ms(last))/86400000):null;
-    t='<div class="sf small">Points ajoutés après validation'+(last?' · dernier point : '+esc(fmtD(last)):'')+'</div>';
+    t=last?'<div class="sf small">Dernier point : '+esc(fmtD(last))+'</div>':'';
     if(age!=null&&age>120)t+='<div class="sf small warn">Dernier point vieux de '+age+' jours : à actualiser.</div>';
   }
   return t;
@@ -263,7 +262,7 @@ function pointList(c){
   return rows.length?'<ul class="pl">'+rows.join("")+'</ul>':"";
 }
 function curveCard(c){
-  return'<div class="share curve"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.unit)+' <span class="mode">'+(c.auto?"auto":"semi-auto")+'</span></div><div class="lcw">'+lineChart(c)+'</div>'+
+  return'<div class="share curve"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.unit)+'</div><div class="lcw">'+lineChart(c)+'</div>'+
    '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div><div class="fr">'+curveFresh(c)+'</div>'+
    '<details class="why"><summary>Limites'+(c.auto?'':' et points sourcés')+'</summary><div class="sc">'+esc(c.caveat)+'</div>'+pointList(c)+'</details></div>';
 }
@@ -373,7 +372,7 @@ function rMethod(){
 
 function renderAll(){
   if(!S.market)return;
-  renderChips();rUne();rFeed();rMarket();rInfra();rRace();rMethod();
+  rUne();rFeed();rMarket();rInfra();rRace();rMethod();
 }
 function show(tab){
   if(tab==="infrastructure")tab="marche";
@@ -381,7 +380,6 @@ function show(tab){
   S.tab=tab;
   TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab||(tab==="marche"&&t==="infrastructure"))});
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
-  $("filter").style.display=FILTERED[tab]?"":"none";
   window.scrollTo(0,0);
 }
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
@@ -389,12 +387,13 @@ function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 document.addEventListener("click",function(e){
   var j=e.target.closest("[data-jump]");
   if(j){e.preventDefault();var id=j.getAttribute("data-jump"),el=$(id);if(el){if(el.tagName==="DETAILS")el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}return}
-  var t=e.target.closest("[data-tab],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
+  var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
   if(t.hasAttribute("data-tab"))return go(t.getAttribute("data-tab"));
   if(t.hasAttribute("data-go"))return go(t.getAttribute("data-go"));
   if(t.hasAttribute("data-more")){S.limit+=120;rFeed();return}
-  if(t.hasAttribute("data-c")){S.country=t.getAttribute("data-c");S.limit=120;renderAll();return}
-  if(t.hasAttribute("data-cat")){S.cat=t.getAttribute("data-cat");S.limit=120;renderAll();return}
+  if(t.hasAttribute("data-fo")){var f=t.getAttribute("data-fo");S.fo=S.fo===f?null:f;rFeed();return}
+  if(t.hasAttribute("data-c")){S.country=t.getAttribute("data-c");S.limit=120;S.fo=null;renderAll();return}
+  if(t.hasAttribute("data-cat")){S.cat=t.getAttribute("data-cat");S.limit=120;S.fo=null;renderAll();return}
   if(t.hasAttribute("data-top")){S.top=!S.top;S.limit=120;renderAll();return}
   if(t.hasAttribute("data-ls")){S.layerSort=t.getAttribute("data-ls");renderAll();return}
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}

@@ -308,3 +308,11 @@ details.why .sc{margin-top:6px}
 .tleg i.hi{background:var(--neg)}.tleg i.mid{background:var(--warn)}.tleg i.lo{background:var(--pos)}
 
 button.logo{background:none;border:0;padding:0;color:var(--ink);cursor:pointer;text-align:left}button.logo:hover span{color:var(--ink)}
+
+/* barre de filtres d'Actualités : sous le titre, une seule ligne */
+.frow{margin:14px 0 0}
+.chip.fb{padding:6px 12px;font-size:12px}.chip.fb span{font-size:10px;margin-left:4px;color:var(--mute)}
+.chip.fb.set{border-color:var(--ink);font-weight:600}.chip.fb.open{background:var(--fill);border-color:var(--ink)}
+.frow .chip[data-top]{padding:6px 12px;font-size:12px}
+.fpanel{display:flex;flex-wrap:wrap;gap:6px;padding:12px 0 4px;border-top:1px solid var(--hair);margin-top:10px}
+.fpanel .chip{padding:5px 12px;font-size:12px}
