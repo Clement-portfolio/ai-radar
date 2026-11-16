@@ -11,7 +11,7 @@ const PUBLIC = path.join(ROOT, "public");
 const PORT = +process.env.PORT || 3000;
 const DATA_URL = (process.env.DATA_SOURCE_URL || "https://raw.githubusercontent.com/Clement-portfolio/ai-radar/main/public/data/").replace(/\/?$/, "/");
 const CACHE_MS = (+process.env.DATA_CACHE_S || 120) * 1000;
-const DATA_FILES = new Set(["feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "sec.json", "shares.json", "series.json"]);
+const DATA_FILES = new Set(["feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "focus.json", "sec.json", "shares.json", "series.json"]);
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".png": "image/png", ".txt": "text/plain; charset=utf-8" };
 
 const cache = new Map(); // nom -> { at, buf }

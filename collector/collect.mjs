@@ -4,7 +4,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { makeBrief, BRIEF_SYSTEM, BRIEF_SCHEMA } from "./brief.mjs";
+import { makeBrief, BRIEF_SYSTEM, BRIEF_SCHEMA, hasNumberWords, digitsOf } from "./brief.mjs";
+import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
@@ -257,12 +258,21 @@ async function collectAll(cfg, env, http, now, log) {
   return { cands, health };
 }
 
+/** « Pourquoi c'est important » : gardé seulement pour importance 2 ou 3, sans chiffre absent du titre et de l'extrait. */
+function whyOk(r, c) {
+  const w = String(r.why_fr || "").trim();
+  if (!w || w.length > 260 || (Number(r.importance) || 1) < 2 || hasNumberWords(w)) return false;
+  const known = new Set(digitsOf(`${c.title} ${c.snippet || ""}`));
+  return digitsOf(w).every((d) => known.has(d));
+}
+
 /* ---------- Gemini ---------- */
 const SYSTEM = `Tu es l'analyste d'un radar d'actualité sur l'intelligence artificielle et son économie. Pour chaque article fourni (champ i, source, title, snippet, date), renvoie un objet JSON.
 Règles :
 - relevant : true si l'article se rattache à l'IA ou à son économie : modèles et produits d'IA, puces/mémoire/fonderie, datacenters, énergie pour l'IA, financement et résultats des acteurs de l'IA, régulation, usages, adoption, recherche. En cas de doute, mets true avec importance 1. Mets false seulement si l'article n'a clairement aucun rapport avec l'IA (autre sujet, publicité, bons de réduction, conseils boursiers sans fait) et donne alors, dans reason, la raison en 8 mots maximum.
 - title_fr : titre en français, fidèle à l'original, sans ajout.
 - summary_fr : 1 à 2 phrases en français, 260 caractères maximum, UNIQUEMENT à partir des faits présents dans le titre et l'extrait. N'ajoute aucun chiffre, aucune date, aucun nom absent du texte. Si l'extrait est vide, reformule le titre.
+- why_fr : pour importance 2 ou 3 seulement (sinon chaîne vide) : UNE phrase en français, 200 caractères maximum, qui explique pourquoi c'est important (l'enjeu, ce que cela change), UNIQUEMENT à partir du titre et de l'extrait. N'ajoute aucun chiffre, date ou nom absent du texte, aucune prédiction.
 - country : pays de l'acteur principal dont parle l'information (pas le pays du média). US, CN, EU (Europe, Royaume-Uni inclus), GULF (Arabie saoudite, Émirats, Qatar...), OTHER (Taïwan, Corée, Japon, Inde, reste du monde).
 - category : modeles (modèles, labos, produits), puces (GPU, ASIC, mémoire, fonderie, export), energie (électricité, réseau, refroidissement), capex (investissements, levées de fonds, résultats, valorisations, bourse), regul (lois, règles, procès, contrôles à l'export), adoption (usages, revenus, déploiements), recherche (articles scientifiques).
 - importance : 3 = événement majeur (nouveau modèle de pointe, résultats ou investissement supérieur à 1 Md$, décision réglementaire ou restriction à l'export majeure, pénurie ou goulot structurel) ; 2 = notable ; 1 = mineur ou redondant.
@@ -274,7 +284,7 @@ const SCHEMA = {
   items: {
     type: "OBJECT",
     properties: {
-      i: { type: "INTEGER" }, relevant: { type: "BOOLEAN" }, title_fr: { type: "STRING" }, summary_fr: { type: "STRING" },
+      i: { type: "INTEGER" }, relevant: { type: "BOOLEAN" }, title_fr: { type: "STRING" }, summary_fr: { type: "STRING" }, why_fr: { type: "STRING" },
       country: { type: "STRING", enum: COUNTRIES }, category: { type: "STRING", enum: CATEGORIES },
       importance: { type: "INTEGER" }, layer: { type: "STRING", enum: LAYERS }, reason: { type: "STRING" },
     },
@@ -496,6 +506,7 @@ export async function run(opts = {}) {
           country, category: CATEGORIES.includes(r.category) ? r.category : (c.research ? "recherche" : "adoption"),
           importance: Math.min(3, Math.max(1, Math.round(r.importance) || 1)), layer: LAYERS.includes(r.layer) ? r.layer : "Autre",
           source: c.source, url: c.url, confidence: conf,
+          ...(whyOk(r, c) ? { why: String(r.why_fr).trim().replace(/\s+/g, " ") } : {}),
         });
       });
     }
@@ -528,6 +539,16 @@ export async function run(opts = {}) {
   } : null;
   const brief = await makeBrief({ items: keep, now: nowMs, prev: briefPrev, generate, modelName: () => classifier?.state.model || null });
   log("Brief : " + brief.reason);
+  const focusPrev = await readJson("focus.json", null);
+  const generateFocus = env.GEMINI_API_KEY && !classifier?.state.fatal ? async (inputs) => {
+    classifier ||= await makeClassifier(env, fetchImpl, log, state.gemini && state.gemini.date === pacificNow ? state.gemini.dead : []);
+    if (classifier.state.fatal) return null;
+    return classifier.call(inputs, { system: FOCUS_SYSTEM, schema: FOCUS_SCHEMA });
+  } : null;
+  let focus = { doc: focusPrev, regenerated: false, reason: "erreur" };
+  try { focus = await makeFocus({ items: keep, now: nowMs, prev: focusPrev, generate: generateFocus, modelName: () => classifier?.state.model || null }); }
+  catch (e) { focus.reason = String(e.message || e).slice(0, 120); }
+  log("À retenir : " + focus.reason);
 
   // Capex et revenus déclarés à la SEC (XBRL) : ne bloque jamais la collecte
   let secRes = { doc: null, summary: { refreshed: false, reason: "erreur" } };
@@ -555,7 +576,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, brief: { regenerated: brief.regenerated, reason: brief.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -564,6 +585,7 @@ export async function run(opts = {}) {
     if (okCount > 0 && (added.length || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     await fs.writeFile(path.join(dataDir, "brief.json"), JSON.stringify(brief.doc, null, 1));
+    if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
     if (evoRes.doc && JSON.stringify(evoRes.doc) !== JSON.stringify(seriesPrev)) await fs.writeFile(path.join(dataDir, "series.json"), fmtSeries(evoRes.doc));

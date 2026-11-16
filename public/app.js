@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Capex & finance",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
-var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null};
+var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null};
 
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
@@ -21,7 +21,7 @@ function rowHTML(it){
   return '<div class="row i'+it.importance+open+'"><span class="time">'+esc(fmtTime(it.ts))+'</span>'+ctag(it.country)+
    '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.title)+'</a>'+
    '<span class="rsrc">'+esc(it.source)+cdot(it.confidence)+'</span>'+
-   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+
+   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+(it.why?'<p class="rwhy">'+esc(it.why)+'</p>':'')+
    '<div class="sum"><p>'+(it.summary?esc(it.summary):'Résumé indisponible : ouvrez l\'article.')+(it.pending?' <i class="small">(titre d\'origine, non classé par l\'IA)</i>':'')+'</p><div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
 }
 function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s.u))+'" target="_blank" rel="noopener">'+esc(s.t)+'</a>'}).join("")}
@@ -29,9 +29,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];
   });
 }
 function setStatus(kind,txt,title){
@@ -104,7 +104,20 @@ function rUne(){
   }else{
     h+='<section class="brief"><h2>Le briefing du jour</h2><p class="small" style="padding:12px 0">Pas encore de brief : il est généré par l\'IA lors de la prochaine collecte, dès que le quota Gemini le permet.</p></section>';
   }
-  h+='<section class="ess"><h2>'+(fallback?'Les plus importants (sélection provisoire)':'Les 10 essentiels')+'</h2>'+
+  var F=S.focus,fi=((F&&F.items)||[]).map(function(f){var it=byId[f.id];return it?{f:f,it:it}:null}).filter(Boolean);
+  if(fi.length){
+    h+='<section class="focus"><h2>À retenir aujourd\'hui</h2>'+fi.map(function(x,i){
+      var ctx=(x.f.ctx_ids||[]).map(function(id){return byId[id]}).filter(Boolean);
+      return'<article class="fc"><span class="n">'+(i+1)+'</span><div><div class="meta">'+ctag(x.it.country)+'<span class="cat">'+esc(CATS[x.it.category]||x.it.category)+'</span><span>'+esc(ago(x.it.ts))+'</span></div>'+
+       '<h3><a href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.title)+'</a></h3>'+
+       '<p class="why"><b>Pourquoi c\'est important</b> '+esc(x.f.why)+'</p>'+
+       (x.f.context&&ctx.length?'<p class="ctx"><b>Remise en contexte</b> '+esc(x.f.context)+'</p><div class="by">'+ctx.map(function(c){return'<a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(fmtD(c.ts))+' · '+esc(c.source)+' ↗</a>'}).join("")+'</div>':'')+
+       '<div class="by"><a href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.source)+' ↗</a></div></div></article>';
+    }).join("")+'</section>';
+    var used={};fi.forEach(function(x){used[x.it.id]=1});
+    top=top.filter(function(it){return!used[it.id]});
+  }
+  h+='<section class="ess"><h2>'+(fi.length?'Aussi aujourd\'hui':(fallback?'Les plus importants (sélection provisoire)':'Les 10 essentiels'))+'</h2>'+
     (top.length?top.map(function(it,i){return essHTML(it,i+1)}).join(""):'<div class="empty">Aucune actualité pour le moment.</div>')+
     '</section><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
   el.innerHTML=h;
