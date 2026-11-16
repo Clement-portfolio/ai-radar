@@ -292,3 +292,10 @@ details.why .sc{margin-top:6px}
 @media(max-width:620px){.brief .lede{font-size:17px}}
 
 .leg .dl{font-style:normal;font-family:var(--mono);font-size:10.5px;text-align:right;white-space:nowrap}.dl.up{color:var(--pos)}.dl.dn{color:var(--neg)}
+
+/* soulignement de l'onglet actif collé au trait de l'en-tête */
+.top .wrap{align-items:stretch}
+.top .logo,.top .stat{align-self:center}
+.nav{align-self:stretch;align-items:stretch}
+.tab{display:flex;align-items:center;padding-top:0;padding-bottom:0}
+@media(max-width:720px){.top .wrap{align-items:center}.nav{align-items:stretch}.tab{padding-top:11px;padding-bottom:11px}}
