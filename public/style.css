@@ -199,7 +199,6 @@ footer{border-top:1px solid var(--hair);padding:18px 0 40px;font-family:var(--mo
   .top .wrap{flex-wrap:wrap;gap:0 12px;padding-top:8px}
   .nav{order:3;flex-basis:100%}
   .stat{margin-left:auto}
-  .stat #status{display:none}
   .row{grid-template-columns:42px 1fr 26px;row-gap:2px}
   .row .tag{grid-column:2;grid-row:1}
   .row .time{grid-row:1}
@@ -326,3 +325,6 @@ button.logo{background:none;border:0;padding:0;color:var(--ink);cursor:pointer;t
 #toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:12px;padding:8px 14px;opacity:0;pointer-events:none;transition:.25s;z-index:40}
 #toast.on{opacity:1;transform:translateX(-50%)}
 html{overscroll-behavior-y:contain}
+
+.stat .auto{color:var(--mute)}
+@media(max-width:720px){.stat{flex-wrap:wrap;justify-content:flex-end;gap:0 6px;max-width:60%;text-align:right;white-space:normal;font-size:10.5px;line-height:1.4}.stat .auto .l{display:none}.stat .auto{flex-basis:100%}.stat .auto:before{content:"Mise à jour "}}
