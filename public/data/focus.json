@@ -1,14 +1,66 @@
 {
- "generated_at": "2026-11-17T08:38:34.872Z",
- "model": "gemini-3.8-flash",
+ "generated_at": "2026-11-17T09:09:40.478Z",
+ "model": "gemini-3.5-flash-lite",
  "sig": [
   "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+2952b40b3590+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
+  "066002f02e4c+1aa355519c9f+1d568fb033a7+3ef484d91e4b+4d2a127f1c18+5bf1e9fd711d+5d7763ae049a+7399e7157c4f+772ccdf8e8c7+8882bec2ef59+99adb1c1605d+a2bc04fede09+b89b121d0786+d392b636ea28+f19c04e4b4ea",
   "50ed425740ad+557fd01b66ab+8545e7ee31da+ea7bd8025515+f4fd0de1838a",
-  "09d1dd4a855f+15674a5384bf+15964ea6b308+1908a854fd26+1a9f8b445fb6+45cb1f953fc9+9f736924b3b9+ad0794c39984+ddfe3a9c1778+f45fe323bc06+f55b32fce91c+f9feb5ec0c0b",
   "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
   "01de5d683d52+3a6a7c7107f8+6e8e373b5927+7aaeb16f016b+7b3d614d203e+9696674be12b+96ec9ffb9098+aff4b2c65530+dce5e82d2a55+fa49ced6fa8d"
  ],
  "stories": [
+  {
+   "ids": [
+    "0ecab592c5bf",
+    "c014a9bc4460",
+    "ad6e35716fd3",
+    "5eaf9db99196"
+   ],
+   "head": "Départ de Jensen Huang chez Nvidia et répercussions géopolitiques",
+   "bullets": [
+    "Le PDG de Nvidia, Jensen Huang, a quitté ses fonctions, déclenchant une transition de direction et des répercussions immédiates sur la chaîne d'approvisionnement en semi-conducteurs en Chine.",
+    "Le conseil d'administration envisageait de limoger son PDG après des informations faisant état d'une seconde relation inappropriée et le FBI enquêtait. Des noms comme Ian Buck et Colette Kress étaient pressentis.",
+    "Cette situation pourrait accélérer l'autonomie de la Chine en matière de semi-conducteurs et intensifier la course technologique mondiale."
+   ],
+   "head_en": "Jensen Huang's departure from Nvidia and geopolitical impacts",
+   "bullets_en": [
+    "Nvidia CEO Jensen Huang left his post, triggering a leadership transition and immediate impacts on the semiconductor supply chain in China.",
+    "The board of directors considered dismissing its CEO following reports of a second inappropriate relationship and the FBI was investigating. Names like Ian Buck and Colette Kress were rumored as successors.",
+    "This situation could accelerate China's semiconductor autonomy and intensify the global technological race."
+   ],
+   "ctx_ids": [
+    "cd03d116301a",
+    "eca07e82a29d",
+    "93a1be9c32d9"
+   ],
+   "ts": "2026-11-17T06:51:09.000Z"
+  },
+  {
+   "ids": [
+    "f4fd0de1838a",
+    "557fd01b66ab",
+    "50ed425740ad",
+    "ea7bd8025515"
+   ],
+   "head": "L'introduction en bourse d'Anthropic comme test pour l'IA",
+   "bullets": [
+    "La société d'intelligence artificielle Anthropic prépare une introduction en bourse très attendue, augmentant la pression sur son concurrent OpenAI et attirant les investisseurs asiatiques.",
+    "Le cours de bourse de Nvidia a chuté lourdement suite à de nouvelles révélations publiques touchant la gouvernance et la vie privée du PDG Jensen Huang, dont le départ a ébranlé le marché.",
+    "Cela pourrait tester la solidité de l'engouement financier pour le secteur de l'intelligence artificielle et l'accès au financement des grands acteurs."
+   ],
+   "head_en": "Anthropic's IPO acts as a test for AI",
+   "bullets_en": [
+    "Artificial intelligence company Anthropic is preparing a highly anticipated IPO, increasing pressure on its rival OpenAI and attracting Asian investors.",
+    "Nvidia's share price plummeted following new public revelations regarding CEO Jensen Huang's governance and private life, whose departure shook the market.",
+    "This could test the strength of financial enthusiasm for the AI sector and major players' access to funding."
+   ],
+   "ctx_ids": [
+    "89f810b4a388",
+    "cd03d116301a",
+    "3660858b9b56"
+   ],
+   "ts": "2026-11-17T07:29:46.000Z"
+  },
   {
    "ids": [
     "f819d90d809d",
@@ -16,22 +68,50 @@
     "6e834fc4bc29",
     "06c70ce20939"
    ],
-   "head": "La consommation électrique des centres de données d'IA atteint l'échelle d'États entiers",
+   "head": "L'empreinte énergétique colossale des centres de données d'IA",
    "bullets": [
-    "Plus de 400 centres de données d'IA aux États-Unis consomment désormais autant d'électricité que le Wisconsin ou un pays comme le Chili, selon plusieurs études.",
-    "Face aux limites du réseau électrique, les centres de données diversifiaient déjà leurs stratégies d'approvisionnement énergétique pour soutenir leur essor (3).",
-    "Cette trajectoire énergétique pourrait intensifier les débats environnementaux sur la dépendance continue du secteur technologique aux énergies fossiles."
+    "Des études révèlent que plus de 400 centres de données aux États-Unis consomment une quantité d'électricité et émettent du carbone équivalant à des nations ou des États entiers.",
+    "Les emprunts liés à l'IA concentrent la dette d'entreprise à long terme aux États-Unis, tandis que les centres de données diversifient leurs stratégies d'approvisionnement énergétique.",
+    "Cela montre que la croissance rapide de l'infrastructure d'intelligence artificielle pose un défi majeur aux réseaux électriques et aux objectifs climatiques."
    ],
-   "head_en": "Power demand from American AI data centers rivals consumption of entire states",
+   "head_en": "The colossal energy footprint of AI data centers",
    "bullets_en": [
-    "Over 400 US AI data centers now consume as much electricity as Wisconsin or an entire country like Chile, according to recent studies.",
-    "Faced with power grid constraints, data centers were already diversifying their energy sourcing strategies to sustain expansion (3).",
-    "This energy trajectory could intensify environmental scrutiny over the tech sector's continued reliance on fossil fuels."
+    "Studies reveal that over 400 data centers in the United States consume electricity and emit carbon equivalent to entire nations or states.",
+    "AI-related borrowings concentrate long-term corporate debt in the US, while data centers diversify their energy supply strategies.",
+    "This shows that the rapid growth of AI infrastructure poses a major challenge to electrical grids and climate goals."
    ],
    "ctx_ids": [
+    "a9b5f630fc97",
+    "a8c68b33e1d6",
     "c9160498e0d4"
    ],
    "ts": "2026-11-16T20:27:58.000Z"
+  },
+  {
+   "ids": [
+    "96ec9ffb9098",
+    "01de5d683d52",
+    "7aaeb16f016b",
+    "7b3d614d203e"
+   ],
+   "head": "Incertitudes autour de Nvidia après la chute de Jensen Huang",
+   "bullets": [
+    "Le départ précipité de Jensen Huang de la tête de Nvidia laisse l'entreprise sans successeur désigné, provoquant des interrogations sur sa stratégie d'infrastructure et son avenir.",
+    "Le conseil d'administration de Nvidia envisageait de limoger son PDG après des informations faisant état d'une seconde relation inappropriée et le FBI enquêtait sur cette affaire.",
+    "Cela montre que les scandales de gouvernance personnelle peuvent rapidement déstabiliser les géants technologiques les plus puissants du secteur."
+   ],
+   "head_en": "Uncertainties surround Nvidia following Jensen Huang's fall",
+   "bullets_en": [
+    "Jensen Huang's hasty departure from the head of Nvidia leaves the company without a designated successor, raising questions about its infrastructure strategy and future.",
+    "Nvidia's board of directors considered dismissing its CEO following reports of a second inappropriate relationship and the FBI was investigating the matter.",
+    "This shows that personal governance scandals can quickly destabilize the most powerful tech giants in the sector."
+   ],
+   "ctx_ids": [
+    "cd03d116301a",
+    "eca07e82a29d",
+    "93a1be9c32d9"
+   ],
+   "ts": "2026-11-16T19:05:15.000Z"
   }
  ]
 }

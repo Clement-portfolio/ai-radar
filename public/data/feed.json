@@ -1,6 +1,94 @@
 {
  "items": [
   {
+   "id": "e65e9a614925",
+   "ts": "2026-11-17T09:09:40.478Z",
+   "title": "Singapour et la Malaisie aux prises avec les restrictions américaines sur les puces ciblant l'Asie du Sud-Est",
+   "orig": "Singapore, Malaysia grapple with US chip curbs targeting Southeast Asia",
+   "summary": "Singapour et la Malaisie font face aux nouvelles restrictions américaines sur les puces électroniques visant l'Asie du Sud-Est.",
+   "country": "US",
+   "category": "puces",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/technology/singapore-malaysia-grapple-with-us-chip-curbs-targeting-southeast-asia",
+   "confidence": "moyenne",
+   "why": "Ces restrictions compliquent les chaînes d'approvisionnement régionales et l'accès aux technologies critiques pour les pays d'Asie du Sud-Est.",
+   "title_en": "Singapore, Malaysia grapple with US chip curbs targeting Southeast Asia",
+   "summary_en": "Singapore and Malaysia are facing new US microchip restrictions targeting Southeast Asia.",
+   "why_en": "These restrictions complicate regional supply chains and access to critical technologies for Southeast Asian countries."
+  },
+  {
+   "id": "bbbba9eb0a73",
+   "ts": "2026-11-17T09:02:00.000Z",
+   "title": "Les acteurs britanniques obtiennent plus de droits sur leurs « répliques numériques » dans un accord sur les protections liées à l'IA",
+   "orig": "Actors in UK to get more rights over their ‘digital replicas’ in deal on AI protections",
+   "summary": "Un accord au Royaume-Uni renforce les droits des acteurs concernant l'utilisation de leurs répliques numériques par l'intelligence artificielle.",
+   "country": "EU",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "The Guardian",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQSkI0U3JNRUxtdWtVSE9OcnBsb0tPUVA3SlJfY2xYNzZuWXJ1cjVqZmRPdU1SSnQ0S3ZsZ01Ucjl2a1QtLVJfZzBBNmJGdzVYcTZxcExUcjJ5djd0ZnlZZ2F5dktBMEZMSnNqYWVjb0dQSjctTkJtWkZINXdwdkhGYVg3Z3YxTWZKZ3c3MGJNZHBGWTdnOG1WQzFfZzNoNU05?oc=5",
+   "confidence": "moyenne",
+   "why": "Cet accord établit un précédent important pour la protection des droits à l'image face à la prolifération des contenus générés par IA.",
+   "title_en": "Actors in UK to get more rights over their ‘digital replicas’ in deal on AI protections",
+   "summary_en": "A UK agreement strengthens actors' rights regarding the use of their digital replicas by artificial intelligence.",
+   "why_en": "This agreement sets an important precedent for protecting image rights in the face of the proliferation of AI-generated content."
+  },
+  {
+   "id": "93ede0cf3bf5",
+   "ts": "2026-11-17T09:00:25.000Z",
+   "title": "Alors que l'IA agentique s'infiltre dans la finance, les inquiétudes grandissent face aux nouveaux risques et angles morts",
+   "orig": "As agentic AI seeps into finance, concerns grow over new risks and blind spots",
+   "summary": "Des régulateurs mondiaux débattent à Hong Kong des risques posés par l'IA autonome dans le secteur financier, suite à des incidents techniques bancaires.",
+   "country": "OTHER",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "SCMP Tech",
+   "url": "https://www.scmp.com/business/banking-finance/article/3374724/agentic-ai-seeps-finance-concerns-grow-over-new-risks-and-blind-spots",
+   "confidence": "moyenne",
+   "why": "L'intégration de l'IA autonome dans la finance mondiale soulève des défis critiques de stabilité et de supervision pour les régulateurs.",
+   "title_en": "As agentic AI seeps into finance, concerns grow over new risks and blind spots",
+   "summary_en": "Global regulators are debating in Hong Kong the risks posed by autonomous AI in the financial sector, following banking technical incidents.",
+   "why_en": "The integration of autonomous AI into global finance raises critical stability and oversight challenges for regulators."
+  },
+  {
+   "id": "db00df1b2d4d",
+   "ts": "2026-11-17T09:00:00.000Z",
+   "title": "CONTENU PARTENAIRE : L'avenir des centres de données dépend de la production d'énergie sur site",
+   "orig": "PARTNER CONTENT: The Future of Datacenters Depends on Behind-the-Meter Energy Generation",
+   "summary": "Le développement futur des centres de données repose sur la mise en place de solutions de production d'énergie locale.",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Énergie",
+   "source": "The Register",
+   "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOTHFkNlcyMFlPbmFDTU41N3JrVVVfZGRnWDc5M1hJZEd3TmRSR194UGhjY0VucnhCVGdJTWhYMUhLTklNVjcySTZicjZtUG9lS1J6NnlPOUF6bU0wWUU0VnpXTzRGdmhHd0k4OGtldXJJandvd0M0Yjg4T0ZGSDlsd2NFNlQ0UlRXbmhiQjdaU3hYVldINzRBNFg4d2lCS2s3OG5IZU9LMHVVOGNfZ00wLUFKTVdLc3VEMzdvQkE3NTF6aW1DYjdNZ1Y2alo5dHFOVDRidnZob1VnLVJ6?oc=5",
+   "confidence": "moyenne",
+   "title_en": "PARTNER CONTENT: The Future of Datacenters Depends on Behind-the-Meter Energy Generation",
+   "summary_en": "The future development of datacenters relies on the implementation of local energy production solutions."
+  },
+  {
+   "id": "f19c04e4b4ea",
+   "ts": "2026-11-17T08:48:21.000Z",
+   "title": "CNA explique : Pourquoi les États-Unis ciblent-ils l'Asie du Sud-Est pour limiter l'accès de la Chine aux puces IA ?",
+   "orig": "CNA Explains: Why is the US targeting Southeast Asia in its bid to curb China's access to AI chips?",
+   "summary": "Les États-Unis renforcent leurs contrôles à l'exportation vers l'Asie du Sud-Est pour empêcher la Chine d'accéder aux puces d'IA avancées.",
+   "country": "US",
+   "category": "politique",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "CNA",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNdnBTX1BvQWJGQjJPa0JmNlNDSW5XZk50LTlFeGtHTjAtdl9wNEg3UzJaWHcxMnVMQ3JZLTFybEwyQ1RzR1hmRm16TElIVkhyMk9JdVRxTWEza2N6Sklzd0Q4NldZbDFxMHJRTnBKbmV5RkpqSFRudHkxRV8xS3pacGtjYzR6TUlCVE9HdUFJSExBMkxN?oc=5",
+   "confidence": "moyenne",
+   "why": "Cette stratégie illustre l'intensification de la guerre technologique visant à isoler les capacités de calcul chinoises via des pays tiers.",
+   "title_en": "CNA Explains: Why is the US targeting Southeast Asia in its bid to curb China's access to AI chips?",
+   "summary_en": "The United States is tightening export controls toward Southeast Asia to prevent China from accessing advanced AI chips.",
+   "why_en": "This strategy illustrates the intensification of the technological war aimed at isolating Chinese computing capabilities via third-party countries."
+  },
+  {
    "id": "931b391f9134",
    "ts": "2026-11-17T08:33:32.000Z",
    "title": "La NTNU ouvre une exposition sur le maintien de l'autonomie face à la vague de l'IA",
@@ -31,6 +119,58 @@
    "confidence": "moyenne",
    "title_en": "South Korea cheating scandal: Are AI smart glasses a threat to exams?",
    "summary_en": "The use of AI-equipped smart glasses to cheat on exams is raising concerns in South Korea regarding the integrity of academic tests."
+  },
+  {
+   "id": "82d8b7a98dc8",
+   "ts": "2026-11-17T08:27:15.000Z",
+   "title": "Suivi des serveurs IA : TSMC et Alchip enregistrent de gros gains en octobre grâce aux commandes de 2nm et d'ASIC",
+   "orig": "AI server tracker: TSMC, Alchip post big October gains powered by 2nm and ASIC orders",
+   "summary": "La chaîne d'approvisionnement taïwanaise affiche une forte croissance en octobre, portée par la demande en puces IA et les commandes de fonderie.",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Fonderie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261117VL216/revenue-growth-taiwan-semiconductor-supply-chain-tsmc-2nm.html",
+   "confidence": "moyenne",
+   "why": "La performance de ces acteurs confirme la demande soutenue pour les infrastructures matérielles nécessaires à l'IA.",
+   "title_en": "AI server tracker: TSMC, Alchip post big October gains powered by 2nm and ASIC orders",
+   "summary_en": "The Taiwanese supply chain posted strong growth in October, driven by AI chip demand and foundry orders.",
+   "why_en": "The performance of these players confirms sustained demand for the hardware infrastructure required for AI."
+  },
+  {
+   "id": "6bfa310f1004",
+   "ts": "2026-11-17T08:20:00.000Z",
+   "title": "Les agents IA émergent comme une nouvelle menace de cybersécurité, avant les risques de l'informatique quantique",
+   "orig": "AI agents emerge as a new cybersecurity threat, ahead of quantum computing risks",
+   "summary": "Le Conseil national des sciences et technologies de Taïwan alerte sur les risques de cybersécurité posés par l'IA agentique.",
+   "country": "OTHER",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261117PD237/cybersecurity-quantum-computing-taiwan-moda-software.html",
+   "confidence": "moyenne",
+   "why": "L'IA agentique introduit des vecteurs d'attaque automatisés qui nécessitent une adaptation urgente des stratégies de défense numérique.",
+   "title_en": "AI agents emerge as a new cybersecurity threat, ahead of quantum computing risks",
+   "summary_en": "Taiwan's National Science and Technology Council warns of cybersecurity risks posed by agentic AI.",
+   "why_en": "Agentic AI introduces automated attack vectors that require an urgent adaptation of digital defense strategies."
+  },
+  {
+   "id": "aecbfe6a1ccc",
+   "ts": "2026-11-17T08:15:17.000Z",
+   "title": "Emploi de l'intelligence artificielle pour mener des cyberattaques... et les contrer",
+   "orig": "توظيف الذكاء الاصطناعي لتنفيذ اختراقات إلكترونية... وصدّها",
+   "summary": "L'intelligence artificielle est désormais utilisée à la fois pour orchestrer des cyberattaques et pour renforcer les systèmes de défense.",
+   "country": "GULF",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "الشرق الأوسط",
+   "url": "https://news.google.com/rss/articles/CBMimgRBVV95cUxOM1pfaDREYUFHNW05dlFuRjZ0MjNQcVdaeFRVdy1na0hWQ2tXaHpSNFZvZWRyRmtJb2lvaUZHc3VpRG5aWEVXYnNZalVLekdmVzY4YWRvM0s4cGZLeXN3QUxIUnEyRk1TNk1sd3hHNVRKbXBKSHM4WVg0VEdWTEkwTExubHg4U3EyY3lzYkpoaW5vbXItWlZHSTczZVlkcFBmVE5DS0pjdHQzaWVPY0hBajIzaVBWYUo1cmFFWmZBd2tjc0NqNk13NVZWQzZNOXRMQnhNZml5cFdyejR3bDNIQlRDeVQ2SWl6WG83WWlxVXlJejZTTS13VW4xck54QXVMOVJEODd5M0J2SWFIbXhzN0pMRVFkcy1NcmpPXzJPSE9MSTRpNzgwWkhwNk9lZ2Vid2tNNkdXUVRLbFlMTXpreExyWXlnYzZCWVQwUng5UmUtWXExMGtiVTdkWUVISjFMMzVWbW5XRjVSOU55WVpyY0h3QUVwVk9kM3B3QWRCRHN0LU52OEJaTnR5NFg5UXBUNzZUdHZRMDdtbmZzbHZYZk5KOFV3azhpeGpFcWJIaDJjZ2lnUjg2dzZKRnU1X1lFSmtXZVlQZ1JidXp0YlJDWVdrWllYY0N6c1l3eHRLMTlXblBHT2NDbjFpT2Z1LXdSVTMzMHJVbDR3MUdxUkN3aFBDTlRGVXlTNEJURjVvMkVteUliRVJGX2xB?oc=5",
+   "confidence": "moyenne",
+   "title_en": "Employing artificial intelligence to carry out cyberattacks... and counter them",
+   "summary_en": "Artificial intelligence is now used both to orchestrate cyberattacks and to strengthen defense systems."
   },
   {
    "id": "272ca81f873c",
@@ -333,6 +473,24 @@
    "title_en": "HBMs beyond Nvidia: Why Samsung has the most to gain from Jensen's exit",
    "summary_en": "Market observers expect HBM demand to shift toward non-Nvidia buyers like Google and AMD, with Samsung emerging as a major beneficiary.",
    "why_en": "A shift away from Nvidia's near-monopoly could alter market shares for high-bandwidth memory suppliers."
+  },
+  {
+   "id": "66579b7f3aa0",
+   "ts": "2026-11-17T06:42:00.000Z",
+   "title": "Google observe des cyberattaques entièrement automatisées avec la technologie IA",
+   "orig": "Google beobachtet vollständig automatisierte Cyberangriffe mit KI-Technik",
+   "summary": "Google rapporte l'observation de cyberattaques utilisant l'IA pour une automatisation complète des processus malveillants.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "heise online",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNc2tzNlNPWm9CVjN5V3pHdkdOWndOTjh3WFNEcy1BUElOcDBScFFDbHZ2cENGRDREM09jbjRZMzlSN0tSZmZyaUdURmdwbWlUVjZuQmVDZ2x0VzFlVXI1ekxhVkFaRzIwbjg1MG1oekUwRXRsSWZNVkNlWGQ0MUxPXy1kYVIyMkNyR3d0VWN0TG83QXZfbzl4YW9vczRLTGNCMV9fSmpPNnp4YjkzdXlldzAwY0Y?oc=5",
+   "confidence": "moyenne",
+   "why": "L'automatisation totale des attaques par IA marque une escalade dans la sophistication des menaces numériques.",
+   "title_en": "Google beobachtet vollständig automatisierte Cyberangriffe mit KI-Technik",
+   "summary_en": "Google reports observing cyberattacks using AI for full automation of malicious processes.",
+   "why_en": "Total attack automation via AI marks an escalation in the sophistication of digital threats."
   },
   {
    "id": "40000ea79629",
@@ -2401,6 +2559,24 @@
    "why_en": "This decision aims to close geopolitical gaps by restricting distant access by Chinese actors to chips and AI infrastructure."
   },
   {
+   "id": "2404565dea18",
+   "ts": "2026-11-16T20:48:59.000Z",
+   "title": "L'introduction en bourse d'Anthropic : comment évaluer l'avenir de l'IA ?",
+   "orig": "Anthropic's IPO: How do you price the future of AI?",
+   "summary": "Anthropic prépare son introduction en bourse, suscitant des spéculations sur la valorisation réelle des entreprises d'IA de pointe.",
+   "country": "US",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Financement",
+   "source": "The Economic Times",
+   "url": "https://economictimes.indiatimes.com/tech/technology/anthropics-ipo-how-do-you-price-the-future-of-ai/articleshow/135907629.cms",
+   "confidence": "moyenne",
+   "why": "Cette IPO est un test majeur pour le marché financier concernant la rentabilité à long terme des laboratoires d'IA.",
+   "title_en": "Anthropic's IPO: How do you price the future of AI?",
+   "summary_en": "Anthropic is preparing its initial public offering, sparking speculation on the real valuation of leading AI companies.",
+   "why_en": "This IPO is a major test for the financial market regarding the long-term profitability of AI labs."
+  },
+  {
    "id": "a2a03b401b6e",
    "ts": "2026-11-16T20:47:53.000Z",
    "title": "Un professeur de Caltech ne note plus les devoirs car tout le monde utilise l'IA",
@@ -3267,6 +3443,22 @@
    "summary_en": "The study explores the causes of representation collapse in joint-embedding predictive architectures and proposes normalization solutions."
   },
   {
+   "id": "a0e8fa3b4e1c",
+   "ts": "2026-11-16T18:57:06.000Z",
+   "title": "Extraction de modèles compacts assistée par substitut pour CMOS SKY130 à 77 K",
+   "orig": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+   "summary": "Des chercheurs utilisent des modèles de substitution par IA pour simuler le comportement des transistors à très basse température.",
+   "country": "OTHER",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21594v1",
+   "confidence": "haute",
+   "title_en": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+   "summary_en": "Researchers are using AI surrogate models to simulate transistor behavior at very low temperatures."
+  },
+  {
    "id": "e2100544e313",
    "ts": "2026-11-16T18:54:49.000Z",
    "title": "« L’IA peut réaliser la quasi-totalité des tâches » : quand l’intelligence artificielle met un sérieux coup de frein sur l’emploi des jeunes",
@@ -3281,6 +3473,72 @@
    "confidence": "moyenne",
    "title_en": "\"AI can perform almost all tasks\": When artificial intelligence puts a serious brake on youth employment",
    "summary_en": "Artificial intelligence can perform almost all tasks, which curbs youth employment."
+  },
+  {
+   "id": "03c4dd5388e3",
+   "ts": "2026-11-16T18:54:40.000Z",
+   "title": "Au-delà des intitulés de poste : interpréter les offres d'emploi en début de carrière avec des auto-encodeurs clairsemés",
+   "orig": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+   "summary": "Une étude analyse l'évolution des rôles techniques sur le marché du travail américain en utilisant des méthodes d'apprentissage profond.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21586v1",
+   "confidence": "haute",
+   "title_en": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+   "summary_en": "A study analyzes the evolution of technical roles in the US job market using deep learning methods."
+  },
+  {
+   "id": "b05d343c10cc",
+   "ts": "2026-11-16T18:54:07.000Z",
+   "title": "CertiSum : Entraînement MXFP4 identique au niveau binaire sur toutes les plateformes et configurations",
+   "orig": "CertiSum: Bitwise-Identical MXFP4 Training Across Platforms and Parallelism Layouts",
+   "summary": "CertiSum propose une méthode pour garantir la reproductibilité binaire de l'entraînement IA sur différents matériels et configurations.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21584v1",
+   "confidence": "haute",
+   "why": "La reproductibilité est cruciale pour l'audit et le débogage des modèles d'IA à grande échelle sur des infrastructures hétérogènes.",
+   "title_en": "CertiSum: Bitwise-Identical MXFP4 Training Across Platforms and Parallelism Layouts",
+   "summary_en": "CertiSum proposes a method to ensure bitwise reproducibility of AI training across different hardware and configurations.",
+   "why_en": "Reproducibility is crucial for auditing and debugging large-scale AI models on heterogeneous infrastructures."
+  },
+  {
+   "id": "4e6ff6f0f03f",
+   "ts": "2026-11-16T18:49:56.000Z",
+   "title": "ScenarioForge : Génération basée sur les ressources et validation d'exécution d'exercices cyber",
+   "orig": "ScenarioForge: Resource-Grounded Generation and Execution Validation of Cyber Exercises",
+   "summary": "ScenarioForge utilise des modèles de langage pour automatiser la création et le déploiement d'exercices de cybersécurité complexes.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21579v1",
+   "confidence": "haute",
+   "title_en": "ScenarioForge: Resource-Grounded Generation and Execution Validation of Cyber Exercises",
+   "summary_en": "ScenarioForge uses language models to automate the creation and deployment of complex cybersecurity exercises."
+  },
+  {
+   "id": "24817791f262",
+   "ts": "2026-11-16T18:49:37.000Z",
+   "title": "Quand les noms d'outils ne sont pas des identités : mesurer la mauvaise liaison des fournisseurs dans les agents IA basés sur MCP",
+   "orig": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents",
+   "summary": "Une étude met en évidence des failles de sécurité dans l'identification des fournisseurs d'outils pour les agents IA utilisant le protocole MCP.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21577v1",
+   "confidence": "haute",
+   "title_en": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents",
+   "summary_en": "A study highlights security flaws in tool provider identification for AI agents using the MCP protocol."
   },
   {
    "id": "988998fded65",
@@ -3347,6 +3605,22 @@
    "summary_en": "Nvidia's board of directors is focusing on an investigation concerning Jensen Huang and is not considering his return to the position of CEO."
   },
   {
+   "id": "bab8e88249c0",
+   "ts": "2026-11-16T18:43:35.000Z",
+   "title": "DynSurvX : Explications résolues dans le temps pour les prédictions de survie dynamiques",
+   "orig": "DynSurvX: Time-Resolved Explanations for Dynamic Survival Predictions",
+   "summary": "DynSurvX est un cadre d'explicabilité pour les modèles de survie cliniques utilisant des données longitudinales.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21571v1",
+   "confidence": "haute",
+   "title_en": "DynSurvX: Time-Resolved Explanations for Dynamic Survival Predictions",
+   "summary_en": "DynSurvX is an explainability framework for clinical survival models using longitudinal data."
+  },
+  {
    "id": "cb041b6bc606",
    "ts": "2026-11-16T18:42:49.000Z",
    "title": "La Californie poursuit OpenAI en justice, alléguant qu'elle a mis le public en danger en développant l'IA sans garanties",
@@ -3379,6 +3653,22 @@
    "title_en": "A struggling AI trade is dragging stocks lower ahead of Anthropic's mega-IPO and Nvidia earnings",
    "summary_en": "AI investments are struggling to convince, weighing on stocks ahead of Nvidia and Anthropic's publications.",
    "why_en": "The slowdown in the sector weighs on financial markets' confidence towards new initial public offerings."
+  },
+  {
+   "id": "94cc63575766",
+   "ts": "2026-11-16T18:41:01.000Z",
+   "title": "Quand les modèles de fondation en histologie ont-ils besoin d'une augmentation géométrique au moment du test ?",
+   "orig": "When Do Histology Foundation Models Need Geometric Test-Time Augmentation?",
+   "summary": "L'étude examine l'utilité de l'augmentation de données géométriques pour les modèles d'IA en pathologie numérique.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "arXiv",
+   "url": "https://arxiv.org/abs/2611.21565v1",
+   "confidence": "haute",
+   "title_en": "When Do Histology Foundation Models Need Geometric Test-Time Augmentation?",
+   "summary_en": "The study examines the usefulness of geometric data augmentation for AI models in digital pathology."
   },
   {
    "id": "e467ddd1ee72",
@@ -11637,6 +11927,24 @@
    "confidence": "moyenne",
    "title_en": "AllocFlow: End-to-End Portfolio Trading Action Generation from Raw Market Data",
    "summary_en": "AllocFlow introduces an end-to-end approach for converting market observations into coordinated multi-asset allocations."
+  },
+  {
+   "id": "b88709aa5efa",
+   "ts": "2026-11-15T00:00:00.000Z",
+   "title": "SWE-CoWork : Évaluer les agents de codage en tant qu'employés numériques dans les organisations",
+   "orig": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
+   "summary": "SWE-CoWork est un nouveau benchmark évaluant la capacité des agents IA à collaborer au sein d'équipes de développement logiciel.",
+   "country": "US",
+   "category": "recherche",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "Hugging Face Papers",
+   "url": "https://huggingface.co/papers/2611.20218",
+   "confidence": "moyenne",
+   "why": "Ce benchmark marque une étape vers l'évaluation des agents IA dans des environnements de travail collaboratifs réels.",
+   "title_en": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
+   "summary_en": "SWE-CoWork is a new benchmark evaluating the ability of AI agents to collaborate within software development teams.",
+   "why_en": "This benchmark marks a step toward evaluating AI agents in real collaborative work environments."
   },
   {
    "id": "f9feb5ec0c0b",
@@ -19932,7 +20240,9 @@
    "layer": "Financement",
    "source": "ServeTheHome",
    "url": "https://www.servethehome.com/nvidia-ceo-and-co-founder-jensen-huang-resigns-effective-immediately/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "NVIDIA CEO and Co-Founder Jensen Huang Resigns, Effective Immediately",
+   "summary_en": "Jensen Huang is stepping down as CEO of Nvidia, marking a major turning point for the AI chip industry."
   },
   {
    "id": "533e79107507",
@@ -19946,7 +20256,9 @@
    "layer": "Modèles",
    "source": "Arab News",
    "url": "https://www.arabnews.com/saudi-arabia/humain-ceo-unveils-december-ai-stack-rollout-humain-launch-plans-for-2027-3011422",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "HUMAIN CEO unveils December AI stack rollout, HUMAIN+ launch plans for 2027",
+   "summary_en": "HUMAIN plans to make its AI stack available in December, ahead of launching a training platform in 2027."
   },
   {
    "id": "660711644cdc",
@@ -19960,7 +20272,9 @@
    "layer": "Régulation",
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Cyberattack on Fireworks AI allowed hackers to access Notion customers’ chat transcripts",
+   "summary_en": "Fireworks AI suffered a data breach exposing chat transcripts of Notion users."
   },
   {
    "id": "4cbf829b0dce",
@@ -19974,7 +20288,9 @@
    "layer": "Applications",
    "source": "The Guardian",
    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQSUE1UE5vTU4zUERuR24tVGJhanBER3pxWHN2Wm9wb3VlRWVoZEdNaHFrVWZYUU5ZdHM3RzBYT2dtc2cxaS00dUpvX3NoRkdSYTlhcUJvb05MazVlSEFVV2lJNmpEVFFJakUzNGlYMDJNTUM2c2ZsUmVSUy1RR3dZcHVjeEViWmctakhr?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "US workers are fighting to protect their jobs from AI – and winning",
+   "summary_en": "Employees in the United States are scoring successes in protecting their jobs against AI automation."
   },
   {
    "id": "82595bf1957e",
@@ -19988,7 +20304,9 @@
    "layer": "Applications",
    "source": "日経ビジネス電子版",
    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5RNDIyYUdxV0Z1Q2lVZjVFSWhWZWxiMmlKZjlBeENlTFlzWFFaZ09pamJuNmlFLTlKOGdycGM1VWJtZ09DRm8zSFNBVjVHY3FTV3dLTFFlU1pxWG9EUXM2MmlR?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "China's EV offensive and expanding special AI demand: Who will be the manufacturing industry winner?",
+   "summary_en": "Analysis of the impact of AI demand and Chinese electric vehicle competition on the manufacturing sector."
   },
   {
    "id": "05cd5007b71e",
@@ -20002,7 +20320,9 @@
    "layer": "Financement",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5xdW1NUzNja094TE16Q3N3YjZaNHY2Y2xYU0tmYjhVSnFNeFVEVEhxY2t4YkdOcHBiVDd1LTdKN3BXN0NocmlmYV9kY1Jadkp0a0Fqd09mYy00dnBvQzM5YklCS1U5VGZjRlEwLUZwMC05R0d0eDBXMDNkbUNOX3M?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "AI stocks drop following Nvidia CEO resignation",
+   "summary_en": "The stock market reacts negatively to the sudden resignation of Jensen Huang, CEO of Nvidia."
   },
   {
    "id": "44069f7db871",
@@ -20016,7 +20336,9 @@
    "layer": "Puces",
    "source": "The Business Times",
    "url": "https://www.businesstimes.com.sg/international/wall-street-opens-lower-after-nvidia-ceo-jensen-huang-steps-down",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Wall Street opens lower after Nvidia CEO Jensen Huang steps down",
+   "summary_en": "Major Wall Street stock indices, including the Dow Jones and Nasdaq, are falling following the announcement of Nvidia's CEO resignation."
   },
   {
    "id": "f98f612fda85",
@@ -20030,7 +20352,9 @@
    "layer": "Applications",
    "source": "Ars Technica",
    "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395",
+   "summary_en": "Google is launching Gemini-equipped smart glasses in collaboration with Samsung, Gentle Monster, and Warby Parker."
   },
   {
    "id": "92890eb47ca1",
@@ -20044,7 +20368,9 @@
    "layer": "Applications",
    "source": "CNA",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVVFINlljMTVkOHU2aFBQVWx1ckdVSzdYbWlpblhBSjJ0TkZkRXc1ZWM2SmlmZGZNMWNoYllzT0NqeThyV3ctNVZlLXJaUFR0eUFkMGRtM0VINzZIaGlObkJtT3gxUjcwQ29FZXRPLS1zdnZ0dXdYNThVMFNpb2lyUFU3dkFSQ0ZtaEVlQWNCZHMwdGtJWGR5Q01EcHMyYlE5VG04Ng?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Costco eyes broader India tech footprint as AI bets grow",
+   "summary_en": "Costco plans to expand its technology investments in India to support its AI ambitions."
   },
   {
    "id": "022a12870d8b",
@@ -20058,7 +20384,9 @@
    "layer": "Régulation",
    "source": "The Straits Times",
    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPRWhpTTdlSzNfbmg5RFkzX1lDeDJuS2dyRk4zZm9haDJTWGNNVkNoRjlzYVAwLTJJUERVVEoyRGowXzU4Z1ducmo5aW5zeWR6S2YwczJ6Z2YwVDVEYkYwSjJMZlBLTG0xR1BBQ0V2R3dKYzBWYkRkemhxM3A4bUxPMGxENDViQmNNVDJNZ0J4V3F5cTZHd19qQ2owSkt6VDNValczeW9zSDRWZUdoakZScVd3?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Help wanted: AI firms court ex-spies as Nvidia drama spotlights security risks",
+   "summary_en": "The AI sector is strengthening its security teams by recruiting former intelligence agents following scandals at Nvidia."
   },
   {
    "id": "6e3c12c8fdd0",
@@ -20072,7 +20400,9 @@
    "layer": "Modèles",
    "source": "heise online",
    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNOTM1UmNJT2xkQlhIQVJodl93c0NWUnFfREhVVnJXdzlGMEN4T3ZhNHFhYnFVZHlZQWZKRE9BT1QycFFOdVRfY0d5NnFVbDFYR1Y2T2JtUnlHS3F3R0ZoRVAxLVJJYnBEc1pkTElqcHV0M1pGb0lFd2x1U2hlSWtfZ1N1alM5dHZIbUNhYmpyaVhhbmJ1T3hoSTJNeTYySmpQYVNyNmY1Um9Relk?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "„Das ist bedauerlich“: Amazon lässt Tausende KI-Agenten programmieren",
+   "summary_en": "Amazon is intensifying the large-scale development of AI agents within its operations."
   },
   {
    "id": "d68b98e24195",
@@ -20086,7 +20416,9 @@
    "layer": "Applications",
    "source": "الشرق الأوسط",
    "url": "https://news.google.com/rss/articles/CBMi_wRBVV95cUxNb0NHejlub0ZWMzBqZzk0ZjhUNXJMR1YtUFNxV1hJbGlGYzBaZ3ZwcUJzeEFiQnRwLUhYdzBseC1qeWZTODAxaGNGSU54MW9xVWEwVUNRN2kzOVNyQlAtaHFwbFkwS010RmQ4ZXI5RTBxajV6ak5mMElQdzdEd3dSaml0Wk8xVDNadzB0YmFQVnNsZFhEZk41b0tpS1JUZ2xUV1FMMEZiU05HRzBkUjRfaW1JOFhqbjA2bGR1SUk1QnY1Nk5rWnVvTUx6QWc1TTRJQk95SS1tZUJlR2Etd0FFbXFXb0Y2RnA0dDh6ckxrYWo1VG44N1JldUFuZXh1LU5UVlgtbExDOE9xLXllVUszVWhUcGk1ckdwOE5CQmJVUUZuXzNjNXAxc3FQZGFIZW01cWdxZWxKekN5YTRNNnE0Mk5MZURuZXVsbU9nYUo1MnY5ZW9Mc1RYT3FUOFBCX25vSFZDVXNEWVlKcW5qUkFfNVM5b1R6QXNHWGJ1dDlUS0lBaVpPNUpFLW9CMEJmc2RZRWhIVkhoTUpsc2pyZVhVYkVFN1JlZ0VRVlNRUmVWZC1la0tJMFNRX05mdUx1RWwyZndrVG5udFJBRWRMSnBXR0ltWW1KdGRHcFpVeTF0TjY3LUk2MGd4alNIX29NNDEtQVU3ZnlLcXNzV2V3ZFFubFJxYldjNHRoenU0TmxHVXo0N05OTzROcU00Sk1ublNOS1VieWxoc1Itb2d4U05GTnE0TlpnTzRVNUh0NV9MU0RrLUdwcU9ZYXJmTkp6dHBOc296bVU3OTk5aXB4NElPWDc1cDJKclA0NzBtV1BlVlozTG14SGh6aHpjMFJwTUE?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "UK economy holds up with AI support... and its growth does not settle the interest rate decision",
+   "summary_en": "Artificial intelligence supports economic growth in the United Kingdom despite uncertainties over interest rates."
   },
   {
    "id": "5eaa0e9d9e94",
@@ -20100,7 +20432,9 @@
    "layer": "Datacenters",
    "source": "Khaleej Times",
    "url": "https://www.khaleejtimes.com/business/abu-dhabi-data-centre-leaders-unite-to-meet-soaring-ai-demand",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Abu Dhabi data centre leaders unite to meet soaring AI demand",
+   "summary_en": "Abu Dhabi players are preparing major investments in energy and infrastructure to anticipate future needs reaching up to 5 GW for AI."
   },
   {
    "id": "6f946b2e553d",
@@ -20114,7 +20448,9 @@
    "layer": "Financement",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112VL217/nvidia-ceo-jensen-huang-president-roadmap.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Jensen Huang resigns as Nvidia CEO; CFO Colette Kress named interim chief",
+   "summary_en": "Nvidia co-founder Jensen Huang has stepped down as CEO and board member."
   },
   {
    "id": "28fd93db5ebe",
@@ -20128,7 +20464,9 @@
    "layer": "Applications",
    "source": "Channel Newsasia",
    "url": "https://www.channelnewsasia.com/business/warby-parker-bets-google-ai-glasses-growth-privacy-fears-still-loom-6546621",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Warby Parker bets on Google AI glasses for growth, but privacy fears still loom",
+   "summary_en": "Warby Parker is partnering with Google and Samsung to enter the market for AI-powered connected glasses."
   },
   {
    "id": "3a038bc09aff",
@@ -20142,7 +20480,9 @@
    "layer": "Financement",
    "source": "Wired IA",
    "url": "https://www.wired.com/story/who-is-colette-kress-the-woman-who-could-succeed-jensen-huang/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Meet Colette Kress, Nvidia’s New Interim CEO",
+   "summary_en": "Colette Kress, former CFO, is taking the helm at Nvidia following Jensen Huang's resignation."
   },
   {
    "id": "649a569c9939",
@@ -20156,7 +20496,9 @@
    "layer": "Financement",
    "source": "Arab News",
    "url": "https://www.arabnews.com/world/nvidia-ceo-jensen-huang-to-step-down-in-big-blow-to-ai-boom-3011450",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia CEO Jensen Huang to step down in big blow to AI boom",
+   "summary_en": "Jensen Huang's resignation creates a leadership vacuum at Nvidia, a central player in the AI industry."
   },
   {
    "id": "d4437259b1db",
@@ -20170,7 +20512,9 @@
    "layer": "Financement",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/tech/big-tech/article/3374255/jensen-huang-resigns-nvidia-ceo-amid-affair-scandal",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Jensen Huang resigns as Nvidia CEO amid affairs scandal",
+   "summary_en": "Jensen Huang is leaving Nvidia with immediate effect following reports of extramarital affairs."
   },
   {
    "id": "9696674be12b",
@@ -20184,7 +20528,9 @@
    "layer": "Financement",
    "source": "Le Monde.fr",
    "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxONVRMTUR1NEswVFUzUTVOdU5XaFJla0xoVG1KTmxLRzc1M09ram14NDlPQklsZ0FIb3JYbF9EVnlqN3dXeTQ1c1lNdEZXTnZRdnZyYXhiWmNybkduVk9LaS1TTGdhT0Y4aklpZms5eVJfcmVQS3VWbDRIcTE0SjA4ZzZnRWNVQ3A3ZFRLUHcwczc5OU1iRmNLODgzUlZ4anFtU2cxM0JISmlvNlZyQVN3T0I5YTZNQzNTUENIM3ktaVlHeS1HanJFdk1URQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "The fall of Jensen Huang, iconic Nvidia CEO and godfather of AI",
+   "summary_en": "Analysis of the resignation of Jensen Huang, a central figure in the AI chip industry."
   },
   {
    "id": "90eda980a32c",
@@ -20198,7 +20544,9 @@
    "layer": "Financement",
    "source": "NBC News",
    "url": "https://www.nbcnews.com/tech/tech-news/nvidia-ceo-jensen-huang-resigns-reports-extramarital-relationships-rcna608402",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia CEO Jensen Huang resigns after reports of extramarital relationships",
+   "summary_en": "Jensen Huang is stepping down from Nvidia following revelations of extramarital relationships."
   },
   {
    "id": "3ccd60084d1a",
@@ -20212,7 +20560,9 @@
    "layer": "Financement",
    "source": "The National",
    "url": "https://www.thenationalnews.com/opinion/comment/2026/11/12/ai-artificial-intelligence-nasdaq-market-shares/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Bubble or not, here are five predictions for what AI will really deliver",
+   "summary_en": "Analysis of return prospects for massive investments in datacenters and AI."
   },
   {
    "id": "373dd286dbb0",
@@ -20226,7 +20576,9 @@
    "layer": "Financement",
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/tech-industry/nvidia-confirms-jensen-huang-has-resigned-as-ceo-colette-kress-executive-vice-president-and-chief-financial-officer-appointed-interim-ceo",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia CEO Jensen Huang resigns in the wake of multiple affairs, Chinese spy allegations",
+   "summary_en": "Jensen Huang is leaving Nvidia following scandals involving extramarital affairs and suspicions of espionage."
   },
   {
    "id": "879c46f62678",
@@ -20240,7 +20592,9 @@
    "layer": "Applications",
    "source": "العربية",
    "url": "https://news.google.com/rss/articles/CBMi_gRBVV95cUxNMDZ6TkJ5bm9xbE1HeVN0UG90NnFxU3JlTFYyY1FoR0wzNERyc3puNy1oYUJvYjdGWk9YLVJwZk5aTmZfdGgwcDQ4Q25Wd25oNHVPMXEzR0hLMHFIenRlS3BRY05zeWNvaXFwemxDNVV4bnhFUGJNOTZ4UlkxMGVJaWZseU0teDRUZWNvRUpGcVZha2pRNEQ3enFSUnRWdUFNdXdMWnd0eWU3bk1nUnUzdzVVVnNieC1hV1JtQ0tRSWdYSWctaTE5ZEpwMGdQTVh5S2RwUlVIOE9nM0Y5TzlZQnN6TVRUeU9hODg2WExTT05PRC05OGZBak5KZ1ktQjB5bzdtaVc0cGFQMHJtNFlFUDhVNGc1dHNmNHdVSFlvMHRDMFd2a1ZvWXQwYk9DT211cTl2bzFGNHhMRk1aSXJWQ19fWm0xa0UwdWttZTl5NDJtVEZWenNOVHZESXJwSWg4ZUxKcGw2UHY4S1UtQm5PbTk4dHJIQzcwdVhsUVEza0o2M2Mzclg5UjBqX0NxOUNrMGFUYWF1ZGdhdUFOUFNyakx4UDJOYUN6V0pld0xZRWE1UXowbnVMeHU4a2RVanJqS3F1Q1c5S0ozVmZKY25JQmdrdktRWUU2ZkZpc0l3aGwxek9Tb3d2dC1LUVZodGVlYTJGVmhhall3MUwyZjI4ajJ0ZTBqNlItZDBPSTBfeXROaHhxM1ZOTkNZUmZIRzByMy1xRk1LdjFSY3lzOXJXOVA5Y2JQRkpfd2Q0RnB2Z2NHTWJWeVQybDVTWmtaaHlpdFh2WGdQYUFQa0kyNEZUNVFCMlBzcC1tVlp0TEJiQlJDemRJY2dfVV81YVY4UdIB_gRBVV95cUxNMDZ6TkJ5bm9xbE1HeVN0UG90NnFxU3JlTFYyY1FoR0wzNERyc3puNy1oYUJvYjdGWk9YLVJwZk5aTmZfdGgwcDQ4Q25Wd25oNHVPMXEzR0hLMHFIenRlS3BRY05zeWNvaXFwemxDNVV4bnhFUGJNOTZ4UlkxMGVJaWZseU0teDRUZWNvRUpGcVZha2pRNEQ3enFSUnRWdUFNdXdMWnd0eWU3bk1nUnUzdzVVVnNieC1hV1JtQ0tRSWdYSWctaTE5ZEpwMGdQTVh5S2RwUlVIOE9nM0Y5TzlZQnN6TVRUeU9hODg2WExTT05PRC05OGZBak5KZ1ktQjB5bzdtaVc0cGFQMHJtNFlFUDhVNGc1dHNmNHdVSFlvMHRDMFd2a1ZvWXQwYk9DT211cTl2bzFGNHhMRk1aSXJWQ19fWm0xa0UwdWttZTl5NDJtVEZWenNOVHZESXJwSWg4ZUxKcGw2UHY4S1UtQm5PbTk4dHJIQzcwdVhsUVEza0o2M2Mzclg5UjBqX0NxOUNrMGFUYWF1ZGdhdUFOUFNyakx4UDJOYUN6V0pld0xZRWE1UXowbnVMeHU4a2RVanJqS3F1Q1c5S0ozVmZKY25JQmdrdktRWUU2ZkZpc0l3aGwxek9Tb3d2dC1LUVZodGVlYTJGVmhhall3MUwyZjI4ajJ0ZTBqNlItZDBPSTBfeXROaHhxM1ZOTkNZUmZIRzByMy1xRk1LdjFSY3lzOXJXOVA5Y2JQRkpfd2Q0RnB2Z2NHTWJWeVQybDVTWmtaaHlpdFh2WGdQYUFQa0kyNEZUNVFCMlBzcC1tVlp0TEJiQlJDemRJY2dfVV81YVY4UQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Companies without employees... AI agents are reshaping the startup world",
+   "summary_en": "AI agents are transforming the operational structure of startups by enabling models without human employees."
   },
   {
    "id": "1a1f36cb24e7",
@@ -20254,7 +20608,9 @@
    "layer": "Financement",
    "source": "BBC",
    "url": "https://www.bbc.co.uk/news/live/c6zjry11v8w1t",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia CEO Jensen Huang resigns after reports of second affair deepened scandal",
+   "summary_en": "Jensen Huang's resignation follows the revelation of multiple extramarital relationships."
   },
   {
    "id": "e50d61bc36df",
@@ -20268,7 +20624,9 @@
    "layer": "Financement",
    "source": "Le Figaro",
    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNMmtRcWR0QVA0WUlyZFhqN3BoU2UxaHpJelVwUGlwbEpqcTBUUldBYzZ1WWdKQzNkZ0pWUExXNXllS1JYb1NKYXFLSFFjMWx4aEVhYnJDQUxEX3ZEY3VZUEM1SlUxWmc1ejFtTFN4LUJobEZVVU10VWpmMm1WaklQbzRvdXZ6Wm41NXByMzhvaXJkMkdQQUxOSlZUZG5aUEU0dnNYaTFVcWQyb3NyWm9teERwWVlleVdmY08tdnBRWFdFNFVVNTZveGgwLW5sX1A4dDRuV2EtbFk4dkRUTHJzenNn?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Affaire Nvidia : Jensen Huang, le patron du géant américain des puces, a démissionné",
+   "summary_en": "Jensen Huang has stepped down as CEO of Nvidia following a personal scandal."
   },
   {
    "id": "3725c536bfca",
@@ -20282,7 +20640,9 @@
    "layer": "Financement",
    "source": "The Verge IA",
    "url": "https://www.theverge.com/ai-artificial-intelligence/1031689/jensen-huang-nvidia-ceo-resigns",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia CEO Jensen Huang resigns amid spy, affair scandals",
+   "summary_en": "Jensen Huang is leaving Nvidia after reports of extramarital affairs, including one with an employee and one with a Chinese spy."
   },
   {
    "id": "b8785a000ca8",
@@ -20296,7 +20656,9 @@
    "layer": "Financement",
    "source": "NVIDIA",
    "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-   "confidence": "haute"
+   "confidence": "haute",
+   "title_en": "NVIDIA Announces CEO Transition",
+   "summary_en": "Nvidia has formalized the departure of its CEO Jensen Huang and the beginning of a transition period."
   },
   {
    "id": "a0c31fe0966c",
@@ -20310,7 +20672,9 @@
    "layer": "Régulation",
    "source": "FAZ",
    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNS2E4U2lSNmNobzAycDlGUTg0UVVjeGgyQlJMLXhQeHlfUXczNjRKM3RVSE5lQ1hvY2JhQ1JXRk15UjM1cXo1anFwZXFuVFJORVBxVWtXQ2FOWWJCZE1hNkVXX0hpcFF6aFpTQ21ENDRzODF5bmRwcGdUOXRzNnFWNHMyX1Rud2p0eU1pQnlDcmdzdGtzOXc?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Das KI-Risiko von Siemens",
+   "summary_en": "Analysis of the risks associated with the integration of artificial intelligence into Siemens' activities."
   },
   {
    "id": "ec9356985b11",
@@ -20324,7 +20688,9 @@
    "layer": "Applications",
    "source": "USA Today",
    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQYTF3Z21CLWpjZUxQWkFjZmxpc2lzc1NrSjg5LTBuQk1nQ2t1bmlwXzJMQ2hHQXZGTDBsclFIVW9KTFpMRjgtaFd1amcxblA3MUtMeGM0TTNJNHU5ejF5a1BWQ3l1NVFZMlUzdmhlUHZOaHRLY1licjBDbjlrSHA0d2RqRnEyREtIcmQtOTA4N1hOZjBVRDVFVUF1WXlOWUZHNnVoMEgzbnZFUWxXTi1mcHQ1LTBLS1BXcUdUVWV0Ylg1S1BBakF4eFNSOWdpOTg0b1F4R2pxQjN5RE5oVUpWLURLQUhDMDFsVktMU1ljOUhYM3dGTkVzVGtWdw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Concentrate AI Launches HIPAA-Compliant AI Gateway With One BAA to Simplify Model Access and Reduce Inference Costs",
+   "summary_en": "Concentrate AI offers a health-compliant solution to facilitate access to AI models and reduce costs."
   },
   {
    "id": "24d7fb83f2c2",
@@ -20338,7 +20704,9 @@
    "layer": "Financement",
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nine Korean startups vie for a spot in Disrupt 2027’s Startup Battlefield 200 competition",
+   "summary_en": "Korean startups specializing in semiconductors and AI are looking to establish themselves in the US market."
   },
   {
    "id": "8c901efaf74a",
@@ -20352,7 +20720,9 @@
    "layer": "Énergie",
    "source": "Utility Dive",
    "url": "https://www.utilitydive.com/news/data-centers-could-lower-your-electricity-bill-but-will-utilities-let-them/873144/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Data centers could lower your electricity bill. Will utilities let them?",
+   "summary_en": "Increased electricity sales to datacenters are expected to lower rates, but some utilities are seeking to maintain high rates by adjusting cost forecasts."
   },
   {
    "id": "7708c8d74fc2",
@@ -20366,7 +20736,9 @@
    "layer": "Applications",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/spotlight/supply-chain/taiwan-s-foxconn-has-strong-confidence-in-2027-due-to-ai-demand",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Taiwan's Foxconn has 'strong confidence' in 2027 due to AI demand",
+   "summary_en": "Foxconn expresses strong confidence in its prospects for 2027, driven by sustained demand for artificial intelligence technologies."
   },
   {
    "id": "514453096d3e",
@@ -20380,7 +20752,9 @@
    "layer": "Régulation",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/12/lutnick-cxmt-china-cotton.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Lutnick should ban Chinese memory maker CXMT from U.S., Sen. Cotton says",
+   "summary_en": "Senator Tom Cotton urges the Commerce Secretary to place Chinese memory maker CXMT on the restricted entity list due to its expansion into DRAM and HBM."
   },
   {
    "id": "fa8492dc0f8a",
@@ -20394,7 +20768,9 @@
    "layer": "Recherche",
    "source": "العربية",
    "url": "https://news.google.com/rss/articles/CBMisgRBVV95cUxQN00xUEFtcHZ4TzVGYXhzZmc0dXBEbHZvamdoLTF2TzhWNU5XekFmRHZNS0R1cGZwRnFPb1BxV0h1Rm8tVVVVNlFLeFBWLVIyenFfaW53X3FpYzliTFBkVFdwRHg3OUlseVQwTE9saGN2N1Rzb04wYU8yQTFDd1hsV1pibHdIenotWi1STWhka1NUbWQ4YUdRTU5wZTQ2MmVqY3VLTUNINU82QTBwYVFRYnZWSnQyVUQ1MU4yR0YyZGd2ZEtUMDBGYjB2alVOa2llNHJneUtJYjZrQjhLNkZBMHdQTTU2SEYwWmdGaThRYXZFUG5iSG1SN1JfU2hsclNRamVYYnBXb3FsbzU0dGp0X2VJLW81V3ZfVFF2MlRKWkc5UDZfNERzZTVwam5RenVybWVHVDFFV09KbjMyWUtEWDNqa18wRXAycGw2NDYtZXowVHhKMTdjaUI2akVvTzZEaEdVRi1vTEZOU3NwZGNuYWxCcTRySjg3TmNlM0N0SnduRVBvMld2NkJteFZKeU9POFFZNk1HVnNycGlvQ0NVVm5SVlNoZXQtaWNvRXZYSU16dlNsbV9Ra2pnTGhtZU9LNmh2bFBCYUI2aEcwRl82ZWZ4RndnZXE1WDQ4X1hoVHdVM1VzLWJITTFLNFcxb3JtcUExZTR4QWE4QUt4QnEtQ3R1MjNTcEswZXFxQVo5ejVyVk00UTZKeG8yRlhMNFZBMUp2eVlLR3Y1YXVDN0RLdTd30gGyBEFVX3lxTFA3TTFQQW1wdnhPNUZheHNmZzR1cERsdm9qZ2gtMXZPOFY1Tld6QWZEdk1LRHVwZnBGcU9vUHFXSHVGby1VVVU2UUt4UFYtUjJ6cV9pbndfcWljOWJMUGRUV3BEeDc5SWx5VDBMT2xoY3Y3VHNvTjBhTzJBMUN3WGxXWmJsd0h6ei1aLVJNaGRrU1RtZDhhR1FNTnBlNDYyZWpjdUtNQ0g1TzZBMHBhUVFidlZKdDJVRDUxTjJHRjJkZ3ZkS1QwMEZiMHZqVU5raWU0cmd5S0liNmtCOEs2RkEwd1BNNTZIRjBaZ0ZpOFFhdkVQbmJIbVI3Ul9TaGxyU1FqZVhicFdvcWxvNTR0anRfZUktbzVXdl9UUXYyVEpaRzlQNl80RHNlNXBqblF6dXJtZUdUMUVXT0puMzJZS0RYM2prXzBFcDJwbDY0Ni1lejBUeEoxN2NpQjZqRW9PNkRoR1VGLW9MRk5Tc3BkY25hbEJxNHJKODdOY2UzQ3RKd25FUG8yV3Y2Qm14Vkp5T084UVk2TUdWc3JwaW9DQ1VWblJWU2hldC1pY29FdlhJTXp2U2xtX1FramdMaG1lT0s2aHZsUEJhQjZoRzBGXzZlZnhGd2dlcTVYNDhfWGhUd1UzVXMtYkhNMUs0VzFvcm1xQTFlNHhBYThBS3hCcS1DdHUyM1NwSzBlcXFBWjl6NXJWTTRRNkp4bzJGWEw0VkExSnZ5WUtHdjVhdUM3REt1N3c?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "New scientific breakthrough... AI is getting closer to restoring sight to the blind",
+   "summary_en": "AI advancements are enabling significant progress in vision restoration technologies."
   },
   {
    "id": "e53c2c9a6f92",
@@ -20408,7 +20784,9 @@
    "layer": "Régulation",
    "source": "Computer Weekly",
    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPY2VpYXNsb05fbWozSW1kWmMxMEhjYTFRQm5sM2ZDVU1Xd1pqU1BfSVRtWE9FaTc2U1k4VjRCOWc3VW9fZ2N6M1VKR2tIS3VVcllWZ0pmQ25HTkRyUXF4YnlPY1dUcktZY2szV2tPVzF3eWRITWloRnhHSFpxWGxOcDVzZFFBM1NsQWlISkcyVTlBV0tzUWxhVW4xVGRudVhuMzg0RE8xN2ZTY2VUQlJtQWtsRWVfbUtONEtaRlRpN2NzUQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Why the use of AI by the UK’s intelligence services needs independent oversight",
+   "summary_en": "The article emphasizes the need for independent supervision for the use of artificial intelligence by intelligence services in the UK."
   },
   {
    "id": "21c79970456c",
@@ -20422,7 +20800,9 @@
    "layer": "Financement",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/12/jensen-huang-nvidia-affair-ceo.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "‘A dark day for Nvidia’: Here’s what analysts are saying as markets brace for news on Huang's fate",
+   "summary_en": "Nvidia's board of directors met following reports concerning a relationship between CEO Jensen Huang and an employee."
   },
   {
    "id": "fa813c13604e",
@@ -20436,7 +20816,9 @@
    "layer": "Modèles",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQSjYwT1lnR1JJMlRscWNzeklSaTFDR2RHZmJndGtmX3BsUlhEZkZJQXMwclhWNnNQekRoYVZOMTRlR1VEQ2FSalFJVWZ1RmhWZkxtaHRmMDJqTndtUXVHRDlOSnhDYjFQX1R2U1h4c2xYZU9USTU1YmVMSG1lNWlxeXNJSVFVQVJzQUsyN2NTWmc2M3FKSFVGUWVNWU0wZWJlazZUWmV2QzcyaWlnUFdZelpReUt0bXBzVVNvbS1KNHZ2SVh6UVdlMndsV2lfNFFWc0FPeWk1OTRRQXktVjhObXI0YkE4RnkwM0p0bk1UU3k4eWPSAfgBQVVfeXFMTURQTC10SzUweXNKUjlDbXNhNWNIZVZRRWROUXNjWTNWQnVvQ2dVUVNRMmN3dmh5QmhhNGxWTEpSN0NsUmJUcXRJV1U1aThxMlFPWVZzbGYxY2s3OWdVd0NJdUIyOTYyWElVeUs0REdsMUFsRWJ3d254VVl3TGJxZEZNMy04cFVialhJNWJsblNzQUhRZjNzT3hMR0VzN0ludkhuc0NWbWdBeV9sYWVjTmh3OU9IRUZrR3ZqV1FyWk9NbXpxWTJWSXpMQVotQ2NFTG9OWHlVUHRKRTFoU01HTkFRRFFoZmlQS0RROVJOeHAyU1F2WWFDTHY?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "OpenAI to process API data, run AI inference locally for Indian companies",
+   "summary_en": "OpenAI plans to process API data and perform artificial intelligence inference locally to meet the needs of businesses in India."
   },
   {
    "id": "1148ddec7f22",
@@ -20450,7 +20832,9 @@
    "layer": "Applications",
    "source": "EE Times",
    "url": "https://www.eetimes.com/can-machines-see-a-sick-plant-before-a-farmer-can/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Can Machines See a Sick Plant Before a Farmer Can?",
+   "summary_en": "Research on soybean diseases demonstrates the potential of hyperspectral imaging and semiconductor advances for agriculture."
   },
   {
    "id": "e47d359436f7",
@@ -20464,7 +20848,9 @@
    "layer": "Datacenters",
    "source": "Arabian Business",
    "url": "https://www.arabianbusiness.com/abnews/damac-group-in-serious-negotiations-to-acquire-data-centre-sites-in-uk-and-australia",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "DAMAC Group in ‘serious negotiations’ to acquire data centre sites in UK and Australia",
+   "summary_en": "DAMAC Group is conducting advanced negotiations to acquire datacenters in the UK and Australia to meet AI-related demand."
   },
   {
    "id": "6bb21e22a902",
@@ -20478,7 +20864,9 @@
    "layer": "Applications",
    "source": "Khaleej Times",
    "url": "https://www.khaleejtimes.com/uae/ai-weather-forecasting-programme-training-officials-15-countries",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "UAE’s AI weather forecasting programme trains officials from 15 countries",
+   "summary_en": "The United Arab Emirates is hosting representatives from 15 countries for AI weather forecasting training aimed at supporting 100 million farmers by 2030."
   },
   {
    "id": "125b1efe267f",
@@ -20492,7 +20880,9 @@
    "layer": "Applications",
    "source": "Arab News",
    "url": "https://www.arabnews.com/opinion/ai-is-changing-cybercrime-how-to-protect-yourself-3011159",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "AI is changing cybercrime: How to protect yourself",
+   "summary_en": "Artificial intelligence is transforming cybercrime by enabling criminals to create more convincing scams and target individuals on a large scale."
   },
   {
    "id": "a384cc9c10ea",
@@ -20506,7 +20896,9 @@
    "layer": "Puces",
    "source": "Quartz",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE44ZlFZRTFuQUh5Q3hKakxhekJfemJ4UVdZRGg5SGh0UWNIYl84MTl3dFhGOFhuX1FyV1dXamZoSS1sZ1cwV24xNGxRSWFieVV0bzRCVmk5SUhELWVKU1dqMFFBSTV3RmRkNG54RVFwYWJOZGZSQjNxR19ZZkNNQQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese AI firms are rushing to lock in overseas Nvidia capacity before possible U.S. crackdown",
+   "summary_en": "Fearing new US restrictions, Chinese companies are looking to lock in access to Nvidia computing capabilities outside China."
   },
   {
    "id": "97b995cc642c",
@@ -20520,7 +20912,9 @@
    "layer": "Financement",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/tech/article/3374235/if-jensen-huang-exits-nvidia-who-could-take-us4tr-chipmakers-reins",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "If Jensen Huang exits Nvidia, who could take the US$4 trillion chipmaker’s reins?",
+   "summary_en": "Nvidia co-founder Jensen Huang faces allegations of misconduct, raising questions about his succession at the head of the chip giant."
   },
   {
    "id": "e2ce348da1b2",
@@ -20534,7 +20928,9 @@
    "layer": "Applications",
    "source": "Zawya",
    "url": "https://www.zawya.com/en/press-release/events-conferences/international-affairs-office-at-the-uae-presidential-court-hosts-officials-from-15-countries-2253738",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "International Affairs Office at the UAE Presidential Court hosts officials from 15 countries",
+   "summary_en": "The United Arab Emirates is hosting an AI weather forecasting training session designed to support farmers globally."
   },
   {
    "id": "d746d2120162",
@@ -20548,7 +20944,9 @@
    "layer": "Financement",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/uk-chip-startup-fractile-valued-at-7bn-following-720m-series-c-funding-round/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "UK chip startup Fractile valued at $7bn following $720m Series C funding round",
+   "summary_en": "British startup Fractile raised $720 million in a Series C funding round, backed by the UK sovereign wealth fund."
   },
   {
    "id": "515b4bdfead8",
@@ -20562,7 +20960,9 @@
    "layer": "Financement",
    "source": "The National",
    "url": "https://www.thenationalnews.com/business/markets/2026/11/12/gulf-business-leaders-rally-behind-nvidias-jensen-huang-as-board-weighs-his-future/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Gulf business leaders rally behind Nvidia's Jensen Huang as board weighs his future",
+   "summary_en": "Gulf business leaders express support for Nvidia CEO Jensen Huang as his future within the company remains uncertain."
   },
   {
    "id": "2aac58e4c1e4",
@@ -20576,7 +20976,9 @@
    "layer": "Énergie",
    "source": "Meta Newsroom",
    "url": "https://about.fb.com/news/2026/11/meta-new-agreements-clean-manufacturing-data-center-supply-chains/",
-   "confidence": "haute"
+   "confidence": "haute",
+   "title_en": "Meta’s New Agreements Bring Clean Manufacturing to Data Center Supply Chains",
+   "summary_en": "Meta is entering into long-term purchase agreements with low-carbon producers to green its data center supply chain."
   },
   {
    "id": "c3d9403b69c2",
@@ -20590,7 +20992,9 @@
    "layer": "Financement",
    "source": "SEC EDGAR (Nvidia)",
    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000082/nvda-20261111.htm",
-   "confidence": "haute"
+   "confidence": "haute",
+   "title_en": "Nvidia files 8-K — 8-K",
+   "summary_en": "Nvidia filed an official document with the SEC regarding executive changes."
   },
   {
    "id": "7227ab5badde",
@@ -20604,7 +21008,9 @@
    "layer": "Financement",
    "source": "SEC EDGAR (Meta)",
    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526458525/d177728d8k.htm",
-   "confidence": "haute"
+   "confidence": "haute",
+   "title_en": "Meta files 8-K — 8-K",
+   "summary_en": "Meta submitted a Form 8-K regulatory document to the SEC to report administrative or financial information."
   },
   {
    "id": "90d79223706e",
@@ -20618,7 +21024,9 @@
    "layer": "Applications",
    "source": "OpenAI",
    "url": "https://openai.com/business/customer-stories/gondola",
-   "confidence": "haute"
+   "confidence": "haute",
+   "title_en": "Gondola doubles revenue as its team builds more with Codex",
+   "summary_en": "The use of the Codex tool increases engineering productivity at Gondola, driving growth."
   },
   {
    "id": "bb746fca86a8",
@@ -20632,7 +21040,9 @@
    "layer": "Financement",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTG83aHNBWWF5MjUwMDJVUGtyaVpId0owdF9qamExUGZxZ00zcnFpTUs5QnI4MmE5ZWhsNUFPaE1keWtadFhyY0ppaGU3Y3daZWJmU014MUdmTnAxMmttRXF3eVBfZERNLW5uQjNKeEdVRFdHTzBEQXNSRktQWWlhWDJITUViWlVVeWYxeThyalktM2tHOE9RMFN1S1ZRZw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "AI shakeout lands convertible investors better terms",
+   "summary_en": "Developments in the AI sector allow convertible bond investors to secure more advantageous terms."
   },
   {
    "id": "0f2347b21b7f",
@@ -20646,7 +21056,9 @@
    "layer": "Applications",
    "source": "الشرق الأوسط",
    "url": "https://news.google.com/rss/articles/CBMipgRBVV95cUxNem53Vm9xRkN1QWFtekIwREY1d3VCWVByY3hFTUxHcUlsblU4TUpFbjdrNVdlTVVVaXUtOEZYM1EtZnliTjJrY2EySUxrT1BCZ19PbzF0WDM5UGhmWnpCczg1S2w2Y1NjeVlpeEhnQWw4bERGVFFhenJjUmdqTlhHT1ZJTnZFXzJKdVZuUDN0am1iR3BMR3Vmdk5VcHFhMnVlTnpMelpQam5JVW5RcVMxTEpVcU9FRVV6M09ySUI2c1dhd2cxNjB2UGZvMnFMWDRBN1ZXaGdSTFo4MmotcnVOVWUxNlJDUHNtRlBkcUJVYUlLME9jc3ZWeHBuaU94cFdELTdIak9FdDN0V05WeW9iMFBncmVjMVN3RTBfaER5WU14X04zemFCZG8ycjJnMmFvX2gxUmNxNm1LTzdHMi1XbUNHZ0FoZURrU1N0akYtQjFUcmlNQnRwY3luTU9mZE1NQ2daZGFLTjRZVXpWYWJkYy1yblVCaUVITnB0TG9JRnpCVVFVbHBfdXo2eXhUU2Nsam9RT2M1QVJScU9pOElidXVCWTJ3SUh1c0wxZXRSU3M1YVoxRE9xbGdwUG83UGFXTEpPZ2F2SXk2ODNFbmdoc01xWTJvLVpKTkJCa3k5blYzNFJzTVpXYnJmV2NoRHJFZmRqTmZxdGZEOGw0UG54YXoyTEgwY3BtX2xGTDlQSFFlZlJCd0tySVVXcXBSN2hBOHktMmVn?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Medical conference in Orlando discusses the future of artificial intelligence in hospitals",
+   "summary_en": "Experts gather in Orlando to discuss the prospects and integration of artificial intelligence in the hospital environment."
   },
   {
    "id": "fc250b8df9d7",
@@ -20660,7 +21072,9 @@
    "layer": "Régulation",
    "source": "الشرق الأوسط",
    "url": "https://news.google.com/rss/articles/CBMihwVBVV95cUxOMzFQeGZpWE1BSjFCUlNYQUZOZ3JsM1VNSjRmY3FrNHl1Mjc2SzJYa0ZaQWtRSlpzT0hMNDBPaHhaMld0NkdLOWw1LUxIcUo3VzFCRFhhWFAxb2RabTE0WGZmeHFubkt5cFRXSDF4UmRXRmxKa2VHWEI0dGdLNHZfZlJhdWJGS2RPWWpJVFhNRUFZQW1QZF95elI1Y0VHWVppSC13dlRhUnEzdnZMWXd2ckd6Q1NsSnlWbGhtRFRYR1N5SVRiclk3YU9uNVhkY2JDU2hMZlV3MGhJaUkzSGlwMC1ZSWdJY3JJemtfN3JTR2JMeVduQnFWeXA5LTYwX0I0V0JRT2FMR1hqR05mY0ZLOGVOb0hQdHVDZ1NqbjRMbWU4aWtMZWpCUXpmY0JNSzBLMXBXckQ5RU42SzVVOVRIWjZpZTRPUWVmTW9zX0FpY1lVcFp1YXg4ZDhaQS1UWnllZDIwMGdmX0tZdGxrZXlxNjBXekNhclI3R1dDNUVZSko4YzdsVW9oYmwweFNmemJlT3MyNXYwVTlIN0VhZGFEN0liODBrTVF4NHBQREhZSUg5WllqMUJPVHVVV1RNRVRrY0lLbkdoZThNUExFVk1NZlJEeC03dXhpbmdyQTFXQ1E4SE91cHRrOTVlajBJVEVINHliaG1ibW1WdlFrTDdmaU9BLXhaQl9yVjIwZVZDQnIyT0FaUWg5NUJ2bnpnbWk0OGowUnNqLVplc2JyWGY4bjMwMXF1WWYzaUpCZENhaG1lN3VXU2NjTDJTRWc4U3JBU2FNYkRrcTdLUTRwQy1aNk1XMVRLVV9FUHl4cENscVg4em9wZDJnRllvekYza0U1OUlsMlFYYw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Plans to combat AI cheating programs in American university entrance exams",
+   "summary_en": "Measures are being considered to counter the use of artificial intelligence programs designed to cheat on American university entrance exams."
   },
   {
    "id": "f2a0c0b9c8e1",
@@ -20674,7 +21088,9 @@
    "layer": "Autre",
    "source": "Focus Taiwan",
    "url": "https://focustaiwan.tw/business/202611120024",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Hon Hai expects cloud, networking to top 60% of revenue on AI demand",
+   "summary_en": "Foxconn anticipates that its cloud and networking businesses will account for more than 60 percent of its revenue within 3 to 5 years, driven by strong demand for artificial intelligence."
   },
   {
    "id": "f2a92c7f4c29",
@@ -20688,7 +21104,9 @@
    "layer": "Applications",
    "source": "Arab News",
    "url": "https://www.arabnews.com/saudi-arabia/saudi-arabia-joins-accelerating-tier-in-physical-ai-aws-report-finds-3011219",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Saudi Arabia joins ‘accelerating’ tier in physical AI, AWS report finds",
+   "summary_en": "Saudi Arabia is ranked among countries in the accelerating phase for physical AI, with a significant share of tech startups developing practical solutions."
   },
   {
    "id": "91411a8dd400",
@@ -20702,7 +21120,9 @@
    "layer": "Applications",
    "source": "CNA",
    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTGE2cXBQd2ExOG5PLUY0dFlsc3BLVWpBc2lYRnhscnZwTTRyYWxjZ3p2LW9xMHJHOVR2LTRLQjd1Q0J5MERUZnpnR2UxeEgyVnhfaWloZEloMldMWXlUb2F1LXNYNWV2VU9SN0x1dWVrSUg3VGNpa1hMdTZwNDRXUzctZ2dGQ0ZfN3l4RXhXY0FKVGFIWFAxeElPYlJ3Sk81ZVlzbw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "French army ministry to set up centre for defence-related AI",
+   "summary_en": "The French Ministry of Armed Forces announces the creation of a center dedicated to artificial intelligence applied to defense issues."
   },
   {
    "id": "50e7960c4e61",
@@ -20716,7 +21136,9 @@
    "layer": "Financement",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/12/nvidia-boards-crisis-meeting.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nerves around Nvidia as investors await the outcome of Board's crisis CEO meeting",
+   "summary_en": "Nvidia stock is down as the board of directors meets to decide the fate of CEO Jensen Huang."
   },
   {
    "id": "6666cd5ca799",
@@ -20730,7 +21152,9 @@
    "layer": "Régulation",
    "source": "Focus Taiwan",
    "url": "https://focustaiwan.tw/politics/202611120022",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "MAC not sure if Taiwan received U.S. warning about Nvidia China spy",
+   "summary_en": "Taiwan's agency responsible for policy toward China stated it has received no information regarding an American recommendation to monitor a suspected Chinese spy linked to Nvidia CEO Jensen Huang."
   },
   {
    "id": "b58d961c5aa8",
@@ -20744,7 +21168,9 @@
    "layer": "Puces",
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/google-adds-two-new-specialized-chips-for-ai-agents-and-security-to-8th-gen-tpu-lineup-tpu-8i-max-puts-two-chips-on-one-package-for-long-context-work-tpu-8tx-swaps-arm-hosts-for-amd-epyc",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Google reworks TPU silicon into specialized systems for agents and security",
+   "summary_en": "Google is adapting its TPU chips to create specialized systems for long-context agents and confidential inference."
   },
   {
    "id": "4e124614b29a",
@@ -20758,7 +21184,9 @@
    "layer": "Financement",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/nvidia-board-weighs-temporary-ceo-starts-search-for-potential-replacements-after-jensen-huang-affairs/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia board weighs temporary CEO, starts search for potential replacement after Jensen Huang affairs",
+   "summary_en": "Nvidia's board of directors is exploring replacement options for Jensen Huang, though no final decision has been made regarding his ouster."
   },
   {
    "id": "d237b62da192",
@@ -20772,7 +21200,9 @@
    "layer": "Modèles",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNMkVDZHhDSHZ0UHlvWkdFWGs5eTVlMHRqZ1dPRFNJQ2Q0N3l2bHFLNEIzTHZJVUswWnU2MXJvR3RTWGJael9PUk9STEI0UUJ2ZFo4cDJsMDBKWHJ0dE44UVJBM1ZmYTVBT0VXXzBuaEhHUTllTzVMcnlnZ01PazdkQ19MbHVlX1hHVmZCMV9wM2YzLU5xUEUtYXdoMHJUM0hmVE5zbnpnMFRYaVAwOHNyM09DRVh0VTJmRHZ0MDJ1VUE0UHNFZFo0dC1BMlFVWXk0cXEzazNiMUUzdkZyZnfSAeMBQVVfeXFMUHhCYWd3NkVGVmtCeDdwNkZva1g2VUxYZ0VWMDUzMjgxTmFERld0ajQtb3Z0TzF6bk9NamlYVkxyelpONVgwZ2pvUlJvblRZNXZfX2RHNTMyR2Y4M2c0RmJJcHUzNEM5aDd1SkdOeVJJallyX2VDcHcySTljMjJQU21KbjFnOFhGWFZudUR5NlJBQnpUdlZYQ2RhVEs4QktaZzN1RDZZM1VGc0VaLXlDN2NqN1VLa1ZSUkphREZtYjlmM1pET2g3Z2ktbUpSY2xBNnpVM2JOX0F1cjN2bEZOdkMxOE0?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Meta Muse and Gemini Spark: What are personal AI agents and their risks",
+   "summary_en": "The article analyzes personal artificial intelligence agents like Meta Muse and Gemini Spark, as well as the risks associated with their deployment."
   },
   {
    "id": "d7d79337c140",
@@ -20786,7 +21216,9 @@
    "layer": "Applications",
    "source": "South China Morning Post",
    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNSHVRTU9YY3NOcDNuV0VFQlBOWTZIU2J2RnFDbktwVEhvZkt1QnFOOG5pUW1OMnJSVENQRDJCOEdvOTQ2WXRtN3ZCdUtWMGtkZWNoYkdZMjgtTGp6Q18yd2t2X0hGNV9mTGJEZF9YVWpQYnR1N3ZUM1JGa0NpQnBnaGRIREJpUHJfTUlJOW5kUlotTGptTTBtNGJxLUhlWHpqRHJ2RkpiRm5uRXU2R1JwYjFjQVBQWkZSWmt1SFBmM1TSAcABQVVfeXFMT0R3ek16SkZJOEVJOHBuUEdRVkZjcFhfT0NZaGRmY1V1eHdieWRURlFOa3g1enFBUmVPcmtqdnZTaHA0T1VvOV9VRHFHMFZHc3FWd1p0cUNFSDBfMG55LVFVdm9Uc0lOR0pqMVRMaUVRUnYxN0VsQTR5c3JMbFczQTJORW5LLUJXZWx0REtJYjhEWXM3ZnFwS3dacy1hZnVMdmotbXY4OFNDZVh0LXNpZFFVR1ZERnMwMGlZbWQwM1U4?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "New Zealand workers say AI tracking of toilet breaks forces them to ‘hold on’",
+   "summary_en": "Employees in New Zealand denounce the use of AI to monitor their breaks, leading to restrictive working conditions."
   },
   {
    "id": "311c615912c9",
@@ -20800,7 +21232,9 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/whitepapers/protecting-data-center-integrity-from-top-to-bottom/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Protecting data center integrity from top to bottom",
+   "summary_en": "The article discusses the use of strategic protective coatings to accelerate construction and ensure data center availability."
   },
   {
    "id": "390e479abaa7",
@@ -20814,7 +21248,9 @@
    "layer": "Régulation",
    "source": "Moneycontrol.com",
    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQczNZX3poeEhrVVhieW9hTEVIZGtMQ2ZnMURDSmk4MTR6NVJ4cXo2Qm4zM1VxYUNCRnhhazRqSjlTT18tNlpZRVNGeS1hNEl4elduWG1xUFZfRm1XU2dvU1lIT1FlS2F0UWIxazZYMXh5ZXkxT3lMNzA2RzF6MjdlZlMyZTRvWXlQVENjZWdhdURYdzZZMjZhWmUtLUlTbWxjUDF3a2huUWVKM0g1VGlwWXFFc012Q3FtUnhlTDhydHpfbUJpakFBRGFXX05JcktoOFRSWGF5STbSAd4BQVVfeXFMUDFVSmtTOXRHd1J5bHk2OHFrYjJmU0diQTFmQ0ZXSHZDcmg0dDJtcXR3bWJDaDUwUlBEZWZ1czkzTWNab2NidzgyR0JLWkpfY0s1R1RyM1FtNWRUaFlDdEN4OU1NNW9MUjJlanJHemJJdXJGc0VsSzZJQXpGTkxwMmdVXy1peEJzMWh5LXQ0TktSMEVEWV93MzQ4S1VXVmpibUcycDByaDZ3aEdfemdfZWdLTUFCMkZZMlpCYnZYa1NYOGNPTUh4STNfVV9Ha09TVzhseXppWFhHVVpYeEZR?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia controversy: Indian industry braces for tighter US export controls on AI chips",
+   "summary_en": "The Indian industry anticipates a tightening of US export restrictions on artificial intelligence chips following the controversy at Nvidia."
   },
   {
    "id": "557c797f2a83",
@@ -20828,7 +21264,9 @@
    "layer": "Régulation",
    "source": "Le Figaro",
    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQdm9wOUQ3X0tTMV9VSmNuRzBsdmJMRGFBLUFQTUNpNUFxd2p4alp5NzVUSkdndkhRUVZkSUVRNlUweW1VNnZQS25hOWRmdlRoMXRIZ01vOEh2VWV6Y2pueTRoTUZWenFPdUZtVUwybmtGN0VDUVE4OU8tZGo2eUtpZnhxOFdZdmxLQ3R6SU1SSDVHNGtlSUJFMXNqUVktMjdMdnQ2UE9VQnFuUjhYelNrcVVRRVdVaFFFYkZMajN3cFc0dTZlTVZTX3RkUkRiOUR6eWJ1NWIwWFNUd0JyZ1Jib0lFMkhzcC0yR2tjN3pNTE5Rd0F0dU9iYjJGMA?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Insults, bullying... Anthropic now prohibits its users from mistreating its artificial intelligence Claude",
+   "summary_en": "Anthropic is implementing new rules prohibiting users from mistreating its Claude artificial intelligence model."
   },
   {
    "id": "b71716105600",
@@ -20842,7 +21280,9 @@
    "layer": "Applications",
    "source": "hrme.economictimes.indiatimes.com",
    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNQTlHZnpaQ2s5bUhqa0x5N0tCVGx6ZWxpbDlORklIMHlxR1pyWmxOVDRmREZCVHRlY2VFc3VUWFNDNDd4WkJiMThqOVVXU1ZzYV9wd2lhNUtIcENGbUR0SldEUV96Nm9CbGY4RVV4QUZwWDhGenBsZ3RUSFFqZFFuLWMxV3FFb0Nmc21kOHNqWEVvV0NCMGhFVXRDYVFyMjlINWROaFhnNWY4VDlpMFpmTFA5T09hUl9INHZManNQcWtsV1draWhOdXRjQWtJLWpMM3kwalBDekxNc3F2WU9Nd0dkS18ycE4ya29SdzhYR1nSAfABQVVfeXFMTUE5R2Z6WkNrOW1IamtMeTdLQlRsemVsaWw5TkZJSDB5cUdaclpsTlQ0ZkRGQlR0ZWNlRXN1VFhTQzQ3eFpCYjE4ajlVV1NWc2FfcHdpYTVLSHBDRm1EdEpXRFFfejZvQmxmOEVVeEFGcFg4RnpwbGd0VEhRamRRbi1jMVdxRW9DZnNtZDhzalhFb1dDQjBoRVV0Q2FRcjI5SDVkTmhYZzVmOFQ5aTBaZkxQOU9PYVJfSDR2TGpzUHFrbFdXa2loTnV0Y0FrSS1qTDN5MGpQQ3pMTXNxdllPTXdHZEtfMnBOMmtvUnc4WEdZ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "New research reveals gap between artificial intelligence plans and workplace readiness",
+   "summary_en": "A study highlights the mismatch between enterprise AI adoption strategies and the actual preparedness of work environments."
   },
   {
    "id": "bc2a54375cda",
@@ -20856,7 +21296,9 @@
    "layer": "Financement",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/tech/big-tech/article/3374203/loyalty-vs-accountability-look-nvidia-board-deciding-ceo-jensen-huangs-fate",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Loyalty vs accountability: a look at the Nvidia board deciding CEO Jensen Huang’s fate",
+   "summary_en": "Nvidia's board of directors faces a major dilemma regarding the retention of Jensen Huang following reports of inappropriate relationships."
   },
   {
    "id": "fe4331f3bb35",
@@ -20870,7 +21312,9 @@
    "layer": "Puces",
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/pc-components/gpus/techie-turns-usd2-500-cmp-170hx-8gb-mining-card-into-a-full-fat-a100-80gb-with-voltage-glitching-carefully-blowing-onboard-fuses-to-unlock-entire-vram-and-shader-modules",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Techie uses voltage glitching hack to turn $2,500 Nvidia 8GB cryptomining GPU into a full-fat $20,000 A100 with 80GB of VRAM",
+   "summary_en": "A user successfully unlocked the capabilities of an Nvidia mining card by modifying its internal fuses to achieve the performance of an A100 GPU."
   },
   {
    "id": "1b2efc0711f1",
@@ -20884,7 +21328,9 @@
    "layer": "Applications",
    "source": "العربية",
    "url": "https://news.google.com/rss/articles/CBMi3gRBVV95cUxNck10bDYxWG1jTFhBbU8tTy1mSnVhbEV4Rjh4Z1RIQUpLa21FczVIdlNCd1VBN29DWjVJT3NHNUpXNHRsUUR6OXRocGpqM2M3ampGX0lBZ0ZCS19NNVZNM2F2TTQzekxOczZ4T0tHbkxkVjFVRzFHXy1tMFVvMDRNY3dJNEFKM0dMY1A5d3FHZDIwR1lpdjRiaU5hXzVtNnUyOC1vcXRBNTNXMFhKN2Q2c2hSbXFKeUo2c1ZjMVpoN0hhcWp5TWxvNlFqVlpGbHB6SlNOUFUtUEc3SjBhUmJ0bVpvdEIxcm5ZcHBuQXRfNjhSUW01UXotLU13ZURrdEpTYjlSMW04MC1IbHlGaUVJSmVOTkM1ZzA3UVFnaTNVSUVRUjhURzZPNEc3Y2JyY1ZoRE0zTURxWWN2SmhaeWZzRXFOVWRJYnJabjFTOWFBUjNtUkhGN24yN000X0xGSEZ1aE1xaXRoSGdIdE8xLU5LOHlmTk9FemRlU1ptc2xqbHZTRmY0TlpjZkprZGRFOVFrbWhXT25Kd2VaMEl5N1EwMlRnbUwyaFhXaTAwbll6NnBOUGFFV1hhb0ptYmd2VGtOWHFsLW1Ca3YwMWV0YklrV3dCcTNGLVJ6R2Rmd1BFLUZHV2JlMVRSclh1Y0lVOEpFX240SFhfdExvTjk5LUJIa2FQVXNlTnFXZkx4TUwyZUFFRHdtWlI1R3FXZFI1d2x6SE9FQ1p5TUh5WXVYSmxEYVI0YS1tVTl2amppdXJsUDdvRmNPSlBhekx1ZG5mWXRPUnRORFlWMFRuOGx1U1HSAd4EQVVfeXFMTXJNdGw2MVhtY0xYQW1PLU8tZkp1YWxFeEY4eGdUSEFKS2ttRXM1SHZTQndVQTdvQ1o1SU9zRzVKVzR0bFFEejl0aHBqajNjN2pqRl9JQWdGQktfTTVWTTNhdk00M3pMTnM2eE9LR25MZFYxVUcxR18tbTBVbzA0TWN3STRBSjNHTGNQOXdxR2QyMEdZaXY0YmlOYV81bTZ1Mjgtb3F0QTUzVzBYSjdkNnNoUm1xSnlKNnNWYzFaaDdIYXFqeU1sbzZRalZaRmxwekpTTlBVLVBHN0owYVJidG1ab3RCMXJuWXBwbkF0XzY4UlFtNVF6LS1Nd2VEa3RKU2I5UjFtODAtSGx5RmlFSUplTk5DNWcwN1FRZ2kzVUlFUVI4VEc2TzRHN2NicmNWaERNM01EcVljdkpoWnlmc0VxTlVkSWJyWm4xUzlhQVIzbVJIRjduMjdNNF9MRkhGdWhNcWl0aEhnSHRPMS1OSzh5Zk5PRXpkZVNabXNsamx2U0ZmNE5aY2ZKa2RkRTlRa21oV09uSndlWjBJeTdRMDJUZ21MMmhYV2kwMG5ZejZwTlBhRVdYYW9KbWJndlRrTlhxbC1tQmt2MDFldGJJa1d3QnEzRi1SekdkZndQRS1GR1diZTFUUnJYdWNJVThKRV9uNEhYX3RMb045OS1CSGthUFVzZU5xV2ZMeE1MMmVBRUR3bVpSNUdxV2RSNXdsekhPRUNaeU1IeVl1WEpsRGFSNGEtbVU5dmpqaXVybFA3b0ZjT0pQYXpMdWRuZll0T1J0TkRZVjBUbjhsdVNR?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "\"Fuse\": Our partnership with \"Human\" aims to create a global platform for AI education",
+   "summary_en": "Fuse and Human are partnering to develop an international platform dedicated to education and training in artificial intelligence."
   },
   {
    "id": "6cfb979ea632",
@@ -20898,7 +21344,9 @@
    "layer": "Applications",
    "source": "EE Times",
    "url": "https://www.eetimes.com/connecting-ai-to-the-physical-world/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Connecting AI to the Physical World",
+   "summary_en": "The article explores the importance of specialized wireless devices and SDR software for the next generation of intelligent machines."
   },
   {
    "id": "8fb4c69dc18c",
@@ -20912,7 +21360,9 @@
    "layer": "Régulation",
    "source": "Wired IA",
    "url": "https://www.wired.com/story/google-wanted-spirit-airlines-data-flight-attendants-found-a-way-to-opt-out/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Google Wanted Spirit Airlines Data. Flight Attendants Found a Way to Opt Out",
+   "summary_en": "The Spirit Airlines flight attendants union negotiated with Google to exclude sensitive employee data from a data sale."
   },
   {
    "id": "19d5a492e493",
@@ -20926,7 +21376,9 @@
    "layer": "Puces",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/techasia/sex-spies-and-salaries-shake-up-ai-chipmakers",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Sex, spies and salaries shake up AI chipmakers",
+   "summary_en": "The sector of AI chip designers and manufacturers is facing major turbulence related to personal scandals, espionage suspicions, and salary issues."
   },
   {
    "id": "d1fe654f2e5d",
@@ -20940,7 +21392,9 @@
    "layer": "Applications",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/china-tech/baidu-ceo-robin-li-says-commercial-ai-adoption-is-only-starting",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Baidu CEO Robin Li says commercial AI adoption is only starting",
+   "summary_en": "Baidu CEO Robin Li stated that the deployment and commercial adoption of artificial intelligence are only just beginning."
   },
   {
    "id": "748fc0579335",
@@ -20954,7 +21408,8 @@
    "layer": "Applications",
    "source": "Channel Newsasia",
    "url": "https://www.channelnewsasia.com/business/ecb-economists-turn-reddit-and-ai-read-investors-mood-6545766",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "ECB economists turn to Reddit and AI to read investors' mood"
   },
   {
    "id": "839d4ea8aaa0",
@@ -20968,7 +21423,9 @@
    "layer": "Modèles",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/business/companies/article/3374201/former-bytedance-ai-scientist-touts-drug-discovery-model-tops-world-leaders",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Former ByteDance AI scientist touts drug-discovery model that tops world leaders",
+   "summary_en": "Startup Geodesic Intelligence launched NovaAtom-Lite, an AI model capable of predicting biomolecular structures that outperforms existing systems on several benchmarks."
   },
   {
    "id": "04d9b8daf925",
@@ -20982,7 +21439,9 @@
    "layer": "Datacenters",
    "source": "Tom's Hardware",
    "url": "https://www.tomshardware.com/tech-industry/data-centers/cannabis-farmers-consider-joining-ai-bandwagon-due-to-falling-weed-revenue-existing-sites-could-house-mini-data-center-nodes-but-still-face-serious-challenges-during-conversion",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Struggling marijuana farmers pivot to becoming AI data center sites to escape falling weed revenue",
+   "summary_en": "Some cannabis producers are looking to transform their sites into data centers for AI to offset falling revenues, provided they have access to cheap electricity."
   },
   {
    "id": "305c225465b1",
@@ -20996,7 +21455,9 @@
    "layer": "Applications",
    "source": "Zawya",
    "url": "https://www.zawya.com/en/press-release/companies-news/yango-group-launches-ai-and-robotics-education-initiative-for-schools-across-the-uae-2246682",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Yango Group launches AI and robotics education initiative for schools across the UAE",
+   "summary_en": "Yango is deploying an educational program on artificial intelligence and autonomous robotics in UAE schools, inaugurated at GEMS World Academy."
   },
   {
    "id": "664d75246fac",
@@ -21010,7 +21471,9 @@
    "layer": "Régulation",
    "source": "Euractiv",
    "url": "https://www.rapporteur.com/news/meps-create-pan-european-rules-for-cloud-sovereignty-tiers/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "MEPs create pan-European rules for cloud sovereignty tiers",
+   "summary_en": "Co-rapporteurs plan to centralize the data security regime within the Cloud and AI Development Act at the European level."
   },
   {
    "id": "4f82a8715487",
@@ -21024,7 +21487,9 @@
    "layer": "Financement",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/12/nvidia-nvda-jensen-huang-second-affair.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia stock falls 6% as investors await Jensen Huang’s fate",
+   "summary_en": "Nvidia's board of directors met Wednesday to discuss the potential ouster of CEO Jensen Huang, causing the stock to drop 6 percent."
   },
   {
    "id": "26aaf10743b6",
@@ -21038,7 +21503,9 @@
    "layer": "Régulation",
    "source": "Euronews",
    "url": "https://www.euronews.com/2026/11/12/trumps-upgrade-of-us-led-ai-alliance-runs-into-european-resistance",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Trump's upgrade of US-led AI alliance runs into European resistance",
+   "summary_en": "EU countries are expressing reservations over the US plan to transform the supply chain alliance into a global economic security pact."
   },
   {
    "id": "4e5c3b551909",
@@ -21052,7 +21519,9 @@
    "layer": "Applications",
    "source": "Zawya",
    "url": "https://www.zawya.com/en/press-release/companies-news/applab-concludes-second-consecutive-year-at-mwc-doha-2026-with-two-new-partnerships-2246676",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Applab concludes second consecutive year at MWC Doha 2026 with two new partnerships",
+   "summary_en": "Applab used MWC Doha 2026 to sign new partnerships as part of Qatar's digital transformation."
   },
   {
    "id": "09a282300ba1",
@@ -21066,7 +21535,9 @@
    "layer": "Puces",
    "source": "Moneycontrol",
    "url": "https://www.moneycontrol.com/world/who-will-replace-jensen-huang-if-nvidia-fires-its-ceo-meet-the-two-names-in-the-succession-race-article-14078280.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Who will replace Jensen Huang if Nvidia fires its CEO? Meet the two names in the succession race",
+   "summary_en": "Nvidia's board of directors is discussing Jensen Huang's future while evaluating potential successors."
   },
   {
    "id": "51f50f28bcef",
@@ -21080,7 +21551,9 @@
    "layer": "Régulation",
    "source": "The Business Times",
    "url": "https://www.businesstimes.com.sg/singapore/megaspeed-has-hired-us-law-firm-review-export-control-compliance-says-singaporean-director",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Megaspeed has hired a US law firm to review export control compliance, says Singaporean director",
+   "summary_en": "Megaspeed hired a US law firm to conduct a comprehensive inventory of its graphics processors and check compliance with export regulations."
   },
   {
    "id": "0a5102d93766",
@@ -21094,7 +21567,9 @@
    "layer": "Puces",
    "source": "Bloomberg.com",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9HYWVfSHVobG1qaWRYS2U0c1FsTGhVRVNpZUwyLW1heGE0aWpNRmZSeUd3dkhabGRBekxFSFc0ZkFoYUhuemdacVJPTllxWGxUVTBoV28wS3VmNTkzc25hcGRnb2QzWFktelhRNjdEaXJiTExYcmJB?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese AI-related stocks drop sharply, Alibaba down 7% - concerns over access to advanced semiconductors",
+   "summary_en": "The Chinese AI market is pulling back amid fears over the supply of advanced chips."
   },
   {
    "id": "0990939c7d6e",
@@ -21108,7 +21583,9 @@
    "layer": "Applications",
    "source": "OpenAI",
    "url": "https://openai.com/business/customer-stories/holidays-extras-codex",
-   "confidence": "haute"
+   "confidence": "haute",
+   "title_en": "Holiday Extras is rethinking what it can build with Codex",
+   "summary_en": "Holiday Extras is using OpenAI's Codex model to improve its applications and conversion rates."
   },
   {
    "id": "8e08f655b082",
@@ -21122,7 +21599,9 @@
    "layer": "Financement",
    "source": "Focus Taiwan",
    "url": "https://focustaiwan.tw/business/202611120018",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Hon Hai's Q3 net profit hits record high amid AI boom",
+   "summary_en": "Hon Hai Precision Industry posted a record net profit in the third quarter, up more than 30 percent year-on-year, driven by shipments of AI servers and racks."
   },
   {
    "id": "d1c8696fd7e9",
@@ -21136,7 +21615,9 @@
    "layer": "Régulation",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNWkd2REtMN2Y4MzBuTm5OMF9RX2FPZVR6YmVMUzFBd2JJd2lvTHk4ZXdXVHp5NG43R1RSa3UzSWxCU19lLWM3UGxLdDluRWRSTEdMZWtCeGk0UDZhTlpxYUtMZzhXZWZuSi1Oc1VVbno2WFdmSTlObVpnOVE3NmhwSmhOeWl6RlY0NXR3RzJraWlpLU9qTmIxalRuYWJ6emRPU0lWMTZBUDFpbklpMXpyVmtfOU1xR01WZWVMY0p4R3ZfMi10ejQwalNCSWlsTHQzSldtSGduSmQ1X25qYUtmc3laN1BWTDJqU01sbUxGYk_SAfYBQVVfeXFMT0hLb3ZwT1UweHNWVkVkOUFHdjNhMHF6NHY3M2x6cmFpdEpqMFd6TUE2NS1lOVh6a0MwUkdZRXBIZHNOeENoYjdoakMycDk5VlIxd2ozbzByQ0lIOHpOeWhmcmVKT2ZuYWhuWTByT0NTWGZESmFBaU5Scjl4bmxvRV83UlFncmV0M1ZMWU9DLVdVRktqZU5XcS1sbG9sQndpWUZWM0hXZTVHTU93SHRnajVORUJmaThUbWViRUJ3VFJhd0dXYk1fYWdFWlNxLXZiY01LZG9rRkRtbTJ4Q0VDTzdzdDlfS1p0TlRZZDR0WTBfcExoeUp3?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "OpenAI to process AI requests in India to meet data localisation needs",
+   "summary_en": "OpenAI will process AI requests directly on Indian territory to comply with local data localization requirements."
   },
   {
    "id": "74ff706ddedc",
@@ -21150,7 +21631,9 @@
    "layer": "Applications",
    "source": "الشرق الأوسط",
    "url": "https://news.google.com/rss/articles/CBMingVBVV95cUxQNDM2WkUxV3pTR09yMG1DYjAtYmFiUnJ6TVRBWHByYWVqZWZxYVY2WUMwRDk0Uk5MLVBtQlNfS0VrbEh4LU9DQzVzSDJBNldyX01SWDJ0MWM1UmhOa0hGTlNaaThvQjJKZFdyZTVWellQZUNmdzhqQzB0WmpQaWJ3RDN4WFl2aHNtOEV6RXZ1dE5XVVc1TzJWd2hvRjVaSW9pR0w5aDdCYjdkX1lBeEFub0xVanZaZFc1UC1NemhhVzFDVzh5SEJsZ1Y2WlhjOTJGcnVyb0x5QXlwazcxXzVGVXdXd1hYVkFvMG4xTURjXzhWeHZwd1NqSXdFWlphQ09rZktaa1RSZFJtQ2l3MVlybkpkYlF5bWFRWWlSaWhsTW4ydUVLdDJRREFLOHBzaC02d3VSOFU0bmRRTzF5UEJLTnJJR3MzWG8wdUJwTlBGdFM3ZVhoVHpual9MU1VKUDlOR3VNYmRmX3Z3NGlOaEI2QldjV182M2twSUs1bkItYzVoeHNPT2R6S3dOREs1RnUtdm5HUVRxTTBtX1BpVkFhLUVpWW9VcjE2MzJueUZNbndBU1VfTW0yVm1QNjI5UFhiQTVTUmZQYnpYdHc3Qm1iTzdmQjJROWowQUlMeUIwSkgybm9FbnM2WUhISkZBeFdLbjZHTm9vSlRnczdVcUFLLWZkRkhOM3JWVVV1ZnE0Q29NVWVJVno4SV83LXJOOU9kamV5NkFsbTdoX3ZSQzVheTdxQVB4ZUExejZyVWR0X0UxZWZqX25DY25HY2dwdXhrQ3ljeUxJdGVaYVZtNXBkMlZ5Y09pa1hQR1NxTDhMblU5TmFWNkpiNjZxVERQbjQtM0wxOW55dXJHS2Y1T0h6dHJ6NG1GN3JmdTBldm1R?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "\"Humain\" launches applied AI skills development program in Saudi Arabia",
+   "summary_en": "Humain launched a program dedicated to strengthening practical artificial intelligence skills in Saudi Arabia."
   },
   {
    "id": "f5992289a21a",
@@ -21164,7 +21647,9 @@
    "layer": "Applications",
    "source": "Xinhuanet",
    "url": "https://english.news.cn/20261112/259b9fcdd7f04e11a5252ffe032a5ec5/c.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Researchers in Australia develop AI tool to identify dangerous rip currents",
+   "summary_en": "Researchers based in Australia have developed an artificial intelligence tool to detect dangerous rip currents."
   },
   {
    "id": "c690667cf93b",
@@ -21178,7 +21663,9 @@
    "layer": "Financement",
    "source": "Sifted",
    "url": "https://sifted.eu/articles/accel-30m-spatial-ai-defence-startup-se3/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Accel leads $30m Series A for spatial AI defence startup SE3",
+   "summary_en": "Spatial defense AI startup SE3 secured $30 million in a Series A funding round led by Accel fund."
   },
   {
    "id": "868500a5abbb",
@@ -21192,7 +21679,9 @@
    "layer": "Applications",
    "source": "العربية",
    "url": "https://news.google.com/rss/articles/CBMixwRBVV95cUxNTEVkc25JNGpNZDUyZ3RiUkkyN1hmdFJ0YjZpY3BTUTFqVC01a0Q1SjBLbTA3RFJIaFliX0pQa0ExV0dzSlBXVUx6OWpFNExKcnpKLWhiaUZZUTdiWDNuTVRib3M5M2pYRGVmc2d3MFk5STA3NkRGSjVOMElvdGdlekVMN2prQlBZTjV3aGFiWE9ZVnQzMWJfdVpieURDLTZ0U2JrTmMzWXVSZW9uU1EzXzRqZkFRQlNzQ3dfQ3JGRzZiTzhIemlwTlB2YkwtcVNoSEJLZWI4bkVzRXdJWDRpTTF3cWFQS2xYQXd1OV9QbFcxZlZhRWZiWXNVWHZ6YnRXVFlzLThuT2FZS3FWcm5Xa0xCNkJaOVF2UllweHFNbS13MEFPaDhRaWs2UnBUY3RoV3haWktyWm1qaHIzeWtJRnh2TFlIMDhpdWFKTURlaVZ2aWVOMkFnRFJIUFpMQy0xNS05MGZLZGlFdkdORHV4QVF4VWNRVEVfZndJaDFmSXF0S2VBQk5fcFFMcGljTEl2TktlMkhqcEdHX0c5R1Bidmk1dzZJT2llMEFtTE5LRVNoQ2Vsak95MjhUVU1IYVN1cjhGSFJPXzNkYWxpOGNJOG1vTnFqTjJ0MG45dHlDSGN5dnBGUGVJaUg2cXJrTXRjZ2R3TkQtalQxT0l3UTJyTl94ZExlR0NFUFVHT1BRc1VEYnRuMWtsT0dYWng0bFREZ1Nnd0s2dmQ2UjFEX1JwX3F1MWxpY0xuN2I5RnlFNEtLZ2hsMTNZ0gHMBEFVX3lxTE0tcmoyYXQ5MUlUUFc2dXZOWlJPZ09QQUZjNkVyVldvOWRKMklJLWRZZFFDMGNYcXFxZ0xjbEdUNFpzNWxPS1V2MUpicmRqbmNCSXY2cXY3RGhJLUlRcjI5MG9MUlk0djg1b0pwY2FwU05hN3pkWnlMS0VxcmQ4RnhtN2lWYWdyMHB2Qi1Uc3NKa3JNcTByX0w5eFlnVFA0dkZOdmtub3BobW01WXd2dHBOR25NVnM5SzNRcXAyejA1djRhcHNpLVNqanVwNlM5X0FSdGhpTnc1Mm1VZFhNYl9xS0QxNjRmWFVNYVFWOUQycWF6YXpQd3hWWHIwR0lnZi1xVXh4QnFOcFlmcUprNXM2WWExWDRJVXAtQlo4YlgyY25QcU95ckFFREpmZENwWFpOcDVsV3I3ZHE5ZTNGY3I3T1RvaVF2MkpPX1o1X3IwanoyNEptNFRrMGl5bDkyNENJUGV4WXVob2VWQUNGcWlsbEpuamVpbkxzSFhncHhKQWcyTk9YXzRtZGp3aGI3NlVSMGZNSWE2WENKbUFlT3g0WVhjWEJuTm51SGFIVG5HNXBlSVo3eHFNbTJHb0hrWVRBS2tpU00tNFBKUWRZanA5WThqVVRldjMzNjRUbHFUVW41OExMT1p1aVl3aUdoOXBLVkhjbkVCaGJIQ1I3RFBVejlHeEFzb2MtaEJLby1zU0NYd2Q5UE1aazdWbDJGaVFZaTE0OVV4bmdUTUN1SnN6cmZic3BVeGZ0cUtmLXVWVm9XbnNFRGdhUHdRXw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "For security reasons.. an airline bans AI agents from booking flights",
+   "summary_en": "An airline has banned the use of artificial intelligence agents for ticket booking, citing security concerns."
   },
   {
    "id": "35b74326818e",
@@ -21206,7 +21695,9 @@
    "layer": "Financement",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQazJqbUNYeFVEdEVPRmFkUEE3eVpESE8xb05HYUduM3A2N29kak93SEJLWHpUdng5NkdGQjBVdmhIUUZCNVF6eEs4MmZxNGU2NWxaOXh1cW0zNGlieDRVbExia3F5TnV4MGRJdTJIRWR3X19Dc3hNclcyMmxsQVhIZ2VtcGhPSWU5dkNETjJtWmVBSndERGVnZEZhcjRnWFJkdExWLTVTc0dnVTBkS3FZUW1qaWhEZw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "AI to stay dominant force behind US business investment in 2027, Goldman says",
+   "summary_en": "Goldman Sachs predicts that AI will be the primary driver of corporate investments in the United States in 2027."
   },
   {
    "id": "3695fd877e6a",
@@ -21220,7 +21711,9 @@
    "layer": "Régulation",
    "source": "Euronews",
    "url": "https://www.euronews.com/2026/11/12/is-nvidias-jensen-huang-too-big-to-fail-why-a-replacement-is-difficult-and-the-impact-on-a",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Is Nvidia's Jensen Huang too big to fail? Why a replacement is difficult and the impact on AI",
+   "summary_en": "Nvidia founder Jensen Huang is under investigation, raising questions about potential consequences for the AI sector and China."
   },
   {
    "id": "d7233f5b5dd5",
@@ -21234,7 +21727,9 @@
    "layer": "Applications",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOYWVBOHhodjNxVmZ6Q05XeEJBOFlHNUFzTjRyMVBUMEtoOEgwRWJKT0dqWlU0RGo2ZmZFNm5nZ0ZYSXJydEZfbTJyUmxCQmc1OEhvMmlBc1N0aUJNZXFjb2FFM2Y3N0ZoQzN2bEZKcEU4N3pUeWxiYWhwT1kzUHdLTkwzSUJyZXhpSUxQck1RUzUzQ1JNa2EzV0hURFl6V3VsRDR5eUl1SzBVczN1WV9BTkU3cno?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Most large firms plan higher open-weight AI use to cap bills, study shows",
+   "summary_en": "According to a study, a majority of large corporations plan to increase their use of open-weight AI models to control operating costs."
   },
   {
    "id": "c07013f89d4b",
@@ -21248,7 +21743,9 @@
    "layer": "Applications",
    "source": "Sifted",
    "url": "https://sifted.eu/articles/how-ai-is-changing-procurement-and-supply-chains/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "How AI is changing procurement and supply chains",
+   "summary_en": "Artificial intelligence is redefining purchasing processes and supply chain management."
   },
   {
    "id": "18d26ed717d0",
@@ -21262,7 +21759,9 @@
    "layer": "Datacenters",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPZlBodm56OVpNSWJjbkVBZTMzVmFudFB3SHdEQ3YtaUlHdFViTUpUVGU1b2JmNkdZVllZdDY1T3RjcURiUTF1cEJvYldYNXB2M3BDS1pXVDhneDN0aU5ITG5lWlV5U2NaUERVaC00dUdPYUVzbU40Y29yQjRQWERiWGctakVJUTBGNkFiZjFhZFFxaVkxY0czU0ROeWotNmU2SUlHaEFLcy1LQUg0aEVsUXhYTEpMa0txSmpNbHFXWkp4TFF1bEo1RjhCbmlBdw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Malaysia weighs law to monitor data centre operations, chips use, trade minister says",
+   "summary_en": "The Malaysian government is studying a legislative framework to oversee data center activity and the use of advanced semiconductors."
   },
   {
    "id": "d14710802922",
@@ -21276,7 +21775,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD243/quanta-2027-capex-ai-server-revenue.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Quanta shifts 2027 capex toward power, the new battleground for AI server ODMs",
+   "summary_en": "Quanta plans to invest between 40 and 45 billion TWD (1.21 billion USD) in 2027, targeting power to support the high demand for AI servers."
   },
   {
    "id": "d76e3e19783d",
@@ -21290,7 +21791,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD244/pegatron-rubin-nvidia-2026-shipments.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Pegatron targets multiyear AI server surge, with Nvidia Vera Rubin shipments set for 1H27",
+   "summary_en": "Pegatron anticipates a sharp acceleration in its AI server business in 2027 and plans to ship next-generation Nvidia Vera Rubin systems in the first half of 2027."
   },
   {
    "id": "04523a0e2e28",
@@ -21304,7 +21807,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD245/foxconn-2027-2026-revenue-growth.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Foxconn sees high-double-digit AI rack growth in 2027",
+   "summary_en": "After exceeding 91 billion USD in revenue in Q3 2026, Foxconn projects sustained growth in AI server rack shipments for 2027."
   },
   {
    "id": "3bdfe627a30c",
@@ -21318,7 +21823,8 @@
    "layer": "Régulation",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD237/chips-nvidia-university-supplier-military.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese universities obtain Nvidia chips despite US export controls"
   },
   {
    "id": "15d356df6ea0",
@@ -21332,7 +21838,9 @@
    "layer": "Régulation",
    "source": "EE Times",
    "url": "https://www.eetimes.com/harari-warns-tech-leaders-against-pursuing-ai-superintelligence/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Harari Warns Tech Leaders Against Pursuing AI Superintelligence",
+   "summary_en": "Philosopher Yuval Noah Harari calls for delaying the development of artificial superintelligence to preserve human agency."
   },
   {
    "id": "fb94bba785d5",
@@ -21346,7 +21854,9 @@
    "layer": "Autre",
    "source": "العربية",
    "url": "https://news.google.com/rss/articles/CBMiswRBVV95cUxPbWlXc0dTb0tEd2V0TDVUN2dXNnJ6MUpqb3ZCeEdsUE5uODZCSGxURV9MckVaX0otUjMtM3lFWVdHM2tUZVhxTVd5Yk9VUWhYemV5aEtkM0o5ODRZNllYdkxhMjFKVnNkN295V0tQM1VGM1dhaGtXNjAxT2FDc0I1N0JMc3VNemt2ZUFzS2tCNkhSMmljdGc1ZWRudG5SdnNlamFCVmlJOHcxRGhLTWZhN1BwZ3pqaE5YalpBYVV1cDdHS05EbXB5aGJ1X0JES2J3REhSWjFncHp0dXEwWUZyWG84U000elpmckJiRmRGN29uNE1admk2ekZJS1N0ZDdBWU5EdHJPRWJNellNcUhCd1Z1UklBOWxHczBLaHB4TmF0Y0Q2TXJyY3RHZEROQ2t3NkZKQ2ZMRlZlQkFzZVlNSlpLekxfZVdaNkMyYXc1amRQTWRBRVBHdDhyV3hHd1RzWmJLR1pBTERpV1ViWHA0YnZacl9laTVYbDhmTXV5N1NnaGJhVkdoVTAtRFZjbEZsUUVIMHRILTJOcDVCcmNHREt1aWgtSmdtYUlYa3FWb3F4OER3NmNBZXFRaTNFRmhuRnFXSUZRR2VQcXg2NEtsMVdDWVpCOUxyUmpiRXlTQ3hzamlsOGRkMnVhRDc4eDlSd1o2ajJOMDE4Nlo0d2J2VUtxQXlLSDdpV2lhNWw1S1JDaEh5LWRkaXhhRHZtYTVRckJfWWVNSUhYcEZVcnFWcncwd9IBuARBVV95cUxPV0t2b193NDhaZldfbVVrZ3k1Tm9NTE1mTXJ6M0dlTlc2YmJ3MWI4alVrX291TFVLMUZ1UjdXMUMyblR1d1JoQUxLWUZNQzZHYWQ4Z1lvSkZpTUVDWC14ZzlkNmRjUGRPQ1YtNTRrRUtlZVZzY1JUZF8tcGZUUmVrQ3VFdDBZQWFYcTdEdHVhczVMWmV2c3FpZUZOOE95RDB5NFh5aVNWU2VKWUtRN1M3eDI2bEwwSkZYTFczcGhTMmFSSkxSaU1Ybl9TT2phenBDNThvSjh4ODJ3WEJ3MEVTRFFaT1hmakxQTUdoMkFySkVxMy1pQTlIUW9pLVlHYVgyTGUtWXVMRVJ6cG5wUjFqSGVaNHdSdkFwSkJ0T3RUZFNXS1N1bXN5d3JENy1WRGxFbzMyMllLS0R5NUhKcnZ0VklsaGRSZWswcjh0aEx1ekswMkItLWotdHctdVVnbFZtMTdLY2dJcmJMYmV4V1ZjRDh1M1lzWm4yZnJwUmdlQWVPODVtQVpGWXZ3QmhSMnZLZ1RZZDJtWENJb1B6c3padl9FT3dnTlhwdjBTZXF3MlhkaUhFUlJTV0dXX3J3aGtONUhsZHJ3RjNxazg1amFNNG1mRExUZnBnWGdvNEltMFMtOUxaaVVER3lpN3ZqZ2tRY2NqcmRzWjJHbHotNG1lV0s0aFJxc0dFVkdpRFp2ZDI5REhSd29xVlJtMGZ6MVBNV25RMVoyMUE1ZkhzbGFkOFNTZ2tKbnc3?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Saudi Arabia achieves advanced global ranks in the 2026 AI ranking",
+   "summary_en": "Saudi Arabia has climbed to the top global ranks across several indicators in the artificial intelligence index for the year 2026."
   },
   {
    "id": "bea2daef83b2",
@@ -21360,7 +21870,9 @@
    "layer": "Financement",
    "source": "FAZ",
    "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOcmZzdVUyRnJYZTNSbjNjbVJyZ09FMHBla0tSUlgySWE0S2pvcmF1Rjd0SGZ1aUktNEREdk02RlFkWnBnQTU5cGJxZVd0X2o4MVpDbEdKVlZuWW90YS1LTndvM3RaV3pnMnh6RUZOZ2FSVlQ0NUZUdzVXQi15b1pDaFFUbDYzUWhyY0RXbmxLZTFFLUoyZnFMaEViZGROOXFJcDhQTU44ZDFuNEFLZkZKLWp5UzFKZ3FfZGlMX01pb2RzdGs5RzRWbU9STzdFMy1LcUZOcmREbDJkMndCcXJKMlJiSWJFdw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Münchner Start-up SE3 will mit räumlicher KI-Technologie in Europa expandieren",
+   "summary_en": "Munich-based startup SE3 plans to deploy its spatial artificial intelligence solutions across the European market."
   },
   {
    "id": "6b0a496a8ddd",
@@ -21374,7 +21886,9 @@
    "layer": "Mémoire HBM",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/rethinking-memory-for-ai-inference/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Rethinking Memory For AI Inference",
+   "summary_en": "Processing data closer to memory could reduce energy consumption and improve inference performance."
   },
   {
    "id": "5bd5372d4dd2",
@@ -21388,7 +21902,9 @@
    "layer": "Mémoire HBM",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/beyond-bandwidth-ai-inference-is-reshaping-the-memory-wall/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Beyond Bandwidth: AI Inference Is Reshaping The Memory Wall",
+   "summary_en": "Longer contexts, increased competition, and the rise of multimodal models are shifting memory constraints during AI inference."
   },
   {
    "id": "f6abb872f087",
@@ -21402,7 +21918,9 @@
    "layer": "Puces",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/the-semiconductor-singularity-when-ai-starts-accelerating-the-silicon-that-accelerates-ai/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "The Semiconductor Singularity: When AI Starts Accelerating The Silicon That Accelerates AI",
+   "summary_en": "Analyzing silicon data helps optimize design tools and decisions for the next generation of chips."
   },
   {
    "id": "ba2e7de94659",
@@ -21416,7 +21934,9 @@
    "layer": "Applications",
    "source": "العربية",
    "url": "https://news.google.com/rss/articles/CBMiswRBVV95cUxQNEVLdkpEZV9LdDJjbXM0T0p5LTlhYzNzOHMtSDBobDFIY0RlWVpfMmd1d2Nja01WSmVNZC1GaE9XY285SmJjUnA0azd0RHlEaVdHUmxncVgxS2g3dXRUTW9TdzdlX09abXM2dlJVdkRtaVlkMEtza1N5WklBTzVFRC0tWnlJWmVGTFVvLUxXX2dVV2JtemRLaGM5bHhuNHNHMUw5NkQxRDJLc2RDS3VuSFNqQU54Zml4TUNEU3FCOHROcDAyMVRvd3NCRmdrTG9BbWI0T3Nwb21Dc3U0cXVrOGI4RW5uVUpSUFVnajJ4eXVjWUR2UUVqeUszaXlDdktFYzRac29uUW1nSjREd2JiVm11VUJ5VlIwWEFIZHV6WHpwekF2eEFfYUVvOEFiZG5kXzJMTmQ4SkJuZHZTUkxYRW9kemdjdENRTHBGY25rRXR6cVpVUVhzWkJNcnotaExiaFF1TzJiUFgydnBfYW43UUloeWFEWU1MLVFTdERRbElKMWw5Y2NBV2U1aTktLXJTalB5YVpyMW5QS2E2TUtMaE4yVVpSQ3ZrWWh6aVczRVY2TnBRZkY5WmtHZGp2LTA3Q3o3amotX1pnNE05TTJnelRRbVp4TzZQLURQV2lZbHpWeXljTHE2dkoxY0ZQY042SkQ0N1VyZkFDOVBqR3pMcHVJNW5mWE5rcl9RT3JpLWVPRjctdnVvMzd1VHcwWmRCaG5oWVFRdEp3ZGR3Zk9YWTJ2Y9IBuARBVV95cUxNRlFYUXRJek5iYkk4dWl0N3JUNTBnRnVvZUtoVkl3Y2ptR1c1dG0xWG9MRE5tcGVycERaamZtT3haSHB1WnExdTN3Q3VlVFRtcEI3OVRFQkZ2NUEtRTMtN1R2Smp4Q2czTHRheHVaWG83SmdqTnczY19HMWd2QmdkLXpBR3gwcFNPbGVLanhsS1ViNEVUX1EzU1ExbkZqRmFvYW1SNG81TzJmY2FlYk1uMndsbGUzUmVsWkxhMmNrTHdBN0NNQjM1NDkwa3p5X3ltTjYxSjNOR2paRWJ6MEJSekk1QTJwS2Yta1ozTHdfVnVKS1Rna0lBakdNcHFwWlctaXJCX0g3U2RtVWRGNlE0bXBIdXhzUHZ6U3poTWxMbGQtbVQyalI1dUE4ZU9JWUViNnpFcmNSbEJZVE1ra0RCYlJXQmpnNlhFZmtvV2tTaW8yNkVobnJHZG1zS0lUa283Y3BnbWxyS2FaSmpnLS04VTUyeWVybEZCVXEzYmtOaTFmVmxicFhrVGE5OXFsaktYR1J5azMyaHBfaVBkRXhfWXB3ZGx3VGViajd5ZnhjazdaenVfSnJySXNxRkJHYXBoOGQtMG1Gd1drSkZXZG14cC1FNDlxY0FFa1NfcnVIaWdXUXU3Q1hqekxlWVp2UkJMS2ZWN0xpUDJ0Yy1ZZ1B6Y3M0VzN4TFFpcmFGTk93eTRnZldFbkxrdUVHWWVqRk45VFBxblM0NXJqZnJrWDAyYUd4Z1B0dUJ4?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "MIS signs a framework agreement with Xpro to provide AI support solutions",
+   "summary_en": "MIS has concluded a strategic partnership with Xpro to integrate and deploy artificial intelligence solutions."
   },
   {
    "id": "bc7c18241b0c",
@@ -21430,7 +21950,9 @@
    "layer": "Puces",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/designing-edge-ai-socs-at-near-threshold-why-foundation-ip-can-help-you-break-down-the-power-wall/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Designing Edge AI SoCs At Near-Threshold: Why Foundation IP Can Help You Break Down The Power Wall",
+   "summary_en": "Traditional voltage scaling is no longer sufficient to guarantee real-time performance within strict energy and thermal limits for Edge AI."
   },
   {
    "id": "c750b0c3e470",
@@ -21444,7 +21966,9 @@
    "layer": "Puces",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/ip-integration-challenges-evolve/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "IP Integration Challenges Evolve",
+   "summary_en": "Growing complexities related to semiconductor IP block integration are driving the emergence of new technical solutions."
   },
   {
    "id": "95c05672bca4",
@@ -21458,7 +21982,9 @@
    "layer": "Puces",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/the-memory-challenge-of-physical-ai/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "The Memory Challenge Of Physical AI",
+   "summary_en": "Physical AI requires rethinking the memory hierarchy according to data flows, latency, and equipment hardware constraints."
   },
   {
    "id": "8183dad28b41",
@@ -21472,7 +21998,9 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/rackspace-signs-capacity-agreements-with-together-ai-and-blacksmith/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Rackspace signs capacity agreements with Together AI and Blacksmith",
+   "summary_en": "Rackspace has locked in computing capacity partnerships with Together AI and Blacksmith for deployment scheduled in 2027."
   },
   {
    "id": "9ad98cf872e6",
@@ -21486,7 +22014,9 @@
    "layer": "Puces",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/introduction-to-fp8-formats-part-1/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Introduction To FP8 Formats: Part 1",
+   "summary_en": "Explanation of the fundamentals of 8-bit floating-point data formats, their ecosystem dynamics, and hardware support."
   },
   {
    "id": "9c7495a9aa90",
@@ -21500,7 +22030,9 @@
    "layer": "Puces",
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/foundation-ip-for-the-ai-era-why-execution-shapes-soc-cost/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Foundation IP For The AI Era: Why Execution Shapes SoC Cost ─ eBook",
+   "summary_en": "A guide on using an integrated IP strategy to reduce risks and costs when designing system-on-chips (SoCs) for AI."
   },
   {
    "id": "3660858b9b56",
@@ -21514,7 +22046,9 @@
    "layer": "Financement",
    "source": "The National",
    "url": "https://www.thenationalnews.com/business/markets/2026/11/12/manus-on-markets-nvidia-shares-plunge-after-jensen-huang-faces-second-affair-claim/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Manus on Markets: Nvidia shares plunge after Jensen Huang faces second affair claim",
+   "summary_en": "Nvidia's stock price dropped heavily following new public revelations affecting CEO Jensen Huang's governance and privacy."
   },
   {
    "id": "1ff6cd9f9cb3",
@@ -21528,7 +22062,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112VL211/naver-ai-data-center-capacity-nvidia.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Naver signs US$1.5 billion AI cloud deal with US firm",
+   "summary_en": "Naver has concluded a 2 trillion KRW (1.5 billion USD) AI computing contract with an American inference specialist to develop its AI Factory offering."
   },
   {
    "id": "636230b15257",
@@ -21542,7 +22078,9 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/energy-storage-firm-torus-launches-prefabricated-modular-data-center-product-raises-500m/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Energy storage firm Torus launches prefabricated modular data center product, raises $500m",
+   "summary_en": "Energy storage specialist Torus unveiled its prefabricated modular data centers and raised 500 million USD in funds to support their production."
   },
   {
    "id": "4e2b501b2fcf",
@@ -21556,7 +22094,9 @@
    "layer": "Fonderie",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112VL213/fab-2026-expansion-production-iphone.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "India's Tata Electronics reportedly seeks up to US$2 billion in loans",
+   "summary_en": "Tata Electronics is negotiating a 2 billion USD loan as the opening of its chip foundry experiences delays and is now pushed back to mid-2028."
   },
   {
    "id": "88e07fda9456",
@@ -21570,7 +22110,9 @@
    "layer": "Modèles",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112VL212/bytedance-ai-agent-revenue-2026.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "ByteDance plans to release Muse-like AI agent in coming weeks",
+   "summary_en": "ByteDance is preparing the launch of a new AI agent comparable to Meta's Muse model to catch up with American laboratories."
   },
   {
    "id": "e5ded51a8ef9",
@@ -21584,7 +22126,9 @@
    "layer": "Puces",
    "source": "The Japan Times",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPejNZdjBBQXpVLXA5cjR5MXRmbHV4d25UVUM0WlJlT3dleWhMc1VNYkY1Q0xrb1lXcWhyZk1oOTFpYzFMUGhocjkxeFRWYl9KYXVCTkk1SU5sTE1Oc2hNWm5YYWZNaXhXM0VrTTVKQzROSE1UN1c1NlJYeEJGVE9SZzhmNHJSZWpZd2RrOU5qb294Zw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese AI firms rush to secure Nvidia chip capacity as scandal stirs fear of curbs",
+   "summary_en": "Faced with turmoil at Nvidia and the risk of tightened controls, several Chinese companies are urgently seeking to reserve AI hardware."
   },
   {
    "id": "5e2d01f45d57",
@@ -21598,7 +22142,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD225/synnex-growth-revenue-2027-business.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Synnex pivots to AI solution enabler, targets continued growth in 2027",
+   "summary_en": "Driven by record Q3 2026 results thanks to AI servers and semiconductors, Synnex announces new financing means to support its expansion."
   },
   {
    "id": "f3e8a063e0f2",
@@ -21612,7 +22158,9 @@
    "layer": "Autre",
    "source": "Arab News",
    "url": "https://www.arabnews.com/eye-on-ai/saudi-arabia-achieves-leading-positions-in-ai-indicators-in-imds-2026-ranking-of-70-countries-3011378",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Saudi Arabia achieves leading positions in AI indicators in IMD’s 2026 ranking of 70 countries",
+   "summary_en": "Saudi Arabia ranks second globally for awareness of AI-related cybersecurity risks and fourth for the implementation of its national strategy and enterprise AI adoption according to the IMD 2026 ranking."
   },
   {
    "id": "41911df5e44c",
@@ -21626,7 +22174,9 @@
    "layer": "Régulation",
    "source": "CNBC",
    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQbEZQd1VKRnhGOXdpSDNHeGtxVzBDdEN3a0VnV3hyZG9YZXhscndPSk92N291WE5CTkYwU190dWNSVHFYUnFtWDUyaGtXLTNxWDZzT0oweU9wdTBFS0x1RzJtR0hvbks1TGFCQ0J5QnN3Q01vd0V6bVdtaWZxMGdTY1VoUU9aQm1uRFVVOC1qM0c?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Jensen Huang's affair with alleged spy revives push to tighten China chip curbs ahead of Trump-Xi summit",
+   "summary_en": "The revelation of Jensen Huang's relationship with an alleged spy revives calls to strengthen restrictions on chips destined for China ahead of the summit between Donald Trump and Xi Jinping."
   },
   {
    "id": "8553d069a814",
@@ -21640,7 +22190,9 @@
    "layer": "Autre",
    "source": "أريبيان بزنس",
    "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPRUItbVl0c19oUzBJcEpDcFZHQjd2b0R5TUJ0XzlNQURHQ01ROFNQWks3ZWwwYkp3QVVPOVh1WktfNHRMSy1zLXRXNU5fRzkxNmk5dmV1Q05VUXJvd25mYnJKQUdBa2NpSnNGZGU0NE80ZklKdktDN1NINVdXbUlSdmtHLVVsX0F5MGxIdjhWR0pzSnBxQzdIWTJRMHpKWVhEMzJEd0JuRWZKaFRCYUJ5MHhCdFdfeVk5dWIwY29sSWExdEZpdk0yelBHbDN4TjhwQjNaU2UtYWRfeUNoS1l4OU0xbzM1anZsWUZaeGt2bG8xaGVBZmItTngwNFhpMDgtbUNwdEZ3bm4tUjFQN2hRemlrVVA2TF8xc2RzWDBsQUYydzlweXpKenFvQVdPc0xfUkc3c3ZzZjR3Q0tSM09YVGdnb2NWOEF4WmctMzF3NFY3VEdlU0xOWUxsQQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Saudi Arabia ranks third globally in AI skills growth",
+   "summary_en": "Saudi Arabia has risen to third place globally regarding the growth of artificial intelligence skills."
   },
   {
    "id": "dad468239d15",
@@ -21654,7 +22206,9 @@
    "layer": "Régulation",
    "source": "Chosunbiz",
    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQMy1RTTlQM1phT2puYkhHSmVJVExldDE2dkhINF9FV3hTVjNreVlDc2JJRm5aS2g3eHp1NklXZi1Lbk1GS21TVU1GamxyREtqb0VUMXV1RTU3dkZ5TVAxMXRXdWNTc195NGZtNjRWeV9kakNvckRLbkdLaXNPWVYycHJXUk5Xa3gw0gGcAUFVX3lxTFBrYU9OdmQ3UGhzaGthSUUzclJMZldLbHEzR3RXbU82MHgtTVFJX21mWVVmalNlbVFKZUJUVTFjMHJLa1BVUkZkdzZSQ05sMmVJaWVad05HUUxkRHh2bmpIUFRCRVJuMzMwUGpqaFhyVW1HNnptMWszVXcxMFdaOVdaeFo1cGtRUWV5UlQ3elp0cXFRbVNVUmxtemdEaw?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "US to widen AI chip export controls to seven nations, curb China remote access",
+   "summary_en": "The United States plans to extend its artificial intelligence chip export controls to seven additional countries and limit remote access for China."
   },
   {
    "id": "7b68abd933b8",
@@ -21668,7 +22222,9 @@
    "layer": "Applications",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD213/bytedance-ai-video-production-revenue-china.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "China's AI short-drama boom opens new token revenue opportunity for ByteDance's Seedance, Volcengine",
+   "summary_en": "The rapid growth of the AI-generated short-drama market in China is stimulating demand for computing resources for ByteDance."
   },
   {
    "id": "4155fa932d71",
@@ -21682,7 +22238,9 @@
    "layer": "Financement",
    "source": "Business Standard",
    "url": "https://www.business-standard.com/world-news/inside-anthropic-s-mega-64-billion-ipo-valuation-revenue-risks-and-more-126111200434_1.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Inside Anthropic's mega $64 billion IPO: Valuation, revenue, risks and more",
+   "summary_en": "Anthropic, the creator of Claude AI models, is preparing its initial public offering, highlighting its 64 billion USD valuation, growth, and risks."
   },
   {
    "id": "a8c68b33e1d6",
@@ -21696,7 +22254,9 @@
    "layer": "Financement",
    "source": "Cnbc",
    "url": "https://www.cnbc.com/2026/11/12/ai-credit-debt-bond-markets-pimco.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "AI borrowers now drive nearly half of long-dated U.S. IG issuance. PIMCO sees 3 diversifiers",
+   "summary_en": "AI-related borrowings concentrate long-term corporate debt in the United States, leading PIMCO to identify three diversification opportunities."
   },
   {
    "id": "aa4449b24041",
@@ -21710,7 +22270,9 @@
    "layer": "Régulation",
    "source": "Hindustan Times",
    "url": "https://www.hindustantimes.com/world-news/us-news/nvidia-has-a-significant-china-problem-short-seller-flagged-jensen-huangs-alleged-spy-links-months-before-probe-101794461984741.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "‘Nvidia has a significant China problem’: Short seller flagged Jensen Huang's alleged spy links months before probe",
+   "summary_en": "Nvidia stock fell about 25% following allegations from Culper Research concerning potential AI chip diversions to China and links attributed to Jensen Huang."
   },
   {
    "id": "33f5f2985a1e",
@@ -21724,7 +22286,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD226/loss-2026-equipment-spacex-elon-musk.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "SoftBank rejects Musk's default claim, books JPY597.2B data-center loss",
+   "summary_en": "SoftBank denied Elon Musk's accusation regarding a turbine payment default while posting a 597.2 billion JPY loss related to power equipment for US AI datacenters."
   },
   {
    "id": "b4aad3f88769",
@@ -21738,7 +22302,9 @@
    "layer": "Mémoire HBM",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD219/samsung-demand-openai-sam-altman-ceo.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Sam Altman warns Samsung of short-term AI demand volatility",
+   "summary_en": "Sam Altman warned Samsung of potential short-term volatility in AI memory demand while projecting strong long-term growth creating chip and datacenter shortages."
   },
   {
    "id": "f625a494e7ee",
@@ -21752,7 +22318,9 @@
    "layer": "Régulation",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD221/nvidia-apec-ceo-policy-technology.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese media question timing of Huang allegations amid chip controls",
+   "summary_en": "Chinese state media are questioning the US political maneuvers behind the timing of allegations targeting Jensen Huang ahead of the meeting between American and Chinese leaders."
   },
   {
    "id": "b0c0525b8382",
@@ -21766,7 +22334,9 @@
    "layer": "Datacenters",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD218/meta-infrastructure-data-president-aws.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Meta infrastructure chief to hand over AI compute role in 2027",
+   "summary_en": "Santosh Janardhan will leave Meta in early 2027 and be replaced by Dave Brown, former AWS vice president, as Meta accelerates the deployment of its datacenters and proprietary chips."
   },
   {
    "id": "2684c858e375",
@@ -21780,7 +22350,9 @@
    "layer": "Autre",
    "source": "The National",
    "url": "https://www.thenationalnews.com/podcasts/trending-middle-east/2026/11/12/russia-ukraine-prisoner-swap-nvidia-ceo-huangs-second-affair-and-ras-al-khaimah-beaches-reopen/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Russia-Ukraine prisoner swap, Nvidia CEO Huang's second affair and Ras Al Khaimah beaches reopen",
+   "summary_en": "Nvidia's board of directors is preparing to oust CEO Jensen Huang following new accusations regarding a second extramarital relationship."
   },
   {
    "id": "a1fb0bd6b867",
@@ -21794,7 +22366,9 @@
    "layer": "Autre",
    "source": "Les Echos",
    "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPcDZJWEI0ZVhXcnluTnN3MXRfZzFzM29ENHJnSVFfSV81UUw2NWlQd2Y0RlZNVkpYNE5YclIzSXJJWUh5SjdKajJXREg1VnhwcXE5UzBHVEhIY0czeU5MdVJ3YWQwdW96OXVILU1RU2l2bG5HSlV4Mk9YWDhWeUlrRVgxVE9LSThYRUVtdm9ObWN1ZlF5M1NDU19HUVpKSkVscUgweXBTUmpZNnBSMTk3YW5yVHdtOEthWXgySlVNamZJWExfRzVIOUxNWkItbWRkY2lWMQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia board ready to part ways with CEO-founder Jensen Huang",
+   "summary_en": "Nvidia's board of directors stands ready to part ways with its CEO and founder Jensen Huang."
   },
   {
    "id": "66b6a014d619",
@@ -21808,7 +22382,9 @@
    "layer": "Applications",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD216/samsung-hyundai-samsung-sdi-chairman-automotive.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Samsung and Hyundai forge AI alliance",
+   "summary_en": "Samsung and Hyundai are strengthening their strategic partnership in robotics, energy, and physical AI, bringing together over 100 executives to define their industrial collaboration."
   },
   {
    "id": "9cb1707452f2",
@@ -21822,7 +22398,9 @@
    "layer": "Modèles",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD230/china-ai-open-source-data-demand-2026.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese models capture 89% of US corporate spending in open-source AI",
+   "summary_en": "A report from Menlo Ventures reveals that Chinese AI models have captured 89% of open-source spending by American companies."
   },
   {
    "id": "da65fbfbbf41",
@@ -21836,7 +22414,9 @@
    "layer": "Applications",
    "source": "Zawya",
    "url": "https://www.zawya.com/en/business/ai-shaping-digital-future/invest-qatar-soin-partner-to-launch-regional-operations-in-qatar-2218921",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Invest Qatar, SOIN partner to launch regional operations in Qatar",
+   "summary_en": "Invest Qatar and SOIN have concluded a partnership to accelerate artificial intelligence adoption and digital transformation in Qatar."
   },
   {
    "id": "293cd9f2c270",
@@ -21850,7 +22430,9 @@
    "layer": "Fonderie",
    "source": "SCMP Tech",
    "url": "https://www.scmp.com/tech/tech-war/article/3374170/nexperias-china-unit-claims-supply-chain-localisation-rift-dutch-parent-deepens",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nexperia’s China unit claims supply chain ‘localisation’ as rift with Dutch parent deepens",
+   "summary_en": "Nexperia's China unit announced that its 12-inch wafer platform covers all its product categories following the blocking of European shipments."
   },
   {
    "id": "a855ac33053a",
@@ -21864,7 +22446,9 @@
    "layer": "Mémoire HBM",
    "source": "The Korea Herald",
    "url": "https://www.koreaherald.com/article/10935341",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "‘Megaproject’ breaks ground at Samsung HBM plant",
+   "summary_en": "South Korea has launched its first industrial megaproject at Samsung Electronics' advanced chip packaging center dedicated to HBM memory."
   },
   {
    "id": "93a1be9c32d9",
@@ -21878,7 +22462,9 @@
    "layer": "Autre",
    "source": "The National",
    "url": "https://www.thenationalnews.com/future/technology/2026/11/12/who-could-replace-jensen-huang-as-nvidia-ceo/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Who could replace Jensen Huang as Nvidia CEO?",
+   "summary_en": "As Nvidia's board examines Jensen Huang's retention, Ian Buck and CFO Colette Kress are rumored as candidates for his succession."
   },
   {
    "id": "45aa044abb7e",
@@ -21892,7 +22478,9 @@
    "layer": "Énergie",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD211/intel-china-renewable-energy-chipmakers-ai-inference-demand.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Intel China wants to turn untapped renewable energy into AI tokens with computing pods slated for 1H27",
+   "summary_en": "Intel China presented eco-friendly AI computing pods aimed at large datacenters to harness renewable energy at the CIIE 2026 exhibition."
   },
   {
    "id": "260440ae5635",
@@ -21906,7 +22494,9 @@
    "layer": "Mémoire HBM",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112VL209/samsung-hbm-packaging-2028-plant.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Samsung moves up HBM packaging plant opening to June 2028",
+   "summary_en": "Samsung is bringing forward the opening of its new HBM memory packaging plant in South Korea by one year to meet AI server demand."
   },
   {
    "id": "988605b89980",
@@ -21920,7 +22510,9 @@
    "layer": "Régulation",
    "source": "Business Standard",
    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxPMUpnYklwWTRxdXZtQ0JUZUU0QVJoelhGT2ZqUGNWZFNURGIwNFVkaVBPc1JRR09Qd3U4LVlOd3JDYnZNMl9HS3hrbmJpVXN5S2dpdGV5ZjZram9OejdaWVNwdTlSX01WWnFrSXBpYXEtUk1LbUk1YlJjWnJka3Q4MDR6Y3hoRmp0bFpybUV3SmF5cDFQcmNXY3Z2WGdaNEs3bTVJc0tOaFNuRW9hUlZIS216UklhZFlxNy0wcHh2MnRBNTdNUW9nNGpnaHJlblhjTkpla3lia3VEWWZYVDVNMnY0bmhIb3NSVTdVMUNJUHNPbGPSAfgBQVVfeXFMTkQxU3Q2V3EtNVRhajM2UVZGYjlONGxJcHI5Q0piY1NuejJ1RWVJVm5STE4zRl9SdHhhZDB5dFFmc0dIaVF0dUtUVS1SazB2Tzhuc1VETksxeGh6VmxPUHNiRnRKRkdXTlBPN09XTDVyaEhVYkZDRzdZbFoySGdwUm83Z2N6OFl4dTAtRUNtbGVTcWJVcENLMUg1R1FLcWhfZ3ZITlk2cV96Nm1TTkhwT0hseEdtN1pZQzIyendLVUM1V2V0bFVHanZ5ZTY3SG5jQm5jSHRhbmZUMnQtb2pVdzJKQklVeTZRWWtYOGkybkgtRzZQV01tVmk?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Stopped in 35 secs: How OpenAI's Control Room will monitor AI safety risk",
+   "summary_en": "OpenAI is setting up a facility called Control Room aimed at monitoring and interrupting AI safety risks within 35 seconds."
   },
   {
    "id": "8228052ee22f",
@@ -21934,7 +22526,9 @@
    "layer": "Autre",
    "source": "The National",
    "url": "https://www.thenationalnews.com/future/technology/2026/11/12/jensen-huang-faces-second-affair-claim-as-nvidia-board-weighs-his-future/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Jensen Huang faces second affair claim as Nvidia board considers his future",
+   "summary_en": "According to the New York Times, Jensen Huang reportedly had an affair with Kimberly Powell, a vice president at Nvidia, as the board of directors studies his future."
   },
   {
    "id": "bdebc1d07082",
@@ -21948,7 +22542,9 @@
    "layer": "Financement",
    "source": "The Japan Times",
    "url": "https://www.japantimes.co.jp/business/2026/11/12/economy/boj-rate-hike-ai-demand/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "AI slump not seen affecting Bank of Japan’s rate-rise plan",
+   "summary_en": "The Bank of Japan maintains its rate hike forecast despite the recent drop in shares of AI-related technology companies."
   },
   {
    "id": "b2ffbee61fca",
@@ -21962,7 +22558,9 @@
    "layer": "Autre",
    "source": "Zawya",
    "url": "https://www.zawya.com/en/capital-markets/ai-shaping-digital-future/who-would-be-next-ceo-at-nvidia-top-engineer-and-cfo-favored-as-candidates-2246227",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Who would be next CEO at Nvidia? Top engineer and CFO favored as candidates",
+   "summary_en": "CFO Colette Kress and top engineer Ian Buck are considered by investors and analysts as the leading internal candidates to take the helm of Nvidia."
   },
   {
    "id": "8e35b1c004d5",
@@ -21976,7 +22574,9 @@
    "layer": "Régulation",
    "source": "Focus Taiwan",
    "url": "https://focustaiwan.tw/business/202611120006",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Lai asks Shih to convey Taiwan's desire for AI cooperation at APEC summit",
+   "summary_en": "Taiwanese President Lai Ching-te tasked his representative Stan Shih with expressing Taiwan's desire to collaborate with international partners on AI during the APEC summit."
   },
   {
    "id": "09307f3fedfe",
@@ -21990,7 +22590,9 @@
    "layer": "Autre",
    "source": "Bloomberg.com",
    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQY3QtZVp1YXdTUjBYYWtnQkF0TTJDb2hNZ2RtMk40c0Iwd1dSbzZ0bzJHOURHMmI2TmpSU2pwM2s0Q182LTlrMzF0cU0wMDJLYWVubktOV25uSnB6Y1RwRFlZY3plWWY2eFh0R0JGVnQ2SXU2dU41ZWJFbmhvcFZsaVhQbnFoQ0RsUFUyc3Fpc21nb3BZWGJPcDBqY1NYZGZJb0pQaV9xVmh2Y0VtLVdJQg?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Nvidia Drama Triggers Difficult Search for Huang’s Successor",
+   "summary_en": "Tensions within Nvidia's board of directors make the quest for a potential successor to Jensen Huang complex."
   },
   {
    "id": "340ef00f8c4d",
@@ -22004,7 +22606,9 @@
    "layer": "Financement",
    "source": "Sifted",
    "url": "https://sifted.eu/articles/european-chips-funding-almost-quadruples-as-investors-back-nvidias-inference-challengers/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "European chips funding almost quadruples as investors back Nvidia’s inference challengers",
+   "summary_en": "Capital invested in chips in Europe has nearly quadrupled thanks to interest in companies developing inference chips to compete with Nvidia."
   },
   {
    "id": "c523f441d190",
@@ -22018,7 +22622,9 @@
    "layer": "Fonderie",
    "source": "Reuters",
    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE52TmtmYlUzcl9lRl9tUFNEcWZlTHE4Q3pMNDE1cGpOLU9McDltQVpMazZRSkswbjNNWm9wSFJtbXVzOEZwc3pvQjdGbFRkZFlfNHpKU3YtMjhNVGtxQTJ1TFZ2cm0zOHhHaXB1R2xVN21Oc3l4NThLd0tlSQ?oc=5",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Samsung's advanced chip packaging expansion to boost $30 billion in additional investment, says South Korean president",
+   "summary_en": "The South Korean president announces that expanding Samsung's advanced packaging capacity will attract 30 billion USD in additional investments."
   },
   {
    "id": "311676370e27",
@@ -22032,7 +22638,9 @@
    "layer": "Datacenters",
    "source": "ServeTheHome",
    "url": "https://www.servethehome.com/this-is-the-meta-metaroce-network-adapter/",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "This is the Meta MetaRoCE Network Adapter",
+   "summary_en": "Meta unveiled its MetaRoCE network adapter at the OCP 2026 summit designed to interconnect AI training clusters comprising up to one million GPUs."
   },
   {
    "id": "009d42327d50",
@@ -22046,7 +22654,9 @@
    "layer": "Fonderie",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112PD229/digitimes-substrate-glass-substrate-production-tgv.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "DIGITIMES Insight: Entering glass substrate era, core layers are no longer an exclusive process for substrate makers",
+   "summary_en": "The substrate industry for AI accelerators is moving toward the use of glass to resolve organic substrate warping issues."
   },
   {
    "id": "43e969a94873",
@@ -22060,7 +22670,9 @@
    "layer": "Régulation",
    "source": "Arab News",
    "url": "https://www.arabnews.com/world/chinese-woman-accused-of-spying-on-nvidia-chief-entered-taiwan-8-times-3011350",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Chinese woman accused of spying on Nvidia chief entered Taiwan 8 times",
+   "summary_en": "According to Taiwanese authorities, the Chinese woman involved in the espionage case linked to Nvidia's founder made eight trips to Taiwan."
   },
   {
    "id": "f72a3d094cea",
@@ -22074,7 +22686,9 @@
    "layer": "Applications",
    "source": "Computerweekly News",
    "url": "https://www.computerweekly.com/news/366654757/Next-Netflix-moment-arrives-as-AI-agents-reshape-broadband-landscape",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Next Netflix moment arrives as AI agents reshape broadband landscape",
+   "summary_en": "According to research, internet service providers find that the reliability of sending LLM data from homes is becoming a key broadband criterion."
   },
   {
    "id": "2ad7ed035452",
@@ -22088,7 +22702,9 @@
    "layer": "Fonderie",
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261112VL203/tsmc-demand-packaging-ai-chip-infrastructure.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "TSMC sees surging AI chip demand, highlights advanced packaging and physical AI opportunities",
+   "summary_en": "Driven by accelerating AI investments, TSMC is facing unprecedented demand for its advanced chips and anticipates new opportunities in packaging and physical AI."
   },
   {
    "id": "59bdbae5ccb9",
@@ -22102,7 +22718,9 @@
    "layer": "Financement",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/12/elon-musk-jensen-huang-nvidia-tesla.html",
-   "confidence": "moyenne"
+   "confidence": "moyenne",
+   "title_en": "Elon Musk says it would be an 'honor' to hire Nvidia's Jensen Huang",
+   "summary_en": "Elon Musk posted a message on X as reports indicate Nvidia's board of directors is preparing to oust Jensen Huang."
   },
   {
    "id": "28212fe560d2",
@@ -23474,258 +24092,6 @@
    "layer": "Applications",
    "source": "Bloomberg",
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeHVxSVBEQ0VNQmRBdDYtY0dZNk0tVHFpZ1I3eVRURnB2anRqTDN2dGZDb29xRG90eTZLN3ZmSktIVnFWVkFqWlp3ejc2LWFPa01BZ0JhQTl6MHFKamNfalljd2NsS1ExNzdSSEhpbHBnemxrdHZ5NG1yWEpKVWw1MlQydUJ4YU51UnBQb1AxVWcyczBVM2RfSWFucjAzZERsbnlCeElSR0E?oc=5",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "295068244fb0",
-   "ts": "2026-11-11T18:28:10.000Z",
-   "title": "Maria Heriz de STMicroelectronics sur le passage de tous ses microcontrôleurs à une plateforme STM32 unique",
-   "orig": "STMicros’ Maria Heriz on Moving All Its MCUs to One STM32 Platform",
-   "summary": "STMicroelectronics unifie ses microcontrôleurs sur la plateforme STM32 pour se préparer aux réglementations européennes en cybersécurité et explorer l'IA et la robotique.",
-   "country": "EU",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "EE Times",
-   "url": "https://www.eetimes.com/stmicros-maria-heriz-on-moving-all-its-mcus-to-one-stm32-platform/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "c2f79d0f0a9a",
-   "ts": "2026-11-11T18:16:40.000Z",
-   "title": "Le géant taïwanais des puces TSMC va investir 1 milliard de dollars dans Anthropic et OpenAI",
-   "orig": "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI",
-   "summary": "TSMC projette d'investir 1 milliard de dollars dans Anthropic et OpenAI, illustrant les financements circulaires au sein de l'écosystème de l'IA.",
-   "country": "OTHER",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "Ars Technica",
-   "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "4661ad6e587b",
-   "ts": "2026-11-11T18:01:33.000Z",
-   "title": "Credo à l'OCP 2026 : Optique à micro-émetteurs et fiabilité des interconnexions IA",
-   "orig": "Credo at OCP 2026: Micro-Emitter Optics and AI Interconnect Reliability",
-   "summary": "Credo présente ses solutions d'optique à micro-émetteurs et ses interconnexions 1.6T ZeroFlap ALC pour améliorer la fiabilité des clusters d'IA.",
-   "country": "US",
-   "category": "puces",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "EE Times",
-   "url": "https://www.eetimes.com/credo-at-ocp-2026-micro-emitter-optics-and-ai-interconnect-reliability/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "cce714811b51",
-   "ts": "2026-11-11T18:00:00.000Z",
-   "title": "Gemini Decisions API : Décisions multimodales rapides et calibrées",
-   "orig": "Gemini Decisions API: Fast, calibrated multimodal decisions",
-   "summary": "Google lance l'API Gemini Decisions, basée sur le modèle Gemini Decision, pour permettre des prises de décision multimodales rapides.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Modèles",
-   "source": "Google AI",
-   "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
-   "confidence": "haute"
-  },
-  {
-   "id": "507f5c8fe220",
-   "ts": "2026-11-11T17:16:34.000Z",
-   "title": "Alice Huang, soupçonnée d'avoir eu une liaison avec le PDG de Nvidia, est une banquière chinoise devenue dirigeante tech",
-   "orig": "Alice Huang, Who Reportedly Had an Affair with Nvidia CEO, Is a Chinese Banker Turned Tech Exec",
-   "summary": "Alice Huang, soupçonnée d'espionnage après sa relation avec Jensen Huang, a travaillé dans la finance chinoise avant de diriger une société de datacenters à Singapour.",
-   "country": "US",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Régulation",
-   "source": "Al-sharq Al-awsat",
-   "url": "https://english.aawsat.com/node/5340229",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "1ddfcf59110c",
-   "ts": "2026-11-11T17:13:28.000Z",
-   "title": "Un consortium va développer un centre de données IA hyperscale de 400 MW à Oman",
-   "orig": "Consortium to develop 400MW hyperscale AI data center in Oman",
-   "summary": "Le projet de centre de données à Oman attire l'intérêt de la société américaine de cloud computing Crusoe comme client potentiel.",
-   "country": "GULF",
-   "category": "energie",
-   "importance": 3,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/consortium-to-develop-400mw-hyperscale-ai-data-center-in-oman/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "6090e0bdd14c",
-   "ts": "2026-11-11T17:11:19.000Z",
-   "title": "Les utilisateurs de Pixel bénéficient d'une mise à jour majeure d'Android Auto, rivalisant avec l'IA de Siri",
-   "orig": "Pixel users are getting a major Android Auto update – and it rivals Siri AI",
-   "summary": "Google étend l'accès à Gemini Intelligence sur Android Auto, avec des fonctionnalités exclusives pour les utilisateurs de Pixel.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "ZDNet IA",
-   "url": "https://www.zdnet.com/tech/android-auto-gemini-intelligence-update/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "a7761420660d",
-   "ts": "2026-11-11T17:00:00.000Z",
-   "title": "Une startup veut combattre les armes biologiques basées sur l'IA avec l'IA",
-   "orig": "A Startup Wants to Fight AI Bioweapons With AI",
-   "summary": "Radical Numerics a développé un modèle capable d'identifier des pathogènes naturels ou modifiés par IA sans connexion internet.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Modèles",
-   "source": "Wired IA",
-   "url": "https://www.wired.com/story/startup-fights-ai-bioweapons-with-ai/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "6898bbd8e5e2",
-   "ts": "2026-11-11T16:46:09.000Z",
-   "title": "Claude pourra bientôt collaborer à vos réunions d'équipe, comme un stagiaire",
-   "orig": "Claude can collaborate in your team meetings soon – like an intern",
-   "summary": "Anthropic intègre de nouvelles fonctionnalités à Claude, lui permettant de participer aux réunions d'équipe.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "ZDNet IA",
-   "url": "https://www.zdnet.com/innovation/claude-meetings-workplace-features/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "f97b5eb405e4",
-   "ts": "2026-11-11T16:39:39.000Z",
-   "title": "L'Arabie saoudite figure en bonne place dans le classement IA 2026 de l'IMD parmi 70 pays",
-   "orig": "علوم وتقنيات / المملكة تتبوأ مراتب متقدمة بتصنيف معهد IMD الدولي لعام 2026 في الذكاء الاصطناعي بين 70 دولة",
-   "summary": "L'Arabie saoudite a obtenu des rangs élevés au sein du classement mondial 2026 de l'institut IMD portant sur l'intelligence artificielle.",
-   "country": "GULF",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Autre",
-   "source": "وكالة الأنباء السعودية",
-   "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5yU0dvLVdFS3VDbGFhalpycWxjRWJRVTVxZzlWMUZQZFdiaTNUVG02VzdkS1F2c3J1azY3OTdaRWdIRkdpbGc?oc=5",
-   "confidence": "haute"
-  },
-  {
-   "id": "7288076ed044",
-   "ts": "2026-11-11T16:33:08.000Z",
-   "title": "IBM proposera l'accès à un système quantique à double processeur en 2027",
-   "orig": "IBM to offer access to a dual-processor quantum system in 2027",
-   "summary": "IBM prévoit de relier deux puces de 520 qubits d'ici la fin de l'année prochaine.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "Ars Technica",
-   "url": "https://arstechnica.com/science/2026/11/ibm-to-offer-access-to-a-dual-processor-quantum-system-in-2027/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "6a76034621bc",
-   "ts": "2026-11-11T16:30:00.000Z",
-   "title": "OpenAI et des dirigeants du comté de Géorgie visés par une plainte RICO pour un centre de données IA de 30 milliards de dollars",
-   "orig": "OpenAI and Georgia county leaders hit with Mafia-style RICO racketeering lawsuit over $30 billion AI data center",
-   "summary": "Une plainte pour racket allègue que des parties ont commis des fraudes et dissimulé des informations concernant un projet de centre de données.",
-   "country": "US",
-   "category": "regul",
-   "importance": 3,
-   "layer": "Datacenters",
-   "source": "Tom's Hardware",
-   "url": "https://www.tomshardware.com/tech-industry/data-centers/georgia-politicians-openai-slapped-with-racketeering-lawsuit-over-3-2-gigawatt-ai-data-centers-plaintiffs-allege-multiple-violations-were-part-of-a-coordinated-scheme-to-get-project-camellia-approved",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "e5c84cef5234",
-   "ts": "2026-11-11T16:21:44.000Z",
-   "title": "Tapestry, soutenu par Google, termine le déploiement de la plateforme IA HyperQ pour l'examen d'interconnexion de PJM",
-   "orig": "Google-backed Tapestry completes deployment of HyperQ AI platform for PJM's Cycle 1 interconnection review",
-   "summary": "La plateforme IA HyperQ a permis d'accélérer le processus d'examen d'interconnexion de 60 fois par rapport à une méthode manuelle.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/google-backed-tapestry-completes-deployment-of-hyperq-ai-platform-for-pjms-cycle-1-interconnection-review/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "2ed3a890d3d8",
-   "ts": "2026-11-11T16:14:44.000Z",
-   "title": "Le chiffre d'affaires trimestriel d'OpenAI dépasserait les 10 milliards de dollars pour la première fois",
-   "orig": "OpenAI’s quarterly revenue reportedly crosses $10B for the first time",
-   "summary": "OpenAI enregistre une croissance de près de 50 % de son chiffre d'affaires trimestriel, atteignant 10 milliards de dollars.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "6e11a23c0428",
-   "ts": "2026-11-11T16:05:33.000Z",
-   "title": "Accélérer le développement de produits avec la gestion du cycle de vie pilotée par l'IA (AI-PDLC) dans AWS Quick",
-   "orig": "Accelerating product development with AI-driven lifecycle management (AI-PDLC) in AWS Quick",
-   "summary": "AWS présente une suite d'agents IA pour automatiser le cycle de vie du développement de produits, de la découverte au prototype.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "AWS Machine Learning",
-   "url": "https://aws.amazon.com/blogs/machine-learning/accelerating-product-development-with-ai-driven-lifecycle-management-ai-pdlc-in-aws-quick/",
-   "confidence": "haute"
-  },
-  {
-   "id": "bad6ee94c356",
-   "ts": "2026-11-11T16:00:00.000Z",
-   "title": "Essayez Tabletop : Espaces collaboratifs personnalisables pour que les groupes puissent planifier, jouer et faire plus ensemble",
-   "orig": "Try Tabletop: Customizable, collaborative spaces for groups to plan, play and do more together.",
-   "summary": "Google Labs lance Tabletop, un outil expérimental permettant aux groupes de créer des espaces collaboratifs interactifs via l'IA.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "Google AI",
-   "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/tabletop/",
-   "confidence": "haute"
-  },
-  {
-   "id": "f0476f4b70e9",
-   "ts": "2026-11-11T16:00:00.000Z",
-   "title": "L'expérience IA Tabletop de Google vous permet de créer des applications de collaboration personnalisées",
-   "orig": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
-   "summary": "Tabletop est un nouvel outil IA de Google permettant de générer des hubs collaboratifs personnalisés pour la coordination de groupes.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "The Verge IA",
-   "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
-   "confidence": "moyenne"
-  },
-  {
-   "id": "24dc29f08283",
-   "ts": "2026-11-11T16:00:00.000Z",
-   "title": "Sponsorisé : Considérations harmoniques pour les centres de données",
-   "orig": "Sponsored: Harmonic considerations for data centers",
-   "summary": "La qualité de l'alimentation électrique est essentielle pour garantir la fiabilité des centres de données dans l'économie numérique.",
-   "country": "US",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Énergie",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/opinions/harmonic-considerations-for-data-centers/",
    "confidence": "moyenne"
   }
  ]
