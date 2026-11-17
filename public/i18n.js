@@ -6,7 +6,7 @@
 "use strict";
 var D={
 "Actualités":"News","Marché et infrastructure":"Market & infrastructure","USA–Chine":"US–China","Méthode":"Method","Aujourd'hui":"Today","Briefing du jour":"Daily briefing",
-"Chargement…":"Loading…","mise à jour automatique":"automatic update","mise à jour automatique ":"automatic update ","toutes les 3 h":"every 3 h",
+"Chargement…":"Loading…","mise à jour automatique":"automatic update","mise à jour automatique ":"automatic update ","toutes les 3 h":"every 3 h","Mise à jour automatique toutes les 3 heures":"Automatic update every 3 hours","Mise à jour toutes les 3 heures":"Update every 3 hours","Aucune mise à jour":"No update yet",
 "Toutes les actualités →":"All news →","Sources":"Sources","Source":"Source","Tous":"All","Toutes":"All","Europe":"Europe","Golfe":"Gulf","Autres":"Other","Chine":"China","États-Unis":"United States","Royaume-Uni":"United Kingdom",
 "Modèles":"Models","Puces":"Chips","Énergie":"Energy","Finance":"Finance","Politique":"Politics","Régulation":"Regulation","Adoption":"Adoption","Recherche":"Research",
 "Applications":"Applications","Datacenters":"Data centers","Mémoire HBM":"HBM memory","Fonderie":"Foundry","Financement":"Funding","Autre":"Other",
@@ -92,6 +92,7 @@ var PH=[ /* phrases à trous et locutions, appliquées dans l'ordre */
  [/^Pays : (.+)$/,function(m,a){return"Country: "+tr(a)}],[/^Catégorie : (.+)$/,function(m,a){return"Category: "+tr(a)}],
  [/^Données il y a (\d+) (min|h|j)$/,function(m,n,u){return"Data "+n+" "+(u==="j"?"d":u)+" ago"}],[/^Données à l'instant$/,"Data just now"],[/^Données jamais$/,"Data never"],
  [/^Données (.+)$/,function(m,a){return"Data "+a}],
+ [/^Dernière mise à jour (.+)$/,"Last updated $1"],
  [/^Dernier point : (.+)$/,"Latest point: $1"],[/^Dernier point vieux de (\d+)$/,"Latest point is $1 old"],
  [/^12 mois à fin (.+)$/,"12 months to end $1"],[/^(10-K|10-Q|8-K|20-F|6-K) déposé le (.+?)( ↗)?$/,"$1 filed $2$3"],[/^dernier exercice clos le (.+)$/,"last fiscal year ended $1"],
  [/^Dernier passage : (.+)$/,function(m,a){return"Last run: "+a.replace(/il y a (\d+) (min|h|j)/g,function(x,n,u){return n+" "+(u==="j"?"d":u)+" ago"}).replace(/ sources sur (\d+) répondent/," sources out of $1 responding").replace(/ articles ajoutés/," articles added").replace(/classement par /,"classified by ")}],

@@ -50,7 +50,7 @@ function freshness(extra){
   var u=S.status&&S.status.updated_at;
   var stale=u&&(Date.now()-new Date(u).getTime())>6*3600*1000;
   var errs=(S.status&&S.status.last_run&&S.status.last_run.errors)||[];
-  setStatus(stale||errs.length?"stale":"ok","Données "+ago(u)+(S.status&&S.status.mode==="seed"?" · jeu initial":"")+(extra||""),errs.join(" · "));
+  setStatus(stale||errs.length?"stale":"ok",(u?"Dernière mise à jour "+ago(u):"Aucune mise à jour")+(S.status&&S.status.mode==="seed"?" · jeu initial":"")+(extra||""),errs.join(" · "));
 }
 function toast(txt){var t=$("toast");t.textContent=txt;t.classList.add("on");clearTimeout(toast.k);toast.k=setTimeout(function(){t.classList.remove("on")},2200)}
 function refresh(){

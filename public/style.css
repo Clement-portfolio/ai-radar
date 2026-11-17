@@ -296,7 +296,7 @@ details.why .sc{margin-top:6px}
 .top .wrap{align-items:stretch}
 .top .logo,.top .stat{align-self:center}
 .nav{align-self:stretch;align-items:stretch}
-.tab{display:flex;align-items:center;padding-top:0;padding-bottom:0}
+.tab{display:flex;align-items:center;padding-top:3px;padding-bottom:0}
 @media(max-width:720px){.top .wrap{align-items:center}.nav{align-items:stretch}.tab{padding-top:11px;padding-bottom:11px}}
 
 /* code couleur du goulot : rouge fort, orange sous tension, vert fluide */
@@ -326,8 +326,9 @@ button.logo{background:none;border:0;padding:0;color:var(--ink);cursor:pointer;t
 #toast.on{opacity:1;transform:translateX(-50%)}
 html{overscroll-behavior-y:contain}
 
-.stat .auto{color:var(--mute)}
-@media(max-width:720px){.stat{flex-wrap:wrap;justify-content:flex-end;gap:0 6px;max-width:60%;text-align:right;white-space:normal;font-size:10.5px;line-height:1.4}.stat .auto .l{display:none}.stat .auto{flex-basis:100%}.stat .auto:before{content:"Mise à jour "}}
+.stat .auto{color:var(--mute)}.stat .auto .m{display:none}
+@media(max-width:720px){.stat .auto .d{display:none}.stat .auto .m{display:inline}}
+@media(max-width:720px){.stat{flex-wrap:wrap;justify-content:flex-end;gap:0 6px;max-width:100%;text-align:right;white-space:normal;font-size:10.5px;line-height:1.4}.stat .auto{flex-basis:100%}#status{white-space:nowrap}}
 
 /* À retenir : 2 à 3 actualités majeures, avec le pourquoi et la remise en contexte */
 .focus{border-top:1px solid var(--ink);padding-top:14px;margin-bottom:40px}
@@ -349,6 +350,8 @@ html{overscroll-behavior-y:contain}
 .row .rwhy{grid-column:3;font-size:12.5px;line-height:1.4;color:var(--mute);margin:3px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 @media(max-width:720px){.row .rwhy{grid-column:1/-1;grid-row:auto}.bl .bt{font-size:17px}}
 
-.lang{display:inline-flex;border:1px solid var(--hair)}
-.lang button{background:none;border:0;padding:3px 8px;font-family:var(--mono);font-size:11px;color:var(--mute);cursor:pointer}
-.lang button.on{background:var(--ink);color:var(--bg)}
+.lang{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;line-height:1;color:var(--mute)}
+.lang i{font-style:normal;color:var(--hair)}
+.lang button{background:none;border:0;padding:2px 0;font:inherit;color:var(--mute);cursor:pointer}
+.lang button:hover{color:var(--ink)}
+.lang button.on{color:var(--ink);font-weight:700}
