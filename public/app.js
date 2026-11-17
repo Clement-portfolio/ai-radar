@@ -195,7 +195,7 @@ var ETAGES=[
   [2,"Modèles","Qui fabrique les meilleurs modèles, à quel écart, et à quel prix ?"],
   [3,"Adoption","Qui utilise l\'IA : grand public, entreprises, volume d\'usage ?"],
   [4,"Financement et revenus","Combien est investi, qui le finance, et quels revenus en sortent ?"],
-  [5,"Perspectives","Ce qui est prévu, ce qui arrive, et les acteurs émergents."]
+  [5,"Perspectives et risques","Ce qui est prévu, ce qui arrive, les acteurs émergents et les risques."]
 ];
 function sommaire(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
