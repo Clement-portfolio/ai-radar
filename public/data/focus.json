@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-17T07:06:26.603Z",
+ "generated_at": "2026-11-17T07:25:31.320Z",
  "model": "gemini-3.1-flash-lite",
  "sig": [
   "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+2952b40b3590+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
+  "09d1dd4a855f+15674a5384bf+15964ea6b308+1908a854fd26+1a9f8b445fb6+45cb1f953fc9+9f736924b3b9+ad0794c39984+ddfe3a9c1778+f45fe323bc06+f55b32fce91c+f9feb5ec0c0b",
   "0dd20f185f4b+57145798feaa+5738a0773dec+7eb0d63319ac+893cad2204ae+bfccb2d38562+c85339f01fea",
-  "066002f02e4c+1908a854fd26+1aa355519c9f+1d568fb033a7+3ef484d91e4b+4d2a127f1c18+5bf1e9fd711d+5d7763ae049a+7399e7157c4f+772ccdf8e8c7+8882bec2ef59+99adb1c1605d+a2bc04fede09+b89b121d0786+d392b636ea28+f45fe323bc06+f55b32fce91c",
   "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
   "01de5d683d52+3a6a7c7107f8+6e8e373b5927+7aaeb16f016b+7b3d614d203e+9696674be12b+96ec9ffb9098+aff4b2c65530+dce5e82d2a55+fa49ced6fa8d"
  ],
@@ -16,17 +16,17 @@
     "5738a0773dec",
     "7eb0d63319ac"
    ],
-   "head": "La Chine investit massivement dans des datacenters IA malgré les restrictions américaines",
+   "head": "La Chine investit massivement dans des datacenters IA malgré les restrictions",
    "bullets": [
-    "La Chine déploie plus de 3 milliards de dollars dans des centres de données utilisant des puces Nvidia, tandis que les géants du cloud multiplient les investissements dans ces infrastructures.",
-    "Les investisseurs stratégiques dans l'IA sont souvent aussi des partenaires commerciaux, et des projets de campus géants de 900 MW sont envisagés aux États-Unis pour soutenir la demande.",
-    "Ces investissements massifs montrent que la demande en puissance de calcul reste prioritaire, malgré les risques géopolitiques et les incertitudes pesant sur les entreprises du secteur."
+    "La Chine a déployé plus de 3 milliards de dollars dans des centres de données utilisant des puces Nvidia, tandis que les géants du cloud multiplient les investissements mondiaux.",
+    "Les investisseurs majeurs dans les projets d'IA sont souvent des partenaires stratégiques, et des campus de datacenters géants sont en projet aux États-Unis pour des montants atteignant 16 milliards.",
+    "Cela suggère que la demande mondiale en infrastructures de calcul reste très forte, malgré les incertitudes juridiques et les tensions géopolitiques pesant sur les fournisseurs."
    ],
-   "head_en": "China invests heavily in AI datacenters despite US restrictions",
+   "head_en": "China invests heavily in AI datacenters despite restrictions",
    "bullets_en": [
-    "China is deploying over 3 billion dollars in data centers using Nvidia chips, while cloud giants are increasing investments in these infrastructures.",
-    "Strategic AI investors are often also commercial partners, and giant 900 MW campus projects are being considered in the US to support demand.",
-    "These massive investments show that the demand for computing power remains a priority, despite geopolitical risks and uncertainties weighing on sector companies."
+    "China has deployed over 3 billion dollars in data centers using Nvidia chips, while cloud giants are increasing global investments.",
+    "Major investors in AI projects are often strategic partners, and giant datacenter campuses are planned in the US for amounts reaching 16 billion dollars.",
+    "This suggests that global demand for computing infrastructure remains very strong, despite the legal uncertainties and geopolitical tensions weighing on suppliers."
    ],
    "ctx_ids": [
     "11523406c56e",
@@ -42,17 +42,17 @@
     "6e834fc4bc29",
     "06c70ce20939"
    ],
-   "head": "La consommation électrique des datacenters IA atteint des niveaux records",
+   "head": "L'empreinte énergétique des datacenters IA rivalise avec celle de pays entiers",
    "bullets": [
-    "Les centres de données américains consomment désormais autant d'électricité que des pays entiers comme le Chili, avec une dépendance persistante aux énergies fossiles.",
-    "Les emprunts liés à l'IA représentent près de la moitié des émissions obligataires à long terme aux États-Unis, poussant les entreprises à diversifier leurs sources d'énergie.",
-    "Cela montre que l'expansion rapide de l'IA pose un défi environnemental et énergétique majeur, forçant les acteurs du secteur à repenser leurs modèles d'approvisionnement."
+    "Une étude révèle que la consommation électrique des centres de données américains dépasse celle de plusieurs États et équivaut à la consommation totale de pays comme le Chili.",
+    "Les entreprises du secteur diversifient leurs sources d'énergie face aux limites du réseau, tandis que les dettes liées à l'IA dominent désormais les émissions obligataires à long terme.",
+    "Cela montre que le développement massif de l'IA pose un défi environnemental et infrastructurel majeur, forçant les acteurs à repenser leur approvisionnement énergétique."
    ],
-   "head_en": "AI datacenter electricity consumption reaches record levels",
+   "head_en": "The energy footprint of AI datacenters rivals that of entire countries",
    "bullets_en": [
-    "US data centers now consume as much electricity as entire countries like Chile, with a persistent reliance on fossil fuels.",
-    "AI-related borrowing accounts for nearly half of long-term corporate bond issuance in the US, pushing companies to diversify their energy sources.",
-    "This shows that the rapid expansion of AI poses a major environmental and energy challenge, forcing industry players to rethink their supply models."
+    "A study reveals that the electricity consumption of US data centers exceeds that of several states and is equivalent to the total consumption of countries like Chile.",
+    "Companies in the sector are diversifying their energy sources in the face of grid limitations, while AI-related debt now dominates long-term bond issuances.",
+    "This shows that the massive development of AI poses a major environmental and infrastructural challenge, forcing players to rethink their energy supply."
    ],
    "ctx_ids": [
     "a9b5f630fc97",
@@ -70,15 +70,15 @@
    ],
    "head": "Incertitudes chez Nvidia après le départ brutal de Jensen Huang",
    "bullets": [
-    "Le départ de Jensen Huang, sur fond d'enquêtes et de rumeurs, laisse Nvidia sans successeur clair, alors que Donald Trump a suggéré le nom de Tim Cook pour reprendre le flambeau.",
-    "Le conseil d'administration avait envisagé le licenciement du PDG suite à des informations sur des relations inappropriées, provoquant des réunions d'urgence et des spéculations sur sa succession.",
-    "Cette crise de gouvernance pourrait déstabiliser la stratégie d'infrastructure de l'entreprise et impacter durablement ses partenaires internationaux."
+    "La démission du PDG emblématique de Nvidia laisse l'entreprise sans successeur clair, alors que le président américain suggère le nom de Tim Cook pour le remplacer.",
+    "Le conseil d'administration avait envisagé ce limogeage suite à des informations sur des relations inappropriées et une enquête du FBI, avant que des cadres internes ne soient pressentis.",
+    "Cela pourrait entraîner une période d'instabilité stratégique pour Nvidia, affectant potentiellement ses relations avec ses clients et ses partenaires internationaux."
    ],
-   "head_en": "Uncertainties at Nvidia following the abrupt departure of Jensen Huang",
+   "head_en": "Uncertainty at Nvidia following the abrupt departure of Jensen Huang",
    "bullets_en": [
-    "The departure of Jensen Huang, amid investigations and rumors, leaves Nvidia without a clear successor, while Donald Trump has suggested Tim Cook to take over.",
-    "The board had considered firing the CEO following reports of inappropriate relationships, triggering emergency meetings and speculation about his successor.",
-    "This governance crisis could destabilize the company's infrastructure strategy and have a lasting impact on its international partners."
+    "The resignation of Nvidia's iconic CEO leaves the company without a clear successor, while the US President suggests Tim Cook as a replacement.",
+    "The board had considered this dismissal following reports of inappropriate relationships and an FBI investigation, before internal executives were considered.",
+    "This could lead to a period of strategic instability for Nvidia, potentially affecting its relationships with clients and international partners."
    ],
    "ctx_ids": [
     "cd03d116301a",
