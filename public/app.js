@@ -13,7 +13,7 @@ function loc(){return isEn()?"en-GB":"fr-FR"}
 function tx(o,k){return(isEn()&&o[k+"_en"])||o[k]}
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
-function link(u){return /^https?:\/\//.test(u||"")?u:"#"}
+function link(u){u=u||"";if(/^https:\/\/news\.google\.com\/(rss\/)?(articles|read)\//.test(u))return"/go?u="+encodeURIComponent(u);return /^https?:\/\//.test(u)?u:"#"}
 function ago(iso){
   if(isEn()){if(!iso)return"never";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"just now";if(m<60)return m+" min ago";var h=Math.round(m/60);if(h<24)return h+" h ago";return Math.round(h/24)+" d ago"}
   if(!iso)return"jamais";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"à l'instant";if(m<60)return"il y a "+m+" min";var h=Math.round(m/60);if(h<24)return"il y a "+h+" h";return"il y a "+Math.round(h/24)+" j"}

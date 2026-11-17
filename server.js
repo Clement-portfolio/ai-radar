@@ -5,6 +5,7 @@ import http from "node:http";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { isGnewsUrl, resolveOne } from "./collector/gnews.mjs";
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(ROOT, "public");
@@ -45,6 +46,7 @@ function send(res, code, body, headers = {}) {
   res.end(body);
 }
 
+const GO = new Map(); // lien Google News → adresse réelle (mémoire du serveur)
 const server = http.createServer(async (req, res) => {
   try {
     const url = new URL(req.url, "http://x");
@@ -52,6 +54,15 @@ const server = http.createServer(async (req, res) => {
 
     if (p === "/healthz") return send(res, 200, "ok", { "content-type": MIME[".txt"] });
     if (req.method !== "GET" && req.method !== "HEAD") return send(res, 405, "Method Not Allowed");
+
+    // Lien Google News → article du média : Google bloque les adresses de GitHub, mais pas ce serveur, et seulement au clic.
+    if (p === "/go") {
+      const g = url.searchParams.get("u") || "";
+      if (!isGnewsUrl(g)) return send(res, 400, "Lien non pris en charge");
+      let to = GO.get(g);
+      if (!to) { try { to = await resolveOne(g); GO.set(g, to); if (GO.size > 3000) GO.delete(GO.keys().next().value); } catch (e) { console.error("go:", e.message); to = g; } }
+      return send(res, 302, "", { location: to, "cache-control": "no-store" });
+    }
 
     if (p.startsWith("/data/")) {
       const name = p.slice(6);

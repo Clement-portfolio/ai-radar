@@ -39,6 +39,13 @@ export async function decodeOnline(id, fetchImpl, timeout = 15000) {
   return url;
 }
 
+// Un seul lien (utilisé par le serveur au moment du clic).
+export async function resolveOne(url, fetchImpl = fetch) {
+  if (!isGnewsUrl(url)) throw new Error("pas un lien Google News");
+  const id = gnId(url);
+  return decodeLegacy(id) || (await decodeOnline(id, fetchImpl));
+}
+
 // Remplace sur place les liens Google News des articles (les plus récents d'abord).
 export async function resolveGoogleLinks({ items, fetchImpl = fetch, max = 60, maxTries = 3, sleep = (t) => new Promise((r) => setTimeout(r, t)), spacing = 400, log = () => {} }) {
   const out = { changed: 0, tried: 0, failed: 0, left: 0, reason: "" };

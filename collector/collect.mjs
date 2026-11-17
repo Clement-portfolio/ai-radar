@@ -563,7 +563,7 @@ export async function run(opts = {}) {
   log("Traductions : " + tr.reason + (tr.left ? ` (reste ${tr.left})` : ""));
   // liens Google News → adresse réelle du média (les liens Google affichent parfois une page « automated queries »)
   let gl = { changed: 0, failed: 0, left: 0, reason: "erreur" };
-  try { gl = await resolveGoogleLinks({ items: keep, fetchImpl, max: +env.GNEWS_MAX || 60, log }); }
+  try { gl = await resolveGoogleLinks({ items: keep, fetchImpl, max: +env.GNEWS_MAX || 0, log }); }
   catch (e) { gl.reason = String(e.message || e).slice(0, 120); }
   const generateFocus = mkGen(FOCUS_SYSTEM, FOCUS_SCHEMA);
   const focusPrev = await readJson("focus.json", null);
