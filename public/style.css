@@ -371,9 +371,10 @@ html{overscroll-behavior-y:contain}
 .mute{color:var(--mute)}
 .actors{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .actors{gap:0 34px}
-.actor{padding:22px 0 20px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;min-width:0}
+.actor{padding:22px 0 20px;border-bottom:1px solid var(--hair);display:flex;flex-direction:column;min-width:0;overflow:hidden}
+.actor>*{min-width:0;max-width:100%}
 .actor>*+*{margin-top:11px}
-@supports(grid-template-rows:subgrid){.actor{display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0;align-content:start}.actor>*+*{margin-top:0;padding-top:11px}.actor>.afoot{align-self:end}}
+@supports(grid-template-rows:subgrid){.actor{display:grid;grid-template-columns:minmax(0,1fr);grid-row:span 7;grid-template-rows:subgrid;row-gap:0;align-content:start}.actor>*+*{margin-top:0;padding-top:11px}.actor>.afoot{align-self:end}}
 .actor .aph{position:relative;aspect-ratio:16/9;background:var(--wash,rgba(127,127,127,.08));display:grid;place-items:center;overflow:hidden}
 .actor .aic{display:grid;place-items:center;color:var(--mute)}
 .actor .aic svg{width:64px;height:64px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
@@ -386,7 +387,8 @@ html{overscroll-behavior-y:contain}
 .actor p{margin:0;font-size:13px;line-height:1.45;color:var(--ink2)}
 .actor .awhat{color:var(--ink)}
 .actor .afig{list-style:none;margin:0;padding:0;display:grid;gap:5px}
-.actor .afig li{display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:baseline;font-size:12.5px;line-height:1.35;color:var(--ink2);white-space:nowrap}
+.actor .afig li{display:grid;grid-template-columns:96px 1fr;gap:8px;align-items:baseline;font-size:12.5px;line-height:1.35;color:var(--ink2)}
+.actor .afig li span{min-width:0}
 .actor .afig b{font-family:var(--display);font-size:15px;font-weight:600;color:var(--ink)}
 .actor .arow.rk .lbl,.actor .arow.rk p{color:var(--cn,#b4372c)}
 .actor .afoot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
