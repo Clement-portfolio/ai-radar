@@ -114,6 +114,28 @@ export function ownersPie(csv, now) {
   return { end, segments: [...segs, { label: "Autres propriétaires", pct: Math.max(0, rest) }], total: T };
 }
 
+/** Évolution de la part du compute détenue par chacun des cinq géants, trimestre complet par trimestre complet. */
+export function ownersShare(csv, now, last = 8) {
+  const rows = parseCsv(csv), ends = completeEnds(rows, now).slice(-last);
+  if (ends.length < 4) throw new Error("moins de quatre trimestres complets");
+  if (now - Date.parse(ends[ends.length - 1]) > 460 * DAY) throw new Error("dernier trimestre complet trop ancien : " + ends[ends.length - 1]);
+  const five = ["Google", "Microsoft", "Amazon", "Meta", "Oracle"], byEnd = ends.map((e) => { const t = sumBy(rows, e, "Owner"), T = [...t.values()].reduce((a, b) => a + b, 0); return { e, t, T }; });
+  for (const q of byEnd) { if (!(q.T > 1e5)) throw new Error("total de compute improbable : " + q.e); for (const n of five) if (!(q.t.get(n) > 0)) throw new Error("propriétaire absent : " + n + " (" + q.e + ")"); }
+  const series = five.map((n) => ({ name: n, points: byEnd.map((q) => ({ d: q.e, v: round((100 * q.t.get(n)) / q.T) })) }));
+  series.push({ name: "Autres propriétaires", dashed: true, points: byEnd.map((q) => ({ d: q.e, v: round(100 - five.reduce((a, n) => a + (100 * q.t.get(n)) / q.T, 0)) })) });
+  if (series.some((x) => x.points.some((p) => p.v < 0 || p.v > 100))) throw new Error("part hors 0–100");
+  return { series, last: ends[ends.length - 1] };
+}
+
+/** Indice Ramp : part des entreprises américaines qui paient pour de l'IA (carte, facture, virement), par mois, via la série FRED. */
+export function rampSeries(csv, now, last = 24) {
+  const pts = String(csv).split(/\r?\n/).slice(1).map((l) => l.split(",")).filter((c) => /^\d{4}-\d{2}-\d{2}$/.test(c[0]) && c[1] !== "" && !isNaN(+c[1])).map((c) => ({ d: c[0], v: round(+c[1]) })).sort((a, b) => a.d.localeCompare(b.d));
+  if (pts.length < 12) throw new Error("série Ramp trop courte : " + pts.length);
+  if (pts.some((p) => p.v < 0 || p.v > 100)) throw new Error("valeur Ramp hors 0–100");
+  if (now - Date.parse(pts[pts.length - 1].d) > 75 * DAY) throw new Error("dernier mois Ramp trop ancien : " + pts[pts.length - 1].d);
+  return { series: [{ name: "Entreprises qui paient pour l'IA (Ramp)", points: pts.slice(-last) }] };
+}
+
 const DESIGNERS = [["Nvidia", "Nvidia"], ["Google", "Google (TPU)"], ["Amazon", "Amazon (Trainium)"], ["AMD", "AMD"], ["Huawei", "Huawei"]];
 /** Qui conçoit les puces : compute vendu sur le dernier trimestre complet, par concepteur. */
 export function designersPie(csv, now) {
@@ -207,14 +229,16 @@ export async function secCurves({ ua, fetchImpl, sleep, now, companies = SEC_COM
 // ───────────────────────── orchestration ─────────────────────────
 
 const META = {
+  ownersShare: { kind: "curve", etage: 1, rank: 1, title: "Part du compute IA détenue par chaque géant", unit: "% du parc cumulé (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", caveat: "Estimations d'Epoch, pas des déclarations des sociétés ; trimestres complets du fichier seulement (les plus récents y sont incomplets). « Autres propriétaires » = reste : xAI, CoreWeave, clients chinois, etc." },
+  ramp: { kind: "curve", etage: 3, rank: 4, title: "Entreprises américaines qui paient pour l'IA", unit: "% des entreprises clientes de Ramp", source: "Ramp AI Index (série FRED)", url: "https://ramp.com/data/ai-index", caveat: "Adoption mesurée par les paiements réels (carte, facture, virement) de plus de 85 000 entreprises clientes de Ramp, pas par déclaration : plus fiable qu'un sondage, mais l'échantillon (clients de Ramp, plutôt jeunes et technophiles) n'est pas représentatif de toute l'économie américaine." },
   owners: { kind: "pie", etage: 1, rank: 1, title: "Qui possède le compute IA", metric: "Parc cumulé de puces IA détenu (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", confidence: "moyenne", caveat: "Estimations d'Epoch, pas des déclarations des sociétés. Dernier trimestre complet du fichier (les trimestres plus récents y sont incomplets). « Autres » = reste : xAI, CoreWeave, clients chinois, etc." },
   designers: { kind: "pie", etage: 1, rank: 2, title: "Qui conçoit les puces IA", metric: "Part de la puissance de calcul vendue, par concepteur de puces", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", confidence: "haute", caveat: "Calcul sur le dernier trimestre complet du fichier Epoch. Estimations : les fabricants ne publient pas leurs volumes ; Trainium est la moins fiable." },
   sales: { kind: "curve", etage: 1, rank: 2, title: "Compute IA vendu chaque trimestre", unit: "millions d'équivalents H100", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", caveat: "Estimations d'Epoch ; seuls les trimestres complets sont tracés. Cambricon (moins de 1 %) n'est pas tracé." },
-  capex: { kind: "curve", etage: 1, rank: 1, title: "Capex trimestriel des cinq géants", unit: "milliards de dollars", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Dépenses d'investissement déclarées (immobilisations corporelles). Les trimestres des sociétés ne coïncident pas : Oracle clôt en août, novembre, février et mai. Chaque trimestre est publié ou calculé par différence de cumuls, jamais estimé." },
+  capex: { kind: "curve", etage: 4, rank: 1, title: "Capex trimestriel des cinq géants", unit: "milliards de dollars", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Dépenses d'investissement déclarées (immobilisations corporelles). Les trimestres des sociétés ne coïncident pas : Oracle clôt en août, novembre, février et mai. Chaque trimestre est publié ou calculé par différence de cumuls, jamais estimé." },
   hbm: { kind: "curve", etage: 1, rank: 3, title: "Parts du marché HBM, cinq trimestres", unit: "% du chiffre d'affaires HBM", source: "Counterpoint Research", url: COUNTERPOINT_URL, caveat: "Parts relues sur le tableau de la page Counterpoint ; arrondis publiés (la somme peut différer de 100 %)." },
   train: { kind: "curve", etage: 2, rank: 1, title: "Plus gros entraînement : USA vs Chine", unit: "FLOP (échelle logarithmique)", scale: "log", source: "Epoch AI (AI Models)", url: "https://epoch.ai/data/ai-models", caveat: "Chaque marche est un nouveau record du pays parmi les modèles recensés par Epoch. Seuls les modèles dont tous les laboratoires sont du même pays sont comptés. Beaucoup de laboratoires ne publient pas leur compute : le vrai maximum peut être plus haut, surtout en Chine. Données Epoch AI, licence CC-BY 4.0." },
-  btos: { kind: "curve", etage: 3, rank: 1, title: "Entreprises américaines qui utilisent l'IA", unit: "% des entreprises", source: "U.S. Census Bureau (BTOS)", url: "https://www.census.gov/hfp/btos/data_downloads", caveat: "Enquête auprès des entreprises américaines, une vague toutes les deux semaines. Rupture de série : Census a changé la formulation de la question en novembre 2025 ; seuls les points de la nouvelle formulation sont tracés, les anciens ne sont pas comparables." },
-  capex_rev: { kind: "curve", etage: 3, rank: 2, title: "Capex rapporté aux revenus, par géant", unit: "% du revenu trimestriel", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Capex du trimestre divisé par le revenu total du même trimestre : pas seulement le revenu IA, que les sociétés ne publient pas." },
+  btos: { kind: "curve", etage: 3, rank: 3, title: "Entreprises américaines qui utilisent l'IA", unit: "% des entreprises", source: "U.S. Census Bureau (BTOS)", url: "https://www.census.gov/hfp/btos/data_downloads", caveat: "Enquête auprès des entreprises américaines, une vague toutes les deux semaines. Rupture de série : Census a changé la formulation de la question en novembre 2025 ; seuls les points de la nouvelle formulation sont tracés, les anciens ne sont pas comparables." },
+  capex_rev: { kind: "curve", etage: 4, rank: 3, title: "Capex rapporté aux revenus, par géant", unit: "% du revenu trimestriel", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Capex du trimestre divisé par le revenu total du même trimestre : pas seulement le revenu IA, que les sociétés ne publient pas." },
 };
 
 const due = (p, now) => !p?.checked_at || (p.check_error ? now - Date.parse(p.attempted_at || p.checked_at) >= 6 * HOUR : now - Date.parse(p.checked_at) >= 20 * HOUR);
@@ -242,6 +266,8 @@ export async function collectEvolution({ prev = null, ua, fetchImpl = fetch, now
   const work = {
     owners: async () => { const r = ownersPie(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { period: `Fin ${qLabel(r.end)}`, period_key: r.end, segments: r.segments }; },
     designers: async () => { const r = designersPie(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { period: qLabel(r.end), period_key: r.end, segments: r.segments }; },
+    ownersShare: async () => { const r = ownersShare(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { series: r.series, last_point: r.last }; },
+    ramp: async () => rampSeries(await text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=RAMPAIALL"), now),
     sales: async () => { const r = salesCurve(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { series: r.series, last_point: r.last }; },
     train: async () => { const t = await text(EPOCH + "all_ai_models.csv"); return { series: [{ name: "États-Unis", points: trainRecords(t, now, "2018-01-01", "us"), step: true }, { name: "Chine", points: trainRecords(t, now, "2018-01-01", "cn", 4), step: true, dashed: true }] }; },
     hbm: async () => ({ series: parseHbmHistory(await text(COUNTERPOINT_URL)) }),

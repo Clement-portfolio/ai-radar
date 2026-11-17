@@ -5,7 +5,7 @@
 (function(){
 "use strict";
 var D={
-"Actualités":"News","Marché et infrastructure":"Market & infrastructure","USA–Chine":"US–China","Méthode":"Method","Aujourd'hui":"Today","Briefing du jour":"Daily briefing",
+"Actualités":"News","Marché et infrastructure":"Market & infrastructure","Marché":"Market","Infrastructure":"Infrastructure","USA–Chine":"US–China","Méthode":"Method","Aujourd'hui":"Today","Briefing du jour":"Daily briefing",
 "Chargement…":"Loading…","mise à jour automatique":"automatic update","mise à jour automatique ":"automatic update ","toutes les 3 h":"every 3 h","Mise à jour automatique toutes les 3 heures":"Automatic update every 3 hours","Mise à jour toutes les 3 heures":"Update every 3 hours","Aucune mise à jour":"No update yet","Puces IA":"AI chips","Puces IA (Ascend)":"AI chips (Ascend)","Puces IA (GPU et ASIC)":"AI chips (GPU and ASIC)","SEC (10-K et 10-Q) ↗":"SEC (10-K and 10-Q) ↗","SEC (10-K et 10-Q)":"SEC (10-K and 10-Q)",
 "Toutes les actualités →":"All news →","Sources":"Sources","Source":"Source","Tous":"All","Toutes":"All","Europe":"Europe","Golfe":"Gulf","Autres":"Other","Chine":"China","États-Unis":"United States","Royaume-Uni":"United Kingdom",
 "Modèles":"Models","Puces":"Chips","Énergie":"Energy","Finance":"Finance","Politique":"Politics","Régulation":"Regulation","Adoption":"Adoption","Recherche":"Research",
@@ -52,7 +52,7 @@ var D={
 "Poids ouverts":"Open weights","Poids fermés":"Closed weights","Autres propriétaires":"Other owners","Union européenne":"European Union","Reste du monde":"Rest of world",
 "Capex du trimestre divisé par le revenu total du même trimestre : pas seulement le revenu IA, que les sociétés ne publient pas.":"Quarterly capex divided by total revenue of the same quarter: not just AI revenue, which companies do not publish.",
 "Calcul installé":"Installed compute","Capex et financement":"Capex and funding","Adoption et argent":"Adoption and money","Applications et adoption":"Applications and adoption","Évolution":"Trends","Comment ça évolue":"How it is evolving",
-"Étage 1 sur 3":"Tier 1 of 3","Étage 2 sur 3":"Tier 2 of 3","Étage 3 sur 3":"Tier 3 of 3","courbes dans le temps":"charts over time","parts de marché, chaque camembert est une mesure différente":"market shares, each pie is a different measure",
+"Adoption":"Adoption","Financement et revenus":"Funding and revenue","Perspectives":"Outlook","Chiffres clés":"Key figures","une mesure par carte, datée et sourcée":"one measure per card, dated and sourced","Ce que c'est":"What it is","Pourquoi ça compte":"Why it matters","Dernier chiffre":"Latest figure","Risque principal":"Main risk","Acteurs émergents":"Emerging players","une fiche courte chacun":"one short card each","Capex 2027 prévu":"Expected 2027 capex","fourchette d'analystes, pas des engagements":"analyst range, not commitments","Prochains catalyseurs":"Upcoming catalysts","seulement les dates publiées":"published dates only","Trois indicateurs de risque":"Three risk indicators","Capacité":"Capacity","Ce qui débloquerait":"What would unblock it","Émergent":"Emerging","Calcul en orbite":"Orbital compute","Neocloud":"Neocloud","Puces alternatives":"Alternative chips","Laboratoire chinois":"Chinese lab","aujourd'hui":"today","Règle.":"Rule.","Étage 1 sur 3":"Tier 1 of 3","Étage 2 sur 3":"Tier 2 of 3","Étage 3 sur 3":"Tier 3 of 3","courbes dans le temps":"charts over time","parts de marché, chaque camembert est une mesure différente":"market shares, each pie is a different measure",
 "Sommaire":"Contents","Capex trimestriel des cinq géants":"Quarterly capex of the five giants","Capex rapporté aux revenus, par géant":"Capex as a share of revenue, by giant",
 "Capex trimestriel":"Quarterly capex","Compute IA vendu chaque trimestre":"AI compute sold each quarter","Plus gros entraînement : USA vs Chine":"Largest training run: US vs China",
 "Utilisateurs actifs de ChatGPT":"ChatGPT active users","Revenu annualisé d'OpenAI et d'Anthropic":"OpenAI and Anthropic annualized revenue","Parts de trafic web par chatbot":"Web traffic share by chatbot",
@@ -86,7 +86,7 @@ var MONTHS={"janv.":"Jan","févr.":"Feb","mars":"Mar","avr.":"Apr","mai":"May","
 var MRE="(janv\\.|févr\\.|mars|avr\\.|mai|juin|juil\\.|août|sept\\.|oct\\.|nov\\.|déc\\.)";
 var PH=[ /* phrases à trous et locutions, appliquées dans l'ordre */
  [/^Voir (\d+) articles de plus \((\d+) restants\)$/,"Show $1 more articles ($2 remaining)"],
- [/^Sources citées \((\d+)\)$/,"Sources cited ($1)"],[/^Sources en échec \((\d+)\)$/,"Failing sources ($1)"],[/^Étage (\d) sur 3$/,"Tier $1 of 3"],
+ [/^Sources citées \((\d+)\)$/,"Sources cited ($1)"],[/^Sources en échec \((\d+)\)$/,"Failing sources ($1)"],[/^Étage (\d) sur (\d)$/,"Tier $1 of $2"],
  [/^(Critique|Modéré|Élevé|Faible) · (\d+\/10)$/,function(m,a,b){return tr(a)+" · "+b}],
  [/^(.{2,70}) : (\d[\d.,\s\u00a0\u202f]*(?: ?%| ?[A-Za-z$¥€]{1,4})?)$/,function(m,a,b){var x=tr(a);return(x===a?a:x)+": "+b}],
  [/^Pays : (.+)$/,function(m,a){return"Country: "+tr(a)}],[/^Catégorie : (.+)$/,function(m,a){return"Category: "+tr(a)}],

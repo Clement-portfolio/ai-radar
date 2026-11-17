@@ -1,0 +1,223 @@
+{
+ "as_of": "17 nov. 2026",
+ "rule": "Uniquement des projections publiées par des tiers, en fourchette et datées. Aucune prévision de notre part ; les périmètres diffèrent d'une source à l'autre.",
+ "capex2027": [
+  {
+   "name": "Analystes (Barron's)",
+   "value": "> 1 000 Md$",
+   "scope": "principaux exploitants de datacenters, 2027. Pour 2026 : 330 Md$ dépensés au premier semestre, 469 Md$ attendus au second.",
+   "as_of": "23 août 2026",
+   "source": "Barron's, via Dow Jones",
+   "url": "https://www-web.itiger.com/news/2661220215"
+  },
+  {
+   "name": "S&P Global",
+   "value": "≈ 1 300 Md$",
+   "scope": "six sociétés : Alphabet 357, Amazon 319, SpaceX 197, Microsoft 189, Meta 164, Oracle 95 (Md$, 2027). Total 2025 : 470 ; 2026 : 870.",
+   "as_of": "6 sept. 2026",
+   "source": "S&P Global, cité par The Motley Fool",
+   "url": "https://fool.com/investing/2026/09/06/hyperscalers-driving-ai-capex-cash-flow"
+  }
+ ],
+ "capex_note": "L'écart (plus de 1 000 contre 1 300 Md$) tient surtout au périmètre : S&P inclut SpaceX, pas Barron's. Ce sont des estimations d'analystes, pas des engagements des sociétés.",
+ "gw": {
+  "title": "Datacenters américains : annoncé contre en construction",
+  "value": "≈ 1/3 en construction",
+  "sub": "Sur environ 12 GW américains attendus en service en 2026, un tiers seulement est en construction active (Sightline Climate, cité par Bloomberg). Selon Bloomberg, près de la moitié des projets de l'année seraient retardés ou annulés.",
+  "as_of": "3 avr. 2026",
+  "source": "Tom's Hardware (Sightline Climate / Bloomberg)",
+  "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers",
+  "caveat": "Chiffre contesté par SemiAnalysis ; seuls les États-Unis sont couverts."
+ },
+ "catalysts": [
+  {
+   "date": "2026-11-17",
+   "label": "17 nov. 2026",
+   "title": "Résultats de Nvidia (T3 de l'exercice 2027)",
+   "detail": "Après la clôture américaine, appel à 17 h (New York). Prévision de la société : 108,0 Md$ de revenus (± 2 %), sans aucune vente de puces de calcul à la Chine. Consensus ≈ 109 Md$ (Visible Alpha, via S&P Global, 12 nov.).",
+   "status": "Date confirmée par Nvidia le 28 oct. 2026",
+   "sources": [
+    {
+     "t": "NVIDIA (communiqué du 28 oct. 2026)",
+     "u": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Sets-Conference-Call-for-Third-Quarter-Financial-Results/"
+    },
+    {
+     "t": "S&P Global (aperçu du 12 nov. 2026)",
+     "u": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/11/nvidia-earnings-preview-q3-2027"
+    }
+   ]
+  },
+  {
+   "date": "2026-12-31",
+   "label": "fin 2026 (non datée)",
+   "title": "Moonshot AI : introduction à Hong Kong envisagée",
+   "detail": "La société, valorisée 35 Md$ en juillet, discuterait d'une levée à 50 Md$ avant une cotation à Hong Kong.",
+   "status": "Rapporté par Bloomberg, non confirmé par la société",
+   "sources": [
+    {
+     "t": "Euronews (6 oct. 2026)",
+     "u": "https://www.euronews.com/2026/10/06/moonshot-ai-eyes-hong-kong-ipo-after-50-billion-valuation-as-deepseek-raises-capital"
+    }
+   ]
+  }
+ ],
+ "catalysts_note": "Calendrier volontairement court : seules figurent les échéances dont une source donne la date. Les prochains résultats des géants et d'autres lancements seront ajoutés dès que leur date est publiée.",
+ "actors": [
+  {
+   "name": "SpaceX / xAI",
+   "tag": "Calcul en orbite",
+   "what": "SpaceX a racheté xAI (annoncé le 2 févr. 2026) et demandé à la FCC l'autorisation de lancer jusqu'à un million de satellites faisant office de datacenters.",
+   "why": "Contourner la limite d'énergie et de réseau électrique qui freine les datacenters au sol.",
+   "last": "Demande acceptée à l'instruction par la FCC le 4 févr. 2026 : ce n'est pas une approbation, et le dossier ne fixe pas de calendrier de déploiement.",
+   "risk": "Exécution : le prospectus de SpaceX décrit ces datacenters orbitaux comme reposant sur des technologies non éprouvées.",
+   "as_of": "févr.–juin 2026",
+   "sources": [
+    {
+     "t": "Satellite Today (2 févr. 2026)",
+     "u": "https://www.satellitetoday.com/connectivity/2026/02/02/spacex-files-for-orbital-data-center-satellites-amid-xai-merger-reports/"
+    },
+    {
+     "t": "SoftwareSeni (9 juin 2026, d'après le prospectus)",
+     "u": "https://www.softwareseni.com/spacex-and-the-million-satellite-fcc-filing-orbital-data-centre-plans-at-scale/"
+    }
+   ]
+  },
+  {
+   "name": "Starcloud",
+   "tag": "Calcul en orbite",
+   "what": "Start-up américaine qui met des GPU Nvidia sur satellite. Starcloud-1 (60 kg, lancé le 2 nov. 2025) a emporté la première puce H100 en orbite.",
+   "why": "Premier acteur à faire tourner des charges d'IA dans l'espace ; Nvidia participe à son financement.",
+   "last": "Levée de 250 M$ à 2,3 Md$ de valorisation, annoncée le 21 août 2026. Son projet de 88 000 satellites est une demande à la FCC, pas une approbation.",
+   "risk": "Dépendance au lancement : sa feuille de route repose sur des fusées qu'elle ne contrôle pas, surtout celles de SpaceX.",
+   "as_of": "21 août 2026",
+   "sources": [
+    {
+     "t": "Implicator (22 août 2026)",
+     "u": "https://www.implicator.ai/starcloud-raises-250-million-at-2-3-billion-valuation-to-buy-launch-capacity/"
+    },
+    {
+     "t": "Quartz (juin 2026)",
+     "u": "https://qz.com/orbital-data-center-startups-competitive-landscape-061526"
+    }
+   ]
+  },
+  {
+   "name": "CoreWeave",
+   "tag": "Neocloud",
+   "what": "Loueur de grappes de GPU Nvidia aux laboratoires et aux géants du cloud.",
+   "why": "Montre la demande réelle de calcul loué : son carnet de commandes a presque triplé en un an.",
+   "last": "T3 2026 : revenus 3,66 Md$ (+ 168 %), carnet de commandes 132,5 Md$ (104 Md$ fin juin), dette ≈ 47 Md$, perte nette 709 M$.",
+   "risk": "Dette et charge d'intérêts, avec une forte concentration sur quelques clients (les trois premiers pesaient 72 % des revenus au T2).",
+   "as_of": "10 nov. 2026",
+   "sources": [
+    {
+     "t": "Implicator (10 nov. 2026)",
+     "u": "https://www.implicator.ai/coreweave-reports-q3-revenue-up-168-yoy-3-66b-vs-3-55b-est/"
+    },
+    {
+     "t": "LetsDataScience (d'après CNBC)",
+     "u": "https://letsdatascience.com/news/coreweave-beats-q3-revenue-estimates-raises-2026-guidance-ba-f4170a31"
+    },
+    {
+     "t": "Finsee (T3 2026)",
+     "u": "https://finsee.ai/earnings/crwv/2026/q3/en/"
+    }
+   ]
+  },
+  {
+   "name": "Nebius",
+   "tag": "Neocloud",
+   "what": "Cloud d'IA né de l'ex-Yandex, qui loue du calcul Nvidia.",
+   "why": "Second grand neocloud coté : sa croissance et ses retards disent où se trouve la contrainte de capacité.",
+   "last": "T3 2026 : revenus 980,8 M$ (+ 571 %), dont environ 325 M$ non récurrents ; revenus annualisés 6,4 Md$ fin sept. Prévision 2027 : revenus 12 à 13 Md$ pour 40 à 45 Md$ d'investissements.",
+   "risk": "Retards de livraison de capacité (sites tiers repoussés à 2027) et investissements très supérieurs aux revenus.",
+   "as_of": "12 nov. 2026",
+   "sources": [
+    {
+     "t": "Nebius (formulaire 6-K, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/0001513845/000110465926126008/tm2629571d1_ex99-2.htm"
+    },
+    {
+     "t": "Newsquawk (12 nov. 2026)",
+     "u": "https://www.newsquawk.com/headlines/nebius-group-nv-nbis-q3-2026-usd-adj-ebitda-4658mln-exp-3518mln-revenue-9808mln-exp-9072mln"
+    },
+    {
+     "t": "Blockspace (12 nov. 2026)",
+     "u": "https://blockspace.media/insight/nebius-cuts-2026-revenue-outlook/"
+    }
+   ]
+  },
+  {
+   "name": "Cerebras",
+   "tag": "Puces alternatives",
+   "what": "Fabricant de puces géantes pour l'inférence rapide, coté au Nasdaq depuis le 14 mai 2026.",
+   "why": "Test grandeur nature d'une alternative aux GPU de Nvidia, adossée à OpenAI.",
+   "last": "T1 2026 : revenus 193,4 M$ (+ 94 %). Contrat OpenAI de plus de 20 Md$ pour 750 MW. Introduction en Bourse : 6,4 Md$ levés. Prévision 2026 : 855 à 865 M$ de revenus de base.",
+   "risk": "Concentration : l'essentiel de la croissance attendue repose sur le contrat OpenAI, dont les revenus arrivent surtout en fin d'année.",
+   "as_of": "23 juin 2026",
+   "sources": [
+    {
+     "t": "Cerebras (résultats du T1 2026)",
+     "u": "https://investors.cerebras.ai/node/7126/pdf"
+    },
+    {
+     "t": "Converge Digest (23 juin 2026)",
+     "u": "https://convergedigest.com/cerebras-posts-q1-revenue-expands-openai-and-aws-partnerships/"
+    }
+   ]
+  },
+  {
+   "name": "Moonshot AI (Kimi)",
+   "tag": "Laboratoire chinois",
+   "what": "Laboratoire de Pékin, auteur de Kimi K3 (2,8 billions de paramètres, à poids ouverts, annoncé le 16 juil. 2026).",
+   "why": "Chef de file des modèles ouverts chinois, dont l'écart avec les modèles américains se réduit.",
+   "last": "Levée de 3,5 Md$ à 35 Md$ de valorisation en juillet 2026 ; discussions rapportées à 50 Md$.",
+   "risk": "Accès aux puces avancées : les restrictions américaines à l'export poussent les laboratoires chinois vers les puces Huawei Ascend ou des stocks.",
+   "as_of": "juil.–oct. 2026",
+   "sources": [
+    {
+     "t": "Crunchbase News (T3 2026, Asie)",
+     "u": "https://news.crunchbase.com/venture/q3-2026-asia-startup-funding-near-record-ai/"
+    },
+    {
+     "t": "Euronews (6 oct. 2026)",
+     "u": "https://www.euronews.com/2026/10/06/moonshot-ai-eyes-hong-kong-ipo-after-50-billion-valuation-as-deepseek-raises-capital"
+    },
+    {
+     "t": "Creati (févr. 2026)",
+     "u": "https://creati.ai/ai-news/2026-02-17/moonshot-ai-10-billion-valuation-funding"
+    }
+   ]
+  }
+ ],
+ "risks": [
+  {
+   "id": "capex_cash",
+   "title": "Capex contre cash-flow",
+   "value": "1,57 $ de capex en plus pour 1 $ de cash-flow en plus",
+   "sub": "Cinq géants, de 2025 à 2027 (estimations) : capex + 534 Md$, cash-flow d'exploitation + 340 Md$. Oracle : capex égal à 174 % de son cash-flow d'exploitation (exercice clos en mai 2026).",
+   "as_of": "22 juil. 2026",
+   "source": "Reuters, repris par Khaleej Times",
+   "url": "https://www.khaleejtimes.com/business/tech/ai-investment-boom-puts-big-techs-free-cash-flow-under-pressure"
+  },
+  {
+   "id": "debt",
+   "title": "Dette",
+   "value": "121 Md$ émis en 2025",
+   "sub": "Obligations américaines des cinq géants (28 Md$ par an en moyenne de 2020 à 2024). CoreWeave devait ≈ 47 Md$ fin sept. 2026.",
+   "as_of": "2025 ; 10 nov. 2026",
+   "source": "Bank of America via Quartz ; CoreWeave via Implicator",
+   "url": "https://qz.com/tech-hyperscaler-bond-issuance-investment-grade-index-050526"
+  },
+  {
+   "id": "nvidia",
+   "title": "Concentration sur Nvidia",
+   "value": "",
+   "sub": "Part de Nvidia dans le compute vendu au dernier trimestre complet (Epoch). Nvidia a réalisé 89,0 Md$ de revenu datacenter au trimestre clos le 26 juil. 2026.",
+   "as_of": "T2 2026 ; 26 août 2026",
+   "source": "Epoch AI ; NVIDIA",
+   "url": "https://epoch.ai/data/ai-chip-sales"
+  }
+ ],
+ "risks_note": "Indicateurs, pas un verdict : aucun seuil officiel ne sépare une situation saine d'une bulle."
+}

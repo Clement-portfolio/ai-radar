@@ -36,9 +36,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];if(window.I18N)I18N.extra(r[10]);
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -194,8 +194,10 @@ function shareCard(c){
 }
 var ETAGES=[
   [1,"Compute","Qui construit et possède la puissance de calcul ?"],
-  [2,"Modèles","Qui fabrique les modèles, à quelle échelle, et qui les utilise sur le web ?"],
-  [3,"Adoption et argent","Qui utilise l\'IA en entreprise, et quel argent y entre ?"]
+  [2,"Modèles","Qui fabrique les meilleurs modèles, à quel écart, et à quel prix ?"],
+  [3,"Adoption","Qui utilise l\'IA : grand public, entreprises, volume d\'usage ?"],
+  [4,"Financement et revenus","Combien est investi, qui le finance, et quels revenus en sortent ?"],
+  [5,"Perspectives","Ce qui est prévu, ce qui arrive, et les acteurs émergents."]
 ];
 function sommaire(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
@@ -207,7 +209,7 @@ function capexPie(){
   if(cs.length<3)return null;
   var tot=cs.reduce(function(a,c){return a+c.capex.value},0),end=cs.reduce(function(a,c){return c.capex.end>a?c.capex.end:a},"");
   var segs=cs.map(function(c){return{label:c.name,pct:Math.round(1000*c.capex.value/tot)/10}}).sort(function(a,b){return b.pct-a.pct});
-  return{id:"capex_geants",etage:3,rank:2,title:"Qui dépense le plus en capex",metric:"Part du capex des cinq géants sur les douze derniers mois",period:"Périodes propres à chaque société, jusqu\'à fin "+fmtD(end),segments:segs,source:"SEC (10-K et 10-Q)",url:"https://www.sec.gov/edgar/search/",confidence:"haute",caveat:"Parts calculées entre ces cinq sociétés seulement : ce n\'est pas leur part du capex mondial. Capex déclaré (immobilisations corporelles) ; les exercices sont décalés (Oracle, Microsoft).",auto:true,checked_at:d.updated_at};
+  return{id:"capex_geants",etage:4,rank:2,title:"Qui dépense le plus en capex",metric:"Part du capex des cinq géants sur les douze derniers mois",period:"Périodes propres à chaque société, jusqu\'à fin "+fmtD(end),segments:segs,source:"SEC (10-K et 10-Q)",url:"https://www.sec.gov/edgar/search/",confidence:"haute",caveat:"Parts calculées entre ces cinq sociétés seulement : ce n\'est pas leur part du capex mondial. Capex déclaré (immobilisations corporelles) ; les exercices sont décalés (Oracle, Microsoft).",auto:true,checked_at:d.updated_at};
 }
 function piesFor(pred){
   var out={};
@@ -290,12 +292,49 @@ function curveCard(c){
    '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div><div class="fr">'+curveFresh(c)+'</div>'+
    '<details class="why"><summary>Limites'+(c.auto?'':' et points sourcés')+'</summary><div class="sc">'+esc(c.caveat)+'</div>'+pointList(c)+'</details></div>';
 }
+function statCard(c){
+  return'<div class="share stat1"><h4>'+esc(c.title)+'</h4><div class="bigv">'+esc(c.value)+'</div><div class="sm2">'+esc(c.sub)+'</div>'+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div><div class="fr"><span class="small">'+esc(c.as_of)+'</span></div>'+
+   (c.caveat?'<details class="why"><summary>Limites</summary><div class="sc">'+esc(c.caveat)+'</div></details>':'')+'</div>';
+}
+function nvidiaShare(){
+  var p=((S.series&&S.series.pies)||[]).filter(function(x){return x.id==="designers"})[0];if(!p)return null;
+  var seg=(p.segments||[]).filter(function(x){return x.label==="Nvidia"})[0];return seg?{pct:seg.pct,period:p.period}:null;
+}
+function riskCard(r){
+  var v=r.value;
+  if(r.id==="nvidia"){var n=nvidiaShare();if(!n)return"";v="≈ "+fmtPct(Math.round(n.pct))+" du compute vendu"}
+  return'<div class="share stat1"><h4>'+esc(r.title)+'</h4><div class="bigv">'+esc(v)+'</div><div class="sm2">'+esc(r.sub)+'</div><div class="sf"><a href="'+esc(link(r.url))+'" target="_blank" rel="noopener">'+esc(r.source)+' ↗</a></div><div class="fr"><span class="small">'+esc(r.as_of)+'</span></div></div>';
+}
+function actorCard(a){
+  return'<div class="actor"><div class="ah"><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div>'+
+   '<dl><dt>Ce que c\'est</dt><dd>'+esc(a.what)+'</dd><dt>Pourquoi ça compte</dt><dd>'+esc(a.why)+'</dd><dt>Dernier chiffre</dt><dd>'+esc(a.last)+'</dd><dt class="rk">Risque principal</dt><dd class="rk">'+esc(a.risk)+'</dd></dl>'+
+   '<div class="srcs">'+srcLinks(a.sources)+'</div><div class="fr"><span class="small">'+esc(a.as_of)+'</span></div></div>';
+}
+function outlookHTML(){
+  var o=S.outlook;if(!o)return'<div class="empty small">Perspectives indisponibles.</div>';
+  var today=new Date().toISOString().slice(0,10),h='<div class="note"><b>Règle.</b> '+esc(o.rule)+'</div>';
+  h+='<div class="sgroup">Capex 2027 prévu <em>fourchette d\'analystes, pas des engagements</em></div><div class="cards3">'+
+   o.capex2027.map(function(c){return'<div class="share stat1"><h4>'+esc(c.name)+'</h4><div class="bigv">'+esc(c.value)+'</div><div class="sm2">'+esc(c.scope)+'</div><div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div><div class="fr"><span class="small">'+esc(c.as_of)+'</span></div></div>'}).join("")+
+   (o.gw?statCard({title:o.gw.title,value:o.gw.value,sub:o.gw.sub,as_of:o.gw.as_of,source:o.gw.source,url:o.gw.url,confidence:"moyenne",caveat:o.gw.caveat}):"")+'</div><p class="small mute" style="margin:8px 0 0">'+esc(o.capex_note)+'</p>';
+  var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
+  if(cat.length)h+='<div class="sgroup">Prochains catalyseurs <em>seulement les dates publiées</em></div><ul class="cats">'+cat.map(function(c){return'<li><div class="cd">'+esc(c.label)+(c.date===today?' · aujourd\'hui':'')+'</div><div><b>'+esc(c.title)+'</b><p>'+esc(c.detail)+'</p><span class="small mute">'+esc(c.status)+' · </span><span class="srcs inl">'+srcLinks(c.sources)+'</span></div></li>'}).join("")+'</ul><p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p>';
+  h+='<div class="sgroup">Acteurs émergents <em>une fiche courte chacun</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div>';
+  var rk=(o.risks||[]).map(riskCard).join("");
+  if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
+  return h;
+}
 function etages(){
   return ETAGES.map(function(e){
-    var pies=piesFor(function(c){return c.etage===e[0]}),cur=((S.series&&S.series.curves)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
-    return'<section class="etage" id="m-e'+e[0]+'"><span class="kicker">Étage '+e[0]+' sur 3</span><h3 class="sub2">'+esc(e[1])+'</h3><p class="lede" style="margin-bottom:0">'+esc(e[2])+'</p>'+
-     '<div class="sgroup">Qui domine <em>parts de marché, chaque camembert est une mesure différente</em></div>'+(pies.length?'<div class="cards3">'+pies.map(shareCard).join("")+'</div>':'<div class="empty small">Aucun camembert disponible.</div>')+
-     '<div class="sgroup">Comment ça évolue <em>courbes dans le temps</em></div>'+(cur.length?'<div class="cards3">'+cur.map(curveCard).join("")+'</div>':'<div class="empty small">Courbes en cours de collecte.</div>')+'</section>';
+    var pies=piesFor(function(c){return c.etage===e[0]}),cur=((S.series&&S.series.curves)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)}),
+        st=((S.ind&&S.ind.stats)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
+    var h='<section class="etage" id="m-e'+e[0]+'"><span class="kicker">Étage '+e[0]+' sur '+ETAGES.length+'</span><h3 class="sub2">'+esc(e[1])+'</h3><p class="lede" style="margin-bottom:0">'+esc(e[2])+'</p>';
+    if(e[0]===5)return h+outlookHTML()+'</section>';
+    if(pies.length)h+='<div class="sgroup">Qui domine <em>parts de marché, chaque camembert est une mesure différente</em></div><div class="cards3">'+pies.map(shareCard).join("")+'</div>';
+    if(st.length)h+='<div class="sgroup">Chiffres clés <em>une mesure par carte, datée et sourcée</em></div><div class="cards3">'+st.map(statCard).join("")+'</div>';
+    if(cur.length)h+='<div class="sgroup">Comment ça évolue <em>courbes dans le temps</em></div><div class="cards3">'+cur.map(curveCard).join("")+'</div>';
+    if(!pies.length&&!st.length&&!cur.length)h+='<div class="empty small">Données en cours de collecte.</div>';
+    return h+'</section>';
   }).join("");
 }
 function sharesRace(){
@@ -326,16 +365,35 @@ function meter(t){
   var s='';for(var i=1;i<=10;i++)s+='<i class="'+(i<=t?'f':'')+'"></i>';
   return'<div class="meter '+cls+'">'+s+'</div>';
 }
+function layerTrend(l){
+  var h=(l.history||[]).slice().sort(function(a,b){return a.d.localeCompare(b.d)});
+  if(l.tension==null||h.length<2)return"";
+  var last=h[h.length-1],prev=null,i;
+  for(i=h.length-2;i>=0;i--){if((new Date(last.d)-new Date(h[i].d))>=6*86400000){prev=h[i];break}}
+  if(!prev)return"";
+  var dlt=l.tension-prev.t,cls=dlt>0?"up":(dlt<0?"down":"flat"),sym=dlt>0?"▲":(dlt<0?"▼":"→");
+  return'<span class="trend '+cls+'" title="Tension le '+esc(fmtD(prev.d))+' : '+prev.t+'/10">'+sym+' '+(dlt>0?"+":"")+dlt+' depuis le '+esc(fmtD(prev.d))+'</span>';
+}
+function layerMeter(l){
+  if(l.tension==null)return'<span class="mlabel"><span>Tension</span><span class="tv emerging">'+esc(l.tension_label)+'</span></span>';
+  return meter(l.tension)+'<span class="mlabel"><span>Tension</span><span class="tv '+(l.tension>=8?"hi":(l.tension>=6?"mid":"lo"))+'">'+esc(l.tension_label)+' · '+l.tension+'/10</span></span>'+layerTrend(l);
+}
+function layerExtra(l){
+  var h="";
+  if(l.capacity)h+='<div class="lcap"><span class="kicker">Capacité</span> '+esc(l.capacity.value)+' <span class="small mute">('+esc(l.capacity.as_of)+', <a href="'+esc(link(l.capacity.url))+'" target="_blank" rel="noopener">'+esc(l.capacity.source)+'</a>)</span></div>';
+  if(l.unlock)h+='<div class="lcap"><span class="kicker">Ce qui débloquerait</span> '+esc(l.unlock.text)+' <span class="small mute">(<a href="'+esc(link(l.unlock.url))+'" target="_blank" rel="noopener">'+esc(l.unlock.source)+'</a>)</span></div>';
+  return h;
+}
 function rInfra(){
   var L=S.layers.layers.slice();
-  if(S.layerSort==="tension")L.sort(function(a,b){return b.tension-a.tension});else L.sort(function(a,b){return a.order-b.order});
+  if(S.layerSort==="tension")L.sort(function(a,b){return(b.tension==null?-1:b.tension)-(a.tension==null?-1:a.tension)});else L.sort(function(a,b){return a.order-b.order});
   var el=$("v-infrastructure");
   el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">La pile de l\'IA, des applications à l\'énergie. Pour chaque couche : qui domine, où ça coince, et à quel point (tension de 0 à 10, estimation éditoriale).</p><div class="tleg"><span><i class="hi"></i>Critique (8 à 10)</span><span><i class="mid"></i>Élevé (6 à 7)</span><span><i class="lo"></i>Modéré ou faible (0 à 5)</span></div>'+
    '<div class="toolbar"><button class="chip'+(S.layerSort==="pile"?' on':'')+'" data-ls="pile">Ordre de la pile</button><button class="chip'+(S.layerSort==="tension"?' on':'')+'" data-ls="tension">Par tension</button></div><div class="stack">'+
    L.map(function(l){
      var open=S.open["l"+l.id]?" open":"";
-     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span><span class="lm">'+meter(l.tension)+'<span class="mlabel"><span>Tension</span><span class="tv '+(l.tension>=8?"hi":(l.tension>=6?"mid":"lo"))+'">'+esc(l.tension_label)+' · '+l.tension+'/10</span></span></span><span class="chev">›</span></button>'+
-      '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+esc(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p><div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
+     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span><span class="lm">'+layerMeter(l)+'</span><span class="chev">›</span></button>'+
+      '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+esc(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p>'+layerExtra(l)+'<div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
    }).join("")+'</div>';
 }
 
@@ -399,10 +457,9 @@ function renderAll(){
   rUne();rFeed();rMarket();rInfra();rRace();rMethod();
 }
 function show(tab){
-  if(tab==="infrastructure")tab="marche";
   if(TABS.indexOf(tab)<0)tab="une";
   S.tab=tab;
-  TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab||(tab==="marche"&&t==="infrastructure"))});
+  TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
   window.scrollTo(0,0);
 }
