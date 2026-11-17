@@ -1,43 +1,43 @@
 {
- "updated_at": "2026-11-17T10:17:07.526Z",
+ "updated_at": "2026-11-17T13:17:39.089Z",
  "mode": "live",
  "last_run": {
-  "started_at": "2026-11-17T10:13:51.696Z",
-  "duration_s": 196,
-  "candidates": 1390,
-  "new_unique": 4,
-  "queued": 4,
+  "started_at": "2026-11-17T13:14:14.735Z",
+  "duration_s": 204,
+  "candidates": 1385,
+  "new_unique": 42,
+  "queued": 42,
   "classified_calls": 1,
-  "model": "gemini-3.5-flash-lite",
-  "added": 4,
+  "model": "gemini-3.1-flash-lite",
+  "added": 41,
   "fallback": 0,
-  "rejected": 0,
+  "rejected": 1,
   "total_items": 1500,
   "errors": [],
   "translate": {
-   "changed": 0,
-   "reason": "rien à traduire",
+   "changed": 3,
+   "reason": "3 articles traduits",
    "left": 0
   },
   "gnews": {
    "changed": 0,
    "failed": 0,
-   "left": 331,
+   "left": 351,
    "reason": "rien à faire"
   },
   "i18n": {
-   "added": 0,
+   "added": 12,
    "left": 24,
-   "reason": "aucune traduction valide"
+   "reason": "12 textes traduits"
   },
   "focus": {
-   "regenerated": false,
-   "reason": "histoires retenues inchangées"
+   "regenerated": true,
+   "reason": "briefing régénéré"
   },
   "sec": {
-   "refreshed": false,
-   "ok": 0,
-   "skipped": 5,
+   "refreshed": true,
+   "ok": 5,
+   "skipped": 0,
    "ko": []
   },
   "shares": {
@@ -66,8 +66,8 @@
    "modèles disponibles : gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemini-3.1-flash-lite-preview, gemini-3-flash-preview, gemini-2.5-flash, gemini-2.5-flash-lite",
    "écartés aujourd'hui (quota ou retirés) : gemini-3.6-flash, gemini-3.8-flash, gemini-3.7-flash, gemini-3.5-flash",
    "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.1-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.1-flash-lite-preview : réseau (The operation was aborted due to timeout)"
+   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
+   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a"
   ],
   "yield": [
    {
@@ -77,12 +77,12 @@
    },
    {
     "name": "googlenews · US",
-    "k": 112,
+    "k": 124,
     "r": 0
    },
    {
     "name": "Digitimes",
-    "k": 76,
+    "k": 77,
     "r": 0
    },
    {
@@ -107,7 +107,7 @@
    },
    {
     "name": "googlenews · SA",
-    "k": 41,
+    "k": 44,
     "r": 0
    },
    {
@@ -122,6 +122,11 @@
    },
    {
     "name": "googlenews · SG",
+    "k": 33,
+    "r": 0
+   },
+   {
+    "name": "googlenews · GB",
     "k": 32,
     "r": 0
    },
@@ -136,18 +141,13 @@
     "r": 0
    },
    {
-    "name": "googlenews · GB",
-    "k": 29,
-    "r": 0
-   },
-   {
     "name": "DatacenterDynamics",
-    "k": 23,
+    "k": 27,
     "r": 2
    },
    {
     "name": "newsdata · IN",
-    "k": 23,
+    "k": 24,
     "r": 2
    },
    {
@@ -156,19 +156,24 @@
     "r": 0
    },
    {
+    "name": "newsdata · SG",
+    "k": 21,
+    "r": 1
+   },
+   {
+    "name": "CNBC Tech",
+    "k": 21,
+    "r": 0
+   },
+   {
     "name": "The Register IA",
     "k": 21,
     "r": 0
    },
    {
-    "name": "newsdata · SG",
-    "k": 19,
-    "r": 1
-   },
-   {
-    "name": "CNBC Tech",
-    "k": 19,
-    "r": 0
+    "name": "Tom's Hardware",
+    "k": 15,
+    "r": 4
    },
    {
     "name": "The Verge IA",
@@ -186,17 +191,17 @@
     "r": 1
    },
    {
-    "name": "Tom's Hardware",
-    "k": 13,
-    "r": 4
-   },
-   {
     "name": "newsdata · KR",
-    "k": 16,
+    "k": 17,
     "r": 0
    },
    {
     "name": "googlenews · JP",
+    "k": 15,
+    "r": 1
+   },
+   {
+    "name": "googlenews · IN",
     "k": 15,
     "r": 0
    },
@@ -206,9 +211,9 @@
     "r": 1
    },
    {
-    "name": "googlenews · IN",
-    "k": 13,
-    "r": 0
+    "name": "Wired IA",
+    "k": 12,
+    "r": 2
    },
    {
     "name": "Sifted",
@@ -241,9 +246,9 @@
     "r": 0
    },
    {
-    "name": "Wired IA",
-    "k": 9,
-    "r": 2
+    "name": "googlenews · DE",
+    "k": 11,
+    "r": 0
    },
    {
     "name": "Pandaily",
@@ -251,7 +256,7 @@
     "r": 0
    },
    {
-    "name": "googlenews · DE",
+    "name": "SCMP Tech",
     "k": 10,
     "r": 0
    },
@@ -264,14 +269,15 @@
     "name": "Arab News",
     "k": 8,
     "r": 1
-   },
-   {
-    "name": "SCMP Tech",
-    "k": 9,
-    "r": 0
    }
   ],
   "rejected_samples": [
+   {
+    "ti": "AI株安の受け皿になれぬ食品株 ヤクルトなどに広がる危機感 ヴェリタスEYE（11月17日）",
+    "s": "日本経済新聞",
+    "r": "Conseils boursiers sans fait sur l'IA.",
+    "d": "2026-11-17"
+   },
    {
     "ti": "L’intelligence artificielle sur les traces de minuscules capsules cellulaires",
     "s": "Le Monde.fr",
@@ -445,12 +451,6 @@
     "s": "ZDNet IA",
     "r": "Mise à jour système d'exploitation Windows",
     "d": "2026-11-15"
-   },
-   {
-    "ti": "Fitbit users can’t see Google Health metrics after update – how to fix it",
-    "s": "ZDNet IA",
-    "r": "Problème logiciel de montre connectée",
-    "d": "2026-11-15"
    }
   ],
   "sources": [
@@ -467,13 +467,31 @@
     "n": 25
    },
    {
+    "name": "TechCrunch IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
     "name": "NVIDIA blog",
     "kind": "rss",
     "ok": true,
     "n": 18
    },
    {
+    "name": "Hugging Face blog",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
     "name": "AWS Machine Learning",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Google AI",
     "kind": "rss",
     "ok": true,
     "n": 20
@@ -485,13 +503,7 @@
     "n": 10
    },
    {
-    "name": "Hugging Face blog",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
-    "name": "Google AI",
+    "name": "Ars Technica",
     "kind": "rss",
     "ok": true,
     "n": 20
@@ -503,16 +515,16 @@
     "n": 10
    },
    {
-    "name": "Ars Technica",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
     "name": "Wired IA",
     "kind": "rss",
     "ok": true,
     "n": 10
+   },
+   {
+    "name": "Tom's Hardware",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
    },
    {
     "name": "DatacenterDynamics",
@@ -527,25 +539,13 @@
     "n": 25
    },
    {
-    "name": "Tom's Hardware",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
-    "name": "TechCrunch IA",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
-    "name": "EE Times",
+    "name": "Utility Dive",
     "kind": "rss",
     "ok": true,
     "n": 10
    },
    {
-    "name": "Utility Dive",
+    "name": "EE Times",
     "kind": "rss",
     "ok": true,
     "n": 10
@@ -557,16 +557,16 @@
     "n": 25
    },
    {
-    "name": "The Next Platform",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "Pandaily",
     "kind": "rss",
     "ok": true,
     "n": 20
+   },
+   {
+    "name": "The Next Platform",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
    },
    {
     "name": "Sifted",
@@ -606,16 +606,16 @@
     "err": "HTTP 429"
    },
    {
-    "name": "ChinaTalk",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
     "name": "Epoch AI",
     "kind": "rss",
     "ok": true,
     "n": 25
+   },
+   {
+    "name": "ChinaTalk",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
    },
    {
     "name": "Meta Newsroom",
@@ -636,10 +636,11 @@
     "n": 25
    },
    {
-    "name": "The National",
+    "name": "TechNode",
     "kind": "rss",
-    "ok": true,
-    "n": 25
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
    },
    {
     "name": "Arab News",
@@ -654,11 +655,10 @@
     "n": 25
    },
    {
-    "name": "TechNode",
+    "name": "The National",
     "kind": "rss",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 403"
+    "ok": true,
+    "n": 25
    },
    {
     "name": "Rest of World",
@@ -680,23 +680,17 @@
     "n": 25
    },
    {
-    "name": "ZDNet IA",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
-    "name": "Data Center Knowledge",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "SemiAnalysis",
     "kind": "rss",
     "ok": false,
     "n": 0,
     "err": "HTTP 403"
+   },
+   {
+    "name": "ZDNet IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
    },
    {
     "name": "ServeTheHome",
@@ -710,6 +704,12 @@
     "ok": false,
     "n": 0,
     "err": "HTTP 403"
+   },
+   {
+    "name": "Data Center Knowledge",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
    },
    {
     "name": "TrendForce",
@@ -754,13 +754,13 @@
     "n": 12
    },
    {
-    "name": "Google News États-Unis · Trump administration AI",
+    "name": "Google News États-Unis · chip export controls China",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News États-Unis · chip export controls China",
+    "name": "Google News États-Unis · Trump administration AI",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -778,13 +778,13 @@
     "n": 12
    },
    {
-    "name": "Google News États-Unis · Congress AI bill Senate",
+    "name": "Google News États-Unis · Jensen Huang Trump",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News États-Unis · Jensen Huang Trump",
+    "name": "Google News États-Unis · Congress AI bill Senate",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -844,25 +844,19 @@
     "n": 12
    },
    {
-    "name": "Google News France · IA puces datacenter",
-    "kind": "googlenews",
-    "ok": true,
-    "n": 12
-   },
-   {
     "name": "Google News France · intelligence artificielle",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Allemagne · künstliche Intelligenz",
+    "name": "Google News France · IA puces datacenter",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
+    "name": "Google News Allemagne · künstliche Intelligenz",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -880,13 +874,13 @@
     "n": 12
    },
    {
-    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
+    "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Taïwan · 人工智慧 晶片",
+    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -898,13 +892,13 @@
     "n": 12
    },
    {
-    "name": "Google News Japon · 人工知能 半導体",
+    "name": "Google News Taïwan · 人工智慧 晶片",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
+    "name": "Google News Japon · 人工知能 半導体",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -916,19 +910,25 @@
     "n": 12
    },
    {
+    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
     "name": "Google News Inde · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Singapour · artificial intelligence",
+    "name": "Google News Singapour · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Singapour · AI chips Nvidia data center",
+    "name": "Google News Singapour · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -942,9 +942,8 @@
    {
     "name": "GDELT Monde",
     "kind": "gdelt",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 429"
+    "ok": true,
+    "n": 0
    },
    {
     "name": "GDELT Chine",
@@ -958,7 +957,7 @@
     "kind": "gdelt",
     "ok": false,
     "n": 0,
-    "err": "ignoré (GDELT indisponible)"
+    "err": "HTTP 429"
    },
    {
     "name": "GDELT Golfe",
@@ -1077,7 +1076,7 @@
     "name": "Hacker News · LLM",
     "kind": "hn",
     "ok": true,
-    "n": 5
+    "n": 4
    },
    {
     "name": "Hacker News · OpenAI",
@@ -1101,7 +1100,7 @@
     "name": "Hugging Face Daily Papers",
     "kind": "hf",
     "ok": true,
-    "n": 5
+    "n": 3
    },
    {
     "name": "arXiv",
@@ -1143,7 +1142,7 @@
     "name": "SEC TSMC",
     "kind": "edgar",
     "ok": true,
-    "n": 4
+    "n": 2
    },
    {
     "name": "SEC AMD",
@@ -1177,5 +1176,5 @@
    }
   ]
  },
- "last_attempt": "2026-11-17T10:17:07.526Z"
+ "last_attempt": "2026-11-17T13:17:39.089Z"
 }
