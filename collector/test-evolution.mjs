@@ -73,13 +73,14 @@ const owners5 = (end, scale = 1, inc = "") => [O("Google", end, 24 * scale, inc)
 let csv = own([...owners5("2025-03-31", 6e5), ...owners5("2025-06-30", 7e5), ...owners5("2025-09-30", 85e4), ...owners5("2025-12-31", 1e6), ...owners5("2026-03-31", 1e6, "True").slice(0, 3)]);
 let r = ownersPie(csv, NOW);
 assert.equal(r.end, "2025-12-31", "le trimestre incomplet est ignoré");
-assert.deepEqual(r.segments.map((s) => s.label), ["Google", "Microsoft", "Amazon", "Meta", "Oracle", "Néoclouds (CoreWeave)", "Autres propriétaires"], "CoreWeave est présenté comme « Néoclouds » ; xAI reste dans Autres");
+assert.deepEqual(r.segments.map((s) => s.label), ["Google", "Microsoft", "Amazon", "Meta", "Oracle", "Néoclouds (CoreWeave, Nebius, IREN)", "Autres propriétaires"], "les néoclouds forment un segment (CoreWeave + Nebius + IREN) ; xAI reste dans Autres");
 assert.ok(Math.abs(r.segments.reduce((a, s) => a + s.pct, 0) - 100) < 0.11);
 assert.equal(r.segments[0].pct, 24, "Google = 24 sur un total de 100");
+assert.ok(r.neo && r.neo.nebius > 0 && r.neo.iren > 0 && r.neo.pct > (100 * r.neo.coreweave) / r.total, "la part des néoclouds dépasse celle de CoreWeave seul");
 const sh = ownersShare(csv, NOW);
-assert.equal(sh.series.length, 7); assert.ok(sh.series.find((x) => x.name === "Néoclouds (CoreWeave)") && !sh.series.find((x) => /xAI/.test(x.name)), "xAI est dans Autres"); assert.equal(sh.series[0].points.length, 4); assert.equal(sh.last, "2025-12-31");
+assert.equal(sh.series.length, 6); assert.ok(!sh.series.find((x) => /Néoclouds|CoreWeave|xAI/.test(x.name)), "néoclouds et xAI sont dans Autres"); assert.equal(sh.series[0].points.length, 4); assert.equal(sh.last, "2025-12-31");
 assert.equal(sh.series[0].name, "Google"); assert.equal(sh.series[0].points[3].v, 24, "Google = 24 % du parc au dernier trimestre");
-assert.ok(sh.series[6].dashed && Math.abs(sh.series[6].points[3].v - 27.5) < 0.2, "reste = Autres (avec xAI)");
+assert.ok(sh.series[5].dashed, "reste = Autres (avec néoclouds et xAI)");
 assert.throws(() => ownersShare(own(owners5("2025-12-31", 1e6)), NOW), /quatre trimestres/);
 assert.throws(() => ownersShare(own([...owners5("2024-03-31", 6e5), ...owners5("2024-06-30", 7e5), ...owners5("2024-09-30", 85e4), ...owners5("2024-12-31", 1e6)]), NOW), /trop ancien/);
 

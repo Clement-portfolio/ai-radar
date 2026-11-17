@@ -17,6 +17,8 @@ if (/date non confirmée|attendus? mi-/i.test(read("market"))) ko("market.json :
 const curveSources = series.curves.map((c) => c.id), pieIds = shares.charts.map((c) => c.id);
 if (curveSources.includes("traffic") && pieIds.includes("chat")) ko("parts de trafic des chatbots présentes deux fois (courbe et camembert)");
 
+// feed : pas de fuite de structure JSON dans « pourquoi c'est important » (« », « why_en »: »)
+for (const it of JSON.parse(read("feed")).items) for (const k of ["why", "why_en", "summary", "summary_en"]) if (it[k] && (/(why|summary|title)_(en|fr)\b/.test(it[k]) || (k.startsWith("why") && it[k].length < 25))) ko(`feed : « ${k} » corrompu sur « ${String(it.title).slice(0, 50)} » : ${it[k].slice(0, 50)}`);
 // schéma de l'infrastructure (chain.json) : blocs, pièces, fiches marché datées et sourcées, camembert = dernier point du graphique
 const chain = JSON.parse(read("chain"));
 {

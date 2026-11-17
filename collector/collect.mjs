@@ -277,6 +277,7 @@ function enFields(r, c, hasWhy) {
 function whyOk(r, c) {
   const w = String(r.why_fr || "").trim();
   if (!w || w.length > 260 || (Number(r.importance) || 1) < 2 || hasNumberWords(w)) return false;
+  if (w.length < 25 || w.split(/\s+/).length < 5 || !/^[\p{L}"«'’(]/u.test(w) || /why_|summary_|title_|[{}\[\]]/.test(w)) return false; // fuite de structure JSON (« », « why_en »: »)
   const known = new Set(digitsOf(`${c.title} ${c.snippet || ""}`));
   return digitsOf(w).every((d) => known.has(d));
 }

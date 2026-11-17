@@ -206,8 +206,8 @@ input[type=range]{accent-color:#000;width:170px}
 .mkt .share{padding:12px 0 6px;display:flex;flex-direction:column;min-width:0}
 .mkt .share h4{font-family:var(--display);font-size:16px;font-weight:600;letter-spacing:-.01em;margin-bottom:2px}
 .mkt .share .sm{font-size:11.5px;color:var(--mute);margin-bottom:12px;min-height:32px}
-.mkt .sbody{display:flex;align-items:center;gap:18px}
-.mkt .donut{width:150px;height:150px;flex:none}.mkt .sbody{flex:1}
+.mkt .sbody{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px}
+.mkt .donut{width:250px;height:250px;flex:none}.mkt .sbody{flex:1}.mkt .sbody .leg{width:100%}
 .mkt .leg{display:block;list-style:none;flex:1;font-size:12.5px}
 .mkt .leg li{display:grid;grid-template-columns:10px 1fr auto;gap:8px;align-items:center;padding:3px 0}
 .mkt .leg i{width:10px;height:10px;display:inline-block;border:1px solid var(--hair)}

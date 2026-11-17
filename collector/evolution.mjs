@@ -93,15 +93,22 @@ const completeEnds = (rows, now) => {
   }
   return [...ends].filter(([e, o]) => !o.inc && Date.parse(e) <= now).map(([e]) => e).sort();
 };
-// propriétaires suivis à part quand ils figurent dans le fichier Epoch (xAI fait partie de SpaceX depuis février 2026)
-const EXTRA_OWNERS = [["CoreWeave", "Néoclouds (CoreWeave)"]];
+// Néoclouds : Epoch n'isole que CoreWeave ; Nebius et IREN sont dans « Other ». On les en sort avec une estimation datée au 31 déc. 2025 (même date que le fichier) :
+// - Nebius : 170 MW de puissance active fin 2025 (résultats du T4 2025) × l'équivalent H100 par MW de CoreWeave (Epoch ÷ 850 MW actifs fin 2025) ;
+// - IREN : parc annoncé en sept. 2025 (1 900 H100/H200 ; 19 100 B200/B300 ; 1 200 GB300 ; 1 100 MI350X), les puces Blackwell et MI350X valant ≈ 2,3 H100 (même rapport de débit FP8 que la méthode d'Epoch). Borne haute : tout n'était pas en service fin 2025.
+export const NEO = { end: "2025-12-31", cwMW: 850, nebiusMW: 170, irenOld: 1900, irenNew: 19100 + 1200 + 1100, blackwellH100e: 2.3 };
+const NEO_LINKS = [
+  { t: "CoreWeave : 850 MW actifs fin 2025 (Epoch, FAQ)", u: "https://epoch.ai/data/ai-chip-owners-documentation/faq" },
+  { t: "Nebius : 170 MW actifs fin 2025 (résultats T4 2025)", u: "https://www.businesswire.com/news/home/20260212534404/en/" },
+  { t: "IREN : parc de 23 000 GPU annoncé (sept. 2025)", u: "https://iren.com/resources/blog/iren-ai-cloudstrengthens-leadership-with-nvidiablackwell-deployment" },
+];
 const sumBy = (rows, end, key) => {
   const t = new Map();
   for (const r of rows) if (r["End date"] === end) t.set(r[key], (t.get(r[key]) || 0) + (parseFloat(r["Compute estimate in H100e (median)"]) || 0));
   return t;
 };
 
-/** Qui possède le compute : parc cumulé (équivalents H100) au dernier trimestre complet. */
+/** Qui possède le compute : parc cumulé (équivalents H100) au dernier trimestre complet. Les néoclouds (CoreWeave mesuré par Epoch, Nebius et IREN estimés) forment un seul segment. */
 export function ownersPie(csv, now) {
   const rows = parseCsv(csv), ends = completeEnds(rows, now), end = ends[ends.length - 1];
   if (!end) throw new Error("aucun trimestre complet dans le fichier Epoch");
@@ -110,10 +117,28 @@ export function ownersPie(csv, now) {
   if (!(T > 1e6)) throw new Error("total de compute improbable : " + T);
   const five = ["Google", "Microsoft", "Amazon", "Meta", "Oracle"];
   for (const n of five) if (!(t.get(n) > 0)) throw new Error("propriétaire absent : " + n);
-  const segs = [...five.map((n) => ({ label: n, pct: round((100 * t.get(n)) / T) })), ...EXTRA_OWNERS.filter(([k]) => t.get(k) > 0).map(([k, label]) => ({ label, pct: round((100 * t.get(k)) / T) }))].sort((a, b) => b.pct - a.pct);
+  const cw = t.get("CoreWeave") || 0;
+  let neo = null;
+  if (cw > 0 && end === NEO.end) {
+    const perMW = cw / NEO.cwMW, nebius = NEO.nebiusMW * perMW, iren = NEO.irenOld + NEO.irenNew * NEO.blackwellH100e;
+    neo = { coreweave: cw, nebius, iren, pct: round((100 * (cw + nebius + iren)) / T), perMW };
+  }
+  const neoPct = neo ? neo.pct : round((100 * cw) / T);
+  const segs = [...five.map((n) => ({ label: n, pct: round((100 * t.get(n)) / T) })), ...(cw > 0 ? [{ label: neo ? "Néoclouds (CoreWeave, Nebius, IREN)" : "Néoclouds (CoreWeave)", pct: neoPct }] : [])].sort((a, b) => b.pct - a.pct);
   const rest = round(100 - segs.reduce((a, s) => a + s.pct, 0));
   if (segs.reduce((a, s) => a + s.pct, 0) < 40) throw new Error("part des cinq géants improbable");
-  return { end, segments: [...segs, { label: "Autres propriétaires", pct: Math.max(0, rest) }], total: T };
+  return { end, segments: [...segs, { label: "Autres propriétaires", pct: Math.max(0, rest) }], total: T, neo };
+}
+
+const fmtK = (v) => Math.round(v / 1e3).toLocaleString("fr-FR").replace(/\u202f/g, " ") + " 000";
+/** Légende, liens et limites du camembert : méthode des néoclouds écrite en clair, avec les chiffres calculés. */
+export function ownersNote(r) {
+  if (!r.neo) return { caveat: "Estimations d'Epoch, pas des déclarations des sociétés. Dernier trimestre complet du fichier. Seul CoreWeave est isolé par Epoch ; Nebius, Lambda, Crusoe et les autres sont dans « Autres propriétaires », comme xAI (SpaceX) et les clients chinois." };
+  const n = r.neo, pc = (v) => (100 * v / r.total).toFixed(1).replace(".", ",");
+  return {
+    links: NEO_LINKS,
+    caveat: `Estimations d'Epoch, pas des déclarations des sociétés ; dernier trimestre complet du fichier. Néoclouds = CoreWeave ${pc(n.coreweave)} % (mesuré par Epoch) + Nebius ${pc(n.nebius)} % + IREN ${pc(n.iren)} % (estimés ici, retirés de « Autres »). Nebius : 170 MW actifs fin 2025 × ${Math.round(n.perMW)} équivalents H100 par MW (ratio de CoreWeave : ${fmtK(n.coreweave)} équivalents H100 pour 850 MW). IREN : parc annoncé en septembre 2025 (23 000 GPU, dont 21 400 Blackwell ou MI350X comptés ≈ 2,3 H100) ; tout n'était pas encore en service fin 2025, donc borne haute. Non comptés : Lambda, Crusoe, Nscale, Together, Fluidstack… (pas de parc publié ; des estimations de presse parlent de quelques dizaines de milliers de GPU chacun), donc la vraie part des néoclouds est un peu plus haute. Confiance : faible à moyenne pour Nebius et IREN.`,
+  };
 }
 
 /** Évolution de la part du compute détenue par chacun des cinq géants, trimestre complet par trimestre complet. */
@@ -124,9 +149,7 @@ export function ownersShare(csv, now, last = 8) {
   const five = ["Google", "Microsoft", "Amazon", "Meta", "Oracle"], byEnd = ends.map((e) => { const t = sumBy(rows, e, "Owner"), T = [...t.values()].reduce((a, b) => a + b, 0); return { e, t, T }; });
   for (const q of byEnd) { if (!(q.T > 1e5)) throw new Error("total de compute improbable : " + q.e); for (const n of five) if (!(q.t.get(n) > 0)) throw new Error("propriétaire absent : " + n + " (" + q.e + ")"); }
   const series = five.map((n) => ({ name: n, points: byEnd.map((q) => ({ d: q.e, v: round((100 * q.t.get(n)) / q.T) })) }));
-  const extras = EXTRA_OWNERS.filter(([k]) => byEnd.some((q) => q.t.get(k) > 0));
-  for (const [k, label] of extras) series.push({ name: label, points: byEnd.map((q) => ({ d: q.e, v: round((100 * (q.t.get(k) || 0)) / q.T) })) });
-  series.push({ name: "Autres propriétaires", dashed: true, points: byEnd.map((q) => ({ d: q.e, v: round(100 - five.reduce((a, n) => a + (100 * q.t.get(n)) / q.T, 0) - extras.reduce((a, [k]) => a + (100 * (q.t.get(k) || 0)) / q.T, 0)) })) });
+  series.push({ name: "Autres propriétaires", dashed: true, points: byEnd.map((q) => ({ d: q.e, v: round(100 - five.reduce((a, n) => a + (100 * q.t.get(n)) / q.T, 0)) })) });
   if (series.some((x) => x.points.some((p) => p.v < 0 || p.v > 100))) throw new Error("part hors 0–100");
   return { series, last: ends[ends.length - 1] };
 }
@@ -272,8 +295,8 @@ export async function secCurves({ ua, fetchImpl, sleep, now, companies = SEC_COM
 // ───────────────────────── orchestration ─────────────────────────
 
 const META = {
-  ownersShare: { kind: "curve", etage: 1, rank: 1, title: "Part du compute IA détenue par chaque géant", unit: "% du parc cumulé (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", caveat: "Estimations d'Epoch, pas des déclarations des sociétés ; trimestres complets du fichier seulement (les plus récents y sont incomplets). « Néoclouds » = CoreWeave, le seul néocloud isolé par Epoch ; Nebius, Lambda, Crusoe et les autres sont inclus dans « Autres propriétaires », comme xAI (SpaceX), les clients chinois, etc." },
-  owners: { kind: "pie", etage: 1, rank: 1, title: "Qui possède le compute IA", metric: "Parc cumulé de puces IA détenu (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", confidence: "moyenne", caveat: "Estimations d'Epoch, pas des déclarations des sociétés. Dernier trimestre complet du fichier (les trimestres plus récents y sont incomplets). « Néoclouds » = CoreWeave, le seul néocloud isolé par Epoch ; Nebius, Lambda, Crusoe et les autres sont inclus dans « Autres », comme xAI (SpaceX), les clients chinois, etc." },
+  ownersShare: { kind: "curve", etage: 1, rank: 1, title: "Part du compute IA détenue par chaque géant", unit: "% du parc cumulé (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", caveat: "Estimations d'Epoch, pas des déclarations des sociétés ; trimestres complets du fichier seulement (les plus récents y sont incomplets). Les néoclouds (CoreWeave, Nebius, IREN, Lambda, Crusoe…) ne sont pas isolés ici : Epoch ne suit que CoreWeave, et leur part est donnée dans le camembert voisin. « Autres propriétaires » les contient donc, avec xAI (SpaceX), les clients chinois, etc." },
+  owners: { kind: "pie", etage: 1, rank: 1, title: "Qui possède le compute IA", metric: "Parc cumulé de puces IA détenu (équivalents H100)", source: "Epoch AI (AI Chip Owners), complété pour Nebius et IREN", url: "https://epoch.ai/data/ai-chip-owners", confidence: "moyenne", caveat: "Estimations d'Epoch, pas des déclarations des sociétés. Dernier trimestre complet du fichier (les trimestres plus récents y sont incomplets)." },
   designers: { kind: "pie", etage: 1, rank: 2, title: "Qui conçoit les puces IA", metric: "Part de la puissance de calcul vendue, par concepteur de puces", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", confidence: "haute", caveat: "Calcul sur le dernier trimestre complet du fichier Epoch. Estimations : les fabricants ne publient pas leurs volumes ; Trainium est la moins fiable." },
   sales: { kind: "curve", etage: 1, rank: 2, title: "Compute IA vendu chaque trimestre", unit: "millions d'équivalents H100", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", caveat: "Estimations d'Epoch ; seuls les trimestres complets sont tracés. Cambricon (moins de 1 %) n'est pas tracé." },
   capex: { kind: "curve", etage: 4, rank: 1, title: "Capex trimestriel des cinq géants", unit: "milliards de dollars", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Dépenses d'investissement déclarées (immobilisations corporelles). Les trimestres des sociétés ne coïncident pas : Oracle clôt en août, novembre, février et mai. Chaque trimestre est publié ou calculé par différence de cumuls, jamais estimé." },
@@ -307,7 +330,7 @@ export async function collectEvolution({ prev = null, ua, fetchImpl = fetch, now
   const text = async (u) => (await get(u)).toString("utf8");
   const stamp = new Date(now).toISOString();
   const work = {
-    owners: async () => { const r = ownersPie(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { period: `Fin ${qLabel(r.end)}`, period_key: r.end, segments: r.segments }; },
+    owners: async () => { const r = ownersPie(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { period: `Fin ${qLabel(r.end)}`, period_key: r.end, segments: r.segments, ...ownersNote(r) }; },
     designers: async () => { const r = designersPie(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { period: qLabel(r.end), period_key: r.end, segments: r.segments }; },
     ownersShare: async () => { const r = ownersShare(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { series: r.series, last_point: r.last }; },
     eci_gap: async () => { const r = eciGaps(await text(EPOCH + "eci_scores.csv"), now); return { series: [{ name: "États-Unis moins Chine", points: r.usCn }, { name: "Fermés moins ouverts", points: r.openClosed, dashed: true }], last_point: r.last }; },

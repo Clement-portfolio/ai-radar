@@ -160,7 +160,7 @@ function rMarket(){
   el.innerHTML='<h2 class="sec">Marché</h2><p class="lede">Qui dépense, qui gagne de l\'argent, qui compte. Chiffres sourcés ; la date et la source figurent sous chaque donnée.</p>'+
    '<div class="tiles">'+m.tiles.map(function(t){return'<div class="tile"><div class="l">'+esc(t.label)+'</div><div class="v">'+esc(t.value)+'</div><div class="s">'+esc(t.sub)+'</div><div class="src"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></div></div>'}).join("")+'</div>'+
    sommaire()+etages()+
-   '<details class="details" id="m-details"><summary><span>Détails</span><em>Capex annoncé, revenus, dépôts SEC</em></summary>'+det+'</details>';
+   '<details class="details sec2" id="m-details"><summary><span>Détails</span><em>Capex annoncé, revenus, dépôts SEC</em></summary>'+det+'</details>';
 }
 
 
@@ -187,7 +187,7 @@ function shareCard(c){
   var leg=c.segments.map(function(x,i){return'<li><i style="background:'+dcol(i,x.label)+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
   return'<div class="share"><h4>'+esc(c.title)+'</h4><div class="sm">'+esc(c.metric)+' · '+esc(c.period)+'</div>'+
    '<div class="sbody">'+donut(c.segments)+'<ul class="leg">'+leg+'</ul></div>'+
-   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div><div class="fr">'+shareFresh(c)+'</div>'+
+   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>'+(c.links&&c.links.length?'<div class="srcs">'+srcLinks(c.links)+'</div>':'')+'<div class="fr">'+shareFresh(c)+'</div>'+
    '<details class="why"><summary>Limites</summary><div class="sc">'+esc(c.caveat)+'</div></details></div>';
 }
 var ETAGES=[
@@ -195,11 +195,11 @@ var ETAGES=[
   [2,"Modèles","Qui fabrique les meilleurs modèles, à quel écart, et à quel prix ?"],
   [3,"Adoption","Qui utilise l\'IA : grand public, entreprises, volume d\'usage ?"],
   [4,"Financement et revenus","Combien est investi, qui le finance, et quels revenus en sortent ?"],
-  [5,"Perspectives et risques","Ce qui est prévu, ce qui arrive, les acteurs émergents et les risques."]
+  [5,"Perspectives et risques","Ce qui est prévu, ce qui arrive et les risques."]
 ];
 function sommaire(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
-   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs et six acteurs émergents</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
+   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
 }
 function capexPie(){
   var d=S.sec;if(!d||!d.companies)return null;
@@ -366,7 +366,7 @@ function outlookHTML(){
   if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
   if(cat.length)h+='<details class="details sec2" id="m-cal"><summary><span>Calendrier des six prochains mois</span><em>événements datés, avec la probabilité de chacun</em></summary>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p></details>';
-  h+='<details class="details sec2" id="m-actors"><summary><span>Acteurs</span><em>principaux acteurs et six acteurs émergents</em></summary>'+mainActorsHTML()+'<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div></details>';
+  h+='<details class="details sec2" id="m-actors"><summary><span>Acteurs</span><em>principaux acteurs</em></summary>'+mainActorsHTML()+'<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div></details>';
   return h;
 }
 function etages(){
