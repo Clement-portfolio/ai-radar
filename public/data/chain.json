@@ -1,0 +1,2406 @@
+{
+ "as_of": "17 nov. 2026",
+ "note": "Chaque chiffre porte sa date et sa source ; une sous-couche sans chiffre sourcé n'affiche que son rôle et ses acteurs. Les parts de marché dépendent de la méthode de chaque cabinet.",
+ "blocks": [
+  {
+   "id": "energie",
+   "n": 1,
+   "name": "Énergie",
+   "short": "Électricité et réseau",
+   "layer": "energie",
+   "why": "Un datacenter IA se mesure en gigawatts. Sans électricité livrée à temps, aucune puce ne tourne : le raccordement au réseau et les équipements de puissance fixent le rythme de toute la chaîne.",
+   "feeds": [
+    "datacenter"
+   ],
+   "needs": [],
+   "subs": [
+    {
+     "name": "Turbines à gaz",
+     "why": "Quand le réseau n'est pas prêt, les exploitants produisent leur propre courant sur place ; les turbines sont vendues plusieurs années à l'avance.",
+     "actors": [
+      {
+       "n": "GE Vernova",
+       "c": "US"
+      },
+      {
+       "n": "Siemens Energy",
+       "c": "EU"
+      },
+      {
+       "n": "Mitsubishi Heavy Industries",
+       "c": "JP"
+      }
+     ],
+     "figs": [
+      {
+       "v": "116 GW",
+       "l": "carnet GE Vernova (53 GW fermes + 63 GW de réservations), livraisons jusqu'en 2031",
+       "as_of": "T2 2026",
+       "src": "EUCI ; OilPrice",
+       "u": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html"
+      },
+      {
+       "v": "69 GW",
+       "l": "carnet Siemens Energy ; Mitsubishi : 35 GW de grandes turbines",
+       "as_of": "6 août 2026",
+       "src": "EUCI",
+       "u": "https://www.euci.com/?p=190165"
+      }
+     ]
+    },
+    {
+     "name": "Transformateurs et équipements haute tension",
+     "why": "Un campus ne reçoit pas le courant du réseau sans transformateur de puissance, sans substitut plus rapide à obtenir.",
+     "actors": [
+      {
+       "n": "Hitachi Energy",
+       "c": "OTHER"
+      },
+      {
+       "n": "Siemens Energy",
+       "c": "EU"
+      },
+      {
+       "n": "Eaton",
+       "c": "US"
+      },
+      {
+       "n": "ABB",
+       "c": "EU"
+      }
+     ],
+     "figs": [
+      {
+       "v": "128 semaines",
+       "l": "délai moyen d'un transformateur de puissance (143 pour un transformateur élévateur de centrale)",
+       "as_of": "T2 2025",
+       "src": "Wood Mackenzie, via RTO Insider",
+       "u": "https://www.rtoinsider.com/128131-transform-the-physical-energy-system-to-unleash-its-digital-transition/"
+      },
+      {
+       "v": "+ 274 %",
+       "l": "demande américaine de transformateurs élévateurs, 2019 à 2025",
+       "as_of": "mai 2026",
+       "src": "Wood Mackenzie, via Reuters",
+       "u": "https://www.kitco.com/news/off-the-wire/2026-05-11/us-power-transformer-buyers-scramble-imports-factory-slots"
+      }
+     ]
+    },
+    {
+     "name": "Petits réacteurs modulaires (SMR) — à venir",
+     "why": "Source de courant continue et sans carbone, posée près du campus. Les contrats sont signés, mais aucun SMR n'est encore en service commercial aux États-Unis : à court terme, ce sont les turbines à gaz qui comblent l'écart.",
+     "actors": [
+      {
+       "n": "Kairos Power",
+       "c": "US"
+      },
+      {
+       "n": "X-energy",
+       "c": "US"
+      },
+      {
+       "n": "TerraPower",
+       "c": "US"
+      },
+      {
+       "n": "Oklo",
+       "c": "US"
+      }
+     ],
+     "figs": [
+      {
+       "v": "0",
+       "l": "SMR en service commercial aux États-Unis ; les quatre réacteurs d'X-energy (permis de construire accordé) ne fonctionneront pas avant le début des années 2030",
+       "as_of": "10 nov. 2026",
+       "src": "TechCrunch",
+       "u": "https://techcrunch.com/2026/11/10/x-energy-gets-green-light-to-build-its-first-small-modular-nuclear-reactors/"
+      },
+      {
+       "v": "500 MW",
+       "l": "accord Google–Kairos : jusqu'à sept petits réacteurs d'ici 2035, le premier dès 2030 (annoncé)",
+       "as_of": "14 oct. 2024",
+       "src": "ENR",
+       "u": "https://www.enr.com/articles/59498-google-turns-to-nuclear-to-power-its-growing-data-centers"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "datacenter",
+   "n": 2,
+   "name": "Datacenter",
+   "short": "Bâtiment, froid, distribution",
+   "layer": "datacenters",
+   "why": "Le bâtiment qui héberge les puces : il transforme l'électricité reçue en courant utilisable par les racks et évacue la chaleur. Les racks IA sont trop denses pour être refroidis par l'air seul.",
+   "feeds": [
+    "calcul",
+    "memoire",
+    "cuivre",
+    "optique",
+    "reseau"
+   ],
+   "needs": [
+    "energie"
+   ],
+   "subs": [
+    {
+     "name": "Refroidissement liquide et distribution électrique",
+     "why": "L'eau circule contre les puces et la distribution électrique est refaite pour des racks beaucoup plus puissants.",
+     "actors": [
+      {
+       "n": "Vertiv",
+       "c": "US"
+      }
+     ],
+     "figs": [
+      {
+       "v": "15 Md$",
+       "l": "carnet de commandes de Vertiv, plus que doublé en un an (+ 109 %)",
+       "as_of": "fin 2025",
+       "src": "MarketBeat ; Barchart",
+       "u": "https://www.barchart.com/story/news/300848/vertivs-15-billion-backlog-is-the-loudest-ai-signal-in-2026"
+      },
+      {
+       "v": "2,3 MW",
+       "l": "capacité de la plus grosse unité de distribution de liquide de refroidissement (CDU) de Vertiv, la première qualifiée NVIDIA DSX Ready",
+       "as_of": "21 sept. 2026",
+       "src": "Vertiv",
+       "u": "https://www.vertiv.com/en-us/about/news-and-events/news-releases/2026/vertiv-coolant-distribution-unit-qualified-as-nvidia-dsx-ready-for-ai-factory-infrastructure/"
+      }
+     ]
+    },
+    {
+     "name": "Campus et capacité installée",
+     "why": "Foncier, permis, raccordement et équipements : c'est ici que se joue la mise en service réelle de la puissance annoncée.",
+     "actors": [
+      {
+       "n": "Amazon",
+       "c": "US"
+      },
+      {
+       "n": "Microsoft",
+       "c": "US"
+      },
+      {
+       "n": "Alphabet",
+       "c": "US"
+      },
+      {
+       "n": "Meta",
+       "c": "US"
+      },
+      {
+       "n": "Alibaba, ByteDance",
+       "c": "CN"
+      },
+      {
+       "n": "Humain, G42",
+       "c": "GULF"
+      }
+     ],
+     "figs": [
+      {
+       "v": "≈ 1/3",
+       "l": "des ≈ 12 GW américains attendus en 2026 sont en construction (chiffre contesté par SemiAnalysis)",
+       "as_of": "3 avr. 2026",
+       "src": "Sightline Climate, cité par Bloomberg (via Tom's Hardware)",
+       "u": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fabrication",
+   "n": 3,
+   "name": "Fabrication",
+   "short": "Concevoir, graver, produire",
+   "layer": "fonderie",
+   "why": "Une puce IA se conçoit avec des logiciels que trois éditeurs maîtrisent, se grave avec une machine que fabrique une seule société, puis se produit chez un seul fondeur avancé. Tout le reste de la chaîne en dépend.",
+   "feeds": [
+    "calcul",
+    "memoire",
+    "packaging"
+   ],
+   "needs": [],
+   "subs": [
+    {
+     "name": "Conception : logiciels et briques de circuit (EDA, IP)",
+     "why": "Sans ces outils, on ne dessine pas des milliards de transistors ni ne vérifie qu'ils fonctionneront une fois gravés.",
+     "actors": [
+      {
+       "n": "Synopsys",
+       "c": "US"
+      },
+      {
+       "n": "Cadence",
+       "c": "US"
+      },
+      {
+       "n": "Siemens EDA",
+       "c": "EU"
+      },
+      {
+       "n": "Arm (licences de cœurs)",
+       "c": "OTHER"
+      }
+     ],
+     "figs": [
+      {
+       "v": "> 85 %",
+       "l": "du marché pour les trois premiers éditeurs ; chiffre d'affaires 2025 : Synopsys 8 Md$ (Ansys inclus), Cadence 5,3 Md$",
+       "as_of": "21 mai 2026",
+       "src": "SemiAnalysis",
+       "u": "https://newsletter.semianalysis.com/p/eda-market-primer"
+      }
+     ]
+    },
+    {
+     "name": "Lithographie EUV",
+     "why": "La machine qui imprime les circuits les plus fins sur le silicium ; aucune alternative commerciale n'existe pour les puces IA de pointe.",
+     "actors": [
+      {
+       "n": "ASML",
+       "c": "EU"
+      }
+     ],
+     "figs": [
+      {
+       "v": "Fournisseur unique",
+       "l": "d'EUV ; l'offre prévue pour 2027 et 2028 reste inférieure à la demande, selon ASML",
+       "as_of": "22 oct. 2026",
+       "src": "24/7 Wall St.",
+       "u": "https://247wallst.com/investing/2026/10/22/chinese-competitors-arent-eroding-asmls-euv-core-monopoly/"
+      }
+     ]
+    },
+    {
+     "name": "Fonderie avancée",
+     "why": "Grave les puces de calcul et les couches de base de la mémoire avancée. Les nœuds 3 nm et 2 nm sont presque entièrement concentrés chez un acteur.",
+     "actors": [
+      {
+       "n": "TSMC",
+       "c": "OTHER"
+      },
+      {
+       "n": "Samsung Foundry",
+       "c": "OTHER"
+      },
+      {
+       "n": "Intel Foundry",
+       "c": "US"
+      },
+      {
+       "n": "SMIC",
+       "c": "CN"
+      }
+     ],
+     "figs": [
+      {
+       "v": "46,72 Md$",
+       "l": "revenu TSMC au T3 2026 (+ 41,2 %) ; le 3 nm pèse 33 % et le 2 nm 8 % du revenu wafers",
+       "as_of": "T3 2026",
+       "src": "TSMC (SEC)",
+       "u": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "calcul",
+   "n": 4,
+   "name": "Calcul",
+   "short": "GPU et puces sur mesure",
+   "layer": "puces",
+   "why": "Le cœur : les puces qui exécutent les calculs d'entraînement et d'inférence. C'est la couche la plus visible, mais elle ne vaut que si mémoire, assemblage et réseau suivent.",
+   "feeds": [
+    "modeles"
+   ],
+   "needs": [
+    "fabrication",
+    "memoire",
+    "packaging",
+    "energie"
+   ],
+   "subs": [
+    {
+     "name": "GPU généralistes",
+     "why": "Flexibles, soutenus par un logiciel mûr : le choix par défaut pour entraîner des modèles.",
+     "actors": [
+      {
+       "n": "Nvidia",
+       "c": "US"
+      },
+      {
+       "n": "AMD",
+       "c": "US"
+      },
+      {
+       "n": "Huawei Ascend",
+       "c": "CN"
+      },
+      {
+       "n": "Cambricon",
+       "c": "CN"
+      }
+     ],
+     "figs": [
+      {
+       "v": "≈ 70 %",
+       "l": "du marché des puces IA pour Nvidia, part appelée à reculer",
+       "as_of": "mai 2026",
+       "src": "Tom's Hardware",
+       "u": "https://tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia"
+      }
+     ]
+    },
+    {
+     "name": "Puces sur mesure (ASIC)",
+     "why": "Chaque grand cloud dessine sa propre puce pour baisser le coût d'inférence et dépendre moins de Nvidia, avec l'aide de deux sociétés de conception.",
+     "actors": [
+      {
+       "n": "Broadcom",
+       "c": "US"
+      },
+      {
+       "n": "Marvell",
+       "c": "US"
+      },
+      {
+       "n": "Google (TPU)",
+       "c": "US"
+      },
+      {
+       "n": "Amazon (Trainium)",
+       "c": "US"
+      },
+      {
+       "n": "Microsoft (Maia)",
+       "c": "US"
+      },
+      {
+       "n": "Meta (MTIA)",
+       "c": "US"
+      },
+      {
+       "n": "OpenAI (avec Broadcom)",
+       "c": "US"
+      },
+      {
+       "n": "MediaTek",
+       "c": "OTHER"
+      }
+     ],
+     "figs": [
+      {
+       "v": "27,8 %",
+       "l": "des serveurs IA en 2026 portent une puce sur mesure ; Broadcom et Marvell conçoivent ≈ 95 % de ces puces",
+       "as_of": "mai 2026",
+       "src": "TrendForce, via Tom's Hardware",
+       "u": "https://tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "memoire",
+   "n": 5,
+   "name": "Mémoire",
+   "short": "HBM et DRAM",
+   "layer": "memoire",
+   "why": "Un modèle de langage passe son temps à lire ses paramètres : la mémoire HBM, empilée à côté de la puce, fixe la vitesse à laquelle elle les reçoit. Elle consomme aussi les mêmes plaquettes que la mémoire ordinaire.",
+   "feeds": [
+    "calcul"
+   ],
+   "needs": [
+    "fabrication"
+   ],
+   "subs": [
+    {
+     "name": "HBM (mémoire empilée à haute bande passante)",
+     "why": "Collée à la puce de calcul dans le même boîtier ; chaque nouvelle génération redistribue les parts.",
+     "actors": [
+      {
+       "n": "SK hynix",
+       "c": "OTHER"
+      },
+      {
+       "n": "Samsung",
+       "c": "OTHER"
+      },
+      {
+       "n": "Micron",
+       "c": "US"
+      }
+     ],
+     "figs": [
+      {
+       "v": "50 % / 33 % / 18 %",
+       "l": "parts de revenu HBM : SK hynix, Samsung, Micron",
+       "as_of": "T2 2026",
+       "src": "Counterpoint Research",
+       "u": "https://counterpointresearch.com/insights/global-dram-and-hbm-market-share"
+      },
+      {
+       "v": "fin 2027",
+       "l": "pénurie de HBM attendue au moins jusque-là",
+       "as_of": "avr. 2026",
+       "src": "Agence internationale de l'énergie",
+       "u": "https://iea.org/reports/key-questions-on-energy-and-ai/executive-summary"
+      }
+     ]
+    },
+    {
+     "name": "DRAM standard",
+     "why": "Même matière première que la HBM : plus les fabricants basculent vers la HBM, moins il reste de capacité pour la mémoire des serveurs et des PC.",
+     "actors": [
+      {
+       "n": "Samsung",
+       "c": "OTHER"
+      },
+      {
+       "n": "SK hynix",
+       "c": "OTHER"
+      },
+      {
+       "n": "Micron",
+       "c": "US"
+      },
+      {
+       "n": "CXMT",
+       "c": "CN"
+      }
+     ],
+     "figs": [
+      {
+       "v": "38 % / 29 % / 21 % / 9 %",
+       "l": "parts de revenu DRAM : Samsung, SK hynix, Micron, CXMT",
+       "as_of": "T3 2026",
+       "src": "Counterpoint Research",
+       "u": "https://www.counterpointresearch.com/en/insights/dram-super-cycle-nears-dollar-200b"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "packaging",
+   "n": 6,
+   "name": "Assemblage",
+   "short": "Packaging avancé et substrats",
+   "layer": "fonderie",
+   "why": "Calcul et mémoire ne fonctionnent qu'une fois assemblés sur un même support ultra-dense. Cette étape, discrète, est l'un des goulots les plus serrés de la chaîne.",
+   "feeds": [
+    "calcul",
+    "memoire",
+    "optique"
+   ],
+   "needs": [
+    "fabrication"
+   ],
+   "subs": [
+    {
+     "name": "Assemblage 2,5D (CoWoS et équivalents)",
+     "why": "Relie la puce de calcul et la HBM sur un intercalaire en silicium ; la capacité est réservée à l'avance par les plus gros clients.",
+     "actors": [
+      {
+       "n": "TSMC",
+       "c": "OTHER"
+      },
+      {
+       "n": "ASE",
+       "c": "OTHER"
+      },
+      {
+       "n": "Amkor",
+       "c": "US"
+      },
+      {
+       "n": "SPIL",
+       "c": "OTHER"
+      }
+     ],
+     "figs": [
+      {
+       "v": "130 000–140 000",
+       "l": "plaquettes par mois visées par TSMC fin 2026, contre ≈ 70 000 en 2025 (estimations rapportées)",
+       "as_of": "5 août 2026",
+       "src": "TrendForce",
+       "u": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/"
+      },
+      {
+       "v": "> 50 %",
+       "l": "de la capacité CoWoS 2026 réservée par Nvidia (800 000 à 850 000 plaquettes, rapports)",
+       "as_of": "5 août 2026",
+       "src": "TrendForce",
+       "u": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/"
+      }
+     ]
+    },
+    {
+     "name": "Substrats et tissu de verre (T-glass)",
+     "why": "Le support sous la puce exige un tissu de verre spécial qu'un seul groupe maîtrise presque seul ; son extension de capacité prend des années.",
+     "actors": [
+      {
+       "n": "Nittobo",
+       "c": "OTHER"
+      },
+      {
+       "n": "Ibiden",
+       "c": "OTHER"
+      },
+      {
+       "n": "Unimicron",
+       "c": "OTHER"
+      },
+      {
+       "n": "AT&S",
+       "c": "EU"
+      }
+     ],
+     "figs": [
+      {
+       "v": "≈ 70–90 %",
+       "l": "du tissu de verre T-glass produit par Nittobo selon le périmètre ; pénurie jusqu'en 2027",
+       "as_of": "23 juin 2026",
+       "src": "Tom's Hardware ; Digitimes",
+       "u": "https://www.tomshardware.com/tech-industry/shortages-of-crucial-chip-packaging-material-threatens-ai-accelerator-supply-chains-nittobos-fukushima-plant-is-tripling-capacity-but-itll-take-years-before-market"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cuivre",
+   "n": 7,
+   "name": "Cuivre",
+   "short": "Liaisons courtes dans le rack",
+   "layer": null,
+   "why": "Dans un rack, les puces se parlent sur quelques mètres : le cuivre reste le moyen le moins cher et le plus fiable, tant que les débits le permettent.",
+   "feeds": [
+    "calcul"
+   ],
+   "needs": [
+    "datacenter"
+   ],
+   "subs": [
+    {
+     "name": "Câbles cuivre actifs (AEC)",
+     "why": "Un câble en cuivre avec de l'électronique aux extrémités, qui rallonge la portée en divisant la consommation par deux par rapport aux câbles passifs.",
+     "actors": [
+      {
+       "n": "Credo",
+       "c": "US"
+      },
+      {
+       "n": "Amphenol",
+       "c": "US"
+      },
+      {
+       "n": "Astera Labs",
+       "c": "US"
+      },
+      {
+       "n": "Marvell",
+       "c": "US"
+      }
+     ],
+     "figs": [
+      {
+       "v": "≈ 70 %",
+       "l": "de part attendue pour Credo jusqu'en 2027, selon Jefferies",
+       "as_of": "13 avr. 2026",
+       "src": "Invezz",
+       "u": "https://invezz.com/news/2026/04/13/credo-jumps-11-as-jefferies-backs-copper-tech-in-ai-boom-debate/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "optique",
+   "n": 8,
+   "name": "Optique",
+   "short": "Lasers, modules, photonique",
+   "layer": null,
+   "why": "Au-delà de quelques mètres, il faut des fibres : on convertit le courant en lumière, ce qui demande des lasers en phosphure d'indium que peu d'usines savent produire. La photonique sur silicium rapproche cette conversion de la puce.",
+   "feeds": [
+    "reseau",
+    "calcul"
+   ],
+   "needs": [
+    "packaging"
+   ],
+   "subs": [
+    {
+     "name": "Lasers (phosphure d'indium, EML)",
+     "why": "Le silicium sait guider la lumière mais pas l'émettre ; un module 800G embarque plusieurs lasers. Nvidia a réservé une grande part de la capacité mondiale.",
+     "actors": [
+      {
+       "n": "Lumentum",
+       "c": "US"
+      },
+      {
+       "n": "Coherent",
+       "c": "US"
+      },
+      {
+       "n": "Mitsubishi Electric",
+       "c": "JP"
+      },
+      {
+       "n": "Sumitomo Electric",
+       "c": "JP"
+      },
+      {
+       "n": "Broadcom",
+       "c": "US"
+      }
+     ],
+     "figs": [
+      {
+       "v": "Pénurie",
+       "l": "l'écart offre-demande d'InP dépasse celui de la DRAM et de la NAND, selon le PDG de Lumentum",
+       "as_of": "6 août 2026",
+       "src": "TrendForce",
+       "u": "https://trendforce.com/news/2026/08/06/news-inp-shortage-emerges-as-ai-optical-interconnect-bottleneck/"
+      },
+      {
+       "v": "63 M",
+       "l": "modules 800G et plus attendus en 2026, 2,6 fois 2025",
+       "as_of": "8 déc. 2025",
+       "src": "TrendForce",
+       "u": "https://www.trendforce.com/presscenter/news/20251208-12823.html"
+      }
+     ]
+    },
+    {
+     "name": "Modules optiques (transceivers)",
+     "why": "Le boîtier enfichable qui transforme le signal électrique en lumière et inversement, à chaque bout de fibre. On passe de 800G à 1,6T.",
+     "actors": [
+      {
+       "n": "Innolight",
+       "c": "CN"
+      },
+      {
+       "n": "Eoptolink",
+       "c": "CN"
+      },
+      {
+       "n": "Coherent",
+       "c": "US"
+      },
+      {
+       "n": "Accelink",
+       "c": "CN"
+      },
+      {
+       "n": "Source Photonics",
+       "c": "CN"
+      }
+     ],
+     "figs": [
+      {
+       "v": "≈ 27 % / ≈ 17 %",
+       "l": "parts de revenu : Innolight, Coherent ; les fabricants chinois pèsent ≈ 60 % du revenu",
+       "as_of": "4 août 2026",
+       "src": "Counterpoint Research",
+       "u": "https://counterpointresearch.com/en/insights/fcc-china-ban-ai-component"
+      },
+      {
+       "v": "26 Md$",
+       "l": "marché des transceivers pour l'IA en 2026 (+ 57 %)",
+       "as_of": "20 avr. 2026",
+       "src": "TrendForce, via TelecomTV",
+       "u": "https://www.telecomtv.com/content/access-evolution/global-ai-optical-transceiver-market-to-reach-26bn-in-2026-says-trendforce-55327/amp/"
+      }
+     ]
+    },
+    {
+     "name": "Photonique sur silicium et optique co-intégrée (CPO)",
+     "why": "Au lieu d'un module enfichable, la lumière est produite au bord de la puce du commutateur : moins de consommation, mais l'assemblage devient le nouveau goulot.",
+     "actors": [
+      {
+       "n": "TSMC (COUPE)",
+       "c": "OTHER"
+      },
+      {
+       "n": "Nvidia",
+       "c": "US"
+      },
+      {
+       "n": "Broadcom",
+       "c": "US"
+      },
+      {
+       "n": "Tower Semiconductor",
+       "c": "OTHER"
+      },
+      {
+       "n": "GlobalFoundries",
+       "c": "US"
+      },
+      {
+       "n": "UMC",
+       "c": "OTHER"
+      }
+     ],
+     "figs": [
+      {
+       "v": "Montée en cadence",
+       "l": "des commutateurs CPO de Nvidia et Broadcom ; rendement des moteurs optiques et capacité d'assemblage en goulots",
+       "as_of": "27 juil. 2026",
+       "src": "TrendForce",
+       "u": "https://www.trendforce.com/presscenter/news/20260727-13151.html"
+      },
+      {
+       "v": "> 5 M",
+       "l": "circuits photoniques cohérents livrés par Tower avec Marvell",
+       "as_of": "18 juin 2026",
+       "src": "Tom's Hardware",
+       "u": "https://www.tomshardware.com/tech-industry/semiconductors/tower-semiconductor-revives-shuttered-panasonic-era-fab-in-3-billion-japan-photonics-expansion"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "reseau",
+   "n": 9,
+   "name": "Réseau",
+   "short": "Commutateurs",
+   "layer": null,
+   "why": "Des dizaines de milliers de puces doivent fonctionner comme une seule machine : les commutateurs décident à quelle vitesse et avec quelle perte elles s'échangent leurs données.",
+   "feeds": [
+    "calcul"
+   ],
+   "needs": [
+    "cuivre",
+    "optique"
+   ],
+   "subs": [
+    {
+     "name": "Commutateurs Ethernet et InfiniBand",
+     "why": "Le réseau interne d'entraînement a dépassé en ventes le réseau classique des datacenters ; Ethernet y creuse l'écart sur InfiniBand.",
+     "actors": [
+      {
+       "n": "Celestica",
+       "c": "OTHER"
+      },
+      {
+       "n": "Nvidia",
+       "c": "US"
+      },
+      {
+       "n": "Arista",
+       "c": "US"
+      },
+      {
+       "n": "Cisco",
+       "c": "US"
+      }
+     ],
+     "figs": [
+      {
+       "v": "1er : Celestica",
+       "l": "puis Nvidia et Arista sur les commutateurs Ethernet de réseaux IA ; ventes IA devant le réseau classique pour la première fois",
+       "as_of": "T2 2026",
+       "src": "Dell'Oro Group",
+       "u": "https://www.delloro.com/news/ai-back-end-networks-switch-sales-surpass-front-end-networks-for-the-first-time-in-2q2026/"
+      },
+      {
+       "v": "20,4 %",
+       "l": "part de Nvidia dans les commutateurs Ethernet de datacenter (Arista 18,7 %, Cisco 18,2 %)",
+       "as_of": "T2 2026",
+       "src": "IDC",
+       "u": "https://www.idc.com/resource-center/blog/ethernet-switch-market-surges-43-4-to-18-9b-in-2q26-as-ai-infrastructure-demand-drives-record-datacenter-spending/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "modeles",
+   "n": 10,
+   "name": "Modèles",
+   "short": "Les grands modèles de langage",
+   "layer": "modeles",
+   "why": "Ce que la chaîne produit : des modèles qui apprennent (entraînement) puis répondent (inférence). Plus le calcul, la mémoire et le réseau sont abondants, plus ils grossissent.",
+   "feeds": [
+    "applications"
+   ],
+   "needs": [
+    "calcul",
+    "memoire",
+    "reseau"
+   ],
+   "subs": []
+  },
+  {
+   "id": "applications",
+   "n": 11,
+   "name": "Applications",
+   "short": "Produits et revenus",
+   "layer": "apps",
+   "why": "Là où l'argent rentre : assistants, API, outils pour entreprises. Leurs revenus doivent finir par justifier les centaines de milliards investis en amont.",
+   "feeds": [],
+   "needs": [
+    "modeles"
+   ],
+   "subs": []
+  }
+ ],
+ "parts": {
+  "smr": {
+   "n": "Mini-réacteurs SMR",
+   "c": "à venir (pointillés)",
+   "b": "energie",
+   "s": 2,
+   "r": "Petits réacteurs nucléaires modulaires posés près du campus : une source de courant continue et sans carbone. Aucun n'est encore en service commercial aux États-Unis, d'où les pointillés."
+  },
+  "gas": {
+   "n": "Turbines à gaz",
+   "c": "courant produit sur site",
+   "b": "energie",
+   "s": 0,
+   "r": "Quand le réseau n'est pas prêt, le campus produit son propre courant. C'est la solution réellement déployée aujourd'hui, et les turbines se réservent plusieurs années à l'avance."
+  },
+  "trf": {
+   "n": "Transformateurs",
+   "c": "raccordement au réseau",
+   "b": "energie",
+   "s": 1,
+   "r": "Le courant du réseau haute tension doit être abaissé avant d'entrer dans le campus. Un transformateur de puissance se commande plus de deux ans à l'avance."
+  },
+  "bld": {
+   "n": "Datacenter",
+   "c": "le bâtiment · double-clic ▸",
+   "b": "datacenter",
+   "s": 1,
+   "r": "Un grand bâtiment technique : halles de racks, locaux électriques, salles de refroidissement et réseau."
+  },
+  "cool": {
+   "n": "Refroidissement",
+   "c": "groupes froids, CDU",
+   "b": "datacenter",
+   "s": 0,
+   "r": "À l'extérieur, des groupes froids refroidissent l'eau ; à l'intérieur, des unités de distribution (CDU) l'envoient vers les racks. C'est le métier de Vertiv."
+  },
+  "fibc": {
+   "n": "Fibre vers l'extérieur",
+   "c": "sortie des données",
+   "b": "reseau",
+   "s": -1,
+   "r": "Ce que le datacenter calcule repart par fibre optique vers les utilisateurs et les entreprises."
+  },
+  "models": {
+   "n": "Modèles",
+   "c": "entraînés et servis ici",
+   "b": "modeles",
+   "s": -1,
+   "r": "Les modèles sont entraînés et exécutés dans les datacenters ; ils sont dessinés à part pour montrer qui reçoit le calcul."
+  },
+  "apps": {
+   "n": "Applications",
+   "c": "ceux qui profitent du calcul",
+   "b": "applications",
+   "s": -1,
+   "r": "Assistants, API, outils pour entreprises : c'est là que l'argent rentre, et ce que tout le reste doit finir par justifier."
+  },
+  "rack": {
+   "n": "Racks de calcul",
+   "c": "double-clic ▸",
+   "b": "calcul",
+   "s": -1,
+   "r": "Chaque rack empile des serveurs pleins de modules comme celui du niveau suivant."
+  },
+  "bus": {
+   "n": "Distribution électrique",
+   "c": "barres au-dessus des racks",
+   "b": "datacenter",
+   "s": 0,
+   "r": "Des barres de distribution amènent le courant jusqu'aux racks, beaucoup plus puissants qu'avant : la distribution électrique est refaite pour l'IA."
+  },
+  "loop": {
+   "n": "Boucle d'eau et CDU",
+   "c": "refroidissement liquide",
+   "b": "datacenter",
+   "s": 0,
+   "r": "Une boucle d'eau longe les racks et alimente les plaques froides posées sur les puces."
+  },
+  "sw": {
+   "n": "Commutateurs",
+   "c": "réseau de la salle",
+   "b": "reseau",
+   "s": -1,
+   "r": "Les commutateurs relient les racks entre eux pour que des milliers de puces fonctionnent comme une seule machine."
+  },
+  "fib": {
+   "n": "Fibres optiques",
+   "c": "liaisons longues",
+   "b": "optique",
+   "s": 1,
+   "r": "Entre racks et commutateurs, la lumière prend le relais sur les distances plus longues : modules enfichables, lasers, bientôt optique co-intégrée."
+  },
+  "cu": {
+   "n": "Cuivre dans le rack",
+   "c": "liaisons courtes",
+   "b": "cuivre",
+   "s": 0,
+   "r": "Dans le rack ou entre racks voisins, des câbles en cuivre actifs suffisent et coûtent moins que la fibre."
+  },
+  "cold": {
+   "n": "Plaque froide",
+   "c": "refroidissement liquide",
+   "b": "datacenter",
+   "s": 0,
+   "r": "Un liquide circule dans des canaux collés au-dessus des puces pour évacuer la chaleur. À ces puissances, l'air ne suffit plus : c'est ce qui impose le refroidissement liquide dans tout le datacenter."
+  },
+  "dies": {
+   "n": "Puces de calcul",
+   "c": "GPU ou ASIC",
+   "b": "calcul",
+   "s": -1,
+   "r": "Les dés gravés en fonderie avancée qui font les calculs. Ici deux dés côte à côte sur le même interposeur ; ce peut être un GPU généraliste ou une puce sur mesure (ASIC)."
+  },
+  "fab": {
+   "n": "Gravés en fonderie",
+   "c": "lithographie EUV",
+   "b": "fabrication",
+   "s": -1,
+   "r": "Ces dés sortent d'une fonderie avancée, avec des machines de lithographie EUV et des logiciels de conception (EDA) : c'est l'étage qui précède tout le reste."
+  },
+  "hbm": {
+   "n": "Mémoire HBM",
+   "c": "DRAM empilée",
+   "b": "memoire",
+   "s": 0,
+   "r": "Des puces DRAM empilées à la verticale, reliées entre elles par des vias traversants (TSV, en bleu) et posées juste à côté du calcul. La proximité sur l'interposeur donne la bande passante : d'où le nom « haute bande passante »."
+  },
+  "wires": {
+   "n": "Pistes puce ↔ mémoire",
+   "c": "dans l'interposeur",
+   "b": "packaging",
+   "s": 0,
+   "r": "Des milliers de pistes très fines gravées dans l'interposeur relient chaque pile HBM au calcul. Une carte classique ne peut pas les tracer aussi serrées : c'est la raison d'être de l'assemblage 2,5D."
+  },
+  "ip": {
+   "n": "Interposeur silicium",
+   "c": "assemblage 2,5D (CoWoS)",
+   "b": "packaging",
+   "s": 0,
+   "r": "Une plaque de silicium qui sert de « mini-carte » ultra dense sous le calcul et les mémoires. Sa fabrication et sa capacité d'assemblage sont l'un des goulots du secteur."
+  },
+  "cpo": {
+   "n": "Moteurs optiques CPO",
+   "c": "lumière au bord du package",
+   "b": "optique",
+   "s": 2,
+   "r": "Des composants qui convertissent le signal électrique en lumière au bord même du package, au lieu de passer par un module enfichable : moins de consommation, mais l'assemblage se complique. La technologie monte en cadence."
+  },
+  "sub": {
+   "n": "Substrat organique",
+   "c": "fibre de verre T-glass",
+   "b": "packaging",
+   "s": 1,
+   "r": "Il redistribue les contacts de l'interposeur vers les billes de soudure qui touchent la carte. Le tissu de verre spécial (T-glass) le rend plan et rigide ; très peu de fournisseurs en fabriquent."
+  },
+  "pcb": {
+   "n": "Carte et alimentation",
+   "c": "VRM",
+   "b": "datacenter",
+   "s": 0,
+   "r": "La carte apporte le courant (régulateurs de tension à côté de la puce) et porte les pistes électriques vers les connecteurs. Le courant arrive du datacenter."
+  },
+  "power": {
+   "n": "Courant entrant",
+   "c": "depuis l'énergie",
+   "b": "energie",
+   "s": -1,
+   "r": "Tout ce schéma tire du courant : il arrive de la salle, des transformateurs et des turbines. L'électricité disponible conditionne le nombre de puces installables."
+  },
+  "aec": {
+   "n": "Câble cuivre actif",
+   "c": "liaison courte (AEC)",
+   "b": "cuivre",
+   "s": 0,
+   "r": "Pour les liaisons courtes, le cuivre reste moins cher et moins gourmand que la fibre. « Actif » : une puce dans le câble régénère le signal."
+  },
+  "mod": {
+   "n": "Module optique",
+   "c": "transceiver enfichable",
+   "b": "optique",
+   "s": 1,
+   "r": "Un boîtier qu'on branche en face avant : il convertit le signal électrique en lumière et inversement, pour les liaisons plus longues, d'un rack à l'autre."
+  },
+  "las": {
+   "n": "Laser EML",
+   "c": "phosphure d'indium",
+   "b": "optique",
+   "s": 0,
+   "r": "La source de lumière, modulée à haute vitesse. Les lasers en phosphure d'indium sont peu produits : c'est une pénurie documentée."
+  },
+  "sw2": {
+   "n": "Vers le commutateur",
+   "c": "réseau",
+   "b": "reseau",
+   "s": -1,
+   "r": "Les liaisons (cuivre ou fibre) aboutissent à un commutateur Ethernet ou InfiniBand, qui relie les racks entre eux."
+  }
+ },
+ "det": {
+  "hbm": [
+   [
+    "mem",
+    "Puce de base",
+    "la logique qui dialogue avec le calcul"
+   ],
+   [
+    "mem",
+    "Couches DRAM",
+    "puces mémoire très fines, empilées (4 dessinées, schématique)"
+   ],
+   [
+    "el",
+    "TSV",
+    "vias traversants qui relient les couches entre elles"
+   ]
+  ],
+  "dies": [
+   [
+    "calc",
+    "Dé de calcul",
+    "les cœurs qui font les opérations ; ici deux dés côte à côte (schématique)"
+   ]
+  ],
+  "wires": [
+   [
+    "el",
+    "Pistes",
+    "des milliers de liaisons très serrées entre chaque pile HBM et le calcul"
+   ]
+  ],
+  "ip": [
+   [
+    "asm",
+    "Plaque de silicium",
+    "fait office de mini-carte ultra dense sous les puces"
+   ]
+  ],
+  "sub": [
+   [
+    "asm",
+    "Substrat organique",
+    "redistribue les contacts vers la carte ; renforcé de tissu de verre"
+   ],
+   [
+    "bld",
+    "Billes de soudure",
+    "les contacts électriques vers la carte"
+   ]
+  ],
+  "cpo": [
+   [
+    "op",
+    "Moteur optique",
+    "convertit le signal électrique en lumière au bord du package"
+   ],
+   [
+    "op",
+    "Fibres",
+    "emportent la lumière vers le commutateur"
+   ]
+  ],
+  "mod": [
+   [
+    "op",
+    "Boîtier enfichable",
+    "se branche en face avant"
+   ],
+   [
+    "op",
+    "Fibre",
+    "sortie lumineuse vers l'autre rack"
+   ]
+  ],
+  "las": [
+   [
+    "op",
+    "Laser EML",
+    "source de lumière modulée à haute vitesse"
+   ]
+  ],
+  "cold": [
+   [
+    "cool",
+    "Plaque à canaux",
+    "le liquide circule dans les rainures, au contact de la chaleur"
+   ]
+  ],
+  "pcb": [
+   [
+    "brd",
+    "Carte",
+    "porte les pistes électriques et les connecteurs"
+   ],
+   [
+    "en",
+    "VRM",
+    "régulateurs de tension posés près de la puce"
+   ]
+  ],
+  "aec": [
+   [
+    "cu",
+    "Connecteur",
+    "se branche sur la carte"
+   ],
+   [
+    "cu",
+    "Câble de cuivre",
+    "actif : une puce régénère le signal"
+   ]
+  ],
+  "rack": [
+   [
+    "calc",
+    "Rack",
+    "empile des serveurs ; double-clic pour zoomer dans l'un d'eux"
+   ]
+  ],
+  "bld": [
+   [
+    "bld",
+    "Halle",
+    "héberge les racks, le réseau et la distribution électrique"
+   ]
+  ],
+  "smr": [
+   [
+    "en",
+    "Réacteur modulaire",
+    "encore à l'état de projet aux États-Unis (pointillés)"
+   ]
+  ],
+  "gas": [
+   [
+    "en",
+    "Turbine",
+    "produit du courant sur site quand le réseau n'est pas prêt"
+   ],
+   [
+    "en",
+    "Cheminée",
+    "évacue les gaz de combustion"
+   ]
+  ],
+  "trf": [
+   [
+    "en",
+    "Transformateur",
+    "abaisse la tension du réseau avant le campus"
+   ]
+  ],
+  "cool": [
+   [
+    "cool",
+    "Groupe froid",
+    "refroidit l'eau de la boucle (ventilateur dessiné dessus)"
+   ]
+  ],
+  "loop": [
+   [
+    "cool",
+    "Boucle d'eau et CDU",
+    "distribue le liquide jusqu'aux plaques froides"
+   ]
+  ],
+  "bus": [
+   [
+    "en",
+    "Barre de distribution",
+    "amène le courant jusqu'aux racks"
+   ]
+  ],
+  "sw": [
+   [
+    "net",
+    "Commutateur",
+    "relie les racks entre eux"
+   ]
+  ],
+  "fib": [
+   [
+    "op",
+    "Fibres optiques",
+    "liaisons longues entre racks et commutateurs"
+   ]
+  ],
+  "cu": [
+   [
+    "cu",
+    "Câbles cuivre",
+    "liaisons courtes dans le rack"
+   ]
+  ],
+  "models": [
+   [
+    "use2",
+    "Modèles",
+    "entraînés et servis dans les datacenters ; dessinés à part"
+   ]
+  ],
+  "apps": [
+   [
+    "use",
+    "Applications",
+    "assistants, API, outils pour entreprises"
+   ]
+  ],
+  "fibc": [
+   [
+    "op",
+    "Fibre",
+    "sortie des données vers les utilisateurs"
+   ]
+  ],
+  "sw2": [
+   [
+    "net",
+    "Commutateur",
+    "relie les racks entre eux"
+   ]
+  ]
+ },
+ "u": {
+  "hbmS": {
+   "t": "Parts de revenu HBM",
+   "su": "%",
+   "items": [
+    {
+     "n": "SK hynix",
+     "v": 50
+    },
+    {
+     "n": "Samsung",
+     "v": 33
+    },
+    {
+     "n": "Micron",
+     "v": 18
+    }
+   ],
+   "as_of": "T2 2026",
+   "src": "Counterpoint Research",
+   "u": "https://counterpointresearch.com/insights/global-dram-and-hbm-market-share"
+  },
+  "hbmD": {
+   "t": "Poids de la HBM dans la valeur du marché DRAM",
+   "u": "%",
+   "pts": [
+    {
+     "x": "2023",
+     "v": 8
+    },
+    {
+     "x": "2024",
+     "v": 20,
+     "min": 1
+    },
+    {
+     "x": "2025",
+     "v": 30,
+     "min": 1,
+     "proj": 1
+    }
+   ],
+   "as_of": "mai 2024",
+   "src": "TrendForce, via KED Global",
+   "url": "https://www.kedglobal.com/newsView/ked202405070005",
+   "note": "2024 et 2025 : « plus de 20 % » et « plus de 30 % » (prévisions)."
+  },
+  "chipS": {
+   "t": "Puces IA : qui domine",
+   "su": "%",
+   "items": [
+    {
+     "n": "Nvidia (marché des puces IA)",
+     "v": 70,
+     "ap": 1
+    },
+    {
+     "n": "Puces sur mesure (serveurs IA 2026)",
+     "v": 27.8
+    }
+   ],
+   "as_of": "mai 2026",
+   "src": "Tom's Hardware ; TrendForce",
+   "u": "https://tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
+   "note": "Deux bases différentes, non additionnables."
+  },
+  "chipD": {
+   "t": "Chiffre d'affaires datacenter de Nvidia",
+   "u": "Md$",
+   "pts": [
+    {
+     "x": "exercice 2025",
+     "v": 115.2
+    },
+    {
+     "x": "exercice 2026",
+     "v": 193.7
+    }
+   ],
+   "as_of": "25 fév. 2026",
+   "src": "Nvidia, via InvestmentNews",
+   "url": "https://www.investmentnews.com/equities/nvidias-blowout-year-extends-ai-rally-deepening-mega-cap-concentration-risk/265443",
+   "note": "Indicateur indirect de la demande en puces IA. Exercices clos fin janvier ; 115,2 Md$ : Nvidia, via StartupHub."
+  },
+  "edaS": {
+   "t": "Poids des trois premiers éditeurs de conception (EDA)",
+   "su": "%",
+   "items": [
+    {
+     "n": "Trois premiers éditeurs",
+     "v": 85,
+     "min": 1
+    }
+   ],
+   "as_of": "21 mai 2026",
+   "src": "SemiAnalysis",
+   "u": "https://newsletter.semianalysis.com/p/eda-market-primer"
+  },
+  "cowD": {
+   "t": "Capacité CoWoS visée par TSMC",
+   "u": "k plaquettes/mois",
+   "pts": [
+    {
+     "x": "2025",
+     "v": 70,
+     "l": "≈ 70"
+    },
+    {
+     "x": "fin 2026",
+     "v": 135,
+     "l": "130–140",
+     "proj": 1
+    }
+   ],
+   "as_of": "5 août 2026",
+   "src": "TrendForce",
+   "url": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/",
+   "note": "Estimations rapportées ; valeur 2026 = milieu de la fourchette."
+  },
+  "cowS": {
+   "t": "Capacité CoWoS 2026 réservée par Nvidia",
+   "su": "%",
+   "items": [
+    {
+     "n": "Nvidia",
+     "v": 50,
+     "min": 1
+    }
+   ],
+   "as_of": "5 août 2026",
+   "src": "TrendForce",
+   "u": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/"
+  },
+  "tgS": {
+   "t": "Part de Nittobo dans le tissu de verre T-glass",
+   "su": "%",
+   "items": [
+    {
+     "n": "Nittobo",
+     "v": 80,
+     "l": "≈ 70–90 %"
+    }
+   ],
+   "as_of": "23 juin 2026",
+   "src": "Tom's Hardware ; Digitimes",
+   "u": "https://www.tomshardware.com/tech-industry/shortages-of-crucial-chip-packaging-material-threatens-ai-accelerator-supply-chains-nittobos-fukushima-plant-is-tripling-capacity-but-itll-take-years-before-market",
+   "note": "Selon le périmètre ; barre au milieu de la fourchette."
+  },
+  "modS": {
+   "t": "Parts de revenu des modules optiques",
+   "su": "%",
+   "items": [
+    {
+     "n": "Innolight",
+     "v": 27,
+     "ap": 1
+    },
+    {
+     "n": "Coherent",
+     "v": 17,
+     "ap": 1
+    },
+    {
+     "n": "Fabricants chinois (ensemble)",
+     "v": 60,
+     "ap": 1
+    }
+   ],
+   "as_of": "4 août 2026",
+   "src": "Counterpoint Research",
+   "u": "https://counterpointresearch.com/en/insights/fcc-china-ban-ai-component",
+   "note": "Le total chinois inclut Innolight."
+  },
+  "modD": {
+   "t": "Modules optiques 800G et plus livrés",
+   "u": "M modules",
+   "pts": [
+    {
+     "x": "2025",
+     "v": 24.2,
+     "l": "≈ 24",
+     "calc": 1
+    },
+    {
+     "x": "2026",
+     "v": 63,
+     "proj": 1
+    }
+   ],
+   "as_of": "8 déc. 2025",
+   "src": "TrendForce",
+   "url": "https://www.trendforce.com/presscenter/news/20251208-12823.html",
+   "note": "2025 calculé : 63 M ÷ 2,6 ; 2026 : prévision."
+  },
+  "aecS": {
+   "t": "Part de Credo sur les câbles cuivre actifs",
+   "su": "%",
+   "items": [
+    {
+     "n": "Credo",
+     "v": 70,
+     "ap": 1
+    }
+   ],
+   "as_of": "13 avr. 2026",
+   "src": "Jefferies, via Invezz",
+   "u": "https://invezz.com/news/2026/04/13/credo-jumps-11-as-jefferies-backs-copper-tech-in-ai-boom-debate/",
+   "note": "Part attendue jusqu'en 2027."
+  },
+  "swS": {
+   "t": "Parts des commutateurs Ethernet de datacenter",
+   "su": "%",
+   "items": [
+    {
+     "n": "Nvidia",
+     "v": 20.4
+    },
+    {
+     "n": "Arista",
+     "v": 18.7
+    },
+    {
+     "n": "Cisco",
+     "v": 18.2
+    }
+   ],
+   "as_of": "T2 2026",
+   "src": "IDC",
+   "u": "https://www.idc.com/resource-center/blog/ethernet-switch-market-surges-43-4-to-18-9b-in-2q26-as-ai-infrastructure-demand-drives-record-datacenter-spending/"
+  },
+  "swD": {
+   "t": "Marché des commutateurs Ethernet (trimestre)",
+   "u": "Md$",
+   "pts": [
+    {
+     "x": "T2 2025",
+     "v": 13.2,
+     "l": "≈ 13,2",
+     "calc": 1
+    },
+    {
+     "x": "T2 2026",
+     "v": 18.9
+    }
+   ],
+   "as_of": "T2 2026",
+   "src": "IDC",
+   "url": "https://www.idc.com/resource-center/blog/ethernet-switch-market-surges-43-4-to-18-9b-in-2q26-as-ai-infrastructure-demand-drives-record-datacenter-spending/",
+   "note": "T2 2025 calculé : 18,9 ÷ 1,434 (+ 43,4 % sur un an)."
+  },
+  "gasS": {
+   "t": "Carnets de commandes de grandes turbines (pas des parts de marché)",
+   "su": "GW",
+   "items": [
+    {
+     "n": "GE Vernova",
+     "v": 116
+    },
+    {
+     "n": "Siemens Energy",
+     "v": 69
+    },
+    {
+     "n": "Mitsubishi",
+     "v": 35
+    }
+   ],
+   "as_of": "T2 – août 2026",
+   "src": "EUCI ; OilPrice",
+   "u": "https://www.euci.com/?p=190165",
+   "note": "Dates et périmètres légèrement différents."
+  },
+  "gasD": {
+   "t": "GE Vernova : turbines à gaz sous contrat (carnet + réservations)",
+   "u": "GW",
+   "pts": [
+    {
+     "x": "T3 2025",
+     "v": 62
+    },
+    {
+     "x": "T4 2025",
+     "v": 83
+    },
+    {
+     "x": "T1 2026",
+     "v": 100
+    },
+    {
+     "x": "T2 2026",
+     "v": 116
+    }
+   ],
+   "as_of": "T2 2026",
+   "src": "GE Vernova (résultats), via Motley Fool et Allmind",
+   "url": "https://allmind.ai/earnings/event/2906948"
+  },
+  "trfD": {
+   "t": "Demande américaine de transformateurs élévateurs (2019 = 100)",
+   "u": "indice",
+   "pts": [
+    {
+     "x": "2019",
+     "v": 100
+    },
+    {
+     "x": "2025",
+     "v": 374,
+     "l": "374",
+     "calc": 1
+    }
+   ],
+   "as_of": "mai 2026",
+   "src": "Wood Mackenzie, via Reuters",
+   "url": "https://www.kitco.com/news/off-the-wire/2026-05-11/us-power-transformer-buyers-scramble-imports-factory-slots",
+   "note": "+ 274 % entre 2019 et 2025 ; indice calculé."
+  },
+  "vertD": {
+   "t": "Carnet de commandes de Vertiv",
+   "u": "Md$",
+   "pts": [
+    {
+     "x": "fin 2024",
+     "v": 7.2,
+     "l": "≈ 7,2",
+     "calc": 1
+    },
+    {
+     "x": "fin 2025",
+     "v": 15
+    }
+   ],
+   "as_of": "fin 2025",
+   "src": "MarketBeat ; Barchart",
+   "url": "https://www.barchart.com/story/news/300848/vertivs-15-billion-backlog-is-the-loudest-ai-signal-in-2026",
+   "note": "Fin 2024 calculé : 15 ÷ 2,09 (+ 109 %)."
+  },
+  "ieaD": {
+   "t": "Électricité consommée par les datacenters dans le monde",
+   "u": "TWh",
+   "pts": [
+    {
+     "x": "2024",
+     "v": 415
+    },
+    {
+     "x": "2030",
+     "v": 945,
+     "proj": 1
+    },
+    {
+     "x": "2035",
+     "v": 1200,
+     "proj": 1,
+     "l": "≈ 1 200"
+    }
+   ],
+   "as_of": "10 avr. 2025",
+   "src": "Agence internationale de l'énergie",
+   "url": "https://www.iea.org/reports/energy-and-ai/executive-summary",
+   "note": "2030 et 2035 : scénario de base de l'AIE."
+  },
+  "capexD": {
+   "t": "Investissements des quatre géants du cloud",
+   "u": "Md$",
+   "pts": [
+    {
+     "x": "2025",
+     "v": 410
+    },
+    {
+     "x": "2026",
+     "v": 715,
+     "proj": 1,
+     "l": "≈ 715"
+    }
+   ],
+   "as_of": "2026",
+   "src": "OfficeChai (Amazon, Alphabet, Microsoft, Meta)",
+   "url": "https://officechai.com/ai/ai-capex-spend-at-top-4-hyperscalers-to-touch-715-billion-in-2026/",
+   "note": "2026 : prévisions annoncées par les entreprises."
+  },
+  "appsD": {
+   "t": "Revenu annualisé cumulé OpenAI + Anthropic",
+   "u": "Md$",
+   "pts": [
+    {
+     "x": "fin 2025",
+     "v": 30,
+     "l": "≈ 30"
+    },
+    {
+     "x": "fin sept. 2026",
+     "v": 115,
+     "l": "≈ 115"
+    }
+   ],
+   "as_of": "2026",
+   "src": "Bloomberg (FT), Bloomberg et Reuters",
+   "url": "https://news.bgov.com/financial-accounting/anthropic-revenue-run-rate-surpasses-65-billion-ahead-of-ipo",
+   "note": "Méthodes de calcul différentes selon les entreprises."
+  }
+ },
+ "mkt": {
+  "hbm": {
+   "s": "hbmS",
+   "d": "hbmD"
+  },
+  "dies": {
+   "s": "chipS",
+   "d": "chipD"
+  },
+  "rack": {
+   "s": "chipS",
+   "d": "chipD"
+  },
+  "fab": {
+   "s": "edaS"
+  },
+  "ip": {
+   "s": "cowS",
+   "d": "cowD"
+  },
+  "wires": {
+   "s": "cowS",
+   "d": "cowD"
+  },
+  "sub": {
+   "s": "tgS"
+  },
+  "mod": {
+   "s": "modS",
+   "d": "modD"
+  },
+  "las": {},
+  "cpo": {},
+  "aec": {
+   "s": "aecS"
+  },
+  "cu": {
+   "s": "aecS"
+  },
+  "sw": {
+   "s": "swS",
+   "d": "swD"
+  },
+  "sw2": {
+   "s": "swS",
+   "d": "swD"
+  },
+  "fibc": {
+   "s": "swS",
+   "d": "swD"
+  },
+  "fib": {
+   "s": "modS",
+   "d": "modD"
+  },
+  "gas": {
+   "s": "gasS",
+   "d": "gasD"
+  },
+  "trf": {
+   "d": "trfD"
+  },
+  "smr": {},
+  "cold": {
+   "d": "vertD"
+  },
+  "loop": {
+   "d": "vertD"
+  },
+  "cool": {
+   "d": "vertD"
+  },
+  "bus": {
+   "d": "vertD"
+  },
+  "pcb": {
+   "d": "vertD"
+  },
+  "bld": {
+   "d": "ieaD"
+  },
+  "power": {
+   "d": "ieaD"
+  },
+  "models": {
+   "d": "capexD"
+  },
+  "apps": {
+   "d": "appsD"
+  }
+ },
+ "fm": {
+  "dies": {
+   "name": "Puces IA (GPU et ASIC)",
+   "pie": {
+    "t": "Part du chiffre d'affaires des vendeurs de puces IA qui publient",
+    "m": "Chiffre d'affaires IA / data center du trimestre clos vers juillet 2026 · ≈ 115 Md$ au total",
+    "items": [
+     {
+      "n": "Nvidia",
+      "v": 77.7
+     },
+     {
+      "n": "Broadcom",
+      "v": 14.6
+     },
+     {
+      "n": "AMD",
+      "v": 5.8
+     },
+     {
+      "n": "Marvell",
+      "v": 1.9
+     }
+    ],
+    "as_of": "17 nov. 2026",
+    "src": "Nvidia, Broadcom, AMD, Marvell (résultats trimestriels)",
+    "u": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+    "conf": 1,
+    "note": "Ce n'est pas la part de marché de toutes les puces IA : seulement la part des quatre vendeurs qui publient un chiffre (Nvidia 89,0 Md$, Broadcom 16,7 dont les TPU de Google et les puces de Meta, OpenAI et Anthropic, AMD 6,7, Marvell 2,17). Il n'y a pas de ligne « Autres » : leur total n'est pas connu. Amazon (Trainium), Google (TPU) et Huawei ne vendent pas leurs puces : celles d'Amazon et de Google n'apparaissent qu'à travers leurs fournisseurs (Broadcom, Marvell), et Huawei ne publie pas de chiffre trimestriel. AMD inclut ses processeurs de serveurs, Marvell ses composants optiques, Nvidia et Broadcom leur réseau : la part de l'IA pure est plus faible pour AMD et Marvell."
+   },
+   "chart": {
+    "t": "Évolution de la part du chiffre d'affaires",
+    "u": "% du total des quatre vendeurs · 11 trimestres, de fin 2023 à mi-2026",
+    "x": [
+     "2024-01",
+     "2024-04",
+     "2024-07",
+     "2024-10",
+     "2025-01",
+     "2025-04",
+     "2025-07",
+     "2025-10",
+     "2026-01",
+     "2026-04",
+     "2026-07"
+    ],
+    "calc": [
+     5,
+     7
+    ],
+    "ser": [
+     {
+      "n": "Nvidia",
+      "v": [
+       18.4,
+       22.6,
+       26.3,
+       30.8,
+       35.6,
+       39.1,
+       41.1,
+       51.2,
+       62.3,
+       75.2,
+       89
+      ]
+     },
+     {
+      "n": "Broadcom",
+      "v": [
+       2.3,
+       3.1,
+       3.1,
+       3.7,
+       4.1,
+       4.4,
+       5.2,
+       6.5,
+       8.4,
+       10.8,
+       16.7
+      ]
+     },
+     {
+      "n": "AMD",
+      "v": [
+       2.282,
+       2.337,
+       2.834,
+       3.549,
+       3.859,
+       3.674,
+       3.24,
+       4.341,
+       5.38,
+       5.775,
+       6.7
+      ]
+     },
+     {
+      "n": "Marvell",
+      "v": [
+       0.765,
+       0.816,
+       0.881,
+       1.101,
+       1.366,
+       1.441,
+       1.491,
+       1.518,
+       1.651,
+       1.833,
+       2.172
+      ]
+     }
+    ],
+    "as_of": "17 nov. 2026",
+    "srcs": [
+     [
+      "Nvidia (T2 ex. 2027)",
+      "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+     ],
+     [
+      "Nvidia 2024-2025 (Benzinga)",
+      "https://benzinga.com/z/43998226"
+     ],
+     [
+      "Broadcom (T3 ex. 2026, SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001730168/000173016826000076/avgo-08022026x8kxex99.htm"
+     ],
+     [
+      "AMD (T3 2026, SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0000002488/000000248826000188/q32026991.htm"
+     ],
+     [
+      "AMD 2023-2026 (YCharts)",
+      "https://ycharts.com/indicators/amd_amd_data_center_revenue"
+     ],
+     [
+      "Marvell (T2 ex. 2027, SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000022/q227_8kx812026ex-991.htm"
+     ]
+    ],
+    "note": "Les parts sont calculées ici à partir des chiffres d'affaires trimestriels publiés par chaque vendeur, ramenés au total des quatre. Trimestres alignés par période : Nvidia, Marvell et Broadcom clôturent entre fin janvier et début février, fin avril/début mai, fin juillet/début août et fin octobre/début novembre ; AMD un mois plus tôt (fin décembre, mars, juin, septembre). Ronds creux : un des chiffres du trimestre est calculé à partir de la croissance annoncée (Nvidia octobre 2025 : + 21,7 % ; Broadcom mai 2025 : + 143 %). Le graphique commence fin 2023 parce que Broadcom ne publie son chiffre d'affaires IA par trimestre que depuis 2024. Aucune prévision n'est tracée : AMD ne guide pas son data center seul.",
+    "proj": [
+     {
+      "v": "58 → 115 → 230 Md$",
+      "l": "Broadcom, chiffre d'affaires IA des exercices 2026, 2027, 2028 (objectif de la direction : doubler chaque année)",
+      "as_of": "3 sept. 2026",
+      "src": "Broadcom, via Tiger Brokers",
+      "u": "https://www-web.itiger.com/news/1163835583"
+     },
+     {
+      "v": "+ 70 %",
+      "l": "Nvidia, croissance du chiffre d'affaires de l'exercice 2028 (directrice financière), contre + 44 % attendus par les analystes",
+      "as_of": "26 août 2026",
+      "src": "Nvidia, via Outlook Business (CNBC)",
+      "u": "https://www.outlookbusiness.com/corporate/nvidia-quarter-results-revenue-profits-data-centre-chips-jensen-huang-ai-investment-risk"
+     },
+     {
+      "v": "× 2 +",
+      "l": "AMD, chiffre d'affaires data center 2027 : plus du double ; IA « bien au-delà de + 100 % »",
+      "as_of": "4 août 2026",
+      "src": "AMD (appel T2 2026), via GuruFocus",
+      "u": "https://www.gurufocus.com/stock/MIL:1AMD/transcripts/9004152"
+     }
+    ],
+    "oth": [
+     {
+      "v": "≈ 7,5 → 12 Md$",
+      "l": "Huawei, chiffre d'affaires puces IA 2025 → 2026 (annuel, non publié par Huawei ; sources citées par le Financial Times)",
+      "as_of": "1ᵉʳ mai 2026",
+      "src": "Financial Times, via The Star",
+      "u": "https://www.thestar.com.my/tech/tech-news/2026/05/01/huawei-expects-ai-chip-revenue-to-jump-at-least-60-this-year-ft-reports"
+     },
+     {
+      "v": "non vendues",
+      "l": "Amazon (Trainium) et Google (TPU) n'ont pas de chiffre de ventes de puces : elles servent leurs propres datacenters ; Google achète ses TPU à Broadcom",
+      "as_of": "3 sept. 2026",
+      "src": "Channel Insider",
+      "u": "https://www.channelinsider.com/ai/news-broadcom-ai-chip-revenue-custom-silicon-nvidia/"
+     }
+    ]
+   },
+   "gap": {
+    "lo": 20,
+    "hi": 20
+   },
+   "why": "Les livraisons sont plafonnées par le packaging CoWoS (≈ 20 % de la demande non couverte en 2026) et par la mémoire HBM.",
+   "evid": [
+    {
+     "v": "115 → 194 Md$",
+     "l": "chiffre d'affaires datacenter de Nvidia, exercices 2025 → 2026 (demande)",
+     "as_of": "25 fév. 2026",
+     "src": "Nvidia, via InvestmentNews",
+     "u": "https://www.investmentnews.com/equities/nvidias-blowout-year-extends-ai-rally-deepening-mega-cap-concentration-risk/265443"
+    },
+    {
+     "v": "> 50 %",
+     "l": "de la capacité CoWoS 2026 réservée par Nvidia",
+     "as_of": "5 août 2026",
+     "src": "TrendForce",
+     "u": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/"
+    }
+   ]
+  },
+  "hbm": {
+   "name": "Mémoire HBM",
+   "pie": {
+    "t": "Qui fournit la HBM",
+    "m": "Parts de revenu",
+    "items": [
+     {
+      "n": "SK hynix",
+      "v": 50
+     },
+     {
+      "n": "Samsung",
+      "v": 33
+     },
+     {
+      "n": "Micron",
+      "v": 18
+     }
+    ],
+    "as_of": "T2 2026",
+    "src": "Counterpoint Research",
+    "u": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
+   },
+   "rev": {
+    "t": "Marché de la HBM (valeur annuelle)",
+    "u": "Md$",
+    "pts": [
+     {
+      "x": "2024",
+      "v": 16
+     },
+     {
+      "x": "2025",
+      "v": 35,
+      "l": "≈ 35"
+     },
+     {
+      "x": "2028",
+      "v": 100,
+      "l": "≈ 100",
+      "proj": 1
+     }
+    ],
+    "as_of": "oct. 2026",
+    "src": "Micron (marché adressable), cité par Meticulous Research",
+    "url": "https://www.meticulousresearch.com/product/high-bandwidth-memory-hbm-market-6953",
+    "note": "Estimation de Micron ; Yole Group donne ≈ 34 Md$ en 2025 (storagenewsletter, 2025). 2028 = prévision de Micron. Source secondaire : confiance moyenne."
+   },
+   "gap": {
+    "lo": 34,
+    "hi": 50
+   },
+   "why": "Micron couvre 50 à 66 % de la demande de ses clients clés ; TrendForce juge l'offre 2027 (+ 50–60 % de bits) encore insuffisante.",
+   "evid": [
+    {
+     "v": "+ 121 %",
+     "l": "prix moyen de vente de la HBM attendu en 2027",
+     "as_of": "29 sept. 2026",
+     "src": "TrendForce",
+     "u": "https://www.trendforce.com/presscenter/news/20260929-13255.html"
+    },
+    {
+     "v": "+ 50–60 %",
+     "l": "livraisons de bits de HBM en 2027, jugées insuffisantes face à la demande",
+     "as_of": "4 août 2026",
+     "src": "TrendForce",
+     "u": "https://trendforce.com/presscenter/news/20260804-13166.html"
+    }
+   ]
+  },
+  "ip": {
+   "name": "Assemblage 2,5D (CoWoS)",
+   "pie": {
+    "t": "Qui réserve la capacité CoWoS",
+    "m": "Part de la capacité 2026 de TSMC",
+    "items": [
+     {
+      "n": "Nvidia (plus de la moitié)",
+      "v": 50,
+      "min": 1
+     },
+     {
+      "n": "Autres clients (moins de la moitié)",
+      "v": 50
+     }
+    ],
+    "as_of": "5 août 2026",
+    "src": "TrendForce",
+    "u": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/",
+    "note": "Découpage indicatif : seule la borne « plus de 50 % » est sourcée."
+   },
+   "rev": {
+    "t": "Poids du packaging avancé dans le chiffre d'affaires de TSMC",
+    "u": "% du chiffre d'affaires",
+    "pts": [
+     {
+      "x": "2024",
+      "v": 8,
+      "l": "≈ 8"
+     },
+     {
+      "x": "2025",
+      "v": 10,
+      "l": "≈ 10"
+     }
+    ],
+    "as_of": "janv. 2026",
+    "src": "TSMC (appel de résultats), via SemiWiki",
+    "url": "https://semiwiki.com/forum/threads/tsmc-on-packaging-at-ocp-apac-2026-aug.25684/",
+    "note": "≈ 10 % de 122,4 Md$ en 2025, soit environ 12 Md$ (calcul). TSMC ne publie pas de série plus fine ; source secondaire (transcription) : confiance moyenne."
+   },
+   "gap": {
+    "lo": 20,
+    "hi": 20
+   },
+   "why": "La capacité double presque (≈ 70 → 130–140 k plaquettes par mois) mais l'écart reste d'environ 20 % en 2026.",
+   "evid": [
+    {
+     "v": "≈ 20 %",
+     "l": "écart offre-demande attendu en 2026",
+     "as_of": "5 août 2026",
+     "src": "TrendForce (rapport ETNews)",
+     "u": "https://www.trendforce.com/news/2026/08/05/news-tsmc-reportedly-expands-outsourcing-of-key-cowos-front-end-step-to-osats-amid-rising-nvidia-asic-demand/"
+    }
+   ]
+  },
+  "sub": {
+   "name": "Substrats et tissu de verre T-glass",
+   "pie": {
+    "t": "Qui fabrique le T-glass",
+    "m": "Part du marché mondial",
+    "items": [
+     {
+      "n": "Nittobo",
+      "v": 90,
+      "ap": 1
+     },
+     {
+      "n": "Autres",
+      "v": 10,
+      "ap": 1
+     }
+    ],
+    "as_of": "24 mars 2026",
+    "src": "TrendForce",
+    "u": "https://www.trendforce.com/research/download/RP260324EB",
+    "note": "« Environ 90 % » selon TrendForce ; Tom's Hardware et Digitimes donnent 70–90 % selon le périmètre."
+   },
+   "rev": {
+    "t": "Chiffre d'affaires de Nittobo (fabricant de T-glass)",
+    "u": "Md¥ (exercices clos fin mars)",
+    "pts": [
+     {
+      "x": "2024",
+      "v": 93.3,
+      "l": "93"
+     },
+     {
+      "x": "2025",
+      "v": 109,
+      "l": "109"
+     },
+     {
+      "x": "2026",
+      "v": 118.2,
+      "l": "118"
+     },
+     {
+      "x": "2027",
+      "v": 143,
+      "l": "143",
+      "proj": 1
+     }
+    ],
+    "as_of": "5 nov. 2026",
+    "src": "Nittobo (résultats), via Logmi et TechNews",
+    "url": "https://finance.technews.tw/2026/11/06/fiberglass-cloth-boom-nitto-boseki-raises-forecast-boosts-t-glass-expansion/",
+    "note": "Ventes totales du groupe ; l'activité matériaux électroniques (dont le tissu de verre) pèse 49,3 Md¥ en mars 2026 (Envalith). Prévision 2027 relevée deux fois en 2026."
+   },
+   "gap": {
+    "lo": 10,
+    "hi": 40
+   },
+   "why": "Un seul fournisseur qualifié pour le haut de gamme, sans nouvelle capacité avant mi-2027 au plus tôt ; écart de 10 à 20 % en 2026, plus de 40 % sur le haut de gamme.",
+   "evid": [
+    {
+     "v": "mi-2027",
+     "l": "au plus tôt pour la nouvelle capacité de Nittobo",
+     "as_of": "24 mars 2026",
+     "src": "TrendForce",
+     "u": "https://www.trendforce.com/research/download/RP260324EB"
+    }
+   ]
+  },
+  "las": {
+   "name": "Lasers au phosphure d'indium (EML)",
+   "pie": {
+    "t": "Qui fabrique les lasers EML",
+    "m": "Part du marché des EML",
+    "items": [
+     {
+      "n": "Lumentum, Broadcom, Mitsubishi Electric (trois premiers)",
+      "v": 72,
+      "ap": 1
+     },
+     {
+      "n": "Autres",
+      "v": 28,
+      "ap": 1
+     }
+    ],
+    "as_of": "3 juin 2026",
+    "src": "TrendForce",
+    "u": "https://www.trendforce.com/presscenter/news/20260603-13077.html",
+    "note": "TrendForce ne donne pas la part de chaque fabricant."
+   },
+   "rev": {
+    "t": "Chiffre d'affaires de Lumentum (lasers et modules optiques)",
+    "u": "Md$ (exercices clos fin juin)",
+    "pts": [
+     {
+      "x": "2024",
+      "v": 1.359,
+      "l": "1,36"
+     },
+     {
+      "x": "2025",
+      "v": 1.645,
+      "l": "1,65"
+     },
+     {
+      "x": "2026",
+      "v": 3.014,
+      "l": "3,01"
+     }
+    ],
+    "as_of": "11 août 2026",
+    "src": "Lumentum, via Semiconductor Today",
+    "url": "https://semiconductor-today.com/news_items/2026/aug/lumentum-190826.shtml",
+    "note": "+ 83 % en 2026 ; les composants (lasers) passe de 1,12 à 2,01 Md$. Un seul des trois grands fabricants d'EML."
+   },
+   "gap": {
+    "lo": 30,
+    "hi": 30,
+    "min": 1
+   },
+   "why": "Même après un doublement de la capacité, Lumentum livre plus de 30 % en dessous de la demande ; Nvidia a réservé des capacités au-delà de 2027.",
+   "evid": [
+    {
+     "v": "2 Md$ × 2",
+     "l": "investis par Nvidia dans Lumentum et dans Coherent",
+     "as_of": "mars 2026",
+     "src": "Tom's Hardware",
+     "u": "https://www.tomshardware.com/tech-industry/semiconductors/lumentum-ceo-says-the-indium-phosphide-shortage-will-become-worse-than-memory"
+    },
+    {
+     "v": "> 2027",
+     "l": "délais de livraison des EML chez les fournisseurs clés",
+     "as_of": "9 déc. 2025",
+     "src": "TrendForce, via LEDinside",
+     "u": "https://m.ledinside.com/node/view/35680.html"
+    }
+   ]
+  },
+  "gas": {
+   "name": "Turbines à gaz",
+   "pie": {
+    "t": "Carnets de commandes de grandes turbines",
+    "m": "Part du carnet des trois constructeurs (pas des parts de marché)",
+    "items": [
+     {
+      "n": "GE Vernova (116 GW)",
+      "v": 116
+     },
+     {
+      "n": "Siemens Energy (69 GW)",
+      "v": 69
+     },
+     {
+      "n": "Mitsubishi (35 GW)",
+      "v": 35
+     }
+    ],
+    "as_of": "T2 – août 2026",
+    "src": "OilPrice ; Power Magazine",
+    "u": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html",
+    "note": "Dates et périmètres légèrement différents selon les constructeurs ; part du carnet calculée."
+   },
+   "rev": {
+    "t": "Siemens Energy : chiffre d'affaires de la division turbines à gaz et services",
+    "u": "Md€ (exercices clos fin septembre)",
+    "pts": [
+     {
+      "x": "2022",
+      "v": 9.5,
+      "l": "9,5"
+     },
+     {
+      "x": "2023",
+      "v": 10.9,
+      "l": "10,9"
+     },
+     {
+      "x": "2024",
+      "v": 10.8,
+      "l": "10,8"
+     },
+     {
+      "x": "2025",
+      "v": 12.2,
+      "l": "12,2"
+     },
+     {
+      "x": "mars 2026*",
+      "v": 12.8,
+      "l": "12,8"
+     }
+    ],
+    "as_of": "mars 2026",
+    "src": "Siemens Energy, via StockAnalysis",
+    "url": "https://stockanalysis.com/quote/otc/SMNEY/financials/",
+    "note": "* 12 derniers mois. GE Vernova (premier constructeur) : division Power à 19,8 Md$ en 2025, + 9 % (GE Vernova). Le chiffre d'affaires suit les livraisons, donc bien moins vite que les commandes."
+   },
+   "lead": 48,
+   "leadTxt": "une turbine commandée aujourd'hui arrive en 2031",
+   "why": "Le carnet vaut près de deux ans de production mondiale et GE Vernova vend déjà des créneaux de livraison en 2031.",
+   "evid": [
+    {
+     "v": "36,3 GW",
+     "l": "ajouts de capacité attendus dans les datacenters américains en 2027, plus que la production annuelle des trois constructeurs réunis",
+     "as_of": "mai 2026",
+     "src": "Goldman Sachs, via OilPrice",
+     "u": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html"
+    },
+    {
+     "v": "20 → 30 GW",
+     "l": "production annuelle visée par GE Vernova entre 2026 et 2030",
+     "as_of": "août 2026",
+     "src": "Power Magazine",
+     "u": "https://www.powermag.com/?p=267451"
+    }
+   ]
+  },
+  "trf": {
+   "name": "Transformateurs de puissance (États-Unis)",
+   "pie": null,
+   "pieNote": "Pas de répartition de marché fiable dans nos sources (seules des estimations de cabinets d'études payantes ou peu vérifiables).",
+   "rev": {
+    "t": "Siemens Energy : chiffre d'affaires de la division réseaux (transformateurs inclus)",
+    "u": "Md€ (exercices clos fin septembre)",
+    "pts": [
+     {
+      "x": "2024",
+      "v": 9.28,
+      "l": "9,3"
+     },
+     {
+      "x": "2025",
+      "v": 11.31,
+      "l": "11,3"
+     },
+     {
+      "x": "mars 2026*",
+      "v": 12.09,
+      "l": "12,1"
+     }
+    ],
+    "as_of": "mars 2026",
+    "src": "Siemens Energy, via StockAnalysis",
+    "url": "https://stockanalysis.com/quote/otc/SMNEY/financials/metrics/",
+    "note": "* 12 derniers mois. Périmètre plus large que les transformateurs (réseaux entiers). GE Vernova Électrification : 7,5 Md$ en 2024, 9,6 Md$ en 2025, + 28 % (GE Vernova). Aucune série propre aux transformateurs dans nos sources."
+   },
+   "gap": {
+    "lo": 30,
+    "hi": 30
+   },
+   "why": "Déficit de 30 % en 2025 et délais de livraison de 128 semaines (≈ 2,5 ans) ; la demande a plus que doublé depuis 2019.",
+   "evid": [
+    {
+     "v": "128 sem.",
+     "l": "délai de livraison d'un transformateur de puissance (143 pour un élévateur de centrale)",
+     "as_of": "T2 2025",
+     "src": "Wood Mackenzie, via RTO Insider",
+     "u": "https://www.rtoinsider.com/128131-transform-the-physical-energy-system-to-unleash-its-digital-transition/"
+    },
+    {
+     "v": "+ 116 %",
+     "l": "demande américaine de transformateurs de puissance depuis 2019",
+     "as_of": "2025",
+     "src": "Wood Mackenzie, via APPA",
+     "u": "https://www.publicpower.org/node/28126"
+    }
+   ]
+  }
+ },
+ "fmap": {
+  "dies": "dies",
+  "rack": "dies",
+  "hbm": "hbm",
+  "ip": "ip",
+  "wires": "ip",
+  "sub": "sub",
+  "las": "las",
+  "cpo": "las",
+  "mod": "las",
+  "gas": "gas",
+  "trf": "trf"
+ },
+ "fmvia": {
+  "rack": "Les racks empilent des puces IA : voici la fiche de ces puces.",
+  "wires": "Ces pistes relient la HBM au calcul dans l'interposeur CoWoS : voici la fiche du packaging.",
+  "cpo": "L'optique co-intégrée dépend des lasers au phosphure d'indium : voici leur fiche.",
+  "mod": "Chaque module optique embarque 4 à 8 lasers : voici la fiche du composant critique en amont."
+ },
+ "bmk": {
+  "fabrication": "fab",
+  "calcul": "dies",
+  "memoire": "hbm",
+  "packaging": "ip",
+  "cuivre": "aec",
+  "optique": "mod",
+  "reseau": "sw",
+  "datacenter": "cold",
+  "energie": "gas",
+  "modeles": "models",
+  "applications": "apps"
+ },
+ "rule": "Échelle éditoriale déduite des chiffres ci-dessus, pas une mesure : écart documenté inférieur à 10 % → 1 à 5 ; 10 à 19 % → 6 ou 7 ; 20 à 29 % → 8 ; 30 % et plus, ou délai de livraison de 3 ans et plus → 9 ; 10 = rupture avérée (livraisons impossibles)."
+}

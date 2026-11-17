@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Du campus à la puce</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="chain.css">
+</head><body><div class="wrap">
+ <div class="bar">
+  <div class="crumb" id="cr"></div>
+  <span id="exw" class="hide" style="display:flex;gap:12px;align-items:center;margin-left:auto"><button class="btn on" id="bx">Assembler</button><label>Assemblé <input type="range" id="rg" min="0" max="100" value="70"> Éclaté</label></span>
+ </div>
+<div class="flt"><div class="lay" id="ly"></div><div class="srch"><input id="q" type="search" placeholder="Chercher une pièce…" title="Chercher une pièce, une couche ou une entreprise" autocomplete="off" aria-label="Chercher dans l'architecture IA"><div class="res hide" id="res"></div></div></div>
+  <div class="scene" id="sc"><div class="acts"><button class="btn" id="bz">Zoomer ▸</button><button class="btn" id="br">Réinitialiser la vue</button></div></div>
+ <div class="duo"><div class="sq" id="sqL"></div><div class="sq" id="sqR"></div></div>
+ <div class="mkt" id="mk"></div>
+ <div class="tens" id="tn"></div>
+ <p class="hint" style="margin-top:14px">Schéma simplifié : nombre de racks, de piles HBM, de turbines et de liaisons illustratif, pas celui d'un site ou d'un produit précis. Les modèles tournent dans les datacenters ; ils sont dessinés à part pour montrer qui profite du calcul.</p>
+</div>
+<script src="i18n.js"></script>
+<script src="chain.js"></script>
+</body></html>

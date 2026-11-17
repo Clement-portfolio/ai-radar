@@ -593,7 +593,7 @@ export async function run(opts = {}) {
   const enPrev = await readJson("en.json", {});
   let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
   try {
-    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {})];
+    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), await readJson("chain.json", {})];
     enRes = await translateData({ docs, prev: enPrev, generate: mkGen(I18N_SYSTEM, I18N_SCHEMA), batch: +env.I18N_BATCH || 50, rounds: +env.I18N_ROUNDS || 3 });
   } catch (e) { enRes.reason = String(e.message || e).slice(0, 120); }
   log("Textes en anglais : " + enRes.reason + (enRes.left ? ` (reste ${enRes.left})` : ""));

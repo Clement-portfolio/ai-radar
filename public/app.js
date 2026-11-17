@@ -430,11 +430,33 @@ function layerExtra(l){
   if(l.unlock)h+='<div class="lcap"><span class="kicker">Ce qui débloquerait</span> '+esc(l.unlock.text)+' <span class="small mute">(<a href="'+esc(link(l.unlock.url))+'" target="_blank" rel="noopener">'+esc(l.unlock.source)+'</a>)</span></div>';
   return h;
 }
+var chainFrame=null;
+function chainSrc(){return"chain.html?lang="+S.lang}
+function chainHost(){
+  var h=$("chain-host");if(!h)return;
+  if(!chainFrame){
+    chainFrame=document.createElement("iframe");chainFrame.id="chain-frame";chainFrame.src=chainSrc();chainFrame.title="Schéma interactif d'un datacenter IA, du campus à la puce";chainFrame.setAttribute("scrolling","no");chainFrame.setAttribute("loading","lazy");chainFrame.style.height="900px";
+    h.appendChild(chainFrame);
+  }
+}
+function chainLang(){
+  if(!chainFrame)return;
+  try{var w=chainFrame.contentWindow;if(w&&w.ChainFrame)w.ChainFrame.setLang(S.lang)}catch(e){}
+}
+window.addEventListener("message",function(e){
+  if(e.origin!==location.origin||!e.data||typeof e.data.chainH!=="number"||!chainFrame)return;
+  var h=Math.max(300,Math.min(4000,e.data.chainH));chainFrame.style.height=h+"px";
+});
 function rInfra(){
   var L=S.layers.layers.slice();
   if(S.layerSort==="tension")L.sort(function(a,b){return(b.tension==null?-1:b.tension)-(a.tension==null?-1:a.tension)});else L.sort(function(a,b){return a.order-b.order});
   var el=$("v-infrastructure");
-  el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">La pile de l\'IA, des applications à l\'énergie. Pour chaque couche : qui domine, où ça coince, et à quel point (tension de 0 à 10, estimation éditoriale).</p><div class="tleg"><span><i class="hi"></i>Critique (8 à 10)</span><span><i class="mid"></i>Élevé (6 à 7)</span><span><i class="lo"></i>Modéré ou faible (0 à 5)</span></div>'+
+  if(!$("chain-host")){
+    el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">Un datacenter IA vu de l\'extérieur, puis de l\'intérieur, puis au niveau d\'un seul module. Cliquez une pièce ou l\'une des onze couches pour voir qui la fournit, où ça coince et à quel point (tension de 0 à 10, estimation éditoriale).</p><div id="chain-host"></div>'+
+     '<details class="details"><summary>La pile en onze couches <em>vue en liste</em></summary><div id="infra-list"></div></details>';
+  }
+  chainHost();
+  $("infra-list").innerHTML='<div class="tleg"><span><i class="hi"></i>Critique (8 à 10)</span><span><i class="mid"></i>Élevé (6 à 7)</span><span><i class="lo"></i>Modéré ou faible (0 à 5)</span></div>'+
    '<div class="toolbar"><button class="chip'+(S.layerSort==="pile"?' on':'')+'" data-ls="pile">Ordre de la pile</button><button class="chip'+(S.layerSort==="tension"?' on':'')+'" data-ls="tension">Par tension</button></div><div class="stack">'+
    L.map(function(l){
      var open=S.open["l"+l.id]?" open":"";
@@ -514,7 +536,7 @@ function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 function setLang(l){
   S.lang=l==="en"?"en":"fr";
   try{localStorage.setItem("lang",S.lang)}catch(e){}
-  if(window.I18N)I18N.set(S.lang);
+  if(window.I18N)I18N.set(S.lang);chainLang();
   [].forEach.call(document.querySelectorAll("[data-lang]"),function(b){b.classList.toggle("on",b.getAttribute("data-lang")===S.lang)});
   if(S.market){freshness();renderAll()}
 }
