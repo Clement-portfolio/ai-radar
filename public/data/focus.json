@@ -1,14 +1,36 @@
 {
- "generated_at": "2026-11-17T09:09:40.478Z",
+ "generated_at": "2026-11-17T09:37:51.580Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
+  "4e379f6cb9d3+5bf4951adbe9+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3+ef6edd3b09bd",
   "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+2952b40b3590+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
-  "066002f02e4c+1aa355519c9f+1d568fb033a7+3ef484d91e4b+4d2a127f1c18+5bf1e9fd711d+5d7763ae049a+7399e7157c4f+772ccdf8e8c7+8882bec2ef59+99adb1c1605d+a2bc04fede09+b89b121d0786+d392b636ea28+f19c04e4b4ea",
+  "1498609c0aea+3ef484d91e4b+58d8417fa030+5bf1e9fd711d+5d7763ae049a+6fd4401d69f5+772ccdf8e8c7+8fc39b6b9b40+99adb1c1605d+c7e45fe092ad+f19c04e4b4ea",
   "50ed425740ad+557fd01b66ab+8545e7ee31da+ea7bd8025515+f4fd0de1838a",
-  "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
-  "01de5d683d52+3a6a7c7107f8+6e8e373b5927+7aaeb16f016b+7b3d614d203e+9696674be12b+96ec9ffb9098+aff4b2c65530+dce5e82d2a55+fa49ced6fa8d"
+  "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d"
  ],
  "stories": [
+  {
+   "ids": [
+    "4e379f6cb9d3",
+    "ccff0c0dae36",
+    "5bf4951adbe9",
+    "ef6edd3b09bd"
+   ],
+   "head": "OpenAI lance un portefeuille numérique permettant aux agents d'IA de payer",
+   "bullets": [
+    "OpenAI a introduit un portefeuille numérique permettant à ses agents d'effectuer des transactions et des achats avec l'approbation de l'utilisateur, en s'associant notamment avec American Express, Mastercard et Visa.",
+    "Des solutions de refroidissement liquide direct sont développées pour répondre aux besoins thermiques croissants des centres de données.",
+    "Cela pourrait transformer les agents conversationnels en véritables assistants d'achat autonomes, facilitant les transactions au quotidien pour les utilisateurs."
+   ],
+   "head_en": "OpenAI launches a digital wallet allowing AI agents to make payments",
+   "bullets_en": [
+    "OpenAI introduced a digital wallet enabling its agents to perform transactions and purchases with user approval, partnering with American Express, Mastercard, and Visa.",
+    "Direct liquid cooling solutions are being developed to address the growing thermal demands of data centers.",
+    "This could transform conversational agents into true autonomous shopping assistants, facilitating daily transactions for users."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-17T09:15:18.000Z"
+  },
   {
    "ids": [
     "0ecab592c5bf",
@@ -16,17 +38,17 @@
     "ad6e35716fd3",
     "5eaf9db99196"
    ],
-   "head": "Départ de Jensen Huang chez Nvidia et répercussions géopolitiques",
+   "head": "Le départ de Jensen Huang de Nvidia bouscule le secteur des semi-conducteurs",
    "bullets": [
-    "Le PDG de Nvidia, Jensen Huang, a quitté ses fonctions, déclenchant une transition de direction et des répercussions immédiates sur la chaîne d'approvisionnement en semi-conducteurs en Chine.",
-    "Le conseil d'administration envisageait de limoger son PDG après des informations faisant état d'une seconde relation inappropriée et le FBI enquêtait. Des noms comme Ian Buck et Colette Kress étaient pressentis.",
-    "Cette situation pourrait accélérer l'autonomie de la Chine en matière de semi-conducteurs et intensifier la course technologique mondiale."
+    "Nvidia a officialisé le départ de son PDG Jensen Huang, marquant le début d'une période de transition pour l'entreprise et accentuant les répercussions sur la chaîne d'approvisionnement des composants.",
+    "Le conseil d'administration de Nvidia a envisagé de limoger son dirigeant à la suite d'informations concernant sa vie privée, et des successeurs potentiels comme Ian Buck ont été pressentis.",
+    "Cela montre que la gouvernance des géants technologiques peut directement influencer la stabilité de toute la chaîne d'approvisionnement mondiale de l'intelligence artificielle."
    ],
-   "head_en": "Jensen Huang's departure from Nvidia and geopolitical impacts",
+   "head_en": "Jensen Huang's departure from Nvidia shakes up the semiconductor sector",
    "bullets_en": [
-    "Nvidia CEO Jensen Huang left his post, triggering a leadership transition and immediate impacts on the semiconductor supply chain in China.",
-    "The board of directors considered dismissing its CEO following reports of a second inappropriate relationship and the FBI was investigating. Names like Ian Buck and Colette Kress were rumored as successors.",
-    "This situation could accelerate China's semiconductor autonomy and intensify the global technological race."
+    "Nvidia formalized the departure of its CEO Jensen Huang, marking the beginning of a transition period for the company and amplifying repercussions on the component supply chain.",
+    "Nvidia's board of directors considered removing its leader following reports regarding his personal life, and potential successors such as Ian Buck were discussed.",
+    "This shows that the governance of tech giants can directly influence the stability of the entire global artificial intelligence supply chain."
    ],
    "ctx_ids": [
     "cd03d116301a",
@@ -37,22 +59,48 @@
   },
   {
    "ids": [
+    "8fc39b6b9b40",
+    "1498609c0aea",
+    "5d7763ae049a",
+    "58d8417fa030"
+   ],
+   "head": "Les États-Unis renforcent les restrictions sur l'accès à distance aux puces d'IA",
+   "bullets": [
+    "Washington étend ses contrôles à l'exportation pour bloquer l'accès distant de la Chine aux puces d'intelligence artificielle, exigeant des autorisations préalables pour l'utilisation de serveurs à l'étranger.",
+    "Les États-Unis prévoyaient d'élargir le contrôle des exportations de puces à de nouveaux pays, tandis que des entreprises chinoises cherchaient à se procurer des composants en Asie du Sud-Est.",
+    "Cela montre la volonté des autorités américaines de combler les failles géographiques et d'empêcher tout contournement de leurs interdictions commerciales dans le domaine technologique."
+   ],
+   "head_en": "The United States tightens restrictions on remote access to AI chips",
+   "bullets_en": [
+    "Washington is expanding its export controls to block China's remote access to artificial intelligence chips, requiring prior authorization for the use of overseas servers.",
+    "The United States planned to expand chip export controls to additional countries, while Chinese companies sought to procure components through Southeast Asia.",
+    "This demonstrates the determination of US authorities to close geographical loopholes and prevent any circumvention of their technological trade bans."
+   ],
+   "ctx_ids": [
+    "dad468239d15",
+    "4faa7b4c5b2a",
+    "99c93905584d"
+   ],
+   "ts": "2026-11-17T08:48:21.000Z"
+  },
+  {
+   "ids": [
     "f4fd0de1838a",
     "557fd01b66ab",
     "50ed425740ad",
     "ea7bd8025515"
    ],
-   "head": "L'introduction en bourse d'Anthropic comme test pour l'IA",
+   "head": "L'introduction en bourse d'Anthropic constitue un test pour le marché de l'IA",
    "bullets": [
-    "La société d'intelligence artificielle Anthropic prépare une introduction en bourse très attendue, augmentant la pression sur son concurrent OpenAI et attirant les investisseurs asiatiques.",
-    "Le cours de bourse de Nvidia a chuté lourdement suite à de nouvelles révélations publiques touchant la gouvernance et la vie privée du PDG Jensen Huang, dont le départ a ébranlé le marché.",
-    "Cela pourrait tester la solidité de l'engouement financier pour le secteur de l'intelligence artificielle et l'accès au financement des grands acteurs."
+    "Le projet d'entrée en bourse du laboratoire Anthropic met à l'épreuve l'engouement actuel des investisseurs pour le secteur, accentuant la pression sur son concurrent OpenAI.",
+    "Le conseil d'administration de Nvidia a examiné la situation de son PDG Jensen Huang à la suite de révélations publiques touchant sa gouvernance.",
+    "Cela pourrait redéfinir les critères de valorisation des entreprises d'intelligence artificielle et influencer la capacité de l'ensemble de l'écosystème à lever des capitaux massifs."
    ],
-   "head_en": "Anthropic's IPO acts as a test for AI",
+   "head_en": "Anthropic's initial public offering acts as a test for the AI market",
    "bullets_en": [
-    "Artificial intelligence company Anthropic is preparing a highly anticipated IPO, increasing pressure on its rival OpenAI and attracting Asian investors.",
-    "Nvidia's share price plummeted following new public revelations regarding CEO Jensen Huang's governance and private life, whose departure shook the market.",
-    "This could test the strength of financial enthusiasm for the AI sector and major players' access to funding."
+    "The planned stock market entry of the laboratory Anthropic tests current investor enthusiasm for the sector, increasing pressure on its competitor OpenAI.",
+    "Nvidia's board of directors reviewed the situation of its CEO Jensen Huang following public revelations affecting his governance.",
+    "This could redefine the valuation criteria for artificial intelligence companies and influence the ability of the entire ecosystem to raise massive capital."
    ],
    "ctx_ids": [
     "89f810b4a388",
@@ -68,17 +116,17 @@
     "6e834fc4bc29",
     "06c70ce20939"
    ],
-   "head": "L'empreinte énergétique colossale des centres de données d'IA",
+   "head": "La consommation électrique des centres de données américains atteint des records",
    "bullets": [
-    "Des études révèlent que plus de 400 centres de données aux États-Unis consomment une quantité d'électricité et émettent du carbone équivalant à des nations ou des États entiers.",
-    "Les emprunts liés à l'IA concentrent la dette d'entreprise à long terme aux États-Unis, tandis que les centres de données diversifient leurs stratégies d'approvisionnement énergétique.",
-    "Cela montre que la croissance rapide de l'infrastructure d'intelligence artificielle pose un défi majeur aux réseaux électriques et aux objectifs climatiques."
+    "Une étude montre que les centres de données hyperscale aux États-Unis consomment collectivement autant d'électricité que des pays ou des États entiers, tout en reposant en grande partie sur les énergies fossiles.",
+    "Les emprunts liés à l'intelligence artificielle concentrent la dette d'entreprise à long terme aux États-Unis, poussant les acteurs financiers à diversifier leurs investissements.",
+    "Cela montre que la croissance rapide des infrastructures d'intelligence artificielle pose un défi énergétique majeur et soulève des questions durables sur son empreinte carbone."
    ],
-   "head_en": "The colossal energy footprint of AI data centers",
+   "head_en": "Electricity consumption of US data centers reaches record highs",
    "bullets_en": [
-    "Studies reveal that over 400 data centers in the United States consume electricity and emit carbon equivalent to entire nations or states.",
-    "AI-related borrowings concentrate long-term corporate debt in the US, while data centers diversify their energy supply strategies.",
-    "This shows that the rapid growth of AI infrastructure poses a major challenge to electrical grids and climate goals."
+    "A study shows that hyperscale data centers in the United States collectively consume as much electricity as entire countries or states, while still relying heavily on fossil fuels.",
+    "Artificial intelligence-related borrowing concentrates long-term corporate debt in the United States, prompting financial actors to diversify their investments.",
+    "This shows that the rapid growth of artificial intelligence infrastructure poses a major energy challenge and raises lasting questions about its carbon footprint."
    ],
    "ctx_ids": [
     "a9b5f630fc97",
@@ -86,32 +134,6 @@
     "c9160498e0d4"
    ],
    "ts": "2026-11-16T20:27:58.000Z"
-  },
-  {
-   "ids": [
-    "96ec9ffb9098",
-    "01de5d683d52",
-    "7aaeb16f016b",
-    "7b3d614d203e"
-   ],
-   "head": "Incertitudes autour de Nvidia après la chute de Jensen Huang",
-   "bullets": [
-    "Le départ précipité de Jensen Huang de la tête de Nvidia laisse l'entreprise sans successeur désigné, provoquant des interrogations sur sa stratégie d'infrastructure et son avenir.",
-    "Le conseil d'administration de Nvidia envisageait de limoger son PDG après des informations faisant état d'une seconde relation inappropriée et le FBI enquêtait sur cette affaire.",
-    "Cela montre que les scandales de gouvernance personnelle peuvent rapidement déstabiliser les géants technologiques les plus puissants du secteur."
-   ],
-   "head_en": "Uncertainties surround Nvidia following Jensen Huang's fall",
-   "bullets_en": [
-    "Jensen Huang's hasty departure from the head of Nvidia leaves the company without a designated successor, raising questions about its infrastructure strategy and future.",
-    "Nvidia's board of directors considered dismissing its CEO following reports of a second inappropriate relationship and the FBI was investigating the matter.",
-    "This shows that personal governance scandals can quickly destabilize the most powerful tech giants in the sector."
-   ],
-   "ctx_ids": [
-    "cd03d116301a",
-    "eca07e82a29d",
-    "93a1be9c32d9"
-   ],
-   "ts": "2026-11-16T19:05:15.000Z"
   }
  ]
 }
