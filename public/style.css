@@ -130,14 +130,14 @@ h3.sub2{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing
 /* infrastructure */
 .stack{border-top:1px solid var(--ink);margin-top:14px}
 .layer{border-bottom:1px solid var(--hair)}
-.lhead{display:grid;grid-template-columns:30px minmax(0,1.1fr) minmax(0,1.5fr) 190px 24px;gap:16px;align-items:center;padding:16px 0;width:100%;background:none;border:0;text-align:left}
+.lhead{display:grid;grid-template-columns:30px minmax(0,1fr) 230px 24px;gap:16px;align-items:center;padding:16px 0;width:100%;background:none;border:0;text-align:left}
 .lhead:hover{background:var(--fill)}
 .lnum{font-family:var(--mono);font-size:12px;color:var(--mute)}
 .lname{font-family:var(--display);font-size:18px;font-weight:600;letter-spacing:-.01em;line-height:1.2}
 .lstat{font-size:13px;color:var(--ink2);line-height:1.35}
 .meter{display:flex;gap:2px;margin-bottom:5px}.meter i{flex:1;height:6px;background:var(--hair)}
 .meter i.f{background:var(--ink)}
-.mlabel{font-size:10.5px;color:var(--mute);display:flex;justify-content:space-between}
+.mlabel{font-size:10.5px;color:var(--mute);display:flex;justify-content:space-between;white-space:nowrap;gap:8px}
 .chev{transition:.2s;color:var(--mute)}.layer.open .chev{transform:rotate(90deg)}
 .lbody{display:none;padding:0 0 22px 46px;max-width:860px}
 .layer.open .lbody{display:block}
@@ -429,3 +429,6 @@ html{overscroll-behavior-y:contain}
 .details.sec2{margin-top:26px}
 .details.sec2>summary{font-size:18px}
 .tax{margin:6px 12px 4px}
+
+.lmain{display:flex;flex-direction:column;gap:3px;min-width:0}.lstat{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:1060px){.lstat{white-space:normal}}

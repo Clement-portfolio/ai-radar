@@ -421,8 +421,8 @@ function layerTrend(l){
   return'<span class="trend '+cls+'" title="Tension le '+esc(fmtD(prev.d))+' : '+prev.t+'/10">'+sym+' '+(dlt>0?"+":"")+dlt+' depuis le '+esc(fmtD(prev.d))+'</span>';
 }
 function layerMeter(l){
-  if(l.tension==null)return'<span class="mlabel"><span>Tension</span><span class="tv emerging">'+esc(l.tension_label)+'</span></span>';
-  return meter(l.tension)+'<span class="mlabel"><span>Tension</span><span class="tv '+(l.tension>=8?"hi":(l.tension>=6?"mid":"lo"))+'">'+esc(l.tension_label)+' · '+l.tension+'/10</span></span>'+layerTrend(l);
+  if(l.tension==null)return'<span class="mlabel"><span>Tension estimée</span><span class="tv emerging">'+esc(l.tension_label)+'</span></span>';
+  return meter(l.tension)+'<span class="mlabel"><span>Tension estimée</span><span class="tv '+(l.tension>=8?"hi":(l.tension>=6?"mid":"lo"))+'">'+esc(l.tension_label)+' · '+l.tension+'/10</span></span>'+layerTrend(l);
 }
 function layerExtra(l){
   var h="";
@@ -438,7 +438,7 @@ function rInfra(){
    '<div class="toolbar"><button class="chip'+(S.layerSort==="pile"?' on':'')+'" data-ls="pile">Ordre de la pile</button><button class="chip'+(S.layerSort==="tension"?' on':'')+'" data-ls="tension">Par tension</button></div><div class="stack">'+
    L.map(function(l){
      var open=S.open["l"+l.id]?" open":"";
-     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span><span class="lm">'+layerMeter(l)+'</span><span class="chev">›</span></button>'+
+     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lmain"><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span></span><span class="lm">'+layerMeter(l)+'</span><span class="chev">›</span></button>'+
       '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+esc(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p>'+layerExtra(l)+'<div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
    }).join("")+'</div>';
 }

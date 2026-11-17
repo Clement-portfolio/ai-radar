@@ -60,7 +60,7 @@ var D={
 "Entreprises américaines qui utilisent l'IA":"US companies using AI","Parts du marché HBM, cinq trimestres":"HBM market shares, five quarters","Camembert":"Pie chart","Sommaire du marché":"Market contents",
 "Variation depuis le point précédent":"Change since the previous point",
 "La pile de l'IA, des applications à l'énergie. Pour chaque couche : qui domine, où ça coince, et à quel point (tension de 0 à 10, estimation éditoriale).":"The AI stack, from applications to energy. For each layer: who leads, where it is stuck, and how badly (tension from 0 to 10, editorial estimate).",
-"Ordre de la pile":"Stack order","Par tension":"By tension","Couche":"Layer","Tension":"Tension","Tendance":"Trend","Type":"Type",
+"Ordre de la pile":"Stack order","Par tension":"By tension","Couche":"Layer","Tension":"Tension","Tension estimée":"Estimated tension","Tendance":"Trend","Type":"Type",
 "Critique (8 à 10)":"Critical (8 to 10)","Élevé (6 à 7)":"High (6 to 7)","Modéré ou faible (0 à 5)":"Moderate or low (0 to 5)","Critique":"Critical","Élevé":"High","Modéré":"Moderate","Faible":"Low",
 "Classement":"Ranking","couches : avance USA":"layers: US ahead","couches : avance Chine":"layers: China ahead","Avance USA →":"US ahead →","← Avance Chine":"← China ahead",
 "→ écart stable":"→ gap stable","↗ les États-Unis creusent l'écart":"↗ the US is widening the gap","↘ la Chine creuse l'écart":"↘ China is widening the gap","↘ la Chine rattrape":"↘ China is catching up","↗ les États-Unis rattrapent":"↗ the US is catching up","à égalité":"level",
