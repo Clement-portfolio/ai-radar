@@ -47,10 +47,22 @@
   {
    "name": "SpaceX / xAI",
    "tag": "Calcul en orbite",
-   "what": "SpaceX a racheté xAI (annoncé le 2 févr. 2026) et demandé à la FCC l'autorisation de lancer jusqu'à un million de satellites faisant office de datacenters.",
+   "image": "spacex-xai",
+   "icon": "satellite",
+   "website": "https://www.spacex.com",
+   "what": "SpaceX a racheté xAI (annoncé le 2 févr. 2026) et veut lancer des satellites-datacenters : demande déposée auprès de la FCC.",
    "why": "Contourner la limite d'énergie et de réseau électrique qui freine les datacenters au sol.",
-   "last": "Demande acceptée à l'instruction par la FCC le 4 févr. 2026 : ce n'est pas une approbation, et le dossier ne fixe pas de calendrier de déploiement.",
-   "risk": "Exécution : le prospectus de SpaceX décrit ces datacenters orbitaux comme reposant sur des technologies non éprouvées.",
+   "figures": [
+    {
+     "v": "≤ 1 M",
+     "l": "satellites demandés à la FCC"
+    },
+    {
+     "v": "4 févr. 2026",
+     "l": "demande acceptée à l'instruction : pas une approbation"
+    }
+   ],
+   "risk": "Technologies non éprouvées, selon le prospectus de SpaceX ; aucun calendrier de déploiement fixé.",
    "as_of": "févr.–juin 2026",
    "sources": [
     {
@@ -61,16 +73,31 @@
      "t": "SoftwareSeni (9 juin 2026, d'après le prospectus)",
      "u": "https://www.softwareseni.com/spacex-and-the-million-satellite-fcc-filing-orbital-data-centre-plans-at-scale/"
     }
-   ],
-   "icon": "satellite"
+   ]
   },
   {
    "name": "Starcloud",
    "tag": "Calcul en orbite",
-   "what": "Start-up américaine qui met des GPU Nvidia sur satellite. Starcloud-1 (60 kg, lancé le 2 nov. 2025) a emporté la première puce H100 en orbite.",
-   "why": "Premier acteur à faire tourner des charges d'IA dans l'espace ; Nvidia participe à son financement.",
-   "last": "Levée de 250 M$ à 2,3 Md$ de valorisation, annoncée le 21 août 2026. Son projet de 88 000 satellites est une demande à la FCC, pas une approbation.",
-   "risk": "Dépendance au lancement : sa feuille de route repose sur des fusées qu'elle ne contrôle pas, surtout celles de SpaceX.",
+   "image": "starcloud",
+   "icon": "orbit",
+   "website": "https://www.starcloud.com",
+   "what": "Start-up américaine de GPU Nvidia sur satellite. Starcloud-1 (60 kg, lancé le 2 nov. 2025) a mis la première puce H100 en orbite.",
+   "why": "Premier acteur à faire tourner de l'IA dans l'espace ; Nvidia participe à son financement.",
+   "figures": [
+    {
+     "v": "250 M$",
+     "l": "levés le 21 août 2026"
+    },
+    {
+     "v": "2,3 Md$",
+     "l": "valorisation"
+    },
+    {
+     "v": "88 000",
+     "l": "satellites demandés à la FCC (pas approuvés)"
+    }
+   ],
+   "risk": "Dépend de fusées qu'elle ne contrôle pas, surtout celles de SpaceX.",
    "as_of": "21 août 2026",
    "sources": [
     {
@@ -81,16 +108,31 @@
      "t": "Quartz (juin 2026)",
      "u": "https://qz.com/orbital-data-center-startups-competitive-landscape-061526"
     }
-   ],
-   "icon": "orbit"
+   ]
   },
   {
    "name": "CoreWeave",
    "tag": "Neocloud",
+   "image": "coreweave",
+   "icon": "racks",
+   "website": "https://www.coreweave.com",
    "what": "Loueur de grappes de GPU Nvidia aux laboratoires et aux géants du cloud.",
    "why": "Montre la demande réelle de calcul loué : son carnet de commandes a presque triplé en un an.",
-   "last": "T3 2026 : revenus 3,66 Md$ (+ 168 %), carnet de commandes 132,5 Md$ (104 Md$ fin juin), dette ≈ 47 Md$, perte nette 709 M$.",
-   "risk": "Dette et charge d'intérêts, avec une forte concentration sur quelques clients (les trois premiers pesaient 72 % des revenus au T2).",
+   "figures": [
+    {
+     "v": "3,66 Md$",
+     "l": "revenus T3 2026 (+ 168 %)"
+    },
+    {
+     "v": "132,5 Md$",
+     "l": "carnet de commandes (104 Md$ fin juin)"
+    },
+    {
+     "v": "≈ 47 Md$",
+     "l": "dette · perte nette 709 M$"
+    }
+   ],
+   "risk": "Dette et intérêts ; les trois premiers clients pesaient 72 % des revenus au T2.",
    "as_of": "10 nov. 2026",
    "sources": [
     {
@@ -105,16 +147,31 @@
      "t": "Finsee (T3 2026)",
      "u": "https://finsee.ai/earnings/crwv/2026/q3/en/"
     }
-   ],
-   "icon": "racks"
+   ]
   },
   {
    "name": "Nebius",
    "tag": "Neocloud",
+   "image": "nebius",
+   "icon": "cloud",
+   "website": "https://nebius.com",
    "what": "Cloud d'IA né de l'ex-Yandex, qui loue du calcul Nvidia.",
    "why": "Second grand neocloud coté : sa croissance et ses retards disent où se trouve la contrainte de capacité.",
-   "last": "T3 2026 : revenus 980,8 M$ (+ 571 %), dont environ 325 M$ non récurrents ; revenus annualisés 6,4 Md$ fin sept. Prévision 2027 : revenus 12 à 13 Md$ pour 40 à 45 Md$ d'investissements.",
-   "risk": "Retards de livraison de capacité (sites tiers repoussés à 2027) et investissements très supérieurs aux revenus.",
+   "figures": [
+    {
+     "v": "980,8 M$",
+     "l": "revenus T3 2026 (+ 571 %), dont ≈ 325 M$ non récurrents"
+    },
+    {
+     "v": "6,4 Md$",
+     "l": "revenus annualisés fin sept."
+    },
+    {
+     "v": "12–13 Md$",
+     "l": "revenus prévus 2027, pour 40–45 Md$ d'investissements"
+    }
+   ],
+   "risk": "Sites tiers repoussés à 2027 ; investissements très supérieurs aux revenus.",
    "as_of": "12 nov. 2026",
    "sources": [
     {
@@ -129,16 +186,31 @@
      "t": "Blockspace (12 nov. 2026)",
      "u": "https://blockspace.media/insight/nebius-cuts-2026-revenue-outlook/"
     }
-   ],
-   "icon": "cloud"
+   ]
   },
   {
    "name": "Cerebras",
    "tag": "Puces alternatives",
+   "image": "cerebras",
+   "icon": "chip",
+   "website": "https://www.cerebras.ai",
    "what": "Fabricant de puces géantes pour l'inférence rapide, coté au Nasdaq depuis le 14 mai 2026.",
    "why": "Test grandeur nature d'une alternative aux GPU de Nvidia, adossée à OpenAI.",
-   "last": "T1 2026 : revenus 193,4 M$ (+ 94 %). Contrat OpenAI de plus de 20 Md$ pour 750 MW. Introduction en Bourse : 6,4 Md$ levés. Prévision 2026 : 855 à 865 M$ de revenus de base.",
-   "risk": "Concentration : l'essentiel de la croissance attendue repose sur le contrat OpenAI, dont les revenus arrivent surtout en fin d'année.",
+   "figures": [
+    {
+     "v": "193,4 M$",
+     "l": "revenus T1 2026 (+ 94 %)"
+    },
+    {
+     "v": "> 20 Md$",
+     "l": "contrat OpenAI, 750 MW"
+    },
+    {
+     "v": "6,4 Md$",
+     "l": "levés en Bourse · prévision 2026 : 855–865 M$"
+    }
+   ],
+   "risk": "Croissance attendue concentrée sur le contrat OpenAI, dont les revenus arrivent surtout en fin d'année.",
    "as_of": "23 juin 2026",
    "sources": [
     {
@@ -149,16 +221,27 @@
      "t": "Converge Digest (23 juin 2026)",
      "u": "https://convergedigest.com/cerebras-posts-q1-revenue-expands-openai-and-aws-partnerships/"
     }
-   ],
-   "icon": "chip"
+   ]
   },
   {
    "name": "Moonshot AI (Kimi)",
    "tag": "Laboratoire chinois",
-   "what": "Laboratoire de Pékin, auteur de Kimi K3 (2,8 billions de paramètres, à poids ouverts, annoncé le 16 juil. 2026).",
+   "image": "moonshot",
+   "icon": "moon",
+   "website": "https://www.moonshot.ai",
+   "what": "Laboratoire de Pékin, auteur de Kimi K3 (2,8 billions de paramètres, poids ouverts, annoncé le 16 juil. 2026).",
    "why": "Chef de file des modèles ouverts chinois, dont l'écart avec les modèles américains se réduit.",
-   "last": "Levée de 3,5 Md$ à 35 Md$ de valorisation en juillet 2026 ; discussions rapportées à 50 Md$.",
-   "risk": "Accès aux puces avancées : les restrictions américaines à l'export poussent les laboratoires chinois vers les puces Huawei Ascend ou des stocks.",
+   "figures": [
+    {
+     "v": "3,5 Md$",
+     "l": "levés en juil. 2026"
+    },
+    {
+     "v": "35 Md$",
+     "l": "valorisation (50 Md$ en discussion, d'après la presse)"
+    }
+   ],
+   "risk": "Accès aux puces avancées : restrictions américaines à l'export, repli sur Huawei Ascend ou des stocks.",
    "as_of": "juil.–oct. 2026",
    "sources": [
     {
@@ -173,8 +256,7 @@
      "t": "Creati (févr. 2026)",
      "u": "https://creati.ai/ai-news/2026-02-17/moonshot-ai-10-billion-valuation-funding"
     }
-   ],
-   "icon": "moon"
+   ]
   }
  ],
  "risks": [

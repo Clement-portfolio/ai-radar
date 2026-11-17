@@ -28,8 +28,11 @@ for (const x of ind.stats) {
 }
 for (const k of ["catalysts"]) for (const x of out[k] || []) if (!x.as_of && !x.date) ko(`outlook.${k} : entrée sans date`);
 for (const a of out.actors || []) {
-  for (const f of ["what", "why", "last", "risk"]) if (!a[f]) ko(`outlook : acteur « ${a.name} » sans « ${f} »`);
+  for (const f of ["what", "why", "risk", "image"]) if (!a[f]) ko(`outlook : acteur « ${a.name} » sans « ${f} »`);
   if (!["satellite", "orbit", "racks", "cloud", "chip", "moon"].includes(a.icon)) ko(`outlook : acteur « ${a.name} » sans pictogramme valide`);
+  if (!isUrl(a.website)) ko(`outlook : acteur « ${a.name} » sans site officiel (https)`);
+  if (!/^[a-z0-9-]+$/.test(a.image || "")) ko(`outlook : acteur « ${a.name} » : nom d'image invalide`);
+  if (!(a.figures || []).length || !a.figures.every((f) => f.v && f.l)) ko(`outlook : acteur « ${a.name} » sans chiffres clés valides`);
   if (!(a.sources || []).length || !a.sources.every((s) => isUrl(s.u || s.url))) ko(`outlook : acteur « ${a.name} » sans source`);
 }
 const lay = JSON.parse(read("layers")).layers;

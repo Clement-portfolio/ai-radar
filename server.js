@@ -13,7 +13,7 @@ const PORT = +process.env.PORT || 3000;
 const DATA_URL = (process.env.DATA_SOURCE_URL || "https://raw.githubusercontent.com/Clement-portfolio/ai-radar/main/public/data/").replace(/\/?$/, "/");
 const CACHE_MS = (+process.env.DATA_CACHE_S || 120) * 1000;
 const DATA_FILES = new Set(["feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "focus.json", "sec.json", "shares.json", "series.json", "indicators.json", "outlook.json", "en.json"]);
-const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".png": "image/png", ".txt": "text/plain; charset=utf-8" };
+const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".svg": "image/svg+xml", ".ico": "image/x-icon", ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".webp": "image/webp", ".txt": "text/plain; charset=utf-8" };
 
 const cache = new Map(); // nom -> { at, buf }
 const inflight = new Map();
@@ -46,6 +46,7 @@ function send(res, code, body, headers = {}) {
   res.end(body);
 }
 
+const IMG = new Map(); // illustrations des acteurs : nom -> { at, buf|null }
 const GO = new Map(); // lien Google News → adresse réelle (mémoire du serveur)
 const server = http.createServer(async (req, res) => {
   try {
@@ -69,6 +70,22 @@ const server = http.createServer(async (req, res) => {
       if (!DATA_FILES.has(name)) return send(res, 404, "Not found");
       const buf = await readData(name);
       return buf ? send(res, 200, buf, { "content-type": MIME[".json"], "cache-control": "no-store" }) : send(res, 404, "Not found");
+    }
+
+    // Illustrations des acteurs : lues sur GitHub (déposer un fichier suffit, sans redéployer), sinon celles du déploiement.
+    const im = p.match(/^\/img\/actors\/([a-z0-9-]+\.(jpg|jpeg|png|webp))$/);
+    if (im) {
+      const hit = IMG.get(im[1]);
+      let buf = hit && Date.now() - hit.at < 600000 ? hit.buf : undefined;
+      if (buf === undefined) {
+        try {
+          const r = await fetch(DATA_URL.replace(/data\/$/, "") + "img/actors/" + im[1], { signal: AbortSignal.timeout(5000) });
+          buf = r.ok ? Buffer.from(await r.arrayBuffer()) : null;
+        } catch { buf = null; }
+        if (!buf) { try { buf = await fs.readFile(path.join(PUBLIC, "img", "actors", im[1])); } catch { buf = null; } }
+        IMG.set(im[1], { at: Date.now(), buf });
+      }
+      return buf ? send(res, 200, buf, { "content-type": MIME["." + im[2]], "cache-control": "public, max-age=600" }) : send(res, 404, "Not found");
     }
 
     const rel = p === "/" ? "/index.html" : p;

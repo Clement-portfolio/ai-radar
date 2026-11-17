@@ -319,13 +319,24 @@ var ICONS={
  moon:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M44 8a24 24 0 1 0 12 30A20 20 0 0 1 44 8z"/><path d="M46 44l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></svg>'
 };
 function actorCard(a){
-  return'<article class="actor"><div class="ah"><span class="aic" role="img" aria-label="'+esc(a.name)+'">'+(ICONS[a.icon]||ICONS.chip)+'</span><div><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div></div>'+
-   '<div class="alast"><span class="lbl">Dernier chiffre connu</span><p>'+esc(a.last)+'</p><span class="small mute">'+esc(a.as_of)+'</span></div>'+
-   '<div class="arow"><span class="lbl">Ce que c\'est</span><p>'+esc(a.what)+'</p></div>'+
+  var ok=/^https:\/\//.test(a.website||"");
+  var fig=(a.figures||[]).map(function(f){return'<li><b>'+esc(f.v)+'</b><span>'+esc(f.l)+'</span></li>'}).join("");
+  return'<article class="actor"><div class="aph" role="img" aria-label="'+esc(a.name)+'"><span class="aic">'+(ICONS[a.icon]||ICONS.chip)+'</span>'+
+   (a.image?'<img class="aimg" data-b="'+esc(a.image)+'" data-n="0" src="img/actors/'+esc(a.image)+'.jpg" alt="" loading="lazy">':'')+'</div>'+
+   '<div class="abody"><div class="ah"><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div>'+
+   '<p class="awhat">'+esc(a.what)+'</p>'+
    '<div class="arow"><span class="lbl">Pourquoi ça compte</span><p>'+esc(a.why)+'</p></div>'+
-   '<div class="arow rk"><span class="lbl">Risque principal</span><p>'+esc(a.risk)+'</p></div>'+
-   '<div class="srcs">'+srcLinks(a.sources)+'</div></article>';
+   (fig?'<div class="arow"><span class="lbl">Chiffres clés <i>'+esc(a.as_of)+'</i></span><ul class="afig">'+fig+'</ul></div>':'')+
+   '<div class="arow rk"><span class="lbl">Risque d\'exécution</span><p>'+esc(a.risk)+'</p></div>'+
+   '<div class="afoot">'+(ok?'<a class="site" href="'+esc(a.website)+'" target="_blank" rel="noopener">Site officiel ↗</a>':'')+
+   '<details class="srcd"><summary>Sources</summary><div class="srcs">'+srcLinks(a.sources)+'</div></details></div></div></article>';
 }
+// Illustrations : public/img/actors/<nom>.jpg, sinon .webp, sinon .png ; à défaut, le pictogramme reste affiché.
+document.addEventListener("error",function(e){
+  var im=e.target;if(!im||!im.classList||!im.classList.contains("aimg"))return;
+  var ex=["jpg","webp","png"],n=+im.getAttribute("data-n")+1;
+  if(n<ex.length){im.setAttribute("data-n",n);im.src="img/actors/"+im.getAttribute("data-b")+"."+ex[n]}else im.remove();
+},true);
 function outlookHTML(){
   var o=S.outlook;if(!o)return'<div class="empty small">Perspectives indisponibles.</div>';
   var today=new Date().toISOString().slice(0,10),h='';
