@@ -199,7 +199,7 @@ var ETAGES=[
 ];
 function sommaire(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
-   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>principaux acteurs et six acteurs émergents</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
+   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs et six acteurs émergents</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
 }
 function capexPie(){
   var d=S.sec;if(!d||!d.companies)return null;

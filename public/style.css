@@ -249,7 +249,7 @@ footer{border-top:1px solid var(--hair);padding:18px 0 40px;font-family:var(--mo
 /* Marché : sommaire, trois étages, détails repliés */
 .toc{margin-top:26px;border-top:1px solid var(--ink);padding-top:10px}
 .toc ol{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:0 28px;margin-top:6px}
-.toc a{display:block;text-decoration:none;padding:8px 0 10px;border-bottom:1px solid var(--hair);font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.01em}
+.toc li{display:flex}.toc a{flex:1;display:block;text-decoration:none;padding:8px 0 10px;border-bottom:1px solid var(--hair);font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:-.01em}
 .toc a b{font-family:var(--mono);font-weight:500;font-size:12px;color:var(--mute);margin-right:6px}
 .toc a span{display:block;font-family:var(--body);font-weight:400;font-size:12px;color:var(--mute);letter-spacing:0;margin-top:3px;line-height:1.35}
 .toc a:hover{border-color:var(--ink)}
