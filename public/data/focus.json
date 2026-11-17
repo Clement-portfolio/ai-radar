@@ -1,14 +1,102 @@
 {
- "generated_at": "2026-11-17T16:01:15.230Z",
+ "generated_at": "2026-11-17T21:58:53.569Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
+  "0c4605812a3f+1447c52b300c+2de58a421677+3c69314e6bc3+7e1b6ce0b47c+dd5f54370718",
   "1aa355519c9f+1d568fb033a7+24814f58a684+3ef484d91e4b+4d2a127f1c18+54d6bbb0ceee+5bf1e9fd711d+5d7763ae049a+63ecd24538c6+64cb51cd5a8b+772ccdf8e8c7+99adb1c1605d+b89b121d0786+c7e45fe092ad+d392b636ea28+d9d83de861d8+f45fe323bc06",
-  "19948b3510c3+21a4a1a0ce23+2a8f3e96bb72+97a96eda4701+cf6b82b3d889",
-  "1ca0178448c0+754462065a85+7b19db7f813e+838138796907+ad236726dba6+af3820b9acec+c0841d37a18b",
   "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
+  "0dd20f185f4b+1fcd3d951882+4d26e05d4a3f+609f4b5b9b9f+75e60b60b1f6+dc46bdd2652f",
   "4e379f6cb9d3+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3+ef6edd3b09bd"
  ],
  "stories": [
+  {
+   "ids": [
+    "dd5f54370718",
+    "2de58a421677",
+    "1447c52b300c",
+    "7e1b6ce0b47c"
+   ],
+   "head": "Nvidia dépasse les attentes pour son premier trimestre sans Jensen Huang",
+   "bullets": [
+    "Nvidia annonce des revenus trimestriels de 115,8 milliards de dollars, dépassant les prévisions des analystes sous la direction par intérim de Colette Kress.",
+    "Colette Kress, directrice financière de l'entreprise depuis 2013, a pris la direction par intérim suite à la démission du dirigeant historique Jensen Huang."
+   ],
+   "head_en": "Nvidia beats expectations in first quarter without Jensen Huang",
+   "bullets_en": [
+    "Nvidia reports quarterly revenues of 115,8 billion dollars, beating analyst forecasts under the interim leadership of Colette Kress.",
+    "Colette Kress, chief financial officer of the company since 2013, took over the interim leadership following the resignation of historical leader Jensen Huang."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-17T21:47:10.000Z"
+  },
+  {
+   "ids": [
+    "d9d83de861d8",
+    "64cb51cd5a8b",
+    "d392b636ea28",
+    "5d7763ae049a"
+   ],
+   "head": "Les États-Unis durcissent les restrictions sur l'accès aux puces IA",
+   "bullets": [
+    "Le gouvernement américain renforce ses restrictions pour empêcher les entreprises chinoises d'accéder à des puces d'IA via des centres de données et des services cloud tiers dans des pays tiers comme le Brésil ou l'Asie du Sud-Est.",
+    "À la suite des problèmes entourant Nvidia, le Congrès américain avait accentué la pression sur l'administration pour durcir les règles d'exportation de semi-conducteurs d'IA vers la Chine."
+   ],
+   "head_en": "The United States tightens restrictions on AI chip access",
+   "bullets_en": [
+    "The US government is tightening restrictions to prevent Chinese companies from accessing AI chips via third-party data centers and cloud services in third countries like Brazil or Southeast Asia.",
+    "Following issues surrounding Nvidia, the US Congress had increased pressure on the administration to tighten export rules for AI semiconductors to China."
+   ],
+   "ctx_ids": [
+    "ce333b7063cc"
+   ],
+   "ts": "2026-11-17T15:32:00.000Z"
+  },
+  {
+   "ids": [
+    "f819d90d809d",
+    "b1da22f7bd68",
+    "6e834fc4bc29",
+    "4f1fe20754ae"
+   ],
+   "head": "La consommation électrique massive des centres de données américains",
+   "bullets": [
+    "Une étude montre que 403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an, rivalisant avec la consommation de pays comme le Chili ou de certains États américains.",
+    "Face aux limites du réseau électrique, les centres de données diversifient leurs stratégies d'approvisionnement énergétique pour soutenir leur croissance.",
+    "Une étude publiée dans Nature Sustainability indique que ces centres de données reposent encore largement sur les énergies fossiles tout en atteignant des niveaux d'émissions comparables à ceux de nations entières."
+   ],
+   "head_en": "The massive power consumption of American data centers",
+   "bullets_en": [
+    "A study shows that 403 hyperscale data centers in the United States consumed 82 terawatt-hours of electricity in a year, rivaling the consumption of countries like Chile or certain US states.",
+    "Faced with the limits of the electrical grid, data centers are diversifying their energy supply strategies to support their growth.",
+    "A study published in Nature Sustainability indicates that these data centers still rely heavily on fossil fuels while reaching emission levels comparable to those of entire nations."
+   ],
+   "ctx_ids": [
+    "c9160498e0d4"
+   ],
+   "ts": "2026-11-17T10:30:00.000Z"
+  },
+  {
+   "ids": [
+    "dc46bdd2652f",
+    "609f4b5b9b9f",
+    "1fcd3d951882",
+    "75e60b60b1f6"
+   ],
+   "head": "L'impact des restrictions américaines sur les puces IA en Asie",
+   "bullets": [
+    "Les nouvelles limitations américaines sur l'exportation de puces IA pèsent sur les actions des centres de données asiatiques, incitant Singapour à réclamer un accès sécurisé et orientant le marché malaisien vers les géants américains.",
+    "L'affaire Nvidia avait déjà mis en lumière des entreprises situées à Singapour et en Malaisie au sein de la chaîne d'approvisionnement des puces d'intelligence artificielle."
+   ],
+   "head_en": "The impact of US AI chip restrictions in Asia",
+   "bullets_en": [
+    "The new US limitations on AI chip exports weigh on Asian data center stocks, prompting Singapore to demand secure access and directing the Malaysian market toward American giants.",
+    "The Nvidia affair had already highlighted companies located in Singapore and Malaysia within the artificial intelligence chip supply chain."
+   ],
+   "ctx_ids": [
+    "1649f55ea99c"
+   ],
+   "ts": "2026-11-17T10:02:00.000Z"
+  },
   {
    "ids": [
     "4e379f6cb9d3",
@@ -16,15 +104,15 @@
     "ef6edd3b09bd",
     "d5c13ac00ff3"
    ],
-   "head": "OpenAI lance un portefeuille numérique pour ses agents d'intelligence artificielle",
+   "head": "OpenAI lance ChatGPT Wallet pour les paiements par agents IA",
    "bullets": [
-    "OpenAI introduit une fonction de portefeuille numérique, en partenariat avec American Express, Mastercard et Visa, pour permettre à ses agents d'effectuer des achats pour le compte des utilisateurs.",
-    "Cette option est réservée aux abonnés ChatGPT Pro âgés d'au moins 18 ans aux États-Unis."
+    "OpenAI introduit ChatGPT Wallet, une fonction développée avec American Express, Mastercard et Visa permettant aux agents IA Dots d'effectuer des achats pour le compte des utilisateurs.",
+    "Cette nouvelle fonctionnalité s'adresse dans un premier temps aux abonnés ChatGPT Pro âgés d'au moins 18 ans aux États-Unis."
    ],
-   "head_en": "OpenAI launches digital wallet for artificial intelligence agents",
+   "head_en": "OpenAI launches ChatGPT Wallet for AI agent payments",
    "bullets_en": [
-    "OpenAI is introducing a digital wallet feature, in partnership with American Express, Mastercard, and Visa, to allow its agents to make purchases on behalf of users.",
-    "This option is reserved for ChatGPT Pro subscribers aged 18 and older in the United States."
+    "OpenAI introduces ChatGPT Wallet, a feature developed with American Express, Mastercard and Visa allowing Dots AI agents to make purchases on behalf of users.",
+    "This new feature is initially aimed at ChatGPT Pro subscribers aged at least 18 in the United States."
    ],
    "ctx_ids": [],
    "ts": "2026-11-17T09:15:18.000Z"
