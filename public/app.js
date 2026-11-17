@@ -331,18 +331,38 @@ function actorCard(a){
    '<div class="afoot">'+(ok?'<a class="site" href="'+esc(a.website)+'" target="_blank" rel="noopener">Site officiel ↗</a>':'')+
    '<details class="srcd"><summary>Sources</summary><div class="srcs">'+srcLinks(a.sources)+'</div></details></div></div></article>';
 }
-// Illustrations : public/img/actors/<nom>.jpg, sinon .webp, sinon .png ; à défaut, le pictogramme reste affiché.
+// Illustrations : public/img/actors/<nom>.jpg, .jpeg, .webp ou .png ; à défaut, le pictogramme reste affiché.
 document.addEventListener("error",function(e){
   var im=e.target;if(!im||!im.classList||!im.classList.contains("aimg"))return;
-  var ex=["jpg","webp","png"],n=+im.getAttribute("data-n")+1;
+  var ex=["jpg","jpeg","webp","png"],n=+im.getAttribute("data-n")+1;
   if(n<ex.length){im.setAttribute("data-n",n);im.src="img/actors/"+im.getAttribute("data-b")+"."+ex[n]}else im.remove();
 },true);
+function pctTxt(p){return p<1?"< 1 %":Math.round(p).toLocaleString(loc())+" %"}
+function timeline(cat,today){
+  var t0=ms(today),t1=t0+183*86400000,span=t1-t0,rows=[],lanes=[],i;
+  cat=cat.filter(function(c){return ms(c.date)<=t1}).sort(function(a,b){return a.date<b.date?-1:a.date>b.date?1:0});
+  var dots=cat.map(function(c,n){
+    var x=Math.max(0,Math.min(100,(ms(c.date)-t0)/span*100)),l=0;
+    while(lanes[l]!=null&&x-lanes[l]<3.4)l++;
+    lanes[l]=x;
+    return'<span class="tdot" style="left:'+x.toFixed(2)+'%;top:'+(l*20+2)+'px" title="'+esc(c.label+" : "+c.title)+'">'+(n+1)+'</span>';
+  }).join("");
+  var ticks="",d=new Date(t0);d=Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,1);
+  for(;d<=t1;){var dd=new Date(d);ticks+='<span class="tmon" style="left:'+((d-t0)/span*100).toFixed(2)+'%">'+esc(dd.toLocaleDateString(loc(),{month:"short",timeZone:"UTC"})+(dd.getUTCMonth()===0?" "+dd.getUTCFullYear():""))+'</span>';d=Date.UTC(dd.getUTCFullYear(),dd.getUTCMonth()+1,1)}
+  var ax='<div class="tax" style="height:'+(lanes.length*20+34)+'px"><span class="tmon tnow" style="left:0">aujourd\'hui</span>'+ticks+'<div class="tline" style="top:'+(lanes.length*20+6)+'px"></div>'+dots+'</div>';
+  var li=cat.map(function(c,n){
+    var pr=(c.probs||[]).slice().sort(function(a,b){return b.p-a.p});
+    var pb=pr.length?pr.map(function(q,k){return'<div class="tpr'+(k?' sec':'')+'"><span>'+esc(q.label)+'</span><b>'+pctTxt(q.p)+'</b><i><u style="width:'+Math.max(1,Math.round(q.p))+'%"></u></i></div>'}).join("")+(c.probs_at?'<span class="small mute">Pari Polymarket au '+esc(fmtD(c.probs_at))+'</span>':''):'<span class="small mute">Pas de probabilité publiée</span>';
+    return'<li><span class="tn">'+(n+1)+'</span><div class="tdt">'+esc(c.label)+(c.date===today?' · aujourd\'hui':'')+'<span class="tk">'+esc(c.kind||"")+'</span></div><div class="tbd"><b>'+esc(c.title)+'</b><p>'+esc(c.detail)+'</p><span class="small mute">'+esc(c.status)+' · </span><span class="srcs inl">'+srcLinks(c.sources)+'</span></div><div class="tpb">'+pb+'</div></li>';
+  }).join("");
+  return'<div class="tl">'+ax+'<ol class="tlist">'+li+'</ol></div>';
+}
 function outlookHTML(){
   var o=S.outlook;if(!o)return'<div class="empty small">Perspectives indisponibles.</div>';
   var today=new Date().toISOString().slice(0,10),h='';
   if(o.gw)h+='<div class="sgroup">Contrainte physique <em>l\'énergie, pas l\'argent</em></div><div class="cards3">'+statCard({title:o.gw.title,value:o.gw.value,sub:o.gw.sub,as_of:o.gw.as_of,source:o.gw.source,url:o.gw.url,confidence:"moyenne",caveat:o.gw.caveat})+'</div>';
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
-  if(cat.length)h+='<div class="sgroup">Prochains catalyseurs <em>seulement les dates publiées</em></div><ul class="cats">'+cat.map(function(c){return'<li><div class="cd">'+esc(c.label)+(c.date===today?' · aujourd\'hui':'')+'</div><div><b>'+esc(c.title)+'</b><p>'+esc(c.detail)+'</p><span class="small mute">'+esc(c.status)+' · </span><span class="srcs inl">'+srcLinks(c.sources)+'</span></div></li>'}).join("")+'</ul><p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p>';
+  if(cat.length)h+='<div class="sgroup">Calendrier des six prochains mois <em>probabilités des marchés, pas des prévisions</em></div>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p>';
   h+='<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div>';
   var rk=(o.risks||[]).map(riskCard).join("");
   if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';

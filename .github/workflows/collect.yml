@@ -37,6 +37,9 @@ jobs:
           GDELT_TIMESPAN: ${{ github.event_name == 'schedule' && '3h' || '1d' }}
           MAX_AGE_DAYS: ${{ github.event_name == 'schedule' && '3' || '7' }}
         run: node collector/collect.mjs
+      - name: Probabilités du calendrier
+        continue-on-error: true
+        run: node collector/calendar.mjs
       - name: Enregistrer les données
         run: |
           git config user.name "ai-radar-bot"

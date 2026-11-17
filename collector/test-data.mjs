@@ -27,6 +27,13 @@ for (const x of ind.stats) {
   if (!(x.etage >= 1 && x.etage <= 5)) ko(`indicators : « ${x.id} » étage invalide`);
 }
 for (const k of ["catalysts"]) for (const x of out[k] || []) if (!x.as_of && !x.date) ko(`outlook.${k} : entrée sans date`);
+for (const c of out.catalysts || []) {
+  if (!(c.sources || []).length || !c.sources.every((s) => isUrl(s.u))) ko(`outlook : catalyseur « ${c.title} » sans source valide`);
+  for (const p of c.probs || []) {
+    if (!(p.p >= 0 && p.p <= 100) || !p.label) ko(`outlook : probabilité invalide pour « ${c.title} »`);
+    if (p.poll && !(c.sources || []).some((s) => /polymarket\.com\/event\//.test(s.u))) ko(`outlook : « ${c.title} » a une probabilité sans lien vers son marché`);
+  }
+}
 for (const a of out.actors || []) {
   for (const f of ["what", "why", "risk", "image"]) if (!a[f]) ko(`outlook : acteur « ${a.name} » sans « ${f} »`);
   if (!["satellite", "orbit", "racks", "cloud", "chip", "moon"].includes(a.icon)) ko(`outlook : acteur « ${a.name} » sans pictogramme valide`);

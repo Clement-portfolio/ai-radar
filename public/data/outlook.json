@@ -14,9 +14,20 @@
   {
    "date": "2026-11-17",
    "label": "17 nov. 2026",
+   "kind": "Résultats",
    "title": "Résultats de Nvidia (T3 de l'exercice 2027)",
    "detail": "Après la clôture américaine, appel à 17 h (New York). Prévision de la société : 108,0 Md$ de revenus (± 2 %), sans aucune vente de puces de calcul à la Chine. Consensus ≈ 109 Md$ (Visible Alpha, via S&P Global, 12 nov.).",
    "status": "Date confirmée par Nvidia le 28 oct. 2026",
+   "probs": [
+    {
+     "label": "Bénéfice par action supérieur à 2,53 $",
+     "p": 87.6,
+     "poll": {
+      "slug": "nvda-quarterly-earnings-nongaap-eps-11-17-2026-2pt53",
+      "match": "beat"
+     }
+    }
+   ],
    "sources": [
     {
      "t": "NVIDIA (communiqué du 28 oct. 2026)",
@@ -25,8 +36,129 @@
     {
      "t": "S&P Global (aperçu du 12 nov. 2026)",
      "u": "https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/11/nvidia-earnings-preview-q3-2027"
+    },
+    {
+     "t": "Polymarket (pari sur le bénéfice)",
+     "u": "https://polymarket.com/event/nvda-quarterly-earnings-nongaap-eps-11-17-2026-2pt53"
     }
-   ]
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2026-11-19",
+   "label": "19 nov. 2026",
+   "kind": "Introduction en Bourse",
+   "title": "Anthropic : premiers échanges au Nasdaq (« ANT »)",
+   "detail": "Prix fixé le 18 nov., premiers échanges le 19 nov. ; fourchette de 70 à 78 $ l'action, jusqu'à 64,4 Md$ levés.",
+   "status": "Calendrier de l'opération annoncé dans le dossier déposé à la SEC",
+   "probs": [
+    {
+     "label": "Cotée d'ici le 19 nov.",
+     "p": 97,
+     "poll": {
+      "slug": "anthropic-ipo-by",
+      "match": "by November 19, 2026"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Decrypt (10 nov. 2026)",
+     "u": "https://decrypt.co/382939/anthropic-sets-ipo-price-range-at-70-to-78-valuing-company-at-up-to-1-4-trillion"
+    },
+    {
+     "t": "Polymarket (pari sur la date)",
+     "u": "https://polymarket.com/event/anthropic-ipo-by"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2026-12-09",
+   "label": "9 déc. 2026",
+   "kind": "Fed",
+   "title": "Réunion de la Fed (FOMC) : 8–9 décembre",
+   "detail": "Taux actuel : 3,75–4,00 % (hausse de septembre, maintien le 28 oct.). Réunion avec nouvelles projections de la Fed. Autre mesure citée par la presse : environ 99 % de hausse selon CME FedWatch au 10 nov. (StockWireX).",
+   "status": "Date publiée par la Fed",
+   "probs": [
+    {
+     "label": "Hausse de 25 pb",
+     "p": 91.5,
+     "poll": {
+      "slug": "fed-decision-in-december-20260729232808632",
+      "match": "increase interest rates by 25 bps after"
+     }
+    },
+    {
+     "label": "Aucun changement",
+     "p": 3.1,
+     "poll": {
+      "slug": "fed-decision-in-december-20260729232808632",
+      "match": "no change in Fed interest rates after"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Calendrier officiel de la Fed",
+     "u": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+     "t": "Polymarket (marché sur la décision)",
+     "u": "https://polymarket.com/event/fed-decision-in-december-20260729232808632"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2026-12-31",
+   "label": "d'ici le 31 déc. 2026",
+   "kind": "Modèles",
+   "title": "Nouveau modèle phare d'OpenAI (GPT Astra 6.1 ou plus)",
+   "detail": "Date de sortie non annoncée par OpenAI : la probabilité est celle d'un pari sur une sortie avant fin 2026.",
+   "status": "Non annoncé par la société",
+   "probs": [
+    {
+     "label": "Sortie d'ici le 31 déc.",
+     "p": 97.2,
+     "poll": {
+      "slug": "gpt-astra-6pt1-released-byptptpt",
+      "match": "by December 31, 2026"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Polymarket (pari sur la sortie)",
+     "u": "https://polymarket.com/event/gpt-astra-6pt1-released-byptptpt"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2026-12-31",
+   "label": "d'ici le 31 déc. 2026",
+   "kind": "Modèles",
+   "title": "Nouveau Claude Opus (5.6 ou plus)",
+   "detail": "Date de sortie non annoncée par Anthropic : la probabilité est celle d'un pari sur une sortie avant fin 2026.",
+   "status": "Non annoncé par la société",
+   "probs": [
+    {
+     "label": "Sortie d'ici le 31 déc.",
+     "p": 69.5,
+     "poll": {
+      "slug": "next-claude-opus-released-byptptpt-20260923144500000",
+      "match": "by December 31, 2026"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Polymarket (pari sur la sortie)",
+     "u": "https://polymarket.com/event/next-claude-opus-released-byptptpt-20260923144500000"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
   },
   {
    "date": "2026-12-31",
@@ -39,15 +171,177 @@
      "t": "Euronews (6 oct. 2026)",
      "u": "https://www.euronews.com/2026/10/06/moonshot-ai-eyes-hong-kong-ipo-after-50-billion-valuation-as-deepseek-raises-capital"
     }
-   ]
+   ],
+   "kind": "Introduction en Bourse"
+  },
+  {
+   "date": "2027-01-27",
+   "label": "27 janv. 2027",
+   "kind": "Fed",
+   "title": "Réunion de la Fed (FOMC) : 26–27 janvier",
+   "detail": "Décision attendue le 27 janvier.",
+   "status": "Date publiée par la Fed",
+   "probs": [
+    {
+     "label": "Hausse de 25 pb",
+     "p": 61.5,
+     "poll": {
+      "slug": "fed-decision-in-january-20260729233815502",
+      "match": "increase interest rates by 25 bps after"
+     }
+    },
+    {
+     "label": "Aucun changement",
+     "p": 36.5,
+     "poll": {
+      "slug": "fed-decision-in-january-20260729233815502",
+      "match": "no change in Fed interest rates after"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Calendrier officiel de la Fed",
+     "u": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+     "t": "Polymarket (marché sur la décision)",
+     "u": "https://polymarket.com/event/fed-decision-in-january-20260729233815502"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2027-03-17",
+   "label": "17 mars 2027",
+   "kind": "Fed",
+   "title": "Réunion de la Fed (FOMC) : 16–17 mars",
+   "detail": "Réunion avec nouvelles projections de la Fed.",
+   "status": "Date publiée par la Fed",
+   "probs": [
+    {
+     "label": "Hausse de 25 pb",
+     "p": 57.5,
+     "poll": {
+      "slug": "fed-decision-in-march-2027",
+      "match": "increase interest rates by 25 bps after"
+     }
+    },
+    {
+     "label": "Aucun changement",
+     "p": 37,
+     "poll": {
+      "slug": "fed-decision-in-march-2027",
+      "match": "no change in Fed interest rates after"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Calendrier officiel de la Fed",
+     "u": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+     "t": "Polymarket (marché sur la décision)",
+     "u": "https://polymarket.com/event/fed-decision-in-march-2027"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2027-03-31",
+   "label": "d'ici le 31 mars 2027",
+   "kind": "Introduction en Bourse",
+   "title": "OpenAI : introduction en Bourse",
+   "detail": "Aucune date annoncée : la probabilité est celle d'un pari sur une cotation avant le 31 mars 2027.",
+   "status": "Non annoncé par la société",
+   "probs": [
+    {
+     "label": "Cotée d'ici le 31 mars",
+     "p": 22.5,
+     "poll": {
+      "slug": "openai-ipo-by",
+      "match": "by March 31 2027"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Polymarket (pari sur la date)",
+     "u": "https://polymarket.com/event/openai-ipo-by"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2027-03-31",
+   "label": "d'ici le 31 mars 2027",
+   "kind": "Chine",
+   "title": "DeepSeek inscrit sur la liste d'exportation américaine (Entity List)",
+   "detail": "Aucune décision annoncée : la probabilité est celle d'un pari sur une inscription avant le 31 mars 2027.",
+   "status": "Non annoncé par le gouvernement américain",
+   "probs": [
+    {
+     "label": "Inscrit d'ici le 31 mars",
+     "p": 35,
+     "poll": {
+      "slug": "deepseek-added-to-the-entity-list-by",
+      "match": "by March 31, 2027"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Polymarket (pari sur l'inscription)",
+     "u": "https://polymarket.com/event/deepseek-added-to-the-entity-list-by"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
+  },
+  {
+   "date": "2027-04-28",
+   "label": "28 avr. 2027",
+   "kind": "Fed",
+   "title": "Réunion de la Fed (FOMC) : 27–28 avril",
+   "detail": "Décision attendue le 28 avril.",
+   "status": "Date publiée par la Fed",
+   "probs": [
+    {
+     "label": "Hausse de 25 pb",
+     "p": 26.5,
+     "poll": {
+      "slug": "fed-decision-in-april-2027",
+      "match": "increase interest rates by 25 bps after"
+     }
+    },
+    {
+     "label": "Aucun changement",
+     "p": 59,
+     "poll": {
+      "slug": "fed-decision-in-april-2027",
+      "match": "no change in Fed interest rates after"
+     }
+    }
+   ],
+   "sources": [
+    {
+     "t": "Calendrier officiel de la Fed",
+     "u": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    },
+    {
+     "t": "Polymarket (marché sur la décision)",
+     "u": "https://polymarket.com/event/fed-decision-in-april-2027"
+    }
+   ],
+   "probs_at": "2026-11-17T09:56Z"
   }
  ],
- "catalysts_note": "Calendrier volontairement court : seules figurent les échéances dont une source donne la date. Les prochains résultats des géants et d'autres lancements seront ajoutés dès que leur date est publiée.",
+ "catalysts_note": "Probabilités = prix de paris sur Polymarket (argent réel), actualisés toutes les 3 heures : c'est l'avis moyen des parieurs, ni une prévision de notre part ni une certitude. Les dates des réunions de la Fed viennent de la Fed ; quand aucune date officielle n'existe, l'échéance est la date limite du pari. Sans marché sur un événement, aucune probabilité n'est affichée.",
  "actors": [
   {
    "name": "SpaceX / xAI",
    "tag": "Calcul en orbite",
-   "image": "spacex-xai",
+   "image": "spacex",
    "icon": "satellite",
    "website": "https://www.spacex.com",
    "what": "SpaceX a racheté xAI (annoncé le 2 févr. 2026) et veut lancer des satellites-datacenters : demande déposée auprès de la FCC.",
