@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-17T09:49:58.531Z",
- "model": "gemini-3.1-flash-lite",
+ "generated_at": "2026-11-17T10:03:07.346Z",
+ "model": "gemini-3.1-flash-lite-preview",
  "sig": [
   "4e379f6cb9d3+5bf4951adbe9+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3+ef6edd3b09bd",
-  "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
-  "1498609c0aea+58d8417fa030+5bf1e9fd711d+5d7763ae049a+6fd4401d69f5+772ccdf8e8c7+8fc39b6b9b40+c7e45fe092ad+f19c04e4b4ea",
+  "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+3bf1ef011275+4f24ccd44766+58d8417fa030+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
   "50ed425740ad+557fd01b66ab+8545e7ee31da+ea7bd8025515+f4fd0de1838a",
+  "09d1dd4a855f+15674a5384bf+15964ea6b308+1a9f8b445fb6+45cb1f953fc9+9f736924b3b9+ad0794c39984+ddfe3a9c1778+f55b32fce91c+f9feb5ec0c0b",
   "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d"
  ],
  "stories": [
@@ -18,15 +18,15 @@
    ],
    "head": "OpenAI lance un portefeuille numérique pour permettre aux agents IA d'effectuer des achats",
    "bullets": [
-    "OpenAI a introduit une fonction de portefeuille numérique permettant à ses agents IA d'effectuer des transactions et des achats pour le compte des utilisateurs, avec leur approbation.",
+    "OpenAI a introduit une fonction de portefeuille numérique permettant à ses agents IA d'effectuer des transactions et des achats pour le compte des utilisateurs, avec leur approbation préalable.",
     "Les développeurs utilisent déjà OpenAI Codex sur Amazon Bedrock, tandis que des solutions de refroidissement liquide sont développées pour gérer la densité thermique des centres de données.",
-    "Cela montre que l'IA évolue vers une autonomie accrue dans les tâches transactionnelles, transformant les agents en assistants capables d'interagir directement avec les systèmes de paiement."
+    "Cela montre que l'IA évolue vers une autonomie accrue dans les tâches transactionnelles, transformant les agents en assistants capables de gérer des budgets et des paiements réels."
    ],
    "head_en": "OpenAI launches digital wallet to allow AI agents to make purchases",
    "bullets_en": [
-    "OpenAI has introduced a digital wallet feature allowing its AI agents to perform transactions and purchases on behalf of users, with their approval.",
+    "OpenAI has introduced a digital wallet feature allowing its AI agents to perform transactions and purchases on behalf of users, with their prior approval.",
     "Developers are already using OpenAI Codex on Amazon Bedrock, while liquid cooling solutions are being developed to manage the thermal density of data centers.",
-    "This shows that AI is moving toward increased autonomy in transactional tasks, turning agents into assistants capable of interacting directly with payment systems."
+    "This shows that AI is moving toward increased autonomy in transactional tasks, turning agents into assistants capable of managing real budgets and payments."
    ],
    "ctx_ids": [
     "0566809c6575",
@@ -38,27 +38,79 @@
    "ids": [
     "0ecab592c5bf",
     "c014a9bc4460",
-    "ad6e35716fd3",
-    "5eaf9db99196"
+    "58d8417fa030",
+    "ad6e35716fd3"
    ],
-   "head": "Démission de Jensen Huang : Nvidia entame une période de transition à la tête de l'entreprise",
+   "head": "Le départ de Jensen Huang de Nvidia accentue les tensions technologiques avec la Chine",
    "bullets": [
-    "Nvidia a officialisé le départ de son PDG Jensen Huang, marquant le début d'une période de transition pour le géant des semi-conducteurs.",
-    "Le conseil d'administration avait précédemment étudié son départ suite à des scandales et des informations sur sa vie privée, envisageant des successeurs comme Ian Buck ou Colette Kress.",
-    "Cela pourrait fragiliser la chaîne d'approvisionnement mondiale en composants d'IA et accentuer les tensions technologiques entre les États-Unis et la Chine."
+    "Le départ du dirigeant de Nvidia coïncide avec le durcissement des règles américaines sur l'exportation de puces d'IA et le blocage de l'accès à distance pour la Chine.",
+    "Le département du Commerce a finalisé des règles restreignant l'accès à distance aux technologies d'IA, tandis que la succession de Jensen Huang est en cours d'examen.",
+    "Cela pourrait accélérer la volonté de la Chine d'atteindre une autonomie technologique totale en matière de semi-conducteurs face aux restrictions américaines."
    ],
-   "head_en": "Jensen Huang resigns: Nvidia begins a transition period for the company's leadership",
+   "head_en": "Jensen Huang's departure from Nvidia heightens tech tensions with China",
    "bullets_en": [
-    "Nvidia has made official the departure of its CEO Jensen Huang, marking the beginning of a transition period for the semiconductor giant.",
-    "The board of directors had previously studied his departure following scandals and reports about his private life, considering successors like Ian Buck or Colette Kress.",
-    "This could weaken the global AI component supply chain and heighten technological tensions between the United States and China."
+    "The departure of Nvidia's leader coincides with the tightening of US rules on AI chip exports and the blocking of remote access for China.",
+    "The Department of Commerce has finalized rules restricting remote access to AI technologies, while the succession of Jensen Huang is under review.",
+    "This could accelerate China's drive toward total technological autonomy in semiconductors in the face of US restrictions."
    ],
    "ctx_ids": [
-    "89f810b4a388",
-    "cd03d116301a",
-    "93a1be9c32d9"
+    "1c8e2c3c240d",
+    "93a1be9c32d9",
+    "dad468239d15"
    ],
    "ts": "2026-11-17T06:51:09.000Z"
+  },
+  {
+   "ids": [
+    "f4fd0de1838a",
+    "557fd01b66ab",
+    "50ed425740ad",
+    "ea7bd8025515"
+   ],
+   "head": "L'introduction en bourse d'Anthropic teste l'appétit des investisseurs pour l'IA",
+   "bullets": [
+    "L'entrée en bourse prévue d'Anthropic est perçue comme un test majeur pour le secteur de l'IA, alors que les besoins en financement pour les infrastructures atteignent des niveaux records.",
+    "Le conseil d'administration de Nvidia a envisagé de licencier Jensen Huang suite à des révélations sur sa vie privée et sa gouvernance, provoquant une chute du cours de l'action.",
+    "Cela montre que la viabilité financière des entreprises d'IA dépend désormais de leur capacité à lever des capitaux massifs pour soutenir des infrastructures de plus en plus coûteuses."
+   ],
+   "head_en": "Anthropic's IPO tests investor appetite for AI",
+   "bullets_en": [
+    "Anthropic's planned IPO is seen as a major test for the AI sector, as infrastructure funding needs reach record levels.",
+    "Nvidia's board considered firing Jensen Huang following revelations about his private life and governance, causing the stock price to fall.",
+    "This shows that the financial viability of AI companies now depends on their ability to raise massive capital to support increasingly expensive infrastructure."
+   ],
+   "ctx_ids": [
+    "cd03d116301a",
+    "93a1be9c32d9",
+    "3660858b9b56"
+   ],
+   "ts": "2026-11-17T07:29:46.000Z"
+  },
+  {
+   "ids": [
+    "1a9f8b445fb6",
+    "45cb1f953fc9",
+    "f55b32fce91c",
+    "09d1dd4a855f"
+   ],
+   "head": "Les États-Unis renforcent les contrôles sur les puces IA pour contrer les contournements",
+   "bullets": [
+    "Le gouvernement américain durcit les restrictions d'exportation de puces vers la Chine en ciblant des pays comme Singapour et la Malaisie pour empêcher les circuits détournés.",
+    "Singapour a été identifié comme une plaque tournante pour l'acheminement de puces vers la Chine, poussant le Congrès à exiger des mesures plus strictes de l'administration.",
+    "Cela montre que les autorités américaines cherchent à fermer toutes les portes dérobées logistiques pour maintenir leur avance technologique sur l'IA."
+   ],
+   "head_en": "US tightens AI chip controls to counter circumvention",
+   "bullets_en": [
+    "The US government is tightening chip export restrictions to China by targeting countries like Singapore and Malaysia to prevent diverted circuits.",
+    "Singapore was identified as a hub for shipping chips to China, pushing Congress to demand stricter measures from the administration.",
+    "This shows that US authorities are seeking to close all logistical backdoors to maintain their technological lead in AI."
+   ],
+   "ctx_ids": [
+    "732abd037152",
+    "ce333b7063cc",
+    "84b4b4ed2488"
+   ],
+   "ts": "2026-11-17T07:07:35.000Z"
   },
   {
    "ids": [
@@ -67,17 +119,17 @@
     "6e834fc4bc29",
     "06c70ce20939"
    ],
-   "head": "La consommation électrique des centres de données d'IA rivalise avec celle de pays entiers",
+   "head": "La consommation électrique des centres de données IA atteint des niveaux nationaux",
    "bullets": [
-    "Une étude révèle que les centres de données d'IA aux États-Unis consomment autant d'électricité que des États entiers ou des pays comme le Chili.",
-    "Les entreprises diversifient leurs stratégies d'approvisionnement énergétique face aux limites du réseau, tout en faisant face à des risques de sécurité physique comme les drones.",
-    "Cela montre que l'empreinte environnementale et la dépendance aux énergies fossiles deviennent des défis majeurs pour la croissance durable de l'infrastructure IA."
+    "Une étude révèle que les centres de données américains consomment autant d'électricité que des pays entiers, tout en restant fortement dépendants des énergies fossiles.",
+    "Les entreprises liées à l'IA concentrent une part croissante de la dette obligataire à long terme, tandis que les centres de données explorent de nouvelles stratégies d'approvisionnement.",
+    "Cela montre que le développement massif de l'IA pose un défi environnemental et énergétique majeur, forçant le secteur à repenser ses modèles de croissance."
    ],
-   "head_en": "AI data center electricity consumption rivals that of entire countries",
+   "head_en": "AI data center electricity consumption reaches national levels",
    "bullets_en": [
-    "A study reveals that AI data centers in the United States consume as much electricity as entire states or countries like Chile.",
-    "Companies are diversifying their energy supply strategies in the face of grid limitations, while also dealing with physical security risks such as drones.",
-    "This shows that the environmental footprint and reliance on fossil fuels are becoming major challenges for the sustainable growth of AI infrastructure."
+    "A study reveals that US data centers consume as much electricity as entire countries, while remaining heavily dependent on fossil fuels.",
+    "AI-related companies are concentrating a growing share of long-term bond debt, while data centers are exploring new supply strategies.",
+    "This shows that the massive development of AI poses a major environmental and energy challenge, forcing the sector to rethink its growth models."
    ],
    "ctx_ids": [
     "a8c68b33e1d6",
