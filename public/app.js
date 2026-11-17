@@ -152,17 +152,15 @@ function rMarket(){
   var rev=m.revenue.slice();
   var maxR=Math.max.apply(null,m.revenue.map(function(r){return r.num}));
   var rv=rev.length?rev.map(function(r){return'<div class="bar"><div class="nm">'+esc(r.name)+'</div><div class="track"><div class="fill'+(r.country==="CN"?' cn':'')+'" style="width:'+Math.max(2,r.num/maxR*100)+'%"></div></div><div class="val">'+esc(r.value)+' Md$</div><div class="nt">'+esc(r.note)+' · <a href="'+esc(link(r.url))+'" target="_blank" rel="noopener">'+esc(r.source)+'</a>, '+esc(r.as_of)+' · '+conf(r.confidence)+'</div></div>'}).join(""):'<div class="empty">Aucune donnée de revenus pour ce pays.</div>';
-  var act=m.actors.slice();
   var det='<div class="two"><div class="panel"><span class="kicker">Qui dépense</span><h3>Capex 2026, États-Unis</h3><div class="sub">Guidance annuelle, en milliards de dollars. Zone claire = fourchette.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Guidance</th><th>Détail</th></tr></thead><tbody>'+cu+'</tbody></table></div>'+
    '<div class="panel"><span class="kicker">Qui dépense</span><h3>Capex, Chine</h3><div class="sub">Montants en yuans, comparables au capex américain à un facteur de 5 à 7 près.</div><table class="table cx"><colgroup><col style="width:24%"><col style="width:26%"><col></colgroup><thead><tr><th>Société</th><th>Montant</th><th>Détail</th></tr></thead><tbody>'+cc+'</tbody></table></div></div>'+
    '<div class="two"><div class="panel"><span class="kicker">Qui gagne</span><h3>Revenus de l\'IA</h3><div class="sub">Run-rate annualisé, en milliards de dollars.</div>'+rv+'</div>'+
    '<div class="note"><b>À lire avant de comparer.</b> '+esc(m.caveat)+'</div></div>'+
-   secPanel()+'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui compte</span><h3 style="font-family:var(--serif);font-size:22px;margin:2px 0 6px">Principaux acteurs</h3>'+
-   (act.length?'<table class="table"><thead><tr><th>Acteur</th><th>Pays</th><th>Rôle</th><th>Repère</th></tr></thead><tbody>'+act.map(function(a){return'<tr><td>'+esc(a.name)+'</td><td>'+ctag(a.country)+'</td><td>'+esc(a.role)+'</td><td>'+esc(a.note)+' <a class="small" href="'+esc(link(a.u))+'" target="_blank" rel="noopener">'+esc(a.src)+'</a></td></tr>'}).join("")+'</tbody></table>':'<div class="empty">Aucun acteur pour ce filtre.</div>');
+   secPanel();
   el.innerHTML='<h2 class="sec">Marché</h2><p class="lede">Qui dépense, qui gagne de l\'argent, qui compte. Chiffres sourcés ; la date et la source figurent sous chaque donnée.</p>'+
    '<div class="tiles">'+m.tiles.map(function(t){return'<div class="tile"><div class="l">'+esc(t.label)+'</div><div class="v">'+esc(t.value)+'</div><div class="s">'+esc(t.sub)+'</div><div class="src"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></div></div>'}).join("")+'</div>'+
    sommaire()+etages()+
-   '<details class="details" id="m-details"><summary><span>Détails</span><em>Capex annoncé, revenus, dépôts SEC, principaux acteurs</em></summary>'+det+'</details>';
+   '<details class="details" id="m-details"><summary><span>Détails</span><em>Capex annoncé, revenus, dépôts SEC</em></summary>'+det+'</details>';
 }
 
 
@@ -201,7 +199,7 @@ var ETAGES=[
 ];
 function sommaire(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
-   '<li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC, principaux acteurs</span></a></li></ol></nav>';
+   '<li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
 }
 function capexPie(){
   var d=S.sec;if(!d||!d.companies)return null;
@@ -337,6 +335,10 @@ document.addEventListener("error",function(e){
   var ex=["jpg","jpeg","webp","png"],n=+im.getAttribute("data-n")+1;
   if(n<ex.length){im.setAttribute("data-n",n);im.src="img/actors/"+im.getAttribute("data-b")+"."+ex[n]}else im.remove();
 },true);
+function mainActorsHTML(){
+  var act=((S.market&&S.market.actors)||[]).slice();
+  return'<div class="sgroup">Principaux acteurs <em>qui compte aujourd\'hui</em></div>'+(act.length?'<table class="table"><thead><tr><th>Acteur</th><th>Pays</th><th>Rôle</th><th>Repère</th></tr></thead><tbody>'+act.map(function(a){return'<tr><td>'+esc(a.name)+'</td><td>'+ctag(a.country)+'</td><td>'+esc(a.role)+'</td><td>'+esc(a.note)+' <a class="small" href="'+esc(link(a.u))+'" target="_blank" rel="noopener">'+esc(a.src)+'</a></td></tr>'}).join("")+'</tbody></table>':'<div class="empty">Aucun acteur pour ce filtre.</div>');
+}
 function pctTxt(p){return p<1?"< 1 %":Math.round(p).toLocaleString(loc())+" %"}
 function timeline(cat,today){
   var t0=ms(today),t1=t0+183*86400000,span=t1-t0,rows=[],lanes=[],i;
@@ -362,8 +364,8 @@ function outlookHTML(){
   var today=new Date().toISOString().slice(0,10),h='';
   if(o.gw)h+='<div class="sgroup">Contrainte physique <em>l\'énergie, pas l\'argent</em></div><div class="cards3">'+statCard({title:o.gw.title,value:o.gw.value,sub:o.gw.sub,as_of:o.gw.as_of,source:o.gw.source,url:o.gw.url,confidence:"moyenne",caveat:o.gw.caveat})+'</div>';
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
-  if(cat.length)h+='<div class="sgroup">Calendrier des six prochains mois <em>probabilités des marchés, pas des prévisions</em></div>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p>';
-  h+='<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div>';
+  if(cat.length)h+='<details class="details sec2" id="m-cal"><summary><span>Calendrier des six prochains mois</span><em>événements datés, avec la probabilité de chacun</em></summary>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p></details>';
+  h+='<details class="details sec2" id="m-actors"><summary><span>Acteurs</span><em>principaux acteurs et six acteurs émergents</em></summary>'+mainActorsHTML()+'<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div></details>';
   var rk=(o.risks||[]).map(riskCard).join("");
   if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
   return h;
