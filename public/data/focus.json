@@ -1,56 +1,14 @@
 {
- "generated_at": "2026-11-17T13:42:55.241Z",
+ "generated_at": "2026-11-17T15:15:49.097Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "4e379f6cb9d3+5bf4951adbe9+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3+ef6edd3b09bd",
-  "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+3bf1ef011275+4f24ccd44766+58d8417fa030+5e4e9816b432+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
-  "04a5044fb261+2de58a421677+3a038bc09aff+50ed425740ad+6cfc658d4b6a+7e1b6ce0b47c",
-  "1aa355519c9f+24814f58a684+4d26e05d4a3f+4d2a127f1c18+5d7763ae049a+6fd4401d69f5+75da567d500e+772ccdf8e8c7+782240c4e790+8882bec2ef59+8bc723f2e27b+99adb1c1605d+99c93905584d+c7e45fe092ad+d392b636ea28+dad468239d15+f19c04e4b4ea",
-  "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d"
+  "19948b3510c3+21a4a1a0ce23+2a8f3e96bb72+97a96eda4701+cf6b82b3d889",
+  "1ca0178448c0+754462065a85+7b19db7f813e+838138796907+ad236726dba6+af3820b9acec+c0841d37a18b",
+  "1aa355519c9f+24814f58a684+4d2a127f1c18+5d7763ae049a+6fd4401d69f5+75da567d500e+772ccdf8e8c7+8882bec2ef59+8bc723f2e27b+99adb1c1605d+c7e45fe092ad+d392b636ea28+dad468239d15",
+  "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
+  "4e379f6cb9d3+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3+ef6edd3b09bd"
  ],
  "stories": [
-  {
-   "ids": [
-    "4e379f6cb9d3",
-    "ccff0c0dae36",
-    "5bf4951adbe9",
-    "ef6edd3b09bd"
-   ],
-   "head": "OpenAI lance un portefeuille numérique pour permettre aux agents IA de faire des achats",
-   "bullets": [
-    "OpenAI a introduit une fonction de portefeuille numérique permettant à ses agents d'effectuer des transactions pour le compte des utilisateurs, en s'associant avec American Express, Mastercard et Visa."
-   ],
-   "head_en": "OpenAI launches a digital wallet allowing AI agents to make purchases",
-   "bullets_en": [
-    "OpenAI introduced a digital wallet function allowing its agents to perform transactions on behalf of users, partnering with American Express, Mastercard, and Visa."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-17T09:15:18.000Z"
-  },
-  {
-   "ids": [
-    "2de58a421677",
-    "6cfc658d4b6a",
-    "50ed425740ad",
-    "04a5044fb261"
-   ],
-   "head": "Nvidia fait face à un test crucial après la démission de son dirigeant historique",
-   "bullets": [
-    "La capitalisation boursière de Nvidia est passée sous la barre des 4 000 milliards de dollars après la démission de son dirigeant Jensen Huang, remplacé par Colette Kress.",
-    "Le conseil d'administration de Nvidia se préparait à écarter son PDG en raison d'accusations de liaison et d'espionnage pour la Chine, tandis que Ian Buck et Colette Kress étaient pressentis pour sa succession."
-   ],
-   "head_en": "Nvidia faces a crucial test following the resignation of its historic leader",
-   "bullets_en": [
-    "Nvidia's market capitalization fell below the 4 trillion dollar mark following the resignation of its leader Jensen Huang, replaced by Colette Kress.",
-    "Nvidia's board of directors was preparing to oust its CEO due to accusations of an affair and espionage for China, while Ian Buck and Colette Kress were tipped as potential successors."
-   ],
-   "ctx_ids": [
-    "171cab1f3c00",
-    "93a1be9c32d9",
-    "a1fb0bd6b867"
-   ],
-   "ts": "2026-11-17T13:30:05.000Z"
-  },
   {
    "ids": [
     "75da567d500e",
@@ -58,36 +16,34 @@
     "d392b636ea28",
     "8bc723f2e27b"
    ],
-   "head": "Les États-Unis durcissent les restrictions sur l'exportation de puces d'IA vers l'Asie",
+   "head": "Les États-Unis durcissent les contrôles sur les puces d'IA pour contrer la Chine",
    "bullets": [
-    "Les autorités américaines exigent des licences d'exportation pour les puces d'IA destinées aux centres de données d'Asie du Sud-Est pour empêcher la Chine d'y accéder.",
-    "Washington étend ses contrôles à l'exportation pour bloquer l'accès à distance aux puces pour les entreprises chinoises louant de la puissance de calcul dans des pays tiers."
+    "Les autorités américaines exigent désormais des licences d'exportation pour les puces d'intelligence artificielle destinées à des centres de données en Asie du Sud-Est et au Brésil pour bloquer l'accès aux entreprises chinoises."
    ],
-   "head_en": "The US tightens restrictions on AI chip exports to Asia",
+   "head_en": "US tightens AI chip controls to counter China",
    "bullets_en": [
-    "US authorities are requiring export licenses for AI chips destined for data centers in Southeast Asia to prevent China from accessing them.",
-    "Washington is expanding its export controls to block remote access to chips for Chinese companies renting computing power in third countries."
+    "US authorities now require export licenses for artificial intelligence chips destined for data centers in Southeast Asia and Brazil to block access for Chinese companies."
    ],
    "ctx_ids": [],
    "ts": "2026-11-17T13:06:55.000Z"
   },
   {
    "ids": [
-    "f819d90d809d",
-    "b1da22f7bd68",
-    "6e834fc4bc29",
-    "4f1fe20754ae"
+    "4e379f6cb9d3",
+    "ccff0c0dae36",
+    "ef6edd3b09bd",
+    "d5c13ac00ff3"
    ],
-   "head": "Une étude révèle la consommation électrique massive des centres de données d'IA",
+   "head": "OpenAI lance ChatGPT Wallet pour permettre aux agents IA de payer",
    "bullets": [
-    "Plus de 400 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an, rivalisant avec la consommation de pays entiers."
+    "OpenAI introduit une fonction de portefeuille numérique s'associant à American Express, Mastercard et Visa pour permettre aux agents IA de réaliser des achats pour le compte des abonnés ChatGPT Pro."
    ],
-   "head_en": "A study reveals the massive power consumption of AI data centers",
+   "head_en": "OpenAI launches ChatGPT Wallet to allow AI agents to pay",
    "bullets_en": [
-    "Over 400 hyperscale data centers in the United States consumed 82 terawatt-hours of electricity in a year, rivaling the consumption of entire countries."
+    "OpenAI is introducing a digital wallet feature partnering with American Express, Mastercard, and Visa to allow AI agents to make purchases on behalf of ChatGPT Pro subscribers."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-17T10:30:00.000Z"
+   "ts": "2026-11-17T09:15:18.000Z"
   }
  ]
 }
