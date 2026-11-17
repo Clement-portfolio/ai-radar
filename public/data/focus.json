@@ -1,6 +1,115 @@
 {
- "generated_at": null,
- "model": null,
- "sig": [],
- "stories": []
+ "generated_at": "2026-11-17T06:41:49.335Z",
+ "model": "gemini-3.5-flash-lite",
+ "sig": [
+  "0a3a3741b20c+0ecab592c5bf+2952b40b3590+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
+  "066002f02e4c+1908a854fd26+1aa355519c9f+1d568fb033a7+3ef484d91e4b+4d2a127f1c18+5bf1e9fd711d+5d7763ae049a+7399e7157c4f+772ccdf8e8c7+8882bec2ef59+99adb1c1605d+a2bc04fede09+b89b121d0786+d392b636ea28+f45fe323bc06+f55b32fce91c",
+  "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
+  "1a1f36cb24e7+25e84a67aa9e+2722c4b91e77+2a0155947f7e+305b612c5495+3725c536bfca+373dd286dbb0+4e124614b29a+6db207818073+6f946b2e553d+770de7745f3f+84958f8eb2bd+8765697df349+89f810b4a388+90eda980a32c+9f598bff8747+a1fb0bd6b867+b91248042740+bc2a54375cda+c24f64cfec57+ca1899ca1680+cd03d116301a+d3d3421ae28d+d4437259b1db+df9eb8397668+eca07e82a29d+ee129214e4fa",
+  "4e379f6cb9d3+5bf4951adbe9+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3"
+ ],
+ "stories": [
+  {
+   "ids": [
+    "0ecab592c5bf",
+    "c014a9bc4460",
+    "ad6e35716fd3",
+    "5eaf9db99196"
+   ],
+   "head": "Départ de Jensen Huang de Nvidia et tensions technologiques",
+   "bullets": [
+    "Le départ de Jensen Huang de Nvidia accélère la fracture technologique entre les États-Unis et la Chine, tandis que Washington finalise de nouvelles règles d'exportation.",
+    "Le conseil d'administration de Nvidia envisageait de limoger son PDG après des informations sur une seconde relation inappropriée et des enquêtes du FBI.",
+    "Cette situation pourrait profondément bouleverser la chaîne d'approvisionnement mondiale des composants d'intelligence artificielle."
+   ],
+   "head_en": "Departure of Jensen Huang from Nvidia and technological tensions",
+   "bullets_en": [
+    "Jensen Huang's departure from Nvidia accelerates the technological fracture between the US and China, while Washington finalizes new export rules.",
+    "Nvidia's board considered firing its CEO following reports of a second inappropriate relationship and FBI investigations.",
+    "This situation could profoundly disrupt the global supply chain for artificial intelligence components."
+   ],
+   "ctx_ids": [
+    "cd03d116301a",
+    "eca07e82a29d",
+    "93a1be9c32d9"
+   ],
+   "ts": "2026-11-17T01:17:25.000Z"
+  },
+  {
+   "ids": [
+    "f819d90d809d",
+    "b1da22f7bd68",
+    "6e834fc4bc29",
+    "06c70ce20939"
+   ],
+   "head": "Consommation énergétique record des centres de données d'IA",
+   "bullets": [
+    "Les centres de données d'IA aux États-Unis consomment désormais autant d'électricité que des pays entiers, reposant encore largement sur les énergies fossiles.",
+    "Face aux limites du réseau électrique, les centres de données diversifient leurs stratégies d'approvisionnement énergétique pour soutenir leur croissance.",
+    "Cela montre que la transition énergétique de l'industrie technologique reste un défi majeur face à l'essor des infrastructures d'IA."
+   ],
+   "head_en": "Record energy consumption of AI data centers",
+   "bullets_en": [
+    "AI data centers in the US now consume as much electricity as entire countries, still relying heavily on fossil fuels.",
+    "Facing power grid limits, data centers are diversifying their energy sourcing strategies to support growth.",
+    "This shows that the tech industry's energy transition remains a major challenge amid the rise of AI infrastructure."
+   ],
+   "ctx_ids": [
+    "a9b5f630fc97",
+    "a8c68b33e1d6",
+    "c9160498e0d4"
+   ],
+   "ts": "2026-11-16T20:27:58.000Z"
+  },
+  {
+   "ids": [
+    "c24f64cfec57",
+    "ca1899ca1680",
+    "770de7745f3f",
+    "9f598bff8747"
+   ],
+   "head": "Incertitudes autour de la direction de Nvidia après un scandale",
+   "bullets": [
+    "Jensen Huang a démissionné de ses fonctions chez Nvidia et Colette Kress assure l'intérim, tandis que des investisseurs et alliés tentent d'organiser son retour.",
+    "Des autorités américaines ont accusé une ressortissante chinoise d'être un agent du ministère de la Sécurité d'État dans le cadre de cette affaire.",
+    "Cela laisse penser que la gouvernance de l'entreprise fait face à des turbulences internes majeures qui pourraient affecter sa stratégie."
+   ],
+   "head_en": "Uncertainties surrounding Nvidia's leadership after a scandal",
+   "bullets_en": [
+    "Jensen Huang has resigned from his roles at Nvidia with Colette Kress serving as interim, while investors and allies seek his return.",
+    "US authorities accused a Chinese national of being an agent of the Ministry of State Security in connection with this matter.",
+    "This suggests the company's governance is facing major internal turbulence that could affect its strategy."
+   ],
+   "ctx_ids": [
+    "3ab674d00e1b",
+    "96444feb70c6"
+   ],
+   "ts": "2026-11-16T18:43:35.000Z"
+  },
+  {
+   "ids": [
+    "4e379f6cb9d3",
+    "ccff0c0dae36",
+    "5bf4951adbe9",
+    "d5c13ac00ff3"
+   ],
+   "head": "OpenAI lance un portefeuille numérique pour ses agents d'IA",
+   "bullets": [
+    "OpenAI introduit le portefeuille ChatGPT, permettant à ses agents d'effectuer des achats et des paiements en ligne pour le compte des utilisateurs.",
+    "OpenAI a également déployé des outils pour les développeurs utilisant des infrastructures cloud partenaires.",
+    "Cela pourrait transformer les assistants conversationnels en véritables acteurs économiques capables d'initier des transactions marchandes."
+   ],
+   "head_en": "OpenAI launches a digital wallet for its AI agents",
+   "bullets_en": [
+    "OpenAI is introducing the ChatGPT wallet, allowing its agents to make online purchases and payments on behalf of users.",
+    "OpenAI has also deployed tools for developers using partner cloud infrastructures.",
+    "This could transform conversational assistants into genuine economic actors capable of initiating commercial transactions."
+   ],
+   "ctx_ids": [
+    "0566809c6575",
+    "833a92501626"
+   ],
+   "ts": "2026-11-15T14:56:00.000Z"
+  }
+ ]
 }
