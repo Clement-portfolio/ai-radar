@@ -1,61 +1,6 @@
 {
- "generated_at": "2026-11-17T03:59:27.841Z",
- "model": "gemini-3.5-flash-lite",
- "picks": [
-  "e9ccbe633c8a",
-  "8fc39b6b9b40",
-  "0ecab592c5bf",
-  "b1da22f7bd68",
-  "6e3dfd038e5d"
- ],
- "items": [
-  {
-   "id": "e9ccbe633c8a",
-   "why": "La Chine contourne les limites imposées sur les puces en utilisant des intelligences artificielles américaines pour développer ses propres outils.",
-   "context": "Le Congrès américain et le gouvernement réclament des contrôles renforcés ainsi que des restrictions plus strictes sur l'exportation de puces d'intelligence artificielle vers la Chine.",
-   "ctx_ids": [
-    "15674a5384bf",
-    "17fb72c9f3b7",
-    "f45fe323bc06"
-   ]
-  },
-  {
-   "id": "8fc39b6b9b40",
-   "why": "Les autorités américaines bloquent l'accès informatique à distance pour empêcher le contournement des règles sur les puces d'intelligence artificielle.",
-   "context": "Les États-Unis ont limité l'accès à distance aux puces avancées et exigé des licences pour bloquer l'accès à la puissance de calcul pour la Chine.",
-   "ctx_ids": [
-    "b89b121d0786",
-    "7399e7157c4f",
-    "772ccdf8e8c7",
-    "6fd4401d69f5"
-   ]
-  },
-  {
-   "id": "0ecab592c5bf",
-   "why": "Le changement à la tête de Nvidia accentue la fracture technologique et pousse la Chine vers l'autonomie en matière de composants.",
-   "context": "Nvidia a officialisé le départ de son dirigeant et une crise a débuté, impactant la chaîne d'approvisionnement des composants en Chine et entraînant des mesures américaines.",
-   "ctx_ids": [
-    "b8785a000ca8",
-    "5eaf9db99196",
-    "ad6e35716fd3",
-    "5bf1e9fd711d"
-   ]
-  },
-  {
-   "id": "b1da22f7bd68",
-   "why": "La forte consommation électrique des centres de données d'intelligence artificielle pose un défi énergétique majeur pour les infrastructures.",
-   "context": "",
-   "ctx_ids": []
-  },
-  {
-   "id": "6e3dfd038e5d",
-   "why": "Le parcours de l'ancien dirigeant de Nvidia connaît de nouveaux rebondissements avec d'éventuelles tractations pour reprendre la tête de l'entreprise.",
-   "context": "Le cofondateur et dirigeant de Nvidia a démissionné de ses fonctions à la suite de rapports concernant des relations extra-conjugales.",
-   "ctx_ids": [
-    "90eda980a32c",
-    "bb998c7e0633",
-    "7aaeb16f016b"
-   ]
-  }
- ]
+ "generated_at": null,
+ "model": null,
+ "sig": [],
+ "stories": []
 }
