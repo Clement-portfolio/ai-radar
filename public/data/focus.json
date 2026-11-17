@@ -1,39 +1,39 @@
 {
- "generated_at": "2026-11-17T06:41:49.335Z",
- "model": "gemini-3.5-flash-lite",
+ "generated_at": "2026-11-17T07:06:26.603Z",
+ "model": "gemini-3.1-flash-lite",
  "sig": [
-  "0a3a3741b20c+0ecab592c5bf+2952b40b3590+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
+  "0a3a3741b20c+0ecab592c5bf+28ee4003d96e+2952b40b3590+3bf1ef011275+4f24ccd44766+5eaf9db99196+812c54fee2cd+ad6e35716fd3+b8785a000ca8+c014a9bc4460",
+  "0dd20f185f4b+57145798feaa+5738a0773dec+7eb0d63319ac+893cad2204ae+bfccb2d38562+c85339f01fea",
   "066002f02e4c+1908a854fd26+1aa355519c9f+1d568fb033a7+3ef484d91e4b+4d2a127f1c18+5bf1e9fd711d+5d7763ae049a+7399e7157c4f+772ccdf8e8c7+8882bec2ef59+99adb1c1605d+a2bc04fede09+b89b121d0786+d392b636ea28+f45fe323bc06+f55b32fce91c",
   "06c70ce20939+2745e145bb51+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
-  "1a1f36cb24e7+25e84a67aa9e+2722c4b91e77+2a0155947f7e+305b612c5495+3725c536bfca+373dd286dbb0+4e124614b29a+6db207818073+6f946b2e553d+770de7745f3f+84958f8eb2bd+8765697df349+89f810b4a388+90eda980a32c+9f598bff8747+a1fb0bd6b867+b91248042740+bc2a54375cda+c24f64cfec57+ca1899ca1680+cd03d116301a+d3d3421ae28d+d4437259b1db+df9eb8397668+eca07e82a29d+ee129214e4fa",
-  "4e379f6cb9d3+5bf4951adbe9+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3"
+  "01de5d683d52+3a6a7c7107f8+6e8e373b5927+7aaeb16f016b+7b3d614d203e+9696674be12b+96ec9ffb9098+aff4b2c65530+dce5e82d2a55+fa49ced6fa8d"
  ],
  "stories": [
   {
    "ids": [
-    "0ecab592c5bf",
-    "c014a9bc4460",
-    "ad6e35716fd3",
-    "5eaf9db99196"
+    "c85339f01fea",
+    "0dd20f185f4b",
+    "5738a0773dec",
+    "7eb0d63319ac"
    ],
-   "head": "Départ de Jensen Huang de Nvidia et tensions technologiques",
+   "head": "La Chine investit massivement dans des datacenters IA malgré les restrictions américaines",
    "bullets": [
-    "Le départ de Jensen Huang de Nvidia accélère la fracture technologique entre les États-Unis et la Chine, tandis que Washington finalise de nouvelles règles d'exportation.",
-    "Le conseil d'administration de Nvidia envisageait de limoger son PDG après des informations sur une seconde relation inappropriée et des enquêtes du FBI.",
-    "Cette situation pourrait profondément bouleverser la chaîne d'approvisionnement mondiale des composants d'intelligence artificielle."
+    "La Chine déploie plus de 3 milliards de dollars dans des centres de données utilisant des puces Nvidia, tandis que les géants du cloud multiplient les investissements dans ces infrastructures.",
+    "Les investisseurs stratégiques dans l'IA sont souvent aussi des partenaires commerciaux, et des projets de campus géants de 900 MW sont envisagés aux États-Unis pour soutenir la demande.",
+    "Ces investissements massifs montrent que la demande en puissance de calcul reste prioritaire, malgré les risques géopolitiques et les incertitudes pesant sur les entreprises du secteur."
    ],
-   "head_en": "Departure of Jensen Huang from Nvidia and technological tensions",
+   "head_en": "China invests heavily in AI datacenters despite US restrictions",
    "bullets_en": [
-    "Jensen Huang's departure from Nvidia accelerates the technological fracture between the US and China, while Washington finalizes new export rules.",
-    "Nvidia's board considered firing its CEO following reports of a second inappropriate relationship and FBI investigations.",
-    "This situation could profoundly disrupt the global supply chain for artificial intelligence components."
+    "China is deploying over 3 billion dollars in data centers using Nvidia chips, while cloud giants are increasing investments in these infrastructures.",
+    "Strategic AI investors are often also commercial partners, and giant 900 MW campus projects are being considered in the US to support demand.",
+    "These massive investments show that the demand for computing power remains a priority, despite geopolitical risks and uncertainties weighing on sector companies."
    ],
    "ctx_ids": [
-    "cd03d116301a",
-    "eca07e82a29d",
-    "93a1be9c32d9"
+    "11523406c56e",
+    "989875c353fb",
+    "1ff6cd9f9cb3"
    ],
-   "ts": "2026-11-17T01:17:25.000Z"
+   "ts": "2026-11-17T05:28:00.000Z"
   },
   {
    "ids": [
@@ -42,17 +42,17 @@
     "6e834fc4bc29",
     "06c70ce20939"
    ],
-   "head": "Consommation énergétique record des centres de données d'IA",
+   "head": "La consommation électrique des datacenters IA atteint des niveaux records",
    "bullets": [
-    "Les centres de données d'IA aux États-Unis consomment désormais autant d'électricité que des pays entiers, reposant encore largement sur les énergies fossiles.",
-    "Face aux limites du réseau électrique, les centres de données diversifient leurs stratégies d'approvisionnement énergétique pour soutenir leur croissance.",
-    "Cela montre que la transition énergétique de l'industrie technologique reste un défi majeur face à l'essor des infrastructures d'IA."
+    "Les centres de données américains consomment désormais autant d'électricité que des pays entiers comme le Chili, avec une dépendance persistante aux énergies fossiles.",
+    "Les emprunts liés à l'IA représentent près de la moitié des émissions obligataires à long terme aux États-Unis, poussant les entreprises à diversifier leurs sources d'énergie.",
+    "Cela montre que l'expansion rapide de l'IA pose un défi environnemental et énergétique majeur, forçant les acteurs du secteur à repenser leurs modèles d'approvisionnement."
    ],
-   "head_en": "Record energy consumption of AI data centers",
+   "head_en": "AI datacenter electricity consumption reaches record levels",
    "bullets_en": [
-    "AI data centers in the US now consume as much electricity as entire countries, still relying heavily on fossil fuels.",
-    "Facing power grid limits, data centers are diversifying their energy sourcing strategies to support growth.",
-    "This shows that the tech industry's energy transition remains a major challenge amid the rise of AI infrastructure."
+    "US data centers now consume as much electricity as entire countries like Chile, with a persistent reliance on fossil fuels.",
+    "AI-related borrowing accounts for nearly half of long-term corporate bond issuance in the US, pushing companies to diversify their energy sources.",
+    "This shows that the rapid expansion of AI poses a major environmental and energy challenge, forcing industry players to rethink their supply models."
    ],
    "ctx_ids": [
     "a9b5f630fc97",
@@ -63,53 +63,29 @@
   },
   {
    "ids": [
-    "c24f64cfec57",
-    "ca1899ca1680",
-    "770de7745f3f",
-    "9f598bff8747"
+    "96ec9ffb9098",
+    "01de5d683d52",
+    "7aaeb16f016b",
+    "7b3d614d203e"
    ],
-   "head": "Incertitudes autour de la direction de Nvidia après un scandale",
+   "head": "Incertitudes chez Nvidia après le départ brutal de Jensen Huang",
    "bullets": [
-    "Jensen Huang a démissionné de ses fonctions chez Nvidia et Colette Kress assure l'intérim, tandis que des investisseurs et alliés tentent d'organiser son retour.",
-    "Des autorités américaines ont accusé une ressortissante chinoise d'être un agent du ministère de la Sécurité d'État dans le cadre de cette affaire.",
-    "Cela laisse penser que la gouvernance de l'entreprise fait face à des turbulences internes majeures qui pourraient affecter sa stratégie."
+    "Le départ de Jensen Huang, sur fond d'enquêtes et de rumeurs, laisse Nvidia sans successeur clair, alors que Donald Trump a suggéré le nom de Tim Cook pour reprendre le flambeau.",
+    "Le conseil d'administration avait envisagé le licenciement du PDG suite à des informations sur des relations inappropriées, provoquant des réunions d'urgence et des spéculations sur sa succession.",
+    "Cette crise de gouvernance pourrait déstabiliser la stratégie d'infrastructure de l'entreprise et impacter durablement ses partenaires internationaux."
    ],
-   "head_en": "Uncertainties surrounding Nvidia's leadership after a scandal",
+   "head_en": "Uncertainties at Nvidia following the abrupt departure of Jensen Huang",
    "bullets_en": [
-    "Jensen Huang has resigned from his roles at Nvidia with Colette Kress serving as interim, while investors and allies seek his return.",
-    "US authorities accused a Chinese national of being an agent of the Ministry of State Security in connection with this matter.",
-    "This suggests the company's governance is facing major internal turbulence that could affect its strategy."
+    "The departure of Jensen Huang, amid investigations and rumors, leaves Nvidia without a clear successor, while Donald Trump has suggested Tim Cook to take over.",
+    "The board had considered firing the CEO following reports of inappropriate relationships, triggering emergency meetings and speculation about his successor.",
+    "This governance crisis could destabilize the company's infrastructure strategy and have a lasting impact on its international partners."
    ],
    "ctx_ids": [
-    "3ab674d00e1b",
-    "96444feb70c6"
+    "cd03d116301a",
+    "eca07e82a29d",
+    "93a1be9c32d9"
    ],
-   "ts": "2026-11-16T18:43:35.000Z"
-  },
-  {
-   "ids": [
-    "4e379f6cb9d3",
-    "ccff0c0dae36",
-    "5bf4951adbe9",
-    "d5c13ac00ff3"
-   ],
-   "head": "OpenAI lance un portefeuille numérique pour ses agents d'IA",
-   "bullets": [
-    "OpenAI introduit le portefeuille ChatGPT, permettant à ses agents d'effectuer des achats et des paiements en ligne pour le compte des utilisateurs.",
-    "OpenAI a également déployé des outils pour les développeurs utilisant des infrastructures cloud partenaires.",
-    "Cela pourrait transformer les assistants conversationnels en véritables acteurs économiques capables d'initier des transactions marchandes."
-   ],
-   "head_en": "OpenAI launches a digital wallet for its AI agents",
-   "bullets_en": [
-    "OpenAI is introducing the ChatGPT wallet, allowing its agents to make online purchases and payments on behalf of users.",
-    "OpenAI has also deployed tools for developers using partner cloud infrastructures.",
-    "This could transform conversational assistants into genuine economic actors capable of initiating commercial transactions."
-   ],
-   "ctx_ids": [
-    "0566809c6575",
-    "833a92501626"
-   ],
-   "ts": "2026-11-15T14:56:00.000Z"
+   "ts": "2026-11-16T19:05:15.000Z"
   }
  ]
 }
