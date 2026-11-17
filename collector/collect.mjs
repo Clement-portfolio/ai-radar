@@ -27,6 +27,9 @@ const AI_CJK = /人工智能|人工智慧|大模型|大語言模型|算力|芯�
 const hostOf = (u) => { try { return new URL(u).hostname.toLowerCase().replace(/^www\./, ""); } catch { return ""; } };
 const domainIn = (host, list) => !!host && list.some((d) => host === d || host.endsWith("." + d));
 const DISCOVERY = new Set(["googlenews", "gdelt", "newsdata", "hn"]);
+const OUTLETS = { "reuters.com": "Reuters", "ft.com": "Financial Times", "nytimes.com": "The New York Times", "wsj.com": "WSJ", "bloomberg.com": "Bloomberg", "businessinsider.com": "Business Insider", "fortune.com": "Fortune", "tomshardware.com": "Tom's Hardware", "developer.nvidia.com": "NVIDIA blog", "nvidianews.nvidia.com": "NVIDIA", "theguardian.com": "The Guardian", "npr.org": "NPR", "wired.com": "Wired", "blog.google": "Google blog", "nbcnews.com": "NBC News", "cbsnews.com": "CBS News", "bbc.co.uk": "BBC", "bbc.com": "BBC", "cnn.com": "CNN", "theverge.com": "The Verge", "arstechnica.com": "Ars Technica", "techcrunch.com": "TechCrunch", "cnbc.com": "CNBC", "washingtonpost.com": "The Washington Post" };
+// Nom du média d'origine à partir de son domaine (Hacker News n'est qu'un canal de découverte, jamais une source affichée).
+export const outletName = (host) => { const h = String(host || "").toLowerCase().replace(/^www\./, ""); const k = Object.keys(OUTLETS).find((d) => h === d || h.endsWith("." + d)); if (k) return OUTLETS[k]; const parts = h.split("."); const base = parts.length > 2 && parts[parts.length - 2].length <= 3 ? parts[parts.length - 3] : parts[parts.length - 2]; return base ? base.charAt(0).toUpperCase() + base.slice(1) : "Web"; };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const sha = (s) => crypto.createHash("sha1").update(s).digest("hex").slice(0, 12);
@@ -198,7 +201,7 @@ async function collectAll(cfg, env, http, now, log) {
       try {
         const u = `https://hn.algolia.com/api/v1/search_by_date?query=${encodeURIComponent(q)}&tags=story&numericFilters=${encodeURIComponent(`points>${cfg.hackernews.minPoints},created_at_i>${since}`)}&hitsPerPage=${cfg.hackernews.perQuery}`;
         const j = await http(u, { json: true });
-        for (const h of j.hits || []) cands.push({ url: h.url || `https://news.ycombinator.com/item?id=${h.objectID}`, title: h.title, snippet: `${h.points} points sur Hacker News`, date: h.created_at, source: "Hacker News", tier: "press", via: "hn", domain: hostOf(h.url) });
+        for (const h of j.hits || []) if (h.url) cands.push({ url: h.url, title: h.title, snippet: `${h.points} points sur Hacker News`, date: h.created_at, source: outletName(hostOf(h.url)), tier: "press", via: "hn", domain: hostOf(h.url) });
         add(name, "hn", true, (j.hits || []).length);
       } catch (e) { add(name, "hn", false, 0, e); }
     }
