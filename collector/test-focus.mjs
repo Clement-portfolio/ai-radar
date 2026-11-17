@@ -41,24 +41,46 @@ assert.deepEqual(relatedFor(st.find((s) => s.lead.id === "b"), items, now), [], 
 // validation
 const arts = rubin.items.map((a, m) => ({ a: m + 1, title: a.title, summary: a.summary }));
 const inputs = [{ i: 1, articles: arts, background: [{ j: 1, title: items[4].title, summary: items[4].summary }, { j: 2, title: items[3].title, summary: items[3].summary }] }];
-const T = { i: 1, head: "Nvidia livre Rubin à ses clients cloud", b1: "La puce est 3 fois plus rapide.", b2: "Rubin devait succéder à Blackwell.", b3: "Cela montre que le calendrier est tenu.", ctx: [2], head_en: "Nvidia ships Rubin to cloud customers", b1_en: "The chip is 3 times faster.", b2_en: "Rubin was meant to succeed Blackwell.", b3_en: "This shows the schedule is on track." };
+const T = { i: 1, head: "Nvidia livre Rubin à ses clients cloud", b1: "La puce est 3 fois plus rapide.", b2: "Rubin devait succéder à Blackwell.", b3: "Le calendrier de Rubin est tenu malgré une puce 3 fois plus rapide.", ctx: [2], head_en: "Nvidia ships Rubin to cloud customers", b1_en: "The chip is 3 times faster.", b2_en: "Rubin was meant to succeed Blackwell.", b3_en: "Rubin is on schedule despite a chip 3 times faster." };
 const good = validateStories([T], inputs);
 assert.equal(good[0].bullets.length, 3); assert.equal(good[0].bullets_en.length, 3); assert.deepEqual(good[0].ctx, [2]);
 assert.equal(validateStories([{ ...T, b1: "Gain de 777 % attendu." }], inputs), null, "nombre inventé : histoire rejetée");
 assert.equal(validateStories([{ ...T, b3: "Trois fois plus rapide." }], inputs), null, "nombre en toutes lettres : rejeté");
-assert.equal(validateStories([{ ...T, b2: "" }], inputs), null, "une puce vide : rejeté");
+assert.equal(validateStories([{ ...T, b1: "" }], inputs), null, "première puce vide : rejeté");
 assert.equal(validateStories([{ ...T, head: "x".repeat(200) }], inputs), null, "titre trop long : rejeté");
 const badEn = validateStories([{ ...T, b1_en: "A gain of 777% expected." }], inputs);
 assert.equal(badEn[0].bullets_en, null, "anglais avec chiffre inventé : retiré, le français reste");
 assert.equal(validateStories([{ ...T, b1: "川普訪華" }], inputs), null, "écriture non latine : rejeté");
 assert.deepEqual(validateStories([{ ...T, ctx: [9] }], inputs)[0].ctx, [], "source de contexte inconnue : ignorée");
 
+// puces facultatives et formules creuses : b3 creux ou vide retiré, b2 vide retiré, b1 creux rejeté
+const f1 = validateStories([{ ...T, b3: "Cela veut dire que le calendrier est tenu." }], inputs);
+assert.equal(f1[0].bullets.length, 2, "« Cela veut dire » : puce retirée");
+assert.equal(f1[0].bullets_en.length, 2, "l'anglais suit le français");
+for (const filler of ["Cela signifie que tout va bien.", "Cela montre que le calendrier est tenu.", "Cela pourrait compter.", "Autrement dit, c'est tenu.", "En clair, Rubin arrive.", "Concrètement, rien ne change.", "Ça veut dire que Rubin arrive."]) assert.equal(validateStories([{ ...T, b3: filler }], inputs)[0].bullets.length, 2, "formule creuse retirée : " + filler);
+assert.equal(validateStories([{ ...T, b3: "" , b3_en: "" }], inputs)[0].bullets.length, 2, "pas d'analyse : pas de puce");
+assert.equal(validateStories([{ ...T, b2: "", b2_en: "", ctx: [2] }], inputs)[0].bullets.length, 2, "pas de second fait : pas de puce");
+assert.deepEqual(validateStories([{ ...T, b2: "", b2_en: "", ctx: [2] }], inputs)[0].ctx, [], "sans puce de contexte, pas de source de contexte");
+assert.equal(validateStories([{ ...T, b1: "Cela veut dire que Rubin arrive." }], inputs), null, "première puce creuse : histoire rejetée");
+assert.equal(validateStories([{ ...T, b3_en: "This means that the schedule holds." }], inputs)[0].bullets.length, 2, "anglais creux : puce retirée des deux langues");
+
+// regroupement : deux sujets sans rapport ne sont jamais réunis, même avec quelques mots communs
+const mix = [
+  mk("w1", 2, "OpenAI lance un portefeuille numérique pour les agents IA des centres de données", "OpenAI et ses agents.", { category: "modeles", layer: "Applications" }),
+  mk("w2", 3, "Le portefeuille numérique d'OpenAI permet aux agents IA de payer", "Agents IA et paiements.", { category: "modeles", layer: "Applications" }),
+  mk("l1", 4, "Le refroidissement liquide direct gagne les centres de données IA haute densité", "Refroidissement des centres de données IA.", { category: "energie", layer: "Datacenters" }),
+  mk("l2", 5, "Refroidissement liquide : les centres de données IA haute densité l'adoptent", "Refroidissement liquide direct.", { category: "energie", layer: "Datacenters" }),
+];
+const stm = pickStories(mix, now, 5);
+assert.equal(stm.length, 2, "deux sujets distincts");
+assert.ok(stm.every((s) => s.items.every((a) => a.category === s.lead.category)), "aucune histoire ne mélange deux catégories");
+
 // génération, conservation, régénération
 let calls = 0;
-const gen = (inp) => { calls++; return inp.map((x) => ({ i: x.i, head: "Titre " + "ABCDEFGH"[x.i], b1: "Détail.", b2: "Contexte sans annonce.", b3: "Cela pourrait compter.", ctx: x.background.length ? [1] : [], head_en: "Title " + "ABCDEFGH"[x.i], b1_en: "Detail.", b2_en: "Context.", b3_en: "It could matter." })); };
+const gen = (inp) => { calls++; return inp.map((x) => ({ i: x.i, head: "Titre " + "ABCDEFGH"[x.i], b1: "Détail.", b2: "Contexte sans annonce.", b3: "Analyse tirée des articles.", ctx: x.background.length ? [1] : [], head_en: "Title " + "ABCDEFGH"[x.i], b1_en: "Detail.", b2_en: "Context.", b3_en: "It could matter." })); };
 let r1 = await makeFocus({ items, now, prev: null, generate: gen, modelName: () => "m" });
 assert.equal(r1.regenerated, true); assert.equal(calls, 1); assert.equal(r1.doc.stories.length, 5);
-assert.ok(r1.doc.stories.every((s) => s.ids.length >= 1 && s.bullets.length === 3 && s.bullets_en.length === 3 && s.ts));
+assert.ok(r1.doc.stories.every((s) => s.ids.length >= 1 && s.bullets.length >= 2 && s.bullets_en.length === s.bullets.length && s.ts));
 assert.ok(r1.doc.stories.some((s) => s.ids.length === 3), "les sources de l'histoire sont gardées (médias distincts)");
 let r2 = await makeFocus({ items, now: now + H, prev: r1.doc, generate: gen });
 assert.equal(r2.regenerated, false); assert.equal(calls, 1, "mêmes histoires : aucun nouvel appel");

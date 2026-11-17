@@ -108,12 +108,12 @@ function buildPkg(){
 }
 var PKG_L=[["cold",[0,0,52,4]],["dies",[-42,-30,33,3]],["fab",[42,30,33,3]],["hbm",[116,-70,34,3]],["wires",[-92,40,24,2]],["ip",[0,100,24,2]],["cpo",[156,-50,30,2]],["sub",[0,-170,18,1]],["pcb",[-160,160,8,0]],["power",[-250,0,8,0]],["aec",[290,-100,24,1]],["mod",[285,100,32,1]],["las",[272,100,38,2]],["sw2",[500,0,12,1]]];
 var LV=[
- {id:"campus",name:"Campus",ww:1010,cx:-10,cy:-20,zc:30,rx:56,rz:-28,build:buildCampus,L:CAMPUS_L,rep:["energie","datacenter","modeles","applications","reseau"],lvZoom:"Zoomer : Salle ▸"},
- {id:"hall",name:"Salle",ww:610,cx:-10,cy:-20,zc:50,rx:56,rz:-26,build:buildHall,L:HALL_L,rep:["calcul","datacenter","reseau","optique","cuivre"],lvZoom:"Zoomer : Package ▸"},
- {id:"pkg",name:"Package",ww:820,cx:125,cy:40,zc:null,rx:58,rz:-35,build:buildPkg,L:PKG_L,rep:["datacenter","calcul","memoire","packaging","optique","cuivre","reseau","energie"],lvZoom:""}
+ {id:"campus",name:"Data center",ww:1010,cx:-10,cy:10,zc:30,rx:56,rz:-28,build:buildCampus,L:CAMPUS_L,rep:["energie","datacenter","modeles","applications","reseau"],lvZoom:"Zoomer : Salle ▸"},
+ {id:"hall",name:"Salle",ww:610,cx:-10,cy:10,zc:50,rx:56,rz:-26,build:buildHall,L:HALL_L,rep:["calcul","datacenter","reseau","optique","cuivre"],lvZoom:"Zoomer : Module ▸"},
+ {id:"pkg",name:"Module",ww:820,cx:125,cy:70,zc:null,rx:58,rz:-35,build:buildPkg,L:PKG_L,rep:["datacenter","calcul","memoire","packaging","optique","cuivre","reseau","energie"],lvZoom:""}
 ];
 var cur=0,sel={part:null,block:null},gap=60,sg=9,moved=0;
-var sc=document.getElementById("sc"),ly=document.getElementById("ly"),cr=document.getElementById("cr"),bz=document.getElementById("bz"),exw=document.getElementById("exw");
+var sc=document.getElementById("sc"),ly=document.getElementById("ly"),cr=document.getElementById("cr"),bz=document.getElementById("bz"),exw=document.getElementById("bx");
 function init(){
  BUILDING=true;
  LV.forEach(function(v,i){
@@ -156,7 +156,7 @@ function place(){
  var r=sc.getBoundingClientRect(),W=r.width,H=r.height,P=[];
  v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect();P.push({i:i,ax:a.left+a.width/2-r.left,ay:a.top+a.height/2-r.top})});
  P.sort(function(a,b){return a.ax-b.ax});var half=Math.ceil(P.length/2),lines="";
- [[P.slice(0,half),8,0],[P.slice(half),W-184,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?40:-40;
+ [[P.slice(0,half),0,0],[P.slice(half),W-176,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?40:-40;
   arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-44);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";
    var lx=g[2]?g[1]:g[1]+176;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ax+'" y2="'+o.ay+'"/><circle cx="'+o.ax+'" cy="'+o.ay+'" r="2.5"/>'});});
  v.sv.innerHTML=lines;
@@ -248,11 +248,10 @@ sc.addEventListener("dblclick",function(e){if(moved>4)return;var t=e.target.clos
 bz.addEventListener("click",function(){if(cur<2)go(cur+1)});
 sc.addEventListener("mouseover",function(e){var t=e.target.closest(".bx[data-part],.fl[data-part],.lb[data-part]");var p=t?t.getAttribute("data-part"):null;if(p!==hovP){hovP=p;refreshCol()}});
 sc.addEventListener("mouseleave",function(){hovP=null;refreshCol()});
-var rg=document.getElementById("rg"),bx=document.getElementById("bx");
-function setGap(v){gap=v*.9;sg=v*.13;view();bx.textContent=v>40?"Assembler":"Éclater";bx.classList.toggle("on",v>40)}
-rg.addEventListener("input",function(){setGap(+rg.value)});
-bx.addEventListener("click",function(){var to=+rg.value>40?0:70;rg.value=to;setGap(to)});
-document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();var d=[[56,-28],[56,-26],[58,-35]][cur];LV[cur].rx=d[0];LV[cur].rz=d[1];rg.value=70;setGap(70);sel={part:null,block:null};mark();view()});
+var bx=document.getElementById("bx"),expl=false;
+function setGap(v){gap=v*.9;sg=v*.13;view();expl=v>40;bx.textContent=expl?"Assembler":"Éclater"}
+bx.addEventListener("click",function(e){e.stopPropagation();setGap(expl?0:70)});
+document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();var d=[[56,-28],[56,-26],[58,-35]][cur];LV[cur].rx=d[0];LV[cur].rz=d[1];setGap(0);sel={part:null,block:null};mark();view()});
 var dr=null;
 sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
 sc.addEventListener("pointermove",function(e){if(!dr)return;var v=LV[cur];moved=Math.abs(e.clientX-dr.x)+Math.abs(e.clientY-dr.y);if(moved>4&&!dr.cap){dr.cap=1;try{sc.setPointerCapture(dr.id)}catch(_){}}v.rz=dr.rz+(e.clientX-dr.x)*.3;v.rx=Math.max(15,Math.min(85,dr.rx-(e.clientY-dr.y)*.3));view()});
@@ -273,111 +272,88 @@ function mini(part){
  BUILDING=wasB;
  return'<div class="mw" data-sc="'+sc+'" style="transform:rotateX(58deg) scale('+sc+')"><div class="spin">'+h+'</div></div>';
 }
-function lineChart(d){
- var W=520,H=210,pl=28,pr=28,pt=28,pb=34,n=d.pts.length,mx=0;d.pts.forEach(function(p){mx=Math.max(mx,p.v)});mx*=1.18;
- function X(i){return n===1?W/2:pl+(W-pl-pr)*i/(n-1)}function Y(v){return pt+(H-pt-pb)*(1-v/mx)}
- var C='var(--c1)',g='<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" class="gl2"/><line x1="'+pl+'" y1="'+pt+'" x2="'+(W-pr)+'" y2="'+pt+'" class="gl"/>';
- for(var i=0;i<n-1;i++){var a=d.pts[i],b=d.pts[i+1],dash=(b.proj||b.calc||a.calc)?' stroke-dasharray="5 4"':'';g+='<line x1="'+X(i)+'" y1="'+Y(a.v)+'" x2="'+X(i+1)+'" y2="'+Y(b.v)+'" style="stroke:'+C+'" stroke-width="1.8"'+dash+'/>'}
- d.pts.forEach(function(p,i){var hollow=p.calc||p.proj;g+='<circle cx="'+X(i)+'" cy="'+Y(p.v)+'" r="3.6" style="fill:'+(hollow?'#fff':C)+';stroke:'+C+'" stroke-width="1.8"/><text class="vl" x="'+X(i)+'" y="'+(Y(p.v)-10)+'" text-anchor="middle">'+(p.min&&!p.l?'> ':'')+esc(p.l||fmt(p.v))+'</text><text class="ax" x="'+X(i)+'" y="'+(H-pb+17)+'" text-anchor="middle">'+esc(p.x)+'</text>'});
- return'<svg class="lc" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>';
-}
-function srcLine(o,url){return'<div class="src">'+esc(o.as_of)+' · <a href="'+esc(url)+'" target="_blank" rel="noopener">'+esc(o.src)+' ↗</a>'+(o.note?' · '+esc(o.note):'')+'</div>'}
-/* ---------- fiches marché des composants critiques (chiffres datés et sourcés) ---------- */
+/* ---------- fiche marché unifiée : camembert | chiffre d'affaires | tension (chiffres datés et sourcés) ---------- */
 function tens(f){var g=f.gap?f.gap.hi:0,t=g>=30?9:(g>=20?8:(g>=10?6:3));if(f.lead&&f.lead>=36)t=Math.max(t,9);return t}
 function tlab(t){return t>=8?"Critique":(t>=6?"Élevé":(t>=4?"Modéré":"Faible"))}
-function tensHtml(part){
- if(!part||!PARTS[part])return'<span class="kicker">Tension estimée</span><div class="empty" style="padding:30px 20px">Cliquez une pièce : niveau de tension sur 10, code couleur et justification.</div>';
- var P=PARTS[part],key=FMAP[part],f=key&&FM[key],b=BY[P.b],l=b.layer&&LY[b.layer],t=null,why="",ev="",basis="",nm=f?f.name:P.n;
- if(f){t=tens(f);why=f.why+(f.leadTxt?" Délai : "+f.leadTxt+".":"");ev=evRows(f.evid);basis="Déduite des écarts et délais documentés"}
- else if(l&&l.t!=null){t=l.t;why=(l.key?l.key.replace(/\.?$/,"."):"")+(l.note?" "+l.note:"");ev=(l.src||[]).slice(0,3).map(function(x){return'<div class="src"><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+' ↗</a></div>'}).join("");basis="Tension de la couche « "+b.name+" » (estimation éditoriale du site)"}
- if(t==null)return'<div class="hd"><div><span class="kicker">Tension estimée</span><h3>'+esc(nm)+'</h3></div></div><div class="none">Pas d\'estimation de tension pour ce composant : aucune pénurie ni délai documenté dans nos sources.</div>';
- var c=cls(t),sc='<div class="scale"><span><i class="lo"></i>1–5 modérée</span><span><i class="mid"></i>6–7 élevée</span><span><i class="hi"></i>8–10 critique</span></div>';
- return'<div class="tbox '+c+'"><div class="hd"><div><span class="kicker">Tension estimée · composant</span><h3>'+esc(nm)+'</h3></div></div><div class="tg"><div class="tl"><div class="big"><b>'+t+'</b><span>/10</span><em class="tvv">'+tlab(t)+'</em></div><div class="meter lg '+c+'">'+Array.apply(null,Array(10)).map(function(_,i){return'<i class="'+(i<t?'f':'')+'"></i>'}).join("")+'</div>'+sc+'<div class="src" style="margin-top:8px">'+esc(basis)+'</div></div><div class="tw"><div class="st">Pourquoi ce niveau</div><p>'+esc(why)+'</p>'+ev+(f?'<div class="rule">'+esc(RULE)+'</div>':'')+'</div></div></div>'}
-function verdict(f){
- if(f.gap){if(f.gap.lo>=20||f.gap.hi>=40)return"c";if(f.gap.hi>=10)return"t"}
- if(f.lead&&f.lead>=36)return"c";return"n"}
-var VL={c:"Critique",t:"Tendu",n:"Pas de tension documentée"};
-var GREYS=["#8A9099","#AEB3BA","#CDD0D5","#E3E5E8"];
-function donutSvg(items,col){
- var tot=items.reduce(function(a,i){return a+i.v},0),R=50,C=2*Math.PI*R,off=0,g='';
- items.forEach(function(it,i){var len=C*it.v/tot;g+='<circle cx="66" cy="66" r="'+R+'" fill="none" stroke="'+(i===0?col:GREYS[Math.min(i-1,3)])+'" stroke-width="24" stroke-dasharray="'+len+' '+(C-len)+'" stroke-dashoffset="'+(-off)+'" transform="rotate(-90 66 66)"/>';off+=len});
- return'<svg viewBox="0 0 132 132" role="img" aria-label="Camembert des parts">'+g+'<circle cx="66" cy="66" r="38" fill="#fff"/></svg>'}
-function pieHtml(p,col){
- var tot=p.items.reduce(function(a,i){return a+i.v},0);
- return'<p class="sm"><b>'+esc(p.t)+'</b><br>'+esc(p.m)+'</p><div class="dn">'+donutSvg(p.items,col)+'<ul class="lgd">'+p.items.map(function(it,i){var pc=Math.abs(tot-100)<=2?it.v:Math.round(it.v/tot*1000)/10;return'<li><i style="background:'+(i===0?col:GREYS[Math.min(i-1,3)])+'"></i><span>'+esc(it.n)+'</span><b>'+(it.min?'> ':(it.ap?'≈ ':''))+esc(fmt(pc))+' %</b></li>'}).join("")+'</ul></div>'+srcLine(p,p.u)}
-function evChart(e,col){
- var W=430,H=200,pl=30,pr=30,pt=26,pb=34,n=e.x.length,mx=0;
- e.dem.concat(e.sup).forEach(function(p){if(p&&p.v!=null)mx=Math.max(mx,p.v)});mx*=1.2;
- function X(i){return n===1?W/2:pl+(W-pl-pr)*i/(n-1)}function Y(v){return pt+(H-pt-pb)*(1-v/mx)}
- var g='<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" stroke="#D9D9D9"/>';
- function line(arr,c,dy){var pts=[];arr.forEach(function(p,i){if(p&&p.v!=null)pts.push([i,p])});
-  for(var k=0;k<pts.length-1;k++){var a=pts[k],b=pts[k+1],dash=(a[1].calc||b[1].calc)?' stroke-dasharray="5 4"':'';g+='<line x1="'+X(a[0])+'" y1="'+Y(a[1].v)+'" x2="'+X(b[0])+'" y2="'+Y(b[1].v)+'" stroke="'+c+'" stroke-width="2.5"'+dash+'/>'}
-  pts.forEach(function(q){var i=q[0],p=q[1];g+='<circle cx="'+X(i)+'" cy="'+Y(p.v)+'" r="5" fill="'+(p.calc?'#fff':c)+'" stroke="'+c+'" stroke-width="2.5"/><text x="'+X(i)+'" y="'+(Y(p.v)+dy)+'" text-anchor="middle" font-weight="600" fill="'+c+'">'+(p.min&&!p.l?'> ':'')+esc(p.l||fmt(p.v))+'</text>'})}
- line(e.dem,"#000",-11);if(e.sup&&e.sup.length)line(e.sup,col,18);
- e.x.forEach(function(x,i){g+='<text class="ax" x="'+X(i)+'" y="'+(H-pb+18)+'" text-anchor="middle">'+esc(x)+'</text>'});
- return'<div class="key"><span><i></i>Demande</span>'+((e.sup&&e.sup.length)?'<span><i style="border-color:'+col+'"></i>Offre</span>':'')+'<span>○ calculé</span></div><svg viewBox="0 0 '+W+' '+H+'">'+g+'</svg>'}
-function pairChart(p,col){
- var W=430,rows=[{lab:p.dem.l,v:p.dem.v,l:p.dem.u0||String(p.dem.v),dem:1}].concat(p.sup.map(function(s){return{lab:s.lab,v:s.v,l:s.l}})),mx=Math.max.apply(null,rows.map(function(r){return r.v})),bw=W-250,g='',y=6;
- rows.forEach(function(r){var w=Math.max(2,bw*r.v/mx);
-  g+='<text x="0" y="'+(y+14)+'">'+esc(r.lab)+'</text><rect x="200" y="'+y+'" width="'+w+'" height="20" '+(r.dem?'fill="#fff" stroke="#000" stroke-width="1.5"':'fill="'+col+'"')+'/><text x="'+(200+w+6)+'" y="'+(y+14)+'" font-weight="600">'+esc(r.l)+(p.u==="%"&&!r.dem?' %':(p.u==="GW"?(r.dem?'':''):''))+'</text>';y+=34});
- return'<svg viewBox="0 0 '+W+' '+y+'" style="margin-top:6px">'+g+'</svg>'}
-function evRows(a){return a.map(function(f){return'<div class="ev"><div class="v">'+esc(f.v)+'</div><div>'+esc(f.l)+'<div class="src">'+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></div></div></div>'}).join("")}
+function tensInfo(part){
+ var P=PARTS[part],key=FMAP[part],f=key&&FM[key],b=BY[P.b],l=b.layer&&LY[b.layer];
+ if(f&&(f.gap||f.lead)){var ev=(f.evid||[]);return{t:tens(f),why:f.why+(f.leadTxt?" Délai : "+f.leadTxt+".":""),ev:ev,basis:"Déduite des écarts et délais documentés",rule:RULE}}
+ if(l&&l.t!=null)return{t:l.t,why:((l.key?l.key.replace(/\.?$/,"."):"")+(l.note?" "+l.note:"")).trim(),ev:[],links:(l.src||[]).slice(0,3),basis:"Niveau de la couche",rule:""};
+ return null}
 var SH=function(c,i){return/^(autres?|other)/i.test(c||"")?"var(--cg)":"var(--c"+(Math.min(i,5)+1)+")"};
 function fmtPct(v){return String(v).replace(".",",")+" %"}
+function nice(v){var p=Math.pow(10,Math.floor(Math.log10(v))),a=[1,1.5,2,2.5,3,4,5,6,8,10];for(var i=0;i<a.length;i++)if(a[i]*p>=v)return a[i]*p;return 10*p}
+function fv(v){return fmt(v>=10?Math.round(v*10)/10:Math.round(v*100)/100)}
 function donut2(items){
  var tot=items.reduce(function(a,x){return a+x.v},0),R=52,r=32,c=60,a0=-Math.PI/2,out="";
  items.forEach(function(x,i){
   var a1=a0+x.v/tot*2*Math.PI,big=(a1-a0)>Math.PI?1:0;
   var P=function(rad,a){return(c+rad*Math.cos(a)).toFixed(2)+" "+(c+rad*Math.sin(a)).toFixed(2)};
-  var d=items.length===1?"":"M"+P(R,a0)+" A"+R+" "+R+" 0 "+big+" 1 "+P(R,a1)+" L"+P(r,a1)+" A"+r+" "+r+" 0 "+big+" 0 "+P(r,a0)+" Z";
-  out+='<path d="'+d+'" style="fill:'+SH(x.n,i)+'" stroke="#fff" stroke-width="1.5"><title>'+esc(x.n)+' : '+fmtPct(fmt(x.v))+'</title></path>';a0=a1});
+  var d=items.length===1?"M"+(c-R)+" "+c+" A"+R+" "+R+" 0 1 1 "+(c+R)+" "+c+" A"+R+" "+R+" 0 1 1 "+(c-R)+" "+c+" Z":"M"+P(R,a0)+" A"+R+" "+R+" 0 "+big+" 1 "+P(R,a1)+" L"+P(r,a1)+" A"+r+" "+r+" 0 "+big+" 0 "+P(r,a0)+" Z";
+  out+='<path d="'+d+'" style="fill:'+SH(x.n,i)+'" stroke="#fff" stroke-width="1.5"><title>'+esc(x.n)+' : '+fmtPct(fmt(Math.round(x.v/tot*1000)/10))+'</title></path>';a0=a1});
  return'<svg class="donut" viewBox="0 0 120 120" role="img" aria-label="Camembert">'+out+'</svg>'}
-function confHtml(){return'<span class="conf haute"><i></i>Source primaire</span>'}
-function limits(txt,extra){return'<details class="why"><summary>Limites'+(extra?' et points sourcés':'')+'</summary><div class="sc">'+esc(txt||"")+'</div>'+(extra||"")+'</details>'}
-function pieCard(p){
+/* camembert issu d'une ancienne série de parts (%) : on complète à 100 % quand le total est inférieur */
+function sPie(s){
+ if(!s||!s.items||!s.items.length||s.su!=="%")return null;
+ var tot=s.items.reduce(function(a,i){return a+i.v},0);if(tot>100.5)return null;
+ var items=s.items.map(function(i){return{n:i.n,v:i.v,ap:i.ap,min:i.min}});
+ if(tot<99.5)items.push({n:"Autres (calculé)",v:Math.round((100-tot)*10)/10});
+ return{t:s.t,m:"Part du marché",items:items,as_of:s.as_of,src:s.src,u:s.u,note:s.note||""}}
+function piePanel(p){
+ if(!p||!p.items||!p.items.length)return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>';
  var tot=p.items.reduce(function(a,i){return a+i.v},0);
- var leg=p.items.map(function(it,i){var pc=Math.abs(tot-100)<=2?it.v:Math.round(it.v/tot*1000)/10;return'<li><i style="background:'+SH(it.n,i)+'"></i><span>'+esc(it.n)+'</span><b>'+(it.min?'> ':(it.ap?'≈ ':''))+fmtPct(fmt(pc))+'</b></li>'}).join("");
- return'<div class="share"><h4>'+esc(p.t)+'</h4><div class="sm">'+esc(p.m)+'</div><div class="sbody">'+donut2(p.items)+'<ul class="leg">'+leg+'</ul></div>'+
-  '<div class="sf"><a href="'+esc(p.u)+'" target="_blank" rel="noopener">'+esc(p.src)+' ↗</a> '+(p.conf?confHtml():'')+'</div><div class="fr small">'+esc(p.as_of)+'</div>'+(p.note?limits(p.note):'')+'</div>'}
-function barsCard(s){
- return'<div class="share"><h4>'+esc(s.t)+'</h4><div class="sm">'+esc(s.as_of)+'</div><div class="bars">'+s.items.map(function(it){var w=Math.min(100,it.v);return'<div class="br2"><span class="n">'+esc(it.n)+'</span><span class="tr"><i style="width:'+w+'%"></i></span><span class="v">'+(it.min?'> ':(it.ap?'≈ ':''))+esc(it.l||fmt(it.v)+(s.su==="%"?" %":" "+s.su))+'</span></div>'}).join("")+'</div>'+
-  '<div class="sf"><a href="'+esc(s.u)+'" target="_blank" rel="noopener">'+esc(s.src)+' ↗</a></div><div class="fr small">'+esc(s.as_of)+'</div>'+(s.note?limits(s.note):'')+'</div>'}
-function revCard(d,url){
- return'<div class="share"><h4>'+esc(d.t)+'</h4><div class="sm">'+esc(d.u)+'</div><div class="lcw">'+lineChart(d)+'</div><div class="sf"><a href="'+esc(url||d.url)+'" target="_blank" rel="noopener">'+esc(d.src)+' ↗</a></div><div class="fr small">'+esc(d.as_of)+'</div>'+(d.note?limits(d.note):'')+'</div>'}
-var DASHM=["","6 3","2 3","8 3 2 3","1 2.5"];
-function mcChart(c){
- var W=520,H=240,L=40,R=12,T=12,B=26,n=c.x.length;
- var tot=c.x.map(function(_,k){return c.ser.reduce(function(a,s){return a+s.v[k]},0)});
- var sh=c.ser.map(function(s){return s.v.map(function(v,k){return Math.round(v/tot[k]*1000)/10})});
- function T_(d){var q=d.split("-");return Date.UTC(+q[0],+q[1]-1,1)}
- var t0=T_(c.x[0]),t1=T_(c.x[n-1]);
- function X(t){return L+(t-t0)/(t1-t0)*(W-L-R)}function Y(v){return T+(1-v/100)*(H-T-B)}
+ var leg=p.items.map(function(it,i){var pc=Math.round(it.v/tot*1000)/10;return'<li><i style="background:'+SH(it.n,i)+'"></i><span>'+esc(it.n)+'</span><b>'+(it.min?'> ':(it.ap?'≈ ':''))+fmtPct(fmt(pc))+'</b></li>'}).join("");
+ return'<div class="col"><h4>'+esc(p.t)+'</h4><div class="sm">'+esc(p.m)+'</div><div class="pie">'+donut2(p.items)+'<ul class="pleg">'+leg+'</ul></div><div class="sf"><a href="'+esc(p.u)+'" target="_blank" rel="noopener">'+esc(p.src)+' ↗</a> · '+esc(p.as_of)+'</div></div>'}
+function lineChart(d){
+ var W=560,H=170,pl=30,pr=30,pt=26,pb=30,n=d.pts.length,mx=0;d.pts.forEach(function(p){mx=Math.max(mx,p.v)});mx*=1.18;
+ function X(i){return n===1?W/2:pl+(W-pl-pr)*i/(n-1)}function Y(v){return pt+(H-pt-pb)*(1-v/mx)}
+ var C='var(--c1)',g='<line x1="'+pl+'" y1="'+(H-pb)+'" x2="'+(W-pr)+'" y2="'+(H-pb)+'" class="gl2"/><line x1="'+pl+'" y1="'+pt+'" x2="'+(W-pr)+'" y2="'+pt+'" class="gl"/>';
+ for(var i=0;i<n-1;i++){var a=d.pts[i],b=d.pts[i+1],dash=(b.proj||b.calc||a.calc)?' stroke-dasharray="5 4"':'';g+='<line x1="'+X(i)+'" y1="'+Y(a.v)+'" x2="'+X(i+1)+'" y2="'+Y(b.v)+'" style="stroke:'+C+'" stroke-width="1.8"'+dash+'/>'}
+ d.pts.forEach(function(p,i){var hollow=p.calc||p.proj;g+='<circle cx="'+X(i)+'" cy="'+Y(p.v)+'" r="3.6" style="fill:'+(hollow?'#fff':C)+';stroke:'+C+'" stroke-width="1.8"/><text class="vl" x="'+X(i)+'" y="'+(Y(p.v)-10)+'" text-anchor="middle">'+(p.min&&!p.l?'> ':'')+esc(p.l||fmt(p.v))+'</text><text class="ax" x="'+X(i)+'" y="'+(H-pb+17)+'" text-anchor="middle">'+esc(p.x)+'</text>'});
+ return'<svg class="lc" viewBox="0 0 '+W+' '+H+'">'+g+'</svg>'}
+function revChart(c){
+ var W=560,H=184,L=38,R=22,T=10,B=24,n=c.x.length,mx=0;
+ c.ser.forEach(function(s){s.v.forEach(function(v){if(v>mx)mx=v})});mx=nice(mx*1.04);
+ function X(i){return L+(W-L-R)*i/(n-1)}function Y(v){return T+(H-T-B)*(1-v/mx)}
  var g='';
- [0,25,50,75,100].forEach(function(k){var yy=Y(k).toFixed(1);g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-5)+'" y="'+(+yy+3)+'" text-anchor="end" class="ax">'+k+' %</text>'});
- for(var m=0;m<n;m+=2){var tt=T_(c.x[m]),xx=X(tt).toFixed(1),lab=new Date(tt).toLocaleDateString("fr-FR",{month:"short",year:"2-digit",timeZone:"UTC"});g+='<line x1="'+xx+'" x2="'+xx+'" y1="'+(H-B)+'" y2="'+(H-B+3)+'" class="gl2"/><text x="'+xx+'" y="'+(H-8)+'" text-anchor="'+(+xx>W-34?'end':'middle')+'" class="ax">'+esc(lab)+'</text>'}
+ [0,.5,1].forEach(function(k){var yy=Y(mx*k).toFixed(1);g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="'+(k?'gl':'gl2')+'"/><text x="'+(L-5)+'" y="'+(+yy+3)+'" text-anchor="end" class="ax">'+fv(mx*k)+'</text>'});
+ c.x.forEach(function(x,i){g+='<text x="'+X(i).toFixed(1)+'" y="'+(H-8)+'" text-anchor="middle" class="ax">'+esc(x)+'</text>'});
  c.ser.forEach(function(s,i){
-  var d="";sh[i].forEach(function(v,k){d+=(k?'L':'M')+X(T_(c.x[k])).toFixed(1)+' '+Y(v).toFixed(1)});
-  g+='<path d="'+d+'" fill="none" style="stroke:'+SH(s.n,i)+'" stroke-width="1.8" stroke-linejoin="round"'+(DASHM[i]?' stroke-dasharray="'+DASHM[i]+'"':'')+'/>';
-  sh[i].forEach(function(v,k){var hol=c.calc.indexOf(k)>=0,last=k===n-1;g+='<circle cx="'+X(T_(c.x[k])).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="'+(last?3:2.3)+'" style="'+(hol?'fill:#fff;stroke:'+SH(s.n,i)+';stroke-width:1.6':'fill:'+SH(s.n,i))+'"><title>'+esc(s.n+" · "+new Date(T_(c.x[k])).toLocaleDateString("fr-FR",{month:"long",year:"numeric",timeZone:"UTC"})+" : "+fmtPct(fmt(v))+" ("+fmt(s.v[k])+" Md$"+(hol&&(c.calc.indexOf(k)>=0)?", un chiffre du trimestre est calculé":"")+")")+'</title></circle>'})});
- var leg=c.ser.map(function(s,i){var a=sh[i][n-1],b=sh[i][n-2],dl=Math.round((a-b)*10)/10,chip=dl===0?'<em class="dl"></em>':'<em class="dl '+(dl>0?'up':'dn')+'" title="Variation depuis le trimestre précédent">'+(dl>0?"▲ ":"▼ ")+fmt(Math.abs(dl))+' pt</em>';
-  return'<li><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M0 4H22" style="stroke:'+SH(s.n,i)+'" stroke-width="2"'+(DASHM[i]?' stroke-dasharray="'+DASHM[i]+'"':'')+' fill="none"/></svg><span>'+esc(s.n)+'</span><b>'+fmtPct(fmt(a))+'</b>'+chip+'</li>'}).join("");
- return'<svg class="lc" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Évolution des parts">'+g+'</svg><ul class="leg lg">'+leg+'</ul>'}
-function chartCard(c){
- var pl=c.proj.concat(c.oth).map(function(f){return'<li><b>'+esc(f.v)+'</b> · '+esc(f.l)+' · '+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></li>'}).join("");
- var ex='<div class="sc" style="margin-top:8px"><b>Annonces des dirigeants (2 ans) et acteurs sans série trimestrielle</b></div><ul class="pl">'+pl+'</ul>';
- return'<div class="share"><h4>'+esc(c.t)+'</h4><div class="sm">'+esc(c.u)+'</div><div class="lcw">'+mcChart(c)+'</div>'+
-  '<div class="sf">'+c.srcs.map(function(x){return'<a href="'+esc(x[1])+'" target="_blank" rel="noopener">'+esc(x[0])+' ↗</a>'}).join(" ")+' '+confHtml()+'</div><div class="fr small">'+esc(c.as_of)+'</div>'+limits(c.note,ex)+'</div>'}
+  var col=SH(s.n,i),d="";s.v.forEach(function(v,k){d+=(k?'L':'M')+X(k).toFixed(1)+' '+Y(v).toFixed(1)});
+  g+='<path d="'+d+'" fill="none" style="stroke:'+col+'" stroke-width="1.9" stroke-linejoin="round"'+(s.dash?' stroke-dasharray="6 4"':'')+'/>';
+  s.v.forEach(function(v,k){var hol=(s.hol||[]).indexOf(k)>=0,last=k===n-1;g+='<circle cx="'+X(k).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="'+(last?3.4:2.4)+'" style="'+(hol?'fill:#fff;stroke:'+col+';stroke-width:1.6':'fill:'+col)+'"><title>'+esc(s.n+" · "+c.x[k]+" : "+fv(v)+(s.eur?" Md€":" Md$")+(hol?" (calculé)":""))+'</title></circle>'})});
+ var leg=c.ser.map(function(s,i){
+  var a=s.v[n-1],b=s.v[n-5],gr=b>0?Math.round((a/b-1)*100):null;
+  return'<li><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M0 4H22" style="stroke:'+SH(s.n,i)+'" stroke-width="2"'+(s.dash?' stroke-dasharray="6 4"':'')+' fill="none"/></svg><span>'+esc(s.n)+'</span><b>'+fv(a)+(s.eur?' Md€':' Md$')+'</b>'+(gr==null?'<em class="dl"></em>':'<em class="dl '+(gr>=0?'up':'dn')+'" title="Variation sur un an">'+(gr>=0?'▲ ':'▼ ')+Math.abs(gr)+' %</em>')+'</li>'}).join("");
+ return'<svg class="lc" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Chiffre d\'affaires par trimestre">'+g+'</svg><ul class="cleg">'+leg+'</ul>'}
+function chartPanel(ch,rv){
+ if(ch)return'<div class="col"><h4>'+esc(ch.t)+'</h4><div class="sm">'+esc(ch.u)+'</div>'+revChart(ch)+'<div class="sf">'+'<span>'+esc(ch.as_of)+'</span> · <span>Sources ci-dessous</span></div></div>';
+ if(rv&&rv.pts&&rv.pts.length)return'<div class="col"><h4>'+esc(rv.t)+'</h4><div class="sm">'+esc(rv.u)+'</div>'+lineChart(rv)+'<div class="sf"><a href="'+esc(rv.url)+'" target="_blank" rel="noopener">'+esc(rv.src)+' ↗</a> · '+esc(rv.as_of)+'</div></div>';
+ return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>'}
+function ringHtml(t,c){
+ var R=46,C=2*Math.PI*R;
+ return'<svg class="ring '+c+'" viewBox="0 0 120 120" role="img" aria-label="Tension '+t+' sur 10"><circle cx="60" cy="60" r="'+R+'" class="bg"/><circle cx="60" cy="60" r="'+R+'" class="fg" stroke-dasharray="'+(C*t/10).toFixed(1)+' '+C.toFixed(1)+'" transform="rotate(-90 60 60)"/><text x="60" y="64" text-anchor="middle" class="rn">'+t+'</text><text x="60" y="82" text-anchor="middle" class="rd">/10</text></svg>'}
+function tensPanel(ti){
+ if(!ti)return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>';
+ var c=cls(ti.t);
+ return'<div class="col tcol '+c+'"><h4>Tension</h4><div class="sm">Niveau de 0 à 10</div><div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b><span class="why1">'+esc(ti.why)+'</span></div></div></div>'}
+function notesHtml(f,pie,ch,rv,ti){
+ var h="";
+ if(pie){h+='<div class="nb"><div class="st">Camembert</div>'+(pie.note?'<p>'+esc(pie.note)+'</p>':'')+'<div class="src">'+esc(pie.as_of)+' · <a href="'+esc(pie.u)+'" target="_blank" rel="noopener">'+esc(pie.src)+' ↗</a></div></div>'}
+ else if(f&&f.pieNote)h+='<div class="nb"><div class="st">Camembert</div><p>'+esc(f.pieNote)+'</p></div>';
+ if(ch){
+  var pl=(ch.proj||[]).concat(ch.oth||[]).map(function(x){return'<li><b>'+esc(x.v)+'</b> · '+esc(x.l)+' · '+esc(x.as_of)+' · <a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.src)+' ↗</a></li>'}).join("");
+  h+='<div class="nb"><div class="st">Chiffre d\'affaires</div><p>'+esc(ch.note||"")+'</p><div class="src">'+esc(ch.as_of)+' · '+ch.srcs.map(function(x){return'<a href="'+esc(x[1])+'" target="_blank" rel="noopener">'+esc(x[0])+' ↗</a>'}).join(" · ")+'</div>'+(pl?'<ul class="pl">'+pl+'</ul>':'')+'</div>'}
+ else if(rv&&rv.pts&&rv.pts.length&&rv.note)h+='<div class="nb"><div class="st">Chiffre d\'affaires</div><p>'+esc(rv.note)+'</p></div>';
+ if(ti){h+='<div class="nb"><div class="st">Tension</div><p>'+esc(ti.why)+'</p>'+evRows(ti.ev||[])+(ti.links||[]).map(function(x){return'<div class="src"><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+' ↗</a></div>'}).join("")+'<div class="src">'+esc(ti.basis)+'</div>'+(ti.rule?'<div class="rule">'+esc(ti.rule)+'</div>':'')+'</div>'}
+ return h?'<details class="why"><summary>Sources, méthode et limites</summary>'+h+'</details>':""}
+function evRows(a){return a.map(function(f){return'<div class="ev"><div class="v">'+esc(f.v)+'</div><div>'+esc(f.l)+'<div class="src">'+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></div></div></div>'}).join("")}
 function mkHtml(part){
- var P=PARTS[part],key=FMAP[part],f=key&&FM[key],h;
- if(f){
-  h='<div class="hd"><div><span class="kicker">Fiche marché · composant critique documenté</span><h3>'+esc(f.name)+'</h3></div></div>'+(FMVIA[part]?'<p class="sm" style="margin:-4px 0 12px">'+esc(FMVIA[part])+'</p>':'');
-  h+='<div class="pair">'+(f.pie?pieCard(f.pie):'<div class="share"><h4>Part de marché</h4><div class="none">'+esc(f.pieNote)+'</div></div>')+(f.chart?chartCard(f.chart):revCard(f.rev))+'</div>';
-  return h}
- var m=MKT[part]||{};
- h='<div class="hd"><div><span class="kicker">Fiche marché</span><h3>'+esc(P.n)+'</h3></div></div><div class="pair">';
- h+=m.s?barsCard(m.s):'<div class="share"><h4>Part de marché</h4><div class="none">Pas de parts de marché sourcées pour ce composant.</div></div>';
- h+=m.d?revCard(m.d):'<div class="share"><h4>Évolution du marché</h4><div class="none">Pas de série d\'évolution sourcée pour ce composant.</div></div>';
- return h+'</div>'}
+ var P=PARTS[part],key=FMAP[part],f=key&&FM[key],m=MKT[part]||{},nm=f?f.name:P.n;
+ var pie=f?f.pie:sPie(m.s),ch=f?(f.chart||null):null,rv=f?(f.rev||null):(m.d||null),ti=tensInfo(part);
+ return'<div class="hd"><span class="kicker">Fiche marché</span><h3>'+esc(nm)+'</h3>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
+  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+notesHtml(f,pie,ch,rv,ti)}
+
 
 function duo(){
  var L=document.getElementById("sqL"),R=document.getElementById("sqR"),K=document.getElementById("mk");
@@ -385,7 +361,7 @@ function duo(){
  if(!part||!PARTS[part]){
   L.innerHTML='<span class="kicker">Zoom sur la pièce</span><div class="empty">Cliquez une pièce sur le schéma :<br>elle s\'affiche ici en gros, avec ses composants.</div>';
   R.innerHTML='<span class="kicker">Fiche technique</span><div class="empty">Ce que c\'est, à quoi ça sert, de quoi ça dépend et ce que ça alimente.</div>';
-  K.innerHTML='<span class="kicker">Fiche marché</span><div class="empty" style="padding:34px 20px">Cliquez une pièce : part de marché et évolution de la taille du marché.</div>';document.getElementById("tn").className="tens";document.getElementById("tn").innerHTML=tensHtml(null);return}
+  K.innerHTML='<span class="kicker">Fiche marché</span><div class="empty" style="padding:34px 20px">Cliquez une pièce : part de marché, chiffre d\'affaires et tension.</div>';return}
  var P=PARTS[part],b=BY[P.b],fam=PF[part],dt=DET[part]||[],mh=mini(part);
  L.innerHTML='<div class="kk"><span class="kicker">Zoom sur la pièce</span><span class="tag">'+esc(b.name)+'</span></div><h3>'+esc(P.n)+'</h3>'+
   (mh?'<div class="mini">'+mh+'</div>':'<p class="big">'+esc(P.r)+'</p>')+
@@ -399,7 +375,6 @@ function duo(){
   '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div>';
  R.innerHTML=t;
  K.innerHTML=mkHtml(part);
- var TN=document.getElementById("tn"),tp=tensHtml(part);TN.innerHTML=tp;TN.className="tens"+(tp.indexOf('class="tbox ')>=0?" has":"");
 }
 function centerMini(box){
  if(!box)return;var mw=box.querySelector(".mw"),sp=box.querySelector(".spin");if(!mw||!sp)return;
@@ -419,6 +394,6 @@ function centerMini(box){
 }
 window.addEventListener("resize",function(){var m=document.querySelector("#sqL .mini");if(m)centerMini(m)});
 
-init();setGap(70);
+init();setGap(0);
 }
 })();

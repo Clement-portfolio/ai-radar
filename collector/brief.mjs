@@ -45,6 +45,7 @@ export const BRIEF_SYSTEM = `Tu rédiges le brief du jour d'un radar d'actualit�
 - Écris tous les nombres en chiffres, jamais en toutes lettres (« 7 milliards de dollars », « 60 % », pas « sept milliards » ni « soixante pour cent »).
 - Pas de prédiction, pas d'opinion, aucune recommandation d'investissement.
 - Varie les sujets : ne consacre pas deux phrases à la même histoire.
+- Aucune formule creuse (« Cela veut dire », « Cela signifie », « Autrement dit », « En clair ») : énonce directement le fait.
 Réponds uniquement par un tableau JSON de 5 objets {text, sources}.`;
 
 export const BRIEF_SCHEMA = {
@@ -67,7 +68,7 @@ export function validateBullets(arr, inputs) {
   for (const b of arr) {
     const text = String(b?.text || "").trim();
     const src = [...new Set((Array.isArray(b?.sources) ? b.sources : []).map(Number))].filter((i) => Number.isInteger(i) && i >= 1 && i <= inputs.length).slice(0, 3);
-    if (!text || text.length > 280 || !src.length || hasNumberWords(text)) continue;
+    if (!text || text.length > 280 || !src.length || hasNumberWords(text) || /\b(cela|ça)\s+(veut dire|signifie)\b|\b(autrement dit|en clair)\b/i.test(text)) continue;
     const ref = src.map((i) => `${inputs[i - 1].title} ${inputs[i - 1].summary}`).join(" ");
     const known = new Set(digitsOf(ref));
     if (digitsOf(text).some((d) => !known.has(d))) continue;

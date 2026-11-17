@@ -36,18 +36,26 @@ const chain = JSON.parse(read("chain"));
     for (const e of f.evid || []) if (!e.as_of || !e.src || !isUrl2(e.u)) ko(`chain : fiche « ${key} », chiffre « ${e.v} » sans date, source ou lien`);
     const c = f.chart;
     if (c) {
+      if (c.x.length !== 8) ko(`chain : fiche « ${key} », ${c.x.length} trimestres au lieu de 8`);
+      if (!c.as_of || !(c.srcs || []).length) ko(`chain : fiche « ${key} », graphique sans date ou sans source`);
       for (const s of c.srcs || []) if (!isUrl2(s[1])) ko(`chain : fiche « ${key} », source de graphique sans lien https`);
       const names = c.ser.map((x) => x.n);
-      for (const x of c.ser) if (x.v.length !== c.x.length) ko(`chain : fiche « ${key} », série « ${x.n} » : ${x.v.length} points pour ${c.x.length} trimestres`);
+      if (new Set(names).size !== names.length) ko(`chain : fiche « ${key} », séries en double`);
+      for (const x of c.ser) {
+        if (x.v.length !== c.x.length) ko(`chain : fiche « ${key} », série « ${x.n} » : ${x.v.length} points pour ${c.x.length} trimestres`);
+        if (x.v.some((v) => !(v > 0))) ko(`chain : fiche « ${key} », série « ${x.n} » : valeur manquante ou nulle`);
+        for (const i of x.hol || []) if (!(i >= 0 && i < c.x.length)) ko(`chain : fiche « ${key} », série « ${x.n} » : point creux hors graphique`);
+      }
       if (f.pie) {
-        const last = c.ser.map((x) => x.v[c.x.length - 1]), tot = last.reduce((a, b) => a + b, 0);
+        // le camembert est le dernier point du graphique (même unité) ; une ligne « Autres » complète le total
         for (const it of f.pie.items) {
-          const i = names.indexOf(it.n);
-          if (i >= 0 && Math.abs(last[i] / tot * 100 - it.v) > 0.15) ko(`chain : « ${it.n} » ${it.v} % dans le camembert ≠ ${(last[i] / tot * 100).toFixed(1)} % au dernier point du graphique`);
+          const s = c.ser.find((x) => x.n === it.n);
+          if (!s && !/^autres/i.test(it.n)) ko(`chain : fiche « ${key} », « ${it.n} » est dans le camembert mais pas dans le graphique`);
+          if (s && Math.abs(s.v[c.x.length - 1] - it.v) > 1e-6) ko(`chain : fiche « ${key} », « ${it.n} » : ${it.v} dans le camembert ≠ ${s.v[c.x.length - 1]} au dernier point du graphique`);
         }
+        for (const s of c.ser) if (!s.eur && !f.pie.items.some((it) => it.n === s.n)) ko(`chain : fiche « ${key} », « ${s.n} » est dans le graphique mais pas dans le camembert`);
       }
     }
-    if (f.pie && f.chart) { const t = f.pie.items.reduce((a, i) => a + i.v, 0); if (Math.abs(t - 100) > 1.5) ko(`chain : fiche « ${key} », camembert : somme ${t.toFixed(1)} % (attendu ≈ 100)`); }
   }
 }
 

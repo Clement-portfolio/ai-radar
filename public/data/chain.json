@@ -1774,23 +1774,23 @@
    "name": "Puces IA (GPU et ASIC)",
    "pie": {
     "t": "Part du chiffre d'affaires des vendeurs de puces IA qui publient",
-    "m": "Chiffre d'affaires IA / data center du trimestre clos vers juillet 2026 · ≈ 115 Md$ au total",
+    "m": "Dernier trimestre (clos vers juillet 2026) · ≈ 115 Md$ au total",
     "items": [
      {
       "n": "Nvidia",
-      "v": 77.7
+      "v": 89
      },
      {
       "n": "Broadcom",
-      "v": 14.6
+      "v": 16.7
      },
      {
       "n": "AMD",
-      "v": 5.8
+      "v": 6.7
      },
      {
       "n": "Marvell",
-      "v": 1.9
+      "v": 2.172
      }
     ],
     "as_of": "17 nov. 2026",
@@ -1800,32 +1800,22 @@
     "note": "Ce n'est pas la part de marché de toutes les puces IA : seulement la part des quatre vendeurs qui publient un chiffre (Nvidia 89,0 Md$, Broadcom 16,7 dont les TPU de Google et les puces de Meta, OpenAI et Anthropic, AMD 6,7, Marvell 2,17). Il n'y a pas de ligne « Autres » : leur total n'est pas connu. Amazon (Trainium), Google (TPU) et Huawei ne vendent pas leurs puces : celles d'Amazon et de Google n'apparaissent qu'à travers leurs fournisseurs (Broadcom, Marvell), et Huawei ne publie pas de chiffre trimestriel. AMD inclut ses processeurs de serveurs, Marvell ses composants optiques, Nvidia et Broadcom leur réseau : la part de l'IA pure est plus faible pour AMD et Marvell."
    },
    "chart": {
-    "t": "Évolution de la part du chiffre d'affaires",
-    "u": "% du total des quatre vendeurs · 11 trimestres, de fin 2023 à mi-2026",
+    "t": "Chiffre d'affaires IA / data center par vendeur",
+    "u": "Md$ par trimestre · 8 derniers trimestres",
     "x": [
-     "2024-01",
-     "2024-04",
-     "2024-07",
-     "2024-10",
-     "2025-01",
-     "2025-04",
-     "2025-07",
-     "2025-10",
-     "2026-01",
-     "2026-04",
-     "2026-07"
-    ],
-    "calc": [
-     5,
-     7
+     "T3 24",
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26"
     ],
     "ser": [
      {
       "n": "Nvidia",
       "v": [
-       18.4,
-       22.6,
-       26.3,
        30.8,
        35.6,
        39.1,
@@ -1834,14 +1824,14 @@
        62.3,
        75.2,
        89
+      ],
+      "hol": [
+       4
       ]
      },
      {
       "n": "Broadcom",
       "v": [
-       2.3,
-       3.1,
-       3.1,
        3.7,
        4.1,
        4.4,
@@ -1850,14 +1840,14 @@
        8.4,
        10.8,
        16.7
+      ],
+      "hol": [
+       2
       ]
      },
      {
       "n": "AMD",
       "v": [
-       2.282,
-       2.337,
-       2.834,
        3.549,
        3.859,
        3.674,
@@ -1871,9 +1861,6 @@
      {
       "n": "Marvell",
       "v": [
-       0.765,
-       0.816,
-       0.881,
        1.101,
        1.366,
        1.441,
@@ -1912,7 +1899,7 @@
       "https://www.sec.gov/Archives/edgar/data/0001835632/000183563226000022/q227_8kx812026ex-991.htm"
      ]
     ],
-    "note": "Les parts sont calculées ici à partir des chiffres d'affaires trimestriels publiés par chaque vendeur, ramenés au total des quatre. Trimestres alignés par période : Nvidia, Marvell et Broadcom clôturent entre fin janvier et début février, fin avril/début mai, fin juillet/début août et fin octobre/début novembre ; AMD un mois plus tôt (fin décembre, mars, juin, septembre). Ronds creux : un des chiffres du trimestre est calculé à partir de la croissance annoncée (Nvidia octobre 2025 : + 21,7 % ; Broadcom mai 2025 : + 143 %). Le graphique commence fin 2023 parce que Broadcom ne publie son chiffre d'affaires IA par trimestre que depuis 2024. Aucune prévision n'est tracée : AMD ne guide pas son data center seul.",
+    "note": "Chiffres d'affaires trimestriels publiés par chaque vendeur ; le camembert en calcule les parts. Trimestres alignés par période : Nvidia, Marvell et Broadcom clôturent entre fin janvier et début février, fin avril/début mai, fin juillet/début août et fin octobre/début novembre ; AMD un mois plus tôt (fin décembre, mars, juin, septembre). Points creux : le chiffre est calculé à partir de la croissance annoncée (Nvidia octobre 2025 : + 21,7 % ; Broadcom mai 2025 : + 143 %). Aucune prévision n'est tracée : AMD ne guide pas son data center seul.",
     "proj": [
      {
       "v": "58 → 115 → 230 Md$",
@@ -1976,52 +1963,32 @@
    ]
   },
   "hbm": {
-   "name": "Mémoire HBM",
+   "name": "Mémoire DRAM et HBM",
    "pie": {
-    "t": "Qui fournit la HBM",
-    "m": "Parts de revenu",
+    "t": "Chiffre d'affaires DRAM par fabricant",
+    "m": "T2 2026 · 154,7 Md$ pour tout le marché de la DRAM",
     "items": [
      {
-      "n": "SK hynix",
-      "v": 50
+      "n": "Samsung",
+      "v": 60.98
      },
      {
-      "n": "Samsung",
-      "v": 33
+      "n": "SK hynix",
+      "v": 38.59
      },
      {
       "n": "Micron",
-      "v": 18
-     }
-    ],
-    "as_of": "T2 2026",
-    "src": "Counterpoint Research",
-    "u": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
-   },
-   "rev": {
-    "t": "Marché de la HBM (valeur annuelle)",
-    "u": "Md$",
-    "pts": [
-     {
-      "x": "2024",
-      "v": 16
+      "v": 36.0
      },
      {
-      "x": "2025",
-      "v": 35,
-      "l": "≈ 35"
-     },
-     {
-      "x": "2028",
-      "v": 100,
-      "l": "≈ 100",
-      "proj": 1
+      "n": "Autres",
+      "v": 19.16
      }
     ],
-    "as_of": "oct. 2026",
-    "src": "Micron (marché adressable), cité par Meticulous Research",
-    "url": "https://www.meticulousresearch.com/product/high-bandwidth-memory-hbm-market-6953",
-    "note": "Estimation de Micron ; Yole Group donne ≈ 34 Md$ en 2025 (storagenewsletter, 2025). 2028 = prévision de Micron. Source secondaire : confiance moyenne."
+    "as_of": "7 sept. 2026",
+    "src": "TrendForce (classement de la DRAM, T2 2026)",
+    "u": "https://www.trendforce.com/presscenter/news/20260907-13219.html",
+    "note": "« Autres » : calculé (154,73 Md$ moins les trois premiers : Nanya, Winbond, CXMT…). La HBM n'est pas détaillée ici : TrendForce classe la DRAM entière, HBM comprise. Pour la HBM seule, Counterpoint donne SK hynix 50 %, Samsung 33 %, Micron 18 % au T2 2026."
    },
    "gap": {
     "lo": 34,
@@ -2043,7 +2010,94 @@
      "src": "TrendForce",
      "u": "https://trendforce.com/presscenter/news/20260804-13166.html"
     }
-   ]
+   ],
+   "chart": {
+    "t": "Chiffre d'affaires DRAM trimestriel",
+    "u": "Md$ par trimestre (DRAM, HBM comprise)",
+    "x": [
+     "T3 24",
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26"
+    ],
+    "ser": [
+     {
+      "n": "Samsung",
+      "v": [
+       10.7,
+       11.25,
+       9.1,
+       10.35,
+       13.5,
+       19.3,
+       37.32,
+       60.98
+      ]
+     },
+     {
+      "n": "SK hynix",
+      "v": [
+       8.95,
+       10.46,
+       9.72,
+       12.229,
+       13.75,
+       17.22,
+       27.98,
+       38.59
+      ]
+     },
+     {
+      "n": "Micron",
+      "v": [
+       5.78,
+       6.4,
+       6.58,
+       6.95,
+       10.65,
+       11.98,
+       21.75,
+       36.0
+      ],
+      "hol": [
+       3
+      ]
+     }
+    ],
+    "as_of": "7 sept. 2026",
+    "srcs": [
+     [
+      "TrendForce T2 2026",
+      "https://www.trendforce.com/presscenter/news/20260907-13219.html"
+     ],
+     [
+      "TrendForce T4 2025",
+      "https://www.trendforce.com/presscenter/news/20260226-12937.html"
+     ]
+    ],
+    "note": "Classement trimestriel de la DRAM par TrendForce. Point creux : Micron T2 2025 calculé à partir de la hausse de 53,2 % annoncée au T3 2025. Le marché total de la DRAM est passé de 97 à 155 Md$ entre le T1 et le T2 2026.",
+    "proj": [],
+    "oth": [
+     {
+      "v": "50 / 33 / 18 %",
+      "l": "HBM seule : SK hynix, Samsung, Micron",
+      "as_of": "T2 2026",
+      "src": "Counterpoint Research",
+      "u": "https://counterpointresearch.com/en/insights/global-dram-and-hbm-market-share"
+     },
+     {
+      "v": "≈ 35 Md$",
+      "l": "marché de la HBM en 2025 (estimation de Micron ; 16 Md$ en 2024)",
+      "as_of": "oct. 2026",
+      "src": "Micron, via Meticulous Research",
+      "u": "https://www.meticulousresearch.com/product/high-bandwidth-memory-hbm-market-6953"
+     }
+    ]
+   }
   },
   "ip": {
    "name": "Assemblage 2,5D (CoWoS)",
@@ -2166,76 +2220,6 @@
      "as_of": "24 mars 2026",
      "src": "TrendForce",
      "u": "https://www.trendforce.com/research/download/RP260324EB"
-    }
-   ]
-  },
-  "las": {
-   "name": "Lasers au phosphure d'indium (EML)",
-   "pie": {
-    "t": "Qui fabrique les lasers EML",
-    "m": "Part du marché des EML",
-    "items": [
-     {
-      "n": "Lumentum, Broadcom, Mitsubishi Electric (trois premiers)",
-      "v": 72,
-      "ap": 1
-     },
-     {
-      "n": "Autres",
-      "v": 28,
-      "ap": 1
-     }
-    ],
-    "as_of": "3 juin 2026",
-    "src": "TrendForce",
-    "u": "https://www.trendforce.com/presscenter/news/20260603-13077.html",
-    "note": "TrendForce ne donne pas la part de chaque fabricant."
-   },
-   "rev": {
-    "t": "Chiffre d'affaires de Lumentum (lasers et modules optiques)",
-    "u": "Md$ (exercices clos fin juin)",
-    "pts": [
-     {
-      "x": "2024",
-      "v": 1.359,
-      "l": "1,36"
-     },
-     {
-      "x": "2025",
-      "v": 1.645,
-      "l": "1,65"
-     },
-     {
-      "x": "2026",
-      "v": 3.014,
-      "l": "3,01"
-     }
-    ],
-    "as_of": "11 août 2026",
-    "src": "Lumentum, via Semiconductor Today",
-    "url": "https://semiconductor-today.com/news_items/2026/aug/lumentum-190826.shtml",
-    "note": "+ 83 % en 2026 ; les composants (lasers) passe de 1,12 à 2,01 Md$. Un seul des trois grands fabricants d'EML."
-   },
-   "gap": {
-    "lo": 30,
-    "hi": 30,
-    "min": 1
-   },
-   "why": "Même après un doublement de la capacité, Lumentum livre plus de 30 % en dessous de la demande ; Nvidia a réservé des capacités au-delà de 2027.",
-   "evid": [
-    {
-     "v": "2 Md$ × 2",
-     "l": "investis par Nvidia dans Lumentum et dans Coherent",
-     "as_of": "mars 2026",
-     "src": "Tom's Hardware",
-     "u": "https://www.tomshardware.com/tech-industry/semiconductors/lumentum-ceo-says-the-indium-phosphide-shortage-will-become-worse-than-memory"
-    },
-    {
-     "v": "> 2027",
-     "l": "délais de livraison des EML chez les fournisseurs clés",
-     "as_of": "9 déc. 2025",
-     "src": "TrendForce, via LEDinside",
-     "u": "https://m.ledinside.com/node/view/35680.html"
     }
    ]
   },
@@ -2368,6 +2352,509 @@
      "u": "https://www.publicpower.org/node/28126"
     }
    ]
+  },
+  "fab": {
+   "name": "Fonderies de puces et lithographie",
+   "pie": {
+    "t": "Chiffre d'affaires des fonderies",
+    "m": "T2 2026 · 53,5 Md$ pour les dix premières fonderies mondiales",
+    "items": [
+     {
+      "n": "TSMC",
+      "v": 40.2
+     },
+     {
+      "n": "Samsung",
+      "v": 3.26
+     },
+     {
+      "n": "SMIC",
+      "v": 3.01
+     },
+     {
+      "n": "UMC",
+      "v": 2.18
+     },
+     {
+      "n": "GlobalFoundries",
+      "v": 1.79
+     },
+     {
+      "n": "Autres du top 10",
+      "v": 3.05
+     }
+    ],
+    "as_of": "9 sept. 2026",
+    "src": "TrendForce (classement des fonderies, T2 2026)",
+    "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+    "note": "Camembert : les cinq grandes fonderies nommées (Samsung : sa seule activité de fonderie) et, en gris, le reste du top 10 (calculé : 53,49 Md$ moins les cinq). ASML n'y figure pas : c'est un fabricant de machines de lithographie, qui vend à ces fonderies ; l'ajouter compterait deux fois le même argent. Intel Foundry n'est pas dans ce classement."
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel des fonderies et d'ASML",
+    "u": "Md$ par trimestre (ASML : Md€, en pointillés)",
+    "x": [
+     "T3 24",
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26"
+    ],
+    "ser": [
+     {
+      "n": "TSMC",
+      "v": [
+       23.53,
+       26.85,
+       25.5,
+       30.24,
+       33.063,
+       33.723,
+       35.855,
+       40.2
+      ]
+     },
+     {
+      "n": "Samsung",
+      "v": [
+       3.31,
+       3.26,
+       2.89,
+       3.16,
+       3.184,
+       3.399,
+       3.201,
+       3.26
+      ],
+      "hol": [
+       0
+      ]
+     },
+     {
+      "n": "SMIC",
+      "v": [
+       2.16,
+       2.2,
+       2.25,
+       2.21,
+       2.383,
+       2.489,
+       2.505,
+       3.01
+      ],
+      "hol": [
+       0
+      ]
+     },
+     {
+      "n": "UMC",
+      "v": [
+       1.87,
+       1.87,
+       1.76,
+       1.9,
+       1.975,
+       1.993,
+       1.93,
+       2.18
+      ],
+      "hol": [
+       2
+      ]
+     },
+     {
+      "n": "GlobalFoundries",
+      "v": [
+       1.74,
+       1.83,
+       1.59,
+       1.69,
+       1.66,
+       1.8,
+       1.634,
+       1.79
+      ],
+      "hol": [
+       2,
+       4
+      ]
+     },
+     {
+      "n": "ASML (Md€)",
+      "v": [
+       7.467,
+       9.263,
+       7.742,
+       7.692,
+       7.516,
+       9.718,
+       8.767,
+       9.326
+      ],
+      "dash": 1,
+      "eur": 1
+     }
+    ],
+    "as_of": "15 juil. 2026",
+    "srcs": [
+     [
+      "TrendForce T2 2026",
+      "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+     ],
+     [
+      "TrendForce T1 2026",
+      "https://www.trendforce.com/presscenter/news/20260612-13095.html"
+     ],
+     [
+      "TrendForce T4 2025 (Evertiq)",
+      "https://evertiq.com/news/2026-03-12-ai-demand-lifts-top-foundries-q4-revenue-samsung-gains-share"
+     ],
+     [
+      "TrendForce T4 2024",
+      "https://www.trendforce.com/presscenter/news/20250310-12510.html"
+     ],
+     [
+      "TrendForce T3 2024",
+      "https://www.trendforce.com/presscenter/news/20241205-12398.html"
+     ],
+     [
+      "GlobalFoundries T1 2026",
+      "https://anysilicon.com/?p=111612"
+     ],
+     [
+      "ASML T4 2024",
+      "https://www.asml.com/news/press-releases/2025/q4-2024-financial-results"
+     ],
+     [
+      "ASML T1 2025",
+      "https://www.asml.com/news/press-releases/2025/q1-2025-financial-results"
+     ],
+     [
+      "ASML T3 2025",
+      "https://www.asml.com/news/press-releases/2025/q3-2025-financial-results"
+     ],
+     [
+      "ASML T2 2026",
+      "https://www.asml.com/news/press-releases/2026/q2-2026-financial-results"
+     ]
+    ],
+    "note": "Chiffres de TrendForce (classement trimestriel des fonderies) ; ASML : ventes nettes publiées, en millions d'euros convertis en milliards, non convertis en dollars. Points creux : le chiffre est calculé à partir de la croissance annoncée ou du total annuel, pas publié tel quel. Samsung Foundry hors activité System LSI. L'axe est linéaire : les petites fonderies sont écrasées par TSMC, d'où les valeurs en légende.",
+    "proj": [],
+    "oth": []
+   }
+  },
+  "dc": {
+   "name": "Datacenters : qui investit",
+   "pie": {
+    "t": "Investissement des quatre hyperscalers",
+    "m": "T3 2026 · ≈ 202 Md$ de dépenses d'investissement sur le trimestre",
+    "items": [
+     {
+      "n": "Amazon",
+      "v": 77.3
+     },
+     {
+      "n": "Alphabet",
+      "v": 51.4
+     },
+     {
+      "n": "Microsoft",
+      "v": 39.4
+     },
+     {
+      "n": "Meta",
+      "v": 33.9
+     }
+    ],
+    "as_of": "2026",
+    "src": "Walnut Invest (dépôts SEC 10-Q et 10-K)",
+    "u": "https://walnutinvest.com/stats/ai-capex-statistics",
+    "note": "Dépenses d'investissement (capex) en trésorerie, tous usages confondus : une grande part va aux datacenters mais ce n'est pas le détail IA. Microsoft : T1 de son exercice 2027 (juillet–septembre 2026), hors contrats de location-financement."
+   },
+   "chart": {
+    "t": "Dépenses d'investissement trimestrielles",
+    "u": "Md$ par trimestre (capex, pas chiffre d'affaires)",
+    "x": [
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26",
+     "T3 26"
+    ],
+    "ser": [
+     {
+      "n": "Amazon",
+      "v": [
+       27.8,
+       25.0,
+       32.2,
+       35.1,
+       39.5,
+       44.2,
+       54.2,
+       77.3
+      ]
+     },
+     {
+      "n": "Alphabet",
+      "v": [
+       14.3,
+       17.2,
+       22.4,
+       24.0,
+       27.9,
+       35.7,
+       44.9,
+       51.4
+      ]
+     },
+     {
+      "n": "Microsoft",
+      "v": [
+       15.8,
+       16.7,
+       17.1,
+       19.4,
+       29.9,
+       30.9,
+       35.8,
+       39.4
+      ]
+     },
+     {
+      "n": "Meta",
+      "v": [
+       14.4,
+       12.9,
+       16.5,
+       18.8,
+       21.4,
+       19.0,
+       30.1,
+       33.9
+      ]
+     }
+    ],
+    "as_of": "2026",
+    "srcs": [
+     [
+      "Walnut Invest, capex IA (SEC)",
+      "https://walnutinvest.com/stats/ai-capex-statistics"
+     ]
+    ],
+    "note": "Le « marché » des datacenters est la dépense de ses clients : ce graphique montre donc l'investissement, non un chiffre d'affaires. Trimestres calendaires ; Microsoft décalé de son exercice (T1 2027 = T3 2026). Les quatre ensemble : 72 Md$ au T4 2024, 202 Md$ au T3 2026.",
+    "proj": [],
+    "oth": []
+   }
+  },
+  "opt": {
+   "name": "Optique : lasers et modules",
+   "pie": {
+    "t": "Chiffre d'affaires des deux fabricants qui publient",
+    "m": "T2 2026 (exercice clos fin juin) · total des deux sociétés",
+    "items": [
+     {
+      "n": "Coherent",
+      "v": 2.046
+     },
+     {
+      "n": "Lumentum",
+      "v": 1.0063
+     }
+    ],
+    "as_of": "11 août 2026",
+    "src": "Coherent et Lumentum (résultats de l'exercice 2026)",
+    "u": "https://seekingalpha.com/pr/20615640",
+    "note": "Camembert faible : seuls deux fabricants publient un chiffre trimestriel comparable. Les chiffres sont ceux de toute la société (Coherent inclut des activités industrielles : la part de l'IA y est plus faible). Innolight et Eoptolink (Chine) publient en yuans, Fabrinet et Broadcom ne séparent pas l'optique. Parts de marché sourcées d'autres périmètres : modules (Counterpoint) Innolight 27 %, Coherent 17 %, fabricants chinois 60 % ; lasers EML (TrendForce) : Lumentum, Broadcom et Mitsubishi Electric 72 % à eux trois."
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel (société entière)",
+    "u": "Md$ par trimestre (exercices clos fin juin)",
+    "x": [
+     "T3 24",
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26"
+    ],
+    "ser": [
+     {
+      "n": "Coherent",
+      "v": [
+       1.348,
+       1.435,
+       1.498,
+       1.529,
+       1.581,
+       1.686,
+       1.806,
+       2.046
+      ],
+      "hol": [
+       2
+      ]
+     },
+     {
+      "n": "Lumentum",
+      "v": [
+       0.3369,
+       0.4022,
+       0.4252,
+       0.4807,
+       0.5338,
+       0.6655,
+       0.8084,
+       1.0063
+      ],
+      "hol": [
+       0
+      ]
+     }
+    ],
+    "as_of": "11 août 2026",
+    "srcs": [
+     [
+      "Coherent T4 exercice 2026",
+      "https://coherent.gcs-web.com/node/17126/pdf"
+     ],
+     [
+      "Lumentum T4 exercice 2026",
+      "https://seekingalpha.com/pr/20615640"
+     ],
+     [
+      "Lumentum exercice 2026",
+      "https://semiconductor-today.com/news_items/2026/aug/lumentum-190826.shtml"
+     ]
+    ],
+    "note": "Trimestres d'exercice alignés sur les trimestres calendaires (septembre 2024 = T3 2024). Points creux : calculés en retranchant les trois autres trimestres du total annuel publié (Lumentum 1 645,0 M$ ; Coherent 5 810 M$ en 2025). Lumentum a presque triplé en huit trimestres (+ 199 %).",
+    "proj": [],
+    "oth": []
+   },
+   "gap": {
+    "lo": 30,
+    "hi": 30,
+    "min": 1
+   },
+   "why": "Même après un doublement de la capacité, Lumentum livre plus de 30 % en dessous de la demande ; Nvidia a réservé des capacités au-delà de 2027.",
+   "evid": [
+    {
+     "v": "2 Md$ × 2",
+     "l": "investis par Nvidia dans Lumentum et dans Coherent",
+     "as_of": "mars 2026",
+     "src": "Tom's Hardware",
+     "u": "https://www.tomshardware.com/tech-industry/semiconductors/lumentum-ceo-says-the-indium-phosphide-shortage-will-become-worse-than-memory"
+    },
+    {
+     "v": "> 2027",
+     "l": "délais de livraison des EML chez les fournisseurs clés",
+     "as_of": "9 déc. 2025",
+     "src": "TrendForce, via LEDinside",
+     "u": "https://m.ledinside.com/node/view/35680.html"
+    }
+   ]
+  },
+  "net": {
+   "name": "Réseau : commutateurs et interconnexions",
+   "pie": {
+    "t": "Chiffre d'affaires réseau des deux vendeurs qui publient",
+    "m": "T2 2026 · Nvidia (réseau) et Arista (total)",
+    "items": [
+     {
+      "n": "Nvidia (réseau)",
+      "v": 17.5
+     },
+     {
+      "n": "Arista",
+      "v": 3.0357
+     }
+    ],
+    "as_of": "26 août 2026",
+    "src": "Arista (résultats T2 2026, SEC)",
+    "u": "https://www.sec.gov/Archives/edgar/data/0001596532/000159653226000174/ex991q226-earningsrelease.htm",
+    "note": "Camembert faible : deux vendeurs seulement. Nvidia : segment réseau (NVLink, InfiniBand, Spectrum-X), ≈ 17,5 Md$ calculé à partir de la hausse de 18 % annoncée au trimestre clos fin juillet 2026. Arista : chiffre d'affaires total (3,036 Md$). Broadcom, Cisco, Marvell et Huawei ne sont pas inclus faute de chiffre réseau comparable ; IDC donne pour les commutateurs Ethernet de datacenter Nvidia 20,4 %, Arista 18,7 %, Cisco 18,2 % au T2 2026."
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel réseau",
+    "u": "Md$ par trimestre",
+    "x": [
+     "T3 24",
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26"
+    ],
+    "ser": [
+     {
+      "n": "Nvidia (réseau)",
+      "v": [
+       3.127,
+       3.024,
+       4.96,
+       7.3,
+       8.2,
+       11.0,
+       14.8,
+       17.5
+      ],
+      "hol": [
+       2,
+       5,
+       7
+      ]
+     },
+     {
+      "n": "Arista",
+      "v": [
+       1.81,
+       1.93,
+       2.005,
+       2.2048,
+       2.3083,
+       2.488,
+       2.708,
+       3.0357
+      ],
+      "hol": [
+       0,
+       2,
+       6
+      ]
+     }
+    ],
+    "as_of": "26 août 2026",
+    "srcs": [
+     [
+      "Arista T2 2026 (SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001596532/000159653226000174/ex991q226-earningsrelease.htm"
+     ],
+     [
+      "Arista T2 2026 (Business Wire)",
+      "https://www.businesswire.com/news/home/20260804130700/en/"
+     ],
+     [
+      "Nvidia réseau T2 exercice 2026",
+      "https://www.nasdaq.com/articles/nvidias-networking-revenues-double-can-it-keep-momentum"
+     ],
+     [
+      "Nvidia T2 exercice 2027",
+      "https://www.nasdaq.com/articles/nvidia-q2-earnings-beat-blackwell-ultra-data-center-strength"
+     ]
+    ],
+    "note": "Nvidia clôt ses trimestres un mois après le trimestre calendaire (octobre 2024 = T3 2024). Points creux : calculés à partir de la croissance séquentielle annoncée ou arrondis (T1 2025 : + 64 % ; T4 2025 : « environ » 11 Md$ ; T2 2026 : + 18 %) ; Arista T3 2024 et T1 2025 déduits des variations annoncées et du total annuel, T1 2026 approximatif.",
+    "proj": [],
+    "oth": []
+   }
   }
  },
  "fmap": {
@@ -2377,17 +2864,38 @@
   "ip": "ip",
   "wires": "ip",
   "sub": "sub",
-  "las": "las",
-  "cpo": "las",
-  "mod": "las",
+  "las": "opt",
+  "cpo": "opt",
+  "mod": "opt",
   "gas": "gas",
-  "trf": "trf"
+  "trf": "trf",
+  "fib": "opt",
+  "fab": "fab",
+  "bld": "dc",
+  "cool": "dc",
+  "loop": "dc",
+  "cold": "dc",
+  "bus": "dc",
+  "pcb": "dc",
+  "sw": "net",
+  "sw2": "net",
+  "fibc": "net"
  },
  "fmvia": {
-  "rack": "Les racks empilent des puces IA : voici la fiche de ces puces.",
+  "rack": "Les racks empilent des puces IA : voici le chiffre d'affaires de leurs vendeurs.",
   "wires": "Ces pistes relient la HBM au calcul dans l'interposeur CoWoS : voici la fiche du packaging.",
-  "cpo": "L'optique co-intégrée dépend des lasers au phosphure d'indium : voici leur fiche.",
-  "mod": "Chaque module optique embarque 4 à 8 lasers : voici la fiche du composant critique en amont."
+  "cpo": "L'optique co-intégrée dépend des lasers au phosphure d'indium : voici le marché de l'optique.",
+  "mod": "Chaque module optique embarque 4 à 8 lasers : voici le marché de l'optique, des lasers aux modules.",
+  "cool": "Le refroidissement est installé dans des datacenters financés par les hyperscalers : voici qui investit.",
+  "loop": "La boucle d'eau est installée dans des datacenters financés par les hyperscalers : voici qui investit.",
+  "cold": "Les plaques froides équipent des datacenters financés par les hyperscalers : voici qui investit.",
+  "bus": "La distribution électrique est installée dans des datacenters financés par les hyperscalers : voici qui investit.",
+  "pcb": "Les cartes et alimentations équipent des datacenters financés par les hyperscalers : voici qui investit.",
+  "bld": "Les datacenters sont financés par les hyperscalers : voici qui investit.",
+  "fib": "Les fibres relient des modules optiques : voici le marché de l'optique.",
+  "sw": "Les commutateurs sont vendus par Nvidia, Arista et d'autres : voici le marché du réseau.",
+  "sw2": "Ces liaisons aboutissent à des commutateurs : voici le marché du réseau.",
+  "fibc": "Ces fibres relient le datacenter au réseau : voici le marché du réseau."
  },
  "bmk": {
   "fabrication": "fab",
@@ -2397,7 +2905,7 @@
   "cuivre": "aec",
   "optique": "mod",
   "reseau": "sw",
-  "datacenter": "cold",
+  "datacenter": "bld",
   "energie": "gas",
   "modeles": "models",
   "applications": "apps"

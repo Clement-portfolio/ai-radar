@@ -102,7 +102,7 @@ function rUne(){
   h+='<section class="focus"><h2>Briefing du jour</h2>';
   if(st.length){
     h+='<ol class="bl">'+st.map(function(x){
-      var s=x.s,lead=x.arts[0],en=isEn()&&s.head_en&&s.bullets_en&&s.bullets_en.length===3;
+      var s=x.s,lead=x.arts[0],en=isEn()&&s.head_en&&s.bullets_en&&s.bullets_en.length===s.bullets.length;
       var head=en?s.head_en:s.head,bl=en?s.bullets_en:s.bullets;
       return'<li><div class="meta">'+ctag(lead.country)+'<span class="cat">'+esc(CATS[lead.category]||lead.category)+'</span><span>'+esc(ago(s.ts||lead.ts))+'</span></div>'+
        '<h3 class="bt">'+esc(head)+'</h3>'+
@@ -452,7 +452,7 @@ function rInfra(){
   if(S.layerSort==="tension")L.sort(function(a,b){return(b.tension==null?-1:b.tension)-(a.tension==null?-1:a.tension)});else L.sort(function(a,b){return a.order-b.order});
   var el=$("v-infrastructure");
   if(!$("chain-host")){
-    el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">Un datacenter IA vu de l\'extérieur, puis de l\'intérieur, puis au niveau d\'un seul module. Cliquez une pièce ou l\'une des onze couches pour voir qui la fournit, où ça coince et à quel point (tension de 0 à 10, estimation éditoriale).</p><div id="chain-host"></div>'+
+    el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">Un datacenter IA vu de l\'extérieur, puis de l\'intérieur, puis au niveau d\'un seul module. Cliquez une pièce ou l\'une des onze couches pour voir qui la fournit, où ça coince et à quel point (tension de 0 à 10).</p><div id="chain-host"></div>'+
      '<details class="details"><summary>La pile en onze couches <em>vue en liste</em></summary><div id="infra-list"></div></details>';
   }
   chainHost();

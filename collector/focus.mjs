@@ -10,6 +10,12 @@ function tokens(t) {
 }
 function shared(a, b) { let i = 0; for (const x of a) if (b.has(x)) i++; return i; }
 function sim(a, b) { const i = shared(a, b); return i >= 3 ? i / (a.size + b.size - i) : 0; }
+const titleToks = (i) => tokens(i.title);
+/** Deux articles ne se regroupent que s'ils partagent au moins 2 mots de titre ET la même catégorie ou la même couche. */
+function compat(a, b) {
+  if (shared(titleToks(a), titleToks(b)) < 2) return false;
+  return (a.category && a.category === b.category) || (a.layer && a.layer !== "Autre" && a.layer === b.layer);
+}
 function overlap(a, b) { const i = shared(a, b); return i >= 2 ? i / Math.min(a.size, b.size) : 0; }
 
 /**
@@ -22,7 +28,7 @@ export function pickStories(items, now, n = 5) {
   const tok = new Map(pool.map((i) => [i.id, tokens(i.title + " " + (i.summary || ""))]));
   const groups = [];
   for (const it of [...pool].sort((a, b) => (b.importance - a.importance) || (Date.parse(b.ts) - Date.parse(a.ts)))) {
-    const g = groups.find((g) => sim(tok.get(it.id), tok.get(g.items[0].id)) >= 0.2 || g.items.some((o) => sim(tok.get(it.id), tok.get(o.id)) >= 0.35));
+    const g = groups.find((g) => compat(it, g.items[0]) && (sim(tok.get(it.id), tok.get(g.items[0].id)) >= 0.2 || g.items.some((o) => compat(it, o) && sim(tok.get(it.id), tok.get(o.id)) >= 0.35)));
     if (g) g.items.push(it); else groups.push({ items: [it] });
   }
   const scored = groups.map((g) => {
@@ -63,12 +69,14 @@ export function relatedFor(story, items, now, max = 3) {
 export const FOCUS_SYSTEM = `Tu rédiges le « Briefing du jour » d'un site d'actualité sur l'intelligence artificielle et son économie, pour un lecteur non spécialiste. On te donne des histoires numérotées (i) ; chacune regroupe des articles récents sur le même sujet (articles : a, title, summary, source, date) et parfois des articles plus anciens (background : j).
 Pour chaque histoire, renvoie en français :
 - head : le titre principal, une phrase d'actualité claire, 110 caractères maximum, sans point final.
-- b1 : ce qui s'est passé, avec les faits précis des articles. 200 caractères maximum.
-- b2 : ce qu'il faut savoir de ce qui s'est passé avant, d'après UNIQUEMENT le background (indique les numéros j utilisés dans ctx). S'il n'y a pas de background, donne à la place un second fait distinct tiré des articles. N'écris jamais « Contexte », « Avant » ni aucun mot qui annonce le contexte : va droit au fait. 200 caractères maximum.
-- b3 : ce que cela implique ou laisse penser, ton interprétation prudente (« cela pourrait », « cela montre que »), sans prédiction chiffrée ni conseil d'investissement. 200 caractères maximum.
-- head_en, b1_en, b2_en, b3_en : les mêmes textes traduits fidèlement en anglais.
+- b1 : ce qui s'est passé, avec les faits précis des articles. 200 caractères maximum. Obligatoire.
+- b2 : ce qu'il faut savoir de ce qui s'est passé avant, d'après UNIQUEMENT le background (indique les numéros j utilisés dans ctx). S'il n'y a pas de background, donne à la place un second fait distinct sur LE MÊME événement, tiré des articles de cette histoire. Si tu n'as ni background ni second fait sur ce même événement, renvoie une chaîne vide : ne comble jamais avec un autre sujet. Va droit au fait, sans mot qui annonce le contexte. 200 caractères maximum.
+- b3 : une vraie analyse, ou rien. Une analyse met en relation deux faits ou deux chiffres présents dans les articles (un ordre de grandeur, une comparaison, une contradiction, une conséquence directement indiquée par les articles) et apprend quelque chose que b1 et b2 ne disent pas. Si les articles ne permettent pas une telle analyse, renvoie une chaîne vide. 200 caractères maximum. Pas de prédiction chiffrée, pas de conseil d'investissement.
+- head_en, b1_en, b2_en, b3_en : les mêmes textes traduits fidèlement en anglais (chaîne vide si le texte français est vide).
 Règles impératives :
-- Les trois puces apportent trois informations différentes et ne répètent pas le titre.
+- Aucune formule creuse ou d'introduction : ne commence jamais une puce par « Cela veut dire », « Cela signifie », « Cela montre que », « Cela pourrait », « Cela laisse penser », « Autrement dit », « En d'autres termes », « En clair », « Concrètement », « Il faut retenir ». Écris directement le fait ou l'analyse.
+- Toutes les puces d'une histoire parlent du même événement que le titre. Si un article fourni n'a manifestement rien à voir avec le premier, ignore-le.
+- Les puces apportent des informations différentes et ne répètent pas le titre.
 - N'utilise AUCUN chiffre, date, nom propre ou fait absent des articles fournis. N'invente rien, ne complète pas avec tes connaissances.
 - Écris tous les nombres en chiffres, jamais en toutes lettres.
 - Pas d'opinion politique : décris les positions des acteurs sans prendre parti.
@@ -88,8 +96,10 @@ export const FOCUS_SCHEMA = {
 
 const clean = (s) => String(s || "").trim().replace(/\s+/g, " ");
 const LIM = { head: 130, b: 260 };
+/** Formules creuses d'introduction (français et anglais) : une puce qui en commence par une est écartée. */
+export const FILLER = /^\s*(cela|ça|ce qui)\s+(veut|vient de)\s+dire\b|^\s*(cela|ça)\s+(signifie|montre|laisse|pourrait|pourrait|suggère|indique|prouve|confirme|illustre|souligne)\b|^\s*(autrement dit|en d['’]autres termes|en clair|concrètement|il faut (retenir|savoir)|à retenir|en résumé|en somme|bref)\b|^\s*(this|that|which)\s+(means|shows|suggests|could|might|indicates|confirms|highlights|illustrates)\b|^\s*(in other words|in short|basically|put simply|concretely)\b/i;
 
-/** Garde chaque histoire dont aucun chiffre n'est absent des articles fournis ; l'anglais est retiré s'il ne suit pas. */
+/** Garde chaque histoire dont aucun chiffre n'est absent des articles fournis ; b2 et b3 sont facultatifs (vides ou formule creuse : retirés). */
 export function validateStories(arr, inputs, diag = []) {
   if (!Array.isArray(arr)) return null;
   const out = [];
@@ -100,13 +110,17 @@ export function validateStories(arr, inputs, diag = []) {
     const ctx = [...new Set((Array.isArray(r.ctx) ? r.ctx : []).map(Number))].filter((j) => bg.some((b) => b.j === j));
     const own = inp.articles.map((a) => `${a.title} ${a.summary}`).join(" ");
     const poolAll = new Set(digitsOf(own + " " + bg.map((b) => `${b.title} ${b.summary}`).join(" ")));
-    const head = clean(r.head), bullets = [clean(r.b1), clean(r.b2), clean(r.b3)];
-    if (!head || head.length > LIM.head || bullets.some((b) => !b || b.length > LIM.b)) { diag.push(`histoire ${inp.i} : texte vide ou trop long (titre ${head.length}, puces ${bullets.map((b) => b.length).join("/")})`); continue; }
-    const bad = [head, ...bullets].find((t) => hasNumberWords(t) || foreignScript(t) || digitsOf(t).some((d) => !poolAll.has(d)));
+    const head = clean(r.head);
+    const fr = [clean(r.b1), clean(r.b2), clean(r.b3)], en0 = [clean(r.b1_en), clean(r.b2_en), clean(r.b3_en)];
+    const keep = fr.map((b, k) => !!b && !FILLER.test(b) && !(k && en0[k] && FILLER.test(en0[k])));
+    if (!head || head.length > LIM.head || !keep[0] || FILLER.test(fr[0])) { diag.push(`histoire ${inp.i} : titre ou première puce vide, trop long ou creux`); continue; }
+    const bullets = fr.filter((_, k) => keep[k]);
+    if (bullets.some((b) => b.length > LIM.b)) { diag.push(`histoire ${inp.i} : puce trop longue (${bullets.map((b) => b.length).join("/")})`); continue; }
+    const bad = [head, ...bullets].find((x) => hasNumberWords(x) || foreignScript(x) || digitsOf(x).some((d) => !poolAll.has(d)));
     if (bad) { diag.push(`histoire ${inp.i} : nombre ou écriture non conforme (« ${bad.slice(0, 60)} »)`); continue; }
-    const en = [clean(r.head_en), clean(r.b1_en), clean(r.b2_en), clean(r.b3_en)];
-    const enOk = en.every((t, k) => t && t.length <= (k ? LIM.b + 40 : LIM.head + 20) && !foreignScript(t) && digitsOf(t).every((d) => poolAll.has(d)));
-    out.push({ i: inp.i, head, bullets, ctx, head_en: enOk ? en[0] : null, bullets_en: enOk ? en.slice(1) : null });
+    const enAll = [clean(r.head_en), ...en0.filter((_, k) => keep[k])];
+    const enOk = enAll.every((x, k) => x && x.length <= (k ? LIM.b + 40 : LIM.head + 20) && !foreignScript(x) && digitsOf(x).every((d) => poolAll.has(d)));
+    out.push({ i: inp.i, head, bullets, ctx: keep[1] ? ctx : [], head_en: enOk ? enAll[0] : null, bullets_en: enOk ? enAll.slice(1) : null });
   }
   return out.length ? out : null;
 }
