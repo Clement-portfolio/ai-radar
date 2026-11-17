@@ -45,6 +45,10 @@ export function applyTranslations(arr, inputs, byIdx) {
     if (foreignScript(it.title)) {
       const t = clean(r.title_fr);
       if (t && t.length <= 220 && !foreignScript(t) && ok(t)) { it.title = t; touched = true; }
+      else if (it.summary && !foreignScript(it.summary)) { // secours : le résumé français, déjà validé, sert de titre
+        const first = clean(it.summary).split(/(?<=[.!?])\s/)[0];
+        it.title = first.length <= 150 ? first.replace(/\.$/, "") : first.slice(0, 147).replace(/\s+\S*$/, "") + "…"; touched = true;
+      }
     }
     const te = clean(r.title_en);
     if (te && te.length <= 240 && !foreignScript(te) && ok(te)) {

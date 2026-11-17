@@ -554,7 +554,7 @@ export async function run(opts = {}) {
   } : null;
   // titres restés dans une autre écriture + version anglaise des articles (par lots, les plus récents d'abord)
   let tr = { changed: 0, reason: "erreur" };
-  try { tr = await translateMissing({ items: keep, generate: mkGen(TRANSLATE_SYSTEM, TRANSLATE_SCHEMA), max: +env.TRANSLATE_BATCH || 40, rounds: +env.TRANSLATE_ROUNDS || 2 }); }
+  try { tr = await translateMissing({ items: keep, generate: mkGen(TRANSLATE_SYSTEM, TRANSLATE_SCHEMA), max: +env.TRANSLATE_BATCH || 60, rounds: +env.TRANSLATE_ROUNDS || 3 }); }
   catch (e) { tr.reason = String(e.message || e).slice(0, 120); }
   log("Traductions : " + tr.reason + (tr.left ? ` (reste ${tr.left})` : ""));
   const generateFocus = mkGen(FOCUS_SYSTEM, FOCUS_SCHEMA);

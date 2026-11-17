@@ -34,10 +34,13 @@ assert.equal(items[2].title_en, "Already translated", "article déjà traduit in
 // chiffre inventé : champ refusé ; titre encore non latin : refusé
 const it2 = [mk("e", "2026-11-17T02:00:00Z", "川普訪華", { summary: "Résumé sans chiffre." })];
 assert.equal((await translateMissing({ items: it2, generate: (inp) => [{ i: 0, title_fr: "Trump visite la Chine pour 500 milliards", title_en: "Trump visits China", summary_en: "x 999", why_en: "" }], rounds: 1 })).changed, 1);
-assert.equal(it2[0].title, "川普訪華", "titre français avec chiffre inventé : refusé");
+assert.equal(it2[0].title, "Résumé sans chiffre", "titre français avec chiffre inventé : refusé, le résumé sert de titre");
 assert.equal(it2[0].title_en, "Trump visits China");
 assert.equal(it2[0].summary_en, undefined, "résumé anglais avec chiffre inventé : refusé");
-const it3 = [mk("f", "2026-11-17T02:00:00Z", "川普訪華")];
-assert.equal((await translateMissing({ items: it3, generate: () => [{ i: 0, title_fr: "川普訪華", title_en: "川普訪華", summary_en: "", why_en: "" }], rounds: 1 })).changed, 0, "toujours non latin : rien d'appliqué");
+const it3 = [mk("f", "2026-11-17T02:00:00Z", "川普訪華", { summary: "" })];
+assert.equal((await translateMissing({ items: it3, generate: () => [{ i: 0, title_fr: "川普訪華", title_en: "川普訪華", summary_en: "", why_en: "" }], rounds: 1 })).changed, 0, "toujours non latin et sans résumé : rien d'appliqué");
+const it4 = [mk("g", "2026-11-17T02:00:00Z", "川普訪華", { summary: "Avant la visite de Trump en Chine, les États-Unis resserrent les règles. Suite du texte." })];
+await translateMissing({ items: it4, generate: () => [{ i: 0, title_fr: "川普訪華", title_en: "Trump visits China", summary_en: "", why_en: "" }], rounds: 1 });
+assert.equal(it4[0].title, "Avant la visite de Trump en Chine, les États-Unis resserrent les règles", "secours : première phrase du résumé français");
 assert.equal((await translateMissing({ items: it3, generate: () => null })).reason, "Gemini indisponible");
 console.log("Tests traductions : OK");

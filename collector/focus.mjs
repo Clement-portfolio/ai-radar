@@ -90,19 +90,20 @@ const clean = (s) => String(s || "").trim().replace(/\s+/g, " ");
 const LIM = { head: 130, b: 260 };
 
 /** Garde chaque histoire dont aucun chiffre n'est absent des articles fournis ; l'anglais est retiré s'il ne suit pas. */
-export function validateStories(arr, inputs) {
+export function validateStories(arr, inputs, diag = []) {
   if (!Array.isArray(arr)) return null;
   const out = [];
   for (const r of arr) {
     const inp = inputs.find((x) => x.i === Number(r?.i));
-    if (!inp) continue;
+    if (!inp) { diag.push("numéro d'histoire inconnu"); continue; }
     const bg = inp.background || [];
     const ctx = [...new Set((Array.isArray(r.ctx) ? r.ctx : []).map(Number))].filter((j) => bg.some((b) => b.j === j));
     const own = inp.articles.map((a) => `${a.title} ${a.summary}`).join(" ");
-    const poolAll = new Set(digitsOf(own + " " + bg.filter((b) => ctx.includes(b.j)).map((b) => `${b.title} ${b.summary}`).join(" ")));
+    const poolAll = new Set(digitsOf(own + " " + bg.map((b) => `${b.title} ${b.summary}`).join(" ")));
     const head = clean(r.head), bullets = [clean(r.b1), clean(r.b2), clean(r.b3)];
-    if (!head || head.length > LIM.head || bullets.some((b) => !b || b.length > LIM.b)) continue;
-    if ([head, ...bullets].some((t) => hasNumberWords(t) || foreignScript(t) || digitsOf(t).some((d) => !poolAll.has(d)))) continue;
+    if (!head || head.length > LIM.head || bullets.some((b) => !b || b.length > LIM.b)) { diag.push(`histoire ${inp.i} : texte vide ou trop long (titre ${head.length}, puces ${bullets.map((b) => b.length).join("/")})`); continue; }
+    const bad = [head, ...bullets].find((t) => hasNumberWords(t) || foreignScript(t) || digitsOf(t).some((d) => !poolAll.has(d)));
+    if (bad) { diag.push(`histoire ${inp.i} : nombre ou écriture non conforme (« ${bad.slice(0, 60)} »)`); continue; }
     const en = [clean(r.head_en), clean(r.b1_en), clean(r.b2_en), clean(r.b3_en)];
     const enOk = en.every((t, k) => t && t.length <= (k ? LIM.b + 40 : LIM.head + 20) && !foreignScript(t) && digitsOf(t).every((d) => poolAll.has(d)));
     out.push({ i: inp.i, head, bullets, ctx, head_en: enOk ? en[0] : null, bullets_en: enOk ? en.slice(1) : null });
@@ -130,8 +131,9 @@ export async function makeFocus({ items, now, prev, generate, modelName }) {
   }));
   let res = null;
   try { res = await generate(inputs.map((x) => ({ ...x, background: x.background.map(({ id, ...b }) => b) }))); } catch { res = null; }
-  const ok = validateStories(res, inputs);
-  if (!ok) return { doc: base, regenerated: false, reason: res ? "briefing rejeté : texte non conforme aux articles" : "Gemini indisponible : dernier briefing conservé" };
+  const diag = [];
+  const ok = validateStories(res, inputs, diag);
+  if (!ok) return { doc: base, regenerated: false, reason: res ? "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || (Array.isArray(res) ? "réponse vide" : "réponse invalide")) : "Gemini indisponible : dernier briefing conservé" };
   const keep = ok.sort((a, b) => a.i - b.i);
   return {
     doc: {
