@@ -212,7 +212,6 @@ footer{border-top:1px solid var(--hair);padding:18px 0 40px;font-family:var(--mo
   .bar{grid-template-columns:100px 1fr 62px}.src-list{columns:1}
   .brief li p{font-size:15.5px}
 }
-#v-infrastructure{margin-top:56px;padding-top:28px;border-top:1px solid var(--ink)}
 .table.sec td.sv,.sv{font-family:var(--mono);font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .table.sec td{line-height:1.4}
 .table.sec .small a{text-decoration:none;border-bottom:1px solid var(--hair)}.table.sec .small a:hover{color:var(--ink);border-color:var(--ink)}
