@@ -6,6 +6,7 @@ import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { hasNumberWords, digitsOf } from "./brief.mjs";
 import { translateData, I18N_SYSTEM, I18N_SCHEMA } from "./i18n.mjs";
+import { resolveGoogleLinks } from "./gnews.mjs";
 import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
 import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { collectSec } from "./sec.mjs";
@@ -560,6 +561,10 @@ export async function run(opts = {}) {
   try { tr = await translateMissing({ items: keep, generate: mkGen(TRANSLATE_SYSTEM, TRANSLATE_SCHEMA), max: +env.TRANSLATE_BATCH || 60, rounds: +env.TRANSLATE_ROUNDS || 3 }); }
   catch (e) { tr.reason = String(e.message || e).slice(0, 120); }
   log("Traductions : " + tr.reason + (tr.left ? ` (reste ${tr.left})` : ""));
+  // liens Google News → adresse réelle du média (les liens Google affichent parfois une page « automated queries »)
+  let gl = { changed: 0, failed: 0, left: 0, reason: "erreur" };
+  try { gl = await resolveGoogleLinks({ items: keep, fetchImpl, max: +env.GNEWS_MAX || 60, log }); }
+  catch (e) { gl.reason = String(e.message || e).slice(0, 120); }
   const generateFocus = mkGen(FOCUS_SYSTEM, FOCUS_SCHEMA);
   const focusPrev = await readJson("focus.json", null);
   let focus = { doc: focusPrev, regenerated: false, reason: "erreur" };
@@ -602,13 +607,13 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
   if (!opts.dry) {
     await fs.mkdir(dataDir, { recursive: true });
-    if (okCount > 0 && (added.length || tr.changed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
+    if (okCount > 0 && (added.length || tr.changed || gl.changed || gl.failed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
     if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));

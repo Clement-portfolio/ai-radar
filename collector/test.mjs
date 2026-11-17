@@ -117,5 +117,6 @@ await import("./test-focus.mjs");
 await import("./test-translate.mjs");
 await import("./test-i18n.mjs");
 await import("./test-review.mjs");
+await import("./test-gnews.mjs");
 await import("./test-data.mjs");
 console.log("TOUS LES TESTS PASSENT");

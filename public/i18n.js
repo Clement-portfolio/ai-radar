@@ -6,7 +6,7 @@
 "use strict";
 var D={
 "Actualités":"News","Marché et infrastructure":"Market & infrastructure","USA–Chine":"US–China","Méthode":"Method","Aujourd'hui":"Today","Briefing du jour":"Daily briefing",
-"Chargement…":"Loading…","mise à jour automatique":"automatic update","mise à jour automatique ":"automatic update ","toutes les 3 h":"every 3 h","Mise à jour automatique toutes les 3 heures":"Automatic update every 3 hours","Mise à jour toutes les 3 heures":"Update every 3 hours","Aucune mise à jour":"No update yet",
+"Chargement…":"Loading…","mise à jour automatique":"automatic update","mise à jour automatique ":"automatic update ","toutes les 3 h":"every 3 h","Mise à jour automatique toutes les 3 heures":"Automatic update every 3 hours","Mise à jour toutes les 3 heures":"Update every 3 hours","Aucune mise à jour":"No update yet","Puces IA":"AI chips","Puces IA (Ascend)":"AI chips (Ascend)","Puces IA (GPU et ASIC)":"AI chips (GPU and ASIC)","SEC (10-K et 10-Q) ↗":"SEC (10-K and 10-Q) ↗","SEC (10-K et 10-Q)":"SEC (10-K and 10-Q)",
 "Toutes les actualités →":"All news →","Sources":"Sources","Source":"Source","Tous":"All","Toutes":"All","Europe":"Europe","Golfe":"Gulf","Autres":"Other","Chine":"China","États-Unis":"United States","Royaume-Uni":"United Kingdom",
 "Modèles":"Models","Puces":"Chips","Énergie":"Energy","Finance":"Finance","Politique":"Politics","Régulation":"Regulation","Adoption":"Adoption","Recherche":"Research",
 "Applications":"Applications","Datacenters":"Data centers","Mémoire HBM":"HBM memory","Fonderie":"Foundry","Financement":"Funding","Autre":"Other",
@@ -92,7 +92,7 @@ var PH=[ /* phrases à trous et locutions, appliquées dans l'ordre */
  [/^Pays : (.+)$/,function(m,a){return"Country: "+tr(a)}],[/^Catégorie : (.+)$/,function(m,a){return"Category: "+tr(a)}],
  [/^Données il y a (\d+) (min|h|j)$/,function(m,n,u){return"Data "+n+" "+(u==="j"?"d":u)+" ago"}],[/^Données à l'instant$/,"Data just now"],[/^Données jamais$/,"Data never"],
  [/^Données (.+)$/,function(m,a){return"Data "+a}],
- [/^Dernière mise à jour (.+)$/,"Last updated $1"],
+ [/^Dernière mise à jour (.+)$/,"Last updated $1"],[/^fin (20\d\d) à (20\d\d)$/,"end of $1 to $2"],[/^fin (.+)$/,"end of $1"],[/\brelay[ée]e? par /g,"relayed by "],
  [/^Dernier point : (.+)$/,"Latest point: $1"],[/^Dernier point vieux de (\d+)$/,"Latest point is $1 old"],
  [/^12 mois à fin (.+)$/,"12 months to end $1"],[/^(10-K|10-Q|8-K|20-F|6-K) déposé le (.+?)( ↗)?$/,"$1 filed $2$3"],[/^dernier exercice clos le (.+)$/,"last fiscal year ended $1"],
  [/^Dernier passage : (.+)$/,function(m,a){return"Last run: "+a.replace(/il y a (\d+) (min|h|j)/g,function(x,n,u){return n+" "+(u==="j"?"d":u)+" ago"}).replace(/ sources sur (\d+) répondent/," sources out of $1 responding").replace(/ articles ajoutés/," articles added").replace(/classement par /,"classified by ")}],
@@ -116,7 +116,7 @@ function numericish(t){
   return !/\p{L}{2}/u.test(r);
 }
 function tr(s){
-  var m=/^(\s*)([\s\S]*?)(\s*)$/.exec(s),pre=m[1],core=m[2].replace(/\s+/g," "),post=m[3];
+  var m=/^([\s,·]*)([\s\S]*?)([\s·]*)$/.exec(s),pre=m[1],core=m[2].replace(/\s+/g," "),post=m[3];
   if(!core)return s;
   var arrow="";if(/ ↗$/.test(core)){arrow=" ↗";core=core.slice(0,-2)}
   var hit=lookup(core+arrow);
@@ -132,7 +132,14 @@ function tr(s){
     var hit2=lookup(t);if(hit2!==null)t=hit2; /* seconde chance (ex. « Pays : Tous ») */
   }
   t+=arrow;
-  return t===core+arrow?s:pre+t+post;
+  return t===core+arrow?trLoose(s):pre+t+post;
+}
+/* texte composé (« libellé · période », « , fin sept. 2026 · ») : chaque morceau est traduit séparément */
+function trLoose(s){
+  var m=/^([\s,·]*)([\s\S]*?)([\s·]*)$/.exec(s);
+  if(!m[2]||(m[1]===""&&m[3]===""&&m[2].indexOf(" · ")<0))return s;
+  var t=m[2].split(" · ").map(function(p){return tr(p)}).join(" · ");
+  return t===m[2]?s:m[1]+t+m[3];
 }
 var SKIP=["SCRIPT","STYLE","NOSCRIPT"],ART=".row,.bl,.story,.e";
 function inArticle(n){var e=n.nodeType===1?n:n.parentNode;return e&&e.closest&&e.closest(ART)}
