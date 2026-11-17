@@ -4,14 +4,21 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
-var S={feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null};
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null};
 
+try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
+function isEn(){return S.lang==="en"}
+function loc(){return isEn()?"en-GB":"fr-FR"}
+/* texte d'un article dans la langue choisie (retombe sur le français si la version anglaise n'existe pas encore) */
+function tx(o,k){return(isEn()&&o[k+"_en"])||o[k]}
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]})}
 function link(u){return /^https?:\/\//.test(u||"")?u:"#"}
-function ago(iso){if(!iso)return"jamais";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"à l'instant";if(m<60)return"il y a "+m+" min";var h=Math.round(m/60);if(h<24)return"il y a "+h+" h";return"il y a "+Math.round(h/24)+" j"}
-function fmtDay(iso){return new Date(iso).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
-function fmtTime(iso){return new Date(iso).toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})}
+function ago(iso){
+  if(isEn()){if(!iso)return"never";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"just now";if(m<60)return m+" min ago";var h=Math.round(m/60);if(h<24)return h+" h ago";return Math.round(h/24)+" d ago"}
+  if(!iso)return"jamais";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"à l'instant";if(m<60)return"il y a "+m+" min";var h=Math.round(m/60);if(h<24)return"il y a "+h+" h";return"il y a "+Math.round(h/24)+" j"}
+function fmtDay(iso){return new Date(iso).toLocaleDateString(loc(),{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
+function fmtTime(iso){return new Date(iso).toLocaleTimeString(loc(),{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})}
 function ctag(c){return '<span class="tag c-'+esc(c)+'">'+esc(CLABEL[c]||c)+'</span>'}
 function conf(c){var L={haute:'Source primaire',moyenne:'Presse',faible:'Non vérifié'};return '<span class="conf '+esc(c)+'"><i></i>'+(L[c]||esc(c))+'</span>'}
 function imp(n){return '<span class="imp" title="Importance '+n+'/3">'+[1,2,3].map(function(i){return'<i class="'+(i<=n?'f':'')+'"></i>'}).join("")+'</span>'}
@@ -19,19 +26,19 @@ function cdot(c){var L={haute:'Source primaire',moyenne:'Presse',faible:'Non vé
 function rowHTML(it){
   var k='f'+it.id,open=S.open[k]?' open':'';
   return '<div class="row i'+it.importance+open+'"><span class="time">'+esc(fmtTime(it.ts))+'</span>'+ctag(it.country)+
-   '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.title)+'</a>'+
+   '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a>'+
    '<span class="rsrc">'+esc(it.source)+cdot(it.confidence)+'</span>'+
-   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+(it.why?'<p class="rwhy">'+esc(it.why)+'</p>':'')+
-   '<div class="sum"><p>'+(it.summary?esc(it.summary):'Résumé indisponible : ouvrez l\'article.')+(it.pending?' <i class="small">(titre d\'origine, non classé par l\'IA)</i>':'')+'</p><div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
+   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+(it.why?'<p class="rwhy">'+esc(tx(it,'why'))+'</p>':'')+
+   '<div class="sum"><p>'+(it.summary?esc(tx(it,'summary')):'Résumé indisponible : ouvrez l\'article.')+(it.pending?' <i class="small">(titre d\'origine, non classé par l\'IA)</i>':'')+'</p><div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
 }
 function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s.u))+'" target="_blank" rel="noopener">'+esc(s.t)+'</a>'}).join("")}
 
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -76,31 +83,38 @@ function byCountry(x){return S.country==="ALL"||x.country===S.country}
 /* views */
 function storyHTML(it,cls){
   return '<article class="'+(cls||"story")+'"><div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span></div>'+
-  '<h4>'+esc(it.title)+'</h4><p>'+esc(it.summary)+'</p><div class="meta"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.source)+'</a><span>'+esc(fmtDay(it.ts).replace(/^\S+\s/,""))+'</span>'+conf(it.confidence)+'</div></article>';
+  '<h4>'+esc(tx(it,'title'))+'</h4><p>'+esc(tx(it,'summary'))+'</p><div class="meta"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.source)+'</a><span>'+esc(fmtDay(it.ts).replace(/^\S+\s/,""))+'</span>'+conf(it.confidence)+'</div></article>';
 }
 function essHTML(it,n){
-  return '<article class="e"><span class="n">'+(n<10?"0":"")+n+'</span><div><h3><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.title)+'</a></h3>'+
-   (it.summary?'<p>'+esc(it.summary)+'</p>':'')+
+  return '<article class="e"><span class="n">'+(n<10?"0":"")+n+'</span><div><h3><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a></h3>'+
+   (it.summary?'<p>'+esc(tx(it,'summary'))+'</p>':'')+
    '<div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span><span>'+esc(it.source)+'</span>'+conf(it.confidence)+'<span>'+esc(ago(it.ts))+'</span></div></div></article>';
 }
 function rUne(){
   var el=$("v-une"),byId={};
   S.feed.forEach(function(x){byId[x.id]=x});
   var u=S.status&&S.status.updated_at;
-  var F=S.focus,fi=((F&&F.items)||[]).map(function(f){var it=byId[f.id];return it?{f:f,it:it}:null}).filter(Boolean);
-  var fallback=!fi.length;
-  if(fallback){
-    fi=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,5).map(function(it){return{f:{why:it.why||it.summary||"",ctx_ids:[]},it:it}});
-  }
+  var F=S.focus,st=((F&&F.stories)||[]).map(function(s){
+    var arts=(s.ids||[]).map(function(id){return byId[id]}).filter(Boolean);
+    return arts.length?{s:s,arts:arts,ctx:(s.ctx_ids||[]).map(function(id){return byId[id]}).filter(Boolean)}:null;
+  }).filter(Boolean);
   var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span><span>Données '+esc(ago(u))+'</span></div>';
-  h+='<section class="focus"><h2>À retenir'+(fallback?' (sélection provisoire)':'')+'</h2>'+(fi.length?'<ul class="bl">'+fi.map(function(x){
-    var ctx=(x.f.ctx_ids||[]).map(function(id){return byId[id]}).filter(Boolean);
-    return'<li><div class="meta">'+ctag(x.it.country)+'<span class="cat">'+esc(CATS[x.it.category]||x.it.category)+'</span><span>'+esc(ago(x.it.ts))+'</span></div>'+
-     '<a class="bt" href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.title)+'</a>'+
-     (x.f.why?'<p class="why">'+esc(x.f.why)+'</p>':'')+
-     (x.f.context&&ctx.length?'<p class="ctx"><b>Avant</b> '+esc(x.f.context)+'</p>':'')+
-     '<div class="by"><a href="'+esc(link(x.it.url))+'" target="_blank" rel="noopener">'+esc(x.it.source)+' ↗</a>'+ctx.map(function(c){return'<a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(fmtD(c.ts))+' · '+esc(c.source)+' ↗</a>'}).join("")+'</div></li>';
-  }).join("")+'</ul>':'<div class="empty">Aucune actualité pour le moment.</div>')+'</section><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
+  h+='<section class="focus"><h2>Briefing du jour</h2>';
+  if(st.length){
+    h+='<ol class="bl">'+st.map(function(x){
+      var s=x.s,lead=x.arts[0],en=isEn()&&s.head_en&&s.bullets_en&&s.bullets_en.length===3;
+      var head=en?s.head_en:s.head,bl=en?s.bullets_en:s.bullets;
+      return'<li><div class="meta">'+ctag(lead.country)+'<span class="cat">'+esc(CATS[lead.category]||lead.category)+'</span><span>'+esc(ago(s.ts||lead.ts))+'</span></div>'+
+       '<h3 class="bt">'+esc(head)+'</h3>'+
+       '<ul class="b3">'+bl.map(function(b){return'<li>'+esc(b)+'</li>'}).join("")+'</ul>'+
+       '<div class="by"><span class="bylab">Sources</span>'+x.arts.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("")+x.ctx.map(function(c){return'<a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(fmtD(c.ts))+' · '+esc(c.source)+' ↗</a>'}).join("")+'</div></li>';
+    }).join("")+'</ol>';
+  }else{
+    var top=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,5);
+    h+='<p class="small" style="padding:6px 0 0">Le briefing est rédigé par l\'IA à chaque collecte. En attendant, voici les articles les plus importants.</p>'+
+      (top.length?'<ol class="bl">'+top.map(function(it){return'<li><div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span><span>'+esc(ago(it.ts))+'</span></div><h3 class="bt"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a></h3>'+(it.summary?'<ul class="b3"><li>'+esc(tx(it,'summary'))+'</li></ul>':'')+'<div class="by"><span class="bylab">Sources</span><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.source)+' ↗</a></div></li>'}).join("")+'</ol>':'<div class="empty">Aucune actualité pour le moment.</div>');
+  }
+  h+='</section><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
   el.innerHTML=h;
 }
 
@@ -207,10 +221,10 @@ function shortUnit(u){return/%/.test(u)?" %":/dollars/.test(u)?" Md$":/H100/.tes
 function fmtVal(c,v){
   if(c.scale==="log"){var e=Math.floor(Math.log10(v)),m=v/Math.pow(10,e);return String(Math.round(m*10)/10).replace(".",",")+"e"+e}
   var n=Math.abs(v)>=100?Math.round(v):Math.round(v*10)/10;
-  return n.toLocaleString("fr-FR")+shortUnit(c.unit)
+  return n.toLocaleString(loc())+shortUnit(c.unit)
 }
 function ms(d){return Date.parse(String(d).slice(0,10)+"T00:00:00Z")}
-function fmtM(t){return new Date(t).toLocaleDateString("fr-FR",{month:"short",year:"2-digit",timeZone:"UTC"})}
+function fmtM(t){return new Date(t).toLocaleDateString(loc(),{month:"short",year:"2-digit",timeZone:"UTC"})}
 function lineChart(c){
   var W=340,H=196,L=40,R=10,T=10,B=24,ser=(c.series||[]).filter(function(x){return x.points&&x.points.length});
   if(!ser.length)return'<div class="empty small">Données en cours de collecte.</div>';
@@ -288,7 +302,7 @@ function sharesRace(){
   var cs=piesFor(function(c){return c.tab==="usachine"});
   return cs.length?'<hr class="rule thick" style="margin-top:34px"><span class="kicker">Qui domine</span><h3 class="sub2" style="margin-top:2px">Parts de marché : où est le compute, qui fabrique</h3><div class="cards3">'+cs.map(shareCard).join("")+'</div>':"";
 }
-function fmtD(iso){return new Date(String(iso).slice(0,10)+"T00:00:00Z").toLocaleDateString("fr-FR",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
+function fmtD(iso){return new Date(String(iso).slice(0,10)+"T00:00:00Z").toLocaleDateString(loc(),{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"})}
 function mdUsd(v){return (v/1e9).toFixed(1).replace(".",",")+" Md$"}
 function secCell(m){
   if(!m)return '<td><span class="small">indisponible</span></td>';
@@ -394,7 +408,15 @@ function show(tab){
 }
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 
+function setLang(l){
+  S.lang=l==="en"?"en":"fr";
+  try{localStorage.setItem("lang",S.lang)}catch(e){}
+  if(window.I18N)I18N.set(S.lang);
+  [].forEach.call(document.querySelectorAll("[data-lang]"),function(b){b.classList.toggle("on",b.getAttribute("data-lang")===S.lang)});
+  if(S.market){freshness();renderAll()}
+}
 document.addEventListener("click",function(e){
+  var lg=e.target.closest("[data-lang]");if(lg){setLang(lg.getAttribute("data-lang"));return}
   var j=e.target.closest("[data-jump]");
   if(j){e.preventDefault();var id=j.getAttribute("data-jump"),el=$(id);if(el){if(el.tagName==="DETAILS")el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}return}
   var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
@@ -409,6 +431,7 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
 window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
+setLang(S.lang);
 show(location.hash.slice(1));
 refresh();
 })();

@@ -114,5 +114,7 @@ await import("./test-sec.mjs");
 await import("./test-shares.mjs");
 await import("./test-evolution.mjs");
 await import("./test-focus.mjs");
+await import("./test-translate.mjs");
+await import("./test-i18n.mjs");
 await import("./test-review.mjs");
 console.log("TOUS LES TESTS PASSENT");

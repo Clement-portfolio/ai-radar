@@ -333,8 +333,13 @@ html{overscroll-behavior-y:contain}
 .focus{border-top:1px solid var(--ink);padding-top:14px;margin-bottom:40px}
 .focus h2{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--mute);margin-bottom:6px}
 .bl{list-style:none;margin:0;padding:0}
-.bl li{position:relative;padding:16px 0 16px 22px;border-bottom:1px solid var(--hair)}
-.bl li::before{content:"";position:absolute;left:2px;top:27px;width:7px;height:7px;background:var(--ink)}
+.bl>li{position:relative;padding:20px 0 18px 30px;border-bottom:1px solid var(--hair);counter-increment:bl}
+.bl{counter-reset:bl}
+.bl>li::before{content:counter(bl);position:absolute;left:0;top:25px;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.bl ul.b3{list-style:none;margin:8px 0 2px;padding:0}
+.bl ul.b3 li{position:relative;padding:3px 0 3px 16px;font-size:15px;line-height:1.5;color:var(--ink2)}
+.bl ul.b3 li::before{content:"";position:absolute;left:1px;top:.78em;width:5px;height:5px;background:var(--ink)}
+.bl .bylab{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin-right:2px}
 .bl .bt{display:block;font-family:var(--display);font-size:19px;line-height:1.3;letter-spacing:-.01em;margin:6px 0 4px;color:var(--ink);text-decoration:none}
 .bl .bt:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .bl p{font-size:15px;line-height:1.5;color:var(--ink2);margin:3px 0}
@@ -343,3 +348,7 @@ html{overscroll-behavior-y:contain}
 .bl .by a{text-decoration:none;border-bottom:1px solid var(--hair)}.bl .by a:hover{color:var(--ink);border-color:var(--ink)}
 .row .rwhy{grid-column:3;font-size:12.5px;line-height:1.4;color:var(--mute);margin:3px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 @media(max-width:720px){.row .rwhy{grid-column:1/-1;grid-row:auto}.bl .bt{font-size:17px}}
+
+.lang{display:inline-flex;border:1px solid var(--hair)}
+.lang button{background:none;border:0;padding:3px 8px;font-family:var(--mono);font-size:11px;color:var(--mute);cursor:pointer}
+.lang button.on{background:var(--ink);color:var(--bg)}

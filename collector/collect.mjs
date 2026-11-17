@@ -5,6 +5,8 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { hasNumberWords, digitsOf } from "./brief.mjs";
+import { translateData, I18N_SYSTEM, I18N_SCHEMA } from "./i18n.mjs";
+import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
 import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
@@ -259,6 +261,15 @@ async function collectAll(cfg, env, http, now, log) {
 }
 
 /** « Pourquoi c'est important » : gardé seulement pour importance 2 ou 3, sans chiffre absent du titre et de l'extrait. */
+/** Version anglaise renvoyée par le classement : gardée seulement si ses chiffres viennent du titre et de l'extrait. */
+function enFields(r, c, hasWhy) {
+  const known = new Set(digitsOf(`${c.title} ${c.snippet || ""}`));
+  const okEn = (t, max) => { const x = String(t || "").trim().replace(/\s+/g, " "); return x && x.length <= max && !foreignScript(x) && digitsOf(x).every((d) => known.has(d)) ? x : ""; };
+  const title_en = okEn(r.title_en, 240);
+  if (!title_en) return {};
+  const summary_en = okEn(r.summary_en, 420), why_en = hasWhy ? okEn(r.why_en, 320) : "";
+  return { title_en, ...(summary_en ? { summary_en } : {}), ...(why_en ? { why_en } : {}) };
+}
 function whyOk(r, c) {
   const w = String(r.why_fr || "").trim();
   if (!w || w.length > 260 || (Number(r.importance) || 1) < 2 || hasNumberWords(w)) return false;
@@ -270,9 +281,12 @@ function whyOk(r, c) {
 const SYSTEM = `Tu es l'analyste d'un radar d'actualité sur l'intelligence artificielle et son économie. Pour chaque article fourni (champ i, source, title, snippet, date), renvoie un objet JSON.
 Règles :
 - relevant : true si l'article se rattache à l'IA ou à son économie : modèles et produits d'IA, puces/mémoire/fonderie, datacenters, énergie pour l'IA, financement, résultats et cours de bourse des acteurs de l'IA, décisions et polémiques politiques qui touchent l'IA (Maison Blanche, Département du Commerce, Congrès, gouvernements, liens entre dirigeants de l'IA et pouvoir), régulation, usages, adoption, recherche. En cas de doute, mets true avec importance 1. Mets false seulement si l'article n'a clairement aucun rapport avec l'IA (autre sujet, publicité, bons de réduction, conseils boursiers sans fait) et donne alors, dans reason, la raison en 8 mots maximum.
-- title_fr : titre en français, fidèle à l'original, sans ajout.
+- title_fr : titre en français, fidèle à l'original, sans ajout. Toujours en écriture latine : traduis les titres chinois, japonais, coréens, arabes ou russes.
+- title_en : le même titre en anglais (recopie l'original s'il est déjà en anglais).
 - summary_fr : 1 à 2 phrases en français, 260 caractères maximum, UNIQUEMENT à partir des faits présents dans le titre et l'extrait. N'ajoute aucun chiffre, aucune date, aucun nom absent du texte. Si l'extrait est vide, reformule le titre.
+- summary_en : le même résumé, traduit en anglais (chaîne vide si summary_fr est vide).
 - why_fr : pour importance 2 ou 3 seulement (sinon chaîne vide) : UNE phrase en français, 200 caractères maximum, qui explique pourquoi c'est important (l'enjeu, ce que cela change), UNIQUEMENT à partir du titre et de l'extrait. N'ajoute aucun chiffre, date ou nom absent du texte, aucune prédiction.
+- why_en : la même phrase traduite en anglais (chaîne vide si why_fr est vide).
 - country : pays de l'acteur principal dont parle l'information (pas le pays du média). US, CN, EU (Europe, Royaume-Uni inclus), GULF (Arabie saoudite, Émirats, Qatar...), OTHER (Taïwan, Corée, Japon, Inde, reste du monde).
 - category : modeles (modèles, labos, produits), puces (GPU, ASIC, mémoire, fonderie, export), energie (électricité, réseau, refroidissement), capex = rubrique « Finance » (investissements, levées de fonds, résultats, valorisations, bourse), politique (décisions, nominations, déclarations, conflits ou polémiques de l'administration américaine, du Congrès ou d'autres gouvernements et de leurs responsables quand ils touchent l'IA ou ses dirigeants), regul (lois, règles, procès, contrôles à l'export), adoption (usages, revenus, déploiements), recherche (articles scientifiques).
 - importance : 3 = événement majeur (nouveau modèle de pointe, résultats ou investissement supérieur à 1 Md$, décision réglementaire ou restriction à l'export majeure, crise politique ou décision de la Maison Blanche touchant un grand acteur de l'IA, forte chute ou envolée boursière du secteur, pénurie ou goulot structurel) ; 2 = notable ; 1 = mineur ou redondant.
@@ -284,7 +298,7 @@ const SCHEMA = {
   items: {
     type: "OBJECT",
     properties: {
-      i: { type: "INTEGER" }, relevant: { type: "BOOLEAN" }, title_fr: { type: "STRING" }, summary_fr: { type: "STRING" }, why_fr: { type: "STRING" },
+      i: { type: "INTEGER" }, relevant: { type: "BOOLEAN" }, title_fr: { type: "STRING" }, summary_fr: { type: "STRING" }, why_fr: { type: "STRING" }, title_en: { type: "STRING" }, summary_en: { type: "STRING" }, why_en: { type: "STRING" },
       country: { type: "STRING", enum: COUNTRIES }, category: { type: "STRING", enum: CATEGORIES },
       importance: { type: "INTEGER" }, layer: { type: "STRING", enum: LAYERS }, reason: { type: "STRING" },
     },
@@ -508,6 +522,7 @@ export async function run(opts = {}) {
           importance: Math.min(3, Math.max(1, Math.round(r.importance) || 1)), layer: LAYERS.includes(r.layer) ? r.layer : "Autre",
           source: c.source, url: c.url, confidence: conf,
           ...(whyOk(r, c) ? { why: String(r.why_fr).trim().replace(/\s+/g, " ") } : {}),
+          ...enFields(r, c, whyOk(r, c)),
         });
       });
     }
@@ -532,12 +547,18 @@ export async function run(opts = {}) {
 
   // Aujourd'hui : 5 puces « À retenir » (focus.json)
   const pacificNow = new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10);
-  const focusPrev = await readJson("focus.json", null);
-  const generateFocus = env.GEMINI_API_KEY && !classifier?.state.fatal ? async (inputs) => {
+  const mkGen = (system, schema) => env.GEMINI_API_KEY && !classifier?.state.fatal ? async (inputs) => {
     classifier ||= await makeClassifier(env, fetchImpl, log, state.gemini && state.gemini.date === pacificNow ? state.gemini.dead : []);
     if (classifier.state.fatal) return null;
-    return classifier.call(inputs, { system: FOCUS_SYSTEM, schema: FOCUS_SCHEMA });
+    return classifier.call(inputs, { system, schema });
   } : null;
+  // titres restés dans une autre écriture + version anglaise des articles (par lots, les plus récents d'abord)
+  let tr = { changed: 0, reason: "erreur" };
+  try { tr = await translateMissing({ items: keep, generate: mkGen(TRANSLATE_SYSTEM, TRANSLATE_SCHEMA), max: +env.TRANSLATE_BATCH || 40, rounds: +env.TRANSLATE_ROUNDS || 2 }); }
+  catch (e) { tr.reason = String(e.message || e).slice(0, 120); }
+  log("Traductions : " + tr.reason + (tr.left ? ` (reste ${tr.left})` : ""));
+  const generateFocus = mkGen(FOCUS_SYSTEM, FOCUS_SCHEMA);
+  const focusPrev = await readJson("focus.json", null);
   let focus = { doc: focusPrev, regenerated: false, reason: "erreur" };
   try { focus = await makeFocus({ items: keep, now: nowMs, prev: focusPrev, generate: generateFocus, modelName: () => classifier?.state.model || null }); }
   catch (e) { focus.reason = String(e.message || e).slice(0, 120); }
@@ -560,6 +581,15 @@ export async function run(opts = {}) {
   try { evoRes = await collectEvolution({ prev: seriesPrev, ua: env.SEC_USER_AGENT, fetchImpl, now: nowMs, sleep: opts.sleep, log }); }
   catch (e) { evoRes.summary.reason = String(e.message || e); log("Évolution : " + evoRes.summary.reason); }
 
+  // textes des pages de données en anglais (public/data/en.json) : par lots, ne bloque jamais la collecte
+  const enPrev = await readJson("en.json", {});
+  let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
+  try {
+    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}];
+    enRes = await translateData({ docs, prev: enPrev, generate: mkGen(I18N_SYSTEM, I18N_SCHEMA), batch: +env.I18N_BATCH || 50, rounds: +env.I18N_ROUNDS || 3 });
+  } catch (e) { enRes.reason = String(e.message || e).slice(0, 120); }
+  log("Textes en anglais : " + enRes.reason + (enRes.left ? ` (reste ${enRes.left})` : ""));
+
   const status = await readJson("status.json", {});
   const errors = [...evoRes.alerts];
   for (const c of sharesRes.doc?.charts || []) if (c.auto && c.check_error) errors.push(`Parts de marché « ${c.title} » : lecture impossible, ancien chiffre conservé (${c.check_error})`);
@@ -569,15 +599,16 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
   if (!opts.dry) {
     await fs.mkdir(dataDir, { recursive: true });
-    if (okCount > 0 && (added.length || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
+    if (okCount > 0 && (added.length || tr.changed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
+    if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
     if (evoRes.doc && JSON.stringify(evoRes.doc) !== JSON.stringify(seriesPrev)) await fs.writeFile(path.join(dataDir, "series.json"), fmtSeries(evoRes.doc));
