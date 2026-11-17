@@ -23,6 +23,7 @@ const isUrl = (u) => typeof u === "string" && /^https:\/\/[^\s]+$/.test(u);
 for (const x of ind.stats) {
   if (!x.value || !x.title) ko(`indicators : « ${x.id} » sans titre ou sans valeur`);
   if (!x.as_of || !x.source || !isUrl(x.url)) ko(`indicators : « ${x.id} » sans date, source ou lien`);
+  if (x.links && !x.links.every((l) => l.t && isUrl(l.u))) ko(`indicators : « ${x.id} » a un lien de source invalide`);
   if (!(x.etage >= 1 && x.etage <= 5)) ko(`indicators : « ${x.id} » étage invalide`);
 }
 for (const k of ["catalysts"]) for (const x of out[k] || []) if (!x.as_of && !x.date) ko(`outlook.${k} : entrée sans date`);

@@ -1,7 +1,7 @@
 // Tests hors ligne de la section Évolution : lecture de CSV et de .xlsx, calculs, contrôles, repli et cadence.
 import assert from "node:assert/strict";
 import zlib from "node:zlib";
-import { parseCsv, unzip, readXlsx, eciGaps, priceAtPerformance, ownersPie, ownersShare, rampSeries, designersPie, salesCurve, trainRecords, countryOf, btosSeries, secCurves, collectEvolution } from "./evolution.mjs";
+import { parseCsv, unzip, readXlsx, eciGaps, priceAtPerformance, ownersPie, ownersShare, designersPie, salesCurve, trainRecords, countryOf, btosSeries, secCurves, collectEvolution } from "./evolution.mjs";
 import { quarterly } from "./sec.mjs";
 import { parseHbmHistory } from "./shares.mjs";
 
@@ -69,17 +69,17 @@ assert.throws(() => btosSeries(zip({ "x": ["y", 0] }), NOW), /feuilles|zip|intro
 // ── Epoch : propriétaires, concepteurs, ventes
 const own = (rows) => "Name,Chip manufacturer,Owner,Start date,End date,Compute estimate in H100e (median),Incomplete\n" + rows.map((r) => r.join(",")).join("\n");
 const O = (owner, end, v, inc = "") => ["x", "Nvidia", owner, "2022-01-01", end, v, inc];
-const owners5 = (end, scale = 1, inc = "") => [O("Google", end, 24 * scale, inc), O("Microsoft", end, 16 * scale, inc), O("Amazon", end, 12 * scale, inc), O("Meta", end, 11 * scale, inc), O("Oracle", end, 5.5 * scale, inc), O("Other", end, 16 * scale, inc), O("China", end, 5.5 * scale, inc), O("xAI", end, 10 * scale, inc)];
+const owners5 = (end, scale = 1, inc = "") => [O("Google", end, 24 * scale, inc), O("Microsoft", end, 16 * scale, inc), O("Amazon", end, 12 * scale, inc), O("Meta", end, 11 * scale, inc), O("Oracle", end, 5.5 * scale, inc), O("Other", end, 16 * scale, inc), O("China", end, 5.5 * scale, inc), O("xAI", end, 6 * scale, inc), O("CoreWeave", end, 4 * scale, inc)];
 let csv = own([...owners5("2025-03-31", 6e5), ...owners5("2025-06-30", 7e5), ...owners5("2025-09-30", 85e4), ...owners5("2025-12-31", 1e6), ...owners5("2026-03-31", 1e6, "True").slice(0, 3)]);
 let r = ownersPie(csv, NOW);
 assert.equal(r.end, "2025-12-31", "le trimestre incomplet est ignoré");
-assert.deepEqual(r.segments.map((s) => s.label), ["Google", "Microsoft", "Amazon", "Meta", "xAI (SpaceX)", "Oracle", "Autres propriétaires"], "xAI (SpaceX) apparaît à part");
+assert.deepEqual(r.segments.map((s) => s.label), ["Google", "Microsoft", "Amazon", "Meta", "Oracle", "Néoclouds (CoreWeave)", "Autres propriétaires"], "CoreWeave est présenté comme « Néoclouds » ; xAI reste dans Autres");
 assert.ok(Math.abs(r.segments.reduce((a, s) => a + s.pct, 0) - 100) < 0.11);
 assert.equal(r.segments[0].pct, 24, "Google = 24 sur un total de 100");
 const sh = ownersShare(csv, NOW);
-assert.equal(sh.series.length, 7); assert.ok(sh.series.find((x) => x.name === "xAI (SpaceX)")); assert.equal(sh.series[0].points.length, 4); assert.equal(sh.last, "2025-12-31");
+assert.equal(sh.series.length, 7); assert.ok(sh.series.find((x) => x.name === "Néoclouds (CoreWeave)") && !sh.series.find((x) => /xAI/.test(x.name)), "xAI est dans Autres"); assert.equal(sh.series[0].points.length, 4); assert.equal(sh.last, "2025-12-31");
 assert.equal(sh.series[0].name, "Google"); assert.equal(sh.series[0].points[3].v, 24, "Google = 24 % du parc au dernier trimestre");
-assert.ok(sh.series[6].dashed && Math.abs(sh.series[6].points[3].v - 21.5) < 0.2, "reste = Autres (sans xAI ni CoreWeave)");
+assert.ok(sh.series[6].dashed && Math.abs(sh.series[6].points[3].v - 27.5) < 0.2, "reste = Autres (avec xAI)");
 assert.throws(() => ownersShare(own(owners5("2025-12-31", 1e6)), NOW), /quatre trimestres/);
 assert.throws(() => ownersShare(own([...owners5("2024-03-31", 6e5), ...owners5("2024-06-30", 7e5), ...owners5("2024-09-30", 85e4), ...owners5("2024-12-31", 1e6)]), NOW), /trop ancien/);
 
@@ -101,11 +101,6 @@ const pp = priceAtPerformance(priceCsv(), NOW_ECI);
 assert.equal(pp.points.length, 40, "chaque nouveau record est un point"); assert.ok(pp.points.every((p, i, a) => i === 0 || (a[i - 1].d <= p.d && p.v < a[i - 1].v)), "prix décroissant, dates croissantes");
 assert.equal(pp.points[0].v, 10, "le moins cher au seuil, pas le moins cher tout court (acc 0,5 ignoré, autre benchmark ignoré)");
 assert.throws(() => priceAtPerformance(priceCsv(10), NOW_ECI), /trop court/); assert.throws(() => priceAtPerformance(priceCsv(), Date.parse("2026-11-16T00:00:00Z")), /trop ancien/);
-const fred = "observation_date,RAMPAIALL\n" + Array.from({ length: 14 }, (_, i) => `2025-${String((i % 12) + 1).padStart(2, "0")}-01,${40 + i}`).slice(0, 12).join("\n") + "\n2026-01-01,53.2\n2026-02-01,.\n2026-03-01,55.1";
-const rp = rampSeries(fred, Date.parse("2026-04-15T00:00:00Z"));
-assert.equal(rp.series[0].points.length, 14, "« . » ignoré"); assert.equal(rp.series[0].points[13].v, 55.1);
-assert.throws(() => rampSeries(fred, Date.parse("2027-04-15T00:00:00Z")), /trop ancien/);
-assert.throws(() => rampSeries("observation_date,RAMPAIALL\n2026-01-01,12", NOW), /trop courte/);
 assert.throws(() => ownersPie(own(owners5("2025-12-31", 1e6).filter((x) => x[2] !== "Oracle")), NOW), /Oracle/);
 assert.throws(() => ownersPie(own(owners5("2024-01-31", 1e6)), NOW), /trop ancien/);
 assert.throws(() => ownersPie(own(owners5("2025-12-31", 1e6, "True")), NOW), /aucun trimestre complet/);
@@ -178,7 +173,6 @@ let hits = []; let down = false;
 const net = async (url) => {
   const u = String(url); hits.push(u);
   if (down && !u.includes("sec.gov")) return { ok: false, status: 503, text: async () => "" };
-  if (u.includes("fredgraph")) return ok("observation_date,RAMPAIALL\n" + Array.from({ length: 14 }, (_, i) => `${new Date(Date.UTC(2025, 2 + i, 1)).toISOString().slice(0, 10)},${45 + i / 2}`).join("\n"));
   if (u.includes("ai_chip_owners_cumulative")) return ok(csv);
   if (u.includes("ai_chip_sales_timelines")) return ok(salesCsv());
   if (u.includes("all_ai_models")) { const us = [["A", "2019-02-14", "1.5e21"], ["B", "2020-05-28", "3.1e23"], ["C", "2022-04-04", "2.5e24"], ["D", "2023-03-15", "2.1e25"], ["E", "2025-02-17", "3.5e26"], ["F", "2026-03-03", "9.4e26"]], cn = [["G", "2020-01-01", "1e22"], ["H", "2021-01-01", "1e23"], ["I", "2023-01-01", "1e24"], ["J", "2025-01-01", "5e25"]];
@@ -196,7 +190,7 @@ const T1 = Date.parse("2026-05-20T12:00:00Z");
 let ev = await collectEvolution({ prev: prev0, ua: "t t@t.t", fetchImpl: net, now: T1, sleep: async () => {} });
 // BTOS : l'horloge simulée est calée sur la fenêtre des vagues simulées
 assert.deepEqual(Object.fromEntries(Object.entries(ev.summary.tasks).filter(([, v]) => v !== "ok")), {}, JSON.stringify(ev.summary.tasks));
-assert.equal(ev.doc.curves.filter((x) => x.auto).length, 9); assert.equal(ev.doc.pies.length, 2);
+assert.equal(ev.doc.curves.filter((x) => x.auto).length, 8); assert.equal(ev.doc.pies.length, 2);
 assert.ok(ev.doc.curves.find((x) => x.id === "users"), "la courbe semi-automatique est recopiée telle quelle");
 assert.equal(ev.doc.curves.find((x) => x.id === "train").scale, "log");
 assert.equal(hits.filter((u) => u.includes("ai_chip_sales_timelines")).length, 1, "un fichier Epoch n'est téléchargé qu'une fois par passage");
@@ -216,6 +210,6 @@ down = false; const ev4 = await collectEvolution({ prev: ev3.doc, ua: "t t@t.t",
 assert.ok(!ev4.doc.pies.find((x) => x.id === "owners").check_error, "rétablissement : l'alerte disparaît");
 // premier passage sans rien en base et réseau coupé : des entrées vides, pas de plantage
 down = true; const ev5 = await collectEvolution({ prev: null, ua: "", fetchImpl: net, now: T1, sleep: async () => {} });
-assert.equal(ev5.doc.curves.length + ev5.doc.pies.length, 11); assert.ok(ev5.doc.pies.every((x) => x.check_error));
+assert.equal(ev5.doc.curves.length + ev5.doc.pies.length, 10); assert.ok(ev5.doc.pies.every((x) => x.check_error));
 console.log("test-evolution : OK");
 function HOUR(n) { return n * 3600000; }

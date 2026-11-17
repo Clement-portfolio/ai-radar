@@ -190,11 +190,11 @@
   {
    "id": "debt",
    "title": "Dette",
-   "value": "121 Md$ émis en 2025",
-   "sub": "Obligations américaines des cinq géants (28 Md$ par an en moyenne de 2020 à 2024). CoreWeave devait ≈ 47 Md$ fin sept. 2026.",
-   "as_of": "2025 ; 10 nov. 2026",
-   "source": "Bank of America via Quartz ; CoreWeave via Implicator",
-   "url": "https://qz.com/tech-hyperscaler-bond-issuance-investment-grade-index-050526"
+   "value": "≈ 225 Md$ levés en neuf mois",
+   "sub": "Dette nouvelle d'Amazon, Alphabet et Meta de janvier à septembre 2026 (Microsoft et Oracle non comptés). CoreWeave devait ≈ 47 Md$ fin sept. 2026.",
+   "as_of": "à fin sept. 2026 ; 10 nov. 2026",
+   "source": "Amazon, Alphabet, Meta ; CoreWeave via Implicator",
+   "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/"
   },
   {
    "id": "nvidia",

@@ -219,8 +219,10 @@ function piesFor(pred){
   return Object.keys(out).map(function(i){return out[i]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
 }
 var DASH=["","6 3","2 3","8 3 2 3","1 2.5"];
-function shortUnit(u){return/%/.test(u)?" %":/dollars/.test(u)?" Md$":/H100/.test(u)?" M H100e":/utilisateurs/.test(u)?" M":/FLOP/.test(u)?" FLOP":""}
+function shortUnit(u){return/%/.test(u)?" %":/dollars/.test(u)?" Md$":/H100/.test(u)?" M H100e":/utilisateurs/.test(u)?" M":/FLOP/.test(u)?" FLOP":/TWh/.test(u)?" TWh":""}
+function fmtUsd(v){return(v>=100?Math.round(v):v>=1?Math.round(v*100)/100:+v.toPrecision(2)).toLocaleString(loc(),{maximumFractionDigits:6})+" $"}
 function fmtVal(c,v){
+  if(c.fmt==="usd")return fmtUsd(v);
   if(c.scale==="log"){var e=Math.floor(Math.log10(v)),m=v/Math.pow(10,e);return String(Math.round(m*10)/10).replace(".",",")+"e"+e}
   var n=Math.abs(v)>=100?Math.round(v):Math.round(v*10)/10;
   return n.toLocaleString(loc())+shortUnit(c.unit)
@@ -228,7 +230,7 @@ function fmtVal(c,v){
 function ms(d){return Date.parse(String(d).slice(0,10)+"T00:00:00Z")}
 function fmtM(t){return new Date(t).toLocaleDateString(loc(),{month:"short",year:"2-digit",timeZone:"UTC"})}
 function lineChart(c){
-  var W=340,H=196,L=40,R=10,T=10,B=24,ser=(c.series||[]).filter(function(x){return x.points&&x.points.length});
+  var W=340,H=196,L=c.fmt==="usd"?58:40,R=10,T=10,B=24,ser=(c.series||[]).filter(function(x){return x.points&&x.points.length});
   if(!ser.length)return'<div class="empty small">Données en cours de collecte.</div>';
   var log=c.scale==="log",all=[];ser.forEach(function(x){x.points.forEach(function(p){all.push(p)})});
   var t0=Math.min.apply(null,all.map(function(p){return ms(p.d)})),t1=Math.max.apply(null,all.map(function(p){return ms(p.d)}));
@@ -238,7 +240,7 @@ function lineChart(c){
   else{var raw=vmax*1.05,mag=Math.pow(10,Math.floor(Math.log10(raw))),cand=[];[mag/10,mag].forEach(function(b){[1,2,2.5,5].forEach(function(k){cand.push(k*b)})});cand.push(mag*10);var stp=cand.filter(function(k){return raw/k<=5})[0]||mag*10;y1=Math.ceil(raw/stp)*stp;y0=0;for(var v=0;v<=y1+1e-9;v+=stp)ticks.push(v)}
   var X=function(t){return L+(t-t0)/(t1-t0)*(W-L-R)},Y=function(v){var q=log?(Math.log10(v)-y0)/(y1-y0):(v-y0)/(y1-y0);return T+(1-q)*(H-T-B)};
   var g='';
-  ticks.forEach(function(k){var yy=Y(log?Math.pow(10,k):k).toFixed(1);g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-5)+'" y="'+(+yy+3)+'" text-anchor="end" class="ax">'+(log?'1e'+k:(k>=1000?k.toLocaleString("fr-FR"):String(k).replace(".",",")))+'</text>'});
+  ticks.forEach(function(k){var yy=Y(log?Math.pow(10,k):k).toFixed(1);g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+yy+'" y2="'+yy+'" class="gl"/><text x="'+(L-5)+'" y="'+(+yy+3)+'" text-anchor="end" class="ax">'+(log?(c.fmt==='usd'?fmtUsd(Math.pow(10,k)):'1e'+k):(k>=1000?k.toLocaleString("fr-FR"):String(k).replace(".",",")))+'</text>'});
   var xt=[],span=t1-t0,yrsSpan=span/(365.25*86400000),stepM=yrsSpan<=1.3?3:(yrsSpan<=3.3?6:(yrsSpan<=7?12:24));
   var mm0=new Date(t0).getUTCFullYear()*12+new Date(t0).getUTCMonth();
   for(var mm=Math.ceil((mm0+1)/stepM)*stepM;;mm+=stepM){var tt=Date.UTC(Math.floor(mm/12),mm%12,1);if(tt>t1)break;xt.push([tt,stepM>=12?String(Math.floor(mm/12)):fmtM(tt)])}
@@ -262,13 +264,15 @@ function deltaChip(c,x){
   if(p.length<2)return'<em class="dl"></em>';
   var a=p[p.length-2].v,b=p[p.length-1].v,t;
   if(!(a>0)||a===b)return'<em class="dl"></em>';
-  if(c.scale==="log")t="×"+String(Math.round(b/a*10)/10).replace(".",",");
+  if(c.fmt==="usd")t=String(Math.abs(Math.round((b/a-1)*100)))+" %";
+  else if(c.scale==="log")t="×"+String(Math.round(b/a*10)/10).replace(".",",");
   else if(/%/.test(c.unit||""))t=String(Math.abs(Math.round((b-a)*10)/10)).replace(".",",")+" pt";
   else t=String(Math.abs(Math.round((b/a-1)*100)))+" %";
   if(t==="0 pt"||t==="0 %")return'<em class="dl"></em>';
   return'<em class="dl '+(b>a?"up":"dn")+'" title="Variation depuis le point précédent">'+(b>a?"▲ ":"▼ ")+t+'</em>';
 }
 function curveFresh(c){
+  if(c.asof_note)return'<div class="sf small">'+esc(c.asof_note)+'</div>';
   var all=[];(c.series||[]).forEach(function(x){(x.points||[]).forEach(function(p){all.push(p.d)})});
   var last=all.sort().pop(),t='';
   if(c.auto){
@@ -294,7 +298,7 @@ function curveCard(c){
 }
 function statCard(c){
   return'<div class="share stat1"><h4>'+esc(c.title)+'</h4><div class="bigv">'+esc(c.value)+'</div><div class="sm2">'+esc(c.sub)+'</div>'+
-   '<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div><div class="fr"><span class="small">'+esc(c.as_of)+'</span></div>'+
+   (c.links&&c.links.length?'<div class="sf">'+srcLinks(c.links)+' '+conf(c.confidence)+'</div>':'<div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a> '+conf(c.confidence)+'</div>')+'<div class="fr"><span class="small">'+esc(c.as_of)+'</span></div>'+
    (c.caveat?'<details class="why"><summary>Limites</summary><div class="sc">'+esc(c.caveat)+'</div></details>':'')+'</div>';
 }
 function nvidiaShare(){
