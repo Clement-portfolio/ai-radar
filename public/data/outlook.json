@@ -1,25 +1,6 @@
 {
  "as_of": "17 nov. 2026",
  "rule": "Uniquement des projections publiées par des tiers, en fourchette et datées. Aucune prévision de notre part ; les périmètres diffèrent d'une source à l'autre.",
- "capex2027": [
-  {
-   "name": "Analystes (Barron's)",
-   "value": "> 1 000 Md$",
-   "scope": "principaux exploitants de datacenters, 2027. Pour 2026 : 330 Md$ dépensés au premier semestre, 469 Md$ attendus au second.",
-   "as_of": "23 août 2026",
-   "source": "Barron's, via Dow Jones",
-   "url": "https://www-web.itiger.com/news/2661220215"
-  },
-  {
-   "name": "S&P Global",
-   "value": "≈ 1 300 Md$",
-   "scope": "six sociétés : Alphabet 357, Amazon 319, SpaceX 197, Microsoft 189, Meta 164, Oracle 95 (Md$, 2027). Total 2025 : 470 ; 2026 : 870.",
-   "as_of": "6 sept. 2026",
-   "source": "S&P Global, cité par The Motley Fool",
-   "url": "https://fool.com/investing/2026/09/06/hyperscalers-driving-ai-capex-cash-flow"
-  }
- ],
- "capex_note": "L'écart (plus de 1 000 contre 1 300 Md$) tient surtout au périmètre : S&P inclut SpaceX, pas Barron's. Ce sont des estimations d'analystes, pas des engagements des sociétés.",
  "gw": {
   "title": "Datacenters américains : annoncé contre en construction",
   "value": "≈ 1/3 en construction",
@@ -80,7 +61,8 @@
      "t": "SoftwareSeni (9 juin 2026, d'après le prospectus)",
      "u": "https://www.softwareseni.com/spacex-and-the-million-satellite-fcc-filing-orbital-data-centre-plans-at-scale/"
     }
-   ]
+   ],
+   "icon": "satellite"
   },
   {
    "name": "Starcloud",
@@ -99,7 +81,8 @@
      "t": "Quartz (juin 2026)",
      "u": "https://qz.com/orbital-data-center-startups-competitive-landscape-061526"
     }
-   ]
+   ],
+   "icon": "orbit"
   },
   {
    "name": "CoreWeave",
@@ -122,7 +105,8 @@
      "t": "Finsee (T3 2026)",
      "u": "https://finsee.ai/earnings/crwv/2026/q3/en/"
     }
-   ]
+   ],
+   "icon": "racks"
   },
   {
    "name": "Nebius",
@@ -145,7 +129,8 @@
      "t": "Blockspace (12 nov. 2026)",
      "u": "https://blockspace.media/insight/nebius-cuts-2026-revenue-outlook/"
     }
-   ]
+   ],
+   "icon": "cloud"
   },
   {
    "name": "Cerebras",
@@ -164,7 +149,8 @@
      "t": "Converge Digest (23 juin 2026)",
      "u": "https://convergedigest.com/cerebras-posts-q1-revenue-expands-openai-and-aws-partnerships/"
     }
-   ]
+   ],
+   "icon": "chip"
   },
   {
    "name": "Moonshot AI (Kimi)",
@@ -187,7 +173,8 @@
      "t": "Creati (févr. 2026)",
      "u": "https://creati.ai/ai-news/2026-02-17/moonshot-ai-10-billion-valuation-funding"
     }
-   ]
+   ],
+   "icon": "moon"
   }
  ],
  "risks": [

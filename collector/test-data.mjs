@@ -25,9 +25,10 @@ for (const x of ind.stats) {
   if (!x.as_of || !x.source || !isUrl(x.url)) ko(`indicators : « ${x.id} » sans date, source ou lien`);
   if (!(x.etage >= 1 && x.etage <= 5)) ko(`indicators : « ${x.id} » étage invalide`);
 }
-for (const k of ["capex2027", "catalysts"]) for (const x of out[k] || []) if (!x.as_of && !x.date) ko(`outlook.${k} : entrée sans date`);
+for (const k of ["catalysts"]) for (const x of out[k] || []) if (!x.as_of && !x.date) ko(`outlook.${k} : entrée sans date`);
 for (const a of out.actors || []) {
   for (const f of ["what", "why", "last", "risk"]) if (!a[f]) ko(`outlook : acteur « ${a.name} » sans « ${f} »`);
+  if (!["satellite", "orbit", "racks", "cloud", "chip", "moon"].includes(a.icon)) ko(`outlook : acteur « ${a.name} » sans pictogramme valide`);
   if (!(a.sources || []).length || !a.sources.every((s) => isUrl(s.u || s.url))) ko(`outlook : acteur « ${a.name} » sans source`);
 }
 const lay = JSON.parse(read("layers")).layers;

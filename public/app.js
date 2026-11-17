@@ -306,20 +306,29 @@ function riskCard(r){
   if(r.id==="nvidia"){var n=nvidiaShare();if(!n)return"";v="≈ "+fmtPct(Math.round(n.pct))+" du compute vendu"}
   return'<div class="share stat1"><h4>'+esc(r.title)+'</h4><div class="bigv">'+esc(v)+'</div><div class="sm2">'+esc(r.sub)+'</div><div class="sf"><a href="'+esc(link(r.url))+'" target="_blank" rel="noopener">'+esc(r.source)+' ↗</a></div><div class="fr"><span class="small">'+esc(r.as_of)+'</span></div></div>';
 }
+var ICONS={
+ satellite:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="27" y="27" width="10" height="10" transform="rotate(45 32 32)"/><path d="M14 22l10 10-6 6-10-10z"/><path d="M50 42L40 32l6-6 10 10z"/><path d="M12 52c8 0 14-6 14-14M12 58c11 0 20-9 20-20"/></svg>',
+ orbit:'<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="7"/><ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(-25 32 32)"/><circle cx="53" cy="22" r="3"/></svg>',
+ racks:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="8" width="18" height="48"/><rect x="36" y="8" width="18" height="48"/><path d="M10 20h18M10 32h18M10 44h18M36 20h18M36 32h18M36 44h18"/><path d="M15 14h4M15 26h4M15 38h4M15 50h4M41 14h4M41 26h4M41 38h4M41 50h4"/></svg>',
+ cloud:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 40a9 9 0 0 1 1-18 12 12 0 0 1 23-2 10 10 0 0 1 3 20z"/><path d="M22 48v8M32 48v8M42 48v8"/></svg>',
+ chip:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="12" width="40" height="40"/><rect x="22" y="22" width="20" height="20"/><path d="M20 12V5M32 12V5M44 12V5M20 59v-7M32 59v-7M44 59v-7M12 20H5M12 32H5M12 44H5M59 20h-7M59 32h-7M59 44h-7"/></svg>',
+ moon:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M44 8a24 24 0 1 0 12 30A20 20 0 0 1 44 8z"/><path d="M46 44l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></svg>'
+};
 function actorCard(a){
-  return'<div class="actor"><div class="ah"><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div>'+
-   '<dl><dt>Ce que c\'est</dt><dd>'+esc(a.what)+'</dd><dt>Pourquoi ça compte</dt><dd>'+esc(a.why)+'</dd><dt>Dernier chiffre</dt><dd>'+esc(a.last)+'</dd><dt class="rk">Risque principal</dt><dd class="rk">'+esc(a.risk)+'</dd></dl>'+
-   '<div class="srcs">'+srcLinks(a.sources)+'</div><div class="fr"><span class="small">'+esc(a.as_of)+'</span></div></div>';
+  return'<article class="actor"><div class="ah"><span class="aic" role="img" aria-label="'+esc(a.name)+'">'+(ICONS[a.icon]||ICONS.chip)+'</span><div><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div></div>'+
+   '<div class="alast"><span class="lbl">Dernier chiffre connu</span><p>'+esc(a.last)+'</p><span class="small mute">'+esc(a.as_of)+'</span></div>'+
+   '<div class="arow"><span class="lbl">Ce que c\'est</span><p>'+esc(a.what)+'</p></div>'+
+   '<div class="arow"><span class="lbl">Pourquoi ça compte</span><p>'+esc(a.why)+'</p></div>'+
+   '<div class="arow rk"><span class="lbl">Risque principal</span><p>'+esc(a.risk)+'</p></div>'+
+   '<div class="srcs">'+srcLinks(a.sources)+'</div></article>';
 }
 function outlookHTML(){
   var o=S.outlook;if(!o)return'<div class="empty small">Perspectives indisponibles.</div>';
-  var today=new Date().toISOString().slice(0,10),h='<div class="note"><b>Règle.</b> '+esc(o.rule)+'</div>';
-  h+='<div class="sgroup">Capex 2027 prévu <em>fourchette d\'analystes, pas des engagements</em></div><div class="cards3">'+
-   o.capex2027.map(function(c){return'<div class="share stat1"><h4>'+esc(c.name)+'</h4><div class="bigv">'+esc(c.value)+'</div><div class="sm2">'+esc(c.scope)+'</div><div class="sf"><a href="'+esc(link(c.url))+'" target="_blank" rel="noopener">'+esc(c.source)+' ↗</a></div><div class="fr"><span class="small">'+esc(c.as_of)+'</span></div></div>'}).join("")+
-   (o.gw?statCard({title:o.gw.title,value:o.gw.value,sub:o.gw.sub,as_of:o.gw.as_of,source:o.gw.source,url:o.gw.url,confidence:"moyenne",caveat:o.gw.caveat}):"")+'</div><p class="small mute" style="margin:8px 0 0">'+esc(o.capex_note)+'</p>';
+  var today=new Date().toISOString().slice(0,10),h='';
+  if(o.gw)h+='<div class="sgroup">Contrainte physique <em>l\'énergie, pas l\'argent</em></div><div class="cards3">'+statCard({title:o.gw.title,value:o.gw.value,sub:o.gw.sub,as_of:o.gw.as_of,source:o.gw.source,url:o.gw.url,confidence:"moyenne",caveat:o.gw.caveat})+'</div>';
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
   if(cat.length)h+='<div class="sgroup">Prochains catalyseurs <em>seulement les dates publiées</em></div><ul class="cats">'+cat.map(function(c){return'<li><div class="cd">'+esc(c.label)+(c.date===today?' · aujourd\'hui':'')+'</div><div><b>'+esc(c.title)+'</b><p>'+esc(c.detail)+'</p><span class="small mute">'+esc(c.status)+' · </span><span class="srcs inl">'+srcLinks(c.sources)+'</span></div></li>'}).join("")+'</ul><p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p>';
-  h+='<div class="sgroup">Acteurs émergents <em>une fiche courte chacun</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div>';
+  h+='<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div>';
   var rk=(o.risks||[]).map(riskCard).join("");
   if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
   return h;
@@ -329,11 +338,12 @@ function etages(){
     var pies=piesFor(function(c){return c.etage===e[0]}),cur=((S.series&&S.series.curves)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)}),
         st=((S.ind&&S.ind.stats)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
     var h='<section class="etage" id="m-e'+e[0]+'"><span class="kicker">Étage '+e[0]+' sur '+ETAGES.length+'</span><h3 class="sub2">'+esc(e[1])+'</h3><p class="lede" style="margin-bottom:0">'+esc(e[2])+'</p>';
-    if(e[0]===5)return h+outlookHTML()+'</section>';
+    if(e[0]===5&&S.outlook&&S.outlook.rule)h+='<div class="note"><b>Règle.</b> '+esc(S.outlook.rule)+'</div>';
     if(pies.length)h+='<div class="sgroup">Qui domine <em>parts de marché, chaque camembert est une mesure différente</em></div><div class="cards3">'+pies.map(shareCard).join("")+'</div>';
     if(st.length)h+='<div class="sgroup">Chiffres clés <em>une mesure par carte, datée et sourcée</em></div><div class="cards3">'+st.map(statCard).join("")+'</div>';
     if(cur.length)h+='<div class="sgroup">Comment ça évolue <em>courbes dans le temps</em></div><div class="cards3">'+cur.map(curveCard).join("")+'</div>';
-    if(!pies.length&&!st.length&&!cur.length)h+='<div class="empty small">Données en cours de collecte.</div>';
+    if(!pies.length&&!st.length&&!cur.length&&e[0]!==5)h+='<div class="empty small">Données en cours de collecte.</div>';
+    if(e[0]===5)h+=outlookHTML();
     return h+'</section>';
   }).join("");
 }

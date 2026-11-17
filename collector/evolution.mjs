@@ -93,6 +93,8 @@ const completeEnds = (rows, now) => {
   }
   return [...ends].filter(([e, o]) => !o.inc && Date.parse(e) <= now).map(([e]) => e).sort();
 };
+// propriétaires suivis à part quand ils figurent dans le fichier Epoch (xAI fait partie de SpaceX depuis février 2026)
+const EXTRA_OWNERS = [["CoreWeave", "CoreWeave"], ["xAI", "xAI (SpaceX)"]];
 const sumBy = (rows, end, key) => {
   const t = new Map();
   for (const r of rows) if (r["End date"] === end) t.set(r[key], (t.get(r[key]) || 0) + (parseFloat(r["Compute estimate in H100e (median)"]) || 0));
@@ -108,7 +110,7 @@ export function ownersPie(csv, now) {
   if (!(T > 1e6)) throw new Error("total de compute improbable : " + T);
   const five = ["Google", "Microsoft", "Amazon", "Meta", "Oracle"];
   for (const n of five) if (!(t.get(n) > 0)) throw new Error("propriétaire absent : " + n);
-  const segs = five.map((n) => ({ label: n, pct: round((100 * t.get(n)) / T) })).sort((a, b) => b.pct - a.pct);
+  const segs = [...five.map((n) => ({ label: n, pct: round((100 * t.get(n)) / T) })), ...EXTRA_OWNERS.filter(([k]) => t.get(k) > 0).map(([k, label]) => ({ label, pct: round((100 * t.get(k)) / T) }))].sort((a, b) => b.pct - a.pct);
   const rest = round(100 - segs.reduce((a, s) => a + s.pct, 0));
   if (segs.reduce((a, s) => a + s.pct, 0) < 40) throw new Error("part des cinq géants improbable");
   return { end, segments: [...segs, { label: "Autres propriétaires", pct: Math.max(0, rest) }], total: T };
@@ -122,9 +124,59 @@ export function ownersShare(csv, now, last = 8) {
   const five = ["Google", "Microsoft", "Amazon", "Meta", "Oracle"], byEnd = ends.map((e) => { const t = sumBy(rows, e, "Owner"), T = [...t.values()].reduce((a, b) => a + b, 0); return { e, t, T }; });
   for (const q of byEnd) { if (!(q.T > 1e5)) throw new Error("total de compute improbable : " + q.e); for (const n of five) if (!(q.t.get(n) > 0)) throw new Error("propriétaire absent : " + n + " (" + q.e + ")"); }
   const series = five.map((n) => ({ name: n, points: byEnd.map((q) => ({ d: q.e, v: round((100 * q.t.get(n)) / q.T) })) }));
-  series.push({ name: "Autres propriétaires", dashed: true, points: byEnd.map((q) => ({ d: q.e, v: round(100 - five.reduce((a, n) => a + (100 * q.t.get(n)) / q.T, 0)) })) });
+  const extras = EXTRA_OWNERS.filter(([k]) => byEnd.some((q) => q.t.get(k) > 0));
+  for (const [k, label] of extras) series.push({ name: label, points: byEnd.map((q) => ({ d: q.e, v: round((100 * (q.t.get(k) || 0)) / q.T) })) });
+  series.push({ name: "Autres propriétaires", dashed: true, points: byEnd.map((q) => ({ d: q.e, v: round(100 - five.reduce((a, n) => a + (100 * q.t.get(n)) / q.T, 0) - extras.reduce((a, [k]) => a + (100 * (q.t.get(k) || 0)) / q.T, 0)) })) });
   if (series.some((x) => x.points.some((p) => p.v < 0 || p.v > 100))) throw new Error("part hors 0–100");
   return { series, last: ends[ends.length - 1] };
+}
+
+/** Frontière de capacités (Epoch Capabilities Index) : meilleur score atteint à ce jour, par groupe de modèles. */
+const frontier = (rows, pick) => {
+  let m = -Infinity; const out = [];
+  for (const r of rows.filter(pick).sort((a, b) => a.date.localeCompare(b.date))) if (r.eci > m) { m = r.eci; out.push({ d: r.date, v: r.eci, model: r.model }); }
+  return out;
+};
+const frontierAt = (f, d) => { let v = null; for (const p of f) if (p.d <= d) v = p.v; return v; };
+const monthEnds = (from, to) => { const out = []; let y = +from.slice(0, 4), m = +from.slice(5, 7); for (;;) { const e = new Date(Date.UTC(y, m, 0)).toISOString().slice(0, 10); if (e > to) break; out.push(e); if (++m > 12) { m = 1; y++; } } return out; };
+
+/** Écarts de capacités par mois : États-Unis moins Chine, modèles fermés moins modèles ouverts (points d'ECI). */
+export function eciGaps(csv, now) {
+  const rows = parseCsv(csv).map((r) => ({ model: r.Model, date: r.date, eci: parseFloat(r.eci), country: r["Country (of organization)"], group: r["Accessibility group"] })).filter((r) => /^\d{4}-\d{2}-\d{2}$/.test(r.date) && r.eci > 0);
+  if (rows.length < 100) throw new Error("fichier ECI trop court : " + rows.length);
+  const last = rows.map((r) => r.date).sort().pop();
+  if (now - Date.parse(last) > 75 * DAY) throw new Error("dernier modèle ECI trop ancien : " + last);
+  const us = frontier(rows, (r) => /^United States/.test(r.country)), cn = frontier(rows, (r) => r.country === "China"), closed = frontier(rows, (r) => r.group === "Closed weights"), open = frontier(rows, (r) => r.group === "Open weights");
+  if (!us.length || !cn.length || !closed.length || !open.length) throw new Error("frontière ECI vide");
+  const gap = (a, b) => {
+    const start = [a[0].d, b[0].d].sort().pop(), days = [...monthEnds(start, last), ...(monthEnds(start, last).slice(-1)[0] === last ? [] : [last])], pts = [];
+    for (const d of days) { const x = frontierAt(a, d), y = frontierAt(b, d); if (x != null && y != null) pts.push({ d, v: round(x - y) }); }
+    if (pts.length < 12) throw new Error("écart ECI : moins de douze points");
+    if (pts.some((p) => Math.abs(p.v) > 80)) throw new Error("écart ECI improbable");
+    return pts;
+  };
+  const f = (a) => ({ model: a[a.length - 1].model, v: a[a.length - 1].v });
+  return { last, usCn: gap(us, cn), openClosed: gap(closed, open), leaders: { us: f(us), cn: f(cn), closed: f(closed), open: f(open) } };
+}
+
+/** Coût pour atteindre un niveau de performance fixe (GPQA Diamond, 75 % ajusté du hasard = 81,25 % brut) : le moins cher observé à chaque date de relevé de prix. */
+export function priceAtPerformance(csv, now, threshold = 0.8125) {
+  const rows = parseCsv(csv).filter((r) => r.benchmark === "gpqa" && /^\d{4}-\d{2}-\d{2}$/.test(r.price_date));
+  if (rows.length < 500) throw new Error("fichier de coûts trop court : " + rows.length);
+  const best = new Map();
+  for (const r of rows) {
+    const a = parseFloat(r.acc), c = parseFloat(r.cost_per_task_usd);
+    if (!(a >= threshold) || !(c > 0)) continue;
+    const b = best.get(r.model); if (!b || c < b.c) best.set(r.model, { c, d: r.price_date });
+  }
+  const list = [...best].map(([model, o]) => ({ model, ...o })).sort((a, b) => a.d.localeCompare(b.d) || a.c - b.c);
+  if (list.length < 15) throw new Error("trop peu de modèles au seuil : " + list.length);
+  const pts = []; let m = Infinity;
+  for (const o of list) if (o.c < m) { m = o.c; pts.push({ d: o.d, v: +o.c.toPrecision(3), src: o.model }); }
+  if (pts.length < 5) throw new Error("courbe de coût trop courte");
+  if (now - Date.parse(list[list.length - 1].d) > 150 * DAY) throw new Error("dernier relevé de prix trop ancien : " + list[list.length - 1].d);
+  if (pts[0].v / pts[pts.length - 1].v < 10) throw new Error("baisse de coût improbable");
+  return { points: pts, last: list[list.length - 1].d };
 }
 
 /** Indice Ramp : part des entreprises américaines qui paient pour de l'IA (carte, facture, virement), par mois, via la série FRED. */
@@ -230,15 +282,16 @@ export async function secCurves({ ua, fetchImpl, sleep, now, companies = SEC_COM
 
 const META = {
   ownersShare: { kind: "curve", etage: 1, rank: 1, title: "Part du compute IA détenue par chaque géant", unit: "% du parc cumulé (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", caveat: "Estimations d'Epoch, pas des déclarations des sociétés ; trimestres complets du fichier seulement (les plus récents y sont incomplets). « Autres propriétaires » = reste : xAI, CoreWeave, clients chinois, etc." },
-  ramp: { kind: "curve", etage: 3, rank: 4, title: "Entreprises américaines qui paient pour l'IA", unit: "% des entreprises clientes de Ramp", source: "Ramp AI Index (série FRED)", url: "https://ramp.com/data/ai-index", caveat: "Adoption mesurée par les paiements réels (carte, facture, virement) de plus de 85 000 entreprises clientes de Ramp, pas par déclaration : plus fiable qu'un sondage, mais l'échantillon (clients de Ramp, plutôt jeunes et technophiles) n'est pas représentatif de toute l'économie américaine." },
+  ramp: { kind: "curve", etage: 3, rank: 4, title: "Entreprises clientes de Ramp qui paient pour l'IA", unit: "% des entreprises clientes de Ramp", source: "Ramp AI Index (série FRED)", url: "https://ramp.com/data/ai-index", caveat: "Part des clientes de Ramp (plateforme de cartes et de factures, plus de 85 000 entreprises) qui ont payé au moins un produit d'IA : mesure des paiements réels, pas une déclaration. Ce n'est pas l'économie américaine : les clientes de Ramp sont plutôt jeunes, petites et technophiles. D'où l'écart avec le Census (courbe voisine), qui interroge un échantillon représentatif de toutes les entreprises, y compris les plus petites et les moins numérisées, sur un usage récent, pas sur un abonnement." },
   owners: { kind: "pie", etage: 1, rank: 1, title: "Qui possède le compute IA", metric: "Parc cumulé de puces IA détenu (équivalents H100)", source: "Epoch AI (AI Chip Owners)", url: "https://epoch.ai/data/ai-chip-owners", confidence: "moyenne", caveat: "Estimations d'Epoch, pas des déclarations des sociétés. Dernier trimestre complet du fichier (les trimestres plus récents y sont incomplets). « Autres » = reste : xAI, CoreWeave, clients chinois, etc." },
   designers: { kind: "pie", etage: 1, rank: 2, title: "Qui conçoit les puces IA", metric: "Part de la puissance de calcul vendue, par concepteur de puces", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", confidence: "haute", caveat: "Calcul sur le dernier trimestre complet du fichier Epoch. Estimations : les fabricants ne publient pas leurs volumes ; Trainium est la moins fiable." },
   sales: { kind: "curve", etage: 1, rank: 2, title: "Compute IA vendu chaque trimestre", unit: "millions d'équivalents H100", source: "Epoch AI (AI Chip Sales)", url: "https://epoch.ai/data/ai-chip-sales", caveat: "Estimations d'Epoch ; seuls les trimestres complets sont tracés. Cambricon (moins de 1 %) n'est pas tracé." },
   capex: { kind: "curve", etage: 4, rank: 1, title: "Capex trimestriel des cinq géants", unit: "milliards de dollars", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Dépenses d'investissement déclarées (immobilisations corporelles). Les trimestres des sociétés ne coïncident pas : Oracle clôt en août, novembre, février et mai. Chaque trimestre est publié ou calculé par différence de cumuls, jamais estimé." },
   hbm: { kind: "curve", etage: 1, rank: 3, title: "Parts du marché HBM, cinq trimestres", unit: "% du chiffre d'affaires HBM", source: "Counterpoint Research", url: COUNTERPOINT_URL, caveat: "Parts relues sur le tableau de la page Counterpoint ; arrondis publiés (la somme peut différer de 100 %)." },
   train: { kind: "curve", etage: 2, rank: 1, title: "Plus gros entraînement : USA vs Chine", unit: "FLOP (échelle logarithmique)", scale: "log", source: "Epoch AI (AI Models)", url: "https://epoch.ai/data/ai-models", caveat: "Chaque marche est un nouveau record du pays parmi les modèles recensés par Epoch. Seuls les modèles dont tous les laboratoires sont du même pays sont comptés. Beaucoup de laboratoires ne publient pas leur compute : le vrai maximum peut être plus haut, surtout en Chine. Données Epoch AI, licence CC-BY 4.0." },
-  btos: { kind: "curve", etage: 3, rank: 3, title: "Entreprises américaines qui utilisent l'IA", unit: "% des entreprises", source: "U.S. Census Bureau (BTOS)", url: "https://www.census.gov/hfp/btos/data_downloads", caveat: "Enquête auprès des entreprises américaines, une vague toutes les deux semaines. Rupture de série : Census a changé la formulation de la question en novembre 2025 ; seuls les points de la nouvelle formulation sont tracés, les anciens ne sont pas comparables." },
-  capex_rev: { kind: "curve", etage: 4, rank: 3, title: "Capex rapporté aux revenus, par géant", unit: "% du revenu trimestriel", source: "SEC (dépôts 10-K et 10-Q)", url: "https://www.sec.gov/edgar/search/", caveat: "Capex du trimestre divisé par le revenu total du même trimestre : pas seulement le revenu IA, que les sociétés ne publient pas." },
+  eci_gap: { kind: "curve", etage: 2, rank: 2, title: "Écart de capacités : USA – Chine et fermés – ouverts", unit: "points d'ECI (écart entre les meilleurs modèles)", source: "Epoch AI (Epoch Capabilities Index)", url: "https://epoch.ai/benchmarks/eci", caveat: "L'ECI est un score composite de dizaines de tests. Chaque courbe donne, à chaque fin de mois, l'écart entre le meilleur modèle d'un groupe et celui de l'autre (plus c'est haut, plus le premier a d'avance). Les deux courbes se ressemblent parce que presque tous les modèles ouverts de pointe sont chinois et presque tous les modèles américains de pointe sont fermés. Un point d'écart ne se traduit pas en mois de retard de façon fixe. Données Epoch AI, licence CC-BY 4.0." },
+  price_perf: { kind: "curve", etage: 2, rank: 3, title: "Coût d'une réponse à performance égale", unit: "dollars par question (GPQA Diamond, 75 % ajusté du hasard), échelle logarithmique", scale: "log", source: "Epoch AI et D. Roodman (inference-cost)", url: "https://epoch.ai/publications/the-plunging-price-of-thought", caveat: "Chaque point est un nouveau record : le modèle le moins cher à atteindre le même score (75 % ajusté du hasard, soit 81,25 % de bonnes réponses) à la date où son prix a été relevé. On mesure le coût par question, pas par token, parce que les modèles de raisonnement consomment beaucoup plus de tokens : c'est le coût réel pour un résultat identique. Prix relevés sur OpenRouter ou chez les éditeurs ; les dates sont celles des relevés, pas des lancements." },
+  btos: { kind: "curve", etage: 3, rank: 3, title: "Entreprises américaines qui utilisent l'IA (Census)", unit: "% de toutes les entreprises", source: "U.S. Census Bureau (BTOS)", url: "https://www.census.gov/hfp/btos/data_downloads", caveat: "Enquête représentative de toutes les entreprises américaines (pas seulement les clientes d'une plateforme), une vague toutes les deux semaines ; la question posée est : l'entreprise a-t-elle utilisé l'IA dans l'une de ses fonctions au cours des deux dernières semaines (pas : a-t-elle un abonnement payant). À ne pas comparer directement à l'indice Ramp (autre population, autre définition). Rupture de série : Census a changé la formulation de la question en novembre 2025 ; seuls les points de la nouvelle formulation sont tracés, les anciens ne sont pas comparables." },
 };
 
 const due = (p, now) => !p?.checked_at || (p.check_error ? now - Date.parse(p.attempted_at || p.checked_at) >= 6 * HOUR : now - Date.parse(p.checked_at) >= 20 * HOUR);
@@ -267,6 +320,8 @@ export async function collectEvolution({ prev = null, ua, fetchImpl = fetch, now
     owners: async () => { const r = ownersPie(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { period: `Fin ${qLabel(r.end)}`, period_key: r.end, segments: r.segments }; },
     designers: async () => { const r = designersPie(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { period: qLabel(r.end), period_key: r.end, segments: r.segments }; },
     ownersShare: async () => { const r = ownersShare(await text(EPOCH + "ai_chip_owners_cumulative_by_designer.csv"), now); return { series: r.series, last_point: r.last }; },
+    eci_gap: async () => { const r = eciGaps(await text(EPOCH + "eci_scores.csv"), now); return { series: [{ name: "États-Unis moins Chine", points: r.usCn }, { name: "Fermés moins ouverts", points: r.openClosed, dashed: true }], last_point: r.last }; },
+    price_perf: async () => { const r = priceAtPerformance(await text("https://raw.githubusercontent.com/droodman/inference-cost/main/data/cost_truncated_curves.csv"), now); return { series: [{ name: "Coût le plus bas observé", points: r.points, step: true }], last_point: r.last }; },
     ramp: async () => rampSeries(await text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=RAMPAIALL"), now),
     sales: async () => { const r = salesCurve(await text(EPOCH + "ai_chip_sales_timelines_by_chip.csv"), now); return { series: r.series, last_point: r.last }; },
     train: async () => { const t = await text(EPOCH + "all_ai_models.csv"); return { series: [{ name: "États-Unis", points: trainRecords(t, now, "2018-01-01", "us"), step: true }, { name: "Chine", points: trainRecords(t, now, "2018-01-01", "cn", 4), step: true, dashed: true }] }; },
@@ -276,7 +331,6 @@ export async function collectEvolution({ prev = null, ua, fetchImpl = fetch, now
   let sec = null;
   const secOnce = async () => (sec ||= secCurves({ ua, fetchImpl, sleep, now }));
   work.capex = async () => ({ series: (await secOnce()).capex });
-  work.capex_rev = async () => ({ series: (await secOnce()).ratio });
   const out = new Map();
   for (const id of Object.keys(META)) {
     const p = prevItems.get(id);
