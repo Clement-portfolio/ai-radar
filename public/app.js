@@ -323,13 +323,13 @@ function actorCard(a){
   var fig=(a.figures||[]).map(function(f){return'<li><b>'+esc(f.v)+'</b><span>'+esc(f.l)+'</span></li>'}).join("");
   return'<article class="actor"><div class="aph" role="img" aria-label="'+esc(a.name)+'"><span class="aic">'+(ICONS[a.icon]||ICONS.chip)+'</span>'+
    (a.image?'<img class="aimg" data-b="'+esc(a.image)+'" data-n="0" src="img/actors/'+esc(a.image)+'.jpg" alt="" loading="lazy">':'')+'</div>'+
-   '<div class="abody"><div class="ah"><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div>'+
+   '<div class="ah"><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div>'+
    '<p class="awhat">'+esc(a.what)+'</p>'+
    '<div class="arow"><span class="lbl">Pourquoi ça compte</span><p>'+esc(a.why)+'</p></div>'+
-   (fig?'<div class="arow"><span class="lbl">Chiffres clés <i>'+esc(a.as_of)+'</i></span><ul class="afig">'+fig+'</ul></div>':'')+
+   '<div class="arow"><span class="lbl">Chiffres clés <i>'+esc(a.as_of)+'</i></span><ul class="afig">'+fig+'</ul></div>'+
    '<div class="arow rk"><span class="lbl">Risque d\'exécution</span><p>'+esc(a.risk)+'</p></div>'+
    '<div class="afoot">'+(ok?'<a class="site" href="'+esc(a.website)+'" target="_blank" rel="noopener">Site officiel ↗</a>':'')+
-   '<details class="srcd"><summary>Sources</summary><div class="srcs">'+srcLinks(a.sources)+'</div></details></div></div></article>';
+   '<details class="srcd"><summary>Sources</summary><div class="srcs">'+srcLinks(a.sources)+'</div></details></div></article>';
 }
 // Illustrations : public/img/actors/<nom>.jpg, .jpeg, .webp ou .png ; à défaut, le pictogramme reste affiché.
 document.addEventListener("error",function(e){

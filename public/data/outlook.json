@@ -20,7 +20,7 @@
    "status": "Date confirmée par Nvidia le 28 oct. 2026",
    "probs": [
     {
-     "label": "Bénéfice par action supérieur à 2,53 $",
+     "label": "Bénéfice par action > 2,53 $",
      "p": 87.6,
      "poll": {
       "slug": "nvda-quarterly-earnings-nongaap-eps-11-17-2026-2pt53",
@@ -353,7 +353,7 @@
     },
     {
      "v": "4 févr. 2026",
-     "l": "demande acceptée à l'instruction : pas une approbation"
+     "l": "demande acceptée, non approuvée"
     }
    ],
    "risk": "Technologies non éprouvées, selon le prospectus de SpaceX ; aucun calendrier de déploiement fixé.",
@@ -388,7 +388,7 @@
     },
     {
      "v": "88 000",
-     "l": "satellites demandés à la FCC (pas approuvés)"
+     "l": "satellites demandés (non approuvés)"
     }
    ],
    "risk": "Dépend de fusées qu'elle ne contrôle pas, surtout celles de SpaceX.",
@@ -419,11 +419,11 @@
     },
     {
      "v": "132,5 Md$",
-     "l": "carnet de commandes (104 Md$ fin juin)"
+     "l": "carnet (104 Md$ fin juin)"
     },
     {
      "v": "≈ 47 Md$",
-     "l": "dette · perte nette 709 M$"
+     "l": "dette (perte nette 709 M$)"
     }
    ],
    "risk": "Dette et intérêts ; les trois premiers clients pesaient 72 % des revenus au T2.",
@@ -454,7 +454,7 @@
    "figures": [
     {
      "v": "980,8 M$",
-     "l": "revenus T3 2026 (+ 571 %), dont ≈ 325 M$ non récurrents"
+     "l": "revenus T3 2026 (+ 571 %)"
     },
     {
      "v": "6,4 Md$",
@@ -462,10 +462,10 @@
     },
     {
      "v": "12–13 Md$",
-     "l": "revenus prévus 2027, pour 40–45 Md$ d'investissements"
+     "l": "revenus prévus en 2027"
     }
    ],
-   "risk": "Sites tiers repoussés à 2027 ; investissements très supérieurs aux revenus.",
+   "risk": "Sites tiers repoussés à 2027 ; investissements très supérieurs aux revenus (40–45 Md$ prévus en 2027) ; 325 M$ des revenus du T3 sont non récurrents.",
    "as_of": "12 nov. 2026",
    "sources": [
     {
@@ -497,14 +497,14 @@
     },
     {
      "v": "> 20 Md$",
-     "l": "contrat OpenAI, 750 MW"
+     "l": "contrat OpenAI (750 MW)"
     },
     {
      "v": "6,4 Md$",
-     "l": "levés en Bourse · prévision 2026 : 855–865 M$"
+     "l": "levés en Bourse"
     }
    ],
-   "risk": "Croissance attendue concentrée sur le contrat OpenAI, dont les revenus arrivent surtout en fin d'année.",
+   "risk": "Croissance attendue concentrée sur le contrat OpenAI, dont les revenus arrivent surtout en fin d'année (prévision 2026 : 855–865 M$ de revenus de base).",
    "as_of": "23 juin 2026",
    "sources": [
     {
@@ -532,10 +532,10 @@
     },
     {
      "v": "35 Md$",
-     "l": "valorisation (50 Md$ en discussion, d'après la presse)"
+     "l": "valorisation (50 Md$ évoqués)"
     }
    ],
-   "risk": "Accès aux puces avancées : restrictions américaines à l'export, repli sur Huawei Ascend ou des stocks.",
+   "risk": "Accès aux puces avancées : restrictions américaines à l'export, repli sur Huawei Ascend ou des stocks. Valorisation de 50 Md$ : discussions rapportées, non confirmées.",
    "as_of": "juil.–oct. 2026",
    "sources": [
     {
