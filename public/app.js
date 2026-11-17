@@ -362,11 +362,11 @@ function timeline(cat,today){
 function outlookHTML(){
   var o=S.outlook;if(!o)return'<div class="empty small">Perspectives indisponibles.</div>';
   var today=new Date().toISOString().slice(0,10),h='';
+  var rk=(o.risks||[]).map(riskCard).join("");
+  if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
   if(cat.length)h+='<details class="details sec2" id="m-cal"><summary><span>Calendrier des six prochains mois</span><em>événements datés, avec la probabilité de chacun</em></summary>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p></details>';
   h+='<details class="details sec2" id="m-actors"><summary><span>Acteurs</span><em>principaux acteurs et six acteurs émergents</em></summary>'+mainActorsHTML()+'<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div></details>';
-  var rk=(o.risks||[]).map(riskCard).join("");
-  if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
   return h;
 }
 function etages(){
