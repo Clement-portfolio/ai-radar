@@ -625,11 +625,11 @@ function aFiche(a){
 function aTabs(on){
   return'<div class="toolbar atabs"><a class="chip'+(on==="co"?' on':'')+'" href="#acteurs">Entreprises</a><a class="chip'+(on==="vx"?' on':'')+'" href="#acteurs/voix">Insiders</a></div>';
 }
-var VCATS=[["ALL","Tous"],["dirigeants","Dirigeants"],["cadres","Cadres et conseil"],["chercheurs","Chercheurs"],["pouvoirs","Pouvoirs publics"]];
+var VCATS=[["ALL","Tous"],["dirigeants","Dirigeants"],["cadres","Cadres et conseil"],["chercheurs","Chercheurs"],["pouvoirs","Pouvoirs publics"],["investisseurs","Analystes et investisseurs"]];
 function aVoix(){
   var P=(S.voix&&S.voix.people)||[],vc=S.vc||"ALL";
   var cnt=function(c){return P.filter(function(p){return c==="ALL"||p.cat===c}).length};
-  var h=aTabs("vx")+'<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les patrons, cadres, chercheurs et responsables publics de l\'IA, dans la presse et en vidéo, sur les 30 derniers jours. Titres des médias (traduits automatiquement en français), avec le lien vers l\'article ou la vidéo d\'origine. Seuls les titres où la personne s\'exprime sont retenus.</p>'+
+  var h=aTabs("vx")+'<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les patrons, cadres, chercheurs, responsables publics, analystes et investisseurs de l\'IA, dans la presse et en vidéo, sur les 30 derniers jours. Titres des médias (traduits automatiquement en français), avec le lien vers l\'article ou la vidéo d\'origine. Seuls les titres où la personne s\'exprime sont retenus ; pour les investisseurs, une prise de position (achat, vente, pari) compte aussi.</p>'+
    '<div class="toolbar">'+VCATS.map(function(c){return'<button class="chip'+(vc===c[0]?' on':'')+'" data-vc="'+c[0]+'">'+c[1]+' ('+cnt(c[0])+')</button>'}).join("")+'</div>';
   if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
   var L=P.filter(function(p){return vc==="ALL"||p.cat===vc});

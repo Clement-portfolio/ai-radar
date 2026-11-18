@@ -3,7 +3,7 @@
 // Rien n'est inventé ni résumé : titre du média, date, média, lien.
 export const VOIX_RULES = { days: 30, perPerson: 8, perQuery: 30 };
 
-// cat : dirigeants (PDG, y compris chaîne de l'IA) · cadres (CFO, CTO, président, conseil) · chercheurs · pouvoirs publics.
+// cat : dirigeants (PDG, y compris chaîne de l'IA) · cadres (CFO, CTO, président, conseil) · chercheurs · pouvoirs publics · investisseurs et analystes.
 // Les intitulés sont écrits à la main (vérifiés le 18 nov. 2026) ; `watch: false` coupe l'alerte de changement de poste quand l'intitulé vient d'être mis à jour.
 export const PEOPLE = [
   { id: "sam-altman", cat: "dirigeants", n: "Sam Altman", role: "PDG d'OpenAI", co: "OpenAI", actor: "openai", re: /\bAltman\b/ },
@@ -44,9 +44,31 @@ export const PEOPLE = [
   { id: "mira-murati", cat: "chercheurs", n: "Mira Murati", role: "Fondatrice de Thinking Machines Lab, ancienne CTO d'OpenAI", co: "Thinking Machines Lab", actor: null, re: /\bMurati\b/ },
   { id: "arthur-mensch", cat: "chercheurs", n: "Arthur Mensch", role: "PDG de Mistral AI", co: "Mistral AI", actor: null, re: /\bMensch\b/ },
   { id: "donald-trump", cat: "pouvoirs", n: "Donald Trump", role: "Président des États-Unis", co: "", actor: null, re: /\bTrump\b/, q: '"Trump" (AI OR "artificial intelligence" OR Nvidia OR chips OR "data centers")' },
-  { id: "david-sacks", cat: "pouvoirs", n: "David Sacks", role: "Coprésident du PCAST, ancien conseiller IA et crypto de la Maison-Blanche", co: "", actor: null, re: /\bDavid Sacks\b|\bSacks\b/, q: '"David Sacks" AI' },
+  { id: "david-sacks", cat: "pouvoirs", n: "David Sacks", role: "Coprésident du PCAST, ancien conseiller IA et crypto de la Maison-Blanche", co: "", actor: null, re: /\bDavid Sacks\b/, q: '"David Sacks" AI' },
   { id: "howard-lutnick", cat: "pouvoirs", n: "Howard Lutnick", role: "Secrétaire américain au Commerce", co: "", actor: null, re: /\bLutnick\b/, q: '"Lutnick" (chips OR AI OR Nvidia OR export OR semiconductor)' },
   { id: "henna-virkkunen", cat: "pouvoirs", n: "Henna Virkkunen", role: "Vice-présidente exécutive de la Commission européenne (souveraineté technologique)", co: "", actor: null, re: /\bVirkkunen\b/ },
+  { id: "scott-bessent", cat: "pouvoirs", n: "Scott Bessent", role: "Secrétaire américain au Trésor", co: "", actor: null, re: /\bBessent\b/, q: '"Bessent" (AI OR Nvidia OR chips OR semiconductor OR tariffs)' },
+  { id: "michael-kratsios", cat: "pouvoirs", n: "Michael Kratsios", role: "Directeur du bureau de la science et de la technologie de la Maison-Blanche (OSTP)", co: "", actor: null, re: /\bKratsios\b/ },
+  { id: "ted-cruz", cat: "pouvoirs", n: "Ted Cruz", role: "Sénateur républicain, président de la commission Commerce du Sénat", co: "", actor: null, re: /\bTed Cruz\b|\b(?:Sen\.|Senator) Cruz\b/, q: '"Ted Cruz" (AI OR "artificial intelligence" OR chatbot OR Nvidia)' },
+  { id: "maria-cantwell", cat: "pouvoirs", n: "Maria Cantwell", role: "Sénatrice démocrate, première démocrate de la commission Commerce", co: "", actor: null, re: /\bCantwell\b/, q: '"Maria Cantwell" AI' },
+  { id: "mark-warner", cat: "pouvoirs", n: "Mark Warner", role: "Sénateur démocrate de Virginie", co: "", actor: null, re: /\bMark Warner\b|\b(?:Sen\.|Senator) Warner\b/, q: '"Mark Warner" (AI OR "artificial intelligence" OR chips)' },
+  { id: "josh-hawley", cat: "pouvoirs", n: "Josh Hawley", role: "Sénateur républicain du Missouri", co: "", actor: null, re: /\bHawley\b/, q: '"Josh Hawley" (AI OR "artificial intelligence" OR chatbot)' },
+  { id: "elizabeth-warren", cat: "pouvoirs", n: "Elizabeth Warren", role: "Sénatrice démocrate, première démocrate de la commission Banques", co: "", actor: null, re: /\bElizabeth Warren\b|\b(?:Sen\.|Senator) Warren\b/, q: '"Elizabeth Warren" (Nvidia OR AI OR chips OR "data centers")' },
+  { id: "jay-obernolte", cat: "pouvoirs", n: "Jay Obernolte", role: "Représentant républicain de Californie, président de la sous-commission Recherche et Technologie", co: "", actor: null, re: /\bObernolte\b/ },
+  { id: "ted-lieu", cat: "pouvoirs", n: "Ted Lieu", role: "Représentant démocrate de Californie", co: "", actor: null, re: /\bTed Lieu\b|\b(?:Rep\.|Representative) Lieu\b/, q: '"Ted Lieu" AI' },
+  { id: "john-moolenaar", cat: "pouvoirs", n: "John Moolenaar", role: "Représentant républicain du Michigan, commission spéciale sur la Chine", co: "", actor: null, re: /\bMoolenaar\b/, q: '"Moolenaar" (chips OR AI OR Nvidia OR China OR export)' },
+  { id: "bill-ackman", cat: "investisseurs", n: "Bill Ackman", role: "Fondateur et PDG de Pershing Square", co: "", actor: null, re: /\bAckman\b/ },
+  { id: "michael-burry", cat: "investisseurs", n: "Michael Burry", role: "Investisseur (« The Big Short »), auteur de la newsletter Cassandra Unchained", co: "", actor: null, re: /\bBurry\b/ },
+  { id: "dan-ives", cat: "investisseurs", n: "Dan Ives", role: "Analyste technologie (Wedbush Securities)", co: "", actor: null, re: /\bDan Ives\b/, q: '"Dan Ives"' },
+  { id: "stacy-rasgon", cat: "investisseurs", n: "Stacy Rasgon", role: "Analyste semi-conducteurs (Bernstein)", co: "", actor: null, re: /\bRasgon\b/ },
+  { id: "gil-luria", cat: "investisseurs", n: "Gil Luria", role: "Analyste (D.A. Davidson)", co: "", actor: null, re: /\bLuria\b/, q: '"Gil Luria"' },
+  { id: "ming-chi-kuo", cat: "investisseurs", n: "Ming-Chi Kuo", role: "Analyste de la chaîne d'approvisionnement technologique (TF International Securities)", co: "", actor: null, re: /\bKuo\b/, q: '"Ming-Chi Kuo"' },
+  { id: "cathie-wood", cat: "investisseurs", n: "Cathie Wood", role: "Fondatrice d'ARK Invest", co: "", actor: null, re: /\bCathie Wood\b/ },
+  { id: "masayoshi-son", cat: "investisseurs", n: "Masayoshi Son", role: "Fondateur et PDG de SoftBank", co: "", actor: null, re: /\bMasayoshi Son\b/ },
+  { id: "marc-andreessen", cat: "investisseurs", n: "Marc Andreessen", role: "Cofondateur du fonds Andreessen Horowitz", co: "", actor: null, re: /\bAndreessen\b/ },
+  { id: "stanley-druckenmiller", cat: "investisseurs", n: "Stanley Druckenmiller", role: "Investisseur (Duquesne Family Office)", co: "", actor: null, re: /\bDruckenmiller\b/ },
+  { id: "ray-dalio", cat: "investisseurs", n: "Ray Dalio", role: "Fondateur de Bridgewater Associates", co: "", actor: null, re: /\bDalio\b/, q: '"Ray Dalio" (AI OR bubble OR Nvidia OR market)' },
+  { id: "jim-chanos", cat: "investisseurs", n: "Jim Chanos", role: "Investisseur vendeur à découvert (Kynikos)", co: "", actor: null, re: /\bChanos\b/, q: '"Jim Chanos" (AI OR Nvidia OR "data center" OR bubble)' },
 ];
 
 // chaînes dont les vidéos portent le nom de l'invité ou du dirigeant (identifiants vérifiés sur le flux : auteur du flux = nom de la chaîne)
@@ -59,10 +81,15 @@ export const CHANNELS = [
 ];
 
 const CUE = "says?|said|warns?|warned|predicts?|predicted|tells?|told|expects?|expected|believes?|claims?|argues?|admits?|reveals?|insists?|calls?|slams?|urges?|vows?|interview|keynote|speech|testif\\w+|podcast|speaks?|announces?|unveils?|responds?|defends?|rejects?|dismisses?|sees?|thinks?|hints?|teases?|criticizes?|pushes back|doubles down|reflects?|explains?|addresses?|opens up|confirms?|denies|dit|déclare|affirme|prévient|estime|annonce|juge|assure";
+// Pour les investisseurs et analystes, une prise de position compte aussi : achat, vente, pari, relèvement ou abaissement d'objectif.
+export const INVEST_CUE = "buys?|bought|sells?|sold|shorts?|shorted|bets?|dumps?|dumped|trims?|adds?|boosts?|raises?|cuts?|lowers?|upgrades?|downgrades?|initiates?|reiterates?|backs?|stakes?|invests?|exits?|loads?|doubles?|piles?";
+// Pouvoirs publics et investisseurs parlent de tout : on ne garde que ce qui touche à l'IA, aux puces, aux datacenters et aux grandes sociétés de l'IA.
+export const TOPIC = /\b(?:A\.?I\.?|artificial intelligence|chatbots?|Nvidia|OpenAI|Anthropic|Gemini|ChatGPT|Claude|xAI|Grok|chips?|semiconductors?|GPUs?|data ?cent(?:er|re)s?|Huang|Microsoft|Alphabet|Google|Meta|AMD|Broadcom|TSMC|Micron|Intel|Oracle|CoreWeave|Palantir|SoftBank|Samsung|SK hynix|ASML|hyperscalers?|robots?|robotics|superintelligence|tech(?:nology)?)\b/i;
 const cueRe = new RegExp(`\\b(?:${CUE})\\b`, "i");
 
 /** La personne est-elle celle qui parle dans ce titre ? */
-export function isStatement(title, re) {
+export function isStatement(title, re, extra = "") {
+  const CUEX = extra ? `${CUE}|${extra}` : CUE;
   const t = String(title).replace(/\s+/g, " ").trim();
   const m = re.exec(t);
   if (!m) return false;
@@ -70,15 +97,15 @@ export function isStatement(title, re) {
   if (/\b(?:Meta AI|ChatGPT|Grok|Gemini|Claude|Copilot|Siri|AI (?:predicts|says|thinks))\b/i.test(t.slice(m.index + m[0].length).split(/[:,|]/)[0])) return false;
   const before = t.slice(0, m.index), after = t.slice(m.index + m[0].length);
   // « X says … » : le verbe suit le nom (au plus six mots entre les deux : titre, sociétés, etc.)
-  const cueAfter = new RegExp(`^((?:[\\w.'’-]+\\W+){0,6}?)(?:${CUE})\\b`, "i").exec(after.replace(/^['’]s\b/, "").trim());
+  const cueAfter = new RegExp(`^((?:[\\w.'’-]+\\W+){0,6}?)(?:${CUEX})\\b`, "i").exec(after.replace(/^['’]s\b/, "").trim());
   if (cueAfter && /(?:^|\s)(?:to|will|would|not|never|could)\s*$/i.test(cueAfter[1])) return false;
   if (cueAfter && /\b(?:he|she|they|who|which)\b/i.test(cueAfter[1])) return false; // nouveau sujet : « Bessent blames Lutnick’s Commerce as he slams… »
-  if (new RegExp(`^(?:[\\w.'’-]+\\W+){0,6}?(?:${CUE})\\b`, "i").test(after.replace(/^['’]s\b/, "").trim()) && !/^\s*(?:,|’s|'s)?\s*(?:lawyers?|critics?|rivals?)\b/i.test(after)) {
+  if (new RegExp(`^(?:[\\w.'’-]+\\W+){0,6}?(?:${CUEX})\\b`, "i").test(after.replace(/^['’]s\b/, "").trim()) && !/^\s*(?:,|’s|'s)?\s*(?:lawyers?|critics?|rivals?)\b/i.test(after)) {
     // le nom ne doit pas être complément d'un autre sujet qui parle (« Trump says Altman… », « Analysts say Huang… »)
-    if (!new RegExp(`\\b(?:${CUE})\\s+(?:that\\s+)?(?:[\\w.'’-]+\\W+){0,4}$`, "i").test(before)) return true;
+    if (!new RegExp(`\\b(?:${CUEX})\\s+(?:that\\s+)?(?:[\\w.'’-]+\\W+){0,4}$`, "i").test(before)) return true;
   }
   // « …, says X » / « — X says » / « | X : »
-  if (new RegExp(`[,–—|:-]\\s*(?:${CUE})\\s+(?:[\\w.'’-]+\\W+){0,4}$`, "i").test(before)) return true;
+  if (new RegExp(`[,–—|:-]\\s*(?:${CUEX})\\s+(?:[\\w.'’-]+\\W+){0,4}$`, "i").test(before)) return true;
   // « Musk : "…" » : le nom ouvre le titre, suivi de deux-points puis d'une citation
   if (/^\s*:\s*['"‘“]/.test(after) && before.trim().length < 12) return true;
   return false;
@@ -119,7 +146,8 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
         const title = (sfx ? x.title.slice(0, -sfx.length) : x.title.replace(/\s+-\s+[^-]{2,40}$/, "")).trim();
         // alerte de poste : un titre récent annonce peut-être un changement (démission, nomination…) pour cette personne
         if (p.watch !== false && ts > Date.parse(ROLES_AS_OF + "T23:59:59Z") && p.re.test(title) && CHANGE.test(title)) alerts.get(p.id).set(canon(x.link), { ts: new Date(ts).toISOString(), title, url: x.link, source: x.source || "Presse" });
-        if (!isStatement(title, p.re)) continue;
+        if ((p.cat === "pouvoirs" || p.cat === "investisseurs") && !TOPIC.test(title)) continue;
+        if (!isStatement(title, p.re, p.cat === "investisseurs" ? INVEST_CUE : "")) continue;
         add(p, { ts: new Date(ts).toISOString(), title, url: x.link, source: String(x.source || "").split(/\s[-–|]\s/)[0] || (x.title.match(/\s-\s([^-]{2,40})$/) || [])[1] || "Presse", kind: "presse" });
       }
     } catch (e) { failed++; log(`Voix ${p.n} : ${String(e.message || e).slice(0, 80)}`); }

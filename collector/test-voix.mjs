@@ -1,6 +1,6 @@
 // Tests hors ligne de « Voix » : seuls les titres où la personne s'exprime sont retenus ; fusion, fenêtre de 30 jours, traduction contrôlée.
 import assert from "node:assert/strict";
-import { isStatement, collectVoix, translateVoix, PEOPLE } from "./voix.mjs";
+import { isStatement, collectVoix, translateVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
 import { parseFeed } from "./collect.mjs";
 
 const R = (n) => PEOPLE.find((p) => p.n === n).re;
@@ -18,6 +18,14 @@ const cases = [
   ["Bessent blames Lutnick’s Commerce as he slams Nvidia chip leakage", "Howard Lutnick", false],
   ["Hinton warns of an AI Chernobyl by 2027", "Geoffrey Hinton", true],
 ];
+assert.equal(isStatement("Michael Burry shorts Nvidia again", R("Michael Burry"), INVEST_CUE), true, "investisseur : une prise de position compte");
+assert.equal(isStatement("Michael Burry shorts Nvidia again", R("Michael Burry")), false, "dirigeant : pas une déclaration");
+assert.equal(isStatement("Warren Buffett says AI is risky", R("Elizabeth Warren")), false, "Warren Buffett n'est pas Elizabeth Warren");
+assert.equal(isStatement("Warner Bros says it will cut costs", R("Mark Warner")), false, "Warner Bros n'est pas Mark Warner");
+assert.equal(isStatement("Sen. Cruz says AI bill needs a vote", R("Ted Cruz")), true);
+assert.equal(TOPIC.test("Ted Cruz explains how the GOP blew it in Texas"), false, "hors sujet IA");
+assert.equal(TOPIC.test("Cathie Wood sells $85 million of Nvidia"), true);
+assert.equal(TOPIC.test("Ray Dalio warns of a debt fight"), false);
 for (const [t, n, e] of cases) assert.equal(isStatement(t, R(n)), e, t);
 
 // collecte : fenêtre de 30 jours, doublons, vidéos par nom, échec isolé
