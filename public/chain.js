@@ -406,8 +406,8 @@ function newsHtml(){
  if(its.length>shown.length){var r=its.length-shown.length;h+='<div class="nmw"><button class="btn nmore" type="button">'+tx("Voir "+Math.min(120,r)+" articles de plus ("+r+" restants)","Show "+Math.min(120,r)+" more articles ("+r+" remaining)")+'</button></div>'}
  if(!its.length)h='<div class="none2">'+tx("Aucune actualité récente sur les entreprises suivies pour ce composant.","No recent news on the companies tracked for this component.")+'</div>';
  var chips=function(a,c){return a.map(function(n){return'<span class="nco '+c+'">'+esc(n)+'</span>'}).join("")};
- var nm=gs.map(function(g){return WT.groups[g].name}).join(" · ");
- return'<summary>'+tx("Actualités du composant","Component news")+' ('+its.length+')</summary><div class="nwb"><p class="nsc">'+esc(nm)+' · '+tx("Hors Bourse : ni cours, ni notes d'analystes","No stock prices or analyst ratings")+'</p>'+h+
+ var nm=gs.map(function(g){return WT.groups[g].name}).join(" · "),nm0=(PARTS[sel.part||BMK[sel.block]]||{}).n||nm;
+ return'<summary>'+tx("Actualités du composant","Component news")+' <em>'+esc(nm0)+' · '+its.length+' '+(its.length>1?"articles":"article")+'</em></summary><div class="nwb"><p class="nsc">'+esc(nm)+' · '+tx("Hors Bourse : ni cours, ni notes d'analystes","No stock prices or analyst ratings")+'</p>'+h+
   '<details class="wlst"><summary>'+tx("Entreprises suivies","Companies tracked")+' ('+(F.key.length+F.em.length)+')</summary><div class="wlb"><div class="wlr"><b>'+tx("Acteurs clés","Key players")+'</b>'+chips(F.key,"k")+'</div>'+
   (F.em.length?'<div class="wlr"><b>'+tx("Émergents","Emerging")+'</b>'+chips(F.em,"e")+'</div>':'')+'</div></details></div>'}
 function paintNews(){var el=document.getElementById("nw");if(el){el.innerHTML=newsHtml();report()}}
@@ -422,7 +422,7 @@ function mkHtml(part){
  var pie=f?f.pie:sPie(m.s),ch=f?(f.chart||null):null,rv=f?(f.rev||null):(m.d||null),ti=tensInfo(part);
  return'<div class="fmh"><span class="kicker">Fiche marché</span><h4 class="fmt">'+esc(nm)+'</h4>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
   '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+
-  (WT?'<details class="nwd" id="nw"'+(nwDetOpen?' open':'')+'>'+newsHtml()+'</details>':'')+notesHtml(f,pie,ch,rv,ti)}
+  notesHtml(f,pie,ch,rv,ti)+(WT?'<details class="nwd" id="nw"'+(nwDetOpen?' open':'')+'>'+newsHtml()+'</details>':'')}
 var nwDetOpen=false,lastPart=null;
 
 function duo(){
