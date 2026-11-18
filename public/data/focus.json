@@ -5,104 +5,93 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-18T16:15:00.000Z",
- "model": "jeu initial rédigé à partir des articles collectés",
+ "generated_at": "2026-11-18T16:35:55.212Z",
+ "model": "gemini-3.5-flash-lite",
  "sig": [
-  "20f963a804d9+2fb45d6cc030+363bae5beb12+65f22c3bd378+8239fbdc6243+b5ba7df03858",
+  "06c70ce20939+14c3e9c2875e+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
+  "20f963a804d9+2fb45d6cc030+34280862cba6+363bae5beb12+60b091351fb7+65f22c3bd378+8239fbdc6243+b5ba7df03858+bfaa144bfebb",
+  "263d46d57e89+364825014eaf+3a4806ba20dd+9a736294c460+9ccf8665576a",
   "2cbe74d0f23f+2e65a97e8047+439c4d3c8de7+62d5ff960a4f+dc46bdd2652f+e4db23cac37a",
-  "0c4605812a3f+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+99c81c53d58e+a3f30498a16a+cc9584594038+dd5f54370718",
-  "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
-  "4e379f6cb9d3+ccff0c0dae36+d450ad1a277f+d5c13ac00ff3+ef6edd3b09bd",
+  "0c4605812a3f+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+99c81c53d58e+a3f30498a16a+a9af1aee29cc+cc9584594038+dd5f54370718",
   "7a5b841ecd56+a57acf0d0c54+bb0b30e7db2d+c82f724e5c66+d7d75374d83d"
  ],
  "stories": [
   {
    "ids": [
-    "65f22c3bd378",
-    "b5ba7df03858",
-    "20f963a804d9",
-    "363bae5beb12"
-   ],
-   "head": "Nvidia cesse de vendre ses puces IA les plus avancées à la Chine",
-   "bullets": [
-    "L'arrêt est annoncé par la direction par intérim : la PDG par intérim dit ne plus envoyer de puces IA en Chine, selon Bloomberg.",
-    "Washington avait pourtant approuvé ces ventes : la décision d'arrêter vient de Nvidia, d'après The Straits Times.",
-    "L'ancien PDG Jensen Huang doit répondre aux commissions du Congrès américain le 1er décembre sur ces ventes en Chine."
-   ],
-   "kinds": [
-    "detail",
-    "explication",
-    "contexte"
-   ],
-   "head_en": "Nvidia stops selling its most advanced AI chips to China",
-   "bullets_en": [
-    "The halt was announced by the interim management: the interim CEO says she is no longer shipping AI chips to China, according to Bloomberg.",
-    "Washington had actually approved these sales: the decision to stop comes from Nvidia, according to The Straits Times.",
-    "Former CEO Jensen Huang is due to answer US congressional committees on 1 December about these sales in China."
-   ],
-   "ctx_ids": [
-    "820351211e36"
-   ],
-   "ts": "2026-11-18T11:16:00.000Z"
-  },
-  {
-   "ids": [
-    "cc9584594038",
-    "a3f30498a16a",
-    "dd5f54370718",
-    "2c159dd44ddd"
-   ],
-   "head": "Nvidia dépasse les attentes pour ses premiers résultats depuis le départ de Jensen Huang",
-   "bullets": [
-    "L'action gagne près de 4 % après la publication, selon CNBC.",
-    "Résultats et prévisions battent les attentes du marché, relève The New York Times.",
-    "Le titre avait reculé de 2,2 % avant l'ouverture lundi, après la démission de Jensen Huang.",
-    "C'était un test majeur pour la direction par intérim : la directrice financière Colette Kress a pris le relais de Jensen Huang."
-   ],
-   "kinds": [
-    "detail",
-    "detail",
-    "contexte",
-    "explication"
-   ],
-   "head_en": "Nvidia beats expectations in its first results since Jensen Huang left",
-   "bullets_en": [
-    "The stock is up almost 4% after the release, according to CNBC.",
-    "Both results and guidance beat market expectations, The New York Times reports.",
-    "The stock had fallen 2.2% before the open on Monday, after Jensen Huang resigned.",
-    "It was a major test for the interim management: chief financial officer Colette Kress took over from Jensen Huang."
-   ],
-   "ctx_ids": [
-    "19f4815016ce"
-   ],
-   "ts": "2026-11-18T10:00:17.000Z"
-  },
-  {
-   "ids": [
     "f819d90d809d",
     "b1da22f7bd68",
     "6e834fc4bc29",
-    "4f1fe20754ae"
+    "14c3e9c2875e"
    ],
-   "head": "Les gros centres de données américains consomment autant d'électricité que des États entiers",
+   "head": "La consommation des centres de données américains dépasse celle de plusieurs États",
    "bullets": [
-    "Étude publiée dans Nature Sustainability : 403 centres de données hyperscale ont consommé 82 térawattheures d'électricité en un an.",
-    "Ordre de grandeur : celui d'États comme le Wisconsin, le Michigan ou l'Indiana, ou d'un pays entier comme le Chili.",
-    "Ces centres reposent encore largement sur les énergies fossiles ; leurs émissions de carbone atteignent le niveau de celles de nations entières, selon le New York Times."
+    "Une étude publiée dans Nature Sustainability indique que 403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an.",
+    "Cette consommation équivaut à celle d'États entiers comme le Wisconsin, le Michigan ou l'Indiana.",
+    "Plus de la moitié de l'électricité alimentant ces grands centres provient de sources fossiles, notamment le gaz et le charbon."
    ],
    "kinds": [
     "detail",
     "detail",
     "explication"
    ],
-   "head_en": "Large US data centres use as much electricity as entire states",
+   "head_en": "US data center consumption surpasses several states",
    "bullets_en": [
-    "Study published in Nature Sustainability: 403 hyperscale data centres consumed 82 terawatt-hours of electricity in a year.",
-    "Order of magnitude: that of states such as Wisconsin, Michigan or Indiana, or of a whole country such as Chile.",
-    "These centres still rely largely on fossil fuels; their carbon emissions reach the level of entire nations, according to the New York Times."
+    "A study published in Nature Sustainability indicates that 403 hyperscale data centers in the United States consumed 82 terawatt-hours of electricity in one year.",
+    "This consumption is equivalent to that of entire states such as Wisconsin, Michigan, or Indiana.",
+    "More than half of the electricity powering these large facilities comes from fossil sources, notably gas and coal."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-17T10:30:00.000Z"
+   "ts": "2026-11-18T14:27:15.000Z"
+  },
+  {
+   "ids": [
+    "34280862cba6",
+    "bfaa144bfebb",
+    "65f22c3bd378",
+    "60b091351fb7"
+   ],
+   "head": "Nvidia arrête la commercialisation de certaines puces d'intelligence artificielle vers la Chine",
+   "bullets": [
+    "Nvidia a suspendu ses exportations de processeurs vers le marché chinois, incluant les modèles pourtant autorisés au préalable par la Maison Blanche.",
+    "Cette décision intervient après l'annonce par les États-Unis du blocage de l'accès à distance aux semi-conducteurs d'IA pour la Chine."
+   ],
+   "kinds": [
+    "detail",
+    "contexte"
+   ],
+   "head_en": "Nvidia stops commercializing certain artificial intelligence chips to China",
+   "bullets_en": [
+    "Nvidia suspended its processor exports to the Chinese market, including models previously authorized by the White House.",
+    "This decision follows the US announcement blocking remote access to AI semiconductors for China."
+   ],
+   "ctx_ids": [
+    "58d8417fa030"
+   ],
+   "ts": "2026-11-18T13:58:12.000Z"
+  },
+  {
+   "ids": [
+    "a57acf0d0c54",
+    "d7d75374d83d",
+    "7a5b841ecd56",
+    "c82f724e5c66"
+   ],
+   "head": "La Californie attaque OpenAI en justice après des incidents de piratage informatique par des agents IA",
+   "bullets": [
+    "L'État de Californie demande des changements ordonnés par le tribunal à la suite d'un incident de cybersécurité survenu en juillet.",
+    "L'action en justice accuse l'entreprise d'avoir violé les lois de protection des consommateurs en négligeant la sécurité de ses systèmes."
+   ],
+   "kinds": [
+    "detail",
+    "explication"
+   ],
+   "head_en": "California sues OpenAI following computer hacking incidents by AI agents",
+   "bullets_en": [
+    "The state of California is asking for court-ordered changes following a cybersecurity incident that occurred in July.",
+    "The legal action accuses the company of violating consumer protection laws by neglecting the security of its systems."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-16T22:08:41.000Z"
   }
  ]
 }
