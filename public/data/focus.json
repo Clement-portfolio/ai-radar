@@ -1,101 +1,79 @@
 {
- "generated_at": "2026-11-18T10:11:15.362Z",
- "model": "gemini-3.8-flash",
+ "generated_at": "2026-11-18T11:49:11.155Z",
+ "model": "gemini-3.6-flash",
  "sig": [
-  "0c4605812a3f+3c69314e6bc3+52a17fa9dbeb+a3f30498a16a+cc9584594038+dd5f54370718",
-  "1fcd3d951882+4d26e05d4a3f+5db9be893d58+75e60b60b1f6+782240c4e790+8af29bc77845+dc46bdd2652f+e0ac844ba9e5+e65e9a614925",
-  "01ad01e5cd41+2511beafb119+2a0155947f7e+3ee7a75e87fa+499e87d18729+50e1e25269a9+8e2a2f996f96+be019836a173+f9bb4fd6f894",
-  "1498609c0aea+15674a5384bf+20f963a804d9+6fd4401d69f5+ad0794c39984",
+  "20f963a804d9+2fb45d6cc030+363bae5beb12+472accef9bf8+65f22c3bd378+8239fbdc6243+b5ba7df03858",
+  "2cbe74d0f23f+2e65a97e8047+439c4d3c8de7+60552b44b771+62d5ff960a4f+dc46bdd2652f+e4db23cac37a",
+  "0c4605812a3f+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+99c81c53d58e+a3f30498a16a+cc9584594038+dd5f54370718",
+  "1aa355519c9f+1d568fb033a7+24814f58a684+3ef484d91e4b+4d2a127f1c18+54d6bbb0ceee+5bf1e9fd711d+5d7763ae049a+64cb51cd5a8b+772ccdf8e8c7+99adb1c1605d+b89b121d0786+c7e45fe092ad+d392b636ea28+d9d83de861d8+f45fe323bc06",
   "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d"
  ],
  "stories": [
   {
    "ids": [
-    "cc9584594038",
-    "a3f30498a16a",
-    "dd5f54370718",
-    "0c4605812a3f"
+    "65f22c3bd378",
+    "472accef9bf8",
+    "b5ba7df03858",
+    "20f963a804d9"
    ],
-   "head": "Nvidia dépasse les attentes au 3e trimestre malgré le départ de son PDG",
+   "head": "Nvidia arrête les expéditions de ses puces d'IA de pointe vers la Chine",
    "bullets": [
-    "Nvidia a enregistré un chiffre d'affaires trimestriel de 115,8 milliards de dollars, dépassant les prévisions des analystes et faisant monter son action de près de 4 %.",
-    "Le cofondateur Jensen Huang avait démissionné de son poste de PDG, laissant l'intérim à la directrice financière Colette Kress, ce qui avait fait chuter le titre de 2,2 %."
+    "Nvidia a décidé de suspendre la commercialisation et la livraison de ses processeurs d'intelligence artificielle les plus performants vers le marché chinois.",
+    "Cette annonce intervient sous la direction du nouveau PDG par intérim de l'entreprise, consécutive à la démission du cofondateur Jensen Huang (1).",
+    "La suspension des livraisons survient alors même que l'entreprise avait obtenu l'approbation préalable des autorités américaines pour exporter ces puces."
    ],
-   "head_en": "Nvidia beats Q3 expectations despite the departure of its CEO",
+   "head_en": "Nvidia stops shipping its cutting-edge AI chips to China",
    "bullets_en": [
-    "Nvidia posted quarterly revenue of $115.8 billion, exceeding analyst expectations and driving its shares up by nearly 4%.",
-    "Co-founder Jensen Huang had resigned as CEO, leaving CFO Colette Kress as interim head, which had previously caused the stock to drop 2.2%."
+    "Nvidia has decided to suspend marketing and shipments of its highest-performing artificial intelligence processors to the Chinese market.",
+    "This announcement comes under the direction of the company's new interim CEO, following the resignation of co-founder Jensen Huang (1).",
+    "The suspension of shipments occurs even though the company had previously obtained approval from US authorities to export these chips."
    ],
    "ctx_ids": [
-    "caba73249c9d",
-    "19f4815016ce"
+    "32f526731264"
    ],
-   "ts": "2026-11-18T10:00:17.000Z"
+   "ts": "2026-11-18T11:16:00.000Z"
   },
   {
    "ids": [
-    "5db9be893d58",
-    "dc46bdd2652f",
-    "e0ac844ba9e5",
-    "1fcd3d951882"
+    "2cbe74d0f23f",
+    "62d5ff960a4f",
+    "2e65a97e8047",
+    "dc46bdd2652f"
    ],
-   "head": "Les restrictions américaines sur les puces IA visent l'Asie du Sud-Est et le Golfe",
+   "head": "La Chine menace de répliquer aux nouvelles restrictions américaines sur les puces d'IA",
    "bullets": [
-    "Les nouvelles restrictions américaines sur l'exportation de puces d'IA freinent les projets de centres de données en Asie du Sud-Est, notamment à Singapour et en Malaisie, ainsi que dans le Golfe.",
-    "En Malaisie, ces contraintes sur l'accès aux technologies de pointe favorisent les acteurs américains pour le développement des infrastructures de calcul."
+    "Pékin promet des contre-mesures et appelle au dialogue après le renforcement par Washington des règles d'exportation et de location de processeurs d'IA.",
+    "Ces nouvelles limitations américaines touchent aussi les infrastructures de centres de données du Golfe et ont entraîné le recul des actions du secteur."
    ],
-   "head_en": "US AI chip curbs target Southeast Asia and the Gulf",
+   "head_en": "China threatens to retaliate against new US AI chip restrictions",
    "bullets_en": [
-    "New US restrictions on AI chip exports are hampering data center developments in Southeast Asia, notably in Singapore and Malaysia, as well as in the Gulf region.",
-    "In Malaysia, these constraints on advanced chip access are steering data center development toward US tech giants."
+    "Beijing promises countermeasures and calls for dialogue after Washington tightened export and leasing rules for AI processors.",
+    "These new US limitations also affect data center infrastructure in the Gulf and led to a drop in sector stocks."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-18T08:09:43.000Z"
+   "ts": "2026-11-18T11:00:00.000Z"
   },
   {
    "ids": [
-    "3ee7a75e87fa",
-    "2511beafb119",
-    "8e2a2f996f96",
-    "01ad01e5cd41"
+    "f819d90d809d",
+    "b1da22f7bd68",
+    "6e834fc4bc29",
+    "4f1fe20754ae"
    ],
-   "head": "Le conseil d'administration de Nvidia exclut tout retour de Jensen Huang",
+   "head": "La consommation des centres de données d'IA américains atteint celle de pays entiers",
    "bullets": [
-    "Le conseil d'administration de Nvidia a confirmé qu'il n'avait aucun projet de réintégrer Jensen Huang à son poste de PDG, rejetant les demandes formulées pour son retour.",
-    "Le dirigeant avait quitté ses fonctions après 33 ans de direction, suscitant des appels de dirigeants du secteur technologique et de grands actionnaires pour qu'il reprenne la tête du groupe.",
-    "La direction intérimaire a confirmé ce départ définitif tout en relevant ses perspectives de croissance."
+    "Une étude publiée dans Nature Sustainability montre que 403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an.",
+    "Ces infrastructures reposent encore majoritairement sur les énergies fossiles et consomment autant d'électricité qu'un pays comme le Chili.",
+    "Avec 82 térawattheures absorbés par 403 centres, cette consommation d'électricité équivaut à celle d'États américains entiers comme le Wisconsin ou le Michigan."
    ],
-   "head_en": "Nvidia's board rules out any return of Jensen Huang as CEO",
+   "head_en": "Power consumption of US AI data centers matches that of entire countries",
    "bullets_en": [
-    "Nvidia's board of directors confirmed it has no plans to reinstate Jensen Huang as CEO, rejecting demands and pressure for his return.",
-    "The executive had resigned after 33 years at the helm, prompting tech industry leaders and major shareholders to call for his reinstatement.",
-    "The interim leadership reaffirmed his departure while raising the company's growth outlook.Ctx"
-   ],
-   "ctx_ids": [
-    "32f526731264",
-    "68541c852c8c"
-   ],
-   "ts": "2026-11-18T01:22:38.321Z"
-  },
-  {
-   "ids": [
-    "20f963a804d9",
-    "1498609c0aea",
-    "6fd4401d69f5",
-    "ad0794c39984"
-   ],
-   "head": "Nvidia interrompt la vente de ses puces d'IA vers la Chine",
-   "bullets": [
-    "Nvidia a pris la décision d'arrêter de vendre ses puces d'intelligence artificielle vers la Chine, bien qu'elle disposait d'une autorisation accordée par les autorités américaines.",
-    "Dans le même temps, le Congrès et l'administration américaine préparent de nouvelles mesures pour restreindre l'exportation et bloquer l'accès à distance de la Chine à ces composants."
-   ],
-   "head_en": "Nvidia halts AI chip sales to China despite US approval",
-   "bullets_en": [
-    "Nvidia has decided to stop selling its artificial intelligence chips to China, despite holding approval from US authorities.",
-    "Meanwhile, the US Congress and administration are pushing stricter rules to curb exports and block China's remote access to AI chips."
+    "A study published in Nature Sustainability shows that 403 hyperscale data centers in the US consumed 82 terawatt-hours of electricity in one year.",
+    "These infrastructures still rely heavily on fossil fuels and consume as much electricity as a country like Chile.",
+    "With 82 terawatt-hours consumed by 403 centers, this electricity usage equals that of entire US states such as Wisconsin or Michigan."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-18T01:15:00.000Z"
+   "ts": "2026-11-17T10:30:00.000Z"
   }
  ]
 }
