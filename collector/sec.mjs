@@ -7,6 +7,26 @@ export const SEC_COMPANIES = [
   { name: "Meta", cik: "1326801" },
   { name: "Oracle", cik: "1341439" },
 ];
+// Sociétés cotées de la chaîne de valeur (page « Acteurs ») : leurs chiffres vont dans sec-acteurs.json, jamais dans sec.json
+// (sec.json alimente le camembert du capex des cinq géants : l'élargir changerait ce graphique).
+export const SEC_ACTORS = [
+  { name: "Nvidia", cik: "1045810" }, { name: "AMD", cik: "2488" }, { name: "Broadcom", cik: "1730168" }, { name: "Marvell", cik: "1835632" },
+  { name: "Micron", cik: "723125" }, { name: "Intel", cik: "50863" }, { name: "GlobalFoundries", cik: "1709048" }, { name: "Amkor", cik: "1047127" },
+  { name: "Microsoft", cik: "789019" }, { name: "Alphabet", cik: "1652044" }, { name: "Amazon", cik: "1018724" }, { name: "Meta", cik: "1326801" },
+  { name: "Cisco", cik: "858877" }, { name: "Arista", cik: "1596532" }, { name: "Credo", cik: "1807794" }, { name: "Astera Labs", cik: "1736297" },
+  { name: "Coherent", cik: "820318" }, { name: "Lumentum", cik: "1633978" }, { name: "Amphenol", cik: "820313" }, { name: "Vertiv", cik: "1674101" },
+  { name: "Eaton", cik: "1551182" }, { name: "GE Vernova", cik: "1996810" }, { name: "Cadence", cik: "813672" }, { name: "Synopsys", cik: "883241" },
+  { name: "Oklo", cik: "1849056" }, { name: "NuScale", cik: "1822966" },
+];
+// Carnet de commandes contractuel déclaré (RPO = obligations de performance restantes), valeur à une date, pas sur une période.
+export const BACKLOG = ["RevenueRemainingPerformanceObligation"];
+// Prises de participation et acquisitions (flux de trésorerie) : on ne retient pas « PaymentsToAcquireInvestments », qui mélange titres de trésorerie et participations.
+export const STAKES = [
+  ["PaymentsToAcquireBusinessesNetOfCashAcquired", "Acquisitions d'entreprises"],
+  ["PaymentsToAcquireEquityMethodInvestments", "Participations (mise en équivalence)"],
+  ["PaymentsToAcquireOtherInvestments", "Autres placements (titres non cotés)"],
+  ["PaymentsToAcquireEquitySecuritiesFvNi", "Actions et titres de capital"],
+];
 export const CAPEX = ["PaymentsToAcquirePropertyPlantAndEquipment", "PaymentsToAcquireProductiveAssets"];
 export const REVENUE = ["RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues", "SalesRevenueNet", "RevenueFromContractWithCustomerIncludingAssessedTax"];
 
@@ -33,6 +53,18 @@ export function trailing(entries) {
   const pick = (value, basis, start, end, ref) => ({ value, basis, start, end, form: ref.form, filed: ref.filed, accn: ref.accn });
   if (Y && P) return pick(A.val + Y.val - P.val, "ttm", new Date(ms(Y.end) - 365 * DAY + DAY).toISOString().slice(0, 10), Y.end, Y);
   return pick(A.val, "annual", A.start, A.end, A);
+}
+
+/** Dernière valeur « à une date » (sans début de période) d'un 10-K ou 10-Q ; la plus récemment déposée l'emporte pour une même date. */
+export function latestInstant(entries) {
+  const byEnd = new Map();
+  for (const e of entries || []) {
+    if (!e || !e.end || typeof e.val !== "number" || !/^10-[KQ]/.test(e.form || "")) continue;
+    const o = byEnd.get(e.end);
+    if (!o || String(e.filed) > String(o.filed)) byEnd.set(e.end, e);
+  }
+  const L = [...byEnd.values()].sort((a, b) => b.end.localeCompare(a.end))[0];
+  return L ? { value: L.val, basis: "date", start: null, end: L.end, form: L.form, filed: L.filed, accn: L.accn } : null;
 }
 
 export async function getConcept(c, concept, { ua, fetchImpl, sleep }) {
@@ -76,13 +108,15 @@ export function quarterly(entries) {
   return [...out.values()].sort((a, b) => a.end.localeCompare(b.end));
 }
 
-async function metric(c, concepts, ctx, nowMs) {
+async function metric(c, concepts, ctx, nowMs, instant = false, withQuarters = false) {
   let best = null;
   for (const concept of concepts) {
-    const t = trailing(await getConcept(c, concept, ctx));
+    const raw = await getConcept(c, concept, ctx);
+    const t0 = instant ? latestInstant(raw) : trailing(raw);
+    const t = t0 && withQuarters ? { ...t0, quarters: quarterly(raw).slice(-6) } : t0;
     await ctx.sleep(150);
     if (!t || !(t.value > 0)) continue;
-    if (nowMs - ms(t.end) > 600 * DAY) continue; // balise abandonnée
+    if (nowMs - ms(t.end) > (instant ? 400 : 600) * DAY) continue; // balise abandonnée
     if (!best || t.end > best.end) best = { ...t, concept };
   }
   if (!best) return null;
@@ -94,18 +128,35 @@ async function metric(c, concepts, ctx, nowMs) {
  * Met à jour sec.json. Une société déjà lue il y a moins de maxAgeH heures n'est pas relue ;
  * en cas d'échec, l'ancien chiffre est conservé avec sa propre date de lecture (l'interface alerte au-delà de 30 jours).
  */
-export async function collectSec({ ua, fetchImpl = fetch, prev = null, now = Date.now(), companies = SEC_COMPANIES, maxAgeH = 20, sleep = (t) => new Promise((r) => setTimeout(r, t)), log = () => {} } = {}) {
+export async function collectSec({ ua, fetchImpl = fetch, prev = null, now = Date.now(), companies = SEC_COMPANIES, metrics = ["capex", "revenue"], maxAgeH = 20, sleep = (t) => new Promise((r) => setTimeout(r, t)), log = () => {} } = {}) {
   if (!ua) return { doc: prev, summary: { refreshed: false, reason: "SEC_USER_AGENT absente" } };
   const ctx = { ua, fetchImpl, sleep }, prevBy = new Map((prev?.companies || []).map((c) => [String(c.cik), c]));
   const out = [], ko = []; let ok = 0, skipped = 0;
   for (const c of companies) {
     const p = prevBy.get(String(c.cik));
-    const fresh = (m) => m?.fetched_at && now - Date.parse(m.fetched_at) < maxAgeH * 3600e3;
-    if (p && fresh(p.capex) && fresh(p.revenue)) { out.push(p); skipped++; continue; }
+    const fresh = (m) => !Array.isArray(m) && m?.fetched_at && now - Date.parse(m.fetched_at) < maxAgeH * 3600e3;
+    // une métrique déjà tentée (même absente) est « fraîche » tant que la société a été lue il y a moins de maxAgeH heures
+    const readFresh = p?.read_at && now - Date.parse(p.read_at) < maxAgeH * 3600e3;
+    if (p && metrics.every((k) => (k in p) && (p[k] ? (Array.isArray(p[k]) ? readFresh : fresh(p[k])) : readFresh))) { out.push(p); skipped++; continue; }
     try {
-      const capex = await metric(c, CAPEX, ctx, now), revenue = await metric(c, REVENUE, ctx, now);
-      if (!capex && !revenue) throw new Error("aucune donnée XBRL exploitable");
-      out.push({ name: c.name, cik: String(c.cik), capex: capex || p?.capex || null, revenue: revenue || p?.revenue || null });
+      const got = {};
+      if (metrics.includes("capex")) got.capex = await metric(c, CAPEX, ctx, now);
+      if (metrics.includes("revenue")) got.revenue = await metric(c, REVENUE, ctx, now, false, metrics.includes("stakes"));
+      if (metrics.includes("stakes")) {
+        const rows = [];
+        for (const [concept, label] of STAKES) {
+          const t = trailing(await getConcept(c, concept, ctx));
+          await ctx.sleep(150);
+          if (t && t.value > 0 && now - ms(t.end) <= 600 * DAY) rows.push({ concept, label, value: t.value, basis: t.basis, start: t.start, end: t.end, form: t.form, filed: t.filed });
+        }
+        got.stakes = rows.length ? rows : null;
+      }
+      if (metrics.includes("backlog")) got.backlog = await metric(c, BACKLOG, ctx, now, true);
+      if (!Object.values(got).some(Boolean)) throw new Error("aucune donnée XBRL exploitable");
+      const row = { name: c.name, cik: String(c.cik) };
+      for (const k of metrics) row[k] = got[k] || p?.[k] || null;
+      if (metrics.includes("backlog") || metrics.length > 2) row.read_at = new Date(now).toISOString();
+      out.push(row);
       ok++;
     } catch (e) { ko.push(`${c.name} : ${e.message}`); if (p) out.push(p); }
   }

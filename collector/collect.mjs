@@ -11,7 +11,8 @@ import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } f
 import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
 import { collectResults } from "./resultats.mjs";
-import { collectSec } from "./sec.mjs";
+import { collectSec, SEC_ACTORS } from "./sec.mjs";
+import { buildActeurs } from "./acteurs.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
 import { updateChain } from "./chainauto.mjs";
@@ -644,11 +645,20 @@ export async function run(opts = {}) {
   catch (e) { log("Fiches infrastructure : " + String(e.message || e)); }
   log(`Fiches infrastructure : ${chainRes.changes.length} mise(s) à jour, ${chainRes.stale.length} série(s) à actualiser`);
 
+  // Fiches « Acteurs » : chiffres SEC des sociétés cotées de la chaîne (sec-acteurs.json), puis assemblage sans IA (acteurs.json)
+  const secActPrev = await readJson("sec-acteurs.json", null), actPrev = await readJson("acteurs.json", null);
+  let secAct = { doc: secActPrev, summary: { refreshed: false, reason: "erreur" } }, acteurs = null;
+  try { secAct = await collectSec({ ua: env.SEC_USER_AGENT, fetchImpl, prev: secActPrev, now: nowMs, companies: SEC_ACTORS, metrics: ["revenue", "capex", "backlog", "stakes"], maxAgeH: 24, sleep: opts.sleep, log }); }
+  catch (e) { secAct.summary.reason = String(e.message || e); log("SEC acteurs : " + secAct.summary.reason); }
+  try { if (chainRes.chain) acteurs = buildActeurs({ chain: chainRes.chain, feed: { items: keep }, sec: secAct.doc, releases: (resSrc.doc && resSrc.doc.items) || [], fiches: JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "acteurs-fiches.json"), "utf8")).actors, now: nowMs }); }
+  catch (e) { log("Fiches acteurs : " + String(e.message || e).slice(0, 120)); }
+  log(`Fiches acteurs : ${acteurs ? acteurs.actors.length : 0} fiche(s)`);
+
   // textes des pages de données en anglais (public/data/en.json) : par lots, ne bloque jamais la collecte
   const enPrev = await readJson("en.json", {});
   let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
   try {
-    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}];
+    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}, acteurs ? { actors: acteurs.actors.map((a) => ({ ...a, news: undefined, rivals: undefined })) } : {}];
     enRes = await translateData({ docs, prev: enPrev, generate: mkGen(I18N_SYSTEM, I18N_SCHEMA), batch: +env.I18N_BATCH || 50, rounds: +env.I18N_ROUNDS || 3 });
   } catch (e) { enRes.reason = String(e.message || e).slice(0, 120); }
   log("Textes en anglais : " + enRes.reason + (enRes.left ? ` (reste ${enRes.left})` : ""));
@@ -663,7 +673,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -678,6 +688,8 @@ export async function run(opts = {}) {
     if (chainRes.changes.length) await fs.writeFile(path.join(dataDir, "chain.json"), JSON.stringify(chainRes.chain, null, 1));
     if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
+    if (secAct.doc && JSON.stringify(secAct.doc) !== JSON.stringify(secActPrev)) await fs.writeFile(path.join(dataDir, "sec-acteurs.json"), JSON.stringify(secAct.doc, null, 1));
+    if (acteurs && JSON.stringify({ ...acteurs, generated_at: 0 }) !== JSON.stringify({ ...(actPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "acteurs.json"), JSON.stringify(acteurs));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
     if (evoRes.doc && JSON.stringify(evoRes.doc) !== JSON.stringify(seriesPrev)) await fs.writeFile(path.join(dataDir, "series.json"), fmtSeries(evoRes.doc));
     await fs.writeFile(path.join(dataDir, "status.json"), JSON.stringify(out, null, 1));

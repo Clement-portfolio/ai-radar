@@ -437,3 +437,28 @@ html{overscroll-behavior-y:contain}
 /* Une : chiffres clés sous le briefing, même carte que le Marché */
 .figs{margin:-18px 0 40px}
 @media(max-width:620px){.cards3>.share>.sf{align-self:flex-start}}
+
+.agrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 34px;margin-top:6px}
+.acard{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:12px 0;border-bottom:1px solid var(--hair);text-decoration:none;align-items:baseline}
+.acard:hover .an{text-decoration:underline}
+.acard .an{font-family:var(--display);font-size:17px;font-weight:600;letter-spacing:-.01em}
+.acard .ap{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.acard .ar{grid-column:1/3;font-size:12.5px;color:var(--ink2);line-height:1.4}
+.asearch{width:100%;max-width:420px;border:1px solid var(--hair);background:transparent;color:var(--ink);padding:8px 10px;font:inherit;font-size:14px;margin:6px 0 10px;border-radius:0}
+.back{display:inline-block;margin:4px 0 14px;text-decoration:none}
+.ahead{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.arank{font-family:var(--display);font-size:18px;font-weight:500;margin:4px 0 12px}
+.adesc{max-width:720px;color:var(--ink2);margin:14px 0 6px;font-size:15px;line-height:1.55}
+.stat1 .mutev{color:var(--mute);font-size:19px}
+.clist{list-style:none;margin:0;padding:0}
+.clist li{display:grid;grid-template-columns:minmax(0,1.2fr) auto;gap:2px 16px;padding:9px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+.clist .cn{font-weight:500}.clist .cn b{font-family:var(--mono);color:var(--mute);margin-right:6px;font-weight:500}
+.clist .cv{font-family:var(--mono);font-size:13px;text-align:right}
+.clist .cnote{grid-column:1/2}.clist .csrc{grid-column:2/3;text-align:right}
+.anews{display:grid;grid-template-columns:62px minmax(0,1fr) auto;gap:12px;padding:8px 0;border-bottom:1px solid var(--hair);font-size:14px;align-items:baseline}
+.anews a{text-decoration:none}.anews a:hover{text-decoration:underline}
+.rivals{margin:30px 0 10px}
+.rvbtn{padding:8px 16px;font-size:12px}
+.rvbody{margin-top:14px}.rv{margin-bottom:10px}
+@media(max-width:1060px){.agrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.agrid{grid-template-columns:1fr}.anews{grid-template-columns:52px minmax(0,1fr)}.anews span:last-child{display:none}.clist li{grid-template-columns:1fr}.clist .cv,.clist .csrc{text-align:left;grid-column:1}}

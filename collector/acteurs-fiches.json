@@ -1,0 +1,443 @@
+{
+ "_note": "Données éditoriales des fiches « Acteurs ». desc : description factuelle sans chiffre. rank, markets (camemberts : parts de marché avec source et date) et clients ne sont renseignés que s'ils sont sourcés ; sinon la fiche n'affiche rien.",
+ "actors": {
+  "abb": {
+   "desc": "Groupe suisse d'électrification et d'automatisation : distribution électrique, transformateurs, variateurs."
+  },
+  "accelink": {
+   "desc": "Fabricant chinois de composants et de modules optiques pour les télécoms et les datacenters."
+  },
+  "alibaba": {
+   "desc": "Groupe chinois de commerce en ligne et de cloud (Alibaba Cloud) ; développe les modèles Qwen et construit des centres de données."
+  },
+  "alphabet": {
+   "desc": "Maison mère de Google : moteur de recherche, cloud (Google Cloud), modèles Gemini et puces maison (TPU).",
+   "markets": [
+    {
+     "t": "Services d'infrastructure cloud",
+     "items": [
+      {
+       "n": "Amazon (AWS)",
+       "v": 26,
+       "self": false
+      },
+      {
+       "n": "Microsoft",
+       "v": 19,
+       "self": false
+      },
+      {
+       "n": "Google",
+       "v": 16,
+       "self": true
+      },
+      {
+       "n": "Autres",
+       "v": 39,
+       "self": false
+      }
+     ],
+     "as_of": "T3 2026",
+     "src": "Synergy Research Group (via Data Center Knowledge)",
+     "u": "https://datacenterknowledge.com/cloud/cloud-revenue-hits-168b-as-ai-capacity-expands",
+     "note": "Part du chiffre d'affaires mondial ; « Autres » = complément à 100 %."
+    }
+   ],
+   "rank": {
+    "text": "n° 3 du cloud (16 % du marché)",
+    "src": "Synergy Research Group (via Data Center Knowledge)",
+    "u": "https://datacenterknowledge.com/cloud/cloud-revenue-hits-168b-as-ai-capacity-expands",
+    "as_of": "T3 2026"
+   }
+  },
+  "amazon": {
+   "desc": "Commerce en ligne et cloud (AWS), premier fournisseur de cloud ; conçoit ses propres puces d'IA (Trainium, Inferentia).",
+   "markets": [
+    {
+     "t": "Services d'infrastructure cloud",
+     "items": [
+      {
+       "n": "Amazon (AWS)",
+       "v": 26,
+       "self": true
+      },
+      {
+       "n": "Microsoft",
+       "v": 19,
+       "self": false
+      },
+      {
+       "n": "Google",
+       "v": 16,
+       "self": false
+      },
+      {
+       "n": "Autres",
+       "v": 39,
+       "self": false
+      }
+     ],
+     "as_of": "T3 2026",
+     "src": "Synergy Research Group (via Data Center Knowledge)",
+     "u": "https://datacenterknowledge.com/cloud/cloud-revenue-hits-168b-as-ai-capacity-expands",
+     "note": "Part du chiffre d'affaires mondial ; « Autres » = complément à 100 %."
+    }
+   ],
+   "rank": {
+    "text": "n° 1 du cloud (26 % du marché)",
+    "src": "Synergy Research Group (via Data Center Knowledge)",
+    "u": "https://datacenterknowledge.com/cloud/cloud-revenue-hits-168b-as-ai-capacity-expands",
+    "as_of": "T3 2026"
+   }
+  },
+  "amd": {
+   "desc": "Concepteur américain de processeurs et de GPU, dont la gamme Instinct pour l'IA."
+  },
+  "amkor": {
+   "desc": "Sous-traitant américain d'assemblage et de test de puces, présent sur l'assemblage avancé."
+  },
+  "amphenol": {
+   "desc": "Fabricant américain de connecteurs et de câbles, dont le câblage haute vitesse des serveurs."
+  },
+  "arista": {
+   "desc": "Équipementier réseau américain : commutateurs Ethernet pour datacenters et réseaux d'IA."
+  },
+  "arm": {
+   "desc": "Société britannique qui concède des architectures de processeurs (cœurs), utilisées des smartphones aux serveurs."
+  },
+  "ase": {
+   "desc": "Taïwanais, grand sous-traitant mondial d'assemblage et de test de semi-conducteurs."
+  },
+  "asml": {
+   "desc": "Néerlandais, fabricant des machines de lithographie qui gravent les puces, seul fournisseur des machines EUV.",
+   "rank": {
+    "text": "Seul fabricant de machines de lithographie EUV",
+    "src": "CNBC, via WebProNews",
+    "u": "https://www.webpronews.com/asml-the-dutch-monopoly-powering-nvidias-ai-dominance",
+    "as_of": "janv. 2026"
+   },
+   "markets": [
+    {
+     "t": "Lithographie pour semi-conducteurs (EUV et DUV)",
+     "items": [
+      {
+       "n": "ASML",
+       "v": 90
+      },
+      {
+       "n": "Autres",
+       "v": 10
+      }
+     ],
+     "as_of": "janv. 2026",
+     "src": "CNBC, via WebProNews",
+     "u": "https://www.webpronews.com/asml-the-dutch-monopoly-powering-nvidias-ai-dominance",
+     "note": "Part estimée du marché de la lithographie ; monopole sur l'EUV."
+    }
+   ],
+   "clients": [
+    {
+     "n": "TSMC",
+     "note": "Premier client d'ASML.",
+     "src": "CNBC, via WebProNews",
+     "u": "https://www.webpronews.com/asml-the-dutch-monopoly-powering-nvidias-ai-dominance"
+    },
+    {
+     "n": "Samsung",
+     "note": "Client majeur (ordre non publié).",
+     "src": "Parsers",
+     "u": "https://parsers.vc/news/260131-asml--the-indispensable-architect-of-the-ai/"
+    },
+    {
+     "n": "Intel",
+     "note": "Client majeur (ordre non publié).",
+     "src": "Parsers",
+     "u": "https://parsers.vc/news/260131-asml--the-indispensable-architect-of-the-ai/"
+    }
+   ],
+   "clients_ranked": false
+  },
+  "astera-labs": {
+   "desc": "Américain, puces de connectivité (PCIe, CXL) qui relient processeurs, GPU et mémoire dans les serveurs d'IA."
+  },
+  "at-s": {
+   "desc": "Autrichien, substrats pour circuits intégrés et cartes de circuits imprimés avancées."
+  },
+  "broadcom": {
+   "desc": "Américain, puces réseau et accélérateurs d'IA sur mesure pour de grands clients, plus logiciels d'infrastructure.",
+   "clients": [
+    {
+     "n": "Google",
+     "note": "Puces TPU ; client historique des accélérateurs sur mesure.",
+     "src": "Counterpoint Research",
+     "u": "https://www.counterpointresearch.com/en/insights/custom-xpus-driving-broadcoms-growth-into-2026-and-beyond"
+    },
+    {
+     "n": "Anthropic",
+     "note": "Plus de 3 GW de calcul prévus en 2027.",
+     "src": "The Register",
+     "u": "https://theregister.com/2026/03/05/broadcom_q1_2026/"
+    },
+    {
+     "n": "Meta",
+     "note": "Accélérateurs MTIA, plusieurs GW en 2027 et après.",
+     "src": "The Register",
+     "u": "https://theregister.com/2026/03/05/broadcom_q1_2026/"
+    },
+    {
+     "n": "OpenAI",
+     "note": "Plus de 1 GW prévu en 2027.",
+     "src": "The Register",
+     "u": "https://theregister.com/2026/03/05/broadcom_q1_2026/"
+    }
+   ],
+   "clients_ranked": false,
+   "clients_note": "Six clients d'accélérateurs sur mesure ; Broadcom ne publie pas leur classement."
+  },
+  "bytedance": {
+   "desc": "Groupe chinois de TikTok et Douyin ; développe des modèles d'IA (Doubao) et investit dans le calcul."
+  },
+  "cadence": {
+   "desc": "Américain, logiciels de conception de puces (EDA) et briques de circuit sous licence."
+  },
+  "cambricon": {
+   "desc": "Concepteur chinois de puces d'IA."
+  },
+  "celestica": {
+   "desc": "Canadien, fabricant sous contrat d'électronique ; serveurs et commutateurs pour les grands acteurs du cloud."
+  },
+  "cisco": {
+   "desc": "Américain, équipements réseau (commutateurs, routeurs) et sécurité."
+  },
+  "coherent": {
+   "desc": "Américain, lasers, matériaux et modules optiques pour télécoms et datacenters."
+  },
+  "credo": {
+   "desc": "Américain, connectivité haute vitesse : câbles cuivre actifs (AEC) et circuits d'interface."
+  },
+  "cxmt": {
+   "desc": "Principal fabricant chinois de mémoire DRAM (ChangXin Memory)."
+  },
+  "eaton": {
+   "desc": "Groupe de gestion de l'énergie électrique : tableaux, onduleurs et protection pour datacenters."
+  },
+  "eoptolink": {
+   "desc": "Fabricant chinois de modules optiques haute vitesse."
+  },
+  "g42": {
+   "desc": "Groupe d'IA basé à Abou Dhabi : modèles, cloud et infrastructures de calcul."
+  },
+  "ge-vernova": {
+   "desc": "Américain, issu de GE : turbines à gaz, équipements de réseau électrique et éolien.",
+   "rank": {
+    "text": "1er carnet de commandes de grandes turbines à gaz",
+    "src": "EUCI ; OilPrice",
+    "u": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html",
+    "as_of": "T2 2026"
+   }
+  },
+  "globalfoundries": {
+   "desc": "Fonderie américaine de puces spécialisées (hors nœuds les plus avancés), dont la photonique sur silicium."
+  },
+  "hitachi-energy": {
+   "desc": "Filiale énergie du japonais Hitachi, basée en Suisse : transformateurs, équipements haute tension et réseaux."
+  },
+  "huawei-ascend": {
+   "desc": "Gamme de puces d'IA Ascend du groupe chinois Huawei."
+  },
+  "humain": {
+   "desc": "Société saoudienne d'IA détenue par le fonds public PIF : centres de données et modèles."
+  },
+  "ibiden": {
+   "desc": "Japonais, substrats de puces haut de gamme et cartes électroniques."
+  },
+  "innolight": {
+   "desc": "Fabricant chinois de modules optiques haute vitesse pour datacenters."
+  },
+  "intel-foundry": {
+   "desc": "Activité de fonderie du groupe américain Intel : fabrication de puces pour son compte et pour des clients."
+  },
+  "kairos-power": {
+   "desc": "Américain, développe des réacteurs nucléaires avancés refroidis par sels fondus."
+  },
+  "lumentum": {
+   "desc": "Américain, lasers et composants optiques pour télécoms et datacenters."
+  },
+  "marvell": {
+   "desc": "Américain, puces de connectivité, d'optique et accélérateurs sur mesure."
+  },
+  "mediatek": {
+   "desc": "Taïwanais, puces pour smartphones et objets connectés ; propose aussi des puces sur mesure."
+  },
+  "meta": {
+   "desc": "Groupe de Facebook et Instagram ; modèles Llama, puces maison (MTIA) et construction de grands centres de données."
+  },
+  "micron": {
+   "desc": "Américain, mémoires DRAM et NAND ; produit de la mémoire HBM pour les GPU."
+  },
+  "microsoft": {
+   "desc": "Logiciels et cloud (Azure) ; partenaire d'OpenAI ; conçoit ses propres puces d'IA (Maia).",
+   "markets": [
+    {
+     "t": "Services d'infrastructure cloud",
+     "items": [
+      {
+       "n": "Amazon (AWS)",
+       "v": 26,
+       "self": false
+      },
+      {
+       "n": "Microsoft",
+       "v": 19,
+       "self": true
+      },
+      {
+       "n": "Google",
+       "v": 16,
+       "self": false
+      },
+      {
+       "n": "Autres",
+       "v": 39,
+       "self": false
+      }
+     ],
+     "as_of": "T3 2026",
+     "src": "Synergy Research Group (via Data Center Knowledge)",
+     "u": "https://datacenterknowledge.com/cloud/cloud-revenue-hits-168b-as-ai-capacity-expands",
+     "note": "Part du chiffre d'affaires mondial ; « Autres » = complément à 100 %."
+    }
+   ],
+   "rank": {
+    "text": "n° 2 du cloud (19 % du marché)",
+    "src": "Synergy Research Group (via Data Center Knowledge)",
+    "u": "https://datacenterknowledge.com/cloud/cloud-revenue-hits-168b-as-ai-capacity-expands",
+    "as_of": "T3 2026"
+   }
+  },
+  "mitsubishi-electric": {
+   "desc": "Japonais, équipements électriques et composants électroniques, dont des lasers pour l'optique."
+  },
+  "mitsubishi-heavy-industries": {
+   "desc": "Japonais, turbines à gaz et grands équipements industriels."
+  },
+  "nittobo": {
+   "desc": "Japonais, fibre de verre et tissu de verre spécial (T-glass) utilisé dans les substrats de puces."
+  },
+  "nvidia": {
+   "desc": "Américain, GPU pour l'IA et plateforme logicielle CUDA ; vend aussi du réseau (InfiniBand, Ethernet).",
+   "rank": {
+    "text": "n° 1 des puces IA (≈ 70 % du marché)",
+    "src": "Tom's Hardware ; TrendForce",
+    "u": "https://tomshardware.com/tech-industry/semiconductors/custom-ai-asics-examined-from-broadcom-to-mtia",
+    "as_of": "mai 2026"
+   },
+   "clients": [
+    {
+     "n": "Premier client direct (non nommé)",
+     "v": "22 % du chiffre d'affaires",
+     "note": "Exercice clos en janv. 2026 ; Nvidia ne nomme pas ses clients directs.",
+     "src": "Rapport 10-K de Nvidia, d'après Daloopa",
+     "u": "https://daloopa.com/?p=14854"
+    },
+    {
+     "n": "Hors des cinq premiers hyperscalers",
+     "v": "≈ 40 % du chiffre d'affaires",
+     "note": "Entreprises, robotique, États et autres clients (Jensen Huang, GTC 2026).",
+     "src": "Yahoo Finance",
+     "u": "https://finance.yahoo.com/markets/stocks/articles/nvidia-stock-1-problem-heres-035000900.html"
+    }
+   ],
+   "clients_ranked": false
+  },
+  "oklo": {
+   "desc": "Américain, développe de petits réacteurs nucléaires avancés ; coté en Bourse."
+  },
+  "openai": {
+   "desc": "Laboratoire d'IA américain (ChatGPT) ; conçoit une puce d'IA avec Broadcom."
+  },
+  "samsung": {
+   "desc": "Sud-coréen : mémoires (DRAM, HBM), fonderie de puces et électronique grand public.",
+   "rank": {
+    "text": "n° 1 de la DRAM (39,4 % du chiffre d'affaires)",
+    "src": "TrendForce (via Korea Times)",
+    "u": "https://www.koreatimes.co.kr/business/20260907/samsung-extends-lead-in-global-dram-market-with-39-share-report",
+    "as_of": "T2 2026"
+   }
+  },
+  "siemens-eda": {
+   "desc": "Branche de Siemens spécialisée dans les logiciels de conception de puces."
+  },
+  "siemens-energy": {
+   "desc": "Allemand, turbines à gaz, équipements de réseau électrique et transformateurs."
+  },
+  "sk-hynix": {
+   "desc": "Sud-coréen, mémoires DRAM et NAND ; producteur majeur de HBM.",
+   "rank": {
+    "text": "n° 1 de la HBM (50 % du chiffre d'affaires)",
+    "src": "Counterpoint Research",
+    "u": "https://counterpointresearch.com/insights/global-dram-and-hbm-market-share",
+    "as_of": "T2 2026"
+   }
+  },
+  "smic": {
+   "desc": "Première fonderie de semi-conducteurs de Chine."
+  },
+  "source-photonics": {
+   "desc": "Fabricant de modules optiques pour datacenters et télécoms."
+  },
+  "spil": {
+   "desc": "Taïwanais (Siliconware Precision Industries, filiale d'ASE), assemblage et test de puces."
+  },
+  "sumitomo-electric": {
+   "desc": "Japonais, câbles, composants optiques et lasers."
+  },
+  "synopsys": {
+   "desc": "Américain, logiciels de conception de puces (EDA) et briques de circuit sous licence."
+  },
+  "terrapower": {
+   "desc": "Américain, soutenu par Bill Gates ; développe des réacteurs nucléaires avancés refroidis au sodium."
+  },
+  "tower": {
+   "desc": "Israélien, fonderie de puces spécialisées, notamment de photonique sur silicium."
+  },
+  "tsmc": {
+   "desc": "Taïwanais, plus grande fonderie de puces au monde ; fabrique notamment pour Nvidia, AMD et Apple, et assemble les puces d'IA.",
+   "rank": {
+    "text": "n° 1 mondial des fonderies",
+    "src": "TrendForce (classement des fonderies, T2 2026)",
+    "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+    "as_of": "9 sept. 2026"
+   },
+   "clients": [
+    {
+     "n": "Nvidia",
+     "v": "19 % du chiffre d'affaires 2025",
+     "note": "Premier client, devant Apple.",
+     "src": "Rapport annuel 2025 de TSMC, d'après Asiae",
+     "u": "https://view.asiae.co.kr/en/article/2026030610061501773"
+    },
+    {
+     "n": "Apple",
+     "v": "17 % du chiffre d'affaires 2025",
+     "note": "22 % en 2024.",
+     "src": "Rapport annuel 2025 de TSMC, d'après Asiae",
+     "u": "https://view.asiae.co.kr/en/article/2026030610061501773"
+    }
+   ],
+   "clients_ranked": true
+  },
+  "umc": {
+   "desc": "Taïwanais, fonderie de puces sur nœuds matures."
+  },
+  "unimicron": {
+   "desc": "Taïwanais, substrats de puces et cartes de circuits imprimés."
+  },
+  "vertiv": {
+   "desc": "Américain, refroidissement et alimentation électrique des datacenters."
+  },
+  "x-energy": {
+   "desc": "Américain, petits réacteurs nucléaires à haute température (Xe-100) ; partenariat annoncé avec Amazon."
+  }
+ }
+}

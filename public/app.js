@@ -3,8 +3,8 @@
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
-var TABS=["une","actualites","marche","infrastructure","usa-chine","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null};
+var TABS=["une","actualites","marche","infrastructure","acteurs","usa-chine","methode"];
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,actor:null,aq:"",ab:"ALL",arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -37,9 +37,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];if(window.I18N)I18N.extra(r[10]);
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -536,12 +536,110 @@ function rMethod(){
    '<hr class="rule thick" style="margin-top:34px"><span class="kicker">Sources citées ('+list.length+')</span><div class="src-list">'+list.map(function(s){return'<a href="'+esc(link(s[1]))+'" target="_blank" rel="noopener">'+esc(s[0])+' ↗</a>'}).join("")+'</div>';
 }
 
+/* ---------- Acteurs : liste et fiche ---------- */
+function aMd(v){var b=v/1e9;return b>=1?(Math.round(b*10)/10).toString().replace(".",",")+" Md$":Math.round(v/1e6).toLocaleString(loc())+" M$"}
+function aSigned(x){if(x==null)return"";var v=Math.abs(x)>=10?Math.round(x):Math.round(x*10)/10;return(v>0?"+":v<0?"−":"")+String(Math.abs(v)).replace(".",",")+" %"}
+function aLink(u,t){return'<a href="'+esc(link(u))+'" target="_blank" rel="noopener">'+esc(t)+' ↗</a>'}
+function aById(id){return((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return a.id===id})[0]}
+function aBlocks(){
+  var seen={},out=[];((S.acteurs&&S.acteurs.actors)||[]).forEach(function(a){a.roles.forEach(function(r){if(!seen[r.block]){seen[r.block]=1;out.push(r.block)}})});return out;
+}
+function aCard(a){
+  var line=a.rank?a.rank.text:a.roles.map(function(r){return r.sub.replace(/\s*\(.*$/,"")}).filter(function(x,i,l){return l.indexOf(x)===i}).slice(0,2).join(" · ");
+  return'<a class="acard" href="#acteurs/'+esc(a.id)+'"><span class="an">'+esc(a.n)+'</span><span class="ap">'+esc(a.pays)+'</span><span class="ar">'+esc(line)+'</span></a>';
+}
+function aList(){
+  var A=S.acteurs.actors,q=S.aq.trim().toLowerCase();
+  var list=A.filter(function(a){
+    if(S.ab!=="ALL"&&!a.roles.some(function(r){return r.block===S.ab}))return false;
+    return !q||(a.n+" "+a.pays+" "+a.roles.map(function(r){return r.sub}).join(" ")).toLowerCase().indexOf(q)>=0;
+  });
+  return list.length?list.map(aCard).join(""):'<p class="small">Aucun acteur ne correspond.</p>';
+}
+function aSortMarket(m){
+  var self=m.items.filter(function(x){return x.self}),oth=m.items.filter(function(x){return !x.self&&!/^(autres?|reste)/i.test(x.n)}).sort(function(a,b){return b.v-a.v}),aut=m.items.filter(function(x){return !x.self&&/^(autres?|reste)/i.test(x.n)});
+  return self.concat(oth,aut);
+}
+function aMarketCard(m){
+  var segs=aSortMarket(m).map(function(x){return{label:x.n,pct:x.v}});
+  var leg=segs.map(function(x,i){return'<li><i style="background:'+dcol(i,x.label)+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
+  return'<div class="share"><h4>'+esc(m.t)+'</h4><div class="sm">'+esc(m.as_of)+(m.calc?' · part calculée entre les acteurs listés':'')+'</div>'+
+   (segs.length>1?'<div class="sbody">'+donut(segs)+'<ul class="leg">'+leg+'</ul></div>':'<div class="bigv" style="margin:14px 0 4px">'+fmtPct(segs[0].pct)+'</div><div class="sm2">'+esc(segs[0].label)+' (seule part publiée, pas de répartition complète)</div>')+
+   '<div class="sf">'+aLink(m.u,m.src)+'</div>'+(m.note?'<div class="fr"><span class="small">'+esc(m.note)+'</span></div>':'')+'</div>';
+}
+function aFinCards(a){
+  var f=a.fin||{},h="",q=f.quarter;
+  var none=function(t,why){return'<div class="share stat1"><h4>'+t+'</h4><div class="bigv mutev">Non disponible</div><div class="sm2">'+why+'</div></div>'};
+  // 1. chiffre d'affaires du dernier trimestre
+  if(q){
+    var vs=[];if(q.qoq!=null)vs.push(aSigned(q.qoq)+" sur le trimestre précédent");if(q.yoy!=null)vs.push(aSigned(q.yoy)+" sur un an");
+    h+='<div class="share stat1"><h4>Chiffre d\'affaires du trimestre</h4><div class="bigv">'+esc(aMd(q.value))+'</div><div class="sm2">'+esc(vs.join(" · ")||"Variation non disponible")+'</div>'+
+     '<div class="sf">'+aLink(q.url,q.src)+(q.calc?' <span class="small">variations calculées</span>':'')+'</div><div class="fr"><span class="small">Trimestre clos le '+esc(fmtD(q.end))+'</span></div>'+
+     (f.pending?'<div class="sm2" style="margin-top:6px">Des résultats plus récents sont publiés par communiqué ; ils seront ajoutés avec le dépôt SEC.</div>':'')+'</div>';
+  }else h+=none("Chiffre d'affaires du trimestre","Pas de dépôt trimestriel exploitable auprès de la SEC pour cette société.");
+  // 2. investissement sur 12 mois
+  if(f.capex){
+    var st=(f.stakes||[]).map(function(x){return esc(x.label)+' : '+esc(aMd(x.value))+' <span class="small">('+(x.basis==="ttm"?"12 mois":"exercice clos le "+esc(fmtD(x.end)))+')</span>'}).join("<br>");
+    h+='<div class="share stat1"><h4>Investissement sur 12 mois</h4><div class="bigv">'+esc(aMd(f.capex.value))+'</div><div class="sm2">Investissements en équipements (capex)'+(st?'<br><b>Participations et acquisitions</b><br>'+st:'')+'</div>'+
+     '<div class="sf">'+aLink(f.capex.url,"SEC ("+f.capex.form+")")+'</div><div class="fr"><span class="small">'+(f.capex.basis==="ttm"?"12 mois":"Dernier exercice")+' clos le '+esc(fmtD(f.capex.end))+'</span></div></div>';
+  }else h+=none("Investissement sur 12 mois","Pas de dépôt trimestriel exploitable auprès de la SEC pour cette société.");
+  // 3. carnet de commandes
+  var b=f.backlog;
+  if(b&&b.kind==="rpo")h+='<div class="share stat1"><h4>Carnet de commandes</h4><div class="bigv">'+esc(aMd(b.value))+'</div><div class="sm2">Contrats signés restant à facturer (RPO), déclarés à la SEC. Les commandes non contractualisées n\'y figurent pas.</div>'+
+   '<div class="sf">'+aLink(b.url,"SEC ("+b.form+")")+'</div><div class="fr"><span class="small">Au '+esc(fmtD(b.end))+'</span></div></div>';
+  else if(b)h+='<div class="share stat1"><h4>Carnet de commandes</h4><div class="bigv">'+esc(b.text)+'</div><div class="sm2">'+esc(b.label)+'</div><div class="sf">'+aLink(b.url,b.src)+'</div><div class="fr"><span class="small">'+esc(b.as_of)+'</span></div></div>';
+  else h+=none("Carnet de commandes","Aucun carnet publié dans une source collectée.");
+  return h;
+}
+function aClients(a){
+  if(!a.clients||!a.clients.length)return'<p class="small">Aucune source fiable collectée pour l\'instant.</p>';
+  var li=a.clients.map(function(c,i){return'<li><span class="cn">'+(a.clients_ranked?'<b>'+(i+1)+'</b> ':'')+esc(c.n)+'</span>'+(c.v?'<span class="cv">'+esc(c.v)+'</span>':'')+(c.note?'<span class="small cnote">'+esc(c.note)+'</span>':'')+'<span class="small csrc">'+aLink(c.u,c.src)+'</span></li>'}).join("");
+  return'<ul class="clist">'+li+'</ul>'+(a.clients_note?'<p class="small">'+esc(a.clients_note)+'</p>':!a.clients_ranked?'<p class="small">Ordre non publié par la société ou par la source.</p>':'');
+}
+function aNews(a){
+  if(!a.news||!a.news.length)return'<p class="small">Aucune actualité récente dans le fil.</p>';
+  return a.news.map(function(n){return'<div class="anews"><span class="small">'+esc(new Date(n.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><a href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+esc(isEn()&&n.title_en?n.title_en:n.title)+'</a><span class="small">'+esc(n.source)+'</span></div>'}).join("");
+}
+function aRivals(a){
+  if(!a.rivals||!a.rivals.length)return"";
+  var body=a.rivals.map(function(r){
+    var chips=r.ids.map(function(id){var o=aById(id);return o?'<a class="chip" href="#acteurs/'+esc(id)+'">'+esc(o.n)+'</a>':""}).join("");
+    return'<div class="rv"><span class="small">'+esc(r.block)+' · '+esc(r.sub)+'</span><div class="toolbar">'+chips+'</div></div>';
+  }).join("");
+  return'<div class="rivals"><button class="chip rvbtn'+(S.arv?' on':'')+'" data-arv="1">'+(S.arv?'Masquer les concurrents':'Découvrir les concurrents')+'</button>'+(S.arv?'<div class="rvbody">'+body+'</div>':'')+'</div>';
+}
+function aFiche(a){
+  var blocks=a.roles.map(function(r){return r.block}).filter(function(x,i,l){return l.indexOf(x)===i});
+  var h='<a class="back small" href="#acteurs">← Tous les acteurs</a><div class="ahead"><h2 class="sec">'+esc(a.n)+'</h2><span class="small">'+esc(a.pays)+'</span></div>'+
+   (a.rank?'<div class="arank">'+esc(a.rank.text)+' <span class="small">('+aLink(a.rank.u,a.rank.src)+(a.rank.as_of?', '+esc(a.rank.as_of):'')+')</span></div>':'')+
+   '<div class="toolbar">'+blocks.map(function(b){return'<span class="chip">'+esc(b)+'</span>'}).join("")+'</div>'+
+   (a.desc?'<p class="adesc">'+esc(a.desc)+'</p>':'');
+  h+='<div class="sgroup">Chiffres clés</div><div class="cards3">'+aFinCards(a)+'</div>';
+  h+='<div class="sgroup">Parts de marché <em>sur ses principaux métiers, face aux concurrents</em></div>';
+  h+=a.markets&&a.markets.length?'<div class="cards3">'+a.markets.map(aMarketCard).join("")+'</div>':'<p class="small" style="margin-top:12px">Aucune part de marché sourcée pour cet acteur.</p>';
+  h+='<div class="sgroup">Clients principaux</div><div style="margin-top:10px">'+aClients(a)+'</div>';
+  h+='<div class="sgroup">Actualités</div><div style="margin-top:6px">'+aNews(a)+'</div>';
+  h+=aRivals(a);
+  return h;
+}
+function rActeurs(){
+  var el=$("v-acteurs");if(!el||!S.acteurs)return;
+  var a=S.actor&&aById(S.actor);
+  if(a){el.innerHTML=aFiche(a);return}
+  var blocks=aBlocks();
+  el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients, chacun daté et sourcé. Un champ sans source reste vide.</p>'+
+   '<div class="toolbar"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">Toutes ('+S.acteurs.actors.length+')</button>'+blocks.map(function(b){return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'">'+esc(b)+'</button>'}).join("")+'</div>'+
+   '<input id="aq" class="asearch" type="search" placeholder="Rechercher un acteur" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"><div id="alist" class="agrid">'+aList()+'</div>';
+}
+
 function renderAll(){
   if(!S.market)return;
-  rUne();rFeed();rMarket();rInfra();rRace();rMethod();
+  rUne();rFeed();rMarket();rInfra();rActeurs();rRace();rMethod();
 }
 function show(tab){
+  var parts=String(tab||"").split("/");tab=parts[0];
   if(TABS.indexOf(tab)<0)tab="une";
+  if(tab==="acteurs"){S.actor=parts[1]||null;S.arv=false;if(S.acteurs)rActeurs()}
   S.tab=tab;
   TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
@@ -560,6 +658,8 @@ document.addEventListener("click",function(e){
   var lg=e.target.closest("[data-lang]");if(lg){setLang(lg.getAttribute("data-lang"));return}
   var j=e.target.closest("[data-jump]");
   if(j){e.preventDefault();var id=j.getAttribute("data-jump"),el=$(id);if(el){if(el.tagName==="DETAILS")el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}return}
+  var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");rActeurs();return}
+  if(e.target.closest("[data-arv]")){S.arv=!S.arv;rActeurs();return}
   var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
   if(t.hasAttribute("data-tab"))return go(t.getAttribute("data-tab"));
   if(t.hasAttribute("data-go"))return go(t.getAttribute("data-go"));
@@ -571,6 +671,7 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-ls")){S.layerSort=t.getAttribute("data-ls");renderAll();return}
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
+document.addEventListener("input",function(e){if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
 setLang(S.lang);
 show(location.hash.slice(1));
