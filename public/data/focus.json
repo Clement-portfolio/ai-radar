@@ -5,93 +5,96 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-18T16:35:55.212Z",
+ "generated_at": "2026-11-18T19:24:29.085Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "06c70ce20939+14c3e9c2875e+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
-  "20f963a804d9+2fb45d6cc030+34280862cba6+363bae5beb12+60b091351fb7+65f22c3bd378+8239fbdc6243+b5ba7df03858+bfaa144bfebb",
-  "263d46d57e89+364825014eaf+3a4806ba20dd+9a736294c460+9ccf8665576a",
-  "2cbe74d0f23f+2e65a97e8047+439c4d3c8de7+62d5ff960a4f+dc46bdd2652f+e4db23cac37a",
-  "0c4605812a3f+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+99c81c53d58e+a3f30498a16a+a9af1aee29cc+cc9584594038+dd5f54370718",
+  "0b8aa72489cc+58e8987b4f93+855aa6c2f478+9ce8ac8b4c95+f4fd0de1838a",
+  "06c70ce20939+14c3e9c2875e+2745e145bb51+4f1fe20754ae+6e834fc4bc29+854cbb320fb2+b1da22f7bd68+db111edbe82f",
+  "09d1dd4a855f+1a9f8b445fb6+21a4a1a0ce23+2d72e3f30e78+353b19162ed2+7706a462416c+97a96eda4701+ad0794c39984+ae0e0c9ba790+bbb72de1e1a5",
+  "1fcd3d951882+4d26e05d4a3f+5db9be893d58+75e60b60b1f6+782240c4e790+7ca1352e5747+e0ac844ba9e5+e65e9a614925",
+  "0c4605812a3f+167fd587b60c+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+6a6c919520ba+99c81c53d58e+a3f30498a16a+a9af1aee29cc+cc9584594038+dd5f54370718",
   "7a5b841ecd56+a57acf0d0c54+bb0b30e7db2d+c82f724e5c66+d7d75374d83d"
  ],
  "stories": [
   {
    "ids": [
-    "f819d90d809d",
-    "b1da22f7bd68",
-    "6e834fc4bc29",
-    "14c3e9c2875e"
+    "855aa6c2f478",
+    "0b8aa72489cc",
+    "58e8987b4f93",
+    "f4fd0de1838a"
    ],
-   "head": "La consommation des centres de données américains dépasse celle de plusieurs États",
+   "head": "L'introduction en bourse d'Anthropic se prépare comme un test majeur pour l'industrie de l'intelligence artificielle",
    "bullets": [
-    "Une étude publiée dans Nature Sustainability indique que 403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an.",
-    "Cette consommation équivaut à celle d'États entiers comme le Wisconsin, le Michigan ou l'Indiana.",
-    "Plus de la moitié de l'électricité alimentant ces grands centres provient de sources fossiles, notamment le gaz et le charbon."
-   ],
-   "kinds": [
-    "detail",
-    "detail",
-    "explication"
-   ],
-   "head_en": "US data center consumption surpasses several states",
-   "bullets_en": [
-    "A study published in Nature Sustainability indicates that 403 hyperscale data centers in the United States consumed 82 terawatt-hours of electricity in one year.",
-    "This consumption is equivalent to that of entire states such as Wisconsin, Michigan, or Indiana.",
-    "More than half of the electricity powering these large facilities comes from fossil sources, notably gas and coal."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-18T14:27:15.000Z"
-  },
-  {
-   "ids": [
-    "34280862cba6",
-    "bfaa144bfebb",
-    "65f22c3bd378",
-    "60b091351fb7"
-   ],
-   "head": "Nvidia arrête la commercialisation de certaines puces d'intelligence artificielle vers la Chine",
-   "bullets": [
-    "Nvidia a suspendu ses exportations de processeurs vers le marché chinois, incluant les modèles pourtant autorisés au préalable par la Maison Blanche.",
-    "Cette décision intervient après l'annonce par les États-Unis du blocage de l'accès à distance aux semi-conducteurs d'IA pour la Chine."
+    "L'opération doit se dérouler sur le Nasdaq avec une fixation du prix prévue cette semaine.",
+    "L'accès au financement constitue l'enjeu principal du secteur au moment où la construction d'un datacenter d'un gigawatt exige un investissement minimal de 30 milliards de dollars."
    ],
    "kinds": [
     "detail",
     "contexte"
    ],
-   "head_en": "Nvidia stops commercializing certain artificial intelligence chips to China",
+   "head_en": "Anthropic's upcoming initial public offering is shaping up as a major test for the artificial intelligence industry",
    "bullets_en": [
-    "Nvidia suspended its processor exports to the Chinese market, including models previously authorized by the White House.",
-    "This decision follows the US announcement blocking remote access to AI semiconductors for China."
+    "The operation is set to take place on Nasdaq with pricing scheduled for this week.",
+    "Access to financing constitutes the primary challenge for the sector at a time when building a one-gigawatt datacenter requires a minimum investment of 30 billion dollars."
    ],
    "ctx_ids": [
-    "58d8417fa030"
+    "8545e7ee31da"
    ],
-   "ts": "2026-11-18T13:58:12.000Z"
+   "ts": "2026-11-18T18:26:51.000Z"
   },
   {
    "ids": [
-    "a57acf0d0c54",
-    "d7d75374d83d",
-    "7a5b841ecd56",
-    "c82f724e5c66"
+    "db111edbe82f",
+    "b1da22f7bd68",
+    "6e834fc4bc29",
+    "14c3e9c2875e"
    ],
-   "head": "La Californie attaque OpenAI en justice après des incidents de piratage informatique par des agents IA",
+   "head": "La consommation électrique des centres de données d'intelligence artificielle aux États-Unis atteint des niveaux records",
    "bullets": [
-    "L'État de Californie demande des changements ordonnés par le tribunal à la suite d'un incident de cybersécurité survenu en juillet.",
-    "L'action en justice accuse l'entreprise d'avoir violé les lois de protection des consommateurs en négligeant la sécurité de ses systèmes."
+    "Un ensemble de 403 centres de données hyperscale a consommé 82 térawattheures en l'espace d'une année.",
+    "La consommation de ces infrastructures sur le sol américain équivaut à celle d'États entiers tels que le Wisconsin, le Michigan ou l'Indiana."
    ],
    "kinds": [
     "detail",
-    "explication"
+    "detail"
    ],
-   "head_en": "California sues OpenAI following computer hacking incidents by AI agents",
+   "head_en": "The electricity consumption of artificial intelligence datacenters in the United States reaches record levels",
    "bullets_en": [
-    "The state of California is asking for court-ordered changes following a cybersecurity incident that occurred in July.",
-    "The legal action accuses the company of violating consumer protection laws by neglecting the security of its systems."
+    "A group of 403 hyperscale datacenters consumed 82 terawatt-hours over the span of a year.",
+    "The consumption of these infrastructures on American soil equals that of entire states such as Wisconsin, Michigan, or Indiana."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-16T22:08:41.000Z"
+   "ts": "2026-11-18T17:52:00.000Z"
+  },
+  {
+   "ids": [
+    "cc9584594038",
+    "a3f30498a16a",
+    "dd5f54370718",
+    "6a6c919520ba"
+   ],
+   "head": "Nvidia dépasse les attentes du marché financier lors de sa publication de résultats trimestriels",
+   "bullets": [
+    "L'action de l'entreprise a enregistré une progression de près de 4 % à la suite de cette annonce.",
+    "Le cofondateur Jensen Huang a quitté ses fonctions de directeur général, laissant la direction intérimaire à la directrice financière Colette Kress.",
+    "Le titre avait reculé de 2,2 % lors des échanges avant-bourse en début de semaine à la suite de l'annonce du départ de la direction."
+   ],
+   "kinds": [
+    "detail",
+    "contexte",
+    "contexte"
+   ],
+   "head_en": "Nvidia exceeds financial market expectations during its quarterly earnings release",
+   "bullets_en": [
+    "The company's stock recorded an increase of nearly 4% following this announcement.",
+    "Co-founder Jensen Huang stepped down as chief executive officer, leaving interim management to chief financial officer Colette Kress.",
+    "The stock had declined by 2.2% in pre-market trading earlier in the week following the announcement of the leadership departure."
+   ],
+   "ctx_ids": [
+    "caba73249c9d",
+    "19f4815016ce"
+   ],
+   "ts": "2026-11-18T17:48:00.000Z"
   }
  ]
 }
