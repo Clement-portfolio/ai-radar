@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-18T19:24:29.085Z",
+ "generated_at": "2026-11-18T22:05:46.051Z",
  "people": [
   {
    "id": "sam-altman",
@@ -12,6 +12,14 @@
    "actor": "openai",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-18T20:07:01.000Z",
+     "title": "Sam Altman says his life is so weird that he's unfazed by Andrew Garfield portraying him in upcoming movie",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbkVTOFduVWx3ejV5ZGR5aFI2cE9XN0tPRFEtaFM4YkU2SlFlY1Q4R1pGNUgyeTV5anRrZDZMZmQ4UWlhLWFSOTUxTHM3MFJ3ZUZXNDBxWHNoTHBrX1YzcngwdFFkWGJybU1oemRoMkttSGpFLVZXN1dVYmNRQzJkV3I2NENvY3pkdHFPQ2pPa1NhN2JYdy1Vc0tTa1F4cjM3ZmpJMzhvRURYNUVuQnkyS1JhLXI0NXpQVG4wSWluZmdreWFDQkswZjV0bzh0X0N1ZGh3WGkyUQ?oc=5",
+     "source": "TechCrunch",
+     "kind": "presse",
+     "title_fr": "Sam Altman déclare que sa vie est si bizarre qu'il n'est pas troublé qu'Andrew Garfield l'incarne dans le prochain film"
+    },
     {
      "ts": "2026-11-18T17:58:13.000Z",
      "title": "OpenAI’s Sam Altman Says It Is ‘Hard To Imagine’ AI Industry Without Jensen Huang",
@@ -61,20 +69,12 @@
      "title_fr": "Sam Altman déclare qu'il veut que tout le monde « ait beaucoup de RAM »"
     },
     {
-     "ts": "2026-11-11T09:06:00.000Z",
-     "title": "Sam Altman Warns Samsung Executives of Double-Counted AI Demand, Hints at Near-Term Correction",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ROGxzZnRRaFRLMFdqYWFLLXBqMzhRZFRvUjVaT3NPOVMyam5Da3ViMGJLaTRjeDBScjJucG1SSU5qQnVybWxaaDF6VTFxYkxDUm5NYzJwOVNIZTBsVHlLdkJrbHBuUVdiTWZMOENKelFtM2FpclE?oc=5",
-     "source": "BigGo Finance",
+     "ts": "2026-11-14T15:00:00.000Z",
+     "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPbENpWmtGaVYwc3pOU2FrLTV3TlJVcTI5TkF6bVZRTE5Qc2NpRkZKMm9XcEdBUlNZZU1YX3BvZXV0czlPTWJBQy1wVDBwdkVEY0ZRaF84MkNoeXJfc0lZemx4cHVUci1MeE5MbHM1dFlfYUw3b3dadHlPaU5tTXlfNEUxUmNBS0E0dkFacDlwajZJdkVxSmc?oc=5",
+     "source": "The Verge",
      "kind": "presse",
-     "title_fr": "Sam Altman met en garde les dirigeants de Samsung contre une demande en IA surévaluée et suggère une correction à court terme"
-    },
-    {
-     "ts": "2026-11-05T08:00:00.000Z",
-     "title": "Sam Altman Backtracked on His Most Absurd AI Claim Yet. Sort of",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZEtqbU5kV29vVEFsZ3JnYU5WRE0xNDZPVUdxWm40MW12MlZuR1NTbFplQkIyc3pQdG5yU2xtemRoSHFtQWo1Nk5vNTNmU010VnZteUlfTkZPMjQ2TDB1bzlvbmVlQjVyRHpnVVpWN2FiWkxkTkItbWpTUnNyUVNYYXp6SVNwNmVKNWNaRkVIa25MV2xTRXhfX0ZrU0pIbUU4M1Jxcw?oc=5",
-     "source": "Inc.com",
-     "kind": "presse",
-     "title_fr": "Sam Altman est revenu sur son affirmation la plus absurde sur l'IA à ce jour. En quelque sorte"
+     "title_fr": "Le membre du conseil d'administration d'OpenAI qui a licencié Sam Altman déclare que nous ne pouvons toujours pas faire confiance aux PDG de l'IA"
     }
    ]
   },
@@ -293,6 +293,14 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-18T22:03:58.000Z",
+     "title": "Satya Nadella addresses Microsoft outages, says AI cuts both ways on software flaws",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9VUmVmUlctZVJ0R2ZnQk0tS0NQXzBxS1R1bVp1bEJaMXFfdk9mYll5WkpNXzVsNkdjQmk1d1pzOXQzeHVvcVQ5Y0NJMThPWXF2SG9oQnJEdDZxRzBIWEdybE1kd09yX2J3Q1g4dlV3Zw?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "Satya Nadella aborde les pannes de Microsoft et déclare que l'IA a un double tranchant sur les failles logicielles"
+    },
+    {
      "ts": "2026-11-18T06:11:21.000Z",
      "title": "CBA’s Matt Comyn and Microsoft’s Satya Nadella see eye-to-eye on cyber risks",
      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNc2dTdkZEZjZCMHRTQlh6NGw1a3A4LWp6SzYwaUpEYl9PeDZkYnZTMkVBSjFjamNrenpzOFRWc2EtT1A4d0FYakhGVE5nZXBYWkxtWDgwMXc5MmFfVnpoNi1TQWZjVTF3OHB5MTlnNGFYR1lIUmdScEpyV1FSZVpCUzFsWmNJaFJxdjN5QW9aRWpVQmNNMmUxbDJNc0ctVjhURmh2X2xUanVBVk1CTFBjN19mcWZINFpTdFRoRWR6c3dESlFadkVWR3plZmJVQ2lYSmdyLTJtRnl6eVdNY29iTTlNMA?oc=5",
@@ -347,14 +355,6 @@
      "source": "Technology Record",
      "kind": "presse",
      "title_fr": "Microsoft Ignite 2026 : Satya Nadella prédit l'essor de la « fabrique de logiciels »"
-    },
-    {
-     "ts": "2026-11-17T13:43:11.000Z",
-     "title": "Don't feel stuck: Satya Nadella reveals why Microsoft is asking 60,000 employees to leave voluntarily",
-     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNb2VLVW5fS2loYlFNZ05DSHhrZkRCZEJjU1UzVXZya3ZKVFlzemdSVFk5SDNpM05WVWtxdjRuaHRDQjh2Q09IN19FSi1IUVFFd2pic3FlZlg0WUZpUWZsRUFIZlpWUzUwODdFR052X21wWENDNEhtajZiRDNPYmVCSzFyMmVlV0MwazR5SjAyYWtBR2lSQmg1ZzBoTm84djdtZ2NvNkdoSkRySjcwRFlyeUl5REF1UjF5cmFNUWtWbFF2bkcwSm02S1QwcDA3ZENPa0Y0R3Jfc0V1YWVSMG5LNFdpUlNGOEc2UldySzNrTFdKRXBxYTQ1SVgya9IBgAJBVV95cUxQcHlDQ3ExYm1qc1BWaHBSa1ZGNDNiRGJBZmdhRElsZkdXVmNJXzB2aGxDaUEtZ2JiRUxGc21TTDRPUTBlNnJNSmlyTWV5X1NHT1ZCaklLbmc5STVVTU5DUkIzNkhwTmdXT2l1eGdvZGpBSmFvUzJtQktHNTZYRjBYeTRMZ0R4N0FMajVPNDFNV0RraXhQdWhfSlE2X1NrNlJ6NkljWXF5NE9MOUMxLWEySnJVdEQyN0R6eDJ1Slg2bzNtd3BqZTJWblJWVGpoQXQ0cjljR2V3YU0weUZWcmF1UU93YUJBY1QzcEtYTndhdWpkcDdsM3k0QnRrd3htdUIx?oc=5",
-     "source": "India Today",
-     "kind": "presse",
-     "title_fr": "Ne vous sentez pas coincé : Satya Nadella révèle pourquoi Microsoft demande à 60 000 employés de partir volontairement"
     }
    ]
   },
@@ -445,6 +445,14 @@
      "title_fr": "Demis Hassabis prévient que l'industrie de l'IA se dirige vers une « marée noire », déclare que les entreprises doivent agir avant qu'il ne soit trop tard"
     },
     {
+     "ts": "2026-11-13T01:31:13.000Z",
+     "title": "Nobel Laureate Demis Hassabis Unveils Groundbreaking AlphaGenome 2: Deciphers 98% of Human Genetic \"Dark Matter\"",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA3anNodTNQU0N5U3VlMWxhd3VRU1NfTjlkQnZlaHRXOEJvY1JfbWthUUtDeVJiZjkzcEl6cmtPV2VUa21RUnRuVXhkN0pOazRsejJF?oc=5",
+     "source": "eu.36kr.com",
+     "kind": "presse",
+     "title_fr": "Le prix Nobel Demis Hassabis dévoile le révolutionnaire AlphaGenome 2 : il déchiffre 98 % de la « matière noire » génétique humaine"
+    },
+    {
      "ts": "2026-11-12T15:10:27.000Z",
      "title": "Nobel Laureate Demis Hassabis Unveils Groundbreaking AlphaGenome 2: Decodes 98% of Human Genetic \"Dark Matter\"",
      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9rdXBrTXpqMkNpZTFhcU9KVW5ObWs4RFVHLU01bTRjNkdsWmM0ZVFNZkdGbk1IZDVfX3FicV9sQUVxYnk0UVh1dXBYY1VaODllUHlF?oc=5",
@@ -508,6 +516,14 @@
      "title_fr": "Interrogée sur NVIDIA, Lisa Su qualifie Jensen Huang de leader formidable pour l'industrie alors qu'AMD se concentre sur l'infrastructure IA"
     },
     {
+     "ts": "2026-11-12T15:36:56.000Z",
+     "title": "AMD CEO Dr. Lisa Su reflects on her biggest lessons of 2026",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUXlROTl6ZEI3UUZ1OUs4MnhOQkpmbFVsWGVMTk9PSEFpTUtBaUNaTnlrMnFTVVVYczRieURaTXRNZE50bUp1eFNTdXluSU42OFNaTU9KR01hZXRCRXhuMGNtbU04bDhpSWFqUF84QXpyVFd5QjJneElVT1cxOU9jWWxMQmtxb2VTT0NwNDgxRThKOEhqbFVhbWtHaWt0SzRUUkRRc09DWTE?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "La PDG d'AMD, le Dr Lisa Su, revient sur ses plus grands enseignements de 2026"
+    },
+    {
      "ts": "2026-11-10T08:00:00.000Z",
      "title": "AMD CEO Lisa Su says, 'We are a data center-first company'",
      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVGdsQWxINE5fT1c0Y2MwX3FVQkRUNnhxUjdpMzkyMXBzLUJiNFdFdmg3azJJVmtlTjYwc0lEQVBHUmUweS1pSXprSnhJMWhjaWVpeWFFVEVwVjBER3BGVzZ3V3ZoLUVjSDd5YXRHdlpfcjk3OG1iRi1FVlJlbnVZUkNjY3hWbXlHSW1pT2I2bGtSdm9LQy04dlF0R2NqVEY5NjQ2cll6TQ?oc=5",
@@ -538,14 +554,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "La PDG d'AMD, Lisa Su, voit l'IA devenir « essentielle à chaque aspect de nos vies »"
-    },
-    {
-     "ts": "2026-11-05T08:00:00.000Z",
-     "title": "AMD is a 'data center first' company, says CEO Lisa Su",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVGJTaVd6b3BOQ0JmalAwNDFSVEJjRS1DN0haR2JvRXhYVU8zRFVUOXZvSVdTTWt4Wk4zYWJ5TDF5Wi1tdGdDYzVSdkVpcjQ1WlZ0bkYzYm1xUnREa3N3OFMzc1ZBUDhtRU5ZUHV0OWhTMmVyX3JVMlJ0LU80a2dBcnhIQlg2bGVxdG8wdk9EaWthMF9ueUd1TUJPYXp3YkE?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "AMD est une entreprise « axée sur les centres de données », déclare la PDG Lisa Su"
     }
    ]
   },
@@ -581,6 +589,14 @@
    "actor": "amazon",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-18T20:50:06.000Z",
+     "title": "Amazon CEO Andy Jassy says he believes NBA will return Sonics to Seattle",
+     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQUDdveTIwalV1WkozZVUxdVF6MmNKLUppRmd4MmpOZklKaElRRjlmZ1VDUFJ2R3BuNUxUMEpnRi0zZllCMDRGbk90SEZJZmJ2UUlCdHVXdHJVMDUtcURmRS04Si1tZF9zRF9ES3dfU1hiWlB4cmg5MlBWWU9TVGJwaWZXQlcwTFFFV3dvaTAwWUVxNHVmWFY5TmV4c1JZWnZZZVVwcU1mZ19WUnQ0aFExOGQ2ZDhXbmRmVkhidGFuMDZ2UWR5bnNEcDhVT2hsSWZwaXdZSVhfRjlaeXRKQVc0TmxFX05SOTRfZHdQNEtCV1p5Zw?oc=5",
+     "source": "KOMO",
+     "kind": "presse",
+     "title_fr": "Le PDG d'Amazon, Andy Jassy, déclare qu'il pense que la NBA ramènera les Sonics à Seattle"
+    },
     {
      "ts": "2026-11-18T17:11:18.000Z",
      "title": "Andy Jassy Says Nvidia “Will Be Very Strong” for Years, Even as Amazon’s Own Chips Grow Triple Digits",
@@ -1416,14 +1432,16 @@
      "title": "Trump Tech Advisor David Sacks Says ‘Spy Narrative Is Collapsing’ as US Officials Question Evidence Again",
      "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNX2R5WnFXM2JpVzNNT2NadVhhZzVvYVhKVzlVemFCb18tUXhqeDZKalUxbVp1UDctT0pNOFVXSU5wQWZzN0xkUHBxTXVwZHlHTnFKNS11UUc3SkM1VHpUdjUtSk9EcWZvM3hRRE9YQzVKOG1sbDFRQmYxaXJqSzFWamdzV2p2RmJoREhHc1BhQm5XazA3bGRXc2NXZW94RlZUTFRmZ0k5UnN0VDBmNkJjYkMxVC0xX2xQUk1uVS1NZF8wQjBHc0FsT3BrVEpPNDZ1dFE2TE11QVR5TllKenlQN3NEeWI2TG8tVnRRUm1XWG9nT3ZMamZvS3ZZQU91ZHlIUURBNkloYl9hY2JXdnhDcg?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Le conseiller technologique de Trump, David Sacks, déclare que « le narratif d'espionnage s'effondre » alors que des responsables américains remettent à nouveau en question les preuves"
     },
     {
      "ts": "2026-11-08T08:00:00.000Z",
      "title": "David Sacks Warns the AI Data Center Pipeline Could Dry Up. Here’s What’s at Stake",
      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaWFUamRmY0E0TGExeEtFelJZQ2IxZndwRENUbDZsUGtzcjVXR1RQUE92cE02Sm4wN1VSNWhRSUdFeTVQVVlCbmt2b1N5VWF4dFB4d0tBdk1ZVmNUcGd1MWIzV2tvR0J1b05VZWVVcUM0dlp3bkNHc0J4TW9Ic1dqNHdMRHZqS2Ztdng3V2poVDlrMF9fUmR3ZUNMZjkzUmgxd0J6LWktM3VjSzBNd202d0VjanAzVzNlOEtfQkN5MjU?oc=5",
      "source": "24/7 Wall St.",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "David Sacks prévient que le pipeline des centres de données d'IA pourrait s'assécher. Voici ce qui est en jeu"
     }
    ]
   },
@@ -1453,14 +1471,16 @@
      "title": "EU tech chief Virkkunen says AI chip work must stay with trusted partners",
      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBMU1p3VWVLVHlZWkFrbzFHdzBXY3VGUjVNbzM1QldDalJzNWs2TERmNnQzX0tkTnNhVWNBZVFuaFRhVVpBYUI4T0paX25FMWRYNkQ1Umh3?oc=5",
      "source": "Cryptonews.net",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "La cheffe de la tech européenne Virkkunen déclare que le travail sur les puces d'IA doit rester avec des partenaires de confiance"
     },
     {
      "ts": "2026-11-10T15:26:13.000Z",
      "title": "Virkkunen urges trusted AI chip partnerships — Politico Europe",
      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPS2c4UnNJbS1tQmFBV0J4ZWw4aGlBRXo3NGNlLWh1UVhYM05sbmcyQmZ0cWt4QVhjSUNoMjhicDl3dUxuMVRJYmwwOXhLZ0N2SU0wT25yZFhsUC1wZVdNXzJFZjV5bFBkWm1uOEZFdWVrNjFMY1BIN3ZTeVJRMmpsQmdwX3QwSjZPRGczd2NpQmFzeHhnc0NCWjNZZVMyMEFUdXQ1RGg3Q25aS0lTWGc4djgtQ1k1VlhDcnJmZ2tKdHlkVG5Pek9zS2pXOU1FMlNaM09xYg?oc=5",
      "source": "UA.NEWS",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Virkkunen exhorte à des partenariats de confiance pour les puces d'IA — Politico Europe"
     }
    ]
   },
@@ -1479,56 +1499,64 @@
      "title": "Bessent calls for Nvidia shake-up as longtime CFO takes reins",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUDJZTUo4eTV1Y1dLSlNxakxEZzUyY3AxUmQtekh5TEJSdnpOU3lzQmZiaDVmUTJ1eU1ZdXVtc1Z4T0N1VURQN29IQVkzNUx1RkN4OE9lTHh5emRYUWtILTJ4dTZyWlVIMFZfUjBQUE1NR3pCaFJiV1FBazNZS01LVFRwNkhPenhnVVk3dUJPaGVvZ0p1SGc?oc=5",
      "source": "CFO Dive",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bessent appelle à un remaniement chez Nvidia alors qu'un directeur financier de longue date prend les rênes"
     },
     {
      "ts": "2026-11-16T05:07:00.000Z",
      "title": "Nvidia’s CEO Search Draws Fire With Bessent’s Shakeup Call",
      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOZVBETnNKak9BME5HaDEzOXN3TzctS3kzWUVadDVaem9wVDExVFJqb0NSMEdoZG01cXFmLTJSaFJzSkhxOTRYelRQcXYxSTl6OUdzaTE3LW9KM3FTRWh0bUZWY1BKMmNaUWVvN1luaTczdVhWTXZHVnFJSWwzZ3Z5R1JIYVljbUl5UmY3bGZfWW1tZnJOaUMwYnpQVElIekFHMjJyUDR3a0NBYVNKZkhtbGdJSQ?oc=5",
      "source": "Bloomberg.com",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "La recherche d'un PDG par Nvidia suscite des critiques suite à l'appel de Bessent à un remaniement"
     },
     {
      "ts": "2026-11-15T21:48:00.000Z",
      "title": "Bessent pushes back on need for tighter chip sale legislation",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNXduMHhTcERhV0JPeHo5U2RSMEw0THVFYXpfTmZLblhTNjRNQ01mV1J4TGlYbDVzeGlmVTEyQVpZVTVCLWxGd1NFZk1NZm00UHNnTmtDUXFmWi1ac3p5X1VGQ1lrWjY2M2tKZV91X3RyWTdwdkIzSTJHbTVUanUyRE12eVc1QjU0VXVfang3MUpFcnpDaFE?oc=5",
      "source": "Politico",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bessent rejette la nécessité d'une législation plus stricte sur la vente de puces"
     },
     {
      "ts": "2026-11-15T20:11:47.000Z",
      "title": "Nvidia Feels the Heat on CEO Search as Bessent Calls for Shakeup",
      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNS1ZOWlF3ZUlxWGYyZm9kX3NnZUsyNEpjYXhKaWMxY3hPbnRvSlJYeHc3ak9lejRYcHdmWjB2dk54cmMweklHdXdpVDdmRm9yNE91LWJKV2VoUC16bF9sdzRTM2NhWk5MMnBROXJ2UHA2SU0tSDNpeEZLZkxJZGg4T1laVHUyU1Fid0dtYjQ3c0tHMFRsOVp3TndoeEUzaElUSkxVT3hlOGQyZTVPZDF3emxB?oc=5",
      "source": "Bloomberg.com",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Nvidia subit des pressions concernant la recherche d'un PDG alors que Bessent réclame un remaniement"
     },
     {
      "ts": "2026-11-15T19:51:00.000Z",
      "title": "Bessent says if Nvidia was a bank, 'a lot of the executives would be removed' as Huang eyes return",
      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHV5a2FIMk8zTktGZkdCR25IU1FreUZpMVItcGg2VUhRTHE4NG1pWFk3dVRhczUtck51MWhoTmtqbXRNM3NCODZKc1hYVWFQYzNyZUxlSzVxTnZqdVpSV0dXeGdUQlVFZ19MNDk0cjBCVEMxb3NoblpfVXI5TG9TUklLSDZ2ODJReEFtNF8wS3h5M1d1T1gxbUl4ZmFXUWowSXRDZmZIVnlBZ1Jkbnc?oc=5",
      "source": "Fortune",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bessent déclare que si Nvidia était une banque, « bon nombre des dirigeants seraient renvoyés » alors qu'Huang envisage un retour"
     },
     {
      "ts": "2026-11-15T19:25:00.000Z",
      "title": "Bessent calls for Nvidia leadership shake-up amid China chip scandal, urges outside CEO",
      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSElEN2tuOTNYdFY4ZWx0X1hyU3I3ZElVZERWOTBhUE01a1AzaXNSNHhTOFU4ZWRBdElkRVlBNDRUQUpSSnppbDB6b0llSjNGeFhzNmUxVWVVa3gwQmNaM3dNeU5INHdQbW5JT2Z0d1BKT0VQNENBd2hVdWROeVdodDIxSzQ2MzhQcVRTTVhVWHhUZU9Ua2wxSkQ2bktWSkZPNG9IS2lJcWwwWTdhb3RtSEtRYW1zSlJ4SHlGTERacmxqOWRmdVHSAcsBQVVfeXFMTTZ5V0FKd0JlWTR4VFVQN2FNeWd3Wl82VkNYRFhjcS1wN0FCVlNQQTY1YV9ybXdESy1MRWg3LUt1UmlnaTg3SzcxdGVMNFVWMlpieDRJVFF3Yk03QmR3MVktV2VFNWwtVmlwbXlrNF9Nb3R6VkxVWWZnaUtVUDVTZEs3dHdJb0s2M0dhRmlJTU0taUJUQnNTT0gzbUJ0S2lFZGpLakljUVFraWkwblR2N0s0WTRoTnlQWVpmdTZOekd3MWszaGZXYV9zVTQ?oc=5",
      "source": "Fox Business",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bessent réclame un remaniement de la direction de Nvidia sur fond de scandale des puces en Chine et exhorte à nommer un PDG externe"
     },
     {
      "ts": "2026-11-15T18:44:00.000Z",
      "title": "Bessent Urges Nvidia to Pick Outsider as Next CEO",
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNelVNRDFXQmNHV3JpOFRyaWl2N3h1WnNXNXNXS2FOOHg4dklQNVZfNktCNUdyZ3pNSGtENWRIbE1sYThZZk1QODBNTndERElkRmQ0MHlReHJQU2ZlRDdaYTFqdzA5anBUTXJjVmwwV0hvcW1hS1pPc01zSF9lTXFrTC15RnFzdlJfN2VuYzVuUQ?oc=5",
      "source": "WSJ",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bessent exhorte Nvidia à choisir une personne extérieure comme prochain PDG"
     },
     {
      "ts": "2026-11-15T18:31:00.000Z",
      "title": "Scott Bessent says Nvidia should look outside the company for a new CEO: ‘They needed a dramatic shake-up'",
      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNY2hMczZBaFgtNjdjOUUwYWMtSG53ZjBaMFNUcVAtUE9xYnlXX2tVRENaTS1CNUhpSWtQbEJ6aEJOUlRDTkVRMHc0aFhNTVppVS1kZWJuV0R1TV9OTW9qOG5ueVlha1VkX3o4NDZpUEt3Z01FQ21BUFNUV0plY244el9vSXF1MkdJZlA5dkpFUHM3NkJOMGFnbGVMY3U?oc=5",
      "source": "Business Insider",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Scott Bessent déclare que Nvidia devrait chercher un nouveau PDG à l'extérieur de l'entreprise : « Ils avaient besoin d'un remaniement radical »"
     }
    ]
   },
@@ -1569,35 +1597,40 @@
      "title": "Senators Cantwell and Rounds warn the White House that AI-enabled cyber threats are outpacing US defenses",
      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPU1FQejQ4OXBfY2ZXYS1tV1JDS04zaVVGUDViTW9NNjZFYjYzd2hzell0eGNXbnFXSTdpaHJqSjBGS05ZSE5kSkhldlFrZlk4UUJxTS14X3BfNURDY0MzYTh1cy1NRWswZUpUbF9pX3lpQ3p0djNtaVAyVEFFMjJHZG5Cb3c5RlB4Mm5QbU1SOWJSeHRJenhCeFhGSk1pQjZ3ZnplSVMyYjk4OHdzTG5MZDJENm1nLTRGMkFwM2IyWGFKd3R4?oc=5",
      "source": "MLQ.ai",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Les sénateurs Cantwell et Rounds préviennent la Maison Blanche que les cybermenaces alimentées par l'IA dépassent les défenses américaines"
     },
     {
      "ts": "2026-11-16T16:46:19.000Z",
      "title": "Cantwell calls out U.S. Secretary of Commerce for allowing China access to advanced AI technology",
      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBlcFhPMDYwWXNCVE9vNUxRT08yR3JqMmJiRTJpNTNNblJKQVpRUXBYVmJEaktnWFE4MW0xUllkeFh5THppdHk3dXNpMnFXWFU1bWx2Z3I3a2xfYVdPQ3hGSVBGUTdzUmg1aUdNaXpoUTJ5dw?oc=5",
      "source": "MyNorthwest.com",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Cantwell interpelle le secrétaire au Commerce des États-Unis pour avoir permis à la Chine d'accéder à la technologie d'IA avancée"
     },
     {
      "ts": "2026-11-16T12:53:34.000Z",
      "title": "Sen. Cantwell said Lutnick failed to stop U.S. AI chip exports to China",
      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9sMDNZNERaUmVGNlVFYlVaMjlfSGkyY254LWdtWlNFRWJkWkx5YzlUdmFOU0RsOHJGMXljNm40a1dYZ1hEb1ZtV1ZkR2s5WlZScWEzSXJPaUtOZDZJTTBidkhlUWtvYnZxbVlkQQ?oc=5",
      "source": "Quartz",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "La sénatrice Cantwell a déclaré que Lutnick n'avait pas réussi à bloquer les exportations de puces d'IA américaines vers la Chine"
     },
     {
      "ts": "2026-11-16T11:36:57.000Z",
      "title": "Cantwell says Commerce let advanced AI chips flow to China-linked companies and presses Lutnick to enforce export controls",
      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNVDBKWFRLdVoyZDF2NEYxWkpHbHg3UngzOXFTaEhVSFFiTzROdzFsczRqY2NKNTNlaTBXcG1TLTRlbXhMaURiclduYllfQVZ0cC1id1lrWGtLOHZHSHFEbVJFY3RScVh0NFZDdUNla2g0eTMtLUNfV3hENGF1aUFHdDE0eFZlZ1NjZ3hjbENoNUQxWVM0MElHSGdOVlJrOFpVbHpIQ2RMemhUNU43dEtqUDV0UDczYm9IZk1TTDNrWUo3RGhYa19vWFZiRmtpUjg3MkRmQ25vd21VR00?oc=5",
      "source": "MLQ.ai",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Cantwell déclare que le département du Commerce a laissé des puces d'IA avancées affluer vers des entreprises liées à la Chine et fait pression sur Lutnick pour qu'il applique les contrôles à l'exportation"
     },
     {
      "ts": "2026-11-16T10:00:01.000Z",
      "title": "Cantwell urges Lutnick to stop AI chip sales to China ahead of Xi meeting",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1ldVNDZVFSVmJ6dW1CSnZPQlJwZlhwVWNUTmhCMG9zNDFtTXFrcDBMOFA2ZkhOT0MySTFzbWdqYzhkajhNdHRPWlBTQ2J2MWRBekpUa0tSX0d6bHpnM3QzVG9oVzgxT0lMX1Vxc240cWcwbkhOd2fSAXtBVV95cUxQYzFJYk80R1pCSk5OZ0tnc2lEb2VSenNhcTN0OTNrRGs4LU5wcUdCNS1PVjZkQXc2UzhjXzltM09BdXF4T2Y4VDFZcUZUSW4zNjFORW1JMWNEYVRFM25LZC1yQVhpYmllQkVJWEVTdGpJMTY0cjFpZGhnR3M?oc=5",
      "source": "CNBC",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Cantwell exhorte Lutnick à stopper les ventes de puces d'IA à la Chine avant la rencontre avec Xi"
     }
    ]
   },
@@ -1623,18 +1656,28 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-18T19:50:00.000Z",
+     "title": "Josh Hawley worries tech outages are connected, but says he could be wrong",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBPTURGdjIwT0ZJVm0wM0xnTVBraE1TMURza21PMjJVNXVJclJ1RUo2c2c1U0VLQnhVeGVtWWdKMF9fc0VmcktlUXJfaEtOUHd3VW9RM3VJdWRUSTVOSkpyNnZISWR5cS11enVGWHgtZUxuTjBHZGJuUUgtSHpkZ9IBfkFVX3lxTE9yeEY5Z2tLZVlGMzNLVzU5bG1ZbW1zS1Q0YUR2R0FEV0prU1U0SFhGajFVZFRXcENuYWptV0FkeEwtZjdTa1FBZVF2d05oTXFNb0hLZjduemhxN1FDdHlmMURBaTBjcDFQSVRIQ0JzdWUxZFBkRXhuamM1OU9Hdw?oc=5",
+     "source": "Kansas City Star",
+     "kind": "presse",
+     "title_fr": "Josh Hawley s'inquiète du fait que les pannes technologiques soient liées, mais déclare qu'il pourrait se tromper"
+    },
+    {
      "ts": "2026-11-11T20:35:12.000Z",
      "title": "Sen. Hawley Urges National Data Center Moratorium",
      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNRUJ0UWw2bWRKNGd2SmpsR0V3bDA3V18wT28yeEd2NWt4ek05QUdhYzdrT2t2RkQ4dHEzSEZmbGFFeDFYLTVTNlhSNDgyUmk0ek50UDlGQWlTb0hvOXlLZDRiZVA1OHZZT2FmZ1Q0UHNGWWZkVnVDS3ExZ08wektpLXRMa1pqcXFBNm0zY0Vrc1hkcXIxYTB4cw?oc=5",
      "source": "Newsmax",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Le sénateur Hawley exhorte à un moratoire national sur les centres de données"
     },
     {
      "ts": "2026-11-11T18:45:27.000Z",
      "title": "In first for a GOP senator, Hawley calls for data center moratorium",
      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNTnZQTmR4YXJlNHZxcVhPNXJWREpGeElEdzZFUFcxcjRGaTV4WThOXzJLS0N5OWRZVFRGUmVPakdwOWFYcW42ZUJob1BodWFYOTEtbXRvR0ZPLXFiaU1ZNWNpM2g4UjhqQmN6Zzd0Y0JQVGNFOGZlcWNtNHMtdnBXbTVadUJmWVg2TzZzVURWeFItRlJzLVd3VUxNY3FwaGlwRzhBaF92UG5Qd1VWZDR5XzFzajJYYjJWbmtn?oc=5",
      "source": "Washington Examiner",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Une première pour un sénateur républicain, Hawley appelle à un moratoire sur les centres de données"
     }
    ]
   },
@@ -1653,28 +1696,32 @@
      "title": "Elizabeth Warren Says NVIDIA Leaders Remain Accountable After Huang’s Exit",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBsWUtXdnAxTldYNUp0NllUNFpnZHduVG9mMWZSdDQtZFFxSTVfVnduM0tLbXp1UERHY3h1NlF1VjFpUnd2Z0d3QkMzVmxGczFKOF9kWkRJRTRKX2M?oc=5",
      "source": "www.tokenpost.com",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Elizabeth Warren déclare que les dirigeants de Nvidia restent comptables après le départ d'Huang"
     },
     {
      "ts": "2026-11-14T09:00:48.000Z",
      "title": "Sen. Elizabeth Warren Says Huang’s Exit Does Not End Accountability",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBtNHBCMUE0cmNNS2FhajJENE5fNENCRUpNbGZxZU9HSlBVWjBLSkZfRFBYSGVIU2VYUmJaMGhLVGNJeXhUUWZXUGpFYldiOXRSWjZUN2JzLTRjRVk?oc=5",
      "source": "TOKENPOST",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "La sénatrice Elizabeth Warren déclare que le départ d'Huang ne met pas fin à l'obligation de rendre des comptes"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
      "title": "Elizabeth Warren Slams Trump for 'Wining and Dining' AI Billionaires Instead of Protecting Americans: 'It Needs to Stop'",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZUhJZTI0Y2h4LUhKM2NrZXB5Njd2aDlFSWh3NXh5VGJscE55UWVIalBON0VnZ2JOOE4tMmdMR3dGRWJFdW03d1FoaXRBRnNyeDZqZzRmemQ0OW14MDRnREEwdW5wN05yREM5TFo1Wks0bmxBRFJxOGxxMElJV2xXNDg2RGRGZGdSeW51NWFyVXY5eGpocVVxSnVSaw?oc=5",
      "source": "Yahoo",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Elizabeth Warren critique vivement Trump pour « faire bombance et dîner » avec des milliardaires de l'IA au lieu de protéger les Américains : « Cela doit cesser »"
     },
     {
      "ts": "2026-11-09T21:06:57.000Z",
      "title": "Sen. Elizabeth Warren Said to Take Senate Banking Gavel in January, Push Tougher Crypto, AI Rules",
      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1tU1p5MjhmR29pNU9wU1B0T2dLRUdqSHZnVGMwMGNVTk0xOGxmR3p0V09DQ0RjdW4yY2prZ2RXV0ZWckFSXzNCMGdXV1A1R3AzaW5DUg?oc=5",
      "source": "bloomingbit",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "La sénatrice Elizabeth Warren appelée à prendre le marteau de la commission bancaire du Sénat en janvier, pour imposer des règles plus strictes sur la crypto et l'IA"
     }
    ]
   },
@@ -1704,21 +1751,24 @@
      "title": "Ted Lieu Pushes Back On AI Theories Behind US Outages, Says ‘Trump Administration Needs to Deal With Facts’ As Chamath Palihapitiya Calls for Software Overhaul",
      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQV9kbGNGZ2Y4dUhCdUNBV0tnYkZsNHhLajlFdjNGMzZRMl9MX2lVejFBWDJaYjJQMzdubUZIYzd0c2s4UkI4c3h1M1VEcHAzY0ZjdGdsUUl3c1NHUVVZT3gwN3UwRE9ITzhSQ0lQQzNDUlNXRGFlZGNaZGozUElMdFZ2V2VJZklpbE4w?oc=5",
      "source": "Yahoo",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Ted Lieu rejette les théories sur l'IA derrière les pannes américaines et déclare que « l'administration Trump doit traiter les faits » tandis que Chamath Palihapitiya appelle à une refonte logicielle"
     },
     {
      "ts": "2026-11-17T13:35:00.000Z",
      "title": "‘How about we get some facts?’: Ted Lieu pushes back against AI theory behind Microsoft and FAA outages",
      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVmtrTS1PR05XMzNINVk0UC1DZkZZa2w2dFFYa3J5TzBqVUoxLVZtVWN3cjJtUXdaLW14Yk9mZ3dsN1pPV052UkR4T043MGIzQ1FKS0MyMkxSZ3hUbEE5ZDdVX3NBSnduWFY5V1lLeDFITXlQS1RGdHpLQzRwaTFxQ2ttanFWSjVWUHprVV9IdHFxSjEzSnpNRjcycTN2cm8zeWM1dnN4RGZpUVNqNkRsOWFObWhsdDVKalJhMmU2TjlFTEJSLTA3LUpwN2lKR2R1?oc=5",
      "source": "primetimer.com",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "« Et si on s'en tenait aux faits ? » : Ted Lieu réfute la théorie de l'IA derrière les pannes de Microsoft et de la FAA"
     },
     {
      "ts": "2026-11-17T09:57:25.000Z",
      "title": "Ted Lieu Pushes Back On AI Theories Behind US Outages, Says ‘Trump Administration Needs to Deal With Fact",
      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZ2NENzJxM2hHUmpObVNHM0tHUHpaZGRHcWFvOGJhYWtjT0RCOHVVTXg5U0lmRERrYm9vVXRNYzY5S0I1WmU1M1d2OVAyUVRCVGx1RTFYSWxGaFo1aWQxVlVTQXFIcWprMXNTOF9oMDVVUlkyTk1wSlRMNEVMYzdxMXZ0VlJZUXJ1LXpZc19hTVVIQkl5enR3NWNn?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Ted Lieu rejette les théories sur l'IA derrière les pannes américaines et déclare que « l'administration Trump doit traiter les faits »"
     }
    ]
   },
@@ -1737,7 +1787,8 @@
      "title": "Jensen Huang agrees to answer House China committee questions privately, Moolenaar says",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQdEVfYnlrVEc1Z05NUmt1TWVoNEdvVHlXZ0d5eE9YdW5hQUNJUVlmdnRucGUxZmVGSGRjcWlLZllSMHhoNVV1Q1FGVWNfNEhmQnR2Zm1nYjJ2d3BsQm1NQ2puaEtfVHdpRXB5SzNBWXNaZk9WclpSVFBFTFVMTElUSzJJc0x0aGxBUi1DTGpNcWcwcC0xdXN0VWUtdHl6VGhISVRHZ1Y5eUNCMTg?oc=5",
      "source": "MLQ.ai",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Jensen Huang accepte de répondre en privé aux questions de la commission de la Chambre sur la Chine, déclare Moolenaar"
     }
    ]
   },
@@ -1752,60 +1803,68 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-18T20:20:00.000Z",
+     "title": "Billionaire investor Bill Ackman bashes Nvidia’s board for not bringing back Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPQVRCUEhOVUstSlFsb0loaFJOdzFCXzI3dDdxSXpDWkNFWXlONzRZR3lSLVl3MlA5aWRnNXczUFdlV28zWUlEdWRaRkhvTk5pUkE2ZWpuSnFQRnNOMHpoX1AwQ1h1R3kyVk9WZ1pKUUR5bEQxa2JwMGZoTUpxamtHVEVycDlvSlVMNVRDZGY4SXUtUmZvQnNyNm9wc1VYbTFTNmJj?oc=5",
+     "source": "Business Insider",
+     "kind": "presse",
+     "title_fr": "L'investisseur milliardaire Bill Ackman critique vertement le conseil d'administration de Nvidia pour ne pas avoir fait revenir Jensen Huang"
+    },
+    {
      "ts": "2026-11-18T19:04:11.000Z",
      "title": "Bill Ackman Says Nvidia Board ‘Rushed To Judgment’ On Jensen Huang",
      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWEdWZG13dUUxb2VOYjRTRmxIT3hPa2hIb0FnRk1nMGxFSV9CV3FnREJMRWd0NUNaUUpHNUdnS2JCV0pVNFAzRF9qVTNQUklFemxyTlVkTXhSNWxHQ0h3cW1WV25jakdGWDFQZmVsNzZ5bEg4Wll4eDBTRnkxSUI1QjdoWFdFQVZUclN1YXpqbW5DNVhIOEREdy1lSEhYQWlDME4xS19MTnFEUTVlaklRQU8zOFc3SUtDQVBJcHNKSQ?oc=5",
      "source": "Forbes",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bill Ackman déclare que le conseil d'administration de Nvidia a « agi avec précipitation » concernant Jensen Huang"
     },
     {
      "ts": "2026-11-17T18:02:20.000Z",
      "title": "Bill Ackman Cut His Microsoft Stake. Your S&P 500 Fund Can’t.",
      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMGdveG14QXBMUUtKdV8yRHlSMjUtUlFYZVpYM2pwdXYwODhtbnZMODRnWlNlSm1samoyeGFWNW5xeFdQTzVsVGpVS0lpNUQ2V0dQT1FBVjI4aHI5Sm9YUEJ2ZVRTR2gzUE03M0R2WXE1RGxKTXBrSUtPdFFWdGRxcUl5TEFkRFNsRkJqa1JnUEVxSXFwUjhSWVdVR3E?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bill Ackman a réduit sa participation dans Microsoft. Votre fonds S&P 500 ne le peut pas."
     },
     {
      "ts": "2026-11-17T15:10:58.000Z",
      "title": "Bill Ackman Just Sold 35% of His Microsoft Stake",
      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTE5zMWhvZGZJRVBtTTFsOWxJQmcxeEpPRlhhQXlibk1yYXVwQWtUaVNvTE1NMzFoS0haa2NDWHVKU3VVV18yeHlVODlMY3UxMm9KSkFqZ0RHdDZNdjZ2cDhHUjF1LTZQa0VTYnRzM2Q3cVJCbUJOQ2cySjRxcFhLQ3NNWVhJVWY4WHZRbi1kMU1nT3c?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bill Ackman vient de vendre 35 % de sa participation dans Microsoft"
     },
     {
      "ts": "2026-11-17T13:44:00.000Z",
      "title": "Bill Ackman says it’s ‘unlikely’ he’ll get involved to bring Huang back",
      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQ3ZlR05ZeUd5a3FEUEF2bnJyVy1mNnRyRzVwQnVCLWNqQlVCRTFVNXZaS0ZNeDR6TExDYldWNFRlamZsTk8zby1PcllGdUNsYk1NUzZOLTkxVVZzbTZvVjhoR2dHMm9uY2Ziam9jUHlTMU54eUIwSjB0SXVFV1g4ak8zdFcxS3g4UjBoTDB6MXFyZml1R185bVpZcUpXY3FUeXZHRWQwRTliTDdxWDk4?oc=5",
      "source": "Semafor",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bill Ackman déclare qu'il est « peu probable » qu'il s'implique pour faire revenir Huang"
     },
     {
      "ts": "2026-11-14T15:05:02.000Z",
      "title": "Billionaire Bill Ackman Says There’s a Huge Disconnect in Wall Street’s Expectations for Amazon, Microsoft, Meta, and Alphabet",
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRW00MGFOMHNPb3BycnZCUldFUWE4UVMwSFdBV21USlVHSndCaDZ4QngwMU5VUEdQVTZhcG92eWszcFpfa3A2ZHUxbEcyeDRhbFRTM0FBdHYxZnJQbzdmNGRYTERnNDdOd3dfdlJBNVhhLU9zTWRaR0FvQ2pKV0QtVTRIVGRPbUhBc0NfUnJISHowM185NE5WcnBENHJha1U?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Le milliardaire Bill Ackman déclare qu'il y a un gouffre entre les attentes de Wall Street pour Amazon, Microsoft, Meta et Alphabet"
     },
     {
      "ts": "2026-11-12T22:38:17.000Z",
      "title": "Bill Ackman says Microsoft's position is 'really, really strong' as Anthropic pushes into enterprise software",
      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNNGxyVmFIZ0htSkxiTFBTemhQZEkyYmsxck9NZTIza0J6WEF6ZWVvSVFKQ2I3SktOc3VqNi01NVRUZ3FONU5LSWhkeUNjcFI5bFJXRTJLZkdheHdUUjllWHk3Qm9YZlNmVVU0dzZYN3JTY2NrSW9ld29HV3UwTWVEa003bDhLdEtFMkFZVHl1a3ktbm1CVGphb3F4UVViRWFwWjlIR3VlMjE3MTZkQnFZOGtHLWFNNzVoVDNuczNTM1JTY0RNTXhERHhGejZKa3FXbWt0QXUtYklzMGhPMzFLWDI1bHJhN1A3dlJFcnNQazlPZXpib0E3S2JyRDVNZw?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Bill Ackman déclare que la position de Microsoft est « vraiment, vraiment forte » alors qu'Anthropic se lance sur le marché des logiciels d'entreprise"
     },
     {
      "ts": "2026-11-12T22:13:31.000Z",
      "title": "Why Bill Ackman sees value in Microsoft",
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVFVIcGNSVHFsckw2Y2ZhTlM4aFptZVNWSUlPeUR4ajBKa29VM0prTjVyYmJyaHdTelRCTndYOGJOOU9ua0l3a2sycDZBM1ZIYVNva0VMSzF2MGtqaWl5dzFLMjJvUUp0ZVJVWVE3MElud0ZlY3k2WGVsVDVfcnNUME54emJNbmxsdl91QjBFZw?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-12T21:22:01.000Z",
-     "title": "Bill Ackman calls Anthropic 'the most amazing business story of this century' — but he's not a buyer",
-     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPQ3lCZ1h4TERzWDBzNkhnbXUxMkZGR2tibXVrZTVQdEYxSFk4ekV1Rk9aZVltWkljaG5FM1BUaGxCdUdsQm43YmVmWnkwcjNuNXJLNm80dl9tSEt5enlCOXhTcURYUmZ4S1M0VFQxc0x5cERUcVpXVlFQYmdfaHhtbFp5S1BYbmxCQTlEbHd1cGRxM3V4UjdIcjVoVEMxUVBhZHp1ODZPVkZCaE0yUjg2dEpXdXN2VEFtbVpYT1ZmNUpnVUJ2cTZ5R2FWclFBTFFDUWtoaWJjTlZoTnhkY0pFcWpqcWNRV1BL?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Pourquoi Bill Ackman voit de la valeur dans Microsoft"
     }
    ]
   },
@@ -1824,56 +1883,64 @@
      "title": "Michael Burry Donates Alphabet Shares, Then Buys the Software Stock Wall Street Fears Most",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSzBKa0Rrbi1IVUJPN2d1dnpFX3NKcEF5eXprNGNHV0E3eDYyU3J2UlBmMGFDam1qRVAzODE4bzJ1NHJwSEc0Z2luSHdxR1RPb2h2RTZfM2R4Z2gxUVEwc0piZXF6bDR2UEN6a1VjUlJGaHg4TEhTUExiQjkyQ3ZDc01EczFqSks1dGhXZlJuaFh2RDlMV2lhVjhfdVVuaXJyOW9GSQ?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry cède ses actions Alphabet, puis achète le titre logiciel que Wall Street craint le plus"
     },
     {
      "ts": "2026-11-17T15:29:00.000Z",
      "title": "Michael Burry Still Bearish On Nvidia, AI Trade, Buys These Software Names",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQN3lsU2wtSDlsc1E5TXRFQUdVaGxWN29hWlJtbjFnb0RnNFN1MDI2VVpDM3U3T0l1M0ZXOWsybXF1S3N3Vzg5U25hUG1INEJjeGRyVjNsb1FmUXFRTmJRcFFZRHJmSGRwSzYyTUhhLW5LcE0xeTFLVXpZRk4xTkFfNHJCbUFCYUNidTRqbThPbEpXdkhjeFlRTmotRG5jQTNrQlZBSw?oc=5",
      "source": "Investor's Business Daily",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry reste baissier sur Nvidia et le secteur de l'IA, et achète ces valeurs du logiciel"
     },
     {
      "ts": "2026-11-17T14:50:02.000Z",
      "title": "Michael Burry Shorted Nvidia Stock. Is He About to Make Another Fortune?",
      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdU0wNEdPNnJobERkQ0hVV0NJcnRLOU9Gc005SlozbmlyVFJqZVFtaldQdENiVGQ3ZmpPOGdMZno0cU9WMmVTYlNsa3U5a1dsWEZlaENhQXVibzY4SHR6MktySXE0WXpFV0ZfVkFGME1reUgxLW9SV045ZlV3WTg5dG5QUFhReUtGRmluZE9IbE5aVUpWS0IzTEp0M3pWVFFN?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry a vendu à découvert l'action Nvidia. S'apprête-t-il à faire une autre fortune ?"
     },
     {
      "ts": "2026-11-16T15:45:00.000Z",
      "title": "Michael Burry says he won't buy Nvidia stock 'at any price' now — as he predicts 'real problems' beyond Jensen Huang",
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUUtJVEdGQWwxZDR0Snk5NWFSY2tLTlAxeTFwM1FaWjdod0I1cnJ5WUZ6dWFOTzUxelhoZi1pUXZlMnF0QTJhYUtuaHBoZzd4ek9rcFV2RzBZM0FIMUQ0Qk1FVkROamVZU2ZLQU1scU5RcmlZZklIZEpDSGpxRF9BWjV3N3NPeGhRbG41bThEaUc1cXowOWxnTGVnSTQxVUU?oc=5",
      "source": "Business Insider",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry déclare qu'il n'achètera pas l'action Nvidia « à aucun prix » désormais, prédisant de « vrais problèmes » au-delà de Jensen Huang"
     },
     {
      "ts": "2026-11-15T16:37:08.000Z",
      "title": "Michael Burry Warned AI Chips Would Lose Value Fast. New Data Suggests He Was Wrong",
      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOeUJvbUhzMzA3QThNZkV4c09YR0t3cVRfLV93encwSV9UbUFyalZfSzktcmh5a3MwM3l0cGdCbTBUZjNIRGhDTHBQNWFwR1BBRFk0dmZxUmdKNmRMVmhqbXU4NGdqX0JNX0w3c3hCd1gyTmdCRFY3VThZVUQyeWNVMlhaSXRKZHJIakhvWHhFdXlLUkVkdV82WA?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry avait prévenu que les puces d'IA perdraient rapidement de leur valeur. De nouvelles données suggèrent qu'il avait tort"
     },
     {
      "ts": "2026-11-15T03:33:00.000Z",
      "title": "Michael Burry sees 2 chip winners in Nvidia’s shake-up",
      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNemRLWWd6UXU5YmtNbXVWNlVrazRvMHV6YmhzZ01ncllzTVVFQXdoVkk4eWVETl9YYTNWM0pXSW1mQnpBMmlHbnhsMVJzVUpYNlRLX1lYVEV0NENIQmhTc29XLWp4eXpZekxvUWNhQklISzhkMlFWa0JBRlFSdm5RVnFJaVpab3ZUYUYzM1YtUUcyX3kt?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry identifie 2 gagnants de puces dans le remaniement de Nvidia"
     },
     {
      "ts": "2026-11-13T17:39:00.000Z",
      "title": "'Behold the bull-trap': Michael Burry says he's ramped up bearish tech bets",
      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZVdqVk9BVmd5OWJSNVZPR3BkaXZHRVpSc3NoaVNGb0JVVGMzSUpmLThVOVRLbnNuQ0RieE5GblBoU1FLcV9EQjZHa1lOMWZTOXNEUlhQM2RyR2RjYXQ2eXVyRVNYSlVHQXE0VkRxYWd0MThPdWpvanZ2ZkFubThXMWJ3aGdZaXNEdzNYOFo0TndTZw?oc=5",
      "source": "Business Insider",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "« Observez le piège à hausses » : Michael Burry déclare avoir intensifié ses paris baissiers sur la technologie"
     },
     {
      "ts": "2026-11-13T16:14:21.000Z",
      "title": "Michael Burry Says WSJ Missed the Real Nvidia Story",
      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOclRadDV5VUM3VmtHa3RrTF9jbkQ3UWxEZV9rR0tUZnB4YnZmZmxWUFRjRVdQaXR6WnFaYXZqRUZVMDJ1S0FuTGVvUHZiUERGUEdKLTQtZWhBUjhNTm5mVkdPenZNN01EXzZDSU9XVDdfQ1A5NzFTbEQ4V2RnY2EzVzdiZFlKckpESmJJVzlrUXByWGpaeXlCRXJxNlZ1ZFVvY0ZsYTM4UQ?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Michael Burry déclare que le WSJ est passé à côté de la véritable histoire de Nvidia"
     }
    ]
   },
@@ -1892,35 +1959,40 @@
      "title": "Dan Ives Says Nvidia’s Guidance ‘Speaks Volumes’ After Jensen Huang Exit: ‘Demand Did Not Leave With Him’",
      "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQS3FwSm8yeUtWZHdaejdjenRrSEN4b284bVRVNU5BTzlGWXhrNEdMNDlFeTlyQkZveGx2RVFVaVM3Y2ZiVE5HWXJTUzlmOGpZWndISENMVnVWV0NPWEFUa2dyVzVMTDlobUJDejFJS25DcW85eGZkek9JdjRHSDJkWFhQYXl3RUZXZ1o2NmhxMHBGb0lkdjZOYVdkYTBuOVkzREtMVW90LVRQTXdnMVp0c3BQbnlwdnFmazMwa0hCVDdsRTZ4ODA2WVl4ZFN3NmZQWVJVRzFlbTdRS3FaaEhhcXJmOFdfSWFzWHp6ZmZGbWVtRGZUbmRFVW5yQ3NUQTEtVFhlNg?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Dan Ives déclare que les prévisions de Nvidia « en disent long » après le départ de Jensen Huang : « La demande n'est pas partie avec lui »"
     },
     {
      "ts": "2026-11-17T16:36:41.000Z",
      "title": "Dan Ives Says the Anthropic IPO Is a Crucial Moment for AI. I Still Think You Should Wait at Least a Quarter Before You Buy ANT Stock.",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQNG4yazFWZHRSMUVrSjV4Rm8wcjJmRG5DUGhRQXNZUnNJZ05PR2kyellvUVhKTlZwMUdqSk12NUlBdjVTUnVYSnZfU3ZGQV9reDBpUnd3T1JfYk5WbV9vV3pBNkc2aXZCdUpDZGNROWtHM09PRVdpMWpwUmdSZ0M5WTRjSVRBV3c5eEVya0s5SV91d0t0NkE?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Dan Ives déclare que l'introduction en bourse d'Anthropic est un moment crucial pour l'IA. Je pense toujours que vous devriez attendre au moins un trimestre avant d'acheter l'action ANT."
     },
     {
      "ts": "2026-11-17T07:50:19.000Z",
      "title": "NVDA's ‘Black Eye Moment’: Dan Ives Says Losing Jensen Huang Is a ‘Dream Scenario for China,’ But Won’t S",
      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQNEVfUldtMW5lTmtiSnVOMWFHSmtCRFBTNHNkQ0VIOG9wREM2ODY1VXc4T1g3RjFHUWJFS24wa1JwRjlIMUUtNnhnSEJ1V0FxYmFnQ3Roc05MSkFCaDVGOXg1ZVZGZ0FFLW9oMDRiVUo0RTZUbE14blB5UUFqS1plc0lURnBGMUFMMEwzVlNwSE9kMEFNSmJJR2hta3VtRThDakZPZTB0NzBtOGxHOUFOanZISVljSEFJUXlzTThZOUYydC0yMTlqMjJUNUJQTXQ3LW1veThWenBsd0ttSHBJaHg2M2hLaXFwT3c4NkJVZDVadVpacnExNEtybV9fNTVOQmMybGdvZ2RJcHFlQTk0cUlXb3I?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Le « moment de honte » de NVDA : Dan Ives déclare que perdre Jensen Huang est un « scénario de rêve pour la Chine », mais ne s'arrêtera pas l"
     },
     {
      "ts": "2026-11-15T20:32:00.000Z",
      "title": "Dan Ives Rejects Jensen Huang Comeback as Nvidia Investors Push for Return",
      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSHZCZHhTbnI1Q2VaeHY1YWF0UTNERi1mOHJvVThKYzZwWXFUNk9PTlZKanNGNk9aSWNYYzN0Yjl6SWJWaGxLNUxHWDB3NkNUN19sU04tcmJuZlIxQnRYaU9SMmo4SkcxcGtqTzhJc19LdzFyTWkwWWxNbnNOaVRySA?oc=5",
      "source": "Newsweek",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Dan Ives rejette un retour de Jensen Huang alors que les investisseurs de Nvidia font pression pour son come-back"
     },
     {
      "ts": "2026-11-15T07:29:36.000Z",
      "title": "Dan Ives Says Nvidia Turmoil Could Hand Big Tech an Unexpected AI Advantage as Hyperscalers Gain, Dismiss",
      "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxQb3Jhc0JMRGxBeFZibHhIeFdBbGJzOGZyVkJGUjEzOXQwbkxSdFh0ZGJzZng2R3pVTi1YYm56SkVrWlhvOGRwZFBDZ0RySnVCRjFic21VeDhNWUM4SHNBNlRJa01CRmw1UjNVbW0wdDM1bE1FejFKbkVpTzJ0LUh4ZnVfU01uZHpma2p6Y053d1ozRU9CS3Z5UWFtMUh0N1d1QzFYdXhWMElCcXpkRVpjNDN4YzF3VWstRnF1ZUgwRDV1UzZTYVJBQk5ydWYtcFk5OFlXMjV2RmpiVDNlMVpiVDg3SUNiQm5tUnJJUzd4WDEyOFB6cUQxMGJHRk9hdVpNUm9mUjNCUUpRUXF6TFZETWhB?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Dan Ives déclare que la tourmente chez Nvidia pourrait conférer aux géants de la tech un avantage inattendu dans l'IA alors que les hyperscalers gagnent du terrain, rejetant"
     },
     {
      "ts": "2026-11-13T14:49:33.000Z",
@@ -1934,14 +2006,16 @@
      "title": "Dan Ives Says 'Irreplaceable' Nvidia CEO Jensen Huang Is the 'Central Nervous System' of US Tech, Says Company Has No Succession Plan Amid China Spy Allegations",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOdHNfMDk3eHFYQ0JDQWFwUGJuVnJfWlpFejFVSGpBczVIbkVTOU5IVEJYbXI0NlV6QmtRaURpYy14VVJhSl9tZ0t5bTdYcDJGNjR3VUxndm91akozdER1R0hFZ0JiNlJpM3hRa09qaFpxY2J2eE52SFZJRVRpN2liVTM3V0lRMlFyRjRMWGNqeVdGN21YWFh6SUxObw?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Dan Ives qualifie le PDG « irremplaçable » de Nvidia, Jensen Huang, de « système nerveux central » de la tech américaine, et affirme que l'entreprise n'a aucun plan de succession sur fond d'allégations d'espionnage par la Chine"
     },
     {
      "ts": "2026-11-13T00:00:00.000Z",
      "title": "Watch Dan Ives Cuts Nvidia Price Target, But Stays Bullish Post-Huang",
      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdVNHSExLNTVNd0UwbEI1YjJ6d0hSdmFDc2lKY1c5azhteTA4WkFmUWd4VkdCeXFVSXBFM1c0UFNNcElRLTY4OFJNTEZ2TkVnOGp1ZUNreGVvaG5nNEcwWW5GcGxrbnJEd01CNXdRR2NwTGZWc2FkdnNYZGlzLTF0WGtJWW4xeFhQRkRJcWlxZGlrS3dfTjF6R1NVYmtwU1ZMNGJ3eGhhYURYWkdkelE?oc=5",
      "source": "Bloomberg.com",
-     "kind": "presse"
+     "kind": "presse",
+     "title_fr": "Regardez Dan Ives abaisser son objectif de cours sur Nvidia, tout en restant haussier après le départ d'Huang"
     }
    ]
   },
@@ -2027,6 +2101,20 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-17T19:46:03.000Z",
+     "title": "Cathie Wood's ARK Sells $85 Million in Nvidia, Buys $40 Million in Crypto Stocks",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPVkpnTVFKM1pNOGRzdC1JLVVPLUREcDRaWEV1R1kzd1NpbjJvRnZtQVFIMFM2NW9feFp1ZmFnY2RnVUNJdnozZ1E2UDl0UExwakhwUnpmV0U1b2xQLVpQb25YRG9IR2pfZk11OEdNb3NiUE5GZ0dHVGtwZXJzZ2ZQWFcweDFkQXUzaWM5QktWanRpWUk4?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse"
+    },
+    {
+     "ts": "2026-11-17T16:08:21.000Z",
+     "title": "Cathie Wood Sold $85 Million of Nvidia the Day Before Earnings",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNUWxKOUhrUWExOUFUS0l5WUN6bjY4c0hUalh3bmxyVGtrLVlmWmRRTGg0c085cUwtVUFqSHd3V2pMdFBYSlRhM01JVkRSNDVUeUFLU0tPSXBITVE3Wmk2NzZhYzJHakxhQWV2WHBDVmptWEplOXduOU9oVjVWRUpwZDRNYU5NSnB2azRhNzlJYTZIV05UekUw?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse"
+    },
+    {
      "ts": "2026-11-17T14:38:00.000Z",
      "title": "Cathie Wood’s ARK Invest Sells $85 Million of Nvidia, Adds Block, Circle and Coinbase",
      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPTklJQ09wV0lwVzllaDFhcHNkdXVMWm8wajBtVFFMYmM2U2xDMmtXd05tX3FWM0dpSldjdVhmaG9iblJTMnUydjl1SVFWQkFFa1R4eDlKcGRiNlhVM0lsZWdrdmlnVHpDV1BWZzlwU3FTdGFVdWwyWm1zaHlVSnYtajF6ZHhBdTR4R19XeXRNTDZ0dlIyR3E2Nw?oc=5",
@@ -2067,20 +2155,6 @@
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdjNrRWE5RXRRUmxWMlpkS3Z6X1FPRUFvV20wWEJoa2tIMV82VXJsUmkxNGxlbk1DTFhRYWpVako4M0g1QzBHM1ozbHhvZ19MMTR1OWJzVG56c2N5aG1BRWFRdGk0S3ZzcFRSM1g5OU1KNExEakNpeWR3TGd6M1oyMEFzWnFYQnY3LXg5RUFPdw?oc=5",
      "source": "Yahoo Finance",
      "kind": "presse"
-    },
-    {
-     "ts": "2026-11-10T13:36:00.000Z",
-     "title": "Investor Cathie Wood Buys The Dip In Nvidia Stock",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQYTc1QUg1S0FraFV1elRjVEFLUzJnVEZ1LWF0bGpwc2dDU051ZnZJOURzNVhyUFRqdTJJWEVkeEhVVXFNbnM1T3lVM01IZHc1OVFTTkJkNEpId3E4bVVETUhRNnYtcnJDOTd0WHh4ek1JWWVMdjFBYWhyNkNWa011OXdmZFJyUlNSSnc3VGw0MFBOSUhmWGUzNFBR?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Cathie Wood Buys Over 90,000 Shares Of Nvidia After CEO Probe Sends Stock Down",
-     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOYmtxc0o0djhQMmFjcWdORlBGX2RKdzZjZ1dReUx5bHJBd2xlZFVfSmNPdlhTZUltSHU2SzNEaS1WdjR3Q1RTYUFKMi1EM1lCSGdDcW9ZMEFpNm9YRmhfYTl2ZS1Jalo3TzVjcUZRN3UwM2FXS2dwWVZVT1VfSGVheUt4X3h2Vlh3OUE?oc=5",
-     "source": "Investor's Business Daily",
-     "kind": "presse"
     }
    ]
   },
@@ -2094,6 +2168,13 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-18T21:35:00.000Z",
+     "title": "SoftBank's Masayoshi Son Calls Skipping Anthropic a 'Mistake' as AI Bet Stays on OpenAI",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBvTTc2Y0t1OUozeERSVkN4dFV5X255VVdUR0tnY2hCeUFKVlpzV0VUR3dvcDhBelMyWnl3SXctcmFsV3RWTF9GWkpHampNRFB4V2VzbDQwZ05IcWNpWUJyR0FQNEFFTnQ0VVl4UnBHVHdqcnZ4Rmc?oc=5",
+     "source": "BigGo Finance",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-18T12:56:35.000Z",
      "title": "Masayoshi Son calls passing on Anthropic 'one of my mistakes' in the week it lists",
@@ -2290,25 +2371,25 @@
    "n": "Satya Nadella",
    "role": "PDG de Microsoft",
    "actor": "microsoft",
-   "ts": "2026-11-17T19:58:00.000Z",
-   "title": "Microsoft’s Satya Nadella praises Jensen Huang, says return as CEO is ‘up to the Nvidia board’",
-   "title_fr": "Satya Nadella de Microsoft fait l'éloge de Jensen Huang, déclare qu'un retour en tant que PDG « dépend du conseil d'administration de Nvidia »",
-   "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQM3hQcmp5dXFNdGJ0QXpoamFyLWp4RnlRMWpQbklaVkEybXE4b09XNG5HQ1VKSEtGMXYyaEZfTk1fYmZQR21JRGs1S1laSWZPLXVVWElwVVBrd3NteTREZUtFeTNvdzRWZ19ydjdtWW5zYXhwYnRZb3dPOW84VU5IdW9oSWpLVFFNeWE2TWRTb19IY1RjV2VxS1FxcTBKTm5HNDZ1NjVPQzZOMm5YYXR1UjlEQ0hvRC1sbEZDd2hNczRINU1uWmlDQi1XUkRGV0ZjWEZBVDQyaUVZM1NCMzlIekY1MXdwUQ?oc=5",
-   "source": "Fortune",
+   "ts": "2026-11-17T23:41:18.000Z",
+   "title": "Satya Nadella says he’s AGI-pilled now",
+   "title_fr": "Satya Nadella déclare qu'il est désormais convaincu par l'AGI",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOekpkWW1DdTdKZVdGdWpSQndwV09wTWpONUpZNTlnZVdvYkxtaFpDM3YtdEY1a2FiN0FwTndBeEFPclRyYkw0dUdBcnJlV09GbGF4Uk5CZVVhLTg1XzRkMElVOFlObGZ1U3AtYlpqMG5UbWVjZlc4VVBid0tzS1Vubw?oc=5",
+   "source": "The Verge",
    "kind": "presse",
    "outlets": 2
   },
   {
-   "score": 2.35,
-   "id": "masayoshi-son",
-   "n": "Masayoshi Son",
-   "role": "Fondateur et PDG de SoftBank",
-   "actor": null,
-   "ts": "2026-11-18T10:05:00.000Z",
-   "title": "Masayoshi Son Admits Mistake: SoftBank's OpenAI Bet Cost It Anthropic",
-   "title_fr": "",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5Mdmg5cWJPYVJLbWs5VGFpVFg5Mkk5cXVqU3prWlBJbkNJMjVycHdlMDFmMmZaNkJjdnR0UVBJZG5ycUFBcDdZTWlaSnh4OGJDS0NESlc2LS02MDNZTXNnaDNydTU2TmNKMjdrYXYxNXltZHJmUlE?oc=5",
-   "source": "BigGo Finance",
+   "score": 2.07,
+   "id": "jensen-huang",
+   "n": "Jensen Huang",
+   "role": "Fondateur de Nvidia, ancien PDG (démission le 12 nov. 2026)",
+   "actor": "nvidia",
+   "ts": "2026-11-17T16:23:05.000Z",
+   "title": "Jensen Huang says he would be ‘honored’ to return as Nvidia’s CEO if he were asked",
+   "title_fr": "Jensen Huang déclare qu'il serait « honoré » de revenir en tant que PDG de Nvidia si on le lui demandait",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPV2ZxYnRqaW9aaENyUWlkSGpKZ3dKWGNHdHhPR3hNQ0I3ZW1uYk90TzFDLUpoVFZUYWVNM3ROdnB6a1J4VUl1M0UyTzhIY2FRSExXYWFpNVhfVUZ2OXpLQUV6Ukw2OTFRczQxYWh6MjJQcXMwem1qYTBmSFAtVE1tcTk4VmEtQzdnNHdGc3NzTWhpR2p1eHVMUEJmejlzM1JlRTI2cnRTZUh0cUN1ckphUWNLeXNkdw?oc=5",
+   "source": "NBC News",
    "kind": "presse",
    "outlets": 3
   }
