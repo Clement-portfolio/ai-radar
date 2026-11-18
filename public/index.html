@@ -21,7 +21,7 @@
     <button class="tab" data-tab="methode">Méthode</button>
   </nav>
   <div class="stat"><span id="status"><span class="dot stale"></span>Chargement…</span>
-  <span class="auto"><span class="d">Mise à jour automatique toutes les 3 heures</span><span class="m">Mise à jour toutes les 3 heures</span></span>
+  <button class="sbtn" id="sbtn" type="button" aria-label="Rechercher" title="Rechercher (/)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
   <span class="lang" role="group" aria-label="Langue / Language"><button data-lang="fr">FR</button><i aria-hidden="true">|</i><button data-lang="en">EN</button></span></div>
 </div></header>
 
@@ -35,6 +35,7 @@
   <section class="view" id="v-methode"></section>
 </main>
 <footer><div class="wrap">What's Going On? · Données collectées automatiquement, classées par IA, à vérifier à la source. Ne constitue pas un conseil en investissement.</div></footer>
+<div id="sov" hidden><div class="sbk" data-sclose="1"></div><div class="spn" role="dialog" aria-label="Rechercher"><div class="sbar"><input id="sq" type="search" placeholder="Rechercher une entreprise, une personne, un sujet" aria-label="Rechercher" autocomplete="off"><button type="button" class="sx" data-sclose="1" aria-label="Fermer">Fermer</button></div><div id="sres"></div></div></div>
 <div id="ptr" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></div><div id="toast" role="status"></div>
 <script src="i18n.js"></script>
 <script src="app.js"></script>
