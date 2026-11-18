@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","acteurs","usa-chine","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,actor:null,aq:"",ab:"ALL",arv:false};
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,actor:null,aq:"",ab:"ALL",arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -37,9 +37,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];if(window.I18N)I18N.extra(r[10]);
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];S.voix=r[15];if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -622,12 +622,31 @@ function aFiche(a){
   h+=aRivals(a);
   return h;
 }
+function aTabs(on){
+  return'<div class="toolbar atabs"><a class="chip'+(on==="co"?' on':'')+'" href="#acteurs">Entreprises</a><a class="chip'+(on==="vx"?' on':'')+'" href="#acteurs/voix">Voix des dirigeants</a></div>';
+}
+function aVoix(){
+  var P=(S.voix&&S.voix.people)||[];
+  var h=aTabs("vx")+'<h2 class="sec">Voix des dirigeants</h2><p class="lede">Ce que disent les patrons de l\'IA, dans la presse et en vidéo, sur les 30 derniers jours. Titres des médias (traduits automatiquement en français), avec le lien vers l\'article ou la vidéo d\'origine. Seuls les titres où la personne s\'exprime sont retenus.</p>';
+  if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
+  P.slice().sort(function(a,b){var x=a.items[0]?a.items[0].ts:"",y=b.items[0]?b.items[0].ts:"";return y<x?-1:y>x?1:0}).forEach(function(p){
+    var co=p.actor&&aById(p.actor);
+    h+='<div class="vperson"><div class="ahead"><h3 class="vname">'+esc(p.n)+'</h3><span class="small">'+esc(p.role)+(co?' · <a href="#acteurs/'+esc(co.id)+'">Fiche '+esc(co.n)+'</a>':'')+'</span></div>';
+    h+=p.items.length?p.items.map(function(n){
+      return'<div class="anews"><span class="small">'+esc(new Date(n.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><a href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+esc(!isEn()&&n.title_fr?n.title_fr:n.title)+'</a><span class="small">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span></div>';
+    }).join(""):'<p class="small">Aucune déclaration sur les 30 derniers jours.</p>';
+    h+='</div>';
+  });
+  return h;
+}
+
 function rActeurs(){
   var el=$("v-acteurs");if(!el||!S.acteurs)return;
+  if(S.actor==="voix"){el.innerHTML=aVoix();return}
   var a=S.actor&&aById(S.actor);
   if(a){el.innerHTML=aFiche(a);return}
   var blocks=aBlocks();
-  el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients, chacun daté et sourcé. Un champ sans source reste vide.</p>'+
+  el.innerHTML=aTabs("co")+'<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients, chacun daté et sourcé. Un champ sans source reste vide.</p>'+
    '<div class="toolbar"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">Toutes ('+S.acteurs.actors.length+')</button>'+blocks.map(function(b){return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'">'+esc(b)+'</button>'}).join("")+'</div>'+
    '<input id="aq" class="asearch" type="search" placeholder="Rechercher un acteur" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"><div id="alist" class="agrid">'+aList()+'</div>';
 }

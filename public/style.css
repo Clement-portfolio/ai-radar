@@ -462,3 +462,6 @@ html{overscroll-behavior-y:contain}
 .rvbody{margin-top:14px}.rv{margin-bottom:10px}
 @media(max-width:1060px){.agrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.agrid{grid-template-columns:1fr}.anews{grid-template-columns:52px minmax(0,1fr)}.anews span:last-child{display:none}.clist li{grid-template-columns:1fr}.clist .cv,.clist .csrc{text-align:left;grid-column:1}}
+
+.atabs{margin-bottom:14px}.atabs a.chip{text-decoration:none}
+.vperson{margin:26px 0 0}.vname{font-family:var(--display);font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0}

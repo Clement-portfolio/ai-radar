@@ -13,6 +13,7 @@ import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
 import { collectResults } from "./resultats.mjs";
 import { collectSec, SEC_ACTORS } from "./sec.mjs";
 import { buildActeurs } from "./acteurs.mjs";
+import { collectVoix, translateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
 import { updateChain } from "./chainauto.mjs";
@@ -653,6 +654,18 @@ export async function run(opts = {}) {
   try { if (chainRes.chain) acteurs = buildActeurs({ chain: chainRes.chain, feed: { items: keep }, sec: secAct.doc, releases: (resSrc.doc && resSrc.doc.items) || [], fiches: JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "acteurs-fiches.json"), "utf8")).actors, now: nowMs }); }
   catch (e) { log("Fiches acteurs : " + String(e.message || e).slice(0, 120)); }
   log(`Fiches acteurs : ${acteurs ? acteurs.actors.length : 0} fiche(s)`);
+  // Voix : ce que disent les dirigeants (presse et vidéos), titres traduits ; ne bloque jamais la collecte
+  const voixPrev = await readJson("voix.json", null);
+  let voix = { doc: voixPrev, summary: { added: 0, failed: 0, total: 0, reason: "erreur" } };
+  try {
+    voix = await collectVoix({ http, parseFeed, now: nowMs, prev: voixPrev, log, ...(opts.sleep ? { sleep: opts.sleep } : {}) });
+    // les titres déjà traduits restent traduits
+    const known = new Map(((voixPrev && voixPrev.people) || []).flatMap((p) => p.items).filter((i) => i.title_fr).map((i) => [i.url, i.title_fr]));
+    for (const it of voix.doc.people.flatMap((p) => p.items)) if (known.has(it.url)) it.title_fr = known.get(it.url);
+    voix.summary.translate = (await translateVoix({ doc: voix.doc, generate: mkGen(VOIX_SYSTEM, VOIX_SCHEMA) })).reason;
+    await resolveGoogleLinks({ items: voix.doc.people.flatMap((p) => p.items), fetchImpl, max: +env.GNEWS_MAX || 0, log });
+  } catch (e) { voix.summary.reason = String(e.message || e).slice(0, 120); }
+  log(`Voix : ${voix.summary.total} déclaration(s), ${voix.summary.added} nouvelle(s)${voix.summary.reason ? " — " + voix.summary.reason : ""}`);
 
   // textes des pages de données en anglais (public/data/en.json) : par lots, ne bloque jamais la collecte
   const enPrev = await readJson("en.json", {});
@@ -673,7 +686,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, voix: voix.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -689,6 +702,7 @@ export async function run(opts = {}) {
     if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (secAct.doc && JSON.stringify(secAct.doc) !== JSON.stringify(secActPrev)) await fs.writeFile(path.join(dataDir, "sec-acteurs.json"), JSON.stringify(secAct.doc, null, 1));
+    if (voix.doc && JSON.stringify({ ...voix.doc, generated_at: 0 }) !== JSON.stringify({ ...(voixPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "voix.json"), JSON.stringify(voix.doc, null, 1));
     if (acteurs && JSON.stringify({ ...acteurs, generated_at: 0 }) !== JSON.stringify({ ...(actPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "acteurs.json"), JSON.stringify(acteurs));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
     if (evoRes.doc && JSON.stringify(evoRes.doc) !== JSON.stringify(seriesPrev)) await fs.writeFile(path.join(dataDir, "series.json"), fmtSeries(evoRes.doc));
