@@ -1,79 +1,33 @@
 {
- "generated_at": "2026-11-18T11:49:11.155Z",
- "model": "gemini-3.6-flash",
+ "generated_at": "2026-11-18T13:04:24.231Z",
+ "model": "gemini-3.5-flash-lite",
  "sig": [
+  "2d63384e9945+5250f8130009+738cf9204884+a2aa55ba11cb+ae688f23ea4f",
   "20f963a804d9+2fb45d6cc030+363bae5beb12+472accef9bf8+65f22c3bd378+8239fbdc6243+b5ba7df03858",
-  "2cbe74d0f23f+2e65a97e8047+439c4d3c8de7+60552b44b771+62d5ff960a4f+dc46bdd2652f+e4db23cac37a",
-  "0c4605812a3f+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+99c81c53d58e+a3f30498a16a+cc9584594038+dd5f54370718",
+  "2cbe74d0f23f+2e65a97e8047+439c4d3c8de7+62d5ff960a4f+dc46bdd2652f+e4db23cac37a",
   "1aa355519c9f+1d568fb033a7+24814f58a684+3ef484d91e4b+4d2a127f1c18+54d6bbb0ceee+5bf1e9fd711d+5d7763ae049a+64cb51cd5a8b+772ccdf8e8c7+99adb1c1605d+b89b121d0786+c7e45fe092ad+d392b636ea28+d9d83de861d8+f45fe323bc06",
   "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d"
  ],
  "stories": [
   {
    "ids": [
-    "65f22c3bd378",
-    "472accef9bf8",
-    "b5ba7df03858",
-    "20f963a804d9"
+    "5250f8130009",
+    "2d63384e9945",
+    "ae688f23ea4f",
+    "738cf9204884"
    ],
-   "head": "Nvidia arrête les expéditions de ses puces d'IA de pointe vers la Chine",
+   "head": "Nvidia maintient ses perspectives optimistes malgré le départ de son directeur général Jensen Huang",
    "bullets": [
-    "Nvidia a décidé de suspendre la commercialisation et la livraison de ses processeurs d'intelligence artificielle les plus performants vers le marché chinois.",
-    "Cette annonce intervient sous la direction du nouveau PDG par intérim de l'entreprise, consécutive à la démission du cofondateur Jensen Huang (1).",
-    "La suspension des livraisons survient alors même que l'entreprise avait obtenu l'approbation préalable des autorités américaines pour exporter ces puces."
+    "Colette Kress assume la fonction de PDG par intérim de Nvidia pour piloter la transition après le départ de Jensen Huang, tandis que l'entreprise sécurise ses approvisionnements en mémoire et relève ses perspectives.",
+    "Malgré le choc du départ de Jensen Huang, Sam Altman exprime sa confiance dans l'avenir de l'industrie de l'IA."
    ],
-   "head_en": "Nvidia stops shipping its cutting-edge AI chips to China",
+   "head_en": "Nvidia maintains optimistic outlook despite the departure of CEO Jensen Huang",
    "bullets_en": [
-    "Nvidia has decided to suspend marketing and shipments of its highest-performing artificial intelligence processors to the Chinese market.",
-    "This announcement comes under the direction of the company's new interim CEO, following the resignation of co-founder Jensen Huang (1).",
-    "The suspension of shipments occurs even though the company had previously obtained approval from US authorities to export these chips."
-   ],
-   "ctx_ids": [
-    "32f526731264"
-   ],
-   "ts": "2026-11-18T11:16:00.000Z"
-  },
-  {
-   "ids": [
-    "2cbe74d0f23f",
-    "62d5ff960a4f",
-    "2e65a97e8047",
-    "dc46bdd2652f"
-   ],
-   "head": "La Chine menace de répliquer aux nouvelles restrictions américaines sur les puces d'IA",
-   "bullets": [
-    "Pékin promet des contre-mesures et appelle au dialogue après le renforcement par Washington des règles d'exportation et de location de processeurs d'IA.",
-    "Ces nouvelles limitations américaines touchent aussi les infrastructures de centres de données du Golfe et ont entraîné le recul des actions du secteur."
-   ],
-   "head_en": "China threatens to retaliate against new US AI chip restrictions",
-   "bullets_en": [
-    "Beijing promises countermeasures and calls for dialogue after Washington tightened export and leasing rules for AI processors.",
-    "These new US limitations also affect data center infrastructure in the Gulf and led to a drop in sector stocks."
+    "Colette Kress takes over as interim CEO of Nvidia to manage the transition following Jensen Huang's departure, while the company secures its memory supply and raises its outlook.",
+    "Despite the shock of Jensen Huang's departure, Sam Altman expresses confidence in the future of the AI industry."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-18T11:00:00.000Z"
-  },
-  {
-   "ids": [
-    "f819d90d809d",
-    "b1da22f7bd68",
-    "6e834fc4bc29",
-    "4f1fe20754ae"
-   ],
-   "head": "La consommation des centres de données d'IA américains atteint celle de pays entiers",
-   "bullets": [
-    "Une étude publiée dans Nature Sustainability montre que 403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an.",
-    "Ces infrastructures reposent encore majoritairement sur les énergies fossiles et consomment autant d'électricité qu'un pays comme le Chili.",
-    "Avec 82 térawattheures absorbés par 403 centres, cette consommation d'électricité équivaut à celle d'États américains entiers comme le Wisconsin ou le Michigan."
-   ],
-   "head_en": "Power consumption of US AI data centers matches that of entire countries",
-   "bullets_en": [
-    "A study published in Nature Sustainability shows that 403 hyperscale data centers in the US consumed 82 terawatt-hours of electricity in one year.",
-    "These infrastructures still rely heavily on fossil fuels and consume as much electricity as a country like Chile.",
-    "With 82 terawatt-hours consumed by 403 centers, this electricity usage equals that of entire US states such as Wisconsin or Michigan."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-17T10:30:00.000Z"
+   "ts": "2026-11-18T12:03:54.000Z"
   }
  ]
 }
