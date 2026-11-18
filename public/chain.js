@@ -384,8 +384,9 @@ function nwFollowed(gs){
  return{key:key,em:em}}
 function nwLink(u){u=u||"";if(/^https:\/\/news\.google\.com\/(rss\/)?(articles|read)\//.test(u))return"/go?u="+encodeURIComponent(u);return /^https?:\/\//.test(u)?u:"#"}
 function nwLoc(){return LANG==="en"?"en-GB":"fr-FR"}
-function nwDay(ts){return new Date(ts).toLocaleDateString(nwLoc(),{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
-function nwTime(ts){return new Date(ts).toLocaleTimeString(nwLoc(),{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})}
+function nwDay(ts){return new Date(ts).toLocaleDateString(nwLoc(),{weekday:"long",day:"numeric",month:"long",year:"numeric"})}
+function nwDayKey(ts){return new Date(ts).toLocaleDateString("sv-SE")}
+function nwTime(ts){return new Date(ts).toLocaleTimeString(nwLoc(),{hour:"2-digit",minute:"2-digit"})}
 function nwImp(n){return'<span class="imp" title="Importance '+n+'/3">'+[1,2,3].map(function(i){return'<i class="'+(i<=n?'f':'')+'"></i>'}).join("")+'</span>'}
 function nwRow(x){
  var c=x.conf||"moyenne",pick=function(k){return LANG==="en"?(x[k+"_en"]||x[k]):x[k]},o=nwOpen[x.id]?" open":"",im=x.imp||1;
@@ -400,9 +401,9 @@ function nwItems(){
 var nwLimit=NSHOW;
 function newsHtml(){
  var gs=nwGroups(),its=nwItems(),F=gs.length?nwFollowed(gs):{key:[],em:[]};
- var shown=its.slice(0,nwLimit),cnt={};its.forEach(function(x){var d=x.ts.slice(0,10);cnt[d]=(cnt[d]||0)+1});
+ var shown=its.slice(0,nwLimit),cnt={};its.forEach(function(x){var d=nwDayKey(x.ts);cnt[d]=(cnt[d]||0)+1});
  var h="",day="";
- shown.forEach(function(x){var d=x.ts.slice(0,10);if(d!==day){day=d;h+='<div class="day">'+esc(nwDay(x.ts))+' <span>'+cnt[d]+' '+(cnt[d]>1?"articles":"article")+'</span></div>'}h+=nwRow(x)});
+ shown.forEach(function(x){var d=nwDayKey(x.ts);if(d!==day){day=d;h+='<div class="day">'+esc(nwDay(x.ts))+' <span>'+cnt[d]+' '+(cnt[d]>1?"articles":"article")+'</span></div>'}h+=nwRow(x)});
  if(its.length>shown.length){var r=its.length-shown.length;h+='<div class="nmw"><button class="btn nmore" type="button">'+tx("Voir "+Math.min(120,r)+" articles de plus ("+r+" restants)","Show "+Math.min(120,r)+" more articles ("+r+" remaining)")+'</button></div>'}
  if(!its.length)h='<div class="none2">'+tx("Aucune actualité récente sur les entreprises suivies pour ce composant.","No recent news on the companies tracked for this component.")+'</div>';
  var chips=function(a,c){return a.map(function(n){return'<span class="nco '+c+'">'+esc(n)+'</span>'}).join("")};

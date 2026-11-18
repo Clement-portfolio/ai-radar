@@ -17,8 +17,9 @@ function link(u){u=u||"";if(/^https:\/\/news\.google\.com\/(rss\/)?(articles|rea
 function ago(iso){
   if(isEn()){if(!iso)return"never";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"just now";if(m<60)return m+" min ago";var h=Math.round(m/60);if(h<24)return h+" h ago";return Math.round(h/24)+" d ago"}
   if(!iso)return"jamais";var m=Math.round((Date.now()-new Date(iso).getTime())/60000);if(m<1)return"à l'instant";if(m<60)return"il y a "+m+" min";var h=Math.round(m/60);if(h<24)return"il y a "+h+" h";return"il y a "+Math.round(h/24)+" j"}
-function fmtDay(iso){return new Date(iso).toLocaleDateString(loc(),{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
-function fmtTime(iso){return new Date(iso).toLocaleTimeString(loc(),{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})}
+function fmtDay(iso){return new Date(iso).toLocaleDateString(loc(),{weekday:"long",day:"numeric",month:"long",year:"numeric"})}
+function dayKey(iso){return new Date(iso).toLocaleDateString("sv-SE")}
+function fmtTime(iso){return new Date(iso).toLocaleTimeString(loc(),{hour:"2-digit",minute:"2-digit"})}
 function ctag(c){return '<span class="tag c-'+esc(c)+'">'+esc(CLABEL[c]||c)+'</span>'}
 function conf(c){var L={haute:'Source primaire',moyenne:'Presse',faible:'Non vérifié'};return '<span class="conf '+esc(c)+'"><i></i>'+(L[c]||esc(c))+'</span>'}
 function imp(n){return '<span class="imp" title="Importance '+n+'/3">'+[1,2,3].map(function(i){return'<i class="'+(i<=n?'f':'')+'"></i>'}).join("")+'</span>'}
@@ -129,9 +130,9 @@ function rFeed(){
   var h='<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l\'article.</p>'+
    '<div class="toolbar frow"><button class="chip fb'+(S.fo==="pays"?' open':'')+(S.country!=="ALL"?' set':'')+'" data-fo="pays">Pays : '+esc(cn)+' <span>▾</span></button><button class="chip fb'+(S.fo==="cat"?' open':'')+(S.cat!=="ALL"?' set':'')+'" data-fo="cat">Catégorie : '+esc(cl)+' <span>▾</span></button><span class="sp"></span><button class="chip'+(S.top?' on':'')+'" data-top="1">Essentiel seulement</button></div>'+panel;
   if(!items.length)h+='<div class="empty">Aucune actualité pour ces filtres.</div>';
-  var dayCount={};items.forEach(function(x){var d=x.ts.slice(0,10);dayCount[d]=(dayCount[d]||0)+1});var day="";var total=items.length;items=items.slice(0,S.limit);
+  var dayCount={};items.forEach(function(x){var d=dayKey(x.ts);dayCount[d]=(dayCount[d]||0)+1});var day="";var total=items.length;items=items.slice(0,S.limit);
   items.forEach(function(it){
-    var d=it.ts.slice(0,10);
+    var d=dayKey(it.ts);
     if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(it.ts))+' <span>'+(dayCount[d]||0)+' articles</span></div>'}
     h+=rowHTML(it);
   });
