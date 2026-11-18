@@ -1,33 +1,99 @@
 {
- "generated_at": "2026-11-18T13:04:24.231Z",
+ "generated_at": "2026-11-18T13:21:12.353Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "2d63384e9945+5250f8130009+738cf9204884+a2aa55ba11cb+ae688f23ea4f",
-  "20f963a804d9+2fb45d6cc030+363bae5beb12+472accef9bf8+65f22c3bd378+8239fbdc6243+b5ba7df03858",
+  "20f963a804d9+2fb45d6cc030+363bae5beb12+65f22c3bd378+8239fbdc6243+b5ba7df03858",
   "2cbe74d0f23f+2e65a97e8047+439c4d3c8de7+62d5ff960a4f+dc46bdd2652f+e4db23cac37a",
-  "1aa355519c9f+1d568fb033a7+24814f58a684+3ef484d91e4b+4d2a127f1c18+54d6bbb0ceee+5bf1e9fd711d+5d7763ae049a+64cb51cd5a8b+772ccdf8e8c7+99adb1c1605d+b89b121d0786+c7e45fe092ad+d392b636ea28+d9d83de861d8+f45fe323bc06",
+  "0c4605812a3f+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+99c81c53d58e+a3f30498a16a+cc9584594038+dd5f54370718",
+  "1aa355519c9f+1d568fb033a7+3ef484d91e4b+4d2a127f1c18+54d6bbb0ceee+5bf1e9fd711d+5d7763ae049a+64cb51cd5a8b+772ccdf8e8c7+99adb1c1605d+b89b121d0786+c7e45fe092ad+d392b636ea28+d9d83de861d8+f45fe323bc06",
   "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d"
  ],
  "stories": [
   {
    "ids": [
-    "5250f8130009",
-    "2d63384e9945",
-    "ae688f23ea4f",
-    "738cf9204884"
+    "65f22c3bd378",
+    "b5ba7df03858",
+    "20f963a804d9",
+    "363bae5beb12"
    ],
-   "head": "Nvidia maintient ses perspectives optimistes malgré le départ de son directeur général Jensen Huang",
+   "head": "Nvidia arrête ses ventes de puces d'IA avancées en Chine",
    "bullets": [
-    "Colette Kress assume la fonction de PDG par intérim de Nvidia pour piloter la transition après le départ de Jensen Huang, tandis que l'entreprise sécurise ses approvisionnements en mémoire et relève ses perspectives.",
-    "Malgré le choc du départ de Jensen Huang, Sam Altman exprime sa confiance dans l'avenir de l'industrie de l'IA."
+    "Nvidia interrompt la commercialisation et l'expédition de ses processeurs d'intelligence artificielle les plus performants vers le marché chinois.",
+    "L'ancien PDG Jensen Huang avait été auditionné par le Congrès américain sur les ventes de l'entreprise en Chine avant sa démission après 33 ans à la tête du groupe."
    ],
-   "head_en": "Nvidia maintains optimistic outlook despite the departure of CEO Jensen Huang",
+   "head_en": "Nvidia stops selling advanced AI chips to China",
    "bullets_en": [
-    "Colette Kress takes over as interim CEO of Nvidia to manage the transition following Jensen Huang's departure, while the company secures its memory supply and raises its outlook.",
-    "Despite the shock of Jensen Huang's departure, Sam Altman expresses confidence in the future of the AI industry."
+    "Nvidia is halting the commercialization and shipment of its highest-performing artificial intelligence processors to the Chinese market.",
+    "Former CEO Jensen Huang had been questioned by the US Congress regarding the company's sales in China prior to his resignation after 33 years leading the group."
+   ],
+   "ctx_ids": [
+    "820351211e36"
+   ],
+   "ts": "2026-11-18T11:16:00.000Z"
+  },
+  {
+   "ids": [
+    "2cbe74d0f23f",
+    "62d5ff960a4f",
+    "2e65a97e8047",
+    "dc46bdd2652f"
+   ],
+   "head": "La Chine menace de représailles face aux restrictions sur les puces",
+   "bullets": [
+    "Pékin brandit la menace de contre-mesures et de représailles à l'encontre des nouvelles restrictions américaines sur l'exportation et la location de processeurs graphiques.",
+    "Les infrastructures de centres de données situées dans la région du Golfe subissent également les répercussions de ces nouvelles limitations décidées par Washington."
+   ],
+   "head_en": "China threatens retaliation over chip restrictions",
+   "bullets_en": [
+    "Beijing is raising the threat of counter-measures and retaliation against new US restrictions on the export and rental of graphics processing units.",
+    "Data center infrastructures located in the Gulf region are also experiencing the repercussions of these new limitations decided by Washington."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-18T12:03:54.000Z"
+   "ts": "2026-11-18T11:00:00.000Z"
+  },
+  {
+   "ids": [
+    "cc9584594038",
+    "a3f30498a16a",
+    "dd5f54370718",
+    "2c159dd44ddd"
+   ],
+   "head": "Nvidia dépasse les attentes pour son premier bilan sans Jensen Huang",
+   "bullets": [
+    "Nvidia enregistre des revenus trimestriels supérieurs aux prévisions des analystes et voit son action progresser après l'annonce de ces performances financières.",
+    "Le conseil d'administration avait officialisé la démission du cofondateur Jensen Huang, confiant l'intérim à la directrice financière Colette Kress."
+   ],
+   "head_en": "Nvidia beats expectations in first report without Jensen Huang",
+   "bullets_en": [
+    "Nvidia posts quarterly revenues exceeding analysts' forecasts and sees its stock rise following the announcement of these financial performances.",
+    "The board of directors had formalized the resignation of co-founder Jensen Huang, entrusting the interim to Chief Financial Officer Colette Kress."
+   ],
+   "ctx_ids": [
+    "caba73249c9d"
+   ],
+   "ts": "2026-11-18T10:00:17.000Z"
+  },
+  {
+   "ids": [
+    "d9d83de861d8",
+    "64cb51cd5a8b",
+    "d392b636ea28",
+    "5d7763ae049a"
+   ],
+   "head": "Washington durcit le contrôle des accès cloud aux puces d'IA",
+   "bullets": [
+    "Les États-Unis imposent une autorisation préalable pour l'utilisation de serveurs à l'étranger afin d'empêcher les entreprises chinoises de contourner les restrictions via des services tiers.",
+    "Des entreprises chinoises s'étaient tournées vers l'Asie du Sud-Est pour réussir à se procurer des processeurs d'intelligence artificielle de la marque."
+   ],
+   "head_en": "Washington tightens controls on cloud access to AI chips",
+   "bullets_en": [
+    "The United States is requiring prior authorization for the use of overseas servers to prevent Chinese companies from circumventing restrictions via third-party services.",
+    "Chinese companies had turned to Southeast Asia in order to successfully procure artificial intelligence processors from the brand."
+   ],
+   "ctx_ids": [
+    "99c93905584d"
+   ],
+   "ts": "2026-11-17T15:32:00.000Z"
   }
  ]
 }
