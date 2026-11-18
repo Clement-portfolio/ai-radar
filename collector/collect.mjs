@@ -10,6 +10,7 @@ import { resolveGoogleLinks } from "./gnews.mjs";
 import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
 import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
+import { collectResults } from "./resultats.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
@@ -608,8 +609,14 @@ export async function run(opts = {}) {
   log("À retenir : " + focus.reason);
   // Chiffres clés de la Une : 3 chiffres tirés des articles collectés, une mise à jour par jour ; ne bloque jamais la collecte
   const figPrev = await readJson("chiffres.json", null);
+  // communiqués de résultats officiels (SEC) : réservés aux chiffres clés, jamais ajoutés au fil ni au briefing
+  const srcPrev = await readJson("chiffres-src.json", null);
+  let resSrc = { doc: srcPrev, added: 0, reason: "erreur" };
+  try { resSrc = await collectResults({ cfg, env: e2, http, now: nowMs, prev: srcPrev, log }); }
+  catch (e) { resSrc.reason = String(e.message || e).slice(0, 120); }
+  log("Communiqués de résultats : " + resSrc.reason);
   let figs = { doc: figPrev, regenerated: false, reason: "erreur" };
-  try { figs = await makeFigures({ items: keep, now: nowMs, prev: figPrev, generate: mkGen(FIG_SYSTEM, FIG_SCHEMA), modelName: () => classifier?.state.model || null }); }
+  try { figs = await makeFigures({ items: [...keep, ...((resSrc.doc && resSrc.doc.items) || [])], now: nowMs, prev: figPrev, generate: mkGen(FIG_SYSTEM, FIG_SCHEMA), modelName: () => classifier?.state.model || null }); }
   catch (e) { figs.reason = String(e.message || e).slice(0, 120); }
   log("Chiffres clés : " + figs.reason);
 
@@ -656,7 +663,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason }, sec: secRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -666,6 +673,7 @@ export async function run(opts = {}) {
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
     if (figs.doc) await fs.writeFile(path.join(dataDir, "chiffres.json"), JSON.stringify(figs.doc, null, 1));
+    if (resSrc.doc) await fs.writeFile(path.join(dataDir, "chiffres-src.json"), JSON.stringify(resSrc.doc, null, 1));
     if (watchRes.doc && JSON.stringify({ ...watchRes.doc, updated_at: 0 }) !== JSON.stringify({ ...(watchPrev || {}), updated_at: 0 })) await fs.writeFile(path.join(dataDir, "watch.json"), JSON.stringify(watchRes.doc));
     if (chainRes.changes.length) await fs.writeFile(path.join(dataDir, "chain.json"), JSON.stringify(chainRes.chain, null, 1));
     if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));

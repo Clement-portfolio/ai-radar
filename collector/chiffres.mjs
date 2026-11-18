@@ -31,7 +31,7 @@ export function figureCandidates(items, now) {
 }
 
 export const FIG_SYSTEM = `Tu choisis les « chiffres clés » d'un site d'actualité sur l'intelligence artificielle et son économie, pour un lecteur non spécialiste. On te donne des articles numérotés (a, date, title, summary, source).
-Renvoie jusqu'à 8 chiffres clés, du plus marquant au moins marquant. Chaque chiffre est tiré d'un ou deux articles (ids = leurs numéros a) et mesure UNE chose : un résultat financier, un montant levé ou investi, un gain ou une perte de valeur en Bourse, une capacité, un volume, une part de marché, un nombre d'utilisateurs. Deux chiffres ne portent jamais sur le même sujet ni sur le même article. Préfère les chiffres des 24 dernières heures, mais renvoie aussi des chiffres plus anciens de la semaine et du mois.
+Renvoie jusqu'à 8 chiffres clés, du plus marquant au moins marquant. Chaque chiffre est tiré d'un ou deux articles (ids = leurs numéros a) et mesure UNE chose : un résultat financier, un montant levé ou investi, un gain ou une perte de valeur en Bourse, une capacité, un volume, une part de marché, un nombre d'utilisateurs. Deux chiffres ne portent jamais sur le même sujet ni sur le même article. Préfère les chiffres des 24 dernières heures, mais renvoie aussi des chiffres plus anciens de la semaine et du mois. Certains articles sont des communiqués de résultats officiels d'entreprises, en anglais : pour un résultat d'entreprise, privilégie le bénéfice par action (BPA) avec sa croissance, ou le chiffre d'affaires avec sa croissance, et écris en français.
 Pour chacun, en français :
 - title : ce que mesure le chiffre, 70 caractères maximum (ex. « Nvidia : revenus du trimestre »).
 - value : le chiffre tel qu'il est écrit dans l'article, avec son unité, 40 caractères maximum (ex. « 115,8 Md$ » ou « +4 % »).
@@ -62,7 +62,7 @@ const FILLER = /^\s*(cela|ça)\s+(veut|signifie|montre|laisse|pourrait|suggère|
  * Valide les chiffres renvoyés par le modèle. Un chiffre est écarté s'il : cite un article inconnu, a une valeur sans chiffre ou dont les chiffres
  * ne figurent pas dans les articles cités, contient dans ses textes un nombre absent de ces articles (ou en toutes lettres), a un sous-texte qui répète
  * le titre, vient d'articles de plus de 31 jours, ou double un chiffre déjà retenu (même article, même valeur ou même sujet).
- * `inputs` : les articles envoyés au modèle ({a, id, ts, title, summary}).
+ * `inputs` : les articles envoyés au modèle ({a, id, ts, title, summary, source, url, conf}).
  */
 export function validateFigures(arr, inputs, now, diag = []) {
   if (!Array.isArray(arr)) return null;
@@ -88,7 +88,7 @@ export function validateFigures(arr, inputs, now, diag = []) {
     if (dup) return diag.push(`${tag} : double « ${dup.title.slice(0, 40)} »`);
     const en = { title_en: clean(r.title_en), value_en: clean(r.value_en), sub_en: clean(r.sub_en) };
     const enOk = en.title_en && en.value_en && en.sub_en && en.title_en.length <= 90 && en.sub_en.length <= 290 && [en.title_en, en.value_en, en.sub_en].every((x) => !foreignScript(x) && nd(x).every((d) => pool.has(d)));
-    out.push({ k, title, value, sub, ids: idsReal, scope, ts: newest, vd: vd.join("-"), title_en: enOk ? en.title_en : null, value_en: enOk ? en.value_en : null, sub_en: enOk ? en.sub_en : null });
+    out.push({ k, title, value, sub, ids: idsReal, links: arts.filter((a) => a.url).map((a) => ({ t: a.source, u: a.url })), conf: arts.some((a) => a.conf === "haute") ? "haute" : "moyenne", scope, ts: newest, vd: vd.join("-"), title_en: enOk ? en.title_en : null, value_en: enOk ? en.value_en : null, sub_en: enOk ? en.sub_en : null });
   });
   return out.length ? out : null;
 }
@@ -123,9 +123,9 @@ export async function makeFigures({ items, now, prev, generate, modelName }) {
   const hasDay = base.figures.some((f) => scopeOf(f.ts, now) === "day");
   if (base.v === 1 && base.day === day && base.figures.length === FIG_RULES.count && (hasDay || age <= 6 * H)) return { doc: base, regenerated: false, reason: "chiffres du jour déjà publiés" };
   if (!generate) return { doc: base, regenerated: false, reason: "Gemini indisponible : derniers chiffres conservés" };
-  const inputs = cands.map((c, k) => ({ a: k + 1, id: c.id, ts: c.ts, title: c.title, summary: c.summary || "", source: c.source }));
+  const inputs = cands.map((c, k) => ({ a: k + 1, id: c.id, ts: c.ts, title: c.title, summary: c.summary || "", source: c.source, url: c.url, conf: c.confidence }));
   let res = null;
-  try { res = await generate(inputs.map(({ id, ts, ...x }) => ({ ...x, date: ts.slice(0, 16).replace("T", " ") }))); } catch { res = null; }
+  try { res = await generate(inputs.map(({ id, ts, url, conf, ...x }) => ({ ...x, date: ts.slice(0, 16).replace("T", " ") }))); } catch { res = null; }
   const diag = [];
   const valid = validateFigures(res, inputs, now, diag);
   if (!valid) return { doc: base, regenerated: false, reason: res ? "chiffres rejetés : " + (diag.slice(0, 3).join(" ; ") || "réponse vide") : "Gemini indisponible : derniers chiffres conservés" };

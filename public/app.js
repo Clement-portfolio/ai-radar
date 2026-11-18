@@ -122,9 +122,11 @@ function rUne(){
 function figScope(ts){var a=Date.now()-Date.parse(ts);return a<=864e5?"Dernières 24 h":a<=7*864e5?"Cette semaine":"Ce mois-ci"}
 function figCard(f,byId){
   var en=isEn()&&f.title_en&&f.value_en&&f.sub_en,arts=(f.ids||[]).map(function(id){return byId[id]}).filter(Boolean);
-  var src=arts.map(function(a){return'<a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(a.source)+' ↗</a>'}).join("");
+  var ls=(f.links&&f.links.length)?f.links:arts.map(function(a){return{t:a.source,u:a.url}});
+  var hi=f.conf?f.conf==="haute":arts.some(function(a){return a.confidence==="haute"});
+  var src=ls.map(function(l){return'<a href="'+esc(link(l.u))+'" target="_blank" rel="noopener">'+esc(l.t)+' ↗</a>'}).join("");
   return'<div class="share stat1"><h4>'+esc(en?f.title_en:f.title)+'</h4><div class="bigv">'+esc(en?f.value_en:f.value)+'</div><div class="sm2">'+esc(en?f.sub_en:f.sub)+'</div>'+
-   '<div class="sf">'+src+(arts.length?' '+conf(arts.some(function(a){return a.confidence==="haute"})?"haute":"moyenne"):'')+'</div><div class="fr"><span class="small"><span>'+esc(figScope(f.ts))+'</span> · <span>'+esc(fmtD(f.ts))+'</span></span></div></div>';
+   '<div class="sf">'+src+(ls.length?' '+conf(hi?"haute":"moyenne"):'')+'</div><div class="fr"><span class="small"><span>'+esc(figScope(f.ts))+'</span> · <span>'+esc(fmtD(f.ts))+'</span></span></div></div>';
 }
 function figsHtml(byId){
   var fs=(S.figs&&S.figs.figures)||[];

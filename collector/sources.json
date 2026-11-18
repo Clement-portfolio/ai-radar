@@ -521,6 +521,22 @@
    }
   ]
  },
+ "edgarResults": {
+  "_note": "Communiqués de résultats officiels (8-K, point 2.02) lus à la SEC. Réservés aux chiffres clés de la Une : ils n'entrent ni dans le fil Actualités ni dans le briefing.",
+  "lookbackDays": 35,
+  "keepDays": 40,
+  "companies": [
+   { "name": "Nvidia", "cik": "1045810" },
+   { "name": "Microsoft", "cik": "789019" },
+   { "name": "Alphabet", "cik": "1652044" },
+   { "name": "Amazon", "cik": "1018724" },
+   { "name": "Meta", "cik": "1326801" },
+   { "name": "AMD", "cik": "2488" },
+   { "name": "Broadcom", "cik": "1730168" },
+   { "name": "Micron", "cik": "723125" },
+   { "name": "Oracle", "cik": "1341439" }
+  ]
+ },
  "federalRegister": {
   "term": "artificial intelligence",
   "perPage": 15

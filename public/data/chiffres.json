@@ -5,18 +5,29 @@
  "model": "jeu initial rédigé à partir des articles collectés",
  "figures": [
   {
-   "title": "Nvidia : chiffre d'affaires du trimestre",
-   "value": "115,8 Md$",
-   "sub": "Trimestre record, dont 20 milliards de dollars issus de Vera Rubin, la nouvelle architecture ; l'action gagne près de 4 % après des résultats supérieurs aux attentes.",
+   "title": "Nvidia : bénéfice par action du trimestre",
+   "value": "BPA +108 %",
+   "sub": "2,70 $ par action contre 1,30 $ un an plus tôt, pour un chiffre d'affaires de 115,8 Md$ (+103 %) ; résultats au-dessus des attentes, l'action gagne près de 4 %.",
    "ids": [
-    "6e5022b2db8b",
+    "55e7265b76e2",
     "cc9584594038"
    ],
+   "links": [
+    {
+     "t": "Nvidia (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
+    },
+    {
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html"
+    }
+   ],
+   "conf": "haute",
    "scope": "day",
-   "ts": "2026-11-18T13:00:00.000Z",
-   "title_en": "Nvidia: quarterly revenue",
-   "value_en": "$115.8B",
-   "sub_en": "Record quarter, including $20 billion from Vera Rubin, its new architecture; the stock is up nearly 4% after results above expectations."
+   "ts": "2026-11-18T10:00:17.000Z",
+   "title_en": "Nvidia: quarterly earnings per share",
+   "value_en": "EPS +108%",
+   "sub_en": "$2.70 per share versus $1.30 a year earlier, on revenue of $115.8B (+103%); results above expectations, the stock is up nearly 4%."
   },
   {
    "title": "Anthropic : fourchette de prix de l'introduction en Bourse",
@@ -25,6 +36,13 @@
    "ids": [
     "33642c9df619"
    ],
+   "links": [
+    {
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"
+    }
+   ],
+   "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-17T14:34:48.000Z",
    "title_en": "Anthropic: IPO price range",
@@ -38,6 +56,13 @@
    "ids": [
     "5d4425e9ff04"
    ],
+   "links": [
+    {
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/16/imf-georgieva-warning-ai-circular-financing.html"
+    }
+   ],
+   "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-16T09:14:46.000Z",
    "title_en": "Circular AI financing",

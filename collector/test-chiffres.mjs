@@ -4,7 +4,7 @@ import { figureCandidates, validateFigures, pickFigures, makeFigures, scopeOf, F
 
 const now = Date.parse("2026-11-18T16:00:00Z");
 const H = 3600e3, D = 24 * H;
-const mk = (id, ageH, title, summary = "", o = {}) => ({ id, ts: new Date(now - ageH * H).toISOString(), title, summary, source: "S" + id, importance: 3, confidence: "moyenne", ...o });
+const mk = (id, ageH, title, summary = "", o = {}) => ({ id, ts: new Date(now - ageH * H).toISOString(), title, summary, source: "S" + id, url: "https://ex.com/" + id, importance: 3, confidence: "moyenne", ...o });
 assert.equal(FIG_RULES.count, 3, "3 chiffres clés");
 assert.deepEqual([scopeOf(new Date(now - 5 * H).toISOString(), now), scopeOf(new Date(now - 3 * D).toISOString(), now), scopeOf(new Date(now - 20 * D).toISOString(), now), scopeOf(new Date(now - 40 * D).toISOString(), now)], ["day", "week", "month", null]);
 
@@ -22,10 +22,11 @@ const items = [
 const cands = figureCandidates(items, now);
 assert.deepEqual(cands.map((c) => c.id), ["n1", "n2", "w1", "w2", "w3", "m1"], "articles chiffrés importants des 31 derniers jours, les plus frais d'abord ; ni vieux, ni sans chiffre, ni mineurs");
 
-const inputs = cands.map((c, k) => ({ a: k + 1, id: c.id, ts: c.ts, title: c.title, summary: c.summary }));
+const inputs = cands.map((c, k) => ({ a: k + 1, id: c.id, ts: c.ts, title: c.title, summary: c.summary, source: c.source, url: "https://ex.com/" + c.id, conf: c.confidence }));
 const F = (o) => ({ title: "Nvidia : revenus du trimestre", value: "115,8 Md$", sub: "Revenus records, au-dessus des attentes des analystes.", ids: [1], title_en: "Nvidia: quarterly revenue", value_en: "$115.8B", sub_en: "Record revenue, above analyst expectations.", ...o });
 const ok = validateFigures([F({})], inputs, now);
 assert.equal(ok.length, 1); assert.equal(ok[0].scope, "day"); assert.deepEqual(ok[0].ids, ["n1"]); assert.ok(ok[0].title_en);
+assert.deepEqual(ok[0].links, [{ t: "Sn1", u: "https://ex.com/n1" }], "le lien de la source est gardé dans le chiffre"); assert.equal(ok[0].conf, "moyenne");
 const bad = (o) => validateFigures([F(o)], inputs, now);
 assert.equal(bad({ value: "130 Md$" }), null, "valeur absente des articles cités : rejetée");
 assert.equal(bad({ value: "beaucoup" }), null, "valeur sans chiffre : rejetée");
@@ -62,10 +63,11 @@ assert.equal(pickFigures([f(0, "day")]).length, 1, "moins de 3 disponibles : on 
 // génération, conservation, mise à jour quotidienne
 let calls = 0;
 const mkRes = (ids) => ids.map((a, n) => ({ title: ["Revenus trimestriels records", "Levée de fonds géante", "Valorisation des licornes", "Part du capital détenue", "Hausse en Bourse"][n], value: ["115,8 Md$", "4 %", "5 milliards de dollars", "30 %", "10 milliards de dollars"][a - 1] || "4 %", sub: `Précision ${["zulu", "yankee", "xray", "whisky", "victor"][n]} donnée par la presse.`, ids: [a], title_en: "Figure " + ["alpha", "bravo", "charlie", "delta", "echo"][n], value_en: "v", sub_en: "Detail " + ["zulu", "yankee", "xray", "whisky", "victor"][n] }));
-const gen = (inp) => { calls++; assert.ok(inp.length >= 6 && inp[0].date && !inp[0].id, "les articles partent avec numéro et date, sans identifiant interne"); return mkRes([1, 3, 4, 2, 5]); };
+const gen = (inp) => { calls++; assert.ok(inp.length >= 6 && inp[0].date && !inp[0].id && !inp[0].url && !inp[0].conf, "les articles partent avec numéro et date, sans identifiant ni lien internes"); return mkRes([1, 3, 4, 2, 5]); };
 const r1 = await makeFigures({ items, now, prev: null, generate: gen, modelName: () => "m" });
 assert.equal(r1.regenerated, true); assert.equal(calls, 1); assert.equal(r1.doc.figures.length, 3, "3 chiffres clés");
 assert.equal(r1.doc.day, "2026-11-18");
+assert.ok(r1.doc.figures.every((x) => x.links.length >= 1 && x.conf), "chaque chiffre garde ses liens et sa confiance");
 assert.deepEqual(r1.doc.figures.map((x) => x.scope), ["day", "week", "week"]);
 const r2 = await makeFigures({ items, now: now + 2 * H, prev: r1.doc, generate: gen });
 assert.equal(r2.regenerated, false); assert.equal(calls, 1, "même jour, 3 chiffres dont un du jour : aucun nouvel appel");
