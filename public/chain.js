@@ -417,11 +417,12 @@ document.addEventListener("click",function(e){
  if(e.target.closest&&e.target.closest("#nw .nmore")){nwLimit+=120;paintNews()}});
 document.addEventListener("toggle",function(){report()},true);
 window.ChainFrame.refresh=function(){duo()};
+var HINT='<p class="hint fnote">Schéma simplifié : nombre de racks, de piles HBM, de turbines et de liaisons illustratif, pas celui d\'un site ou d\'un produit précis. Les modèles tournent dans les datacenters ; ils sont dessinés à part pour montrer qui profite du calcul.</p>';
 function mkHtml(part){
  var P=PARTS[part],key=FMAP[part],f=key&&FM[key],m=MKT[part]||{},nm=f?f.name:P.n;
  var pie=f?f.pie:sPie(m.s),ch=f?(f.chart||null):null,rv=f?(f.rev||null):(m.d||null),ti=tensInfo(part);
  return'<div class="fmh"><span class="kicker">Fiche marché</span><h4 class="fmt">'+esc(nm)+'</h4>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
-  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+
+  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+HINT+
   notesHtml(f,pie,ch,rv,ti)+(WT?'<details class="nwd" id="nw"'+(nwDetOpen?' open':'')+'>'+newsHtml()+'</details>':'')}
 var nwDetOpen=false,lastPart=null;
 
@@ -429,7 +430,7 @@ function duo(){
  var F=document.getElementById("fc");
  var part=sel.part||(sel.block?BMK[sel.block]:null);
  if(!part||!PARTS[part]){
-  F.innerHTML='<div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez une pièce sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>';report();return}
+  F.innerHTML='<div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez une pièce sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>'+HINT;report();return}
  var old=document.getElementById("nw");
  if(part!==lastPart){nwDetOpen=false;nwLimit=NSHOW;nwOpen={}}else if(old)nwDetOpen=old.open;
  lastPart=part;
