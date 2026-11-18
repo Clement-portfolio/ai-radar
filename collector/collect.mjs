@@ -12,6 +12,7 @@ import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
+import { updateChain } from "./chainauto.mjs";
 import { compileWatchlist, watchJobs, watchCandidateOk, buildWatch } from "./watch.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -622,11 +623,18 @@ export async function run(opts = {}) {
   try { evoRes = await collectEvolution({ prev: seriesPrev, ua: env.SEC_USER_AGENT, fetchImpl, now: nowMs, sleep: opts.sleep, log }); }
   catch (e) { evoRes.summary.reason = String(e.message || e); log("Évolution : " + evoRes.summary.reason); }
 
+  // Fiches de l'infrastructure (chain.json) : nouveaux trimestres lus à la source (SEC, courbe capex) si tous les contrôles passent ; sinon alerte de fraîcheur
+  const chainPrev = await readJson("chain.json", null);
+  let chainRes = { chain: chainPrev, changes: [], skipped: [], stale: [] };
+  try { if (chainPrev) chainRes = await updateChain({ chain: chainPrev, series: evoRes.doc || seriesPrev, ua: env.SEC_USER_AGENT, fetchImpl, now: nowMs, sleep: opts.sleep, log }); }
+  catch (e) { log("Fiches infrastructure : " + String(e.message || e)); }
+  log(`Fiches infrastructure : ${chainRes.changes.length} mise(s) à jour, ${chainRes.stale.length} série(s) à actualiser`);
+
   // textes des pages de données en anglais (public/data/en.json) : par lots, ne bloque jamais la collecte
   const enPrev = await readJson("en.json", {});
   let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
   try {
-    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), await readJson("chain.json", {})];
+    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}];
     enRes = await translateData({ docs, prev: enPrev, generate: mkGen(I18N_SYSTEM, I18N_SCHEMA), batch: +env.I18N_BATCH || 50, rounds: +env.I18N_ROUNDS || 3 });
   } catch (e) { enRes.reason = String(e.message || e).slice(0, 120); }
   log("Textes en anglais : " + enRes.reason + (enRes.left ? ` (reste ${enRes.left})` : ""));
@@ -634,13 +642,14 @@ export async function run(opts = {}) {
   const status = await readJson("status.json", {});
   const errors = [...evoRes.alerts];
   for (const c of sharesRes.doc?.charts || []) if (c.auto && c.check_error) errors.push(`Parts de marché « ${c.title} » : lecture impossible, ancien chiffre conservé (${c.check_error})`);
+  for (const s of chainRes.stale) errors.push(`Fiche « ${s.name} » : le trimestre ${s.due} est publié, le graphique s'arrête à ${s.last}${s.auto ? " (mise à jour automatique impossible, voir lastRun.chain)" : " (à mettre à jour à la main)"}`);
   if (okCount === 0) errors.push("aucune source n'a répondu");
   if (classifier?.state.error) errors.push(classifier.state.error);
   if (!env.GEMINI_API_KEY) errors.push("GEMINI_API_KEY absente");
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -650,6 +659,7 @@ export async function run(opts = {}) {
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
     if (watchRes.doc && JSON.stringify({ ...watchRes.doc, updated_at: 0 }) !== JSON.stringify({ ...(watchPrev || {}), updated_at: 0 })) await fs.writeFile(path.join(dataDir, "watch.json"), JSON.stringify(watchRes.doc));
+    if (chainRes.changes.length) await fs.writeFile(path.join(dataDir, "chain.json"), JSON.stringify(chainRes.chain, null, 1));
     if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));

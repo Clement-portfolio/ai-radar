@@ -233,3 +233,5 @@ input[type=range]{accent-color:#000;width:170px}
 .mkt details.wlst summary::-webkit-details-marker{display:none}
 .mkt .wlb{margin-top:6px}.mkt .wlr{display:flex;flex-wrap:wrap;gap:4px 5px;align-items:center;margin-bottom:6px}.mkt .wlr b{font-family:var(--mono);font-size:10px;font-weight:500;color:var(--mute);text-transform:uppercase;letter-spacing:.03em;width:96px;flex:none}
 @media(max-width:900px){.mkt .nl li{grid-template-columns:44px minmax(0,1fr)}.mkt .nwh .nfn{margin-left:0}.mkt .wlr b{width:100%}}
+
+.mkt .sf .stl{color:#b45309;font-weight:600}

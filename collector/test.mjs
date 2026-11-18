@@ -121,4 +121,5 @@ await import("./test-review.mjs");
 await import("./test-gnews.mjs");
 await import("./test-data.mjs");
 await import("./test-watch.mjs");
+await import("./test-chainauto.mjs");
 console.log("TOUS LES TESTS PASSENT");

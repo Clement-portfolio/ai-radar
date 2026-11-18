@@ -323,11 +323,15 @@ function revChart(c){
   g+='<path d="'+d+'" fill="none" style="stroke:'+col+'" stroke-width="1.9" stroke-linejoin="round"'+(s.dash?' stroke-dasharray="6 4"':'')+'/>';
   s.v.forEach(function(v,k){var hol=(s.hol||[]).indexOf(k)>=0,last=k===n-1;g+='<circle cx="'+X(k).toFixed(1)+'" cy="'+Y(v).toFixed(1)+'" r="'+(last?3.4:2.4)+'" style="'+(hol?'fill:#fff;stroke:'+col+';stroke-width:1.6':'fill:'+col)+'"><title>'+esc(s.n+" · "+c.x[k]+" : "+fv(v)+(s.eur?" Md€":" Md$")+(hol?" (calculé)":""))+'</title></circle>'})});
  var leg=c.ser.map(function(s,i){
-  var a=s.v[n-1],b=s.v[n-5],gr=b>0?Math.round((a/b-1)*100):null;
+  var a=s.v[n-1],b=s.v[n-5],hl=s.hol||[],gr=(b>0&&!(s.interp&&(hl.indexOf(n-1)>=0||hl.indexOf(n-5)>=0)))?Math.round((a/b-1)*100):null;
   return'<li><svg width="22" height="8" viewBox="0 0 22 8" aria-hidden="true"><path d="M0 4H22" style="stroke:'+SH(s.n,i)+'" stroke-width="2"'+(s.dash?' stroke-dasharray="6 4"':'')+' fill="none"/></svg><span>'+esc(s.n)+'</span><b>'+fv(a)+(s.eur?' Md€':' Md$')+'</b>'+(gr==null?'<em class="dl"></em>':'<em class="dl '+(gr>=0?'up':'dn')+'" title="Variation sur un an">'+(gr>=0?'▲ ':'▼ ')+Math.abs(gr)+' %</em>')+'</li>'}).join("");
  return'<svg class="lc" viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Chiffre d\'affaires par trimestre">'+g+'</svg><ul class="cleg">'+leg+'</ul>'}
+function qIdx(l){var m=/^T([1-4]) (\d\d)$/.exec(l||"");return m?(2000+ +m[2])*4+(+m[1]-1):null}
+function qLab(i){return"T"+(i%4+1)+" "+String(Math.floor(i/4)).slice(2)}
+function dueQ(lag){var n=Date.now(),y0=new Date().getUTCFullYear(),b=null;for(var y=y0-1;y<=y0;y++)for(var q=1;q<=4;q++)if(Date.UTC(y,q*3,0)+lag*864e5<=n){var i=y*4+q-1;if(b==null||i>b)b=i}return b}
+function staleTag(ch){var l=qIdx(ch.x[ch.x.length-1]),d=dueQ(ch.lag||50);return(l!=null&&d!=null&&l<d)?' · <span class="stl"><span>À actualiser</span> : '+qLab(d)+'</span>':''}
 function chartPanel(ch,rv){
- if(ch)return'<div class="col"><h4>'+esc(ch.t)+'</h4><div class="sm">'+esc(ch.u)+'</div>'+revChart(ch)+'<div class="sf">'+'<span>'+esc(ch.as_of)+'</span> · <span>Sources ci-dessous</span></div></div>';
+ if(ch)return'<div class="col"><h4>'+esc(ch.t)+'</h4><div class="sm">'+esc(ch.u)+'</div>'+revChart(ch)+'<div class="sf">'+'<span>'+esc(ch.as_of)+'</span> · <span>Sources ci-dessous</span>'+staleTag(ch)+'</div></div>';
  if(rv&&rv.pts&&rv.pts.length)return'<div class="col"><h4>'+esc(rv.t)+'</h4><div class="sm">'+esc(rv.u)+'</div>'+lineChart(rv)+'<div class="sf"><a href="'+esc(rv.url)+'" target="_blank" rel="noopener">'+esc(rv.src)+' ↗</a> · '+esc(rv.as_of)+'</div></div>';
  return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>'}
 function ringHtml(t,c){

@@ -1,5 +1,5 @@
 {
- "as_of": "17 nov. 2026",
+ "as_of": "18 nov. 2026",
  "note": "Chaque chiffre porte sa date et sa source ; une sous-couche sans chiffre sourcé n'affiche que son rôle et ses acteurs. Les parts de marché dépendent de la méthode de chaque cabinet.",
  "blocks": [
   {
@@ -1938,7 +1938,8 @@
       "src": "Channel Insider",
       "u": "https://www.channelinsider.com/ai/news-broadcom-ai-chip-revenue-custom-silicon-nvidia/"
      }
-    ]
+    ],
+    "lag": 75
    },
    "gap": {
     "lo": 20,
@@ -2096,7 +2097,8 @@
       "src": "Micron, via Meticulous Research",
       "u": "https://www.meticulousresearch.com/product/high-bandwidth-memory-hbm-market-6953"
      }
-    ]
+    ],
+    "lag": 75
    }
   },
   "ip": {
@@ -2649,7 +2651,18 @@
     ],
     "note": "Le « marché » des datacenters est la dépense de ses clients : ce graphique montre donc l'investissement, non un chiffre d'affaires. Trimestres calendaires ; Microsoft décalé de son exercice (T1 2027 = T3 2026). Les quatre ensemble : 72 Md$ au T4 2024, 202 Md$ au T3 2026.",
     "proj": [],
-    "oth": []
+    "oth": [],
+    "auto": {
+     "from": {
+      "curve": "capex",
+      "map": {
+       "Amazon": "Amazon",
+       "Alphabet": "Alphabet",
+       "Microsoft": "Microsoft",
+       "Meta": "Meta"
+      }
+     }
+    }
    }
   },
   "opt": {
@@ -2736,7 +2749,8 @@
     ],
     "note": "Trimestres d'exercice alignés sur les trimestres calendaires (septembre 2024 = T3 2024). Points creux : calculés en retranchant les trois autres trimestres du total annuel publié (Lumentum 1 645,0 M$ ; Coherent 5 810 M$ en 2025). Lumentum a presque triplé en huit trimestres (+ 199 %).",
     "proj": [],
-    "oth": []
+    "oth": [],
+    "lag": 75
    },
    "gap": {
     "lo": 30,
@@ -2853,7 +2867,550 @@
     ],
     "note": "Nvidia clôt ses trimestres un mois après le trimestre calendaire (octobre 2024 = T3 2024). Points creux : calculés à partir de la croissance séquentielle annoncée ou arrondis (T1 2025 : + 64 % ; T4 2025 : « environ » 11 Md$ ; T2 2026 : + 18 %) ; Arista T3 2024 et T1 2025 déduits des variations annoncées et du total annuel, T1 2026 approximatif.",
     "proj": [],
-    "oth": []
+    "oth": [],
+    "lag": 75
+   }
+  },
+  "smr": {
+   "name": "Mini-réacteurs nucléaires (SMR)",
+   "pie": {
+    "t": "Gigawatts annoncés avec des acteurs de l'IA",
+    "m": "Engagements annoncés, ≈ 15,5 GW au total · aucun réacteur commercial en service",
+    "items": [
+     {
+      "n": "NuScale–ENTRA1 · TVA (6 GW)",
+      "v": 6,
+      "ap": 1
+     },
+     {
+      "n": "X-energy · Amazon (5 GW)",
+      "v": 5,
+      "min": 1
+     },
+     {
+      "n": "TerraPower · Meta (2,8 GW)",
+      "v": 2.8,
+      "ap": 1
+     },
+     {
+      "n": "Oklo · Meta (1,2 GW)",
+      "v": 1.2,
+      "ap": 1
+     },
+     {
+      "n": "Kairos · Google (0,5 GW)",
+      "v": 0.5,
+      "ap": 1
+     }
+    ],
+    "as_of": "janv. 2026",
+    "src": "World Nuclear News (accord Meta)",
+    "u": "https://world-nuclear-news.org/articles/meta-announces-landmark-agreements-for-new-nuclear",
+    "note": "Part de chaque projet dans le total des gigawatts annoncés, pas une part de marché : ce sont des intentions (« jusqu'à »), pas des réacteurs commandés ou construits. Dates des annonces : TVA–ENTRA1 sept. 2025, Amazon–X-energy (plus de 5 GW d'ici 2039) août 2025, Meta–TerraPower et Meta–Oklo 9 janv. 2026, Google–Kairos (500 MW d'ici 2035) août 2025. Les accords de Meta avec Vistra (centrales existantes) ne sont pas comptés. Acteurs non chiffrés ici : GE Vernova Hitachi (BWRX-300), Westinghouse, Aalo, Radiant, Valar, Last Energy."
+   },
+   "rev": {
+    "t": "Réacteurs d'essai ayant atteint la criticité",
+    "u": "nombre cumulé en 2026 (réacteurs d'essai du programme pilote du DOE, pas de production commerciale)",
+    "pts": [
+     {
+      "x": "4 juin",
+      "v": 1,
+      "l": "1"
+     },
+     {
+      "x": "18 juin",
+      "v": 2,
+      "l": "2"
+     },
+     {
+      "x": "30 juin",
+      "v": 3,
+      "l": "3"
+     },
+     {
+      "x": "4 juil.",
+      "v": 4,
+      "l": "4"
+     },
+     {
+      "x": "5 août",
+      "v": 5,
+      "l": "5"
+     }
+    ],
+    "as_of": "6 août 2026",
+    "src": "Département de l'Énergie ; American Nuclear Society",
+    "url": "https://www.energy.gov/articles/fact-sheet-golden-era-american-nuclear-energy-has-arrived",
+    "note": "Antares (4 juin), Valar (18 juin), Deployable Energy (30 juin), Aalo (4 juillet, démonstration à puissance nulle) puis Oklo (réacteur d'essai de Groves, Texas, 5 août). Ce sont des réacteurs d'essai de faible puissance : aucun ne vend de courant. Le réacteur de production d'Oklo (Aurora) n'est pas encore critique."
+   },
+   "lead": 48,
+   "leadTxt": "premiers réacteurs commerciaux annoncés pour 2030 au plus tôt",
+   "why": "15,5 GW sont annoncés avec Amazon, Google, Meta et la TVA, mais aucun réacteur commercial ne produit encore : les premiers sont attendus vers 2030.",
+   "evid": [
+    {
+     "v": "6 GW",
+     "l": "NuScale–ENTRA1 : jusqu'à six centrales dans la région de la TVA, à financer et posséder par ENTRA1",
+     "as_of": "3 sept. 2025",
+     "src": "World Nuclear News",
+     "u": "https://world-nuclear-news.org/articles/tva-entra1-energy-team-up-for-smr-deployment"
+    },
+    {
+     "v": "5 GW",
+     "l": "Amazon et X-energy : plus de 5 GW de réacteurs Xe-100 d'ici 2039, à commencer par 320 MW avec Energy Northwest",
+     "as_of": "2025",
+     "src": "Power Magazine",
+     "u": "https://www.powermag.com/amazon-backs-massive-nuclear-smr-deployment-5-gw-with-x-energy-agreements-with-energy-northwest-dominion"
+    },
+    {
+     "v": "2,8 GW",
+     "l": "Meta et TerraPower : jusqu'à huit unités Natrium, livraison d'ici 2035",
+     "as_of": "12 janv. 2026",
+     "src": "American Nuclear Society",
+     "u": "https://www.ans.org/news/article-7666/meta-strikes-deals-with-vistra-oklo-terrapower"
+    },
+    {
+     "v": "1,2 GW",
+     "l": "Meta et Oklo : campus de réacteurs Aurora dans l'Ohio, Meta prépayant l'électricité",
+     "as_of": "janv. 2026",
+     "src": "World Nuclear News",
+     "u": "https://world-nuclear-news.org/articles/meta-announces-landmark-agreements-for-new-nuclear"
+    },
+    {
+     "v": "0,5 GW",
+     "l": "Google et Kairos : 500 MW d'ici 2035 ; premier réacteur (Hermes 2, 50 MW) prévu en 2030",
+     "as_of": "18 août 2025",
+     "src": "Kairos Power",
+     "u": "https://www.kairospower.com/updates/google-kairos-power-tva-collaborate-to-meet-americas-growing-energy-needs"
+    },
+    {
+     "v": "5 réacteurs",
+     "l": "d'essai critiques en 2026 dans le programme pilote du DOE (quatre avant le 4 juillet, objectif : trois)",
+     "as_of": "24 juil. 2026",
+     "src": "Département de l'Énergie",
+     "u": "https://www.energy.gov/articles/fact-sheet-golden-era-american-nuclear-energy-has-arrived"
+    }
+   ]
+  },
+  "cool": {
+   "name": "Refroidissement des datacenters",
+   "pie": {
+    "t": "Chiffre d'affaires de trois fournisseurs du refroidissement",
+    "m": "T3 2026 · sociétés entières, le refroidissement n'en est qu'une partie",
+    "items": [
+     {
+      "n": "Vertiv",
+      "v": 4.3128
+     },
+     {
+      "n": "nVent",
+      "v": 1.5149
+     },
+     {
+      "n": "Modine",
+      "v": 0.9944
+     }
+    ],
+    "as_of": "28 oct. – 4 nov. 2026",
+    "src": "SEC (10-Q de Vertiv, nVent et Modine)",
+    "u": "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026067893/vrt-20260930.htm",
+    "note": "Camembert partiel : chiffre d'affaires total de chaque société, pas celui du refroidissement seul. Vertiv (alimentation et refroidissement de datacenters) en est le plus proche ; nVent (électrique, enceintes, refroidissement liquide) et Modine (climatisation, datacenters, véhicules) n'ont qu'une part de leur activité dans les datacenters. Schneider Electric, Trane, Carrier, CoolIT et LiquidStack ne figurent pas ici faute de chiffre comparable."
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel",
+    "u": "Md$ par trimestre (sociétés entières)",
+    "x": [
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26",
+     "T3 26"
+    ],
+    "ser": [
+     {
+      "n": "Vertiv",
+      "v": [
+       2.3464,
+       2.036,
+       2.6381,
+       2.6758,
+       2.88,
+       2.6495,
+       3.2743,
+       4.3128
+      ]
+     },
+     {
+      "n": "nVent",
+      "v": [
+       0.7522,
+       0.8093,
+       0.9631,
+       1.054,
+       1.0667,
+       1.242,
+       1.4713,
+       1.5149
+      ]
+     },
+     {
+      "n": "Modine",
+      "v": [
+       0.6168,
+       0.6472,
+       0.6828,
+       0.7389,
+       0.805,
+       0.9544,
+       0.8741,
+       0.9944
+      ]
+     }
+    ],
+    "as_of": "4 nov. 2026",
+    "srcs": [
+     [
+      "Vertiv, 10-Q du T3 2026 (SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001674101/000162828026067893/vrt-20260930.htm"
+     ],
+     [
+      "nVent, dépôts 10-Q et 10-K (SEC)",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1720635&type=10-Q&dateb=&owner=include&count=10"
+     ],
+     [
+      "Modine, dépôts 10-Q et 10-K (SEC)",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=67347&type=10-Q&dateb=&owner=include&count=10"
+     ]
+    ],
+    "note": "Chiffres des dépôts 10-Q et 10-K de la SEC (données XBRL) ; un trimestre sans publication propre (le quatrième) est calculé par différence avec les neuf mois. Modine clôt son exercice fin mars : ses trimestres sont ramenés au calendrier. Vertiv T3 2026 : + 61 % sur un an, dont environ 6 points d'acquisitions.",
+    "proj": [],
+    "oth": [
+     {
+      "v": "+ 61 %",
+      "l": "ventes de Vertiv au T3 2026 sur un an (55 % hors acquisitions), commandes organiques en hausse de plus de 100 %",
+      "as_of": "28 oct. 2026",
+      "src": "Vertiv (communiqué)",
+      "u": "https://investors.vertiv.com/news/news-details/2026/Vertiv-Reports-Strong-Third-Quarter-2026-with-Net-Sales-Growth-of-61-Organic-Orders-Growth-over-100-and-Diluted-EPS-Growth-of-91-Adjusted-Diluted-EPS-Growth-of-78-Raises-Full-Year-2026-Guidance-Across-All-Key-Metrics/"
+     },
+     {
+      "v": "14,45–14,85 Md$",
+      "l": "prévision de ventes 2026 de Vertiv, relevée de 650 M$ au T3",
+      "as_of": "28 oct. 2026",
+      "src": "Vertiv (communiqué)",
+      "u": "https://investors.vertiv.com/news/news-details/2026/Vertiv-Reports-Strong-Third-Quarter-2026-with-Net-Sales-Growth-of-61-Organic-Orders-Growth-over-100-and-Diluted-EPS-Growth-of-91-Adjusted-Diluted-EPS-Growth-of-78-Raises-Full-Year-2026-Guidance-Across-All-Key-Metrics/"
+     }
+    ],
+    "auto": {
+     "sec": {
+      "Vertiv": 1674101,
+      "nVent": 1720635,
+      "Modine": 67347
+     }
+    }
+   }
+  },
+  "cu": {
+   "name": "Cuivre et connectique du rack",
+   "pie": {
+    "t": "Chiffre d'affaires de deux fournisseurs de connectique IA",
+    "m": "T2 2026 · sociétés entières, pas le cuivre seul",
+    "items": [
+     {
+      "n": "Credo",
+      "v": 0.479
+     },
+     {
+      "n": "Astera Labs",
+      "v": 0.3924
+     }
+    ],
+    "as_of": "2 sept. 2026",
+    "src": "SEC (10-Q de Credo et d'Astera Labs)",
+    "u": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1807794&type=10-Q&dateb=&owner=include&count=10",
+    "note": "Camembert faible : deux vendeurs seulement. Credo vend surtout des câbles cuivre actifs ; Astera Labs des puces de connexion (retimers, câbles, commutateurs Scorpio), pas seulement du cuivre. Les deux publient leur total, non le cuivre seul. Marvell, Broadcom, Amphenol, TE et Molex ne sont pas inclus."
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel",
+    "u": "Md$ par trimestre (sociétés entières)",
+    "x": [
+     "T3 24",
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26"
+    ],
+    "ser": [
+     {
+      "n": "Credo",
+      "v": [
+       0.072,
+       0.135,
+       0.17,
+       0.2231,
+       0.268,
+       0.407,
+       0.437,
+       0.479
+      ]
+     },
+     {
+      "n": "Astera Labs",
+      "v": [
+       0.1131,
+       0.1411,
+       0.1594,
+       0.1919,
+       0.2306,
+       0.2706,
+       0.3084,
+       0.3924
+      ]
+     }
+    ],
+    "as_of": "2 sept. 2026",
+    "srcs": [
+     [
+      "Credo, dépôts 10-Q et 10-K (SEC)",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1807794&type=10-Q&dateb=&owner=include&count=10"
+     ],
+     [
+      "Astera Labs, dépôts 10-Q et 10-K (SEC)",
+      "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=1736297&type=10-Q&dateb=&owner=include&count=10"
+     ]
+    ],
+    "note": "Données XBRL de la SEC. Credo clôt ses trimestres un mois après le trimestre calendaire (1ᵉʳ août 2026 = T2 2026), comme Nvidia dans la fiche réseau ; le trimestre sans publication propre est calculé par différence avec les neuf mois. Astera Labs est en calendrier : son T3 2026 (584,9 M$) est déjà publié, celui de Credo ne l'est pas.",
+    "proj": [],
+    "oth": [
+     {
+      "v": "584,9 M$",
+      "l": "revenu d'Astera Labs au T3 2026, record, + 154 % sur un an ; les commutateurs Scorpio sont devenus sa première gamme",
+      "as_of": "3 nov. 2026",
+      "src": "Astera Labs (SEC, 8-K)",
+      "u": "https://www.sec.gov/Archives/edgar/data/0001736297/000173629726000044/q326exhibit991.htm"
+     },
+     {
+      "v": "≈ 70 %",
+      "l": "part de Credo sur les câbles cuivre actifs, attendue jusqu'en 2027 (estimation d'analyste)",
+      "as_of": "13 avr. 2026",
+      "src": "Jefferies, via Invezz",
+      "u": "https://invezz.com/news/2026/04/13/credo-jumps-11-as-jefferies-backs-copper-tech-in-ai-boom-debate/"
+     }
+    ],
+    "auto": {
+     "sec": {
+      "Credo": 1807794,
+      "Astera Labs": 1736297
+     }
+    },
+    "lag": 75
+   }
+  },
+  "models": {
+   "name": "Modèles : qui gagne l'argent",
+   "pie": {
+    "t": "Dépenses d'API de modèles des entreprises américaines",
+    "m": "2026 · parts des dépenses (enquête, pas une mesure comptable)",
+    "indep": true,
+    "items": [
+     {
+      "n": "Anthropic",
+      "v": 55
+     },
+     {
+      "n": "OpenAI",
+      "v": 31
+     },
+     {
+      "n": "Google",
+      "v": 9
+     },
+     {
+      "n": "Autres",
+      "v": 5
+     }
+    ],
+    "as_of": "3 nov. 2026",
+    "src": "Menlo Ventures",
+    "u": "https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf",
+    "note": "Enquête auprès d'environ 400 décideurs américains ; Menlo est investisseur d'Anthropic. Mesure les dollars d'API en entreprise, pas tous les usages (ChatGPT grand public exclu). « Autres » : 100 moins les trois premiers. Confiance : moyenne. Les laboratoires chinois (DeepSeek, Qwen, Z.ai, Moonshot, MiniMax) ne publient pas de revenu comparable : leur poids se mesure côté développeurs (voir ci-dessous)."
+   },
+   "chart": {
+    "t": "Revenu annualisé des deux premiers laboratoires",
+    "u": "Md$ (run rate : revenu récent × 12, non audité)",
+    "x": [
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26",
+     "T3 26"
+    ],
+    "ser": [
+     {
+      "n": "Anthropic",
+      "v": [
+       1.0,
+       2.5,
+       4.0,
+       6.3,
+       9.0,
+       27.7,
+       56.3,
+       71.0
+      ],
+      "hol": [
+       1,
+       2,
+       3,
+       5,
+       6,
+       7
+      ],
+      "interp": true
+     },
+     {
+      "n": "OpenAI",
+      "v": [
+       5.5,
+       7.7,
+       10.0,
+       15.1,
+       21.4,
+       27.8,
+       36.0,
+       50.0
+      ],
+      "hol": [
+       1,
+       3,
+       5,
+       6
+      ],
+      "interp": true
+     }
+    ],
+    "as_of": "10 nov. 2026",
+    "srcs": [
+     [
+      "Anthropic, prospectus d'introduction en Bourse (31 oct. 2026)",
+      "https://247wallst.com/investing/2026/11/11/anthropic-says-its-revenue-run-rate-jumped-to-an-81-billion-run-rate/"
+     ],
+     [
+      "OpenAI, 50 Md$ fin sept. 2026 (Financial Times, via Bloomberg Government)",
+      "https://news.bgov.com/artificial-intelligence/openais-annualized-revenue-nears-50-billion-ft-says"
+     ],
+     [
+      "OpenAI, 10 Md$ en juin 2025 et 5,5 Md$ en déc. 2024 (CNBC, Reuters)",
+      "https://www.storyboard18.com/brand-marketing/openais-annualised-revenue-surges-to-10-billion-from-5-5-billion-in-december-2024-69607.htm"
+     ],
+     [
+      "Anthropic et OpenAI : points intermédiaires (courbe « Revenu annualisé »)",
+      "https://news.bgov.com/financial-accounting/anthropic-revenue-run-rate-surpasses-65-billion-ahead-of-ipo"
+     ]
+    ],
+    "note": "Points creux : calculés par interpolation entre deux annonces (les laboratoires ne publient pas à date fixe) ; Anthropic fin sept. 2026 = 81 Md$ au 31 oct. moins 10 Md$ d'ajout en octobre, selon le prospectus. Les deux sociétés ne comptent pas pareil : Anthropic inclut les ventes via les clouds partenaires en brut ; sur cette base, OpenAI serait proche de 70 Md$ fin sept. 2026 au lieu de 50 Md$ (Axios, 29 sept. 2026).",
+    "proj": [],
+    "oth": [
+     {
+      "v": "81 Md$",
+      "l": "revenu annualisé d'Anthropic au 31 octobre 2026, + 10 Md$ en un mois",
+      "as_of": "10 nov. 2026",
+      "src": "Anthropic (prospectus, via 24/7 Wall St)",
+      "u": "https://247wallst.com/investing/2026/11/11/anthropic-says-its-revenue-run-rate-jumped-to-an-81-billion-run-rate/"
+     },
+     {
+      "v": "≈ 50 Md$",
+      "l": "revenu annualisé d'OpenAI fin septembre 2026 (environ 70 Md$ avec la méthode d'Anthropic)",
+      "as_of": "8 oct. 2026",
+      "src": "Financial Times, via Bloomberg Government",
+      "u": "https://news.bgov.com/artificial-intelligence/openais-annualized-revenue-nears-50-billion-ft-says"
+     },
+     {
+      "v": "1 Md",
+      "l": "d'utilisateurs actifs par mois pour Gemini (Google ne publie pas de revenu propre au modèle)",
+      "as_of": "11 août 2026",
+      "src": "Google, via Implicator",
+      "u": "https://www.implicator.ai/google-puts-gemini-at-1-billion-monthly-users-without-naming-paying-subscribers/"
+     },
+     {
+      "v": "31,8 %",
+      "l": "des requêtes de développeurs sur OpenRouter vont à DeepSeek ; la Chine pèse 47,3 % contre 42 % pour les États-Unis (minimum côté chinois)",
+      "as_of": "semaine du 9 nov. 2026",
+      "src": "OpenRouter",
+      "u": "https://openrouter.ai/rankings?duration=month"
+     }
+    ]
+   }
+  },
+  "apps": {
+   "name": "Applications : qui capte les usagers",
+   "pie": {
+    "t": "Visites des sites d'IA générative",
+    "m": "Octobre 2026 · sites web seulement, ni applications mobiles ni IA intégrée",
+    "items": [
+     {
+      "n": "ChatGPT",
+      "v": 55.7
+     },
+     {
+      "n": "Gemini",
+      "v": 24.2
+     },
+     {
+      "n": "Claude",
+      "v": 11.5
+     },
+     {
+      "n": "Autres",
+      "v": 8.6
+     }
+    ],
+    "as_of": "31 oct. 2026",
+    "src": "Similarweb, relayé par OfficeChai",
+    "u": "https://officechai.com/ai/claude-takes-website-traffic-share-from-chatgpt-gemini-in-october/",
+    "note": "« Autres » : 100 moins les trois premiers (Perplexity, DeepSeek, Grok…), calculé. Les relais de presse divergent parfois d'environ un point. Confiance : moyenne."
+   },
+   "rev": {
+    "t": "Utilisateurs actifs de ChatGPT par semaine",
+    "u": "millions d'utilisateurs actifs par semaine",
+    "pts": [
+     {
+      "x": "fév. 2025",
+      "v": 400,
+      "l": "400"
+     },
+     {
+      "x": "oct. 2025",
+      "v": 800,
+      "l": "800"
+     },
+     {
+      "x": "fév. 2026",
+      "v": 900,
+      "l": "900"
+     },
+     {
+      "x": "août 2026",
+      "v": 1000,
+      "l": "1 000"
+     },
+     {
+      "x": "sept. 2026",
+      "v": 1200,
+      "l": "1 200"
+     }
+    ],
+    "as_of": "29 sept. 2026",
+    "src": "OpenAI (DevDay)",
+    "url": "https://openai.com/index/devday-2026-recap/",
+    "note": "Autres assistants, mesures non équivalentes : Gemini 1 milliard d'utilisateurs actifs par mois (Google, 11 août 2026) ; Doubao 382 millions par mois, en Chine seulement (QuestMobile, 1ᵉʳ semestre 2026) ; Meta AI plus d'un milliard par mois dans les applications Meta (dernier chiffre : mai 2025, ancien) ; Claude environ 245 millions par mois selon une estimation externe de Sensor Tower, confiance faible (Anthropic ne publie pas ce nombre)."
    }
   }
  },
@@ -2872,30 +3429,35 @@
   "fib": "opt",
   "fab": "fab",
   "bld": "dc",
-  "cool": "dc",
-  "loop": "dc",
-  "cold": "dc",
+  "cool": "cool",
+  "loop": "cool",
+  "cold": "cool",
   "bus": "dc",
   "pcb": "dc",
   "sw": "net",
   "sw2": "net",
-  "fibc": "net"
+  "fibc": "net",
+  "smr": "smr",
+  "cu": "cu",
+  "aec": "cu",
+  "models": "models",
+  "apps": "apps"
  },
  "fmvia": {
   "rack": "Les racks empilent des puces IA : voici le chiffre d'affaires de leurs vendeurs.",
   "wires": "Ces pistes relient la HBM au calcul dans l'interposeur CoWoS : voici la fiche du packaging.",
   "cpo": "L'optique co-intégrée dépend des lasers au phosphure d'indium : voici le marché de l'optique.",
   "mod": "Chaque module optique embarque 4 à 8 lasers : voici le marché de l'optique, des lasers aux modules.",
-  "cool": "Le refroidissement est installé dans des datacenters financés par les hyperscalers : voici qui investit.",
-  "loop": "La boucle d'eau est installée dans des datacenters financés par les hyperscalers : voici qui investit.",
-  "cold": "Les plaques froides équipent des datacenters financés par les hyperscalers : voici qui investit.",
+  "loop": "La boucle d'eau est un maillon du refroidissement : voici les vendeurs.",
+  "cold": "Les plaques froides sont un maillon du refroidissement liquide : voici les vendeurs.",
   "bus": "La distribution électrique est installée dans des datacenters financés par les hyperscalers : voici qui investit.",
   "pcb": "Les cartes et alimentations équipent des datacenters financés par les hyperscalers : voici qui investit.",
   "bld": "Les datacenters sont financés par les hyperscalers : voici qui investit.",
   "fib": "Les fibres relient des modules optiques : voici le marché de l'optique.",
   "sw": "Les commutateurs sont vendus par Nvidia, Arista et d'autres : voici le marché du réseau.",
   "sw2": "Ces liaisons aboutissent à des commutateurs : voici le marché du réseau.",
-  "fibc": "Ces fibres relient le datacenter au réseau : voici le marché du réseau."
+  "fibc": "Ces fibres relient le datacenter au réseau : voici le marché du réseau.",
+  "aec": "Les câbles cuivre actifs sont vendus par Credo : voici la fiche cuivre et connectique."
  },
  "bmk": {
   "fabrication": "fab",

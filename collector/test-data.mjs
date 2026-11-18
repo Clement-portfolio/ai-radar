@@ -46,7 +46,8 @@ const chain = JSON.parse(read("chain"));
         if (x.v.some((v) => !(v > 0))) ko(`chain : fiche « ${key} », série « ${x.n} » : valeur manquante ou nulle`);
         for (const i of x.hol || []) if (!(i >= 0 && i < c.x.length)) ko(`chain : fiche « ${key} », série « ${x.n} » : point creux hors graphique`);
       }
-      if (f.pie) {
+      if (f.pie && !f.pie.indep) {
+        // (pie.indep : camembert d'une autre mesure que le graphique, ex. parts de dépenses d'API vs revenu annualisé)
         // le camembert est le dernier point du graphique (même unité) ; une ligne « Autres » complète le total
         for (const it of f.pie.items) {
           const s = c.ser.find((x) => x.n === it.n);
