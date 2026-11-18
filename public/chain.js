@@ -26,13 +26,13 @@ var FC={en:"#EBA73A",cool:"#5B9BDB",bld:"#E3DACB",calc:"#34476B",mem:"#34BBA0",a
 var ZOOM={bld:1,rack:2};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function Z(b,k,extra){return"calc("+b+"px + "+k+" * var(--gap)"+(extra?" + "+extra:"")+")"}
-var BUILDING=false,RECBY={};
+var BUILDING=false,RECBY={},CURLV=0;
 function box(o){
- if(BUILDING){(RECBY[o.p]=RECBY[o.p]||[]).push(o)}
+ if(BUILDING){o.lv=CURLV;(RECBY[o.p]=RECBY[o.p]||[]).push(o)}
  var d=typeof o.d==="number"?o.d+"px":o.d;
  return'<div class="bx '+(o.f?"f-"+o.f+" ":"")+(o.c||"")+'" data-part="'+o.p+'" data-fam="'+(o.f||"")+'" style="--w:'+o.w+'px;--h:'+o.h+'px;--d:'+d+';width:'+o.w+'px;height:'+o.h+'px;transform:translate3d('+o.x+'px,'+o.y+'px,'+(o.z||Z(o.b||0,o.k||0))+')"><i class="t"></i><i class="fr"></i><i class="bk"></i><i class="lf"></i><i class="rt"></i></div>';
 }
-function flat(o){if(BUILDING){o.flat=true;(RECBY[o.p]=RECBY[o.p]||[]).push(o)}return'<div class="fl '+(o.c||"")+'" data-part="'+o.p+'" data-fam="'+(o.f||"")+'" style="width:'+o.w+'px;height:'+o.h+'px;transform:translate3d('+o.x+'px,'+o.y+'px,'+(o.z||Z(o.b||0,o.k||0))+')"></div>'}
+function flat(o){if(BUILDING){o.flat=true;o.lv=CURLV;(RECBY[o.p]=RECBY[o.p]||[]).push(o)}return'<div class="fl '+(o.c||"")+'" data-part="'+o.p+'" data-fam="'+(o.f||"")+'" style="width:'+o.w+'px;height:'+o.h+'px;transform:translate3d('+o.x+'px,'+o.y+'px,'+(o.z||Z(o.b||0,o.k||0))+')"></div>'}
 /* ---------- levels ---------- */
 function buildCampus(){
  var h="";
@@ -116,7 +116,7 @@ var cur=0,sel={part:null,block:null},gap=60,sg=9,moved=0;
 var sc=document.getElementById("sc"),ly=document.getElementById("ly"),cr=document.getElementById("cr"),bz=document.getElementById("bz"),exw=document.getElementById("bx");
 function init(){
  BUILDING=true;
- LV.forEach(function(v,i){
+ LV.forEach(function(v,i){CURLV=i;
   var el=document.createElement("div");el.className="lvl";el.innerHTML='<div class="world"><div class="stack">'+v.build()+v.L.map(function(l,j){var a=l[1];return'<i class="an" data-i="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],a[3])+')"></i>'}).join("")+'</div></div><div class="ov"><svg></svg>'+v.L.map(function(l,j){var p=PARTS[l[0]];return'<button class="lb" style="--lc:'+FC[PF[l[0]]]+'" data-part="'+l[0]+'" data-i="'+j+'">'+esc(p.n)+'<small>'+esc(p.c)+'</small></button>'}).join("")+'</div>';
   sc.appendChild(el);v.el=el;v.wd=el.querySelector(".world");v.st=el.querySelector(".stack");v.ov=el.querySelector(".ov");v.sv=el.querySelector("svg");
  });
@@ -263,12 +263,26 @@ function fmt(v){return String(v).replace(".",",")}
 function mini(part){
  var R=(RECBY[part]||[]).filter(function(o){if(o.flat&&(o.w>140||o.h>140))return false;return part==="hbm"?HBMFILTER(o):true});
  if(!R.length)return"";
- var G=part==="hbm"?0:30,S=part==="hbm"?14:6,L=[],mnx=1e9,mxx=-1e9,mny=1e9,mxy=-1e9,mnz=1e9,mxz=-1e9;
- R.forEach(function(o){var z=o.zf?o.zf(G,S):(o.b||0)+(o.k||0)*G,d=o.flat?.6:(o.dn?o.dn(S):(typeof o.d==="number"?o.d:10));
-  L.push({o:o,z:z,d:d});mnx=Math.min(mnx,o.x);mxx=Math.max(mxx,o.x+o.w);mny=Math.min(mny,o.y);mxy=Math.max(mxy,o.y+o.h);mnz=Math.min(mnz,z);mxz=Math.max(mxz,z+d)});
- var cx=(mnx+mxx)/2,cy=(mny+mxy)/2,cz=(mnz+mxz)/2,ext=Math.max(mxx-mnx,mxy-mny,(mxz-mnz)*1.2,1),sc=Math.min(7,Math.max(.5,330/ext));
+ var G=part==="hbm"?0:30,S=part==="hbm"?14:6,L=[],mnz=1e9,mxz=-1e9;
+ function zOf(o){return o.zf?o.zf(G,S):(o.b||0)+(o.k||0)*G}
+ function dOf(o){return o.flat?.6:(o.dn?o.dn(S):(typeof o.d==="number"?o.d:10))}
+ var sx0=1e9,sx1=-1e9,sy0=1e9,sy1=-1e9;
+ R.forEach(function(o){sx0=Math.min(sx0,o.x);sx1=Math.max(sx1,o.x+o.w);sy0=Math.min(sy0,o.y);sy1=Math.max(sy1,o.y+o.h)});
+ /* environnement direct : ce qui touche la pièce sur le même schéma, découpé dans une fenêtre autour d'elle et grisé */
+ var m=Math.max(40,Math.max(sx1-sx0,sy1-sy0)*.4),wx0=sx0-m,wx1=sx1+m,wy0=sy0-m,wy1=sy1+m,lv=R[0].lv,inR=new Set(R),E=[];
+ Object.keys(RECBY).forEach(function(k){if(k==="ground"||k==="floor")return;RECBY[k].forEach(function(o){
+  if(o.lv!==lv||inR.has(o))return;
+  var a=Math.max(o.x,wx0),b=Math.min(o.x+o.w,wx1),c=Math.max(o.y,wy0),d=Math.min(o.y+o.h,wy1);
+  if(b-a<1||d-c<1)return;
+  E.push(Object.assign({},o,{x:a,y:c,w:b-a,h:d-c,f:"",c:"env"+(/\b(fib|tsv|thin)\b/.test(o.c||"")?" "+(o.c.match(/\b(fib|tsv|thin)\b/)[1]):"")}))})});
+ E=E.slice(0,160);
+ var cx=(wx0+wx1)/2,cy=(wy0+wy1)/2;
+ var all=R.map(function(o){return{o:o,env:0}}).concat(E.map(function(o){return{o:o,env:1}}));
+ all.forEach(function(e){e.z=zOf(e.o);e.d=dOf(e.o);mnz=Math.min(mnz,e.z);mxz=Math.max(mxz,e.z+e.d)});
+ var cz=(mnz+mxz)/2,ext=Math.max(wx1-wx0,wy1-wy0,(mxz-mnz)*1.2,1),sc=Math.min(7,Math.max(.5,330/ext));
  var wasB=BUILDING;BUILDING=false;
- var h=L.map(function(e){var o=e.o,c=Object.assign({},o,{x:o.x-cx,y:o.y-cy,z:(e.z-cz)+"px",d:e.d});delete c.zf;return o.flat?flat(c):box(c)}).join("");
+ /* l'environnement est dessiné d'abord, la pièce en couleur par-dessus */
+ var h=all.sort(function(a,b){return a.env-b.env?b.env-a.env:0}).map(function(e){var o=e.o,c=Object.assign({},o,{x:o.x-cx,y:o.y-cy,z:(e.z-cz)+"px",d:e.d});delete c.zf;return o.flat?flat(c):box(c)}).join("");
  BUILDING=wasB;
  return'<div class="mw" data-sc="'+sc+'" style="transform:rotateX(58deg) scale('+sc+')"><div class="spin">'+h+'</div></div>';
 }
@@ -299,11 +313,13 @@ function sPie(s){
  var items=s.items.map(function(i){return{n:i.n,v:i.v,ap:i.ap,min:i.min}});
  if(tot<99.5)items.push({n:"Autres (calculé)",v:Math.round((100-tot)*10)/10});
  return{t:s.t,m:"Part du marché",items:items,as_of:s.as_of,src:s.src,u:s.u,note:s.note||""}}
+function mcol(h,sm,body,sf,cls){return'<div class="mc'+(cls?' '+cls:'')+'"><h4>'+h+'</h4><div class="sm">'+sm+'</div><div class="mb">'+body+'</div><div class="sf">'+sf+'</div></div>'}
+function noViz(){return mcol("","",'<div class="none">Aucune visualisation disponible</div>',"")}
 function piePanel(p){
- if(!p||!p.items||!p.items.length)return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>';
+ if(!p||!p.items||!p.items.length)return noViz();
  var tot=p.items.reduce(function(a,i){return a+i.v},0);
  var leg=p.items.map(function(it,i){var pc=Math.round(it.v/tot*1000)/10;return'<li><i style="background:'+SH(it.n,i)+'"></i><span>'+esc(it.n)+'</span><b>'+(it.min?'> ':(it.ap?'≈ ':''))+fmtPct(fmt(pc))+'</b></li>'}).join("");
- return'<div class="col"><h4>'+esc(p.t)+'</h4><div class="sm">'+esc(p.m)+'</div><div class="pie">'+donut2(p.items)+'<ul class="pleg">'+leg+'</ul></div><div class="sf"><a href="'+esc(p.u)+'" target="_blank" rel="noopener">'+esc(p.src)+' ↗</a> · '+esc(p.as_of)+'</div></div>'}
+ return mcol(esc(p.t),esc(p.m),'<div class="pie">'+donut2(p.items)+'<ul class="pleg">'+leg+'</ul></div>','<a href="'+esc(p.u)+'" target="_blank" rel="noopener">'+esc(p.src)+' ↗</a> · '+esc(p.as_of))}
 function lineChart(d){
  var W=560,H=170,pl=30,pr=30,pt=26,pb=30,n=d.pts.length,mx=0;d.pts.forEach(function(p){mx=Math.max(mx,p.v)});mx*=1.18;
  function X(i){return n===1?W/2:pl+(W-pl-pr)*i/(n-1)}function Y(v){return pt+(H-pt-pb)*(1-v/mx)}
@@ -331,16 +347,16 @@ function qLab(i){return"T"+(i%4+1)+" "+String(Math.floor(i/4)).slice(2)}
 function dueQ(lag){var n=Date.now(),y0=new Date().getUTCFullYear(),b=null;for(var y=y0-1;y<=y0;y++)for(var q=1;q<=4;q++)if(Date.UTC(y,q*3,0)+lag*864e5<=n){var i=y*4+q-1;if(b==null||i>b)b=i}return b}
 function staleTag(ch){var l=qIdx(ch.x[ch.x.length-1]),d=dueQ(ch.lag||50);return(l!=null&&d!=null&&l<d)?' · <span class="stl"><span>À actualiser</span> : '+qLab(d)+'</span>':''}
 function chartPanel(ch,rv){
- if(ch)return'<div class="col"><h4>'+esc(ch.t)+'</h4><div class="sm">'+esc(ch.u)+'</div>'+revChart(ch)+'<div class="sf">'+'<span>'+esc(ch.as_of)+'</span> · <span>Sources ci-dessous</span>'+staleTag(ch)+'</div></div>';
- if(rv&&rv.pts&&rv.pts.length)return'<div class="col"><h4>'+esc(rv.t)+'</h4><div class="sm">'+esc(rv.u)+'</div>'+lineChart(rv)+'<div class="sf"><a href="'+esc(rv.url)+'" target="_blank" rel="noopener">'+esc(rv.src)+' ↗</a> · '+esc(rv.as_of)+'</div></div>';
- return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>'}
+ if(ch)return mcol(esc(ch.t),esc(ch.u),revChart(ch),'<span>'+esc(ch.as_of)+'</span> · <span>Sources ci-dessous</span>'+staleTag(ch));
+ if(rv&&rv.pts&&rv.pts.length)return mcol(esc(rv.t),esc(rv.u),lineChart(rv),'<a href="'+esc(rv.url)+'" target="_blank" rel="noopener">'+esc(rv.src)+' ↗</a> · '+esc(rv.as_of));
+ return noViz()}
 function ringHtml(t,c){
  var R=46,C=2*Math.PI*R;
  return'<svg class="ring '+c+'" viewBox="0 0 120 120" role="img" aria-label="Tension '+t+' sur 10"><circle cx="60" cy="60" r="'+R+'" class="bg"/><circle cx="60" cy="60" r="'+R+'" class="fg" stroke-dasharray="'+(C*t/10).toFixed(1)+' '+C.toFixed(1)+'" transform="rotate(-90 60 60)"/><text x="60" y="64" text-anchor="middle" class="rn">'+t+'</text><text x="60" y="82" text-anchor="middle" class="rd">/10</text></svg>'}
 function tensPanel(ti){
- if(!ti)return'<div class="col"><div class="none">Aucune visualisation disponible</div></div>';
+ if(!ti)return noViz();
  var c=cls(ti.t);
- return'<div class="col tcol '+c+'"><h4>Tension</h4><div class="sm">Niveau de 0 à 10</div><div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b><span class="why1">'+esc(ti.why)+'</span></div></div></div>'}
+ return mcol("Tension","Niveau de 0 à 10",'<div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b><span class="why1">'+esc(ti.why)+'</span></div></div>',esc(ti.basis||""),"tcol "+c)}
 function notesHtml(f,pie,ch,rv,ti){
  var h="";
  if(pie){h+='<div class="nb"><div class="st">Camembert</div>'+(pie.note?'<p>'+esc(pie.note)+'</p>':'')+'<div class="src">'+esc(pie.as_of)+' · <a href="'+esc(pie.u)+'" target="_blank" rel="noopener">'+esc(pie.src)+' ↗</a></div></div>'}
@@ -352,66 +368,83 @@ function notesHtml(f,pie,ch,rv,ti){
  if(ti){h+='<div class="nb"><div class="st">Tension</div><p>'+esc(ti.why)+'</p>'+evRows(ti.ev||[])+(ti.links||[]).map(function(x){return'<div class="src"><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+' ↗</a></div>'}).join("")+'<div class="src">'+esc(ti.basis)+'</div>'+(ti.rule?'<div class="rule">'+esc(ti.rule)+'</div>':'')+'</div>'}
  return h?'<details class="why"><summary>Sources, méthode et limites</summary>'+h+'</details>':""}
 function evRows(a){return a.map(function(f){return'<div class="ev"><div class="v">'+esc(f.v)+'</div><div>'+esc(f.l)+'<div class="src">'+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></div></div></div>'}).join("")}
-/* ---------- actualités du composant (watchlist, hors trading) : data/watch.json, produit par le collecteur ---------- */
-var NSHOW=6;
+/* ---------- actualités du composant (watchlist, hors trading) : data/watch.json ; même forme que le fil Actualités ---------- */
+var NSHOW=6,nwOpen={};
+var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
+var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
+var CONFL={haute:"Source primaire",moyenne:"Presse",faible:"Non vérifié"};
 function tx(fr,en){return LANG==="en"?en:fr}
 function nwParts(){return sel.part?[sel.part]:(sel.block?Object.keys(PARTS).filter(function(p){return PARTS[p].b===sel.block}):[])}
 function nwGroups(){
  if(!WT||!WT.groups)return[];var ps=nwParts();
  return Object.keys(WT.groups).filter(function(g){return WT.groups[g].parts.some(function(p){return ps.indexOf(p)>=0})})}
-function nwDate(ts){try{return new Date(ts).toLocaleDateString(LANG==="en"?"en-GB":"fr-FR",{day:"numeric",month:"short"})}catch(e){return String(ts).slice(0,10)}}
-function nwScore(x){return Date.parse(x.ts)+((x.imp||1)-1)*2*864e5}
 function nwFollowed(gs){
  var seen={},key=[],em=[];
  gs.forEach(function(g){WT.groups[g].cos.forEach(function(c){if(seen[c.n])return;seen[c.n]=1;(c.k==="k"?key:em).push(c.n)})});
  return{key:key,em:em}}
+function nwLink(u){u=u||"";if(/^https:\/\/news\.google\.com\/(rss\/)?(articles|read)\//.test(u))return"/go?u="+encodeURIComponent(u);return /^https?:\/\//.test(u)?u:"#"}
+function nwLoc(){return LANG==="en"?"en-GB":"fr-FR"}
+function nwDay(ts){return new Date(ts).toLocaleDateString(nwLoc(),{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"})}
+function nwTime(ts){return new Date(ts).toLocaleTimeString(nwLoc(),{hour:"2-digit",minute:"2-digit",timeZone:"UTC"})}
+function nwImp(n){return'<span class="imp" title="Importance '+n+'/3">'+[1,2,3].map(function(i){return'<i class="'+(i<=n?'f':'')+'"></i>'}).join("")+'</span>'}
+function nwRow(x){
+ var c=x.conf||"moyenne",pick=function(k){return LANG==="en"?(x[k+"_en"]||x[k]):x[k]},o=nwOpen[x.id]?" open":"",im=x.imp||1;
+ return'<div class="row i'+im+o+'" data-nid="'+esc(x.id)+'"><span class="time">'+esc(nwTime(x.ts))+'</span><span class="tag">'+esc(CLABEL[x.country]||x.country||"")+'</span>'+
+  '<a class="ttl" href="'+esc(nwLink(x.url))+'" target="_blank" rel="noopener">'+esc(pick("title"))+'</a>'+
+  '<span class="rsrc">'+esc(x.source)+'<i class="cd '+esc(c)+'" title="'+esc(CONFL[c]||c)+'"></i></span>'+
+  '<button class="rtog" type="button" data-nt="'+esc(x.id)+'" aria-label="Afficher le résumé">›</button>'+
+  '<div class="sum"><p>'+(x.summary?esc(pick("summary")):'Résumé indisponible : ouvrez l\'article.')+'</p><div class="meta">'+(x.cat?'<span class="cat">'+esc(CATS[x.cat]||x.cat)+'</span>':'')+(x.lay?'<span>'+esc(x.lay)+'</span>':'')+nwImp(im)+'<span class="conf '+esc(c)+'"><i></i>'+esc(CONFL[c]||c)+'</span><a href="'+esc(nwLink(x.url))+'" target="_blank" rel="noopener">Lire sur '+esc(x.source)+' ↗</a></div></div></div>'}
+function nwItems(){
+ if(!WT||!WT.items)return[];var gs=nwGroups();if(!gs.length)return[];
+ return WT.items.filter(function(x){return x.g.some(function(g){return gs.indexOf(g)>=0})}).sort(function(a,b){return b.ts.localeCompare(a.ts)})}
+var nwLimit=NSHOW;
 function newsHtml(){
- if(!WT||!WT.items)return"";
- var gs=nwGroups();if(!gs.length)return"";
- var its=WT.items.filter(function(x){return x.g.some(function(g){return gs.indexOf(g)>=0})}).sort(function(a,b){return nwScore(b)-nwScore(a)});
- var shown=nwShown?its:its.slice(0,NSHOW),F=nwFollowed(gs);
- var nm=gs.map(function(g){return WT.groups[g].name}).join(" · ");
- var li=shown.map(function(x){
-  var t=LANG==="en"?(x.title_en||x.title):x.title;
-  var cs=(x.cos||[]).slice(0,3).map(function(c){return'<span class="nco">'+esc(c)+'</span>'}).join("");
-  return'<li><time>'+esc(nwDate(x.ts))+'</time><div><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(t)+'</a><div class="nm"><span>'+esc(x.source)+'</span>'+cs+'</div></div></li>'}).join("");
- var more=its.length>NSHOW&&!nwShown?'<button class="nmore" type="button">'+tx("Afficher les "+(its.length-NSHOW)+" autres","Show the other "+(its.length-NSHOW))+'</button>':"";
+ var gs=nwGroups(),its=nwItems(),F=gs.length?nwFollowed(gs):{key:[],em:[]};
+ var shown=its.slice(0,nwLimit),cnt={};its.forEach(function(x){var d=x.ts.slice(0,10);cnt[d]=(cnt[d]||0)+1});
+ var h="",day="";
+ shown.forEach(function(x){var d=x.ts.slice(0,10);if(d!==day){day=d;h+='<div class="day">'+esc(nwDay(x.ts))+' <span>'+cnt[d]+' '+(cnt[d]>1?"articles":"article")+'</span></div>'}h+=nwRow(x)});
+ if(its.length>shown.length){var r=its.length-shown.length;h+='<div class="nmw"><button class="btn nmore" type="button">'+tx("Voir "+Math.min(120,r)+" articles de plus ("+r+" restants)","Show "+Math.min(120,r)+" more articles ("+r+" remaining)")+'</button></div>'}
+ if(!its.length)h='<div class="none2">'+tx("Aucune actualité récente sur les entreprises suivies pour ce composant.","No recent news on the companies tracked for this component.")+'</div>';
  var chips=function(a,c){return a.map(function(n){return'<span class="nco '+c+'">'+esc(n)+'</span>'}).join("")};
- return'<div class="nwh"><span class="st">'+tx("Actualités du composant","Component news")+'</span><span class="nsc">'+esc(nm)+'</span><span class="nfn">'+tx("Hors Bourse : ni cours, ni notes d'analystes","No stock prices or analyst ratings")+'</span></div>'+
-  (li?'<ul class="nl">'+li+'</ul>'+more:'<div class="none2">'+tx("Aucune actualité récente sur les entreprises suivies pour ce composant.","No recent news on the companies tracked for this component.")+'</div>')+
+ var nm=gs.map(function(g){return WT.groups[g].name}).join(" · ");
+ return'<summary>'+tx("Actualités du composant","Component news")+' ('+its.length+')</summary><div class="nwb"><p class="nsc">'+esc(nm)+' · '+tx("Hors Bourse : ni cours, ni notes d'analystes","No stock prices or analyst ratings")+'</p>'+h+
   '<details class="wlst"><summary>'+tx("Entreprises suivies","Companies tracked")+' ('+(F.key.length+F.em.length)+')</summary><div class="wlb"><div class="wlr"><b>'+tx("Acteurs clés","Key players")+'</b>'+chips(F.key,"k")+'</div>'+
-  (F.em.length?'<div class="wlr"><b>'+tx("Émergents","Emerging")+'</b>'+chips(F.em,"e")+'</div>':'')+'</div></details>'}
-var nwShown=false;
-function paintNews(){var el=document.getElementById("nw");if(el){el.innerHTML=newsHtml();bindNews()}}
-function bindNews(){var b=document.querySelector("#nw .nmore");if(b)b.addEventListener("click",function(){nwShown=true;paintNews();report()})}
-window.ChainFrame.refresh=paintNews;
+  (F.em.length?'<div class="wlr"><b>'+tx("Émergents","Emerging")+'</b>'+chips(F.em,"e")+'</div>':'')+'</div></details></div>'}
+function paintNews(){var el=document.getElementById("nw");if(el){el.innerHTML=newsHtml();report()}}
+document.addEventListener("click",function(e){
+ var t=e.target.closest&&e.target.closest("#nw [data-nt]");
+ if(t){var id=t.getAttribute("data-nt");nwOpen[id]=!nwOpen[id];t.closest(".row").classList.toggle("open",!!nwOpen[id]);report();return}
+ if(e.target.closest&&e.target.closest("#nw .nmore")){nwLimit+=120;paintNews()}});
+document.addEventListener("toggle",function(){report()},true);
+window.ChainFrame.refresh=function(){duo()};
 function mkHtml(part){
  var P=PARTS[part],key=FMAP[part],f=key&&FM[key],m=MKT[part]||{},nm=f?f.name:P.n;
  var pie=f?f.pie:sPie(m.s),ch=f?(f.chart||null):null,rv=f?(f.rev||null):(m.d||null),ti=tensInfo(part);
- return'<div class="hd"><span class="kicker">Fiche marché</span><h3>'+esc(nm)+'</h3>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
-  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+(WT?'<div class="nws" id="nw">'+newsHtml()+'</div>':'')+notesHtml(f,pie,ch,rv,ti)}
-
+ return'<div class="fmh"><span class="kicker">Fiche marché</span><h4 class="fmt">'+esc(nm)+'</h4>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
+  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+
+  (WT?'<details class="nwd" id="nw"'+(nwDetOpen?' open':'')+'>'+newsHtml()+'</details>':'')+notesHtml(f,pie,ch,rv,ti)}
+var nwDetOpen=false,lastPart=null;
 
 function duo(){
- var L=document.getElementById("sqL"),R=document.getElementById("sqR"),K=document.getElementById("mk");
+ var F=document.getElementById("fc");
  var part=sel.part||(sel.block?BMK[sel.block]:null);
  if(!part||!PARTS[part]){
-  L.innerHTML='<span class="kicker">Zoom sur la pièce</span><div class="empty">Cliquez une pièce sur le schéma :<br>elle s\'affiche ici en gros, avec ses composants.</div>';
-  R.innerHTML='<span class="kicker">Fiche technique</span><div class="empty">Ce que c\'est, à quoi ça sert, de quoi ça dépend et ce que ça alimente.</div>';
-  K.innerHTML='<span class="kicker">Fiche marché</span><div class="empty" style="padding:34px 20px">Cliquez une pièce : part de marché, chiffre d\'affaires et tension.</div>';return}
+  F.innerHTML='<div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez une pièce sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>';report();return}
+ var old=document.getElementById("nw");
+ if(part!==lastPart){nwDetOpen=false;nwLimit=NSHOW;nwOpen={}}else if(old)nwDetOpen=old.open;
+ lastPart=part;
  var P=PARTS[part],b=BY[P.b],fam=PF[part],dt=DET[part]||[],mh=mini(part);
- L.innerHTML='<div class="kk"><span class="kicker">Zoom sur la pièce</span><span class="tag">'+esc(b.name)+'</span></div><h3>'+esc(P.n)+'</h3>'+
-  (mh?'<div class="mini">'+mh+'</div>':'<p class="big">'+esc(P.r)+'</p>')+
-  (dt.length?'<div class="det">'+dt.map(function(r){return'<div><i style="background:'+FC[r[0]]+'"></i><p><b>'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span></p></div>'}).join("")+'</div>':(mh?'<div class="det"><div><i style="background:'+FC[fam]+'"></i><p><span>'+esc(P.r)+'</span></p></div></div>':''));
- centerMini(L.querySelector(".mini"));
  function chs(a){return a.map(function(id){return'<button class="chip" data-block="'+id+'">'+BY[id].n+' '+esc(BY[id].name)+'</button>'}).join("")}
- var t='<div class="kk"><span class="kicker">Fiche technique</span><span class="tag">'+esc(P.c)+'</span></div><h3>'+esc(P.n)+'</h3><div class="ft">'+
+ var det=dt.length?'<div class="det">'+dt.map(function(r){return'<div><i style="background:'+FC[r[0]]+'"></i><p><b>'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span></p></div>'}).join("")+'</div>':(mh?'<div class="det"><div><i style="background:'+FC[fam]+'"></i><p><span>'+esc(P.r)+'</span></p></div></div>':'');
+ var left='<div class="fzl"><span class="kicker">Zoom sur la pièce</span>'+(mh?'<div class="mini">'+mh+'</div><p class="mlg"><i class="mk1" style="background:'+FC[fam]+'"></i>Coloré : la pièce <i class="mk2"></i>Gris : son environnement direct</p>':'<p class="big">'+esc(P.r)+'</p>')+det+'</div>';
+ var right='<div class="fzr"><span class="kicker">Fiche technique</span><div class="ft">'+
   '<div class="blk"><div class="st">Ce que c\'est</div><p>'+esc(P.r)+'</p></div>'+
   '<div class="blk"><div class="st">À quoi ça sert dans l\'infrastructure</div><p>'+esc(b.why)+'</p></div>'+
   '<div class="blk"><div class="st">Dépend de</div><div class="cl">'+(b.needs.length?chs(b.needs):'<span class="src">Rien en amont dans ce schéma.</span>')+'</div></div>'+
-  '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div>';
- R.innerHTML=t;
- nwShown=false;K.innerHTML=mkHtml(part);bindNews();
+  '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div></div>';
+ F.innerHTML='<div class="fh"><h3>'+esc(P.n)+'</h3><span class="tag">'+esc(P.c)+'</span><span class="tag">'+esc(b.name)+'</span></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
+ var nw=document.getElementById("nw");if(nw)nw.setAttribute("data-part",part);
+ centerMini(F.querySelector(".mini"));report();
 }
 function centerMini(box){
  if(!box)return;var mw=box.querySelector(".mw"),sp=box.querySelector(".spin");if(!mw||!sp)return;
@@ -429,7 +462,7 @@ function centerMini(box){
  mw.style.transform="translate("+Tx+"px,"+Ty+"px) rotateX(58deg) scale("+S+")";
  sp.style.transform="";sp.style.animation="";
 }
-window.addEventListener("resize",function(){var m=document.querySelector("#sqL .mini");if(m)centerMini(m)});
+window.addEventListener("resize",function(){var m=document.querySelector("#fc .mini");if(m)centerMini(m)});
 
 init();setGap(0);
 }

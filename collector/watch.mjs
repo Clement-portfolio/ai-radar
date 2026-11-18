@@ -82,7 +82,7 @@ export const PER_GROUP = 20, MAX_AGE_DAYS = 120;
 const slim = (it, tag) => ({
   id: it.id, ts: it.ts, title: it.title, ...(it.title_en && it.title_en !== it.title ? { title_en: it.title_en } : {}),
   ...(it.summary ? { summary: clip(it.summary, 200) } : {}), ...(it.summary_en ? { summary_en: clip(it.summary_en, 200) } : {}),
-  source: it.source, url: it.url, country: it.country, imp: it.importance || 1, g: tag.g, cos: tag.cos.slice(0, 6), ...(it.pending ? { pending: true } : {}),
+  source: it.source, url: it.url, country: it.country, imp: it.importance || 1, ...(it.confidence ? { conf: it.confidence } : {}), ...(it.category ? { cat: it.category } : {}), ...(it.layer ? { lay: it.layer } : {}), g: tag.g, cos: tag.cos.slice(0, 6), ...(it.pending ? { pending: true } : {}),
 });
 const score = (x) => Date.parse(x.ts) + (x.imp - 1) * 2 * 86400000;
 const STOP = new Set(["the", "and", "for", "with", "from", "that", "this", "des", "les", "une", "pour", "dans", "sur", "aux", "avec", "par", "est", "son", "ses", "its", "has", "have", "will", "new", "après", "plus", "que", "qui"]);
