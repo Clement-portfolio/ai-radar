@@ -11,6 +11,9 @@ Promise.all([get("data/chain.json"),get("data/layers.json"),get("data/en.json").
   report();
 }).catch(fail);
 function report(){try{parent.postMessage({chainH:Math.ceil(document.querySelector(".wrap").getBoundingClientRect().height)},location.origin)}catch(e){}}
+/* demi-écran : la fenêtre du site fait moins des deux tiers de l'écran → disposition en deux colonnes (classe .half) */
+function setHalf(){var pw=innerWidth;try{pw=parent.innerWidth||pw}catch(e){}document.documentElement.classList.toggle("half",pw<=(screen.availWidth||pw)*.66)}
+setHalf();window.addEventListener("resize",setHalf);try{parent.addEventListener("resize",setHalf)}catch(e){}
 window.ChainFrame={setLang:function(l){LANG=l==="en"?"en":"fr";if(window.I18N)I18N.set(LANG);if(window.ChainFrame.refresh)window.ChainFrame.refresh();setTimeout(report,50)}};
 if(window.ResizeObserver)new ResizeObserver(report).observe(document.documentElement);
 window.addEventListener("load",report);
@@ -351,7 +354,7 @@ function chartPanel(ch,rv){
  if(rv&&rv.pts&&rv.pts.length)return mcol(esc(rv.t),esc(rv.u),lineChart(rv),'<a href="'+esc(rv.url)+'" target="_blank" rel="noopener">'+esc(rv.src)+' ↗</a> · '+esc(rv.as_of));
  return noViz()}
 function ringHtml(t,c){
- var R=46,C=2*Math.PI*R;
+ var R=42,C=2*Math.PI*R;
  return'<svg class="ring '+c+'" viewBox="0 0 120 120" role="img" aria-label="Tension '+t+' sur 10"><circle cx="60" cy="60" r="'+R+'" class="bg"/><circle cx="60" cy="60" r="'+R+'" class="fg" stroke-dasharray="'+(C*t/10).toFixed(1)+' '+C.toFixed(1)+'" transform="rotate(-90 60 60)"/><text x="60" y="64" text-anchor="middle" class="rn">'+t+'</text><text x="60" y="82" text-anchor="middle" class="rd">/10</text></svg>'}
 function tensPanel(ti){
  if(!ti)return noViz();

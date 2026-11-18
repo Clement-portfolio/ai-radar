@@ -158,8 +158,8 @@ input[type=range]{accent-color:#000;width:170px}
 .fiche .lc .ax{font-family:var(--mono);font-size:10px;fill:var(--mute)}
 .fiche .lc .vl{font-family:var(--mono);font-size:10.5px;font-weight:600;fill:var(--ink)}
 .fiche .tcol{--tc:var(--mute)}.fiche .tcol.hi{--tc:var(--neg)}.fiche .tcol.mid{--tc:var(--warn)}.fiche .tcol.lo{--tc:var(--pos)}
-.fiche .ring .bg{fill:none;stroke:#EDEDED;stroke-width:12}
-.fiche .ring .fg{fill:none;stroke-width:12;stroke-linecap:butt}
+.fiche .ring .bg{fill:none;stroke:#EDEDED;stroke-width:20}
+.fiche .ring .fg{fill:none;stroke-width:20;stroke-linecap:butt}
 .fiche .ring.hi .fg{stroke:var(--neg)}.fiche .ring.mid .fg{stroke:var(--warn)}.fiche .ring.lo .fg{stroke:var(--pos)}
 .fiche .ring .rn{font-family:var(--display);font-weight:600;font-size:34px;fill:var(--tc);letter-spacing:-.03em}
 .fiche .ring.hi .rn{fill:var(--neg)}.fiche .ring.mid .rn{fill:var(--warn)}.fiche .ring.lo .rn{fill:var(--pos)}
@@ -274,3 +274,7 @@ details.nwd>summary::-webkit-details-marker,details.wlst>summary::-webkit-detail
 /* demi-écran : camembert et graphique sur le même étage, tension en dessous du camembert */
 @media(max-width:900px){.g3{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}}
 @media(max-width:520px){.g3{grid-template-columns:1fr}}
+
+.half .g3{grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:0 28px}
+@media(max-width:520px){.half .g3{grid-template-columns:1fr}}
+.half .fiche .lc .ax{font-size:11px}.half .fiche .lc .vl{font-size:12px}
