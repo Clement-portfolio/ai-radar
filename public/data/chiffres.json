@@ -1,0 +1,48 @@
+{
+ "v": 1,
+ "day": "2026-11-18",
+ "generated_at": "2026-11-18T16:15:00.000Z",
+ "model": "jeu initial rédigé à partir des articles collectés",
+ "figures": [
+  {
+   "title": "Nvidia : chiffre d'affaires du trimestre",
+   "value": "115,8 Md$",
+   "sub": "Trimestre record, dont 20 milliards de dollars issus de Vera Rubin, la nouvelle architecture ; l'action gagne près de 4 % après des résultats supérieurs aux attentes.",
+   "ids": [
+    "6e5022b2db8b",
+    "cc9584594038"
+   ],
+   "scope": "day",
+   "ts": "2026-11-18T13:00:00.000Z",
+   "title_en": "Nvidia: quarterly revenue",
+   "value_en": "$115.8B",
+   "sub_en": "Record quarter, including $20 billion from Vera Rubin, its new architecture; the stock is up nearly 4% after results above expectations."
+  },
+  {
+   "title": "Anthropic : fourchette de prix de l'introduction en Bourse",
+   "value": "70 à 78 $",
+   "sub": "Fourchette actuelle du prix d'introduction, que l'entreprise devrait dépasser. Cotée au Nasdaq sous le symbole ANT, elle sera négociée à partir du 19 novembre.",
+   "ids": [
+    "33642c9df619"
+   ],
+   "scope": "week",
+   "ts": "2026-11-17T14:34:48.000Z",
+   "title_en": "Anthropic: IPO price range",
+   "value_en": "$70 to $78",
+   "sub_en": "Current IPO price range, which the company is expected to exceed. Listed on the Nasdaq under the symbol ANT, it will start trading on 19 November."
+  },
+  {
+   "title": "Financement circulaire de l'IA",
+   "value": "plus de 1 000 Md$",
+   "sub": "Montant dépassé entre entreprises d'IA, selon la cheffe du FMI Kristalina Georgieva, qui met en garde sur fond de refroidissement des investisseurs.",
+   "ids": [
+    "5d4425e9ff04"
+   ],
+   "scope": "week",
+   "ts": "2026-11-16T09:14:46.000Z",
+   "title_en": "Circular AI financing",
+   "value_en": "over $1,000B",
+   "sub_en": "Amount exceeded among AI companies, according to IMF head Kristalina Georgieva, who warns amid cooling investor sentiment."
+  }
+ ]
+}

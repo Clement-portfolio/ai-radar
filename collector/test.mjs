@@ -115,6 +115,7 @@ await import("./test-shares.mjs");
 await import("./test-evolution.mjs");
 await import("./test-calendar.mjs");
 await import("./test-focus.mjs");
+await import("./test-chiffres.mjs");
 await import("./test-translate.mjs");
 await import("./test-i18n.mjs");
 await import("./test-review.mjs");
