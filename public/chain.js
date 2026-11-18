@@ -347,7 +347,7 @@ function qLab(i){return"T"+(i%4+1)+" "+String(Math.floor(i/4)).slice(2)}
 function dueQ(lag){var n=Date.now(),y0=new Date().getUTCFullYear(),b=null;for(var y=y0-1;y<=y0;y++)for(var q=1;q<=4;q++)if(Date.UTC(y,q*3,0)+lag*864e5<=n){var i=y*4+q-1;if(b==null||i>b)b=i}return b}
 function staleTag(ch){var l=qIdx(ch.x[ch.x.length-1]),d=dueQ(ch.lag||50);return(l!=null&&d!=null&&l<d)?' · <span class="stl"><span>À actualiser</span> : '+qLab(d)+'</span>':''}
 function chartPanel(ch,rv){
- if(ch)return mcol(esc(ch.t),esc(ch.u),revChart(ch),'<span>'+esc(ch.as_of)+'</span> · <span>Sources ci-dessous</span>'+staleTag(ch));
+ if(ch)return mcol(esc(ch.t),esc(ch.u),revChart(ch),'<span>'+esc(ch.as_of)+'</span>'+staleTag(ch));
  if(rv&&rv.pts&&rv.pts.length)return mcol(esc(rv.t),esc(rv.u),lineChart(rv),'<a href="'+esc(rv.url)+'" target="_blank" rel="noopener">'+esc(rv.src)+' ↗</a> · '+esc(rv.as_of));
  return noViz()}
 function ringHtml(t,c){
@@ -356,7 +356,7 @@ function ringHtml(t,c){
 function tensPanel(ti){
  if(!ti)return noViz();
  var c=cls(ti.t);
- return mcol("Tension","Niveau de 0 à 10",'<div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b><span class="why1">'+esc(ti.why)+'</span></div></div>',esc(ti.basis||""),"tcol "+c)}
+ return mcol("Tension","Niveau de 0 à 10",'<div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b><span class="why1">'+esc(ti.why)+'</span></div></div>',"","tcol "+c)}
 function notesHtml(f,pie,ch,rv,ti){
  var h="";
  if(pie){h+='<div class="nb"><div class="st">Camembert</div>'+(pie.note?'<p>'+esc(pie.note)+'</p>':'')+'<div class="src">'+esc(pie.as_of)+' · <a href="'+esc(pie.u)+'" target="_blank" rel="noopener">'+esc(pie.src)+' ↗</a></div></div>'}
@@ -407,7 +407,7 @@ function newsHtml(){
  if(!its.length)h='<div class="none2">'+tx("Aucune actualité récente sur les entreprises suivies pour ce composant.","No recent news on the companies tracked for this component.")+'</div>';
  var chips=function(a,c){return a.map(function(n){return'<span class="nco '+c+'">'+esc(n)+'</span>'}).join("")};
  var nm=gs.map(function(g){return WT.groups[g].name}).join(" · "),nm0=(PARTS[sel.part||BMK[sel.block]]||{}).n||nm;
- return'<summary>'+tx("Actualités du composant","Component news")+' <em>'+esc(nm0)+' · '+its.length+' '+(its.length>1?"articles":"article")+'</em></summary><div class="nwb"><p class="nsc">'+esc(nm)+' · '+tx("Hors Bourse : ni cours, ni notes d'analystes","No stock prices or analyst ratings")+'</p>'+h+
+ return'<summary>'+tx("Actualités du composant","Component news")+' <em>'+esc(nm0)+' · '+its.length+' '+(its.length>1?"articles":"article")+'</em></summary><div class="nwb">'+h+
   '<details class="wlst"><summary>'+tx("Entreprises suivies","Companies tracked")+' ('+(F.key.length+F.em.length)+')</summary><div class="wlb"><div class="wlr"><b>'+tx("Acteurs clés","Key players")+'</b>'+chips(F.key,"k")+'</div>'+
   (F.em.length?'<div class="wlr"><b>'+tx("Émergents","Emerging")+'</b>'+chips(F.em,"e")+'</div>':'')+'</div></details></div>'}
 function paintNews(){var el=document.getElementById("nw");if(el){el.innerHTML=newsHtml();report()}}
