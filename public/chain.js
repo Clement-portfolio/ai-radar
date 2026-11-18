@@ -4,17 +4,17 @@
 var qs=new URLSearchParams(location.search),LANG=qs.get("lang")==="en"?"en":"fr";
 function get(u){return fetch(u,{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(u+" "+r.status);return r.json()})}
 function fail(e){var s=document.getElementById("sc");if(s)s.innerHTML='<p class="hint" style="padding:24px">Le schéma n\'a pas pu être chargé. Rechargez la page.</p>';try{console.error(e)}catch(x){}}
-Promise.all([get("data/chain.json"),get("data/layers.json"),get("data/en.json").catch(function(){return {}})]).then(function(r){
+Promise.all([get("data/chain.json"),get("data/layers.json"),get("data/en.json").catch(function(){return {}}),get("data/watch.json").catch(function(){return null})]).then(function(r){
   var ten={};(r[1].layers||[]).forEach(function(l){ten[l.id]={t:l.tension,lab:l.tension_label,key:l.key_stat,note:l.note,leaders:l.leaders,src:l.sources}});
-  run(r[0],ten);
+  run(r[0],ten,r[3]);
   if(window.I18N){I18N.extra(r[2]);I18N.set(LANG)}
   report();
 }).catch(fail);
 function report(){try{parent.postMessage({chainH:Math.ceil(document.querySelector(".wrap").getBoundingClientRect().height)},location.origin)}catch(e){}}
-window.ChainFrame={setLang:function(l){LANG=l==="en"?"en":"fr";if(window.I18N)I18N.set(LANG);setTimeout(report,50)}};
+window.ChainFrame={setLang:function(l){LANG=l==="en"?"en":"fr";if(window.I18N)I18N.set(LANG);if(window.ChainFrame.refresh)window.ChainFrame.refresh();setTimeout(report,50)}};
 if(window.ResizeObserver)new ResizeObserver(report).observe(document.documentElement);
 window.addEventListener("load",report);
-function run(CH,LY){
+function run(CH,LY,WT){
 var PARTS=CH.parts,U=CH.u,BMK=CH.bmk,DET=CH.det,FM=CH.fm,FMAP=CH.fmap,FMVIA=CH.fmvia,RULE=CH.rule,MKT={};
 Object.keys(CH.mkt).forEach(function(k){var m=CH.mkt[k],o={};if(m.s)o.s=U[m.s];if(m.d)o.d=U[m.d];MKT[k]=o});
 
@@ -348,11 +348,44 @@ function notesHtml(f,pie,ch,rv,ti){
  if(ti){h+='<div class="nb"><div class="st">Tension</div><p>'+esc(ti.why)+'</p>'+evRows(ti.ev||[])+(ti.links||[]).map(function(x){return'<div class="src"><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+' ↗</a></div>'}).join("")+'<div class="src">'+esc(ti.basis)+'</div>'+(ti.rule?'<div class="rule">'+esc(ti.rule)+'</div>':'')+'</div>'}
  return h?'<details class="why"><summary>Sources, méthode et limites</summary>'+h+'</details>':""}
 function evRows(a){return a.map(function(f){return'<div class="ev"><div class="v">'+esc(f.v)+'</div><div>'+esc(f.l)+'<div class="src">'+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></div></div></div>'}).join("")}
+/* ---------- actualités du composant (watchlist, hors trading) : data/watch.json, produit par le collecteur ---------- */
+var NSHOW=6;
+function tx(fr,en){return LANG==="en"?en:fr}
+function nwParts(){return sel.part?[sel.part]:(sel.block?Object.keys(PARTS).filter(function(p){return PARTS[p].b===sel.block}):[])}
+function nwGroups(){
+ if(!WT||!WT.groups)return[];var ps=nwParts();
+ return Object.keys(WT.groups).filter(function(g){return WT.groups[g].parts.some(function(p){return ps.indexOf(p)>=0})})}
+function nwDate(ts){try{return new Date(ts).toLocaleDateString(LANG==="en"?"en-GB":"fr-FR",{day:"numeric",month:"short"})}catch(e){return String(ts).slice(0,10)}}
+function nwScore(x){return Date.parse(x.ts)+((x.imp||1)-1)*2*864e5}
+function nwFollowed(gs){
+ var seen={},key=[],em=[];
+ gs.forEach(function(g){WT.groups[g].cos.forEach(function(c){if(seen[c.n])return;seen[c.n]=1;(c.k==="k"?key:em).push(c.n)})});
+ return{key:key,em:em}}
+function newsHtml(){
+ if(!WT||!WT.items)return"";
+ var gs=nwGroups();if(!gs.length)return"";
+ var its=WT.items.filter(function(x){return x.g.some(function(g){return gs.indexOf(g)>=0})}).sort(function(a,b){return nwScore(b)-nwScore(a)});
+ var shown=nwShown?its:its.slice(0,NSHOW),F=nwFollowed(gs);
+ var nm=gs.map(function(g){return WT.groups[g].name}).join(" · ");
+ var li=shown.map(function(x){
+  var t=LANG==="en"?(x.title_en||x.title):x.title;
+  var cs=(x.cos||[]).slice(0,3).map(function(c){return'<span class="nco">'+esc(c)+'</span>'}).join("");
+  return'<li><time>'+esc(nwDate(x.ts))+'</time><div><a href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(t)+'</a><div class="nm"><span>'+esc(x.source)+'</span>'+cs+'</div></div></li>'}).join("");
+ var more=its.length>NSHOW&&!nwShown?'<button class="nmore" type="button">'+tx("Afficher les "+(its.length-NSHOW)+" autres","Show the other "+(its.length-NSHOW))+'</button>':"";
+ var chips=function(a,c){return a.map(function(n){return'<span class="nco '+c+'">'+esc(n)+'</span>'}).join("")};
+ return'<div class="nwh"><span class="st">'+tx("Actualités du composant","Component news")+'</span><span class="nsc">'+esc(nm)+'</span><span class="nfn">'+tx("Hors Bourse : ni cours, ni notes d'analystes","No stock prices or analyst ratings")+'</span></div>'+
+  (li?'<ul class="nl">'+li+'</ul>'+more:'<div class="none2">'+tx("Aucune actualité récente sur les entreprises suivies pour ce composant.","No recent news on the companies tracked for this component.")+'</div>')+
+  '<details class="wlst"><summary>'+tx("Entreprises suivies","Companies tracked")+' ('+(F.key.length+F.em.length)+')</summary><div class="wlb"><div class="wlr"><b>'+tx("Acteurs clés","Key players")+'</b>'+chips(F.key,"k")+'</div>'+
+  (F.em.length?'<div class="wlr"><b>'+tx("Émergents","Emerging")+'</b>'+chips(F.em,"e")+'</div>':'')+'</div></details>'}
+var nwShown=false;
+function paintNews(){var el=document.getElementById("nw");if(el){el.innerHTML=newsHtml();bindNews()}}
+function bindNews(){var b=document.querySelector("#nw .nmore");if(b)b.addEventListener("click",function(){nwShown=true;paintNews();report()})}
+window.ChainFrame.refresh=paintNews;
 function mkHtml(part){
  var P=PARTS[part],key=FMAP[part],f=key&&FM[key],m=MKT[part]||{},nm=f?f.name:P.n;
  var pie=f?f.pie:sPie(m.s),ch=f?(f.chart||null):null,rv=f?(f.rev||null):(m.d||null),ti=tensInfo(part);
  return'<div class="hd"><span class="kicker">Fiche marché</span><h3>'+esc(nm)+'</h3>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
-  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+notesHtml(f,pie,ch,rv,ti)}
+  '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+(WT?'<div class="nws" id="nw">'+newsHtml()+'</div>':'')+notesHtml(f,pie,ch,rv,ti)}
 
 
 function duo(){
@@ -374,7 +407,7 @@ function duo(){
   '<div class="blk"><div class="st">Dépend de</div><div class="cl">'+(b.needs.length?chs(b.needs):'<span class="src">Rien en amont dans ce schéma.</span>')+'</div></div>'+
   '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div>';
  R.innerHTML=t;
- K.innerHTML=mkHtml(part);
+ nwShown=false;K.innerHTML=mkHtml(part);bindNews();
 }
 function centerMini(box){
  if(!box)return;var mw=box.querySelector(".mw"),sp=box.querySelector(".spin");if(!mw||!sp)return;

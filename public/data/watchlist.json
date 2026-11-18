@@ -1,0 +1,2983 @@
+{
+ "_note": "Watchlist par composant de l'infrastructure. k = acteur clé, e = émergent. Alias commençant par « = » : casse respectée. kw = mots-clés sectoriels (un article sans nom d'entreprise y est rattaché). q = requêtes Google News (14 jours). Le trading (cours, consensus, objectifs d'analystes) est exclu : voir collector/watch.mjs.",
+ "as_of": "2026-11-18",
+ "groups": [
+  {
+   "id": "smr",
+   "name": "Nucléaire (SMR et réacteurs avancés)",
+   "parts": [
+    "smr"
+   ],
+   "scope": "Réacteurs modulaires et avancés destinés à alimenter des datacenters",
+   "cos": [
+    {
+     "n": "Oklo",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "X-energy",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "X-Energy",
+      "Xe-100"
+     ]
+    },
+    {
+     "n": "NuScale",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "NuScale Power"
+     ]
+    },
+    {
+     "n": "TerraPower",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Natrium"
+     ]
+    },
+    {
+     "n": "Kairos Power",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Westinghouse",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "AP1000",
+      "AP300"
+     ],
+     "w": 1
+    },
+    {
+     "n": "GE Vernova Hitachi",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "BWRX-300"
+     ]
+    },
+    {
+     "n": "Nano Nuclear",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "NANO Nuclear"
+     ]
+    },
+    {
+     "n": "Last Energy",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Aalo Atomics",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Aalo"
+     ]
+    },
+    {
+     "n": "Deep Fission",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Terrestrial Energy",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Rolls-Royce SMR",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "Rolls-Royce Small Modular"
+     ]
+    },
+    {
+     "n": "Holtec",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Constellation Energy",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Constellation"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Talen Energy",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Talen"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Vistra",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Centrus Energy",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Centrus"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Newcleo",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Blue Energy",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Radiant Nuclear",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Radiant Industries"
+     ]
+    },
+    {
+     "n": "Valar Atomics",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Valar"
+     ]
+    }
+   ],
+   "kw": "small modular reactors?|\\bSMRs?\\b|microreactors?|advanced (?:nuclear )?reactors?|nuclear (?:power|plant|reactor)s?\\W+(?:\\w+\\W+){0,6}data ?cent(?:er|re)s?|data ?cent(?:er|re)s?\\W+(?:\\w+\\W+){0,6}nuclear",
+   "q": [
+    "Oklo OR \"X-energy\" OR NuScale OR TerraPower OR \"Kairos Power\" OR \"Nano Nuclear\"",
+    "small modular reactor data center",
+    "Westinghouse OR Holtec OR \"Last Energy\" OR \"Aalo Atomics\" nuclear data center"
+   ],
+   "cx": "nuclear|reactor|uranium|\\bSMRs?\\b"
+  },
+  {
+   "id": "gas",
+   "name": "Production sur site (turbines, piles à combustible)",
+   "parts": [
+    "gas"
+   ],
+   "scope": "Turbines à gaz, moteurs et piles à combustible qui alimentent les campus sans attendre le réseau",
+   "cos": [
+    {
+     "n": "GE Vernova",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Siemens Energy",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "Mitsubishi Heavy Industries",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Mitsubishi Heavy"
+     ]
+    },
+    {
+     "n": "Caterpillar",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Solar Turbines"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Bloom Energy",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Bloom Energy"
+     ]
+    },
+    {
+     "n": "Wärtsilä",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "Wartsila"
+     ]
+    },
+    {
+     "n": "Cummins",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Baker Hughes",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Doosan Enerbility",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Doosan"
+     ],
+     "w": 1
+    },
+    {
+     "n": "ProEnergy",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Boom Supersonic",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Boom Superpower"
+     ]
+    },
+    {
+     "n": "Williams Companies",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Williams Cos"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Energy Transfer",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Kinder Morgan",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Crusoe",
+     "c": "US",
+     "k": "e"
+    }
+   ],
+   "kw": "gas turbines?|behind-the-meter|on-?site (?:power|generation)|bring[- ]your[- ]own[- ]power|fuel cells? (?:\\w+\\W+){0,5}data ?cent",
+   "q": [
+    "\"GE Vernova\" OR \"Siemens Energy\" OR \"Mitsubishi Heavy\" gas turbine data center",
+    "\"Bloom Energy\" OR Caterpillar OR Wärtsilä on-site power data center",
+    "gas turbine shortage backlog"
+   ],
+   "cx": "gas|turbine|data ?cent(?:er|re)|on-?site|power plant"
+  },
+  {
+   "id": "grid",
+   "name": "Réseau électrique et transformateurs",
+   "parts": [
+    "trf",
+    "power"
+   ],
+   "scope": "Raccordement au réseau, transformateurs, appareillage haute tension",
+   "cos": [
+    {
+     "n": "Hitachi Energy",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "Siemens Energy",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "GE Vernova",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Schneider Electric",
+     "c": "EU",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "ABB",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "=ABB"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Eaton",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Eaton"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Hyundai Electric",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "HD Hyundai Electric"
+     ]
+    },
+    {
+     "n": "HD Hyundai Electric",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Hammond Power",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Hammond Power Solutions"
+     ]
+    },
+    {
+     "n": "Prolec GE",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "WEG",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=WEG"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Hitachi",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "=Hitachi"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Quanta Services",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Powell Industries",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Sieyuan Electric",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Hyosung Heavy Industries",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Hyosung"
+     ],
+     "w": 1
+    },
+    {
+     "n": "LS Electric",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "NextEra Energy",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "NextEra"
+     ],
+     "w": 1
+    },
+    {
+     "n": "PJM",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=PJM"
+     ],
+     "w": 1
+    },
+    {
+     "n": "ERCOT",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=ERCOT"
+     ],
+     "w": 1
+    },
+    {
+     "n": "FERC",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=FERC"
+     ],
+     "w": 1
+    }
+   ],
+   "kw": "power transformers?|grid transformers?|transformer (?:shortage|lead times?|backlog)|interconnection queues?|large[- ]load (?:interconnection|tariff)|switchgear|high-voltage (?:equipment|direct current|HVDC)",
+   "q": [
+    "\"Hitachi Energy\" OR \"Siemens Energy\" OR \"Hyundai Electric\" OR \"Hammond Power\" transformer",
+    "data center grid interconnection large load PJM OR ERCOT OR FERC",
+    "transformer shortage lead times data center"
+   ],
+   "cx": "data ?cent(?:er|re)|large[- ]load|interconnection|transformer|substation|grid"
+  },
+  {
+   "id": "dcbuild",
+   "name": "Datacenters : constructeurs, exploitants, néoclouds",
+   "parts": [
+    "bld"
+   ],
+   "scope": "Qui construit et exploite les campus de calcul",
+   "cos": [
+    {
+     "n": "Microsoft",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Microsoft Azure"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Amazon Web Services",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "AWS",
+      "=Amazon"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Google Cloud",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Google"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Meta",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Meta"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Oracle",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Oracle"
+     ],
+     "w": 1
+    },
+    {
+     "n": "CoreWeave",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Nebius",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "IREN",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "=IREN",
+      "Iris Energy"
+     ]
+    },
+    {
+     "n": "Lambda",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Lambda Labs",
+      "Lambda AI",
+      "Lambda Cloud"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Crusoe",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Nscale",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Together AI",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Fluidstack",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Equinix",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Digital Realty",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Vantage Data Centers",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Vantage"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Aligned Data Centers",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Aligned Data Centers"
+     ],
+     "x": 1
+    },
+    {
+     "n": "QTS",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=QTS"
+     ]
+    },
+    {
+     "n": "Stack Infrastructure",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=STACK Infrastructure"
+     ],
+     "x": 1
+    },
+    {
+     "n": "CyrusOne",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Applied Digital",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Core Scientific",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "TeraWulf",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Cipher Mining",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Cipher Digital"
+     ]
+    },
+    {
+     "n": "Galaxy Digital",
+     "c": "US",
+     "k": "e",
+     "a": []
+    },
+    {
+     "n": "Stargate",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Project Stargate"
+     ]
+    },
+    {
+     "n": "Humain",
+     "c": "GULF",
+     "k": "k",
+     "x": 1,
+     "a": [
+      "=Humain",
+      "=HUMAIN"
+     ]
+    },
+    {
+     "n": "G42",
+     "c": "GULF",
+     "k": "k"
+    },
+    {
+     "n": "Khazna",
+     "c": "GULF",
+     "k": "e"
+    },
+    {
+     "n": "Reliance Jio",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Jamnagar"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Alibaba Cloud",
+     "c": "CN",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Tencent Cloud",
+     "c": "CN",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Huawei Cloud",
+     "c": "CN",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Scala Data Centers",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Brookfield",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=Brookfield"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Blackstone",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Blackstone"
+     ],
+     "w": 1
+    }
+   ],
+   "kw": "hyperscale(?:rs?)?|(?:AI )?data ?cent(?:er|re)s? (?:campus|construction|capacity|lease|developers?|buildout|build-out)|gigawatt[- ]scale|neoclouds?",
+   "q": [
+    "CoreWeave OR Nebius OR IREN OR Nscale OR Crusoe OR Lambda data center capacity",
+    "Stargate OR Humain OR G42 OR Khazna data center campus",
+    "Equinix OR \"Digital Realty\" OR Vantage OR Aligned OR \"Applied Digital\" data center lease"
+   ],
+   "cx": "data ?cent(?:er|re)|compute capacity|gigawatt|\\bGW\\b|AI infrastructure|AI factory|cloud capacity|capex|campus"
+  },
+  {
+   "id": "cooling",
+   "name": "Refroidissement des datacenters",
+   "parts": [
+    "cool",
+    "loop",
+    "cold"
+   ],
+   "scope": "Refroidissement liquide : unités de distribution (CDU), boucles d'eau, plaques froides",
+   "cos": [
+    {
+     "n": "Vertiv",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Schneider Electric",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "Motivair"
+     ],
+     "w": 1
+    },
+    {
+     "n": "nVent",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "CoolIT Systems",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "CoolIT"
+     ]
+    },
+    {
+     "n": "LiquidStack",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Submer",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Accelsius",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "JetCool",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Boyd Thermal",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Boyd"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Modine",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Trane Technologies",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Trane"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Carrier",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Carrier Global"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Johnson Controls",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Daikin",
+     "c": "OTHER",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Munters",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Asetek",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Delta Electronics",
+     "c": "OTHER",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Auras",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Auras Technology"
+     ]
+    },
+    {
+     "n": "Asia Vital Components",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "AVC"
+     ]
+    },
+    {
+     "n": "Eaton",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Eaton"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Alfa Laval",
+     "c": "EU",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Rittal",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Stulz",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Airedale",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Chilldyne",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Iceotope",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "GRC",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Green Revolution Cooling"
+     ]
+    }
+   ],
+   "kw": "liquid[- ]cool(?:ed|ing)|direct[- ]to[- ]chip|cold ?plates?|coolant distribution|\\bCDUs?\\b|immersion[- ]cool(?:ed|ing)|two-phase cooling|rear-door heat",
+   "q": [
+    "Vertiv OR nVent OR CoolIT OR LiquidStack OR Accelsius OR Submer liquid cooling",
+    "\"Schneider Electric\" OR Motivair OR Modine OR Trane OR Daikin data center cooling",
+    "liquid cooling data center Nvidia Blackwell OR Rubin CDU"
+   ],
+   "cx": "cooling|thermal|liquid|CDU|heat"
+  },
+  {
+   "id": "elec",
+   "name": "Distribution électrique et alimentation des puces",
+   "parts": [
+    "bus",
+    "pcb"
+   ],
+   "scope": "Barres de distribution, onduleurs, 800 V continu, alimentation des cartes",
+   "cos": [
+    {
+     "n": "Vertiv",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Eaton",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Eaton"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Schneider Electric",
+     "c": "EU",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "ABB",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "=ABB"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Legrand",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "Delta Electronics",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Lite-On",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Lite-On Technology"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Infineon",
+     "c": "EU",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Navitas",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Navitas Semiconductor"
+     ]
+    },
+    {
+     "n": "Vicor",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Monolithic Power Systems",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "MPS"
+     ]
+    },
+    {
+     "n": "Renesas",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Texas Instruments",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "onsemi",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "STMicroelectronics",
+     "c": "EU",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Wolfspeed",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Power Integrations",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Flex",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Flex Ltd",
+      "Flex Power"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "TTM Technologies",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "TTM"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Victory Giant Technology",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Hitachi Energy",
+     "c": "EU",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Hubbell",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "nVent",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Bel Fuse",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Advanced Energy",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Enphase",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    }
+   ],
+   "kw": "800 ?V(?: ?DC)?|solid-state transformers?|power shelf|busbars?|\\bVRMs?\\b|voltage regulators?|power delivery (?:\\w+\\W+){0,4}(?:GPU|rack|chip)|uninterruptible power|\\bUPS\\b systems?",
+   "q": [
+    "800V DC data center power Nvidia Vertiv OR Eaton OR Infineon OR Navitas",
+    "\"Delta Electronics\" OR Legrand OR \"Monolithic Power\" OR Vicor AI server power",
+    "solid-state transformer data center"
+   ],
+   "cx": "power|800 ?V|data ?cent(?:er|re)|rack|GPU|AI server"
+  },
+  {
+   "id": "chips",
+   "name": "Puces de calcul et serveurs",
+   "parts": [
+    "dies",
+    "rack"
+   ],
+   "scope": "GPU, ASIC, accélérateurs maison et fabricants de serveurs",
+   "cos": [
+    {
+     "n": "Nvidia",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "AMD",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=AMD"
+     ]
+    },
+    {
+     "n": "Broadcom",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Marvell",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Google TPU",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "TPU",
+      "Ironwood"
+     ]
+    },
+    {
+     "n": "Amazon Trainium",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Trainium",
+      "Annapurna Labs"
+     ]
+    },
+    {
+     "n": "Microsoft Maia",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Maia"
+     ]
+    },
+    {
+     "n": "Meta MTIA",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "MTIA"
+     ]
+    },
+    {
+     "n": "Qualcomm",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "AI200",
+      "AI250"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Intel",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Intel",
+      "Gaudi",
+      "Jaguar Shores"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Cerebras",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Groq",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "SambaNova",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Tenstorrent",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Etched",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "d-Matrix",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "MatX",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Huawei Ascend",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Ascend",
+      "Atlas 950"
+     ]
+    },
+    {
+     "n": "Cambricon",
+     "c": "CN",
+     "k": "k"
+    },
+    {
+     "n": "Moore Threads",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "MetaX",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Biren",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Hygon",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Alibaba T-Head",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "T-Head",
+      "Zhenwu"
+     ]
+    },
+    {
+     "n": "Baidu Kunlun",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "Kunlunxin",
+      "Kunlun"
+     ]
+    },
+    {
+     "n": "Super Micro",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Supermicro"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Dell",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Dell"
+     ],
+     "w": 1
+    },
+    {
+     "n": "HPE",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Hewlett Packard Enterprise"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Foxconn",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Hon Hai"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Quanta",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "=Quanta Computer"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Wiwynn",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Wistron",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Celestica",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Lenovo",
+     "c": "CN",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Inspur",
+     "c": "CN",
+     "k": "e",
+     "w": 1
+    }
+   ],
+   "kw": "AI (?:accelerators?|chips?)|AI GPUs?|custom (?:AI )?(?:silicon|ASICs?)|\\bXPUs?\\b|rack-scale|Blackwell|\\bRubin\\b|Vera Rubin|MI[34]\\d\\d",
+   "q": [
+    "Nvidia OR AMD OR Broadcom OR Marvell AI accelerator",
+    "Cerebras OR Groq OR Etched OR Tenstorrent OR SambaNova OR d-Matrix chip",
+    "Huawei Ascend OR Cambricon OR \"Moore Threads\" OR MetaX OR Biren AI chip",
+    "TPU OR Trainium OR Maia OR MTIA custom AI chip"
+   ],
+   "cx": "\\bAI\\b|GPU|accelerator|server|rack|inference|training"
+  },
+  {
+   "id": "foundry",
+   "name": "Fabrication : fonderies, lithographie, conception",
+   "parts": [
+    "fab"
+   ],
+   "scope": "Conception (EDA), machines de gravure, fonderies avancées",
+   "cos": [
+    {
+     "n": "TSMC",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Taiwan Semiconductor"
+     ]
+    },
+    {
+     "n": "Samsung Foundry",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Intel Foundry",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "SMIC",
+     "c": "CN",
+     "k": "k"
+    },
+    {
+     "n": "UMC",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=UMC",
+      "United Microelectronics"
+     ]
+    },
+    {
+     "n": "GlobalFoundries",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Rapidus",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Tower Semiconductor",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Hua Hong",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "ASML",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "Applied Materials",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Lam Research",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "KLA",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=KLA"
+     ]
+    },
+    {
+     "n": "Tokyo Electron",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Synopsys",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Cadence",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Cadence Design"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Siemens EDA",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "Arm",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "=Arm Holdings",
+      "=Arm Ltd"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "SMEE",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "=SMEE",
+      "Shanghai Micro Electronics"
+     ]
+    },
+    {
+     "n": "Naura",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "AMEC",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "Advanced Micro-Fabrication"
+     ]
+    },
+    {
+     "n": "SiCarrier",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "SiCarrier"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Zeiss SMT",
+     "c": "EU",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Lasertec",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Soitec",
+     "c": "EU",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Shin-Etsu",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "SUMCO",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "JSR",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    }
+   ],
+   "kw": "foundr(?:y|ies)|\\bEUV\\b|High-NA|lithography|\\b[12]\\d? ?nm\\b|\\b18A\\b|\\bA16\\b|\\bN2\\b|process nodes?|chip ?making equipment|semiconductor equipment|export controls? (?:on )?(?:chip|semiconductor)",
+   "q": [
+    "TSMC OR \"Samsung Foundry\" OR \"Intel Foundry\" OR SMIC OR Rapidus foundry 2nm",
+    "ASML OR \"Applied Materials\" OR \"Lam Research\" OR KLA OR \"Tokyo Electron\" chipmaking equipment",
+    "Synopsys OR Cadence OR \"Siemens EDA\" AI chip design",
+    "SMEE OR Naura OR SiCarrier China lithography EUV"
+   ],
+   "cx": "foundr|fab\\b|chip|semiconductor|lithograph|wafer|EUV"
+  },
+  {
+   "id": "memory",
+   "name": "Mémoire : DRAM et HBM",
+   "parts": [
+    "hbm"
+   ],
+   "scope": "DRAM, HBM, empilage et équipements associés",
+   "cos": [
+    {
+     "n": "SK hynix",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "SK Hynix",
+      "SKhynix"
+     ]
+    },
+    {
+     "n": "Samsung Electronics",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Samsung",
+      "Samsung memory",
+      "Samsung HBM"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Micron",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "CXMT",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "ChangXin Memory"
+     ]
+    },
+    {
+     "n": "YMTC",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Kioxia",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "SanDisk",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Sandisk"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Western Digital",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Seagate",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Nanya Technology",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Nanya"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Winbond",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Hanmi Semiconductor",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Hanmi"
+     ]
+    },
+    {
+     "n": "Hanwha Semitech",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "BESI",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "=BESI",
+      "Besi"
+     ]
+    },
+    {
+     "n": "ASMPT",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Disco",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=Disco Corp"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Advantest",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Teradyne",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Rambus",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Netlist",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    }
+   ],
+   "kw": "\\bHBM\\d?E?\\b|high[- ]bandwidth memory|\\bDRAM\\b|\\bLPDDR\\d?X?\\b|\\bSOCAMM\\b|\\bGDDR\\d\\b|memory (?:shortage|supercycle|crunch)|HBF|high bandwidth flash",
+   "q": [
+    "\"SK hynix\" OR Micron OR \"Samsung\" HBM4",
+    "CXMT OR YMTC OR Kioxia OR SanDisk memory",
+    "DRAM shortage OR supercycle AI memory",
+    "Hanmi OR BESI OR ASMPT OR Hanwha TC bonder HBM"
+   ],
+   "cx": "HBM|DRAM|memory|LPDDR|GDDR"
+  },
+  {
+   "id": "packaging",
+   "name": "Assemblage avancé (CoWoS, interposeur)",
+   "parts": [
+    "ip",
+    "wires"
+   ],
+   "scope": "Assemblage 2,5D/3D qui relie puce de calcul et mémoire",
+   "cos": [
+    {
+     "n": "TSMC",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "CoWoS",
+      "SoIC",
+      "CoPoS",
+      "TSMC CoWoS"
+     ],
+     "x": 1
+    },
+    {
+     "n": "ASE Technology",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "ASE Group",
+      "SPIL",
+      "Siliconware",
+      "=ASE"
+     ]
+    },
+    {
+     "n": "Amkor",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Intel",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "EMIB",
+      "Foveros"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "JCET",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Powertech",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "PTI"
+     ]
+    },
+    {
+     "n": "Tongfu Microelectronics",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "TFME"
+     ]
+    },
+    {
+     "n": "Samsung",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "I-Cube",
+      "X-Cube"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Kulicke & Soffa",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "K&S"
+     ],
+     "w": 1
+    },
+    {
+     "n": "BESI",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "=BESI",
+      "Besi"
+     ]
+    },
+    {
+     "n": "Disco",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=Disco Corp"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Onto Innovation",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Camtek",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Unimicron",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Shinko",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Palomar",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Tokyo Seimitsu",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    }
+   ],
+   "kw": "CoWoS|advanced packaging|chiplets?|hybrid bonding|interposers?|\\bSoIC\\b|\\bFOPLP\\b|panel[- ]level packaging|2\\.5D|3D (?:packaging|stacking)",
+   "q": [
+    "CoWoS capacity TSMC OR ASE OR Amkor advanced packaging",
+    "Amkor OR \"ASE Technology\" OR JCET OR Powertech packaging AI",
+    "hybrid bonding OR \"panel-level packaging\" OR glass interposer AI chip"
+   ],
+   "cx": "packag|CoWoS|chiplet|bonding|interposer|HBM"
+  },
+  {
+   "id": "substrate",
+   "name": "Substrats et matériaux (T-glass, ABF)",
+   "parts": [
+    "sub"
+   ],
+   "scope": "Substrats organiques, fibre de verre, films, verre",
+   "cos": [
+    {
+     "n": "Ibiden",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Unimicron",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Shinko Electric",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Shinko"
+     ]
+    },
+    {
+     "n": "AT&S",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "=AT&S"
+     ]
+    },
+    {
+     "n": "Kinsus",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Nan Ya PCB",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Ajinomoto",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "ABF",
+      "Ajinomoto Build-up"
+     ]
+    },
+    {
+     "n": "Nittobo",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Nitto Boseki",
+      "T-glass",
+      "T-Glass"
+     ]
+    },
+    {
+     "n": "Taiwan Glass",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Corning",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Absolics",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "SKC Absolics"
+     ]
+    },
+    {
+     "n": "LG Innotek",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Samsung Electro-Mechanics",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "SEMCO"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Resonac",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "AGC",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=AGC Inc"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Schott",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "=Schott AG"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Mitsubishi Gas Chemical",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Doosan Electro-Materials",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Intel",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "glass core",
+      "glass substrate"
+     ],
+     "x": 1,
+     "w": 1
+    }
+   ],
+   "kw": "T-glass|glass cloth|low-CTE|\\bABF\\b|IC substrates?|glass substrates?|glass[- ]core|substrate (?:shortage|supply)",
+   "q": [
+    "Nittobo OR Ibiden OR Unimicron OR Ajinomoto substrate OR T-glass OR ABF",
+    "glass substrate OR \"glass core\" AI chip Intel OR Absolics OR Corning",
+    "T-glass shortage"
+   ],
+   "cx": "substrate|glass|ABF|T-glass|packag"
+  },
+  {
+   "id": "optics",
+   "name": "Optique : lasers, modules, fibre, CPO",
+   "parts": [
+    "mod",
+    "las",
+    "cpo",
+    "fib",
+    "fibc"
+   ],
+   "scope": "Liaisons optiques : lasers, modules enfichables, optique co-packagée, fibre",
+   "cos": [
+    {
+     "n": "Coherent",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Lumentum",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Innolight",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "InnoLight",
+      "Zhongji Innolight"
+     ]
+    },
+    {
+     "n": "Eoptolink",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Eoptolink Technology"
+     ]
+    },
+    {
+     "n": "Fabrinet",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Applied Optoelectronics",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "AAOI"
+     ]
+    },
+    {
+     "n": "Ayar Labs",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Lightmatter",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Celestial AI",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "POET Technologies",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=POET"
+     ]
+    },
+    {
+     "n": "Corning",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Prysmian",
+     "c": "EU",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Sumitomo Electric",
+     "c": "OTHER",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Fujikura",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Furukawa Electric",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "YOFC",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "Yangtze Optical"
+     ]
+    },
+    {
+     "n": "Mitsubishi Electric",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=Mitsubishi Electric"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Hisense Broadband",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Source Photonics",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Marvell",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Broadcom",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Ciena",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Nokia",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "=Nokia",
+      "Infinera"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Tower Semiconductor",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "IQE",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "NewPhotonics",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Sivers",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "Sivers Semiconductors"
+     ]
+    },
+    {
+     "n": "Xscape Photonics",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "nEye",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Teramount",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Scintil",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Cisco Silicon One",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Acacia"
+     ],
+     "w": 1
+    }
+   ],
+   "kw": "optical transceivers?|co-?packaged optics|\\bCPO\\b|silicon photonics|\\b(?:800G|1\\.6T|3\\.2T)\\b|\\bEMLs?\\b|indium phosphide|optical (?:interconnects?|links?|modules?|engines?)|optical fib(?:er|re)|hollow[- ]core|\\bVCSELs?\\b",
+   "q": [
+    "Coherent OR Lumentum OR Innolight OR Eoptolink OR Fabrinet optical transceiver",
+    "\"Ayar Labs\" OR Lightmatter OR \"Celestial AI\" OR \"Xscape Photonics\" photonics",
+    "co-packaged optics Nvidia OR Broadcom silicon photonics",
+    "Corning OR Prysmian OR Fujikura OR YOFC optical fiber data center"
+   ],
+   "cx": "optic|photonic|transceiver|fib(?:er|re)|laser|CPO|800G|1\\.6T"
+  },
+  {
+   "id": "copper",
+   "name": "Cuivre : câbles et connectique du rack",
+   "parts": [
+    "cu",
+    "aec"
+   ],
+   "scope": "Câbles et connecteurs courte portée, câbles actifs (AEC)",
+   "cos": [
+    {
+     "n": "Credo",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Credo Technology"
+     ]
+    },
+    {
+     "n": "Amphenol",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "TE Connectivity",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Molex",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Marvell",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Astera Labs",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Broadcom",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Luxshare",
+     "c": "CN",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Volex",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Semtech",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Fujikura",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Samtec",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Ethernovia",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Bizlink",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "BizLink"
+     ]
+    },
+    {
+     "n": "Southwire",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Freeport-McMoRan",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Freeport"
+     ],
+     "w": 1
+    }
+   ],
+   "kw": "active electrical cables?|\\bAECs?\\b|\\bDACs?\\b (?:cable|copper)|copper (?:cables?|interconnects?|wiring|demand|supply|shortage)|copper-based|NVLink spine|cable cartridge",
+   "q": [
+    "Credo OR Amphenol OR \"TE Connectivity\" OR Molex OR Luxshare active electrical cable",
+    "\"Astera Labs\" OR Marvell OR Semtech retimer OR AEC AI",
+    "copper demand AI data center"
+   ],
+   "cx": "cable|copper|connect|retimer|AEC|interconnect"
+  },
+  {
+   "id": "network",
+   "name": "Réseau : commutateurs et interconnexions",
+   "parts": [
+    "sw",
+    "sw2"
+   ],
+   "scope": "Commutateurs Ethernet/InfiniBand, interconnexion entre racks et entre sites",
+   "cos": [
+    {
+     "n": "Nvidia networking",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Spectrum-X",
+      "InfiniBand",
+      "NVLink",
+      "Quantum-X",
+      "Spectrum-XGS"
+     ]
+    },
+    {
+     "n": "Arista",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Arista Networks"
+     ]
+    },
+    {
+     "n": "Cisco",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Broadcom Tomahawk",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Tomahawk",
+      "Jericho"
+     ]
+    },
+    {
+     "n": "Juniper",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Juniper Networks"
+     ]
+    },
+    {
+     "n": "HPE Networking",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Aruba"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Celestica",
+     "c": "OTHER",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Accton",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Marvell",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Huawei networking",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "CloudEngine"
+     ],
+     "w": 1
+    },
+    {
+     "n": "H3C",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "New H3C"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Ruijie",
+     "c": "CN",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Ciena",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Nokia",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "=Nokia"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Ultra Ethernet Consortium",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Ultra Ethernet",
+      "UEC"
+     ]
+    },
+    {
+     "n": "UALink",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "UALink Consortium"
+     ]
+    },
+    {
+     "n": "Enfabrica",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Eridu",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "DriveNets",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Alpha Wave",
+     "c": "OTHER",
+     "k": "e"
+    }
+   ],
+   "kw": "AI networking|\\bSpectrum-?X\\b|InfiniBand|Ultra ?Ethernet|\\bUALink\\b|NVLink|scale-?(?:up|out|across) (?:network|fabric|interconnect)|\\bTomahawk\\b|Ethernet switch(?:es)?|co-?packaged",
+   "q": [
+    "Arista OR Cisco OR Celestica OR Accton AI networking switch",
+    "Nvidia Spectrum-X OR InfiniBand OR NVLink OR \"Ultra Ethernet\" OR UALink",
+    "Ciena OR Nokia OR Infinera data center interconnect AI"
+   ],
+   "cx": "network|switch|Ethernet|InfiniBand|interconnect|fabric|scale-"
+  },
+  {
+   "id": "models",
+   "name": "Modèles et laboratoires",
+   "parts": [
+    "models"
+   ],
+   "scope": "Laboratoires qui entraînent et servent les modèles de pointe",
+   "cos": [
+    {
+     "n": "OpenAI",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Anthropic",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Google DeepMind",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Gemini",
+      "DeepMind"
+     ]
+    },
+    {
+     "n": "Meta AI",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Llama",
+      "Meta Superintelligence"
+     ]
+    },
+    {
+     "n": "xAI",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Grok"
+     ]
+    },
+    {
+     "n": "Microsoft AI",
+     "c": "US",
+     "k": "e",
+     "a": []
+    },
+    {
+     "n": "Mistral AI",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "Mistral"
+     ]
+    },
+    {
+     "n": "DeepSeek",
+     "c": "CN",
+     "k": "k"
+    },
+    {
+     "n": "Alibaba Qwen",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Qwen"
+     ]
+    },
+    {
+     "n": "Moonshot AI",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Kimi",
+      "Moonshot"
+     ]
+    },
+    {
+     "n": "Zhipu AI",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Z.ai",
+      "Zhipu",
+      "GLM-"
+     ]
+    },
+    {
+     "n": "MiniMax",
+     "c": "CN",
+     "k": "k"
+    },
+    {
+     "n": "ByteDance Seed",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Doubao",
+      "Seed-OSS",
+      "=Seed1"
+     ]
+    },
+    {
+     "n": "Baidu Ernie",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "Ernie"
+     ]
+    },
+    {
+     "n": "Tencent Hunyuan",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "Hunyuan"
+     ]
+    },
+    {
+     "n": "StepFun",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Cohere",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "AI21 Labs",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "AI21"
+     ]
+    },
+    {
+     "n": "Safe Superintelligence",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=SSI",
+      "Sutskever"
+     ]
+    },
+    {
+     "n": "Thinking Machines",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Thinking Machines Lab"
+     ]
+    },
+    {
+     "n": "Reflection AI",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Sakana AI",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Sakana"
+     ]
+    },
+    {
+     "n": "Black Forest Labs",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Perplexity",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Humain",
+     "c": "GULF",
+     "k": "e",
+     "a": [
+      "=Humain",
+      "=HUMAIN",
+      "ALLaM"
+     ],
+     "x": 1
+    },
+    {
+     "n": "G42",
+     "c": "GULF",
+     "k": "e",
+     "a": [
+      "Jais"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Sarvam AI",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Sarvam"
+     ]
+    },
+    {
+     "n": "Naver HyperCLOVA",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "HyperCLOVA"
+     ]
+    },
+    {
+     "n": "LG AI Research",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "EXAONE"
+     ]
+    },
+    {
+     "n": "Upstage",
+     "c": "OTHER",
+     "k": "e"
+    }
+   ],
+   "kw": "frontier (?:AI )?models?|open-weights?|reasoning models?|foundation models?|large language models?|\\bLLMs?\\b|new (?:AI )?model(?:s)? (?:release|launch)|model (?:release|launch)",
+   "q": [
+    "OpenAI OR Anthropic OR \"Google DeepMind\" OR xAI new model",
+    "DeepSeek OR Qwen OR Moonshot OR Kimi OR Zhipu OR MiniMax new model",
+    "Mistral OR Cohere OR \"Safe Superintelligence\" OR \"Thinking Machines\" OR \"Reflection AI\" model",
+    "open-weight model release"
+   ]
+  },
+  {
+   "id": "apps",
+   "name": "Applications et adoption",
+   "parts": [
+    "apps"
+   ],
+   "scope": "Produits d'IA et adoption en entreprise",
+   "cos": [
+    {
+     "n": "ChatGPT",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "ChatGPT"
+     ]
+    },
+    {
+     "n": "Claude",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Claude Code",
+      "Claude Cowork",
+      "Claude.ai"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Gemini app",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Google AI Mode",
+      "AI Overviews",
+      "=Gemini app"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Microsoft Copilot",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Microsoft Copilot",
+      "GitHub Copilot",
+      "Copilot Studio"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Cursor",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Anysphere",
+      "=Cursor"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Cognition",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Devin",
+      "Windsurf"
+     ]
+    },
+    {
+     "n": "Replit",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Lovable",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Perplexity",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Harvey",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Harvey AI"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Glean",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Sierra",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Sierra AI"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Decagon",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Palantir",
+     "c": "US",
+     "k": "k",
+     "a": [],
+     "w": 1
+    },
+    {
+     "n": "Salesforce Agentforce",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Agentforce"
+     ]
+    },
+    {
+     "n": "ServiceNow",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "Adobe Firefly",
+     "c": "US",
+     "k": "e",
+     "a": []
+    },
+    {
+     "n": "ElevenLabs",
+     "c": "EU",
+     "k": "e"
+    },
+    {
+     "n": "Runway",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Runway"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Midjourney",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Character.AI",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "Character.AI"
+     ]
+    },
+    {
+     "n": "Doubao",
+     "c": "CN",
+     "k": "k"
+    },
+    {
+     "n": "Yuanbao",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Hugging Face",
+     "c": "EU",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Notion AI",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Figma Make",
+     "c": "US",
+     "k": "e"
+    }
+   ],
+   "kw": "AI agents?|agentic (?:AI|commerce|coding|workflows?)|coding (?:assistants?|agents?|tools?)|enterprise AI (?:adoption|deployment)|weekly active users|\\bchatbots?\\b",
+   "q": [
+    "ChatGPT OR Claude OR Gemini weekly users OR subscribers",
+    "Cursor OR Cognition OR Replit OR Lovable AI coding agents",
+    "Perplexity OR Harvey OR Glean OR Sierra enterprise AI agents",
+    "Doubao OR Qwen OR Yuanbao OR Kimi app users China"
+   ],
+   "cx": "\\bAI\\b|agent|assistant|copilot|chatbot"
+  }
+ ]
+}

@@ -12,6 +12,7 @@ import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { collectSec } from "./sec.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
+import { compileWatchlist, watchJobs, watchCandidateOk, buildWatch } from "./watch.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
@@ -126,7 +127,7 @@ async function pool(items, n, fn) {
   return res;
 }
 
-async function collectAll(cfg, env, http, now, log) {
+async function collectAll(cfg, env, http, now, log, W = null) {
   const cands = []; const health = [];
   const add = (name, kind, ok, n, err) => health.push({ name, kind, ok, n, err: err ? String(err.message || err).slice(0, 140) : undefined });
 
@@ -155,6 +156,22 @@ async function collectAll(cfg, env, http, now, log) {
         }
         add(name, "googlenews", true, items.length);
       } catch (e) { add(name, "googlenews", false, 0, e); }
+    });
+  }
+
+  // Watchlist : une requête Google News par groupe d'entreprises (14 jours, édition États-Unis) — c'est ce qui fait remonter les acteurs de niche (SMR, refroidissement, optique…)
+  if (W) {
+    await pool(watchJobs(W), 4, async ({ group, q }) => {
+      const name = `Watchlist ${group} · ${q.slice(0, 48)}`;
+      try {
+        const u = `https://news.google.com/rss/search?q=${encodeURIComponent(q + " when:14d")}&hl=en-US&gl=US&ceid=${encodeURIComponent("US:en")}`;
+        const items = parseFeed(await http(u)).slice(0, 30);
+        for (const it of items) {
+          const m = it.title.match(/^(.*) - ([^-]+)$/);
+          cands.push({ url: it.link, title: m ? m[1] : it.title, snippet: "", date: it.date, source: it.source || (m ? m[2] : "Google News"), tier: "press", via: "googlenews", edition: "US", domain: hostOf(it.sourceUrl), watch: group });
+        }
+        add(name, "watchlist", true, items.length);
+      } catch (e) { add(name, "watchlist", false, 0, e); }
     });
   }
 
@@ -296,6 +313,7 @@ Règles :
 - category : modeles (modèles, labos, produits), puces (GPU, ASIC, mémoire, fonderie, export), energie (électricité, réseau, refroidissement), capex = rubrique « Finance » (investissements, levées de fonds, résultats, valorisations, bourse), politique (décisions, nominations, déclarations, conflits ou polémiques de l'administration américaine, du Congrès ou d'autres gouvernements et de leurs responsables quand ils touchent l'IA ou ses dirigeants), regul (lois, règles, procès, contrôles à l'export), adoption (usages, revenus, déploiements), recherche (articles scientifiques).
 - importance : 3 = événement majeur (nouveau modèle de pointe, résultats ou investissement supérieur à 1 Md$, décision réglementaire ou restriction à l'export majeure, crise politique ou décision de la Maison Blanche touchant un grand acteur de l'IA, forte chute ou envolée boursière du secteur, pénurie ou goulot structurel) ; 2 = notable ; 1 = mineur ou redondant.
 - layer : Applications, Modèles, Datacenters, Puces, Mémoire HBM, Fonderie, Énergie, Financement, Régulation, Recherche ou Autre.
+- trading : true si l'article porte surtout sur un cours de Bourse, une note ou un objectif d'analyste, un consensus, une valorisation boursière ou un conseil d'investissement ; false si c'est un fait d'industrie (produit, usine, contrat, capacité, résultat chiffré, décision).
 Réponds uniquement par un tableau JSON, un objet par article, avec le même champ i.`;
 
 const SCHEMA = {
@@ -305,7 +323,7 @@ const SCHEMA = {
     properties: {
       i: { type: "INTEGER" }, relevant: { type: "BOOLEAN" }, title_fr: { type: "STRING" }, summary_fr: { type: "STRING" }, why_fr: { type: "STRING" }, title_en: { type: "STRING" }, summary_en: { type: "STRING" }, why_en: { type: "STRING" },
       country: { type: "STRING", enum: COUNTRIES }, category: { type: "STRING", enum: CATEGORIES },
-      importance: { type: "INTEGER" }, layer: { type: "STRING", enum: LAYERS }, reason: { type: "STRING" },
+      importance: { type: "INTEGER" }, layer: { type: "STRING", enum: LAYERS }, reason: { type: "STRING" }, trading: { type: "BOOLEAN" },
     },
     required: ["i", "relevant", "title_fr", "summary_fr", "country", "category", "importance", "layer"],
   },
@@ -422,13 +440,15 @@ export async function run(opts = {}) {
   const http = makeHttp(fetchImpl);
   const readJson = async (f, d) => { try { return JSON.parse(await fs.readFile(path.join(dataDir, f), "utf8")); } catch { return d; } };
 
+  const wlDoc = opts.watchlist || await readJson("watchlist.json", null);
+  const W = wlDoc ? compileWatchlist(wlDoc) : null;
   const feedDoc = await readJson("feed.json", { items: [] });
   const state = await readJson("state.json", {});
   const today = new Date(nowMs).toISOString().slice(0, 10);
   const nd = state.newsdata && state.newsdata.date === today ? state.newsdata : { date: today, n: 0 };
   const e2 = { ...env, __ndUsed: nd.n };
   log("Collecte des sources…");
-  const { cands, health } = await collectAll(cfg, e2, http, nowMs, log);
+  const { cands, health } = await collectAll(cfg, e2, http, nowMs, log, W);
   if (e2.__ndUsedOut != null) nd.n = e2.__ndUsedOut;
 
   const okCount = health.filter((h) => h.ok).length;
@@ -455,7 +475,8 @@ export async function run(opts = {}) {
     const cu = canonicalUrl(c.url); const id = sha(cu);
     if (known.has(cu) || known.has(id) || rejected[id] || seen.has(cu)) continue;
     const text = `${c.title} ${c.snippet || ""}`;
-    if ((c.filter || c.via === "gdelt" || c.via === "googlenews" || c.via === "newsdata" || c.via === "fedreg") && !(AI_RE.test(text) || AI_CJK.test(text))) continue;
+    if (c.watch && !(W && watchCandidateOk(c, W))) continue; // requête de la watchlist : nom d'entreprise ou sujet suivi, jamais du trading
+    if (!c.watch && (c.filter || c.via === "gdelt" || c.via === "googlenews" || c.via === "newsdata" || c.via === "fedreg") && !(AI_RE.test(text) || AI_CJK.test(text))) continue;
     const ts = parseDate(c.date, new Date(nowMs).toISOString());
     if (nowMs - new Date(ts).getTime() > maxAgeFor(c, maxAge)) continue;
     if (new Date(ts).getTime() > nowMs + 86400000) continue;
@@ -473,7 +494,10 @@ export async function run(opts = {}) {
   const cap = +env.MAX_CLASSIFY || 200;
   const KIND_CAP = { arxiv: 8, hf: 5, fedreg: 8, hn: 8 }; const perSource = +env.MAX_PER_SOURCE || 8;
   const cntSrc = {}, cntKind = {}; const queue = [];
-  for (const c of uniq) {
+  const WATCH_FIRST = +env.WATCH_QUEUE || 60;
+  const wFirst = uniq.filter((c) => c.watch).slice(0, WATCH_FIRST), wSet = new Set(wFirst);
+  const ordered = [...wFirst, ...uniq.filter((c) => !wSet.has(c))];
+  for (const c of ordered) {
     if (queue.length >= cap) break;
     const ks = String(c.source).toLowerCase();
     if ((cntSrc[ks] || 0) >= perSource || (cntKind[c.via] || 0) >= (KIND_CAP[c.via] ?? 999)) continue;
@@ -513,7 +537,8 @@ export async function run(opts = {}) {
         const r = by.get(i); if (!r) return;
         handled.add(c.id);
         const y = c.pendingOld ? null : (yieldStats[yk(c)] ||= { k: 0, r: 0 });
-        if (!r.relevant) {
+        const forced = !r.relevant && c.watch && W && watchCandidateOk(c, W);
+        if (!r.relevant && !forced) {
           rejected[c.id] = nowMs; rejectedNow++; if (c.pendingOld) dropIds.add(c.id); else y.r++;
           rejSamples.push({ ti: c.title.slice(0, 110), s: c.source, r: String(r.reason || "").slice(0, 70), d: new Date(nowMs).toISOString().slice(0, 10) }); if (rejSamples.length > 60) rejSamples.shift();
           return;
@@ -527,6 +552,7 @@ export async function run(opts = {}) {
           importance: Math.min(3, Math.max(1, Math.round(r.importance) || 1)), layer: LAYERS.includes(r.layer) ? r.layer : "Autre",
           source: c.source, url: c.url, confidence: conf,
           ...(whyOk(r, c) ? { why: String(r.why_fr).trim().replace(/\s+/g, " ") } : {}),
+          ...(r.trading === true ? { trading: true } : {}),
           ...enFields(r, c, whyOk(r, c)),
         });
       });
@@ -537,7 +563,7 @@ export async function run(opts = {}) {
   let fallback = 0;
   for (const c of queue) {
     if (handled.has(c.id) || c.pendingOld) continue;
-    if (!(AI_RE.test(`${c.title} ${c.snippet || ""}`) || AI_CJK.test(`${c.title} ${c.snippet || ""}`))) continue;
+    if (!c.watch && !(AI_RE.test(`${c.title} ${c.snippet || ""}`) || AI_CJK.test(`${c.title} ${c.snippet || ""}`))) continue;
     const rc = ruleClassify(c);
     added.push({ id: c.id, ts: c.ts, title: c.title.trim(), orig: c.title.slice(0, 200), summary: (c.snippet || "").slice(0, 260), country: rc.country, category: rc.category, importance: 1, layer: rc.layer, source: c.source, url: c.url, confidence: (c.tier === "primary" || domainIn(c.domain, Q.primaryDomains || [])) ? "haute" : "moyenne", pending: true });
     fallback++;
@@ -566,6 +592,12 @@ export async function run(opts = {}) {
   let gl = { changed: 0, failed: 0, left: 0, reason: "erreur" };
   try { gl = await resolveGoogleLinks({ items: keep, fetchImpl, max: +env.GNEWS_MAX || 0, log }); }
   catch (e) { gl.reason = String(e.message || e).slice(0, 120); }
+  // Watchlist : articles rattachés à un composant de l'infrastructure (hors trading), conservés au-delà du flux principal ; ne bloque jamais la collecte
+  const watchPrev = await readJson("watch.json", null);
+  let watchRes = { doc: null, summary: { reason: W ? "erreur" : "watchlist.json absente" } };
+  try { if (W) watchRes = buildWatch({ prev: watchPrev, items: keep, W, now: nowMs }); }
+  catch (e) { watchRes.summary.reason = String(e.message || e).slice(0, 120); }
+  log("Watchlist : " + (watchRes.summary.total != null ? `${watchRes.summary.total} articles rattachés (${watchRes.summary.tagged} mis à jour)` : watchRes.summary.reason));
   const generateFocus = mkGen(FOCUS_SYSTEM, FOCUS_SCHEMA);
   const focusPrev = await readJson("focus.json", null);
   let focus = { doc: focusPrev, regenerated: false, reason: "erreur" };
@@ -608,7 +640,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, sec: secRes.summary, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -617,6 +649,7 @@ export async function run(opts = {}) {
     if (okCount > 0 && (added.length || tr.changed || gl.changed || gl.failed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
+    if (watchRes.doc && JSON.stringify({ ...watchRes.doc, updated_at: 0 }) !== JSON.stringify({ ...(watchPrev || {}), updated_at: 0 })) await fs.writeFile(path.join(dataDir, "watch.json"), JSON.stringify(watchRes.doc));
     if (enRes.changed) await fs.writeFile(path.join(dataDir, "en.json"), JSON.stringify(enRes.dict, null, 1));
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
@@ -626,7 +659,7 @@ export async function run(opts = {}) {
   log(`Terminé : +${added.length} articles, ${rejectedNow} écartés, ${keep.length} au total, ${errors.length} alerte(s)`);
   return out;
 }
-function maxAgeFor(c, base) { return c.via === "edgar" || c.via === "fedreg" ? 8 * 86400000 : base; }
+function maxAgeFor(c, base) { return c.watch ? 14 * 86400000 : c.via === "edgar" || c.via === "fedreg" ? 8 * 86400000 : base; }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   run({ dry: process.argv.includes("--dry") }).then((s) => { if (s.last_run.errors.length) console.log("Alertes :", s.last_run.errors.join(" | ")); }).catch((e) => { console.error(e); process.exit(1); });
