@@ -3,22 +3,50 @@
 // Rien n'est inventé ni résumé : titre du média, date, média, lien.
 export const VOIX_RULES = { days: 30, perPerson: 8, perQuery: 30 };
 
+// cat : dirigeants (PDG, y compris chaîne de l'IA) · cadres (CFO, CTO, président, conseil) · chercheurs · pouvoirs publics.
+// Les intitulés sont écrits à la main (vérifiés le 18 nov. 2026) ; `watch: false` coupe l'alerte de changement de poste quand l'intitulé vient d'être mis à jour.
 export const PEOPLE = [
-  { id: "sam-altman", n: "Sam Altman", role: "PDG d'OpenAI", co: "OpenAI", actor: "openai", re: /\bAltman\b/ },
-  { id: "dario-amodei", n: "Dario Amodei", role: "PDG d'Anthropic", co: "Anthropic", actor: null, re: /\bAmodei\b/ },
-  { id: "jensen-huang", n: "Jensen Huang", role: "Fondateur de Nvidia, ancien PDG (démission le 12 nov. 2026)", co: "Nvidia", actor: "nvidia", re: /\bJensen\b|\bHuang\b/ },
-  { id: "colette-kress", n: "Colette Kress", role: "Directrice financière et PDG par intérim de Nvidia", co: "Nvidia", actor: "nvidia", re: /\bKress\b/ },
-  { id: "elon-musk", n: "Elon Musk", role: "Fondateur de xAI, PDG de Tesla", co: "xAI", actor: null, re: /\bMusk\b/, q: '"Elon Musk" (xAI OR Grok OR "AI" OR OpenAI OR Nvidia)' },
-  { id: "satya-nadella", n: "Satya Nadella", role: "PDG de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bNadella\b/ },
-  { id: "sundar-pichai", n: "Sundar Pichai", role: "PDG d'Alphabet (Google)", co: "Alphabet", actor: "alphabet", re: /\bPichai\b/ },
-  { id: "demis-hassabis", n: "Demis Hassabis", role: "PDG de Google DeepMind", co: "Google DeepMind", actor: "alphabet", re: /\bHassabis\b/ },
-  { id: "mark-zuckerberg", n: "Mark Zuckerberg", role: "PDG de Meta", co: "Meta", actor: "meta", re: /\bZuckerberg\b/ },
-  { id: "lisa-su", n: "Lisa Su", role: "PDG d'AMD", co: "AMD", actor: "amd", re: /\bLisa Su\b/ },
-  { id: "hock-tan", n: "Hock Tan", role: "PDG de Broadcom", co: "Broadcom", actor: "broadcom", re: /\bHock Tan\b/ },
-  { id: "cc-wei", n: "C.C. Wei", role: "PDG de TSMC", co: "TSMC", actor: "tsmc", re: /\bC\.?\s?C\.? Wei\b/, q: '"C.C. Wei" TSMC' },
-  { id: "andy-jassy", n: "Andy Jassy", role: "PDG d'Amazon", co: "Amazon", actor: "amazon", re: /\bJassy\b/ },
-  { id: "mustafa-suleyman", n: "Mustafa Suleyman", role: "Directeur de Microsoft AI", co: "Microsoft", actor: "microsoft", re: /\bSuleyman\b/ },
-  { id: "lip-bu-tan", n: "Lip-Bu Tan", role: "PDG d'Intel", co: "Intel", actor: "intel-foundry", re: /\bLip-Bu Tan\b/ },
+  { id: "sam-altman", cat: "dirigeants", n: "Sam Altman", role: "PDG d'OpenAI", co: "OpenAI", actor: "openai", re: /\bAltman\b/ },
+  { id: "dario-amodei", cat: "dirigeants", n: "Dario Amodei", role: "PDG d'Anthropic", co: "Anthropic", actor: null, re: /\bAmodei\b/ },
+  { id: "jensen-huang", cat: "dirigeants", n: "Jensen Huang", role: "Fondateur de Nvidia, ancien PDG (démission le 12 nov. 2026)", co: "Nvidia", actor: "nvidia", re: /\bJensen\b|\bHuang\b/, watch: false },
+  { id: "elon-musk", cat: "dirigeants", n: "Elon Musk", role: "Fondateur de xAI, PDG de Tesla", co: "xAI", actor: null, re: /\bMusk\b/, q: '"Elon Musk" (xAI OR Grok OR "AI" OR OpenAI OR Nvidia)' },
+  { id: "satya-nadella", cat: "dirigeants", n: "Satya Nadella", role: "PDG de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bNadella\b/ },
+  { id: "sundar-pichai", cat: "dirigeants", n: "Sundar Pichai", role: "PDG d'Alphabet (Google)", co: "Alphabet", actor: "alphabet", re: /\bPichai\b/ },
+  { id: "demis-hassabis", cat: "dirigeants", n: "Demis Hassabis", role: "PDG de Google DeepMind", co: "Google DeepMind", actor: "alphabet", re: /\bHassabis\b/ },
+  { id: "mark-zuckerberg", cat: "dirigeants", n: "Mark Zuckerberg", role: "PDG de Meta", co: "Meta", actor: "meta", re: /\bZuckerberg\b/ },
+  { id: "lisa-su", cat: "dirigeants", n: "Lisa Su", role: "PDG d'AMD", co: "AMD", actor: "amd", re: /\bLisa Su\b/ },
+  { id: "hock-tan", cat: "dirigeants", n: "Hock Tan", role: "PDG de Broadcom", co: "Broadcom", actor: "broadcom", re: /\bHock Tan\b/ },
+  { id: "cc-wei", cat: "dirigeants", n: "C.C. Wei", role: "PDG de TSMC", co: "TSMC", actor: "tsmc", re: /\bC\.?\s?C\.? Wei\b/, q: '"C.C. Wei" TSMC' },
+  { id: "andy-jassy", cat: "dirigeants", n: "Andy Jassy", role: "PDG d'Amazon", co: "Amazon", actor: "amazon", re: /\bJassy\b/ },
+  { id: "mustafa-suleyman", cat: "dirigeants", n: "Mustafa Suleyman", role: "Directeur de Microsoft AI", co: "Microsoft", actor: "microsoft", re: /\bSuleyman\b/ },
+  { id: "lip-bu-tan", cat: "dirigeants", n: "Lip-Bu Tan", role: "PDG d'Intel", co: "Intel", actor: "intel-foundry", re: /\bLip-Bu Tan\b/ },
+  { id: "clay-magouyrk", cat: "dirigeants", n: "Clay Magouyrk", role: "Co-PDG d'Oracle", co: "Oracle", actor: null, re: /\bMagouyrk\b/ },
+  { id: "sanjay-mehrotra", cat: "dirigeants", n: "Sanjay Mehrotra", role: "PDG de Micron", co: "Micron", actor: "micron", re: /\bMehrotra\b/ },
+  { id: "christophe-fouquet", cat: "dirigeants", n: "Christophe Fouquet", role: "PDG d'ASML", co: "ASML", actor: "asml", re: /\bFouquet\b/ },
+  { id: "kwak-noh-jung", cat: "dirigeants", n: "Kwak Noh-jung", role: "PDG de SK hynix", co: "SK hynix", actor: "sk-hynix", re: /\bKwak Noh[- ]?jung\b/ },
+  { id: "michael-intrator", cat: "dirigeants", n: "Michael Intrator", role: "PDG de CoreWeave", co: "CoreWeave", actor: null, re: /\bIntrator\b/ },
+  { id: "alex-karp", cat: "dirigeants", n: "Alex Karp", role: "PDG de Palantir", co: "Palantir", actor: null, re: /\bKarp\b/ },
+  { id: "robin-li", cat: "dirigeants", n: "Robin Li", role: "PDG de Baidu", co: "Baidu", actor: null, re: /\bRobin Li\b/, q: '"Robin Li" Baidu' },
+  { id: "larry-ellison", cat: "cadres", n: "Larry Ellison", role: "Président et directeur technique d'Oracle", co: "Oracle", actor: null, re: /\bEllison\b/, q: '"Larry Ellison" (Oracle OR AI OR OpenAI OR Stargate)' },
+  { id: "colette-kress", cat: "cadres", n: "Colette Kress", role: "Directrice financière et PDG par intérim de Nvidia", co: "Nvidia", actor: "nvidia", re: /\bKress\b/ },
+  { id: "harvey-jones", cat: "cadres", n: "Harvey C. Jones", role: "Président du conseil de Nvidia", co: "Nvidia", actor: "nvidia", re: /\bHarvey (?:C\. )?Jones\b/, q: '"Harvey Jones" Nvidia' },
+  { id: "greg-brockman", cat: "cadres", n: "Greg Brockman", role: "Cofondateur et président d'OpenAI", co: "OpenAI", actor: "openai", re: /\bBrockman\b/ },
+  { id: "sarah-friar", cat: "cadres", n: "Sarah Friar", role: "Directrice financière d'OpenAI", co: "OpenAI", actor: "openai", re: /\bSarah Friar\b/ },
+  { id: "kevin-scott", cat: "cadres", n: "Kevin Scott", role: "Directeur technique de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bKevin Scott\b/, q: '"Kevin Scott" Microsoft' },
+  { id: "brad-smith", cat: "cadres", n: "Brad Smith", role: "Vice-président et président de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bBrad Smith\b/, q: '"Brad Smith" Microsoft' },
+  { id: "ruth-porat", cat: "cadres", n: "Ruth Porat", role: "Présidente et directrice des investissements d'Alphabet", co: "Alphabet", actor: "alphabet", re: /\bPorat\b/ },
+  { id: "geoffrey-hinton", cat: "chercheurs", n: "Geoffrey Hinton", role: "Prix Nobel, pionnier de l'apprentissage profond", co: "", actor: null, re: /\bHinton\b/ },
+  { id: "yoshua-bengio", cat: "chercheurs", n: "Yoshua Bengio", role: "Chercheur, pionnier de l'apprentissage profond", co: "", actor: null, re: /\bBengio\b/ },
+  { id: "yann-lecun", cat: "chercheurs", n: "Yann LeCun", role: "Président exécutif d'AMI Labs, ancien de Meta", co: "AMI Labs", actor: null, re: /\bLeCun\b/ },
+  { id: "ilya-sutskever", cat: "chercheurs", n: "Ilya Sutskever", role: "Cofondateur de Safe Superintelligence, ancien d'OpenAI", co: "SSI", actor: null, re: /\bSutskever\b/ },
+  { id: "andrej-karpathy", cat: "chercheurs", n: "Andrej Karpathy", role: "Chercheur, ancien d'OpenAI et de Tesla", co: "", actor: null, re: /\bKarpathy\b/ },
+  { id: "fei-fei-li", cat: "chercheurs", n: "Fei-Fei Li", role: "Chercheuse, cofondatrice de World Labs", co: "World Labs", actor: null, re: /\bFei-Fei Li\b/ },
+  { id: "mira-murati", cat: "chercheurs", n: "Mira Murati", role: "Fondatrice de Thinking Machines Lab, ancienne CTO d'OpenAI", co: "Thinking Machines Lab", actor: null, re: /\bMurati\b/ },
+  { id: "arthur-mensch", cat: "chercheurs", n: "Arthur Mensch", role: "PDG de Mistral AI", co: "Mistral AI", actor: null, re: /\bMensch\b/ },
+  { id: "donald-trump", cat: "pouvoirs", n: "Donald Trump", role: "Président des États-Unis", co: "", actor: null, re: /\bTrump\b/, q: '"Trump" (AI OR "artificial intelligence" OR Nvidia OR chips OR "data centers")' },
+  { id: "david-sacks", cat: "pouvoirs", n: "David Sacks", role: "Coprésident du PCAST, ancien conseiller IA et crypto de la Maison-Blanche", co: "", actor: null, re: /\bDavid Sacks\b|\bSacks\b/, q: '"David Sacks" AI' },
+  { id: "howard-lutnick", cat: "pouvoirs", n: "Howard Lutnick", role: "Secrétaire américain au Commerce", co: "", actor: null, re: /\bLutnick\b/, q: '"Lutnick" (chips OR AI OR Nvidia OR export OR semiconductor)' },
+  { id: "henna-virkkunen", cat: "pouvoirs", n: "Henna Virkkunen", role: "Vice-présidente exécutive de la Commission européenne (souveraineté technologique)", co: "", actor: null, re: /\bVirkkunen\b/ },
 ];
 
 // chaînes dont les vidéos portent le nom de l'invité ou du dirigeant (identifiants vérifiés sur le flux : auteur du flux = nom de la chaîne)
@@ -44,6 +72,7 @@ export function isStatement(title, re) {
   // « X says … » : le verbe suit le nom (au plus six mots entre les deux : titre, sociétés, etc.)
   const cueAfter = new RegExp(`^((?:[\\w.'’-]+\\W+){0,6}?)(?:${CUE})\\b`, "i").exec(after.replace(/^['’]s\b/, "").trim());
   if (cueAfter && /(?:^|\s)(?:to|will|would|not|never|could)\s*$/i.test(cueAfter[1])) return false;
+  if (cueAfter && /\b(?:he|she|they|who|which)\b/i.test(cueAfter[1])) return false; // nouveau sujet : « Bessent blames Lutnick’s Commerce as he slams… »
   if (new RegExp(`^(?:[\\w.'’-]+\\W+){0,6}?(?:${CUE})\\b`, "i").test(after.replace(/^['’]s\b/, "").trim()) && !/^\s*(?:,|’s|'s)?\s*(?:lawyers?|critics?|rivals?)\b/i.test(after)) {
     // le nom ne doit pas être complément d'un autre sujet qui parle (« Trump says Altman… », « Analysts say Huang… »)
     if (!new RegExp(`\\b(?:${CUE})\\s+(?:that\\s+)?(?:[\\w.'’-]+\\W+){0,4}$`, "i").test(before)) return true;
@@ -55,6 +84,8 @@ export function isStatement(title, re) {
   return false;
 }
 
+const CHANGE = /\b(?:resign\w*|steps? down|stepping down|ousted|fired|replaced|appointed|names? (?:new |a new )?(?:ceo|chief|chair)|succeed\w*|retir\w*|quits?|departure|leaves|exits?)\b/i;
+export const ROLES_AS_OF = "2026-11-18";
 const DAY = 864e5;
 async function withRetry(fn, sleep) { try { return await fn(); } catch (e) { if (!/429|5\d\d|abort|timeout/i.test(String(e.message || e))) throw e; await sleep(5000); return fn(); } }
 const canon = (u) => { try { const x = new URL(u); x.hash = ""; for (const k of [...x.searchParams.keys()]) if (/^utm_|^oc$|^hl$|^gl$|^ceid$/.test(k)) x.searchParams.delete(k); return x.href.replace(/\/$/, ""); } catch { return String(u); } };
@@ -64,10 +95,12 @@ const norm = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
  * collectVoix({ http, parseFeed, now, prev, log }) → { doc, summary }
  * `http(url)` renvoie le texte ; une personne ou une chaîne en échec n'arrête pas les autres.
  */
-export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, pause = 700, sleep = (t) => new Promise((r) => setTimeout(r, t)) }) {
+export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, pause = 1000, sleep = (t) => new Promise((r) => setTimeout(r, t)) }) {
   const cutoff = now - VOIX_RULES.days * DAY;
   const byPerson = new Map(PEOPLE.map((p) => [p.id, new Map()]));
   for (const p of prev?.people || []) if (byPerson.has(p.id)) for (const it of p.items || []) byPerson.get(p.id).set(canon(it.url), it);
+  const alerts = new Map(PEOPLE.map((p) => [p.id, new Map()]));
+  for (const p of prev?.people || []) if (alerts.has(p.id)) for (const a of p.alerts || []) alerts.get(p.id).set(canon(a.url), a);
   let added = 0, failed = 0;
   const add = (p, it) => {
     const m = byPerson.get(p.id), k = canon(it.url);
@@ -81,9 +114,13 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
       const xml = await withRetry(() => http(`https://news.google.com/rss/search?q=${encodeURIComponent(q + " when:14d")}&hl=en-US&gl=US&ceid=${encodeURIComponent("US:en")}`), sleep);
       for (const x of parseFeed(xml).slice(0, VOIX_RULES.perQuery)) {
         const ts = Date.parse(x.date); if (!(ts >= cutoff) || ts > now + DAY) continue;
-        const title = x.title.replace(/\s+-\s+[^-]{2,40}$/, "").trim(); // Google ajoute « - Média » en fin de titre
+        // Google ajoute « - Média » en fin de titre : on retire exactement le nom du média annoncé, sinon le dernier segment
+        const sfx = x.source && x.title.endsWith(" - " + x.source) ? " - " + x.source : null;
+        const title = (sfx ? x.title.slice(0, -sfx.length) : x.title.replace(/\s+-\s+[^-]{2,40}$/, "")).trim();
+        // alerte de poste : un titre récent annonce peut-être un changement (démission, nomination…) pour cette personne
+        if (p.watch !== false && ts > Date.parse(ROLES_AS_OF + "T23:59:59Z") && p.re.test(title) && CHANGE.test(title)) alerts.get(p.id).set(canon(x.link), { ts: new Date(ts).toISOString(), title, url: x.link, source: x.source || "Presse" });
         if (!isStatement(title, p.re)) continue;
-        add(p, { ts: new Date(ts).toISOString(), title, url: x.link, source: x.source || (x.title.match(/\s-\s([^-]{2,40})$/) || [])[1] || "Presse", kind: "presse" });
+        add(p, { ts: new Date(ts).toISOString(), title, url: x.link, source: String(x.source || "").split(/\s[-–|]\s/)[0] || (x.title.match(/\s-\s([^-]{2,40})$/) || [])[1] || "Presse", kind: "presse" });
       }
     } catch (e) { failed++; log(`Voix ${p.n} : ${String(e.message || e).slice(0, 80)}`); }
     await sleep(pause);
@@ -98,7 +135,8 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
     } catch (e) { failed++; log(`Voix ${c.name} : ${String(e.message || e).slice(0, 80)}`); }
   }
   const people = PEOPLE.map((p) => ({
-    id: p.id, n: p.n, role: p.role, co: p.co, actor: p.actor,
+    id: p.id, cat: p.cat, n: p.n, role: p.role, co: p.co, actor: p.actor,
+    alerts: [...alerts.get(p.id).values()].filter((a) => Date.parse(a.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 2),
     items: [...byPerson.get(p.id).values()].filter((it) => Date.parse(it.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, VOIX_RULES.perPerson),
   }));
   const total = people.reduce((s, p) => s + p.items.length, 0);

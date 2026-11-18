@@ -15,6 +15,8 @@ const cases = [
   ["Sundar Pichai overtakes Satya Nadella to claim top spot", "Sundar Pichai", false],
   ["Lip-Bu Tan: Latest Activity", "Lip-Bu Tan", false],
   ["Intel acquires a startup", "Lip-Bu Tan", false],
+  ["Bessent blames Lutnick’s Commerce as he slams Nvidia chip leakage", "Howard Lutnick", false],
+  ["Hinton warns of an AI Chernobyl by 2027", "Geoffrey Hinton", true],
 ];
 for (const [t, n, e] of cases) assert.equal(isStatement(t, R(n)), e, t);
 
@@ -32,7 +34,14 @@ const alt = r.doc.people.find((p) => p.id === "sam-altman"), am = r.doc.people.f
 assert.equal(alt.items.length, 1, "doublon de titre fusionné, article de 40 jours et article sans déclaration écartés");
 assert.equal(alt.items[0].title, "Sam Altman says AI is early");
 assert.equal(am.items.length, 1); assert.equal(am.items[0].kind, "video");
+assert.ok(PEOPLE.length >= 40 && PEOPLE.every((p) => p.cat && p.role && p.re), "roster : catégorie, poste et motif pour chacun");
+assert.equal(new Set(PEOPLE.map((p) => p.id)).size, PEOPLE.length, "identifiants uniques");
 assert.ok(r.summary.failed > 0 && r.summary.total === 2, "un échec n'arrête pas les autres");
+// alerte de poste : un titre récent annonçant une démission ou une nomination est signalé (pas pour les titres d'avant la vérification)
+const http3 = async (url) => /news\.google\.com/.test(url) && /Sutskever/.test(decodeURIComponent(url)) ? `<rss><channel><item><title>Ilya Sutskever resigns as head of SSI - Média</title><link>https://m.example/z</link><pubDate>${new Date(Date.parse("2026-11-24T12:00:00Z")).toUTCString()}</pubDate></item></channel></rss>` : (() => { throw new Error("HTTP 404"); })();
+const r3 = await collectVoix({ http: http3, parseFeed, now: Date.parse("2026-11-25T12:00:00Z"), prev: null, sleep: async () => {}, pause: 0 });
+assert.equal(r3.doc.people.find((p) => p.id === "ilya-sutskever").alerts.length, 1, "alerte de changement de poste");
+assert.equal(r3.doc.people.find((p) => p.id === "jensen-huang").alerts.length, 0);
 // la collecte suivante garde l'historique
 const r2 = await collectVoix({ http: async () => { throw new Error("HTTP 500"); }, parseFeed, now: now + 864e5, prev: r.doc, sleep: async () => {}, pause: 0 });
 assert.equal(r2.doc.people.find((p) => p.id === "sam-altman").items.length, 1, "historique conservé quand la source échoue");
