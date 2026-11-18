@@ -271,3 +271,6 @@ details.nwd>summary::-webkit-details-marker,details.wlst>summary::-webkit-detail
 }
 
 .fnote{margin:12px 0 0}
+/* demi-écran : camembert et graphique sur le même étage, tension en dessous du camembert */
+@media(max-width:900px){.g3{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}}
+@media(max-width:520px){.g3{grid-template-columns:1fr}}
