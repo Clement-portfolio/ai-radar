@@ -1,73 +1,73 @@
 {
-  "v": 1,
-  "day": "2026-11-18",
-  "generated_at": "2026-11-18T16:15:00.000Z",
-  "model": "jeu initial rédigé à partir des articles collectés",
-  "figures": [
+ "v": 1,
+ "day": "2026-11-18",
+ "generated_at": "2026-11-18T16:15:00.000Z",
+ "model": "jeu initial rédigé à partir des articles collectés",
+ "figures": [
+  {
+   "title": "Nvidia : chiffre d'affaires du trimestre",
+   "value": "115,8 Md$ (+20 %)",
+   "sub": "Contre 96,2 Md$ au trimestre précédent (+20 %) et +103 % sur un an ; BPA de 2,70 $ contre 1,30 $ un an plus tôt. Résultats au-dessus des attentes, l'action gagne près de 4 %.",
+   "ids": [
+    "55e7265b76e2",
+    "cc9584594038"
+   ],
+   "links": [
     {
-      "title": "Nvidia : chiffre d'affaires du trimestre",
-      "value": "115,8 Md$ (+20 %)",
-      "sub": "Contre 96,2 Md$ au trimestre précédent (+20 %) et +103 % sur un an ; BPA de 2,70 $ contre 1,30 $ un an plus tôt. Résultats au-dessus des attentes, l'action gagne près de 4 %.",
-      "ids": [
-        "55e7265b76e2",
-        "cc9584594038"
-      ],
-      "links": [
-        {
-          "t": "Nvidia (communiqué de résultats, SEC)",
-          "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
-        },
-        {
-          "t": "CNBC Tech",
-          "u": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html"
-        }
-      ],
-      "conf": "haute",
-      "scope": "day",
-      "ts": "2026-11-18T10:00:17.000Z",
-      "title_en": "Nvidia: quarterly revenue",
-      "value_en": "$115.8B (+20%)",
-      "sub_en": "Versus $96.2B in the previous quarter (+20%) and up 103% year on year; EPS of $2.70 versus $1.30 a year earlier. Results above expectations, the stock is up nearly 4%."
+     "t": "Nvidia (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
     },
     {
-      "title": "Anthropic : fourchette de prix de l'introduction en Bourse",
-      "value": "70 à 78 $",
-      "sub": "Fourchette actuelle du prix d'introduction, que l'entreprise devrait dépasser. Cotée au Nasdaq sous le symbole ANT, elle sera négociée à partir du 19 novembre.",
-      "ids": [
-        "33642c9df619"
-      ],
-      "links": [
-        {
-          "t": "CNBC Tech",
-          "u": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"
-        }
-      ],
-      "conf": "moyenne",
-      "scope": "week",
-      "ts": "2026-11-17T14:34:48.000Z",
-      "title_en": "Anthropic: IPO price range",
-      "value_en": "$70 to $78",
-      "sub_en": "Current IPO price range, which the company is expected to exceed. Listed on the Nasdaq under the symbol ANT, it will start trading on 19 November."
-    },
-    {
-      "title": "Financement circulaire de l'IA",
-      "value": "plus de 1 000 Md$",
-      "sub": "Montant dépassé entre entreprises d'IA, selon la cheffe du FMI Kristalina Georgieva, qui met en garde sur fond de refroidissement des investisseurs.",
-      "ids": [
-        "5d4425e9ff04"
-      ],
-      "links": [
-        {
-          "t": "CNBC Tech",
-          "u": "https://www.cnbc.com/2026/11/16/imf-georgieva-warning-ai-circular-financing.html"
-        }
-      ],
-      "conf": "moyenne",
-      "scope": "week",
-      "ts": "2026-11-16T09:14:46.000Z",
-      "title_en": "Circular AI financing",
-      "value_en": "over $1,000B",
-      "sub_en": "Amount exceeded among AI companies, according to IMF head Kristalina Georgieva, who warns amid cooling investor sentiment."
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html"
     }
-  ]
+   ],
+   "conf": "haute",
+   "scope": "day",
+   "ts": "2026-11-18T10:00:17.000Z",
+   "title_en": "Nvidia: quarterly revenue",
+   "value_en": "$115.8B (+20%)",
+   "sub_en": "Versus $96.2B in the previous quarter (+20%) and up 103% year on year; EPS of $2.70 versus $1.30 a year earlier. Results above expectations, the stock is up nearly 4%."
+  },
+  {
+   "title": "Anthropic : fourchette de prix de l'introduction en Bourse",
+   "value": "70 à 78 $",
+   "sub": "Fourchette actuelle du prix d'introduction, que l'entreprise devrait dépasser. Cotée au Nasdaq sous le symbole ANT, elle sera négociée à partir du 19 novembre.",
+   "ids": [
+    "33642c9df619"
+   ],
+   "links": [
+    {
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-17T14:34:48.000Z",
+   "title_en": "Anthropic: IPO price range",
+   "value_en": "$70 to $78",
+   "sub_en": "Current IPO price range, which the company is expected to exceed. Listed on the Nasdaq under the symbol ANT, it will start trading on 19 November."
+  },
+  {
+   "title": "Financement circulaire de l'IA",
+   "value": "plus de 1 000 Md$",
+   "sub": "Montant dépassé entre entreprises d'IA, selon la cheffe du FMI Kristalina Georgieva, qui met en garde sur fond de refroidissement des investisseurs.",
+   "ids": [
+    "5d4425e9ff04"
+   ],
+   "links": [
+    {
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/16/imf-georgieva-warning-ai-circular-financing.html"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-16T09:14:46.000Z",
+   "title_en": "Circular AI financing",
+   "value_en": "over $1,000B",
+   "sub_en": "Amount exceeded among AI companies, according to IMF head Kristalina Georgieva, who warns amid cooling investor sentiment."
+  }
+ ]
 }
