@@ -1,14 +1,34 @@
 {
- "generated_at": "2026-11-18T04:00:56.031Z",
+ "generated_at": "2026-11-18T07:23:48.799Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "01ad01e5cd41+2511beafb119+2a0155947f7e+3ee7a75e87fa+50e1e25269a9+8e2a2f996f96+be019836a173+f9bb4fd6f894",
+  "08537e7ab15d+08611d581f9a+738cf9204884+a2aa55ba11cb+a9e0bd04d64f+dce5e82d2a55+e25b2f709400+ea44684bf658",
+  "01ad01e5cd41+2511beafb119+2a0155947f7e+3ee7a75e87fa+499e87d18729+50e1e25269a9+8e2a2f996f96+be019836a173+f9bb4fd6f894",
   "1498609c0aea+15674a5384bf+20f963a804d9+6fd4401d69f5+ad0794c39984",
-  "2de58a421677+3c69314e6bc3+6cfc658d4b6a+a3f30498a16a+b68a7c2b553a+bfed3fc289dc+d0a7ff607720+dd5f54370718+ecbfea8ffe59",
   "06c70ce20939+2745e145bb51+4f1fe20754ae+6e834fc4bc29+78a6e6b6b646+854cbb320fb2+b1da22f7bd68+f819d90d809d",
   "2952b40b3590+2fb45d6cc030+363bae5beb12+8239fbdc6243+b5ba7df03858"
  ],
  "stories": [
+  {
+   "ids": [
+    "ea44684bf658",
+    "08611d581f9a",
+    "08537e7ab15d",
+    "738cf9204884"
+   ],
+   "head": "Le monde technologique s'interroge après le départ du PDG de Nvidia Jensen Huang",
+   "bullets": [
+    "Le PDG de Nvidia Jensen Huang a quitté ses fonctions, suscitant des interrogations dans l'industrie technologique sur l'avenir de l'entreprise et la rentabilité des investissements dans l'IA.",
+    "Malgré ce choc, Nvidia poursuit ses activités et sa stratégie de croissance, tandis que Sam Altman se montre confiant quant à l'avenir de l'industrie de l'IA."
+   ],
+   "head_en": "The tech world questions Nvidia's future after CEO Jensen Huang's departure",
+   "bullets_en": [
+    "Nvidia CEO Jensen Huang has stepped down, raising questions in the tech industry about the company's future and the profitability of investments in AI.",
+    "Despite this shock, Nvidia continues its operations and growth strategy, while Sam Altman expresses confidence in the future of the AI industry."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-18T05:20:00.000Z"
+  },
   {
    "ids": [
     "3ee7a75e87fa",
@@ -18,15 +38,17 @@
    ],
    "head": "Le conseil d'administration de Nvidia écarte tout retour de Jensen Huang",
    "bullets": [
-    "Le conseil d'administration de Nvidia a confirmé qu'il n'avait aucune intention de réintégrer Jensen Huang au poste de PDG, rejetant les demandes de retour.",
-    "Des dirigeants de la tech et de grands actionnaires réclamaient le retour de Jensen Huang au poste de PDG de Nvidia après sa démission."
+    "Le conseil d'administration de Nvidia a confirmé qu'il ne prévoit pas de réintégrer l'ancien PDG Jensen Huang au poste de directeur général.",
+    "Cette décision intervient alors que des dirigeants de la tech et des actionnaires réclamaient le retour de Jensen Huang après sa démission intervenue après 33 ans de mandat."
    ],
-   "head_en": "Nvidia's board rules out any return for Jensen Huang",
+   "head_en": "Nvidia's board rules out any return of Jensen Huang",
    "bullets_en": [
-    "Nvidia's board of directors confirmed it has no intention of reinstating Jensen Huang as CEO, rejecting demands for his return.",
-    "Tech leaders and major shareholders called for Jensen Huang to return as Nvidia's CEO following his resignation."
+    "Nvidia's board of directors confirmed it has no plans to reinstate former CEO Jensen Huang as chief executive.",
+    "This decision comes as tech executives and shareholders called for Jensen Huang's return following his resignation after 33 years in office."
    ],
    "ctx_ids": [
+    "32f526731264",
+    "733031d07a95",
     "68541c852c8c"
    ],
    "ts": "2026-11-18T01:22:38.321Z"
@@ -40,13 +62,13 @@
    ],
    "head": "Nvidia cesse la vente de ses puces d'intelligence artificielle vers la Chine",
    "bullets": [
-    "Nvidia a décidé d'arrêter la vente et l'expédition de ses puces d'intelligence artificielle vers la Chine, alors que l'administration américaine prend des mesures pour restreindre l'accès à distance.",
-    "À la suite des problèmes entourant Nvidia, le Congrès américain accentue la pression sur l'administration pour durcir les règles d'exportation de semi-conducteurs d'IA vers la Chine."
+    "Nvidia a décidé d'arrêter la vente et les expéditions de ses puces d'intelligence artificielle vers la Chine, tandis que l'administration et le Congrès américains renforcent les restrictions d'exportation.",
+    "Le Congrès américain accentuait déjà la pression sur l'administration pour durcir les règles d'exportation de semi-conducteurs d'IA vers la Chine à la suite des problèmes entourant Nvidia."
    ],
-   "head_en": "Nvidia stops selling artificial intelligence chips to China",
+   "head_en": "Nvidia stops selling its artificial intelligence chips to China",
    "bullets_en": [
-    "Nvidia has decided to stop selling and shipping its artificial intelligence chips to China as the U.S. administration takes steps to restrict remote access.",
-    "Following issues surrounding Nvidia, the U.S. Congress is increasing pressure on the administration to tighten rules on exporting AI semiconductors to China."
+    "Nvidia has decided to stop selling and shipping its artificial intelligence chips to China, while the US administration and Congress tighten export restrictions.",
+    "The US Congress was already increasing pressure on the administration to tighten export rules for AI semiconductors to China following issues surrounding Nvidia."
    ],
    "ctx_ids": [
     "ce333b7063cc"
@@ -55,40 +77,20 @@
   },
   {
    "ids": [
-    "a3f30498a16a",
-    "dd5f54370718",
-    "2de58a421677",
-    "6cfc658d4b6a"
-   ],
-   "head": "Nvidia dépasse les attentes lors de son premier rapport financier post-Huang",
-   "bullets": [
-    "Nvidia a publié des résultats financiers supérieurs aux attentes des analystes, marquant un test majeur pour la direction intérimaire.",
-    "Des rapports indiquent que Jensen Huang a quitté ses fonctions de PDG de Nvidia à la suite d'un départ forcé."
-   ],
-   "head_en": "Nvidia beats expectations in its first financial report post-Huang",
-   "bullets_en": [
-    "Nvidia posted financial results above analysts' expectations, marking a major test for the interim leadership.",
-    "Reports indicate that Jensen Huang stepped down as Nvidia CEO following a forced departure."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-18T00:45:00.000Z"
-  },
-  {
-   "ids": [
     "f819d90d809d",
     "b1da22f7bd68",
     "6e834fc4bc29",
     "4f1fe20754ae"
    ],
-   "head": "La consommation électrique des centres de données américains explose",
+   "head": "La consommation électrique massive des centres de données d'IA aux États-Unis",
    "bullets": [
-    "403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an, rivalisant avec la consommation de pays entiers.",
-    "Plus de 400 centres de données d'IA américains consomment autant d'électricité que des États entiers comme le Wisconsin, le Michigan ou l'Indiana."
+    "Une étude révèle que 403 centres de données hyperscale aux États-Unis ont consommé 82 térawattheures d'électricité en un an, rivalisant avec la consommation de pays entiers.",
+    "Ces infrastructures reposent encore largement sur les énergies fossiles et leur consommation électrique équivaut à celle d'États comme le Wisconsin, le Michigan ou l'Indiana."
    ],
-   "head_en": "Power consumption of American data centers skyrockets",
+   "head_en": "The massive electricity consumption of AI data centers in the United States",
    "bullets_en": [
-    "403 hyperscale data centers in the United States consumed 82 terawatt-hours of electricity in a year, rivaling the consumption of entire countries.",
-    "More than 400 American AI data centers consume as much electricity as entire states like Wisconsin, Michigan, or Indiana."
+    "A study reveals that 403 hyperscale data centers in the United States consumed 82 terawatt-hours of electricity in a year, rivaling the consumption of entire countries.",
+    "These infrastructures still rely heavily on fossil fuels and their electricity consumption equals that of states like Wisconsin, Michigan, or Indiana."
    ],
    "ctx_ids": [],
    "ts": "2026-11-17T10:30:00.000Z"
@@ -100,19 +102,17 @@
     "8239fbdc6243",
     "2952b40b3590"
    ],
-   "head": "Nvidia confirme l'arrêt des exportations de puces vers la Chine",
+   "head": "Nvidia confirme l'arrêt des exportations de ses puces d'IA vers la Chine",
    "bullets": [
-    "La direction par intérim de Nvidia, sous la houlette de sa PDG par intérim, a confirmé l'arrêt des expéditions de puces d'IA avancées vers le marché chinois.",
-    "La démission surprise de Jensen Huang a ébranlé l'action Nvidia tout en profitant à certains de ses concurrents sur les marchés financiers."
+    "La direction par intérim de Nvidia a confirmé l'arrêt des expéditions de puces d'intelligence artificielle vers le marché chinois.",
+    "La Chine a menacé de resserrer ses contrôles sur les terres rares en représailles à d'éventuelles restrictions américaines sur les semi-conducteurs."
    ],
-   "head_en": "Nvidia confirms the halt of chip exports to China",
+   "head_en": "Nvidia confirms the cessation of its AI chip exports to China",
    "bullets_en": [
-    "Nvidia's interim management, led by its interim CEO, confirmed the halt of shipments of advanced AI chips to the Chinese market.",
-    "Jensen Huang's surprise resignation shook Nvidia's stock while benefiting some of its competitors in financial markets."
+    "Nvidia's interim management confirmed the cessation of shipments of artificial intelligence chips to the Chinese market.",
+    "China threatened to tighten its controls on rare earths in retaliation for potential US restrictions on semiconductors."
    ],
-   "ctx_ids": [
-    "b68a7c2b553a"
-   ],
+   "ctx_ids": [],
    "ts": "2026-11-18T03:23:31.000Z"
   }
  ]
