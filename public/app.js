@@ -115,8 +115,16 @@ function rUne(){
     h+='<p class="small" style="padding:6px 0 0">Le briefing est rédigé par l\'IA à chaque collecte. En attendant, voici les articles les plus importants.</p>'+
       (top.length?'<ol class="bl">'+top.map(function(it){return'<li><div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span><span>'+esc(ago(it.ts))+'</span></div><h3 class="bt"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a></h3>'+(it.summary?'<ul class="b3"><li>'+esc(tx(it,'summary'))+'</li></ul>':'')+'<div class="by"><span class="bylab">Sources</span><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.source)+' ↗</a></div></li>'}).join("")+'</ol>':'<div class="empty">Aucune actualité pour le moment.</div>');
   }
-  h+='</section>'+figsHtml(byId)+'<button class="more" data-go="actualites">Toutes les actualités →</button></div>';
+  h+='</section>'+voixHtml()+figsHtml(byId)+'<button class="more" data-go="actualites">Toutes les actualités →</button></div>';
   el.innerHTML=h;
+}
+function voixHtml(){
+  var H=(S.voix&&S.voix.hot)||[];
+  if(!H.length)return"";
+  return'<section class="vhot"><div class="sgroup">Voix <em>les déclarations les plus reprises des dernières 48 h</em></div>'+H.map(function(n){
+    var meta=[n.outlets>1?n.outlets+' médias':'',n.kind==="video"?'Vidéo':n.source,ago(n.ts)].filter(Boolean).join(' · ');
+    return'<div class="vh"><div class="vhn"><b>'+esc(n.n)+'</b><span class="small">'+esc(n.role)+'</span></div><a class="vht" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+esc(!isEn()&&n.title_fr?n.title_fr:n.title)+'</a><div class="small">'+esc(meta)+'</div></div>';
+  }).join("")+'<a class="vall small" href="#acteurs/voix">Toutes les voix →</a></section>';
 }
 /* Chiffres clés de la Une : même carte que les chiffres du Marché ; la portée (24 h, semaine, mois) se recalcule à l'affichage */
 function figScope(ts){var a=Date.now()-Date.parse(ts);return a<=864e5?"Dernières 24 h":a<=7*864e5?"Cette semaine":"Ce mois-ci"}

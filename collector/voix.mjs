@@ -3,23 +3,24 @@
 // Rien n'est inventé ni résumé : titre du média, date, média, lien.
 export const VOIX_RULES = { days: 30, perPerson: 8, perQuery: 30 };
 
+// w : influence (1,6 = voix majeure, 0,6 = élu ou conseiller de second plan) ; sert au classement des déclarations de la Une.
 // cat : dirigeants (PDG, y compris chaîne de l'IA) · cadres (CFO, CTO, président, conseil) · chercheurs · pouvoirs publics · investisseurs et analystes.
 // Les intitulés sont écrits à la main (vérifiés le 18 nov. 2026) ; `watch: false` coupe l'alerte de changement de poste quand l'intitulé vient d'être mis à jour.
 export const PEOPLE = [
-  { id: "sam-altman", cat: "dirigeants", n: "Sam Altman", role: "PDG d'OpenAI", co: "OpenAI", actor: "openai", re: /\bAltman\b/ },
-  { id: "dario-amodei", cat: "dirigeants", n: "Dario Amodei", role: "PDG d'Anthropic", co: "Anthropic", actor: null, re: /\bAmodei\b/ },
-  { id: "jensen-huang", cat: "dirigeants", n: "Jensen Huang", role: "Fondateur de Nvidia, ancien PDG (démission le 12 nov. 2026)", co: "Nvidia", actor: "nvidia", re: /\bJensen\b|\bHuang\b/, watch: false },
-  { id: "elon-musk", cat: "dirigeants", n: "Elon Musk", role: "Fondateur de xAI, PDG de Tesla", co: "xAI", actor: null, re: /\bMusk\b/, q: '"Elon Musk" (xAI OR Grok OR "AI" OR OpenAI OR Nvidia)' },
-  { id: "satya-nadella", cat: "dirigeants", n: "Satya Nadella", role: "PDG de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bNadella\b/ },
-  { id: "sundar-pichai", cat: "dirigeants", n: "Sundar Pichai", role: "PDG d'Alphabet (Google)", co: "Alphabet", actor: "alphabet", re: /\bPichai\b/ },
-  { id: "demis-hassabis", cat: "dirigeants", n: "Demis Hassabis", role: "PDG de Google DeepMind", co: "Google DeepMind", actor: "alphabet", re: /\bHassabis\b/ },
-  { id: "mark-zuckerberg", cat: "dirigeants", n: "Mark Zuckerberg", role: "PDG de Meta", co: "Meta", actor: "meta", re: /\bZuckerberg\b/ },
-  { id: "lisa-su", cat: "dirigeants", n: "Lisa Su", role: "PDG d'AMD", co: "AMD", actor: "amd", re: /\bLisa Su\b/ },
-  { id: "hock-tan", cat: "dirigeants", n: "Hock Tan", role: "PDG de Broadcom", co: "Broadcom", actor: "broadcom", re: /\bHock Tan\b/ },
-  { id: "cc-wei", cat: "dirigeants", n: "C.C. Wei", role: "PDG de TSMC", co: "TSMC", actor: "tsmc", re: /\bC\.?\s?C\.? Wei\b/, q: '"C.C. Wei" TSMC' },
-  { id: "andy-jassy", cat: "dirigeants", n: "Andy Jassy", role: "PDG d'Amazon", co: "Amazon", actor: "amazon", re: /\bJassy\b/ },
+  { id: "sam-altman", w: 1.6, cat: "dirigeants", n: "Sam Altman", role: "PDG d'OpenAI", co: "OpenAI", actor: "openai", re: /\bAltman\b/ },
+  { id: "dario-amodei", w: 1.6, cat: "dirigeants", n: "Dario Amodei", role: "PDG d'Anthropic", co: "Anthropic", actor: null, re: /\bAmodei\b/ },
+  { id: "jensen-huang", w: 1.6, cat: "dirigeants", n: "Jensen Huang", role: "Fondateur de Nvidia, ancien PDG (démission le 12 nov. 2026)", co: "Nvidia", actor: "nvidia", re: /\bJensen\b|\bHuang\b/, watch: false },
+  { id: "elon-musk", w: 1.6, cat: "dirigeants", n: "Elon Musk", role: "Fondateur de xAI, PDG de Tesla", co: "xAI", actor: null, re: /\bMusk\b/, q: '"Elon Musk" (xAI OR Grok OR "AI" OR OpenAI OR Nvidia)' },
+  { id: "satya-nadella", w: 1.6, cat: "dirigeants", n: "Satya Nadella", role: "PDG de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bNadella\b/ },
+  { id: "sundar-pichai", w: 1.6, cat: "dirigeants", n: "Sundar Pichai", role: "PDG d'Alphabet (Google)", co: "Alphabet", actor: "alphabet", re: /\bPichai\b/ },
+  { id: "demis-hassabis", w: 1.6, cat: "dirigeants", n: "Demis Hassabis", role: "PDG de Google DeepMind", co: "Google DeepMind", actor: "alphabet", re: /\bHassabis\b/ },
+  { id: "mark-zuckerberg", w: 1.6, cat: "dirigeants", n: "Mark Zuckerberg", role: "PDG de Meta", co: "Meta", actor: "meta", re: /\bZuckerberg\b/ },
+  { id: "lisa-su", w: 1.6, cat: "dirigeants", n: "Lisa Su", role: "PDG d'AMD", co: "AMD", actor: "amd", re: /\bLisa Su\b/ },
+  { id: "hock-tan", w: 1.6, cat: "dirigeants", n: "Hock Tan", role: "PDG de Broadcom", co: "Broadcom", actor: "broadcom", re: /\bHock Tan\b/ },
+  { id: "cc-wei", w: 1.6, cat: "dirigeants", n: "C.C. Wei", role: "PDG de TSMC", co: "TSMC", actor: "tsmc", re: /\bC\.?\s?C\.? Wei\b/, q: '"C.C. Wei" TSMC' },
+  { id: "andy-jassy", w: 1.6, cat: "dirigeants", n: "Andy Jassy", role: "PDG d'Amazon", co: "Amazon", actor: "amazon", re: /\bJassy\b/ },
   { id: "mustafa-suleyman", cat: "dirigeants", n: "Mustafa Suleyman", role: "Directeur de Microsoft AI", co: "Microsoft", actor: "microsoft", re: /\bSuleyman\b/ },
-  { id: "lip-bu-tan", cat: "dirigeants", n: "Lip-Bu Tan", role: "PDG d'Intel", co: "Intel", actor: "intel-foundry", re: /\bLip-Bu Tan\b/ },
+  { id: "lip-bu-tan", w: 1.6, cat: "dirigeants", n: "Lip-Bu Tan", role: "PDG d'Intel", co: "Intel", actor: "intel-foundry", re: /\bLip-Bu Tan\b/ },
   { id: "clay-magouyrk", cat: "dirigeants", n: "Clay Magouyrk", role: "Co-PDG d'Oracle", co: "Oracle", actor: null, re: /\bMagouyrk\b/ },
   { id: "sanjay-mehrotra", cat: "dirigeants", n: "Sanjay Mehrotra", role: "PDG de Micron", co: "Micron", actor: "micron", re: /\bMehrotra\b/ },
   { id: "christophe-fouquet", cat: "dirigeants", n: "Christophe Fouquet", role: "PDG d'ASML", co: "ASML", actor: "asml", re: /\bFouquet\b/ },
@@ -43,20 +44,20 @@ export const PEOPLE = [
   { id: "fei-fei-li", cat: "chercheurs", n: "Fei-Fei Li", role: "Chercheuse, cofondatrice de World Labs", co: "World Labs", actor: null, re: /\bFei-Fei Li\b/ },
   { id: "mira-murati", cat: "chercheurs", n: "Mira Murati", role: "Fondatrice de Thinking Machines Lab, ancienne CTO d'OpenAI", co: "Thinking Machines Lab", actor: null, re: /\bMurati\b/ },
   { id: "arthur-mensch", cat: "chercheurs", n: "Arthur Mensch", role: "PDG de Mistral AI", co: "Mistral AI", actor: null, re: /\bMensch\b/ },
-  { id: "donald-trump", cat: "pouvoirs", n: "Donald Trump", role: "Président des États-Unis", co: "", actor: null, re: /\bTrump\b/, q: '"Trump" (AI OR "artificial intelligence" OR Nvidia OR chips OR "data centers")' },
+  { id: "donald-trump", w: 1.6, cat: "pouvoirs", n: "Donald Trump", role: "Président des États-Unis", co: "", actor: null, re: /\bTrump\b/, q: '"Trump" (AI OR "artificial intelligence" OR Nvidia OR chips OR "data centers")' },
   { id: "david-sacks", cat: "pouvoirs", n: "David Sacks", role: "Coprésident du PCAST, ancien conseiller IA et crypto de la Maison-Blanche", co: "", actor: null, re: /\bDavid Sacks\b/, q: '"David Sacks" AI' },
   { id: "howard-lutnick", cat: "pouvoirs", n: "Howard Lutnick", role: "Secrétaire américain au Commerce", co: "", actor: null, re: /\bLutnick\b/, q: '"Lutnick" (chips OR AI OR Nvidia OR export OR semiconductor)' },
   { id: "henna-virkkunen", cat: "pouvoirs", n: "Henna Virkkunen", role: "Vice-présidente exécutive de la Commission européenne (souveraineté technologique)", co: "", actor: null, re: /\bVirkkunen\b/ },
-  { id: "scott-bessent", cat: "pouvoirs", n: "Scott Bessent", role: "Secrétaire américain au Trésor", co: "", actor: null, re: /\bBessent\b/, q: '"Bessent" (AI OR Nvidia OR chips OR semiconductor OR tariffs)' },
-  { id: "michael-kratsios", cat: "pouvoirs", n: "Michael Kratsios", role: "Directeur du bureau de la science et de la technologie de la Maison-Blanche (OSTP)", co: "", actor: null, re: /\bKratsios\b/ },
-  { id: "ted-cruz", cat: "pouvoirs", n: "Ted Cruz", role: "Sénateur républicain, président de la commission Commerce du Sénat", co: "", actor: null, re: /\bTed Cruz\b|\b(?:Sen\.|Senator) Cruz\b/, q: '"Ted Cruz" (AI OR "artificial intelligence" OR chatbot OR Nvidia)' },
-  { id: "maria-cantwell", cat: "pouvoirs", n: "Maria Cantwell", role: "Sénatrice démocrate, première démocrate de la commission Commerce", co: "", actor: null, re: /\bCantwell\b/, q: '"Maria Cantwell" AI' },
-  { id: "mark-warner", cat: "pouvoirs", n: "Mark Warner", role: "Sénateur démocrate de Virginie", co: "", actor: null, re: /\bMark Warner\b|\b(?:Sen\.|Senator) Warner\b/, q: '"Mark Warner" (AI OR "artificial intelligence" OR chips)' },
-  { id: "josh-hawley", cat: "pouvoirs", n: "Josh Hawley", role: "Sénateur républicain du Missouri", co: "", actor: null, re: /\bHawley\b/, q: '"Josh Hawley" (AI OR "artificial intelligence" OR chatbot)' },
-  { id: "elizabeth-warren", cat: "pouvoirs", n: "Elizabeth Warren", role: "Sénatrice démocrate, première démocrate de la commission Banques", co: "", actor: null, re: /\bElizabeth Warren\b|\b(?:Sen\.|Senator) Warren\b/, q: '"Elizabeth Warren" (Nvidia OR AI OR chips OR "data centers")' },
-  { id: "jay-obernolte", cat: "pouvoirs", n: "Jay Obernolte", role: "Représentant républicain de Californie, président de la sous-commission Recherche et Technologie", co: "", actor: null, re: /\bObernolte\b/ },
-  { id: "ted-lieu", cat: "pouvoirs", n: "Ted Lieu", role: "Représentant démocrate de Californie", co: "", actor: null, re: /\bTed Lieu\b|\b(?:Rep\.|Representative) Lieu\b/, q: '"Ted Lieu" AI' },
-  { id: "john-moolenaar", cat: "pouvoirs", n: "John Moolenaar", role: "Représentant républicain du Michigan, commission spéciale sur la Chine", co: "", actor: null, re: /\bMoolenaar\b/, q: '"Moolenaar" (chips OR AI OR Nvidia OR China OR export)' },
+  { id: "scott-bessent", w: 1.6, cat: "pouvoirs", n: "Scott Bessent", role: "Secrétaire américain au Trésor", co: "", actor: null, re: /\bBessent\b/, q: '"Bessent" (AI OR Nvidia OR chips OR semiconductor OR tariffs)' },
+  { id: "michael-kratsios", w: 0.6, cat: "pouvoirs", n: "Michael Kratsios", role: "Directeur du bureau de la science et de la technologie de la Maison-Blanche (OSTP)", co: "", actor: null, re: /\bKratsios\b/ },
+  { id: "ted-cruz", w: 0.6, cat: "pouvoirs", n: "Ted Cruz", role: "Sénateur républicain, président de la commission Commerce du Sénat", co: "", actor: null, re: /\bTed Cruz\b|\b(?:Sen\.|Senator) Cruz\b/, q: '"Ted Cruz" (AI OR "artificial intelligence" OR chatbot OR Nvidia)' },
+  { id: "maria-cantwell", w: 0.6, cat: "pouvoirs", n: "Maria Cantwell", role: "Sénatrice démocrate, première démocrate de la commission Commerce", co: "", actor: null, re: /\bCantwell\b/, q: '"Maria Cantwell" AI' },
+  { id: "mark-warner", w: 0.6, cat: "pouvoirs", n: "Mark Warner", role: "Sénateur démocrate de Virginie", co: "", actor: null, re: /\bMark Warner\b|\b(?:Sen\.|Senator) Warner\b/, q: '"Mark Warner" (AI OR "artificial intelligence" OR chips)' },
+  { id: "josh-hawley", w: 0.6, cat: "pouvoirs", n: "Josh Hawley", role: "Sénateur républicain du Missouri", co: "", actor: null, re: /\bHawley\b/, q: '"Josh Hawley" (AI OR "artificial intelligence" OR chatbot)' },
+  { id: "elizabeth-warren", w: 0.6, cat: "pouvoirs", n: "Elizabeth Warren", role: "Sénatrice démocrate, première démocrate de la commission Banques", co: "", actor: null, re: /\bElizabeth Warren\b|\b(?:Sen\.|Senator) Warren\b/, q: '"Elizabeth Warren" (Nvidia OR AI OR chips OR "data centers")' },
+  { id: "jay-obernolte", w: 0.6, cat: "pouvoirs", n: "Jay Obernolte", role: "Représentant républicain de Californie, président de la sous-commission Recherche et Technologie", co: "", actor: null, re: /\bObernolte\b/ },
+  { id: "ted-lieu", w: 0.6, cat: "pouvoirs", n: "Ted Lieu", role: "Représentant démocrate de Californie", co: "", actor: null, re: /\bTed Lieu\b|\b(?:Rep\.|Representative) Lieu\b/, q: '"Ted Lieu" AI' },
+  { id: "john-moolenaar", w: 0.6, cat: "pouvoirs", n: "John Moolenaar", role: "Représentant républicain du Michigan, commission spéciale sur la Chine", co: "", actor: null, re: /\bMoolenaar\b/, q: '"Moolenaar" (chips OR AI OR Nvidia OR China OR export)' },
   { id: "bill-ackman", cat: "investisseurs", n: "Bill Ackman", role: "Fondateur et PDG de Pershing Square", co: "", actor: null, re: /\bAckman\b/ },
   { id: "michael-burry", cat: "investisseurs", n: "Michael Burry", role: "Investisseur (« The Big Short »), auteur de la newsletter Cassandra Unchained", co: "", actor: null, re: /\bBurry\b/ },
   { id: "dan-ives", cat: "investisseurs", n: "Dan Ives", role: "Analyste technologie (Wedbush Securities)", co: "", actor: null, re: /\bDan Ives\b/, q: '"Dan Ives"' },
@@ -163,7 +164,7 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
     } catch (e) { failed++; log(`Voix ${c.name} : ${String(e.message || e).slice(0, 80)}`); }
   }
   const people = PEOPLE.map((p) => ({
-    id: p.id, cat: p.cat, n: p.n, role: p.role, co: p.co, actor: p.actor,
+    id: p.id, cat: p.cat, w: p.w ?? 1, n: p.n, role: p.role, co: p.co, actor: p.actor,
     alerts: [...alerts.get(p.id).values()].filter((a) => Date.parse(a.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 2),
     items: [...byPerson.get(p.id).values()].filter((it) => Date.parse(it.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, VOIX_RULES.perPerson),
   }));
@@ -193,4 +194,30 @@ export async function translateVoix({ doc, generate, max = 60 }) {
     it.title_fr = fr; n++;
   }
   return { changed: n, reason: n ? `${n} titre(s) traduit(s)` : "aucune traduction valide" };
+}
+
+/* ---------- Déclarations brûlantes du jour (Une) : classement mécanique, sans IA ---------- */
+export const HOT_RULES = { hours: 48, top: 3, weight: { dirigeants: 1, pouvoirs: 1, cadres: 0.8, chercheurs: 0.8, investisseurs: 0.7 }, strong: 1.3, sim: 0.4 };
+const STRONG = /\b(?:warns?|warned|resign\w*|slams?|admits?|predicts?|reveals?|vows?|rejects?|denies|demands?|urges?|calls? for|shorts?|sells?|sold|downgrades?|insists?|blasts?|accuses?)\b/i;
+const STOP = new Set("the a an of to in on for and or at by with as is are was be it its this that from after says said say will would about over into than not has have had who his her their".split(" "));
+const toks = (t) => new Set(String(t).toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
+const jac = (a, b) => { let i = 0; for (const x of a) if (b.has(x)) i++; return i ? i / (a.size + b.size - i) : 0; };
+
+/**
+ * Calcule `doc.hot` : au plus HOT_RULES.top déclarations, une par personne, des dernières 48 h.
+ * Score = fraîcheur × (1 + log2(médias qui reprennent le propos)) × poids de la catégorie × verbe fort.
+ */
+export function hotVoix(doc, now) {
+  const R = HOT_RULES, all = doc.people.flatMap((p) => p.items.map((it) => ({ p, it, t: toks(it.title) })));
+  const best = new Map();
+  for (const x of all) {
+    const age = (now - Date.parse(x.it.ts)) / 36e5;
+    if (!(age >= 0) || age > R.hours) continue;
+    const media = new Set(all.filter((y) => y.p.id === x.p.id && Math.abs(Date.parse(y.it.ts) - Date.parse(x.it.ts)) <= R.hours * 36e5 && jac(x.t, y.t) >= R.sim).map((y) => String(y.it.source).toLowerCase()));
+    const rec = age <= 12 ? 1 : age <= 24 ? 0.8 : 0.5;
+    const score = rec * (1 + Math.log2(Math.max(1, media.size))) * (R.weight[x.p.cat] || 0.7) * (x.p.w ?? 1) * (STRONG.test(x.it.title) ? R.strong : 1);
+    const cur = best.get(x.p.id);
+    if (!cur || score > cur.score) best.set(x.p.id, { score: +score.toFixed(2), id: x.p.id, n: x.p.n, role: x.p.role, actor: x.p.actor, ts: x.it.ts, title: x.it.title, title_fr: x.it.title_fr || "", url: x.it.url, source: x.it.source, kind: x.it.kind, outlets: media.size });
+  }
+  return [...best.values()].sort((a, b) => b.score - a.score || b.ts.localeCompare(a.ts)).slice(0, R.top);
 }

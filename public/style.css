@@ -466,3 +466,8 @@ html{overscroll-behavior-y:contain}
 .atabs{margin-bottom:14px}.atabs a.chip{text-decoration:none}
 .vperson{margin:26px 0 0}.vname{font-family:var(--display);font-size:20px;font-weight:600;letter-spacing:-.01em;margin:0}
 .valert{margin:2px 0 6px;color:var(--ink2)}.vempty{margin-top:28px}
+.vhot{margin-top:34px}
+.vh{padding:11px 0;border-bottom:1px solid var(--hair)}
+.vhn{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;margin-bottom:3px}.vhn b{font-family:var(--display);font-size:15px;font-weight:600}
+.vht{display:block;font-size:17px;line-height:1.35;text-decoration:none;margin-bottom:3px}.vht:hover{text-decoration:underline}
+.vall{display:inline-block;margin-top:10px;text-decoration:none}

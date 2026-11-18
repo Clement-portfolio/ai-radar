@@ -1,6 +1,6 @@
 // Tests hors ligne de « Voix » : seuls les titres où la personne s'exprime sont retenus ; fusion, fenêtre de 30 jours, traduction contrôlée.
 import assert from "node:assert/strict";
-import { isStatement, collectVoix, translateVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
+import { isStatement, collectVoix, translateVoix, hotVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
 import { parseFeed } from "./collect.mjs";
 
 const R = (n) => PEOPLE.find((p) => p.n === n).re;
@@ -58,4 +58,17 @@ assert.equal(r2.doc.people.find((p) => p.id === "sam-altman").items.length, 1, "
 const doc = { people: [{ items: [{ title: "Jassy says 3 deals", url: "u1" }, { title: "Altman says AI is early", url: "u2" }] }] };
 const tr = await translateVoix({ doc, generate: async () => [{ i: 0, fr: "Jassy parle de 4 accords" }, { i: 1, fr: "Altman dit que l'IA en est à ses débuts" }] });
 assert.equal(tr.changed, 1); assert.equal(doc.people[0].items[0].title_fr, undefined); assert.equal(doc.people[0].items[1].title_fr, "Altman dit que l'IA en est à ses débuts");
+// déclarations brûlantes : fraîcheur, reprise par plusieurs médias, une par personne, 48 h maximum, 3 au plus
+const H = (id, cat, t, src, h) => ({ id, n: id, cat, role: "r", actor: null, items: [{ ts: new Date(now - h * 36e5).toISOString(), title: t, url: "https://x/" + t + src, source: src }] });
+const hdoc = { people: [
+  { ...H("a", "dirigeants", "A warns AI bubble will burst soon", "Reuters", 3), items: ["Reuters", "CNBC", "Forbes", "Verge"].map((s, i) => ({ ts: new Date(now - (3 + i) * 36e5).toISOString(), title: "A warns AI bubble will burst soon", url: "https://x/a" + i, source: s })) },
+  H("b", "dirigeants", "B says new chip ships next year", "Wired", 2),
+  H("c", "investisseurs", "C raises Nvidia price target sharply", "Barrons", 1),
+  H("d", "dirigeants", "D says old news from long ago", "Wired", 80),
+  H("e", "chercheurs", "E explains transformers to students", "Blog", 5),
+] };
+const hot = hotVoix(hdoc, now);
+assert.equal(hot.length, 3); assert.equal(hot[0].id, "a"); assert.equal(hot[0].outlets, 4, "propos repris par 4 médias");
+assert.ok(!hot.some((x) => x.id === "d"), "plus de 48 h : écarté");
+assert.equal(new Set(hot.map((x) => x.id)).size, 3, "une déclaration par personne");
 console.log("test-voix OK");
