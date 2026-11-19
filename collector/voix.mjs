@@ -56,7 +56,6 @@ export const PEOPLE = [
   { id: "josh-hawley", w: 0.6, cat: "pouvoirs", n: "Josh Hawley", role: "Sénateur républicain du Missouri", co: "", actor: null, re: /\bHawley\b/, q: '"Josh Hawley" (AI OR "artificial intelligence" OR chatbot)' },
   { id: "elizabeth-warren", w: 0.6, cat: "pouvoirs", n: "Elizabeth Warren", role: "Sénatrice démocrate, première démocrate de la commission Banques", co: "", actor: null, re: /\bElizabeth Warren\b|\b(?:Sen\.|Senator) Warren\b/, q: '"Elizabeth Warren" (Nvidia OR AI OR chips OR "data centers")' },
   { id: "jay-obernolte", w: 0.6, cat: "pouvoirs", n: "Jay Obernolte", role: "Représentant républicain de Californie, président de la sous-commission Recherche et Technologie", co: "", actor: null, re: /\bObernolte\b/ },
-  { id: "ted-lieu", w: 0.6, cat: "pouvoirs", n: "Ted Lieu", role: "Représentant démocrate de Californie", co: "", actor: null, re: /\bTed Lieu\b|\b(?:Rep\.|Representative) Lieu\b/, q: '"Ted Lieu" AI' },
   { id: "john-moolenaar", w: 0.6, cat: "pouvoirs", n: "John Moolenaar", role: "Représentant républicain du Michigan, commission spéciale sur la Chine", co: "", actor: null, re: /\bMoolenaar\b/, q: '"Moolenaar" (chips OR AI OR Nvidia OR China OR export)' },
   { id: "bill-ackman", cat: "investisseurs", n: "Bill Ackman", role: "Fondateur et PDG de Pershing Square", co: "", actor: null, re: /\bAckman\b/ },
   { id: "michael-burry", cat: "investisseurs", n: "Michael Burry", role: "Investisseur (« The Big Short »), auteur de la newsletter Cassandra Unchained", co: "", actor: null, re: /\bBurry\b/ },
@@ -126,6 +125,24 @@ export const PEOPLE = [
   { id: "vinod-khosla", cat: "investisseurs", n: "Vinod Khosla", role: "Fondateur de Khosla Ventures", co: "", actor: null, re: /\bVinod Khosla\b/, q: '"Vinod Khosla" AI' },
   { id: "chamath-palihapitiya", cat: "investisseurs", n: "Chamath Palihapitiya", role: "Fondateur de Social Capital", co: "", actor: null, re: /\bChamath\b/, q: '"Chamath Palihapitiya" (AI OR Nvidia OR OpenAI OR bubble)' },
   { id: "larry-fink", cat: "investisseurs", n: "Larry Fink", role: "PDG de BlackRock", co: "", actor: null, re: /\bLarry Fink\b/, q: '"Larry Fink" (AI OR infrastructure OR "data centers")' },
+  // --- Ajouts : responsables américains (nov. 2026) — ceux qui décident (signent, votent, bloquent) ---
+  { id: "jay-clayton", w: 1.3, cat: "pouvoirs", n: "Jay Clayton", role: "Directeur du renseignement national, chef de la « Super Intelligence Force » (tsar de l'IA depuis le 4 oct. 2026)", co: "", actor: null, re: /\bJay Clayton\b|\bDNI Clayton\b/, q: '"Jay Clayton" (AI OR "Super Intelligence" OR "artificial intelligence")' },
+  { id: "jeffrey-kessler", cat: "pouvoirs", n: "Jeffrey Kessler", role: "Sous-secrétaire au Commerce pour l'industrie et la sécurité (BIS, contrôle des exportations de puces)", co: "", actor: null, re: /\bJeffrey Kessler\b|\bUnder Secretary Kessler\b/, q: '"Jeffrey Kessler" (BIS OR "export controls" OR chips OR Nvidia)' },
+  { id: "chris-wright", cat: "pouvoirs", n: "Chris Wright", role: "Secrétaire américain à l'Énergie", co: "", actor: null, re: /\bChris Wright\b/, q: '"Chris Wright" (energy OR "data centers" OR AI OR grid)' },
+  { id: "laura-swett", w: 0.8, cat: "pouvoirs", n: "Laura Swett", role: "Présidente de la FERC (régulateur fédéral de l'énergie)", co: "", actor: null, re: /\bSwett\b/, q: '"Laura Swett" FERC (data centers OR grid OR "large load")' },
+  { id: "john-thune", w: 0.8, cat: "pouvoirs", n: "John Thune", role: "Sénateur républicain, chef des républicains au Sénat", co: "", actor: null, re: /\bThune\b/, q: '"Thune" (AI OR "artificial intelligence" OR preemption)' },
+  { id: "amy-klobuchar", w: 0.6, cat: "pouvoirs", n: "Amy Klobuchar", role: "Sénatrice démocrate du Minnesota, coauteure du texte sénatorial sur l'IA", co: "", actor: null, re: /\bKlobuchar\b/, q: '"Klobuchar" (AI OR "artificial intelligence")' },
+  { id: "stephen-miller", cat: "pouvoirs", n: "Stephen Miller", role: "Chef de cabinet de la Maison-Blanche (depuis le 9 nov. 2026, succède à Susie Wiles)", co: "", actor: null, re: /\bStephen Miller\b/, q: '"Stephen Miller" (AI OR "artificial intelligence" OR "Super Intelligence" OR Nvidia OR chips)' },
+  { id: "chuck-schumer", w: 0.8, cat: "pouvoirs", n: "Chuck Schumer", role: "Sénateur démocrate de New York, chef des démocrates au Sénat", co: "", actor: null, re: /\bSchumer\b/, q: '"Schumer" (AI OR "artificial intelligence" OR Nvidia OR chips)' },
+  { id: "frank-pallone", w: 0.6, cat: "pouvoirs", n: "Frank Pallone", role: "Représentant démocrate du New Jersey, premier démocrate de la commission Énergie et Commerce de la Chambre", co: "", actor: null, re: /\bPallone\b/, q: '"Pallone" (AI OR "artificial intelligence" OR "data centers")' },
+  // --- Ceux qui influencent (conseillent, écrivent les textes) ---
+  { id: "kevin-hassett", w: 0.8, cat: "pouvoirs", n: "Kevin Hassett", role: "Directeur du Conseil économique national (Maison-Blanche)", co: "", actor: null, re: /\bHassett\b/, q: '"Kevin Hassett" (AI OR "artificial intelligence" OR productivity)' },
+  { id: "sean-cairncross", w: 0.8, cat: "pouvoirs", n: "Sean Cairncross", role: "Directeur national de la cybersécurité (Maison-Blanche)", co: "", actor: null, re: /\bCairncross\b/, q: '"Cairncross" (AI OR "artificial intelligence" OR cyber)' },
+  { id: "andrew-ferguson", w: 0.8, cat: "pouvoirs", n: "Andrew Ferguson", role: "Président de la Commission fédérale du commerce (FTC), vice-président de la « Super Intelligence Force »", co: "", actor: null, re: /\bAndrew Ferguson\b/, q: '"Andrew Ferguson" FTC (AI OR chatbots OR antitrust)' },
+  { id: "emil-michael", w: 0.8, cat: "pouvoirs", n: "Emil Michael", role: "Sous-secrétaire à la Défense pour la recherche et l'ingénierie, directeur technique du Pentagone", co: "", actor: null, re: /\bEmil Michael\b/, q: '"Emil Michael" (AI OR Pentagon OR Anthropic OR drones)' },
+  { id: "scott-kupor", w: 0.8, cat: "pouvoirs", n: "Scott Kupor", role: "Directeur de l'OPM (personnel fédéral), ancien associé d'Andreessen Horowitz", co: "", actor: null, re: /\bKupor\b/, q: '"Scott Kupor" (AI OR OPM)' },
+  { id: "marsha-blackburn", w: 0.6, cat: "pouvoirs", n: "Marsha Blackburn", role: "Sénatrice républicaine du Tennessee, auteure d'un projet de loi sur l'IA", co: "", actor: null, re: /\bBlackburn\b/, q: '"Blackburn" (AI OR "artificial intelligence" OR "AI Act")' },
+  { id: "gavin-newsom", w: 0.8, cat: "pouvoirs", n: "Gavin Newsom", role: "Gouverneur démocrate de Californie", co: "", actor: null, re: /\bNewsom\b/, q: '"Newsom" (AI OR "artificial intelligence" OR preemption)' },
 ];
 
 // chaînes dont les vidéos portent le nom de l'invité ou du dirigeant (identifiants vérifiés sur le flux : auteur du flux = nom de la chaîne)
@@ -141,7 +158,7 @@ const CUE = "says?|said|warns?|warned|predicts?|predicted|tells?|told|expects?|e
 // Pour les investisseurs et analystes, une prise de position compte aussi : achat, vente, pari, relèvement ou abaissement d'objectif.
 export const INVEST_CUE = "buys?|bought|sells?|sold|shorts?|shorted|bets?|dumps?|dumped|trims?|adds?|boosts?|raises?|cuts?|lowers?|upgrades?|downgrades?|initiates?|reiterates?|backs?|stakes?|invests?|exits?|loads?|doubles?|piles?";
 // Pouvoirs publics et investisseurs parlent de tout : on ne garde que ce qui touche à l'IA, aux puces, aux datacenters et aux grandes sociétés de l'IA.
-export const TOPIC = /\b(?:A\.?I\.?|artificial intelligence|chatbots?|Nvidia|OpenAI|Anthropic|Gemini|ChatGPT|Claude|xAI|Grok|chips?|semiconductors?|GPUs?|data ?cent(?:er|re)s?|Huang|Microsoft|Alphabet|Google|Meta|AMD|Broadcom|TSMC|Micron|Intel|Oracle|CoreWeave|Palantir|SoftBank|Samsung|SK hynix|ASML|hyperscalers?|robots?|robotics|superintelligence|tech(?:nology)?)\b/i;
+export const TOPIC = /\b(?:A\.?I\.?|artificial intelligence|chatbots?|Nvidia|OpenAI|Anthropic|Gemini|ChatGPT|Claude|xAI|Grok|chips?|semiconductors?|GPUs?|data ?cent(?:er|re)s?|Huang|Microsoft|Alphabet|Google|Meta|AMD|Broadcom|TSMC|Micron|Intel|Oracle|CoreWeave|Palantir|SoftBank|Samsung|SK hynix|ASML|hyperscalers?|robots?|robotics|super ?intelligence|preempt\w*|export controls?|large loads?|AI Act|tech(?:nology)?)\b/i;
 const cueRe = new RegExp(`\\b(?:${CUE})\\b`, "i");
 
 /** La personne est-elle celle qui parle dans ce titre ? */
