@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-19T16:32:35.479Z",
+ "generated_at": "2026-11-19T19:17:06.427Z",
  "people": [
   {
    "id": "sam-altman",
@@ -111,7 +111,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Anthropic « apprécie » de travailler avec SpaceX, déclare le PDG Dario Amodei"
     },
     {
      "ts": "2026-11-19T16:02:45.000Z",
@@ -120,7 +121,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'Anthropic, Dario Amodei, déclare que les engagements de 900 milliards de dollars ne « semblent pas si importants »"
     },
     {
      "ts": "2026-11-19T15:26:03.000Z",
@@ -129,7 +131,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Anthropic espère obtenir une note de crédit de qualité investissement à l'avenir, déclare le PDG Dario Amodei"
     },
     {
      "ts": "2026-11-19T14:58:28.000Z",
@@ -138,7 +141,8 @@
      "source": "Bloomberg.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Regardez Dario Amodei dire que la sécurité est dans l'ADN d'Anthropic"
     },
     {
      "ts": "2026-11-19T12:07:59.000Z",
@@ -215,7 +219,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Elon Musk déclare que Nvidia a fait une « erreur » en se séparant de Jensen Huang : il qualifie l'ex-PDG de « Michael Jordan peut-être à son apogée »"
     },
     {
      "ts": "2026-11-19T01:08:04.000Z",
@@ -542,6 +547,12 @@
    "actor": "amd",
    "alerts": [
     {
+     "ts": "2026-11-19T15:50:09.000Z",
+     "title": "AMD's Lisa Su speaks out on her cousin Jensen Huang's Nvidia exit",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRzFoMGM1OEZGSk9sUHBDU05meVBOdEVEa29kaWtueGROX2szejBZcEVrd3dsMDc2SENqcldIZE04YkJFX2syN1F4U25nNGlnZG9PdlhUWl9ZTUN5M0RNUk5DRzJ3dWZLV0FnQUR0S2RpSkhwMWc0U0ltNEpFTUdVaTVnOS1IZk9PNXF3QS0tTk5YU0pPaWxmZHhQYWFlMXEyTjVhMjFFZHdNdjdyN2hmeQ?oc=5",
+     "source": "Business Insider Africa"
+    },
+    {
      "ts": "2026-11-19T15:50:00.000Z",
      "title": "AMD's Lisa Su Speaks Out on Her Cousin Jensen Huang's Nvidia Exit",
      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZFZfNjZyS0cyZm16d0VJcGFBdWxINlRka0VXZVJOQXlUU0pfR0FpVXlZZVlwS2ZWcEpKcUF0UlpoY2E5UEpNRlVoQVhYa0lzV3VqMlM4VWl6QUsxTTBQZnBweEo2Y1dBanEyUjVEQXpzakZ3NGxlcFB0ZzlyOElTcTFTbk9DMWd0cXJIOGkwVExVd283?oc=5",
@@ -556,7 +567,8 @@
      "source": "Business Insider",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Lisa Su d'AMD s'exprime sur le départ de son cousin Jensen Huang de Nvidia"
     },
     {
      "ts": "2026-11-18T05:39:12.000Z",
@@ -952,12 +964,12 @@
      "e": 0
     },
     {
-     "ts": "2026-11-12T10:30:00.000Z",
-     "title": "Alex Karp Said He’s a ‘Progressive.’ OK! Here’s Some Other Stuff He’s Said Recently",
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQYUx6WUJaVXNQQnZLdmNYdkFHbm5heDE4aXNqeGtwZDRjdmVfNGs0bHhaS05peFY3UVBhbEtTRzR3ME5qUUowVkp1clYxcVE3REFkd1hRR1FoSFdJNVVUN1NhRGk4YUtIVG1DZERXX3l0Z3FrTTdTQTZFWjBrbk9KZ2gzVmdURzNLVWh2dUVaT2dvcTdlMW1PRVZGOEFjT2w1ZlhfbjA3dGY?oc=5",
-     "source": "WIRED",
+     "ts": "2026-11-12T14:27:50.000Z",
+     "title": "Palantir CEO Alex Karp Calls Himself Progressive After Democrats Win US Congress",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5oTzctTmRoMUt2QVlYdDZYYVFDTXRqX2lTbFJvenpHWXVQV2duNTVyM0ZPeVcxN2Y3YVNJYzlBSElVcllHd056azE5MVBwUDdvMzM1RGpsbWNDdmhlSlNHakpDdzIzb214SnpiZ2o4NA?oc=5",
+     "source": "The 420.in",
      "kind": "presse",
-     "title_fr": "Alex Karp a dit qu'il était « progressiste ». OK ! Voici d'autres choses qu'il a dites récemment",
+     "title_fr": "Le PDG de Palantir, Alex Karp, se qualifie de progressiste après la victoire des démocrates au Congrès américain",
      "m": 1,
      "e": 0
     }
@@ -1073,6 +1085,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-18T22:16:00.000Z",
+     "title": "Does Nvidia Got This? Interim CEO Colette Kress Says It’s Got This",
+     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE14ZVp5dHUySlRMcTh0TU01cGVPZndwSTZBR1ZFY0FYOWtXQ2cwcEU1UjN4TU1LdzZraThLR3hpYVhVczh1aWZUYWc2LXRiMUc5SFVtc25RM3l3d2x4bk9rV3NR?oc=5",
+     "source": "WIRED",
+     "kind": "presse",
+     "title_fr": "Nvidia maîtrise-t-il la situation ? La PDG par intérim Colette Kress déclare que oui",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-18T19:09:18.000Z",
      "title": "Nvidia interim CEO Kress tells employees ‘let’s move forward’ at first all-hands meeting since Jensen Huang exit",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOUHlsTnZZSU9BNjZuZUZvQXBGUkZnc2hxZ2U4cE5WWkE2OG81eUZxVTVsRHdaMTVGdFBTWnBSQUZhS0lBOEhJdVhCNjJ5ZURrOGlCekFWU010bWRjRXJQd1JuVFRSbGRtYWl4STNlVFNrREdVV3BXYW4zRDlMNGFoek5TbkVLaVlaWGpCcjJrVXJzb2xHQ0xNUm50U2V2YUVPRlJrYdIBqgFBVV95cUxNNzZwUmstbGVkVFNDZ3FfTkNYRHZmUlhMRGJvbENlNG1sRl9MZjJjSVpORzVvRTZ2ZWNJWWRTQ2pkYlY4ZTdpMzhfN1AwVzZzSWUxR1hPR2pCWDJPLTIxZGdMT0JMLVdZUUlyWWVxT2ZsNXFwZ2VEZ2czRl9Ya3NDVEFBZF9wb0lOMVlnczBIazh1OHdJTFRCYXVNTWU1RVVjQnBWREQxQ005Zw?oc=5",
@@ -1129,8 +1151,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "La PDG par intérim de Nvidia, Colette Kress, s'exprime sur le chiffre d'affaires trimestriel atteignant 116 milliards de dollars",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     }
    ]
   },
@@ -1533,7 +1555,8 @@
      "source": "USA Today",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Trump déclare que Jensen Huang traverse « l'enfer » au milieu du scandale"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -1552,7 +1575,8 @@
      "source": "Reuters",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Trump déclare que le PDG de Nvidia lui a dit qu'il ne savait pas que la femme liée à lui était une espionne"
     }
    ]
   },
@@ -1700,6 +1724,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-18T16:32:20.000Z",
+     "title": "Cantwell and Rounds renew call for White House strategy against AI-assisted cyberattacks",
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOa0dwWWRPWDlBUGxHbTJLTFFNM3p1Mm5ucWxLX21wRFdEeWdqeExXQVBoUmxlRkU2d3owd1RneFpfRnRCS3ZKTnpTeVpDd2MtNkJRLURVTU9remRNX1hXZjFsbUV4bWtJY0F6eGpLSE5TMENlRjRURmo4Y291dDJlVnBxVEJWTklhU3U4ZXA0OU9uamU4blRSdWRvdTB4ZlJLNGhFbEppbXRYVnh0ajRuTHRNOTk1a0o1UU1taDFsQQ?oc=5",
+     "source": "Superpower Daily",
+     "kind": "presse",
+     "title_fr": "Cantwell et Rounds renouvellent leur appel à une stratégie de la Maison Blanche contre les cyberattaques assistées par l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-18T15:02:47.000Z",
      "title": "Senators Cantwell and Rounds warn the White House that AI-enabled cyber threats are outpacing US defenses",
@@ -1896,8 +1930,25 @@
    "role": "Fondateur et PDG de Pershing Square",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-19T16:20:00.000Z",
+     "title": "Bill Ackman says Nvidia's board is failing you — and not just because it fired Jensen Huang after one Zoom call, at most",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQLUowNHBFcFFTdklOUEpROVhXeE80OGxQSmplRHhpXzA0ek9EMHBWUU40Q2c1MEdPOHJ3UExfOGhkU1RYdDA1VFBIaUtTaWpsV2ZTLVRYQXVFelR5Mm0yNmFWYXIzcm84QmZQTU43UkZzbGI1ZTh5QjhVVzgwMHNONlROVmI0UUl1MkJqN25sOHl3ZFJXQTQ3Wk8tRQ?oc=5",
+     "source": "Yahoo Finance"
+    }
+   ],
    "items": [
+    {
+     "ts": "2026-11-19T16:20:00.000Z",
+     "title": "Bill Ackman says Nvidia's board is failing you — and not just because it fired Jensen Huang after one Zoom call, at most",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQLUowNHBFcFFTdklOUEpROVhXeE80OGxQSmplRHhpXzA0ek9EMHBWUU40Q2c1MEdPOHJ3UExfOGhkU1RYdDA1VFBIaUtTaWpsV2ZTLVRYQXVFelR5Mm0yNmFWYXIzcm84QmZQTU43UkZzbGI1ZTh5QjhVVzgwMHNONlROVmI0UUl1MkJqN25sOHl3ZFJXQTQ3Wk8tRQ?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Bill Ackman déclare que le conseil d'administration de Nvidia vous fait défaut — et pas seulement parce qu'il a licencié Jensen Huang après un seul appel Zoom, au maximum",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-18T20:20:00.000Z",
      "title": "Billionaire investor Bill Ackman bashes Nvidia’s board for not bringing back Jensen Huang",
@@ -1965,16 +2016,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Bill Ackman déclare que la position de Microsoft est « vraiment, vraiment forte » alors qu'Anthropic se lance sur le marché des logiciels d'entreprise",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-12T22:13:31.000Z",
-     "title": "Why Bill Ackman sees value in Microsoft",
-     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVFVIcGNSVHFsckw2Y2ZhTlM4aFptZVNWSUlPeUR4ajBKa29VM0prTjVyYmJyaHdTelRCTndYOGJOOU9ua0l3a2sycDZBM1ZIYVNva0VMSzF2MGtqaWl5dzFLMjJvUUp0ZVJVWVE3MElud0ZlY3k2WGVsVDVfcnNUME54emJNbmxsdl91QjBFZw?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Pourquoi Bill Ackman voit de la valeur dans Microsoft",
      "m": 1,
      "e": 0
     }
@@ -2546,6 +2587,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T17:00:13.000Z",
+     "title": "CNBC Exclusive: Transcript: Anthropic Co-Founders Dario and Daniela Amodei Speak with Andrew Ross Sorkin on CNBC Today",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQZG54TmtzTGd1MnFLdHFIcnVOVExSSkhaRUV1TU5DVHJiZHF6SzVVVlRMemJkSGI2dWV3NV9IbGxSWFdISzNaX2phcXBuNUZWb3Q5S3VpZ044cWotajRPcGxJZVJCOWd4d282UHQzNUR4b0ZmWEJUckU4dWR5anAxYXRlVTd0T3EzNm5tdjd2Vy1jWWlIZGQ2Y1psY0Z0bVFSVmtIUGxxQW01RExZeU83U3Z1NlJjejJ1US03dTk3VzJwQVlMbkNwYWZUVDdxdG1BNlROYWtyVjhPMTU3OFpWSjNDMmNFcUJX0gHuAUFVX3lxTFAydl96b2VCQXV2dXJ4YXZlMEZGNkdfOE9Gd0E5RUp3Zi1TaU9hd0ZpQVF5T2RWS2VaendpVTZINVlIdENkWEpGZ0tuZmhCWk5DNXBCeWJ6ZHdqQ2xvbVN6LXdwUGJaVXo5UjRaOEVYRkNodG8wOTk0dmNOekliMHFkclN1WlpidWtpYXRhV0pGVVA1QkM3ZXZ6M2lyRHFSRndoZFg3dloybWkybENJQnpwbGpycEpRNHNXMzA5Q1dUUEtkQlgyWEtiTERmdjFpUm1RNmZtMnhvTnRSbDk3RGVoU2dCeWdwb3pLWDMxanc?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Exclusivité CNBC : Transcription : Les cofondateurs d'Anthropic, Dario et Daniela Amodei, s'entretiennent avec Andrew Ross Sorkin sur CNBC aujourd'hui",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-06T08:00:00.000Z",
      "title": "Anthropic president Daniela Amodei told wedding guests to fantasize about 'romantic hookups' with stuffed animals",
      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOVXlST2k1dTNCaG5oUmU5RVA3V213RG1ydnhSbGVzbWFmaGtxN2k0M2JDVVRwUEdtVHlwbVZhYTd1RDl6aDhSVkptUkVpQkh2UVg0ams3M0JvN0xrSGg3RHRpVFpZYWhiYm9EX3FydmdKcHBkNFBEV1huVkFQbjRiY3l6bUh1aXhSRWJFejNvZ2U0UEhsLWtBeUstYzkxNk1DUzVLUUJrTGkyTXZQR1hxQ3hwVHdnYWlwYUNwMTJoQUl3ZDBLTUdfdlViSUphSlBlcUswTVJnSE1nRS1ENXJfLVc3UUNjZw?oc=5",
@@ -2864,7 +2915,8 @@
      "source": "Fox Business",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jay Clayton aborde les préoccupations liées aux pannes technologiques généralisées"
     }
    ]
   },
@@ -2885,7 +2937,8 @@
      "source": "AOL.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chuck Schumer appelle à une enquête sur Nvidia après la démission de Jensen Huang et soulève des questions sur l'administration Trump"
     },
     {
      "ts": "2026-11-12T16:11:55.000Z",
@@ -2894,7 +2947,8 @@
      "source": "Yahoo",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Schumer qualifie la défense du PDG de Nvidia par Trump de « manquement au devoir »"
     },
     {
      "ts": "2026-11-10T19:22:16.000Z",
@@ -2903,7 +2957,8 @@
      "source": "bloomingbit",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Schumer déclare que la défense du PDG de Nvidia, Jensen Huang, par Trump est préoccupante"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -2912,7 +2967,8 @@
      "source": "Reuters",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Schumer demande des réponses sur la défense du PDG de Nvidia par Trump"
     }
    ]
   },
@@ -2933,7 +2989,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Kevin Hassett déclare que l'économie américaine peut prospérer malgré le ralentissement des centres de données"
     },
     {
      "ts": "2026-11-06T08:00:00.000Z",
@@ -2942,7 +2999,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Renforcement des centres de données : Hassett déclare qu'une vague bleue n'arrêtera pas le développement de l'IA"
     },
     {
      "ts": "2026-11-06T08:00:00.000Z",
@@ -2951,7 +3009,8 @@
      "source": "Briefs Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Hassett déclare que le développement des centres de données se poursuivra malgré les limites électorales de 2026"
     }
    ]
   },
@@ -2972,7 +3031,8 @@
      "source": "Washington Examiner",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Newsom déclare que la réglementation de l'IA devrait être une « condition de base » pour tout candidat sérieux en 2028"
     },
     {
      "ts": "2026-11-18T21:54:00.000Z",
@@ -2981,7 +3041,8 @@
      "source": "New York Post",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gavin Newsom publie un rapport sur l'IA incontrôlée et demande à donner à la Californie le pouvoir de tout arrêter"
     },
     {
      "ts": "2026-11-18T21:02:53.000Z",
@@ -2990,7 +3051,8 @@
      "source": "Politico",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Newsom s'attaque à l'IA alors que le LAO met en garde contre un krach"
     },
     {
      "ts": "2026-11-18T10:09:55.000Z",
@@ -2999,7 +3061,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gavin Newsom déclare que Trump a « complètement échoué » sur l'IA alors que la Californie prépare un « bouton d'arrêt » et des mesures plus strictes"
     },
     {
      "ts": "2026-11-17T20:25:29.000Z",
@@ -3008,7 +3071,8 @@
      "source": "Washington Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le gouverneur Gavin Newsom dit à Trump qu'il « raconte n'importe quoi » au milieu des fermetures technologiques"
     }
    ]
   },
@@ -3040,7 +3104,8 @@
      "source": "NewsBytes",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'AWS, Matt Garman, qualifie les centres de données IA dans l'espace d'impraticables"
     },
     {
      "ts": "2026-11-11T19:13:57.000Z",
@@ -3058,7 +3123,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'AWS, Matt Garman, déclare que l'inférence IA est encore en dessous de 1 % de son échelle finale"
     },
     {
      "ts": "2026-11-10T17:08:00.000Z",
@@ -3067,7 +3133,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'AWS, Matt Garman, déclare que le géant du cloud se dirige vers 1 000 milliards de dollars, mais qu'il manquera de capacité pendant deux ans"
     }
    ]
   },
@@ -3106,7 +3173,8 @@
      "source": "شبكة تواصل الإخبارية",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le PDG d'Oracle, Mike Sicilia, admet que le message des entreprises technologiques sur les centres de données est erroné ; il déclare que pour que les communautés acceptent, elles doivent parler de..."
     },
     {
      "ts": "2026-11-17T15:28:00.000Z",
@@ -3115,7 +3183,8 @@
      "source": "The Times of India",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le PDG d'Oracle, Mike Sicilia, admet que le message des entreprises technologiques sur les centres de données est erroné ; il déclare que pour les communautés..."
     }
    ]
   },
@@ -3136,7 +3205,8 @@
      "source": "Quartz",
      "kind": "presse",
      "m": 1,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le président de la Fed, Kevin Warsh, a averti que l'IA pourrait entraîner des pertes d'emplois ou un krach boursier si elle déçoit"
     },
     {
      "ts": "2026-11-16T22:16:00.000Z",
@@ -3145,7 +3215,8 @@
      "source": "The Hill",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Warsh déclare que l'IA pourrait « décevoir »"
     },
     {
      "ts": "2026-11-16T21:38:07.000Z",
@@ -3154,7 +3225,8 @@
      "source": "CFO Dive",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Warsh déclare que la Fed examine si l'IA va stimuler ou secouer l'économie américaine"
     },
     {
      "ts": "2026-11-16T19:35:15.000Z",
@@ -3163,7 +3235,8 @@
      "source": "C-SPAN",
      "kind": "presse",
      "m": 1,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le président de la Fed, Kevin Warsh, souligne l'importance de l'IA mais met en garde contre les perturbations"
     },
     {
      "ts": "2026-11-16T18:09:00.000Z",
@@ -3172,7 +3245,8 @@
      "source": "WSJ",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Warsh déclare que la Fed évalue comment l'IA pourrait remodeler l'économie"
     },
     {
      "ts": "2026-11-16T17:53:00.000Z",
@@ -3181,7 +3255,8 @@
      "source": "MarketWatch",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Comment l'IA va-t-elle bouleverser l'économie ? Warsh déclare que la Fed commence à le comprendre."
     },
     {
      "ts": "2026-11-16T17:30:00.000Z",
@@ -3190,7 +3265,8 @@
      "source": "Barron's",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le président de la Fed, Kevin Warsh, s'exprime en direct aujourd'hui sur l'IA et la technologie"
     },
     {
      "ts": "2026-11-16T17:26:53.000Z",
@@ -3199,7 +3275,8 @@
      "source": "Financial Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le président de la Fed, Kevin Warsh, déclare que le boom de l'IA pourrait aider à soutenir une croissance américaine « nettement plus élevée »"
     }
    ]
   },
@@ -3220,7 +3297,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bessent veut un PDG externe. Brad Gerstner déclare que Nvidia devrait attendre pour Jensen Huang"
     },
     {
      "ts": "2026-11-18T02:48:38.000Z",
@@ -3229,7 +3307,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Brad Gerstner déclare qu'Anthropic pourrait soutenir ses prévisions de revenus pour 2027 avec environ 500 MW de puissance de calcul"
     },
     {
      "ts": "2026-11-17T13:46:00.000Z",
@@ -3238,7 +3317,8 @@
      "source": "Semafor",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gerstner d'Altimeter déclare que le conseil d'administration de Nvidia devrait laisser la porte ouverte au retour de Huang : « Faites ce qu'il faut »"
     },
     {
      "ts": "2026-11-17T00:07:00.000Z",
@@ -3247,7 +3327,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Brad Gerstner déclare que l'IA est à son moment « Google 2005 ». Voici qui, selon lui, gagnera"
     },
     {
      "ts": "2026-11-16T23:20:46.000Z",
@@ -3256,7 +3337,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Brad Gerstner parie 5 milliards de dollars sur l'introduction en bourse d'Anthropic : « Un pilier de croissance pour longtemps »"
     },
     {
      "ts": "2026-11-16T22:51:36.000Z",
@@ -3265,7 +3347,8 @@
      "source": "news.lavx.hu",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Brad Gerstner d'Altimeter prévoit un pari de 5 milliards de dollars sur l'introduction en bourse d'Anthropic"
     },
     {
      "ts": "2026-11-16T20:25:00.000Z",
@@ -3274,7 +3357,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gerstner parie 5 milliards de dollars sur Anthropic plutôt que sur Nvidia : « L'ère de l'infrastructure IA est terminée »"
     },
     {
      "ts": "2026-11-06T08:00:00.000Z",
@@ -3283,7 +3367,8 @@
      "source": "TOKENPOST",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gerstner déclare que les 10 à 15 GW de capacité de centres de données américains prévus pour 2027 pourraient glisser"
     }
    ]
   },
@@ -3304,7 +3389,8 @@
      "source": "The Motley Fool",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jamie Dimon vient de prononcer 5 mots bloquant les agents IA externes des comptes JPMorgan : « Vous ne voulez pas d'agents voyous. » Voici pourquoi cette position de sécurité est importante pour JPM et ses rivaux technologiques."
     },
     {
      "ts": "2026-11-12T09:07:00.000Z",
@@ -3313,7 +3399,8 @@
      "source": "The Times of India",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jamie Dimon met en garde, alors que les entreprises d'IA « se vantent » que leurs agents peuvent faire beaucoup de choses, y compris effectuer des paiements pour les clients"
     }
    ]
   },
@@ -3326,7 +3413,18 @@
    "co": "",
    "actor": null,
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-09T18:34:06.000Z",
+     "title": "David Solomon says Goldman Sachs sees strong AI infrastructure demand",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOb2pzVHFhZ05jRThPYk5ZSk0zM2JyWFVXNE1BWC1ra3FaRm9RRzdkUUNZN0Q0NFh6MlFyYzVSQVFJSmlZSWNFM2lTZmM4RTl3NzFCc2FHZUhuX0w2TW40cGlnRGRXSEZSVXFSWW9ZOGNYdFRmc1pBcEJpSXdOeTd5bTdmTWx6OV84cUVMSkNOckdiQzlFZXQtOUhWV2xJWWh4Z2Z1ZnVmWW15TFB3SjRqU2hXek1ZelJk?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "David Solomon déclare que Goldman Sachs constate une forte demande en infrastructure IA",
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "jon-gray",
@@ -3345,7 +3443,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jon Gray de Blackstone déclare que la demande en IA est trop forte pour que les craintes de bulle persistent"
     },
     {
      "ts": "2026-11-18T18:08:00.000Z",
@@ -3354,7 +3453,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jon Gray de Blackstone déclare que le développement de l'IA est un boom ferroviaire, pas une bulle Internet"
     },
     {
      "ts": "2026-11-18T15:55:36.000Z",
@@ -3363,7 +3463,8 @@
      "source": "Bloomberg.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jon Gray de Blackstone qualifie les inquiétudes concernant une bulle de l'IA d'exagérées"
     }
    ]
   },
@@ -3384,7 +3485,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'Apollo, Marc Rowan, déclare que le boom de l'IA pourrait nécessiter jusqu'à 8 000 milliards de dollars et remodeler les marchés du crédit américains"
     },
     {
      "ts": "2026-11-17T16:41:44.000Z",
@@ -3393,7 +3495,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'Apollo, Marc Rowan, déclare que Nvidia a été la banque ou le garant de l'écosystème IA - Interview CNBC"
     }
    ]
   },
@@ -3414,7 +3517,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Howard Marks avertit que l'investissement dans l'IA est un pari de 1 000 milliards de dollars : des profits « pratiquement inconnaissables »"
     },
     {
      "ts": "2026-11-14T14:46:10.000Z",
@@ -3423,7 +3527,8 @@
      "source": "Tekedia",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'investisseur Howard Marks avertit que les leaders de l'IA pourraient perdre leur domination alors qu'Anthropic prépare une méga-introduction en bourse"
     },
     {
      "ts": "2026-11-13T19:29:00.000Z",
@@ -3432,7 +3537,8 @@
      "source": "Business Insider",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'investisseur milliardaire Howard Marks déclare que la vitesse des progrès de l'IA est un risque pour Anthropic et OpenAI"
     },
     {
      "ts": "2026-11-13T12:30:06.000Z",
@@ -3441,7 +3547,18 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "L'avertissement de Warren Buffett en 1979 pourrait être la leçon parfaite pour le boom actuel de l'IA, déclare Howard Marks : « L'incertitude est en fait l'amie »"
+    },
+    {
+     "ts": "2026-11-13T09:42:24.000Z",
+     "title": "Howard Marks warns AI could raise global borrowing costs",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTU1weWNlN0ZPdTFHbjZBbUZLSGV5dUJHWXdTVWtPbXRxYy1CSW5na01lV2d4Yzh4dmlNVko1NWNWMnIwMGo2R25wSFBZTVY2cFRTRGEwQUJybElPRVc3TEZtUllrYkZ3M1F1cnZrbFcxODhkdzFSS1ljOGp3Znc5OGhtVEtNcElqY01PUjB0NUFuUmZmYkwyanB6aEg4dHNqa0R5d2dQcw?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Howard Marks avertit que l'IA pourrait augmenter les coûts d'emprunt mondiaux",
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-12T07:29:17.000Z",
@@ -3450,7 +3567,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "L'avertissement de Warren Buffett en 1979 pourrait être la leçon parfaite pour le boom actuel de l'IA, déclare Howard Marks : « L'incertitude... »"
     },
     {
      "ts": "2026-11-11T20:49:49.000Z",
@@ -3468,7 +3586,8 @@
      "source": "Stocktwits",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Howard Marks qualifie l'exposition à l'IA de « ligne de faille » traversant les portefeuilles — souligne près de 600 milliards de dollars d'émissions de dette liées à l'IA"
     }
    ]
   },
@@ -3489,7 +3608,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Les perspectives de croissance de Nvidia survivent aux questions de succession de Jensen Huang, déclare Vivek Arya de BofA"
     }
    ]
   },
@@ -3510,7 +3630,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "La qualité du carnet de commandes de CoreWeave testée par les baissiers de l'IA, déclare Brent Thill de Jefferies"
     }
    ]
   },
@@ -3531,7 +3652,8 @@
      "source": "Washington Times",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le magnat de la technologie Palmer Luckey déclare que les États-Unis sont confrontés à un décalage technologique avec les pirates informatiques utilisant l'IA"
     },
     {
      "ts": "2026-11-19T15:04:29.000Z",
@@ -3540,7 +3662,8 @@
      "source": "USA Herald",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Palmer Luckey avertit que les pirates informatiques utilisant l'IA dépassent les défenses américaines"
     },
     {
      "ts": "2026-11-19T00:21:01.000Z",
@@ -3549,7 +3672,8 @@
      "source": "The New York Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Regardez : Palmer Luckey met en garde contre le retard dans la course à l'IA"
     },
     {
      "ts": "2026-11-18T23:53:16.000Z",
@@ -3558,7 +3682,8 @@
      "source": "The New York Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Vidéo : Pourquoi Palmer Luckey ne pense pas que les modèles d'IA puissent être contrôlés"
     },
     {
      "ts": "2026-11-18T22:12:49.000Z",
@@ -3567,7 +3692,8 @@
      "source": "The New York Times",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Palmer Luckey avertit que les États-Unis sont confrontés à un « décalage » en matière d'IA"
     },
     {
      "ts": "2026-11-18T21:34:13.000Z",
@@ -3576,7 +3702,8 @@
      "source": "TechCrunch",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Palmer Luckey avertit que les cyberattaques alimentées par l'IA dépassent les défenses : « Il est temps de commencer à courir »"
     },
     {
      "ts": "2026-11-18T21:31:21.000Z",
@@ -3585,7 +3712,8 @@
      "source": "TechCrunch",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Palmer Luckey pense que la Chine est « ravie que Jensen soit parti », il veut donc que le PDG évincé de Nvidia soit réintégré"
     },
     {
      "ts": "2026-11-18T21:16:02.000Z",
@@ -3594,7 +3722,8 @@
      "source": "Decrypt",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Palmer Luckey déclare qu'il construit un refuge offshore pour l'industrie — et des médicaments « illégaux »"
     }
    ]
   },
@@ -3615,7 +3744,8 @@
      "source": "www.tokenpost.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gensler avertit que les flux de trésorerie d'Anthropic pourraient poser des risques pour l'économie de l'IA"
     },
     {
      "ts": "2026-11-18T11:46:00.000Z",
@@ -3624,7 +3754,8 @@
      "source": "Coin Gabbar",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Avertissement sur la bulle de l'IA : pourquoi Gensler prédit une récession avant l'élection de 2028"
     },
     {
      "ts": "2026-11-18T00:32:01.000Z",
@@ -3633,7 +3764,8 @@
      "source": "ET Now",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "« C'est déjà une bulle » : l'ancien président de la SEC, Gary Gensler, avertit qu'un éclatement de l'IA pourrait pousser l'économie en récession"
     },
     {
      "ts": "2026-11-18T00:00:00.000Z",
@@ -3642,7 +3774,8 @@
      "source": "Bloomberg.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'ancien président de la SEC, Gary Gensler, avertit que les flux de trésorerie d'Anthropic posent un grand risque pour l'économie de l'IA"
     },
     {
      "ts": "2026-11-17T13:50:32.000Z",
@@ -3651,7 +3784,8 @@
      "source": "Cryptonews.net",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gary Gensler s'attend à une récession de l'IA sept mois après le halving du Bitcoin (BTC)"
     },
     {
      "ts": "2026-11-17T10:33:21.000Z",
@@ -3660,7 +3794,8 @@
      "source": "Pluang",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gary Gensler avertit que la bulle de l'IA pourrait éclater..."
     },
     {
      "ts": "2026-11-17T10:16:05.000Z",
@@ -3669,7 +3804,8 @@
      "source": "Crypto News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gary Gensler avertit que la bulle de l'IA pourrait éclater avant le halving du Bitcoin en 2028"
     },
     {
      "ts": "2026-11-17T07:24:29.000Z",
@@ -3678,7 +3814,8 @@
      "source": "TOKENPOST",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gensler s'attend à une réévaluation de la bulle de l'IA et à un ralentissement économique avant l'élection américaine de 2028"
     }
    ]
   },
@@ -3699,7 +3836,8 @@
      "source": "NDTV",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Guerre de l'IA entre les États-Unis et la Chine : le PDG d'IBM, Arvind Krishna, révèle qui mène la course à la domination de l'IA"
     },
     {
      "ts": "2026-11-17T17:04:57.000Z",
@@ -3708,7 +3846,8 @@
      "source": "NDTV",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Vidéo | IA, emplois et avenir technologique de l'Inde : la grande interview du PDG d'IBM, Arvind Krishna"
     },
     {
      "ts": "2026-11-17T05:39:34.000Z",
@@ -3717,7 +3856,8 @@
      "source": "Bold News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'IBM, Arvind Krishna, exhorte l'Inde à développer l'industrie des semi-conducteurs et à accélérer l'adoption de l'IA"
     },
     {
      "ts": "2026-11-16T12:33:56.000Z",
@@ -3726,7 +3866,8 @@
      "source": "indica News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'IA pourrait déplacer jusqu'à 20 % des emplois au cours de la prochaine décennie, déclare le PDG d'IBM, Arvind Krishna"
     },
     {
      "ts": "2026-11-16T06:57:09.000Z",
@@ -3735,7 +3876,8 @@
      "source": "Lokmat Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'Inde est prête à mener l'IA mondiale, déclare le chef d'IBM, Arvind Krishna"
     }
    ]
   },
@@ -3756,7 +3898,8 @@
      "source": "Futurism",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "JD Vance déclare que la vraie raison pour laquelle tout le système aérien américain s'est effondré était les athlètes trans, pas l'IA"
     },
     {
      "ts": "2026-11-18T14:01:00.000Z",
@@ -3765,7 +3908,8 @@
      "source": "Men's Journal",
      "kind": "presse",
      "m": 1,
-     "e": 1
+     "e": 1,
+     "title_fr": "JD Vance aborde les craintes d'urgence alors que Google met en garde contre les pirates informatiques utilisant l'IA"
     },
     {
      "ts": "2026-11-17T14:27:29.000Z",
@@ -3774,7 +3918,8 @@
      "source": "Daily Mail",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "JD Vance dit aux Américains de « se préparer à toutes les éventualités » alors que Google émet un avertissement inquiétant sur les pannes technologiques"
     }
    ]
   },
@@ -3795,7 +3940,8 @@
      "source": "The New York Times",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Rubio déclare que les cyberattaques ne sont pas la cause des récentes pannes technologiques"
     },
     {
      "ts": "2026-11-18T06:27:17.000Z",
@@ -3804,7 +3950,8 @@
      "source": "Forbes",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Marco Rubio déclare que les pannes de Microsoft, de la FAA et des banques ne sont pas liées — « Aucune preuve » de cyberattaques"
     },
     {
      "ts": "2026-11-18T06:26:00.000Z",
@@ -3813,7 +3960,8 @@
      "source": "The Guardian",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "« Aucune » preuve que la récente cascade de pannes technologiques soit liée, déclare Rubio"
     },
     {
      "ts": "2026-11-18T04:57:06.000Z",
@@ -3822,7 +3970,8 @@
      "source": "BBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Rubio déclare que les pannes technologiques ne font pas partie d'une « attaque systémique » contre les États-Unis"
     },
     {
      "ts": "2026-11-18T02:43:00.000Z",
@@ -3831,7 +3980,8 @@
      "source": "CBS News",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Rubio déclare qu'il n'y a « aucune preuve » que les récentes pannes technologiques soient liées"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3840,7 +3990,8 @@
      "source": "Yahoo",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Rubio a averti Trump au sujet de l'affaire d'espionnage chinoise présumée du PDG de Nvidia : rapport explosif"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3849,7 +4000,8 @@
      "source": "The Times of India",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Rubio a averti Trump au sujet de la liaison du PDG de Nvidia avec une « espionne » chinoise il y a des mois. L'a-t-il ignoré ?"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3858,7 +4010,8 @@
      "source": "The Indian Express",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Rubio a averti Trump au sujet du lien d'espionnage chinois avec le PDG de Nvidia, Jensen Huang. Que s'est-il passé ensuite ?"
     }
    ]
   },
@@ -3879,7 +4032,8 @@
      "source": "R&D World",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Alors que les discussions sur la bulle de l'IA augmentent, Dwarkesh Patel prédit que l'auto-amélioration récursive déclenchera une explosion de la recherche en IA"
     },
     {
      "ts": "2026-11-14T14:49:59.000Z",
@@ -3888,7 +4042,8 @@
      "source": "FourWeekMBA",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Dwarkesh Patel voit désormais l'IA égaler les meilleurs chercheurs d'ici 2028"
     }
    ]
   },
@@ -3909,7 +4064,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Les documents d'introduction en bourse d'Anthropic ne peuvent pas répondre à la question de 750 milliards de dollars sur l'IA, déclare Benedict Evans"
     },
     {
      "ts": "2026-11-13T06:22:54.000Z",
@@ -3918,7 +4074,8 @@
      "source": "finance.biggo.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Qui gagne de l'argent avec l'IA ? Benedict Evans explique | Behind the Balance Sheet"
     }
    ]
   },
@@ -3939,7 +4096,8 @@
      "source": "news.lavx.hu",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Nathan Lambert avertit que le départ de Jensen Huang laisse l'IA open-source américaine sans champion"
     }
    ]
   },
@@ -3960,7 +4118,8 @@
      "source": "South China Morning Post",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Xi Jinping exhorte la Corée du Sud à coopérer avec la Chine sur l'IA et les chaînes d'approvisionnement"
     },
     {
      "ts": "2026-11-18T07:20:52.000Z",
@@ -3969,7 +4128,8 @@
      "source": "Bloomberg.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Regardez Xi Jinping s'exprimer à l'APEC alors que Nvidia publie de solides premiers résultats après Huang"
     },
     {
      "ts": "2026-11-18T03:24:54.000Z",
@@ -3978,7 +4138,8 @@
      "source": "France 24",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Xi Jinping appelle à une coopération mondiale sur l'IA et le libre-échange lors du sommet de l'APEC"
     },
     {
      "ts": "2026-11-14T01:29:13.000Z",
@@ -3987,7 +4148,8 @@
      "source": "Financial Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Donald Trump ne soulèvera pas la question de l'espionnage de Nvidia avec Xi Jinping lors du sommet, selon des responsables"
     }
    ]
   },
@@ -4008,7 +4170,8 @@
      "source": "헤럴드경제",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chey Tae-won appelle à une plus grande indépendance du conseil d'administration pour maximiser la valeur actionnariale"
     },
     {
      "ts": "2026-11-15T05:31:11.000Z",
@@ -4017,7 +4180,8 @@
      "source": "매일경제",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chey Tae-won : « Installer un volant d'inertie IA »... Le rééquilibrage 2.0 de SK démarre"
     },
     {
      "ts": "2026-11-15T01:11:00.000Z",
@@ -4026,7 +4190,8 @@
      "source": "Chosunbiz",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chey Tae-won exhorte SK à construire un volant d'inertie IA et à cibler l'économie des jetons"
     },
     {
      "ts": "2026-11-15T00:35:39.000Z",
@@ -4035,7 +4200,8 @@
      "source": "헤럴드경제",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chey Tae-won appelle à un « volant d'inertie IA » pour stimuler le cycle de croissance du groupe SK"
     },
     {
      "ts": "2026-11-13T09:24:00.000Z",
@@ -4044,7 +4210,8 @@
      "source": "조선일보",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chey Tae-won exhorte à agir sur la feuille de route économique Corée-Japon"
     }
    ]
   },
@@ -4065,7 +4232,8 @@
      "source": "finance.biggo.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Au même sommet sur l'IA, Wang Xingxing le qualifie de « plus excitant » tandis que Robin Li le qualifie de « plus urgent »"
     },
     {
      "ts": "2026-11-17T07:02:59.000Z",
@@ -4074,7 +4242,8 @@
      "source": "Pandaily",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Wang Xingxing de Unitree déclare que la généralisation des robots et l'échelle de fabrication restent des défis"
     },
     {
      "ts": "2026-11-07T08:00:00.000Z",
@@ -4083,7 +4252,8 @@
      "source": "Pandaily",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Wang Xingxing de Unitree qualifie les robots de sécurité de domaine de croissance à venir, citant la demande étrangère"
     }
    ]
   },
@@ -4104,7 +4274,8 @@
      "source": "Startup Fortune",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Pony Ma de Tencent déclare que la moitié du personnel passera au travail natif de l'IA"
     }
    ]
   },
@@ -4125,7 +4296,8 @@
      "source": "Livemint",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Foxconn prévoit une croissance des revenus à « deux chiffres » en 2027 ; le président Young Liu déclare que « l'IA sera le moteur de croissance le plus important »"
     }
    ]
   },
@@ -4146,7 +4318,8 @@
      "source": "파이낸셜뉴스",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le président Lee déjeune avec de la poitrine de bœuf à la cafétéria de Samsung ; Lee Jae-yong déclare : « Gwangju avancera plus vite avec le président qui supervisera personnellement »"
     },
     {
      "ts": "2026-11-12T07:36:00.000Z",
@@ -4155,7 +4328,8 @@
      "source": "Chosunbiz",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Lee Jae-yong déclare que le déjeuner avec le président Lee accélérera les progrès de Gwangju"
     },
     {
      "ts": "2026-11-12T04:37:58.000Z",
@@ -4164,7 +4338,8 @@
      "source": "뉴스웍스",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Lee Jae-yong : « Onyang se transforme en un hub HBM... Promotion active du méga-projet Honam-Yeongnam »"
     },
     {
      "ts": "2026-11-12T01:38:55.000Z",
@@ -4173,7 +4348,8 @@
      "source": "파이낸셜뉴스",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Lee Jae-yong : « Le campus Onyang de Samsung deviendra un hub HBM de pointe, le cœur des semi-conducteurs IA »"
     },
     {
      "ts": "2026-11-12T01:27:48.000Z",
@@ -4182,7 +4358,8 @@
      "source": "머니투데이",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le président de Samsung, Lee Jae-yong, déclare que le campus Onyang deviendra un hub HBM de pointe"
     }
    ]
   },
@@ -4225,7 +4402,8 @@
      "source": "NDTV Profit",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Mukesh Ambani déclare que les entreprises de télécommunications harcèlent Jio ; fait l'éloge de Modi, Nilekani et Arnab"
     }
    ]
   },
@@ -4251,13 +4429,34 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T18:59:56.000Z",
+     "title": "Goolsbee says the Fed's job right now is to keep AI surge from overheating the economy",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPem1LUUZ0MzVCaURJTHpfcktwS0tMWGMydV9rNlFwSE1uWkQ5eFNsZ1locTBSMzAtOFhmNHJpUWVBaXVrTnRGeEpaLThoRXpKaU93TExUV3hlNE5TLU5aVzFoT1loQzhXOWNJZlpTWElmZ0ljRTJtMFNWUnlDSTY4bW1ROEkyTmFsaWJmVTlSS2VTa3JmTjdXazlxeWpYa0pwd1BSR2NJNTBlVkFNbllhMHA3LUU?oc=5",
+     "source": "Reuters",
+     "kind": "presse",
+     "title_fr": "Goolsbee déclare que le travail de la Fed en ce moment est d'empêcher la poussée de l'IA de surchauffer l'économie",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-19T18:27:52.000Z",
+     "title": "Fed’s Goolsbee says AI boom risks overheating economy",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQa1ozRDdneFJnTzY1dXJDNUZIekVpTzVZMXZ2Ylpob015TEJ5czV4N1hxcEhFSGY2UEhCekhiUzJUVkg4UEkxVWtONHc4MHhCQ3hTSGlrN2pWbTcxV1R5czYzc1dDTXZxRkFXNzVaRkxnWDFtNWVHV2IwTkYzSEoybHBFbElnSnUwaTFmc2RzMHpxMENfV0pMSGVpN1RpelRHNjBCaWVWOA?oc=5",
+     "source": "Investing.com",
+     "kind": "presse",
+     "title_fr": "Goolsbee de la Fed déclare que le boom de l'IA risque de surchauffer l'économie",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-13T15:05:00.000Z",
      "title": "Goolsbee Warns Fed Is Off the 2% Path as AI Data-Center Demand Fuels Price Pressures",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFAwczdVZDFxRGJfN2UzRU5oQ0trYjM3WUZiNExEYmRZTC1pZ1AzeHExS3lVbGwxd2ZJal9jYl9pMjc2TDBSQWxtOG5uX0s1ZUs3cGFDUWd2RUdpdFNoRFhpb0VLSFF3S0RzZzFTRDJjRl8xYmIxcUE?oc=5",
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Goolsbee avertit que la Fed est hors de la trajectoire de 2 % alors que la demande de centres de données IA alimente les pressions sur les prix"
     },
     {
      "ts": "2026-11-10T15:38:00.000Z",
@@ -4265,8 +4464,9 @@
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMmV6a2NONkpnVnJYYUVIN3RiTVNaRjl4Tm95WVpzcmdHY1RiVFROaUF1RUVDQUV1REE3c1lhdVNoTnB6Z2RHTm5pbHJtMXJvWGxvbkREdVJpMDhpXzhibG9CMGpwM2sxN2hsMm1mRlZsVUZXRldpSmdOcjEyakpVcGNBRDUzbTdOTFpOZkJtN3RMNkVZZ1J4NDJManMtZ0JsRkNQRHV1WGJDUGxhYUlYd3k1bkk?oc=5",
      "source": "24/7 Wall St.",
      "kind": "presse",
-     "m": 2,
-     "e": 1
+     "m": 1,
+     "e": 0,
+     "title_fr": "Goolsbee de la Fed déclare que les centres de données IA ressemblent à une « surchauffe à l'ancienne »"
     },
     {
      "ts": "2026-11-10T14:19:30.000Z",
@@ -4275,7 +4475,8 @@
      "source": "TOKENPOST",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Goolsbee voit une surchauffe économique dans le développement des centres de données"
     },
     {
      "ts": "2026-11-10T12:50:30.000Z",
@@ -4283,8 +4484,9 @@
      "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQT3dPVF9Eb3BqYWJqQ2NGYUJZSm1WRU80TXJSQTVXenAzNzk1WURNajBubWNIYWxzY1VuTnN2aDVEdnhWdWxSd0U0aXV6Mm1LOXR0cy1JbWxnTFFfWHpyaTkxWmVvR2s2YVRESUVkV2JZVndqdU9aczZ2TDdIdWJpblpja3A3VnNBVDROR19JYjd2Q0RkMkZVb0hZakJBQ0dmS1dLZTVyb1MxUF9JR2h0TXhsQWtFUGw4Szg0WmczX29jZTZ3ekZpNFdpaVlReTBRRXRjcXdDV1VVeWFRZEp3NEc3UFV4emZXYjNrTDRmamtUaEg1WTBHWmRyZW5aNlo5OWV3TmdvZUN3UE5hNVM5NUdDZzUzLVJXQ3hKU1VQSWU3UEZCNFZ4Q1p3?oc=5",
      "source": "Benzinga",
      "kind": "presse",
-     "m": 2,
-     "e": 1
+     "m": 1,
+     "e": 0,
+     "title_fr": "Goolsbee de la Fed avertit que le boom des centres de données IA commence à ressembler à une « surchauffe de la demande », déclare la banque centrale"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -4293,7 +4495,8 @@
      "source": "UA.NEWS",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Goolsbee déclare que les centres de données IA surchauffent l'économie — The Hill"
     },
     {
      "ts": "2026-11-09T22:05:00.000Z",
@@ -4301,26 +4504,9 @@
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNU5OTWxiVWpIY0lTb2ZzaWtlWEdROHBhTV9IclRtX3lnRU1QY2pLdGhxT201d0Z1a2tkdXVvenkwNXNsNmNqSjByMXhPMWhsbWswaDdvYUFFNGtUQVRWU2F1M1diV1pud2YzTzIyM0gtNGFmd1ZlWTdsWEwtekY5LWlKZmQwOEd40gGOAUFVX3lxTE5UZ0JSWVotZVdvRERqMl82SG5hSGFUdUtzdzNCVndTUnFwWDlOVEgwcEJQZjF2VFVtZWlnZEJwT3diSVJVcUNGcUxoWDF4UTVydHQ0U0hoX2xacGVMTjgwVzlTM1B3anNBNmhZek5sV2xjNW1MV015VU5BanlaaU1mMUtMeGliR185eTdHeEE?oc=5",
      "source": "The Hill",
      "kind": "presse",
-     "m": 3,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-09T17:30:47.000Z",
-     "title": "Fed’s Goolsbee Says AI Data Center Boom Looks Like ‘Old-Fashioned Demand Overheating’ – Flags Inflation Risks",
-     "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxPTktPUnMtTUNTcEZpUkpQdHMzS2FRZDF0NmhjSmNNZ3QzNWllR0tZUVJXZVVOYjdZZ2xVS0Y0b09sdUI2QmNjSEJjSVpBaG1pRE1jeVhXMEZiYW4yanBqakpsaF9fcjFRYjZuTmN6WjRiNF9zQkJYRHJrUTBaTVZYc1JpYXk4X21ldDF3QU5XVWI0X0FiSHYtWk1oNE43Q0l2bVowLTJzaUpWQzM1TUxGSC1lbDRfS0Z5MTl2cllrUENrbjd5cEdvSXY4OUltV0NHc1BRUXUtZ1VNSThBYkxsRE4ycWtsVjZKSkdLeGU1MUU2ZlNxdlM5VQ?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "m": 3,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-09T08:00:00.000Z",
-     "title": "Fed’s Goolsbee says AI spending resembles demand shock",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOSG4tbWRBSlZGLWJXdmJaUGZ0SHVpRHBudjI3RmZZTXBEQUh3V0ZCZzhtQW15eVRpc1ZwdVl4X1UzRUt1aHNXT3lLek1KUlE2Y2h5UkNyU2hLRi0ybmFpZlEtakZDdE0tSkh4eEg2a1RJMy1ZTS1tLUxEclFxX0cxS2s1Q1dQdXF3WmYwck5LZm51aEE?oc=5",
-     "source": "American Banker",
-     "kind": "presse",
-     "m": 1,
-     "e": 0
+     "m": 4,
+     "e": 1,
+     "title_fr": "Goolsbee de la Fed déclare que le développement des centres de données « surchauffe » l'économie"
     }
    ]
   },
@@ -4341,7 +4527,8 @@
      "source": "CoinDesk",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le gouverneur de la Fed, Michael Barr, avertit que les agents IA pourraient déclencher des paniques bancaires en quelques minutes"
     },
     {
      "ts": "2026-11-16T15:19:54.000Z",
@@ -4350,7 +4537,8 @@
      "source": "bloomingbit",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le gouverneur de la Fed, Michael Barr, avertit que les risques de financement de l'IA pourraient menacer la stabilité financière"
     },
     {
      "ts": "2026-11-16T10:17:38.000Z",
@@ -4359,7 +4547,8 @@
      "source": "UA.NEWS",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le gouverneur de la Fed, Michael Barr, met en garde contre les risques de l'IA pour le système financier — Channel NewsAsia"
     }
    ]
   },
@@ -4380,7 +4569,8 @@
      "source": "FourWeekMBA",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Waller de la Fed veut une hausse de 50 points de base mais ne voit aucune bulle de prix dans l'IA"
     },
     {
      "ts": "2026-11-18T12:51:53.000Z",
@@ -4389,7 +4579,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Waller de la Fed déclare que la tarification de l'IA ne montre aucun signe de bulle"
     },
     {
      "ts": "2026-11-17T14:28:31.000Z",
@@ -4518,9 +4709,27 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T15:13:11.000Z",
+     "title": "Anthropic makes market debut on the NASDAQ: El-Erian says it’s a ‘historic’ day",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRaG1sckRFckczMUd2amZxRnVkUzJER1ljN2paYkFMbzVpdnA0S09zVzFMdGphOWR1ejJQZDN1d1VLN3JyeC1FYmtHdDd3RVkwaDRWTmFDaEJZYWM?oc=5",
+     "source": "Fox Business",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T15:09:47.000Z",
      "title": "Anthropic NASDAQ debut marks a historic milestone for AI, Mohamed El-Erian says",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBNUkR5dXhJZ3VGR0M2aEVHVDFxR19pQVFna1dUSVNWeHZFeWtsUkxQd3JrZmUyamZael9kemhqYTVzMmpDTy1YcWlYbHkwb28ybU5NME9tZ1FONXc?oc=5",
+     "source": "Fox Business",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-10T08:00:00.000Z",
+     "title": "Nvidia board is facing a 'really difficult issue,' Mohamed El-Erian says",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1YdDUxaWZTaXVaelItNWRzb1FMbDlGMlp4YmVlZzFNY0NOYlA5Qnl6eENaWUlfRXpQMHNLRUVrMG11bXdlSHpEdEVzM0NJLVhqclEtS241Z3BvS2s?oc=5",
      "source": "Fox Business",
      "kind": "presse",
      "m": 1,
@@ -4734,20 +4943,6 @@
  ],
  "hot": [
   {
-   "score": 3.31,
-   "id": "sam-altman",
-   "n": "Sam Altman",
-   "role": "PDG d'OpenAI",
-   "actor": "openai",
-   "ts": "2026-11-18T17:58:13.000Z",
-   "title": "OpenAI’s Sam Altman Says It Is ‘Hard To Imagine’ AI Industry Without Jensen Huang",
-   "title_fr": "Sam Altman d'OpenAI déclare qu'il est « difficile d'imaginer » l'industrie de l'IA sans Jensen Huang",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNDlOcjk0azEybTVzdVR2S3NTUlNqd2ctWlNwOXEwcGNwaWdFS0t5azVuVXNPM3pOR181M3VyZml2dVRNTEt3NjBqbV9XbEdXajdkTGhlT1gtWTRBbF9pQVc0alBNWGVFMW85c3MtTkJpNFJRUnNVQXZHd1FFdHU5TFJjNTR2T09HNDEtMFBLZ1ZVTk9FbjBKZTJXZEVkUTNhZzBWdHhJdXpuWEZCQUZVYmxaYlhoVHVyS1Z4OXBBSnc1ZFA4TDhlbzBVdw?oc=5",
-   "source": "Forbes",
-   "kind": "presse",
-   "outlets": 3
-  },
-  {
    "score": 2.6,
    "id": "palmer-luckey",
    "n": "Palmer Luckey",
@@ -4755,7 +4950,7 @@
    "actor": null,
    "ts": "2026-11-19T15:04:29.000Z",
    "title": "Palmer Luckey Warns AI Hackers Are Outpacing U.S. Defenses",
-   "title_fr": "",
+   "title_fr": "Palmer Luckey avertit que les pirates informatiques utilisant l'IA dépassent les défenses américaines",
    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE15Z01nSHRxTXBtelowakJTaXpTY1V0ajRib0NsU0FKcmxiNG9vOFdadFZ4UFUwZkNub3VhangxMUhuY0lONVVSUkE3eDdFYk1laXh3NlR3ai1NdnEzMjdhTW5iSW85bzhoY1Zr?oc=5",
    "source": "USA Herald",
    "kind": "presse",
@@ -4774,6 +4969,20 @@
    "source": "TechCrunch",
    "kind": "presse",
    "outlets": 2
+  },
+  {
+   "score": 2.07,
+   "id": "sam-altman",
+   "n": "Sam Altman",
+   "role": "PDG d'OpenAI",
+   "actor": "openai",
+   "ts": "2026-11-18T17:58:13.000Z",
+   "title": "OpenAI’s Sam Altman Says It Is ‘Hard To Imagine’ AI Industry Without Jensen Huang",
+   "title_fr": "Sam Altman d'OpenAI déclare qu'il est « difficile d'imaginer » l'industrie de l'IA sans Jensen Huang",
+   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNDlOcjk0azEybTVzdVR2S3NTUlNqd2ctWlNwOXEwcGNwaWdFS0t5azVuVXNPM3pOR181M3VyZml2dVRNTEt3NjBqbV9XbEdXajdkTGhlT1gtWTRBbF9pQVc0alBNWGVFMW85c3MtTkJpNFJRUnNVQXZHd1FFdHU5TFJjNTR2T09HNDEtMFBLZ1ZVTk9FbjBKZTJXZEVkUTNhZzBWdHhJdXpuWEZCQUZVYmxaYlhoVHVyS1Z4OXBBSnc1ZFA4TDhlbzBVdw?oc=5",
+   "source": "Forbes",
+   "kind": "presse",
+   "outlets": 3
   }
  ]
 }
