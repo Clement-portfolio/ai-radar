@@ -522,3 +522,11 @@ html{overscroll-behavior-y:contain}
 .vrow .ttl:hover{text-decoration:underline;text-underline-offset:3px}
 .vrow .rsrc{font-family:var(--mono);font-size:11px;color:var(--mute);white-space:nowrap;max-width:170px;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:720px){.vrow{grid-template-columns:42px 1fr;row-gap:2px}.vrow .vwho{grid-column:2;grid-row:1;flex-direction:row;gap:8px;align-items:baseline;flex-wrap:wrap}.vwho .small{display:none}.vrow .ttl{grid-column:1/-1;grid-row:2}.vrow .rsrc{grid-column:1/-1;grid-row:3;max-width:none}}
+.vtool{margin:14px 0 0;gap:6px}.vtool #vbtns{display:contents}
+.vsearch{flex:0 1 220px;min-width:150px;border:1px solid var(--hair);background:transparent;color:var(--ink);padding:6px 10px;font:inherit;font-size:12px;border-radius:0}
+.vsearch:focus{outline:none;border-color:var(--ink)}
+.vrow{grid-template-columns:42px 210px minmax(0,1fr) auto 26px}
+.vrow .rtog{justify-self:end}.vrow.open .rtog{transform:rotate(90deg);color:var(--ink)}
+.vrow .sum{display:none;grid-column:3/-1;padding:4px 0 6px}.vrow.open .sum{display:block}
+@media(max-width:720px){.vrow{grid-template-columns:42px 1fr 26px}.vrow .vwho{grid-column:2}.vrow .rtog{grid-column:3;grid-row:1}.vrow .sum{grid-column:1/-1;grid-row:4}.vtool .vsearch{flex:1 1 100%}}
+.vtool .chip[data-ve]{padding:6px 12px;font-size:12px}.vsearch{padding:7px 10px}

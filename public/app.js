@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","acteurs","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",arv:false};
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -30,7 +30,7 @@ function rowHTML(it){
    '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a>'+
    '<span class="rsrc">'+esc(it.source)+cdot(it.confidence)+'</span>'+
    '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+(it.why?'<p class="rwhy">'+esc(tx(it,'why'))+'</p>':'')+
-   '<div class="sum"><p>'+(it.summary?esc(tx(it,'summary')):'Résumé indisponible : ouvrez l\'article.')+(it.pending?' <i class="small">(titre d\'origine, non classé par l\'IA)</i>':'')+'</p><div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
+   '<div class="sum">'+(it.pending?'<p><i class="small">(titre d\'origine, non classé par l\'IA)</i></p>':'')+'<div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
 }
 function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s.u))+'" target="_blank" rel="noopener">'+esc(s.t)+'</a>'}).join("")}
 
@@ -671,15 +671,28 @@ function vItems(){
   });
   return out;
 }
-function vBody(){
-  var all=vItems(),ve=S.ve,vc=S.vc||"ALL";
-  var base=all.filter(function(x){return!ve||x.n.e});
-  var cnt=function(c){return base.filter(function(x){return c==="ALL"||x.p.cat===c}).length};
-  var nE=all.filter(function(x){return x.n.e&&(vc==="ALL"||x.p.cat===vc)}).length;
-  var h='<div class="toolbar vtool"><button class="chip'+(S.vv!=="pers"?' on':'')+'" data-vv="flux">Chronologique</button><button class="chip'+(S.vv==="pers"?' on':'')+'" data-vv="pers">Par personne</button><span class="sp"></span><button class="chip'+(ve?' on':'')+'" data-ve="1">Essentiel seulement ('+nE+')</button></div>'+
-   '<div class="toolbar">'+VCATS.map(function(c){return'<button class="chip'+(vc===c[0]?' on':'')+'" data-vc="'+c[0]+'">'+c[1]+' ('+cnt(c[0])+')</button>'}).join("")+'</div>';
-  var L=base.filter(function(x){return vc==="ALL"||x.p.cat===vc});
-  if(!L.length)return h+'<div class="empty">Aucune déclaration pour ces filtres.</div>';
+function vKey(u){var h=0;u=String(u||"");for(var i=0;i<u.length;i++)h=(h*31+u.charCodeAt(i))|0;return"v"+(h>>>0).toString(36)}
+function vImp(n){return 1+(n.e?1:0)+((n.m||1)>=3?1:0)}
+function vCl(){return VCATS.filter(function(c){return c[0]===(S.vc||"ALL")})[0][1]}
+function vBtns(){
+  var vo=S.vfo;
+  return'<button class="chip fb'+(vo==="vue"?' open':'')+'" data-vfo="vue">Vue : '+(S.vv==="pers"?"Par personne":"Chronologique")+' <span>▾</span></button>'+
+   '<button class="chip fb'+(vo==="cat"?' open':'')+((S.vc||"ALL")!=="ALL"?' set':'')+'" data-vfo="cat">Catégorie : '+esc(vCl())+' <span>▾</span></button><span class="sp"></span>'+
+   '<button class="chip'+(S.ve?' on':'')+'" data-ve="1">Essentiel seulement</button>';
+}
+function vPanel(){
+  var vc=S.vc||"ALL";
+  if(S.vfo==="vue")return'<div class="fpanel"><button class="chip'+(S.vv!=="pers"?' on':'')+'" data-vv="flux">Chronologique</button><button class="chip'+(S.vv==="pers"?' on':'')+'" data-vv="pers">Par personne</button></div>';
+  if(S.vfo==="cat"){
+    var base=vItems().filter(function(x){return!S.ve||x.n.e});
+    return'<div class="fpanel">'+VCATS.map(function(c){var k=base.filter(function(x){return c[0]==="ALL"||x.p.cat===c[0]}).length;return'<button class="chip'+(vc===c[0]?' on':'')+'" data-vc="'+c[0]+'">'+c[1]+' ('+k+')</button>'}).join("")+'</div>';
+  }
+  return"";
+}
+function vList(){
+  var ve=S.ve,vc=S.vc||"ALL",h="";
+  var L=vItems().filter(function(x){return(!ve||x.n.e)&&(vc==="ALL"||x.p.cat===vc)});
+  if(!L.length)return'<div class="empty">Aucune déclaration pour ces filtres.</div>';
   var ttl=function(n){return esc(!isEn()&&n.title_fr?n.title_fr:n.title)};
   if(S.vv==="pers"){
     var by={},order=[];
@@ -702,11 +715,14 @@ function vBody(){
   L.sort(function(a,b){return b.n.ts<a.n.ts?-1:b.n.ts>a.n.ts?1:0});
   var dc={};L.forEach(function(x){var d=dayKey(x.n.ts);dc[d]=(dc[d]||0)+1});
   var total=L.length,day="";L=L.slice(0,S.vlimit);
+  var catL={};VCATS.forEach(function(c){catL[c[0]]=c[1]});
   L.forEach(function(x){
-    var n=x.n,d=dayKey(n.ts);
+    var n=x.n,d=dayKey(n.ts),k=vKey(n.url);
     if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(n.ts))+' <span>'+dc[d]+' '+(dc[d]>1?'déclarations':'déclaration')+'</span></div>'}
-    h+='<div class="vrow"><span class="time">'+esc(fmtTime(n.ts))+'</span><span class="vwho"><a href="#acteurs/voix/'+esc(x.p.id)+'" data-vp="'+esc(x.p.id)+'">'+esc(x.p.n)+'</a><span class="small">'+esc(x.p.role)+'</span></span>'+
-     '<a class="ttl" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+ttl(n)+'</a><span class="rsrc">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span></div>';
+    h+='<div class="vrow'+(S.open[k]?' open':'')+'"><span class="time">'+esc(fmtTime(n.ts))+'</span><span class="vwho"><a href="#acteurs/voix/'+esc(x.p.id)+'" data-vp="'+esc(x.p.id)+'">'+esc(x.p.n)+'</a><span class="small">'+esc(x.p.role)+'</span></span>'+
+     '<a class="ttl" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+ttl(n)+'</a><span class="rsrc">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span>'+
+     '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le détail">›</button>'+
+     '<div class="sum"><div class="meta"><span class="cat">'+esc(catL[x.p.cat]||x.p.cat)+'</span>'+imp(vImp(n))+'<a href="'+esc(link(n.url))+'" target="_blank" rel="noopener">Lire sur '+esc(n.source)+' ↗</a></div></div></div>';
   });
   if(total>L.length)h+='<div style="text-align:center;padding:24px 0"><button class="btn" data-vmore="1">Voir '+Math.min(80,total-L.length)+' déclarations de plus ('+(total-L.length)+' restantes)</button></div>';
   return h;
@@ -715,7 +731,7 @@ function aVoix(){
   var P=(S.voix&&S.voix.people)||[];
   var h=aTabs("vx")+'<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA, du plus récent au plus ancien (30 derniers jours). Titres de presse traduits ; seuls ceux où la personne s\'exprime sont retenus. « Essentiel » : propos repris par plusieurs médias, ou prise de parole forte d\'une voix majeure.</p>';
   if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
-  return h+'<input id="vq" class="asearch" type="search" placeholder="Rechercher une personne" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"><div id="vbody">'+vBody()+'</div>';
+  return h+'<div class="toolbar frow vtool"><span id="vbtns">'+vBtns()+'</span><input id="vq" class="vsearch" type="search" placeholder="Rechercher une personne" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"></div><div id="vpanel">'+vPanel()+'</div><div id="vbody">'+vList()+'</div>';
 }
 
 function rActeurs(){
@@ -744,7 +760,7 @@ function show(tab){
   if(tab==="infrastructure"&&parts[1]){S.open["l"+parts[1]]=true;if(S.layers)rInfra();var dl=$("infra-list");dl=dl&&dl.closest("details");if(dl)dl.open=true;var lye=$("ly-"+parts[1]);if(lye)lye.scrollIntoView({block:"start"})}
   if(toRace){var rc=$("m-race");if(rc){rc.open=true;rc.scrollIntoView({block:"start"})}}
   if(tab==="acteurs"&&parts[1]==="voix"&&!parts[2]&&S.vv!=="flux"){S.vv="flux";rActeurs()}
-  if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]){S.vc="ALL";S.vv="pers";S.vq="";S.ve=false;rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}
+  if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]){S.vc="ALL";S.vv="pers";S.vq="";S.ve=false;S.vfo=null;rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}
 }
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 
@@ -759,8 +775,9 @@ document.addEventListener("click",function(e){
   var lg=e.target.closest("[data-lang]");if(lg){setLang(lg.getAttribute("data-lang"));return}
   var j=e.target.closest("[data-jump]");
   if(j){e.preventDefault();var id=j.getAttribute("data-jump"),el=$(id);if(el){if(el.tagName==="DETAILS")el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}return}
-  var vcb=e.target.closest("[data-vc]");if(vcb){S.vc=vcb.getAttribute("data-vc");S.vlimit=80;vRefresh();return}
-  var vvb=e.target.closest("[data-vv]");if(vvb){S.vv=vvb.getAttribute("data-vv");vRefresh();return}
+  var vcb=e.target.closest("[data-vc]");if(vcb){S.vc=vcb.getAttribute("data-vc");S.vlimit=80;S.vfo=null;vRefresh();return}
+  var vfo=e.target.closest("[data-vfo]");if(vfo){var vf=vfo.getAttribute("data-vfo");S.vfo=S.vfo===vf?null:vf;vRefresh();return}
+  var vvb=e.target.closest("[data-vv]");if(vvb){S.vv=vvb.getAttribute("data-vv");S.vfo=null;vRefresh();return}
   if(e.target.closest("[data-ve]")){S.ve=!S.ve;S.vlimit=80;vRefresh();return}
   if(e.target.closest("[data-vmore]")){S.vlimit+=80;vRefresh();return}
   var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");rActeurs();return}
@@ -776,7 +793,7 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-ls")){S.layerSort=t.getAttribute("data-ls");renderAll();return}
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
-function vRefresh(){var b=$("vbody");if(b){b.innerHTML=vBody()}else rActeurs()}
+function vRefresh(){var b=$("vbody");if(b){$("vbtns").innerHTML=vBtns();$("vpanel").innerHTML=vPanel();b.innerHTML=vList()}else rActeurs()}
 document.addEventListener("input",function(e){if(e.target&&e.target.id==="vq"){S.vq=e.target.value;S.vlimit=80;vRefresh();return}if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 
 /* Recherche globale */
