@@ -120,6 +120,7 @@ await import("./test-focus.mjs");
 await import("./test-chiffres.mjs");
 await import("./test-resultats.mjs");
 await import("./test-translate.mjs");
+await import("./test-units.mjs");
 await import("./test-i18n.mjs");
 await import("./test-review.mjs");
 await import("./test-gnews.mjs");

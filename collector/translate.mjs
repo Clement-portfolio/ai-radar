@@ -1,5 +1,6 @@
 // What's Going On? — titres toujours en français (écriture latine) et version anglaise des articles. Aucune dépendance.
 import { digitsOf } from "./brief.mjs";
+import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 
 const NON_LATIN = /[Ѐ-ӿ֐-׿؀-ۿऀ-ॿ฀-๿぀-ヿ㐀-鿿가-힯]/gu;
 
@@ -15,7 +16,7 @@ export const TRANSLATE_SYSTEM = `Tu prépares les textes d'un site d'actualité 
 - title_en : le titre en anglais, fidèle à orig.
 - summary_en : le résumé traduit fidèlement en anglais (chaîne vide si summary est vide).
 - why_en : why traduit fidèlement en anglais (chaîne vide si why est vide).
-Règles : n'ajoute aucun chiffre, date ou nom absent des textes fournis ; écris les nombres en chiffres.
+Règles : n'ajoute aucun chiffre, date ou nom absent des textes fournis ; écris les nombres en chiffres. ${UNITS_RULE}
 Réponds uniquement par un tableau JSON, un objet par article, avec le même champ i.`;
 
 export const TRANSLATE_SCHEMA = {
@@ -39,23 +40,24 @@ export function applyTranslations(arr, inputs, byIdx) {
   for (const r of arr) {
     const inp = inputs.find((x) => x.i === Number(r?.i)); const it = inp && byIdx.get(inp.i);
     if (!it) continue;
-    const pool = new Set(digitsOf(`${inp.title} ${inp.orig} ${inp.summary} ${inp.why}`));
-    const ok = (s) => digitsOf(s).every((d) => pool.has(d));
+    const all = `${inp.title} ${inp.orig} ${inp.summary} ${inp.why}`;
+    const pool = new Set(digitsOf(stripAmounts(all)));
+    const ok = (s, lang, strict = false, src = all) => digitsOf(stripAmounts(s)).every((d) => pool.has(d)) && unitsOk(src, s, lang, strict);
     let touched = false;
     if (foreignScript(it.title)) {
-      const t = clean(r.title_fr);
-      if (t && t.length <= 220 && !foreignScript(t) && ok(t)) { it.title = t; touched = true; }
+      const t = normalizeFr(inp.orig || inp.title, clean(r.title_fr));
+      if (t && t.length <= 220 && !foreignScript(t) && ok(t, "fr", true, inp.orig || inp.title)) { it.title = t; touched = true; }
       else if (it.summary && !foreignScript(it.summary)) { // secours : le résumé français, déjà validé, sert de titre
         const first = clean(it.summary).split(/(?<=[.!?])\s/)[0];
         it.title = first.length <= 150 ? first.replace(/\.$/, "") : first.slice(0, 147).replace(/\s+\S*$/, "") + "…"; touched = true;
       }
     }
     const te = clean(r.title_en);
-    if (te && te.length <= 240 && !foreignScript(te) && ok(te)) {
+    if (te && te.length <= 240 && !foreignScript(te) && ok(te, "en", true, inp.orig || inp.title)) {
       it.title_en = te; touched = true;
       const se = clean(r.summary_en), we = clean(r.why_en);
-      if (se && se.length <= 400 && !foreignScript(se) && ok(se)) it.summary_en = se;
-      if (we && it.why && we.length <= 320 && !foreignScript(we) && ok(we)) it.why_en = we;
+      if (se && se.length <= 400 && !foreignScript(se) && ok(se, "en", false, inp.summary || all)) it.summary_en = se;
+      if (we && it.why && we.length <= 320 && !foreignScript(we) && ok(we, "en", false, inp.why || all)) it.why_en = we;
     }
     if (touched) n++;
   }

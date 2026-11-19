@@ -5,6 +5,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { hasNumberWords, digitsOf } from "./brief.mjs";
+import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { translateData, I18N_SYSTEM, I18N_SCHEMA } from "./i18n.mjs";
 import { resolveGoogleLinks } from "./gnews.mjs";
 import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
@@ -289,9 +290,9 @@ async function collectAll(cfg, env, http, now, log, W = null) {
 /** « Pourquoi c'est important » : gardé seulement pour importance 2 ou 3, sans chiffre absent du titre et de l'extrait. */
 /** Version anglaise renvoyée par le classement : gardée seulement si ses chiffres viennent du titre et de l'extrait. */
 function enFields(r, c, hasWhy) {
-  const known = new Set(digitsOf(`${c.title} ${c.snippet || ""}`));
-  const okEn = (t, max) => { const x = String(t || "").trim().replace(/\s+/g, " "); return x && x.length <= max && !foreignScript(x) && digitsOf(x).every((d) => known.has(d)) ? x : ""; };
-  const title_en = okEn(r.title_en, 240);
+  const src = `${c.title} ${c.snippet || ""}`, known = new Set(digitsOf(stripAmounts(src)));
+  const okEn = (t, max, strict = false) => { const x = String(t || "").trim().replace(/\s+/g, " "); return x && x.length <= max && !foreignScript(x) && digitsOf(stripAmounts(x)).every((d) => known.has(d)) && unitsOk(strict ? c.title : src, x, "en", strict) ? x : ""; };
+  const title_en = okEn(r.title_en, 240, true);
   if (!title_en) return {};
   const summary_en = okEn(r.summary_en, 420), why_en = hasWhy ? okEn(r.why_en, 320) : "";
   return { title_en, ...(summary_en ? { summary_en } : {}), ...(why_en ? { why_en } : {}) };
@@ -300,14 +301,15 @@ function whyOk(r, c) {
   const w = String(r.why_fr || "").trim();
   if (!w || w.length > 260 || (Number(r.importance) || 1) < 2 || hasNumberWords(w)) return false;
   if (w.length < 25 || w.split(/\s+/).length < 5 || !/^[\p{L}"«'’(]/u.test(w) || /why_|summary_|title_|[{}\[\]]/.test(w)) return false; // fuite de structure JSON (« », « why_en »: »)
-  const known = new Set(digitsOf(`${c.title} ${c.snippet || ""}`));
-  return digitsOf(w).every((d) => known.has(d));
+  const src = `${c.title} ${c.snippet || ""}`, known = new Set(digitsOf(stripAmounts(src)));
+  return digitsOf(stripAmounts(w)).every((d) => known.has(d)) && unitsOk(src, w, "fr");
 }
 
 /* ---------- Gemini ---------- */
 const SYSTEM = `Tu es l'analyste d'un radar d'actualité sur l'intelligence artificielle et son économie. Pour chaque article fourni (champ i, source, title, snippet, date), renvoie un objet JSON.
 Règles :
 - relevant : true si l'article se rattache à l'IA ou à son économie : modèles et produits d'IA, puces/mémoire/fonderie, datacenters, énergie pour l'IA, financement, résultats et cours de bourse des acteurs de l'IA, décisions et polémiques politiques qui touchent l'IA (Maison Blanche, Département du Commerce, Congrès, gouvernements, liens entre dirigeants de l'IA et pouvoir), régulation, usages, adoption, recherche. En cas de doute, mets true avec importance 1. Mets false seulement si l'article n'a clairement aucun rapport avec l'IA (autre sujet, publicité, bons de réduction, conseils boursiers sans fait) et donne alors, dans reason, la raison en 8 mots maximum.
+- Ordres de grandeur : ${UNITS_RULE}
 - title_fr : titre en français, fidèle à l'original, sans ajout. Toujours en écriture latine : traduis les titres chinois, japonais, coréens, arabes ou russes.
 - title_en : le même titre en anglais (recopie l'original s'il est déjà en anglais).
 - summary_fr : 1 à 2 phrases en français, 260 caractères maximum, UNIQUEMENT à partir des faits présents dans le titre et l'extrait. N'ajoute aucun chiffre, aucune date, aucun nom absent du texte. Si l'extrait est vide, reformule le titre.
@@ -541,6 +543,12 @@ export async function run(opts = {}) {
       slice.forEach((c, i) => {
         const r = by.get(i); if (!r) return;
         handled.add(c.id);
+        { // garde-fou « billion / trillion » : réécrit en milliards si l'ordre de grandeur est juste, sinon refuse la traduction
+          const gsrc = `${c.title} ${c.snippet || ""}`;
+          for (const k of ["title_fr", "summary_fr", "why_fr"]) if (r[k]) r[k] = normalizeFr(k === "title_fr" ? c.title : gsrc, String(r[k]));
+          if (r.title_fr && !(unitsOk(c.title, r.title_fr, "fr", true) && digitsOf(stripAmounts(r.title_fr)).every((d) => new Set(digitsOf(stripAmounts(c.title))).has(d)))) r.title_fr = "";
+          if (r.summary_fr && !unitsOk(gsrc, r.summary_fr, "fr")) r.summary_fr = "";
+        }
         const y = c.pendingOld ? null : (yieldStats[yk(c)] ||= { k: 0, r: 0 });
         const forced = !r.relevant && c.watch && W && watchCandidateOk(c, W);
         if (!r.relevant && !forced) {

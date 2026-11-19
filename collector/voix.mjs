@@ -1,6 +1,7 @@
 // Voix : ce que disent les dirigeants de l'IA. Presse (Google Actualités) et vidéos (chaînes YouTube vérifiées).
 // Règle : un titre n'est retenu que si la personne en est le sujet qui parle (« X says… », « …, says X », citation) ou si la vidéo porte son nom.
 // Rien n'est inventé ni résumé : titre du média, date, média, lien.
+import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 export const VOIX_RULES = { days: 30, perPerson: 8, perQuery: 30 };
 
 // w : influence (1,6 = voix majeure, 0,6 = élu ou conseiller de second plan) ; sert au classement des déclarations de la Une.
@@ -248,7 +249,7 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
 }
 
 export const VOIX_SYSTEM = `Tu traduis en français des titres d'articles de presse et de vidéos sur l'intelligence artificielle. Pour chaque titre (i, en), renvoie fr = la traduction française fidèle, naturelle, au même niveau d'affirmation (« says » reste une déclaration, « warns » un avertissement, pas plus fort ni plus faible).
-Règles : conserve exactement les chiffres, noms propres, sociétés, sigles et produits ; ne rajoute aucune information ; garde les guillemets s'il y en a. Réponds uniquement par un tableau JSON, un objet par titre, avec le même champ i.`;
+Règles : conserve exactement les chiffres, noms propres, sociétés, sigles et produits ; ne rajoute aucune information ; garde les guillemets s'il y en a. ${UNITS_RULE} Réponds uniquement par un tableau JSON, un objet par titre, avec le même champ i.`;
 export const VOIX_SCHEMA = { type: "ARRAY", items: { type: "OBJECT", properties: { i: { type: "INTEGER" }, fr: { type: "STRING" } }, required: ["i", "fr"] } };
 
 const digits = (s) => String(s).match(/\d+/g) || [];
@@ -264,9 +265,10 @@ export async function translateVoix({ doc, generate, max = 140 }) {
   for (const r of res) {
     const it = todo[Number(r?.i)], fr = String(r?.fr || "").trim().replace(/\s+/g, " ");
     if (!it || !fr || fr.length > it.title.length * 2 + 40) continue;
-    const a = digits(it.title), b = digits(fr);
-    if (a.length !== b.length || !a.every((x, k) => x === b[k])) continue;
-    it.title_fr = fr; n++;
+    const fixed = normalizeFr(it.title, fr);
+    const a = digits(stripAmounts(it.title)), b = digits(stripAmounts(fixed));
+    if (a.length !== b.length || !a.every((x, k) => x === b[k]) || !unitsOk(it.title, fixed, "fr", true)) continue;
+    it.title_fr = fixed; n++;
   }
   return { changed: n, reason: n ? `${n} titre(s) traduit(s)` : "aucune traduction valide" };
 }
