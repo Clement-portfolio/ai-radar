@@ -5,42 +5,65 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-18T19:24:29.085Z",
+ "generated_at": "2026-11-19T04:10:51.471Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "0b8aa72489cc+58e8987b4f93+855aa6c2f478+9ce8ac8b4c95+f4fd0de1838a",
+  "06e6d380e3a5+1dfd0f40ba72+2e93dd0a1829+4ff277b88683+8838b8c2d698+8df8ab3d4ae8+92ca8c823c3c+b1f950c01034+b7121aa76176+ccbe8c6ad574+ea05cfb5b9ab",
+  "1aa355519c9f+399baa5b5687+439c4d3c8de7+60f15c77a555+61af5bd8e7f5+7399e7157c4f+8882bec2ef59+988998fded65+99adb1c1605d+b89b121d0786+d392b636ea28+ef1344e97f9b",
   "06c70ce20939+14c3e9c2875e+2745e145bb51+4f1fe20754ae+6e834fc4bc29+854cbb320fb2+b1da22f7bd68+db111edbe82f",
-  "09d1dd4a855f+1a9f8b445fb6+21a4a1a0ce23+2d72e3f30e78+353b19162ed2+7706a462416c+97a96eda4701+ad0794c39984+ae0e0c9ba790+bbb72de1e1a5",
-  "1fcd3d951882+4d26e05d4a3f+5db9be893d58+75e60b60b1f6+782240c4e790+7ca1352e5747+e0ac844ba9e5+e65e9a614925",
-  "0c4605812a3f+167fd587b60c+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+6a6c919520ba+99c81c53d58e+a3f30498a16a+a9af1aee29cc+cc9584594038+dd5f54370718",
-  "7a5b841ecd56+a57acf0d0c54+bb0b30e7db2d+c82f724e5c66+d7d75374d83d"
+  "0ecab592c5bf+472accef9bf8+51dccde4caab+af1ef56805a0+d8f38d7ef9ae+ea44684bf658",
+  "49c66e740b56+91835d4a8ae3+a04e0643bbe0+c9996132d66d+d28c8d530298",
+  "0c4605812a3f+167fd587b60c+28393d4da0d4+2c159dd44ddd+3c69314e6bc3+52a17fa9dbeb+6a6c919520ba+99c81c53d58e+a3f30498a16a+a9af1aee29cc+cc9584594038+dd5f54370718"
  ],
  "stories": [
   {
    "ids": [
-    "855aa6c2f478",
-    "0b8aa72489cc",
-    "58e8987b4f93",
-    "f4fd0de1838a"
+    "4ff277b88683",
+    "8838b8c2d698",
+    "8df8ab3d4ae8",
+    "06e6d380e3a5"
    ],
-   "head": "L'introduction en bourse d'Anthropic se prépare comme un test majeur pour l'industrie de l'intelligence artificielle",
+   "head": "Anthropic entre en bourse au prix de 83 dollars avec une valorisation de 1 500 milliards de dollars",
    "bullets": [
-    "L'opération doit se dérouler sur le Nasdaq avec une fixation du prix prévue cette semaine.",
-    "L'accès au financement constitue l'enjeu principal du secteur au moment où la construction d'un datacenter d'un gigawatt exige un investissement minimal de 30 milliards de dollars."
+    "L'introduction en bourse permet de lever 81,3 milliards de dollars.",
+    "Le prix initialement envisagé se situait dans une fourchette de 70 à 78 dollars.",
+    "L'entreprise est cotée au Nasdaq sous le symbole ANT."
    ],
    "kinds": [
     "detail",
-    "contexte"
+    "contexte",
+    "explication"
    ],
-   "head_en": "Anthropic's upcoming initial public offering is shaping up as a major test for the artificial intelligence industry",
-   "bullets_en": [
-    "The operation is set to take place on Nasdaq with pricing scheduled for this week.",
-    "Access to financing constitutes the primary challenge for the sector at a time when building a one-gigawatt datacenter requires a minimum investment of 30 billion dollars."
-   ],
+   "head_en": null,
+   "bullets_en": null,
    "ctx_ids": [
-    "8545e7ee31da"
+    "33642c9df619"
    ],
-   "ts": "2026-11-18T18:26:51.000Z"
+   "ts": "2026-11-19T01:36:49.000Z"
+  },
+  {
+   "ids": [
+    "61af5bd8e7f5",
+    "399baa5b5687",
+    "d392b636ea28",
+    "ef1344e97f9b"
+   ],
+   "head": "Les États-Unis renforcent les contrôles sur les puces d'intelligence artificielle",
+   "bullets": [
+    "Un prêt de 480 millions de dollars destiné à ByteDance est gelé par les nouvelles restrictions.",
+    "Les mesures ciblent les centres de données desservant des entreprises chinoises et bloquent l'accès à distance aux technologies."
+   ],
+   "kinds": [
+    "detail",
+    "explication"
+   ],
+   "head_en": "The United States tightens controls on artificial intelligence chips",
+   "bullets_en": [
+    "A 480 million dollar loan intended for ByteDance is frozen by the new restrictions.",
+    "The measures target data centers serving Chinese companies and block remote access to technologies."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-18T23:48:23.000Z"
   },
   {
    "ids": [
@@ -49,52 +72,22 @@
     "6e834fc4bc29",
     "14c3e9c2875e"
    ],
-   "head": "La consommation électrique des centres de données d'intelligence artificielle aux États-Unis atteint des niveaux records",
+   "head": "La consommation électrique des centres de données d'IA aux États-Unis atteint des records",
    "bullets": [
-    "Un ensemble de 403 centres de données hyperscale a consommé 82 térawattheures en l'espace d'une année.",
-    "La consommation de ces infrastructures sur le sol américain équivaut à celle d'États entiers tels que le Wisconsin, le Michigan ou l'Indiana."
+    "403 centres de données hyperscale ont consommé 82 térawattheures d'électricité en un an.",
+    "Plus de la moitié de cette électricité provient du gaz et du charbon."
    ],
    "kinds": [
     "detail",
-    "detail"
+    "explication"
    ],
-   "head_en": "The electricity consumption of artificial intelligence datacenters in the United States reaches record levels",
+   "head_en": "Electricity consumption of US AI data centers reaches record levels",
    "bullets_en": [
-    "A group of 403 hyperscale datacenters consumed 82 terawatt-hours over the span of a year.",
-    "The consumption of these infrastructures on American soil equals that of entire states such as Wisconsin, Michigan, or Indiana."
+    "403 hyperscale data centers consumed 82 terawatt-hours of electricity in one year.",
+    "More than half of this electricity comes from gas and coal."
    ],
    "ctx_ids": [],
    "ts": "2026-11-18T17:52:00.000Z"
-  },
-  {
-   "ids": [
-    "cc9584594038",
-    "a3f30498a16a",
-    "dd5f54370718",
-    "6a6c919520ba"
-   ],
-   "head": "Nvidia dépasse les attentes du marché financier lors de sa publication de résultats trimestriels",
-   "bullets": [
-    "L'action de l'entreprise a enregistré une progression de près de 4 % à la suite de cette annonce.",
-    "Le cofondateur Jensen Huang a quitté ses fonctions de directeur général, laissant la direction intérimaire à la directrice financière Colette Kress.",
-    "Le titre avait reculé de 2,2 % lors des échanges avant-bourse en début de semaine à la suite de l'annonce du départ de la direction."
-   ],
-   "kinds": [
-    "detail",
-    "contexte",
-    "contexte"
-   ],
-   "head_en": "Nvidia exceeds financial market expectations during its quarterly earnings release",
-   "bullets_en": [
-    "The company's stock recorded an increase of nearly 4% following this announcement.",
-    "Co-founder Jensen Huang stepped down as chief executive officer, leaving interim management to chief financial officer Colette Kress.",
-    "The stock had declined by 2.2% in pre-market trading earlier in the week following the announcement of the leadership departure."
-   ],
-   "ctx_ids": [
-    "caba73249c9d",
-    "19f4815016ce"
-   ],
-   "ts": "2026-11-18T17:48:00.000Z"
   }
  ]
 }

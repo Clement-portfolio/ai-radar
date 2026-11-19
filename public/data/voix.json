@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-19T01:26:44.878Z",
+ "generated_at": "2026-11-19T04:10:51.471Z",
  "people": [
   {
    "id": "sam-altman",
@@ -214,7 +214,14 @@
    "role": "Fondateur de xAI, PDG de Tesla",
    "co": "xAI",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-19T00:37:36.000Z",
+     "title": "Elon Musk on Jensen Huang's Nvidia exit",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeF9DQXpFNUVtQzJuQ2drb1RXMVlrTzRSVHliTzlBVEJnUXgxdUtlNFdiU19MZUZLMi1tVjhEQUgzMlQySWUtUl8xSHFxUUhsem8wXzN4UWN4NmVxYTM2RmYtYTU2LXQ1bDBsU0xYQWk3c0JBOVYxZy1FV2xFMlRLM1RBYW9ZOGhS?oc=5",
+     "source": "CNBC"
+    }
+   ],
    "items": [
     {
      "ts": "2026-11-19T01:08:04.000Z",
@@ -331,6 +338,14 @@
      "title_fr": "Sur fond de craintes de cyberattaques par IA, Satya Nadella affirme qu'une grande partie des infrastructures critiques est « impossible à corriger »"
     },
     {
+     "ts": "2026-11-18T23:39:21.000Z",
+     "title": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdzBNWUJudXptZ3JuNGctLTVyQlBUdzRjd1A5ai1Ec1dMbGNKc0h5QkVUd1Jqd2hpV1RtWFB2Zk9ucWEteXY0NmZSc2JSZXNFU0FNU0RqQkFyVkwwTktCeXBfcnBzWTJPM0hKVElGMjdYcElkdWpZU0JlZS1uODdHVzBteHQzZFh3R0NvMWs1b053bm1mUnVnVm5IZnE4eE1GOVFjRm5LTEtPN3PSAbABQVVfeXFMTjJVTUN2QXJUa29MSFhIdFhGdW9JTVhaNVVYaUdQS2FUX1BTTmpocXVYbXE3WHZ0bEZ3N1U2N2ZxYWtqajQ3WWdpUmg2SGhwZkNOVDk2cHA4WXRlN0pnb2pVNW00NDg5X1dOaVFObFVQZWk0T3A3em9iWEVfVWJrTktQd0pJNzJLRlhSYm9DbzQxT3dsUmlfX1R4ME56c1ZRaEo1aXQzb1NXOUViZDkzTHc?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Le PDG de Microsoft, Satya Nadella, qualifie la panne d'Outlook de \"tempête parfaite\". Voici ce qui s'est mal passé"
+    },
+    {
      "ts": "2026-11-18T22:58:11.000Z",
      "title": "Satya Nadella predicts AI agents will reshuffle the economics of the web",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQTZPUzQ4QVgxSWZ1N0ZhWXV5bGNtS25WdjFyZVdDUVczUzFTTldyTExxM1FhTmtIb1VsQTlJdC1LQktaZGMyVTViTldsR0ZCT2JKcERLdS1CZlpyNmlEMkdVTjRUYUpzRnJxdlI3VTV1Sk1GSDFtM3BZV0hwYWZyQlkzekRlc3JVWGZoYUdxamZyM25Jb3lNM1dUeENyVzE4S3BKNE9VcXp4eHM?oc=5",
@@ -353,14 +368,6 @@
      "source": "Capital Brief",
      "kind": "presse",
      "title_fr": "Matt Comyn de la CBA et Satya Nadella de Microsoft sont sur la même longueur d'onde concernant les cyber-risques"
-    },
-    {
-     "ts": "2026-11-18T00:49:00.000Z",
-     "title": "Microsoft CEO Satya Nadella Praises Jensen Huang, Addresses Service Outage and Buyout Plan",
-     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNeWZEU2lCdEt4TnJfNmVvckM4bXlOZ29oNTFVanlsRVFwcHg4Q0ZCUUVhZTFsdXA5bkhNTFF2Ukg1TUpZX0RpWXR0dk91OVQyU1lUTjFpMUp0RUs1c3gyc1Nxc280TWtJMzhaeU1tUTF2Tzc3a2NDcXNONG1vNTJmeGFuWndNeHQ3Skl4cG9VRm5kNmxkTF9sLWFzdFJvSlpKSHl2S0txVTh1Z3J3akpIaGl4cTh6UGh3RG5ENmtQampHOUJpNEZ1MTRiT1Z6Rm9icmNDMWVEcTRlZW02MXMwYmdSUkNKRnc?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "title_fr": "Le PDG de Microsoft, Satya Nadella, fait l'éloge de Jensen Huang, aborde la panne de service et le plan de rachat"
     }
    ]
   },
@@ -823,6 +830,14 @@
      "title_fr": "Alex Karp déclare que Palantir est « progressiste » désormais, des mois après son manifeste fasciste"
     },
     {
+     "ts": "2026-11-12T18:53:27.000Z",
+     "title": "Palantir’s Karp takes a sharp left turn, says he and the company’s products are actually ‘progressive’",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNYkFPc3lFQ0U4dWRMV3dqb0ppWV9ob25oS0xKTURmOVVJZ0lIMUFrTnAwM1hEc2I3aDFDZzc4bWswSk5YWVFZMkd4WHl4UWtEMGZudmxaOU9KUWIxOTlVcXZlSjdXY3o3Q1lFVkExRjc4bUZwZzRSNVpoQmJFSTBrUVdoTE1QTDdOdHprMnloaUFEX0Y2dzJWQTVVd2NObF9uUnlDNlA0dVpLVWpLRVZlOEJ2cWhVSXJ5b0gzVEJlVThsX09JOWFmbk9MUy1iSHoyTktwV19pVmFNUjlFd3FwTUZpbXV3cjRy?oc=5",
+     "source": "The Register",
+     "kind": "presse",
+     "title_fr": "Karp de Palantir opte pour un virage à gauche radical, affirmant que lui et les produits de l'entreprise sont en réalité \"progressistes\""
+    },
+    {
      "ts": "2026-11-12T16:10:00.000Z",
      "title": "Alex Karp going woke? Palantir CEO insists he was progressive all along: Robby Soave | RISING",
      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSm5ubFZzaXFyMHUzOXI5OWRXU0ZKbXFxY0VfVmt3Wm5wQ3k1NmYtMnY1aTJNcW1pQ19aeVV0ZUs0SU8zVkdkYnN0NXNhanE5Ui1mRDY0aHNnZXFWZlZHRWNBOTVWZFBXYnpnUjVub0lIMGV4Ni02N2huTDVmUG9RQm1CdGVwQnRic1o0bmZ0QlJjMjIyUndLZ3hWVlVCVlhHa0xjNWlraHQ5NGpjMkFhelhSZktBQVR0bjJPWVVrdnFrdTg?oc=5",
@@ -845,14 +860,6 @@
      "source": "The Washington Post",
      "kind": "presse",
      "title_fr": "Après les victoires des démocrates aux élections de mi-mandat, le PDG de Palantir, Alex Karp, se dit désormais « progressiste »"
-    },
-    {
-     "ts": "2026-11-12T00:52:00.000Z",
-     "title": "Is Alex Karp a Democrat? The Palantir CEO now says he always was, despite backing Trump",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQWFFLU1gxZlEzYk9CRE1vejJqWEZBMWEwU0RJdl9RUE90M2NadGYxQXJSb3RlMF95NzVZSllONnZsWFpKazNVSmhfZ0RvX2JEcWQzZ25QRDZySURwU2RNYWpZWWg5YkZIeHhCN0FfblBfUkdfdmFJZjR5MTNNSHBOblVjVXN4Ymp0SVZCZk5kLXJUcWVfTi02UTN0elVkSFpLSlZ1aUpobjFoR0E?oc=5",
-     "source": "Nacionale",
-     "kind": "presse",
-     "title_fr": "Alex Karp est-il démocrate ? Le PDG de Palantir affirme maintenant qu'il l'a toujours été, malgré son soutien à Trump"
     }
    ]
   },
@@ -941,7 +948,16 @@
    "co": "Oracle",
    "actor": null,
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-18T21:55:17.000Z",
+     "title": "Elon Musk Invested in Skydance, CEO David Ellison Confirms",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOMUlxUXpMd2lrRDBtbVU5b0g3Njg1RnJJSXVuMUUtdjA2ZjNfRHp1aE5fWktpdkVWM2pmQ1d4TWFKRnBBb0hhdFl1TVJMRjhWQWQ2ajhLQzN0ZmYwekRYNjI1RzIwc09tSk53SkpGZjFFYXFmaHoxYV9NekE2MXN6ZEVicTFKTjk1UDM5MEVtS0lOT1Zt?oc=5",
+     "source": "The New York Times",
+     "kind": "presse",
+     "title_fr": "Elon Musk a investi dans Skydance, confirme le PDG David Ellison"
+    }
+   ]
   },
   {
    "id": "colette-kress",
@@ -1382,6 +1398,14 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T01:46:00.000Z",
+     "title": "Trump says he referred to ex-Nvidia boss Huang's situation 'briefly' in talk with Xi",
+     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZGVNM0xjMGtxNjE0aEFnRWU2QURJZy1TSzZGSkFXNVk0eTM0bkhOZWF4cXJjWGhyZEVfZjNuWjZxVVlqUWh5cDUzckE2QTdISldZeThRZG9sZTB3dzdIU1ZOX2RJV0FMQXJ4V2dKS0U3V0t1YWNpcXE4R2FuZVVRVFJaUUNnYmZkS1pQXzluQ25WaUROQ2NVQk5wNHpPa2NheXhUZFFiQ3o5cjNxcHFWUWRVS3FCNm1meTltX0xiMA?oc=5",
+     "source": "Reuters",
+     "kind": "presse",
+     "title_fr": "Trump affirme avoir évoqué \"brièvement\" la situation de l'ex-patron de Nvidia, Huang, lors de son entretien avec Xi"
+    },
+    {
      "ts": "2026-11-18T10:03:33.000Z",
      "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
@@ -1517,6 +1541,14 @@
      "title_fr": "Bessent appelle à un remaniement chez Nvidia alors qu'un directeur financier de longue date prend les rênes"
     },
     {
+     "ts": "2026-11-16T16:00:00.000Z",
+     "title": "Nvidia’s CEO search draws fire with Bessent’s call",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1TWVROV1B4ZTFOOE10ajF5d1hkMFc2NHk3Z1pvRzBJSGcycGI5U05VR3M4QlBOcFlHQ01nYXdlU3BvV0lhREllajVpRktaaS11cDdNaTNrdEZkWkVZX3loRHpibU05ZnMxRFNodjV4VlU5TUE1NEE?oc=5",
+     "source": "Taipei Times",
+     "kind": "presse",
+     "title_fr": "La recherche d'un PDG par Nvidia critiquée suite à l'appel de Bessent"
+    },
+    {
      "ts": "2026-11-16T13:14:42.000Z",
      "title": "Treasury Secretary Bessent calls for 'dramatic shakeup' at Nvidia",
      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB5OTJWQVFBM0w2ZVo1VjMtVTRWdFkzNW1jNi1jWkZCRXpGZ0JyenVUU3pNX2tnSTdMV3FtOEF4VnY4UkdoZkNxdmxJMGZSRTIwdndGSFFR?oc=5",
@@ -1563,14 +1595,6 @@
      "source": "Fox Business",
      "kind": "presse",
      "title_fr": "Bessent réclame un remaniement de la direction de Nvidia sur fond de scandale des puces en Chine et exhorte à nommer un PDG externe"
-    },
-    {
-     "ts": "2026-11-15T18:44:00.000Z",
-     "title": "Bessent Urges Nvidia to Pick Outsider as Next CEO",
-     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNelVNRDFXQmNHV3JpOFRyaWl2N3h1WnNXNXNXS2FOOHg4dklQNVZfNktCNUdyZ3pNSGtENWRIbE1sYThZZk1QODBNTndERElkRmQ0MHlReHJQU2ZlRDdaYTFqdzA5anBUTXJjVmwwV0hvcW1hS1pPc01zSF9lTXFrTC15RnFzdlJfN2VuYzVuUQ?oc=5",
-     "source": "WSJ",
-     "kind": "presse",
-     "title_fr": "Bessent exhorte Nvidia à choisir une personne extérieure comme prochain PDG"
     }
    ]
   },
