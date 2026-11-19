@@ -3,7 +3,7 @@
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
-var TABS=["une","actualites","marche","infrastructure","acteurs","usa-chine","methode"];
+var TABS=["une","actualites","marche","infrastructure","acteurs","methode"];
 var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",actor:null,aq:"",ab:"ALL",arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
@@ -100,7 +100,7 @@ function rUne(){
     return arts.length?{s:s,arts:arts,ctx:(s.ctx_ids||[]).map(function(id){return byId[id]}).filter(Boolean)}:null;
   }).filter(Boolean);
   var h='<div class="col"><h1 class="page">Aujourd\'hui</h1><div class="stamp"><span>'+esc(fmtDay(u||new Date().toISOString()))+'</span></div>';
-  h+='<section class="focus"><h2>Briefing du jour</h2>';
+  h+='<div class="ugrid"><div class="umain"><section class="focus"><h2>Briefing du jour</h2>';
   if(st.length){
     h+='<ol class="bl">'+st.map(function(x){
       var s=x.s,lead=x.arts[0],en=isEn()&&s.head_en&&s.bullets_en&&s.bullets_en.length===s.bullets.length;
@@ -115,7 +115,7 @@ function rUne(){
     h+='<p class="small" style="padding:6px 0 0">Le briefing est rédigé par l\'IA à chaque collecte. En attendant, voici les articles les plus importants.</p>'+
       (top.length?'<ol class="bl">'+top.map(function(it){return'<li><div class="meta">'+ctag(it.country)+'<span class="cat">'+esc(CATS[it.category]||it.category)+'</span><span>'+esc(ago(it.ts))+'</span></div><h3 class="bt"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a></h3>'+(it.summary?'<ul class="b3"><li>'+esc(tx(it,'summary'))+'</li></ul>':'')+'<div class="by"><span class="bylab">Sources</span><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(it.source)+' ↗</a></div></li>'}).join("")+'</ol>':'<div class="empty">Aucune actualité pour le moment.</div>');
   }
-  h+='</section>'+voixHtml()+figsHtml(byId)+'<button class="more" data-go="actualites">Toutes les actualités →</button></div>';
+  h+='</section></div><aside class="uside">'+voixHtml()+figsHtml(byId)+'</aside></div><button class="more" data-go="actualites">Toutes les actualités →</button></div>';
   el.innerHTML=h;
 }
 function voixHtml(){
@@ -223,7 +223,7 @@ var ETAGES=[
 ];
 function sommaire(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
-   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
+   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs</span></a></li><li><a href="#" data-jump="m-race"><b>+</b> USA–Chine<span>Qui est devant, couche par couche</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
 }
 function capexPie(){
   var d=S.sec;if(!d||!d.companies)return null;
@@ -391,6 +391,7 @@ function outlookHTML(){
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
   if(cat.length)h+='<details class="details sec2" id="m-cal"><summary><span>Calendrier des six prochains mois</span><em>événements datés, avec la probabilité de chacun</em></summary>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p></details>';
   h+='<details class="details sec2" id="m-actors"><summary><span>Acteurs</span><em>principaux acteurs</em></summary>'+mainActorsHTML()+'<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div></details>';
+  h+='<details class="details sec2" id="m-race"><summary><span>USA–Chine</span><em>qui est devant, couche par couche</em></summary>'+raceHtml()+'</details>';
   return h;
 }
 function etages(){
@@ -511,9 +512,9 @@ function raceRows(compact){
   });
   return h+'</div>';
 }
-function rRace(){
+function raceHtml(){
   var rows=S.race.rows,us=rows.filter(function(r){return r.lead>0}).length,cn=rows.filter(function(r){return r.lead<0}).length,eq=rows.length-us-cn;
-  $("v-usa-chine").innerHTML='<h2 class="sec">USA–Chine</h2><p class="lede">'+esc(S.race.summary)+'</p>'+
+  return'<p class="lede">'+esc(S.race.summary)+'</p>'+
    '<div class="score"><div><div class="n us">'+us+'</div><div class="lb">couches : avance USA</div></div><div><div class="n cn">'+cn+'</div><div class="lb">couches : avance Chine</div></div>'+(eq?'<div><div class="n" style="color:var(--mute)">'+eq+'</div><div class="lb">à égalité</div></div>':'')+'</div>'+
    raceRows(false)+'<div class="note"><b>Méthode.</b> '+esc(S.race.method)+'</div>'+sharesRace();
 }
@@ -669,16 +670,17 @@ function rActeurs(){
 
 function renderAll(){
   if(!S.market)return;
-  rUne();rFeed();rMarket();rInfra();rActeurs();rRace();rMethod();
+  rUne();rFeed();rMarket();rInfra();rActeurs();rMethod();
 }
 function show(tab){
-  var parts=String(tab||"").split("/");tab=parts[0];
+  var parts=String(tab||"").split("/");tab=parts[0];var toRace=tab==="usa-chine";if(toRace)tab="marche";
   if(TABS.indexOf(tab)<0)tab="une";
   if(tab==="acteurs"){S.actor=parts[1]||null;S.arv=false;if(S.acteurs)rActeurs()}
   S.tab=tab;
   TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
   window.scrollTo(0,0);
+  if(toRace){var rc=$("m-race");if(rc){rc.open=true;rc.scrollIntoView({block:"start"})}}
   if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]){S.vc="ALL";rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}
 }
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}

@@ -492,3 +492,17 @@ html{overscroll-behavior-y:contain}
 .sh{padding:14px}
 #sres .sm2{padding:2px 14px;color:var(--mute)}
 .sbar input::-webkit-search-cancel-button{display:none}
+
+/* Une : deux colonnes sur ordinateur */
+.uside .figs{margin:0 0 30px}
+@media(min-width:1000px){
+.ugrid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:0 52px;align-items:start}
+.uside .vhot{margin-top:0}
+.uside .cards3{grid-template-columns:1fr}
+.uside .vht{font-size:15.5px}
+.uside{border-top:1px solid var(--ink);padding-top:14px}
+.uside .sgroup{margin-top:0}
+.uside .figs .sgroup{margin-top:18px}
+.uside .share .sm2{display:none}
+.uside .vhn{flex-direction:column;gap:0}
+}
