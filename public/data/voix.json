@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-19T19:17:06.427Z",
+ "generated_at": "2026-11-19T22:09:01.146Z",
  "people": [
   {
    "id": "sam-altman",
@@ -151,7 +151,8 @@
      "source": "Inc.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'Anthropic, Dario Amodei, déclare que le cancer appartiendra au passé dans 10 ans. Des chercheurs affirment qu'il omet 1 facteur clé"
     },
     {
      "ts": "2026-11-17T20:09:00.000Z",
@@ -302,6 +303,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-19T17:01:00.000Z",
+     "title": "AI likely to cause more outages after ‘perfect storm’ slammed Microsoft, CEO Satya Nadella warns",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObE4xZWxfd3djTWpaT0lIYWtCb2NLOEoxSHVQX2ZUV0dHcEhpYnQyLTFHVGtmYmdGc3pGb2pwb0E0U20xNnYzOU4xOWZvRUFfcGlvdjVVX045b0VNcDhfamdDRjN6U19XbTdlNmhORDAtMlROc0ptbk9iZE1SWUVPVFVkNUNLVzJ2azF0RWJwSGZ6bEVhaG5uZFU4NVdXSUdyN09VbFJQaU9zOFVWR2R3SWxEejFYeHdLdGF5azd4V1ZUZGlFLXc0QQ?oc=5",
+     "source": "New York Post",
+     "kind": "presse",
+     "title_fr": "L'IA va sans doute causer davantage de pannes après la « tempête parfaite » qui a frappé Microsoft, prévient le PDG Satya Nadella",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-19T11:13:02.000Z",
      "title": "NVIDIA’s Board Must Decide Its Leadership Path: Satya Nadella Tells Jim Cramer",
      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYVBoQmVXOFdrU0R1ai1HVGRaVlFLRk5sZ0daeVJyMWdUUFpfaWdpaG1kN3JodmpIbk5SMk1WYWNXZFpJMlRZV0hKejJ0YXliQktJQlFxenFmSEdqNkJ0T3Q4NFpqM3kwbTAyTHFZMWtkZmdveXlfd0dnb3pMRG13aXJ1VE9XaS0yT1hoNnppbXlfWTQ4TmM1bzd5U1k2VUlqZldyLTZNVDIxdnotWUxJczByeUM1TjV5V2g4enhSTXZTT2d1NGo3Zg?oc=5",
@@ -369,16 +380,6 @@
      "title_fr": "Le PDG de Microsoft, Satya Nadella, qualifie la panne d'Outlook de \"tempête parfaite\". Voici ce qui s'est mal passé",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-18T22:58:11.000Z",
-     "title": "Satya Nadella predicts AI agents will reshuffle the economics of the web",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQTZPUzQ4QVgxSWZ1N0ZhWXV5bGNtS25WdjFyZVdDUVczUzFTTldyTExxM1FhTmtIb1VsQTlJdC1LQktaZGMyVTViTldsR0ZCT2JKcERLdS1CZlpyNmlEMkdVTjRUYUpzRnJxdlI3VTV1Sk1GSDFtM3BZV0hwYWZyQlkzekRlc3JVWGZoYUdxamZyM25Jb3lNM1dUeENyVzE4S3BKNE9VcXp4eHM?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "title_fr": "Satya Nadella prédit que les agents d'IA vont bouleverser l'économie du Web",
-     "m": 1,
-     "e": 1
     }
    ]
   },
@@ -1549,6 +1550,16 @@
      "e": 1
     },
     {
+     "ts": "2026-11-16T14:58:09.000Z",
+     "title": "Trump says he's OK with Jensen Huang returning as Nvidia CEO, sees no national security risk",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxONVZuVWJHaTJ6elZWYk81VFhVenZSVVJVa1NHb0lycThIQVBXZFNyNHZpNHVzZnNib28tOGt0XzdOMmotZkxCVXhnNFlrMk9wb09uRTZxdVBkSkNYbDVUcDFWV0M2czFlNmd2MzQ3RGMxdmp4elBTeGY1aGpteVB2TTNKeG9FUUpCaVBwRHAzbmNCUdIBlwFBVV95cUxPeDdvNW94aFJlaVExSzIyR19OWERVUGV2SWdiNUFkWWxQSF80U1VzTU90Z0FVX3BKMDl5LTJKZGRoNDl0MzNNWVdfX2t5R19KV0ZueGh5aU1zQ1FVTDduRXlIVTZLdV9tdFJBcmJ5VVlIbU9PdFVjT2tmaXlDV194NUY3UmF1Y3R4UGhteVdmUWo5eUUtSlBJ?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Trump affirme qu'il est favorable au retour de Jensen Huang comme PDG de Nvidia et ne voit aucun risque pour la sécurité nationale",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-13T19:46:00.000Z",
      "title": "Trump says Jensen Huang is going 'through hell' amid scandal",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQamlUUEtMdEYtaU9VYkZEMkFpbWo3U2k2TFhfU3NSUWphWVN3d2MyQ19JN05ZTU1CbXlvMHppdmhPWm1kTzNkTkozUnpuZkQ2OHpJYm9Eb1hJMWhMT1ljdmJZNXNSMWVMbXNGdVNXMGVuZ3lFdl9MZ0U5RjVLMURQNUVXN3FVMXVmOFk0bkx0NWJPUll3bTFJWk5tRVdpQXlTaDNDNA?oc=5",
@@ -1559,24 +1570,14 @@
      "title_fr": "Trump déclare que Jensen Huang traverse « l'enfer » au milieu du scandale"
     },
     {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Trump says FBI probing Nvidia CEO Huang as China controversy deepens",
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNcUVlREFfdFVvdmk1OXFEamNOcFVZTGJFX1gxZkhjYjhXNTFnZkJqUmpLLTliVmRCZUNtRGdHSDZ2cVBvRXlLdldZSG1rVmFfMFk5M1dKNnBnVnNnUzZ1NmVSNkRWakkyNktBZmhGbzJwYkh5YTZBekVPY3pyUU9lTXY1WGt4TkhLcHVPTldJb1k3MGVPdzBLcTIyVzNuRUpyRGt5cDJpMV91QzdjcWFtQy1MekMwU3lkRlNXUFNn?oc=5",
+     "ts": "2026-11-12T16:12:19.000Z",
+     "title": "Trump says ex Apple CEO Cook is 'a legend', should replace Huang at Nvidia",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOUkxOYXBCUHFaN0RTbHNZLUcwVG02UmtKQWJwLWc0X0lfQUdpVjl4UjhncWktZTU3YmF0SjdtbnBRSk04RHAtSTQ0QW9CelRNeU9HUG5EdU9ROWJTUnpHSFMzMWlCSzhvXzVlRVFZVmR0dDFjYk1IRnZSQnVOTXZHUjJybkpGbzR4STNfSDAwMUEyZ3FkaGV6bXBpa1k4RVk?oc=5",
      "source": "Reuters",
      "kind": "presse",
-     "title_fr": "Trump déclare que le FBI enquête sur le PDG de Nvidia, Huang, alors que la controverse avec la Chine s'intensifie",
+     "title_fr": "Trump qualifie l'ancien PDG d'Apple Cook de « légende » et estime qu'il devrait remplacer Huang chez Nvidia",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Trump says Nvidia CEO told him he did not know the woman linked to him was a spy",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQcWxSVUVzOF9TSjBVVUprWWFUcXVrVUJLOUZySFBSSWtLcXBMc29NcGZtRjEyRHRkbzNGZDVFRmg1Mm1XY1BWT0EyQWVlem1LejZXdjEyLWxxT253ang3TzJ3WXhGeVNZczJxYzRqSWFRcEVuYVNMUXhMUmtjS0ZGUl9QaU9ObEZQY1pGQ2VFSnpENV9tRkhQLUNCQjU5a2VXTkV1WC03TzQ3T2NQSEhMQ0xlVUZSNFZ3M2I0?oc=5",
-     "source": "Reuters",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Trump déclare que le PDG de Nvidia lui a dit qu'il ne savait pas que la femme liée à lui était une espionne"
     }
    ]
   },
@@ -1683,6 +1684,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-15T21:30:40.000Z",
+     "title": "Nvidia CEO Search Heats Up as Bessent Urges Shakeup",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPekVaQWFmdlB5ajNzZmlPQmdMVFBPUXhUYVpnc0U3ZGlQeXJjSFRUZVhwZGxmWjFjMzRPTkZsODJkQjZsOWp3bkMySXJuTDFZNXNaQVU5NFVfNlpHUEtBakN5djhiOGVXSXpXVHM3QVdHU1JaWlo3QVI0SXAxaV9rdnV2X1ZqQjVjXzBZNFVkYTh0a0t4UWQ0bXdrU3dGMmh4R2hHZ0NfNW4?oc=5",
+     "source": "Bloomberg.com",
+     "kind": "presse",
+     "title_fr": "La recherche d'un PDG pour Nvidia s'accélère alors que Bessent réclame un remaniement",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-15T20:11:47.000Z",
      "title": "Nvidia Feels the Heat on CEO Search as Bessent Calls for Shakeup",
      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNS1ZOWlF3ZUlxWGYyZm9kX3NnZUsyNEpjYXhKaWMxY3hPbnRvSlJYeHc3ak9lejRYcHdmWjB2dk54cmMweklHdXdpVDdmRm9yNE91LWJKV2VoUC16bF9sdzRTM2NhWk5MMnBROXJ2UHA2SU0tSDNpeEZLZkxJZGg4T1laVHUyU1Fid0dtYjQ3c0tHMFRsOVp3TndoeEUzaElUSkxVT3hlOGQyZTVPZDF3emxB?oc=5",
@@ -1701,16 +1712,6 @@
      "title_fr": "Bessent déclare que si Nvidia était une banque, « bon nombre des dirigeants seraient renvoyés » alors qu'Huang envisage un retour",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-15T19:25:00.000Z",
-     "title": "Bessent calls for Nvidia leadership shake-up amid China chip scandal, urges outside CEO",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOSElEN2tuOTNYdFY4ZWx0X1hyU3I3ZElVZERWOTBhUE01a1AzaXNSNHhTOFU4ZWRBdElkRVlBNDRUQUpSSnppbDB6b0llSjNGeFhzNmUxVWVVa3gwQmNaM3dNeU5INHdQbW5JT2Z0d1BKT0VQNENBd2hVdWROeVdodDIxSzQ2MzhQcVRTTVhVWHhUZU9Ua2wxSkQ2bktWSkZPNG9IS2lJcWwwWTdhb3RtSEtRYW1zSlJ4SHlGTERacmxqOWRmdVHSAcsBQVVfeXFMTTZ5V0FKd0JlWTR4VFVQN2FNeWd3Wl82VkNYRFhjcS1wN0FCVlNQQTY1YV9ybXdESy1MRWg3LUt1UmlnaTg3SzcxdGVMNFVWMlpieDRJVFF3Yk03QmR3MVktV2VFNWwtVmlwbXlrNF9Nb3R6VkxVWWZnaUtVUDVTZEs3dHdJb0s2M0dhRmlJTU0taUJUQnNTT0gzbUJ0S2lFZGpLakljUVFraWkwblR2N0s0WTRoTnlQWVpmdTZOekd3MWszaGZXYV9zVTQ?oc=5",
-     "source": "Fox Business",
-     "kind": "presse",
-     "title_fr": "Bessent réclame un remaniement de la direction de Nvidia sur fond de scandale des puces en Chine et exhorte à nommer un PDG externe",
-     "m": 1,
-     "e": 1
     }
    ]
   },
@@ -1917,6 +1918,16 @@
      "source": "CBS News",
      "kind": "presse",
      "title_fr": "Le représentant Moolenaar juge « scandaleux » de ne pas considérer l'affaire Jensen Huang comme un risque pour la sécurité nationale",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-10T08:00:00.000Z",
+     "title": "Moolenaar warns Nvidia’s Huang investigation must not become damage control",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVzNjMzZfamc5N3QtZktIVW1VM0hjWFhRb1NnQ2FfYlN5SmdVSGFVa3ZBOEVVNW85MHFOMDVpZW9LSk1IT3FvQjltMnN6cGRQVkM2Mlg1eDNMbVJiTmw2aHRycjRSRjFoQ2xnbmNYOTNDZE9Xd3Y3VHVYZlJMeEJWV19CSWNJbDlGenZsb3FlWE9URUdNZllSTG9zcGRWa2JPSkI4VkZCb0JlWlExSlE?oc=5",
+     "source": "Superpower Daily",
+     "kind": "presse",
+     "title_fr": "Moolenaar prévient que l'enquête sur Huang de Nvidia ne doit pas servir d'opération de communication pour limiter les dégâts",
      "m": 1,
      "e": 0
     }
@@ -3437,13 +3448,23 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T09:39:20.000Z",
+     "title": "Blackstone’s Jon Gray says AI bubble fears are overblown",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQTFJrTnBwYnB6MG1GLXp1dHZqRFpyLThXbEVubXctNk5wbTFyS2hrR1JGTlNyXzNacW5pY1dueVlMV1M4UVYwOGxKaGNtbDVpb0hyVGdobXoxc3JwSUZXMkU3U2pkWEdUUVNtekQ4YURLd3RjdE5EMHcxLTAxY21mN1dlNWYycjRSYTFDTXZlRXRvbzlG?oc=5",
+     "source": "Private Equity Wire",
+     "kind": "presse",
+     "title_fr": "Jon Gray de Blackstone affirme que les craintes d'une bulle de l'IA sont exagérées",
+     "m": 3,
+     "e": 1
+    },
+    {
      "ts": "2026-11-18T21:50:49.000Z",
      "title": "Blackstone’s Jon Gray Says AI Demand Is Too Strong for Bubble Fears to Stick",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTFRJaDROY29iUnhTTlBINm1iX3ptNFJlbUIxd0k2WUFuVUZGSUVyWVR3SDlHX1RodE43bHFtMlk4VFh5QUJyN3RCRUpTeHpUTGE3UnB0dFBnQlNKTU81R19BbXk5akFYV0hNcHVpUEtKbmE5V013VUZWMThmNXZKTVEwc1hWU2puT1JYN3RMZmFqUjRrQ1E?oc=5",
      "source": "Yahoo Finance",
      "kind": "presse",
-     "m": 1,
-     "e": 0,
+     "m": 2,
+     "e": 1,
      "title_fr": "Jon Gray de Blackstone déclare que la demande en IA est trop forte pour que les craintes de bulle persistent"
     },
     {
@@ -3462,8 +3483,8 @@
      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMVEzb011dktFTnVOcmlvY3MydHBFY2tQUms0bk5PRFRIUlNUclRzQk81UFlST2k4VS11dlhoLWlSWUw1bTduX3oxa25lQU5pU3Uwd3QtN0hVWlFPVkYtaE1ONE1zMFVDNkR5Vzd0Umk2YmlNb3ZhXzhGcE1QLVFkSHZmVDdVUlo4QVIwck1USmdpVFNBMlA3ZTlPTzFHS0NjZGctNzJUMHlBR3N3X1NWWk5lYw?oc=5",
      "source": "Bloomberg.com",
      "kind": "presse",
-     "m": 1,
-     "e": 0,
+     "m": 2,
+     "e": 1,
      "title_fr": "Jon Gray de Blackstone qualifie les inquiétudes concernant une bulle de l'IA d'exagérées"
     }
    ]
@@ -3577,7 +3598,8 @@
      "source": "Seeking Alpha",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Howard Marks affirme que le rendement de mille milliards de dollars de l'IA relève d'un « acte de foi » (AIQ:NASDAQ)"
     },
     {
      "ts": "2026-11-11T17:03:00.000Z",
@@ -4429,14 +4451,64 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T21:35:29.000Z",
+     "title": "AI surge could strain US capacity and overheat economy, Fed's Goolsbee says",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZ2V1TTUwaFZ4T1pYN3VBVDlqZThZVHBvQ0VhNnRNNlpWVlZXLUYtVWh5T096NmxYbEsxdjF6T0JmZmZCM0lHQ01CT2NUcTdrUzJ0djdFbWRteWlNTWF4enhqajdoY2ZWcjBmc0lMYkpYczV1RDJVdmxZWFctNDI3bHFxOTBySmZvbHNDRXM5QmxqWUtieXFJYjZnUmNONVUzUnBTYTlMdlNqaDdzdkYweVRHZ2w?oc=5",
+     "source": "Reuters",
+     "kind": "presse",
+     "title_fr": "La flambée de l'IA pourrait mettre à rude épreuve les capacités des États-Unis et surchauffer l'économie, déclare Goolsbee de la Fed",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-19T20:48:54.000Z",
+     "title": "Fed’s Goolsbee says AI surge could strain US capacity, overheat economy By Reuters",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaVF6bFhJUkkwWjA3cFhmYlZhc2pjUEpjMFI1VW9ERlRMZWkwSHRHeDJabXRab3ptZ3Z6RmtUYUdYU0l5QUNIalVZR1NvTGZJelBOcWRDcndrajN2b3B0cFlUVDBYNGxGc003azAtNnpQbTFfR2V4dGNGLUxQTk5qV0swSDlWMkRfS3g1UFZBenEyb0o1SjdPOTJpLU5YVzNSTUhhRlJHX29nbEU1OGt3dG95RjFCX3pORUtVRmRn?oc=5",
+     "source": "Investing.com",
+     "kind": "presse",
+     "title_fr": "Goolsbee de la Fed déclare que la flambée de l'IA pourrait mettre à rude épreuve les capacités des États-Unis et surchauffer l'économie Par Reuters",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-19T20:30:00.000Z",
+     "title": "Fed's Goolsbee says AI surge could strain US capacity, overheat economy",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOWGI0enh2Qm5SSkoxN1htUWlYNFVNZVFKVmR1NFN6SFpJT0M1VGlQXzMxcENQNFF0NlNlN1d4Rjl4N2hvV3V3S2hXaHlZMGdxdHZnMHBzbTk3QWlGMFVaOWVWck9vSnU4VXBvaERsd0xLTlRPVUZEalZycC1IX2hNZzVBcGV2YlhwdU5wRE8zWC0zM0JhODkwdDloRmFaSzFndGNPR0ZsSlBYb1Y0M21fd19qQ2g5WTZuQURvOC1fV3JjbWY4WmhRYlVJSVdkZTdXb2RWZ0NWNA?oc=5",
+     "source": "TradingView",
+     "kind": "presse",
+     "title_fr": "Goolsbee de la Fed déclare que la flambée de l'IA pourrait mettre à rude épreuve les capacités des États-Unis et surchauffer l'économie",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-19T19:42:50.000Z",
+     "title": "Fed's Goolsbee Warns AI Could Overheat Economy",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNFFWX09IQzU1Mk1Eb3I1OHRFY0JPRWFYY0lCUldIcnU1YW50OXRKLWlkRDk0ZTFISHpuSDlDa3RnX0s3M3NpeERsb0hsSjZkSEI2dmJKNVBzR3N0MzlIU3lkNXdoZEhRRlphX29fRDVuWDFsV3haaGU1cm0yY1NvcnZqSWhsWnM?oc=5",
+     "source": "Wisevoter",
+     "kind": "presse",
+     "title_fr": "Goolsbee de la Fed prévient que l'IA pourrait surchauffer l'économie",
+     "m": 4,
+     "e": 1
+    },
+    {
      "ts": "2026-11-19T18:59:56.000Z",
      "title": "Goolsbee says the Fed's job right now is to keep AI surge from overheating the economy",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPem1LUUZ0MzVCaURJTHpfcktwS0tMWGMydV9rNlFwSE1uWkQ5eFNsZ1locTBSMzAtOFhmNHJpUWVBaXVrTnRGeEpaLThoRXpKaU93TExUV3hlNE5TLU5aVzFoT1loQzhXOWNJZlpTWElmZ0ljRTJtMFNWUnlDSTY4bW1ROEkyTmFsaWJmVTlSS2VTa3JmTjdXazlxeWpYa0pwd1BSR2NJNTBlVkFNbllhMHA3LUU?oc=5",
      "source": "Reuters",
      "kind": "presse",
      "title_fr": "Goolsbee déclare que le travail de la Fed en ce moment est d'empêcher la poussée de l'IA de surchauffer l'économie",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-19T18:56:39.000Z",
+     "title": "Goolsbee says the Fed’s job right now is to keep AI surge from overheating the economy By Reuters",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMkU4Nk8xSDZCVldubzRfWGhaTXBDZnozd1pPdU94QjR2c1h1aGE5aHJtNFpNcEE4czlJcFRnMm1kLUh6cHRRWWFnWE8tN2UzWnVJQm85VnpCQVJwVmFGeEdxY1dKeW5YTGpvMkRDeXRCNmViZkhMSTdyUzJHMVZia054UmZ2WThSWWhqUy1mOFpkLWR3VWswVkljRVhSbDM3al9mNTFvN05BUGRJRHhNcFpadTJkQmVCRVNxd2NkZDFXdlN1YlZrS0QwZnEyNnZEMGVZ?oc=5",
+     "source": "Investing.com",
+     "kind": "presse",
+     "title_fr": "Goolsbee déclare que le rôle de la Fed en ce moment est d'empêcher la flambée de l'IA de surchauffer l'économie Par Reuters",
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-19T18:27:52.000Z",
@@ -4445,8 +4517,8 @@
      "source": "Investing.com",
      "kind": "presse",
      "title_fr": "Goolsbee de la Fed déclare que le boom de l'IA risque de surchauffer l'économie",
-     "m": 2,
-     "e": 1
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-13T15:05:00.000Z",
@@ -4457,56 +4529,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Goolsbee avertit que la Fed est hors de la trajectoire de 2 % alors que la demande de centres de données IA alimente les pressions sur les prix"
-    },
-    {
-     "ts": "2026-11-10T15:38:00.000Z",
-     "title": "Fed’s Goolsbee Says AI Data Centers Look Like ‘Old-Fashioned Overheating’",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMmV6a2NONkpnVnJYYUVIN3RiTVNaRjl4Tm95WVpzcmdHY1RiVFROaUF1RUVDQUV1REE3c1lhdVNoTnB6Z2RHTm5pbHJtMXJvWGxvbkREdVJpMDhpXzhibG9CMGpwM2sxN2hsMm1mRlZsVUZXRldpSmdOcjEyakpVcGNBRDUzbTdOTFpOZkJtN3RMNkVZZ1J4NDJManMtZ0JsRkNQRHV1WGJDUGxhYUlYd3k1bkk?oc=5",
-     "source": "24/7 Wall St.",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Goolsbee de la Fed déclare que les centres de données IA ressemblent à une « surchauffe à l'ancienne »"
-    },
-    {
-     "ts": "2026-11-10T14:19:30.000Z",
-     "title": "Goolsbee Sees Economic Overheating in Data Center Buildout",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9iZmNTVmwzaHNFSndZTDJHWmJjM21Kc2dCVVRCdVNXTWpESjBySlNvWkNPNzJBRzJwZFRSX2lVbGJaRm53dWlKV0pmTm1rdTlSZkJCZmI5NGlEdUE?oc=5",
-     "source": "TOKENPOST",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Goolsbee voit une surchauffe économique dans le développement des centres de données"
-    },
-    {
-     "ts": "2026-11-10T12:50:30.000Z",
-     "title": "Fed’s Goolsbee Warns AI Data Center Boom Is Starting to Look Like ‘Demand Overheating,’ Says Central Bank",
-     "url": "https://news.google.com/rss/articles/CBMiqgJBVV95cUxQT3dPVF9Eb3BqYWJqQ2NGYUJZSm1WRU80TXJSQTVXenAzNzk1WURNajBubWNIYWxzY1VuTnN2aDVEdnhWdWxSd0U0aXV6Mm1LOXR0cy1JbWxnTFFfWHpyaTkxWmVvR2s2YVRESUVkV2JZVndqdU9aczZ2TDdIdWJpblpja3A3VnNBVDROR19JYjd2Q0RkMkZVb0hZakJBQ0dmS1dLZTVyb1MxUF9JR2h0TXhsQWtFUGw4Szg0WmczX29jZTZ3ekZpNFdpaVlReTBRRXRjcXdDV1VVeWFRZEp3NEc3UFV4emZXYjNrTDRmamtUaEg1WTBHWmRyZW5aNlo5OWV3TmdvZUN3UE5hNVM5NUdDZzUzLVJXQ3hKU1VQSWU3UEZCNFZ4Q1p3?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Goolsbee de la Fed avertit que le boom des centres de données IA commence à ressembler à une « surchauffe de la demande », déclare la banque centrale"
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Goolsbee says AI data centers are overheating the economy — The Hill",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPcG1yMXpHTEtTVkRyTjJ6T3lPcHFfR2dlN2c5SW9fZzNLeWozY1JTLU1lWWtwdkJiWmlodXZ5QXQ2SUtzSXJlMktVbzlZaElFWnBoX1RZeFpvSDktMmZQZzFKMVoxLTB1MnVkZF9tZ2RBV1hvT1pQeVgtX2ZFemZvUDJybXVPZk1zcGJoV00zczZ4SkwtcXZ3cWtVcjFIdjhtM1VsYjhYRWZ2RVk?oc=5",
-     "source": "UA.NEWS",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Goolsbee déclare que les centres de données IA surchauffent l'économie — The Hill"
-    },
-    {
-     "ts": "2026-11-09T22:05:00.000Z",
-     "title": "Fed’s Goolsbee says data center buildout ‘overheating’ economy",
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNU5OTWxiVWpIY0lTb2ZzaWtlWEdROHBhTV9IclRtX3lnRU1QY2pLdGhxT201d0Z1a2tkdXVvenkwNXNsNmNqSjByMXhPMWhsbWswaDdvYUFFNGtUQVRWU2F1M1diV1pud2YzTzIyM0gtNGFmd1ZlWTdsWEwtekY5LWlKZmQwOEd40gGOAUFVX3lxTE5UZ0JSWVotZVdvRERqMl82SG5hSGFUdUtzdzNCVndTUnFwWDlOVEgwcEJQZjF2VFVtZWlnZEJwT3diSVJVcUNGcUxoWDF4UTVydHQ0U0hoX2xacGVMTjgwVzlTM1B3anNBNmhZek5sV2xjNW1MV015VU5BanlaaU1mMUtMeGliR185eTdHeEE?oc=5",
-     "source": "The Hill",
-     "kind": "presse",
-     "m": 4,
-     "e": 1,
-     "title_fr": "Goolsbee de la Fed déclare que le développement des centres de données « surchauffe » l'économie"
     }
    ]
   },
@@ -4589,7 +4611,8 @@
      "source": "Stocktwits",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Waller de la Fed déclare que l'IA et la tokenisation pourraient renforcer mutuellement leur développement à mesure que les marchés financiers évoluent"
     }
    ]
   },
@@ -4610,7 +4633,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Mary Daly de la Fed affirme que le flux d'investissements dans l'IA continuera, même s'il ralentit"
     }
    ]
   },
@@ -4631,7 +4655,8 @@
      "source": "www.tokenpost.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le scénario haussier pour l'IA résiste malgré la vente massive, car Nvidia n'est pas le seul moteur de l'innovation, affirme Tom Lee"
     },
     {
      "ts": "2026-11-17T01:09:00.000Z",
@@ -4640,7 +4665,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Tom Lee considère que le marché de l'IA reste intact malgré la chute de 12 % du Nasdaq"
     },
     {
      "ts": "2026-11-17T01:00:00.000Z",
@@ -4649,7 +4675,8 @@
      "source": "BeInCrypto",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Tom Lee ne voit aucune faiblesse dans le marché de l'IA malgré la chute de 12 % du Nasdaq"
     },
     {
      "ts": "2026-11-13T19:02:51.000Z",
@@ -4658,7 +4685,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Tom Lee qualifie le retour de Jensen Huang de « choquant » : Trump l'aurait incité à se battre pour son poste"
     },
     {
      "ts": "2026-11-13T08:00:41.000Z",
@@ -4667,7 +4695,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Tom Lee conseille de « profiter de la baisse » de l'action Nvidia après le départ de Huang, même si le bitcoin plonge sous les 70 000 dollars : « Le meilleur ratio risque/rendement de l'IA »"
     },
     {
      "ts": "2026-11-12T20:32:59.000Z",
@@ -4676,7 +4705,8 @@
      "source": "TipRanks",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'action Nvidia plonge, mais Tom Lee conseille de « profiter de la baisse »"
     },
     {
      "ts": "2026-11-12T15:08:26.000Z",
@@ -4685,7 +4715,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Tom Lee voit une opportunité d'achat dans la tech et affirme que le scandale du PDG de Nvidia ne remet pas en cause la thèse"
     },
     {
      "ts": "2026-11-12T14:57:47.000Z",
@@ -4694,7 +4725,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Les actions de Nvidia chutent après la démission de Jensen Huang, tandis que Tom Lee anticipe un point bas pour les valeurs technologiques"
     }
    ]
   },
@@ -4709,13 +4741,24 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-19T22:01:00.000Z",
+     "title": "Anthropic Closes Up 17% While Nasdaq Falls; Mohamed El-Erian Calls It ‘Making Room’ For AI",
+     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNTUwtaE1Qcm9BYlZVaWQtVkJocUVQUVFETXFQa0M2NEtfdXcxYjM5ZGxrclRqTS1uZGozWUE4Unh5d2haUXpfRDFtdDIwWllsWGZvM1RMVlNXcEt6NDkxUWJTT1ZPYWNKcXJsRUpuRmFHNHVnWk1fUkQzTGdSV0dDbFh5TURYSmpxd0xoRzNHZGYxaUk0YzJmdTFLbS1vcDBfTkVReDFfUkZncEZCVi1mU2tPOFhBeDVySmdYR0Jpb2ZRU05zSnNDRzZhSlRFZ0ppbHN5RWVsVE92M1p0a1ZoejMxQkg?oc=5",
+     "source": "Stocktwits",
+     "kind": "presse",
+     "title_fr": "Anthropic clôture en hausse de 17 % tandis que le Nasdaq recule ; Mohamed El-Erian y voit une façon de « faire de la place » pour l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T15:13:11.000Z",
      "title": "Anthropic makes market debut on the NASDAQ: El-Erian says it’s a ‘historic’ day",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRaG1sckRFckczMUd2amZxRnVkUzJER1ljN2paYkFMbzVpdnA0S09zVzFMdGphOWR1ejJQZDN1d1VLN3JyeC1FYmtHdDd3RVkwaDRWTmFDaEJZYWM?oc=5",
      "source": "Fox Business",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Anthropic fait ses débuts sur le NASDAQ : El-Erian qualifie cette journée d'« historique »"
     },
     {
      "ts": "2026-11-19T15:09:47.000Z",
@@ -4724,7 +4767,8 @@
      "source": "Fox Business",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'entrée d'Anthropic sur le NASDAQ marque un jalon historique pour l'IA, affirme Mohamed El-Erian"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -4733,7 +4777,8 @@
      "source": "Fox Business",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le conseil d'administration de Nvidia fait face à un « problème vraiment difficile », déclare Mohamed El-Erian"
     },
     {
      "ts": "2026-11-09T08:00:00.000Z",
@@ -4742,7 +4787,8 @@
      "source": "Globest",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Mohamed El-Erian affirme qu'une économie propulsée par l'IA ne peut pas se permettre de freiner brutalement"
     },
     {
      "ts": "2026-11-06T08:00:00.000Z",
@@ -4751,7 +4797,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Mohamed El-Erian affirme que l'approche américaine axée sur le tout-à-l'IA a montré ses limites alors que la réaction politique s'intensifie à mi-mandat — Bil"
     },
     {
      "ts": "2026-11-05T17:48:18.000Z",
@@ -4760,7 +4807,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "El-Erian affirme que la bourse « exagère » ses craintes concernant l'IA alors que le Nasdaq entre en territoire de correction"
     }
    ]
   },
@@ -4781,7 +4829,8 @@
      "source": "TIKR.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Nvidia « aurait théoriquement pu perdre 30 % de sa demande » tout en atteignant ses prévisions, selon Dan Niles"
     },
     {
      "ts": "2026-11-16T21:21:47.000Z",
@@ -4790,7 +4839,8 @@
      "source": "TIKR.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Intel « se négocie à 34 fois ses bénéfices pour seulement 11 % » de croissance, affirme Dan Niles. Des actionnaires portent maintenant plainte"
     },
     {
      "ts": "2026-11-11T11:28:25.000Z",
@@ -4799,7 +4849,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Dan Niles achète lors de la baisse de Nvidia et affirme que la hausse d'Apple en 2011 après le départ de Steve Jobs montre pourquoi la perte d'un visionnaire est"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -4808,7 +4859,8 @@
      "source": "Fox News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Dan Niles affirme que le scandale de Jensen Huang est un événement « secondaire » pour le marché plus large de l'IA"
     },
     {
      "ts": "2026-11-07T23:57:05.000Z",
@@ -4817,7 +4869,8 @@
      "source": "TOKENPOST",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Dan Niles affirme que les contraintes dans les centres de données et les coûts de financement pèsent sur les entreprises d'IA"
     }
    ]
   },
@@ -4838,7 +4891,8 @@
      "source": "scanx.trade",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gundlach critique la notation d'Anthropic ; Blackstone met en garde contre le statut de junk bond"
     },
     {
      "ts": "2026-11-13T16:49:00.000Z",
@@ -4847,7 +4901,8 @@
      "source": "24/7 Wall St.",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le milliardaire Jeffrey Gundlach qualifie le marché boursier d'« arbre creux » alors que la faiblesse s'étend au-delà des géants de la tech"
     }
    ]
   },
@@ -4868,7 +4923,8 @@
      "source": "Yahoo Tech",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "De la programmation à la finance et aux sciences de la vie : le PDG de Box, Aaron Levie, affirme que les agents IA acquièrent les compétences nécessaires pour transformer le travail professionnel"
     },
     {
      "ts": "2026-11-16T10:46:20.000Z",
@@ -4877,7 +4933,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "De la programmation à la finance et aux sciences de la vie : le PDG de Box, Aaron Levie, affirme que les agents IA acquièrent les compétences nécessaires pour tr"
     },
     {
      "ts": "2026-11-13T11:15:23.000Z",
@@ -4886,7 +4943,8 @@
      "source": "Fast Company",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Aaron Levie de Box s'amuse avec l'IA et pense que vous devriez en faire autant"
     }
    ]
   },
@@ -4918,7 +4976,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bernie Sanders dit aux géants de la tech que leurs 3 000 milliards de dollars de dette liés à l'IA reposent sur un « pari à haut risque » — En cas d'échec"
     },
     {
      "ts": "2026-11-09T08:00:00.000Z",
@@ -4927,7 +4986,8 @@
      "source": "24/7 Wall St.",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "« Ne venez pas mendier auprès des contribuables », prévient Bernie Sanders aux géants de la tech, « vous ne serez pas renfloués » si le pari sur l'IA financé par 3 000 milliards de dollars de dette explose"
     },
     {
      "ts": "2026-11-09T08:00:00.000Z",
@@ -4936,12 +4996,27 @@
      "source": "Pluang",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bernie Sanders met en garde la tech : pas de renflouement par les contribuab..."
     }
    ]
   }
  ],
  "hot": [
+  {
+   "score": 3.12,
+   "id": "austan-goolsbee",
+   "n": "Austan Goolsbee",
+   "role": "Président de la Réserve fédérale de Chicago",
+   "actor": null,
+   "ts": "2026-11-19T19:42:50.000Z",
+   "title": "Fed's Goolsbee Warns AI Could Overheat Economy",
+   "title_fr": "Goolsbee de la Fed prévient que l'IA pourrait surchauffer l'économie",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNFFWX09IQzU1Mk1Eb3I1OHRFY0JPRWFYY0lCUldIcnU1YW50OXRKLWlkRDk0ZTFISHpuSDlDa3RnX0s3M3NpeERsb0hsSjZkSEI2dmJKNVBzR3N0MzlIU3lkNXdoZEhRRlphX29fRDVuWDFsV3haaGU1cm0yY1NvcnZqSWhsWnM?oc=5",
+   "source": "Wisevoter",
+   "kind": "presse",
+   "outlets": 4
+  },
   {
    "score": 2.6,
    "id": "palmer-luckey",
@@ -4969,20 +5044,6 @@
    "source": "TechCrunch",
    "kind": "presse",
    "outlets": 2
-  },
-  {
-   "score": 2.07,
-   "id": "sam-altman",
-   "n": "Sam Altman",
-   "role": "PDG d'OpenAI",
-   "actor": "openai",
-   "ts": "2026-11-18T17:58:13.000Z",
-   "title": "OpenAI’s Sam Altman Says It Is ‘Hard To Imagine’ AI Industry Without Jensen Huang",
-   "title_fr": "Sam Altman d'OpenAI déclare qu'il est « difficile d'imaginer » l'industrie de l'IA sans Jensen Huang",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNNDlOcjk0azEybTVzdVR2S3NTUlNqd2ctWlNwOXEwcGNwaWdFS0t5azVuVXNPM3pOR181M3VyZml2dVRNTEt3NjBqbV9XbEdXajdkTGhlT1gtWTRBbF9pQVc0alBNWGVFMW85c3MtTkJpNFJRUnNVQXZHd1FFdHU5TFJjNTR2T09HNDEtMFBLZ1ZVTk9FbjBKZTJXZEVkUTNhZzBWdHhJdXpuWEZCQUZVYmxaYlhoVHVyS1Z4OXBBSnc1ZFA4TDhlbzBVdw?oc=5",
-   "source": "Forbes",
-   "kind": "presse",
-   "outlets": 3
   }
  ]
 }
