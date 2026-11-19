@@ -1,73 +1,68 @@
 {
  "v": 1,
- "day": "2026-11-18",
- "generated_at": "2026-11-18T16:15:00.000Z",
- "model": "jeu initial rédigé à partir des articles collectés",
+ "day": "2026-11-19",
+ "generated_at": "2026-11-19T01:26:44.878Z",
+ "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Nvidia : chiffre d'affaires du trimestre",
-   "value": "115,8 Md$ (+20 %)",
-   "sub": "Contre 96,2 Md$ au trimestre précédent (+20 %) et +103 % sur un an ; BPA de 2,70 $ contre 1,30 $ un an plus tôt. Résultats au-dessus des attentes, l'action gagne près de 4 %.",
+   "title": "Anthropic : valorisation en bourse",
+   "value": "1 500 Md$",
+   "sub": "La valorisation atteinte par le géant de l'intelligence artificielle à la veille de son introduction en bourse, avec un prix d'action fixé à 83 dollars.",
    "ids": [
-    "55e7265b76e2",
-    "cc9584594038"
+    "8838b8c2d698"
+   ],
+   "links": [
+    {
+     "t": "Arab News",
+     "u": "https://www.arabnews.com/world/anthropic-reportedly-prices-its-ipo-at-83-per-share-valuing-the-ai-giant-at-15-trillion-3012817"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-19T00:35:38.000Z",
+   "title_en": "Anthropic: market valuation",
+   "value_en": "$1,500B",
+   "sub_en": "The valuation reached by the artificial intelligence giant on the eve of its initial public offering, with an issue price set at $83 per share."
+  },
+  {
+   "title": "Nvidia : revenus du trimestre",
+   "value": "115,8 Md$",
+   "sub": "En hausse de 20 % par rapport aux 96,2 milliards de dollars du trimestre précédent et en progression de 103 % sur un an. Le bénéfice par action dilué non-GAAP s'établit à 2,68 dollars.",
+   "ids": [
+    "55e7265b76e2"
    ],
    "links": [
     {
      "t": "Nvidia (communiqué de résultats, SEC)",
      "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
-    },
-    {
-     "t": "CNBC Tech",
-     "u": "https://www.cnbc.com/2026/11/18/nvidia-stock-earnings.html"
     }
    ],
    "conf": "haute",
-   "scope": "day",
-   "ts": "2026-11-18T10:00:17.000Z",
+   "scope": "week",
+   "ts": "2026-11-17T21:20:51.000Z",
    "title_en": "Nvidia: quarterly revenue",
-   "value_en": "$115.8B (+20%)",
-   "sub_en": "Versus $96.2B in the previous quarter (+20%) and up 103% year on year; EPS of $2.70 versus $1.30 a year earlier. Results above expectations, the stock is up nearly 4%."
+   "value_en": "$115.8B",
+   "sub_en": "Up 20% from the previous quarter's $96.2 billion and up 103% year-over-year. Non-GAAP diluted earnings per share was $2.68."
   },
   {
-   "title": "Anthropic : fourchette de prix de l'introduction en Bourse",
-   "value": "70 à 78 $",
-   "sub": "Fourchette actuelle du prix d'introduction, que l'entreprise devrait dépasser. Cotée au Nasdaq sous le symbole ANT, elle sera négociée à partir du 19 novembre.",
+   "title": "Isomorphic Labs : montant levé",
+   "value": "5 Md$",
+   "sub": "Fonds levés par la plateforme de découverte de médicaments par IA, issue de Google DeepMind, lors d'un tour de table de série C pour amener des candidats aux essais cliniques.",
    "ids": [
-    "33642c9df619"
+    "ed47f6db4915"
    ],
    "links": [
     {
-     "t": "CNBC Tech",
-     "u": "https://www.cnbc.com/2026/11/17/anthropic-ipo-price.html"
+     "t": "TechCrunch IA",
+     "u": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/"
     }
    ],
    "conf": "moyenne",
    "scope": "week",
-   "ts": "2026-11-17T14:34:48.000Z",
-   "title_en": "Anthropic: IPO price range",
-   "value_en": "$70 to $78",
-   "sub_en": "Current IPO price range, which the company is expected to exceed. Listed on the Nasdaq under the symbol ANT, it will start trading on 19 November."
-  },
-  {
-   "title": "Financement circulaire de l'IA",
-   "value": "plus de 1 000 Md$",
-   "sub": "Montant dépassé entre entreprises d'IA, selon la cheffe du FMI Kristalina Georgieva, qui met en garde sur fond de refroidissement des investisseurs.",
-   "ids": [
-    "5d4425e9ff04"
-   ],
-   "links": [
-    {
-     "t": "CNBC Tech",
-     "u": "https://www.cnbc.com/2026/11/16/imf-georgieva-warning-ai-circular-financing.html"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-16T09:14:46.000Z",
-   "title_en": "Circular AI financing",
-   "value_en": "over $1,000B",
-   "sub_en": "Amount exceeded among AI companies, according to IMF head Kristalina Georgieva, who warns amid cooling investor sentiment."
+   "ts": "2026-11-17T14:50:58.000Z",
+   "title_en": "Isomorphic Labs: funds raised",
+   "value_en": "$5B",
+   "sub_en": "Funds raised by the AI drug discovery platform, spun out of Google DeepMind, in a Series C funding round to advance candidates into clinical trials."
   }
  ]
 }
