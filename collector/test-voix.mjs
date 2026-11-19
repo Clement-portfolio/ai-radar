@@ -3,7 +3,9 @@ import assert from "node:assert/strict";
 import { isStatement, collectVoix, translateVoix, hotVoix, annotateVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
 import { parseFeed } from "./collect.mjs";
 
-const R = (n) => PEOPLE.find((p) => p.n === n).re;
+// noms sortis du roster (liste resserrée à 100 le 19 nov. 2026) : motif de secours pour garder les cas de test
+const OUT = { "Jensen Huang": /\bJensen\b|\bHuang\b/, "Howard Lutnick": /\bLutnick\b/, "Ted Cruz": /\bTed Cruz\b|\b(?:Sen\.|Senator) Cruz\b/, "Mark Warner": /\bMark Warner\b|\b(?:Sen\.|Senator) Warner\b/ };
+const R = (n) => PEOPLE.find((p) => p.n === n)?.re ?? OUT[n];
 const cases = [
   ["Sam Altman says it is hard to imagine AI without Nvidia", "Sam Altman", true],
   ["AI will take jobs, says Dario Amodei", "Dario Amodei", true],
@@ -46,10 +48,10 @@ assert.ok(PEOPLE.length >= 100 && PEOPLE.every((p) => p.cat && p.role && p.re), 
 assert.equal(new Set(PEOPLE.map((p) => p.id)).size, PEOPLE.length, "identifiants uniques");
 assert.ok(r.summary.failed > 0 && r.summary.total === 2, "un échec n'arrête pas les autres");
 // alerte de poste : un titre récent annonçant une démission ou une nomination est signalé (pas pour les titres d'avant la vérification)
-const http3 = async (url) => /news\.google\.com/.test(url) && /Sutskever/.test(decodeURIComponent(url)) ? `<rss><channel><item><title>Ilya Sutskever resigns as head of SSI - Média</title><link>https://m.example/z</link><pubDate>${new Date(Date.parse("2026-11-24T12:00:00Z")).toUTCString()}</pubDate></item></channel></rss>` : (() => { throw new Error("HTTP 404"); })();
+const http3 = async (url) => /news\.google\.com/.test(url) && /Nadella/.test(decodeURIComponent(url)) ? `<rss><channel><item><title>Satya Nadella resigns as head of Microsoft - Média</title><link>https://m.example/z</link><pubDate>${new Date(Date.parse("2026-11-24T12:00:00Z")).toUTCString()}</pubDate></item></channel></rss>` : (() => { throw new Error("HTTP 404"); })();
 const r3 = await collectVoix({ http: http3, parseFeed, now: Date.parse("2026-11-25T12:00:00Z"), prev: null, sleep: async () => {}, pause: 0 });
-assert.equal(r3.doc.people.find((p) => p.id === "ilya-sutskever").alerts.length, 1, "alerte de changement de poste");
-assert.equal(r3.doc.people.find((p) => p.id === "jensen-huang").alerts.length, 0);
+assert.equal(r3.doc.people.find((p) => p.id === "satya-nadella").alerts.length, 1, "alerte de changement de poste");
+assert.equal(r3.doc.people.find((p) => p.id === "sam-altman").alerts.length, 0);
 // la collecte suivante garde l'historique
 const r2 = await collectVoix({ http: async () => { throw new Error("HTTP 500"); }, parseFeed, now: now + 864e5, prev: r.doc, sleep: async () => {}, pause: 0 });
 assert.equal(r2.doc.people.find((p) => p.id === "sam-altman").items.length, 1, "historique conservé quand la source échoue");
@@ -77,7 +79,7 @@ const reOf = (id) => PEOPLE.find((p) => p.id === id).re;
 assert.equal(isStatement("Daniela Amodei says Anthropic will hire", reOf("dario-amodei")), false, "Daniela n'est pas Dario");
 assert.equal(isStatement("Daniela Amodei says Anthropic will hire", reOf("daniela-amodei")), true);
 assert.equal(isStatement("Dario Amodei warns of job losses", reOf("dario-amodei")), true);
-assert.equal(isStatement("Hire Tim Cook to lead Nvidia, Trump says", reOf("tim-cook")), false, "c'est Trump qui parle");
+assert.equal(isStatement("Hire Tim Cook to lead Nvidia, Trump says", /\bTim Cook\b/), false, "c'est Trump qui parle");
 assert.equal(isStatement("Peter Thiel’s partner Jack Selby warns AI bubble", reOf("peter-thiel")), false, "l'associé parle, pas Thiel");
 assert.equal(isStatement("Jeff Bezos says AI could allow three-day workweeks", reOf("jeff-bezos")), true);
 assert.ok(PEOPLE.find((p) => p.id === "elon-musk"), "Musk suivi");
