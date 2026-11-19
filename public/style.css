@@ -506,3 +506,7 @@ html{overscroll-behavior-y:contain}
 .uside .share .sm2{display:none}
 .uside .vhn{flex-direction:column;gap:0}
 }
+
+.leader a{color:inherit;text-decoration:underline;text-decoration-color:var(--hair);text-underline-offset:3px}.leader a:hover{text-decoration-color:currentColor}
+.apile{margin:8px 0 0;color:var(--mute)}.apile a{color:var(--ink)}
+.vdn{margin:10px 0 0}.vdn a{color:var(--mute);text-decoration:none}.vdn a:hover{color:var(--ink)}

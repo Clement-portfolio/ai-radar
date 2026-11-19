@@ -146,12 +146,14 @@ function rFeed(){
   var el=$("v-actualites");
   var cats=[["ALL","Toutes"]].concat(Object.keys(CATS).map(function(k){return[k,CATS[k]]}));
   var items=S.feed.filter(byCountry).filter(function(x){return S.cat==="ALL"||x.category===S.cat}).filter(function(x){return!S.top||x.importance>=3});
+  var dupF=voixDupFn(),nDup=0;items=items.filter(function(x){if(dupF(x)){nDup++;return false}return true});
   var cn=COUNTRIES.filter(function(c){return c[0]===S.country})[0][1],cl=S.cat==="ALL"?"Toutes":CATS[S.cat];
   var panel="";
   if(S.fo==="pays")panel='<div class="fpanel">'+COUNTRIES.map(function(c){return'<button class="chip'+(S.country===c[0]?' on':'')+'" data-c="'+c[0]+'">'+c[1]+'</button>'}).join("")+'</div>';
   if(S.fo==="cat")panel='<div class="fpanel">'+cats.map(function(c){return'<button class="chip'+(S.cat===c[0]?' on':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'}).join("")+'</div>';
   var h='<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l\'article.</p>'+
    '<div class="toolbar frow"><button class="chip fb'+(S.fo==="pays"?' open':'')+(S.country!=="ALL"?' set':'')+'" data-fo="pays">Pays : '+esc(cn)+' <span>▾</span></button><button class="chip fb'+(S.fo==="cat"?' open':'')+(S.cat!=="ALL"?' set':'')+'" data-fo="cat">Catégorie : '+esc(cl)+' <span>▾</span></button><span class="sp"></span><button class="chip'+(S.top?' on':'')+'" data-top="1">Essentiel seulement</button></div>'+panel;
+  if(nDup)h+='<p class="small vdn"><a href="#acteurs/voix">'+nDup+' article(s) déjà dans Insiders, non répétés ici →</a></p>';
   if(!items.length)h+='<div class="empty">Aucune actualité pour ces filtres.</div>';
   var dayCount={};items.forEach(function(x){var d=dayKey(x.ts);dayCount[d]=(dayCount[d]||0)+1});var day="";var total=items.length;items=items.slice(0,S.limit);
   items.forEach(function(it){
@@ -472,6 +474,30 @@ window.addEventListener("message",function(e){
   if(e.origin!==location.origin||!e.data||typeof e.data.chainH!=="number"||!chainFrame)return;
   var h=Math.max(300,Math.min(4000,e.data.chainH));chainFrame.style.height=h+"px";
 });
+/* Liens entre Infrastructure, Acteurs et Insiders */
+var ALIAS={google:"alphabet"};
+function nz(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+function aMatchName(nm){
+  var A=(S.acteurs&&S.acteurs.actors)||[],ps=String(nm).split(/\(|\)/).map(function(x){return nz(x).trim()}).filter(Boolean);
+  for(var i=0;i<ps.length;i++){var q=ALIAS[ps[i]]||ps[i];for(var j=0;j<A.length;j++)if(nz(A[j].n)===q||A[j].id===q)return A[j]}
+  return null;
+}
+function leaderHtml(n){
+  return String(n).split(/,\s*/).map(function(part){var a=aMatchName(part);return a?'<a href="#acteurs/'+esc(a.id)+'" title="Fiche '+esc(a.n)+'">'+esc(part)+'</a>':esc(part)}).join(", ");
+}
+function layersOf(a){
+  return((S.layers&&S.layers.layers)||[]).filter(function(l){return(l.leaders||[]).some(function(o){return String(o.n).split(/,\s*/).some(function(part){var m=aMatchName(part);return m&&m.id===a.id})})});
+}
+function tok(t){var o={};String(t||"").toLowerCase().replace(/[^a-z0-9\u00c0-\u024f ]+/g," ").split(/\s+/).forEach(function(w){if(w.length>2)o[w]=1});return o}
+function voixDupFn(){
+  var sig=[];((S.voix&&S.voix.people)||[]).forEach(function(p){(p.items||[]).forEach(function(n){sig.push(tok(n.title))})});
+  return function(it){
+    var a=tok(it.orig||it.title_en||it.title),na=Object.keys(a).length;if(na<4)return false;
+    for(var i=0;i<sig.length;i++){var b=sig[i],nb=0,inter=0;for(var k in b){nb++;if(a[k])inter++}
+      if(inter/(na+nb-inter)>=0.6)return true}
+    return false;
+  };
+}
 function rInfra(){
   var L=S.layers.layers.slice();
   if(S.layerSort==="tension")L.sort(function(a,b){return(b.tension==null?-1:b.tension)-(a.tension==null?-1:a.tension)});else L.sort(function(a,b){return a.order-b.order});
@@ -485,8 +511,8 @@ function rInfra(){
    '<div class="toolbar"><button class="chip'+(S.layerSort==="pile"?' on':'')+'" data-ls="pile">Ordre de la pile</button><button class="chip'+(S.layerSort==="tension"?' on':'')+'" data-ls="tension">Par tension</button></div><div class="stack">'+
    L.map(function(l){
      var open=S.open["l"+l.id]?" open":"";
-     return'<div class="layer'+open+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lmain"><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span></span><span class="lm">'+layerMeter(l)+'</span><span class="chev">›</span></button>'+
-      '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+esc(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p>'+layerExtra(l)+'<div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
+     return'<div class="layer'+open+'" id="ly-'+esc(l.id)+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lmain"><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span></span><span class="lm">'+layerMeter(l)+'</span><span class="chev">›</span></button>'+
+      '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+leaderHtml(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p>'+layerExtra(l)+'<div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
    }).join("")+'</div>';
 }
 
@@ -623,6 +649,8 @@ function aFiche(a){
    (a.rank?'<div class="arank">'+esc(a.rank.text)+' <span class="small">('+aLink(a.rank.u,a.rank.src)+(a.rank.as_of?', '+esc(a.rank.as_of):'')+')</span></div>':'')+
    '<div class="toolbar">'+blocks.map(function(b){return'<span class="chip">'+esc(b)+'</span>'}).join("")+'</div>'+
    (a.desc?'<p class="adesc">'+esc(a.desc)+'</p>':'');
+  var ly=layersOf(a);
+  if(ly.length)h+='<p class="small apile">Dans la pile : '+ly.map(function(l){return'<a href="#infrastructure/'+esc(l.id)+'">'+esc(l.name)+'</a>'}).join(" · ")+'</p>';
   h+='<div class="sgroup">Chiffres clés</div><div class="cards3">'+aFinCards(a)+'</div>';
   h+='<div class="sgroup">Parts de marché <em>sur ses principaux métiers, face aux concurrents</em></div>';
   h+=a.markets&&a.markets.length?'<div class="cards3">'+a.markets.map(aMarketCard).join("")+'</div>':'<p class="small" style="margin-top:12px">Aucune part de marché sourcée pour cet acteur.</p>';
@@ -680,6 +708,7 @@ function show(tab){
   TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
   window.scrollTo(0,0);
+  if(tab==="infrastructure"&&parts[1]){S.open["l"+parts[1]]=true;if(S.layers)rInfra();var dl=$("infra-list");dl=dl&&dl.closest("details");if(dl)dl.open=true;var lye=$("ly-"+parts[1]);if(lye)lye.scrollIntoView({block:"start"})}
   if(toRace){var rc=$("m-race");if(rc){rc.open=true;rc.scrollIntoView({block:"start"})}}
   if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]){S.vc="ALL";rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}
 }
@@ -713,7 +742,6 @@ document.addEventListener("click",function(e){
 document.addEventListener("input",function(e){if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 
 /* Recherche globale */
-function nz(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")}
 var SG=["Entreprises","Personnes","Déclarations","Actualités","Couches de l'infrastructure"],SCAP=[6,6,6,8,3];
 function sIndex(){
   var K=[],A=(S.acteurs&&S.acteurs.actors)||[],P=(S.voix&&S.voix.people)||[],en=isEn();
@@ -729,11 +757,13 @@ function sIndex(){
       K.push({g:2,t:t,s:p.n+" · "+n.source,u:n.url,ts:n.ts,k:"",x:nz(n.title+" "+(n.title_fr||"")+" "+p.n+" "+n.source)});
     });
   });
+  var dupS=voixDupFn();
   S.feed.forEach(function(it){
+    if(dupS(it))return;
     K.push({g:3,t:tx(it,"title"),s:it.source+" · "+ago(it.ts),u:it.url,ts:it.ts,k:"",x:nz((it.title||"")+" "+(it.orig||"")+" "+(it.title_en||"")+" "+(it.summary||"")+" "+(it.summary_en||"")+" "+it.source)});
   });
   ((S.layers&&S.layers.layers)||[]).forEach(function(l){
-    K.push({g:4,t:l.name,s:l.key_stat||"",h:"#infrastructure",k:nz(l.name),x:nz(l.name+" "+(l.key_stat||"")+" "+(l.note||"")+" "+(l.leaders||[]).map(function(o){return o.n}).join(" "))});
+    K.push({g:4,t:l.name,s:l.key_stat||"",h:"#infrastructure/"+l.id,k:nz(l.name),x:nz(l.name+" "+(l.key_stat||"")+" "+(l.note||"")+" "+(l.leaders||[]).map(function(o){return o.n}).join(" "))});
   });
   return K;
 }
