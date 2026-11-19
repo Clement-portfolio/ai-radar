@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","acteurs","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",actor:null,aq:"",ab:"ALL",arv:false};
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -663,26 +663,59 @@ function aTabs(on){
   return'<div class="toolbar atabs"><a class="chip'+(on==="co"?' on':'')+'" href="#acteurs">Entreprises</a><a class="chip'+(on==="vx"?' on':'')+'" href="#acteurs/voix">Insiders</a></div>';
 }
 var VCATS=[["ALL","Tous"],["dirigeants","Dirigeants"],["cadres","Cadres et conseil"],["chercheurs","Chercheurs"],["pouvoirs","Pouvoirs publics"],["investisseurs","Analystes et investisseurs"]];
-function aVoix(){
-  var P=(S.voix&&S.voix.people)||[],vc=S.vc||"ALL";
-  var cnt=function(c){return P.filter(function(p){return c==="ALL"||p.cat===c}).length};
-  var h=aTabs("vx")+'<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les patrons, cadres, chercheurs, responsables publics, analystes et investisseurs de l\'IA, dans la presse et en vidéo, sur les 30 derniers jours. Titres des médias (traduits automatiquement en français), avec le lien vers l\'article ou la vidéo d\'origine. Seuls les titres où la personne s\'exprime sont retenus ; pour les investisseurs, une prise de position (achat, vente, pari) compte aussi.</p>'+
-   '<div class="toolbar">'+VCATS.map(function(c){return'<button class="chip'+(vc===c[0]?' on':'')+'" data-vc="'+c[0]+'">'+c[1]+' ('+cnt(c[0])+')</button>'}).join("")+'</div>';
-  if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
-  var L=P.filter(function(p){return vc==="ALL"||p.cat===vc});
-  var full=L.filter(function(p){return p.items.length}).sort(function(a,b){return b.items[0].ts<a.items[0].ts?-1:b.items[0].ts>a.items[0].ts?1:0});
-  var empty=L.filter(function(p){return !p.items.length});
-  full.forEach(function(p){
-    var co=p.actor&&aById(p.actor);
-    h+='<div class="vperson" id="vp-'+esc(p.id)+'"><div class="ahead"><h3 class="vname">'+esc(p.n)+'</h3><span class="small">'+esc(p.role)+(co?' · <a href="#acteurs/'+esc(co.id)+'">Fiche '+esc(co.n)+'</a>':'')+'</span></div>';
-    if(p.alerts&&p.alerts.length)h+='<div class="valert small">Changement de poste possible, signalé par la presse : <a href="'+esc(link(p.alerts[0].url))+'" target="_blank" rel="noopener">'+esc(p.alerts[0].title)+' ↗</a></div>';
-    h+=p.items.map(function(n){
-      return'<div class="anews"><span class="small">'+esc(new Date(n.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><a href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+esc(!isEn()&&n.title_fr?n.title_fr:n.title)+'</a><span class="small">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span></div>';
-    }).join("");
-    h+='</div>';
+function vItems(){
+  var q=nz(S.vq).trim(),out=[];
+  ((S.voix&&S.voix.people)||[]).forEach(function(p){
+    if(q&&nz(p.n).indexOf(q)<0)return;
+    (p.items||[]).forEach(function(n){out.push({p:p,n:n})});
   });
-  if(empty.length)h+='<p class="small vempty">Aucune déclaration sur les 30 derniers jours : '+empty.map(function(p){return esc(p.n)}).join(", ")+'.</p>';
+  return out;
+}
+function vBody(){
+  var all=vItems(),ve=S.ve,vc=S.vc||"ALL";
+  var base=all.filter(function(x){return!ve||x.n.e});
+  var cnt=function(c){return base.filter(function(x){return c==="ALL"||x.p.cat===c}).length};
+  var nE=all.filter(function(x){return x.n.e&&(vc==="ALL"||x.p.cat===vc)}).length;
+  var h='<div class="toolbar vtool"><button class="chip'+(S.vv!=="pers"?' on':'')+'" data-vv="flux">Chronologique</button><button class="chip'+(S.vv==="pers"?' on':'')+'" data-vv="pers">Par personne</button><span class="sp"></span><button class="chip'+(ve?' on':'')+'" data-ve="1">Essentiel seulement ('+nE+')</button></div>'+
+   '<div class="toolbar">'+VCATS.map(function(c){return'<button class="chip'+(vc===c[0]?' on':'')+'" data-vc="'+c[0]+'">'+c[1]+' ('+cnt(c[0])+')</button>'}).join("")+'</div>';
+  var L=base.filter(function(x){return vc==="ALL"||x.p.cat===vc});
+  if(!L.length)return h+'<div class="empty">Aucune déclaration pour ces filtres.</div>';
+  var ttl=function(n){return esc(!isEn()&&n.title_fr?n.title_fr:n.title)};
+  if(S.vv==="pers"){
+    var by={},order=[];
+    L.forEach(function(x){if(!by[x.p.id]){by[x.p.id]=[];order.push(x.p)}by[x.p.id].push(x.n)});
+    order.sort(function(a,b){var A=by[a.id][0].ts,B=by[b.id][0].ts;return B<A?-1:B>A?1:0});
+    order.forEach(function(p){
+      var co=p.actor&&aById(p.actor);
+      h+='<div class="vperson" id="vp-'+esc(p.id)+'"><div class="ahead"><h3 class="vname">'+esc(p.n)+'</h3><span class="small">'+esc(p.role)+(co?' · <a href="#acteurs/'+esc(co.id)+'">Fiche '+esc(co.n)+'</a>':'')+'</span></div>';
+      if(p.alerts&&p.alerts.length)h+='<div class="valert small">Changement de poste possible, signalé par la presse : <a href="'+esc(link(p.alerts[0].url))+'" target="_blank" rel="noopener">'+esc(p.alerts[0].title)+' ↗</a></div>';
+      h+=by[p.id].map(function(n){
+        return'<div class="anews"><span class="small">'+esc(new Date(n.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><a href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+ttl(n)+'</a><span class="small">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span></div>';
+      }).join("")+'</div>';
+    });
+    if(!ve&&!S.vq.trim()&&vc==="ALL"){
+      var empty=((S.voix&&S.voix.people)||[]).filter(function(p){return!(p.items||[]).length});
+      if(empty.length)h+='<p class="small vempty">Aucune déclaration sur les 30 derniers jours : '+empty.map(function(p){return esc(p.n)}).join(", ")+'.</p>';
+    }
+    return h;
+  }
+  L.sort(function(a,b){return b.n.ts<a.n.ts?-1:b.n.ts>a.n.ts?1:0});
+  var dc={};L.forEach(function(x){var d=dayKey(x.n.ts);dc[d]=(dc[d]||0)+1});
+  var total=L.length,day="";L=L.slice(0,S.vlimit);
+  L.forEach(function(x){
+    var n=x.n,d=dayKey(n.ts);
+    if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(n.ts))+' <span>'+dc[d]+' '+(dc[d]>1?'déclarations':'déclaration')+'</span></div>'}
+    h+='<div class="vrow"><span class="time">'+esc(fmtTime(n.ts))+'</span><span class="vwho"><a href="#acteurs/voix/'+esc(x.p.id)+'" data-vp="'+esc(x.p.id)+'">'+esc(x.p.n)+'</a><span class="small">'+esc(x.p.role)+'</span></span>'+
+     '<a class="ttl" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+ttl(n)+'</a><span class="rsrc">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span></div>';
+  });
+  if(total>L.length)h+='<div style="text-align:center;padding:24px 0"><button class="btn" data-vmore="1">Voir '+Math.min(80,total-L.length)+' déclarations de plus ('+(total-L.length)+' restantes)</button></div>';
   return h;
+}
+function aVoix(){
+  var P=(S.voix&&S.voix.people)||[];
+  var h=aTabs("vx")+'<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA, du plus récent au plus ancien (30 derniers jours). Titres de presse traduits ; seuls ceux où la personne s\'exprime sont retenus. « Essentiel » : propos repris par plusieurs médias, ou prise de parole forte d\'une voix majeure.</p>';
+  if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
+  return h+'<input id="vq" class="asearch" type="search" placeholder="Rechercher une personne" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"><div id="vbody">'+vBody()+'</div>';
 }
 
 function rActeurs(){
@@ -710,7 +743,8 @@ function show(tab){
   window.scrollTo(0,0);
   if(tab==="infrastructure"&&parts[1]){S.open["l"+parts[1]]=true;if(S.layers)rInfra();var dl=$("infra-list");dl=dl&&dl.closest("details");if(dl)dl.open=true;var lye=$("ly-"+parts[1]);if(lye)lye.scrollIntoView({block:"start"})}
   if(toRace){var rc=$("m-race");if(rc){rc.open=true;rc.scrollIntoView({block:"start"})}}
-  if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]){S.vc="ALL";rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}
+  if(tab==="acteurs"&&parts[1]==="voix"&&!parts[2]&&S.vv!=="flux"){S.vv="flux";rActeurs()}
+  if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]){S.vc="ALL";S.vv="pers";S.vq="";S.ve=false;rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}
 }
 function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 
@@ -725,7 +759,10 @@ document.addEventListener("click",function(e){
   var lg=e.target.closest("[data-lang]");if(lg){setLang(lg.getAttribute("data-lang"));return}
   var j=e.target.closest("[data-jump]");
   if(j){e.preventDefault();var id=j.getAttribute("data-jump"),el=$(id);if(el){if(el.tagName==="DETAILS")el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}return}
-  var vcb=e.target.closest("[data-vc]");if(vcb){S.vc=vcb.getAttribute("data-vc");rActeurs();return}
+  var vcb=e.target.closest("[data-vc]");if(vcb){S.vc=vcb.getAttribute("data-vc");S.vlimit=80;vRefresh();return}
+  var vvb=e.target.closest("[data-vv]");if(vvb){S.vv=vvb.getAttribute("data-vv");vRefresh();return}
+  if(e.target.closest("[data-ve]")){S.ve=!S.ve;S.vlimit=80;vRefresh();return}
+  if(e.target.closest("[data-vmore]")){S.vlimit+=80;vRefresh();return}
   var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");rActeurs();return}
   if(e.target.closest("[data-arv]")){S.arv=!S.arv;rActeurs();return}
   var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
@@ -739,7 +776,8 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-ls")){S.layerSort=t.getAttribute("data-ls");renderAll();return}
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
-document.addEventListener("input",function(e){if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
+function vRefresh(){var b=$("vbody");if(b){b.innerHTML=vBody()}else rActeurs()}
+document.addEventListener("input",function(e){if(e.target&&e.target.id==="vq"){S.vq=e.target.value;S.vlimit=80;vRefresh();return}if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 
 /* Recherche globale */
 var SG=["Entreprises","Personnes","Déclarations","Actualités","Couches de l'infrastructure"],SCAP=[6,6,6,8,3];

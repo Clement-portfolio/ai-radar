@@ -1,6 +1,6 @@
 // Tests hors ligne de « Voix » : seuls les titres où la personne s'exprime sont retenus ; fusion, fenêtre de 30 jours, traduction contrôlée.
 import assert from "node:assert/strict";
-import { isStatement, collectVoix, translateVoix, hotVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
+import { isStatement, collectVoix, translateVoix, hotVoix, annotateVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
 import { parseFeed } from "./collect.mjs";
 
 const R = (n) => PEOPLE.find((p) => p.n === n).re;
@@ -42,7 +42,7 @@ const alt = r.doc.people.find((p) => p.id === "sam-altman"), am = r.doc.people.f
 assert.equal(alt.items.length, 1, "doublon de titre fusionné, article de 40 jours et article sans déclaration écartés");
 assert.equal(alt.items[0].title, "Sam Altman says AI is early");
 assert.equal(am.items.length, 1); assert.equal(am.items[0].kind, "video");
-assert.ok(PEOPLE.length >= 40 && PEOPLE.every((p) => p.cat && p.role && p.re), "roster : catégorie, poste et motif pour chacun");
+assert.ok(PEOPLE.length >= 100 && PEOPLE.every((p) => p.cat && p.role && p.re), "roster : catégorie, poste et motif pour chacun");
 assert.equal(new Set(PEOPLE.map((p) => p.id)).size, PEOPLE.length, "identifiants uniques");
 assert.ok(r.summary.failed > 0 && r.summary.total === 2, "un échec n'arrête pas les autres");
 // alerte de poste : un titre récent annonçant une démission ou une nomination est signalé (pas pour les titres d'avant la vérification)
@@ -71,4 +71,29 @@ const hot = hotVoix(hdoc, now);
 assert.equal(hot.length, 3); assert.equal(hot[0].id, "a"); assert.equal(hot[0].outlets, 4, "propos repris par 4 médias");
 assert.ok(!hot.some((x) => x.id === "d"), "plus de 48 h : écarté");
 assert.equal(new Set(hot.map((x) => x.id)).size, 3, "une déclaration par personne");
+
+// Dario n'est pas Daniela ; propos d'un tiers écarté
+const reOf = (id) => PEOPLE.find((p) => p.id === id).re;
+assert.equal(isStatement("Daniela Amodei says Anthropic will hire", reOf("dario-amodei")), false, "Daniela n'est pas Dario");
+assert.equal(isStatement("Daniela Amodei says Anthropic will hire", reOf("daniela-amodei")), true);
+assert.equal(isStatement("Dario Amodei warns of job losses", reOf("dario-amodei")), true);
+assert.equal(isStatement("Hire Tim Cook to lead Nvidia, Trump says", reOf("tim-cook")), false, "c'est Trump qui parle");
+assert.equal(isStatement("Peter Thiel’s partner Jack Selby warns AI bubble", reOf("peter-thiel")), false, "l'associé parle, pas Thiel");
+assert.equal(isStatement("Jeff Bezos says AI could allow three-day workweeks", reOf("jeff-bezos")), true);
+assert.ok(PEOPLE.find((p) => p.id === "elon-musk"), "Musk suivi");
+assert.ok(PEOPLE.filter((p) => p.topic).every((p) => p.q), "personnalité à sujet large : requête IA obligatoire");
+
+// annotateVoix : « essentiel » = repris par ≥ 2 médias, ou verbe fort d'une voix majeure
+const adoc = { people: [
+  { id: "x", w: 1.6, items: [{ title: "Altman warns of AI bubble risk", source: "A" }, { title: "Altman warns of AI bubble risk for investors", source: "B" }, { title: "Altman visits Tokyo office", source: "C" }, { title: "Altman rejects Musk claims about nonprofit", source: "D" }] },
+  { id: "y", w: 0.8, items: [{ title: "Smith warns about chips", source: "A" }, { title: "Smith opens a new lab", source: "A" }] },
+] };
+annotateVoix(adoc);
+const [a1, a2, a3, a4] = adoc.people[0].items;
+assert.equal(a1.m, 2); assert.equal(a1.e, 1, "repris par 2 médias");
+assert.equal(a2.m, 2);
+assert.equal(a3.m, 1); assert.equal(a3.e, 0, "voix majeure mais verbe neutre");
+assert.equal(a4.e, 1, "voix majeure + verbe fort");
+assert.equal(adoc.people[1].items[0].e, 0, "voix mineure, un seul média : pas essentiel");
+console.log("test-voix (insiders) OK");
 console.log("test-voix OK");

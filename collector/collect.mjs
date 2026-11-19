@@ -13,7 +13,7 @@ import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
 import { collectResults } from "./resultats.mjs";
 import { collectSec, SEC_ACTORS } from "./sec.mjs";
 import { buildActeurs } from "./acteurs.mjs";
-import { collectVoix, translateVoix, hotVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
+import { collectVoix, translateVoix, hotVoix, annotateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
 import { updateChain } from "./chainauto.mjs";
@@ -664,6 +664,7 @@ export async function run(opts = {}) {
     for (const it of voix.doc.people.flatMap((p) => p.items)) if (known.has(it.url)) it.title_fr = known.get(it.url);
     voix.summary.translate = (await translateVoix({ doc: voix.doc, generate: mkGen(VOIX_SYSTEM, VOIX_SCHEMA) })).reason;
     await resolveGoogleLinks({ items: voix.doc.people.flatMap((p) => p.items), fetchImpl, max: +env.GNEWS_MAX || 0, log });
+    annotateVoix(voix.doc);
     voix.doc.hot = hotVoix(voix.doc, nowMs); // les titres déjà traduits et les liens résolus sont repris tels quels
   } catch (e) { voix.summary.reason = String(e.message || e).slice(0, 120); }
   log(`Voix : ${voix.summary.total} déclaration(s), ${voix.summary.added} nouvelle(s)${voix.summary.reason ? " — " + voix.summary.reason : ""}`);
