@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-19T13:07:04.981Z",
+ "generated_at": "2026-11-19T14:02:07.464Z",
  "people": [
   {
    "id": "sam-altman",
@@ -79,7 +79,8 @@
      "source": "Reuters",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Sam Altman déclare qu'il est difficile d'imaginer la révolution de l'IA sans Jensen Huang"
     },
     {
      "ts": "2026-11-16T20:41:28.000Z",
@@ -274,6 +275,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-19T02:37:00.000Z",
+     "title": "Musk says Jensen Huang is irreplaceable, regrets midterm spending",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1IZzFuTWNYdk9Ic0Z4cGxSR2pBcVB1a0hMUE1icWUyYnNrYzBaOEphTmcwcDlncDJsZG5lY2Rjby1KOGZrU2liaGxNOGhPZlctcm5pOUFOeG1ZbTBYeXRjV0NZbGJUS21RbE5oYkhwYk5vSjQzdVFV0gF8QVVfeXFMTjBQalZjdEotUDUwTXJOOTdvUi0xcExrZUlNUkEtLWprdGhIdHUxb1ctUVRkaXFVczg3UWJJaC1Nalg5cW1KS2x3LVpydHMxejlJUEJYZWZiUWxKSzB4SXJSUEJEVFBJbkVqTno0STl0S2V1VDhDbEFnb1FLZA?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Musk déclare que Jensen Huang est irremplaçable et regrette les dépenses à mi-parcours",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T01:08:04.000Z",
      "title": "DealBook Summit: Elon Musk Paints Himself as Political Moderate, Says He Is ‘Not MAGA’",
      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1ZYjB2UXJGcEo1ZE0xNVhkMHU4VnU5NmNYWS1NUkRhYWVhdFdTSTRMNlUxcFRuVlF4VHVQSWVlZzR5VjNOOXZQdGR5R2lzVUM2aWZ2aVhhRkVxZDVVVzhJTTkzU29HeUVtOUxpcmIyN1lDdnFqb1ZvYQ?oc=5",
@@ -290,7 +301,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Elon Musk déclare qu'évincer Jensen Huang de Nvidia revient à renvoyer Michael Jordan d'une équipe gagnante"
     },
     {
      "ts": "2026-11-18T23:25:17.000Z",
@@ -329,7 +341,7 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Jensen Huang envisagerait un retour chez Nvidia alors qu'Elon Musk prévient que des « contrats critiques seront perdus » sans lui",
-     "m": 2,
+     "m": 1,
      "e": 1
     },
     {
@@ -339,17 +351,7 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Elon Musk prévient que Nvidia perdra des « contrats critiques » sans Jensen Huang",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-14T16:02:00.000Z",
-     "title": "Musk: ‘Critical deals will be lost’ at Nvidia without Huang",
-     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOdzhfU1JDbkEzVXBnbUF4MVJVeHg3cE5KZ0tPU1R2M0N3OHlWenA4ZHRpVHdMT3JmNDU3eVBLdFNPTjBiRkJQaG1iVDhKcWY2NXNHRjlqNkJkLXoyVU1ldkdRZzNQb0dOU09zVVY0YVY1ODVxZloyNlRqNnk5b1pDXy1EQVZkQdIBiwFBVV95cUxORHlFWE1wZlNvLVVhcFhYVG5ORkVBVFhSdUtOWGxPS3p6S2JjaTBROGtsUFdCUEdJRUl4aXlMdVU0dHhlSGJHWmhUSDVRSHRYNkdPY0Y4VWhzNmNXV1lmOVNLb2FwSS1fTGlsNGk4Ulk5cndzUGVldExlZ1FCUEFEeTMzM1B1cndzQk5J?oc=5",
-     "source": "The Hill",
-     "kind": "presse",
-     "title_fr": "Musk : « Des contrats critiques seront perdus » chez Nvidia sans Huang",
-     "m": 2,
+     "m": 1,
      "e": 1
     }
    ]
@@ -377,6 +379,17 @@
      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNYVBoQmVXOFdrU0R1ai1HVGRaVlFLRk5sZ0daeVJyMWdUUFpfaWdpaG1kN3JodmpIbk5SMk1WYWNXZFpJMlRZV0hKejJ0YXliQktJQlFxenFmSEdqNkJ0T3Q4NFpqM3kwbTAyTHFZMWtkZmdveXlfd0dnb3pMRG13aXJ1VE9XaS0yT1hoNnppbXlfWTQ4TmM1bzd5U1k2VUlqZldyLTZNVDIxdnotWUxJczByeUM1TjV5V2g4enhSTXZTT2d1NGo3Zg?oc=5",
      "source": "Benzinga",
      "kind": "presse",
+     "m": 1,
+     "e": 0,
+     "title_fr": "Le conseil d'administration de NVIDIA doit décider de sa direction : déclare Satya Nadella à Jim Cramer"
+    },
+    {
+     "ts": "2026-11-19T07:38:30.000Z",
+     "title": "Satya Nadella Says AI Agents Will Reshape the Web, the Workforce and Cyber Defence",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLW5DaW9aSXMxNU9LY0xzN1lOZzVTUVpkVldmMndOSnJDQ0FLc01BbHdHY01fY2kyMC02TlIyYThwLWVfbHFBa21EWmc1ZGlkN3hHYjdXcUtfYzdGemUzNXR5TDRRZWtRYzVwZ2RBTmRQbDk2VG5CcUZJZmxPUE5JNnhjZmw1a2dwZml4N1NCWWpyWWQ1bzdCVEJiNUF1UGVTWEhmRjZXeGtCaXlaenFKanQtREpBdTBYbFhJ?oc=5",
+     "source": "AI Insider",
+     "kind": "presse",
+     "title_fr": "Satya Nadella déclare que les agents d'IA vont remodeler le Web, la main-d'œuvre et la cyberdéfense",
      "m": 1,
      "e": 0
     },
@@ -438,16 +451,6 @@
      "title_fr": "Satya Nadella prédit que les agents d'IA vont bouleverser l'économie du Web",
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-18T22:03:58.000Z",
-     "title": "Satya Nadella addresses Microsoft outages, says AI cuts both ways on software flaws",
-     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9VUmVmUlctZVJ0R2ZnQk0tS0NQXzBxS1R1bVp1bEJaMXFfdk9mYll5WkpNXzVsNkdjQmk1d1pzOXQzeHVvcVQ5Y0NJMThPWXF2SG9oQnJEdDZxRzBIWEdybE1kd09yX2J3Q1g4dlV3Zw?oc=5",
-     "source": "Crypto Briefing",
-     "kind": "presse",
-     "title_fr": "Satya Nadella aborde les pannes de Microsoft et déclare que l'IA a un double tranchant sur les failles logicielles",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -468,7 +471,8 @@
      "source": "DD News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "« Un petit pas pour les TPU » : le PDG de Google, Sundar Pichai, annonce le projet Suncatcher pour tester le calcul IA dans l'espace"
     },
     {
      "ts": "2026-11-16T03:27:00.000Z",
@@ -666,6 +670,16 @@
      "e": 1
     },
     {
+     "ts": "2026-11-08T08:00:00.000Z",
+     "title": "Lisa Su Expects 80% Revenue Growth in 2027. AMD Stock Is Still a Strong Buy, But It Demands Flawless Execution.",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPWHFtTlVvRHlWRkhUR19QaTZFZkFjWWdCTkZZemJHRUxMZ2tFZXhTbENFS2l1Nm5zMkx0NHF1WTBlQ2R6Y2hrSDdJSE95TTZrTVFQSnF2bDBrU2dwYnR1QkUzMFlLVFRWQjVBQmZjTDZvTUI4MVlqZGNLQ0R2WkxEOXcyUHpEdHNhd3daejFmMzZ3YVFT?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Lisa Su prévoit une croissance du chiffre d'affaires de 80 % en 2027. L'action AMD reste un achat fort, mais exige une exécution sans faille.",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-07T08:00:00.000Z",
      "title": "AMD CEO Lisa Su: 'We are a data center-first company'",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZ1dvb3UzdFEyakdpTUItWmhUMzhxUGVDdV9EYjZhenF4NmJYUjgySVZ6aHhOTExXcTBjZVQ2XzJyVVVUVTRyT2xuN3ZJb2hiZHVjeENZSWFoVDZwbGtHN3BhYlpGWUdTLVZfUXZiU2t0dVU0ZURLZ3l0alg3d29yenZ2Skl3bUctVGpxeUdwTFg4ODliYVE?oc=5",
@@ -684,16 +698,6 @@
      "title_fr": "Lisa Su d'AMD déclare que le marché est « à courte vue » concernant l'IA",
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-05T08:00:00.000Z",
-     "title": "AMD CEO Lisa Su sees AI becoming 'essential to every aspect of our lives'",
-     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOT3BLQ3JIb1o1X2hwOFJpZkI1UWQtUUljQkhZazhYZ1FTdHlQMHFxcVh1RE1sek9oc0RVRzBXTHA2dUdLWlFGRGh2Mjh5cWZyS0ZPTXNiUVFWWjN2NGFxcE5Vcm1jei03VzNwVFRmSXl4ZFItbFE0T3JFYUdDZWs5WlNxTjZTQVdxbDM0SEpJOGltOEpodFYtNGpYZk5OQURsR1FWd3JLU05VQ1FCZ1k1dzBOcWRuaFM3dXBPV1FDNFNmMVlKMTNmdGx4aw?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "La PDG d'AMD, Lisa Su, voit l'IA devenir « essentielle à chaque aspect de nos vies »",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -736,7 +740,8 @@
      "source": "Fortune",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Andy Jassy d'Amazon a une question d'entretien incontournable : si vous ne pouvez pas répondre sur-le-champ, c'est fini"
     },
     {
      "ts": "2026-11-18T20:50:06.000Z",
@@ -849,7 +854,8 @@
      "source": "The Next Web",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'Intel, Lip-Bu Tan, déclare qu'Intel a signé son premier client externe pour le 18A"
     },
     {
      "ts": "2026-11-12T18:11:36.000Z",
@@ -1208,7 +1214,8 @@
      "source": "Fortune",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Colette Kress lors de la première conférence sur les résultats de Nvidia sans Jensen Huang : « On gère »"
     },
     {
      "ts": "2026-11-18T01:05:00.000Z",
@@ -1300,7 +1307,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Altman et Brockman déclarent que leurs parts inégales dans OpenAI ne pèsent pas sur leur partenariat"
     },
     {
      "ts": "2026-11-08T09:23:47.000Z",
@@ -1689,7 +1697,8 @@
      "source": "Bloomberg.com",
      "kind": "presse",
      "m": 1,
-     "e": 1
+     "e": 1,
+     "title_fr": "Trump met en garde contre des réglementations qui « étoufferaient » l'industrie de l'IA"
     },
     {
      "ts": "2026-11-19T01:46:00.000Z",
@@ -1758,7 +1767,8 @@
      "source": "Reuters",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Trump déclare que le PDG de Nvidia lui a dit qu'il ne savait pas que la femme liée à lui était une espionne"
     }
    ]
   },
@@ -2198,7 +2208,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "John Moolenaar accuse Microsoft de « jouer sur les deux tableaux » dans la course à l'IA entre les États-Unis et la Chine"
     },
     {
      "ts": "2026-11-15T22:05:56.000Z",
@@ -2361,7 +2372,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Michael Burry laisse entendre qu'il y aura une plus grande « révélation » sur l'Asie pour Nvidia alors que la pique de Jensen Huang sur Colette Kress refait surface"
     },
     {
      "ts": "2026-11-16T15:45:00.000Z",
@@ -2700,7 +2712,8 @@
      "source": "파이낸셜뉴스",
      "kind": "presse",
      "m": 4,
-     "e": 1
+     "e": 1,
+     "title_fr": "Masayoshi Son : « Ne pas investir dans Anthropic était une erreur » ; focus sur OpenAI"
     },
     {
      "ts": "2026-11-18T21:35:00.000Z",
@@ -2954,7 +2967,8 @@
      "source": "MacDailyNews",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG d'Apple, John Ternus, annonce un record historique des ventes de Mac pour l'exercice 2026"
     }
    ]
   },
@@ -2982,7 +2996,8 @@
      "source": "Mashable",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Tim Cook déclare qu'Apple travaille sur une technologie de voiture autonome"
     }
    ]
   },
@@ -3003,7 +3018,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jeff Bezos prévient qu'un PDG extérieur remplaçant Jensen Huang a une « chance infime de réussir » chez Nvidia : « Trop compliqué »"
     },
     {
      "ts": "2026-11-16T23:38:00.000Z",
@@ -3012,7 +3028,8 @@
      "source": "The Cool Down",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jeff Bezos déclare que l'IA pourrait permettre aux gens de subvenir aux besoins de leur famille avec un seul salaire et des semaines de travail de trois jours"
     },
     {
      "ts": "2026-11-12T08:01:00.000Z",
@@ -3021,7 +3038,8 @@
      "source": "Fortune",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jeff Bezos prédit que l'IA pourrait permettre aux familles de vivre avec un seul salaire. Amodei et Gates préviennent que le chemin sera plus difficile"
     }
    ]
   },
@@ -3033,7 +3051,14 @@
    "role": "Fondateur et PDG de Dell Technologies",
    "co": "Dell",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-19T14:00:00.000Z",
+     "title": "Michael Dell On Eventual Retirement: ‘I Don't Know How To Do Anything Else So I’m Just Going To Keep Doing This’",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPbzlWQktkOXl1UWh0dnlUTXBDbnJoYkY1amdSWW5kOF9qZnFENjQzZ0JiNzB3NTllbkpYVEhGUWh6TDVfZXQxRGVUdm41al9KY2lDcnNIWEJZVEp6TU5vZkxPcXdSeDd4b2IyVkRWMVRwc00wVUE1Zi1HVmNLcUQwUWNWNmhNOFJQbWpzTWQ4MkV3NTYwT2czQVhmZkN3RERZSEhwRkpWRmtUcnc5VUpIZW14TVg4R1JKY0dtTXdJQU5LRlBVRmthNEdHRy1LeEtLalpET1prNlBXTjkyQ1JtRDlzcTU1Zw?oc=5",
+     "source": "www.crn.com"
+    }
+   ],
    "items": []
   },
   {
@@ -3064,7 +3089,8 @@
      "source": "NDTV",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG de Perplexity, Aravind Srinivas, déclare « Ne parlez pas de finances » alors que l'entreprise atteint 1 milliard de dollars de revenus"
     },
     {
      "ts": "2026-11-17T17:00:09.000Z",
@@ -3091,7 +3117,8 @@
      "source": "The Economic Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Perplexity pourrait avancer le calendrier de son introduction en bourse ; le PDG Aravind Srinivas déclare que l'inscription pourrait avoir lieu dès 2027"
     }
    ]
   },
@@ -3112,7 +3139,8 @@
      "source": "Startup Fortune",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG de Cohere, Aidan Gomez, déclare que le laboratoire soutenu par Nvidia se bat toujours quotidiennement pour obtenir des puces IA"
     }
    ]
   },
@@ -3166,7 +3194,8 @@
      "source": "Android Headlines",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'ancien PDG de Google, Eric Schmidt, déclare que les entreprises d'IA ont un énorme problème de relations publiques"
     },
     {
      "ts": "2026-11-11T13:32:11.000Z",
@@ -3175,7 +3204,8 @@
      "source": "TechRadar",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "« Notre industrie fait un travail terrible pour commercialiser ses avantages » : l'ancien PDG de Google, Eric Schmidt, pense que l'IA a un problème de relations publiques — mais peut-être que les gens la comprennent très bien"
     },
     {
      "ts": "2026-11-06T08:00:00.000Z",
@@ -3184,7 +3214,8 @@
      "source": "富途牛牛",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Lecture du week-end | « L'écart d'IA entre la Chine et les États-Unis s'est réduit à seulement six mois ! » L'ancien PDG de Google, Eric Schmidt, révèle dans sa dernière interview que les tentatives d'investissement dans DeepSeek ont échoué"
     }
    ]
   },
@@ -3205,7 +3236,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "« De nombreux emplois disparaîtront pour toujours » : Bill Gates prévient que l'IA pourrait anéantir des carrières en une décennie. Protégez votre salaire"
     },
     {
      "ts": "2026-11-11T16:34:57.000Z",
@@ -3214,7 +3246,8 @@
      "source": "bloomingbit",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bill Gates déclare que les quatre prochaines années sont critiques pour la sécurité de l'IA et appelle à une réglementation urgente"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3223,7 +3256,8 @@
      "source": "MARCA",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Un robot coûtera 10 dollars de l'heure pour le même travail pour lequel un humain gagne 20 dollars, déclare Bill Gates"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3232,7 +3266,8 @@
      "source": "Adgully",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bill Gates appelle à des impôts plus élevés pour les milliardaires afin de contrer les inégalités entraînées par l'IA"
     },
     {
      "ts": "2026-11-09T08:11:16.000Z",
@@ -3241,7 +3276,8 @@
      "source": "Business Standard",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bill Gates déclare que les milliardaires devraient payer plus d'impôts alors que l'IA remodèle l'économie"
     },
     {
      "ts": "2026-11-08T08:00:00.000Z",
@@ -3250,7 +3286,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bill Gates déclare qu'un robot à 10 dollars de l'heure pourrait remplacer le travailleur à 20 dollars de l'heure — « Il n'y a pas de plan » pour ce qui viendra ensuite"
     }
    ]
   },
@@ -3271,7 +3308,8 @@
      "source": "The Economic Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'ancien PDG d'Intel, Pat Gelsinger, déclare que cette puce mémoire de Georgia Tech pourrait être la plus grande percée de l'industrie"
     }
    ]
   },
@@ -3292,7 +3330,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'auto-amélioration de l'IA confrontée à la réalité : Jeff Dean déclare que l'auto-amélioration récursive a des limites physiques, Fei-Fei Li déclare que la Silicon Valley utilise le terme de manière vague"
     }
    ]
   },
@@ -3357,7 +3396,8 @@
      "source": "New York Post",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "La présidente d'Anthropic, Daniela Amodei, a dit aux invités de son mariage de fantasmer sur des « aventures romantiques » avec des animaux en peluche"
     }
    ]
   },
@@ -3378,7 +3418,8 @@
      "source": "The Economist",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'IA accélérera le progrès scientifique, déclare Jack Clark"
     }
    ]
   },
@@ -3520,7 +3561,8 @@
      "source": "FourWeekMBA",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Kai-Fu Lee déclare que l'IA chinoise génère des profits ; les revenus de Zhipu ont été multipliés par 5"
     },
     {
      "ts": "2026-11-11T04:01:13.000Z",
@@ -3529,7 +3571,8 @@
      "source": "eu.36kr.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "La dernière interview de Kai-Fu Lee : ces deux types de personnes seront les plus précieux à l'avenir"
     }
    ]
   },
@@ -3561,7 +3604,8 @@
      "source": "The 420.in",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'expert en IA Stuart Russell appelle à des tests de sécurité obligatoires pour les systèmes d'IA avancés"
     },
     {
      "ts": "2026-11-14T08:26:17.000Z",
@@ -3570,7 +3614,8 @@
      "source": "Hindustan Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "La Chine a des réglementations sur l'IA plus strictes que l'Europe et les États-Unis : l'expert Stuart Russell s'exprime au HTLS 2026 | Hindustan Times"
     }
    ]
   },
@@ -3600,7 +3645,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Gary Marcus déclare que l'introduction en bourse d'Anthropic échouera : la croissance a ralenti de 147 % à 47 % alors que 900 milliards de dollars de factures de calcul arrivent à échéance"
     },
     {
      "ts": "2026-11-12T23:01:00.000Z",
@@ -3609,7 +3655,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le changement de direction chez Nvidia pourrait défaire le financement de l'IA, déclare le professeur de NYU Gary Marcus"
     },
     {
      "ts": "2026-11-10T01:20:00.000Z",
@@ -3618,7 +3665,8 @@
      "source": "TOKENPOST",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Gary Marcus déclare que les actions de Krispy Kreme ont surperformé Nvidia"
     },
     {
      "ts": "2026-11-09T08:00:00.000Z",
@@ -3627,7 +3675,8 @@
      "source": "Coinpedia",
      "kind": "presse",
      "m": 4,
-     "e": 1
+     "e": 1,
+     "title_fr": "Krispy Kreme a battu Nvidia ? Gary Marcus déclare qu'OpenAI pourrait devenir le WeWork de l'IA"
     },
     {
      "ts": "2026-11-08T08:00:00.000Z",
@@ -3636,7 +3685,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le professeur de NYU Gary Marcus déclare qu'OpenAI pourrait devenir le « WeWork de l'IA » après le report de l'introduction en bourse"
     },
     {
      "ts": "2026-11-07T08:00:00.000Z",
@@ -3645,7 +3695,8 @@
      "source": "Stocktwits",
      "kind": "presse",
      "m": 3,
-     "e": 1
+     "e": 1,
+     "title_fr": "Gary Marcus prévient qu'OpenAI pourrait devenir le « WeWork de l'IA » — et Nvidia pourrait en payer le prix"
     }
    ]
   },
@@ -3666,7 +3717,8 @@
      "source": "news.lavx.hu",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Ethan Mollick teste Fable 5.2 et plaide pour une « AGI en dents de scie »"
     }
    ]
   },
@@ -3709,7 +3761,8 @@
      "source": "PPC Land",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Doom, Inc. : Timnit Gebru déclare que l'apocalypse est l'argument de vente"
     }
    ]
   },
@@ -3741,7 +3794,8 @@
      "source": "DD News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le président français Macron salue la révolution numérique de l'Inde, déclare que l'avenir de l'IA réside dans la combinaison de la technologie et de l'humanité"
     },
     {
      "ts": "2026-11-15T16:28:20.000Z",
@@ -3750,7 +3804,8 @@
      "source": "NDTV",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "La poussée de l'IA d'Emmanuel Macron : le président français appelle à la diversité linguistique dans l'intelligence artificielle"
     },
     {
      "ts": "2026-11-10T10:48:10.000Z",
@@ -3759,7 +3814,8 @@
      "source": "سانا",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Macron appelle à l'interdiction des applications d'IA qui menacent la sécurité des enfants"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3768,7 +3824,8 @@
      "source": "The Next Web",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Des entreprises d'IA signent l'Appel de Paris de Macron, mais un groupe de sécurité déclare qu'il manque de mordant"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3777,7 +3834,8 @@
      "source": "NDTV",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Emmanuel Macron met en garde contre les risques de l'IA, cherche des mesures de sécurité plus fortes"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3786,7 +3844,8 @@
      "source": "MLQ.ai",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "OpenAI, Anthropic et Microsoft signent l'Appel de Paris de Macron en s'engageant à des arrêts de sécurité pour l'IA de pointe, avec huit pays"
     },
     {
      "ts": "2026-11-10T08:00:00.000Z",
@@ -3795,7 +3854,8 @@
      "source": "صوت الإمارات",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Macron appelle à une interdiction des applications d'intelligence artificielle qui menacent la santé mentale des enfants"
     },
     {
      "ts": "2026-11-10T07:16:39.000Z",
@@ -3804,7 +3864,8 @@
      "source": "Kuwait Times",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Macron appelle à des interdictions de l'IA partout où elle menace les enfants"
     }
    ]
   },
@@ -3825,7 +3886,8 @@
      "source": "A News",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "L'UE a besoin d'investissements dans l'IA d'une valeur de 500 milliards d'euros, déclare von der Leyen"
     }
    ]
   },
@@ -3857,7 +3919,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jensen Huang est évincé de NVIDIA. Dylan Patel déclare que la bataille pour les GPU chinois ne fait que commencer."
     },
     {
      "ts": "2026-11-13T00:33:00.000Z",
@@ -3866,7 +3929,8 @@
      "source": "CNBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Dylan Patel de SemiAnalysis s'attend à ce que l'emprise de Nvidia sur la chaîne d'approvisionnement des puces IA s'affaiblisse"
     }
    ]
   },
@@ -3887,7 +3951,8 @@
      "source": "MLQ.ai",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Résumé 13F : Atreides de Gavin Baker achète un put sur un ETF de puces et des calls sur Alphabet, Maverick et Tudor réduisent Microsoft et Astera"
     }
    ]
   },
@@ -3926,7 +3991,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Peter Thiel a vendu toutes les actions de services publics qu'il possédait et a misé 161 millions de dollars sur un ETF de puces. Il est en baisse de 37 millions de dollars depuis"
     },
     {
      "ts": "2026-11-13T17:26:01.000Z",
@@ -3935,7 +4001,8 @@
      "source": "Komando.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Une startup soutenue par Peter Thiel déclare que son IA peut trouver un écart de QI de 14 points entre vos embryons. Voici ce que disent les experts."
     },
     {
      "ts": "2026-11-11T20:30:09.000Z",
@@ -3944,7 +4011,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le partenaire commercial de longue date de Peter Thiel déclare que l'IA est absolument dans une bulle : « Cela va se corriger »"
     }
    ]
   },
@@ -3965,7 +4033,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le milliardaire capital-risqueur Vinod Khosla déclare qu'il faut juger l'IA par son utilisation, pas par le cours des actions"
     },
     {
      "ts": "2026-11-05T22:54:29.000Z",
@@ -3974,7 +4043,8 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Vinod Khosla déclare qu'il a renoncé à Anthropic pour protéger ses connaissances sur OpenAI"
     }
    ]
   },
@@ -3995,7 +4065,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Ted Lieu repousse les théories sur l'IA derrière les pannes aux États-Unis, déclare que « l'administration Trump doit traiter les faits » alors que Chamath Palihapitiya appelle à une refonte logicielle"
     },
     {
      "ts": "2026-11-16T08:51:14.000Z",
@@ -4004,7 +4075,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "La controverse sur Jensen Huang de Nvidia pourrait se retourner contre la Chine, déclare Chamath Palihapitiya — Washington pourrait obtenir"
     },
     {
      "ts": "2026-11-16T08:51:14.000Z",
@@ -4013,7 +4085,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "La controverse sur Jensen Huang de Nvidia pourrait se retourner contre la Chine, déclare Chamath Palihapitiya — Washington pourrait obtenir les contrôles sur les puces qu'il recherche"
     },
     {
      "ts": "2026-11-13T12:15:18.000Z",
@@ -4022,7 +4095,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chamath Palihapitiya déclare qu'une surveillance de Nvidia serait un « désastre » après le départ de Jensen Huang, met en garde contre"
     },
     {
      "ts": "2026-11-11T10:37:29.000Z",
@@ -4040,7 +4114,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "SpaceX d'Elon Musk pourrait gagner plus de pouvoir sur les coûts de calcul de l'IA alors que les démocrates ralentissent l'expansion des centres de données, déclare Chamath Palihapitiya : « Le mouvement de faiseur de rois »"
     },
     {
      "ts": "2026-11-08T07:33:00.000Z",
@@ -4049,7 +4124,8 @@
      "source": "TradingView",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chamath Palihapitiya prévient que le ralentissement des centres de données IA pourrait être un coup « disproportionné » pour Anthropic et OpenAI"
     },
     {
      "ts": "2026-11-07T20:08:00.000Z",
@@ -4058,7 +4134,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Chamath Palihapitiya déclare qu'un seul contrat SpaceX-Anthropic pourrait revaloriser l'ensemble du développement de l'IA"
     }
    ]
   },
