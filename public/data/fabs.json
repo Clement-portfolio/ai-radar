@@ -545,6 +545,38 @@
     "t": "TrendForce",
     "u": "https://www.trendforce.com/news/2026/08/06/news-nanya-unveils-up-to-us10-7b-fab-5a-investment-plan-through-2029-targets-10nm-class-dram-with-euv/"
    }
+  },
+  {
+   "id": "kioxia-kitakami",
+   "name": "Kioxia / Sandisk Kitakami (Iwate)",
+   "co": "Kioxia / Sandisk",
+   "kind": "memory",
+   "cc": "JP",
+   "status": "ramp",
+   "lat": 39.2867,
+   "lon": 141.1135,
+   "fr": "Kioxia et Sandisk annoncent le début de production de leur NAND de 10e génération (332 couches) à la Fab2 de Kitakami, le 3 juillet 2026.",
+   "en": "Kioxia and Sandisk announce the start of production of their 10th-generation NAND (332 layers) at Kitakami Fab2 on 3 July 2026.",
+   "src": {
+    "t": "Kioxia",
+    "u": "https://www.kioxia.com/en-jp/about/news/2026/20260703-2.html"
+   }
+  },
+  {
+   "id": "kioxia-yokkaichi",
+   "name": "Kioxia / Sandisk Yokkaichi (Mie)",
+   "co": "Kioxia / Sandisk",
+   "kind": "memory",
+   "cc": "JP",
+   "status": "ramp",
+   "lat": 34.9648,
+   "lon": 136.6248,
+   "fr": "Site de production partagé par Kioxia et Sandisk ; leur coentreprise sur Yokkaichi, qui devait s'arrêter fin 2029, est prolongée jusqu'au 31 décembre 2034.",
+   "en": "Production site shared by Kioxia and Sandisk; their Yokkaichi joint venture, which was due to end in 2029, is extended through 31 December 2034.",
+   "src": {
+    "t": "Kioxia",
+    "u": "https://www.kioxia.com/en-jp/about/news/2026/20260130-1.html"
+   }
   }
  ]
 }

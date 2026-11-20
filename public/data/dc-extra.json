@@ -1,6 +1,6 @@
 {
  "as_of": "2026-11-20",
- "note": "Sites et zones annoncés, relevés à la main dans la presse (un lien par fiche). Hors base Epoch et hors totaux : ce sont surtout des capacités annoncées, pas de la puissance en service.",
+ "note": "Sites et zones relevés à la main dans la presse (un lien par fiche). Hors base Epoch et hors totaux : capacités annoncées, puissance en service déclarée (« live »), ou site recensé sans puissance (« known »).",
  "sites": [
   {
    "id": "humain-riyadh",
@@ -373,6 +373,718 @@
     "t": "CGTN",
     "u": "https://news.cgtn.com/news/2026-08-09/Clusters-and-fibers-China-accelerates-AI-build-out-1Ptq5WPdWyk/share_amp.html"
    }
+  },
+  {
+   "id": "iren-childress-h1",
+   "name": "IREN Childress — Horizon 1",
+   "co": "IREN (client : Microsoft)",
+   "cc": "US",
+   "kind": "site",
+   "status": "live",
+   "mw": 50,
+   "lat": 34.5197,
+   "lon": -100.2068,
+   "prec": "commune",
+   "fr": "Premier des quatre bâtiments de 50 MW (charge IT) refroidis par liquide livrés à Microsoft sur le campus de Childress ; livré et accepté par Microsoft. Les Horizons 2 à 4 sont attendus au 4e trimestre 2026. Le campus affiche 750 MW de capacité, mais seule cette phase est confirmée comme livrée pour l'IA. Absent d'Epoch.",
+   "en": "First of four 50 MW (IT load) liquid-cooled buildings delivered to Microsoft at the Childress campus; delivered and accepted by Microsoft. Horizons 2–4 are due in Q4 2026. The campus lists 750 MW of capacity, but only this phase is confirmed as delivered for AI. Not in Epoch.",
+   "src": {
+    "t": "Data Center Dynamics",
+    "u": "https://www.datacenterdynamics.com/en/news/iren-delivers-first-phase-of-ai-capacity-to-microsoft-in-texas/"
+   }
+  },
+  {
+   "id": "coreweave-copenhagen-den01",
+   "name": "CoreWeave — Copenhague (atNorth DEN01)",
+   "co": "CoreWeave (hébergeur : atNorth)",
+   "cc": "DK",
+   "kind": "site",
+   "status": "live",
+   "mw": 22.5,
+   "lat": 55.7304,
+   "lon": 12.3612,
+   "prec": "commune",
+   "fr": "Première implantation de CoreWeave au Danemark : l'essentiel des 22,5 MW de capacité IT prévus est en ligne (annonce du 27 octobre 2026), dans le datacenter DEN01 d'atNorth à Ballerup, près de Copenhague. Point placé à la commune. Absent d'Epoch.",
+   "en": "CoreWeave's first deployment in Denmark: most of the planned 22.5 MW of IT capacity is online (announced 27 October 2026), in atNorth's DEN01 data center in Ballerup, near Copenhagen. Dot placed at town level. Not in Epoch.",
+   "src": {
+    "t": "Data Center Dynamics",
+    "u": "https://datacenterdynamics.com/en/news/coreweave-leasing-225mw-from-atnorth-data-center-in-denmark"
+   }
+  },
+  {
+   "id": "nebius-keflavik",
+   "name": "Nebius — Keflavik (Verne)",
+   "co": "Nebius (hébergeur : Verne)",
+   "cc": "IS",
+   "kind": "site",
+   "status": "live",
+   "mw": 10,
+   "lat": 63.9998,
+   "lon": -22.5565,
+   "prec": "commune",
+   "fr": "Cluster de calcul de 10 MW en colocation chez Verne, alimenté par la géothermie. Nebius annonçait une mise en service fin du 1er trimestre 2025 ; je n'ai pas de confirmation indépendante de la puissance actuellement en service. Absent d'Epoch.",
+   "en": "10 MW compute cluster in colocation at Verne, geothermal-powered. Nebius announced go-live by the end of Q1 2025; I found no independent confirmation of the power currently in service. Not in Epoch.",
+   "src": {
+    "t": "Nebius (blog)",
+    "u": "https://nebius.com/blog/posts/300-mw-new-jersey-and-iceland-regions"
+   }
+  },
+  {
+   "id": "iren-sweetwater",
+   "name": "IREN Sweetwater",
+   "co": "IREN",
+   "cc": "US",
+   "kind": "site",
+   "status": "build",
+   "mw": 2000,
+   "lat": 32.471,
+   "lon": -100.4059,
+   "prec": "commune",
+   "fr": "Hub de 2 GW en deux sites (Sweetwater 1 : 1,4 GW, Sweetwater 2 : 600 MW, reliés par fibre) ; IREN indique « en construction ». Capacité de raccordement, pas de puissance IT en service.",
+   "en": "2 GW hub across two sites (Sweetwater 1: 1.4 GW, Sweetwater 2: 600 MW, fiber-linked); IREN lists it as under construction. Grid capacity, not IT power in service.",
+   "src": {
+    "t": "IREN",
+    "u": "https://iren.com/data-centers/sweetwater"
+   }
+  },
+  {
+   "id": "iren-kiowa",
+   "name": "IREN Kiowa (Project Emerald)",
+   "co": "IREN",
+   "cc": "US",
+   "kind": "site",
+   "status": "plan",
+   "mw": 1600,
+   "lat": 34.7207,
+   "lon": -95.8992,
+   "prec": "commune",
+   "fr": "Campus de 1,6 GW sur 2 000 acres dans le comté de Pittsburg (Oklahoma), annoncé en février 2026 ; montée en puissance attendue à partir de 2028. Un dossier local cite 1,2 GW.",
+   "en": "1.6 GW campus on 2,000 acres in Pittsburg County, Oklahoma, announced February 2026; power ramp expected from 2028. A local filing cites 1.2 GW.",
+   "src": {
+    "t": "IREN",
+    "u": "https://iren.com/resources/news/iren-oklahoma-1-6gw-data-center-campus"
+   }
+  },
+  {
+   "id": "cw-cheyenne",
+   "name": "CoreWeave — Cheyenne",
+   "co": "CoreWeave (Related Digital)",
+   "cc": "US",
+   "kind": "site",
+   "status": "known",
+   "lat": 41.14,
+   "lon": -104.8202,
+   "prec": "commune",
+   "fr": "CoreWeave est le locataire principal du premier bâtiment du campus de Related Digital à l'est de Cheyenne (Wyoming). Absent d'Epoch. Puissance non publiée.",
+   "en": "CoreWeave is the anchor tenant of the first building on Related Digital's campus east of Cheyenne, Wyoming. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-cambridge",
+   "name": "CoreWeave — Cambridge (Ontario)",
+   "co": "CoreWeave",
+   "cc": "CA",
+   "kind": "site",
+   "status": "live",
+   "lat": 43.3601,
+   "lon": -80.3123,
+   "prec": "commune",
+   "fr": "CoreWeave exploite un datacenter à Cambridge, en Ontario. Absent d'Epoch. Puissance non publiée.",
+   "en": "CoreWeave operates a data center in Cambridge, Ontario. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-richardson",
+   "name": "CoreWeave — Richardson (CyrusOne DFW6)",
+   "co": "CoreWeave (CyrusOne)",
+   "cc": "US",
+   "kind": "site",
+   "status": "known",
+   "lat": 32.9482,
+   "lon": -96.7297,
+   "prec": "commune",
+   "fr": "Site loué dans le datacenter CyrusOne DFW6 à Richardson (Texas) ; statut non précisé. Absent d'Epoch. Puissance non publiée.",
+   "en": "Leased site in CyrusOne's DFW6 data center in Richardson, Texas; status not stated. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-kenilworth",
+   "name": "CoreWeave — Kenilworth (NEST 11)",
+   "co": "CoreWeave",
+   "cc": "US",
+   "kind": "site",
+   "status": "build",
+   "lat": 40.6771,
+   "lon": -74.2871,
+   "prec": "commune",
+   "fr": "Bâtiment NEST 11 en conversion en datacenter IA ; un terrain voisin est acquis pour une extension prévue. Absent d'Epoch. Puissance non publiée.",
+   "en": "NEST 11 building being converted into an AI data center; neighbouring land acquired for a planned expansion. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-allentown",
+   "name": "CoreWeave — Allentown (Breinigsville)",
+   "co": "CoreWeave (TekPark)",
+   "cc": "US",
+   "kind": "site",
+   "status": "live",
+   "lat": 40.5367,
+   "lon": -75.6303,
+   "prec": "commune",
+   "fr": "Déploiement de GPU haute densité en service au TekPark de Breinigsville, près d'Allentown (Pennsylvanie). Absent d'Epoch. Puissance non publiée.",
+   "en": "High-density GPU deployment in service at TekPark in Breinigsville, near Allentown, Pennsylvania. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-austin",
+   "name": "CoreWeave — Austin",
+   "co": "CoreWeave",
+   "cc": "US",
+   "kind": "site",
+   "status": "known",
+   "lat": 30.2649,
+   "lon": -97.7474,
+   "prec": "commune",
+   "fr": "Bail sécurisé à Austin (Texas) ; statut non précisé. Absent d'Epoch. Puissance non publiée.",
+   "en": "Lease secured in Austin, Texas; status not stated. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-regina",
+   "name": "CoreWeave — Regina",
+   "co": "CoreWeave",
+   "cc": "CA",
+   "kind": "site",
+   "status": "build",
+   "lat": 50.448,
+   "lon": -104.6159,
+   "prec": "commune",
+   "fr": "Site en construction près de Regina (Saskatchewan), municipalité rurale de Sherwood ; première phase attendue jusqu'en 2027. Point placé à Regina. Absent d'Epoch. Puissance non publiée.",
+   "en": "Site under construction near Regina, Saskatchewan (Sherwood rural municipality); first phase due through 2027. Dot placed at Regina. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-lasvegas",
+   "name": "CoreWeave — Las Vegas (LAS1)",
+   "co": "CoreWeave",
+   "cc": "US",
+   "kind": "site",
+   "status": "known",
+   "lat": 36.1674,
+   "lon": -115.1484,
+   "prec": "commune",
+   "fr": "Site « US West LAS1 » à Las Vegas (Nevada) ; statut non précisé. Absent d'Epoch. Puissance non publiée.",
+   "en": "« US West LAS1 » site in Las Vegas, Nevada; status not stated. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-calgary",
+   "name": "CoreWeave — Calgary (CAL-3)",
+   "co": "CoreWeave",
+   "cc": "CA",
+   "kind": "site",
+   "status": "known",
+   "lat": 51.3699,
+   "lon": -114.0142,
+   "prec": "commune",
+   "fr": "Site CAL-3 dans le comté de Rocky View, près de Calgary (Alberta) ; statut non précisé. Absent d'Epoch. Puissance non publiée.",
+   "en": "CAL-3 site in Rocky View County, near Calgary, Alberta; status not stated. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-douglasville",
+   "name": "CoreWeave — Douglasville",
+   "co": "CoreWeave",
+   "cc": "US",
+   "kind": "site",
+   "status": "known",
+   "lat": 33.7515,
+   "lon": -84.7477,
+   "prec": "commune",
+   "fr": "Site à Douglasville, banlieue d'Atlanta (Géorgie) ; statut non précisé. Absent d'Epoch. Puissance non publiée.",
+   "en": "Site in Douglasville, Atlanta area, Georgia; status not stated. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-barcelona",
+   "name": "CoreWeave — Barcelone",
+   "co": "CoreWeave",
+   "cc": "ES",
+   "kind": "site",
+   "status": "live",
+   "lat": 41.3826,
+   "lon": 2.1771,
+   "prec": "commune",
+   "fr": "Première phase déployée à Barcelone. Absent d'Epoch. Puissance non publiée.",
+   "en": "First phase deployed in Barcelona. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-hillsboro",
+   "name": "CoreWeave — Hillsboro",
+   "co": "CoreWeave",
+   "cc": "US",
+   "kind": "site",
+   "status": "plan",
+   "lat": 45.5229,
+   "lon": -122.9898,
+   "prec": "commune",
+   "fr": "Site prévu à Hillsboro (Oregon). Absent d'Epoch. Puissance non publiée.",
+   "en": "Planned site in Hillsboro, Oregon. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-plano",
+   "name": "CoreWeave — Plano",
+   "co": "CoreWeave (Flexential)",
+   "cc": "US",
+   "kind": "site",
+   "status": "live",
+   "lat": 33.0137,
+   "lon": -96.6925,
+   "prec": "commune",
+   "fr": "Déploiement IA haute densité chez Flexential à Plano (Texas). Deux fiches Plano existent dans la source ; je les ai regroupées en un point. Absent d'Epoch. Puissance non publiée.",
+   "en": "High-density AI deployment at Flexential in Plano, Texas. The source has two Plano entries; I merged them into one dot. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "cw-heroya",
+   "name": "CoreWeave — Herøya (HER01)",
+   "co": "CoreWeave",
+   "cc": "NO",
+   "kind": "site",
+   "status": "known",
+   "lat": 59.112,
+   "lon": 9.6483,
+   "prec": "commune",
+   "fr": "Site HER01 à Herøya, Porsgrunn (Norvège) ; statut non précisé. Absent d'Epoch. Puissance non publiée.",
+   "en": "HER01 site at Herøya, Porsgrunn, Norway; status not stated. Not in Epoch. Power not published.",
+   "src": {
+    "t": "Baxtel (liste CoreWeave)",
+    "u": "https://baxtel.com/data-centers/coreweave"
+   }
+  },
+  {
+   "id": "nebius-kansas-city",
+   "name": "Nebius — Kansas City",
+   "co": "Nebius (hébergeur : Patmos)",
+   "cc": "US",
+   "kind": "site",
+   "status": "known",
+   "lat": 39.1001,
+   "lon": -94.5781,
+   "prec": "commune",
+   "fr": "Colocation dans l'ancienne imprimerie du Kansas City Star reconvertie par Patmos ; puissance non publiée ici. Absent d'Epoch.",
+   "en": "Colocation in the former Kansas City Star printing plant converted by Patmos; power not published here. Not in Epoch.",
+   "src": {
+    "t": "Nebius",
+    "u": "https://nebius.com/hardware"
+   }
+  },
+  {
+   "id": "nebius-paris",
+   "name": "Nebius — Paris (Equinix)",
+   "co": "Nebius (hébergeur : Equinix)",
+   "cc": "FR",
+   "kind": "site",
+   "status": "known",
+   "lat": 48.8535,
+   "lon": 2.3484,
+   "prec": "commune",
+   "fr": "Capacité louée chez Equinix à Paris, selon Data Center Dynamics ; puissance non précisée. Point au centre de Paris, site exact non publié. Absent d'Epoch.",
+   "en": "Capacity leased at Equinix in Paris, per Data Center Dynamics; power not stated. Dot at central Paris, exact site not published. Not in Epoch.",
+   "src": {
+    "t": "Data Center Dynamics",
+    "u": "https://www.datacenterdynamics.com/en/news/nebius-expands-european-presence-announces-deployment-in-estonia-and-second-data-center-in-m%C3%A4nts%C3%A4l%C3%A4-finland/"
+   }
+  },
+  {
+   "id": "nebius-london",
+   "name": "Nebius — Londres (Ark)",
+   "co": "Nebius (hébergeur : Ark)",
+   "cc": "GB",
+   "kind": "site",
+   "status": "known",
+   "lat": 51.5074,
+   "lon": -0.1278,
+   "prec": "commune",
+   "fr": "Capacité louée dans un datacenter Ark à Londres, selon Data Center Dynamics ; puissance non précisée. Point au centre de Londres, site exact non publié. Absent d'Epoch.",
+   "en": "Capacity leased in an Ark data center in London, per Data Center Dynamics; power not stated. Dot at central London, exact site not published. Not in Epoch.",
+   "src": {
+    "t": "Data Center Dynamics",
+    "u": "https://www.datacenterdynamics.com/en/news/nebius-expands-european-presence-announces-deployment-in-estonia-and-second-data-center-in-m%C3%A4nts%C3%A4l%C3%A4-finland/"
+   }
+  },
+  {
+   "id": "iren-mackenzie",
+   "name": "IREN Mackenzie",
+   "co": "IREN",
+   "cc": "CA",
+   "kind": "site",
+   "status": "known",
+   "lat": 55.3244,
+   "lon": -123.0926,
+   "prec": "commune",
+   "fr": "Campus de 80 MW en Colombie-Britannique, alimenté à environ 98 % par l'hydroélectricité ; capacité du site, pas puissance IA en service. Absent d'Epoch.",
+   "en": "80 MW campus in British Columbia, about 98% hydro-powered; site capacity, not AI power in service. Not in Epoch.",
+   "src": {
+    "t": "IREN",
+    "u": "https://iren.com/childress"
+   },
+   "mw": 80
+  },
+  {
+   "id": "iren-prince-george",
+   "name": "IREN Prince George",
+   "co": "IREN",
+   "cc": "CA",
+   "kind": "site",
+   "status": "known",
+   "lat": 53.9129,
+   "lon": -122.7454,
+   "prec": "commune",
+   "fr": "Campus de 50 MW en Colombie-Britannique ; capacité du site, pas puissance IA en service. Absent d'Epoch.",
+   "en": "50 MW campus in British Columbia; site capacity, not AI power in service. Not in Epoch.",
+   "src": {
+    "t": "IREN",
+    "u": "https://iren.com/childress"
+   },
+   "mw": 50
+  },
+  {
+   "id": "iren-canal-flats",
+   "name": "IREN Canal Flats",
+   "co": "IREN",
+   "cc": "CA",
+   "kind": "site",
+   "status": "known",
+   "lat": 50.1597,
+   "lon": -115.8077,
+   "prec": "commune",
+   "fr": "Campus de 30 MW en Colombie-Britannique ; capacité du site, pas puissance IA en service. Absent d'Epoch.",
+   "en": "30 MW campus in British Columbia; site capacity, not AI power in service. Not in Epoch.",
+   "src": {
+    "t": "IREN",
+    "u": "https://iren.com/childress"
+   },
+   "mw": 30
+  },
+  {
+   "id": "meta-el-paso",
+   "name": "Meta El Paso",
+   "co": "Meta",
+   "cc": "US",
+   "kind": "site",
+   "status": "build",
+   "lat": 31.7601,
+   "lon": -106.487,
+   "prec": "commune",
+   "fr": "Datacenter orienté IA qui peut monter à 1 GW ; mise en service attendue en 2028 selon un porte-parole de Meta. Absent d'Epoch.",
+   "en": "AI-focused data center that can scale to 1 GW; expected online in 2028 per a Meta spokesperson. Not in Epoch.",
+   "src": {
+    "t": "Meta",
+    "u": "https://about.fb.com/news/2025/10/metas-new-ai-optimized-data-center-el-paso/amp/"
+   },
+   "mw": 1000
+  },
+  {
+   "id": "meta-lebanon",
+   "name": "Meta Lebanon (Indiana)",
+   "co": "Meta",
+   "cc": "US",
+   "kind": "site",
+   "status": "build",
+   "lat": 40.0484,
+   "lon": -86.4692,
+   "prec": "commune",
+   "fr": "Campus de 1 GW pour l'IA et les produits de Meta, chantier lancé en février 2026 ; mise en service attendue fin 2027 ou début 2028. Absent d'Epoch.",
+   "en": "1 GW campus for AI and Meta's core products, construction started February 2026; expected online end of 2027 or early 2028. Not in Epoch.",
+   "src": {
+    "t": "Meta",
+    "u": "https://about.fb.com/news/2026/02/metas-new-data-center-lebanon-indiana-marks-milestone-ai-investment/"
+   },
+   "mw": 1000
+  },
+  {
+   "id": "aws-louisiana",
+   "name": "Amazon / AWS — nord-ouest de la Louisiane",
+   "co": "Amazon (AWS)",
+   "cc": "US",
+   "kind": "zone",
+   "status": "plan",
+   "lat": 32.5135,
+   "lon": -93.7478,
+   "prec": "zone",
+   "fr": "Trois campus prévus dans les paroisses de Caddo et Bossier, dont un à Shreveport, pour 18 milliards de dollars au total ; capacité IT non communiquée. Point placé à Shreveport. Absent d'Epoch.",
+   "en": "Three planned campuses in Caddo and Bossier parishes, including one in Shreveport, for $18 billion in total; IT capacity not disclosed. Dot placed at Shreveport. Not in Epoch.",
+   "src": {
+    "t": "Data Center Dynamics",
+    "u": "https://www.datacenterdynamics.com/en/news/aws-pledges-6bn-investment-in-data-center-campus-in-shreveport-louisiana/"
+   }
+  },
+  {
+   "id": "aws-clinton",
+   "name": "Amazon / AWS — Clinton (Mississippi)",
+   "co": "Amazon (AWS)",
+   "cc": "US",
+   "kind": "site",
+   "status": "plan",
+   "lat": 32.3411,
+   "lon": -90.3216,
+   "prec": "commune",
+   "fr": "Nouveau datacenter prévu à Clinton, en plus de l'extension du campus du comté de Madison, dans un investissement de 12 milliards de dollars ; puissance non communiquée. Absent d'Epoch.",
+   "en": "New data center planned in Clinton, on top of expanding the Madison County campus, in a $12 billion investment; power not disclosed. Not in Epoch.",
+   "src": {
+    "t": "CoStar",
+    "u": "https://www.costar.com/article/875674298"
+   }
+  },
+  {
+   "id": "google-pine-island",
+   "name": "Google Pine Island (Minnesota)",
+   "co": "Google",
+   "cc": "US",
+   "kind": "site",
+   "status": "plan",
+   "lat": 44.2034,
+   "lon": -92.6461,
+   "prec": "commune",
+   "fr": "Site de 480 acres choisi pour le premier datacenter de Google dans le Minnesota, conçu pour l'IA ; puissance non communiquée ici. Absent d'Epoch.",
+   "en": "480-acre site chosen for Google's first Minnesota data center, designed for AI workloads; power not disclosed here. Not in Epoch.",
+   "src": {
+    "t": "Finviz (d'après la presse)",
+    "u": "https://finviz.com/news/320804/google-unleashes-billion-dollar-ai-hub-in-minnesota"
+   }
+  },
+  {
+   "id": "google-chesterfield",
+   "name": "Google Chesterfield (Virginie)",
+   "co": "Google",
+   "cc": "US",
+   "kind": "site",
+   "status": "plan",
+   "lat": 37.386,
+   "lon": -77.5785,
+   "prec": "zone",
+   "fr": "Nouveau datacenter dans le comté de Chesterfield, dans un investissement de 9 milliards de dollars pour le cloud et l'IA ; puissance non communiquée. Point placé au centre du comté. Absent d'Epoch.",
+   "en": "New data center in Chesterfield County, part of a $9 billion cloud and AI investment; power not disclosed. Dot placed at the county centre. Not in Epoch.",
+   "src": {
+    "t": "Virginia Economic Development Partnership",
+    "u": "https://vedp.org/press-release/2025-08/google-chesterfield"
+   }
+  },
+  {
+   "id": "google-haskell",
+   "name": "Google Haskell County (Texas)",
+   "co": "Google",
+   "cc": "US",
+   "kind": "site",
+   "status": "plan",
+   "lat": 33.1542,
+   "lon": -99.72,
+   "prec": "zone",
+   "fr": "Nouveau campus annoncé dans le comté de Haskell, avec une centrale solaire et un stockage par batteries ; puissance non communiquée. Point placé au centre du comté. Absent d'Epoch.",
+   "en": "New campus announced in Haskell County, built alongside a solar and battery plant; power not disclosed. Dot placed at the county centre. Not in Epoch.",
+   "src": {
+    "t": "Google",
+    "u": "https://blog.google/company-news/inside-google/company-announcements/google-american-innovation-texas/"
+   }
+  },
+  {
+   "id": "google-sc-dorchester",
+   "name": "Google Dorchester County (Caroline du Sud)",
+   "co": "Google",
+   "cc": "US",
+   "kind": "zone",
+   "status": "build",
+   "lat": 33.0756,
+   "lon": -80.3431,
+   "prec": "zone",
+   "fr": "Construction en cours de deux nouveaux sites dans le comté de Dorchester ; puissance non communiquée. Point placé au centre du comté. Absent d'Epoch.",
+   "en": "Two new sites under construction in Dorchester County; power not disclosed. Dot placed at the county centre. Not in Epoch.",
+   "src": {
+    "t": "Google",
+    "u": "https://blog.google/inside-google/company-announcements/google-american-innovation-south-carolina/"
+   }
+  },
+  {
+   "id": "google-dietzenbach",
+   "name": "Google Dietzenbach (Allemagne)",
+   "co": "Google",
+   "cc": "DE",
+   "kind": "site",
+   "status": "plan",
+   "lat": 50.0172,
+   "lon": 8.7843,
+   "prec": "commune",
+   "fr": "Nouveau datacenter prévu à Dietzenbach dans un programme de 5,5 milliards d'euros pour 2026-2029 ; puissance non communiquée. Absent d'Epoch.",
+   "en": "New data center planned in Dietzenbach as part of a €5.5 billion programme for 2026–2029; power not disclosed. Not in Epoch.",
+   "src": {
+    "t": "Verdict",
+    "u": "https://www.verdict.co.uk/?p=396284"
+   }
+  },
+  {
+   "id": "google-malaysia",
+   "name": "Google Malaisie — Selangor et Negeri Sembilan",
+   "co": "Google",
+   "cc": "MY",
+   "kind": "zone",
+   "status": "plan",
+   "lat": 2.8009,
+   "lon": 101.7094,
+   "prec": "zone",
+   "fr": "Nouveaux campus prévus à Selangor et Negeri Sembilan (15 milliards de dollars sur 2027-2028) ; puissance non communiquée. Point placé entre les deux États. Absent d'Epoch.",
+   "en": "New campuses planned in Selangor and Negeri Sembilan ($15 billion over 2027–2028); power not disclosed. Dot placed between the two states. Not in Epoch.",
+   "src": {
+    "t": "Unite.AI",
+    "u": "https://www.unite.ai/?p=502388"
+   }
+  },
+  {
+   "id": "aws-indiana",
+   "name": "Amazon / AWS — Indiana (emplacement inconnu)",
+   "co": "Amazon (AWS)",
+   "cc": "US",
+   "kind": "zone",
+   "status": "plan",
+   "mw": 2400,
+   "lat": 39.7684,
+   "lon": -86.1581,
+   "prec": "zone",
+   "fr": "Investissement de 15 milliards de dollars pour de nouveaux campus dans le nord de l'Indiana, qui ajouteront 2,4 GW de capacité, en plus des 11 milliards déjà annoncés dans le comté de St. Joseph. Les sites exacts ne sont pas publiés : le point est posé sur Indianapolis, la capitale de l'État, par convention, et n'indique pas l'emplacement réel. Absent d'Epoch.",
+   "en": "$15 billion investment in new campuses in northern Indiana, adding 2.4 GW of capacity, on top of the $11 billion already announced in St. Joseph County. The exact sites are not published: the dot is placed on Indianapolis, the state capital, by convention, and does not show the real location. Not in Epoch.",
+   "src": {
+    "t": "Amazon",
+    "u": "https://aboutamazon.com/news/company-news/amazon-15-billion-indiana-data-centers"
+   }
+  },
+  {
+   "id": "deepseek-ulanqab",
+   "name": "DeepSeek — Ulanqab",
+   "co": "DeepSeek",
+   "cc": "CN",
+   "kind": "zone",
+   "status": "plan",
+   "lat": 40.9903,
+   "lon": 113.1316,
+   "prec": "zone",
+   "fr": "Datacenter d'environ 1 GW en projet en Mongolie-Intérieure, selon des sources citées par Bloomberg ; non confirmé par la société à ma connaissance. Point placé à Ulanqab, site exact non publié. Absent d'Epoch.",
+   "en": "About 1 GW data center planned in Inner Mongolia, per sources cited by Bloomberg; not confirmed by the company to my knowledge. Dot placed at Ulanqab, exact site not published. Not in Epoch.",
+   "src": {
+    "t": "Baxtel (d'après Bloomberg)",
+    "u": "https://baxtel.com/news/deepseek-plans-1gw-data-center-in-inner-mongolia-china"
+   },
+   "mw": 1000
+  },
+  {
+   "id": "chindata-shaoguan",
+   "name": "Chindata — Shaoguan",
+   "co": "Chindata",
+   "cc": "CN",
+   "kind": "site",
+   "status": "plan",
+   "lat": 24.81,
+   "lon": 113.6,
+   "prec": "zone",
+   "fr": "Première phase de 150 MW IT sur environ 132 000 m², dans la zone de développement de Qujiang, vers un campus de plusieurs gigawatts. Point placé à Shaoguan (ville). Absent d'Epoch.",
+   "en": "First phase of 150 MW IT on about 132,000 m², in the Qujiang development zone, toward a multi-gigawatt campus. Dot placed at Shaoguan (city level). Not in Epoch.",
+   "src": {
+    "t": "Quamnet (d'après un communiqué Chindata)",
+    "u": "https://www.quamnet.com/post/1s1AEtgvuwtq3C2nh4S4E"
+   },
+   "mw": 150
+  },
+  {
+   "id": "chindata-huailai",
+   "name": "Chindata — Huailai (HQPark)",
+   "co": "Chindata",
+   "cc": "CN",
+   "kind": "site",
+   "status": "known",
+   "lat": 40.3446,
+   "lon": 115.6401,
+   "prec": "zone",
+   "fr": "Datacenter HQPark de 75 MW à Huailai, près de Zhangjiakou (Hebei) ; statut non précisé par la source. Point placé au centre du district. Absent d'Epoch.",
+   "en": "75 MW HQPark data center in Huailai, near Zhangjiakou (Hebei); status not stated by the source. Dot placed at the district centre. Not in Epoch.",
+   "src": {
+    "t": "Data Centre Magazine",
+    "u": "https://publication.datacentremagazine.com/data-centre-magazine-december-2025/0683197001763729149/p95"
+   },
+   "mw": 75
+  },
+  {
+   "id": "chindata-datong-h04",
+   "name": "Chindata — Datong (campus H04)",
+   "co": "Chindata",
+   "cc": "CN",
+   "kind": "site",
+   "status": "known",
+   "lat": 39.3516,
+   "lon": 114.2089,
+   "prec": "zone",
+   "fr": "Campus « China North H04 » dans le district de Lingqiu, à Datong (Shanxi) ; plusieurs bâtiments listés, puissance non publiée. Point placé au centre du district. Absent d'Epoch.",
+   "en": "« China North H04 » campus in Lingqiu County, Datong (Shanxi); several buildings listed, power not published. Dot placed at the county centre. Not in Epoch.",
+   "src": {
+    "t": "Baxtel (liste Chindata)",
+    "u": "https://baxtel.com/data-centers/chindata-group"
+   }
+  },
+  {
+   "id": "chindata-yidu",
+   "name": "Chindata / HEC — Yidu (Hubei)",
+   "co": "Chindata, HEC",
+   "cc": "CN",
+   "kind": "site",
+   "status": "build",
+   "lat": 30.382,
+   "lon": 111.4437,
+   "prec": "zone",
+   "fr": "Datacenter de 7,5 MW dont la construction débute à Yidu, dans le sud du Hubei, avec un centre de démonstration IA. Point placé au centre de la ville. Absent d'Epoch.",
+   "en": "7.5 MW data center starting construction in Yidu, southern Hubei, with an AI showcase centre. Dot placed at the city centre. Not in Epoch.",
+   "src": {
+    "t": "Baxtel",
+    "u": "https://baxtel.com/news/chindata-hec-begin-construction-on-7-5mw-data-center-in-hubei-china"
+   },
+   "mw": 7.5
   }
  ]
 }
