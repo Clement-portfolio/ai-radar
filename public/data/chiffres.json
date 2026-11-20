@@ -1,48 +1,78 @@
 {
  "v": 1,
  "day": "2026-11-20",
- "generated_at": "2026-11-20T01:25:08.429Z",
+ "generated_at": "2026-11-20T07:37:05.104Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Nvidia : revenus du trimestre",
-   "value": "115,8 Md$",
-   "sub": "En hausse de 20 % par rapport aux 96,2 milliards de dollars du trimestre précédent et en progression de 103 % sur un an. Le bénéfice par action dilués GAAP s'établit à 2,70 dollars.",
+   "title": "Anthropic : montant levé en bourse",
+   "value": "81 Md$",
+   "sub": "L'introduction en bourse d'Anthropic constitue l'une des plus importantes de l'histoire, l'action ayant clôturé en hausse de 17 % par rapport à son prix d'introduction initial.",
    "ids": [
-    "55e7265b76e2"
+    "24c1f016305b",
+    "90ec2d9d6b03"
    ],
    "links": [
     {
-     "t": "Nvidia (communiqué de résultats, SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
+     "t": "The National",
+     "u": "https://www.thenationalnews.com/business/markets/2026/11/20/anthropic-share-price-today-ant-listing/"
+    },
+    {
+     "t": "The Hindu",
+     "u": "https://www.thehindu.com/business/anthropic-raises-81-billion-in-ipo-amid-ai-market-volatility/article71721392.ece"
     }
    ],
-   "conf": "haute",
-   "scope": "week",
-   "ts": "2026-11-17T21:20:51.000Z",
-   "title_en": "Nvidia: quarterly revenue",
-   "value_en": "$115.8B",
-   "sub_en": "Up 20% from the previous quarter's $96.2 billion and up 103% year-over-year. GAAP diluted earnings per share was $2.70."
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-20T04:40:10.000Z",
+   "title_en": "Anthropic: IPO Amount Raised",
+   "value_en": "$81B",
+   "sub_en": "Anthropic's IPO is one of the largest in history, with the stock closing 17% higher than its initial offering price."
   },
   {
-   "title": "Amazon : ventes nettes du trimestre",
-   "value": "201,9 Md$",
-   "sub": "En augmentation de 12 % par rapport aux 180,2 milliards de dollars du troisième trimestre 2025. Les ventes du segment AWS ont progressé de 39 % pour atteindre 46,0 milliards de dollars.",
+   "title": "Nvidia : engagements d'approvisionnement",
+   "value": "203 Md$",
+   "sub": "Les obligations d'achat à long terme de l'entreprise ont doublé pour l'exercice 2028, en raison de la forte demande pour la mémoire et les infrastructures liées à l'intelligence artificielle.",
    "ids": [
-    "823e0ec9d64d"
+    "1627fa84d2ae"
    ],
    "links": [
     {
-     "t": "Amazon (communiqué de résultats, SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+     "t": "Digitimes",
+     "u": "https://www.digitimes.com/news/a20261118VL226/nvidia-hbm-memory-2028.html"
     }
    ],
-   "conf": "haute",
-   "scope": "month",
-   "ts": "2026-10-29T20:05:27.000Z",
-   "title_en": "Amazon: quarterly net sales",
-   "value_en": "$201.9B",
-   "sub_en": "Increased 12% compared to $180.2 billion in the third quarter of 2025. AWS segment sales grew 39% to reach $46.0 billion."
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-18T10:10:42.000Z",
+   "title_en": "Nvidia: Supply Commitments",
+   "value_en": "$203B",
+   "sub_en": "The company's long-term purchase obligations doubled for fiscal year 2028, driven by surging demand for memory and AI-related infrastructure."
+  },
+  {
+   "title": "Nvidia : garanties d'infrastructure IA",
+   "value": "118 Md$",
+   "sub": "Nvidia a proposé ce montant massif de garanties financières pour sécuriser la construction et le déploiement de nouvelles infrastructures d'intelligence artificielle.",
+   "ids": [
+    "b4b972b2c1c2",
+    "24884812a57e"
+   ],
+   "links": [
+    {
+     "t": "ET Datacenters",
+     "u": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNRTZVV05VbnFPT09oZ1RpSWpzVmEwZ2MwR0lvTWpSM20xcHR5Q0tVZmsyMUFCMTZWcmdaU3hhanRZZEFoMTFNTFp3OFBLN211OHYxUG43bExzNHZFWnZiQ1BPQXhDR0ZDa2tOcl9VcnVsR2gxTDlzX1N1SVhhY3pVQnB1WGxCbEtlZlNVVC00Q2l6TTZhYVZnSm1tSGUtYVQya0Z5TUhQcFBmaER6OUFGWlhILVdJUHZpbEFvMmhVbmt0UFhxUWNCSXJVZFh2N2VlRjFjdV96TGJWYkwyMWt6WndKLVpIakc1MV9FQkFpUDdBSXBVVHpVTk9qWjV4VFZkSW9qR2Y3VjM5bTRfOG15TGRyZ1VNemZZeGlocNIB5AFBVV95cUxOZktlTmstRy1HOVBWdzlqNnhfRGtuYXoxZXZ0RGtpV2l3UWtjT1lyYUtIelotaEdjeFhhQk82TFNtT1llOVV5eGJwamRuYmdtZk5vV2kydk1RMlR2THEzNXI4em12cVRFS3dqZ0ZDTTdkTHZzT1ZFTDdYYjlOUTNMb0gyR3dnZlR6blZMOHU5NTkyd3czOTNzdHNnQ0tDVlFvVFJRNERVeTM1bVltaUVrSl8zaUp6U2Fyd0lLZEZ6VTl2bG5SSm9YUkdOVzlHUWUxTjZjU2pMQUJzWDVndHBZU0JNTjc?oc=5"
+    },
+    {
+     "t": "Data Center Knowledge",
+     "u": "https://www.datacenterknowledge.com/data-center-chips/nvidia-ai-surge-comes-with-118-billion-in-guarantees"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-19T02:36:12.000Z",
+   "title_en": "Nvidia: AI Infrastructure Guarantees",
+   "value_en": "$118B",
+   "sub_en": "Nvidia offered this massive amount in financial guarantees to secure the construction and deployment of new artificial intelligence infrastructures."
   }
  ]
 }
