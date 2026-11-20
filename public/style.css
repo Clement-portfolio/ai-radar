@@ -729,7 +729,7 @@ h1.page,h2.sec{font-family:var(--display);font-size:clamp(44px,6vw,80px);font-we
 .lname{font:600 19px var(--display);letter-spacing:-.015em}
 .meter i{border-radius:999px}
 .leader{border:0;border-radius:999px;background:var(--pill);padding:4px 10px;font-size:12px}
-#chain-frame,#carte-frame{border-radius:var(--r-xl);background:var(--card)}
+#chain-frame,#carte-frame{border-radius:0;background:transparent}
 .actors{gap:16px}.actor{padding:20px}
 .actor .aph{border-radius:16px}
 .agrid{gap:12px}.acard{padding:16px 18px;border:0;border-radius:var(--r-l);background:var(--card)}
@@ -761,3 +761,4 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 1
 .tiles a{text-decoration:none;color:var(--accent-ink)}
 .acard,.acard .an{color:var(--ink)}
 .chip.fb span{display:inline-flex;vertical-align:-1px}
+#toast{border-radius:999px;font-family:var(--ui,inherit);font-size:13px;font-weight:500;padding:10px 18px;background:rgba(29,29,31,.92);color:#fff;-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}

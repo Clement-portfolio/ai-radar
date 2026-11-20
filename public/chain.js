@@ -254,7 +254,7 @@ sc.addEventListener("mouseleave",function(){hovP=null;refreshCol()});
 var bx=document.getElementById("bx"),expl=false;
 function setGap(v){gap=v*.9;sg=v*.13;view();expl=v>40;bx.textContent=expl?"Assembler":"Éclater"}
 bx.addEventListener("click",function(e){e.stopPropagation();setGap(expl?0:70)});
-document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();var d=[[56,-28],[56,-26],[58,-35]][cur];LV[cur].rx=d[0];LV[cur].rz=d[1];setGap(0);sel={part:null,block:null};mark();view()});
+document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();if(cur>0){go(0)}var d=[[56,-28],[56,-26],[58,-35]][cur];LV[cur].rx=d[0];LV[cur].rz=d[1];setGap(0);sel={part:null,block:null};mark();view()});
 var dr=null;
 sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
 sc.addEventListener("pointermove",function(e){if(!dr)return;var v=LV[cur];moved=Math.abs(e.clientX-dr.x)+Math.abs(e.clientY-dr.y);if(moved>4&&!dr.cap){dr.cap=1;try{sc.setPointerCapture(dr.id)}catch(_){}}v.rz=dr.rz+(e.clientX-dr.x)*.3;v.rx=Math.max(15,Math.min(85,dr.rx-(e.clientY-dr.y)*.3));view()});
@@ -427,14 +427,14 @@ function mkHtml(part){
  var pie=f?f.pie:sPie(m.s),ch=f?(f.chart||null):null,rv=f?(f.rev||null):(m.d||null),ti=tensInfo(part);
  return'<div class="fmh"><span class="kicker">Fiche marché</span><h4 class="fmt">'+esc(nm)+'</h4>'+(FMVIA[part]?'<span class="via">'+esc(FMVIA[part])+'</span>':'')+'</div>'+
   '<div class="g3">'+piePanel(pie)+chartPanel(ch,rv)+tensPanel(ti)+'</div>'+HINT+
-  notesHtml(f,pie,ch,rv,ti)+(WT?'<details class="nwd" id="nw"'+(nwDetOpen?' open':'')+'>'+newsHtml()+'</details>':'')}
+  notesHtml(f,pie,ch,rv,ti)+'</section>'+(WT?'<section class="tile nwt"><details class="nwd" id="nw"'+(nwDetOpen?' open':'')+'>'+newsHtml()+'</details></section>':'')}
 var nwDetOpen=false,lastPart=null;
 
 function duo(){
  var F=document.getElementById("fc");
  var part=sel.part||(sel.block?BMK[sel.block]:null);
  if(!part||!PARTS[part]){
-  F.innerHTML='<div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez une pièce sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>'+HINT;report();return}
+  F.innerHTML='<section class="tile"><div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez une pièce sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>'+HINT+'</section>';report();return}
  var old=document.getElementById("nw");
  if(part!==lastPart){nwDetOpen=false;nwLimit=NSHOW;nwOpen={}}else if(old)nwDetOpen=old.open;
  lastPart=part;
@@ -447,7 +447,7 @@ function duo(){
   '<div class="blk"><div class="st">À quoi ça sert dans l\'infrastructure</div><p>'+esc(b.why)+'</p></div>'+
   '<div class="blk"><div class="st">Dépend de</div><div class="cl">'+(b.needs.length?chs(b.needs):'<span class="src">Rien en amont dans ce schéma.</span>')+'</div></div>'+
   '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div></div>';
- F.innerHTML='<div class="fh"><h3>'+esc(P.n)+'</h3><span class="tag">'+esc(P.c)+'</span><span class="tag">'+esc(b.name)+'</span></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
+ F.innerHTML='<section class="tile"><span class="eb">Composant sélectionné</span><div class="fh"><h3>'+esc(P.n)+'</h3><span class="tag">'+esc(P.c)+'</span><span class="tag">'+esc(b.name)+'</span></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
  var nw=document.getElementById("nw");if(nw)nw.setAttribute("data-part",part);
  centerMini(F.querySelector(".mini"));report();
 }

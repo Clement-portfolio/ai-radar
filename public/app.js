@@ -524,7 +524,7 @@ function voixDupFn(){
 }
 function rCarte(){
   var el=$("v-carte");if(!el)return;
-  if(!$("carte-host"))el.innerHTML='<h2 class="sec">Où est la puissance de calcul</h2><p class="lede">Les datacenters d\'IA et les usines de puces et de mémoire sur une carte du monde. Cliquez un site pour voir qui l\'exploite, sa puissance et ce qui arrive ensuite.</p><div id="carte-host"></div>';
+  if(!$("carte-host"))el.innerHTML='<h2 class="sec">Carte.</h2><p class="lede">Où se trouve la puissance de calcul de l\'IA, et où elle se construit.</p><div id="carte-host"></div>';
   carteHost();
 }
 function rInfra(){
@@ -532,7 +532,7 @@ function rInfra(){
   if(S.layerSort==="tension")L.sort(function(a,b){return(b.tension==null?-1:b.tension)-(a.tension==null?-1:a.tension)});else L.sort(function(a,b){return a.order-b.order});
   var el=$("v-infrastructure");
   if(!$("chain-host")){
-    el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">Un datacenter IA vu de l\'extérieur, puis de l\'intérieur, puis au niveau d\'un seul module. Cliquez une pièce ou l\'une des onze couches pour voir qui la fournit, où ça coince et à quel point (tension de 0 à 10).</p><div id="chain-host"></div>'+
+    el.innerHTML='<h2 class="sec">Infrastructure.</h2><p class="lede">Du réseau électrique à la puce : où ça coince, et à quel point.</p><div id="chain-host"></div>'+
      '<details class="details"><summary>La pile en onze couches <em>vue en liste</em></summary><div id="infra-list"></div></details>';
   }
   chainHost();

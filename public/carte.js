@@ -51,7 +51,7 @@ function safeUrl(u) { return /^https:\/\/[^\s"<>]+$/.test(u || "") ? u : ""; }
 var DC = null, FB = null, EX = { sites: [] }, ST = { layers: { dc: true, logic: true, memory: true, packaging: true, extra: true }, mode: "now", sel: null, view: { lat: 49, lon: 12, z: 1 } };
 var EUROPE = { lat: 49, lon: 12, z: 1 }, REG = { eu: EUROPE, us: { lat: 38, lon: -96, z: 2.1 }, asia: { lat: 31, lon: 115, z: 2.1 } };
 var cv, ctx, box, tip, CW = 800, CH = 520, DPR = 1, ITEMS = [], SCR = [], raf = 0, anim = null, vel = { x: 0, y: 0 }, ptrs = {}, drag = { on: false, moved: false }, hov = null;
-var NS_CHIP = { extra: "#8A9099", dc: "var(--dc)", logic: "var(--logic)", memory: "var(--mem)", packaging: "var(--pack)" }, FCOL = { logic: "#5B45A3", memory: "#D6342C", packaging: "#E08A1E" };
+var NS_CHIP = { extra: "#8E8E93", dc: "var(--dc)", logic: "var(--logic)", memory: "var(--mem)", packaging: "var(--pack)" }, FCOL = { logic: "#5E5CE6", memory: "#FF3B30", packaging: "#FF9500" };
 
 function load() {
   var h = document.getElementById("app");
@@ -81,11 +81,12 @@ function build() {
   ITEMS = items();
   var h = document.getElementById("app");
   h.innerHTML =
-    '<div class="bar" id="lay"></div>' +
-    '<div class="mapbox" id="mb"><canvas id="cv" role="img" aria-label="' + esc(t("title")) + '"></canvas><div class="tip hide" id="tp0"></div><div class="hintb">' + esc(t("hint")) + '</div>' +
-    '<div class="zoom"><button class="btn" id="zi" aria-label="+">+</button><button class="btn" id="zo" aria-label="−">−</button></div></div>' +
-    '<div class="leg" id="lg"></div><div class="fiche" id="fc"></div><div class="kpis" id="kp"></div>' +
-    '<div class="cols"><div><h4 id="h1"></h4><div id="bc"></div></div><div><h4 id="h2"></h4><div id="tp"></div></div></div>' +
+    '<section class="tile"><div class="bar" id="lay"></div><div class="alert" id="al" role="status"><div class="alin"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FF3B30" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 4.2a2 2 0 0 1 3.4 0l7.6 13.2a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z"/><path d="M12 9.5v4"/><path d="M12 17h.01"/></svg><span><b id="alt"></b><i id="ald"></i></span><button type="button" class="alx" id="alx" aria-label="Fermer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div>' +
+    '<div class="mapbox" id="mb"><canvas id="cv" role="img" aria-label="' + esc(t("title")) + '"></canvas><div class="tip hide" id="tp0"></div><div class="regs" id="rg"></div><div class="hintb">' + esc(t("hint")) + '</div>' +
+    '<div class="zoom"><button class="zb" id="zi" aria-label="+"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><button class="zb" id="zo" aria-label="−"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button></div></div>' +
+    '<div class="leg" id="lg"></div></section><div class="fiche" id="fc"></div>' +
+    '<section class="tile"><div class="thead"><span class="eb" id="kpe"></span><h2 id="kpt"></h2></div><div class="kpis" id="kp"></div></section>' +
+    '<div class="cols"><section class="tile half"><div class="thead"><span class="eb" id="h1"></span><h2 id="h1t"></h2></div><div id="bc"></div></section><section class="tile half"><div class="thead"><span class="eb" id="h2"></span><h2 id="h2t"></h2></div><div id="tp"></div></section></div>' +
     '<p class="note" id="nt"></p>';
   cv = document.getElementById("cv"); ctx = cv.getContext("2d"); box = document.getElementById("mb"); tip = document.getElementById("tp0");
   size(); bind(); draw(); setTimeout(report, 60);
@@ -98,10 +99,13 @@ function size() {
 
 function chips() {
   var L = ST.layers;
-  var h = ["dc", "logic", "memory", "packaging"].concat(EX.sites.length ? ["extra"] : []).map(function (k) { return '<button class="chip' + (L[k] ? " on" : "") + '" data-l="' + k + '"><i style="background:' + NS_CHIP[k] + '"></i>' + t(k) + "</button>"; }).join("");
-  h += '<span class="sp"></span>' + ["now", "plan"].map(function (m) { return '<button class="btn' + (ST.mode === m ? " on" : "") + '" data-m="' + m + '">' + t(m) + "</button>"; }).join("");
-  h += '<span style="width:10px"></span>' + ["eu", "us", "asia"].map(function (r) { return '<button class="btn" data-r="' + r + '">' + t(r) + "</button>"; }).join("");
+  var h = ["dc", "logic", "memory", "packaging"].concat(EX.sites.length ? ["extra"] : []).map(function (k) { return '<button class="chip' + (L[k] ? " on" : "") + '" data-l="' + k + '" aria-pressed="' + (L[k] ? "true" : "false") + '"><i class="k-' + k + '"></i>' + t(k) + "</button>"; }).join("");
+  h += '<span class="sp"></span><span class="seg">' + ["now", "plan"].map(function (m) { return '<button class="' + (ST.mode === m ? "on" : "") + '" data-m="' + m + '">' + t(m) + "</button>"; }).join("") + "</span>";
   document.getElementById("lay").innerHTML = h;
+  document.getElementById("rg").innerHTML = ["eu", "us", "asia"].map(function (r) { return '<button class="rb" data-r="' + r + '">' + t(r) + "</button>"; }).join("");
+  var al = document.getElementById("al"); al.classList.toggle("open", !!ST.alert);
+  document.getElementById("alt").textContent = LANG === "fr" ? "Environ 50 % des datacenters recensés" : "About 50% of data centers covered";
+  document.getElementById("ald").textContent = LANG === "fr" ? "Bien couverts aux États-Unis, beaucoup moins en Chine, au Moyen-Orient et en Europe." : "Well covered in the US, far less in China, the Middle East and Europe.";
 }
 
 /* ---------- rendu du globe (projection orthographique) ---------- */
@@ -127,7 +131,7 @@ function render() {
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, CW, CH);
   // mer
   var gr = ctx.createRadialGradient(cx - R * 0.28, cy - R * 0.32, R * 0.1, cx, cy, R);
-  gr.addColorStop(0, "#FFFFFF"); gr.addColorStop(1, "#E4E4DE");
+  gr.addColorStop(0, "#FFFFFF"); gr.addColorStop(1, "#E9E9EE");
   ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.fill();
   ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.clip();
   // graticule
@@ -146,7 +150,7 @@ function render() {
     if (x < -4 || x > CW + 4 || y < -4 || y > CH + 4) continue;
     B[c < 0.2 ? 0 : c < 0.45 ? 1 : c < 0.75 ? 2 : 3].push(x, y, c);
   }
-  ctx.fillStyle = "#33332F";
+  ctx.fillStyle = "#9C9CA3";
   for (var bk = 0; bk < 4; bk++) {
     ctx.globalAlpha = al[bk]; ctx.beginPath(); var arr = B[bk];
     for (i = 0; i < arr.length; i += 3) {
@@ -179,14 +183,14 @@ function render() {
     ctx.globalAlpha = fade;
     if (it.k === "dc") {
       r = rOf(o.m);
-      if (ST.mode === "plan" && d.peak && d.peak.mw > d.mw) { ctx.beginPath(); ctx.setLineDash([3, 2]); ctx.strokeStyle = "#34476B"; ctx.lineWidth = 1; ctx.arc(o.x, o.y, rOf(d.peak.mw), 0, 6.2832); ctx.stroke(); ctx.setLineDash([]); }
+      if (ST.mode === "plan" && d.peak && d.peak.mw > d.mw) { ctx.beginPath(); ctx.setLineDash([3, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1; ctx.arc(o.x, o.y, rOf(d.peak.mw), 0, 6.2832); ctx.stroke(); ctx.setLineDash([]); }
       ctx.beginPath(); ctx.arc(o.x, o.y, r, 0, 6.2832);
       if (o.m > 0) { ctx.fillStyle = "rgba(52,71,107,.62)"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1; ctx.stroke(); }
-      else { ctx.setLineDash([2, 2]); ctx.strokeStyle = "#34476B"; ctx.lineWidth = 1.2; ctx.stroke(); ctx.setLineDash([]); }
+      else { ctx.setLineDash([2, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1.2; ctx.stroke(); ctx.setLineDash([]); }
     } else if (it.k === "extra") {
       r = d.status === "live" && d.mw > 0 ? Math.max(4 * s, rOf(d.mw)) : (d.kind === "zone" ? 8 : 6) * s;
       var lv = d.status === "live"; ctx.beginPath(); ctx.arc(o.x, o.y, r, 0, 6.2832); ctx.fillStyle = lv ? "rgba(107,114,128,.55)" : "rgba(107,114,128,.12)"; ctx.fill();
-      if (!lv) ctx.setLineDash([3, 2]); ctx.strokeStyle = "#5B6370"; ctx.lineWidth = 1.5; ctx.stroke(); ctx.setLineDash([]);
+      if (!lv) ctx.setLineDash([3, 2]); ctx.strokeStyle = "#8E8E93"; ctx.lineWidth = 1.5; ctx.stroke(); ctx.setLineDash([]);
     } else {
       r = 4.6 * s; ctx.beginPath(); ctx.arc(o.x, o.y, r, 0, 6.2832);
       var fs = d.status === "plan" ? 0 : d.status === "build" ? 0.3 : 1;
@@ -209,10 +213,10 @@ function draw() { chips(); legend(); fiche(); stats(); render(); }
 function legend() {
   var dot = function (c, cls) { return '<svg viewBox="-8 -8 16 16"><circle r="5.5" fill="' + c + '" stroke="' + (cls ? c : "#fff") + '" ' + (cls === "b" ? 'fill-opacity=".3"' : cls === "p" ? 'fill-opacity="0" stroke-dasharray="2 2"' : "") + "/></svg>"; };
   document.getElementById("lg").innerHTML =
-    "<b>" + dot("#34476B") + t("dc") + "</b><b>" + dot(FCOL.logic) + t("logic") + "</b><b>" + dot(FCOL.memory) + t("memory") + "</b><b>" + dot(FCOL.packaging) + t("packaging") + "</b>" +
+    "<b>" + dot("#0071E3") + t("dc") + "</b><b>" + dot(FCOL.logic) + t("logic") + "</b><b>" + dot(FCOL.memory) + t("memory") + "</b><b>" + dot(FCOL.packaging) + t("packaging") + "</b>" +
     "<b>" + dot("#555") + t("lgOn") + "</b><b>" + dot("#555", "b") + t("lgBuild") + "</b><b>" + dot("#555", "p") + t("lgProj") + "</b>" +
-    '<b><svg viewBox="-8 -8 16 16"><circle r="6" fill="none" stroke="#34476B" stroke-dasharray="3 2"/></svg>' + t("lgPlan") + "</b>" + (EX.sites.length ? '<b><svg viewBox="-8 -8 16 16"><circle r="5.5" fill="#6B7280" fill-opacity=".12" stroke="#5B6370" stroke-width="1.5" stroke-dasharray="3 2"/></svg>' + t("lgExtra") + '</b><b><svg viewBox="-8 -8 16 16"><circle r="5.5" fill="#6B7280" fill-opacity=".55" stroke="#5B6370" stroke-width="1.5"/></svg>' + t("lgLive") + "</b>" : "") +
-    '<b><svg viewBox="-8 -8 16 16"><circle r="2" fill="#33332F" fill-opacity=".8"/></svg>' + t("lgLand") + "</b>";
+    '<b><svg viewBox="-8 -8 16 16"><circle r="6" fill="none" stroke="#0071E3" stroke-dasharray="3 2"/></svg>' + t("lgPlan") + "</b>" + (EX.sites.length ? '<b><svg viewBox="-8 -8 16 16"><circle r="5.5" fill="#8E8E93" fill-opacity=".12" stroke="#8E8E93" stroke-width="1.5" stroke-dasharray="3 2"/></svg>' + t("lgExtra") + '</b><b><svg viewBox="-8 -8 16 16"><circle r="5.5" fill="#8E8E93" fill-opacity=".55" stroke="#8E8E93" stroke-width="1.5"/></svg>' + t("lgLive") + "</b>" : "") +
+    '<b><svg viewBox="-8 -8 16 16"><circle r="2" fill="#9C9CA3" fill-opacity=".8"/></svg>' + t("lgLand") + "</b>";
 }
 function find(id) { for (var i = 0; i < ITEMS.length; i++) if (ITEMS[i].id === id) return ITEMS[i]; return null; }
 function dl(k, v) { return v ? "<div><dt>" + k + "</dt><dd>" + v + "</dd></div>" : ""; }
@@ -248,14 +252,16 @@ function stats() {
   document.getElementById("kp").innerHTML =
     '<div class="kpi"><b>' + nf(D.length) + "</b><span>" + t("sites") + '</span></div><div class="kpi"><b>' + pw(Math.round(mw)) + "</b><span>" + t("mw") + '</span></div><div class="kpi"><b>' + nf(h / 1e6, 1) + (LANG === "fr" ? " M" : "M") + "</b><span>" + t("h100") + '</span></div><div class="kpi"><b>' + pw(Math.round(plan)) + "</b><span>" + t("cmw") + '</span></div><div class="kpi"><b>' + FB.fabs.length + "</b><span>" + t("fabs") + "</span></div>";
   document.getElementById("h1").textContent = t("byc"); document.getElementById("h2").textContent = plan1 ? t("topPlan") : t("top");
-  var cs = Object.keys(by).sort(function (a, b) { return by[b][plan1 ? "plan" : "now"] - by[a][plan1 ? "plan" : "now"]; }).slice(0, 8), mx = Math.max.apply(null, cs.map(function (c) { return by[c][plan1 ? "plan" : "now"]; })) || 1;
+  document.getElementById("kpe").textContent = LANG === "fr" ? "En chiffres" : "In numbers"; document.getElementById("kpt").textContent = LANG === "fr" ? "La puissance suivie." : "The compute we track.";
+  document.getElementById("h1t").textContent = LANG === "fr" ? "Les États-Unis loin devant." : "The US far ahead."; document.getElementById("h2t").textContent = LANG === "fr" ? "Le gigawatt est franchi." : "The gigawatt is crossed.";
+  var cs = Object.keys(by).sort(function (a, b) { return by[b][plan1 ? "plan" : "now"] - by[a][plan1 ? "plan" : "now"]; }).slice(0, 6), mx = Math.max.apply(null, cs.map(function (c) { return by[c][plan1 ? "plan" : "now"]; })) || 1;
   document.getElementById("bc").innerHTML = cs.map(function (c) {
     var a = by[c], v = plan1 ? a.plan : a.now;
     return '<div class="row"><span class="nm">' + esc(country(c)) + '</span><span class="bg"><i style="width:' + (a.now / mx * 100).toFixed(1) + '%"></i>' + (plan1 ? '<u style="left:' + (a.now / mx * 100).toFixed(1) + "%;width:" + (Math.max(0, a.plan - a.now) / mx * 100).toFixed(1) + '%"></u>' : "") + '</span><span class="v">' + pw(Math.round(v)) + " · " + a.n + "</span></div>";
   }).join("");
-  var top = D.slice().sort(function (a, b) { return mwOf(b) - mwOf(a); }).slice(0, 10), m2 = mwOf(top[0]) || 1;
+  var top = D.slice().sort(function (a, b) { return mwOf(b) - mwOf(a); }).slice(0, 6), m2 = mwOf(top[0]) || 1;
   document.getElementById("tp").innerHTML = top.map(function (s) {
-    return '<button class="row" data-id="dc:' + esc(s.id) + '"><span class="nm">' + esc(s.name) + '</span><span class="bg"><i style="width:' + (mwOf(s) / m2 * 100).toFixed(1) + '%"></i></span><span class="v">' + pw(mwOf(s)) + "</span></button>";
+    return '<button class="row site" data-id="dc:' + esc(s.id) + '"><span class="nm"><b>' + esc(s.name) + '</b><small>' + esc(country(s.country)) + ' · ' + pw(mwOf(s)) + '</small></span><span class="arw"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>';
   }).join("");
   document.getElementById("nt").innerHTML = esc(t("note1")) + "<br>" + esc(t("note2")) + (EX.sites.length ? "<br>" + esc(t("note3")) : "") + " " + t("asof") + " " + esc(DC.as_of) + ' · <a href="' + esc(DC.source.url) + '" target="_blank" rel="noopener">epoch.ai</a>';
 }
@@ -269,8 +275,9 @@ function select(id) {
 
 function bind() {
   document.getElementById("app").addEventListener("click", function (e) {
+    if (e.target.closest("#alx")) { ST.alert = false; draw(); setTimeout(report, 480); return; }
     var b = e.target.closest("[data-l],[data-m],[data-r],[data-id]"); if (!b) return;
-    if (b.dataset.l) { ST.layers[b.dataset.l] = !ST.layers[b.dataset.l]; draw(); }
+    if (b.dataset.l) { ST.layers[b.dataset.l] = !ST.layers[b.dataset.l]; if (b.dataset.l === "dc") ST.alert = !ST.alert; draw(); setTimeout(report, 480); }
     else if (b.dataset.m) { ST.mode = b.dataset.m; draw(); }
     else if (b.dataset.r) go(REG[b.dataset.r], 900);
     else if (b.dataset.id) select(b.dataset.id);
