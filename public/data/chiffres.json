@@ -1,33 +1,13 @@
 {
  "v": 1,
- "day": "2026-11-19",
- "generated_at": "2026-11-19T01:26:44.878Z",
+ "day": "2026-11-20",
+ "generated_at": "2026-11-20T01:25:08.429Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Anthropic : valorisation en bourse",
-   "value": "1 500 Md$",
-   "sub": "La valorisation atteinte par le géant de l'intelligence artificielle à la veille de son introduction en bourse, avec un prix d'action fixé à 83 dollars.",
-   "ids": [
-    "8838b8c2d698"
-   ],
-   "links": [
-    {
-     "t": "Arab News",
-     "u": "https://www.arabnews.com/world/anthropic-reportedly-prices-its-ipo-at-83-per-share-valuing-the-ai-giant-at-15-trillion-3012817"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "day",
-   "ts": "2026-11-19T00:35:38.000Z",
-   "title_en": "Anthropic: market valuation",
-   "value_en": "$1,500B",
-   "sub_en": "The valuation reached by the artificial intelligence giant on the eve of its initial public offering, with an issue price set at $83 per share."
-  },
-  {
    "title": "Nvidia : revenus du trimestre",
    "value": "115,8 Md$",
-   "sub": "En hausse de 20 % par rapport aux 96,2 milliards de dollars du trimestre précédent et en progression de 103 % sur un an. Le bénéfice par action dilué non-GAAP s'établit à 2,68 dollars.",
+   "sub": "En hausse de 20 % par rapport aux 96,2 milliards de dollars du trimestre précédent et en progression de 103 % sur un an. Le bénéfice par action dilués GAAP s'établit à 2,70 dollars.",
    "ids": [
     "55e7265b76e2"
    ],
@@ -42,27 +22,27 @@
    "ts": "2026-11-17T21:20:51.000Z",
    "title_en": "Nvidia: quarterly revenue",
    "value_en": "$115.8B",
-   "sub_en": "Up 20% from the previous quarter's $96.2 billion and up 103% year-over-year. Non-GAAP diluted earnings per share was $2.68."
+   "sub_en": "Up 20% from the previous quarter's $96.2 billion and up 103% year-over-year. GAAP diluted earnings per share was $2.70."
   },
   {
-   "title": "Isomorphic Labs : montant levé",
-   "value": "5 Md$",
-   "sub": "Fonds levés par la plateforme de découverte de médicaments par IA, issue de Google DeepMind, lors d'un tour de table de série C pour amener des candidats aux essais cliniques.",
+   "title": "Amazon : ventes nettes du trimestre",
+   "value": "201,9 Md$",
+   "sub": "En augmentation de 12 % par rapport aux 180,2 milliards de dollars du troisième trimestre 2025. Les ventes du segment AWS ont progressé de 39 % pour atteindre 46,0 milliards de dollars.",
    "ids": [
-    "ed47f6db4915"
+    "823e0ec9d64d"
    ],
    "links": [
     {
-     "t": "TechCrunch IA",
-     "u": "https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/"
+     "t": "Amazon (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
     }
    ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-17T14:50:58.000Z",
-   "title_en": "Isomorphic Labs: funds raised",
-   "value_en": "$5B",
-   "sub_en": "Funds raised by the AI drug discovery platform, spun out of Google DeepMind, in a Series C funding round to advance candidates into clinical trials."
+   "conf": "haute",
+   "scope": "month",
+   "ts": "2026-10-29T20:05:27.000Z",
+   "title_en": "Amazon: quarterly net sales",
+   "value_en": "$201.9B",
+   "sub_en": "Increased 12% compared to $180.2 billion in the third quarter of 2025. AWS segment sales grew 39% to reach $46.0 billion."
   }
  ]
 }
