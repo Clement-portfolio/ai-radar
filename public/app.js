@@ -764,7 +764,7 @@ function aVoix(){
   var P=(S.voix&&S.voix.people)||[];
   var h='<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA, du plus récent au plus ancien (30 derniers jours). Titres de presse traduits ; seuls ceux où la personne s\'exprime sont retenus. « Essentiel » : propos repris par plusieurs médias, ou prise de parole forte d\'une voix majeure.</p>';
   if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
-  return h+'<div class="toolbar frow vtool">'+aTabs("vx")+'<span id="vbtns">'+vBtns()+'</span><input id="vq" class="vsearch" type="search" placeholder="Rechercher" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"><span class="sp"></span><span id="vess">'+vEss()+'</span></div><div id="vpanel">'+vPanel()+'</div><div id="vbody">'+vList()+'</div>';
+  return h+'<div class="toolbar frow vtool"><span id="vbtns">'+vBtns()+'</span><span class="sp"></span><input id="vq" class="vsearch" type="search" placeholder="Rechercher" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"><span id="vess">'+vEss()+'</span></div><div id="vpanel">'+vPanel()+'</div><div id="vbody">'+vList()+'</div>';
 }
 
 function rActeurs(){
@@ -776,7 +776,7 @@ function rActeurs(){
   var blocks=aBlocks();
   var abl=S.ab==="ALL"?"Toutes":S.ab,apanel=S.afo?'<div class="fpanel"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">Toutes ('+S.acteurs.actors.length+')</button>'+blocks.map(function(b){return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'">'+esc(b)+'</button>'}).join("")+'</div>':'';
   el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients, chacun daté et sourcé. Un champ sans source reste vide.</p>'+
-   '<div class="toolbar frow">'+aTabs("co")+'<button class="chip fb'+(S.afo?' open':'')+(S.ab!=="ALL"?' set':'')+'" data-afo="1">Catégorie : '+esc(abl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div>'+apanel+'<div id="alist" class="agrid">'+aList()+'</div>';
+   '<div class="toolbar frow"><button class="chip fb'+(S.afo?' open':'')+(S.ab!=="ALL"?' set':'')+'" data-afo="1">Catégorie : '+esc(abl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><span class="sp"></span><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div>'+apanel+'<div id="alist" class="agrid">'+aList()+'</div>';
 }
 
 function renderAll(){

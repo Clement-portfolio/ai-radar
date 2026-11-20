@@ -16,7 +16,7 @@ var D={
 "Modèles":"Models","Puces":"Chips","Énergie":"Energy","Finance":"Finance","Politique":"Politics","Régulation":"Regulation","Adoption":"Adoption","Recherche":"Research",
 "Applications":"Applications","Datacenters":"Data centers","Mémoire HBM":"HBM memory","Fonderie":"Foundry","Financement":"Funding","Autre":"Other",
 "Source primaire":"Primary source","Presse":"Press","Non vérifié":"Unverified",
-"Pays":"Country","Catégorie":"Category","Essentiel seulement":"Essentials only","Chronologique":"Chronological","Afficher le détail":"Show details","Par personne":"By person","Rechercher une personne":"Search a person","Aucune déclaration pour ces filtres.":"No statements for these filters.",
+"Pays":"Country","Catégorie":"Category","Essentiel seulement":"Essentials only","Rechercher":"Search","Chronologique":"Chronological","Afficher le détail":"Show details","Par personne":"By person","Rechercher une personne":"Search a person","Aucune déclaration pour ces filtres.":"No statements for these filters.",
 "Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l'article.":"The collected news, from most recent to oldest. Click a headline to read the article.",
 "Aucune actualité pour ces filtres.":"No news for these filters.","Aucune actualité pour le moment.":"No news yet.",
 "Le briefing est rédigé par l'IA à chaque collecte. En attendant, voici les articles les plus importants.":"The briefing is written by AI at each collection run. Meanwhile, here are the most important articles.",
