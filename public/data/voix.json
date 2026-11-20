@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-20T01:25:08.429Z",
+ "generated_at": "2026-11-20T04:11:10.162Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1644,6 +1644,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T02:45:04.000Z",
+     "title": "Bessent Urges Nvidia to Pick Outsider as Next CEO",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNelVNRDFXQmNHV3JpOFRyaWl2N3h1WnNXNXNXS2FOOHg4dklQNVZfNktCNUdyZ3pNSGtENWRIbE1sYThZZk1QODBNTndERElkRmQ0MHlReHJQU2ZlRDdaYTFqdzA5anBUTXJjVmwwV0hvcW1hS1pPc01zSF9lTXFrTC15RnFzdlJfN2VuYzVuUQ?oc=5",
+     "source": "WSJ",
+     "kind": "presse",
+     "title_fr": "Bessent exhorte Nvidia à choisir une personne externe comme prochain PDG",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-17T01:30:02.000Z",
      "title": "Bessent calls for Nvidia shake-up as longtime CFO takes reins",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUDJZTUo4eTV1Y1dLSlNxakxEZzUyY3AxUmQtekh5TEJSdnpOU3lzQmZiaDVmUTJ1eU1ZdXVtc1Z4T0N1VURQN29IQVkzNUx1RkN4OE9lTHh5emRYUWtILTJ4dTZyWlVIMFZfUjBQUE1NR3pCaFJiV1FBazNZS01LVFRwNkhPenhnVVk3dUJPaGVvZ0p1SGc?oc=5",
@@ -1700,7 +1710,7 @@
      "source": "Bloomberg.com",
      "kind": "presse",
      "title_fr": "La recherche d'un PDG pour Nvidia s'accélère alors que Bessent réclame un remaniement",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -1712,16 +1722,6 @@
      "title_fr": "Nvidia subit des pressions concernant la recherche d'un PDG alors que Bessent réclame un remaniement",
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-15T19:51:00.000Z",
-     "title": "Bessent says if Nvidia was a bank, 'a lot of the executives would be removed' as Huang eyes return",
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWHV5a2FIMk8zTktGZkdCR25IU1FreUZpMVItcGg2VUhRTHE4NG1pWFk3dVRhczUtck51MWhoTmtqbXRNM3NCODZKc1hYVWFQYzNyZUxlSzVxTnZqdVpSV0dXeGdUQlVFZ19MNDk0cjBCVEMxb3NoblpfVXI5TG9TUklLSDZ2ODJReEFtNF8wS3h5M1d1T1gxbUl4ZmFXUWowSXRDZmZIVnlBZ1Jkbnc?oc=5",
-     "source": "Fortune",
-     "kind": "presse",
-     "title_fr": "Bessent déclare que si Nvidia était une banque, « bon nombre des dirigeants seraient renvoyés » alors qu'Huang envisage un retour",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -2053,6 +2053,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T02:19:00.000Z",
+     "title": "Michael Burry Says He Warned on AI With NVIDIA and CoreWeave: Big Short Déjà Vu?",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaDcwTy0wck1Zc2c5S3lSUzVwV19laHNOYmNjcTJWR0UxVzIxclk5c2ozZGFzM1Rha3NYWGxsWFlXWERyd1hWaDhSWDhkRnMwWDNHYzVqSTUzXy1DVkltVjY4RTdhUmVCenpYVjBIUGFVdGxKYk1LYXNuR1hUUkZpVzRHWm0zc1ZkSm01OFd3WjJLM0lTR0tuWA?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry affirme avoir mis en garde contre l'IA avec NVIDIA et CoreWeave : Déjà-vu de The Big Short ?",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-20T01:03:00.000Z",
+     "title": "Michael Burry Says He Tried to Warn You About Nvidia, CoreWeave and Nebius. Here's What the 'Big Short' Investor Saw",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZGRrc1VrMldqYWVBbVlYN0hWeDBZX25tWDdzaVZvWnZaNGtpM1BuMGtYS0ozMWo3WjNEazhneVlMRXk2X0hYbEZXdWhva20xZFpaQjlObzlnWnFYU3JhcnlpZ3M3eWFNZDRKZXN0ZjFQV21pR0dJYWFOdWJlNURieGpmcENSdElaOUI3NXd6MUg5X2VNTlF1MWNR?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry affirme avoir essayé de vous avertir au sujet de Nvidia, CoreWeave et Nebius. Voici ce qu'a vu l'investisseur de 'The Big Short'",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-17T16:53:23.000Z",
      "title": "Michael Burry Donates Alphabet Shares, Then Buys the Software Stock Wall Street Fears Most",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSzBKa0Rrbi1IVUJPN2d1dnpFX3NKcEF5eXprNGNHV0E3eDYyU3J2UlBmMGFDam1qRVAzODE4bzJ1NHJwSEc0Z2luSHdxR1RPb2h2RTZfM2R4Z2gxUVEwc0piZXF6bDR2UEN6a1VjUlJGaHg4TEhTUExiQjkyQ3ZDc01EczFqSks1dGhXZlJuaFh2RDlMV2lhVjhfdVVuaXJyOW9GSQ?oc=5",
@@ -2109,26 +2129,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Michael Burry avait prévenu que les puces d'IA perdraient rapidement de leur valeur. De nouvelles données suggèrent qu'il avait tort",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-15T03:33:00.000Z",
-     "title": "Michael Burry sees 2 chip winners in Nvidia’s shake-up",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNemRLWWd6UXU5YmtNbXVWNlVrazRvMHV6YmhzZ01ncllzTVVFQXdoVkk4eWVETl9YYTNWM0pXSW1mQnpBMmlHbnhsMVJzVUpYNlRLX1lYVEV0NENIQmhTc29XLWp4eXpZekxvUWNhQklISzhkMlFWa0JBRlFSdm5RVnFJaVpab3ZUYUYzM1YtUUcyX3kt?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry identifie 2 gagnants de puces dans le remaniement de Nvidia",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-13T17:39:00.000Z",
-     "title": "'Behold the bull-trap': Michael Burry says he's ramped up bearish tech bets",
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZVdqVk9BVmd5OWJSNVZPR3BkaXZHRVpSc3NoaVNGb0JVVGMzSUpmLThVOVRLbnNuQ0RieE5GblBoU1FLcV9EQjZHa1lOMWZTOXNEUlhQM2RyR2RjYXQ2eXVyRVNYSlVHQXE0VkRxYWd0MThPdWpvanZ2ZkFubThXMWJ3aGdZaXNEdzNYOFo0TndTZw?oc=5",
-     "source": "Business Insider",
-     "kind": "presse",
-     "title_fr": "« Observez le piège à hausses » : Michael Burry déclare avoir intensifié ses paris baissiers sur la technologie",
      "m": 1,
      "e": 0
     }
@@ -2241,12 +2241,22 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T02:42:02.000Z",
+     "title": "SoftBank’s Masayoshi Son says not backing Anthropic was a mistake",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKclk4XzBpUEhULVkwZ1AxMEc5TFhabzBKWFc2bFV4RTIzcjhxaDU2aEc4eE5CS25EdlhFQ21IdWVGVzNjOTBjUklkUHpiSmxpNEE?oc=5",
+     "source": "Digg",
+     "kind": "presse",
+     "title_fr": "Masayoshi Son de SoftBank affirme que ne pas avoir soutenu Anthropic était une erreur",
+     "m": 5,
+     "e": 1
+    },
+    {
      "ts": "2026-11-19T01:27:37.000Z",
      "title": "Masayoshi Son: “Not Investing in Anthropic Was a Mistake”; Focus on OpenAI",
      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5nRktXejktT3BTYjNHOHA1QmI5N2tjSVVLT1VsQUMtb1daUFVZd21GWUdIZUROX3FsbU5Ld1Z5eW14N0hnTUItTUpDOTBzUU8xYWN3SnF1SG4?oc=5",
      "source": "파이낸셜뉴스",
      "kind": "presse",
-     "m": 4,
+     "m": 5,
      "e": 1,
      "title_fr": "Masayoshi Son : « Ne pas investir dans Anthropic était une erreur » ; focus sur OpenAI"
     },
@@ -2257,7 +2267,7 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "title_fr": "Masayoshi Son de SoftBank qualifie le fait d'avoir ignoré Anthropic d'« erreur » alors que son pari sur l'IA reste tourné vers OpenAI",
-     "m": 4,
+     "m": 5,
      "e": 1
     },
     {
@@ -2277,7 +2287,7 @@
      "source": "TradingView",
      "kind": "presse",
      "title_fr": "Masayoshi Son affirme que ne pas investir dans Anthropic est une erreur ; SoftBank continuera de miser sur OpenAI",
-     "m": 4,
+     "m": 5,
      "e": 1
     },
     {
@@ -2287,7 +2297,7 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "title_fr": "Masayoshi Son admet une erreur : le pari de SoftBank sur OpenAI lui a coûté Anthropic",
-     "m": 4,
+     "m": 5,
      "e": 1
     },
     {
@@ -2297,7 +2307,7 @@
      "source": "Financial Times",
      "kind": "presse",
      "title_fr": "SoftBank regrette « l'erreur » de ne pas avoir soutenu Anthropic, affirme Masayoshi Son",
-     "m": 4,
+     "m": 5,
      "e": 1
     },
     {
@@ -2307,16 +2317,6 @@
      "source": "36Kr",
      "kind": "presse",
      "title_fr": "Masayoshi Son fait face à une situation précaire à haut risque : décryptage des risques critiques auxquels fait face le visionnaire de SoftBank",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-09T08:00:00.000Z",
-     "title": "Elon Musk's One-Word \"Default\" Claim Wipes 10% Off SoftBank Shares, Putting Masayoshi Son's AI Bet on the Line",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBHbmJ1ZnZ4RW1zN1BNNzNHajY4WWs2aTBWODNlakRUUkVYM3B4NC1GT29pcVJYc1prX0hvSXlTRXFrS0xwN3E2aHI4eVo4ZXFZdjQxTXppMFVwbU8tU3dVaEVkRllWaTF2NzZaUEpsZnhzbmtHU1E?oc=5",
-     "source": "BigGo Finance",
-     "kind": "presse",
-     "title_fr": "L'affirmation en un mot d'Elon Musk sur un « défaut » fait perdre 10 % aux actions de SoftBank, mettant en jeu le pari de Masayoshi Son sur l'IA",
      "m": 1,
      "e": 0
     }
@@ -3075,6 +3075,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-20T02:10:00.000Z",
+     "title": "Gov. Newsom unveils new regulations on AI",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNTTYwR3JpWVVER0t3S2F1a2V6dFRQa0ZZTmxkRVRyMTFnMVRpd0Znai1hOG5TNXFTSXJ0MTNnMUlBSGVFbzJTNGQ1Ym85Yi1qVHZ6TmVSc3FqQ3FEUFBuV3EtYms3b2tXaEFFUXFpdmNhQndKbVBBaFhORlQwYTFybHBhMkpQbk1Bd0E?oc=5",
+     "source": "Yahoo",
+     "kind": "presse",
+     "title_fr": "Le gouverneur Newsom dévoile de nouvelles réglementations sur l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-18T22:25:37.000Z",
      "title": "Newsom says AI regulation should be ‘table stakes’ for any serious 2028 candidate",
@@ -3892,13 +3902,23 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-18T06:30:04.000Z",
+     "title": "IBM CEO Arvind Krishna warns China leads in open-weight AI",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMW5XdDF2QWNrNEhtbV96NGpITW0wbkJZTk0zSllGY3hwWU53TXN5eEhUZmU0Z2E0b2VGNHJMNEc2OUtsMzRnem0wclpJN0dEZ0lLVUlOQkIzYVM1QWRLWC1IWF96dDkzN3JfdkJYQ21DS3VMX2c1d250QnZLMEZNQjUyZGNtNGRXc3ZmTG9pTS1RZm5oeUZfamxXT3ZzLXZYNXI5eUZFUDMzUQ?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Le PDG d'IBM Arvind Krishna prévient que la Chine est en tête dans l'IA à poids ouverts",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-18T06:12:23.000Z",
      "title": "US vs China AI War: IBM CEO Arvind Krishna Reveals Who Leads The Race For AI Dominance",
      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPVG1UdlFleG5nc2FVTEw5QWE4UGJQeThuQTZJRjIwbXVJOExrTmdoVXRmdGstWFlkcGZ3WHpnWktSXzE2M1FTOTR3eDJLbTQ0SEoydDhId3R4WmtGcXppU3lZbFAwQnF2LWJ4czJnVU4teG8wVE9iMmFTZ2ZVenRxLWhlMkFNS0lncTZZTk40SE13Si1nRTdBa0VUaTV1SXVMODdjQUZVZl9jYWc1X1NsZmZVN214STVvQjZtZGdfZlRLOEgzSkkxdndHbUg2M3NJUXMyUHJ30gHeAUFVX3lxTE5sTVpVZmNXUHUzX3FjUnJVbEFoU3ZCRTI3Ulp3LTVfTWxpS3ZJMUFWQncyYUtsaWFQYmdxNUhtaktZTDlWLS1vN0pBM09wY1B3NF81UFFSZ20tcjYyU2lndUttRkwteVE0a2lyTTk0anFxWUVTYUJORlhISXQwcEZoenNqOFozeThlWEpKVDdXb0hxVXFQWjRMemp0dGVIV1Fodm81UUs1TXI4M3RhM3VlTVpsdGluWFNwZHJGbkFFaldmRm9wamdrbFpKaFEwUHFBVk9QMUQza2x4bmZsUQ?oc=5",
      "source": "NDTV",
      "kind": "presse",
-     "m": 1,
-     "e": 0,
+     "m": 2,
+     "e": 1,
      "title_fr": "Guerre de l'IA entre les États-Unis et la Chine : le PDG d'IBM, Arvind Krishna, révèle qui mène la course à la domination de l'IA"
     },
     {
@@ -3982,6 +4002,16 @@
      "m": 1,
      "e": 0,
      "title_fr": "JD Vance dit aux Américains de « se préparer à toutes les éventualités » alors que Google émet un avertissement inquiétant sur les pannes technologiques"
+    },
+    {
+     "ts": "2026-11-17T11:21:00.000Z",
+     "title": "JD Vance warns Americans ‘have to be prepared’ amid wave of tech outages",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOd1hZbmRYT1VyTUxSNG5oaXZNWFRfb2k2eDNBWi14cDZBNUlUT3NkaVpSWEpVNG4xQzNtRlNLR214X2NRYWV0aGdidkljenRUUGEzaEdZZGxEc2lwV0J0QkZEdFFFNTk0ZHpCZGZzWXpHaHNIdzd3VmJxX1k1RXIwNnZzWmVxLUZWdnc?oc=5",
+     "source": "Yahoo",
+     "kind": "presse",
+     "title_fr": "JD Vance prévient que les Américains « doivent être préparés » face à une vague de pannes technologiques",
+     "m": 1,
+     "e": 1
     }
    ]
   },
@@ -4831,6 +4861,16 @@
      "title_fr": "Mohamed El-Erian affirme qu'une économie propulsée par l'IA ne peut pas se permettre de freiner brutalement"
     },
     {
+     "ts": "2026-11-09T08:00:00.000Z",
+     "title": "El-Erian Says US Midterm Winners Face Market Test — Warns Against Stifling AI, Urges Fiscal Discipline",
+     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOM2FjX3U2Sll3OHZFWEN1MEpFZzBBdGtpcTE2MTQwQU13WDQwLWVVQkV2NVJNVnRWcURidWgzYlNBbzBSNU4yRjgxNVEzeXRxM3BzcmFrODJ4UnRvSzNKYmh1WHlwZkpGQ1dNRXF2aU9nV0JUclJsel83VkJoYU1TZnRCdFpHbHhhTVpCSUhlb0RJdWxDX0pLVnFUSVdLbHM4WmkxWFByTmVBZWFMV1ZCdU9qOXlrNHlWdHpJcFZiUlloX21TQ0dvTVZHUkV5Q20zejdIWUQ3WVZrUDlyX21GdXZFN00yc1VlNjR3amJET1NyLTRROGc?oc=5",
+     "source": "Stocktwits",
+     "kind": "presse",
+     "title_fr": "El-Erian affirme que les vainqueurs des élections de mi-mandat aux États-Unis font face à un test de marché — met en garde contre l'asphyxie de l'IA et exhorte à la discipline budgétaire",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-06T08:00:00.000Z",
      "title": "Mohamed El-Erian Says America’s AI ‘Let It Rip’ Approach Has Fallen Short as Midterm Backlash Grows — Bil",
      "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNbTdOMW1EQ21OMDdrUXpITWNIdUwyaFVRajNtVzJJb3IzWjFSZktRR2ZvVEg2cUp3ZUVZOWpBR24tX3d0ZWJCVnRRSnNNQkQzLXRjYXBCMGpUaFAybnpGUEEtYUxwaWFmeGFtZXRrQ0xqZElQX1ZNN194dUJjcVVFclItczluaVQzT20zNHZfV0puNE0tQl9uY2N3ZTZLR25NUUU3XzRuc0U4eUlfckx0MnBUbldzaDlGRDY5X2VUYTd5dnpnSkpWNVQweV84YXBDSFdzb3NPZEliX2pBNktDQnJVYU1QUTRqel9xM2pvVE1fRUh2VHJrWHRRdFpDLTdtUGJ2RlJ1SmU2RmlhenJVODZDdWVCazJqUDN6WHEyMEs?oc=5",
@@ -5058,30 +5098,30 @@
    "outlets": 4
   },
   {
-   "score": 2.6,
-   "id": "palmer-luckey",
-   "n": "Palmer Luckey",
-   "role": "Fondateur d'Anduril (défense)",
+   "score": 2.33,
+   "id": "masayoshi-son",
+   "n": "Masayoshi Son",
+   "role": "Fondateur et PDG de SoftBank",
    "actor": null,
-   "ts": "2026-11-19T15:04:29.000Z",
-   "title": "Palmer Luckey Warns AI Hackers Are Outpacing U.S. Defenses",
-   "title_fr": "Palmer Luckey avertit que les pirates informatiques utilisant l'IA dépassent les défenses américaines",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE15Z01nSHRxTXBtelowakJTaXpTY1V0ajRib0NsU0FKcmxiNG9vOFdadFZ4UFUwZkNub3VhangxMUhuY0lONVVSUkE3eDdFYk1laXh3NlR3ai1NdnEzMjdhTW5iSW85bzhoY1Zr?oc=5",
-   "source": "USA Herald",
+   "ts": "2026-11-20T02:42:02.000Z",
+   "title": "SoftBank’s Masayoshi Son says not backing Anthropic was a mistake",
+   "title_fr": "Masayoshi Son de SoftBank affirme que ne pas avoir soutenu Anthropic était une erreur",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBKclk4XzBpUEhULVkwZ1AxMEc5TFhabzBKWFc2bFV4RTIzcjhxaDU2aEc4eE5CS25EdlhFQ21IdWVGVzNjOTBjUklkUHpiSmxpNEE?oc=5",
+   "source": "Digg",
    "kind": "presse",
-   "outlets": 2
+   "outlets": 5
   },
   {
    "score": 2.08,
-   "id": "satya-nadella",
-   "n": "Satya Nadella",
-   "role": "PDG de Microsoft",
-   "actor": "microsoft",
-   "ts": "2026-11-19T17:01:00.000Z",
-   "title": "AI likely to cause more outages after ‘perfect storm’ slammed Microsoft, CEO Satya Nadella warns",
-   "title_fr": "L'IA va sans doute causer davantage de pannes après la « tempête parfaite » qui a frappé Microsoft, prévient le PDG Satya Nadella",
-   "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxObE4xZWxfd3djTWpaT0lIYWtCb2NLOEoxSHVQX2ZUV0dHcEhpYnQyLTFHVGtmYmdGc3pGb2pwb0E0U20xNnYzOU4xOWZvRUFfcGlvdjVVX045b0VNcDhfamdDRjN6U19XbTdlNmhORDAtMlROc0ptbk9iZE1SWUVPVFVkNUNLVzJ2azF0RWJwSGZ6bEVhaG5uZFU4NVdXSUdyN09VbFJQaU9zOFVWR2R3SWxEejFYeHdLdGF5azd4V1ZUZGlFLXc0QQ?oc=5",
-   "source": "New York Post",
+   "id": "scott-bessent",
+   "n": "Scott Bessent",
+   "role": "Secrétaire américain au Trésor",
+   "actor": null,
+   "ts": "2026-11-20T02:45:04.000Z",
+   "title": "Bessent Urges Nvidia to Pick Outsider as Next CEO",
+   "title_fr": "Bessent exhorte Nvidia à choisir une personne externe comme prochain PDG",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNelVNRDFXQmNHV3JpOFRyaWl2N3h1WnNXNXNXS2FOOHg4dklQNVZfNktCNUdyZ3pNSGtENWRIbE1sYThZZk1QODBNTndERElkRmQ0MHlReHJQU2ZlRDdaYTFqdzA5anBUTXJjVmwwV0hvcW1hS1pPc01zSF9lTXFrTC15RnFzdlJfN2VuYzVuUQ?oc=5",
+   "source": "WSJ",
    "kind": "presse",
    "outlets": 1
   }
