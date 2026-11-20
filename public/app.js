@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","marche","infrastructure","carte","acteurs","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",arv:false};
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -104,27 +104,27 @@ function rUne(){
     return arts.length?{s:s,arts:arts}:null;
   }).filter(Boolean).slice(0,3);
   if(!st.length)st=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,3).map(function(it){return{s:{head:tx(it,'title'),bullets:it.summary?[tx(it,'summary')]:[]},arts:[it]}});
-  var h='<section class="hero"><span class="hdate">'+esc(fmtDay(u||new Date().toISOString()))+'</span><h1>'+(en?'AI, today.':'L’IA, aujourd’hui.')+'</h1><p>'+(en?'What happened, who said it, and what the numbers say.':'Ce qui s’est passé, qui l’a dit, et ce que disent les chiffres.')+'</p></section>';
-  h+='<section class="tile">'+tHead(en?'Top stories':'La une',en?'The three stories of the day.':'Les trois histoires du jour.')+'<div class="tgrid3">'+st.map(function(x,i){
+  var h='<section class="hero"><span class="hdate">'+esc(fmtDay(u||new Date().toISOString()))+'</span><h1>'+(en?'AI, today':'L’IA, aujourd’hui')+'</h1><p>'+(en?'What happened, who said it, and what the numbers say.':'Ce qui s’est passé, qui l’a dit, et ce que disent les chiffres.')+'</p></section>';
+  h+='<section class="tile">'+tHead(en?'Top stories':'La une',en?'The three stories of the day':'Les trois histoires du jour')+'<div class="tgrid3">'+st.map(function(x,i){
     var s=x.s,lead=x.arts[0],ok=en&&s.head_en&&s.bullets_en&&s.bullets_en.length===(s.bullets||[]).length;
     var head=ok?s.head_en:s.head,bl=(ok?s.bullets_en:s.bullets)||[];
     return'<article class="tcard"><span class="kick">0'+(i+1)+' · '+esc(CLABEL[lead.country]||lead.country)+' · '+esc(CATS[lead.category]||lead.category)+'</span><h3>'+esc(head)+'</h3>'+(bl[0]?'<p>'+esc(bl[0])+'</p>':'')+
      '<div class="tfoot"><span>'+esc(x.arts.slice(0,3).map(function(a){return a.source}).join(", "))+' · '+esc(ago(s.ts||lead.ts))+'</span>'+arrowA(link(lead.url),en?'Read':'Lire l’histoire',true)+'</div></article>';
   }).join("")+'</div>'+cta("actualites",en?'All news':'Toutes les actualités')+'</section>';
   var H=((S.voix&&S.voix.hot)||[]).slice(0,3);
-  if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say.':'Ce qu’ils disent.')+'<div class="tgrid3">'+H.map(function(n){
+  if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say':'Ce qu’ils disent')+'<div class="tgrid3">'+H.map(function(n){
     return'<figure class="tcard q"><blockquote>« '+esc(!en&&n.title_fr?n.title_fr:n.title)+' »</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
   }).join("")+'</div>'+cta("acteurs/voix",en?'See Insiders':'Voir les Insiders')+'</section>';
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
-  if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember.':'Trois chiffres à retenir.')+'<div class="tnums">'+fs.map(function(f){
+  if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
     var ok=en&&f.title_en&&f.value_en;
     return'<div class="tnum"><span class="v">'+esc(ok?f.value_en:f.value)+'</span><span class="l">'+esc(ok?f.title_en:f.title)+'</span><span class="s">'+esc(figScope(f.ts))+' · '+esc(fmtD(f.ts))+'</span></div>';
   }).join("")+'</div>'+cta("marche",en?'See the market':'Voir le marché')+'</section>';
   var L=((S.layers&&S.layers.layers)||[]).filter(function(l){return l.tension!=null}).slice().sort(function(a,b){return b.tension-a.tension}).slice(0,3);
   h+='<div class="duo">';
-  h+='<section class="tile half">'+tHead('Infrastructure',en?'Where it’s tight.':'Là où ça coince.')+'<div class="tlist2">'+L.map(function(l){return'<div class="tli"><span>'+esc(tx(l,'name'))+'</span><b class="t'+(l.tension>=8?'hi':l.tension>=6?'mid':'lo')+'">'+l.tension+'/10</b></div>'}).join("")+'<span class="tnote">'+(en?'Estimated tension, 0 to 10 (editorial).':'Tension estimée de 0 à 10, estimation éditoriale.')+'</span></div>'+
+  h+='<section class="tile half">'+tHead('Infrastructure',en?'Where it’s tight':'Là où ça coince')+'<div class="tlist2">'+L.map(function(l){return'<div class="tli"><span>'+esc(tx(l,'name'))+'</span><b class="t'+(l.tension>=8?'hi':l.tension>=6?'mid':'lo')+'">'+l.tension+'/10</b></div>'}).join("")+'<span class="tnote">'+(en?'Estimated tension, 0 to 10 (editorial).':'Tension estimée de 0 à 10, estimation éditoriale.')+'</span></div>'+
      '<div class="hfoot"><button class="tlink" data-go="infrastructure">'+(en?'Explore infrastructure':'Explorer l’infrastructure')+' ›</button><button class="arw lg" data-go="infrastructure" aria-label="Infrastructure">'+ARW+'</button></div></section>';
-  h+='<section class="tile half">'+tHead(en?'Map':'Carte',en?'Where the compute is.':'Où est la puissance de calcul.')+'<div class="tglobe"><img src="img/globe-mini.svg" alt="" width="210" height="210"></div>'+
+  h+='<section class="tile half">'+tHead(en?'Map':'Carte',en?'Where the compute is':'Où est la puissance de calcul')+'<div class="tglobe"><img src="img/globe-mini.svg" alt="" width="210" height="210"></div>'+
      '<div class="hfoot"><button class="tlink" data-go="carte">'+(en?'Explore the map':'Explorer la carte')+' ›</button><button class="arw lg" data-go="carte" aria-label="'+(en?'Map':'Carte')+'">'+ARW+'</button></div></section>';
   h+='</div>';
   el.innerHTML=h;
@@ -195,7 +195,7 @@ function rMarket(){
    '<div class="note"><b>À lire avant de comparer.</b> '+esc(m.caveat)+'</div></div>'+
    secPanel();
   el.innerHTML='<h2 class="sec">Marché</h2><p class="lede">Qui dépense, qui gagne de l\'argent, qui compte. Chiffres sourcés ; la date et la source figurent sous chaque donnée.</p>'+
-   '<div class="tiles">'+m.tiles.map(function(t){return'<div class="tile"><div class="l">'+esc(t.label)+'</div><div class="v">'+esc(t.value)+'</div><div class="s">'+esc(t.sub)+'</div><div class="src"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></div></div>'}).join("")+'</div>'+
+   '<section class="tile">'+tHead(isEn()?'Key figures':'Chiffres clés',isEn()?'The market at a glance':'L’essentiel du marché')+'<div class="tnums n'+m.tiles.length+'">'+m.tiles.map(function(t){return'<div class="tnum"><span class="v">'+esc(t.value)+'</span><span class="l">'+esc(t.label)+'</span><span class="s">'+esc(t.sub)+'</span><span class="s"><a href="'+esc(link(t.u))+'" target="_blank" rel="noopener">'+esc(t.src)+'</a></span></div>'}).join("")+'</div></section>'+
    sommaire()+etages()+
    '<details class="details sec2" id="m-details"><summary><span>Détails</span><em>Capex annoncé, revenus, dépôts SEC</em></summary>'+det+'</details>';
 }
@@ -235,6 +235,10 @@ var ETAGES=[
   [5,"Perspectives et risques","Ce qui est prévu, ce qui arrive et les risques."]
 ];
 function sommaire(){
+  var pills=[["m-e1","Compute"],["m-e2","Modèles"],["m-e3","Adoption"],["m-e4","Financement"],["m-e5","Perspectives"],["m-cal","Calendrier"],["m-actors","Acteurs"],["m-race","USA–Chine"],["m-details","Détails"]];
+  return'<nav class="toolbar frow mnav" aria-label="Sommaire du marché">'+pills.map(function(p,i){return'<button type="button" class="chip'+(i===0?' on':'')+'" data-jump="'+p[0]+'">'+esc(p[1])+'</button>'}).join("")+'</nav>';
+}
+function sommaireOld(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
    '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs</span></a></li><li><a href="#" data-jump="m-race"><b>+</b> USA–Chine<span>Qui est devant, couche par couche</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
 }
@@ -411,7 +415,7 @@ function etages(){
   return ETAGES.map(function(e){
     var pies=piesFor(function(c){return c.etage===e[0]}),cur=((S.series&&S.series.curves)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)}),
         st=((S.ind&&S.ind.stats)||[]).filter(function(c){return c.etage===e[0]}).sort(function(a,b){return(a.rank||9)-(b.rank||9)});
-    var h='<section class="etage" id="m-e'+e[0]+'"><span class="kicker">Étage '+e[0]+' sur '+ETAGES.length+'</span><h3 class="sub2">'+esc(e[1])+'</h3><p class="lede" style="margin-bottom:0">'+esc(e[2])+'</p>';
+    var h='<section class="etage" id="m-e'+e[0]+'">'+tHead(e[1],e[2].replace(/\.$/,""));
     if(e[0]===5&&S.outlook&&S.outlook.rule)h+='<div class="note"><b>Règle.</b> '+esc(S.outlook.rule)+'</div>';
     if(pies.length)h+='<div class="sgroup">Qui domine <em>parts de marché, chaque camembert est une mesure différente</em></div><div class="cards3">'+pies.map(shareCard).join("")+'</div>';
     if(st.length)h+='<div class="sgroup">Chiffres clés <em>une mesure par carte, datée et sourcée</em></div><div class="cards3">'+st.map(statCard).join("")+'</div>';
@@ -524,7 +528,7 @@ function voixDupFn(){
 }
 function rCarte(){
   var el=$("v-carte");if(!el)return;
-  if(!$("carte-host"))el.innerHTML='<h2 class="sec">Carte.</h2><p class="lede">Où se trouve la puissance de calcul de l\'IA, et où elle se construit.</p><div id="carte-host"></div>';
+  if(!$("carte-host"))el.innerHTML='<h2 class="sec">Carte</h2><p class="lede">Où se trouve la puissance de calcul de l\'IA, et où elle se construit.</p><div id="carte-host"></div>';
   carteHost();
 }
 function rInfra(){
@@ -532,7 +536,7 @@ function rInfra(){
   if(S.layerSort==="tension")L.sort(function(a,b){return(b.tension==null?-1:b.tension)-(a.tension==null?-1:a.tension)});else L.sort(function(a,b){return a.order-b.order});
   var el=$("v-infrastructure");
   if(!$("chain-host")){
-    el.innerHTML='<h2 class="sec">Infrastructure.</h2><p class="lede">Du réseau électrique à la puce : où ça coince, et à quel point.</p><div id="chain-host"></div>'+
+    el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">Du réseau électrique à la puce : où ça coince, et à quel point.</p><div id="chain-host"></div>'+
      '<details class="details"><summary>La pile en onze couches <em>vue en liste</em></summary><div id="infra-list"></div></details>';
   }
   chainHost();
@@ -689,7 +693,7 @@ function aFiche(a){
   return h;
 }
 function aTabs(on){
-  return'<div class="toolbar atabs"><a class="chip'+(on==="co"?' on':'')+'" href="#acteurs">Entreprises</a><a class="chip'+(on==="vx"?' on':'')+'" href="#acteurs/voix">Insiders</a></div>';
+  return'<span class="atabs"><a class="chip'+(on==="co"?' on':'')+'" href="#acteurs">Entreprises</a><a class="chip'+(on==="vx"?' on':'')+'" href="#acteurs/voix">Insiders</a></span><span class="fsep"></span>';
 }
 var VCATS=[["ALL","Tous"],["dirigeants","Dirigeants"],["cadres","Cadres et conseil"],["chercheurs","Chercheurs"],["pouvoirs","Pouvoirs publics"],["investisseurs","Analystes et investisseurs"]];
 function vItems(){
@@ -706,9 +710,9 @@ function vCl(){return VCATS.filter(function(c){return c[0]===(S.vc||"ALL")})[0][
 function vBtns(){
   var vo=S.vfo;
   return'<button class="chip fb'+(vo==="vue"?' open':'')+'" data-vfo="vue">Vue : '+(S.vv==="pers"?"Par personne":"Chronologique")+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button>'+
-   '<button class="chip fb'+(vo==="cat"?' open':'')+((S.vc||"ALL")!=="ALL"?' set':'')+'" data-vfo="cat">Catégorie : '+esc(vCl())+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><span class="sp"></span>'+
-   '<button class="chip'+(S.ve?' on':'')+'" data-ve="1">Essentiel seulement</button>';
+   '<button class="chip fb'+(vo==="cat"?' open':'')+((S.vc||"ALL")!=="ALL"?' set':'')+'" data-vfo="cat">Catégorie : '+esc(vCl())+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button>';
 }
+function vEss(){return'<button class="chip'+(S.ve?' on':'')+'" data-ve="1">Essentiel seulement</button>'}
 function vPanel(){
   var vc=S.vc||"ALL";
   if(S.vfo==="vue")return'<div class="fpanel"><button class="chip'+(S.vv!=="pers"?' on':'')+'" data-vv="flux">Chronologique</button><button class="chip'+(S.vv==="pers"?' on':'')+'" data-vv="pers">Par personne</button></div>';
@@ -758,20 +762,21 @@ function vList(){
 }
 function aVoix(){
   var P=(S.voix&&S.voix.people)||[];
-  var h=aTabs("vx")+'<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA, du plus récent au plus ancien (30 derniers jours). Titres de presse traduits ; seuls ceux où la personne s\'exprime sont retenus. « Essentiel » : propos repris par plusieurs médias, ou prise de parole forte d\'une voix majeure.</p>';
+  var h='<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA, du plus récent au plus ancien (30 derniers jours). Titres de presse traduits ; seuls ceux où la personne s\'exprime sont retenus. « Essentiel » : propos repris par plusieurs médias, ou prise de parole forte d\'une voix majeure.</p>';
   if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
-  return h+'<div class="toolbar frow vtool"><span id="vbtns">'+vBtns()+'</span><input id="vq" class="vsearch" type="search" placeholder="Rechercher une personne" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"></div><div id="vpanel">'+vPanel()+'</div><div id="vbody">'+vList()+'</div>';
+  return h+'<div class="toolbar frow vtool">'+aTabs("vx")+'<span id="vbtns">'+vBtns()+'</span><input id="vq" class="vsearch" type="search" placeholder="Rechercher" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"><span class="sp"></span><span id="vess">'+vEss()+'</span></div><div id="vpanel">'+vPanel()+'</div><div id="vbody">'+vList()+'</div>';
 }
 
 function rActeurs(){
   var el=$("v-acteurs");if(!el||!S.acteurs)return;
+  el.classList.toggle("essmode",S.actor==="voix"&&!!S.ve);
   if(S.actor==="voix"){el.innerHTML=aVoix();return}
   var a=S.actor&&aById(S.actor);
   if(a){el.innerHTML=aFiche(a);return}
   var blocks=aBlocks();
-  el.innerHTML=aTabs("co")+'<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients, chacun daté et sourcé. Un champ sans source reste vide.</p>'+
-   '<div class="toolbar"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">Toutes ('+S.acteurs.actors.length+')</button>'+blocks.map(function(b){return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'">'+esc(b)+'</button>'}).join("")+'</div>'+
-   '<input id="aq" class="asearch" type="search" placeholder="Rechercher un acteur" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"><div id="alist" class="agrid">'+aList()+'</div>';
+  var abl=S.ab==="ALL"?"Toutes":S.ab,apanel=S.afo?'<div class="fpanel"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">Toutes ('+S.acteurs.actors.length+')</button>'+blocks.map(function(b){return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'">'+esc(b)+'</button>'}).join("")+'</div>':'';
+  el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients, chacun daté et sourcé. Un champ sans source reste vide.</p>'+
+   '<div class="toolbar frow">'+aTabs("co")+'<button class="chip fb'+(S.afo?' open':'')+(S.ab!=="ALL"?' set':'')+'" data-afo="1">Catégorie : '+esc(abl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div>'+apanel+'<div id="alist" class="agrid">'+aList()+'</div>';
 }
 
 function renderAll(){
@@ -810,7 +815,8 @@ document.addEventListener("click",function(e){
   var vvb=e.target.closest("[data-vv]");if(vvb){S.vv=vvb.getAttribute("data-vv");S.vfo=null;vRefresh();return}
   if(e.target.closest("[data-ve]")){S.ve=!S.ve;S.vlimit=80;vRefresh();return}
   if(e.target.closest("[data-vmore]")){S.vlimit+=80;vRefresh();return}
-  var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");rActeurs();return}
+  var afo=e.target.closest("[data-afo]");if(afo){S.afo=!S.afo;rActeurs();return}
+  var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");S.afo=false;rActeurs();return}
   if(e.target.closest("[data-arv]")){S.arv=!S.arv;rActeurs();return}
   var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
   if(t.hasAttribute("data-tab"))return go(t.getAttribute("data-tab"));
@@ -823,7 +829,7 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-ls")){S.layerSort=t.getAttribute("data-ls");renderAll();return}
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
-function vRefresh(){var b=$("vbody");if(b){$("vbtns").innerHTML=vBtns();$("vpanel").innerHTML=vPanel();b.innerHTML=vList()}else rActeurs()}
+function vRefresh(){var b=$("vbody");if(b){$("v-acteurs").classList.toggle("essmode",!!S.ve);$("vess").innerHTML=vEss();$("vbtns").innerHTML=vBtns();$("vpanel").innerHTML=vPanel();b.innerHTML=vList()}else rActeurs()}
 document.addEventListener("input",function(e){if(e.target&&e.target.id==="vq"){S.vq=e.target.value;S.vlimit=80;vRefresh();return}if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 
 /* Recherche globale */
@@ -904,4 +910,16 @@ window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
 setLang(S.lang);
 show(location.hash.slice(1));
 refresh();
+})();
+(function(){
+  var tk=false;
+  function spy(){
+    tk=false;
+    var nav=document.querySelector(".mnav");if(!nav||!nav.offsetParent)return;
+    var cur=null;
+    nav.querySelectorAll("[data-jump]").forEach(function(b){var el=document.getElementById(b.getAttribute("data-jump"));if(el&&el.getBoundingClientRect().top<=160)cur=b});
+    if(!cur)cur=nav.querySelector("[data-jump]");
+    nav.querySelectorAll("[data-jump]").forEach(function(b){b.classList.toggle("on",b===cur)});
+  }
+  window.addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(spy)}},{passive:true});
 })();

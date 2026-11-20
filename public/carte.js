@@ -48,7 +48,7 @@ function country(c) { return LANG === "fr" ? (CN[c] || c) : c; }
 function safeUrl(u) { return /^https:\/\/[^\s"<>]+$/.test(u || "") ? u : ""; }
 
 
-var DC = null, FB = null, EX = { sites: [] }, ST = { layers: { dc: true, logic: true, memory: true, packaging: true, extra: true }, mode: "now", sel: null, view: { lat: 49, lon: 12, z: 1 } };
+var DC = null, FB = null, EX = { sites: [] }, ST = { layers: { dc: true, logic: false, memory: false, packaging: false, extra: false }, alert: true, mode: "now", sel: null, view: { lat: 49, lon: 12, z: 1 } };
 var EUROPE = { lat: 49, lon: 12, z: 1 }, REG = { eu: EUROPE, us: { lat: 38, lon: -96, z: 2.1 }, asia: { lat: 31, lon: 115, z: 2.1 } };
 var cv, ctx, box, tip, CW = 800, CH = 520, DPR = 1, ITEMS = [], SCR = [], raf = 0, anim = null, vel = { x: 0, y: 0 }, ptrs = {}, drag = { on: false, moved: false }, hov = null;
 var NS_CHIP = { extra: "#8E8E93", dc: "var(--dc)", logic: "var(--logic)", memory: "var(--mem)", packaging: "var(--pack)" }, FCOL = { logic: "#5E5CE6", memory: "#FF3B30", packaging: "#FF9500" };
@@ -81,7 +81,7 @@ function build() {
   ITEMS = items();
   var h = document.getElementById("app");
   h.innerHTML =
-    '<section class="tile"><div class="bar" id="lay"></div><div class="alert" id="al" role="status"><div class="alin"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FF3B30" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 4.2a2 2 0 0 1 3.4 0l7.6 13.2a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z"/><path d="M12 9.5v4"/><path d="M12 17h.01"/></svg><span><b id="alt"></b><i id="ald"></i></span><button type="button" class="alx" id="alx" aria-label="Fermer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div>' +
+    '<div class="bar" id="lay"></div><section class="tile"><div class="alert" id="al" role="status"><div class="alin"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#FF3B30" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 4.2a2 2 0 0 1 3.4 0l7.6 13.2a2 2 0 0 1-1.7 3H4.4a2 2 0 0 1-1.7-3z"/><path d="M12 9.5v4"/><path d="M12 17h.01"/></svg><span><b id="alt"></b><i id="ald"></i></span><button type="button" class="alx" id="alx" aria-label="Fermer"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div>' +
     '<div class="mapbox" id="mb"><canvas id="cv" role="img" aria-label="' + esc(t("title")) + '"></canvas><div class="tip hide" id="tp0"></div><div class="regs" id="rg"></div><div class="hintb">' + esc(t("hint")) + '</div>' +
     '<div class="zoom"><button class="zb" id="zi" aria-label="+"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button><button class="zb" id="zo" aria-label="−"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg></button></div></div>' +
     '<div class="leg" id="lg"></div></section><div class="fiche" id="fc"></div>' +
@@ -252,8 +252,8 @@ function stats() {
   document.getElementById("kp").innerHTML =
     '<div class="kpi"><b>' + nf(D.length) + "</b><span>" + t("sites") + '</span></div><div class="kpi"><b>' + pw(Math.round(mw)) + "</b><span>" + t("mw") + '</span></div><div class="kpi"><b>' + nf(h / 1e6, 1) + (LANG === "fr" ? " M" : "M") + "</b><span>" + t("h100") + '</span></div><div class="kpi"><b>' + pw(Math.round(plan)) + "</b><span>" + t("cmw") + '</span></div><div class="kpi"><b>' + FB.fabs.length + "</b><span>" + t("fabs") + "</span></div>";
   document.getElementById("h1").textContent = t("byc"); document.getElementById("h2").textContent = plan1 ? t("topPlan") : t("top");
-  document.getElementById("kpe").textContent = LANG === "fr" ? "En chiffres" : "In numbers"; document.getElementById("kpt").textContent = LANG === "fr" ? "La puissance suivie." : "The compute we track.";
-  document.getElementById("h1t").textContent = LANG === "fr" ? "Les États-Unis loin devant." : "The US far ahead."; document.getElementById("h2t").textContent = LANG === "fr" ? "Le gigawatt est franchi." : "The gigawatt is crossed.";
+  document.getElementById("kpe").textContent = LANG === "fr" ? "En chiffres" : "In numbers"; document.getElementById("kpt").textContent = LANG === "fr" ? "La puissance suivie" : "The compute we track";
+  document.getElementById("h1t").textContent = LANG === "fr" ? "Les États-Unis loin devant" : "The US far ahead"; document.getElementById("h2t").textContent = LANG === "fr" ? "Le gigawatt est franchi" : "The gigawatt is crossed";
   var cs = Object.keys(by).sort(function (a, b) { return by[b][plan1 ? "plan" : "now"] - by[a][plan1 ? "plan" : "now"]; }).slice(0, 6), mx = Math.max.apply(null, cs.map(function (c) { return by[c][plan1 ? "plan" : "now"]; })) || 1;
   document.getElementById("bc").innerHTML = cs.map(function (c) {
     var a = by[c], v = plan1 ? a.plan : a.now;

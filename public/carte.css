@@ -8,18 +8,18 @@ button{font:inherit;color:inherit;cursor:pointer}
 .kicker{display:none}
 .tile{display:flex;flex-direction:column;gap:20px;padding:24px 24px 28px;border-radius:32px;background:#fff}
 .thead{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center}
-.thead .eb{font-size:17px;font-weight:600;color:var(--accent)}
-.thead h2{font:600 clamp(28px,4vw,44px)/1.06 var(--display);letter-spacing:-.035em}
+.thead .eb{font-size:15px;font-weight:600;color:var(--accent)}
+.thead h2{font:600 clamp(24px,3vw,34px)/1.1 var(--display);letter-spacing:-.03em}
 
 /* filtres sur une ligne + Aujourd'hui / Horizon prévu */
-.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px;border-radius:30px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.05)}
 .bar .sp{flex:1}
 .chip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--pill);font-size:15px;color:var(--ink);transition:opacity .2s ease}
 .chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .chip i.k-dc{background:var(--dc)}.chip i.k-logic{background:var(--logic)}.chip i.k-memory{background:var(--mem)}.chip i.k-packaging{background:var(--pack)}
 .chip i.k-extra{background:transparent;border:1.5px dashed var(--extra)}
-.chip:not(.on){opacity:.45}
-.chip:hover{opacity:1}
+.chip:hover{background:#E5E5EA}
+.chip.on{background:var(--ink);color:#fff}.chip.on:hover{background:var(--ink)}
 .seg{display:inline-flex;padding:3px;border-radius:999px;background:var(--pill)}
 .seg button{min-height:38px;padding:0 16px;border:0;border-radius:999px;background:transparent;font-size:14px;color:var(--ink)}
 .seg button.on{background:var(--ink);color:#fff;font-weight:500}
@@ -66,13 +66,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 .kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
 .kpi{display:flex;flex-direction:column;align-items:center;gap:8px;padding:8px 12px;text-align:center}
 .kpi+.kpi{border-left:1px solid var(--hair)}
-.kpi b{font:600 clamp(28px,3.4vw,44px)/1 var(--display);letter-spacing:-.045em;white-space:nowrap}
+.kpi b{font:600 clamp(26px,3vw,38px)/1 var(--display);letter-spacing:-.045em;white-space:nowrap}
 .kpi span{font-size:15px;color:var(--ink)}
 
 /* par pays et plus gros sites */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .tile.half{padding:44px 40px 36px;gap:24px}
-.tile.half .thead h2{font-size:32px;letter-spacing:-.03em}
+.tile.half .thead h2{font-size:26px;letter-spacing:-.03em}
 h4{display:none}
 .row{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;font-size:15px;border:0;border-bottom:1px solid var(--hair);background:none;width:100%;text-align:left;font-family:var(--ui);color:var(--ink)}
 .row:last-child{border-bottom:0}
