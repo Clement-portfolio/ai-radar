@@ -6,23 +6,29 @@
 <title>What's Going On? — l'état de l'IA, en continu</title>
 <meta name="description" content="Les 10 essentiels du jour, le briefing du jour, les actualités de l'IA par pays, le marché, l'infrastructure, la carte des datacenters et la course États-Unis–Chine.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
-  <button class="logo" data-tab="une" aria-label="What's Going On? : aller à Aujourd'hui">What's Going On<span>?</span></button>
-  <nav class="nav">
+  <button class="logo" data-tab="une" aria-label="What's Going On? : aller à l'accueil">What's Going On<span>?</span></button>
+  <div class="hact">
+    <span id="status" hidden></span>
+    <button class="hbtn" id="sbtn" type="button" aria-label="Rechercher" title="Rechercher (/)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span>Recherche</span></button>
+    <button class="hbtn dark" id="mbtn" type="button" aria-expanded="false" aria-controls="mnu"><svg class="i-open" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg><svg class="i-close" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="l-open">Menu</span><span class="l-close">Fermer</span></button>
+  </div>
+</div>
+<div id="mnu" class="mnu" hidden><div class="wrap mgrid">
+  <nav class="nav" aria-label="Rubriques">
     <button class="tab" data-tab="actualites">Actualités</button>
+    <button class="tab" data-tab="acteurs/voix">Insiders</button>
     <button class="tab" data-tab="marche">Marché</button>
     <button class="tab" data-tab="infrastructure">Infrastructure</button>
     <button class="tab" data-tab="carte">Carte</button>
     <button class="tab" data-tab="acteurs">Acteurs</button>
   </nav>
-  <div class="stat"><span id="status"><span class="dot stale"></span>Chargement…</span>
-  <button class="sbtn" id="sbtn" type="button" aria-label="Rechercher" title="Rechercher (/)"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
-  <span class="lang" role="group" aria-label="Langue / Language"><button data-lang="fr">FR</button><i aria-hidden="true">|</i><button data-lang="en">EN</button></span></div>
-</div></header>
+  <div class="mside"><span class="mlab">Langue</span><span class="lang seg" role="group" aria-label="Langue / Language"><button data-lang="fr">FR</button><button data-lang="en">EN</button></span></div>
+</div></div></header>
 
 <main class="wrap">
   <section class="view" id="v-une"></section>
@@ -33,8 +39,8 @@
   <section class="view" id="v-acteurs"></section>
   <section class="view" id="v-methode"></section>
 </main>
-<footer><div class="wrap">What's Going On? · Données collectées automatiquement, classées par IA, à vérifier à la source. Ne constitue pas un conseil en investissement.</div></footer>
-<div id="sov" hidden><div class="sbk" data-sclose="1"></div><div class="spn" role="dialog" aria-label="Rechercher"><div class="sbar"><input id="sq" type="search" placeholder="Rechercher une entreprise, une personne, un sujet" aria-label="Rechercher" autocomplete="off"><button type="button" class="sx" data-sclose="1" aria-label="Fermer">Fermer</button></div><div id="sres"></div></div></div>
+<footer><div class="wrap"><span>Données collectées automatiquement, classées par IA, à vérifier à la source.</span><span>Ne constitue pas un conseil en investissement.</span></div></footer>
+<div id="sov" hidden><div class="sbk" data-sclose="1"></div><div class="spn" role="dialog" aria-label="Rechercher"><div class="wrap"><div class="sbar"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="sq" type="search" placeholder="Rechercher une actu, un acteur, un composant" aria-label="Rechercher" autocomplete="off"><button type="button" class="sx" data-sclose="1" aria-label="Fermer la recherche"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div><div id="sres"></div></div></div></div>
 <div id="ptr" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></div><div id="toast" role="status"></div>
 <script src="i18n.js"></script>
 <script src="app.js"></script>
