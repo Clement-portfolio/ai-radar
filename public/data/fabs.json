@@ -1,0 +1,550 @@
+{
+ "as_of": "2026-11-19",
+ "note": "Liste suivie à la main ; chaque fiche cite sa source. Statuts relevés dans la presse spécialisée à cette date.",
+ "fabs": [
+  {
+   "id": "tsmc-fab20",
+   "name": "TSMC Fab 20 (Hsinchu, Baoshan)",
+   "co": "TSMC",
+   "kind": "logic",
+   "cc": "TW",
+   "status": "ramp",
+   "fr": "Gravure 2 nm : en production depuis fin 2025, capacité attendue de 20 000 à 25 000 plaquettes par mois. Les tranches P3 et P4 (au-delà de 2 nm) sont en génie civil.",
+   "en": "2 nm: in production since late 2025, expected capacity of 20,000–25,000 wafers a month. Phases P3 and P4 (beyond 2 nm) are in civil works.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=53472"
+   },
+   "lat": 24.7847,
+   "lon": 121.002
+  },
+  {
+   "id": "tsmc-fab22",
+   "name": "TSMC Fab 22 (Kaohsiung)",
+   "co": "TSMC",
+   "kind": "logic",
+   "cc": "TW",
+   "status": "ramp",
+   "fr": "2 nm / A16 : la phase 1 monte en cadence, les phases 2 et 3 sont équipées et doivent monter en cadence au second semestre 2026.",
+   "en": "2 nm / A16: phase 1 is ramping; phases 2 and 3 are equipped and due to ramp in the second half of 2026.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/tech-industry/semiconductors/analyzing-tsmcs-fab-expansion-roadmap-multi-fab-n2-ramp-cowos-soic-and-uncorking-bottlenecks"
+   },
+   "lat": 22.7283,
+   "lon": 120.3262
+  },
+  {
+   "id": "tsmc-fab25",
+   "name": "TSMC Fab 25 (Taichung)",
+   "co": "TSMC",
+   "kind": "logic",
+   "cc": "TW",
+   "status": "build",
+   "fr": "Futur pôle 1,4 nm (A14), quatre usines prévues. Pieux posés fin 2025, production à risque attendue fin 2027 selon la presse taïwanaise.",
+   "en": "Planned 1.4 nm (A14) hub, four fabs planned. Piling began in late 2025, risk production expected by late 2027 per Taiwanese press.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=53472"
+   },
+   "lat": 24.2089,
+   "lon": 120.6178
+  },
+  {
+   "id": "tsmc-ap7",
+   "name": "TSMC AP7 (Chiayi) — packaging avancé",
+   "co": "TSMC",
+   "kind": "packaging",
+   "cc": "TW",
+   "status": "build",
+   "fr": "Nouveau grand site d'assemblage avancé de TSMC (WMCM, SoIC, CoPoS). Cérémonie d'ouverture le 4 déc. 2025 ; production de la phase 2 attendue en 2026, de la phase 1 en 2027.",
+   "en": "New large advanced-packaging site for TSMC (WMCM, SoIC, CoPoS). Opening ceremony on 4 Dec 2025; phase 2 output expected in 2026, phase 1 in 2027.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/2025/12/04/news-tsmc-speeds-advanced-packaging-ap7-targets-2026-output-arizona-p6-eyed-for-u-s-packaging-hub/"
+   },
+   "lat": 23.4592,
+   "lon": 120.293
+  },
+  {
+   "id": "tsmc-fab21",
+   "name": "TSMC Arizona — Fab 21 (Phoenix)",
+   "co": "TSMC",
+   "kind": "logic",
+   "cc": "US",
+   "status": "ramp",
+   "fr": "Phase 1 (4/5 nm) en production ; phase 2 (3 nm) en cours d'équipement ; phases 3 et 4 (2 nm / A16) en construction.",
+   "en": "Phase 1 (4/5 nm) in production; phase 2 (3 nm) being equipped; phases 3 and 4 (2 nm / A16) under construction.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/tech-industry/semiconductors/analyzing-tsmcs-fab-expansion-roadmap-multi-fab-n2-ramp-cowos-soic-and-uncorking-bottlenecks"
+   },
+   "lat": 33.7759,
+   "lon": -112.1606
+  },
+  {
+   "id": "tsmc-jasm",
+   "name": "JASM — TSMC Kumamoto",
+   "co": "TSMC",
+   "kind": "logic",
+   "cc": "JP",
+   "status": "ramp",
+   "fr": "Fab 1 (12–28 nm, automobile et industrie) en production depuis fin 2024. Fab 2 : le projet est passé de 6 nm à 3 nm en février 2026 ; calendrier incertain.",
+   "en": "Fab 1 (12–28 nm, automotive and industrial) producing since late 2024. Fab 2: plan moved from 6 nm to 3 nm in February 2026; timing uncertain.",
+   "src": {
+    "t": "Focus Taiwan (CNA)",
+    "u": "https://focustaiwan.tw/business/202605160005"
+   },
+   "lat": 32.8626,
+   "lon": 130.8284
+  },
+  {
+   "id": "tsmc-esmc",
+   "name": "ESMC — TSMC Dresde",
+   "co": "TSMC",
+   "kind": "logic",
+   "cc": "DE",
+   "status": "build",
+   "fr": "Usine de gravures matures (12–28 nm) en construction depuis août 2024.",
+   "en": "Mature-node fab (12–28 nm) under construction since August 2024.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/tech-industry/semiconductors/analyzing-tsmcs-fab-expansion-roadmap-multi-fab-n2-ramp-cowos-soic-and-uncorking-bottlenecks"
+   },
+   "lat": 51.0493,
+   "lon": 13.7381
+  },
+  {
+   "id": "samsung-pyeongtaek",
+   "name": "Samsung Pyeongtaek (P1–P5)",
+   "co": "Samsung",
+   "kind": "memory",
+   "cc": "KR",
+   "status": "ramp",
+   "fr": "Plus grand site de production de Samsung. P4 doit atteindre sa pleine exploitation d'ici fin 2026 (HBM4) ; P5, dernier module prévu, est en construction.",
+   "en": "Samsung's largest production base. P4 is due to reach full operation by end-2026 (HBM4); P5, the last planned module, is under construction.",
+   "src": {
+    "t": "DigiTimes",
+    "u": "https://www.digitimes.com/news/a20260428VL209.html"
+   },
+   "lat": 36.9925,
+   "lon": 127.1127
+  },
+  {
+   "id": "samsung-taylor",
+   "name": "Samsung Taylor (Texas)",
+   "co": "Samsung",
+   "kind": "logic",
+   "cc": "US",
+   "status": "build",
+   "fr": "Fab 1 : équipements installés depuis avril 2026 ; client annoncé Tesla (puce AI6, contrat de 16,5 Md$). Fab 2 : mise en chantier annoncée d'ici fin 2026.",
+   "en": "Fab 1: tool move-in since April 2026; Tesla announced as customer (AI6 chip, $16.5bn contract). Fab 2: groundbreaking announced by end-2026.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/uk/tech-industry/samsungs-fab-roadmap-examined"
+   },
+   "lat": 30.5729,
+   "lon": -97.4141
+  },
+  {
+   "id": "sk-m15x",
+   "name": "SK hynix M15X (Cheongju) — HBM",
+   "co": "SK hynix",
+   "kind": "memory",
+   "cc": "KR",
+   "status": "build",
+   "fr": "Nouvelle usine de mémoire pour HBM à Cheongju ; installation des équipements engagée en 2026.",
+   "en": "New HBM memory fab in Cheongju; tool installation under way in 2026.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=56384"
+   },
+   "lat": 36.6421,
+   "lon": 127.4892
+  },
+  {
+   "id": "sk-pt7",
+   "name": "SK hynix P&T7 (Cheongju) — assemblage",
+   "co": "SK hynix",
+   "kind": "packaging",
+   "cc": "KR",
+   "status": "build",
+   "fr": "Usine d'assemblage avancé dédiée à la mémoire IA (HBM), chantier lancé en avril 2026 ; montée en cadence visée en 2028.",
+   "en": "Advanced-packaging fab dedicated to AI memory (HBM), broke ground in April 2026; ramp targeted for 2028.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=56412"
+   },
+   "lat": 36.6421,
+   "lon": 127.4892
+  },
+  {
+   "id": "sk-yongin",
+   "name": "SK hynix Yongin (cluster)",
+   "co": "SK hynix",
+   "kind": "memory",
+   "cc": "KR",
+   "status": "build",
+   "fr": "Première usine : salle blanche prévue en février 2027. Une 2e usine DRAM (Y2) a été approuvée en août 2026 (35,2 mille milliards de wons).",
+   "en": "First fab: cleanroom due February 2027. A second DRAM fab (Y2) was approved in August 2026 (KRW 35.2 trillion).",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=56384"
+   },
+   "lat": 37.2406,
+   "lon": 127.1786
+  },
+  {
+   "id": "sk-indiana",
+   "name": "SK hynix West Lafayette (Indiana) — assemblage",
+   "co": "SK hynix",
+   "kind": "packaging",
+   "cc": "US",
+   "status": "build",
+   "fr": "Première usine américaine de SK hynix : assemblage avancé de HBM et R&D. Pose de la première pierre le 27 août 2026 ; production visée au second semestre 2028.",
+   "en": "SK hynix's first US plant: advanced HBM packaging and R&D. Groundbreaking on 27 August 2026; production targeted for 2H 2028.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/2026/04/22/news-sk-hynix-reportedly-breaks-ground-on-first-u-s-advanced-packaging-plant-in-indiana-eyes-2h28-production/"
+   },
+   "lat": 40.4259,
+   "lon": -86.9081
+  },
+  {
+   "id": "micron-boise",
+   "name": "Micron Boise (Idaho)",
+   "co": "Micron",
+   "kind": "memory",
+   "cc": "US",
+   "status": "build",
+   "fr": "Fab ID1 : production de DRAM prévue en 2027. Une 2e usine (ID2) doit ouvrir avant celles de New York.",
+   "en": "Fab ID1: DRAM production set for 2027. A second fab (ID2) is due to open ahead of the New York sites.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=51306"
+   },
+   "lat": 43.6166,
+   "lon": -116.2009
+  },
+  {
+   "id": "micron-clay",
+   "name": "Micron Clay (New York)",
+   "co": "Micron",
+   "kind": "memory",
+   "cc": "US",
+   "status": "build",
+   "fr": "Méga-complexe de DRAM pouvant compter jusqu'à quatre usines ; chantier lancé début 2026, montée en puissance sur plusieurs années.",
+   "en": "DRAM megafab complex of up to four fabs; construction started in early 2026, with a build-out spread over many years.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/pc-components/dram/micron-to-begin-work-on-usd100-billion-new-york-megafab-imminently-landmark-site-to-produce-40-percent-of-companys-overall-dram-output-in-the-u-s-by-the-2040s"
+   },
+   "lat": 43.1866,
+   "lon": -76.2065
+  },
+  {
+   "id": "micron-hiroshima",
+   "name": "Micron Hiroshima",
+   "co": "Micron",
+   "kind": "memory",
+   "cc": "JP",
+   "status": "build",
+   "fr": "Extension de 9,3 Md$ lancée en 2026 ; livraisons de HBM visées vers 2028.",
+   "en": "$9.3bn expansion started in 2026; HBM shipments targeted around 2028.",
+   "src": {
+    "t": "Industrial Info",
+    "u": "https://www.industrialinfo.com/news/article/micron-begins-us93-billion-japan-semiconductor-fab-expansion--359843"
+   },
+   "lat": 34.4272,
+   "lon": 132.7416
+  },
+  {
+   "id": "micron-singapore",
+   "name": "Micron Singapour",
+   "co": "Micron",
+   "kind": "memory",
+   "cc": "SG",
+   "status": "build",
+   "fr": "Nouvelle usine de NAND (environ 24 Md$ sur dix ans) et usine d'assemblage de HBM en construction.",
+   "en": "New NAND fab (about $24bn over ten years) and an HBM packaging plant under construction.",
+   "src": {
+    "t": "Dempa / AEI",
+    "u": "https://aei.dempa.net/archives/34553"
+   },
+   "lat": 1.4369,
+   "lon": 103.7862
+  },
+  {
+   "id": "intel-fab52",
+   "name": "Intel Fab 52 / Fab 62 (Chandler, Arizona)",
+   "co": "Intel",
+   "kind": "logic",
+   "cc": "US",
+   "status": "ramp",
+   "fr": "Fab 52 (Intel 18A) en production depuis octobre 2025 ; rendements attendus au niveau standard début 2027. Fab 62 prévue vers 2028.",
+   "en": "Fab 52 (Intel 18A) ramping since October 2025; yields expected at industry-standard levels in early 2027. Fab 62 expected around 2028.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/tech-industry/semiconductors/intels-fab-roadmap-examined"
+   },
+   "lat": 33.3062,
+   "lon": -111.8412
+  },
+  {
+   "id": "intel-ohio",
+   "name": "Intel Ohio One (New Albany)",
+   "co": "Intel",
+   "kind": "logic",
+   "cc": "US",
+   "status": "build",
+   "fr": "En construction ; mise en service de la première usine attendue en 2030–2031 (14 A et suivants).",
+   "en": "Under construction; first fab expected to start operating in 2030–2031 (14A and later nodes).",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/tech-industry/semiconductors/intels-fab-roadmap-examined"
+   },
+   "lat": 40.0812,
+   "lon": -82.8088
+  },
+  {
+   "id": "rapidus-iim1",
+   "name": "Rapidus IIM-1 (Chitose)",
+   "co": "Rapidus",
+   "kind": "logic",
+   "cc": "JP",
+   "status": "build",
+   "fr": "Ligne pilote 2 nm ouverte en avril 2025 ; production de masse visée en 2027, sans client de gros volume confirmé à ce jour.",
+   "en": "2 nm pilot line opened in April 2025; mass production targeted for 2027, with no high-volume customer yet confirmed.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/tech-industry/semiconductors/rapidus-fab-roadmap-examined"
+   },
+   "lat": 42.8209,
+   "lon": 141.651
+  },
+  {
+   "id": "cxmt-hefei",
+   "name": "CXMT Hefei",
+   "co": "CXMT",
+   "kind": "memory",
+   "cc": "CN",
+   "status": "ramp",
+   "fr": "Premier fabricant chinois de DRAM ; ses sites de Hefei et Pékin tournent à pleine capacité.",
+   "en": "China's leading DRAM maker; its Hefei and Beijing plants run at full capacity.",
+   "src": {
+    "t": "Tom's Hardware",
+    "u": "https://www.tomshardware.com/pc-components/dram/chinas-cxmt-and-ymtc-to-expand-memory-output"
+   },
+   "lat": 31.8666,
+   "lon": 117.2814
+  },
+  {
+   "id": "cxmt-shanghai",
+   "name": "CXMT Shanghai (extension)",
+   "co": "CXMT",
+   "kind": "memory",
+   "cc": "CN",
+   "status": "plan",
+   "fr": "Nouvelle usine de DRAM, annoncée de 2 à 3 fois plus grande que Hefei ; équipement au second semestre 2026, production en 2027 (sources de Nikkei Asia).",
+   "en": "New DRAM plant reported at two to three times Hefei's size; tools in 2H 2026, production in 2027 (Nikkei Asia sources).",
+   "src": {
+    "t": "KrASIA / Nikkei Asia",
+    "u": "https://kr-asia.com/chinas-cxmt-and-ymtc-to-massively-expand-memory-output-amid-global-crunch"
+   },
+   "lat": 31.2313,
+   "lon": 121.47
+  },
+  {
+   "id": "ymtc-wuhan",
+   "name": "YMTC Wuhan",
+   "co": "YMTC",
+   "kind": "memory",
+   "cc": "CN",
+   "status": "ramp",
+   "fr": "Deux usines de NAND d'une capacité cumulée de 160 000 plaquettes par mois fin 2024 (Reuters, via TrendForce).",
+   "en": "Two NAND fabs with combined capacity of 160,000 wafers a month at end-2024 (Reuters via TrendForce).",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=46028"
+   },
+   "lat": 30.5789,
+   "lon": 114.2921
+  },
+  {
+   "id": "smic-lingang",
+   "name": "SMIC Lingang (Shanghai)",
+   "co": "SMIC",
+   "kind": "logic",
+   "cc": "CN",
+   "status": "ramp",
+   "lat": 30.877,
+   "lon": 121.9002,
+   "fr": "Fab 12 pouces de Lingang décrite en activité en juin 2026, avec de la lithographie DUV à immersion (ASML NXT:2050i), sans EUV. Source sectorielle secondaire : confiance moyenne.",
+   "en": "SMIC's 12-inch Lingang fab is described as running in June 2026, using immersion DUV lithography (ASML NXT:2050i), no EUV. Secondary industry source: medium confidence.",
+   "src": {
+    "t": "Faxiangongchang",
+    "u": "https://faxiangongchang.com/en/reports/china-wafer-foundry-2026"
+   }
+  },
+  {
+   "id": "smic-north",
+   "name": "SMIC North (Pékin, Yizhuang)",
+   "co": "SMIC",
+   "kind": "logic",
+   "cc": "CN",
+   "status": "ramp",
+   "lat": 39.7989,
+   "lon": 116.4759,
+   "fr": "Fab 12 pouces fondée en 2013 à Yizhuang, base de production de SMIC dans le nord de la Chine : logique, radiofréquence, haute tension et mémoire non volatile embarquée.",
+   "en": "12-inch fab founded in 2013 in Yizhuang, SMIC's main production base in northern China: logic, RF, high-voltage and embedded non-volatile memory.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/2026/01/08/news-chinas-wafer-foundry-expansion-accelerates/"
+   }
+  },
+  {
+   "id": "umc-12i",
+   "name": "UMC Fab 12i (Singapour)",
+   "co": "UMC",
+   "kind": "logic",
+   "cc": "SG",
+   "status": "ramp",
+   "lat": 1.3888,
+   "lon": 103.9287,
+   "fr": "Extension phase 3 (5 Md$, 22 et 28 nm, 30 000 plaquettes par mois) : début de production annoncé pour 2026, pour une capacité du site supérieure à 1 million de plaquettes 12 pouces par an.",
+   "en": "Phase 3 expansion (US$5 bn, 22 and 28 nm, 30,000 wafers a month): production slated to start in 2026, taking the site above 1 million 12-inch wafers a year.",
+   "src": {
+    "t": "Digitimes",
+    "u": "https://www.digitimes.com/news/a20250401PD231.html"
+   }
+  },
+  {
+   "id": "gf-malta",
+   "name": "GlobalFoundries Fab 8 (Malta, New York)",
+   "co": "GlobalFoundries",
+   "kind": "logic",
+   "cc": "US",
+   "status": "ramp",
+   "lat": 42.9685,
+   "lon": -73.7544,
+   "fr": "Plan de plus de 11,6 Md$ sur dix ans : extension de la Fab 8 et nouvelle usine de 358 000 pieds carrés pour tripler la capacité du campus (construction prévue à partir de 2025).",
+   "en": "Plan of more than US$11.6 bn over ten years: expansion of Fab 8 plus a new 358,000 sq ft plant to triple the campus's capacity (construction scheduled from 2025).",
+   "src": {
+    "t": "Area Development",
+    "u": "https://www.areadevelopment.com/newsitems/2-21-2024/globalfoundries-malta-new-york.shtml"
+   }
+  },
+  {
+   "id": "huahong-wuxi",
+   "name": "Hua Hong Fab 9 (Wuxi)",
+   "co": "Hua Hong",
+   "kind": "logic",
+   "cc": "CN",
+   "status": "ramp",
+   "lat": 31.5116,
+   "lon": 120.3686,
+   "fr": "Fab 9A : pleine montée en charge attendue au 3e trimestre 2026 ; Fab 9B commence sa montée en 2027 (résumé des résultats du 2e trimestre 2026).",
+   "en": "Fab 9A: full ramp-up expected in Q3 2026; Fab 9B starts ramping in 2027 (Q2 2026 results summary).",
+   "src": {
+    "t": "Quartr",
+    "u": "https://quartr.com/events/hua-hong-semiconductor-limited-1347-q2-2026_FgI1oHsE"
+   }
+  },
+  {
+   "id": "tower-uozu",
+   "name": "Tower / TPSCo Uozu (Japon)",
+   "co": "Tower",
+   "kind": "logic",
+   "cc": "JP",
+   "status": "ramp",
+   "lat": 36.8171,
+   "lon": 137.4183,
+   "fr": "Investissement d'environ 3 Md$ au Japon, hors 1 Md$ de subventions : Arai converti en photonique silicium 300 mm, production accrue à la Fab 7 d'Uozu.",
+   "en": "About US$3 bn invested in Japan, net of US$1 bn in grants: Arai converted to 300 mm silicon photonics, higher output at the Uozu Fab 7.",
+   "src": {
+    "t": "Calcalist",
+    "u": "https://www.calcalistech.com/ctechnews/article/hzf5eamfc"
+   }
+  },
+  {
+   "id": "vsmc-tampines",
+   "name": "VSMC (Singapour, Tampines)",
+   "co": "VIS / NXP",
+   "kind": "logic",
+   "cc": "SG",
+   "status": "build",
+   "lat": 1.3754,
+   "lon": 103.9262,
+   "fr": "Inaugurée le 28 septembre 2026, en production à risque ; production en volume prévue au 1er trimestre 2027, environ 44 000 plaquettes par mois en 2029 (130 à 40 nm).",
+   "en": "Opened on 28 September 2026, in risk production; volume production scheduled for Q1 2027, about 44,000 wafers a month by 2029 (130 to 40 nm).",
+   "src": {
+    "t": "AnySilicon",
+    "u": "https://anysilicon.com/news/vsmc-opens-new-300mm-fab-in-singapore-as-mature-node-chips-gain-strategic-importance/"
+   }
+  },
+  {
+   "id": "nexchip-hefei",
+   "name": "Nexchip (Hefei)",
+   "co": "Nexchip",
+   "kind": "logic",
+   "cc": "CN",
+   "status": "ramp",
+   "lat": 31.9421,
+   "lon": 117.3718,
+   "fr": "Fin 2025 : capacité conçue de 137 900 plaquettes 12 pouces par mois, production de 139 000, taux d'utilisation de 100,8 %.",
+   "en": "End-2025: designed capacity of 137,900 12-inch wafers a month, output of 139,000, utilisation of 100.8%.",
+   "src": {
+    "t": "Tiger Brokers",
+    "u": "https://www.itiger.com/news/1142496251"
+   }
+  },
+  {
+   "id": "psmc-hsinchu",
+   "name": "PSMC (Hsinchu, Zhunan)",
+   "co": "PSMC",
+   "kind": "logic",
+   "cc": "TW",
+   "status": "ramp",
+   "lat": 24.779,
+   "lon": 120.99,
+   "fr": "Usines à Hsinchu et Zhunan, de 35 000 à 75 000 plaquettes par mois selon le site ; part de marché de 71 % sur la mémoire spécialisée (DRAM de 1 Gb ou moins), selon la société.",
+   "en": "Fabs in Hsinchu and Zhunan, 35,000 to 75,000 wafers a month depending on the site; 71% share of specialty memory foundry (DRAM of 1 Gb or less), per the company.",
+   "src": {
+    "t": "Quartr",
+    "u": "https://quartr.com/events/powerchip-semiconductor-manufacturing-corp-6770-company-presentation_FLNPd7Nu"
+   }
+  },
+  {
+   "id": "micron-tongluo",
+   "name": "Micron Tongluo (ex-PSMC P5)",
+   "co": "Micron",
+   "kind": "memory",
+   "cc": "TW",
+   "status": "build",
+   "lat": 24.487,
+   "lon": 120.7879,
+   "fr": "Usine de Tongluo vendue par PSMC à Micron (environ 1,8 Md$ annoncés) ; TrendForce rapporte en juillet 2026 que Micron a finalisé le rachat.",
+   "en": "Tongluo fab sold by PSMC to Micron (about US$1.8 bn announced); TrendForce reported in July 2026 that Micron had completed the purchase.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/?p=60836"
+   }
+  },
+  {
+   "id": "nanya-5a",
+   "name": "Nanya Fab 5A (New Taipei, Taishan)",
+   "co": "Nanya",
+   "kind": "memory",
+   "cc": "TW",
+   "status": "build",
+   "lat": 25.0589,
+   "lon": 121.4308,
+   "fr": "Investissement 2026-2029 plafonné à 346,6 Md NT$ (environ 10,7 Md$), DRAM de classe 10 nm avec EUV ; début des plaquettes au 2e semestre 2027, 30 000 par mois en 2028, 35 900 en 2029.",
+   "en": "2026–2029 investment capped at NT$346.6 bn (about US$10.7 bn), 10nm-class DRAM with EUV; wafer starts in 2H 2027, 30,000 a month in 2028, 35,900 in 2029.",
+   "src": {
+    "t": "TrendForce",
+    "u": "https://www.trendforce.com/news/2026/08/06/news-nanya-unveils-up-to-us10-7b-fab-5a-investment-plan-through-2029-targets-10nm-class-dram-with-euv/"
+   }
+  }
+ ]
+}

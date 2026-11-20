@@ -16,6 +16,7 @@ import { collectSec, SEC_ACTORS } from "./sec.mjs";
 import { buildActeurs } from "./acteurs.mjs";
 import { collectVoix, translateVoix, hotVoix, annotateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { collectShares } from "./shares.mjs";
+import { collectDatacenters } from "./datacenters.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
 import { updateChain } from "./chainauto.mjs";
 import { compileWatchlist, watchJobs, watchCandidateOk, buildWatch } from "./watch.mjs";
@@ -677,6 +678,15 @@ export async function run(opts = {}) {
   } catch (e) { voix.summary.reason = String(e.message || e).slice(0, 120); }
   log(`Voix : ${voix.summary.total} déclaration(s), ${voix.summary.added} nouvelle(s)${voix.summary.reason ? " — " + voix.summary.reason : ""}`);
 
+  // carte des datacenters (Epoch AI, CC BY 4.0) : une panne de la source garde la carte précédente
+  const dcPrev = await readJson("datacenters.json", null);
+  let dcRes = { doc: null, summary: { reason: "erreur" } };
+  try {
+    const seed = JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "geo-seed.json"), "utf8"));
+    dcRes = await collectDatacenters({ fetchImpl, prev: dcPrev, seed, now: nowMs, log, ...(opts.sleep ? { sleep: opts.sleep } : {}) });
+  } catch (e) { dcRes.summary.reason = String(e.message || e).slice(0, 120); }
+  log(`Datacenters : ${dcRes.doc ? dcRes.summary.sites + " site(s) localisé(s), " + dcRes.summary.unplaced + " sans coordonnées" : "carte précédente gardée — " + dcRes.summary.reason}`);
+
   // textes des pages de données en anglais (public/data/en.json) : par lots, ne bloque jamais la collecte
   const enPrev = await readJson("en.json", {});
   let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
@@ -696,7 +706,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, voix: voix.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, voix: voix.summary, datacenters: dcRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -713,6 +723,7 @@ export async function run(opts = {}) {
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (secAct.doc && JSON.stringify(secAct.doc) !== JSON.stringify(secActPrev)) await fs.writeFile(path.join(dataDir, "sec-acteurs.json"), JSON.stringify(secAct.doc, null, 1));
     if (voix.doc && JSON.stringify({ ...voix.doc, generated_at: 0 }) !== JSON.stringify({ ...(voixPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "voix.json"), JSON.stringify(voix.doc, null, 1));
+    if (dcRes.doc && JSON.stringify({ ...dcRes.doc, generated_at: 0 }) !== JSON.stringify({ ...(dcPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "datacenters.json"), JSON.stringify(dcRes.doc));
     if (acteurs && JSON.stringify({ ...acteurs, generated_at: 0 }) !== JSON.stringify({ ...(actPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "acteurs.json"), JSON.stringify(acteurs));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));
     if (evoRes.doc && JSON.stringify(evoRes.doc) !== JSON.stringify(seriesPrev)) await fs.writeFile(path.join(dataDir, "series.json"), fmtSeries(evoRes.doc));

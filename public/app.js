@@ -3,7 +3,7 @@
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
-var TABS=["une","actualites","marche","infrastructure","acteurs","methode"];
+var TABS=["une","actualites","marche","infrastructure","carte","acteurs","methode"];
 var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",arv:false};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
@@ -470,9 +470,22 @@ function chainLang(){
   if(!chainFrame)return;
   try{var w=chainFrame.contentWindow;if(w&&w.ChainFrame)w.ChainFrame.setLang(S.lang)}catch(e){}
 }
+var carteFrame=null;
+function carteHost(){
+  var h=$("carte-host");if(!h)return;
+  if(!carteFrame){
+    carteFrame=document.createElement("iframe");carteFrame.id="carte-frame";carteFrame.src="carte.html?lang="+S.lang;carteFrame.title="Carte du monde des datacenters et des usines de puces";carteFrame.setAttribute("scrolling","no");carteFrame.setAttribute("loading","lazy");carteFrame.style.height="1200px";
+    h.appendChild(carteFrame);
+  }
+}
+function carteLang(){
+  if(!carteFrame)return;
+  try{var w=carteFrame.contentWindow;if(w&&w.CarteFrame)w.CarteFrame.setLang(S.lang)}catch(e){}
+}
 window.addEventListener("message",function(e){
-  if(e.origin!==location.origin||!e.data||typeof e.data.chainH!=="number"||!chainFrame)return;
-  var h=Math.max(300,Math.min(4000,e.data.chainH));chainFrame.style.height=h+"px";
+  if(e.origin!==location.origin||!e.data)return;
+  if(typeof e.data.chainH==="number"&&chainFrame){var h=Math.max(300,Math.min(4000,e.data.chainH));chainFrame.style.height=h+"px"}
+  if(typeof e.data.carteH==="number"&&carteFrame){var k=Math.max(300,Math.min(4000,e.data.carteH));carteFrame.style.height=k+"px"}
 });
 /* Liens entre Infrastructure, Acteurs et Insiders */
 var ALIAS={google:"alphabet"};
@@ -497,6 +510,11 @@ function voixDupFn(){
       if(inter/(na+nb-inter)>=0.6)return true}
     return false;
   };
+}
+function rCarte(){
+  var el=$("v-carte");if(!el)return;
+  if(!$("carte-host"))el.innerHTML='<h2 class="sec">Où est la puissance de calcul</h2><p class="lede">Les datacenters d\'IA et les usines de puces et de mémoire sur une carte du monde. Cliquez un site pour voir qui l\'exploite, sa puissance et ce qui arrive ensuite.</p><div id="carte-host"></div>';
+  carteHost();
 }
 function rInfra(){
   var L=S.layers.layers.slice();
@@ -747,7 +765,7 @@ function rActeurs(){
 
 function renderAll(){
   if(!S.market)return;
-  rUne();rFeed();rMarket();rInfra();rActeurs();rMethod();
+  rUne();rFeed();rMarket();rInfra();rCarte();rActeurs();rMethod();
 }
 function show(tab){
   var parts=String(tab||"").split("/");tab=parts[0];var toRace=tab==="usa-chine";if(toRace)tab="marche";
@@ -767,7 +785,7 @@ function go(tab){if(location.hash!=="#"+tab)location.hash=tab;else show(tab)}
 function setLang(l){
   S.lang=l==="en"?"en":"fr";
   try{localStorage.setItem("lang",S.lang)}catch(e){}
-  if(window.I18N)I18N.set(S.lang);chainLang();
+  if(window.I18N)I18N.set(S.lang);chainLang();carteLang();
   [].forEach.call(document.querySelectorAll("[data-lang]"),function(b){b.classList.toggle("on",b.getAttribute("data-lang")===S.lang)});
   if(S.market){freshness();renderAll()}
 }

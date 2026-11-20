@@ -431,7 +431,7 @@ html{overscroll-behavior-y:contain}
 
 .lmain{display:flex;flex-direction:column;gap:3px;min-width:0}.lstat{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:1060px){.lstat{white-space:normal}}
-#chain-frame{width:100%;border:0;display:block;background:transparent}
+#chain-frame,#carte-frame{width:100%;border:0;display:block;background:transparent}
 #v-infrastructure .details{margin-top:32px}
 
 /* Une : chiffres clés sous le briefing, même carte que le Marché */

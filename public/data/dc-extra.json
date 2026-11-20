@@ -1,0 +1,378 @@
+{
+ "as_of": "2026-11-20",
+ "note": "Sites et zones annoncés, relevés à la main dans la presse (un lien par fiche). Hors base Epoch et hors totaux : ce sont surtout des capacités annoncées, pas de la puissance en service.",
+ "sites": [
+  {
+   "id": "humain-riyadh",
+   "name": "Humain Riyadh",
+   "co": "Humain (fonds PIF)",
+   "cc": "SA",
+   "kind": "site",
+   "status": "build",
+   "mw": 100,
+   "lat": 24.6389,
+   "lon": 46.716,
+   "prec": "commune",
+   "fr": "Premier datacenter de Humain, société d'IA du fonds souverain saoudien. Capacité initiale annoncée : jusqu'à 100 MW, mise en service prévue au 2e trimestre 2026 (annonce d'août 2025). Je n'ai pas trouvé de confirmation de mise en service.",
+   "en": "First data center of Humain, the Saudi sovereign-fund AI company. Announced initial capacity: up to 100 MW, launch planned for Q2 2026 (August 2025 announcement). I found no confirmation that it is live.",
+   "src": {
+    "t": "RCR Wireless (d'après Bloomberg)",
+    "u": "https://www.rcrwireless.com/20250826/ai-infrastructure/humain-dcs"
+   }
+  },
+  {
+   "id": "humain-dammam",
+   "name": "Humain Dammam",
+   "co": "Humain (fonds PIF)",
+   "cc": "SA",
+   "kind": "site",
+   "status": "build",
+   "mw": 100,
+   "lat": 26.4368,
+   "lon": 50.104,
+   "prec": "commune",
+   "fr": "Second datacenter de Humain, dans la province de l'Est. Capacité initiale annoncée : jusqu'à 100 MW, mise en service prévue au 2e trimestre 2026 (annonce d'août 2025). Je n'ai pas trouvé de confirmation de mise en service.",
+   "en": "Second Humain data center, in the Eastern Province. Announced initial capacity: up to 100 MW, launch planned for Q2 2026 (August 2025 announcement). I found no confirmation that it is live.",
+   "src": {
+    "t": "RCR Wireless (d'après Bloomberg)",
+    "u": "https://www.rcrwireless.com/20250826/ai-infrastructure/humain-dcs"
+   }
+  },
+  {
+   "id": "paris-ai-campus",
+   "name": "Campus IA de Paris",
+   "co": "MGX, Bpifrance, Mistral AI, Nvidia",
+   "cc": "FR",
+   "kind": "site",
+   "status": "plan",
+   "mw": 1400,
+   "lat": 48.8589,
+   "lon": 2.32,
+   "prec": "zone",
+   "fr": "Campus d'IA visant jusqu'à 1,4 GW, porté par une coentreprise de MGX, Bpifrance, Mistral AI et Nvidia ; EDF et RTE sont parmi les partenaires d'infrastructure. La source ne précise pas le site : le point est placé sur Paris, à titre indicatif.",
+   "en": "AI campus targeting up to 1.4 GW, developed by a joint venture of MGX, Bpifrance, Mistral AI and Nvidia; EDF and RTE are among the infrastructure partners. The source does not give the exact site: the dot is placed on Paris for reference.",
+   "src": {
+    "t": "Channel Insider",
+    "u": "https://www.channelinsider.com/ai/news-europe-biggest-ai-data-centers-power-emea-france/"
+   }
+  },
+  {
+   "id": "google-vizag",
+   "name": "Google — hub IA de Visakhapatnam",
+   "co": "Google (avec AdaniConneX et Airtel)",
+   "cc": "IN",
+   "kind": "site",
+   "status": "build",
+   "mw": 1000,
+   "lat": 17.4655,
+   "lon": 82.9286,
+   "prec": "commune",
+   "fr": "Investissement annoncé de 15 Md$ sur 2026-2030 : un campus d'1 GW sur 600 acres, réparti sur trois sites (Rambilli, Adavivaram, Tarluvada). Le chantier a été lancé. Point placé sur Rambilli.",
+   "en": "Announced $15bn investment over 2026–2030: a 1 GW campus on 600 acres across three locations (Rambilli, Adavivaram, Tarluvada). Construction has started. Dot placed on Rambilli.",
+   "src": {
+    "t": "Nifty Trader",
+    "u": "https://www.niftytrader.in/markets/?p=25143"
+   }
+  },
+  {
+   "id": "reliance-vizag",
+   "name": "Reliance — cluster de Visakhapatnam",
+   "co": "Reliance Industries",
+   "cc": "IN",
+   "kind": "site",
+   "status": "plan",
+   "mw": 1500,
+   "lat": 18.0321,
+   "lon": 83.4978,
+   "prec": "commune",
+   "fr": "Cluster de 1,5 GW, pour environ 1,6 lakh crore de roupies (plus de 17 Md$), d'après un article de l'Economic Times repris par Outlook Business ; en trois phases près du futur aéroport de Bhogapuram. Projet annoncé.",
+   "en": "1.5 GW cluster costing about ₹1.6 lakh crore (over $17bn), per an Economic Times report relayed by Outlook Business; built in three phases near the future Bhogapuram airport. Announced project.",
+   "src": {
+    "t": "Outlook Business",
+    "u": "https://www.outlookbusiness.com/corporate/after-google-reliance-steps-in-why-andhra-pradesh-is-becoming-indias-ai-infra-hub"
+   }
+  },
+  {
+   "id": "reliance-jamnagar",
+   "name": "Reliance — Jamnagar",
+   "co": "Reliance Industries",
+   "cc": "IN",
+   "kind": "site",
+   "status": "build",
+   "mw": 3000,
+   "lat": 22.4732,
+   "lon": 70.0552,
+   "prec": "commune",
+   "fr": "Reliance construirait un datacenter IA de 3 GW à Jamnagar (Gujarat), pour 20 à 30 Md$ d'investissement rapportés. La source emploie « reportedly » : chiffres non confirmés, confiance faible.",
+   "en": "Reliance is reportedly building a 3 GW AI data center in Jamnagar (Gujarat) with $20–30bn of reported investment. The source says « reportedly »: unconfirmed figures, low confidence.",
+   "src": {
+    "t": "Outlook Business",
+    "u": "https://www.outlookbusiness.com/explainers/indias-data-centre-boom-adani-reliance-bharti-in-fast-lane-in-a-crowded-field"
+   }
+  },
+  {
+   "id": "sk-aws-ulsan",
+   "name": "SK / AWS — Ulsan",
+   "co": "SK Group, AWS",
+   "cc": "KR",
+   "kind": "site",
+   "status": "build",
+   "mw": 900,
+   "lat": 35.5058,
+   "lon": 129.3997,
+   "prec": "commune",
+   "fr": "Datacenter IA d'Ulsan construit par SK pour une « AI Zone » d'AWS. Le président de SK a déclaré en septembre 2026 que l'extension approchait 900 MW ; SK Telecom vise 1 GW sur le site. Point placé sur le quartier de Mipo.",
+   "en": "AI data center in Ulsan built by SK for an AWS « AI Zone ». SK's chairman said in September 2026 that the expansion was nearing 900 MW; SK Telecom plans 1 GW at the site. Dot placed on the Mipo district.",
+   "src": {
+    "t": "Korea Times",
+    "u": "https://www.koreatimes.co.kr/business/tech-science/20260913/sk-chairman-says-ulsan-ai-data-center-expansion-nearing-900-megawatts"
+   }
+  },
+  {
+   "id": "ulanqab-hub",
+   "name": "Pôle d'Ulanqab (Mongolie-Intérieure)",
+   "co": "Alibaba, Huawei, ByteDance, autres",
+   "cc": "CN",
+   "kind": "zone",
+   "status": "build",
+   "mw": 12500,
+   "lat": 40.9903,
+   "lon": 113.1316,
+   "prec": "zone",
+   "fr": "Près de 100 datacenters ouverts ou en construction depuis 2016, pour 12,5 GW de capacité annoncée par les entreprises chinoises (Wired, repris par AI Weekly). Alibaba, Huawei et Kuaishou y exploitent déjà des sites. Plusieurs sites d'Ulanqab sont déjà dans la base Epoch : ce point ne s'y ajoute pas.",
+   "en": "Nearly 100 data centers opened or under construction since 2016, with 12.5 GW of capacity committed by Chinese firms (Wired, relayed by AI Weekly). Alibaba, Huawei and Kuaishou already operate sites there. Several Ulanqab sites are already in the Epoch database: this dot is not additional.",
+   "src": {
+    "t": "AI Weekly (d'après Wired)",
+    "u": "https://aiweekly.co/alerts/ulanqab-becomes-chinas-ai-data-center-capital-125-gw-planned"
+   }
+  },
+  {
+   "id": "bytedance-datong",
+   "name": "ByteDance — Datong",
+   "co": "ByteDance (Volcano Cloud)",
+   "cc": "CN",
+   "kind": "site",
+   "status": "plan",
+   "lat": 40.0923,
+   "lon": 113.2953,
+   "prec": "commune",
+   "fr": "Centre de calcul annoncé à Datong (Shanxi), exploité par Volcano Cloud, filiale de ByteDance : 614 M$ d'investissement et 205 013 m² de surface. La source ne donne pas la puissance.",
+   "en": "Computing centre announced in Datong (Shanxi), run by ByteDance-controlled Volcano Cloud: $614m investment and 205,013 m² of floor area. The source gives no power figure.",
+   "src": {
+    "t": "South China Morning Post",
+    "u": "https://www.scmp.com/tech/big-tech/article/3294738/bytedance-invest-us614-million-computing-centre-china-amid-high-ai-demand"
+   }
+  },
+  {
+   "id": "zhongwei",
+   "name": "Jinko Power — Zhongwei (Ningxia)",
+   "co": "Jinko Power",
+   "cc": "CN",
+   "kind": "site",
+   "status": "plan",
+   "mw": 1000,
+   "lat": 36.9851,
+   "lon": 105.4966,
+   "prec": "commune",
+   "fr": "Datacenter « vert » de 1 GW cité parmi les plus grands projets chinois de 2026 par Blackridge Research. Peu de détails dans la source : confiance faible.",
+   "en": "1 GW « green » data center listed among China's largest 2026 projects by Blackridge Research. Few details in the source: low confidence.",
+   "src": {
+    "t": "Blackridge Research",
+    "u": "https://www.blackridgeresearch.com/blog/latest-list-top-largest-data-center-projects-china"
+   }
+  },
+  {
+   "id": "guizhou-guian",
+   "name": "Pôle du Guizhou",
+   "co": "Apple, Tencent, autres",
+   "cc": "CN",
+   "kind": "zone",
+   "status": "build",
+   "lat": 26.4696,
+   "lon": 106.4806,
+   "prec": "zone",
+   "fr": "Des dizaines de datacenters construits ces dernières années dans le Guizhou, dont des sites exploités par Apple et Tencent. La source n'indique pas de capacité ; le point est placé à Gui'an, à titre indicatif.",
+   "en": "Dozens of data centers built in recent years in Guizhou, including sites run by Apple and Tencent. The source gives no capacity; the dot is placed at Gui'an for reference.",
+   "src": {
+    "t": "The Next Web",
+    "u": "https://thenextweb.com/news/china-inner-mongolia-green-computing-ai-export-grassland"
+   }
+  },
+  {
+   "id": "nebius-bethune",
+   "name": "Nebius Béthune (Lille)",
+   "co": "Nebius",
+   "cc": "FR",
+   "kind": "site",
+   "status": "plan",
+   "mw": 240,
+   "lat": 50.5309,
+   "lon": 2.6389,
+   "prec": "commune",
+   "fr": "Projet annoncé le 12 février 2026 : centre de 240 MW à Béthune, près de Lille, sur le site d'une ancienne usine Bridgestone, qui serait l'un des plus grands d'Europe. Coût non communiqué.",
+   "en": "Project announced on 12 February 2026: a 240 MW data centre in Béthune, near Lille, on a former Bridgestone plant site, set to be one of Europe's largest. Cost not disclosed.",
+   "src": {
+    "t": "Reuters (via Yahoo Finance)",
+    "u": "https://finance.yahoo.com/news/amsterdam-based-ai-firm-nebius-120558201.html"
+   }
+  },
+  {
+   "id": "nebius-lappeenranta",
+   "name": "Nebius Lappeenranta (Finlande)",
+   "co": "Nebius",
+   "cc": "FI",
+   "kind": "site",
+   "status": "build",
+   "mw": 310,
+   "lat": 61.0529,
+   "lon": 28.2642,
+   "prec": "commune",
+   "fr": "Centre de 310 MW (plus de 10 Md$ estimés) que le promoteur finlandais Polarnode construit déjà ; mise en service par phases à partir de 2027. Ce serait le plus grand site de Nebius hors des États-Unis.",
+   "en": "310 MW data centre (estimated at over US$10 bn) that Finnish developer Polarnode is already building; capacity to come online in phases from 2027. It would be Nebius's largest site outside the US.",
+   "src": {
+    "t": "Reuters (via The Star)",
+    "u": "https://www.thestar.com.my/tech/tech-news/2026/03/31/nebius-furthers-european-expansion-with-10-billion-ai-data-centre-in-finland"
+   }
+  },
+  {
+   "id": "nebius-independence",
+   "name": "Nebius Independence (Missouri)",
+   "co": "Nebius",
+   "cc": "US",
+   "kind": "site",
+   "status": "build",
+   "mw": 1200,
+   "lat": 39.0925,
+   "lon": -94.4138,
+   "prec": "commune",
+   "fr": "Campus de 1,2 GW : chantier lancé le 12 mai 2026, premier projet de plus d'un gigawatt de Nebius aux États-Unis. La Pennsylvanie (jusqu'à 1,2 GW, livraison par phases à partir de 2027) n'est pas placée, sa commune n'étant pas précisée.",
+   "en": "1.2 GW campus: ground broken on 12 May 2026, Nebius's first gigawatt-scale US project. Pennsylvania (up to 1.2 GW, phased delivery from 2027) is not plotted because the source gives no town.",
+   "src": {
+    "t": "Yahoo Finance (résultats T1 2026)",
+    "u": "https://finance.yahoo.com/news/nebius-revenue-jumps-684-q1-122215288.html"
+   }
+  },
+  {
+   "id": "nebius-huuru",
+   "name": "Nebius Hüüru (Estonie)",
+   "co": "Nebius / Greenergy",
+   "cc": "EE",
+   "kind": "site",
+   "status": "plan",
+   "mw": 22,
+   "lat": 59.3797,
+   "lon": 24.5339,
+   "prec": "commune",
+   "fr": "Accord signé avec Greenergy Data Centers pour installer 22 MW dans un datacenter à Hüüru, à l'ouest de Tallinn. Date de mise en service non précisée dans cette source.",
+   "en": "Agreement signed with Greenergy Data Centers to install 22 MW in a data centre at Hüüru, west of Tallinn. This source gives no go-live date.",
+   "src": {
+    "t": "Data Center Dynamics",
+    "u": "https://www.datacenterdynamics.com/en/news/nebius-expands-european-presence-announces-deployment-in-estonia-and-second-data-center-in-m%C3%A4nts%C3%A4l%C3%A4-finland/"
+   }
+  },
+  {
+   "id": "nscale-loughton",
+   "name": "Nscale Loughton (Essex)",
+   "co": "Nscale / Microsoft",
+   "cc": "GB",
+   "kind": "site",
+   "status": "build",
+   "mw": 50,
+   "lat": 51.6467,
+   "lon": 0.0544,
+   "prec": "commune",
+   "fr": "Campus de 50 MW extensible à 90 MW, avec 23 000 GPU GB300, annoncé comme le plus grand datacenter d'IA du Royaume-Uni ; mise en service prévue fin 2026 selon Computer Weekly (d'autres sources parlent du 1er trimestre 2027).",
+   "en": "Campus of 50 MW scalable to 90 MW with 23,000 GB300 GPUs, billed as the UK's largest AI data centre; go-live slated for Q4 2026 per Computer Weekly (other outlets say Q1 2027).",
+   "src": {
+    "t": "Computer Weekly",
+    "u": "https://www.computerweekly.com/news/366639801/AI-factory-builder-Nscale-announces-another-2bn-of-funding"
+   }
+  },
+  {
+   "id": "eclairion-bruyeres",
+   "name": "Eclairion Bruyères-le-Châtel (Mistral)",
+   "co": "Fluidstack / Eclairion",
+   "cc": "FR",
+   "kind": "site",
+   "status": "build",
+   "mw": 40,
+   "lat": 48.5923,
+   "lon": 2.1909,
+   "prec": "commune",
+   "fr": "Site de 40 MW (extension visée à plus de 100 MW) censé héberger en 2025 un cluster d'environ 18 000 GPU pour Mistral AI. Je n'ai pas trouvé de confirmation de livraison.",
+   "en": "40 MW site (expansion planned beyond 100 MW) meant to host a cluster of about 18,000 GPUs for Mistral AI in 2025. I found no confirmation of delivery.",
+   "src": {
+    "t": "InsideHPC",
+    "u": "https://insidehpc.com/2025/03/fluidstack-and-eclairion-to-deliver-18k-gpu-supercomputer-in-france/"
+   }
+  },
+  {
+   "id": "brookfield-strangnas",
+   "name": "Brookfield Strängnäs (Suède)",
+   "co": "Brookfield",
+   "cc": "SE",
+   "kind": "site",
+   "status": "plan",
+   "lat": 59.3763,
+   "lon": 17.0268,
+   "prec": "commune",
+   "fr": "Centre de données planifié, de 350 à 750 MW selon Brookfield. La source ne précise pas la part dédiée à l'IA.",
+   "en": "Planned data centre of 350 to 750 MW according to Brookfield. The source does not say how much is AI-dedicated.",
+   "src": {
+    "t": "Euronews (DE)",
+    "u": "https://de.euronews.com/2026/03/31/niederlandisches-datenunternehmen-stellt-eines-der-grossten-ki-rechenzentrumsprojekte-euro"
+   }
+  },
+  {
+   "id": "china-mobile-hohhot",
+   "name": "China Mobile Hohhot (Mongolie-Intérieure)",
+   "co": "China Mobile",
+   "cc": "CN",
+   "kind": "site",
+   "status": "ramp",
+   "lat": 40.8185,
+   "lon": 111.6602,
+   "prec": "commune",
+   "fr": "Extension achevée : 20 100 pétaflops dont 16 700 pour l'IA, soit le plus grand site unique de calcul intelligent d'un opérateur télécom ; 90 % de la puissance de calcul irait vers la région Pékin-Tianjin-Hebei. Capacité en pétaflops, pas en mégawatts ; l'utilisation réelle n'est pas démontrée.",
+   "en": "Expansion completed: 20,100 petaflops, 16,700 of them for AI, the largest single-site intelligent computing centre run by a telecom operator; 90% of the compute would go to the Beijing-Tianjin-Hebei region. Capacity is in petaflops, not megawatts; actual utilisation is unproven.",
+   "src": {
+    "t": "SCMP (via Longbridge)",
+    "u": "https://longbridge.com/en/news/301643585.md"
+   }
+  },
+  {
+   "id": "china-mobile-qingyang",
+   "name": "China Mobile Qingyang (Gansu)",
+   "co": "China Mobile",
+   "cc": "CN",
+   "kind": "zone",
+   "status": "ramp",
+   "lat": 36.1824,
+   "lon": 107.6216,
+   "prec": "zone",
+   "fr": "Plus de 110 000 pétaflops de capacité locale fin 2025 ; 22 nouveaux bâtiments prévus cette année, pour dépasser 200 000 pétaflops d'ici fin 2026 (People's Daily). Capacité en pétaflops, pas en mégawatts.",
+   "en": "Local computing capacity above 110,000 petaflops at end-2025; 22 new buildings planned this year, to pass 200,000 petaflops by end-2026 (People's Daily). Capacity is in petaflops, not megawatts.",
+   "src": {
+    "t": "People's Daily (via Shenzhen gov.)",
+    "u": "https://www.szzg.gov.cn/2026/english/dn/202606/t20260611_5333096.htm"
+   }
+  },
+  {
+   "id": "zhengzhou-100k",
+   "name": "Supercluster IA de Zhengzhou (Henan)",
+   "co": "État chinois (NDRC)",
+   "cc": "CN",
+   "kind": "site",
+   "status": "ramp",
+   "lat": 34.7473,
+   "lon": 113.6193,
+   "prec": "commune",
+   "fr": "Premier supercluster d'IA de 100 000 puces de fabrication chinoise, mis en service au nœud de Zhengzhou du réseau national de supercalcul (annonce de la NDRC, août 2026). Puissance électrique non communiquée.",
+   "en": "First AI supercluster built from 100,000 domestically made chips, switched on at the Zhengzhou node of the national supercomputing network (NDRC announcement, August 2026). Power draw not disclosed.",
+   "src": {
+    "t": "CGTN",
+    "u": "https://news.cgtn.com/news/2026-08-09/Clusters-and-fibers-China-accelerates-AI-build-out-1Ptq5WPdWyk/share_amp.html"
+   }
+  }
+ ]
+}
