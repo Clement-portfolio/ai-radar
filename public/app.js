@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"LLMs",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","recherche","marche","infrastructure","acteurs","carte","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100};
+var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"tension",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -489,6 +489,11 @@ function layerMeter(l){
   if(l.tension==null)return'<span class="mlabel"><span>Tension estimée</span><span class="tv emerging">'+esc(l.tension_label)+'</span></span>';
   return meter(l.tension)+'<span class="mlabel"><span>Tension estimée</span><span class="tv '+(l.tension>=8?"hi":(l.tension>=6?"mid":"lo"))+'">'+esc(l.tension_label)+' · '+l.tension+'/10</span></span>'+layerTrend(l);
 }
+function layerBar(l){
+  if(l.tension==null)return'<span class="tbar"><i style="width:0"></i></span><span class="tlab">'+esc(l.tension_label)+'</span>';
+  var c=l.tension>=8?"hi":(l.tension>=6?"mid":"lo");
+  return'<span class="tbar"><i class="'+c+'" style="width:'+(l.tension*10)+'%"></i></span><span class="tlab">'+l.tension+'/10 · '+esc(l.tension_label)+'</span>';
+}
 function layerExtra(l){
   var h="";
   if(l.capacity)h+='<div class="lcap"><span class="kicker">Capacité</span> '+esc(l.capacity.value)+' <span class="small mute">('+esc(l.capacity.as_of)+', <a href="'+esc(link(l.capacity.url))+'" target="_blank" rel="noopener">'+esc(l.capacity.source)+'</a>)</span></div>';
@@ -560,15 +565,15 @@ function rInfra(){
   var el=$("v-infrastructure");
   if(!$("chain-host")){
     el.innerHTML='<h2 class="sec">Infrastructure</h2><p class="lede">Du réseau électrique à la puce : où ça coince, et à quel point.</p><div id="chain-host"></div>'+
-     '<details class="details"><summary>La pile en onze couches <em>vue en liste</em></summary><div id="infra-list"></div></details>';
+     '<section class="lyall"><div class="lyh"><span class="lyk">Toutes les couches</span><h3 class="lyt">Où ça coince le plus.</h3><div class="seg" id="ly-seg"></div></div><div id="infra-list"></div></section>';
   }
   chainHost();
-  $("infra-list").innerHTML='<div class="tleg"><span><i class="hi"></i>Critique (8 à 10)</span><span><i class="mid"></i>Élevé (6 à 7)</span><span><i class="lo"></i>Modéré ou faible (0 à 5)</span></div>'+
-   '<div class="toolbar"><button class="chip'+(S.layerSort==="pile"?' on':'')+'" data-ls="pile">Ordre de la pile</button><button class="chip'+(S.layerSort==="tension"?' on':'')+'" data-ls="tension">Par tension</button></div><div class="stack">'+
+  $("ly-seg").innerHTML='<button class="'+(S.layerSort==="tension"?'on':'')+'" data-ls="tension">Par tension</button><button class="'+(S.layerSort==="pile"?'on':'')+'" data-ls="pile">Ordre de la pile</button>';
+  $("infra-list").innerHTML='<div class="lstack">'+
    L.map(function(l){
      var open=S.open["l"+l.id]?" open":"";
-     return'<div class="layer'+open+'" id="ly-'+esc(l.id)+'"><button class="lhead" data-toggle="l'+esc(l.id)+'"><span class="lnum">'+l.order+'</span><span class="lmain"><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span></span><span class="lm">'+layerMeter(l)+'</span><span class="chev">›</span></button>'+
-      '<div class="lbody"><div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+leaderHtml(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p>'+layerExtra(l)+'<div class="srcs">'+srcLinks(l.sources)+'</div></div></div>';
+     return'<div class="layer'+open+'" id="ly-'+esc(l.id)+'"><button class="lhead" data-toggle="l'+esc(l.id)+'" aria-label="Ouvrir '+esc(l.name)+'"><span class="lmain"><span class="lname">'+esc(l.name)+'</span><span class="lstat">'+esc(l.key_stat)+'</span></span><span class="lm">'+layerBar(l)+'</span><span class="lgo">'+ARW+'</span></button>'+
+      '<div class="lbody">'+layerTrend(l)+'<div class="leaders">'+l.leaders.map(function(x){return'<span class="leader c-'+esc(x.c)+'">'+leaderHtml(x.n)+'</span>'}).join("")+'</div><p>'+esc(l.note)+'</p>'+layerExtra(l)+'<div class="srcs">'+srcLinks(l.sources)+'</div></div></div>'
    }).join("")+'</div>';
 }
 

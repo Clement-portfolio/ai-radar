@@ -25,7 +25,7 @@ var BY={};CH.blocks.forEach(function(b){BY[b.id]=b});
 var FAM={en:["Énergie","#EBA73A"],cool:["Refroidissement","#5B9BDB"],st:["Structure (bâtiment, boîtier, carte)","#D6CAB5"],calc:["Calcul","#34476B"],mem:["Mémoire","#34BBA0"],li:["Liaisons (électrique, cuivre, fibre, commutateurs)","#8B6FD6"],use:["Usages (modèles, applications)","#79C477"]};
 var GRP={en:"en",cool:"cool",bld:"st",asm:"st",brd:"st",calc:"calc",mem:"mem",el:"li",cu:"li",op:"li",net:"li",use:"use",use2:"use"};
 var PF={smr:"en",gas:"en",trf:"en",bld:"bld",cool:"cool",fibc:"op",models:"use2",apps:"use",rack:"calc",bus:"en",loop:"cool",sw:"net",fib:"op",cu:"cu",cold:"cool",dies:"calc",fab:"calc",hbm:"mem",wires:"el",ip:"asm",cpo:"op",sub:"asm",pcb:"brd",power:"en",aec:"cu",mod:"op",las:"op",sw2:"net"};
-var FC={en:"#EBA73A",cool:"#5B9BDB",bld:"#E3DACB",calc:"#34476B",mem:"#34BBA0",asm:"#D6CAB5",brd:"#BFB29C",cu:"#8B6FD6",op:"#B9A5F0",el:"#5B45A3",net:"#7458C4",use:"#79C477",use2:"#58AB57"};
+var FC={en:"#EBA73A",cool:"#5B9BDB",bld:"#E3DACB",calc:"#34476B",mem:"#0071E3",asm:"#D6CAB5",brd:"#BFB29C",cu:"#8B6FD6",op:"#B9A5F0",el:"#5B45A3",net:"#7458C4",use:"#79C477",use2:"#58AB57"};
 var ZOOM={bld:1,rack:2};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function Z(b,k,extra){return"calc("+b+"px + "+k+" * var(--gap)"+(extra?" + "+extra:"")+")"}
@@ -160,7 +160,7 @@ function place(){
  v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect();P.push({i:i,ax:a.left+a.width/2-r.left,ay:a.top+a.height/2-r.top})});
  P.sort(function(a,b){return a.ax-b.ax});var half=Math.ceil(P.length/2),lines="";
  [[P.slice(0,half),0,0],[P.slice(half),W-176,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?40:-40;
-  arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-44);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";
+  arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-44);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";el.classList.toggle("rt",!!g[2]);
    var lx=g[2]?g[1]:g[1]+176;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ax+'" y2="'+o.ay+'"/><circle cx="'+o.ax+'" cy="'+o.ay+'" r="2.5"/>'});});
  v.sv.innerHTML=lines;
 }
@@ -447,7 +447,7 @@ function duo(){
   '<div class="blk"><div class="st">À quoi ça sert dans l\'infrastructure</div><p>'+esc(b.why)+'</p></div>'+
   '<div class="blk"><div class="st">Dépend de</div><div class="cl">'+(b.needs.length?chs(b.needs):'<span class="src">Rien en amont dans ce schéma.</span>')+'</div></div>'+
   '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div></div>';
- F.innerHTML='<section class="tile"><span class="eb">Composant sélectionné</span><div class="fh"><h3>'+esc(P.n)+'</h3><span class="tag">'+esc(P.c)+'</span><span class="tag">'+esc(b.name)+'</span></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
+ F.innerHTML='<section class="tile"><div class="fhd"><span class="eb">Composant sélectionné</span><h3>'+esc(P.n)+'.</h3><p class="fl2">'+esc(P.c)+' · '+esc(b.name)+'</p></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
  var nw=document.getElementById("nw");if(nw)nw.setAttribute("data-part",part);
  centerMini(F.querySelector(".mini"));report();
 }
