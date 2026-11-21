@@ -115,6 +115,7 @@ function rUne(){
   if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say':'Ce qu’ils disent')+'<div class="tgrid3">'+H.map(function(n){
     return'<figure class="tcard q"><blockquote>'+esc(ctt(!en&&n.title_fr?n.title_fr:n.title))+'</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
   }).join("")+'</div>'+cta("acteurs/voix",en?'See Insiders':'Voir les Insiders')+'</section>';
+  h+=xHome(en);
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
   if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
     var ok=en&&f.title_en&&f.value_en;
@@ -849,6 +850,16 @@ function xSwitch(){
   var en=isEn(),on=S.vsrc==="x";
   return '<div class="segw"><span class="seg2" role="tablist"><a role="tab" aria-selected="'+(!on)+'" class="'+(on?'':'on')+'" href="#acteurs/voix">'+(en?'Press':'Presse')+'</a><a role="tab" aria-selected="'+on+'" class="'+(on?'on':'')+'" href="#acteurs/voix/x">'+(en?'On X':'Sur X')+'</a></span></div>';
 }
+/* Accueil : les posts X les plus importants des derniers jours (un par compte), avec accès direct à Insiders / Sur X */
+function xHome(en){
+  var all=(S.x&&S.x.items)||[];if(!all.length)return"";
+  var now=Date.now(),seen={},pick=all.filter(function(x){return Date.parse(x.ts)>=now-7*864e5&&!x.pending}).map(function(x){return{x:x,sc:(x.imp||1)*10+(x.media===0?2:0)+Math.min(3,Math.log10((x.eng||0)+1))-(now-Date.parse(x.ts))/864e5}}).sort(function(a,b){return b.sc-a.sc}).map(function(o){return o.x}).filter(function(x){var k=x.handle||x.id;if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
+  if(!pick.length)return"";
+  return'<section class="tile">'+tHead(en?'On X':'Sur X',en?'What stands out on the platform':'Ce qui ressort sur la plateforme')+'<div class="tgrid3">'+pick.map(function(it){
+    var w=xWho(it);
+    return'<article class="tcard"><span class="kick">'+esc(w.name)+'</span><h3>'+esc(xTitle(it))+'</h3><div class="tfoot"><span>'+esc((w.role?w.role+' · ':'')+ago(it.ts))+'</span>'+arrowA(link(it.url),en?'See the post on X':'Voir le post sur X',true)+'</div></article>';
+  }).join("")+'</div>'+cta("acteurs/voix/x",en?'See On X':'Voir Sur X')+'</section>';
+}
 function xTitle(it){var t=tx(it,"title");return t||String(it.text||"").slice(0,160)}
 function xWho(it){
   var en=isEn(),w=((S.x&&S.x.who)||{})[it.handle]||{};
@@ -879,8 +890,6 @@ function xHtml(){
   var total=items.length,day="";items=items.slice(0,S.xlimit);
   items.forEach(function(it){var d=dayKey(it.ts);if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(it.ts))+' <span>'+dc[d]+' '+(en?(dc[d]>1?'posts':'post'):(dc[d]>1?'posts':'post'))+'</span></div>'}h+=xRow(it)});
   if(total>items.length)h+='<div style="text-align:center;padding:24px 0"><button class="btn" data-xmore="1">'+(en?'Show '+Math.min(100,total-items.length)+' more':'Voir '+Math.min(100,total-items.length)+' posts de plus')+' ('+(total-items.length)+(en?' remaining':' restants')+')</button></div>';
-  var u=X.usage||{},mk=String(X.generated_at||"").slice(0,7),n=(u.months||{})[mk];
-  h+='<p class="small xnote">'+(en?'One pass a day, capped at 100 posts read. Each entry is a post from a followed account, sorted by an AI model: the headline is a paraphrase, the original post is in the detail.':'Un passage par jour, plafonné à 100 posts lus. Chaque entrée est un post d\'un compte suivi, trié par une IA : le titre est une reformulation, le post d\'origine est dans le détail.')+(n!=null?' '+(en?'Posts read this month: ':'Posts lus ce mois-ci : ')+n+'.':'')+'</p>';
   return h;
 }
 function renderAll(){
