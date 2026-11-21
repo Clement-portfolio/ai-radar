@@ -28,6 +28,7 @@ jobs:
         with:
           node-version: 22
       - name: Tests
+        if: github.event_name == 'push' # ~13 min : inutile à chaque collecte planifiée, le code n'a pas changé depuis le dernier push
         run: node collector/test.mjs
       - name: Collecte
         env:
