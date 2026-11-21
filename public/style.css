@@ -872,15 +872,13 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 
 /* Recherche : même format qu'Actualités et Insiders */
 #v-recherche .row.rr{grid-template-columns:52px 150px minmax(0,1fr) auto 32px;gap:4px 14px;align-items:baseline;padding:20px 22px 20px 26px}
-#v-recherche .rr .tag{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
 #v-recherche .rr .rtxt{min-width:0}
 #v-recherche .rr .ttl{font:600 17px/1.3 var(--display);letter-spacing:-.015em;color:var(--ink);text-decoration:none}
 #v-recherche .rr .rsm{font-size:15px;line-height:1.45;color:var(--ink2);margin:6px 0 0;max-width:760px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 #v-recherche .row.rr .rsrc{display:flex;flex-direction:column;align-items:flex-end;gap:2px;max-width:200px;font-size:13px;color:var(--mute)}
 #v-recherche .rr .rk{font-style:normal;font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
-#v-recherche .rr .rtog{align-self:start;text-decoration:none}
+#v-recherche .rr .rtog{text-decoration:none}
 #v-recherche.essmode .rr .ttl{color:#fff}
-#v-recherche .rr .rtog svg{width:14px;height:14px}
 .essmode.view .rr .rsm,#v-recherche.essmode .rr .rsm{color:#C7C7CC}
 #v-recherche.essmode .rr .tag,#v-recherche.essmode .rr .rk{color:#A1A1A6}
 #v-recherche .rsrcs{margin:24px 0 10px;border:0;border-radius:32px;background:#fff}
@@ -891,9 +889,13 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 #v-recherche .rsrcs ul{padding:0 24px 24px;font-size:14px}
 #v-recherche .rsrcs li{padding:3px 0}
 @media(max-width:720px){
-  #v-recherche .row.rr{grid-template-columns:42px minmax(0,1fr) 32px;row-gap:2px;padding:18px 18px 18px 20px}
+  #v-recherche .row.rr{grid-template-columns:42px minmax(0,1fr) 26px;row-gap:2px}
   #v-recherche .row.rr .tag{grid-column:2;grid-row:1}
   #v-recherche .row.rr .rtog{grid-column:3;grid-row:1}
   #v-recherche .row.rr .rtxt{grid-column:1/-1;grid-row:2}
   #v-recherche .row.rr .rsrc{grid-column:1/-1;grid-row:3;flex-direction:row;align-items:baseline;gap:8px;max-width:none}
 }
+
+/* Les trois fils (Actualités, Insiders, Recherche) : mêmes colonnes, mêmes tailles, même icône */
+.rtog svg{width:14px;height:14px;display:block}
+@media(min-width:721px){.row,.vrow,#v-recherche .row.rr{grid-template-columns:52px 190px minmax(0,1fr) auto 32px}}

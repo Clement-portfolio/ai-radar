@@ -29,7 +29,7 @@ function rowHTML(it){
   return '<div class="row i'+it.importance+open+'"><span class="time">'+esc(fmtTime(it.ts))+'</span>'+ctag(it.country)+
    '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a>'+
    '<span class="rsrc">'+esc(it.source)+cdot(it.confidence)+'</span>'+
-   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">›</button>'+(it.why?'<p class="rwhy">'+esc(tx(it,'why'))+'</p>':'')+
+   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">'+ARW+'</button>'+(it.why?'<p class="rwhy">'+esc(tx(it,'why'))+'</p>':'')+
    '<div class="sum">'+(it.pending?'<p><i class="small">(titre d\'origine, non classé par l\'IA)</i></p>':'')+'<div class="meta"><span class="cat">'+esc(CATS[it.category]||it.category)+'</span>'+(it.layer?'<span>'+esc(it.layer)+'</span>':'')+imp(it.importance)+conf(it.confidence)+'<a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">Lire sur '+esc(it.source)+' ↗</a></div></div></div>';
 }
 function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s.u))+'" target="_blank" rel="noopener">'+esc(s.t)+'</a>'}).join("")}
@@ -779,7 +779,7 @@ function vList(){
     if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(n.ts))+' <span>'+dc[d]+' '+(dc[d]>1?'déclarations':'déclaration')+'</span></div>'}
     h+='<div class="vrow'+(S.open[k]?' open':'')+'"><span class="time">'+esc(fmtTime(n.ts))+'</span><span class="vwho"><a href="#acteurs/voix/'+esc(x.p.id)+'" data-vp="'+esc(x.p.id)+'">'+esc(x.p.n)+'</a><span class="small">'+esc(x.p.role)+'</span></span>'+
      '<a class="ttl" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+ttl(n)+'</a><span class="rsrc">'+(n.kind==="video"?"Vidéo · ":"")+esc(n.source)+'</span>'+
-     '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le détail">›</button>'+
+     '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le détail">'+ARW+'</button>'+
      '<div class="sum"><div class="meta"><span class="cat">'+esc(catL[x.p.cat]||x.p.cat)+'</span>'+imp(vImp(n))+'<a href="'+esc(link(n.url))+'" target="_blank" rel="noopener">Lire sur '+esc(n.source)+' ↗</a></div></div></div>';
   });
   if(total>L.length)h+='<div style="text-align:center;padding:24px 0"><button class="btn" data-vmore="1">Voir '+Math.min(80,total-L.length)+' déclarations de plus ('+(total-L.length)+' restantes)</button></div>';
