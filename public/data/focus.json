@@ -5,92 +5,92 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-21T12:31:42.736Z",
+ "generated_at": "2026-11-21T13:08:42.284Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+66ea04eb3cac+7e6c0139750f+89495d761169+c48900998378+f1b7c64ada91",
-  "0b56d8c56f62+1e435cb31c5f+453bad6c8f73+6e200b2f4fcf+786107148045+90ec2d9d6b03+96a6c848a0d0+9d762d0c986e+aef96700cda8+b397f013e77f+c9f352697881",
-  "08b074f7bce0+0c1301471b50+5a8f7d1dc4aa+cd767daa7782+d4a5723079d7+d8fbec9f2d14+e504b90df3a2+fba84b20d145",
-  "09a497f98e64+3778953e71a6+8daf2e1f77bd+db8f13db2a39+f2ad34d486f9",
-  "4ebf2d8451cd+5636a3f28c6e+85d5e10f531a+fc01b14e6ad1",
-  "0712ed6d10f5+48cad0db8ddb+606a425eafff+96dd70d3f354+bc62dfcb3848"
+  "09a497f98e64+3778953e71a6+5db9be893d58+8daf2e1f77bd+94d599ca1343+db8f13db2a39+e0ac844ba9e5+e20cbf90b852+f2ad34d486f9",
+  "0396da82d35c+133408be93f9+1dfd0f40ba72+2a888cccd81b+4aacf31011a3+4fedf2b73e6e+4ff277b88683+76a25eb27bdf+7daef9fdaa1b+7f3c247631e5+83eb8920a967+871fa7926cd4+8838b8c2d698+a628189a2219+b1f950c01034+b7121aa76176+bab1a902faa1+c554d88a231d+cf4dad18e37f+d30c8e933f5d+d6f405a6a912+ed6320e874d8+efef379689b1+f4fe310fb2c6+f7ed75cce7a0+fcd152f94053",
+  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+c48900998378+f1b7c64ada91",
+  "47650c445adb+7c86141884e3+a25bfe4a44cc+e9c2330af5a7",
+  "1d0523b60f6f+376956b25183+4b9c8cdeff32+bd693f5f4e0c+cd767daa7782+d8fbec9f2d14",
+  "01ad01e5cd41+2511beafb119+3ee7a75e87fa+499e87d18729+8e2a2f996f96+d0f3964a2126+e48e2cd0b4e2",
+  "260e64ed6f92+52f8100482ff+9b10aa3778dc+f2da25e696e2",
+  "bbb72de1e1a5+c97da236b03c+d89470b71910+e85265dd1b32+ee4ac4dd7186"
  ],
  "stories": [
   {
    "ids": [
-    "786107148045",
-    "0b56d8c56f62",
-    "90ec2d9d6b03",
-    "b397f013e77f"
+    "09a497f98e64",
+    "f2ad34d486f9",
+    "94d599ca1343",
+    "3778953e71a6"
    ],
-   "head": "Anthropic lève 81 milliards de dollars lors d'une introduction en bourse historique",
+   "head": "Samsung et TSMC durcissent leurs exportations de puces IA vers la Chine face aux règles américaines",
    "bullets": [
-    "Amazon et Google détiennent ensemble près de 30 % d'Anthropic après cette opération financière.",
-    "Cette introduction en bourse constitue un test majeur pour mesurer le sentiment des investisseurs envers les laboratoires d'intelligence artificielle."
+    "TSMC a renforcé ses contrôles à l'exportation pour se conformer aux nouvelles exigences du Département du Commerce des États-Unis.",
+    "Ces mesures visent à limiter l'accès de la Chine aux technologies de fabrication de semi-conducteurs les plus avancées."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Anthropic raises 81 billion dollars in a historic initial public offering",
+   "head_en": "Samsung and TSMC tighten AI chip exports to China following new US regulations",
    "bullets_en": [
-    "Amazon and Google together hold nearly 30 percent of Anthropic following this financial transaction.",
-    "This initial public offering serves as a major test to gauge investor sentiment toward artificial intelligence laboratories."
+    "TSMC has strengthened its export controls to comply with the new requirements of the US Department of Commerce.",
+    "These measures aim to limit China's access to the most advanced semiconductor manufacturing technologies."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-21T09:54:00.000Z"
+   "ts": "2026-11-21T11:45:01.000Z"
   },
   {
    "ids": [
-    "fba84b20d145",
-    "d4a5723079d7",
-    "d8fbec9f2d14",
-    "cd767daa7782"
+    "133408be93f9",
+    "d6f405a6a912",
+    "ed6320e874d8",
+    "4aacf31011a3"
    ],
-   "head": "Trump menace les entreprises technologiques d'une taxe énorme pour les datacenters à l'étranger",
+   "head": "Anthropic réalise la plus grande introduction en bourse de l'histoire technologique",
    "bullets": [
-    "Cette mesure vise à contraindre les entreprises technologiques nationales à maintenir leurs investissements dans les infrastructures sur le sol américain.",
-    "Les restrictions américaines sur les puces IA compliquaient déjà le développement des centres de données en Asie du Sud-Est."
+    "L'entreprise a vendu 1 127 000 000 actions à un prix unitaire de 83 dollars pour lever un total de 93,5 milliards de dollars.",
+    "Cette opération consacre la domination financière des laboratoires d'intelligence artificielle malgré les craintes d'une bulle spéculative sur les marchés.",
+    "Cette introduction en bourse sur le Nasdaq était très attendue par les investisseurs comme un test majeur pour l'ensemble du secteur de l'intelligence artificielle."
    ],
    "kinds": [
+    "detail",
     "explication",
     "contexte"
    ],
-   "head_en": "Trump threatens tech companies with a massive tax for datacenters abroad",
-   "bullets_en": [
-    "This measure aims to force national tech companies to keep their infrastructure investments on US soil.",
-    "US restrictions on AI chips were already complicating the development of datacenters in Southeast Asia."
-   ],
+   "head_en": null,
+   "bullets_en": null,
    "ctx_ids": [
-    "5db9be893d58"
+    "58e8987b4f93",
+    "06f57261d639"
    ],
-   "ts": "2026-11-20T21:35:47.000Z"
+   "ts": "2026-11-20T15:15:43.000Z"
   },
   {
    "ids": [
-    "09a497f98e64",
-    "f2ad34d486f9",
-    "3778953e71a6",
-    "db8f13db2a39"
+    "39cc7b62b7b0",
+    "f1b7c64ada91",
+    "c48900998378",
+    "7e6c0139750f"
    ],
-   "head": "Samsung suspend ses livraisons de puces IA en Chine suite aux nouvelles restrictions américaines",
+   "head": "Un mathématicien d'Anthropic affirme avoir résolu l'hypothèse de Riemann avec l'aide de Claude",
    "bullets": [
-    "Nvidia avait déjà suspendu ses expéditions de puces IA haute performance vers la Chine.",
-    "Le Département du Commerce américain durcit ses règles pour contrer les transferts indirects via les hubs de la région."
+    "Le mathématicien Levent Alpöge annonce avoir prouvé ce problème vieux de 167 ans en collaborant avec l'assistant.",
+    "Cette annonce concerne la résolution de l'un des problèmes du prix du millénaire, souvent qualifié de saint Graal des mathématiques."
    ],
    "kinds": [
-    "contexte",
-    "explication"
+    "detail",
+    "detail"
    ],
-   "head_en": "Samsung suspends AI chip shipments to China following new US restrictions",
+   "head_en": "An Anthropic mathematician claims to have solved the Riemann hypothesis with Claude's help",
    "bullets_en": [
-    "Nvidia had already suspended its shipments of high-performance AI chips to China.",
-    "The US Department of Commerce is tightening its rules to counter indirect transfers via regional hubs."
+    "Mathematician Levent Alpöge announces he has proven this 167-year-old problem by collaborating with the assistant.",
+    "This announcement concerns the solution of one of the Millennium Prize problems, often described as the holy grail of mathematics."
    ],
-   "ctx_ids": [
-    "472accef9bf8"
-   ],
-   "ts": "2026-11-21T11:45:01.000Z"
+   "ctx_ids": [],
+   "ts": "2026-11-21T10:19:04.000Z"
   }
  ]
 }
