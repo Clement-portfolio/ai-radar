@@ -37,9 +37,9 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null})]).then(function(r){
     S.feed=(r[0].items||[]).slice().sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];S.voix=r[15];S.rech=r[16];if(window.I18N)I18N.extra(r[10]);
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];S.voix=r[15];S.rech=r[16];S.chain=r[17];if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -127,8 +127,32 @@ function rUne(){
   h+='<section class="tile half">'+tHead(en?'Map':'Carte',en?'Where the compute is':'Où est la puissance de calcul')+'<div class="tglobe"><img src="img/globe-mini.svg" alt="" width="210" height="210"></div>'+
      '<div class="hfoot"><button class="tlink" data-go="carte">'+(en?'Explore the map':'Explorer la carte')+' ›</button><button class="arw lg" data-go="carte" aria-label="'+(en?'Map':'Carte')+'">'+ARW+'</button></div></section>';
   h+='</div>';
+  h+=hpDuo(en);
   el.innerHTML=h;
 }
+/* Accueil : un camembert et un composant tirés au hasard, une fois par chargement de la page */
+var HP={};
+function hpPick(arr,k){if(!arr.length)return null;if(HP[k]==null)HP[k]=Math.floor(Math.random()*arr.length);return arr[HP[k]%arr.length]}
+function hpPie(en){
+  var c=hpPick(((S.shares&&S.shares.charts)||[]).filter(function(x){return x.segments&&x.segments.length>1}),"pie");if(!c)return"";
+  var segs=c.segments,leg=segs.slice(0,5).map(function(x,i){return'<li><i style="background:'+dcol(i,x.label)+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
+  return'<section class="tile half hpm">'+tHead(en?'Market':'Marché',c.title)+'<p class="hpsub">'+esc(c.metric)+' · '+esc(c.period)+'</p><div class="hpbody">'+donut(segs)+'<ul class="leg">'+leg+'</ul></div>'+
+   '<p class="hpsrc">'+esc(c.source)+'</p>'+
+   '<div class="hfoot"><button class="tlink" data-go="marche">'+(en?'Explore the market':'Explorer le marché')+' ›</button><button class="arw lg" data-go="marche" aria-label="'+(en?'Market':'Marché')+'">'+ARW+'</button></div></section>';
+}
+function hpComp(en){
+  var LY={};((S.layers&&S.layers.layers)||[]).forEach(function(l){if(l.tension!=null)LY[l.id]=l});
+  var all=[];((S.chain&&S.chain.blocks)||[]).forEach(function(b){var l=LY[b.layer];if(!l)return;(b.subs||[]).forEach(function(u){if(u.why)all.push({b:b,u:u,l:l})})});
+  var x=hpPick(all,"comp");if(!x)return"";
+  var t=x.l.tension,cls=t>=8?'hi':t>=6?'mid':'lo',fig=(x.u.figs||[])[0],bars="";
+  for(var i=1;i<=10;i++)bars+='<i'+(i<=t?' class="on '+cls+'"':'')+'></i>';
+  return'<section class="tile half hpi">'+tHead(en?'Infrastructure':'Infrastructure',x.u.name)+
+   '<div class="hpmeter"><span class="hpbars" aria-hidden="true">'+bars+'</span><span class="hpt"><b class="t'+cls+'">'+t+'/10</b> '+(en?'tension':'tension')+' · '+esc(tx(x.l,'name'))+'</span></div>'+
+   '<p class="hpwhy">'+esc(x.u.why)+'</p>'+
+   (fig?'<div class="hpfig"><span class="v">'+esc(fig.v)+'</span><span class="l">'+esc(fig.l)+'</span></div>':'')+
+   '<div class="hfoot"><button class="tlink" data-go="infrastructure/'+esc(x.l.id)+'">'+(en?'See this layer':'Voir cette couche')+' ›</button><button class="arw lg" data-go="infrastructure/'+esc(x.l.id)+'" aria-label="Infrastructure">'+ARW+'</button></div></section>';
+}
+function hpDuo(en){var a=hpPie(en),b=hpComp(en);return a||b?'<div class="duo">'+a+b+'</div>':""}
 function voixHtml(){
   var H=(S.voix&&S.voix.hot)||[];
   if(!H.length)return"";

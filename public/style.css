@@ -859,3 +859,23 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .frow .chip.insl{text-decoration:none;gap:12px;padding:0 4px 0 18px}
 .insl .insa{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;flex:none;border-radius:50%;background:#fff;color:var(--ink)}
 .insl:hover .insa{transform:scale(1.06)}.insl .insa{transition:transform .2s var(--ease)}
+
+/* Accueil : encadrés Marché (camembert) et Infrastructure (composant) */
+.hpm .thead h2,.hpi .thead h2{font-size:28px;line-height:1.12}
+.hpsub{margin:-8px 0 0;font-size:14px;color:var(--mute);line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hpbody{display:flex;align-items:center;gap:26px}
+.hpbody .donut{width:132px;height:132px}
+.hpbody .leg{font-size:15px}.hpbody .leg li{padding:4px 0;grid-template-columns:10px 1fr auto}
+.hpbody .leg i{border:0;border-radius:50%}
+.hpbody .leg b{font-family:var(--ui);font-size:14px;font-weight:500}
+.hpsrc{margin:0;font-size:13px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hpmeter{display:flex;flex-direction:column;gap:10px;margin-top:-8px}
+.hpbars{display:flex;gap:4px}
+.hpbars i{flex:1;max-width:34px;height:8px;border-radius:999px;background:var(--pill,#F0F0F3)}
+.hpbars i.on{background:#8E8E93}.hpbars i.on.hi{background:var(--neg)}.hpbars i.on.mid{background:var(--warn)}.hpbars i.on.lo{background:#8E8E93}
+.hpt{font-size:15px;color:var(--ink2)}.hpt b{font-weight:600}.hpt b.thi{color:var(--neg)}.hpt b.tmid{color:var(--warn)}
+.hpwhy{margin:0;font-size:17px;line-height:1.45;color:var(--ink2);display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.hpfig{display:flex;flex-direction:column;gap:2px;padding-top:14px;border-top:1px solid var(--hair)}
+.hpfig .v{font-size:30px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.hpfig .l{font-size:13px;color:var(--mute);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media(max-width:620px){.hpbody{flex-direction:column;align-items:flex-start}}
