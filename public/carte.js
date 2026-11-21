@@ -9,9 +9,9 @@ for (var q = 0; q < W.dots.length; q += 2) { var la = W.dots[q] / 10 * RAD; DLS.
 var T = {
   fr: {
     title: "Où est la puissance de calcul", dc: "Datacenters", logic: "Usines de puces", memory: "Usines de mémoire", packaging: "Assemblage avancé",
-    now: "Aujourd'hui", plan: "Horizon prévu", us: "États-Unis", asia: "Asie de l'Est", eu: "Europe", reset: "Vue d'ensemble",
+    now: "Aujourd'hui", build: "En construction", total: "Cumulé", topBuild: "Les plus gros chantiers en cours", us: "États-Unis", asia: "Asie de l'Est", eu: "Europe", reset: "Vue d'ensemble",
     sites: "datacenters suivis", mw: "puissance IT en service", h100: "équivalents H100", cmw: "puissance IT prévue", fabs: "usines de puces suivies",
-    byc: "Puissance IT par pays (datacenters suivis par Epoch)", top: "Les plus gros sites", topPlan: "Les plus gros sites à l'horizon prévu", unit: "MW",
+    byc: "Puissance IT par pays (datacenters suivis par Epoch)", top: "Les plus gros sites", topPlan: "Les plus gros sites une fois tout construit", unit: "MW",
     hint: "Glissez pour tourner la Terre · molette ou + / − pour zoomer", lgLand: "Un point ≈ 140 km de terre", pick: "Cliquez un site sur le globe pour voir qui l'exploite, sa puissance et ce qui arrive ensuite.",
     owner: "Exploitant", users: "Utilisateurs", power: "Puissance IT en service", chips: "Puces", cost: "Investissement cumulé", next: "Prochain jalon", last: "Dernier jalon connu", loc: "Position",
     locA: "à l'adresse", locC: "à la commune près", likely: "probable", spec: "spéculatif", src: "Source", status: "Statut", co: "Entreprise", kind: "Type", asof: "Données Epoch du",
@@ -23,9 +23,9 @@ var T = {
   },
   en: {
     title: "Where the compute is", dc: "Datacenters", logic: "Chip fabs", memory: "Memory fabs", packaging: "Advanced packaging",
-    now: "Today", plan: "Planned", us: "United States", asia: "East Asia", eu: "Europe", reset: "Overview",
+    now: "Today", build: "Under construction", total: "Cumulative", topBuild: "Largest sites under construction", us: "United States", asia: "East Asia", eu: "Europe", reset: "Overview",
     sites: "datacenters tracked", mw: "IT power in service", h100: "H100 equivalents", cmw: "planned IT power", fabs: "chip fabs tracked",
-    byc: "IT power by country (datacenters tracked by Epoch)", top: "Largest sites", topPlan: "Largest sites at the planned horizon", unit: "MW",
+    byc: "IT power by country (datacenters tracked by Epoch)", top: "Largest sites", topPlan: "Largest sites once everything is built", unit: "MW",
     hint: "Drag to spin the Earth · wheel or + / − to zoom", lgLand: "One dot ≈ 140 km of land", pick: "Click a site on the globe to see who runs it, its power and what comes next.",
     owner: "Operator", users: "Users", power: "IT power in service", chips: "Chips", cost: "Cumulative investment", next: "Next milestone", last: "Last known milestone", loc: "Position",
     locA: "at the street address", locC: "to the nearest town", likely: "likely", spec: "speculative", src: "Source", status: "Status", co: "Company", kind: "Type", asof: "Epoch data as of",
@@ -72,7 +72,9 @@ function items() {
   });
   return out;
 }
-function mwOf(s) { return ST.mode === "plan" ? Math.max(s.mw, s.peak ? s.peak.mw : 0, s.next ? s.next.mw : 0) : s.mw; }
+function totOf(s) { return Math.max(s.mw, s.peak ? s.peak.mw : 0, s.next ? s.next.mw : 0); }
+function incOf(s) { return totOf(s) - s.mw; }
+function mwOf(s) { return ST.mode === "total" ? totOf(s) : ST.mode === "build" ? incOf(s) : s.mw; }
 function sc() { return Math.sqrt(ST.view.z); }
 function rOf(m) { return (m > 0 ? 2.4 + Math.sqrt(m) * 0.2 : 3.6) * sc(); }
 function RR() { return Math.min(CW, CH) / 2 * 0.94 * ST.view.z; }
@@ -100,9 +102,8 @@ function size() {
 function chips() {
   var L = ST.layers;
   var h = ["dc", "logic", "memory", "packaging"].concat(EX.sites.length ? ["extra"] : []).map(function (k) { return '<button class="chip' + (L[k] ? " on" : "") + '" data-l="' + k + '" aria-pressed="' + (L[k] ? "true" : "false") + '"><i class="k-' + k + '"></i>' + t(k) + "</button>"; }).join("");
-  h += '<span class="sp"></span><span class="seg">' + ["now", "plan"].map(function (m) { return '<button class="' + (ST.mode === m ? "on" : "") + '" data-m="' + m + '">' + t(m) + "</button>"; }).join("") + "</span>";
   document.getElementById("lay").innerHTML = h;
-  document.getElementById("rg").innerHTML = ["eu", "us", "asia"].map(function (r) { return '<button class="rb" data-r="' + r + '">' + t(r) + "</button>"; }).join("");
+  document.getElementById("rg").innerHTML = ["now", "build", "total"].map(function (m) { return '<button class="rb' + (ST.mode === m ? " on" : "") + '" data-m="' + m + '" aria-pressed="' + (ST.mode === m ? "true" : "false") + '">' + t(m) + "</button>"; }).join("");
   var al = document.getElementById("al"); al.classList.toggle("open", !!ST.alert);
   document.getElementById("alt").textContent = LANG === "fr" ? "Environ 50 % des datacenters recensés" : "About 50% of data centers covered";
   document.getElementById("ald").textContent = LANG === "fr" ? "Bien couverts aux États-Unis, beaucoup moins en Chine, au Moyen-Orient et en Europe." : "Well covered in the US, far less in China, the Middle East and Europe.";
@@ -165,6 +166,7 @@ function render() {
   SCR = []; var s = sc(), vis = [];
   for (i = 0; i < ITEMS.length; i++) {
     var it = ITEMS[i]; if (!ST.layers[it.k]) continue;
+    if (ST.mode === "build") { if (it.k === "dc" ? !(incOf(it.d) > 0) : it.k === "extra" ? it.d.status === "live" : (it.d.status !== "build" && it.d.status !== "plan")) continue; }
     dl = it.lo - l0; var cdl = Math.cos(dl); c = sp0 * it.sl + cp0 * it.cl * cdl; if (c <= 0.03) continue;
     x = cx + R * it.cl * Math.sin(dl); y = cy - R * (cp0 * it.sl - sp0 * it.cl * cdl);
     if (it.dup > 1) { var an = it.dup * 2.4, rr = 6 * s * Math.ceil((it.dup - 1) / 6); x += Math.cos(an) * rr; y += Math.sin(an) * rr; }
@@ -177,9 +179,9 @@ function render() {
     ctx.globalAlpha = fade;
     if (it.k === "dc") {
       r = rOf(o.m);
-      if (ST.mode === "plan" && d.peak && d.peak.mw > d.mw) { ctx.beginPath(); ctx.setLineDash([3, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1; ctx.arc(o.x, o.y, rOf(d.peak.mw), 0, 6.2832); ctx.stroke(); ctx.setLineDash([]); }
       ctx.beginPath(); ctx.arc(o.x, o.y, r, 0, 6.2832);
-      if (o.m > 0) { ctx.fillStyle = "rgba(0,113,227,.88)"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.2; ctx.stroke(); }
+      if (ST.mode === "build") { ctx.fillStyle = "rgba(0,113,227,.14)"; ctx.fill(); ctx.setLineDash([3, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1.4; ctx.stroke(); ctx.setLineDash([]); }
+      else if (o.m > 0) { ctx.fillStyle = "rgba(0,113,227,.88)"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.2; ctx.stroke(); }
       else { ctx.setLineDash([2, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1.2; ctx.stroke(); ctx.setLineDash([]); }
     } else if (it.k === "extra") {
       r = d.status === "live" && d.mw > 0 ? Math.max(4 * s, rOf(d.mw)) : (d.kind === "zone" ? 8 : 6) * s;
@@ -240,22 +242,23 @@ function fiche() {
 }
 
 function stats() {
-  var D = DC.sites, mw = 0, h = 0, plan = 0, by = {};
+  var D = DC.sites, mw = 0, h = 0, plan = 0, by = {}, M = ST.mode;
   D.forEach(function (s) { mw += s.mw; h += s.h100e; var p = Math.max(s.mw, s.peak ? s.peak.mw : 0, s.next ? s.next.mw : 0); plan += p; var c = by[s.country] = by[s.country] || { now: 0, plan: 0, n: 0 }; c.now += s.mw; c.plan += p; c.n++; });
-  var plan1 = ST.mode === "plan";
-  document.getElementById("kp").innerHTML =
+    document.getElementById("kp").innerHTML =
     '<div class="kpi"><b>' + nf(D.length) + "</b><span>" + t("sites") + '</span></div><div class="kpi"><b>' + pw(Math.round(mw)) + "</b><span>" + t("mw") + '</span></div><div class="kpi"><b>' + nf(h / 1e6, 1) + (LANG === "fr" ? " M" : "M") + "</b><span>" + t("h100") + '</span></div><div class="kpi"><b>' + pw(Math.round(plan)) + "</b><span>" + t("cmw") + '</span></div><div class="kpi"><b>' + FB.fabs.length + "</b><span>" + t("fabs") + "</span></div>";
-  document.getElementById("h1").textContent = t("byc"); document.getElementById("h2").textContent = plan1 ? t("topPlan") : t("top");
+  document.getElementById("h1").textContent = t("byc"); document.getElementById("h2").textContent = M === "total" ? t("topPlan") : M === "build" ? t("topBuild") : t("top");
   document.getElementById("kpe").textContent = LANG === "fr" ? "En chiffres" : "In numbers"; document.getElementById("kpt").textContent = LANG === "fr" ? "La puissance suivie" : "The compute we track";
   document.getElementById("h1t").textContent = LANG === "fr" ? "Les États-Unis loin devant" : "The US far ahead"; document.getElementById("h2t").textContent = LANG === "fr" ? "Le gigawatt est franchi" : "The gigawatt is crossed";
-  var cs = Object.keys(by).sort(function (a, b) { return by[b][plan1 ? "plan" : "now"] - by[a][plan1 ? "plan" : "now"]; }).slice(0, 6), mx = Math.max.apply(null, cs.map(function (c) { return by[c][plan1 ? "plan" : "now"]; })) || 1;
+  var val = function (a) { return M === "total" ? a.plan : M === "build" ? a.plan - a.now : a.now; };
+  var cs = Object.keys(by).sort(function (a, b) { return val(by[b]) - val(by[a]); }).filter(function (c) { return M !== "build" || val(by[c]) > 0; }).slice(0, 6), mx = Math.max.apply(null, cs.map(function (c) { return val(by[c]); })) || 1;
   document.getElementById("bc").innerHTML = cs.map(function (c) {
-    var a = by[c], v = plan1 ? a.plan : a.now;
-    return '<div class="row"><span class="nm">' + esc(country(c)) + '</span><span class="bg"><i style="width:' + (a.now / mx * 100).toFixed(1) + '%"></i>' + (plan1 ? '<u style="left:' + (a.now / mx * 100).toFixed(1) + "%;width:" + (Math.max(0, a.plan - a.now) / mx * 100).toFixed(1) + '%"></u>' : "") + '</span><span class="v">' + pw(Math.round(v)) + " · " + a.n + (a.n > 1 ? " sites" : " site") + "</span></div>";
+    var a = by[c], v = val(a), inc = a.plan - a.now;
+    var bar = M === "now" ? '<i style="width:' + (a.now / mx * 100).toFixed(1) + '%"></i>' : M === "build" ? '<u style="left:0;width:' + (inc / mx * 100).toFixed(1) + '%"></u>' : '<i style="width:' + (a.now / mx * 100).toFixed(1) + '%"></i><u style="left:' + (a.now / mx * 100).toFixed(1) + "%;width:" + (Math.max(0, inc) / mx * 100).toFixed(1) + '%"></u>';
+    return '<div class="row"><span class="nm">' + esc(country(c)) + '</span><span class="bg">' + bar + '</span><span class="v">' + (M === "build" ? "+" : "") + pw(Math.round(v)) + "</span></div>";
   }).join("");
-  var top = D.slice().sort(function (a, b) { return mwOf(b) - mwOf(a); }).slice(0, 6), m2 = mwOf(top[0]) || 1;
+  var top = D.slice().filter(function (x) { return M !== "build" || incOf(x) > 0; }).sort(function (a, b) { return mwOf(b) - mwOf(a); }).slice(0, 6), m2 = mwOf(top[0]) || 1;
   document.getElementById("tp").innerHTML = top.map(function (s) {
-    return '<button class="row site" data-id="dc:' + esc(s.id) + '"><span class="nm"><b>' + esc(s.name) + '</b><small>' + esc(country(s.country)) + ' · ' + pw(mwOf(s)) + '</small></span><span class="arw"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>';
+    return '<button class="row site" data-id="dc:' + esc(s.id) + '"><span class="nm"><b>' + esc(s.name) + '</b><small>' + esc(country(s.country)) + ' · ' + (M === "build" ? "+" : "") + pw(mwOf(s)) + '</small></span><span class="arw"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></button>';
   }).join("");
   document.getElementById("nt").innerHTML = esc(t("note1")) + "<br>" + esc(t("note2")) + (EX.sites.length ? "<br>" + esc(t("note3")) : "") + " " + t("asof") + " " + esc(DC.as_of) + ' · <a href="' + esc(DC.source.url) + '" target="_blank" rel="noopener">epoch.ai</a>';
 }

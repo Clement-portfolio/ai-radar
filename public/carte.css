@@ -12,7 +12,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .thead h2{font:600 clamp(24px,3vw,34px)/1.1 var(--display);letter-spacing:-.03em}
 
 /* filtres sur une ligne + Aujourd'hui / Horizon prévu */
-.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px;border-radius:30px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.bar{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;align-items:center;padding:10px;border-radius:30px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.05)}
 .bar .sp{flex:1}
 .chip{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 16px;border:0;border-radius:999px;background:var(--pill);font-size:15px;color:var(--ink);transition:opacity .2s ease}
 .chip i{width:10px;height:10px;border-radius:50%;display:inline-block}
@@ -42,6 +42,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .regs{position:absolute;left:16px;top:16px;display:flex;gap:8px}
 .rb{min-height:36px;padding:0 14px;border:0;border-radius:999px;background:#fff;font-size:13px;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .rb:hover{background:#FAFAFA}
+.rb.on,.rb.on:hover{background:var(--ink);color:#fff}
 .zoom{position:absolute;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px}
 .zb{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.05)}
 .hintb{position:absolute;left:18px;bottom:18px;font-size:13px;color:var(--mute);pointer-events:none}
@@ -95,3 +96,4 @@ button.row:hover .arw{transform:scale(1.06)}
 @media(max-width:620px){.tile{padding:18px 16px 22px;border-radius:26px}.tile.half{padding:32px 20px 24px}.regs{flex-wrap:wrap}.bar .sp{display:none}}
 
 .row .bg i{min-width:6px}
+.row .bg u{min-width:6px}
