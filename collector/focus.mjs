@@ -77,8 +77,8 @@ export function relatedFor(story, items, now, max = 3) {
 }
 
 export const FOCUS_SYSTEM = `Tu rédiges le « Briefing du jour » d'un site d'actualité sur l'intelligence artificielle et son économie, pour un lecteur non spécialiste qui lit vite. On te donne jusqu'à 6 histoires numérotées (i) ; chacune regroupe des articles récents sur le même sujet (articles : a, title, summary, source, date) et parfois des articles plus anciens (background : j).
-ÉTAPE 1. Choisis EXACTEMENT 3 histoires, de la plus importante à la moins importante, qui racontent 3 événements DIFFÉRENTS. Deux histoires du même dossier comptent pour une seule (par exemple une mesure et la réaction à cette mesure, ou la même affaire vue sous deux angles) : n'en garde qu'une et ignore l'autre. Si tu ne trouves pas 3 événements différents, renvoie-en moins plutôt que de répéter un sujet.
-ÉTAPE 2. Pour chaque histoire retenue, renvoie, en français :
+ÉTAPE 1. Classe les histoires de la plus importante à la moins importante et renvoie les 5 meilleures (toutes s'il y en a moins), qui racontent des événements DIFFÉRENTS. Deux histoires du même dossier comptent pour une seule (par exemple une mesure et la réaction à cette mesure, ou la même affaire vue sous deux angles) : n'en garde qu'une et ignore l'autre. Le site n'en publiera que 3, les premières qui sont valides : les suivantes servent de réserve.
+ÉTAPE 2. Pour chaque histoire renvoyée, renvoie, en français :
 - head : le titre, une phrase d'actualité claire, 110 caractères maximum, sans point final. C'est lui, et lui seul, qui dit l'événement.
 - bullets : de 2 à 4 puces. Chaque puce apporte une information NOUVELLE, que ni le titre ni les autres puces ne donnent, et appartient à l'un de ces trois types (champ kind) :
   • "detail" : un fait précis de l'événement qui n'est pas dans le titre (chiffre, montant, date, nom, lieu, condition, calendrier).
@@ -204,10 +204,11 @@ export async function makeFocus({ items, now, prev, generate, modelName }) {
   try { res = await generate(inputs.map((x) => ({ ...x, background: x.background.map(({ id, ...b }) => b) }))); } catch { res = null; }
   const diag = [];
   const valid = validateStories(res, inputs, diag);
-  if (!valid) return { doc: base, regenerated: false, reason: res ? "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || (Array.isArray(res) ? "réponse vide" : "réponse invalide")) : "Gemini indisponible : dernier briefing conservé" };
+  if (!valid) return { doc: base, regenerated: false, diag, reason: res ? "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || (Array.isArray(res) ? "réponse vide" : "réponse invalide")) : "Gemini indisponible : dernier briefing conservé" };
   const keep = selectDistinct(valid, stories, FOCUS_RULES.stories, diag);
-  if (keep.length < FOCUS_RULES.stories && good) return { doc: base, regenerated: false, reason: `moins de ${FOCUS_RULES.stories} histoires distinctes et valides (${keep.length}) : dernier briefing conservé` };
-  if (!keep.length) return { doc: base, regenerated: false, reason: "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || "aucune histoire distincte") };
+  // un briefing complet encore récent est conservé ; au-delà de 18 h, 2 histoires fraîches valent mieux que 3 histoires de la veille
+  if (keep.length < FOCUS_RULES.stories && good && !(keep.length >= 2 && age > 18 * H)) return { doc: base, regenerated: false, diag, reason: `moins de ${FOCUS_RULES.stories} histoires distinctes et valides (${keep.length}) : dernier briefing conservé` };
+  if (!keep.length) return { doc: base, regenerated: false, diag, reason: "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || "aucune histoire distincte") };
   return {
     doc: {
       v: 2, rules: { stories: FOCUS_RULES.stories, min_bullets: FOCUS_RULES.minBullets, max_bullets: FOCUS_RULES.maxBullets },
@@ -218,6 +219,6 @@ export async function makeFocus({ items, now, prev, generate, modelName }) {
         return { ids, head: r.head, bullets: r.bullets, kinds: r.kinds, head_en: r.head_en, bullets_en: r.bullets_en, ctx_ids: r.ctx.map((j) => inp.background.find((b) => b.j === j).id), ts: new Date(s.newest).toISOString() };
       }),
     },
-    regenerated: true, reason: keep.length < FOCUS_RULES.stories ? `briefing régénéré (${keep.length} histoire(s) distincte(s) seulement)` : "briefing régénéré",
+    regenerated: true, diag, reason: keep.length < FOCUS_RULES.stories ? `briefing régénéré (${keep.length} histoire(s) distincte(s) seulement)` : "briefing régénéré",
   };
 }

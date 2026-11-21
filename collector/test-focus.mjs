@@ -134,6 +134,13 @@ assert.equal(r8.regenerated, false); assert.match(r8.reason, /moins de 3/); asse
 // sans ancien briefing, on publie ce qui existe plutôt que rien
 const r9 = await makeFocus({ items, now, prev: null, generate: (inp) => gen(inp.slice(0, 2)) });
 assert.equal(r9.regenerated, true); assert.equal(r9.doc.stories.length, 2);
+// 2 histoires valides et un briefing de plus de 18 h : on publie les 2 fraîches plutôt que 3 de la veille
+const r11 = await makeFocus({ items, now: now + 20 * H, prev: r1.doc, generate: (inp) => gen(inp.slice(0, 2)) });
+assert.equal(r11.regenerated, true); assert.equal(r11.doc.stories.length, 2, "briefing périmé remplacé par 2 histoires");
+// le modèle renvoie plus d'histoires que nécessaire : les 3 premières valides sont retenues, les suivantes servent de réserve
+const r12 = await makeFocus({ items, now: now + 20 * H, prev: r1.doc, generate: (inp) => { const out = gen(inp); return Array.isArray(out) ? [{ i: out[0].i, head: "", head_en: "", bullets: [] }, ...out] : out; } });
+assert.equal(r12.doc.stories.length, 3, "une histoire invalide ne bloque plus le briefing");
+assert.ok(Array.isArray(r12.diag) && r12.diag.length >= 1, "raisons de rejet conservées");
 const oldDoc = { items: [{ id: "a", why: "ancien format" }] };
 const r7 = await makeFocus({ items, now, prev: oldDoc, generate: gen });
 assert.equal(r7.regenerated, true, "ancien format de document : remplacé");
