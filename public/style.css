@@ -834,3 +834,5 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .vtool .vsearch{padding:0 16px 0 40px;font-size:15px}
 @media(max-width:1000px){.tnums.n6 .tnum:nth-child(-n+2){border-top:0;padding-top:18px}}
 @media(max-width:720px){.tnums.n6 .tnum:nth-child(2){border-top:1px solid var(--hair)}}
+/* Insiders : jamais de texte coupé */
+.vrow .ttl,.vwho .small{display:block;-webkit-line-clamp:unset;overflow:visible;text-overflow:clip}

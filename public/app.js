@@ -113,7 +113,7 @@ function rUne(){
   }).join("")+'</div>'+cta("actualites",en?'All news':'Toutes les actualités')+'</section>';
   var H=((S.voix&&S.voix.hot)||[]).slice(0,3);
   if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say':'Ce qu’ils disent')+'<div class="tgrid3">'+H.map(function(n){
-    return'<figure class="tcard q"><blockquote>« '+esc(!en&&n.title_fr?n.title_fr:n.title)+' »</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
+    return'<figure class="tcard q"><blockquote>« '+esc(ctt(!en&&n.title_fr?n.title_fr:n.title))+' »</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
   }).join("")+'</div>'+cta("acteurs/voix",en?'See Insiders':'Voir les Insiders')+'</section>';
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
   if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
@@ -134,7 +134,7 @@ function voixHtml(){
   if(!H.length)return"";
   return'<section class="vhot"><div class="sgroup">Voix <em>les déclarations les plus reprises des dernières 48 h</em></div>'+H.map(function(n){
     var meta=[n.outlets>1?n.outlets+' médias':'',n.kind==="video"?'Vidéo':n.source,ago(n.ts)].filter(Boolean).join(' · ');
-    return'<div class="vh"><div class="vhn"><b>'+esc(n.n)+'</b><span class="small">'+esc(n.role)+'</span></div><a class="vht" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+esc(!isEn()&&n.title_fr?n.title_fr:n.title)+'</a><div class="small">'+esc(meta)+'</div></div>';
+    return'<div class="vh"><div class="vhn"><b>'+esc(n.n)+'</b><span class="small">'+esc(n.role)+'</span></div><a class="vht" href="'+esc(link(n.url))+'" target="_blank" rel="noopener">'+esc(ctt(!isEn()&&n.title_fr?n.title_fr:n.title))+'</a><div class="small">'+esc(meta)+'</div></div>';
   }).join("")+'<a class="vall small" href="#acteurs/voix">Toutes les voix →</a></section>';
 }
 /* Chiffres clés de la Une : même carte que les chiffres du Marché ; la portée (24 h, semaine, mois) se recalcule à l'affichage */
@@ -722,11 +722,13 @@ function vPanel(){
   }
   return"";
 }
+/* titres tronqués à la source (« … : « Th ») : on retire le fragment citation incomplet */
+function ctt(t){t=String(t||"");var m=t.match(/\s*[:–—-]\s*[«“‘"']\s*[^»”’"'.!?]{0,24}$/);return m&&m.index>20?t.slice(0,m.index):t}
 function vList(){
   var ve=S.ve,vc=S.vc||"ALL",h="";
   var L=vItems().filter(function(x){return(!ve||x.n.e)&&(vc==="ALL"||x.p.cat===vc)});
   if(!L.length)return'<div class="empty">Aucune déclaration pour ces filtres.</div>';
-  var ttl=function(n){return esc(!isEn()&&n.title_fr?n.title_fr:n.title)};
+  var ttl=function(n){return esc(ctt(!isEn()&&n.title_fr?n.title_fr:n.title))};
   if(S.vv==="pers"){
     var by={},order=[];
     L.forEach(function(x){if(!by[x.p.id]){by[x.p.id]=[];order.push(x.p)}by[x.p.id].push(x.n)});
@@ -844,7 +846,7 @@ function sIndex(){
     var h=p.items&&p.items.length?"#acteurs/voix/"+p.id:(p.actor&&aById(p.actor)?"#acteurs/"+p.actor:"#acteurs/voix");
     K.push({g:1,t:p.n,s:p.role,h:h,k:nz(p.n),x:nz(p.role+" "+p.co)});
     (p.items||[]).forEach(function(n){
-      var t=!en&&n.title_fr?n.title_fr:n.title;
+      var t=ctt(!en&&n.title_fr?n.title_fr:n.title);
       K.push({g:2,t:t,s:p.n+" · "+n.source,u:n.url,ts:n.ts,k:"",x:nz(n.title+" "+(n.title_fr||"")+" "+p.n+" "+n.source)});
     });
   });
