@@ -841,7 +841,7 @@ function pHome(en){
   if(!cat.length)return"";
   return'<section class="tile">'+tHead(en?'Calendar':'Calendrier',en?'The odds to watch':'Les probabilités à suivre')+'<div class="tgrid3">'+cat.map(function(c){
     var pr=c.probs.slice().sort(function(a,b){return b.p-a.p}),top=pr[0],sec=pr[1];
-    return'<article class="tcard tprob">'+pRing(top.p)+'<span class="kick">'+esc(({"Introduction en Bourse":"IPO"})[c.kind]||c.kind||"")+' · '+esc(c.label)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(top.label)+(sec?'<br><span class="small mute">'+esc(sec.label)+' : '+esc(pctTxt(sec.p))+'</span>':'')+'</p>'+(c.probs_at?'<span class="small mute">'+(en?'Polymarket bet on ':'Pari Polymarket au ')+esc(fmtD(c.probs_at))+'</span>':'')+'</article>';
+    return'<article class="tcard tprob">'+pRing(top.p)+'<h3>'+esc(c.title)+'</h3><p>'+esc(top.label)+(sec?'<br><span class="small mute">'+esc(sec.label)+' : '+esc(pctTxt(sec.p))+'</span>':'')+'</p>'+(c.probs_at?'<span class="small mute">'+(en?'Polymarket bet on ':'Pari Polymarket au ')+esc(fmtD(c.probs_at))+'</span>':'')+'</article>';
   }).join("")+'</div>'+cta("marche/calendrier",en?'See the calendar':'Voir le calendrier')+'</section>';
 }
 function xTitle(it){var t=tx(it,"title");return t||String(it.text||"").slice(0,160)}
