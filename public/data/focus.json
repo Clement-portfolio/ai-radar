@@ -5,92 +5,92 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-19T14:02:07.464Z",
+ "generated_at": "2026-11-21T12:31:42.736Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "0396da82d35c+06e6d380e3a5+1dfd0f40ba72+4316f933cb3e+4ff277b88683+7f3c247631e5+871fa7926cd4+8838b8c2d698+92ca8c823c3c+b7121aa76176+ea05cfb5b9ab",
-  "01ad01e5cd41+13bd9b6bf644+2511beafb119+2a0155947f7e+3ee7a75e87fa+499e87d18729+8e2a2f996f96+950a39f90ba9+be019836a173+d0f3964a2126+fd11083ed762",
-  "0335ba73541c+399baa5b5687+472accef9bf8+51dccde4caab+5ed22d7cf39b+60b091351fb7+80c35197658e+8239fbdc6243+d8f38d7ef9ae+f55b32fce91c",
-  "06c70ce20939+14c3e9c2875e+2745e145bb51+4f1fe20754ae+6e834fc4bc29+854cbb320fb2+b1da22f7bd68+db111edbe82f",
-  "36e89eb54c7a+39ac7742871f+4d26e05d4a3f+609f4b5b9b9f+ccb11ee094f3",
-  "44f97ed1857f+b898a1b2127c"
+  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+66ea04eb3cac+7e6c0139750f+89495d761169+c48900998378+f1b7c64ada91",
+  "0b56d8c56f62+1e435cb31c5f+453bad6c8f73+6e200b2f4fcf+786107148045+90ec2d9d6b03+96a6c848a0d0+9d762d0c986e+aef96700cda8+b397f013e77f+c9f352697881",
+  "08b074f7bce0+0c1301471b50+5a8f7d1dc4aa+cd767daa7782+d4a5723079d7+d8fbec9f2d14+e504b90df3a2+fba84b20d145",
+  "09a497f98e64+3778953e71a6+8daf2e1f77bd+db8f13db2a39+f2ad34d486f9",
+  "4ebf2d8451cd+5636a3f28c6e+85d5e10f531a+fc01b14e6ad1",
+  "0712ed6d10f5+48cad0db8ddb+606a425eafff+96dd70d3f354+bc62dfcb3848"
  ],
  "stories": [
   {
    "ids": [
-    "871fa7926cd4",
-    "0396da82d35c",
-    "4ff277b88683",
-    "8838b8c2d698"
+    "786107148045",
+    "0b56d8c56f62",
+    "90ec2d9d6b03",
+    "b397f013e77f"
    ],
-   "head": "Anthropic entre en bourse avec une valorisation record de 1 500 milliards de dollars",
+   "head": "Anthropic lève 81 milliards de dollars lors d'une introduction en bourse historique",
    "bullets": [
-    "L'entreprise a fixé le prix de ses actions à 83 dollars et a levé 107 milliards de dollars avant ses débuts.",
-    "La cotation au Nasdaq sous le symbole ANT était prévue pour le 19 novembre après une fourchette initiale estimée entre 70 et 78 dollars."
+    "Amazon et Google détiennent ensemble près de 30 % d'Anthropic après cette opération financière.",
+    "Cette introduction en bourse constitue un test majeur pour mesurer le sentiment des investisseurs envers les laboratoires d'intelligence artificielle."
    ],
    "kinds": [
     "detail",
-    "contexte"
+    "explication"
    ],
-   "head_en": "Anthropic goes public with a record valuation of 1.5 trillion dollars",
+   "head_en": "Anthropic raises 81 billion dollars in a historic initial public offering",
    "bullets_en": [
-    "The company priced its shares at 83 dollars and raised 107 billion dollars prior to its debut.",
-    "The Nasdaq listing under the ticker ANT was scheduled for November 19 following an initial range estimated between 70 and 78 dollars."
-   ],
-   "ctx_ids": [
-    "33642c9df619"
-   ],
-   "ts": "2026-11-19T13:01:00.000Z"
-  },
-  {
-   "ids": [
-    "80c35197658e",
-    "51dccde4caab",
-    "d8f38d7ef9ae",
-    "0335ba73541c"
-   ],
-   "head": "Nvidia suspend ses expéditions de puces d'intelligence artificielle vers la Chine",
-   "bullets": [
-    "La décision intervient alors que le Trésor américain accentue sa pression sur les ventes de semi-conducteurs.",
-    "Cette suspension s'ajoute à une baisse de l'action de 2,2 % enregistrée lors des échanges avant-bourse suite à la démission de Jensen Huang."
-   ],
-   "kinds": [
-    "detail",
-    "contexte"
-   ],
-   "head_en": "Nvidia suspends artificial intelligence chip shipments to China",
-   "bullets_en": [
-    "The decision comes as the US Treasury increases its pressure regarding semiconductor sales.",
-    "This suspension follows a 2.2 percent drop in the stock during pre-market trading following the resignation of Jensen Huang."
-   ],
-   "ctx_ids": [
-    "19f4815016ce"
-   ],
-   "ts": "2026-11-19T09:36:25.000Z"
-  },
-  {
-   "ids": [
-    "db111edbe82f",
-    "b1da22f7bd68",
-    "6e834fc4bc29",
-    "14c3e9c2875e"
-   ],
-   "head": "Plus de 400 centres de données américains consomment autant d'électricité que des États entiers",
-   "bullets": [
-    "403 centres de données hyperscale ont consommé 82 térawattheures d'électricité en un an.",
-    "La consommation de ces infrastructures rivalise avec celle du Wisconsin, du Michigan ou de l'Indiana."
-   ],
-   "kinds": [
-    "detail",
-    "detail"
-   ],
-   "head_en": "More than 400 American data centers consume as much electricity as entire states",
-   "bullets_en": [
-    "403 hyperscale data centers consumed 82 terawatt-hours of electricity in one year.",
-    "The consumption of these infrastructures rivals that of Wisconsin, Michigan, or Indiana."
+    "Amazon and Google together hold nearly 30 percent of Anthropic following this financial transaction.",
+    "This initial public offering serves as a major test to gauge investor sentiment toward artificial intelligence laboratories."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-18T17:52:00.000Z"
+   "ts": "2026-11-21T09:54:00.000Z"
+  },
+  {
+   "ids": [
+    "fba84b20d145",
+    "d4a5723079d7",
+    "d8fbec9f2d14",
+    "cd767daa7782"
+   ],
+   "head": "Trump menace les entreprises technologiques d'une taxe énorme pour les datacenters à l'étranger",
+   "bullets": [
+    "Cette mesure vise à contraindre les entreprises technologiques nationales à maintenir leurs investissements dans les infrastructures sur le sol américain.",
+    "Les restrictions américaines sur les puces IA compliquaient déjà le développement des centres de données en Asie du Sud-Est."
+   ],
+   "kinds": [
+    "explication",
+    "contexte"
+   ],
+   "head_en": "Trump threatens tech companies with a massive tax for datacenters abroad",
+   "bullets_en": [
+    "This measure aims to force national tech companies to keep their infrastructure investments on US soil.",
+    "US restrictions on AI chips were already complicating the development of datacenters in Southeast Asia."
+   ],
+   "ctx_ids": [
+    "5db9be893d58"
+   ],
+   "ts": "2026-11-20T21:35:47.000Z"
+  },
+  {
+   "ids": [
+    "09a497f98e64",
+    "f2ad34d486f9",
+    "3778953e71a6",
+    "db8f13db2a39"
+   ],
+   "head": "Samsung suspend ses livraisons de puces IA en Chine suite aux nouvelles restrictions américaines",
+   "bullets": [
+    "Nvidia avait déjà suspendu ses expéditions de puces IA haute performance vers la Chine.",
+    "Le Département du Commerce américain durcit ses règles pour contrer les transferts indirects via les hubs de la région."
+   ],
+   "kinds": [
+    "contexte",
+    "explication"
+   ],
+   "head_en": "Samsung suspends AI chip shipments to China following new US restrictions",
+   "bullets_en": [
+    "Nvidia had already suspended its shipments of high-performance AI chips to China.",
+    "The US Department of Commerce is tightening its rules to counter indirect transfers via regional hubs."
+   ],
+   "ctx_ids": [
+    "472accef9bf8"
+   ],
+   "ts": "2026-11-21T11:45:01.000Z"
   }
  ]
 }
