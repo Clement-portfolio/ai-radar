@@ -75,7 +75,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .tile.half{padding:44px 40px 36px;gap:24px}
 .tile.half .thead h2{font-size:26px;letter-spacing:-.03em}
 h4{display:none}
-.row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:14px;align-items:center;padding:12px 0;font-size:15px;border:0;border-bottom:1px solid var(--hair);background:none;width:100%;text-align:left;font-family:var(--ui);color:var(--ink)}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) 88px;gap:14px;align-items:center;padding:12px 0;font-size:15px;border:0;border-bottom:1px solid var(--hair);background:none;width:100%;text-align:left;font-family:var(--ui);color:var(--ink)}
 .row:last-child{border-bottom:0}
 .row .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .row .bg{height:10px;border-radius:999px;background:var(--pill);position:relative;overflow:hidden}
