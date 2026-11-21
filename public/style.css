@@ -946,3 +946,6 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .seg2{display:inline-flex;padding:3px;border-radius:999px;background:var(--pill)}
 .seg2 a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 24px;border-radius:999px;color:var(--ink);font:400 15px var(--ui);text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
 .seg2 a.on{background:var(--ink);color:#fff;font-weight:500}
+.essmode .vrow .xq{border-left-color:rgba(255,255,255,.25);color:#E5E5EA}
+.essmode .vrow .rsm,.essmode .vrow .rsm b{color:#C7C7CC}
+.essmode .vrow .xb{background:#2C2C2E;color:#A1A1A6}.essmode .vrow .xb.xn{background:#16331F;color:#6FD39A}.essmode .vrow .xb.xw{background:#3A2A12;color:#F0B35E}

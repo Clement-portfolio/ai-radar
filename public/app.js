@@ -800,7 +800,7 @@ function aVoix(){
 
 function rActeurs(){
   var el=$("v-acteurs");if(!el||!S.acteurs)return;
-  el.classList.toggle("essmode",S.actor==="voix"&&!!S.ve);
+  el.classList.toggle("essmode",S.actor==="voix"&&!!(S.vsrc==="x"?S.xnr:S.ve));
   if(S.actor==="voix"){el.innerHTML=aVoix();return}
   var a=S.actor&&aById(S.actor);
   if(a){el.innerHTML=aFiche(a);return}
