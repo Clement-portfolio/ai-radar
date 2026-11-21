@@ -1049,6 +1049,27 @@
    "b": "reseau",
    "s": -1,
    "r": "Les liaisons (cuivre ou fibre) aboutissent à un commutateur Ethernet ou InfiniBand, qui relie les racks entre eux."
+  },
+  "euv": {
+   "n": "ASML",
+   "c": "fabrique les machines EUV",
+   "b": "fabrication",
+   "s": -1,
+   "r": "ASML ne grave aucune puce : elle construit les machines de lithographie qui impriment les motifs sur le silicium. Elle est la seule à vendre des machines EUV, indispensables aux puces IA les plus fines ; chaque fonderie avancée dépend d'elle."
+  },
+  "tsmc": {
+   "n": "TSMC",
+   "c": "grave les puces IA",
+   "b": "fabrication",
+   "s": -1,
+   "r": "Le premier fondeur mondial : il grave la quasi-totalité des puces IA de pointe (Nvidia, AMD, puces sur mesure) sur ses lignes 3 nm et 5 nm, et monte le 2 nm."
+  },
+  "fnd": {
+   "n": "Autres fonderies",
+   "c": "Samsung, SMIC, UMC, GF",
+   "b": "fabrication",
+   "s": -1,
+   "r": "Les fonderies derrière TSMC : Samsung pour le très avancé, SMIC pour la Chine, UMC et GlobalFoundries surtout pour des puces matures (capteurs, auto, réseau). Elles pèsent un quart du marché des dix premières."
   }
  },
  "det": {
@@ -1272,6 +1293,47 @@
     "net",
     "Commutateur",
     "relie les racks entre eux"
+   ]
+  ],
+  "euv": [
+   [
+    "calc",
+    "Machine EUV",
+    "Lumière ultraviolette extrême : motifs de quelques nanomètres"
+   ],
+   [
+    "op",
+    "Source de lumière",
+    "Gouttelettes d'étain frappées par un laser"
+   ],
+   [
+    "st",
+    "Machines DUV",
+    "Générations précédentes, plus nombreuses"
+   ]
+  ],
+  "tsmc": [
+   [
+    "calc",
+    "Ligne avancée",
+    "3 nm et 5 nm complets, 2 nm en montée"
+   ],
+   [
+    "st",
+    "Bâtiment de fab",
+    "Salle blanche, des milliers d'étapes par plaquette"
+   ]
+  ],
+  "fnd": [
+   [
+    "st",
+    "Fabs de plus petite taille",
+    "Surtout des procédés matures"
+   ],
+   [
+    "calc",
+    "Samsung, SMIC",
+    "Seuls autres acteurs proches du très avancé"
    ]
   ]
  },
@@ -2232,22 +2294,22 @@
     "m": "Part du carnet des trois constructeurs (pas des parts de marché)",
     "items": [
      {
-      "n": "GE Vernova (116 GW)",
-      "v": 116
+      "n": "GE Vernova (122 GW)",
+      "v": 122
      },
      {
-      "n": "Siemens Energy (69 GW)",
-      "v": 69
+      "n": "Siemens Energy (104 GW)",
+      "v": 104
      },
      {
       "n": "Mitsubishi (35 GW)",
       "v": 35
      }
     ],
-    "as_of": "T2 – août 2026",
-    "src": "OilPrice ; Power Magazine",
-    "u": "https://oilprice.com/Energy/Energy-General/The-Gas-Turbine-Shortage-Just-Became-AIs-Biggest-Constraint.html",
-    "note": "Dates et périmètres légèrement différents selon les constructeurs ; part du carnet calculée."
+    "as_of": "28 oct. – 13 nov. 2026 (Mitsubishi : août)",
+    "src": "GE Vernova (T3 2026) ; Siemens Energy via Turbomachinery ; OilPrice",
+    "u": "https://www.turbomachinerymag.com/view/siemens-energy-fy2026-record-backlog-164-billion-gas-services-orders",
+    "note": "Carnet et réservations de créneaux : GE Vernova 122 GW (T3 2026), Siemens Energy 104 GW dont 39 GW de réservations (exercice clos le 30 sept. 2026), Mitsubishi 35 GW (août 2026, non actualisé). Périmètres et dates légèrement différents ; part du carnet calculée."
    },
    "rev": {
     "t": "Siemens Energy : chiffre d'affaires de la division turbines à gaz et services",
@@ -2274,20 +2336,27 @@
       "l": "12,2"
      },
      {
-      "x": "mars 2026*",
-      "v": 12.8,
-      "l": "12,8"
+      "x": "2026",
+      "v": 14.5,
+      "l": "14,5"
      }
     ],
-    "as_of": "mars 2026",
-    "src": "Siemens Energy, via StockAnalysis",
-    "url": "https://stockanalysis.com/quote/otc/SMNEY/financials/",
-    "note": "* 12 derniers mois. GE Vernova (premier constructeur) : division Power à 19,8 Md$ en 2025, + 9 % (GE Vernova). Le chiffre d'affaires suit les livraisons, donc bien moins vite que les commandes."
+    "as_of": "12 nov. 2026",
+    "src": "Siemens Energy (résultats T4 de l'exercice 2026)",
+    "url": "https://www.turbomachinerymag.com/view/siemens-energy-fy2026-record-backlog-164-billion-gas-services-orders",
+    "note": "Exercice clos le 30 septembre 2026 : + 20 % ; les commandes de la division ont bondi de 46 % à 32,8 Md€. GE Vernova : 12,6 Md$ de chiffre d'affaires groupe au T3 2026 (+ 18 % hors effets de périmètre), 197 Md$ de carnet. Le chiffre d'affaires suit les livraisons, donc bien moins vite que les commandes."
    },
    "lead": 48,
    "leadTxt": "une turbine commandée aujourd'hui arrive en 2031",
    "why": "Le carnet vaut près de deux ans de production mondiale et GE Vernova vend déjà des créneaux de livraison en 2031.",
    "evid": [
+    {
+     "v": "122 GW",
+     "l": "de turbines à gaz sous contrat chez GE Vernova (carnet + réservations), 130 GW visés fin 2026 ; la hausse du T3 n'est que de 6 GW",
+     "as_of": "28 oct. 2026",
+     "src": "GE Vernova, via Turbomachinery",
+     "u": "https://www.turbomachinerymag.com/view/ge-vernova-q3-2026-gas-power-backlog-122-gw-trench-acquisition"
+    },
     {
      "v": "36,3 GW",
      "l": "ajouts de capacité attendus dans les datacenters américains en 2027, plus que la production annuelle des trois constructeurs réunis",
@@ -2323,15 +2392,15 @@
       "l": "11,3"
      },
      {
-      "x": "mars 2026*",
-      "v": 12.09,
-      "l": "12,1"
+      "x": "2026",
+      "v": 14.1,
+      "l": "14,1"
      }
     ],
-    "as_of": "mars 2026",
-    "src": "Siemens Energy, via StockAnalysis",
-    "url": "https://stockanalysis.com/quote/otc/SMNEY/financials/metrics/",
-    "note": "* 12 derniers mois. Périmètre plus large que les transformateurs (réseaux entiers). GE Vernova Électrification : 7,5 Md$ en 2024, 9,6 Md$ en 2025, + 28 % (GE Vernova). Aucune série propre aux transformateurs dans nos sources."
+    "as_of": "12 nov. 2026",
+    "src": "Siemens Energy (Oilprice)",
+    "url": "https://oilprice.com/Company-News/Siemens-Energy-Targets-22-Margin-as-Annual-Profit-Jumps-145.html",
+    "note": "Exercice clos le 30 septembre 2026 : + 26 % hors effets de change. Périmètre plus large que les transformateurs (réseaux entiers). Commandes : 24,0 Md€ (+ 14,5 %). GE Vernova Électrification : 7,5 Md$ en 2024, 9,6 Md$ en 2025. Aucune série propre aux transformateurs dans nos sources."
    },
    "gap": {
     "lo": 30,
@@ -2389,118 +2458,120 @@
     "as_of": "9 sept. 2026",
     "src": "TrendForce (classement des fonderies, T2 2026)",
     "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
-    "note": "Camembert : les cinq grandes fonderies nommées (Samsung : sa seule activité de fonderie) et, en gris, le reste du top 10 (calculé : 53,49 Md$ moins les cinq). ASML n'y figure pas : c'est un fabricant de machines de lithographie, qui vend à ces fonderies ; l'ajouter compterait deux fois le même argent. Intel Foundry n'est pas dans ce classement."
+    "note": "Camembert : les cinq grandes fonderies nommées (Samsung : sa seule activité de fonderie) et, en gris, le reste du top 10 (calculé : 53,49 Md$ moins les cinq). ASML n'y figure pas : c'est un fabricant de machines de lithographie, qui vend à ces fonderies ; l'ajouter compterait deux fois le même argent. Intel Foundry n'est pas dans ce classement. Le classement du T3 2026 (TrendForce) n'est pas encore sorti ; les chiffres du T3 des fonderies cotées sont dans le graphique.",
+    "indep": true
    },
    "chart": {
     "t": "Chiffre d'affaires trimestriel des fonderies et d'ASML",
     "u": "Md$ par trimestre (ASML : Md€, en pointillés)",
     "x": [
-     "T3 24",
      "T4 24",
      "T1 25",
      "T2 25",
      "T3 25",
      "T4 25",
      "T1 26",
-     "T2 26"
+     "T2 26",
+     "T3 26"
     ],
     "ser": [
      {
       "n": "TSMC",
       "v": [
-       23.53,
        26.85,
        25.5,
        30.24,
        33.063,
        33.723,
        35.855,
-       40.2
-      ]
-     },
-     {
-      "n": "Samsung",
-      "v": [
-       3.31,
-       3.26,
-       2.89,
-       3.16,
-       3.184,
-       3.399,
-       3.201,
-       3.26
-      ],
-      "hol": [
-       0
+       40.2,
+       46.72
       ]
      },
      {
       "n": "SMIC",
       "v": [
-       2.16,
        2.2,
        2.25,
        2.21,
        2.383,
        2.489,
        2.505,
-       3.01
-      ],
-      "hol": [
-       0
+       3.01,
+       3.19
       ]
      },
      {
       "n": "UMC",
       "v": [
        1.87,
-       1.87,
        1.76,
        1.9,
        1.975,
        1.993,
        1.93,
-       2.18
+       2.18,
+       2.32
       ],
       "hol": [
-       2
+       1
       ]
      },
      {
       "n": "GlobalFoundries",
       "v": [
-       1.74,
        1.83,
        1.59,
        1.69,
        1.66,
        1.8,
        1.634,
-       1.79
+       1.79,
+       1.899
       ],
       "hol": [
-       2,
-       4
+       1,
+       3
       ]
      },
      {
       "n": "ASML (Md€)",
       "v": [
-       7.467,
        9.263,
        7.742,
        7.692,
        7.516,
        9.718,
        8.767,
-       9.326
+       9.326,
+       11.662
       ],
       "dash": 1,
       "eur": 1
      }
     ],
-    "as_of": "15 juil. 2026",
+    "as_of": "14 nov. 2026",
     "srcs": [
+     [
+      "TSMC T3 2026 (SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+     ],
+     [
+      "SMIC T3 2026 (TechNode)",
+      "https://technode.global/?p=997555"
+     ],
+     [
+      "GlobalFoundries T3 2026 (SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000259/globalfoundries3q2026earni.htm"
+     ],
+     [
+      "UMC T3 2026 (Business Wire)",
+      "https://www.financialcontent.com/article/bizwire-2026-10-28-umc-reports-third-quarter-2026-results"
+     ],
+     [
+      "ASML T3 2026",
+      "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+     ],
      [
       "TrendForce T2 2026",
       "https://www.trendforce.com/presscenter/news/20260909-13225.html"
@@ -2516,10 +2587,6 @@
      [
       "TrendForce T4 2024",
       "https://www.trendforce.com/presscenter/news/20250310-12510.html"
-     ],
-     [
-      "TrendForce T3 2024",
-      "https://www.trendforce.com/presscenter/news/20241205-12398.html"
      ],
      [
       "GlobalFoundries T1 2026",
@@ -2542,9 +2609,17 @@
       "https://www.asml.com/news/press-releases/2026/q2-2026-financial-results"
      ]
     ],
-    "note": "Chiffres de TrendForce (classement trimestriel des fonderies) ; ASML : ventes nettes publiées, en millions d'euros convertis en milliards, non convertis en dollars. Points creux : le chiffre est calculé à partir de la croissance annoncée ou du total annuel, pas publié tel quel. Samsung Foundry hors activité System LSI. L'axe est linéaire : les petites fonderies sont écrasées par TSMC, d'où les valeurs en légende.",
+    "note": "Chiffres de TrendForce (classement trimestriel des fonderies) ; ASML : ventes nettes publiées, en millions d'euros convertis en milliards, non convertis en dollars. Points creux : le chiffre est calculé à partir de la croissance annoncée ou du total annuel, pas publié tel quel. Samsung Foundry (hors System LSI) n'est pas tracé : son chiffre du T3 2026 n'est pas encore publié (classement TrendForce attendu en décembre). L'axe est linéaire : les petites fonderies sont écrasées par TSMC, d'où les valeurs en légende.",
     "proj": [],
-    "oth": []
+    "oth": [
+     {
+      "v": "3,26 Md$",
+      "l": "Samsung Foundry (hors System LSI) au T2 2026 : dernier chiffre publié, le T3 n'est pas encore sorti, donc absent des courbes",
+      "as_of": "9 sept. 2026",
+      "src": "TrendForce",
+      "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+     }
+    ]
    }
   },
   "dc": {
@@ -3412,6 +3487,427 @@
     "url": "https://openai.com/index/devday-2026-recap/",
     "note": "Autres assistants, mesures non équivalentes : Gemini 1 milliard d'utilisateurs actifs par mois (Google, 11 août 2026) ; Doubao 382 millions par mois, en Chine seulement (QuestMobile, 1ᵉʳ semestre 2026) ; Meta AI plus d'un milliard par mois dans les applications Meta (dernier chiffre : mai 2025, ancien) ; Claude environ 245 millions par mois selon une estimation externe de Sensor Tower, confiance faible (Anthropic ne publie pas ce nombre)."
    }
+  },
+  "euv": {
+   "name": "ASML : lithographie EUV",
+   "pie": {
+    "t": "Chiffre d'affaires d'ASML par activité",
+    "m": "T3 2026 · 11,7 Md€ au total, arrondis ASML",
+    "items": [
+     {
+      "n": "Machines EUV",
+      "v": 4.1
+     },
+     {
+      "n": "Autres machines (DUV, mesure)",
+      "v": 4.3
+     },
+     {
+      "n": "Services et mises à niveau",
+      "v": 3.3
+     }
+    ],
+    "as_of": "14 oct. 2026",
+    "src": "ASML (résultats T3 2026)",
+    "u": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026",
+    "note": "Les ventes de machines (8,4 Md€) sont réparties entre EUV (4,1 Md€, dont une machine à ouverture élevée) et le reste (4,3 Md€, arrondis) ; les services et mises à niveau pèsent 3,3 Md€. ASML est le seul fabricant de machines EUV : ses parts de marché n'ont donc pas de sens ici, c'est la composition de son activité qui compte.",
+    "indep": true
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel d'ASML",
+    "u": "Md€ par trimestre",
+    "x": [
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26",
+     "T3 26"
+    ],
+    "ser": [
+     {
+      "n": "ASML",
+      "v": [
+       9.263,
+       7.742,
+       7.692,
+       7.516,
+       9.718,
+       8.767,
+       9.326,
+       11.662
+      ],
+      "eur": 1
+     }
+    ],
+    "as_of": "14 oct. 2026",
+    "srcs": [
+     [
+      "ASML T3 2026",
+      "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+     ],
+     [
+      "ASML T2 2026",
+      "https://www.asml.com/en/news/press-releases/2026/q2-2026-financial-results"
+     ],
+     [
+      "ASML T3 2025",
+      "https://www.asml.com/news/press-releases/2025/q3-2025-financial-results"
+     ],
+     [
+      "ASML T1 2025",
+      "https://www.asml.com/news/press-releases/2025/q1-2025-financial-results"
+     ],
+     [
+      "ASML T4 2024",
+      "https://www.asml.com/news/press-releases/2025/q4-2024-financial-results"
+     ]
+    ],
+    "note": "Ventes nettes totales publiées par ASML, en milliards d'euros (non converties en dollars). ASML a cessé de publier ses commandes trimestrielles en 2026 : le chiffre d'affaires suit les livraisons et retarde sur la demande réelle.",
+    "proj": [
+     {
+      "v": "14,2 à 15,2 Md€",
+      "l": "guide d'ASML pour le T4 2026 (le T3 : 11,7 Md€)",
+      "as_of": "14 oct. 2026",
+      "src": "ASML",
+      "u": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+     },
+     {
+      "v": "44 à 45 Md€",
+      "l": "guide d'ASML pour l'année 2026",
+      "as_of": "14 oct. 2026",
+      "src": "ASML",
+      "u": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+     }
+    ],
+    "oth": []
+   },
+   "ten": {
+    "t": 9,
+    "why": "ASML est seul à fournir des machines EUV et dit que son offre de 2027 et 2028 ne couvrira pas toute la demande ; elle étudie des capacités supplémentaires.",
+    "basis": "Jugement éditorial à partir des déclarations d'ASML (fournisseur unique, offre annoncée inférieure à la demande jusqu'en 2028) ; pas de délai de livraison publié"
+   },
+   "evid": [
+    {
+     "v": "113",
+     "l": "systèmes de lithographie neufs vendus au T3 2026 (86 au T2)",
+     "as_of": "14 oct. 2026",
+     "src": "ASML",
+     "u": "https://investor.asml.com/news-releases/news-release-details/asml-reports-eu11.7-billion-total-net-sales-and-eu5.0-billion-net-income-q3-2026"
+    },
+    {
+     "v": "≈ 65 → ≈ 85",
+     "l": "machines EUV à ouverture standard : production prévue en 2026, puis environ 30 % de capacité en plus en 2027",
+     "as_of": "oct. 2026",
+     "src": "Averin (analyse des résultats ASML)",
+     "u": "https://averin.com/en/journal/ruslan-averin-asml-q3-2026-earnings-preview-orders-what-to-watch"
+    },
+    {
+     "v": "23 %",
+     "l": "des ventes de machines d'ASML vont à la Chine",
+     "as_of": "oct. 2026",
+     "src": "Averin (analyse des résultats ASML)",
+     "u": "https://averin.com/en/journal/ruslan-averin-asml-q3-2026-earnings-preview-orders-what-to-watch"
+    }
+   ]
+  },
+  "tsmc": {
+   "name": "TSMC",
+   "pie": {
+    "t": "Chiffre d'affaires de TSMC par procédé",
+    "m": "T3 2026 · part du chiffre d'affaires des wafers, 46,72 Md$ au total",
+    "items": [
+     {
+      "n": "3 nm",
+      "v": 33
+     },
+     {
+      "n": "5 nm",
+      "v": 28
+     },
+     {
+      "n": "7 nm",
+      "v": 10
+     },
+     {
+      "n": "2 nm",
+      "v": 8
+     },
+     {
+      "n": "Procédés plus anciens (calculé)",
+      "v": 21
+     }
+    ],
+    "as_of": "15 oct. 2026",
+    "src": "TSMC (résultats T3 2026, SEC)",
+    "u": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm",
+    "note": "Parts publiées par TSMC pour les procédés de 7 nm et en dessous (79 % du total) ; les procédés plus anciens sont calculés comme le complément à 100 %. Le 2 nm pesait 3 % au T2 : il est en montée rapide.",
+    "indep": true
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel de TSMC",
+    "u": "Md$ par trimestre",
+    "x": [
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26",
+     "T3 26"
+    ],
+    "ser": [
+     {
+      "n": "TSMC",
+      "v": [
+       26.85,
+       25.5,
+       30.24,
+       33.063,
+       33.723,
+       35.855,
+       40.2,
+       46.72
+      ]
+     }
+    ],
+    "as_of": "15 oct. 2026",
+    "srcs": [
+     [
+      "TSMC T3 2026 (SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+     ],
+     [
+      "TrendForce T2 2026",
+      "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+     ],
+     [
+      "TrendForce T1 2026",
+      "https://www.trendforce.com/presscenter/news/20260612-13095.html"
+     ],
+     [
+      "TrendForce T4 2025 (Evertiq)",
+      "https://evertiq.com/news/2026-03-12-ai-demand-lifts-top-foundries-q4-revenue-samsung-gains-share"
+     ],
+     [
+      "TrendForce T4 2024",
+      "https://www.trendforce.com/presscenter/news/20250310-12510.html"
+     ]
+    ],
+    "note": "Chiffre d'affaires publié par TSMC en dollars (TrendForce pour les trimestres intermédiaires). Le calcul haute performance (HPC) représente 68 % du T3 2026, contre 66 % au T2 : c'est lui qui tire la croissance.",
+    "proj": [
+     {
+      "v": "52,3 à 54,3 Md$",
+      "l": "guide de TSMC pour le T4 2026",
+      "as_of": "15 oct. 2026",
+      "src": "TSMC (SEC)",
+      "u": "https://www.sec.gov/Archives/edgar/data/0001046179/000104617926000726/a3q26e_withguidancexfinal.htm"
+     }
+    ],
+    "oth": []
+   },
+   "ten": {
+    "t": 8,
+    "why": "TSMC dit que la demande IA dépasse son offre ; ses capacités 3 nm et 5 nm sont complètement réservées et la capacité 2 nm doit plus que doubler en 2027.",
+    "basis": "Niveau de la couche Fonderie (jugement éditorial à partir des déclarations de TSMC et de TrendForce)"
+   },
+   "evid": [
+    {
+     "v": "68 %",
+     "l": "du chiffre d'affaires de TSMC vient du calcul haute performance, contre 66 % au T2",
+     "as_of": "15 oct. 2026",
+     "src": "CRN Asia",
+     "u": "https://www.crnasia.com/news/2026/components-and-peripherals/tsmc-third-quarter-revenue-tops-guidance-as-ceo-says-ai-dema"
+    },
+    {
+     "v": "72,5 %",
+     "l": "part de marché de TSMC parmi les fonderies, T2 2026",
+     "as_of": "9 sept. 2026",
+     "src": "TrendForce",
+     "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+    }
+   ]
+  },
+  "fnd": {
+   "name": "Fonderies hors TSMC",
+   "pie": {
+    "t": "Chiffre d'affaires des fonderies hors TSMC",
+    "m": "T2 2026 · 13,3 Md$ pour les neuf autres fonderies du top 10 (TSMC : 40,2 Md$)",
+    "items": [
+     {
+      "n": "Samsung",
+      "v": 3.26
+     },
+     {
+      "n": "SMIC",
+      "v": 3.01
+     },
+     {
+      "n": "UMC",
+      "v": 2.18
+     },
+     {
+      "n": "GlobalFoundries",
+      "v": 1.79
+     },
+     {
+      "n": "Autres du top 10",
+      "v": 3.05
+     }
+    ],
+    "as_of": "9 sept. 2026",
+    "src": "TrendForce (classement des fonderies, T2 2026)",
+    "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html",
+    "note": "Même source que la fiche TSMC, sans TSMC : Samsung (activité de fonderie seule) 5,9 % du marché mondial, SMIC 5,4 %. Le classement du T3 2026 n'est pas encore publié.",
+    "indep": true
+   },
+   "chart": {
+    "t": "Chiffre d'affaires trimestriel des autres fonderies",
+    "u": "Md$ par trimestre",
+    "x": [
+     "T4 24",
+     "T1 25",
+     "T2 25",
+     "T3 25",
+     "T4 25",
+     "T1 26",
+     "T2 26",
+     "T3 26"
+    ],
+    "ser": [
+     {
+      "n": "SMIC",
+      "v": [
+       2.2,
+       2.25,
+       2.21,
+       2.383,
+       2.489,
+       2.505,
+       3.01,
+       3.19
+      ]
+     },
+     {
+      "n": "UMC",
+      "v": [
+       1.87,
+       1.76,
+       1.9,
+       1.975,
+       1.993,
+       1.93,
+       2.18,
+       2.32
+      ],
+      "hol": [
+       1
+      ]
+     },
+     {
+      "n": "GlobalFoundries",
+      "v": [
+       1.83,
+       1.59,
+       1.69,
+       1.66,
+       1.8,
+       1.634,
+       1.79,
+       1.899
+      ],
+      "hol": [
+       1,
+       3
+      ]
+     }
+    ],
+    "as_of": "14 nov. 2026",
+    "srcs": [
+     [
+      "SMIC T3 2026 (TechNode)",
+      "https://technode.global/?p=997555"
+     ],
+     [
+      "GlobalFoundries T3 2026 (SEC)",
+      "https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000259/globalfoundries3q2026earni.htm"
+     ],
+     [
+      "UMC T3 2026 (Business Wire)",
+      "https://www.financialcontent.com/article/bizwire-2026-10-28-umc-reports-third-quarter-2026-results"
+     ],
+     [
+      "TrendForce T2 2026",
+      "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+     ],
+     [
+      "TrendForce T1 2026",
+      "https://www.trendforce.com/presscenter/news/20260612-13095.html"
+     ],
+     [
+      "TrendForce T4 2025 (Evertiq)",
+      "https://evertiq.com/news/2026-03-12-ai-demand-lifts-top-foundries-q4-revenue-samsung-gains-share"
+     ],
+     [
+      "TrendForce T4 2024",
+      "https://www.trendforce.com/presscenter/news/20250310-12510.html"
+     ],
+     [
+      "GlobalFoundries T1 2026",
+      "https://anysilicon.com/?p=111612"
+     ]
+    ],
+    "note": "Chiffres de TrendForce (classement trimestriel des fonderies) ; Points creux : le chiffre est calculé à partir de la croissance annoncée ou du total annuel, pas publié tel quel. Samsung Foundry (hors System LSI) n'est pas tracé : son chiffre du T3 2026 n'est pas encore publié (classement TrendForce attendu en décembre). SMIC a un taux d'utilisation de 97,3 % au T3 2026 ; UMC, 92 % (85 % au T2).",
+    "proj": [
+     {
+      "v": "≈ 2,0 Md$",
+      "l": "guide de GlobalFoundries pour le T4 2026",
+      "as_of": "4 nov. 2026",
+      "src": "GlobalFoundries (SEC)",
+      "u": "https://www.sec.gov/Archives/edgar/data/0001709048/000170904826000259/globalfoundries3q2026earni.htm"
+     },
+     {
+      "v": "+ 4 à 6 %",
+      "l": "croissance trimestrielle visée par SMIC au T4 2026",
+      "as_of": "12 nov. 2026",
+      "src": "SMIC (via TechNode)",
+      "u": "https://technode.global/?p=997555"
+     }
+    ],
+    "oth": [
+     {
+      "v": "3,26 Md$",
+      "l": "Samsung Foundry (hors System LSI) au T2 2026 : dernier chiffre publié, le T3 n'est pas encore sorti, donc absent des courbes",
+      "as_of": "9 sept. 2026",
+      "src": "TrendForce",
+      "u": "https://www.trendforce.com/presscenter/news/20260909-13225.html"
+     }
+    ]
+   },
+   "ten": {
+    "t": 6,
+    "why": "TrendForce note que l'IA a resserré la capacité avancée et mature au T3 2026 ; SMIC tourne à 97 % et UMC à 92 %. Aucun écart chiffré entre offre et demande n'est publié.",
+    "basis": "Jugement éditorial à partir des taux d'utilisation publiés (SMIC, UMC) et du bulletin TrendForce ; pas d'écart documenté"
+   },
+   "evid": [
+    {
+     "v": "97,3 %",
+     "l": "taux d'utilisation de SMIC au T3 2026 (+ 3,6 points)",
+     "as_of": "12 nov. 2026",
+     "src": "TechNode",
+     "u": "https://technode.global/?p=997555"
+    },
+    {
+     "v": "92 %",
+     "l": "taux d'utilisation d'UMC au T3 2026 (85 % au T2)",
+     "as_of": "28 oct. 2026",
+     "src": "UMC (Business Wire)",
+     "u": "https://www.financialcontent.com/article/bizwire-2026-10-28-umc-reports-third-quarter-2026-results"
+    }
+   ]
   }
  },
  "fmap": {
@@ -3441,7 +3937,10 @@
   "cu": "cu",
   "aec": "cu",
   "models": "models",
-  "apps": "apps"
+  "apps": "apps",
+  "euv": "euv",
+  "tsmc": "tsmc",
+  "fnd": "fnd"
  },
  "fmvia": {
   "rack": "Les racks empilent des puces IA : voici le chiffre d'affaires de leurs vendeurs.",
@@ -3457,10 +3956,12 @@
   "sw": "Les commutateurs sont vendus par Nvidia, Arista et d'autres : voici le marché du réseau.",
   "sw2": "Ces liaisons aboutissent à des commutateurs : voici le marché du réseau.",
   "fibc": "Ces fibres relient le datacenter au réseau : voici le marché du réseau.",
-  "aec": "Les câbles cuivre actifs sont vendus par Credo : voici la fiche cuivre et connectique."
+  "aec": "Les câbles cuivre actifs sont vendus par Credo : voici la fiche cuivre et connectique.",
+  "euv": "ASML vend ses machines aux fonderies : voici sa fiche (chiffres propres, hors fonderies).",
+  "fnd": "Les fonderies hors TSMC : voici leur marché (le leader est dans sa propre fiche)."
  },
  "bmk": {
-  "fabrication": "fab",
+  "fabrication": "tsmc",
   "calcul": "dies",
   "memoire": "hbm",
   "packaging": "ip",

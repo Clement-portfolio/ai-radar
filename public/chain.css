@@ -439,3 +439,46 @@ details.nwd>summary{font-size:22px}
 .fl.col.c-en,.fl.col.c-cool,.fl.col.c-op,.fl.col.c-cu,.mini .fl.c-en,.mini .fl.c-cool,.mini .fl.c-op,.mini .fl.c-cu{background:#0071E3}
 .mini .fl{--el:#0058B0}
 .lb{text-shadow:0 0 4px #F5F5F7,0 0 4px #F5F5F7,0 0 2px #F5F5F7}
+
+/* — quatre scènes : sol quadrillé plein écran, dock d'icônes, en-tête de scène — */
+.scene{height:640px}
+.lvl{perspective:3600px}
+.lvl.site:not(.on):not(.past){transform:scale(.96)}
+.bx.ground,.bx.floor{--c:var(--stage);--cs:var(--stage)}
+.bx.ground i,.bx.floor i{border:0}
+.bx.ground i.t,.bx.floor i.t{background:linear-gradient(rgba(0,0,0,.075) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,rgba(0,0,0,.075) 1px,transparent 1px) 0 0/48px 48px,var(--stage)}
+.bx.deco{--c:#E3E3E8;--cs:#C9C9CF;pointer-events:none}.bx.deco i{border-color:rgba(0,0,0,.10)}
+.bx.deco.roof i.t{background:repeating-linear-gradient(90deg,#E3E3E8 0 28px,#D1D1D6 28px 30px)}
+.bx.plate{--c:#fff;--cs:#E5E5EA;pointer-events:none}.bx.plate i{border-color:rgba(0,0,0,.06)}
+.fl[data-part="deco"]{pointer-events:none}
+.bx.col.roof i.t{background:repeating-linear-gradient(90deg,#4C9BFF 0 28px,#2E86F0 28px 30px)}
+/* en-tête : nom de la scène, tension et chiffre du marché */
+.shd{position:absolute;left:26px;top:22px;z-index:5;max-width:360px;pointer-events:none}
+.shd h2{margin:0;font:600 34px/1.05 var(--display);letter-spacing:-.035em;color:var(--ink)}
+.shd p{margin:8px 0 0;font:400 14px/1.45 var(--ui);color:var(--ink2)}
+.shd .shm{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:#fff;border-radius:999px;padding:7px 14px 7px 12px;font:600 13px var(--ui);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.shd .shk{margin:8px 0 0;font:400 12.5px/1.4 var(--ui);color:var(--mute);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.shd .crumb{display:flex;align-items:center;gap:6px;margin:0 0 8px;font:500 13px var(--ui);pointer-events:auto}
+.shd .crumb button{border:0;background:none;padding:0;font:inherit;color:var(--acc);cursor:pointer}.shd .crumb button:hover{text-decoration:underline}
+.shd .crumb b{font-weight:600;color:var(--ink)}.shd .crumb span{color:var(--mute)}
+.tdot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#8E8E93;flex:none}.tdot.hi{background:#FF3B30}.tdot.mid{background:#FF9500}
+.lt{font:600 10.5px/1 var(--ui);font-style:normal;margin-left:7px;padding:2px 6px;border-radius:999px;background:rgba(142,142,147,.18);color:#48484A;vertical-align:1px}
+.lt.hi{background:rgba(255,59,48,.14);color:#D70015}.lt.mid{background:rgba(255,149,0,.16);color:#B25000}
+/* légendes des deux zones de la scène Fonderies */
+.zc{position:absolute;transform:translate(-50%,2px);font:600 13px var(--ui);letter-spacing:-.01em;color:var(--ink2);white-space:nowrap;pointer-events:none;text-shadow:0 0 4px var(--stage),0 0 4px var(--stage)}
+/* dock : navigation entre les quatre scènes */
+.dock{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:7;display:flex;gap:4px;padding:6px;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-radius:28px;box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.dock button{position:relative;display:flex;flex-direction:column;align-items:center;gap:5px;min-width:104px;padding:11px 18px 9px;border:0;border-radius:22px;background:transparent;color:var(--ink2);font:500 12.5px var(--ui);cursor:pointer;transition:background .25s,color .25s}
+.dock button svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.dock button:hover{background:rgba(0,0,0,.05)}
+.dock button.on{background:var(--acc);color:#fff}
+.dock .dt{position:absolute;top:9px;right:14px;width:8px;height:8px;border-radius:50%;background:#8E8E93}.dock .dt.hi{background:#FF3B30}.dock .dt.mid{background:#FF9500}
+.dock button.on .dt{box-shadow:0 0 0 2px var(--acc)}
+.acts{top:20px}
+@media(max-width:900px){
+ .scene{height:480px}
+ .shd{left:16px;top:14px;max-width:70%}.shd h2{font-size:24px}.shd p,.shd .shk{display:none}.shd .shm{margin-top:8px;padding:5px 11px 5px 10px;font-size:12px}
+ .zc{display:none}
+ .dock{bottom:10px;gap:2px;padding:4px}.dock button{min-width:70px;padding:8px 10px 7px;font-size:11px}.dock button svg{width:22px;height:22px}
+ .acts{top:14px;right:12px}.acts .btn{height:34px;font-size:12px;padding:0 12px}
+}

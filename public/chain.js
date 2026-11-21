@@ -7,9 +7,19 @@ function fail(e){var s=document.getElementById("sc");if(s)s.innerHTML='<p class=
 Promise.all([get("data/chain.json"),get("data/layers.json"),get("data/en.json").catch(function(){return {}}),get("data/watch.json").catch(function(){return null})]).then(function(r){
   var ten={};(r[1].layers||[]).forEach(function(l){ten[l.id]={t:l.tension,lab:l.tension_label,key:l.key_stat,note:l.note,leaders:l.leaders,src:l.sources}});
   run(r[0],ten,r[3]);
-  if(window.I18N){I18N.extra(r[2]);I18N.set(LANG)}
+  if(window.I18N){I18N.extra(Object.assign({},NEWEN,r[2]));I18N.set(LANG)}
   report();
 }).catch(fail);
+var NEWEN={"Énergie":"Energy","Datacenters":"Data centers","Modèles":"Models","Fonderies":"Foundries","Salle":"Hall","Module":"Module","Tension":"Tension","Critique":"Critical","Élevé":"High","Modéré":"Moderate","Faible":"Low",
+"Le courant qui alimente les datacenters : turbines à gaz sur site, transformateurs et, plus tard, petits réacteurs.":"The power that feeds the data centers: on-site gas turbines, transformers and, later, small reactors.",
+"Le bâtiment, son refroidissement et la fibre qui en sort. Double-cliquez le bâtiment pour entrer dans la salle.":"The building, its cooling and the fibre leaving it. Double-click the building to enter the hall.",
+"Les modèles tournent dans les datacenters ; les applications captent les usagers et l'argent.":"Models run in data centers; applications capture the users and the money.",
+"ASML construit les machines de lithographie ; TSMC et les autres fonderies gravent les puces avec elles.":"ASML builds the lithography machines; TSMC and the other foundries etch the chips with them.",
+"Les racks de calcul, les liaisons et la boucle d'eau d'une salle.":"The compute racks, links and water loop of a hall.",
+"Un module de calcul : puce, mémoire, assemblage et liaisons.":"A compute module: chip, memory, packaging and links.",
+"ASML · fabrique les machines":"ASML · builds the machines","Vers le datacenter":"To the data center","Calcul fourni par les datacenters":"Compute supplied by data centers","TSMC et les autres · gravent les puces":"TSMC and the others · etch the chips",
+"Autres fonderies":"Other foundries","fabrique les machines EUV":"builds the EUV machines","grave les puces IA":"etches the AI chips",
+"Entrer : Salle ▸":"Enter: Hall ▸","Zoomer : Salle ▸":"Zoom: Hall ▸","Zoomer : Module ▸":"Zoom: Module ▸","Passer à :":"Go to:"};
 function report(){try{parent.postMessage({chainH:Math.ceil(document.querySelector(".wrap").getBoundingClientRect().height)},location.origin)}catch(e){}}
 /* demi-écran : la fenêtre du site fait moins des deux tiers de l'écran → disposition en deux colonnes (classe .half) */
 function setHalf(){var pw=innerWidth;try{pw=parent.innerWidth||pw}catch(e){}document.documentElement.classList.toggle("half",pw<=(screen.availWidth||pw)*.66)}
@@ -24,9 +34,9 @@ Object.keys(CH.mkt).forEach(function(k){var m=CH.mkt[k],o={};if(m.s)o.s=U[m.s];i
 var BY={};CH.blocks.forEach(function(b){BY[b.id]=b});
 var FAM={en:["Énergie","#0071E3"],cool:["Refroidissement","#4C9BFF"],st:["Structure (bâtiment, boîtier, carte)","#C9C9CF"],calc:["Calcul","#48484A"],mem:["Mémoire","#0071E3"],li:["Liaisons (électrique, cuivre, fibre, commutateurs)","#1D1D1F"],use:["Usages (modèles, applications)","#0058B0"]};
 var GRP={en:"en",cool:"cool",bld:"st",asm:"st",brd:"st",calc:"calc",mem:"mem",el:"li",cu:"li",op:"li",net:"li",use:"use",use2:"use"};
-var PF={smr:"en",gas:"en",trf:"en",bld:"bld",cool:"cool",fibc:"op",models:"use2",apps:"use",rack:"calc",bus:"en",loop:"cool",sw:"net",fib:"op",cu:"cu",cold:"cool",dies:"calc",fab:"calc",hbm:"mem",wires:"el",ip:"asm",cpo:"op",sub:"asm",pcb:"brd",power:"en",aec:"cu",mod:"op",las:"op",sw2:"net"};
+var PF={smr:"en",gas:"en",trf:"en",bld:"bld",cool:"cool",fibc:"op",models:"use2",apps:"use",rack:"calc",bus:"en",loop:"cool",sw:"net",fib:"op",cu:"cu",cold:"cool",dies:"calc",fab:"calc",hbm:"mem",wires:"el",ip:"asm",cpo:"op",sub:"asm",pcb:"brd",power:"en",aec:"cu",mod:"op",las:"op",sw2:"net",euv:"calc",tsmc:"calc",fnd:"calc"};
 var FC={en:"#0071E3",cool:"#4C9BFF",bld:"#C9C9CF",calc:"#48484A",mem:"#0071E3",asm:"#B4B4BB",brd:"#A9A9B0",cu:"#0071E3",op:"#4C9BFF",el:"#1D1D1F",net:"#0071E3",use:"#0071E3",use2:"#0058B0"};
-var ZOOM={bld:1,rack:2};
+var ZOOM={bld:"hall",rack:"pkg"};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function Z(b,k,extra){return"calc("+b+"px + "+k+" * var(--gap)"+(extra?" + "+extra:"")+")"}
 var BUILDING=false,RECBY={},CURLV=0;
@@ -37,33 +47,63 @@ function box(o){
 }
 function flat(o){if(BUILDING){o.flat=true;o.lv=CURLV;(RECBY[o.p]=RECBY[o.p]||[]).push(o)}return'<div class="fl '+(o.c||"")+'" data-part="'+o.p+'" data-fam="'+(o.f||"")+'" style="width:'+o.w+'px;height:'+o.h+'px;transform:translate3d('+o.x+'px,'+o.y+'px,'+(o.z||Z(o.b||0,o.k||0))+')"></div>'}
 /* ---------- levels ---------- */
-function buildCampus(){
- var h="";
- h+=box({c:"ground",p:"ground",x:-620,y:-300,w:1240,h:530,d:1,b:0});
- // energy: SMR ghosts, gas turbines, transformers
- h+=box({f:"en",c:"ghost",p:"smr",x:-560,y:-205,w:70,h:70,d:70,b:1});
- h+=box({f:"en",c:"ghost",p:"smr",x:-470,y:-205,w:70,h:70,d:70,b:1});
- h+=box({f:"en",p:"gas",x:-560,y:-80,w:120,h:38,d:30,b:1});h+=box({f:"en",p:"gas",x:-560,y:-30,w:120,h:38,d:30,b:1});
- h+=box({f:"en",p:"gas",x:-446,y:-72,w:10,h:10,d:56,b:1});h+=box({f:"en",p:"gas",x:-446,y:-22,w:10,h:10,d:56,b:1});
- [-540,-490,-440].forEach(function(x){h+=box({f:"en",p:"trf",x:x,y:40,w:36,h:36,d:30,b:1})});
- h+=flat({c:"c-en dash",p:"smr",x:-400,y:-173,w:150,h:6,b:1.5});h+=flat({c:"c-en dash",p:"smr",x:-253,y:-173,w:6,h:80,b:1.5});h+=flat({c:"c-en dash",p:"smr",x:-253,y:-99,w:73,h:6,b:1.5});
- h+=flat({c:"c-en",p:"gas",x:-436,y:-54,w:256,h:6,b:1.5});
- h+=flat({c:"c-en",p:"trf",x:-404,y:55,w:224,h:6,b:1.5});
- // building
- h+=box({f:"bld",c:"roof",p:"bld",x:-180,y:-110,w:360,h:220,d:60,b:1});
- // cooling yard
- for(var i=0;i<5;i++)h+=box({f:"cool",c:"fan",p:"cool",x:-170+i*70,y:138,w:56,h:46,d:26,b:1});
- for(i=0;i<5;i++)h+=flat({c:"c-cool",p:"cool",x:-145+i*70,y:110,w:6,h:28,b:1.5});
- // usages
- h+=box({f:"use2",p:"models",x:300,y:-120,w:100,h:100,d:120,b:1});
- [40,70,55,80,45,65].forEach(function(d,j){h+=box({f:"use",p:"apps",x:320+(j%3)*52,y:30+Math.floor(j/3)*52,w:38,h:38,d:d,b:1})});
- h+=flat({c:"c-op",p:"fibc",x:180,y:-73,w:120,h:6,b:1.5});h+=flat({c:"c-op",p:"fibc",x:240,y:-73,w:6,h:128,b:1.5});h+=flat({c:"c-op",p:"fibc",x:240,y:49,w:80,h:6,b:1.5});
+function G(c,p){return box({c:c||"ground",p:p||"ground",x:-2400,y:-2400,w:4800,h:4800,d:1,b:-1})}
+function dc(x,y,w,h,d,c){return box({c:"deco "+(c||""),p:"deco",x:x,y:y,w:w,h:h,d:d,b:1})}
+function buildEnergie(){
+ var h=G();
+ h+=box({f:"en",c:"ghost",p:"smr",x:-340,y:-210,w:80,h:80,d:80,b:1});h+=box({f:"en",c:"ghost",p:"smr",x:-240,y:-210,w:80,h:80,d:80,b:1});
+ h+=box({f:"en",p:"gas",x:-340,y:-72,w:150,h:42,d:34,b:1});h+=box({f:"en",p:"gas",x:-340,y:-18,w:150,h:42,d:34,b:1});
+ h+=box({f:"en",p:"gas",x:-176,y:-62,w:12,h:12,d:62,b:1});h+=box({f:"en",p:"gas",x:-176,y:-8,w:12,h:12,d:62,b:1});
+ [-340,-280,-220].forEach(function(x){h+=box({f:"en",p:"trf",x:x,y:96,w:42,h:42,d:34,b:1})});
+ h+=dc(100,-100,230,170,50,"roof");
+ h+=flat({c:"c-en dash",p:"smr",x:-160,y:-173,w:360,h:6,b:1.5});h+=flat({c:"c-en dash",p:"smr",x:200,y:-173,w:6,h:73,b:1.5});
+ h+=flat({c:"c-en",p:"gas",x:-160,y:-48,w:260,h:6,b:1.5});
+ h+=flat({c:"c-en",p:"trf",x:-176,y:114,w:382,h:6,b:1.5});h+=flat({c:"c-en",p:"trf",x:200,y:70,w:6,h:50,b:1.5});
  return h;
 }
-var CAMPUS_L=[["smr",[-525,-170,70,0]],["gas",[-500,-60,30,0]],["trf",[-490,58,30,0]],["bld",[0,0,60,0]],["cool",[0,160,26,0]],["fibc",[240,-10,2,0]],["models",[350,-70,120,0]],["apps",[372,60,80,0]]];
+var ENERGIE_L=[["smr",[-250,-170,81,0],0],["gas",[-265,-40,35,0],0],["trf",[-280,117,35,0],0]];
+var ENERGIE_C=[["Vers le datacenter",[215,96,1]]];
+function buildDC(){
+ var h=G(),i;
+ h+=box({f:"bld",c:"roof",p:"bld",x:-180,y:-120,w:360,h:220,d:60,b:1});
+ for(i=0;i<5;i++)h+=box({f:"cool",c:"fan",p:"cool",x:-170+i*70,y:138,w:56,h:46,d:26,b:1});
+ for(i=0;i<5;i++)h+=flat({c:"c-cool",p:"cool",x:-145+i*70,y:110,w:6,h:28,b:1.5});
+ h+=flat({c:"c-op",p:"fibc",x:180,y:-14,w:190,h:6,b:1.5});
+ h+=box({f:"op",p:"fibc",x:370,y:-34,w:34,h:34,d:34,b:1});
+ return h;
+}
+var DC_L=[["bld",[0,-10,61,0],1],["cool",[0,160,27,0],0],["fibc",[386,-17,35,0],1]];
+function buildModeles(){
+ var h=G();
+ h+=dc(-390,-70,150,110,34,"roof");
+ h+=flat({c:"c-op",p:"models",x:-240,y:-18,w:140,h:6,b:1.5});
+ h+=box({f:"use2",p:"models",x:-100,y:-70,w:110,h:110,d:130,b:1});
+ h+=flat({c:"c-op",p:"apps",x:10,y:-18,w:110,h:6,b:1.5});
+ [40,70,55,80,45,65].forEach(function(d,j){h+=box({f:"use",p:"apps",x:120+(j%3)*56,y:-62+Math.floor(j/3)*56,w:42,h:42,d:d,b:1})});
+ return h;
+}
+var MOD_L=[["models",[-45,-15,131,0],0],["apps",[185,-15,70,0],1]];
+var MOD_C=[["Calcul fourni par les datacenters",[-315,60,1]]];
+function buildFound(){
+ var h=G();
+ function pl(x,y,w,hh){return box({c:"plate",p:"deco",x:x,y:y,w:w,h:hh,d:4,b:0})}
+ h+=pl(-440,-160,350,330);h+=pl(-50,-160,490,330);
+ h+=box({f:"calc",p:"euv",x:-410,y:-120,w:160,h:110,d:74,b:4});
+ h+=box({f:"asm",p:"euv",x:-240,y:-112,w:56,h:104,d:30,b:4});
+ h+=box({f:"op",p:"euv",x:-400,y:-108,w:46,h:46,d:40,b:78});
+ h+=box({f:"calc",p:"euv",x:-340,y:-96,w:34,h:34,d:90,b:78});
+ [-420,-318,-216].forEach(function(x){h+=box({f:"calc",p:"euv",x:x,y:30,w:92,h:70,d:50,b:4})});
+ h+=box({f:"bld",c:"roof",p:"tsmc",x:-20,y:-130,w:270,h:130,d:60,b:4});
+ h+=box({f:"bld",p:"tsmc",x:262,y:-130,w:80,h:130,d:42,b:4});
+ for(var i=0;i<4;i++)h+=box({f:"bld",c:"roof",p:"fnd",x:-20+i*88,y:34,w:76,h:100,d:34,b:4});
+ h+=flat({c:"c-op",p:"euv",x:-92,y:-65,w:72,h:6,b:4.5});h+=flat({c:"c-op",p:"euv",x:-92,y:84,w:72,h:6,b:4.5});
+ return h;
+}
+var FND_L=[["euv",[-330,-65,80,0],0],["tsmc",[115,-65,64,0],1],["fnd",[150,84,35,0],1]];
+var FND_C=[["ASML · fabrique les machines",[-265,190,1]],["TSMC et les autres · gravent les puces",[195,190,1]]];
 function buildHall(){
  var h="";
- h+=box({c:"floor",p:"floor",x:-330,y:-240,w:650,h:440,d:2,b:0});
+ h+=G("floor","floor");
  var rows=[-150,-60,30,120],X0=-250;
  rows.forEach(function(y,ri){for(var i=0;i<8;i++){
   h+=box({f:"calc",c:(ri===1&&i===3)?"tgt":"",p:"rack",x:X0+i*42,y:y,w:34,h:52,d:80,b:2});
@@ -77,7 +117,7 @@ function buildHall(){
 }
 var HALL_L=[["rack",[-80,-34,82,0]],["bus",[-200,-132,90,0]],["loop",[-100,-79,3,0]],["sw",[205,-124,52,0]],["fib",[130,-116,94,0]],["cu",[-240,-124,83,0]]];
 function buildPkg(){
- var h="";
+ var h=G("floor","floor");
  h+=box({f:"brd",p:"pcb",x:-250,y:-210,w:640,h:420,d:8,b:0,k:0});
  [[-236,-120,34,66],[-236,-33,34,66],[-236,54,34,66]].forEach(function(v){h+=box({f:"en",p:"pcb",x:v[0],y:v[1],w:v[2],h:v[3],d:14,b:8,k:0})});
  h+=flat({c:"ball",p:"sub",x:-170,y:-140,w:340,h:280,b:8.4,k:.5});
@@ -111,30 +151,54 @@ function buildPkg(){
 }
 var PKG_L=[["cold",[0,0,52,4]],["dies",[-42,-30,33,3]],["fab",[42,30,33,3]],["hbm",[116,-70,34,3]],["wires",[-92,40,24,2]],["ip",[0,100,24,2]],["cpo",[156,-50,30,2]],["sub",[0,-170,18,1]],["pcb",[-160,160,8,0]],["power",[-250,0,8,0]],["aec",[290,-100,24,1]],["mod",[285,100,32,1]],["las",[272,100,38,2]],["sw2",[500,0,12,1]]];
 var LV=[
- {id:"campus",name:"Data center",ww:1010,cx:-10,cy:10,zc:30,rx:56,rz:-28,build:buildCampus,L:CAMPUS_L,rep:["energie","datacenter","modeles","applications","reseau"],lvZoom:"Zoomer : Salle ▸"},
- {id:"hall",name:"Salle",ww:610,cx:-10,cy:10,zc:50,rx:56,rz:-26,build:buildHall,L:HALL_L,rep:["calcul","datacenter","reseau","optique","cuivre"],lvZoom:"Zoomer : Module ▸"},
- {id:"pkg",name:"Module",ww:820,cx:125,cy:70,zc:null,rx:58,rz:-35,build:buildPkg,L:PKG_L,rep:["datacenter","calcul","memoire","packaging","optique","cuivre","reseau","energie"],lvZoom:""}
+ {id:"energie",name:"Énergie",site:"energie",ww:680,cx:-5,cy:0,zc:30,rx:56,rz:-28,build:buildEnergie,L:ENERGIE_L,caps:ENERGIE_C,lvZoom:""},
+ {id:"datacenter",name:"Datacenters",site:"datacenter",ww:780,cx:20,cy:20,zc:30,rx:56,rz:-28,build:buildDC,L:DC_L,zi:4,lvZoom:"Zoomer : Salle ▸"},
+ {id:"modeles",name:"Modèles",site:"modeles",ww:700,cx:-55,cy:0,zc:30,rx:56,rz:-28,build:buildModeles,L:MOD_L,caps:MOD_C,lvZoom:""},
+ {id:"fonderies",name:"Fonderies",site:"fonderies",ww:900,cx:0,cy:0,zc:30,rx:56,rz:-24,build:buildFound,L:FND_L,caps:FND_C,lvZoom:""},
+ {id:"hall",name:"Salle",site:"datacenter",parent:1,zi:5,ww:610,cx:-10,cy:10,zc:50,rx:56,rz:-26,build:buildHall,L:HALL_L,lvZoom:"Zoomer : Module ▸"},
+ {id:"pkg",name:"Module",site:"datacenter",parent:4,ww:820,cx:125,cy:70,zc:null,rx:58,rz:-35,build:buildPkg,L:PKG_L,lvZoom:""}
 ];
+var SITES=[
+ {id:"energie",n:"Énergie",ly:"energie",b:"Le courant qui alimente les datacenters : turbines à gaz sur site, transformateurs et, plus tard, petits réacteurs.",ic:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>'},
+ {id:"datacenter",n:"Datacenters",ly:"datacenters",b:"Le bâtiment, son refroidissement et la fibre qui en sort. Double-cliquez le bâtiment pour entrer dans la salle.",ic:'<rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/>'},
+ {id:"modeles",n:"Modèles",ly:"modeles",b:"Les modèles tournent dans les datacenters ; les applications captent les usagers et l'argent.",ic:'<path d="M11 3l1.9 5.6L18.5 10.5l-5.6 1.9L11 18l-1.9-5.6L3.5 10.5l5.6-1.9z"/><path d="M19 15l.7 2.1 2.1.7-2.1.7L19 20.6l-.7-2.1-2.1-.7 2.1-.7z"/>'},
+ {id:"fonderies",n:"Fonderies",ly:"fonderie",b:"ASML construit les machines de lithographie ; TSMC et les autres fonderies gravent les puces avec elles.",ic:'<rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>'}
+];
+function siteOf(i){for(var k=0;k<SITES.length;k++)if(SITES[k].id===LV[i].site)return k;return 0}
+function LVN(i){var v=LV[i];return v.parent!=null?SITES[siteOf(i)].n+" › "+v.name:v.name}
+function nearest(lv){var same=lv.filter(function(i){return LV[i].site===LV[cur].site});return same.length?same[0]:lv[0]}
 var cur=0,sel={part:null,block:null},gap=60,sg=9,moved=0;
-var sc=document.getElementById("sc"),ly=document.getElementById("ly"),cr=document.getElementById("cr"),bz=document.getElementById("bz"),exw=document.getElementById("bx");
+var sc=document.getElementById("sc"),ly=document.getElementById("ly"),sh=document.getElementById("shd"),dk=document.getElementById("dock"),bz=document.getElementById("bz"),exw=document.getElementById("bx");
+function tp(part){var ti=tensInfo(part);return ti?'<i class="lt '+cls(ti.t)+'" title="Tension '+ti.t+'/10">'+ti.t+'</i>':""}
 function init(){
  BUILDING=true;
- LV.forEach(function(v,i){CURLV=i;
-  var el=document.createElement("div");el.className="lvl";el.innerHTML='<div class="world"><div class="stack">'+v.build()+v.L.map(function(l,j){var a=l[1];return'<i class="an" data-i="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],a[3])+')"></i>'}).join("")+'</div></div><div class="ov"><svg></svg>'+v.L.map(function(l,j){var p=PARTS[l[0]];return'<button class="lb" style="--lc:'+FC[PF[l[0]]]+'" data-part="'+l[0]+'" data-i="'+j+'">'+esc(p.n)+'<small>'+esc(p.c)+'</small></button>'}).join("")+'</div>';
+ LV.forEach(function(v,i){CURLV=i;v.rx0=v.rx;v.rz0=v.rz;
+  var el=document.createElement("div");el.className="lvl";
+  var caps=(v.caps||[]);
+  el.innerHTML='<div class="world"><div class="stack">'+v.build()+v.L.map(function(l,j){var a=l[1];return'<i class="an" data-i="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],a[3])+')"></i>'}).join("")+caps.map(function(c,j){var a=c[1];return'<i class="an cp" data-c="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],0)+')"></i>'}).join("")+'</div></div><div class="ov"><svg></svg>'+v.L.map(function(l,j){var p=PARTS[l[0]];return'<button class="lb" style="--lc:'+FC[PF[l[0]]]+'" data-part="'+l[0]+'" data-i="'+j+'">'+esc(p.n)+tp(l[0])+'<small>'+esc(p.c)+'</small></button>'}).join("")+caps.map(function(c,j){return'<div class="zc" data-c="'+j+'">'+esc(c[0])+'</div>'}).join("")+'</div>';
   sc.appendChild(el);v.el=el;v.wd=el.querySelector(".world");v.st=el.querySelector(".stack");v.ov=el.querySelector(".ov");v.sv=el.querySelector("svg");
  });
  BUILDING=false;
+ dk.innerHTML=SITES.map(function(S,k){var l=LY[S.ly],t=l&&l.t!=null?l.t:null;return'<button type="button" data-site="'+k+'"'+(t!=null?' title="Tension '+t+'/10 · '+tlab(t)+'"':'')+'>'+(t!=null?'<i class="dt '+cls(t)+'"></i>':'')+'<svg viewBox="0 0 24 24" aria-hidden="true">'+S.ic+'</svg><span>'+esc(S.n)+'</span></button>'}).join("");
  buildIndex();
  go(0,true);
 }
+function head(){
+ var v=LV[cur],S=SITES[siteOf(cur)],deep=v.parent!=null,chain=[],k;
+ for(k=cur;k!=null;k=LV[k].parent)chain.unshift(k);
+ var crumb=deep?'<div class="crumb">'+chain.map(function(j,n){var nm=n===0?S.n:LV[j].name;return n===chain.length-1?'<b>'+esc(nm)+'</b>':'<button type="button" data-lv="'+j+'">'+esc(nm)+'</button>'}).join("<span>›</span>")+'</div>':"";
+ var l=LY[S.ly],tn=!deep&&l&&l.t!=null;
+ sh.innerHTML=crumb+'<h2>'+esc(deep?v.name:S.n)+'</h2><p>'+esc(deep?(cur===4?"Les racks de calcul, les liaisons et la boucle d'eau d'une salle.":"Un module de calcul : puce, mémoire, assemblage et liaisons."):S.b)+'</p>'+
+  (tn?'<div class="shm"><i class="tdot '+cls(l.t)+'"></i>Tension '+l.t+'/10 · '+tlab(l.t)+'</div>'+(l.key?'<p class="shk">'+esc(l.key)+'</p>':''):'');
+ dk.querySelectorAll("button").forEach(function(b,i){b.classList.toggle("on",i===siteOf(cur))});
+}
 function go(i,quiet){
- cur=i;
- LV.forEach(function(v,j){v.el.className="lvl"+(j===i?" on":(j<i?" past":""))});
- cr.innerHTML=LV.map(function(v,j){return'<button data-lv="'+j+'" class="'+(j===i?"on":"")+'">'+v.name+'</button>'}).join("<span>›</span>");
- bz.classList.toggle("hide",i>=2);bz.textContent=LV[i].lvZoom;
- exw.classList.toggle("hide",i!==2);
+ cur=i;var past={},k;for(k=LV[i].parent;k!=null;k=LV[k].parent)past[k]=1;
+ LV.forEach(function(v,j){v.el.className="lvl "+(v.parent!=null?"deep":"site")+(j===i?" on":(past[j]?" past":""))});
+ bz.classList.toggle("hide",LV[i].zi==null);bz.textContent=LV[i].lvZoom;
+ exw.classList.toggle("hide",LV[i].id!=="pkg");
  sel={part:null,block:null};
- chips();mark();view();
+ head();chips();mark();view();
 }
 function chips(){
  ly.innerHTML=''+CH.blocks.map(function(b){return'<button class="chip" data-block="'+b.id+'" title="'+esc(b.short)+'"><b>'+b.n+'</b>'+esc(b.name)+'</button>'}).join("");
@@ -143,7 +207,7 @@ function chips(){
 function view(){
  var v=LV[cur],W=sc.clientWidth;
  LV.forEach(function(u){
-  var S=Math.min(1.1,Math.max(.4,(W-(W<900?20:400))/u.ww));
+  var S=Math.min(u.parent!=null?1.1:1.35,Math.max(.4,(W-(W<900?20:400))/u.ww));
   u.wd.style.setProperty("--rx",u.rx+"deg");u.wd.style.setProperty("--rz",u.rz+"deg");u.wd.style.setProperty("--s",S);
   u.st.style.setProperty("--gap",gap+"px");u.st.style.setProperty("--sg",sg+"px");
   var zc=u.zc==null?-(2*gap+20):-u.zc;
@@ -157,12 +221,14 @@ function tick(){place();if(performance.now()<until)raf=requestAnimationFrame(tic
 function place(){
  var v=LV[cur];if(sc.clientWidth<900)return;
  var r=sc.getBoundingClientRect(),W=r.width,H=r.height,P=[];
- v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect();P.push({i:i,ax:a.left+a.width/2-r.left,ay:a.top+a.height/2-r.top})});
- P.sort(function(a,b){return a.ax-b.ax});var half=Math.ceil(P.length/2),lines="";
- [[P.slice(0,half),0,0],[P.slice(half),W-176,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?40:-40;
-  arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-44);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";el.classList.toggle("rt",!!g[2]);
+ v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect();P.push({i:i,ax:a.left+a.width/2-r.left,ay:a.top+a.height/2-r.top,sd:l[2]})});
+ var auto=P.some(function(o){return o.sd==null}),g0,g1,lines="";
+ if(auto){P.sort(function(a,b){return a.ax-b.ax});var half=Math.ceil(P.length/2);g0=P.slice(0,half);g1=P.slice(half)}else{g0=P.filter(function(o){return!o.sd});g1=P.filter(function(o){return o.sd})}
+ [[g0,0,0],[g1,W-176,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?40:(v.parent!=null?110:158);
+  arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-120);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";el.classList.toggle("rt",!!g[2]);
    var lx=g[2]?g[1]:g[1]+176;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ax+'" y2="'+o.ay+'"/><circle cx="'+o.ax+'" cy="'+o.ay+'" r="2.5"/>'});});
  v.sv.innerHTML=lines;
+ (v.caps||[]).forEach(function(c,j){var a=v.st.querySelector('.an.cp[data-c="'+j+'"]').getBoundingClientRect(),el=v.ov.querySelector('.zc[data-c="'+j+'"]');el.style.left=(a.left+a.width/2-r.left)+"px";el.style.top=(a.top+a.height/2-r.top)+"px"});
 }
 function fig(f){return'<div class="fig"><div class="v">'+esc(f.v)+'</div><div>'+esc(f.l)+'<div class="m">'+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></div></div></div>'}
 function cls(t){return t==null?"":(t>=8?"hi":(t>=6?"mid":"lo"))}
@@ -170,7 +236,7 @@ var hovP=null;
 var famCur=null;
 function refreshCol(){
  LV.forEach(function(v){
-  v.st.querySelectorAll("[data-part]").forEach(function(e){var p=e.getAttribute("data-part");
+  v.st.querySelectorAll("[data-part]").forEach(function(e){var p=e.getAttribute("data-part");if(p==="ground"||p==="floor")return;
    var on=(sel.block&&inSel(p))||(hovP&&p===hovP)||(famCur&&GRP[e.getAttribute("data-fam")]===famCur);
    e.classList.toggle("col",!!on)});
   v.ov.querySelectorAll(".lb").forEach(function(e){var p=e.getAttribute("data-part");
@@ -180,7 +246,7 @@ function refreshCol(){
 function inSel(p){return sel.part?p===sel.part:(PARTS[p]&&PARTS[p].b===sel.block)}
 function mark(){
  LV.forEach(function(v){
-  v.st.querySelectorAll("[data-part]").forEach(function(e){var on=sel.block&&inSel(e.getAttribute("data-part"));e.classList.toggle("sel",!!on&&e.classList.contains("bx"));e.classList.toggle("dim",!!sel.block&&!on)});
+  v.st.querySelectorAll("[data-part]").forEach(function(e){var pp=e.getAttribute("data-part");if(pp==="ground"||pp==="floor")return;var on=sel.block&&inSel(pp);e.classList.toggle("sel",!!on&&e.classList.contains("bx"));e.classList.toggle("dim",!!sel.block&&!on)});
   v.ov.querySelectorAll(".lb").forEach(function(e){var on=sel.block&&inSel(e.getAttribute("data-part"));e.classList.toggle("sel",!!on);e.classList.toggle("dim",!!sel.block&&!on)});
  });
  ly.querySelectorAll(".chip").forEach(function(e){e.classList.toggle("sel",e.getAttribute("data-block")===sel.block)});
@@ -189,7 +255,7 @@ function mark(){
 function pick(part,block){sel={part:part,block:block};mark()}
 function pickLayer(id){
  var lv=[];LV.forEach(function(v,i){if(v.L.some(function(l){return PARTS[l[0]]&&PARTS[l[0]].b===id}))lv.push(i)});
- if(lv.length&&lv.indexOf(cur)<0){go(lv.reduce(function(a,b){return Math.abs(b-cur)<Math.abs(a-cur)?b:a}))}
+ if(lv.length&&lv.indexOf(cur)<0)go(nearest(lv));
  pick(null,id);
 }
 /* ---------- recherche dans l'architecture ---------- */
@@ -204,7 +270,7 @@ function buildIndex(){
   var m=MKT[p];if(m&&m.s)m.s.items.forEach(function(i){ex.push(i.n)});
   var lvs=[];LV.forEach(function(v,i){if(v.L.some(function(l){return l[0]===p}))lvs.push(i)});
   if(!lvs.length||!b)return;
-  SX.push({k:"p",id:p,name:P.n,sub:"Couche "+b.n+" "+b.name+" · "+LV[lvs[0]].name,t:norm(P.n+" "+P.c+" "+P.r+" "+ex.join(" ")),nt:norm(P.n+" "+P.c),ex:ex,lv:lvs})});
+  SX.push({k:"p",id:p,name:P.n,sub:"Couche "+b.n+" "+b.name+" · "+LVN(lvs[0]),t:norm(P.n+" "+P.c+" "+P.r+" "+ex.join(" ")),nt:norm(P.n+" "+P.c),ex:ex,lv:lvs})});
 }
 function doSearch(q){
  var qn=norm(q).trim(),tk=qn.split(/\s+/).filter(Boolean),res=document.getElementById("res");
@@ -221,7 +287,7 @@ function doSearch(q){
 function chooseSearch(e){
  document.getElementById("res").classList.add("hide");
  if(e.k==="b"){pickLayer(e.id);return}
- if(e.lv.indexOf(cur)<0)go(e.lv[0]);
+ if(e.lv.indexOf(cur)<0)go(nearest(e.lv));
  pick(e.id,PARTS[e.id].b);
 }
 (function(){
@@ -240,24 +306,25 @@ function chooseSearch(e){
 document.addEventListener("click",function(e){
  var c=e.target.closest("[data-block]");if(c){pickLayer(c.getAttribute("data-block"));return}
  var z=e.target.closest("[data-lv]");if(z){go(+z.getAttribute("data-lv"));return}
+ var dsb=e.target.closest("[data-site]");if(dsb){var sid=SITES[+dsb.getAttribute("data-site")].id;for(var q=0;q<LV.length;q++)if(LV[q].id===sid){go(q);break}return}
  if(moved>4)return;
  var lb=e.target.closest(".lb[data-part]");if(lb){var p=lb.getAttribute("data-part");pick(p,PARTS[p].b);return}
  var t=e.target.closest(".bx[data-part],.fl[data-part]");
  if(!t&&e.target===sc){var hs=document.elementsFromPoint(e.clientX,e.clientY);for(var k=0;k<hs.length&&!t;k++)t=hs[k].closest&&hs[k].closest(".bx[data-part],.fl[data-part]")}
- if(t){var p2=t.getAttribute("data-part");if(!PARTS[p2])return;
+ if(t){var p2=t.getAttribute("data-part");if(p2==="ground"||p2==="floor"){pick(null,null);return}if(!PARTS[p2])return;
   pick(p2,PARTS[p2].b)}
 });
-sc.addEventListener("dblclick",function(e){if(moved>4)return;var t=e.target.closest(".bx[data-part],.fl[data-part]");if(!t)return;var p=t.getAttribute("data-part");if(ZOOM[p]!=null&&ZOOM[p]===cur+1)go(cur+1)});
-bz.addEventListener("click",function(){if(cur<2)go(cur+1)});
-sc.addEventListener("mouseover",function(e){var t=e.target.closest(".bx[data-part],.fl[data-part],.lb[data-part]");var p=t?t.getAttribute("data-part"):null;if(p!==hovP){hovP=p;refreshCol()}});
+sc.addEventListener("dblclick",function(e){if(moved>4)return;var t=e.target.closest(".bx[data-part],.fl[data-part]");if(!t)return;var p=t.getAttribute("data-part");var zi=LV[cur].zi;if(zi!=null&&ZOOM[p]===LV[zi].id)go(zi)});
+bz.addEventListener("click",function(){var zi=LV[cur].zi;if(zi!=null)go(zi)});
+sc.addEventListener("mouseover",function(e){var t=e.target.closest(".bx[data-part],.fl[data-part],.lb[data-part]");var p=t?t.getAttribute("data-part"):null;if(p==="ground"||p==="floor")p=null;if(p!==hovP){hovP=p;refreshCol()}});
 sc.addEventListener("mouseleave",function(){hovP=null;refreshCol()});
 var bx=document.getElementById("bx"),expl=false;
 function setGap(v){gap=v*.9;sg=v*.13;view();expl=v>40;bx.textContent=expl?"Assembler":"Éclater"}
 bx.addEventListener("click",function(e){e.stopPropagation();setGap(expl?0:70)});
-document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();if(cur>0){go(0)}var d=[[56,-28],[56,-26],[58,-35]][cur];LV[cur].rx=d[0];LV[cur].rz=d[1];setGap(0);sel={part:null,block:null};mark();view()});
+document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();LV[cur].rx=LV[cur].rx0;LV[cur].rz=LV[cur].rz0;setGap(0);sel={part:null,block:null};mark();view()});
 var dr=null;
-sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
-sc.addEventListener("pointermove",function(e){if(!dr)return;var v=LV[cur];moved=Math.abs(e.clientX-dr.x)+Math.abs(e.clientY-dr.y);if(moved>4&&!dr.cap){dr.cap=1;try{sc.setPointerCapture(dr.id)}catch(_){}}v.rz=dr.rz+(e.clientX-dr.x)*.3;v.rx=Math.max(15,Math.min(85,dr.rx-(e.clientY-dr.y)*.3));view()});
+sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts,.dock,.crumb"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
+sc.addEventListener("pointermove",function(e){if(!dr)return;var v=LV[cur];moved=Math.abs(e.clientX-dr.x)+Math.abs(e.clientY-dr.y);if(moved>4&&!dr.cap){dr.cap=1;try{sc.setPointerCapture(dr.id)}catch(_){}}v.rz=dr.rz+(e.clientX-dr.x)*.3;v.rx=Math.max(30,Math.min(72,dr.rx-(e.clientY-dr.y)*.3));view()});
 sc.addEventListener("pointerup",function(){dr=null;setTimeout(function(){moved=0},0)});
 window.addEventListener("resize",function(){chips();view()});
 /* ---------- marché : parts + demande (chiffres datés et sourcés) ---------- */
@@ -294,6 +361,7 @@ function tens(f){var g=f.gap?f.gap.hi:0,t=g>=30?9:(g>=20?8:(g>=10?6:3));if(f.lea
 function tlab(t){return t>=8?"Critique":(t>=6?"Élevé":(t>=4?"Modéré":"Faible"))}
 function tensInfo(part){
  var P=PARTS[part],key=FMAP[part],f=key&&FM[key],b=BY[P.b],l=b.layer&&LY[b.layer];
+if(f&&f.ten)return{t:f.ten.t,why:f.ten.why,ev:f.evid||[],basis:f.ten.basis,rule:RULE};
  if(f&&(f.gap||f.lead)){var ev=(f.evid||[]);return{t:tens(f),why:f.why+(f.leadTxt?" Délai : "+f.leadTxt+".":""),ev:ev,basis:"Déduite des écarts et délais documentés",rule:RULE}}
  if(l&&l.t!=null)return{t:l.t,why:((l.key?l.key.replace(/\.?$/,"."):"")+(l.note?" "+l.note:"")).trim(),ev:[],links:(l.src||[]).slice(0,3),basis:"Niveau de la couche",rule:""};
  return null}
