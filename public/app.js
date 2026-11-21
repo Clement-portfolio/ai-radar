@@ -386,7 +386,7 @@ function timeline(cat,today){
     return'<span class="tdot" style="left:'+x.toFixed(2)+'%;top:'+(l*20+2)+'px" title="'+esc(c.label+" : "+c.title)+'">'+(n+1)+'</span>';
   }).join("");
   var ticks="",d=new Date(t0);d=Date.UTC(d.getUTCFullYear(),d.getUTCMonth()+1,1);
-  for(;d<=t1;){var dd=new Date(d);ticks+='<span class="tmon" style="left:'+((d-t0)/span*100).toFixed(2)+'%">'+esc(dd.toLocaleDateString(loc(),{month:"short",timeZone:"UTC"})+(dd.getUTCMonth()===0?" "+dd.getUTCFullYear():""))+'</span>';d=Date.UTC(dd.getUTCFullYear(),dd.getUTCMonth()+1,1)}
+  for(;d<=t1;){var dd=new Date(d);if((d-t0)/span*100>=13)ticks+='<span class="tmon" style="left:'+((d-t0)/span*100).toFixed(2)+'%">'+esc(dd.toLocaleDateString(loc(),{month:"short",timeZone:"UTC"})+(dd.getUTCMonth()===0?" "+dd.getUTCFullYear():""))+'</span>';d=Date.UTC(dd.getUTCFullYear(),dd.getUTCMonth()+1,1)}
   var ax='<div class="tax" style="height:'+(lanes.length*20+34)+'px"><span class="tmon tnow" style="left:0">aujourd\'hui</span>'+ticks+'<div class="tline" style="top:'+(lanes.length*20+6)+'px"></div>'+dots+'</div>';
   var li=cat.map(function(c,n){
     var pr=(c.probs||[]).slice().sort(function(a,b){return b.p-a.p});
@@ -438,9 +438,9 @@ function secPanel(){
     var ratio=c.capex&&c.revenue&&c.capex.end===c.revenue.end&&c.capex.basis===c.revenue.basis?Math.round(100*c.capex.value/c.revenue.value)+" %":"–";
     return '<tr><td>'+esc(c.name)+'</td>'+secCell(c.capex)+secCell(c.revenue)+'<td class="sv">'+ratio+'</td></tr>';
   }).join("");
-  return '<h3 class="sub2">Réalisé : ce que les géants ont déjà dépensé</h3><p class="lede" style="margin-bottom:6px">Capex et revenus des 12 derniers mois, lus automatiquement dans les dépôts officiels à la SEC (10-K et 10-Q). Aucun chiffre n\'est estimé : chacun porte sa période, sa date de dépôt et son lien.</p>'+
+  return '<div class="panel"><h3 class="sub2">Réalisé : ce que les géants ont déjà dépensé</h3><p class="lede" style="margin-bottom:6px">Capex et revenus des 12 derniers mois, lus automatiquement dans les dépôts officiels à la SEC (10-K et 10-Q). Aucun chiffre n\'est estimé : chacun porte sa période, sa date de dépôt et son lien.</p>'+
    '<table class="table sec"><thead><tr><th>Société</th><th>Capex</th><th>Revenus</th><th>Capex / revenus</th></tr></thead><tbody>'+rows+'</tbody></table>'+
-   '<div class="note"><b>À lire avant de comparer.</b> Le capex est la sortie de trésorerie pour immobilisations corporelles telle que déclarée dans les données XBRL ; il n\'inclut pas toujours les contrats de location-financement, d\'où un écart possible avec les guidances ci-dessus. Les exercices sont décalés : Oracle (mai), Microsoft (juin) ; les périodes affichées sont donc propres à chaque société.</div>';
+   '<div class="note"><b>À lire avant de comparer.</b> Le capex est la sortie de trésorerie pour immobilisations corporelles telle que déclarée dans les données XBRL ; il n\'inclut pas toujours les contrats de location-financement, d\'où un écart possible avec les guidances ci-dessus. Les exercices sont décalés : Oracle (mai), Microsoft (juin) ; les périodes affichées sont donc propres à chaque société.</div></div>';
 }
 function meter(t){
   var cls=t>=8?"hi":(t>=6?"mid":"lo");
@@ -676,18 +676,18 @@ function aRivals(a){
   return'<div class="rivals"><button class="chip rvbtn'+(S.arv?' on':'')+'" data-arv="1">'+(S.arv?'Masquer les concurrents':'Découvrir les concurrents')+'</button>'+(S.arv?'<div class="rvbody">'+body+'</div>':'')+'</div>';
 }
 function aFiche(a){
+  var en=isEn();
   var blocks=a.roles.map(function(r){return r.block}).filter(function(x,i,l){return l.indexOf(x)===i});
-  var h='<a class="back small" href="#acteurs">← Tous les acteurs</a><div class="ahead"><h2 class="sec">'+esc(a.n)+'</h2><span class="small">'+esc(a.pays)+'</span></div>'+
-   (a.rank?'<div class="arank">'+esc(a.rank.text)+' <span class="small">('+aLink(a.rank.u,a.rank.src)+(a.rank.as_of?', '+esc(a.rank.as_of):'')+')</span></div>':'')+
-   '<div class="toolbar">'+blocks.map(function(b){return'<span class="chip">'+esc(b)+'</span>'}).join("")+'</div>'+
+  var h='<a class="back" href="#acteurs">← Tous les acteurs</a><h2 class="sec">'+esc(a.n)+'</h2>'+
+   '<p class="lede">'+esc(a.pays)+(a.rank?' · '+esc(a.rank.text)+' <span class="small">('+aLink(a.rank.u,a.rank.src)+(a.rank.as_of?', '+esc(a.rank.as_of):'')+')</span>':'')+'</p>'+
+   '<div class="achips">'+blocks.map(function(b){return'<span class="chip">'+esc(b)+'</span>'}).join("")+'</div>'+
    (a.desc?'<p class="adesc">'+esc(a.desc)+'</p>':'');
   var ly=layersOf(a);
   if(ly.length)h+='<p class="small apile">Dans la pile : '+ly.map(function(l){return'<a href="#infrastructure/'+esc(l.id)+'">'+esc(l.name)+'</a>'}).join(" · ")+'</p>';
-  h+='<div class="sgroup">Chiffres clés</div><div class="cards3">'+aFinCards(a)+'</div>';
-  h+='<div class="sgroup">Parts de marché <em>sur ses principaux métiers, face aux concurrents</em></div>';
-  h+=a.markets&&a.markets.length?'<div class="cards3">'+a.markets.map(aMarketCard).join("")+'</div>':'<p class="small" style="margin-top:12px">Aucune part de marché sourcée pour cet acteur.</p>';
-  h+='<div class="sgroup">Clients principaux</div><div style="margin-top:10px">'+aClients(a)+'</div>';
-  h+='<div class="sgroup">Actualités</div><div style="margin-top:6px">'+aNews(a)+'</div>';
+  h+='<section class="tile">'+tHead('Chiffres clés',en?a.n+' in numbers':'Les chiffres de '+a.n)+'<div class="cards3">'+aFinCards(a)+'</div></section>';
+  h+='<section class="tile">'+tHead('Parts de marché',en?'Against its competitors':'Face aux concurrents')+(a.markets&&a.markets.length?'<div class="cards3">'+a.markets.map(aMarketCard).join("")+'</div>':'<p class="empty">Aucune part de marché sourcée pour cet acteur.</p>')+'</section>';
+  h+='<section class="tile">'+tHead('Clients principaux',en?'Who buys from it':'Qui lui achète')+aClients(a)+'</section>';
+  h+='<section class="tile">'+tHead('Actualités',en?'Latest news':'Les dernières nouvelles')+aNews(a)+'</section>';
   h+=aRivals(a);
   return h;
 }
