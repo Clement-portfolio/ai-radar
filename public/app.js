@@ -151,7 +151,7 @@ function hpActors(en){
     var L=A.filter(function(a){return aGroup(a)===g});if(!L.length)return"";
     var names=EX[g].filter(function(n){return L.some(function(a){return a.n===n})});if(!names.length)names=L.slice(0,3).map(function(a){return a.n});
     var n=L.length;
-    return'<div class="layer"><button class="lhead" data-go="acteurs" data-ag="'+g+'" aria-label="'+esc(AGN[g][en?1:0])+'"><span class="lmain"><span class="lname">'+esc(AGN[g][en?1:0])+'</span><span class="lstat">'+esc(names.join(', '))+(n>names.length?'…':'')+'</span></span><span class="lm"><span class="tlab hpcount">'+n+' '+(en?(n>1?'companies':'company'):(n>1?'entreprises':'entreprise'))+'</span></span><span class="lgo">'+ARW+'</span></button></div>';
+    return'<div class="layer"><button class="lhead" data-go="acteurs" data-ag="'+g+'" aria-label="'+esc(AGN[g][en?1:0])+'"><span class="lmain"><span class="lname">'+esc(AGN[g][en?1:0])+'</span><span class="lstat">'+esc(names.join(', '))+(n>names.length?'…':'')+'</span></span><span class="lgo">'+ARW+'</span></button></div>';
   }).join("");
   return'<section class="tile half hpinf hpact">'+tHead(en?'Players':'Acteurs',en?'Who’s who in AI':'Qui fait quoi dans l’IA')+'<div class="hpl">'+rows+'</div>'+
    '<div class="hfoot"><button class="tlink" data-go="acteurs" data-ag="infra">'+(en?'Explore the players':'Explorer les acteurs')+' ›</button><button class="arw lg" data-go="acteurs" data-ag="infra" aria-label="'+(en?'Players':'Acteurs')+'">'+ARW+'</button></div></section>';
@@ -613,12 +613,19 @@ function aById(id){return((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){
 var AHYPER=["alphabet","amazon","microsoft","meta","alibaba","bytedance"],ALAB=["openai"];
 var AGN={infra:["Infrastructure IA","AI infrastructure"],hyper:["Hyperscalers","Hyperscalers"],labs:["Laboratoires IA","Frontier labs"]};
 function aGroup(a){return ALAB.indexOf(a.id)>=0?"labs":AHYPER.indexOf(a.id)>=0?"hyper":"infra"}
+var AFILT=[
+  {k:"fond",fr:"Fonderies",en:"Foundries",blocks:["Fabrication","Assemblage"],tip:["Gravure, lithographie, assemblage avancé","Etching, lithography, advanced packaging"]},
+  {k:"ener",fr:"Énergie",en:"Energy",blocks:["Énergie"],tip:["Turbines, réseau, nucléaire","Turbines, grid, nuclear"]},
+  {k:"dc",fr:"Datacenters",en:"Data centers",blocks:["Datacenter"],tip:["Campus et capacité installée","Campuses and installed capacity"]},
+  {k:"conn",fr:"Connectivité",en:"Connectivity",blocks:["Optique","Cuivre","Réseau"],tip:["Optique, lasers, silicium photonique, cuivre, commutateurs","Optics, lasers, silicon photonics, copper, switches"]},
+  {k:"calc",fr:"Calcul",en:"Compute",blocks:["Calcul"],tip:["GPU et puces sur mesure (ASIC)","GPUs and custom chips (ASICs)"]},
+  {k:"mem",fr:"Mémoire",en:"Memory",blocks:["Mémoire"],tip:["HBM, DRAM","HBM, DRAM"]}];
+function aFilt(k){return AFILT.filter(function(f){return f.k===k})[0]}
+function aInfra(a,k){var f=aFilt(k);return!f||a.roles.some(function(r){return f.blocks.indexOf(r.block)>=0})}
 function aSubs(g){
-  var seen={},out=[];((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return aGroup(a)===g}).forEach(function(a){
-    if(g==="infra")a.roles.forEach(function(r){if(!seen[r.block]){seen[r.block]=1;out.push(r.block)}});
-    else if(a.pays&&!seen[a.pays]){seen[a.pays]=1;out.push(a.pays)}});
-  var cnt={};((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return aGroup(a)===g}).forEach(function(a){(g==='infra'?a.roles.map(function(r){return r.block}).filter(function(x,i,l){return l.indexOf(x)===i}):[a.pays]).forEach(function(k){cnt[k]=(cnt[k]||0)+1})});
-  return out.sort(function(x,y){return cnt[y]-cnt[x]});
+  if(g==="infra")return AFILT.map(function(f){return f.k});
+  var seen={},out=[];((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return aGroup(a)===g}).forEach(function(a){if(a.pays&&!seen[a.pays]){seen[a.pays]=1;out.push(a.pays)}});
+  return out;
 }
 function aCard(a){
   var line=a.rank?a.rank.text:a.roles.map(function(r){return r.sub.replace(/\s*\(.*$/,"")}).filter(function(x,i,l){return l.indexOf(x)===i}).slice(0,2).join(" · ");
@@ -628,7 +635,7 @@ function aList(){
   var A=S.acteurs.actors,q=S.aq.trim().toLowerCase();
   var list=A.filter(function(a){
     if(aGroup(a)!==(S.ag||"infra"))return false;
-    if(S.ab!=="ALL"&&((S.ag||"infra")==="infra"?!a.roles.some(function(r){return r.block===S.ab}):a.pays!==S.ab))return false;
+    if(S.ab!=="ALL"&&((S.ag||"infra")==="infra"?!aInfra(a,S.ab):a.pays!==S.ab))return false;
     return !q||(a.n+" "+a.pays+" "+a.roles.map(function(r){return r.sub}).join(" ")).toLowerCase().indexOf(q)>=0;
   });
   return list.length?list.map(aCard).join(""):'<p class="small">Aucun acteur ne correspond.</p>';
@@ -773,7 +780,7 @@ function vList(){
 }
 function aVoix(){
   var P=(S.voix&&S.voix.people)||[];
-  var h='<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA.</p>'+xSwitch();
+  var h='<h2 class="sec">Insiders</h2><p class="lede">Ce que disent les dirigeants, cofondateurs, chercheurs, responsables publics et investisseurs de l\'IA. Et les passionnés sur X !</p>'+xSwitch();
   if(S.vsrc==="x")return h+xHtml();
   if(!P.length)return h+'<p class="small">Aucune déclaration collectée pour l\'instant.</p>';
   return h+'<div class="toolbar frow vtool"><span id="vbtns">'+vBtns()+'</span><span class="sp"></span><input id="vq" class="vsearch" type="search" placeholder="Rechercher" value="'+esc(S.vq)+'" aria-label="Rechercher une personne"><span id="vess">'+vEss()+'</span></div><div id="vpanel">'+vPanel()+'</div><div id="vbody">'+vList()+'</div>';
@@ -788,7 +795,7 @@ function rActeurs(){
   var en=isEn(),g=S.ag=S.ag||"infra",subs=aSubs(g),A=S.acteurs.actors.filter(function(a){return aGroup(a)===g});
   if(S.ab!=="ALL"&&subs.indexOf(S.ab)<0)S.ab="ALL";
   var seg='<div class="segw"><span class="seg2" role="tablist">'+["infra","hyper","labs"].map(function(k){return'<button type="button" role="tab" aria-selected="'+(k===g)+'" class="'+(k===g?'on':'')+'" data-ag="'+k+'">'+esc(AGN[k][en?1:0])+'</button>'}).join("")+'</span></div>';
-  var chips=subs.length>1?'<span class="achs"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">'+(en?'All':'Tous')+' ('+A.length+')</button>'+subs.map(function(b){var n=A.filter(function(a){return g==="infra"?a.roles.some(function(r){return r.block===b}):a.pays===b}).length;return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'"><span>'+esc(b)+'</span> ('+n+')</button>'}).join("")+'</span>':'';
+  var chips=subs.length>1?'<span class="achs"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">'+(en?'All':'Tous')+'</button>'+subs.map(function(b){var f=g==="infra"&&aFilt(b);return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'"'+(f?' title="'+esc(f.tip[en?1:0])+'"':'')+'>'+(f?esc(f[en?'en':'fr']):'<span>'+esc(b)+'</span>')+'</button>'}).join("")+'</span>':'';
   el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients.</p>'+seg+
    '<div class="toolbar frow">'+chips+'<span class="sp"></span><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div><div id="alist" class="agrid">'+aList()+'</div>';
 }
