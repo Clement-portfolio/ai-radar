@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-21T01:28:45.153Z",
+ "generated_at": "2026-11-21T04:10:00.760Z",
  "people": [
   {
    "id": "sam-altman",
@@ -303,6 +303,15 @@
    ],
    "items": [
     {
+     "ts": "2026-11-20T15:37:58.000Z",
+     "title": "After Microsoft 365's nearly 24-hour outage, Satya Nadella warns AI could help attackers operate at nation-state scale",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQY1BhX0M4aE5JR0YzcWFBYzZtc24tNHFxMWRzVmxPeEprXzRTWXcwVU4tcXlqV1RYa0IwMXlOUHBhd0lXT2wxNXV4NmhKZEJpcE90U2hPSWNHX0V4Q3ZWMXVqd2U0SzVmaG5CZnlmNjZ2VExuWVgyNGctVFZRMGNJYWZQVzJaQmd0OHJtRk1Sd0E?oc=5",
+     "source": "Latin Times",
+     "kind": "presse",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-20T12:21:00.000Z",
      "title": "Satya Nadella says Jensen Huang is 'singular' — but founders are 'not gods'",
      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQY0JTTUVFM1U2bGZta1NJZTU3Vm56SVR3TzJLY2t5cnJaZzUzR1hQOHJUaWx2eFdaODJkQVBsTjZaZTR0aHhOSmI5X0xCTWhnZVVxRFZWWnFLRk9KZk9KdWVQdERleEg1ZGdSTHkydEI1LUZ3NEh0NzdEcEpNVzJWMkxzMTRhQ09QNl83dkdWcFUxS09DM1RzM1RpWkstUzdRa1E?oc=5",
@@ -368,16 +377,6 @@
      "source": "The New York Times",
      "kind": "presse",
      "title_fr": "Vidéo : Regarder : Le PDG de Microsoft, Satya Nadella, aborde la panne mondiale",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-18T23:45:00.000Z",
-     "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is 'unpatchable'",
-     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWThMenBpNnExbF9iQjFXT2I5MDNEeFZCNl9pZkp4Z0RiekJ1eHpocW9IdjlYU012V0p5X0lkNHdVM1E3LThsaEZsWmYxTjYzTU1qdWlNSlYwYk1mY2pfRUpKQTByUmJsLVBGNURORm1xLXBoR25vZkJDclNOYlEzWDdROHdZaVM2QWpnRVNDLUNza2hHSHV0cEhaUXhqYjB6YVgyZzkxREVKNDlxa0RZVlJ2SW52YXZPb2hpVXJFVlVuQ29RTUx5Z0NvSmE?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "title_fr": "Sur fond de craintes de cyberattaques par IA, Satya Nadella affirme qu'une grande partie des infrastructures critiques est « impossible à corriger »",
      "m": 1,
      "e": 0
     }
@@ -1520,6 +1519,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-21T01:52:30.000Z",
+     "title": "Trump calls for Nvidia to reinstate ‘brilliant’ Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTTRWaFJBYUVZRUszSnpjai1ZUWJLRVhEQlJndHJKZnFwUlplbk16S0VjeU9jaU93WThFLXlsTG5BWHlxelBYeWk3RUJaZWNjT0xfWGlmcEowaEQ0OWtZaWlqdzhxcDBEVzZoR241dWtIUnQtRUZYeWZDTWJ6ZzRwY2xEWTVBMk5ENnQ3RWp0bGRGd0JPYnZCZzltTEh3WUxEa0HSAacBQVVfeXFMUEJ3bXdXd0NKcVo0cjV4RnJiOEp4MkUtZTFWTTZUQXYtNkVpNHdNZUV3eUVXOFVxZG1nVlV5NElUMlotSzhXcFlONktxNHFVYWZNOG5iUE5idEtuckwybDZxX01BZmt3WEw4MTJ5TzBEVHd6NlZtYUY3elBxZ0kzWmluRjZmWU9vMF93UzdlVjlvcUdtb014V3AxOTJCQ2lrV29sUUIxeWs?oc=5",
+     "source": "Al Jazeera",
+     "kind": "presse",
+     "title_fr": "Trump appelle Nvidia à réintégrer le « brillant » Jensen Huang",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-20T20:34:56.000Z",
      "title": "WATCH: Trump says he would love former Nvidia CEO Jensen Huang to 'be given a second chance'",
      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNU3BVTXVMUXRwSVVLdFdsX25kbXFDaVhDSWUyRFkwODBqblBzVEF2Z09nZVVSNE4wN0ExY2QwWGtIRGVEc1kwMG50ZDNQdlMwdjVqeno5UXRTTmZsWFc0SS1XekZxYmh1Y2VRWnVLdzBiWW1sOU9Cc09mT0RqTU5DckJrZ2M1VTlPSk10enFsQmxkMlRad2Z1NEhSY0UzX21DQm5Pd211ODVuYjItdVpNc3VlNDJtTkZDOEZpYmJjdHpmRmR1MXfSAcsBQVVfeXFMTmVCc29jeC0zU2R3U1I4d0cwbmtSTU5kbG9hQVdlNTZ6aHRCVmg1N0VYaTVwek9qbUNfcThZcXFBMnhlTC05a1ZJOFVjSVI3UFdaZ09mTkpibUVIdDZEVFFteXZNYndoZklIVU1uc0xnN3FPQlh3clUyZWU5VFhMZ0pCZmhsY3g4cE5zVGZRVU1pSW9YdnRfMHN1LUV4Vk5yWU5yXy1LTXBKRmlJejRLeEIyYzhvcVVMX1pya2ZPMjVhSHhvUEdyUnBPNDA?oc=5",
@@ -1588,16 +1597,6 @@
      "title_fr": "Trump promet d'empêcher les entreprises américaines de construire des centres de données à l'étranger et menace d'une « taxe énorme »",
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-19T03:52:00.000Z",
-     "title": "Trump Warns Against Regulations That Would ‘Stifle’ AI Industry",
-     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQTWJ1dXFRb1Q2R1NTeUc3NC1reXFsanRLdDMzWUZXNllESENlQ3JRWVIwbk1CZ2xBSGM0X1FpNHBVaUtSV1gwajdXR0RIQlIybkY4dnBhSnMzQkNPNmdCdmlHTnNqM2RsRzhmam1NUXVkTjliOHFGS014UWtVQWtuSHFMc1RhRFNFRWF4Njg1Y0wxNTlDT1UzNEtXRkRaWnJoUThyZmtMZGxsNkl6eDFsZnZn?oc=5",
-     "source": "Bloomberg.com",
-     "kind": "presse",
-     "m": 1,
-     "e": 1,
-     "title_fr": "Trump met en garde contre des réglementations qui « étoufferaient » l'industrie de l'IA"
     }
    ]
   },
@@ -2082,6 +2081,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T22:30:00.000Z",
+     "title": "Michael Burry warns AI stocks mirror 1929 and 2000 crashes — and singles out Nvidia's risky deals",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUppLWR4d2dnRV9rVHBJVTRhWlpVSjBWUWM2T2ZfeFZOeGVHYk13LUY0T1ZNX1M1VTMxUWlkV0s3ZGhScHhJZ2ZaTUVCSm9kZEd2Qm9Bb3BxczJmVW5mQng2eGZOUll6T0xQb2VVQlhDdTRqT3Z2SzlRR3R2R0lUdFFIVDVFR0kzSnhoaWxQMEZobERjN3JiZzVR?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry prévient que les actions liées à l'IA reflètent les krachs de 1929 et 2000 — et pointe du doigt les accords risqués de Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T17:11:33.000Z",
      "title": "Michael Burry sells near-term Nvidia puts but keeps longer-dated short position",
      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yMks3LTMzdkhuS21Wa25jM2NheHBHS042dW1aZThaOUYtZlNKc2VXWkk1XzVjbkNaVlIxT3liUUZwTTZEUGdHQmJXTUktVEhuRnBfSk1RWkQ3MDdPcm8tRFRtVXZ6Ykh6MXNsYTAwNWxaZHc?oc=5",
@@ -2148,16 +2157,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Michael Burry cède ses actions Alphabet, puis achète le titre logiciel que Wall Street craint le plus",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-17T15:29:00.000Z",
-     "title": "Michael Burry Still Bearish On Nvidia, AI Trade, Buys These Software Names",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQN3lsU2wtSDlsc1E5TXRFQUdVaGxWN29hWlJtbjFnb0RnNFN1MDI2VVpDM3U3T0l1M0ZXOWsybXF1S3N3Vzg5U25hUG1INEJjeGRyVjNsb1FmUXFRTmJRcFFZRHJmSGRwSzYyTUhhLW5LcE0xeTFLVXpZRk4xTkFfNHJCbUFCYUNidTRqbThPbEpXdkhjeFlRTmotRG5jQTNrQlZBSw?oc=5",
-     "source": "Investor's Business Daily",
-     "kind": "presse",
-     "title_fr": "Michael Burry reste baissier sur Nvidia et le secteur de l'IA, et achète ces valeurs du logiciel",
      "m": 1,
      "e": 0
     }
@@ -2935,7 +2934,14 @@
    "role": "Fondateur de Social Capital",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-21T00:08:00.000Z",
+     "title": "Chamath Palihapitiya: Anthropic's $2 Trillion IPO Leaves Only Ten AI Winners — and Buybacks Are Now a Confession",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBUZEtRNUdjS2xIQjNNMm92RThoOFRPNTRYZW51ZzdrbVNIUk1XOG1PcWtlYVJ0Q2tKbkpHNzU5N1JxYm1ZbDNXZktNalByZy0wQ0puamUzRktkNkU?oc=5",
+     "source": "BigGo Finance"
+    }
+   ],
    "items": [
     {
      "ts": "2026-11-17T09:57:25.000Z",
@@ -4039,6 +4045,16 @@
      "m": 1,
      "e": 0,
      "title_fr": "Le PDG d'IBM, Arvind Krishna, exhorte l'Inde à développer l'industrie des semi-conducteurs et à accélérer l'adoption de l'IA"
+    },
+    {
+     "ts": "2026-11-16T23:50:38.000Z",
+     "title": "Arvind Krishna says talks could boost IBM's $3B India investment",
+     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZkxXZGpFQ2h4VFBBTWU3eElNUWM1RVpPNUNCU2hMNldISHVvellMZUlLdFJjRnBpMXNnMS1pS0s5ZE5aYWVSTW5WaS14cUNqeE9pQzd2Y0RzRVpmYjlfejNEM29TMmQ1X1d0aDMzeFhzY1haeDI3cmJMbUJXU3dtMGk2M0RvbnZvLWM4MV9rYVN0ZDJlYzNLSjF6RGpkSTJqY0dwTFgwZkFzZGdhSUVB?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Arvind Krishna déclare que des discussions pourraient dynamiser l'investissement de 3 milliards de dollars d'IBM en Inde",
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-16T12:33:56.000Z",
@@ -5261,18 +5277,18 @@
    "outlets": 2
   },
   {
-   "score": 1.82,
-   "id": "michael-burry",
-   "n": "Michael Burry",
-   "role": "Investisseur (« The Big Short »), auteur de la newsletter Cassandra Unchained",
+   "score": 1.73,
+   "id": "austan-goolsbee",
+   "n": "Austan Goolsbee",
+   "role": "Président de la Réserve fédérale de Chicago",
    "actor": null,
-   "ts": "2026-11-20T14:59:00.000Z",
-   "title": "'Big Short' Michael Burry says he 'tried to warn' about Nvidia, CoreWeave, Nebius stocks",
-   "title_fr": "Michael Burry de « The Big Short » déclare qu'il a « essayé de prévenir » concernant les actions de Nvidia, CoreWeave et Nebius",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMkZVMDlacnZFTUdQWmc0dGpKNUl5UFpTdjBPM1ZXdWFsN1RNazJabnpwYnk3WE9fM3Vrb1dSdFF2QkIwSzZPdGRJaW9TOFhKUzFQZml6UU4zSlAwXy1aMW5VTlZhN1RMdjJsNWdXR2VmSTdpRjh4enRBUHl3Rjc1N0c2UWxiTVVzcTRhWXdLRTFvd1c3M2hqOUJ0Z25WU3BvTndDTQ?oc=5",
-   "source": "Business Insider",
+   "ts": "2026-11-19T19:42:50.000Z",
+   "title": "Fed's Goolsbee Warns AI Could Overheat Economy",
+   "title_fr": "Goolsbee de la Fed prévient que l'IA pourrait surchauffer l'économie",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNNFFWX09IQzU1Mk1Eb3I1OHRFY0JPRWFYY0lCUldIcnU1YW50OXRKLWlkRDk0ZTFISHpuSDlDa3RnX0s3M3NpeERsb0hsSjZkSEI2dmJKNVBzR3N0MzlIU3lkNXdoZEhRRlphX29fRDVuWDFsV3haaGU1cm0yY1NvcnZqSWhsWnM?oc=5",
+   "source": "Wisevoter",
    "kind": "presse",
-   "outlets": 2
+   "outlets": 5
   }
  ]
 }
