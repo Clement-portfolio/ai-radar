@@ -115,7 +115,7 @@ function rUne(){
   if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say':'Ce qu’ils disent')+'<div class="tgrid3">'+H.map(function(n){
     return'<figure class="tcard q"><blockquote>'+esc(ctt(!en&&n.title_fr?n.title_fr:n.title))+'</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
   }).join("")+'</div>'+cta("acteurs/voix",en?'See Insiders':'Voir les Insiders')+'</section>';
-  h+=xHome(en);
+  h+=xHome(en)+pHome(en);
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
   if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
     var ok=en&&f.title_en&&f.value_en;
@@ -860,6 +860,20 @@ function xHome(en){
     return'<article class="tcard"><span class="kick">'+esc(w.name)+'</span><h3>'+esc(xTitle(it))+'</h3><div class="tfoot"><span>'+esc((w.role?w.role+' · ':'')+ago(it.ts))+'</span>'+arrowA(link(it.url),en?'See the post on X':'Voir le post sur X',true)+'</div></article>';
   }).join("")+'</div>'+cta("acteurs/voix/x",en?'See On X':'Voir Sur X')+'</section>';
 }
+/* Accueil : probabilités des prochains événements du calendrier (paris Polymarket), un anneau par événement */
+function pRing(p){
+  var r=52,c=2*Math.PI*r,v=Math.max(0,Math.min(100,p));
+  return'<svg class="pring" viewBox="0 0 120 120" width="132" height="132" role="img" aria-label="'+esc(pctTxt(p))+'"><circle cx="60" cy="60" r="'+r+'" fill="none" stroke="#E5E5EA" stroke-width="12"/><circle cx="60" cy="60" r="'+r+'" fill="none" stroke="#0071E3" stroke-width="12" stroke-linecap="round" stroke-dasharray="'+(c*v/100).toFixed(1)+' '+c.toFixed(1)+'" transform="rotate(-90 60 60)"/><text x="60" y="68" text-anchor="middle" font-size="26" font-weight="600" fill="currentColor">'+esc(pctTxt(p))+'</text></svg>';
+}
+function pHome(en){
+  var o=S.outlook,today=new Date().toISOString().slice(0,10),seen={};
+  var cat=((o&&o.catalysts)||[]).filter(function(c){return c.date>=today&&(c.probs||[]).length&&c.probs[0]&&c.probs.some(function(q){return q.p<99.5})}).filter(function(c){var k=c.kind||"";if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
+  if(!cat.length)return"";
+  return'<section class="tile">'+tHead(en?'Calendar':'Calendrier',en?'The odds to watch':'Les probabilités à suivre')+'<div class="tgrid3">'+cat.map(function(c){
+    var pr=c.probs.slice().sort(function(a,b){return b.p-a.p}),top=pr[0],sec=pr[1];
+    return'<article class="tcard tprob">'+pRing(top.p)+'<span class="kick">'+esc(c.kind||"")+' · '+esc(c.label)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(top.label)+(sec?'<br><span class="small mute">'+esc(sec.label)+' : '+esc(pctTxt(sec.p))+'</span>':'')+'</p>'+(c.probs_at?'<span class="small mute">'+(en?'Polymarket bet on ':'Pari Polymarket au ')+esc(fmtD(c.probs_at))+'</span>':'')+'</article>';
+  }).join("")+'</div>'+cta("marche/calendrier",en?'See the calendar':'Voir le calendrier')+'</section>';
+}
 function xTitle(it){var t=tx(it,"title");return t||String(it.text||"").slice(0,160)}
 function xWho(it){
   var en=isEn(),w=((S.x&&S.x.who)||{})[it.handle]||{};
@@ -905,6 +919,7 @@ function show(tab){
   [].forEach.call(document.querySelectorAll(".tab"),function(b){b.classList.toggle("on",b.getAttribute("data-tab")===tab)});
   window.scrollTo(0,0);
   if(tab==="infrastructure"&&parts[1]){S.open["l"+parts[1]]=true;if(S.layers)rInfra();var dl=$("infra-list");dl=dl&&dl.closest("details");if(dl)dl.open=true;var lye=$("ly-"+parts[1]);if(lye)lye.scrollIntoView({block:"start"})}
+  if(tab==="marche"&&parts[1]==="calendrier"){var mcl=$("m-cal");if(mcl){mcl.open=true;mcl.scrollIntoView({block:"start"})}}
   if(toRace){var rc=$("m-race");if(rc){rc.open=true;rc.scrollIntoView({block:"start"})}}
   if(tab==="acteurs"&&parts[1]==="voix"&&!parts[2]&&S.vv!=="flux"){S.vv="flux";rActeurs()}
   if(tab==="acteurs"&&parts[1]==="voix"&&parts[2]&&parts[2]!=="x"){S.vc="ALL";S.vv="pers";S.vq="";S.ve=false;S.vfo=null;rActeurs();var pe=document.getElementById("vp-"+parts[2]);if(pe)pe.scrollIntoView({block:"start"})}

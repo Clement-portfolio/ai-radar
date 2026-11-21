@@ -947,3 +947,7 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .essmode .vrow .xq{border-left-color:rgba(255,255,255,.25);color:#E5E5EA}
 .essmode .vrow .rsm,.essmode .vrow .rsm b{color:#C7C7CC}
 .essmode .vrow .xb{color:#A1A1A6}
+
+.tprob{align-items:flex-start}.tprob .pring{align-self:center;margin:4px 0 6px;color:var(--ink)}
+.tprob h3{font-size:19px}.tprob p{margin:0}.tprob .mute{color:var(--mute)}
+.tprob>span.small.mute:last-child{margin-top:auto}
