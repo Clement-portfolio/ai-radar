@@ -74,6 +74,13 @@ assert.equal(hot.length, 3); assert.equal(hot[0].id, "a"); assert.equal(hot[0].o
 assert.ok(!hot.some((x) => x.id === "d"), "plus de 48 h : écarté");
 assert.equal(new Set(hot.map((x) => x.id)).size, 3, "une déclaration par personne");
 
+// fraîcheur : une déclaration récente d'un seul média passe devant un propos de la veille repris partout
+{
+  const old = { ...H("o", "dirigeants", "O warns AI could overheat economy", "A", 40), items: ["A", "B", "C", "D", "E", "F", "G", "H"].map((s, i) => ({ ts: new Date(now - (40 + i / 10) * 36e5).toISOString(), title: "O warns AI could overheat economy", url: "https://x/o" + i, source: s })) };
+  const fresh = H("f", "dirigeants", "F announces new datacenter plan today", "Wired", 2);
+  const h2 = hotVoix({ people: [old, fresh] }, now);
+  assert.equal(h2[0].id, "f", "récent d'abord, même sans reprise multiple");
+}
 // Dario n'est pas Daniela ; propos d'un tiers écarté
 const reOf = (id) => PEOPLE.find((p) => p.id === id).re;
 assert.equal(isStatement("Daniela Amodei says Anthropic will hire", reOf("dario-amodei")), false, "Daniela n'est pas Dario");

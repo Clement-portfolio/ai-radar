@@ -246,7 +246,7 @@ export async function translateVoix({ doc, generate, max = 140 }) {
 }
 
 /* ---------- Déclarations brûlantes du jour (Une) : classement mécanique, sans IA ---------- */
-export const HOT_RULES = { hours: 48, top: 3, weight: { dirigeants: 1, pouvoirs: 1, cadres: 0.8, chercheurs: 0.8, investisseurs: 0.7 }, strong: 1.3, sim: 0.4 };
+export const HOT_RULES = { hours: 48, half: 9, top: 3, weight: { dirigeants: 1, pouvoirs: 1, cadres: 0.8, chercheurs: 0.8, investisseurs: 0.7 }, strong: 1.3, sim: 0.4 };
 const STRONG = /\b(?:warns?|warned|resign\w*|slams?|admits?|predicts?|reveals?|vows?|rejects?|denies|demands?|urges?|calls? for|shorts?|sells?|sold|downgrades?|insists?|blasts?|accuses?)\b/i;
 const STOP = new Set("the a an of to in on for and or at by with as is are was be it its this that from after says said say will would about over into than not has have had who his her their".split(" "));
 const toks = (t) => new Set(String(t).toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
@@ -282,7 +282,7 @@ export function hotVoix(doc, now) {
     const age = (now - Date.parse(x.it.ts)) / 36e5;
     if (!(age >= 0) || age > R.hours) continue;
     const media = new Set(all.filter((y) => y.p.id === x.p.id && Math.abs(Date.parse(y.it.ts) - Date.parse(x.it.ts)) <= R.hours * 36e5 && jac(x.t, y.t) >= R.sim).map((y) => String(y.it.source).toLowerCase()));
-    const rec = age <= 12 ? 1 : age <= 24 ? 0.8 : 0.5;
+    const rec = Math.pow(0.5, age / HOT_RULES.half); // fraîcheur : le poids est divisé par 2 toutes les `half` heures
     const score = rec * (1 + Math.log2(Math.max(1, media.size))) * (R.weight[x.p.cat] || 0.7) * (x.p.w ?? 1) * (STRONG.test(x.it.title) ? R.strong : 1);
     const cur = best.get(x.p.id);
     if (!cur || score > cur.score) best.set(x.p.id, { score: +score.toFixed(2), id: x.p.id, n: x.p.n, role: x.p.role, actor: x.p.actor, ts: x.it.ts, title: x.it.title, title_fr: x.it.title_fr || "", url: x.it.url, source: x.it.source, kind: x.it.kind, outlets: media.size });
