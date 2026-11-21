@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-21T07:26:54.803Z",
+ "generated_at": "2026-11-21T11:50:21.487Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1217,6 +1217,16 @@
      "title_fr": "Altman et Brockman déclarent que leurs parts inégales dans OpenAI ne pèsent pas sur leur partenariat"
     },
     {
+     "ts": "2026-11-18T02:20:50.000Z",
+     "title": "OpenAI’s Brockman says cybersecurity will become a bigger business than coding",
+     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE14ei1pRjI0eGNJYkhISnhaZ29UMk5acElkLXAzRHRQNFd0dUxHRm1IV0JOQzNRWVktb0tmdm5yam1xejJRd2gwSWVYRV85LUNoZnc?oc=5",
+     "source": "Digg",
+     "kind": "presse",
+     "title_fr": "Brockman d'OpenAI affirme que la cybersécurité deviendra un marché plus important que la programmation",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-08T09:23:47.000Z",
      "title": "Death as a choice? OpenAI's Brockman reveals 18-month medical forecast",
      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPc096dGs5aXkxRkpzQU5nMlNUekNtYWFlZlFjZndVMUZKYV9pZGhjd0hDUUxzTFlxZ21TXzY2UlBlakxRb2xveWpuMW9vYmYxU3MtVjE4d09BSEl0d1Z5UDBxNHJaRmVzWGVfUmVJa0JfV0JUQ01ZNy1MSVlua041VU53V1RadUpJdXc?oc=5",
@@ -1243,18 +1253,8 @@
      "source": "NeoTeo",
      "kind": "presse",
      "title_fr": "Greg Brockman déclare qu'OpenAI pourrait être prêt pour une introduction en bourse en 2027",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-05T08:00:00.000Z",
-     "title": "OpenAI president Greg Brockman says company could be IPO ready in 2027",
-     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTFFlV2U3dmllZWdmdnFxa1ZtTXRrekt5LXBkVlJhZm43MDlMUk9CUXJJT1pIQUFkV3h5RVczRG5EUFlkQTdyZVFlODlKb0drRklmVjhPaEx1UURpalBHN2xubHhRLUhGLURWNER5X0pUQjdha09YUVM1RVhXbGdWWDhYOENiOEwweVZQNzNXT1U1VWFibWFKT2RkVnZyYjNDYjRjd2tvWTE?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "title_fr": "Le président d'OpenAI, Greg Brockman, déclare que l'entreprise pourrait être prête pour une introduction en bourse en 2027",
-     "m": 2,
-     "e": 1
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -1663,13 +1663,23 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-21T07:17:15.000Z",
+     "title": "Xi, Trump agree military AI decisions must involve humans, Bessent says",
+     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVloyS0N1eVl5Z203ZkxoWkpFQmc3UFE3V2ZadGxWSjYyT21PRXo0RXdib1ZrZFpKN3IwMzB3YlJSQmRJNUtNaWhIVjlhTWk2ekoybFR0SkJvZG9lYVZFUTV3c1R4SDlDdkVZUnY0VW9nUFQ0bkFYR3lKMW90Rlk5QkRFcWVVN0hvUmJSQ0s2TGFyZFNkcGNPeWVFaDd1d21TTDRaRXBZMm1JcklHUVFwTGZlVE8wRzJJWG0wZThQVlBFMU8ySUHSAcYBQVVfeXFMT19VMVYzcU53TjZOQUZMR0RrLVVDQVc2LVlBVmNOR3lMR3ZZM0wxY216TFMzTGI2VUF1SnRiYzllemd5QlVheENzRXpaVjZSSlJHYWdUZW5MT0tkWEF6U1RiTUpBcmxFbGRGeThtaXYtX09zeDlUQWZFV2tuNGRadjdTdkVUSWJtd0NrdHBReWlUX2d3OW9RWFp1RWc2eFZENThrT0dEcXA2YnZNcmlTQXFZREFUcVdGclh5anBrSWVDel9NVzdR?oc=5",
+     "source": "South China Morning Post",
+     "kind": "presse",
+     "title_fr": "Xi et Trump conviennent que les décisions militaires en matière d'IA doivent impliquer des humains, selon Bessent",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-20T18:07:21.000Z",
      "title": "Trump, Xi agreed that military AI decisions should involve humans, Bessent says",
      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSnJIY2MzcUJjNVY3MzNYaGxKYUIySGw3TzNnVjltNDBIS2JPOHV4Y1BTaDRTRTRxSWp3R0M4Z3VSeU1IWmdoTGl6SU15bHh6UkZobTZ3aWpxUmU5c2dsODBPTjI3V0NQTEhjMWZBWE1fZnNQVHdYcjdONk43LVhleEdaUEs2d0hsV3dqMURGRUcyQzZnTFduVGZuTmJMU0taYzNreTJ4c2ZqeWV6b0l2X1FCQm5SQllFa09PZFRIcGJ5aGs?oc=5",
      "source": "Reuters",
      "kind": "presse",
      "title_fr": "Trump et Xi ont convenu que les décisions militaires en matière d'IA devaient impliquer des humains, déclare Bessent",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -1731,16 +1741,6 @@
      "title_fr": "Bessent appelle à un remaniement chez Nvidia alors qu'un directeur financier de longue date prend les rênes",
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-16T16:00:00.000Z",
-     "title": "Nvidia’s CEO search draws fire with Bessent’s call",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1TWVROV1B4ZTFOOE10ajF5d1hkMFc2NHk3Z1pvRzBJSGcycGI5U05VR3M4QlBOcFlHQ01nYXdlU3BvV0lhREllajVpRktaaS11cDdNaTNrdEZkWkVZX3loRHpibU05ZnMxRFNodjV4VlU5TUE1NEE?oc=5",
-     "source": "Taipei Times",
-     "kind": "presse",
-     "title_fr": "La recherche d'un PDG par Nvidia critiquée suite à l'appel de Bessent",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -2451,8 +2451,24 @@
    "role": "Fondateur d'Amazon, co-PDG de Prometheus",
    "co": "Project Prometheus",
    "actor": "amazon",
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-21T10:35:00.000Z",
+     "title": "Jeff Bezos says your family’s 'not going to need' 2 paychecks thanks to AI. Before you quit, here’s the math on 1 income",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbktsUENkQzNkSERtbzMxdm5LeVZKVUVTZW1iU2NNMUV1eGFBeFNMVnFrb1NoRFhpSjFYV1hFLXlEVTV1UjRwWk01c3E0c08yUW9aeTdLaVhjS2R5SDc4MUpmb0czT1Y4V3ZQeERDXzhnRUlDMkVtekx4WkVyUlY2Zktfd09ld0c2SmVMSE0xT2p4bmg5?oc=5",
+     "source": "Yahoo Finance"
+    }
+   ],
    "items": [
+    {
+     "ts": "2026-11-21T10:35:00.000Z",
+     "title": "Jeff Bezos says your family’s 'not going to need' 2 paychecks thanks to AI. Before you quit, here’s the math on 1 income",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbktsUENkQzNkSERtbzMxdm5LeVZKVUVTZW1iU2NNMUV1eGFBeFNMVnFrb1NoRFhpSjFYV1hFLXlEVTV1UjRwWk01c3E0c08yUW9aeTdLaVhjS2R5SDc4MUpmb0czT1Y4V3ZQeERDXzhnRUlDMkVtekx4WkVyUlY2Zktfd09ld0c2SmVMSE0xT2p4bmg5?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-18T02:03:00.000Z",
      "title": "Jeff Bezos Warns Outsider CEO Replacing Jensen Huang Faces ‘Vanishingly Small Chance of Succeeding’ at Nvidia: ‘Too Complicated’",
@@ -2640,6 +2656,16 @@
      "title_fr": "« De nombreux emplois disparaîtront pour toujours » : Bill Gates prévient que l'IA pourrait anéantir des carrières en une décennie. Protégez votre salaire"
     },
     {
+     "ts": "2026-11-14T13:31:41.000Z",
+     "title": "Bill Gates Warns AI Can Already Threaten Hospitals, Power Grids and Banks",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1qME1ZVy1PSDRFX0MzeDhic1Y3dEgwQWVZR01lNUFPdXJ5cEc2NHZHMVc2OUp6Wk42cHNxWU5BbnFmMGJ4REhBb1dxVkxCZkRZZTBxT3hvWUQ2Q0hsYklfV3haTThFQ3RsUFJxLXRKbEc1UQ?oc=5",
+     "source": "The 420.in",
+     "kind": "presse",
+     "title_fr": "Bill Gates prévient que l'IA peut déjà menacer les hôpitaux, les réseaux électriques et les banques",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-11T16:34:57.000Z",
      "title": "Bill Gates Says Next Four Years Are Critical for AI Safety, Calls for Urgent Regulation",
      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10RmgwWG1TNk1EMjNWTlBGRkY2YXRKWm5pdXhPZ3lESEczQ1VkTWRDaHdKQlc3MVFrUHNMZEVZeW5uQ3FWUWhKcXdCenJrdU03dlZEUg?oc=5",
@@ -2648,16 +2674,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Bill Gates déclare que les quatre prochaines années sont critiques pour la sécurité de l'IA et appelle à une réglementation urgente"
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "A robot will cost $10 an hour for the same work for which a human earns $20, says Bill Gates",
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPY3hXMnVtbzU3VjhpTERmRlBNQllqMkpVbG1McF9YSWVlQlJlY1pyNHg0ODBMaXVLUDVIUFB5NWF4dTc3N0M5aEhRZngwdEtxbE5pRVJQcS1nVzRicFNZQXhWaTlERUkxQ0hQWHRsVUZfRElncnp4SE9OOF9FRGxMOWJDZGJkbExSbmwtYVJ3M21Kai02aS1mRzZCSWVsV1U3R21ZTXNJYlZhVUZhcENpRGh1alFVR29XYXVCQlQxc1FUNWFBY3RjUWxMVExBSXdoOWfSAdIBQVVfeXFMTnF6SEJobGZnOW5KZzlUVEhkRnpRcmxvOXc5bmFmX2FSV20zVUlqY2FJMlN0Z0cxRE5od1hxWVVuNEJXN0F0cjFQZFJQSDZCOXZyZFpMUFVrYnVGMUZYTDFlNU1GVW9YTEF3dTNpc0YxRkVYQkNTSWdxY01LQ2lIUWR4UDVuTkd5WnZOcU9wZ0xMTnl4Ym5WNmNRWVdGdU5jNEtRY3FPMnktaThDMm1oTkZMNzJaSVpKWk56clFWc0c2SGduYzdaY2g3Yk9SdTF3TGlB?oc=5",
-     "source": "MARCA",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Un robot coûtera 10 dollars de l'heure pour le même travail pour lequel un humain gagne 20 dollars, déclare Bill Gates"
     }
    ]
   },
@@ -2671,6 +2687,26 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-21T11:18:49.000Z",
+     "title": "Gelsinger Says AI Needs 10,000x Efficiency Gain",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQNjhvSTNLYTdlanl3ZERfTDVDYmYyRzFUSkJMWDRfMGlXU3VpMzV6eG9Wakt5RV9FUFkzWEJzYXFraERKWUtuLXM0LUN6TzJVV0JQalBVT1loaFZYQmhCSlFrYUphd2o2RUtKMEVnbk1VVFM4V3d3WndlSml5ckdGNk5zV1U5NFNpN2tV?oc=5",
+     "source": "Wisevoter",
+     "kind": "presse",
+     "title_fr": "Gelsinger affirme que l'IA a besoin d'un gain d'efficacité de 10 000 fois",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-21T10:41:09.000Z",
+     "title": "Former Intel CEO Pat Gelsinger Says Incremental Chip Gains Won’t Cut It As AI Demands A “10,000x Leap In Efficiency,” Rejecting The End Of Moore’s Law",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNem1VOUtBRlFMZmU2RTFJS3JPdU9YQWN1LWRJSDNseVJETnFzcjJZM3BRRWk5SXhVUXo0OHpieE84WENxT0FaTUxLRGpxV2pPWXM0VG9CSDVFODVreDlUcHFjclVXR0FWZWh2TFRJOW12UHlwRHJibzhzQVlRZUJaM2l3a2d0Y0Z3Yl9pUFFaMUwxRWNkczNzWUxXYVF4Y05LRVU2ZnFn0gGrAUFVX3lxTE0xdTJzQjJQVGpuZDRtWlRPWDROTTFNYmZNdmJuaGpmblV3Slh2ZVBmdUtqUXRkM0RHSElOV0lJeWdzRk93cnFXM1R0ZlE3R2h5NVNyMjFjSmhxM09vcTEtVk5FV0NHcGRrcDF0X2tsVGdNVFRDTGUzcHJSM1ZmNlZnQXdSTWdfelRpWG9feDAwaDZPZ0hFS1VEU2FLMzZTOEc1NDlPOUppa0RaQQ?oc=5",
+     "source": "Wccftech",
+     "kind": "presse",
+     "title_fr": "L'ancien PDG d'Intel, Pat Gelsinger, affirme que les gains incrémentiels sur les puces ne suffiront pas alors que l'IA exige un \"bond de 10 000 fois de l'efficacité\", rejetant la fin de la loi de Moore",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-06T14:04:13.000Z",
      "title": "Intel's former CEO Pat Gelsinger says this Georgia Tech memory chip could be the industry's biggest breakt",
@@ -5279,30 +5315,30 @@
  ],
  "hot": [
   {
-   "score": 3.2,
-   "id": "donald-trump",
-   "n": "Donald Trump",
-   "role": "Président des États-Unis",
-   "actor": null,
-   "ts": "2026-11-20T19:50:00.000Z",
-   "title": "US tech companies that build AI data centers in other countries will be penalized, Trump says",
-   "title_fr": "Les entreprises technologiques américaines qui construisent des centres de données d'IA dans d'autres pays seront pénalisées, déclare Trump",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWEtzQUtZSkNqOE9ReXZEMTlIRVNjOEdzRVp0b1E1UkFiYncyMGpadjRFV1ZSeDJqSnJuRnhhZ3JvRkt3ZG9BNlN3Z0VESFpTbHFTREp6bzVFWnBKZVNweW5wUUVpMzFaZk14UzA3RFVveWdDUW9rVjI1dTZOeEVVeGl5Ql9QYVFpdWl3cm15VHg4SlZNVXR3dWVuTm0xVk1HZkZZdg?oc=5",
-   "source": "AP News",
-   "kind": "presse",
-   "outlets": 2
-  },
-  {
-   "score": 2.56,
+   "score": 3.31,
    "id": "scott-bessent",
    "n": "Scott Bessent",
    "role": "Secrétaire américain au Trésor",
    "actor": null,
-   "ts": "2026-11-20T16:51:46.000Z",
-   "title": "Trump, Xi Agreed on AI Curb in Military Action, Bessent Says",
-   "title_fr": "Trump et Xi se sont mis d'accord sur une restriction de l'IA dans les actions militaires, déclare Bessent",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVm5TekZSLUtpWTgxRE1Ba3BZLW5JSTNtbUozNXdPMkIzcVRaOUhmZFZ5MWZ0NzBNNlRHN3NYUUliLWlrZlZFaXMtQ2NaUmZiTzZ6WTlKcHE4cHR5dElzYy0yWmszSmN2U08xWFNVU1hQTEE4TEF1VTdaTHh5aktwUU1YOWFsOW9WOXltTkFqazl5eGRsZ1lfU1BseENvbm5ROUFsa1lOTDRaWWlzSmpkMA?oc=5",
-   "source": "Bloomberg.com",
+   "ts": "2026-11-20T18:07:21.000Z",
+   "title": "Trump, Xi agreed that military AI decisions should involve humans, Bessent says",
+   "title_fr": "Trump et Xi ont convenu que les décisions militaires en matière d'IA devaient impliquer des humains, déclare Bessent",
+   "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSnJIY2MzcUJjNVY3MzNYaGxKYUIySGw3TzNnVjltNDBIS2JPOHV4Y1BTaDRTRTRxSWp3R0M4Z3VSeU1IWmdoTGl6SU15bHh6UkZobTZ3aWpxUmU5c2dsODBPTjI3V0NQTEhjMWZBWE1fZnNQVHdYcjdONk43LVhleEdaUEs2d0hsV3dqMURGRUcyQzZnTFduVGZuTmJMU0taYzNreTJ4c2ZqeWV6b0l2X1FCQm5SQllFa09PZFRIcGJ5aGs?oc=5",
+   "source": "Reuters",
+   "kind": "presse",
+   "outlets": 3
+  },
+  {
+   "score": 2.56,
+   "id": "donald-trump",
+   "n": "Donald Trump",
+   "role": "Président des États-Unis",
+   "actor": null,
+   "ts": "2026-11-20T18:02:17.000Z",
+   "title": "Trump says he plans to penalize US tech companies that build AI data centers in other countries",
+   "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises technologiques américaines qui construisent des centres de données d'IA dans d'autres pays",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOXzZtTzFabmQ1dkJOQ1VfVi1xbzdHeDR5dnJ2TzVCc2NIc3JrQVRJTXBGWVY5NFl1YUltSWExM013b18wZWlZbHZ1ZXRTa1Vja1pscFNZNE9raHlqc3FhRDBKNWFSZm1EQUdxMDJhSjRhY1ZPNkQ1ZGVqbHczcU5qNktxaFlfQUlGYThBYUROSzkwYjNTQlFta1lBQ29hbkXSAaQBQVVfeXFMUDl1ajJqM05vYkFNbENfbnZxMy11MG95RUgyV1JkbXkyTWw5c0VqbmZFNmY0Nk9iWklMd182aDZiaEtraTMybUY1Q3JRTDl0bmNOdW1MeFhOQ0w3VkFBUVdWMzI2Uk40YmtSQkRKZ0dZYVNBTnFkYkN6b3hsblNvdGNIR0NISzg0TEtvYVZLQ3ktQ0VpMG8yRkNNYU9YajkxVE5TSGU?oc=5",
+   "source": "ABC News",
    "kind": "presse",
    "outlets": 2
   },
