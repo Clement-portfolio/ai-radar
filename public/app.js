@@ -4,7 +4,7 @@ var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"LLMs",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","recherche","marche","infrastructure","acteurs","carte","methode"];
-var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"tension",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100,vsrc:"decl",xk:"ALL",xnr:false,xlimit:100};
+var S={xfo:false,xq:"",lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"tension",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100,vsrc:"decl",xk:"ALL",xnr:false,xlimit:100};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
@@ -864,8 +864,11 @@ function xHtml(){
   var en=isEn(),X=S.x,all=(X&&X.items)||[];
   if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: the first pass runs at 9 pm (Riyadh time).':'Aucun post collecté pour l\'instant : le premier passage a lieu à 21 h (heure de Riyad).')+'</div>';
   var kinds=Object.keys(XKIND);
-  var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)});
-  var h='<div class="toolbar frow"><span class="atabs">'+'<button class="chip'+(S.xk==="ALL"?' on':'')+'" data-xk="ALL">'+(en?'All':'Tous')+' ('+all.length+')</button>'+kinds.map(function(k){var n=all.filter(function(x){return x.kind===k}).length;return n?'<button class="chip'+(S.xk===k?' on':'')+'" data-xk="'+k+'">'+esc(XKIND[k][en?1:0])+' ('+n+')</button>':""}).join("")+'</span><span class="sp"></span><button class="chip'+(S.xnr?' on':'')+'" data-xnr="1">'+(en?'Not covered by the press':'Non relayés par la presse')+'</button></div>';
+  var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")).indexOf(q)>=0});
+  var CH='<span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>';
+  var kl=S.xk==="ALL"?(en?'All':'Tous'):XKIND[S.xk][en?1:0];
+  var panel=S.xfo?'<div class="fpanel"><button class="chip'+(S.xk==="ALL"?' on':'')+'" data-xk="ALL">'+(en?'All':'Tous')+' ('+all.length+')</button>'+kinds.map(function(k){var n=all.filter(function(x){return x.kind===k}).length;return n?'<button class="chip'+(S.xk===k?' on':'')+'" data-xk="'+k+'">'+esc(XKIND[k][en?1:0])+' ('+n+')</button>':""}).join("")+'</div>':'';
+  var h='<div class="toolbar frow"><button class="chip fb'+(S.xfo?' open':'')+(S.xk!=="ALL"?' set':'')+'" data-xfo="1">'+(en?'Type: ':'Type : ')+esc(kl)+' '+CH+'</button><span class="sp"></span><input id="xq" class="vsearch" type="search" placeholder="'+(en?'Search':'Rechercher')+'" value="'+esc(S.xq||"")+'" aria-label="'+(en?'Search':'Rechercher')+'"><button class="chip'+(S.xnr?' on':'')+'" data-xnr="1">'+(en?'Not covered by the press':'Non relayés par la presse')+'</button></div>'+panel;
   if(!items.length)h+='<div class="empty">'+(en?'No post for these filters.':'Aucun post pour ces filtres.')+'</div>';
   var dc={};items.forEach(function(x){var d=dayKey(x.ts);dc[d]=(dc[d]||0)+1});
   var total=items.length,day="";items=items.slice(0,S.xlimit);
@@ -926,7 +929,8 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-toggle")){var k=t.getAttribute("data-toggle");S.open[k]=!S.open[k];t.parentNode.classList.toggle("open",!!S.open[k])}
 });
 document.addEventListener("click",function(e){
-  var xk=e.target.closest("[data-xk]");if(xk){S.xk=xk.getAttribute("data-xk");S.xlimit=100;rActeurs();return}
+  var xk=e.target.closest("[data-xk]");if(xk){S.xk=xk.getAttribute("data-xk");S.xlimit=100;S.xfo=false;rActeurs();return}
+  if(e.target.closest("[data-xfo]")){S.xfo=!S.xfo;rActeurs();return}
   if(e.target.closest("[data-xnr]")){S.xnr=!S.xnr;S.xlimit=100;rActeurs();return}
   if(e.target.closest("[data-xmore]")){S.xlimit+=100;rActeurs();return}
   var rd=e.target.closest("[data-rd]");if(rd){S.rd=rd.getAttribute("data-rd");S.rlimit=100;S.rfo=null;rResearch();return}
@@ -936,7 +940,7 @@ document.addEventListener("click",function(e){
   if(e.target.closest("[data-rmore]")){S.rlimit+=100;rResearch();return}
 });
 function vRefresh(){var b=$("vbody");if(b){$("v-acteurs").classList.toggle("essmode",!!S.ve);$("vess").innerHTML=vEss();$("vbtns").innerHTML=vBtns();$("vpanel").innerHTML=vPanel();b.innerHTML=vList()}else rActeurs()}
-document.addEventListener("input",function(e){if(e.target&&e.target.id==="rq"){var pos=e.target.selectionStart;S.rq=e.target.value;S.rlimit=100;rResearch();var n=$("rq");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}if(e.target&&e.target.id==="vq"){S.vq=e.target.value;S.vlimit=80;vRefresh();return}if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
+document.addEventListener("input",function(e){if(e.target&&e.target.id==="xq"){var xp=e.target.selectionStart;S.xq=e.target.value;S.xlimit=100;rActeurs();var xn=$("xq");if(xn){xn.focus();try{xn.setSelectionRange(xp,xp)}catch(x){}}return}if(e.target&&e.target.id==="rq"){var pos=e.target.selectionStart;S.rq=e.target.value;S.rlimit=100;rResearch();var n=$("rq");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}if(e.target&&e.target.id==="vq"){S.vq=e.target.value;S.vlimit=80;vRefresh();return}if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 
 /* Recherche globale */
 var SG=["Entreprises","Personnes","Déclarations","Actualités","Couches de l'infrastructure","Recherche","Sur X"],SCAP=[6,6,6,8,3,6,6];
