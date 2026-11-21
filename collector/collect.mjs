@@ -42,6 +42,19 @@ const OUTLETS = { "reuters.com": "Reuters", "ft.com": "Financial Times", "nytime
 export const outletName = (host) => { const h = String(host || "").toLowerCase().replace(/^www\./, ""); const k = Object.keys(OUTLETS).find((d) => h === d || h.endsWith("." + d)); if (k) return OUTLETS[k]; const parts = h.split("."); const base = parts.length > 2 && parts[parts.length - 2].length <= 3 ? parts[parts.length - 3] : parts[parts.length - 2]; return base ? base.charAt(0).toUpperCase() + base.slice(1) : "Web"; };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Page de rubrique, de tag ou de sélection d'articles (et non un article) : à écarter, on ne publie que des articles.
+export function isHubPage(c) {
+  const core = String(c.title || "").replace(/\s+[-–—|]\s+[^-–—|]{2,40}$/, "").trim().toLowerCase().replace(/[“”"«»]/g, "");
+  const words = core.match(/[\p{L}\p{N}]+/gu) || [];
+  const GEN = /^(a\.?i\.?|artificial intelligence|machine learning|technology|tech|business|economy|world|news|latest|chips?|semiconductors?|robots?|robotics|data ?cent(er|re)s?|intelligence artificielle|ia)( \(.*\))?( news| latest| topics?)?$/;
+  if (words.length && words.length <= 6 && GEN.test(core)) return true;
+  let u; try { u = new URL(c.url); } catch { return false; }
+  if (/(^|\.)news\.google\./.test(u.hostname)) return false;
+  const segs = u.pathname.split("/").filter(Boolean);
+  if (/(^|\.)theguardian\.com$/.test(u.hostname)) return !/\/\d{4}\/[a-z]{3}\/\d{1,2}\//.test(u.pathname) && !/^(live|ng-interactive|video|audio|gallery)$/.test(segs[0] || "") && segs.length <= 2;
+  return /\/(tags?|topics?|section|category|categories|collection|hub)(\/|$)/i.test(u.pathname) && segs.length <= 3;
+}
+
 const sha = (s) => crypto.createHash("sha1").update(s).digest("hex").slice(0, 12);
 
 /* ---------- utilitaires ---------- */
@@ -310,7 +323,7 @@ function whyOk(r, c) {
 /* ---------- Gemini ---------- */
 const SYSTEM = `Tu es l'analyste d'un radar d'actualité sur l'intelligence artificielle et son économie. Pour chaque article fourni (champ i, source, title, snippet, date), renvoie un objet JSON.
 Règles :
-- relevant : true si l'article se rattache à l'IA ou à son économie : modèles et produits d'IA, puces/mémoire/fonderie, datacenters, énergie pour l'IA, financement, résultats et cours de bourse des acteurs de l'IA, décisions et polémiques politiques qui touchent l'IA (Maison Blanche, Département du Commerce, Congrès, gouvernements, liens entre dirigeants de l'IA et pouvoir), régulation, usages, adoption, recherche. En cas de doute, mets true avec importance 1. Mets false seulement si l'article n'a clairement aucun rapport avec l'IA (autre sujet, publicité, bons de réduction, conseils boursiers sans fait) et donne alors, dans reason, la raison en 8 mots maximum.
+- relevant : true si l'article se rattache à l'IA ou à son économie : modèles et produits d'IA, puces/mémoire/fonderie, datacenters, énergie pour l'IA, financement, résultats et cours de bourse des acteurs de l'IA, décisions et polémiques politiques qui touchent l'IA (Maison Blanche, Département du Commerce, Congrès, gouvernements, liens entre dirigeants de l'IA et pouvoir), régulation, usages, adoption, recherche. En cas de doute, mets true avec importance 1. Mets false seulement si l'article n'a clairement aucun rapport avec l'IA (autre sujet, publicité, bons de réduction, conseils boursiers sans fait) ; mets aussi false pour une page de rubrique, de tag ou de sélection d'articles (titre générique sans fait précis, par exemple « AI (artificial intelligence) » : on ne publie que des articles) ; donne alors, dans reason, la raison en 8 mots maximum.
 - Ordres de grandeur : ${UNITS_RULE}
 - title_fr : titre en français, fidèle à l'original, sans ajout. Toujours en écriture latine : traduis les titres chinois, japonais, coréens, arabes ou russes.
 - title_en : le même titre en anglais (recopie l'original s'il est déjà en anglais).
@@ -482,6 +495,7 @@ export async function run(opts = {}) {
     if (DISCOVERY.has(c.via) && allow.length && !domainIn(c.domain, allow)) { untrusted++; continue; }
     if (blockPaths.some((b) => `${c.domain}${(() => { try { return new URL(c.url).pathname; } catch { return ""; } })()}`.includes(b))) { untrusted++; continue; }
     const cu = canonicalUrl(c.url); const id = sha(cu);
+    if (isHubPage(c)) { rejected[id] = nowMs; continue; }
     if (known.has(cu) || known.has(id) || rejected[id] || seen.has(cu)) continue;
     const text = `${c.title} ${c.snippet || ""}`;
     if (c.watch && !(W && watchCandidateOk(c, W))) continue; // requête de la watchlist : nom d'entreprise ou sujet suivi, jamais du trading

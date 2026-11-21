@@ -1,8 +1,10 @@
 // Test hors ligne : sources et Gemini simulés.
 import fs from "node:fs/promises"; import os from "node:os"; import path from "node:path";
 import assert from "node:assert/strict";
-import { run, parseFeed, canonicalUrl } from "./collect.mjs";
+import { run, parseFeed, canonicalUrl, isHubPage } from "./collect.mjs";
 
+assert.ok(isHubPage({ title: "AI (artificial intelligence) - The Guardian", url: "https://news.google.com/rss/articles/X?oc=5" }) && isHubPage({ title: "Technology", url: "https://ex.com/a" }) && isHubPage({ title: "x", url: "https://www.theguardian.com/technology/artificialintelligenceai" }) && isHubPage({ title: "Page", url: "https://ex.com/topics/ai" }), "pages de rubrique détectées");
+assert.ok(!isHubPage({ title: "Nvidia unveils new AI chip", url: "https://www.theguardian.com/technology/2026/nov/20/nvidia-ai-chip" }) && !isHubPage({ title: "AI chip demand surges - Reuters", url: "https://news.google.com/rss/articles/Y" }), "articles conservés");
 const now = Date.parse("2026-11-09T15:00:00Z");
 const rss = `<?xml version="1.0"?><rss><channel>
 <item><title><![CDATA[Nvidia unveils new AI chip &amp; HBM4 plan]]></title><link>https://ex.com/a?utm_source=x</link><pubDate>Mon, 09 Nov 2026 12:00:00 GMT</pubDate><description>&lt;p&gt;Big news on GPUs.&lt;/p&gt;</description></item>
