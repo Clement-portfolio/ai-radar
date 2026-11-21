@@ -497,3 +497,13 @@ details.nwd>summary{font-size:22px}
 .dock button{flex:none;white-space:nowrap}
 
 @media(max-width:900px){.flt .lay{flex:1 1 100%}.flt .srch{flex:1 1 100%}}
+
+/* niveaux du datacenter : un rail unique, identique à chaque niveau */
+.shd .rail{display:inline-flex;gap:2px;padding:3px;margin:0 0 10px;background:rgba(0,0,0,.06);border-radius:999px;pointer-events:auto}
+.shd .rail button{border:0;background:none;font:500 12.5px var(--ui);color:var(--ink2);padding:6px 14px;border-radius:999px;cursor:pointer;transition:background .2s,color .2s}
+.shd .rail button:hover{color:var(--ink)}.shd .rail button.on{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(0,0,0,.14)}
+.dock .in{font-style:normal;margin-left:4px;padding:2px 6px;border-radius:999px;opacity:.7}.dock .in:hover{opacity:1;background:rgba(0,0,0,.08)}.dock button.on .in:hover{background:rgba(255,255,255,.25)}
+/* campus en coupe : le bâtiment est vitré, on voit les racks dedans */
+.bx.glass i{background:rgba(255,255,255,.2)!important;border-color:rgba(0,0,0,.18)!important}
+.scene .bx.glass.col i{background:rgba(76,155,255,.22)!important}
+@media(max-width:700px){#bz{display:none!important}}

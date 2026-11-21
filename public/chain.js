@@ -66,7 +66,8 @@ var ENERGIE_L=[["smr",[-250,-170,81,0],0],["gas",[-265,-40,35,0],0],["trf",[-280
 var ENERGIE_C=[["Vers le datacenter",[215,96,1]]];
 function buildDC(){
  var h=G(),i;
- h+=box({f:"bld",c:"roof",p:"bld",x:-180,y:-120,w:360,h:220,d:60,b:1});
+ h+=box({f:"bld",c:"roof glass",p:"bld",x:-180,y:-120,w:360,h:220,d:60,b:1});
+ [-96,-52,-8,36].forEach(function(y){for(i=0;i<8;i++)h+=box({f:"calc",p:"bld",x:-150+i*40,y:y,w:20,h:34,d:46,b:2})});
  for(i=0;i<5;i++)h+=box({f:"cool",c:"fan",p:"cool",x:-170+i*70,y:138,w:56,h:46,d:26,b:1});
  for(i=0;i<5;i++)h+=flat({c:"c-cool",p:"cool",x:-145+i*70,y:110,w:6,h:28,b:1.5});
  h+=flat({c:"c-op",p:"fibc",x:180,y:-14,w:190,h:6,b:1.5});
@@ -162,7 +163,7 @@ var LV=[
 var SITES=[
  {id:"fonderies",n:"Fonderies",ly:"fonderie",b:"ASML construit les machines de lithographie ; TSMC et les autres fonderies gravent les puces avec elles.",ic:'<rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>'},
  {id:"energie",n:"Énergie",ly:"energie",b:"Le courant qui alimente les datacenters : turbines à gaz sur site, transformateurs et, plus tard, petits réacteurs.",ic:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>'},
- {id:"datacenter",n:"Datacenters",ly:"datacenters",b:"Le bâtiment, son refroidissement et la fibre qui en sort. Double-cliquez le bâtiment pour entrer dans la salle.",ic:'<rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/>'},
+ {id:"datacenter",n:"Datacenters",rl:"Campus",ly:"datacenters",b:"Le bâtiment, son refroidissement et la fibre qui en sort. Double-cliquez le bâtiment pour entrer dans la salle.",ic:'<rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/>'},
  {id:"modeles",n:"Modèles",ly:"modeles",b:"Les modèles tournent dans les datacenters ; les applications captent les usagers et l'argent.",ic:'<path d="M11 3l1.9 5.6L18.5 10.5l-5.6 1.9L11 18l-1.9-5.6L3.5 10.5l5.6-1.9z"/><path d="M19 15l.7 2.1 2.1.7-2.1.7L19 20.6l-.7-2.1-2.1-.7 2.1-.7z"/>'}
 ];
 function siteOf(i){for(var k=0;k<SITES.length;k++)if(SITES[k].id===LV[i].site)return k;return 0}
@@ -185,14 +186,14 @@ function init(){
  go(0,true);
 }
 function head(){
- var v=LV[cur],S=SITES[siteOf(cur)],deep=v.parent!=null,chain=[],k;
- for(k=cur;k!=null;k=LV[k].parent)chain.unshift(k);
- var crumb=deep?'<div class="crumb">'+chain.map(function(j,n){var nm=n===0?S.n:LV[j].name;return n===chain.length-1?'<b>'+esc(nm)+'</b>':'<button type="button" data-lv="'+j+'">'+esc(nm)+'</button>'}).join("<span>›</span>")+'</div>':"";
+ var v=LV[cur],S=SITES[siteOf(cur)],deep=v.parent!=null,sid=v.site,ids=[];
+ LV.forEach(function(u,j){if(u.site===sid)ids.push(j)});
+ var crumb=ids.length>1?'<div class="rail" role="tablist">'+ids.map(function(j,n){return'<button type="button" role="tab" data-lv="'+j+'" class="'+(j===cur?"on":"")+'">'+esc(n===0?(S.rl||S.n):LV[j].name)+'</button>'}).join("")+'</div>':"";
  sh.innerHTML=crumb+'<h2>'+esc(deep?v.name:S.n)+'</h2>';
 }
 function dockBuild(){
  var v=LV[cur],seen={},ps=[];v.L.forEach(function(l){if(!seen[l[0]]&&PARTS[l[0]]){seen[l[0]]=1;ps.push(l[0])}});
- dk.innerHTML=ps.map(function(p){return'<button type="button" data-dp="'+p+'"><span>'+esc(cap(PARTS[p].n))+'</span></button>'}).join("");
+ dk.innerHTML=ps.map(function(p){var zi=v.zi,inn=zi!=null&&ZOOM[p]===LV[zi].id;return'<button type="button" data-dp="'+p+'"><span>'+esc(cap(PARTS[p].n))+(inn?' <i class="in" data-enter="'+zi+'" title="Entrer : '+esc(LV[zi].name)+'">▸</i>':"")+'</span></button>'}).join("");
  dk.classList.toggle("hide",ps.length>7&&sc.clientWidth>=900);
  dk.querySelectorAll("button").forEach(function(e){e.classList.toggle("on",e.getAttribute("data-dp")===sel.part)})}
 function go(i,quiet){
@@ -332,6 +333,7 @@ function chooseSearch(e){
 })();
 document.addEventListener("click",function(e){
  var c=e.target.closest("[data-block]");if(c){pickLayer(c.getAttribute("data-block"));return}
+ var en=e.target.closest("[data-enter]");if(en){go(+en.getAttribute("data-enter"));return}
  var dp=e.target.closest("[data-dp]");if(dp){var pp=dp.getAttribute("data-dp");pick(pp,PARTS[pp].b);return}
  var z=e.target.closest("[data-lv]");if(z){go(+z.getAttribute("data-lv"));return}
  var dsb=e.target.closest("[data-site]");if(dsb){var sid=SITES[+dsb.getAttribute("data-site")].id;for(var q=0;q<LV.length;q++)if(LV[q].id===sid){go(q);break}return}
@@ -351,7 +353,7 @@ function setGap(v){gap=v*.9;sg=v*.13;view();expl=v>40;bx.textContent=expl?"Assem
 bx.addEventListener("click",function(e){e.stopPropagation();setGap(expl?0:70)});
 document.getElementById("br").addEventListener("click",function(e){e.stopPropagation();LV[cur].rx=LV[cur].rx0;LV[cur].rz=LV[cur].rz0;setGap(0);sel={part:null,block:null};mark();view()});
 var dr=null;
-sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts,.dock,.crumb"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
+sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts,.dock,.crumb,.rail"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
 sc.addEventListener("pointermove",function(e){if(!dr)return;var v=LV[cur];moved=Math.abs(e.clientX-dr.x)+Math.abs(e.clientY-dr.y);if(moved>4&&!dr.cap){dr.cap=1;try{sc.setPointerCapture(dr.id)}catch(_){}}v.rz=dr.rz+(e.clientX-dr.x)*.3;v.rx=Math.max(30,Math.min(72,dr.rx-(e.clientY-dr.y)*.3));view()});
 sc.addEventListener("pointerup",function(){dr=null;setTimeout(function(){moved=0},0)});
 window.addEventListener("resize",function(){chips();fitAll()});
