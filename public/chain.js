@@ -37,6 +37,7 @@ var GRP={en:"en",cool:"cool",bld:"st",asm:"st",brd:"st",calc:"calc",mem:"mem",el
 var PF={smr:"en",gas:"en",trf:"en",bld:"bld",cool:"cool",fibc:"op",models:"use2",apps:"use",rack:"calc",bus:"en",loop:"cool",sw:"net",fib:"op",cu:"cu",cold:"cool",dies:"calc",fab:"calc",hbm:"mem",wires:"el",ip:"asm",cpo:"op",sub:"asm",pcb:"brd",power:"en",aec:"cu",mod:"op",las:"op",sw2:"net",euv:"calc",tsmc:"calc",fnd:"calc"};
 var FC={en:"#0071E3",cool:"#4C9BFF",bld:"#C9C9CF",calc:"#48484A",mem:"#0071E3",asm:"#B4B4BB",brd:"#A9A9B0",cu:"#0071E3",op:"#4C9BFF",el:"#1D1D1F",net:"#0071E3",use:"#0071E3",use2:"#0058B0"};
 var ZOOM={bld:"hall",rack:"pkg"};
+function cap(s){s=String(s==null?"":s);return s.charAt(0).toUpperCase()+s.slice(1)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function Z(b,k,extra){return"calc("+b+"px + "+k+" * var(--gap)"+(extra?" + "+extra:"")+")"}
 var BUILDING=false,RECBY={},CURLV=0;
@@ -175,7 +176,7 @@ function init(){
  LV.forEach(function(v,i){CURLV=i;v.rx0=v.rx;v.rz0=v.rz;
   var el=document.createElement("div");el.className="lvl";
   var caps=(v.caps||[]);
-  el.innerHTML='<div class="world"><div class="stack">'+v.build()+v.L.map(function(l,j){var a=l[1];return'<i class="an" data-i="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],a[3])+')"></i>'}).join("")+caps.map(function(c,j){var a=c[1];return'<i class="an cp" data-c="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],0)+')"></i>'}).join("")+'</div></div><div class="ov"><svg></svg>'+v.L.map(function(l,j){var p=PARTS[l[0]];return'<button class="lb" style="--lc:'+FC[PF[l[0]]]+'" data-part="'+l[0]+'" data-i="'+j+'">'+esc(p.n)+tp(l[0])+'<small>'+esc(p.c)+'</small></button>'}).join("")+caps.map(function(c,j){return'<div class="zc" data-c="'+j+'">'+esc(c[0])+'</div>'}).join("")+'</div>';
+  el.innerHTML='<div class="world"><div class="stack">'+v.build()+v.L.map(function(l,j){var a=l[1];return'<i class="an" data-i="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],a[3])+')"></i>'}).join("")+caps.map(function(c,j){var a=c[1];return'<i class="an cp" data-c="'+j+'" style="transform:translate3d('+a[0]+'px,'+a[1]+'px,'+Z(a[2],0)+')"></i>'}).join("")+'</div></div><div class="ov"><svg></svg>'+v.L.map(function(l,j){var p=PARTS[l[0]];return'<button class="lb" style="--lc:'+FC[PF[l[0]]]+'" data-part="'+l[0]+'" data-i="'+j+'">'+esc(p.n)+tp(l[0])+'<small>'+esc(cap(p.c))+'</small></button>'}).join("")+caps.map(function(c,j){return'<div class="zc" data-c="'+j+'">'+esc(c[0])+'</div>'}).join("")+'</div>';
   sc.appendChild(el);v.el=el;v.wd=el.querySelector(".world");v.st=el.querySelector(".stack");v.ov=el.querySelector(".ov");v.sv=el.querySelector("svg");
  });
  BUILDING=false;
@@ -231,15 +232,24 @@ function fitAll(){sc.classList.add("nt");LV.forEach(function(u){u.fk=null;fitLv(
 var raf=0,until=0;
 function anim(){until=performance.now()+950;if(!raf)raf=requestAnimationFrame(tick)}
 function tick(){place();if(performance.now()<until)raf=requestAnimationFrame(tick);else raf=0}
+function centre(v,part,r){
+ var es=v.st.querySelectorAll('.bx[data-part="'+part+'"]:not(.deco)');if(!es.length)es=v.st.querySelectorAll('.fl[data-part="'+part+'"]');var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9,R=[];
+ es.forEach(function(e){var q=e.getBoundingClientRect();if(!q.width&&!q.height)return;R.push(q);x0=Math.min(x0,q.left);y0=Math.min(y0,q.top);x1=Math.max(x1,q.right);y1=Math.max(y1,q.bottom)});
+ if(!R.length)return null;
+ var cx=(x0+x1)/2,cy=(y0+y1)/2,best=null,bd=1e9;
+ R.forEach(function(q){if(cx>=q.left&&cx<=q.right&&cy>=q.top&&cy<=q.bottom)best={x:cx,y:cy}});
+ if(best)return{x:best.x-r.left,y:best.y-r.top};
+ R.forEach(function(q){var qx=(q.left+q.right)/2,qy=(q.top+q.bottom)/2,d=(qx-cx)*(qx-cx)+(qy-cy)*(qy-cy);if(d<bd){bd=d;best={x:qx,y:qy}}});
+ return{x:best.x-r.left,y:best.y-r.top}}
 function place(){
  var v=LV[cur];if(sc.clientWidth<900)return;
  var r=sc.getBoundingClientRect(),W=r.width,H=r.height,P=[];
- v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect();P.push({i:i,ax:a.left+a.width/2-r.left,ay:a.top+a.height/2-r.top,sd:l[2]})});
+ v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect(),ax=a.left+a.width/2-r.left,ay=a.top+a.height/2-r.top,c=centre(v,l[0],r);P.push({i:i,ax:ax,ay:ay,ex:c?c.x:ax,ey:c?c.y:ay,sd:l[2]})});
  var auto=P.some(function(o){return o.sd==null}),g0,g1,lines="";
  if(auto){P.sort(function(a,b){return a.ax-b.ax});var half=Math.ceil(P.length/2);g0=P.slice(0,half);g1=P.slice(half)}else{g0=P.filter(function(o){return!o.sd});g1=P.filter(function(o){return o.sd})}
- [[g0,0,0],[g1,W-198,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?72:(v.parent!=null?110:158);
-  arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-120);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";el.classList.toggle("rt",!!g[2]);
-   var lx=g[2]?g[1]:g[1]+198;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ax+'" y2="'+o.ay+'"/><circle cx="'+o.ax+'" cy="'+o.ay+'" r="2.5"/>'});});
+ [[g0,0,0],[g1,W-198,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ey-b.ey}),prev=g[2]?72:(v.parent!=null?110:158);
+  arr.forEach(function(o){var y=Math.max(o.ey-18,prev+44);y=Math.min(y,H-120);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";el.classList.toggle("rt",!!g[2]);
+   var lx=g[2]?g[1]:g[1]+198;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ex+'" y2="'+o.ey+'"/><circle cx="'+o.ex+'" cy="'+o.ey+'" r="2.5"/>'});});
  v.sv.innerHTML=lines;
  (v.caps||[]).forEach(function(c,j){var a=v.st.querySelector('.an.cp[data-c="'+j+'"]').getBoundingClientRect(),el=v.ov.querySelector('.zc[data-c="'+j+'"]');el.style.left=(a.left+a.width/2-r.left)+"px";el.style.top=(a.top+a.height/2-r.top)+"px"});
 }
@@ -528,7 +538,7 @@ function duo(){
   '<div class="blk"><div class="st">À quoi ça sert dans l\'infrastructure</div><p>'+esc(b.why)+'</p></div>'+
   '<div class="blk"><div class="st">Dépend de</div><div class="cl">'+(b.needs.length?chs(b.needs):'<span class="src">Rien en amont dans ce schéma.</span>')+'</div></div>'+
   '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div></div>';
- F.innerHTML='<section class="tile"><div class="fhd"><span class="eb">Composant sélectionné</span><h3>'+esc(P.n)+'</h3><p class="fl2">'+esc(P.c)+' · '+esc(b.name)+'</p></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
+ F.innerHTML='<section class="tile"><div class="fhd"><span class="eb">Composant sélectionné</span><h3>'+esc(P.n)+'</h3><p class="fl2">'+esc(cap(P.c))+' · '+esc(b.name)+'</p></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
  var nw=document.getElementById("nw");if(nw)nw.setAttribute("data-part",part);
  centerMini(F.querySelector(".mini"));report();
 }
