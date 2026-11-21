@@ -941,3 +941,8 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .xb.xw{background:#fbeede;color:#9a5b12}
 .vrow .xq{margin:8px 0 6px;padding:0 0 0 12px;border-left:2px solid var(--hair);font-size:14px;line-height:1.5;color:var(--ink);white-space:pre-line}
 .xnote{margin-top:22px;max-width:70ch}
+
+.segw{display:flex;justify-content:center;margin:4px 0 22px}
+.seg2{display:inline-flex;padding:3px;border-radius:999px;background:var(--pill)}
+.seg2 a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 24px;border-radius:999px;color:var(--ink);font:400 15px var(--ui);text-decoration:none;white-space:nowrap;transition:background .2s,color .2s}
+.seg2 a.on{background:var(--ink);color:#fff;font-weight:500}

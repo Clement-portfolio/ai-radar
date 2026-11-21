@@ -847,7 +847,7 @@ function rResearch(){
 var XKIND={annonce:["Annonce","Announcement"],analyse:["Analyse","Analysis"],donnee:["Donnée","Data"],rumeur:["Rumeur","Rumour"],autre:["Autre","Other"]};
 function xSwitch(){
   var en=isEn(),on=S.vsrc==="x";
-  return '<div class="toolbar frow"><span class="atabs"><a class="chip'+(on?'':' on')+'" href="#acteurs/voix">'+(en?'Statements':'Déclarations')+'</a><a class="chip'+(on?' on':'')+'" href="#acteurs/voix/x">'+(en?'On X':'Sur X')+'</a></span></div>';
+  return '<div class="segw"><span class="seg2" role="tablist"><a role="tab" aria-selected="'+(!on)+'" class="'+(on?'':'on')+'" href="#acteurs/voix">'+(en?'Press':'Presse')+'</a><a role="tab" aria-selected="'+on+'" class="'+(on?'on':'')+'" href="#acteurs/voix/x">'+(en?'On X':'Sur X')+'</a></span></div>';
 }
 function xTitle(it){var t=tx(it,"title");return t||String(it.text||"").slice(0,160)}
 function xRow(it){
