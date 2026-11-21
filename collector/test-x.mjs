@@ -24,13 +24,14 @@ const handles = [...cfg.t1, ...cfg.t2, ...cfg.flux];
 const idOf = (h) => String(1000 + handles.indexOf(h));
 let seq = 0;
 const mkFetch = (status = 200, perCall = 3) => async (url) => {
-  const u = new URL(url); calls.push(u.searchParams.get("query"));
-  if (u.searchParams.get("expansions")) usersAsked++;
+  const u = new URL(url);
+  if (u.pathname === "/2/users") { usersAsked++; const want = u.searchParams.get("ids").split(","); return { ok: true, status: 200, text: async () => JSON.stringify({ data: want.map((id) => ({ id, username: handles[Number(id) - 1000] })) }) }; }
+  calls.push(u.searchParams.get("query"));
+  if (u.searchParams.get("expansions")) throw new Error("expansions interdites");
   if (status !== 200) return { ok: false, status, text: async () => '{"title":"CreditsDepleted"}' };
   const hs = [...u.searchParams.get("query").matchAll(/from:(\w+)/g)].map((m) => m[1]);
   const data = hs.slice(0, perCall).map((h, k) => ({ id: String(++seq), author_id: idOf(h), created_at: new Date(now - (k + 1) * 3600e3).toISOString(), text: `${h} says Nvidia ships 5000 new GPUs to datacenters this quarter https://t.co/x${seq}`, public_metrics: { like_count: 10, retweet_count: 1, reply_count: 0, quote_count: 0 }, lang: "en" }));
   const body = { data, meta: { result_count: data.length } };
-  if (u.searchParams.get("expansions")) body.includes = { users: hs.slice(0, perCall).map((h) => ({ id: idOf(h), username: h })) };
   return { ok: true, status: 200, text: async () => JSON.stringify(body) };
 };
 const gen = async (inputs) => inputs.map((x) => ({ i: x.i, keep: x.i % 2 === 0, kind: "annonce", domain: "calcul", imp: x.i === 0 ? 3 : 2, title_fr: `${x.author} annonce une livraison de 5000 GPU`, title_en: `${x.author} announces 5000 GPUs shipped`, text_fr: x.text.replace("says", "dit") }));
@@ -41,7 +42,8 @@ assert.ok(r1.summary.read > 0 && r1.summary.read <= cfg.caps.day, "lecture sous 
 assert.ok(r1.doc.items.length > 0 && r1.doc.items.length <= X_RULES.perDay, "au plus 10 entrées par passage");
 assert.ok(r1.doc.items.every((x) => x.handle && /^https:\/\/x\.com\/\w+\/status\/\d+$/.test(x.url)), "pseudo et lien du post");
 assert.ok(r1.doc.items.every((x) => x.title && !/["«»]/.test(x.title)), "titre rapporté, sans guillemets");
-assert.ok(usersAsked > 0, "premier passage : les identifiants d'auteurs sont demandés");
+assert.ok(usersAsked > 0, "premier passage : les pseudos d'auteurs sont demandés (un appel groupé)");
+assert.ok(!Object.keys(r1.doc.stats).some((k) => /^\d+$/.test(k)), "statistiques par pseudo, pas par identifiant");
 assert.ok(Object.keys(r1.doc.ids).length > 0 && r1.doc.usage.days["2026-11-21"] === r1.summary.read, "identifiants et lectures mémorisés");
 assert.ok(!r1.doc.items.some((x) => /https?:\/\//.test(x.text)), "liens retirés du texte");
 
@@ -54,7 +56,7 @@ assert.match(r2.summary.reason, /plafond du jour/);
 // lendemain : identifiants connus → plus de demande d'auteurs pour les comptes qui en ont un
 const known = r1.doc, ua = usersAsked;
 const r3 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: known, feed: [], now: now + 864e5, sleep });
-assert.ok(usersAsked - ua <= calls.length, "pas d'erreur");
+assert.ok(usersAsked - ua <= 1, "un seul appel groupé, uniquement pour les nouveaux auteurs (l autre moitié de l étage 2)");
 assert.ok(r3.doc.items.length >= r1.doc.items.length, "les entrées précédentes sont conservées");
 assert.equal(new Set(r3.doc.items.map((x) => x.id)).size, r3.doc.items.length, "pas de doublon");
 
@@ -73,6 +75,9 @@ assert.match(rm.summary.reason, /plafond du mois/);
 // sans IA : seul l'étage 1 est publié, marqué « en attente », jamais de titre inventé
 const r5 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: null, prev: null, feed: [], now, sleep });
 assert.ok(r5.doc.items.length > 0 && r5.doc.items.every((x) => x.pending && x.tier === "t1" && !x.title), "secours sans IA");
+
+// séparateurs de milliers : « 879,868 » devient « 879 868 » sans faire rejeter le titre
+assert.equal(applyRow({ keep: true, kind: "annonce", domain: "politique", imp: 3, title_fr: "Les régulateurs autorisent 879 868 puces", title_en: "x", text_fr: "x" }, { text: "US regulators cleared 879,868 chips" }).title, "Les régulateurs autorisent 879 868 puces");
 
 // validation du modèle : un chiffre inventé fait rejeter le titre, mais pas le post
 const inp = { text: "Nvidia ships 5000 GPUs" };

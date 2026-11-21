@@ -47,24 +47,35 @@ export function dayPlan(cfg, now) {
 }
 
 /* ---------- appel à X ---------- */
-export async function fetchChunk({ fetchImpl, token, query, max, start, withUsers, base = "https://api.x.com" }) {
+export async function fetchChunk({ fetchImpl, token, query, max, start, base = "https://api.x.com" }) {
   const params = new URLSearchParams({ query, max_results: String(Math.max(X_RULES.minRead, Math.min(100, max))), start_time: new Date(start).toISOString().replace(/\.\d+Z$/, "Z"), "tweet.fields": "created_at,public_metrics,author_id,lang" });
-  if (withUsers) { params.set("expansions", "author_id"); params.set("user.fields", "username"); }
   const r = await fetchImpl(`${base}/2/tweets/search/recent?${params}`, { headers: { authorization: `Bearer ${token}` } });
   const body = await r.text();
   if (!r.ok) { const e = new Error(`X ${r.status} : ${body.slice(0, 160).replace(/\s+/g, " ")}`); e.status = r.status; throw e; }
   const j = JSON.parse(body);
-  const users = Object.fromEntries((j.includes?.users || []).map((u) => [u.id, u.username]));
-  return { posts: (j.data || []).slice(0, Math.min(100, max)), users };
+  return { posts: (j.data || []).slice(0, Math.min(100, max)) };
+}
+
+/** Pseudos des auteurs inconnus (un « User : Read » à 0,010 $ par compte, une seule fois : le résultat est mémorisé). */
+export async function lookupUsers({ fetchImpl, token, ids, base = "https://api.x.com" }) {
+  const out = {};
+  for (let i = 0; i < ids.length; i += 100) {
+    const part = ids.slice(i, i + 100);
+    const r = await fetchImpl(`${base}/2/users?${new URLSearchParams({ ids: part.join(","), "user.fields": "username" })}`, { headers: { authorization: `Bearer ${token}` } });
+    const body = await r.text();
+    if (!r.ok) { const e = new Error(`X ${r.status} (users) : ${body.slice(0, 120).replace(/\s+/g, " ")}`); e.status = r.status; throw e; }
+    for (const u of JSON.parse(body).data || []) out[u.id] = u.username;
+  }
+  return out;
 }
 
 /* ---------- tri par l'IA ---------- */
 export const X_SYSTEM = `Tu prépares la rubrique « Sur X » d'un site qui suit le développement de l'intelligence artificielle. Pour chaque post (i, author, text, tier) renvoie :
-- keep : true seulement si le post apporte un contenu concret sur l'IA ou sa chaîne (modèle, produit, résultat, benchmark, puces et calcul, datacenters, robotique, espace lié à l'IA, financement, partenariat, recrutement ou départ marquant, réglementation, donnée chiffrée). false pour : humour, autopromotion, publicité, annonce de fil sans contenu (« 🧵 »), remerciement, vœux, concours, opinion sans fait, politique sans lien avec l'IA, sujet sans rapport.
+- keep : true seulement si le post, À LUI SEUL, apporte un fait ou un chiffre précis et compréhensible sur l'IA ou sa chaîne (modèle, produit, résultat, benchmark, puces et calcul, datacenters, robotique, espace lié à l'IA, financement, partenariat, recrutement ou départ marquant, réglementation, donnée chiffrée). false pour : humour, autopromotion, publicité, annonce de fil sans contenu (« 🧵 »), remerciement, vœux, concours, opinion sans fait, politique sans lien avec l'IA, sujet sans rapport, post qui renvoie à une image, une vidéo ou un fil absents sans dire ce qu'ils montrent, post dont tu ne peux pas écrire un titre précis (nom, fait, chiffre).
 - kind : annonce (l'auteur énonce un fait sans réserve, de première main ou rapporté), analyse (interprétation, commentaire), donnee (chiffre, graphique, benchmark), rumeur UNIQUEMENT si l'auteur lui-même marque l'incertitude (« j'entends », « selon des sources », « rumeur », « serait »), jamais pour un fait énoncé sans réserve ; sinon autre.
 - domain, un de : modeles, calcul (puces, mémoire, serveurs, datacenters), robotique, espace, biologie, sante, energie, securite, marche (bourse, valorisation, résultats, flux financiers : à réserver aux posts de marché dont l'IA est le sujet), politique, autre.
 - imp : 1 à 3. 3 = fait important ou rare, de première main ; 2 = utile ; 1 = anecdotique. Peu de 3.
-- title_fr : UNE phrase en français (140 caractères au plus) qui dit ce que le post affirme, au discours rapporté (« X annonce que… », « Y estime que… »), sans guillemets, sans rien ajouter. Même niveau d'affirmation que l'auteur : une rumeur reste une rumeur.
+- title_fr : UNE phrase en français (140 caractères au plus) qui dit ce que le post affirme, au discours rapporté (« X annonce que… », « Y estime que… »), sans guillemets, sans rien ajouter, qui NOMME le sujet précis (jamais « un auteur » ni « un utilisateur » : utilise le compte donné dans author). Même niveau d'affirmation que l'auteur : une rumeur reste une rumeur.
 - title_en : la même phrase en anglais.
 - text_fr : traduction française fidèle du post (400 caractères au plus ; recopie le texte s'il est déjà en français).
 Règles : n'ajoute aucun chiffre, nom ou résultat absent du post ; ne mets de guillemets que si l'auteur cite quelqu'un. ${UNITS_RULE}
@@ -83,8 +94,9 @@ export const plainText = (t) => clean(String(t || "").replace(/https?:\/\/\S+/g,
 /** Valide la réponse du modèle pour un post : un texte n'est gardé que si ses chiffres et unités viennent du post. */
 export function applyRow(r, inp) {
   const src = inp.text;
-  const pool = new Set(digitsOf(stripAmounts(src)));
-  const ok = (s, lang, strict) => digitsOf(stripAmounts(s)).every((d) => pool.has(d)) && unitsOk(src, s, lang, strict);
+  const flat = (t) => String(t).replace(/(?<=\d)[,.\u00a0\u202f ](?=\d{3}(?!\d))/g, "");
+  const pool = new Set(digitsOf(stripAmounts(flat(src))));
+  const ok = (s, lang, strict) => digitsOf(stripAmounts(flat(s))).every((d) => pool.has(d)) && unitsOk(src, s, lang, strict);
   const out = { keep: r.keep !== false };
   const tf = normalizeFr(src, clean(r.title_fr));
   if (tf && tf.length <= 200 && !foreignScript(tf) && ok(tf, "fr", true)) out.title = tf;
@@ -154,7 +166,6 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const dayKey = new Date(now).toISOString().slice(0, 10), monthKey = dayKey.slice(0, 7);
   const readToday = usage.days[dayKey] || 0, readMonth = usage.months[monthKey] || 0;
   const stats = { ...(prev?.stats || {}) };
-  const asked = { ...(prev?.asked || {}) }; // pseudos pour lesquels on a déjà demandé l'identifiant (un compte muet ne doit pas rallumer les « expansions » chaque jour)
   const rep = { read: 0, kept: 0, added: 0, calls: 0, reason: "", errors: [] };
   const daily = cfg.caps.day;
   if (!token) return { doc: prev || null, summary: { ...rep, reason: "X non configuré (secret X_BEARER_TOKEN absent)" } };
@@ -170,15 +181,13 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const raw = [];
   for (const p of plan) {
     let got;
-    const unknown = p.handles.filter((h) => !ids[h.toLowerCase()] && now - (asked[h.toLowerCase()] || 0) > 7 * DAY);
-    try { got = await fetchChunk({ fetchImpl, token, query: p.query, max: p.max, start, withUsers: unknown.length > 0, base }); rep.calls++; for (const h of unknown) asked[h.toLowerCase()] = now; }
+    try { got = await fetchChunk({ fetchImpl, token, query: p.query, max: p.max, start, base }); rep.calls++; }
     catch (e) {
       rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message);
       if ([401, 402, 403, 429].includes(e.status)) break; // accès, crédit ou limite : inutile d'insister
       continue;
     }
     rep.read += got.posts.length;
-    for (const [id, name] of Object.entries(got.users)) ids[name.toLowerCase()] = id;
     for (const post of got.posts) raw.push({ ...post, tier: p.tier });
     log(`X : ${got.posts.length} post(s) lus (${p.tier}) | ${p.query.slice(0, 90)}`);
     await sleep(1100);
@@ -186,8 +195,13 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   usage.days[dayKey] = readToday + rep.read; usage.months[monthKey] = readMonth + rep.read;
   for (const d of Object.keys(usage.days)) if (now - Date.parse(d) > 40 * DAY) delete usage.days[d];
 
-  // auteurs : identifiant → pseudo (mémorisé après le premier passage)
-  const byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n]));
+  // auteurs : identifiant → pseudo (mémorisé : chaque compte n'est demandé qu'une fois)
+  let byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n]));
+  const unknownIds = [...new Set(raw.map((p) => p.author_id).filter((a) => a && !byId[a]))];
+  if (unknownIds.length) {
+    try { for (const [id, name] of Object.entries(await lookupUsers({ fetchImpl, token, ids: unknownIds, base }))) ids[name.toLowerCase()] = id; byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n])); rep.users = unknownIds.length; }
+    catch (e) { rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message); }
+  }
   const handleCase = Object.fromEntries([...cfg.t1, ...cfg.t2, ...cfg.flux].map((h) => [h.toLowerCase(), h]));
   const fresh = [], seen = new Set();
   for (const p of raw) {
@@ -238,7 +252,7 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const cutoff = now - X_RULES.retainDays * DAY;
   const list = [...items.values()].filter((x) => Date.parse(x.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, X_RULES.maxItems);
   const ok = rep.read > 0 || !rep.errors.length;
-  const doc = { v: 1, generated_at: new Date(now).toISOString(), last_run_ts: ok && rep.calls ? new Date(now).toISOString() : prev?.last_run_ts || null, items: list, ids, asked, usage, stats };
+  const doc = { v: 1, generated_at: new Date(now).toISOString(), last_run_ts: ok && rep.calls ? new Date(now).toISOString() : prev?.last_run_ts || null, items: list, ids, usage, stats };
   if (!rep.reason) rep.reason = rep.errors.length && !rep.read ? "aucun post lu : " + rep.errors[0] : `${rep.read} post(s) lus, ${rep.kept} retenu(s), ${rep.added} publié(s)${ai ? "" : " (sans tri IA)"}`;
   return { doc, summary: { ...rep, month: usage.months[monthKey], classified } };
 }
