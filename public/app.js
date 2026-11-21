@@ -113,7 +113,7 @@ function rUne(){
   }).join("")+'</div>'+cta("actualites",en?'All news':'Toutes les actualités')+'</section>';
   var H=((S.voix&&S.voix.hot)||[]).slice(0,3);
   if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say':'Ce qu’ils disent')+'<div class="tgrid3">'+H.map(function(n){
-    return'<figure class="tcard q"><blockquote>« '+esc(ctt(!en&&n.title_fr?n.title_fr:n.title))+' »</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
+    return'<figure class="tcard q"><blockquote>'+esc(ctt(!en&&n.title_fr?n.title_fr:n.title))+'</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
   }).join("")+'</div>'+cta("acteurs/voix",en?'See Insiders':'Voir les Insiders')+'</section>';
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
   if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
