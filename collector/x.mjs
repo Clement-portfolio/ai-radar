@@ -10,8 +10,8 @@ import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { foreignScript } from "./translate.mjs";
 
 const DAY = 864e5, H = 3600e3;
-export const X_RULES = { retainDays: 30, maxItems: 600, perDay: 12, minRead: 10, windowH: 26, relayDays: 4, relaySim: 0.25, textMax: 500 };
-export const KINDS = ["annonce", "analyse", "donnee", "rumeur", "autre"];
+export const X_RULES = { retainDays: 30, maxItems: 600, perDay: 12, minRead: 10, windowH: 26, relayDays: 4, relaySim: 0.25, textMax: 500, longMax: 700 };
+export const KINDS = ["annonce", "info", "analyse", "donnee", "rumeur", "autre"];
 export const DOMAINS = ["modeles", "calcul", "robotique", "espace", "biologie", "sante", "energie", "securite", "marche", "politique", "autre"];
 
 /* ---------- requêtes ---------- */
@@ -61,24 +61,24 @@ export async function lookupUsers({ fetchImpl, token, ids, base = "https://api.x
   const out = {};
   for (let i = 0; i < ids.length; i += 100) {
     const part = ids.slice(i, i + 100);
-    const r = await fetchImpl(`${base}/2/users?${new URLSearchParams({ ids: part.join(","), "user.fields": "username" })}`, { headers: { authorization: `Bearer ${token}` } });
+    const r = await fetchImpl(`${base}/2/users?${new URLSearchParams({ ids: part.join(","), "user.fields": "username,name" })}`, { headers: { authorization: `Bearer ${token}` } });
     const body = await r.text();
     if (!r.ok) { const e = new Error(`X ${r.status} (users) : ${body.slice(0, 120).replace(/\s+/g, " ")}`); e.status = r.status; throw e; }
-    for (const u of JSON.parse(body).data || []) out[u.id] = u.username;
+    for (const u of JSON.parse(body).data || []) out[u.id] = { username: u.username, name: u.name || "" };
   }
   return out;
 }
 
 /* ---------- tri par l'IA ---------- */
-export const X_SYSTEM = `Tu prépares la rubrique « Sur X » d'un site qui suit le développement de l'intelligence artificielle. Pour chaque post (i, author, text, tier) renvoie :
-- keep : true seulement si le post, À LUI SEUL, apporte un fait ou un chiffre précis et compréhensible sur l'IA ou sa chaîne (modèle, produit, résultat, benchmark, puces et calcul, datacenters, robotique, espace lié à l'IA, financement, partenariat, recrutement ou départ marquant, réglementation, donnée chiffrée). false pour : humour, autopromotion, publicité, annonce de fil sans contenu (« 🧵 »), remerciement, vœux, concours, opinion sans fait, politique sans lien avec l'IA, sujet sans rapport, post qui renvoie à une image, une vidéo ou un fil absents sans dire ce qu'ils montrent, post dont tu ne peux pas écrire un titre précis (nom, fait, chiffre).
-- kind : annonce (l'auteur énonce un fait sans réserve, de première main ou rapporté), analyse (interprétation, commentaire), donnee (chiffre, graphique, benchmark), rumeur UNIQUEMENT si l'auteur lui-même marque l'incertitude (« j'entends », « selon des sources », « rumeur », « serait »), jamais pour un fait énoncé sans réserve ; sinon autre.
+export const X_SYSTEM = `Tu prépares la rubrique « Sur X » d'un site qui suit le développement de l'intelligence artificielle. Le lecteur veut les IDÉES PRINCIPALES de ce qui compte : informations importantes, informations exclusives, et ce dont la plateforme parle le plus. Pour chaque post (i, author, name, role, text, tier) renvoie :
+- keep : true seulement si le post, À LUI SEUL, apporte un fait ou un chiffre précis et compréhensible sur l'IA ou sa chaîne (modèle, produit, résultat, benchmark, puces et calcul, datacenters, robotique, espace lié à l'IA, financement, partenariat, recrutement ou départ marquant, réglementation, donnée chiffrée), ET si son idée principale se dit en une phrase. false pour : humour, autopromotion, publicité, lancement sans dire ce qui est lancé (« nous avons lancé X » sans contenu), texte long ou fil dont l'idée ne se résume pas en une phrase, argumentation en plusieurs points, annonce de fil sans contenu (« 🧵 »), remerciement, vœux, concours, opinion sans fait, politique sans lien avec l'IA, sujet sans rapport, post qui renvoie à une image, une vidéo ou un fil absents sans dire ce qu'ils montrent, post dont tu ne peux pas écrire un titre précis (nom, fait, chiffre).
+- kind : annonce = l'auteur, ou l'organisation qu'il dirige ou représente, annonce SA PROPRE nouvelle (sortie, lancement précis, partenariat, financement, recrutement, résultat) ; info = l'auteur relaie ou rapporte un fait venant d'un tiers (« FT: … », « BREAKING: … », « selon … », un résultat d'autrui) ; analyse = interprétation, commentaire, estimation ; donnee = chiffre, graphique, benchmark ; rumeur UNIQUEMENT si l'auteur lui-même marque l'incertitude (« j'entends », « selon des sources », « rumeur », « serait »), jamais pour un fait énoncé sans réserve ; sinon autre. Un compte d'analyste ou de média qui rapporte la nouvelle d'un autre = info, jamais annonce.
 - domain, un de : modeles, calcul (puces, mémoire, serveurs, datacenters), robotique, espace, biologie, sante, energie, securite, marche (bourse, valorisation, résultats, flux financiers : à réserver aux posts de marché dont l'IA est le sujet), politique, autre.
 - imp : 1 à 3. 3 = fait important ou rare, de première main ; 2 = utile ; 1 = anecdotique. Peu de 3.
-- title_fr : UNE phrase en français (140 caractères au plus) qui dit ce que le post affirme, au discours rapporté (« X annonce que… », « Y estime que… »), sans guillemets, sans rien ajouter, qui NOMME le sujet précis (jamais « un auteur » ni « un utilisateur » : utilise le compte donné dans author). Même niveau d'affirmation que l'auteur : une rumeur reste une rumeur.
+- title_fr : UNE phrase en français (140 caractères au plus) qui dit ce que le post affirme, au discours rapporté (« X annonce que… », « Y estime que… »), sans guillemets, sans rien ajouter, qui NOMME le sujet précis. Désigne l'auteur par son champ name (jamais par son @pseudo si name est donné ; sinon le @pseudo sans arobase), jamais « un auteur » ni « un utilisateur ». Même niveau d'affirmation que l'auteur : une rumeur reste une rumeur.
 - title_en : la même phrase en anglais.
-- text_fr : traduction française fidèle du post (400 caractères au plus ; recopie le texte s'il est déjà en français).
-Règles : n'ajoute aucun chiffre, nom ou résultat absent du post ; ne mets de guillemets que si l'auteur cite quelqu'un. ${UNITS_RULE}
+- text_fr : traduction française fidèle et complète du post (600 caractères au plus ; recopie le texte s'il est déjà en français).
+Règles : n'ajoute aucun chiffre, nom ou résultat absent du post ; recopie les chiffres exactement comme dans le post, sans conversion, sans arrondi, sans changer le séparateur ; ne mets de guillemets que si l'auteur cite quelqu'un. ${UNITS_RULE}
 Réponds uniquement par un tableau JSON, un objet par post, avec le même champ i.`;
 export const X_SCHEMA = {
   type: "ARRAY",
@@ -130,7 +130,7 @@ export function pressRelay(post, feed, now) {
 /** Choix du jour : par importance, mais varié — au plus 2 posts par compte, 3 sur le marché, jamais deux fois le même propos ; les posts que la presse n'a pas relayés et les comptes de l'étage 1 passent devant. */
 export function pickDay(rows, n = X_RULES.perDay) {
   const left = rows.map((f) => ({ f, t: toks(f.text) })), out = [], byAuthor = {}, byDomain = {};
-  const base = (f) => f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(3, Math.log10((f.eng || 0) + 1));
+  const base = (f) => f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(5, 1.5 * Math.log10((f.eng || 0) + 1)) + Math.min(4, 2 * (f.buzz || 0));
   while (out.length < n && left.length) {
     let bi = -1, bs = -1e9;
     left.forEach((x, k) => {
@@ -166,6 +166,8 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const dayKey = new Date(now).toISOString().slice(0, 10), monthKey = dayKey.slice(0, 7);
   const readToday = usage.days[dayKey] || 0, readMonth = usage.months[monthKey] || 0;
   const stats = { ...(prev?.stats || {}) };
+  const profiles = { ...(prev?.profiles || {}) };
+  const whoLow = Object.fromEntries(Object.entries(cfg.who || {}).map(([h, v]) => [h.toLowerCase(), v]));
   const rep = { read: 0, kept: 0, added: 0, calls: 0, reason: "", errors: [] };
   const daily = cfg.caps.day;
   if (!token) return { doc: prev || null, summary: { ...rep, reason: "X non configuré (secret X_BEARER_TOKEN absent)" } };
@@ -197,29 +199,36 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
 
   // auteurs : identifiant → pseudo (mémorisé : chaque compte n'est demandé qu'une fois)
   let byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n]));
-  const unknownIds = [...new Set(raw.map((p) => p.author_id).filter((a) => a && !byId[a]))];
+  const unknownIds = [...new Set(raw.map((p) => p.author_id).filter((a) => a && (!byId[a] || (!profiles[byId[a]] && !whoLow[byId[a]]?.name))))];
   if (unknownIds.length) {
-    try { for (const [id, name] of Object.entries(await lookupUsers({ fetchImpl, token, ids: unknownIds, base }))) ids[name.toLowerCase()] = id; byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n])); rep.users = unknownIds.length; }
-    catch (e) { rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message); }
+    try {
+      for (const [id, u] of Object.entries(await lookupUsers({ fetchImpl, token, ids: unknownIds, base }))) { ids[u.username.toLowerCase()] = id; if (u.name) profiles[u.username.toLowerCase()] = { name: u.name }; }
+      byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n])); rep.users = unknownIds.length;
+    } catch (e) { rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message); }
   }
   const handleCase = Object.fromEntries([...cfg.t1, ...cfg.t2, ...cfg.flux].map((h) => [h.toLowerCase(), h]));
   const fresh = [], seen = new Set();
   for (const p of raw) {
     if (known.has(p.id) || seen.has(p.id)) continue; seen.add(p.id);
     const low = byId[p.author_id]; const handle = low ? handleCase[low] || low : null;
-    const text = plainText(p.text); if (!text) continue;
+    const full = plainText(p.text); if (!full) continue;
+    const text = full;
     const m = p.public_metrics || {};
-    fresh.push({ id: p.id, handle, aid: p.author_id, tier: p.tier, ts: p.created_at, text: text.slice(0, X_RULES.textMax), lang: p.lang, eng: (m.like_count || 0) + 2 * (m.retweet_count || 0) + (m.reply_count || 0) + (m.quote_count || 0) });
+    fresh.push({ id: p.id, handle, aid: p.author_id, tier: p.tier, ts: p.created_at, text: text.slice(0, X_RULES.textMax), long: full.length > X_RULES.longMax, lang: p.lang, eng: (m.like_count || 0) + 2 * (m.retweet_count || 0) + (m.reply_count || 0) + (m.quote_count || 0) });
   }
   for (const f of fresh) { const s = stats[f.handle || f.aid] ||= { read: 0, kept: 0 }; s.read++; s.last = f.ts > (s.last || "") ? f.ts : s.last; }
 
-  // tri par l'IA : on garde ce qui apporte un contenu concret
+  // tri par l'IA : on garde ce qui apporte un contenu concret (les textes trop longs pour être résumés ne sont pas envoyés)
   const items = new Map(prevItems.map((x) => [x.id, x]));
   let classified = 0, ai = false;
-  if (fresh.length && generate) {
-    for (let i = 0; i < fresh.length; i += 25) {
-      const part = fresh.slice(i, i + 25);
-      const inputs = part.map((f, k) => ({ i: k, author: "@" + (f.handle || "?"), text: f.text, tier: f.tier }));
+  const cand = fresh.filter((f) => !f.long);
+  rep.long = fresh.length - cand.length;
+  const who = (f) => { const l = String(f.handle || "").toLowerCase(); return { name: whoLow[l]?.name || profiles[l]?.name || "", role: whoLow[l]?.en || "" }; };
+  const mk = (f, k, extra) => ({ i: k, author: "@" + (f.handle || "?"), ...who(f), text: f.text, tier: f.tier, ...extra });
+  if (cand.length && generate) {
+    for (let i = 0; i < cand.length; i += 25) {
+      const part = cand.slice(i, i + 25);
+      const inputs = part.map((f, k) => mk(f, k));
       let res = null; try { res = await generate(inputs); } catch { res = null; }
       if (!Array.isArray(res)) { rep.reason = "Gemini indisponible"; break; }
       ai = true;
@@ -230,12 +239,30 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
         f.v = v;
       }
     }
+    // un seul nouvel essai pour les posts retenus dont le titre ou la traduction a été refusé par le contrôle des chiffres
+    const again = cand.filter((f) => f.v && (!f.v.title || !f.v.text_fr));
+    if (again.length) {
+      const inputs = again.map((f, k) => mk(f, k, { retry: true }));
+      let res = null; try { res = await generate(inputs); } catch { res = null; }
+      if (Array.isArray(res)) for (const row of res) {
+        const f = again[Number(row?.i)]; if (!f) continue;
+        const v = applyRow(row, inputs[Number(row.i)]);
+        f.v.title ||= v.title; f.v.title_en ||= v.title_en; f.v.text_fr ||= v.text_fr;
+      }
+    }
   }
   const noAI = !generate || rep.reason === "Gemini indisponible";
   const rows = [];
-  for (const f of fresh) {
-    if (f.v) rows.push(f);
+  rep.dropped = 0;
+  for (const f of cand) {
+    if (f.v) { if (!f.v.title || !f.v.text_fr) { rep.dropped++; continue; } rows.push(f); } // sans titre ni traduction fiables : on ne publie pas le texte brut en anglais
     else if (noAI && !f.done && f.tier === "t1" && f.handle) rows.push({ ...f, v: { kind: "autre", domain: "autre", imp: 1, pending: true } });
+  }
+  // « ce qui se dit le plus » : le même propos chez plusieurs comptes différents le même jour
+  for (const f of rows) {
+    const a = toks(f.text); const au = new Set();
+    for (const g of fresh) { if (g === f || (g.handle || g.aid) === (f.handle || f.aid)) continue; const b = toks(g.text); let i = 0; for (const w of a) if (b.has(w)) i++; if (i >= 3 && i / Math.min(a.size, b.size) >= 0.3) au.add(g.handle || g.aid); }
+    f.buzz = au.size;
   }
   for (const f of rows) f.media = pressRelay(f, feed, now);
   for (const f of pickDay(rows)) {
@@ -252,8 +279,10 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const cutoff = now - X_RULES.retainDays * DAY;
   const list = [...items.values()].filter((x) => Date.parse(x.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, X_RULES.maxItems);
   const ok = rep.read > 0 || !rep.errors.length;
-  const doc = { v: 1, generated_at: new Date(now).toISOString(), last_run_ts: ok && rep.calls ? new Date(now).toISOString() : prev?.last_run_ts || null, items: list, ids, usage, stats };
-  if (!rep.reason) rep.reason = rep.errors.length && !rep.read ? "aucun post lu : " + rep.errors[0] : `${rep.read} post(s) lus, ${rep.kept} retenu(s), ${rep.added} publié(s)${ai ? "" : " (sans tri IA)"}`;
+  const whoOut = {};
+  for (const h of [...cfg.t1, ...cfg.t2, ...cfg.flux]) { const v = (cfg.who || {})[h] || {}, e = { name: v.name || profiles[h.toLowerCase()]?.name || "", fr: v.fr || "", en: v.en || "" }; if (e.name || e.fr) whoOut[h] = e; }
+  const doc = { v: 1, generated_at: new Date(now).toISOString(), last_run_ts: ok && rep.calls ? new Date(now).toISOString() : prev?.last_run_ts || null, items: list, ids, usage, stats, profiles, who: whoOut };
+  if (!rep.reason) rep.reason = rep.errors.length && !rep.read ? "aucun post lu : " + rep.errors[0] : `${rep.read} post(s) lus, ${rep.kept} retenu(s), ${rep.added} publié(s)${rep.dropped ? `, ${rep.dropped} écarté(s) sans titre fiable` : ""}${rep.long ? `, ${rep.long} trop long(s)` : ""}${ai ? "" : " (sans tri IA)"}`;
   return { doc, summary: { ...rep, month: usage.months[monthKey], classified } };
 }
 

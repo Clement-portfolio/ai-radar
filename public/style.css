@@ -936,9 +936,7 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 }
 
 /* Sur X (Insiders) */
-.xb{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;background:var(--hair);color:var(--mute);margin-left:8px;white-space:nowrap}
-.xb.xn{background:#e7f3ec;color:#1d6b3f}
-.xb.xw{background:#fbeede;color:#9a5b12}
+.xb{display:inline-block;font-size:12px;color:var(--mute);margin-left:10px;white-space:nowrap}.xb:first-child{margin-left:0}
 .vrow .xq{margin:8px 0 6px;padding:0 0 0 12px;border-left:2px solid var(--hair);font-size:14px;line-height:1.5;color:var(--ink);white-space:pre-line}
 .xnote{margin-top:22px;max-width:70ch}
 
@@ -948,4 +946,4 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .seg2 a.on{background:var(--ink);color:#fff;font-weight:500}
 .essmode .vrow .xq{border-left-color:rgba(255,255,255,.25);color:#E5E5EA}
 .essmode .vrow .rsm,.essmode .vrow .rsm b{color:#C7C7CC}
-.essmode .vrow .xb{background:#2C2C2E;color:#A1A1A6}.essmode .vrow .xb.xn{background:#16331F;color:#6FD39A}.essmode .vrow .xb.xw{background:#3A2A12;color:#F0B35E}
+.essmode .vrow .xb{color:#A1A1A6}

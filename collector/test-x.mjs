@@ -112,6 +112,39 @@ assert.ok(day.filter((f) => f.v.domain === "marche").length <= 3, "3 posts de ma
 assert.ok(!(day.some((f) => f.id === "d1") && day.some((f) => f.id === "d2")), "même propos : une seule fois");
 assert.ok(day.some((f) => f.v.domain === "robotique"), "les autres domaines passent");
 
+
+// noms et rôles : publiés avec le document ; posts trop longs jamais envoyés ; nouvel essai puis écart si le titre reste refusé
+{
+  assert.ok(r1.doc.who && r1.doc.who.demishassabis?.name === "Demis Hassabis" && /DeepMind/.test(r1.doc.who.demishassabis.fr) && /DeepMind/.test(r1.doc.who.demishassabis.en), "nom et rôle publiés");
+  const longText = "Long essay about AI. " + "word ".repeat(200);
+  let sent = [], tries = 0;
+  const fetchL = async (url) => {
+    const u = new URL(url);
+    if (u.pathname === "/2/users") return { ok: true, status: 200, text: async () => JSON.stringify({ data: u.searchParams.get("ids").split(",").map((id) => ({ id, username: handles[Number(id) - 1000], name: "Nom " + id })) }) };
+    const hs = [...u.searchParams.get("query").matchAll(/from:(\w+)/g)].map((m) => m[1]);
+    const data = hs.slice(0, 3).map((h, k) => ({ id: "9" + k + h.length + h, author_id: idOf(h), created_at: new Date(now - 3600e3).toISOString(), text: k === 0 ? longText : k === 1 ? "Nvidia ships 5000 GPUs to datacenters this quarter" : "Anthropic raises 30 billion dollars", public_metrics: {}, lang: "en" }));
+    return { ok: true, status: 200, text: async () => JSON.stringify({ data }) };
+  };
+  const genL = async (inputs) => {
+    sent.push(...inputs);
+    return inputs.map((x) => {
+      const bad = /Nvidia/.test(x.text);
+      if (x.retry) tries++;
+      return { i: x.i, keep: true, kind: "info", domain: "calcul", imp: 2, title_fr: bad && !x.retry ? "Nvidia livre 9999 GPU" : "Titre sans chiffre faux " + (bad ? "pour Nvidia" : "pour Anthropic 30 milliards de dollars"), title_en: "Title", text_fr: "Traduction " + (bad && !x.retry ? "9999" : "") };
+    });
+  };
+  const rl = await collectX({ cfg: { ...cfg, t1: ["rohanpaul_ai", "sama", "emollick"], t2: [], flux: [] }, fetchImpl: fetchL, token: "T", generate: genL, prev: null, feed: [], now, sleep });
+  assert.ok(!sent.some((x) => x.text.startsWith("Long essay")), "post trop long : pas envoyé au modèle");
+  assert.ok(sent.some((x) => x.name), "le nom du compte est transmis au modèle");
+  assert.ok(tries >= 1, "un nouvel essai pour le titre refusé");
+  assert.ok(rl.doc.items.length >= 1 && rl.doc.items.every((x) => x.title && x.text_fr), "jamais d'entrée sans titre ni traduction");
+  assert.ok(rl.doc.items.every((x) => x.kind === "info"), "le genre « info » est accepté");
+  const genBad = async (inputs) => inputs.map((x) => ({ i: x.i, keep: true, kind: "annonce", domain: "calcul", imp: 2, title_fr: "Chiffre inventé 7777", title_en: "Invented 7777", text_fr: "Texte 7777" }));
+  const rb = await collectX({ cfg: { ...cfg, t1: ["rohanpaul_ai", "sama", "emollick"], t2: [], flux: [] }, fetchImpl: fetchL, token: "T", generate: genBad, prev: null, feed: [], now, sleep });
+  assert.equal(rb.doc.items.length, 0, "titre toujours refusé après l'essai : l'entrée est écartée");
+  assert.ok(rb.summary.dropped >= 1);
+}
+
 // comptes muets
 assert.ok(silentAccounts(cfg, { stats: { sama: { read: 3 } } }).length === handles.length - 1);
 console.log("test-x : OK");

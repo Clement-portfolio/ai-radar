@@ -91,5 +91,253 @@
     "xAI",
     "TSMC",
     "HBM"
-  ]
+  ],
+  "who": {
+    "rohanpaul_ai": {
+      "name": "Rohan Paul",
+      "fr": "Veille IA : papiers de recherche et annonces",
+      "en": "AI news curator: research papers and announcements"
+    },
+    "emollick": {
+      "name": "Ethan Mollick",
+      "fr": "Professeur à Wharton, spécialiste de l'IA au travail",
+      "en": "Wharton professor, studies AI at work"
+    },
+    "ArtificialAnlys": {
+      "name": "Artificial Analysis",
+      "fr": "Benchmarks indépendants de modèles d'IA",
+      "en": "Independent AI model benchmarks"
+    },
+    "SemiAnalysis_": {
+      "name": "SemiAnalysis",
+      "fr": "Cabinet d'analyse des semi-conducteurs et de l'IA",
+      "en": "Semiconductor and AI research firm"
+    },
+    "trendforce": {
+      "name": "TrendForce",
+      "fr": "Cabinet d'études : mémoire, puces, écrans",
+      "en": "Market research: memory, chips, displays"
+    },
+    "silicondata": {
+      "name": "Silicon Data",
+      "fr": "Données et indices sur le prix du calcul GPU",
+      "en": "GPU compute pricing data and indices"
+    },
+    "Dylan522p": {
+      "name": "Dylan Patel",
+      "fr": "Fondateur de SemiAnalysis",
+      "en": "Founder of SemiAnalysis"
+    },
+    "EpochAIResearch": {
+      "name": "Epoch AI",
+      "fr": "Institut de recherche sur les tendances de l'IA",
+      "en": "Research institute on AI trends"
+    },
+    "adcock_brett": {
+      "name": "Brett Adcock",
+      "fr": "Fondateur et CEO de Figure AI (robots humanoïdes)",
+      "en": "Founder and CEO of Figure AI (humanoid robots)"
+    },
+    "lmarena_ai": {
+      "name": "LMArena",
+      "fr": "Classement de modèles d'IA par votes d'utilisateurs",
+      "en": "AI model leaderboard based on user votes"
+    },
+    "METR_Evals": {
+      "name": "METR",
+      "fr": "Organisme d'évaluation des capacités des modèles d'IA",
+      "en": "Evaluates AI model capabilities and risks"
+    },
+    "_akhaliq": {
+      "name": "AK (Ahsen Khaliq)",
+      "fr": "Hugging Face : veille sur les papiers de recherche",
+      "en": "Hugging Face: research paper watch"
+    },
+    "simonw": {
+      "name": "Simon Willison",
+      "fr": "Développeur, blogueur de référence sur les LLM",
+      "en": "Developer, leading blogger on LLMs"
+    },
+    "swyx": {
+      "name": "Shawn Wang (swyx)",
+      "fr": "Fondateur de Latent Space et de la conférence AI Engineer",
+      "en": "Founder of Latent Space and the AI Engineer conference"
+    },
+    "natolambert": {
+      "name": "Nathan Lambert",
+      "fr": "Chercheur à l'Allen Institute for AI (Ai2)",
+      "en": "Researcher at the Allen Institute for AI (Ai2)"
+    },
+    "dwarkesh_sp": {
+      "name": "Dwarkesh Patel",
+      "fr": "Animateur du podcast Dwarkesh",
+      "en": "Host of the Dwarkesh podcast"
+    },
+    "aaronburnett": {
+      "name": "",
+      "fr": "Analyste, technologies spatiales",
+      "en": "Analyst, space technology"
+    },
+    "ppdd": {
+      "name": "",
+      "fr": "Analyste, IA physique",
+      "en": "Analyst, physical AI"
+    },
+    "OpenAI": {
+      "name": "OpenAI",
+      "fr": "Compte officiel",
+      "en": "Official account"
+    },
+    "AnthropicAI": {
+      "name": "Anthropic",
+      "fr": "Compte officiel",
+      "en": "Official account"
+    },
+    "GoogleDeepMind": {
+      "name": "Google DeepMind",
+      "fr": "Compte officiel",
+      "en": "Official account"
+    },
+    "AIatMeta": {
+      "name": "AI at Meta",
+      "fr": "Compte officiel de la recherche IA de Meta",
+      "en": "Official account of Meta's AI research"
+    },
+    "xai": {
+      "name": "xAI",
+      "fr": "Compte officiel",
+      "en": "Official account"
+    },
+    "MistralAI": {
+      "name": "Mistral AI",
+      "fr": "Compte officiel",
+      "en": "Official account"
+    },
+    "deepseek_ai": {
+      "name": "DeepSeek",
+      "fr": "Compte officiel",
+      "en": "Official account"
+    },
+    "Alibaba_Qwen": {
+      "name": "Qwen (Alibaba)",
+      "fr": "Compte officiel des modèles Qwen",
+      "en": "Official account of the Qwen models"
+    },
+    "sama": {
+      "name": "Sam Altman",
+      "fr": "CEO d'OpenAI",
+      "en": "CEO of OpenAI"
+    },
+    "gdb": {
+      "name": "Greg Brockman",
+      "fr": "Président et cofondateur d'OpenAI",
+      "en": "President and co-founder of OpenAI"
+    },
+    "demishassabis": {
+      "name": "Demis Hassabis",
+      "fr": "CEO et cofondateur de Google DeepMind",
+      "en": "CEO and co-founder of Google DeepMind"
+    },
+    "JeffDean": {
+      "name": "Jeff Dean",
+      "fr": "Chief Scientist de Google DeepMind et Google Research",
+      "en": "Chief Scientist, Google DeepMind and Google Research"
+    },
+    "ylecun": {
+      "name": "Yann LeCun",
+      "fr": "Chercheur en IA, professeur à NYU, ex-Meta",
+      "en": "AI researcher, NYU professor, formerly at Meta"
+    },
+    "karpathy": {
+      "name": "Andrej Karpathy",
+      "fr": "Fondateur d'Eureka Labs, ex-OpenAI et Tesla",
+      "en": "Founder of Eureka Labs, formerly OpenAI and Tesla"
+    },
+    "jackclarkSF": {
+      "name": "Jack Clark",
+      "fr": "Cofondateur d'Anthropic",
+      "en": "Co-founder of Anthropic"
+    },
+    "OfficialLoganK": {
+      "name": "Logan Kilpatrick",
+      "fr": "Google : responsable produit AI Studio et API Gemini",
+      "en": "Google: product lead for AI Studio and the Gemini API"
+    },
+    "mustafasuleyman": {
+      "name": "Mustafa Suleyman",
+      "fr": "CEO de Microsoft AI",
+      "en": "CEO of Microsoft AI"
+    },
+    "AravSrinivas": {
+      "name": "Aravind Srinivas",
+      "fr": "CEO de Perplexity",
+      "en": "CEO of Perplexity"
+    },
+    "satyanadella": {
+      "name": "Satya Nadella",
+      "fr": "Président et CEO de Microsoft",
+      "en": "Chairman and CEO of Microsoft"
+    },
+    "sundarpichai": {
+      "name": "Sundar Pichai",
+      "fr": "CEO de Google et d'Alphabet",
+      "en": "CEO of Google and Alphabet"
+    },
+    "fchollet": {
+      "name": "François Chollet",
+      "fr": "Créateur de Keras, cofondateur d'Ndea et d'ARC Prize",
+      "en": "Creator of Keras, co-founder of Ndea and ARC Prize"
+    },
+    "DrJimFan": {
+      "name": "Jim Fan",
+      "fr": "Nvidia : recherche en IA incarnée et robotique",
+      "en": "Nvidia: embodied AI and robotics research"
+    },
+    "PalmerLuckey": {
+      "name": "Palmer Luckey",
+      "fr": "Fondateur d'Anduril (défense)",
+      "en": "Founder of Anduril (defense)"
+    },
+    "pmarca": {
+      "name": "Marc Andreessen",
+      "fr": "Cofondateur du fonds a16z",
+      "en": "Co-founder of a16z"
+    },
+    "benedictevans": {
+      "name": "Benedict Evans",
+      "fr": "Analyste indépendant de la tech",
+      "en": "Independent tech analyst"
+    },
+    "elonmusk": {
+      "name": "Elon Musk",
+      "fr": "Fondateur de xAI, Tesla et SpaceX",
+      "en": "Founder of xAI, Tesla and SpaceX"
+    },
+    "DeItaone": {
+      "name": "Walter Bloomberg",
+      "fr": "Fil d'actualité financière en continu (compte indépendant)",
+      "en": "Real-time financial news feed (independent account)"
+    },
+    "KobeissiLetter": {
+      "name": "The Kobeissi Letter",
+      "fr": "Lettre d'analyse des marchés",
+      "en": "Market analysis newsletter"
+    },
+    "wallstengine": {
+      "name": "Wall St Engine",
+      "fr": "Actualité des marchés financiers",
+      "en": "Financial markets news"
+    },
+    "MacroMicroMe": {
+      "name": "MacroMicro",
+      "fr": "Données macroéconomiques",
+      "en": "Macroeconomic data"
+    },
+    "tomshardware": {
+      "name": "Tom's Hardware",
+      "fr": "Média spécialisé en matériel informatique",
+      "en": "Computer hardware news outlet"
+    }
+  },
+  "_who_note": "Nom et rôle affichés dans « Sur X » (à compléter ou corriger à la main). Si le nom est vide, le nom d'affichage du compte sur X est utilisé. Comptes sans rôle : ils s'affichent avec leur nom seul."
 }

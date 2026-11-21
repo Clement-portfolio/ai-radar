@@ -844,27 +844,32 @@ function rResearch(){
   el.innerHTML=h;
 }
 /* Sur X : posts d'analystes et d'observateurs actifs (une collecte par jour, plafonnée) */
-var XKIND={annonce:["Annonce","Announcement"],analyse:["Analyse","Analysis"],donnee:["Donnée","Data"],rumeur:["Rumeur","Rumour"],autre:["Autre","Other"]};
+var XKIND={annonce:["Annonce","Announcement"],info:["Information","Information"],analyse:["Analyse","Analysis"],donnee:["Donnée","Data"],rumeur:["Rumeur","Rumour"],autre:["Autre","Other"]};
 function xSwitch(){
   var en=isEn(),on=S.vsrc==="x";
   return '<div class="segw"><span class="seg2" role="tablist"><a role="tab" aria-selected="'+(!on)+'" class="'+(on?'':'on')+'" href="#acteurs/voix">'+(en?'Press':'Presse')+'</a><a role="tab" aria-selected="'+on+'" class="'+(on?'on':'')+'" href="#acteurs/voix/x">'+(en?'On X':'Sur X')+'</a></span></div>';
 }
 function xTitle(it){var t=tx(it,"title");return t||String(it.text||"").slice(0,160)}
+function xWho(it){
+  var en=isEn(),w=((S.x&&S.x.who)||{})[it.handle]||{};
+  return{name:w.name||("@"+(it.handle||"?")),role:(en?w.en:w.fr)||w.fr||""};
+}
 function xRow(it){
-  var en=isEn(),k=vKey(it.id),kd=XKIND[it.kind]||XKIND.autre,orig=it.text||"",fr=!en&&it.text_fr&&it.text_fr!==orig?it.text_fr:"";
-  var relay=it.kind==="rumeur"?'<span class="xb xw">'+(en?'Unconfirmed':'Non confirmé')+'</span>':'';
-  relay+=it.media>0?'<span class="xb">'+(en?'Picked up by '+it.media+' outlet'+(it.media>1?'s':''):'Repris par '+it.media+' média'+(it.media>1?'s':''))+'</span>':'<span class="xb xn">'+(en?'Not yet covered by the press':'Non relayé par la presse')+'</span>';
-  return '<div class="vrow'+(S.open[k]?' open':'')+'"><span class="time">'+esc(fmtTime(it.ts))+'</span><span class="vwho"><a href="https://x.com/'+esc(it.handle)+'" target="_blank" rel="noopener">@'+esc(it.handle||"?")+'</a><span class="small">'+esc(kd[en?1:0])+'</span></span>'+
+  var en=isEn(),k=vKey(it.id),kd=XKIND[it.kind]||XKIND.autre,w=xWho(it);
+  var body=en?(it.text||""):(it.text_fr||it.text||"");
+  var relay=it.kind==="rumeur"?'<span class="xb">'+(en?'Unconfirmed':'Non confirmé')+'</span>':'';
+  relay+=it.media>0?'<span class="xb">'+(en?'Picked up by '+it.media+' outlet'+(it.media>1?'s':''):'Repris par '+it.media+' média'+(it.media>1?'s':''))+'</span>':'<span class="xb">'+(en?'Not yet covered by the press':'Non relayé par la presse')+'</span>';
+  return '<div class="vrow'+(S.open[k]?' open':'')+'"><span class="time">'+esc(fmtTime(it.ts))+'</span><span class="vwho"><a href="https://x.com/'+esc(it.handle)+'" target="_blank" rel="noopener">'+esc(w.name)+'</a><span class="small">'+esc(w.role||("@"+(it.handle||"?")))+'</span></span>'+
    '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(xTitle(it))+'</a><span class="rsrc">'+(it.pending?(en?'(unsorted)':'(non trié)'):'')+'</span>'+
    '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="'+(en?'Show the post':'Afficher le post')+'">'+ARW+'</button>'+
-   '<div class="sum"><div class="meta">'+imp(it.imp||1)+relay+'</div><blockquote class="xq">« '+esc(orig)+' »</blockquote>'+(fr?'<p class="rsm"><b>'+(en?'Translation':'Traduction')+' :</b> '+esc(fr)+'</p>':'')+
-   '<div class="meta"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+(en?'See the post on X':'Voir le post sur X')+' ↗</a></div></div></div>';
+   '<div class="sum"><div class="meta">'+imp(it.imp||1)+'<span class="xb">'+esc(kd[en?1:0])+'</span>'+relay+'</div><blockquote class="xq">'+esc(body)+'</blockquote>'+
+   '<div class="meta"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+(en?'See the post on X':'Voir le post sur X')+' ↗</a>'+(it.handle?' <span class="xb">@'+esc(it.handle)+'</span>':'')+'</div></div></div>';
 }
 function xHtml(){
   var en=isEn(),X=S.x,all=(X&&X.items)||[];
   if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: the first pass runs at 9 pm (Riyadh time).':'Aucun post collecté pour l\'instant : le premier passage a lieu à 21 h (heure de Riyad).')+'</div>';
   var kinds=Object.keys(XKIND);
-  var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")).indexOf(q)>=0});
+  var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")+" "+xWho(x).name+" "+xWho(x).role).indexOf(q)>=0});
   var CH='<span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>';
   var kl=S.xk==="ALL"?(en?'All':'Tous'):XKIND[S.xk][en?1:0];
   var panel=S.xfo?'<div class="fpanel"><button class="chip'+(S.xk==="ALL"?' on':'')+'" data-xk="ALL">'+(en?'All':'Tous')+' ('+all.length+')</button>'+kinds.map(function(k){var n=all.filter(function(x){return x.kind===k}).length;return n?'<button class="chip'+(S.xk===k?' on':'')+'" data-xk="'+k+'">'+esc(XKIND[k][en?1:0])+' ('+n+')</button>':""}).join("")+'</div>':'';
