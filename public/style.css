@@ -1188,3 +1188,23 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 
 .hpl .lstat{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 @media(min-width:1001px){.duo .tile.half{height:560px;min-height:0}.hpinf:not(.hpact) .lhead{padding:14px 0}}
+
+/* Mobile : alignements et débordements */
+@media(max-width:620px){
+  .duo .tile.half{height:auto;min-height:0}
+  .hfoot{margin:auto -4px -4px 0}
+  .hpbody{align-items:center}.hpbody .donut{width:170px;height:170px}.hpbody .leg{width:100%}
+  .sbody{flex-direction:column;align-items:center;gap:12px}.sbody .donut{width:160px;height:160px;flex:none}.sbody .leg{width:100%;flex:none}
+  .details .share .sbody{flex-wrap:nowrap;gap:12px}.details .share .leg{flex:none;min-width:0;width:100%}
+  .leg li{grid-template-columns:10px minmax(0,1fr) auto}.leg b{white-space:nowrap}
+  .tnums.n6{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tnums.n6 .tnum{padding:18px 10px;border:0;border-top:1px solid var(--hair)}
+  .tnums.n6 .tnum:nth-child(-n+2){border-top:0}.tnums.n6 .tnum:nth-child(even){border-left:1px solid var(--hair)}
+  .tnums.n6 .tnum .v{font-size:23px;letter-spacing:-.03em;white-space:nowrap}.tnums.n6 .tnum .l{font-size:14px}
+  .details>summary{padding-right:44px}
+}
+@media(max-width:620px){
+  .lede,.hero p,.view>p,.pghead p{text-wrap:pretty}
+}
+@media(max-width:720px){body.mopen .hbtn .l-close,body.mopen .hbtn .l-open{display:none}.top .wrap:not(.mgrid){flex-wrap:nowrap}}
+@media(max-width:620px){.table.sec{display:block;max-width:100%;overflow-x:auto}.table.sec th,.table.sec td{white-space:normal}}

@@ -45,7 +45,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .rb.on,.rb.on:hover{background:var(--ink);color:#fff}
 .zoom{position:absolute;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px}
 .zb{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:50%;background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.05)}
-.hintb{position:absolute;left:18px;bottom:18px;font-size:13px;color:var(--mute);pointer-events:none}
+.hintb{position:absolute;left:18px;right:72px;bottom:18px;font-size:13px;color:var(--mute);pointer-events:none}
 .tip{position:absolute;pointer-events:none;background:rgba(29,29,31,.92);color:#fff;font-size:12px;padding:5px 10px;border-radius:10px;white-space:nowrap;max-width:300px;overflow:hidden;text-overflow:ellipsis}
 .leg{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font-size:13px;color:var(--mute)}
 .leg b{font-weight:400;display:inline-flex;align-items:center;gap:6px}
@@ -121,3 +121,4 @@ button.row:hover .arw{transform:scale(1.06)}
 /* « Sources et méthode » : même gabarit que les autres encadrés de sources (68 px, bouton + rond de 36 px) */
 .tile.nsrc{padding:0;gap:0;min-height:0}
 .nsb{min-height:68px}
+@media(max-width:620px){.leg{justify-content:flex-start}.hintb{right:70px}}
