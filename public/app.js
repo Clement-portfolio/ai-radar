@@ -125,7 +125,8 @@ function rUne(){
   h+=pHome(en);
   var L=((S.layers&&S.layers.layers)||[]).filter(function(l){return l.tension!=null}).slice().sort(function(a,b){return b.tension-a.tension}).slice(0,3);
   h+='<div class="duo">';
-  h+='<section class="tile half">'+tHead('Infrastructure',en?'Where it’s tight':'Là où ça coince')+'<div class="tlist2">'+L.map(function(l){return'<div class="tli"><span>'+esc(tx(l,'name'))+'</span><b class="t'+(l.tension>=8?'hi':l.tension>=6?'mid':'lo')+'">'+l.tension+'/10</b></div>'}).join("")+'<span class="tnote">'+(en?'Estimated tension, 0 to 10 (editorial).':'Tension estimée de 0 à 10, estimation éditoriale.')+'</span></div>'+
+  h+='<section class="tile half hpinf">'+tHead('Infrastructure',en?'Where it’s tight':'Là où ça coince')+'<div class="hpl">'+L.map(function(l){
+    return'<div class="layer"><button class="lhead" data-go="infrastructure/'+esc(l.id)+'" aria-label="'+esc(tx(l,'name'))+'"><span class="lmain"><span class="lname">'+esc(tx(l,'name'))+'</span><span class="lstat">'+esc(l.key_stat||'')+'</span></span><span class="lm">'+layerBar(l)+'</span><span class="lgo">'+ARW+'</span></button></div>'}).join("")+'</div>'+
      '<div class="hfoot"><button class="tlink" data-go="infrastructure">'+(en?'Explore infrastructure':'Explorer l’infrastructure')+' ›</button><button class="arw lg" data-go="infrastructure" aria-label="Infrastructure">'+ARW+'</button></div></section>';
   h+='<section class="tile half">'+tHead(en?'Map':'Carte',en?'Where the compute is':'Où est la puissance de calcul')+'<div class="tglobe"><img src="img/globe-mini.svg" alt="" width="210" height="210"></div>'+
      '<div class="hfoot"><button class="tlink" data-go="carte">'+(en?'Explore the map':'Explorer la carte')+' ›</button><button class="arw lg" data-go="carte" aria-label="'+(en?'Map':'Carte')+'">'+ARW+'</button></div></section>';
@@ -143,31 +144,19 @@ function hpPie(en){
    '<p class="hpsrc">'+esc(c.source)+'</p>'+
    '<div class="hfoot"><button class="tlink" data-go="marche">'+(en?'Explore the market':'Explorer le marché')+' ›</button><button class="arw lg" data-go="marche" aria-label="'+(en?'Market':'Marché')+'">'+ARW+'</button></div></section>';
 }
-function hpRing(t,lab,en){
-  var cls=t>=8?'hi':t>=6?'mid':'lo',C=2*Math.PI*44,d=(Math.max(0,Math.min(10,t))/10*C).toFixed(1);
-  return'<div class="hpring '+cls+'" role="img" aria-label="'+(en?'Tightness ':'Tension ')+t+'/10"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="rt" cx="50" cy="50" r="44"/><circle class="rv" cx="50" cy="50" r="44" stroke-dasharray="'+d+' '+C.toFixed(1)+'" transform="rotate(-90 50 50)"/></svg><span class="rn"><b>'+t+'</b><i>/10</i></span></div>';
+function hpActors(en){
+  var A=(S.acteurs&&S.acteurs.actors)||[];if(!A.length)return"";
+  var EX={infra:["Nvidia","TSMC","ASML"],hyper:["Amazon","Microsoft","Alphabet"],labs:["OpenAI"]};
+  var rows=["infra","hyper","labs"].map(function(g){
+    var L=A.filter(function(a){return aGroup(a)===g});if(!L.length)return"";
+    var names=EX[g].filter(function(n){return L.some(function(a){return a.n===n})});if(!names.length)names=L.slice(0,3).map(function(a){return a.n});
+    var n=L.length;
+    return'<div class="layer"><button class="lhead" data-go="acteurs" data-ag="'+g+'" aria-label="'+esc(AGN[g][en?1:0])+'"><span class="lmain"><span class="lname">'+esc(AGN[g][en?1:0])+'</span><span class="lstat">'+esc(names.join(', '))+(n>names.length?'…':'')+'</span></span><span class="lm"><span class="tlab hpcount">'+n+' '+(en?(n>1?'companies':'company'):(n>1?'entreprises':'entreprise'))+'</span></span><span class="lgo">'+ARW+'</span></button></div>';
+  }).join("");
+  return'<section class="tile half hpinf hpact">'+tHead(en?'Players':'Acteurs',en?'Who’s who in AI':'Qui fait quoi dans l’IA')+'<div class="hpl">'+rows+'</div>'+
+   '<div class="hfoot"><button class="tlink" data-go="acteurs" data-ag="infra">'+(en?'Explore the players':'Explorer les acteurs')+' ›</button><button class="arw lg" data-go="acteurs" data-ag="infra" aria-label="'+(en?'Players':'Acteurs')+'">'+ARW+'</button></div></section>';
 }
-function hpCompHead(d,en){return'<span class="eb">'+(en?'Component':'Composant')+'</span><h2>'+esc(d?d.n:'…')+'</h2>'}
-function hpCompBody(d,en){
-  if(!d)return'<div class="hprow"><div class="hpring lo hpwait"><svg viewBox="0 0 100 100"><circle class="rt" cx="50" cy="50" r="44"/></svg></div></div>';
-  return'<div class="hprow">'+hpRing(d.t,d.lab,en)+'<div class="hptxt"><b class="hplab t'+(d.t>=8?'hi':d.t>=6?'mid':'lo')+'">'+esc(d.lab)+'</b><span class="hpl">'+(en?'tightness':'tension')+' · '+esc(d.bname)+'</span></div></div>'+
-   '<p class="hpwhy">'+esc(d.r)+'</p>';
-}
-function hpComp(en){
-  var d=HP.comp||null,src='chain.html?mini='+encodeURIComponent(d?d.part:'rand')+'&lang='+S.lang;
-  var go=d?'data-go="infrastructure" data-part="'+esc(d.part)+'"':'data-go="infrastructure"';
-  return'<section class="tile half hpi"><div class="thead hph">'+hpCompHead(d,en)+'</div>'+
-   '<div class="hpstage" '+go+'><iframe class="hpmini" src="'+src+'" title="'+(en?'3D zoom on an infrastructure component':'Zoom 3D sur un composant de l’infrastructure')+'" scrolling="no" tabindex="-1" loading="lazy"></iframe><span class="hpcap">'+(en?'Zoom on the component':'Zoom sur le composant')+'</span></div>'+
-   '<div class="hpb">'+hpCompBody(d,en)+'</div>'+
-   '<div class="hfoot"><button class="tlink" '+go+'>'+(en?'See this component':'Voir ce composant')+' ›</button><button class="arw lg" '+go+' aria-label="Infrastructure">'+ARW+'</button></div></section>';
-}
-function hpCompFill(d){
-  HP.comp=d;var sec=document.querySelector(".hpi");if(!sec)return;var en=isEn();
-  sec.querySelector(".hph").innerHTML=hpCompHead(d,en);sec.querySelector(".hpb").innerHTML=hpCompBody(d,en);
-  sec.querySelectorAll("[data-go]").forEach(function(e){e.setAttribute("data-part",d.part)});
-  if(window.I18N)I18N.set(S.lang);
-}
-function hpDuo(en){var a=hpPie(en),b=hpComp(en);return a||b?'<div class="duo">'+a+b+'</div>':""}
+function hpDuo(en){var a=hpPie(en),b=hpActors(en);return a||b?'<div class="duo">'+a+b+'</div>':""}
 function voixHtml(){
   var H=(S.voix&&S.voix.hot)||[];
   if(!H.length)return"";
@@ -511,7 +500,6 @@ function carteLang(){
 }
 window.addEventListener("message",function(e){
   if(e.origin!==location.origin||!e.data)return;
-  if(e.data.miniPart){hpCompFill(e.data.miniPart);return}
   if(typeof e.data.chainH==="number"&&chainFrame){var h=Math.max(300,Math.min(4000,e.data.chainH));chainFrame.style.height=h+"px"}
   if(typeof e.data.carteH==="number"&&carteFrame){var k=Math.max(300,Math.min(4000,e.data.carteH));carteFrame.style.height=k+"px"}
 });
@@ -622,8 +610,15 @@ function aMd(v){var b=v/1e9;return b>=1?(Math.round(b*10)/10).toString().replace
 function aSigned(x){if(x==null)return"";var v=Math.abs(x)>=10?Math.round(x):Math.round(x*10)/10;return(v>0?"+":v<0?"−":"")+String(Math.abs(v)).replace(".",",")+" %"}
 function aLink(u,t){return'<a href="'+esc(link(u))+'" target="_blank" rel="noopener">'+esc(t)+' ↗</a>'}
 function aById(id){return((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return a.id===id})[0]}
-function aBlocks(){
-  var seen={},out=[];((S.acteurs&&S.acteurs.actors)||[]).forEach(function(a){a.roles.forEach(function(r){if(!seen[r.block]){seen[r.block]=1;out.push(r.block)}})});return out;
+var AHYPER=["alphabet","amazon","microsoft","meta","alibaba","bytedance"],ALAB=["openai"];
+var AGN={infra:["Infrastructure IA","AI infrastructure"],hyper:["Hyperscalers","Hyperscalers"],labs:["Laboratoires IA","Frontier labs"]};
+function aGroup(a){return ALAB.indexOf(a.id)>=0?"labs":AHYPER.indexOf(a.id)>=0?"hyper":"infra"}
+function aSubs(g){
+  var seen={},out=[];((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return aGroup(a)===g}).forEach(function(a){
+    if(g==="infra")a.roles.forEach(function(r){if(!seen[r.block]){seen[r.block]=1;out.push(r.block)}});
+    else if(a.pays&&!seen[a.pays]){seen[a.pays]=1;out.push(a.pays)}});
+  var cnt={};((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return aGroup(a)===g}).forEach(function(a){(g==='infra'?a.roles.map(function(r){return r.block}).filter(function(x,i,l){return l.indexOf(x)===i}):[a.pays]).forEach(function(k){cnt[k]=(cnt[k]||0)+1})});
+  return out.sort(function(x,y){return cnt[y]-cnt[x]});
 }
 function aCard(a){
   var line=a.rank?a.rank.text:a.roles.map(function(r){return r.sub.replace(/\s*\(.*$/,"")}).filter(function(x,i,l){return l.indexOf(x)===i}).slice(0,2).join(" · ");
@@ -632,7 +627,8 @@ function aCard(a){
 function aList(){
   var A=S.acteurs.actors,q=S.aq.trim().toLowerCase();
   var list=A.filter(function(a){
-    if(S.ab!=="ALL"&&!a.roles.some(function(r){return r.block===S.ab}))return false;
+    if(aGroup(a)!==(S.ag||"infra"))return false;
+    if(S.ab!=="ALL"&&((S.ag||"infra")==="infra"?!a.roles.some(function(r){return r.block===S.ab}):a.pays!==S.ab))return false;
     return !q||(a.n+" "+a.pays+" "+a.roles.map(function(r){return r.sub}).join(" ")).toLowerCase().indexOf(q)>=0;
   });
   return list.length?list.map(aCard).join(""):'<p class="small">Aucun acteur ne correspond.</p>';
@@ -789,10 +785,12 @@ function rActeurs(){
   if(S.actor==="voix"){el.innerHTML=aVoix();return}
   var a=S.actor&&aById(S.actor);
   if(a){el.innerHTML=aFiche(a);return}
-  var blocks=aBlocks();
-  var abl=S.ab==="ALL"?"Toutes":S.ab,apanel=S.afo?'<div class="fpanel"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">Toutes ('+S.acteurs.actors.length+')</button>'+blocks.map(function(b){return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'">'+esc(b)+'</button>'}).join("")+'</div>':'';
-  el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients.</p>'+
-   '<div class="toolbar frow"><button class="chip fb'+(S.afo?' open':'')+(S.ab!=="ALL"?' set':'')+'" data-afo="1">Catégorie : '+esc(abl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><span class="sp"></span><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div>'+apanel+'<div id="alist" class="agrid">'+aList()+'</div>';
+  var en=isEn(),g=S.ag=S.ag||"infra",subs=aSubs(g),A=S.acteurs.actors.filter(function(a){return aGroup(a)===g});
+  if(S.ab!=="ALL"&&subs.indexOf(S.ab)<0)S.ab="ALL";
+  var seg='<div class="segw"><span class="seg2" role="tablist">'+["infra","hyper","labs"].map(function(k){return'<button type="button" role="tab" aria-selected="'+(k===g)+'" class="'+(k===g?'on':'')+'" data-ag="'+k+'">'+esc(AGN[k][en?1:0])+'</button>'}).join("")+'</span></div>';
+  var chips=subs.length>1?'<span class="achs"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">'+(en?'All':'Tous')+' ('+A.length+')</button>'+subs.map(function(b){var n=A.filter(function(a){return g==="infra"?a.roles.some(function(r){return r.block===b}):a.pays===b}).length;return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'"><span>'+esc(b)+'</span> ('+n+')</button>'}).join("")+'</span>':'';
+  el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients.</p>'+seg+
+   '<div class="toolbar frow">'+chips+'<span class="sp"></span><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div><div id="alist" class="agrid">'+aList()+'</div>';
 }
 
 /* Recherche : papiers, labos de modèles, recherche des hyperscalers, agences */
@@ -927,12 +925,13 @@ document.addEventListener("click",function(e){
   var vvb=e.target.closest("[data-vv]");if(vvb){S.vv=vvb.getAttribute("data-vv");S.vfo=null;vRefresh();return}
   if(e.target.closest("[data-ve]")){S.ve=!S.ve;S.vlimit=80;vRefresh();return}
   if(e.target.closest("[data-vmore]")){S.vlimit+=80;vRefresh();return}
+  var ag=e.target.closest("[data-ag]");if(ag){S.ag=ag.getAttribute("data-ag");S.ab="ALL";rActeurs();return}
   var afo=e.target.closest("[data-afo]");if(afo){S.afo=!S.afo;rActeurs();return}
   var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");S.afo=false;rActeurs();return}
   if(e.target.closest("[data-arv]")){S.arv=!S.arv;rActeurs();return}
-  var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
+  var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;if(t.getAttribute("data-tab")==="acteurs"){S.ag="infra";S.ab="ALL"}
   if(t.hasAttribute("data-tab"))return go(t.getAttribute("data-tab"));
-  if(t.hasAttribute("data-go")){if(t.getAttribute("data-part"))chainSelect(t.getAttribute("data-part"));return go(t.getAttribute("data-go"))}
+  if(t.hasAttribute("data-go")){if(t.getAttribute("data-ag")){S.ag=t.getAttribute("data-ag");S.ab="ALL"}if(t.getAttribute("data-part"))chainSelect(t.getAttribute("data-part"));return go(t.getAttribute("data-go"))}
   if(t.hasAttribute("data-more")){S.limit+=120;rFeed();return}
   if(t.hasAttribute("data-fo")){var f=t.getAttribute("data-fo");S.fo=S.fo===f?null:f;rFeed();return}
   if(t.hasAttribute("data-c")){S.country=t.getAttribute("data-c");S.limit=120;S.fo=null;renderAll();return}

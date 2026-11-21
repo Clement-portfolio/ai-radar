@@ -118,3 +118,6 @@ button.row:hover .arw{transform:scale(1.06)}
 .note,.hintb{font-size:12px}
 .fiche{padding:40px}
 @media(max-width:620px){.tile,.tile.half,.fiche{padding:24px 20px}}
+/* « Sources et méthode » : même gabarit que les autres encadrés de sources (68 px, bouton + rond de 36 px) */
+.tile.nsrc{padding:0;gap:0;min-height:0}
+.nsb{min-height:68px}
