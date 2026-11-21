@@ -811,7 +811,7 @@ function rrowHTML(it){
   var sm=tx(it,"summary"),note=it.pending?'<i class="small">(titre d\'origine, non classé par l\'IA)</i>':(it.title_fr_missing&&!isEn()?'<i class="small">(titre d\'origine)</i>':"");
   return '<div class="row rr i'+(it.imp||1)+'"><span class="time">'+esc(fmtTime(it.ts))+'</span><span class="tag rd-'+esc(it.domain)+'">'+esc(RDOM[it.domain]||it.domain)+'</span>'+
    '<div class="rtxt"><a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,"title"))+'</a>'+(sm?'<p class="rsm">'+esc(sm)+'</p>':'')+(note?'<p class="rsm">'+note+'</p>':'')+'</div>'+
-   '<span class="rsrc">'+esc(it.source)+'<em class="rk">'+esc(RKIND[it.kind]||"")+'</em></span>'+
+   '<span class="rsrc">'+esc(it.source)+'</span>'+
    '<a class="rtog" href="'+esc(link(it.url))+'" target="_blank" rel="noopener" aria-label="Lire">'+ARW+'</a></div>';
 }
 function rResearch(){
