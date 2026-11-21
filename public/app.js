@@ -104,7 +104,7 @@ function rUne(){
     return arts.length?{s:s,arts:arts}:null;
   }).filter(Boolean).slice(0,3);
   if(!st.length)st=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,3).map(function(it){return{s:{head:tx(it,'title'),bullets:it.summary?[tx(it,'summary')]:[]},arts:[it]}});
-  var h='<section class="hero"><span class="hdate">'+esc(fmtDay(u||new Date().toISOString()))+'</span><h1>'+(en?'AI, today':'L’IA, aujourd’hui')+'</h1><p>'+(en?'What happened, who said it, and what the numbers say.':'Ce qui s’est passé, qui l’a dit, et ce que disent les chiffres.')+'</p></section>';
+  var h='<section class="hero"><span class="hdate">'+esc(fmtDay(u||new Date().toISOString()))+'</span><h1>'+(en?'AI, today':'L’IA, aujourd’hui')+'</h1><p>'+(en?'What’s happening, what’s being said, and what the numbers show.':'Ce qu’il se passe, ce qu’il se dit, et ce que les chiffres montrent.')+'</p></section>';
   h+='<section class="tile">'+tHead(en?'Top stories':'La une',en?'The three stories of the day':'Les trois histoires du jour')+'<div class="tgrid3">'+st.map(function(x,i){
     var s=x.s,lead=x.arts[0],ok=en&&s.head_en&&s.bullets_en&&s.bullets_en.length===(s.bullets||[]).length;
     var head=ok?s.head_en:s.head,bl=(ok?s.bullets_en:s.bullets)||[];
