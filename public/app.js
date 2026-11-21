@@ -149,7 +149,7 @@ function hpComp(en){
   var t=x.l.tension,cls=t>=8?'hi':t>=6?'mid':'lo',fig=(x.u.figs||[])[0],bars="";
   for(var i=1;i<=10;i++)bars+='<i'+(i<=t?' class="on '+cls+'"':'')+'></i>';
   return'<section class="tile half hpi">'+tHead(en?'Infrastructure':'Infrastructure',x.u.name)+
-   '<div class="hpmeter"><span class="hpbars" aria-hidden="true">'+bars+'</span><span class="hpt"><b class="t'+cls+'">'+t+'/10</b> '+(en?'tension':'tension')+' · '+esc(tx(x.l,'name'))+'</span></div>'+
+   '<div class="hpmeter"><span class="hpbars" aria-hidden="true">'+bars+'</span><span class="hpt"><b class="t'+cls+'">'+t+'/10</b> '+(en?'tightness':'tension')+' · '+esc(tx(x.l,'name'))+'</span></div>'+
    '<p class="hpwhy">'+esc(x.u.why)+'</p>'+
    (fig?'<div class="hpfig"><span class="v">'+esc(fig.v)+'</span><span class="l">'+esc(fig.l)+'</span></div>':'')+
    '<div class="hfoot"><button class="tlink" data-go="infrastructure/'+esc(x.l.id)+'">'+(en?'See this layer':'Voir cette couche')+' ›</button><button class="arw lg" data-go="infrastructure/'+esc(x.l.id)+'" aria-label="Infrastructure">'+ARW+'</button></div></section>';
@@ -260,12 +260,12 @@ var ETAGES=[
   [5,"Perspectives et risques","Ce qui est prévu, ce qui arrive et les risques."]
 ];
 function sommaire(){
-  var pills=[["m-e1","Compute"],["m-e2","Modèles"],["m-e3","Adoption"],["m-e4","Financement"],["m-e5","Perspectives"],["m-cal","Calendrier"],["m-actors","Acteurs"],["m-race","USA–Chine"],["m-details","Détails"]];
+  var pills=[["m-e1","Compute"],["m-e2","Modèles"],["m-e3","Adoption"],["m-e4","Financement"],["m-e5","Perspectives"],["m-cal","Calendrier"],["m-race","USA–Chine"],["m-details","Détails"]];
   return'<nav class="toolbar frow mnav" aria-label="Sommaire du marché">'+pills.map(function(p,i){return'<button type="button" class="chip'+(i===0?' on':'')+'" data-jump="'+p[0]+'">'+esc(p[1])+'</button>'}).join("")+'</nav>';
 }
 function sommaireOld(){
   return'<nav class="toc" aria-label="Sommaire du marché"><span class="kicker">Sommaire</span><ol>'+ETAGES.map(function(e){return'<li><a href="#" data-jump="m-e'+e[0]+'"><b>'+e[0]+'</b> '+esc(e[1])+'<span>'+esc(e[2])+'</span></a></li>'}).join("")+
-   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-actors"><b>+</b> Acteurs<span>Principaux acteurs</span></a></li><li><a href="#" data-jump="m-race"><b>+</b> USA–Chine<span>Qui est devant, couche par couche</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
+   '<li><a href="#" data-jump="m-cal"><b>+</b> Calendrier<span>Six prochains mois, probabilité de chaque événement</span></a></li><li><a href="#" data-jump="m-race"><b>+</b> USA–Chine<span>Qui est devant, couche par couche</span></a></li><li><a href="#" data-jump="m-details"><b>+</b> Détails<span>Capex annoncé, revenus, dépôts SEC</span></a></li></ol></nav>';
 }
 function capexPie(){
   var d=S.sec;if(!d||!d.companies)return null;
@@ -374,37 +374,6 @@ function riskCard(r){
   if(r.id==="nvidia"){var n=nvidiaShare();if(!n)return"";v="≈ "+fmtPct(Math.round(n.pct))+" du compute vendu"}
   return'<div class="share stat1"><h4>'+esc(r.title)+'</h4><div class="bigv">'+esc(v)+'</div><div class="sm2">'+esc(r.sub)+'</div><div class="sf"><a href="'+esc(link(r.url))+'" target="_blank" rel="noopener">'+esc(r.source)+' ↗</a></div><div class="fr"><span class="small">'+esc(r.as_of)+'</span></div></div>';
 }
-var ICONS={
- satellite:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="27" y="27" width="10" height="10" transform="rotate(45 32 32)"/><path d="M14 22l10 10-6 6-10-10z"/><path d="M50 42L40 32l6-6 10 10z"/><path d="M12 52c8 0 14-6 14-14M12 58c11 0 20-9 20-20"/></svg>',
- orbit:'<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="7"/><ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(-25 32 32)"/><circle cx="53" cy="22" r="3"/></svg>',
- racks:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="8" width="18" height="48"/><rect x="36" y="8" width="18" height="48"/><path d="M10 20h18M10 32h18M10 44h18M36 20h18M36 32h18M36 44h18"/><path d="M15 14h4M15 26h4M15 38h4M15 50h4M41 14h4M41 26h4M41 38h4M41 50h4"/></svg>',
- cloud:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 40a9 9 0 0 1 1-18 12 12 0 0 1 23-2 10 10 0 0 1 3 20z"/><path d="M22 48v8M32 48v8M42 48v8"/></svg>',
- chip:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="12" width="40" height="40"/><rect x="22" y="22" width="20" height="20"/><path d="M20 12V5M32 12V5M44 12V5M20 59v-7M32 59v-7M44 59v-7M12 20H5M12 32H5M12 44H5M59 20h-7M59 32h-7M59 44h-7"/></svg>',
- moon:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M44 8a24 24 0 1 0 12 30A20 20 0 0 1 44 8z"/><path d="M46 44l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></svg>'
-};
-function actorCard(a){
-  var ok=/^https:\/\//.test(a.website||"");
-  var fig=(a.figures||[]).map(function(f){return'<li><b>'+esc(f.v)+'</b><span>'+esc(f.l)+'</span></li>'}).join("");
-  return'<article class="actor"><div class="aph" role="img" aria-label="'+esc(a.name)+'"><span class="aic">'+(ICONS[a.icon]||ICONS.chip)+'</span>'+
-   (a.image?'<img class="aimg" data-b="'+esc(a.image)+'" data-n="0" src="img/actors/'+esc(a.image)+'.jpg" alt="" loading="lazy">':'')+'</div>'+
-   '<div class="ah"><h4>'+esc(a.name)+'</h4><span class="mode">'+esc(a.tag)+'</span></div>'+
-   '<p class="awhat">'+esc(a.what)+'</p>'+
-   '<div class="arow"><span class="lbl">Pourquoi ça compte</span><p>'+esc(a.why)+'</p></div>'+
-   '<div class="arow"><span class="lbl">Chiffres clés <i>'+esc(a.as_of)+'</i></span><ul class="afig">'+fig+'</ul></div>'+
-   '<div class="arow rk"><span class="lbl">Risque d\'exécution</span><p>'+esc(a.risk)+'</p></div>'+
-   '<div class="afoot">'+(ok?'<a class="site" href="'+esc(a.website)+'" target="_blank" rel="noopener">Site officiel ↗</a>':'')+
-   '<details class="srcd"><summary>Sources</summary><div class="srcs">'+srcLinks(a.sources)+'</div></details></div></article>';
-}
-// Illustrations : public/img/actors/<nom>.jpg, .jpeg, .webp ou .png ; à défaut, le pictogramme reste affiché.
-document.addEventListener("error",function(e){
-  var im=e.target;if(!im||!im.classList||!im.classList.contains("aimg"))return;
-  var ex=["jpg","jpeg","webp","png"],n=+im.getAttribute("data-n")+1;
-  if(n<ex.length){im.setAttribute("data-n",n);im.src="img/actors/"+im.getAttribute("data-b")+"."+ex[n]}else im.remove();
-},true);
-function mainActorsHTML(){
-  var act=((S.market&&S.market.actors)||[]).slice();
-  return'<div class="sgroup">Principaux acteurs <em>qui compte aujourd\'hui</em></div>'+(act.length?'<table class="table"><thead><tr><th>Acteur</th><th>Pays</th><th>Rôle</th><th>Repère</th></tr></thead><tbody>'+act.map(function(a){return'<tr><td>'+esc(a.name)+'</td><td>'+ctag(a.country)+'</td><td>'+esc(a.role)+'</td><td>'+esc(a.note)+' <a class="small" href="'+esc(link(a.u))+'" target="_blank" rel="noopener">'+esc(a.src)+'</a></td></tr>'}).join("")+'</tbody></table>':'<div class="empty">Aucun acteur pour ce filtre.</div>');
-}
 function pctTxt(p){return p<1?"< 1 %":Math.round(p).toLocaleString(loc())+" %"}
 function timeline(cat,today){
   var t0=ms(today),t1=t0+183*86400000,span=t1-t0,rows=[],lanes=[],i;
@@ -432,7 +401,6 @@ function outlookHTML(){
   if(rk)h+='<div class="sgroup">Trois indicateurs de risque <em>'+esc(o.risks_note)+'</em></div><div class="cards3">'+rk+'</div>';
   var cat=(o.catalysts||[]).filter(function(c){return c.date>=new Date(Date.now()-2*86400000).toISOString().slice(0,10)});
   if(cat.length)h+='<details class="details sec2" id="m-cal"><summary><span>Calendrier des six prochains mois</span><em>événements datés, avec la probabilité de chacun</em></summary>'+timeline(cat,today)+'<p class="small mute" style="margin:8px 0 0">'+esc(o.catalysts_note)+'</p></details>';
-  h+='<details class="details sec2" id="m-actors"><summary><span>Acteurs</span><em>principaux acteurs</em></summary>'+mainActorsHTML()+'<div class="sgroup">Acteurs émergents <em>six sociétés à suivre</em></div><div class="actors">'+(o.actors||[]).map(actorCard).join("")+'</div></details>';
   h+='<details class="details sec2" id="m-race"><summary><span>USA–Chine</span><em>qui est devant, couche par couche</em></summary>'+raceHtml()+'</details>';
   return h;
 }
@@ -973,7 +941,7 @@ function vRefresh(){var b=$("vbody");if(b){$("v-acteurs").classList.toggle("essm
 document.addEventListener("input",function(e){if(e.target&&e.target.id==="xq"){var xp=e.target.selectionStart;S.xq=e.target.value;S.xlimit=100;rActeurs();var xn=$("xq");if(xn){xn.focus();try{xn.setSelectionRange(xp,xp)}catch(x){}}return}if(e.target&&e.target.id==="rq"){var pos=e.target.selectionStart;S.rq=e.target.value;S.rlimit=100;rResearch();var n=$("rq");if(n){n.focus();try{n.setSelectionRange(pos,pos)}catch(x){}}return}if(e.target&&e.target.id==="vq"){S.vq=e.target.value;S.vlimit=80;vRefresh();return}if(e.target&&e.target.id==="aq"){S.aq=e.target.value;var l=$("alist");if(l)l.innerHTML=aList()}});
 
 /* Recherche globale */
-var SG=["Entreprises","Personnes","Déclarations","Actualités","Couches de l'infrastructure","Recherche","Sur X"],SCAP=[6,6,6,8,3,6,6];
+var SG=["Entreprises","Personnes","Déclarations","Actualités","Infrastructure","Recherche","Sur X"],SCAP=[6,6,6,8,3,6,6];
 function sIndex(){
   var K=[],A=(S.acteurs&&S.acteurs.actors)||[],P=(S.voix&&S.voix.people)||[],en=isEn();
   A.forEach(function(a){
@@ -1004,24 +972,41 @@ function sIndex(){
   });
   return K;
 }
-function sRun(q){
-  var box=$("sres"),qq=nz(q).trim(),T=qq.split(/\s+/).filter(Boolean);
+var SGEN=["Companies","People","Statements","News","Infrastructure","Research","On X"],SF=-1;
+function sgn(g){return isEn()?SGEN[g]:SG[g]}
+function sHl(t,T){
+  var raw=String(t==null?"":t),n=nz(raw),m=new Array(raw.length+1).join("0").split("").map(Number);
+  T.forEach(function(w){if(!w)return;var i=n.indexOf(w);while(i>=0){for(var k=i;k<i+w.length&&k<m.length;k++)m[k]=1;i=n.indexOf(w,i+w.length)}});
+  var o="",on=false,i2;
+  for(i2=0;i2<raw.length;i2++){if(m[i2]&&!on){o+="<mark>";on=true}if(!m[i2]&&on){o+="</mark>";on=false}o+=esc(raw.charAt(i2))}
+  return o+(on?"</mark>":"");
+}
+function sRun(q,keepF){
+  var box=$("sres"),qq=nz(q).trim(),T=qq.split(/\s+/).filter(Boolean),en=isEn();
+  if(!keepF)SF=-1;
   if(qq.length<2){box.innerHTML=sSug();return}
   var K=sIndex().filter(function(r){var hay=r.k+" "+r.x;return T.every(function(w){return hay.indexOf(w)>=0})});
   K.forEach(function(r){r.sc=r.k.indexOf(qq)===0?0:r.k.indexOf(qq)>=0?1:2});
-  var h="",n=0;
+  var cnt=SG.map(function(_,g){return K.filter(function(r){return r.g===g}).length}),total=K.length;
+  if(!total){box.innerHTML='<p class="small sh">'+(en?'No results for “':'Aucun résultat pour « ')+esc(q.trim())+(en?'”':' »')+'</p>';return}
+  if(SF>=0&&!cnt[SF])SF=-1;
+  var chips='<div class="sflt" role="tablist"><button type="button" class="chip'+(SF<0?' on':'')+'" data-sf="-1">'+(en?'All':'Tout')+' <em>'+total+'</em></button>'+
+    SG.map(function(_,g){return cnt[g]?'<button type="button" class="chip'+(SF===g?' on':'')+'" data-sf="'+g+'">'+esc(sgn(g))+' <em>'+cnt[g]+'</em></button>':''}).join("")+'</div>';
+  var h=chips;
   SG.forEach(function(name,g){
+    if(SF>=0&&SF!==g)return;
     var L=K.filter(function(r){return r.g===g});
     if(g===1||g===0)L.sort(function(a,b){return a.sc-b.sc});
-    else if(g===2||g===5||g===6)L.sort(function(a,b){return b.ts<a.ts?-1:b.ts>a.ts?1:0});
+    else if(g===2||g===3||g===5||g===6)L.sort(function(a,b){return b.ts<a.ts?-1:b.ts>a.ts?1:0});
     if(!L.length)return;
-    h+='<div class="sg">'+name+'</div>'+L.slice(0,SCAP[g]).map(function(r){
-      n++;
+    var cap=SF===g?60:SCAP[g];
+    h+='<div class="sg">'+esc(sgn(g))+'</div>'+L.slice(0,cap).map(function(r){
       var a=r.u?'<a class="sr" href="'+esc(link(r.u))+'" target="_blank" rel="noopener" data-sx="1">':'<a class="sr" href="'+esc(r.h)+'" data-sr="'+esc(r.h)+'">';
-      return a+'<span class="st">'+esc(r.t)+'</span><span class="ss small">'+esc(r.s)+'</span></a>';
-    }).join("")+(L.length>SCAP[g]?'<div class="small sm2">+ '+(L.length-SCAP[g])+' autres</div>':'');
+      return a+'<span class="st">'+sHl(r.t,T)+'</span><span class="ss small">'+esc(r.s)+'</span></a>';
+    }).join("")+(L.length>cap?'<button type="button" class="sm2" data-sf="'+g+'">'+(en?'Show the '+(L.length-cap)+' others':'Voir les '+(L.length-cap)+' autres')+'</button>':'');
   });
-  box.innerHTML=n?h:'<p class="small sh">Aucun résultat pour « '+esc(q.trim())+' »</p>';
+  box.innerHTML=h;
+  var f=box.querySelector(".sr");if(f)f.classList.add("kb");
 }
 function sSug(){
   var en=isEn(),Ls=((S.layers&&S.layers.layers)||[]).filter(function(l){return l.tension!=null}).slice().sort(function(a,b){return b.tension-a.tension}),top=Ls[0];
@@ -1039,6 +1024,7 @@ document.addEventListener("click",function(e){
   if(e.target.closest("#mbtn")){var m=$("mnu");mSet(m.hidden);if(!m.hidden)sClose();return}
   if(e.target.closest("#sbtn")){mSet(false);sOpen();return}
   if(e.target.closest("[data-sclose]")){sClose();return}
+  var sf=e.target.closest("[data-sf]");if(sf){SF=+sf.getAttribute("data-sf");sRun($("sq").value,true);return}
   var sq=e.target.closest("[data-sq]");if(sq){var qi=$("sq");qi.value=sq.getAttribute("data-sq");sRun(qi.value);qi.focus();return}
   if(e.target.closest("[data-ess]")){S.top=true;S.limit=120;renderAll()}
   var r=e.target.closest("[data-sr]");
@@ -1050,7 +1036,8 @@ document.addEventListener("keydown",function(e){
   var tg=e.target&&e.target.tagName,typing=tg==="INPUT"||tg==="TEXTAREA"||(e.target&&e.target.isContentEditable);
   if(e.key==="Escape"){sClose();mSet(false);return}
   if((e.key==="/"&&!typing)||((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k")){e.preventDefault();sOpen();return}
-  if(e.key==="Enter"&&e.target&&e.target.id==="sq"){var f=document.querySelector("#sres .sr");if(f)f.click()}
+  if((e.key==="ArrowDown"||e.key==="ArrowUp")&&e.target&&e.target.id==="sq"){var L=[].slice.call(document.querySelectorAll("#sres .sr")),c=L.findIndex(function(x){return x.classList.contains("kb")});if(!L.length)return;e.preventDefault();L.forEach(function(x){x.classList.remove("kb")});var n=(c+(e.key==="ArrowDown"?1:-1)+L.length)%L.length;L[n].classList.add("kb");L[n].scrollIntoView({block:"nearest"});return}
+  if(e.key==="Enter"&&e.target&&e.target.id==="sq"){var f=document.querySelector("#sres .sr.kb")||document.querySelector("#sres .sr");if(f)f.click()}
 });
 window.addEventListener("hashchange",function(){show(location.hash.slice(1))});
 setLang(S.lang);

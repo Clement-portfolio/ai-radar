@@ -10,7 +10,7 @@ Promise.all([get("data/chain.json"),get("data/layers.json"),get("data/en.json").
   if(window.I18N){I18N.extra(Object.assign({},NEWEN,r[2]));I18N.set(LANG)}
   report();
 }).catch(fail);
-var NEWEN={"Énergie":"Energy","Datacenters":"Data centers","Modèles":"Models","Fonderies":"Foundries","Salle":"Hall","Module":"Module","Tension":"Tension","Critique":"Critical","Élevé":"High","Modéré":"Moderate","Faible":"Low",
+var NEWEN={"Énergie":"Energy","Datacenters":"Data centers","Modèles":"Models","Fonderies":"Foundries","Salle":"Hall","Module":"Module","Tension":"Tightness","Critique":"Critical","Élevé":"High","Modéré":"Moderate","Faible":"Low",
 "Le courant qui alimente les datacenters : turbines à gaz sur site, transformateurs et, plus tard, petits réacteurs.":"The power that feeds the data centers: on-site gas turbines, transformers and, later, small reactors.",
 "Le bâtiment, son refroidissement et la fibre qui en sort. Double-cliquez le bâtiment pour entrer dans la salle.":"The building, its cooling and the fibre leaving it. Double-click the building to enter the hall.",
 "Les modèles tournent dans les datacenters ; les applications captent les usagers et l'argent.":"Models run in data centers; applications capture the users and the money.",
@@ -390,9 +390,9 @@ function tens(f){var g=f.gap?f.gap.hi:0,t=g>=30?9:(g>=20?8:(g>=10?6:3));if(f.lea
 function tlab(t){return t>=8?"Critique":(t>=6?"Élevé":(t>=4?"Modéré":"Faible"))}
 function tensInfo(part){
  var P=PARTS[part],key=FMAP[part],f=key&&FM[key],b=BY[P.b],l=b.layer&&LY[b.layer];
-if(f&&f.ten)return{t:f.ten.t,why:f.ten.why,ev:f.evid||[],basis:f.ten.basis,rule:RULE};
- if(f&&(f.gap||f.lead)){var ev=(f.evid||[]);return{t:tens(f),why:f.why+(f.leadTxt?" Délai : "+f.leadTxt+".":""),ev:ev,basis:"Déduite des écarts et délais documentés",rule:RULE}}
- if(l&&l.t!=null)return{t:l.t,why:((l.key?l.key.replace(/\.?$/,"."):"")+(l.note?" "+l.note:"")).trim(),ev:[],links:(l.src||[]).slice(0,3),basis:"Niveau de la couche",rule:""};
+if(f&&f.ten)return{t:f.ten.t,why:sp(f.ten.why),ev:f.evid||[],basis:f.ten.basis,rule:RULE};
+ if(f&&(f.gap||f.lead)){var ev=(f.evid||[]);return{t:tens(f),why:sp(f.why)+(f.leadTxt?" <span>Délai :</span> "+sp(f.leadTxt)+".":""),ev:ev,basis:"Déduite des écarts et délais documentés",rule:RULE}}
+ if(l&&l.t!=null)return{t:l.t,why:((l.key?sp(l.key.replace(/\.$/,""))+".":"")+(l.note?" "+sp(l.note):"")).trim(),ev:[],links:(l.src||[]).slice(0,3),basis:"Niveau de la couche",rule:""};
  return null}
 var SH=function(c,i){return/^(autres?|other)/i.test(c||"")?"var(--cg)":"var(--c"+(Math.min(i,5)+1)+")"};
 function fmtPct(v){return String(v).replace(".",",")+" %"}
@@ -456,7 +456,7 @@ function ringHtml(t,c){
 function tensPanel(ti){
  if(!ti)return noViz();
  var c=cls(ti.t);
- return mcol("Tension","Niveau de 0 à 10",'<div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b></div></div>','<span class="why1">'+esc(ti.why)+'</span>',"tcol "+c)}
+ return mcol("Tension","Niveau de 0 à 10",'<div class="tr0">'+ringHtml(ti.t,c)+'<div class="tl"><b class="tv">'+tlab(ti.t)+'</b></div></div>','<span class="why1">'+ti.why+'</span>',"tcol "+c)}
 function notesHtml(f,pie,ch,rv,ti){
  var h="";
  if(pie){h+='<div class="nb"><div class="st">Camembert</div>'+(pie.note?'<p>'+esc(pie.note)+'</p>':'')+'<div class="src">'+esc(pie.as_of)+' · <a href="'+esc(pie.u)+'" target="_blank" rel="noopener">'+esc(pie.src)+' ↗</a></div></div>'}
@@ -465,7 +465,7 @@ function notesHtml(f,pie,ch,rv,ti){
   var pl=(ch.proj||[]).concat(ch.oth||[]).map(function(x){return'<li><b>'+esc(x.v)+'</b> · '+esc(x.l)+' · '+esc(x.as_of)+' · <a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.src)+' ↗</a></li>'}).join("");
   h+='<div class="nb"><div class="st">Chiffre d\'affaires</div><p>'+esc(ch.note||"")+'</p><div class="src">'+esc(ch.as_of)+' · '+ch.srcs.map(function(x){return'<a href="'+esc(x[1])+'" target="_blank" rel="noopener">'+esc(x[0])+' ↗</a>'}).join(" · ")+'</div>'+(pl?'<ul class="pl">'+pl+'</ul>':'')+'</div>'}
  else if(rv&&rv.pts&&rv.pts.length&&rv.note)h+='<div class="nb"><div class="st">Chiffre d\'affaires</div><p>'+esc(rv.note)+'</p></div>';
- if(ti){h+='<div class="nb"><div class="st">Tension</div><p>'+esc(ti.why)+'</p>'+evRows(ti.ev||[])+(ti.links||[]).map(function(x){return'<div class="src"><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+' ↗</a></div>'}).join("")+'<div class="src">'+esc(ti.basis)+'</div>'+(ti.rule?'<div class="rule">'+esc(ti.rule)+'</div>':'')+'</div>'}
+ if(ti){h+='<div class="nb"><div class="st">Tension</div><p>'+ti.why+'</p>'+evRows(ti.ev||[])+(ti.links||[]).map(function(x){return'<div class="src"><a href="'+esc(x.u)+'" target="_blank" rel="noopener">'+esc(x.t)+' ↗</a></div>'}).join("")+'<div class="src">'+esc(ti.basis)+'</div>'+(ti.rule?'<div class="rule">'+esc(ti.rule)+'</div>':'')+'</div>'}
  return h?'<details class="why"><summary>Sources, méthode et limites</summary>'+h+'</details>':""}
 function evRows(a){return a.map(function(f){return'<div class="ev"><div class="v">'+esc(f.v)+'</div><div>'+esc(f.l)+'<div class="src">'+esc(f.as_of)+' · <a href="'+esc(f.u)+'" target="_blank" rel="noopener">'+esc(f.src)+' ↗</a></div></div></div>'}).join("")}
 /* ---------- actualités du composant (watchlist, hors trading) : data/watch.json ; même forme que le fil Actualités ---------- */
@@ -474,6 +474,7 @@ var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var CONFL={haute:"Source primaire",moyenne:"Presse",faible:"Non vérifié"};
 function tx(fr,en){return LANG==="en"?en:fr}
+function sp(x){return x?'<span>'+esc(x)+'</span>':''}
 function nwParts(){return sel.part?[sel.part]:(sel.block?Object.keys(PARTS).filter(function(p){return PARTS[p].b===sel.block}):[])}
 function nwGroups(){
  if(!WT||!WT.groups)return[];var ps=nwParts();
@@ -493,7 +494,7 @@ function nwRow(x){
  return'<div class="row i'+im+o+'" data-nid="'+esc(x.id)+'"><span class="time">'+esc(nwTime(x.ts))+'</span><span class="tag">'+esc(CLABEL[x.country]||x.country||"")+'</span>'+
   '<a class="ttl" href="'+esc(nwLink(x.url))+'" target="_blank" rel="noopener">'+esc(pick("title"))+'</a>'+
   '<span class="rsrc">'+esc(x.source)+'<i class="cd '+esc(c)+'" title="'+esc(CONFL[c]||c)+'"></i></span>'+
-  '<button class="rtog" type="button" data-nt="'+esc(x.id)+'" aria-label="Afficher le résumé">›</button>'+
+  '<button class="rtog" type="button" data-nt="'+esc(x.id)+'" aria-label="Afficher le résumé"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></button>'+
   '<div class="sum"><p>'+(x.summary?esc(pick("summary")):'Résumé indisponible : ouvrez l\'article.')+'</p><div class="meta">'+(x.cat?'<span class="cat">'+esc(CATS[x.cat]||x.cat)+'</span>':'')+(x.lay?'<span>'+esc(x.lay)+'</span>':'')+nwImp(im)+'<span class="conf '+esc(c)+'"><i></i>'+esc(CONFL[c]||c)+'</span><a href="'+esc(nwLink(x.url))+'" target="_blank" rel="noopener">Lire sur '+esc(x.source)+' ↗</a></div></div></div>'}
 function nwItems(){
  if(!WT||!WT.items)return[];var gs=nwGroups();if(!gs.length)return[];

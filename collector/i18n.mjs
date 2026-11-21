@@ -3,7 +3,7 @@
 import { digitsOf } from "./brief.mjs";
 import { foreignScript } from "./translate.mjs";
 
-const FR_MARK = /[éèêàùôîçœâû]|(^|[^\p{L}])(le|la|les|des|du|un|une|et|en|sur|pour|par|qui|est|sont|ce|cette|plus|pas|dans|avec|au|aux|ou|ne|se|son|sa|ses|à|chaque|relayé|relayée|cité|fin|selon|entre|vers)(?![\p{L}])/iu;
+const FR_MARK = /[éèêàùôîçœâû]|(^|[^\p{L}])(le|la|les|des|du|de|d|l|un|une|et|en|sur|pour|par|qui|est|sont|ce|cette|plus|pas|dans|avec|au|aux|ou|ne|se|son|sa|ses|à|chaque|relayé|relayée|cité|fin|selon|entre|vers)(?![\p{L}])/iu;
 const SKIP_KEYS = new Set(["url", "id", "d", "date", "as_of", "href", "u", "key", "kind", "color", "model"]);
 const norm = (s) => String(s).replace(/\s+/g, " ").trim();
 

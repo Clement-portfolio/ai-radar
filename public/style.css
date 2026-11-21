@@ -953,3 +953,51 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .tprob>span.small.mute:last-child{margin-top:auto}
 
 .tile.dark .tnum .v,.tile.dark .tnum .l{color:#fff}.tile.dark .tnum .s,.tile.dark .tnum .s a{color:#A1A1A6}.tile.dark .tnum+.tnum{border-color:rgba(255,255,255,.16)}
+
+/* =========================================================
+   Harmonisation globale : mêmes valeurs sur toutes les pages
+   échelle de texte 12 · 13 · 15 · 18 · 34 · 56 ; rythme vertical 24 ; blocs 40 ; rayons 32 / 22 / 30
+   ========================================================= */
+:root{--sp:24px;--pad:40px;--r-bar:30px;--gap-row:10px}
+/* blocs : même marge intérieure et même respiration entre eux */
+.tile,.etage,.tile.half{padding:var(--pad);gap:32px}
+.tile{margin-bottom:var(--sp)}.etage{margin-top:var(--sp);margin-bottom:0}
+.details{margin-top:var(--sp);padding:8px var(--pad)}
+.panel{padding:var(--pad)}
+.thead .eb,.kicker{font-size:15px;font-weight:600;color:var(--accent)}
+.thead h2{font-size:clamp(24px,2.8vw,34px);letter-spacing:-.03em}.tile.half .thead h2{font-size:clamp(24px,2.8vw,34px)}
+.etage>.sub2,h3.sub2{font-size:clamp(24px,2.8vw,34px);letter-spacing:-.03em}
+/* barres de filtres : pleine largeur, contenu à gauche, 24 px avant la suite */
+.frow,.mnav{width:100%;margin:0 0 var(--sp);padding:10px;border-radius:var(--r-bar);gap:8px}
+#v-actualites .frow,#v-recherche .frow,#v-acteurs .frow{margin-bottom:4px}
+#v-acteurs .frow{margin-bottom:var(--sp)}
+.mnav{justify-content:flex-start;align-self:stretch}
+.frow .sp{flex:1}
+/* lignes (Actualités, Recherche, Insiders) : même gabarit */
+.row,.vrow,#v-recherche .row.rr{padding:20px 22px 20px 26px;border-radius:var(--r-l);margin-bottom:var(--gap-row)}
+.row .ttl,.vrow .ttl,#v-recherche .rr .ttl{font:600 18px/1.3 var(--display);letter-spacing:-.015em}
+.row .time,.row .rsrc,.vrow .time,.vrow .rsrc,#v-recherche .row.rr .rsrc{font-size:13px}
+.row .tag,#v-recherche .row.rr .tag,.vwho b{font-size:15px}
+.agrid{gap:var(--gap-row)}
+/* texte secondaire : 12 px partout, 13 px pour les métadonnées */
+.small,.tag,.cat,.conf,.vwho .small,.rsrcs summary,.rsrcs em,#v-recherche .rr .rk,.sgroup{font-size:12px}
+.meta,.acard .ap,.acard .ar{font-size:13px}
+.day{font-size:28px}
+@media(max-width:900px){.row .ttl,.vrow .ttl,#v-recherche .rr .ttl{font-size:17px}.day{font-size:22px}}
+@media(max-width:620px){.tile,.etage,.tile.half{padding:24px 20px}.details{padding:8px 20px}.panel{padding:24px 20px}}
+
+/* Recherche : filtres par type, mot trouvé surligné, défilement dans le panneau, navigation au clavier */
+.spn{display:flex;flex-direction:column;max-height:88vh}
+.spn .wrap{width:100%;overflow-y:auto;overscroll-behavior:contain;padding-top:28px;padding-bottom:28px}
+.sbar{position:sticky;top:-28px;z-index:2;margin:-28px 0 0;padding:28px 0 12px;background:rgba(255,255,255,.96)}
+.sflt{display:flex;flex-wrap:wrap;gap:8px;padding:6px 0 4px}
+.sflt .chip{min-height:36px;padding:0 14px;font-size:14px}
+.sflt .chip em{font-style:normal;margin-left:6px;opacity:.55}
+.sflt .chip.on em{opacity:.7}
+.sr mark{background:rgba(0,113,227,.16);color:inherit;border-radius:4px;padding:0 1px}
+.sr.kb,.sr:hover,.sr:focus{background:var(--fill)}
+.sr .st{font-size:16px;line-height:1.35}
+.sr .ss{display:block;margin-top:2px}
+#sres .sm2{display:block;width:100%;text-align:left;background:none;border:0;padding:8px 12px;font:500 14px var(--ui);color:var(--accent-ink);cursor:pointer;border-radius:12px}
+#sres .sm2:hover{background:var(--fill)}
+.sg{padding:20px 12px 6px}
