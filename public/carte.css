@@ -74,7 +74,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .tile.half{padding:44px 40px 36px;gap:24px}
 .tile.half .thead h2{font-size:26px;letter-spacing:-.03em}
 h4{display:none}
-.row{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:14px;align-items:center;padding:12px 0;font-size:15px;border:0;border-bottom:1px solid var(--hair);background:none;width:100%;text-align:left;font-family:var(--ui);color:var(--ink)}
+.row{display:grid;grid-template-columns:120px minmax(0,1fr) 150px;gap:14px;align-items:center;padding:12px 0;font-size:15px;border:0;border-bottom:1px solid var(--hair);background:none;width:100%;text-align:left;font-family:var(--ui);color:var(--ink)}
 .row:last-child{border-bottom:0}
 .row .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .row .bg{height:10px;border-radius:999px;background:var(--pill);position:relative;overflow:hidden}
@@ -93,3 +93,5 @@ button.row:hover .arw{transform:scale(1.06)}
 .hide{display:none!important}
 @media(max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi+.kpi{border-left:0}.cols{grid-template-columns:1fr}}
 @media(max-width:620px){.tile{padding:18px 16px 22px;border-radius:26px}.tile.half{padding:32px 20px 24px}.regs{flex-wrap:wrap}.bar .sp{display:none}}
+
+.row .bg i{min-width:6px}

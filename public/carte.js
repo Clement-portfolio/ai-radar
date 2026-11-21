@@ -130,17 +130,11 @@ function render() {
   var v = ST.view, p0 = v.lat * RAD, l0 = v.lon * RAD, sp0 = Math.sin(p0), cp0 = Math.cos(p0), R = RR(), cx = CW / 2, cy = CH / 2, i, c, dl, x, y;
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0); ctx.clearRect(0, 0, CW, CH);
   // mer
-  var gr = ctx.createRadialGradient(cx - R * 0.28, cy - R * 0.32, R * 0.1, cx, cy, R);
+  var gr = ctx.createRadialGradient(cx - R * 0.24, cy - R * 0.36, 0, cx - R * 0.24, cy - R * 0.36, R * 1.5);
   gr.addColorStop(0, "#FFFFFF"); gr.addColorStop(1, "#E9E9EE");
   ctx.fillStyle = gr; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.fill();
   ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.clip();
-  // graticule
-  ctx.strokeStyle = "rgba(0,0,0,.08)"; ctx.lineWidth = 1; ctx.beginPath();
   var pj = function (la, lo) { var d = lo - l0, cl = Math.cos(la), cc = sp0 * Math.sin(la) + cp0 * cl * Math.cos(d); return [cx + R * cl * Math.sin(d), cy - R * (cp0 * Math.sin(la) - sp0 * cl * Math.cos(d)), cc]; };
-  var la, lo, a, b, up;
-  for (la = -60; la <= 60; la += 30) { up = false; for (lo = -180; lo <= 180; lo += 4) { a = pj(la * RAD, lo * RAD); if (a[2] > 0) { if (up) ctx.lineTo(a[0], a[1]); else ctx.moveTo(a[0], a[1]); up = true; } else up = false; } }
-  for (lo = -180; lo < 180; lo += 30) { up = false; for (la = -88; la <= 88; la += 4) { a = pj(la * RAD, lo * RAD); if (a[2] > 0) { if (up) ctx.lineTo(a[0], a[1]); else ctx.moveTo(a[0], a[1]); up = true; } else up = false; } }
-  ctx.stroke();
   // terres : points, aplatis près du bord pour rendre la courbure
   var rd = 0.7 + R / 600, B = [[], [], [], []], al = [0.2, 0.38, 0.6, 0.82];
   for (i = 0; i < DLO.length; i++) {
@@ -163,10 +157,10 @@ function render() {
   ctx.globalAlpha = 1;
   // ombre du limbe
   var sh = ctx.createRadialGradient(cx, cy, R * 0.62, cx, cy, R);
-  sh.addColorStop(0, "rgba(0,0,0,0)"); sh.addColorStop(1, "rgba(30,30,25,.20)");
+  sh.addColorStop(0, "rgba(0,0,0,0)"); sh.addColorStop(1, "rgba(30,30,25,.07)");
   ctx.fillStyle = sh; ctx.fillRect(0, 0, CW, CH);
   ctx.restore();
-  ctx.strokeStyle = "#000"; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.stroke();
+  ctx.strokeStyle = "rgba(0,0,0,.07)"; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(cx, cy, R, 0, 6.2832); ctx.stroke();
   // sites
   SCR = []; var s = sc(), vis = [];
   for (i = 0; i < ITEMS.length; i++) {
@@ -185,7 +179,7 @@ function render() {
       r = rOf(o.m);
       if (ST.mode === "plan" && d.peak && d.peak.mw > d.mw) { ctx.beginPath(); ctx.setLineDash([3, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1; ctx.arc(o.x, o.y, rOf(d.peak.mw), 0, 6.2832); ctx.stroke(); ctx.setLineDash([]); }
       ctx.beginPath(); ctx.arc(o.x, o.y, r, 0, 6.2832);
-      if (o.m > 0) { ctx.fillStyle = "rgba(52,71,107,.62)"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1; ctx.stroke(); }
+      if (o.m > 0) { ctx.fillStyle = "rgba(0,113,227,.88)"; ctx.fill(); ctx.strokeStyle = "#fff"; ctx.lineWidth = 1.2; ctx.stroke(); }
       else { ctx.setLineDash([2, 2]); ctx.strokeStyle = "#0071E3"; ctx.lineWidth = 1.2; ctx.stroke(); ctx.setLineDash([]); }
     } else if (it.k === "extra") {
       r = d.status === "live" && d.mw > 0 ? Math.max(4 * s, rOf(d.mw)) : (d.kind === "zone" ? 8 : 6) * s;
@@ -257,7 +251,7 @@ function stats() {
   var cs = Object.keys(by).sort(function (a, b) { return by[b][plan1 ? "plan" : "now"] - by[a][plan1 ? "plan" : "now"]; }).slice(0, 6), mx = Math.max.apply(null, cs.map(function (c) { return by[c][plan1 ? "plan" : "now"]; })) || 1;
   document.getElementById("bc").innerHTML = cs.map(function (c) {
     var a = by[c], v = plan1 ? a.plan : a.now;
-    return '<div class="row"><span class="nm">' + esc(country(c)) + '</span><span class="bg"><i style="width:' + (a.now / mx * 100).toFixed(1) + '%"></i>' + (plan1 ? '<u style="left:' + (a.now / mx * 100).toFixed(1) + "%;width:" + (Math.max(0, a.plan - a.now) / mx * 100).toFixed(1) + '%"></u>' : "") + '</span><span class="v">' + pw(Math.round(v)) + " · " + a.n + "</span></div>";
+    return '<div class="row"><span class="nm">' + esc(country(c)) + '</span><span class="bg"><i style="width:' + (a.now / mx * 100).toFixed(1) + '%"></i>' + (plan1 ? '<u style="left:' + (a.now / mx * 100).toFixed(1) + "%;width:" + (Math.max(0, a.plan - a.now) / mx * 100).toFixed(1) + '%"></u>' : "") + '</span><span class="v">' + pw(Math.round(v)) + " · " + a.n + (a.n > 1 ? " sites" : " site") + "</span></div>";
   }).join("");
   var top = D.slice().sort(function (a, b) { return mwOf(b) - mwOf(a); }).slice(0, 6), m2 = mwOf(top[0]) || 1;
   document.getElementById("tp").innerHTML = top.map(function (s) {
