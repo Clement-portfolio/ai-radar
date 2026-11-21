@@ -9,7 +9,7 @@ for (var q = 0; q < W.dots.length; q += 2) { var la = W.dots[q] / 10 * RAD; DLS.
 var T = {
   fr: {
     title: "Où est la puissance de calcul", dc: "Datacenters", logic: "Usines de puces", memory: "Usines de mémoire", packaging: "Assemblage avancé",
-    now: "Aujourd'hui", build: "En construction", total: "Cumulé", topBuild: "Les plus gros chantiers en cours", us: "États-Unis", asia: "Asie de l'Est", eu: "Europe", reset: "Vue d'ensemble",
+    srcm: "Sources et méthode", now: "Aujourd'hui", build: "En construction", total: "Cumulé", topBuild: "Les plus gros chantiers en cours", us: "États-Unis", asia: "Asie de l'Est", eu: "Europe", reset: "Vue d'ensemble",
     sites: "datacenters suivis", mw: "puissance IT en service", h100: "équivalents H100", cmw: "puissance IT prévue", fabs: "usines de puces suivies",
     byc: "Puissance IT par pays (datacenters suivis par Epoch)", top: "Les plus gros sites", topPlan: "Les plus gros sites une fois tout construit", unit: "MW",
     hint: "Glissez pour tourner la Terre · molette ou + / − pour zoomer", lgLand: "Un point ≈ 140 km de terre", pick: "Cliquez un site sur le globe pour voir qui l'exploite, sa puissance et ce qui arrive ensuite.",
@@ -23,7 +23,7 @@ var T = {
   },
   en: {
     title: "Where the compute is", dc: "Datacenters", logic: "Chip fabs", memory: "Memory fabs", packaging: "Advanced packaging",
-    now: "Today", build: "Under construction", total: "Cumulative", topBuild: "Largest sites under construction", us: "United States", asia: "East Asia", eu: "Europe", reset: "Overview",
+    srcm: "Sources and method", now: "Today", build: "Under construction", total: "Cumulative", topBuild: "Largest sites under construction", us: "United States", asia: "East Asia", eu: "Europe", reset: "Overview",
     sites: "datacenters tracked", mw: "IT power in service", h100: "H100 equivalents", cmw: "planned IT power", fabs: "chip fabs tracked",
     byc: "IT power by country (datacenters tracked by Epoch)", top: "Largest sites", topPlan: "Largest sites once everything is built", unit: "MW",
     hint: "Drag to spin the Earth · wheel or + / − to zoom", lgLand: "One dot ≈ 140 km of land", pick: "Click a site on the globe to see who runs it, its power and what comes next.",
@@ -89,9 +89,9 @@ function build() {
     '<div class="leg" id="lg"></div></section><div class="fiche" id="fc"></div>' +
     '<section class="tile"><div class="thead"><span class="eb" id="kpe"></span><h2 id="kpt"></h2></div><div class="kpis" id="kp"></div></section>' +
     '<div class="cols"><section class="tile half"><div class="thead"><span class="eb" id="h1"></span><h2 id="h1t"></h2></div><div id="bc"></div></section><section class="tile half"><div class="thead"><span class="eb" id="h2"></span><h2 id="h2t"></h2></div><div id="tp"></div></section></div>' +
-    '<p class="note" id="nt"></p>';
+    '<section class="tile nsrc"><button class="nsb" id="nsb" type="button" aria-expanded="false" aria-controls="nsw"><span id="nsl"></span><i class="nsp" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></i></button><div class="nsw" id="nsw"><div class="nsi"><p class="note" id="nt"></p></div></div></section>';
   cv = document.getElementById("cv"); ctx = cv.getContext("2d"); box = document.getElementById("mb"); tip = document.getElementById("tp0");
-  size(); bind(); draw(); setTimeout(report, 60);
+  size(); bind(); draw(); setTimeout(report, 60); try { new ResizeObserver(function () { report(); }).observe(document.querySelector(".wrap")); } catch (e) {}
 }
 
 function size() {
@@ -242,6 +242,7 @@ function fiche() {
 }
 
 function stats() {
+  document.getElementById("nsl").textContent = t("srcm");
   var D = DC.sites, mw = 0, h = 0, plan = 0, by = {}, M = ST.mode;
   D.forEach(function (s) { mw += s.mw; h += s.h100e; var p = Math.max(s.mw, s.peak ? s.peak.mw : 0, s.next ? s.next.mw : 0); plan += p; var c = by[s.country] = by[s.country] || { now: 0, plan: 0, n: 0 }; c.now += s.mw; c.plan += p; c.n++; });
     document.getElementById("kp").innerHTML =
@@ -273,6 +274,7 @@ function select(id) {
 function bind() {
   document.getElementById("app").addEventListener("click", function (e) {
     if (e.target.closest("#alx")) { ST.alert = false; draw(); setTimeout(report, 480); return; }
+    var nb = e.target.closest("#nsb"); if (nb) { var o = nb.getAttribute("aria-expanded") !== "true"; nb.setAttribute("aria-expanded", o ? "true" : "false"); document.getElementById("nsw").classList.toggle("open", o); setTimeout(report, 60); setTimeout(report, 520); return; }
     var b = e.target.closest("[data-l],[data-m],[data-r],[data-id]"); if (!b) return;
     if (b.dataset.l) { ST.layers[b.dataset.l] = !ST.layers[b.dataset.l]; if (b.dataset.l === "dc") ST.alert = !ST.alert; draw(); setTimeout(report, 480); }
     else if (b.dataset.m) { ST.mode = b.dataset.m; draw(); }
