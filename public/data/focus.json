@@ -5,19 +5,44 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-21T15:51:41.152Z",
+ "generated_at": "2026-11-21T18:54:00.700Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "0396da82d35c+06e6d380e3a5+133408be93f9+1dfd0f40ba72+272d99eb97b0+83eb8920a967+871fa7926cd4+8838b8c2d698+8df8ab3d4ae8+92ca8c823c3c+96a6c848a0d0+b7121aa76176+d30c8e933f5d+dabbfcbec428+ea05cfb5b9ab+f7ed75cce7a0+fcd152f94053",
   "09a497f98e64+3778953e71a6+5db9be893d58+8daf2e1f77bd+94d599ca1343+db8f13db2a39+e0ac844ba9e5+e20cbf90b852+f2ad34d486f9",
-  "01ad01e5cd41+07b3803b9303+364825014eaf+407420f377ab+499e87d18729+50e1e25269a9+86d3aeca06e8+8e2a2f996f96+9f91f68231f9+bc1d56d7d3cd+d48fe5cca15f+e9a32acc23d6",
+  "08b074f7bce0+0c1301471b50+1d0523b60f6f+5a8f7d1dc4aa+5fc039618c60+cd767daa7782+d8fbec9f2d14",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+c48900998378+f1b7c64ada91",
+  "01ad01e5cd41+07b3803b9303+364825014eaf+407420f377ab+499e87d18729+50e1e25269a9+86d3aeca06e8+8e2a2f996f96+9f91f68231f9+bc1d56d7d3cd+d48fe5cca15f+e9a32acc23d6",
   "47650c445adb+7c86141884e3+a25bfe4a44cc+e9c2330af5a7",
-  "1d0523b60f6f+376956b25183+4b9c8cdeff32+bd693f5f4e0c+cd767daa7782+d8fbec9f2d14",
-  "27277ae24135+580518075063+9f91d11995ea",
-  "bbb72de1e1a5+c97da236b03c+d89470b71910+e85265dd1b32+ee4ac4dd7186"
+  "2a26a4e548f3+33850c1d501b+399baa5b5687+60b091351fb7+61af5bd8e7f5+62d5ff960a4f+7f993b0e7fbe+a26538825c12+a5a8206957ca+e98b5918b0f3+eb3e38bfef40",
+  "27277ae24135+580518075063+9f91d11995ea"
  ],
  "stories": [
+  {
+   "ids": [
+    "dabbfcbec428",
+    "133408be93f9",
+    "f7ed75cce7a0",
+    "d30c8e933f5d"
+   ],
+   "head": "Anthropic réalise une introduction en bourse record au Nasdaq",
+   "bullets": [
+    "L'entreprise fait ses débuts avec une valorisation atteignant 1 750 milliards de dollars pour cette entrée en bourse.",
+    "La société a levé un montant de 107 milliards de dollars avant de démarrer sa cotation publique.",
+    "L'opération s'est déroulée au milieu d'une baisse des indices boursiers américains et d'une chute des actions technologiques, incluant Nvidia."
+   ],
+   "kinds": [
+    "detail",
+    "detail",
+    "contexte"
+   ],
+   "head_en": null,
+   "bullets_en": null,
+   "ctx_ids": [
+    "98911e55a71a"
+   ],
+   "ts": "2026-11-21T13:00:01.000Z"
+  },
   {
    "ids": [
     "09a497f98e64",
@@ -25,77 +50,51 @@
     "94d599ca1343",
     "3778953e71a6"
    ],
-   "head": "Samsung et TSMC durcissent leurs exportations de puces IA face aux nouvelles règles américaines",
+   "head": "Samsung suspend ses livraisons de puces IA en Chine après de nouvelles restrictions américaines",
    "bullets": [
-    "Samsung suspend ses livraisons de puces IA vers la Chine pour se conformer aux dernières régulations du Département du Commerce américain.",
-    "Les nouvelles restrictions américaines visent également à limiter les transferts indirects de technologies vers les centres de données situés en Asie du Sud-Est.",
-    "Ces mesures perturbent les chaînes d'approvisionnement mondiales et les projets d'infrastructures technologiques des pays émergents de la région."
+    "Le Département du Commerce américain durcit ses règles d'exportation de puces vers l'Asie du Sud-Est pour contrer les transferts indirects.",
+    "Ces restrictions visent à combler une faille majeure dans les contrôles en ciblant les flux de puces vers les hubs de la région."
    ],
    "kinds": [
     "detail",
-    "detail",
     "explication"
    ],
-   "head_en": "Samsung and TSMC tighten AI chip exports following new US regulations",
+   "head_en": "Samsung suspends AI chip shipments to China following new US restrictions",
    "bullets_en": [
-    "Samsung is suspending AI chip shipments to China to comply with the latest US Department of Commerce regulations.",
-    "New US restrictions also aim to limit indirect technology transfers to data centers located in Southeast Asia.",
-    "These measures disrupt global supply chains and technology infrastructure projects in emerging countries in the region."
+    "The US Department of Commerce is tightening its chip export rules to Southeast Asia to counter indirect transfers.",
+    "These restrictions aim to close a major loophole in controls by targeting chip flows to regional hubs."
    ],
    "ctx_ids": [],
    "ts": "2026-11-21T11:45:01.000Z"
   },
   {
    "ids": [
-    "39cc7b62b7b0",
-    "f1b7c64ada91",
-    "c48900998378",
-    "7e6c0139750f"
+    "5fc039618c60",
+    "1d0523b60f6f",
+    "d8fbec9f2d14",
+    "cd767daa7782"
    ],
-   "head": "Un chercheur d'Anthropic affirme avoir prouvé l'hypothèse de Riemann avec l'aide de l'IA Claude",
+   "head": "Trump veut interdire aux entreprises américaines de construire des datacenters à l'étranger",
    "bullets": [
-    "Le mathématicien Levent Alpöge a utilisé l'assistant Claude pour résoudre ce problème vieux de 167 ans.",
-    "La résolution de ce problème du millénaire via un modèle d'IA marque une étape historique pour le raisonnement des machines."
-   ],
-   "kinds": [
-    "detail",
-    "explication"
-   ],
-   "head_en": "An Anthropic researcher claims to have proven the Riemann hypothesis with the help of AI Claude",
-   "bullets_en": [
-    "Mathematician Levent Alpöge used the Claude assistant to solve this 167-year-old problem.",
-    "Solving this millennium problem via an AI model marks a historic milestone for machine reasoning."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-21T10:19:04.000Z"
-  },
-  {
-   "ids": [
-    "580518075063",
-    "9f91d11995ea",
-    "27277ae24135"
-   ],
-   "head": "Le Nasdaq chute de 5,3 % et efface ses gains de l'année après l'entrée en bourse d'Anthropic",
-   "bullets": [
-    "L'indice Nasdaq perd 5,3 % lors de cette séance de vente massive qui coïncide avec le deuxième jour de cotation d'Anthropic.",
-    "Anthropic venait d'atteindre une valorisation de 2 000 milliards de dollars lors de ses débuts au Nasdaq.",
-    "Les investisseurs se sont délestés de leurs actions liées à l'intelligence artificielle pour réallouer leurs portefeuilles vers Anthropic."
+    "Le gouvernement menace d'imposer des taxes lourdes sur les centres de données construits hors des États-Unis.",
+    "Les États-Unis ont durci leurs mesures pour empêcher le contournement des restrictions sur les puces IA vers la Chine.",
+    "Cette décision politique majeure modifie la stratégie d'expansion mondiale des géants technologiques américains."
    ],
    "kinds": [
     "detail",
     "contexte",
     "explication"
    ],
-   "head_en": "The Nasdaq drops 5.3% and erases its yearly gains following Anthropic's market debut",
+   "head_en": "Trump wants to ban US companies from building datacenters abroad",
    "bullets_en": [
-    "The Nasdaq index loses 5.3% during this massive sell-off session coinciding with Anthropic's second day of trading.",
-    "Anthropic had just reached a valuation of 2 trillion dollars during its debut on the Nasdaq.",
-    "Investors dumped their artificial intelligence-related stocks to reallocate their portfolios toward Anthropic."
+    "The government threatens to impose heavy taxes on data centers built outside the United States.",
+    "The United States tightened measures to prevent the circumvention of AI chip restrictions to China.",
+    "This major political decision alters the global expansion strategy of US tech giants."
    ],
    "ctx_ids": [
-    "bab1a902faa1"
+    "a26538825c12"
    ],
-   "ts": "2026-11-20T22:47:42.000Z"
+   "ts": "2026-11-21T16:29:39.000Z"
   }
  ]
 }

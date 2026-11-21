@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-20T22:07:23.659Z",
+ "updated_at": "2026-11-21T18:54:00.700Z",
  "companies": [
   {
    "name": "Nvidia",
@@ -2137,6 +2137,189 @@
    "backlog": null,
    "stakes": null,
    "read_at": "2026-11-20T22:07:23.659Z"
+  },
+  {
+   "name": "CoreWeave",
+   "cik": "1769628",
+   "revenue": {
+    "value": 9886000000,
+    "basis": "ttm",
+    "start": "2025-10-01",
+    "end": "2026-09-30",
+    "form": "10-Q",
+    "filed": "2026-11-12",
+    "accn": "0001769628-26-000465",
+    "quarters": [
+     {
+      "end": "2025-06-30",
+      "value": 1212000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-08-12"
+     },
+     {
+      "end": "2025-09-30",
+      "value": 1365000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-11-12"
+     },
+     {
+      "end": "2025-12-31",
+      "value": 1572000000,
+      "basis": "cumul",
+      "form": "10-K",
+      "filed": "2026-03-02"
+     },
+     {
+      "end": "2026-03-31",
+      "value": 2078000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-05-08"
+     },
+     {
+      "end": "2026-06-30",
+      "value": 2575000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-08-12"
+     },
+     {
+      "end": "2026-09-30",
+      "value": 3661000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-11-12"
+     }
+    ],
+    "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "fetched_at": "2026-11-21T18:54:00.700Z",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm"
+   },
+   "capex": {
+    "value": 27618000000,
+    "basis": "ttm",
+    "start": "2025-10-01",
+    "end": "2026-09-30",
+    "form": "10-Q",
+    "filed": "2026-11-12",
+    "accn": "0001769628-26-000465",
+    "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "fetched_at": "2026-11-21T18:54:00.700Z",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm"
+   },
+   "backlog": {
+    "value": 132300000000,
+    "basis": "date",
+    "start": null,
+    "end": "2026-09-30",
+    "form": "10-Q",
+    "filed": "2026-11-12",
+    "accn": "0001769628-26-000465",
+    "concept": "RevenueRemainingPerformanceObligation",
+    "fetched_at": "2026-11-21T18:54:00.700Z",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm"
+   },
+   "stakes": [
+    {
+     "concept": "PaymentsToAcquireBusinessesNetOfCashAcquired",
+     "label": "Acquisitions d'entreprises",
+     "value": 52000000,
+     "basis": "ttm",
+     "start": "2025-10-01",
+     "end": "2026-09-30",
+     "form": "10-Q",
+     "filed": "2026-11-12"
+    }
+   ],
+   "read_at": "2026-11-21T18:54:00.700Z"
+  },
+  {
+   "name": "IREN",
+   "cik": "1878848",
+   "revenue": {
+    "value": 900007000,
+    "basis": "ttm",
+    "start": "2025-10-01",
+    "end": "2026-09-30",
+    "form": "10-Q",
+    "filed": "2026-11-05",
+    "accn": "0001878848-26-000066",
+    "quarters": [
+     {
+      "end": "2025-06-30",
+      "value": 187292000,
+      "basis": "cumul",
+      "form": "10-K",
+      "filed": "2026-08-27"
+     },
+     {
+      "end": "2025-09-30",
+      "value": 7000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-11-05"
+     },
+     {
+      "end": "2025-12-31",
+      "value": 184692000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-02-05"
+     },
+     {
+      "end": "2026-03-31",
+      "value": 144795000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-05-08"
+     },
+     {
+      "end": "2026-06-30",
+      "value": 137225000,
+      "basis": "cumul",
+      "form": "10-K",
+      "filed": "2026-08-27"
+     },
+     {
+      "end": "2026-09-30",
+      "value": 200000000,
+      "basis": "trimestre",
+      "form": "10-Q",
+      "filed": "2026-11-05"
+     }
+    ],
+    "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "fetched_at": "2026-11-21T18:54:00.700Z",
+    "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm"
+   },
+   "capex": {
+    "value": 4949006000,
+    "basis": "ttm",
+    "start": "2025-10-01",
+    "end": "2026-09-30",
+    "form": "10-Q",
+    "filed": "2026-11-05",
+    "accn": "0001878848-26-000066",
+    "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
+    "fetched_at": "2026-11-21T18:54:00.700Z",
+    "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm"
+   },
+   "backlog": {
+    "value": 6347000000,
+    "basis": "date",
+    "start": null,
+    "end": "2026-09-30",
+    "form": "10-Q",
+    "filed": "2026-11-05",
+    "accn": "0001878848-26-000066",
+    "concept": "RevenueRemainingPerformanceObligation",
+    "fetched_at": "2026-11-21T18:54:00.700Z",
+    "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm"
+   },
+   "stakes": null,
+   "read_at": "2026-11-21T18:54:00.700Z"
   }
  ]
 }
