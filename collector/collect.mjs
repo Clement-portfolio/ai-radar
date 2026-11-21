@@ -17,6 +17,7 @@ import { buildActeurs } from "./acteurs.mjs";
 import { collectVoix, translateVoix, hotVoix, annotateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectDatacenters } from "./datacenters.mjs";
+import { collectRecherche, RECH_SYSTEM, RECH_SCHEMA } from "./recherche.mjs";
 import { collectEvolution, fmtSeries } from "./evolution.mjs";
 import { updateChain } from "./chainauto.mjs";
 import { compileWatchlist, watchJobs, watchCandidateOk, buildWatch } from "./watch.mjs";
@@ -678,6 +679,16 @@ export async function run(opts = {}) {
   } catch (e) { voix.summary.reason = String(e.message || e).slice(0, 120); }
   log(`Voix : ${voix.summary.total} déclaration(s), ${voix.summary.added} nouvelle(s)${voix.summary.reason ? " — " + voix.summary.reason : ""}`);
 
+  // Recherche : papiers, labos de modèles, recherche des hyperscalers, agences ; ne bloque jamais la collecte
+  const rechPrev = await readJson("recherche.json", null);
+  let rech = { doc: rechPrev, summary: { total: 0, added: 0, reason: "erreur" } };
+  try {
+    const rsrc = opts.rechercheSources || JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "recherche-sources.json"), "utf8")).sources;
+    rech = await collectRecherche({ sources: rsrc, http: (u, o = {}) => http(u, { ...o, retries: 0 }), generate: mkGen(RECH_SYSTEM, RECH_SCHEMA), prev: rechPrev, now: nowMs, log, batch: +env.RECH_BATCH || 20, rounds: +env.RECH_ROUNDS || 2, ...(opts.sleep ? { sleep: opts.sleep } : {}) });
+    await resolveGoogleLinks({ items: rech.doc.items, fetchImpl, max: +env.GNEWS_MAX || 0, log });
+  } catch (e) { rech.summary.reason = String(e.message || e).slice(0, 120); }
+  log(`Recherche : ${rech.summary.total} entrée(s), ${rech.summary.added} nouvelle(s)${rech.summary.failed ? `, ${rech.summary.failed} flux en échec` : ""} — ${rech.summary.reason}`);
+
   // carte des datacenters (Epoch AI, CC BY 4.0) : une panne de la source garde la carte précédente
   const dcPrev = await readJson("datacenters.json", null);
   let dcRes = { doc: null, summary: { reason: "erreur" } };
@@ -723,6 +734,7 @@ export async function run(opts = {}) {
     if (secRes.doc) await fs.writeFile(path.join(dataDir, "sec.json"), JSON.stringify(secRes.doc, null, 1));
     if (secAct.doc && JSON.stringify(secAct.doc) !== JSON.stringify(secActPrev)) await fs.writeFile(path.join(dataDir, "sec-acteurs.json"), JSON.stringify(secAct.doc, null, 1));
     if (voix.doc && JSON.stringify({ ...voix.doc, generated_at: 0 }) !== JSON.stringify({ ...(voixPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "voix.json"), JSON.stringify(voix.doc, null, 1));
+    if (rech.doc && JSON.stringify({ ...rech.doc, generated_at: 0 }) !== JSON.stringify({ ...(rechPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "recherche.json"), JSON.stringify(rech.doc));
     if (dcRes.doc && JSON.stringify({ ...dcRes.doc, generated_at: 0 }) !== JSON.stringify({ ...(dcPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "datacenters.json"), JSON.stringify(dcRes.doc));
     if (acteurs && JSON.stringify({ ...acteurs, generated_at: 0 }) !== JSON.stringify({ ...(actPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "acteurs.json"), JSON.stringify(acteurs));
     if (sharesRes.doc && JSON.stringify(sharesRes.doc) !== JSON.stringify(sharesPrev)) await fs.writeFile(path.join(dataDir, "shares.json"), fmtShares(sharesRes.doc));

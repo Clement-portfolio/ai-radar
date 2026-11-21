@@ -1,0 +1,48 @@
+{
+  "_doc": "Sources de l'onglet Recherche. kind : journal | preprint | frontier (labos de modèles) | hyper (recherche des hyperscalers) | agence. tier : 1 = référence, 2 = solide, 3 = préprint ou relais. kw : true = l'IA doit apparaître dans le titre ou le résumé (revues généralistes, préprints, agences). filter : règle de tri (doi_contains, dc_type, section, title_prefix, title_contains, not_title, lab_research). type : rss | gnews (recherche Google News, lien résolu ensuite) | hf | arxiv | biorxiv. verified : false = flux jamais lu en production, à surveiller dans l'état de la collecte.",
+  "sources": [
+    { "id": "nature", "name": "Nature", "kind": "journal", "tier": 1, "type": "rss", "url": "https://www.nature.com/nature.rss", "filter": "doi_contains:s41586", "kw": true },
+    { "id": "science", "name": "Science", "kind": "journal", "tier": 1, "type": "rss", "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science", "filter": "dc_type:Research Article|Report|Review", "kw": true },
+    { "id": "cell", "name": "Cell", "kind": "journal", "tier": 1, "type": "rss", "url": "https://www.cell.com/cell/current.rss", "filter": "section:Article|Resource|Report", "kw": true },
+    { "id": "nejm", "name": "NEJM", "kind": "journal", "tier": 1, "type": "rss", "url": "https://www.nejm.org/action/showFeed?jc=nejm&type=etoc&feed=rss", "filter": "doi_contains:NEJMoa", "kw": true },
+    { "id": "lancet", "name": "The Lancet", "kind": "journal", "tier": 1, "type": "rss", "url": "https://www.thelancet.com/rssfeed/lancet_current.xml", "filter": "title_prefix:[Articles]", "kw": true },
+    { "id": "nature-mi", "name": "Nature Machine Intelligence", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/natmachintell.rss", "filter": "doi_contains:s42256" },
+    { "id": "nature-medicine", "name": "Nature Medicine", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/nm.rss", "filter": "doi_contains:s41591", "kw": true },
+    { "id": "nature-biotech", "name": "Nature Biotechnology", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/nbt.rss", "filter": "doi_contains:s41587", "kw": true },
+    { "id": "nature-astro", "name": "Nature Astronomy", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/natastron.rss", "filter": "doi_contains:s41550", "kw": true },
+    { "id": "nature-energy", "name": "Nature Energy", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/nenergy.rss", "filter": "doi_contains:s41560", "kw": true },
+    { "id": "nature-materials", "name": "Nature Materials", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/nmat.rss", "filter": "doi_contains:s41563", "kw": true },
+    { "id": "nature-electronics", "name": "Nature Electronics", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/natelectron.rss", "filter": "doi_contains:s41928", "kw": true },
+    { "id": "nature-physics", "name": "Nature Physics", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.nature.com/nphys.rss", "filter": "doi_contains:s41567", "kw": true },
+    { "id": "science-robotics", "name": "Science Robotics", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=scirobotics", "filter": "dc_type:Research Article|Review" },
+    { "id": "science-tm", "name": "Science Translational Medicine", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=stm", "filter": "dc_type:Research Article|Review", "kw": true },
+    { "id": "pnas", "name": "PNAS", "kind": "journal", "tier": 2, "type": "rss", "url": "https://www.pnas.org/action/showFeed?type=etoc&feed=rss&jc=pnas", "filter": "not_title:In This Issue", "kw": true },
+
+    { "id": "hf-papers", "name": "Hugging Face Daily Papers", "kind": "preprint", "tier": 3, "type": "hf", "url": "https://huggingface.co/api/daily_papers", "minUpvotes": 10 },
+    { "id": "arxiv", "name": "arXiv", "kind": "preprint", "tier": 3, "type": "arxiv", "url": "cs.RO,eess.IV,q-bio.QM,q-bio.BM,astro-ph.IM,physics.med-ph,cond-mat.mtrl-sci,physics.ao-ph,quant-ph,cs.CR", "kw": true },
+    { "id": "biorxiv", "name": "bioRxiv", "kind": "preprint", "tier": 3, "type": "biorxiv", "url": "biorxiv:all", "kw": true },
+    { "id": "medrxiv", "name": "medRxiv", "kind": "preprint", "tier": 3, "type": "biorxiv", "url": "medrxiv:all", "kw": true },
+
+    { "id": "openai", "name": "OpenAI", "kind": "frontier", "tier": 1, "type": "rss", "url": "https://openai.com/news/rss.xml", "filter": "lab_research" },
+    { "id": "deepmind", "name": "Google DeepMind", "kind": "frontier", "tier": 1, "type": "rss", "url": "https://deepmind.google/blog/rss.xml" },
+    { "id": "anthropic", "name": "Anthropic", "kind": "frontier", "tier": 1, "type": "gnews", "url": "site:anthropic.com/research OR site:anthropic.com/news" },
+    { "id": "meta-ai", "name": "Meta AI", "kind": "frontier", "tier": 1, "type": "gnews", "url": "site:ai.meta.com/blog OR site:ai.meta.com/research", "verified": false },
+    { "id": "mistral", "name": "Mistral AI", "kind": "frontier", "tier": 2, "type": "rss", "url": "https://mistral.ai/rss.xml" },
+    { "id": "qwen", "name": "Qwen (Alibaba)", "kind": "frontier", "tier": 2, "type": "rss", "url": "https://qwenlm.github.io/blog/index.xml", "verified": false },
+    { "id": "deepseek", "name": "DeepSeek", "kind": "frontier", "tier": 2, "type": "gnews", "url": "site:api-docs.deepseek.com/news OR site:deepseek.com", "verified": false },
+    { "id": "xai", "name": "xAI", "kind": "frontier", "tier": 2, "type": "gnews", "url": "site:x.ai/news", "verified": false },
+
+    { "id": "google-research", "name": "Google Research", "kind": "hyper", "tier": 2, "type": "rss", "url": "https://research.google/blog/rss/" },
+    { "id": "microsoft-research", "name": "Microsoft Research", "kind": "hyper", "tier": 2, "type": "rss", "url": "https://www.microsoft.com/en-us/research/feed/" },
+    { "id": "aws-ml", "name": "AWS Machine Learning", "kind": "hyper", "tier": 3, "type": "rss", "url": "https://aws.amazon.com/blogs/machine-learning/feed/", "filter": "lab_research" },
+    { "id": "amazon-science", "name": "Amazon Science", "kind": "hyper", "tier": 2, "type": "rss", "url": "https://www.amazon.science/index.rss", "verified": false },
+    { "id": "nvidia", "name": "NVIDIA", "kind": "hyper", "tier": 2, "type": "rss", "url": "https://blogs.nvidia.com/feed/", "filter": "lab_research" },
+    { "id": "nvidia-dev", "name": "NVIDIA Developer", "kind": "hyper", "tier": 3, "type": "rss", "url": "https://developer.nvidia.com/blog/feed", "filter": "lab_research", "verified": false },
+
+    { "id": "nasa", "name": "NASA", "kind": "agence", "tier": 2, "type": "rss", "url": "https://www.nasa.gov/feed/", "kw": true },
+    { "id": "nasa-tech", "name": "NASA Technology", "kind": "agence", "tier": 2, "type": "rss", "url": "https://www.nasa.gov/technology/feed/", "kw": true },
+    { "id": "esa", "name": "ESA", "kind": "agence", "tier": 2, "type": "rss", "url": "https://www.esa.int/rssfeed/TopNews", "kw": true },
+    { "id": "fda", "name": "FDA", "kind": "agence", "tier": 2, "type": "rss", "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml", "kw": true },
+    { "id": "darpa", "name": "DARPA", "kind": "agence", "tier": 2, "type": "rss", "url": "https://www.darpa.mil/rss.xml", "kw": true }
+  ]
+}

@@ -531,8 +531,7 @@ html{overscroll-behavior-y:contain}
 @media(max-width:720px){.vrow{grid-template-columns:42px 1fr 26px}.vrow .vwho{grid-column:2}.vrow .rtog{grid-column:3;grid-row:1}.vrow .sum{grid-column:1/-1;grid-row:4}.vtool .vsearch{flex:1 1 100%}}
 .vtool .chip[data-ve]{padding:6px 12px;font-size:12px}.vsearch{padding:7px 10px}
 
-/* ================================================================
-   Refonte 2026 · forme inspirée d'Apple
+/* =========================================================   Refonte 2026 · forme inspirée d'Apple
    fond gris très clair, un grand rectangle blanc par section,
    police système (SF Pro sur Apple, Inter ailleurs), liens bleus
    ================================================================ */
@@ -836,3 +835,23 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 @media(max-width:720px){.tnums.n6 .tnum:nth-child(2){border-top:1px solid var(--hair)}}
 /* Insiders : jamais de texte coupé */
 .vrow .ttl,.vwho .small{display:block;-webkit-line-clamp:unset;overflow:visible;text-overflow:clip}
+/* Recherche */
+.row.rr{grid-template-columns:42px 128px minmax(0,1fr) auto;align-items:start;padding:10px 0}
+.row.rr .time,.row.rr .tag{padding-top:3px}
+.rr .rtxt{min-width:0}
+.rr .rsm{font-size:13px;line-height:1.45;color:var(--ink2);margin:3px 0 0;max-width:760px}
+.row.rr .rsrc{flex-direction:column;align-items:flex-end;gap:1px;padding-top:3px}
+.rr .rk{font-style:normal;font-size:10px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em}
+.rsrcs{margin:34px 0 10px;border-top:1px solid var(--ink)}
+.rsrcs summary{cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--mute);padding:10px 0}
+.rsrcs ul{list-style:none;margin:0;padding:0;columns:2;font-size:12.5px;color:var(--ink2)}
+.rsrcs li{padding:2px 0;break-inside:avoid}
+.rsrcs em{font-style:normal;font-family:var(--mono);font-size:10px;color:var(--mute);text-transform:uppercase}
+.rs-ok{color:var(--ink)}.rs-ko{color:var(--mute)}
+@media(max-width:720px){
+  .row.rr{grid-template-columns:42px 1fr;row-gap:2px}
+  .row.rr .tag{grid-column:2;grid-row:1}
+  .row.rr .rtxt{grid-column:1/-1;grid-row:2}
+  .row.rr .rsrc{grid-column:1/-1;grid-row:3;flex-direction:row;align-items:baseline;gap:8px;max-width:none}
+  .rsrcs ul{columns:1}
+}
