@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-20T22:07:23.659Z",
+ "generated_at": "2026-11-21T01:28:45.153Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1550,12 +1550,32 @@
      "e": 0
     },
     {
+     "ts": "2026-11-20T18:40:12.000Z",
+     "title": "Trump says only older chips should be sold to China",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOFEtNXdjeFdVNFdzb2gyY0R6cENORm5IRHNyNWY0RWVYcEY0SHRpQ2RTZEEzT0RnTnhWUVNHNV9qaVl0N1RjaExzcUtCdmFybmwzSUFKUG42T1ZLT19UTm1YbFdESzVtQWxQeHhaZWVBSXA3aGdSVDB4NTd6ZzdRS1NKbl80YVV4RlpiYXE3VVRFMXVvVktaQ2pwcDk?oc=5",
+     "source": "Reuters",
+     "kind": "presse",
+     "title_fr": "Trump déclare que seuls les puces plus anciennes devraient être vendues à la Chine",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-20T18:02:17.000Z",
      "title": "Trump says he plans to penalize companies that build data centers in other countries",
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOXzZtTzFabmQ1dkJOQ1VfVi1xbzdHeDR5dnJ2TzVCc2NIc3JrQVRJTXBGWVY5NFl1YUltSWExM013b18wZWlZbHZ1ZXRTa1Vja1pscFNZNE9raHlqc3FhRDBKNWFSZm1EQUdxMDJhSjRhY1ZPNkQ1ZGVqbHczcU5qNktxaFlfQUlGYThBYUROSzkwYjNTQlFta1lBQ29hbkU?oc=5",
      "source": "ABC News",
      "kind": "presse",
      "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises qui construisent des centres de données dans d'autres pays",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-20T18:02:17.000Z",
+     "title": "Trump says he plans to penalize US tech companies that build AI data centers in other countries",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOXzZtTzFabmQ1dkJOQ1VfVi1xbzdHeDR5dnJ2TzVCc2NIc3JrQVRJTXBGWVY5NFl1YUltSWExM013b18wZWlZbHZ1ZXRTa1Vja1pscFNZNE9raHlqc3FhRDBKNWFSZm1EQUdxMDJhSjRhY1ZPNkQ1ZGVqbHczcU5qNktxaFlfQUlGYThBYUROSzkwYjNTQlFta1lBQ29hbkXSAaQBQVVfeXFMUDl1ajJqM05vYkFNbENfbnZxMy11MG95RUgyV1JkbXkyTWw5c0VqbmZFNmY0Nk9iWklMd182aDZiaEtraTMybUY1Q3JRTDl0bmNOdW1MeFhOQ0w3VkFBUVdWMzI2Uk40YmtSQkRKZ0dZYVNBTnFkYkN6b3hsblNvdGNIR0NISzg0TEtvYVZLQ3ktQ0VpMG8yRkNNYU9YajkxVE5TSGU?oc=5",
+     "source": "ABC News",
+     "kind": "presse",
+     "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises technologiques américaines qui construisent des centres de données d'IA dans d'autres pays",
      "m": 2,
      "e": 1
     },
@@ -1578,26 +1598,6 @@
      "m": 1,
      "e": 1,
      "title_fr": "Trump met en garde contre des réglementations qui « étoufferaient » l'industrie de l'IA"
-    },
-    {
-     "ts": "2026-11-19T01:46:00.000Z",
-     "title": "Trump says he referred to ex-Nvidia boss Huang's situation 'briefly' in talk with Xi",
-     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZGVNM0xjMGtxNjE0aEFnRWU2QURJZy1TSzZGSkFXNVk0eTM0bkhOZWF4cXJjWGhyZEVfZjNuWjZxVVlqUWh5cDUzckE2QTdISldZeThRZG9sZTB3dzdIU1ZOX2RJV0FMQXJ4V2dKS0U3V0t1YWNpcXE4R2FuZVVRVFJaUUNnYmZkS1pQXzluQ25WaUROQ2NVQk5wNHpPa2NheXhUZFFiQ3o5cjNxcHFWUWRVS3FCNm1meTltX0xiMA?oc=5",
-     "source": "Reuters",
-     "kind": "presse",
-     "title_fr": "Trump affirme avoir évoqué \"brièvement\" la situation de l'ex-patron de Nvidia, Huang, lors de son entretien avec Xi",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-18T10:03:33.000Z",
-     "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
-     "source": "ABC News",
-     "kind": "presse",
-     "title_fr": "Le président Donald Trump annonce la création d'une force opérationnelle sur l'IA, la « Super Intelligence Force »",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -1684,6 +1684,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-20T15:52:58.000Z",
+     "title": "Trump says he discussed Jensen Huang with Xi; Bessent tells CNBC Nvidia chip export policy is unchanged",
+     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBZY0VGNGFCdGNHVmYycjVUbzFUR0FXcEJrMndDTnJLVDR5Z0VmMHVwS2dTbE5WZTdudnJLNzZJbXdXdXpqUUxCSmR6cUVFeHN4SDV2Ykk1MHlhWGRpNnBoeEpsNnRTempqSzhmdGduNmRQRjFRRExuTdIBfkFVX3lxTE56cjI2TnhQdVVjLVdxdXFYN044dU1UNlZjTFN3eEFYaWsxOERGMmF2S0FsRERhQnBhdWJQekd1dl9tYzFSM1lhVFRPLTVPdlBQdmZfRGppT3lfVFRoZUd2Y29selZXVkRUcUt3bEhMZW53dUlSSlJiLTFWY3FQUQ?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Trump déclare avoir discuté de Jensen Huang avec Xi ; Bessent indique à CNBC que la politique d'exportation des puces Nvidia reste inchangée",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T15:33:55.000Z",
      "title": "Bessent says Trump and Xi saw robust discussion on trade policy, AI",
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPY0EtUzdLOWktNkJxZU55MDJpamRQcXY0YmxjWW81ekQ3S2xYX3BNRjVPMmFuQV9ZQk9MemRVdGJydTg4OWo2aVJ5VTh6ejBlUUwtdXJpb2pJMHllVWdMdTUwdmh2ZVdUUmVzOFQ5ZncxcEdqSDRkN09XcnQxZXZCTVZWZm5JVThMUVNSMTVrb1ltc0hpTGcycG81T3MtM0U?oc=5",
@@ -1722,16 +1732,6 @@
      "title_fr": "La recherche d'un PDG par Nvidia critiquée suite à l'appel de Bessent",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-16T13:14:42.000Z",
-     "title": "Treasury Secretary Bessent calls for 'dramatic shakeup' at Nvidia",
-     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFB5OTJWQVFBM0w2ZVo1VjMtVTRWdFkzNW1jNi1jWkZCRXpGZ0JyenVUU3pNX2tnSTdMV3FtOEF4VnY4UkdoZkNxdmxJMGZSRTIwdndGSFFR?oc=5",
-     "source": "Fox News",
-     "kind": "presse",
-     "title_fr": "Le secrétaire au Trésor Bessent appelle à un « bouleversement spectaculaire » chez Nvidia",
-     "m": 1,
-     "e": 1
     }
    ]
   },
@@ -2051,22 +2051,21 @@
      "e": 0
     },
     {
+     "ts": "2026-11-17T00:08:00.000Z",
+     "title": "Bill Ackman Adds More To Netflix In Q3; Exits Hertz, Cuts Microsoft",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOTg0ZDc0Y0U3Mkd1dEx5aXdTSW5lajl2Nmw0QVBZbzAxTGxZYTd6M25vWkdrdjBSZmxzenBuNVJwMkdoWkEzZm4wYUExb0NPVkRSYThtZWgzc3c1WmdJaHY3cHlfb3B5R3g3TF9IOGZTcE45WGNPUlowZFZBTzJKQkpKdi1idVhVLTZ0YmhJekUzY2FyTWxKN1V3?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-14T15:05:02.000Z",
      "title": "Billionaire Bill Ackman Says There’s a Huge Disconnect in Wall Street’s Expectations for Amazon, Microsoft, Meta, and Alphabet",
      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNRW00MGFOMHNPb3BycnZCUldFUWE4UVMwSFdBV21USlVHSndCaDZ4QngwMU5VUEdQVTZhcG92eWszcFpfa3A2ZHUxbEcyeDRhbFRTM0FBdHYxZnJQbzdmNGRYTERnNDdOd3dfdlJBNVhhLU9zTWRaR0FvQ2pKV0QtVTRIVGRPbUhBc0NfUnJISHowM185NE5WcnBENHJha1U?oc=5",
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Le milliardaire Bill Ackman déclare qu'il y a un gouffre entre les attentes de Wall Street pour Amazon, Microsoft, Meta et Alphabet",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-12T22:38:17.000Z",
-     "title": "Bill Ackman says Microsoft's position is 'really, really strong' as Anthropic pushes into enterprise software",
-     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNNGxyVmFIZ0htSkxiTFBTemhQZEkyYmsxck9NZTIza0J6WEF6ZWVvSVFKQ2I3SktOc3VqNi01NVRUZ3FONU5LSWhkeUNjcFI5bFJXRTJLZkdheHdUUjllWHk3Qm9YZlNmVVU0dzZYN3JTY2NrSW9ld29HV3UwTWVEa003bDhLdEtFMkFZVHl1a3ktbm1CVGphb3F4UVViRWFwWjlIR3VlMjE3MTZkQnFZOGtHLWFNNzVoVDNuczNTM1JTY0RNTXhERHhGejZKa3FXbWt0QXUtYklzMGhPMzFLWDI1bHJhN1A3dlJFcnNQazlPZXpib0E3S2JyRDVNZw?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Bill Ackman déclare que la position de Microsoft est « vraiment, vraiment forte » alors qu'Anthropic se lance sur le marché des logiciels d'entreprise",
      "m": 1,
      "e": 0
     }
@@ -2082,6 +2081,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-20T17:11:33.000Z",
+     "title": "Michael Burry sells near-term Nvidia puts but keeps longer-dated short position",
+     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yMks3LTMzdkhuS21Wa25jM2NheHBHS042dW1aZThaOUYtZlNKc2VXWkk1XzVjbkNaVlIxT3liUUZwTTZEUGdHQmJXTUktVEhuRnBfSk1RWkQ3MDdPcm8tRFRtVXZ6Ykh6MXNsYTAwNWxaZHc?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "Michael Burry vend des options de vente Nvidia à court terme mais conserve une position the vendeur à plus long terme",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-20T14:59:00.000Z",
      "title": "'Big Short' Michael Burry says he 'tried to warn' about Nvidia, CoreWeave, Nebius stocks",
@@ -2149,16 +2158,6 @@
      "source": "Investor's Business Daily",
      "kind": "presse",
      "title_fr": "Michael Burry reste baissier sur Nvidia et le secteur de l'IA, et achète ces valeurs du logiciel",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-17T14:50:02.000Z",
-     "title": "Michael Burry Shorted Nvidia Stock. Is He About to Make Another Fortune?",
-     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNdU0wNEdPNnJobERkQ0hVV0NJcnRLOU9Gc005SlozbmlyVFJqZVFtaldQdENiVGQ3ZmpPOGdMZno0cU9WMmVTYlNsa3U5a1dsWEZlaENhQXVibzY4SHR6MktySXE0WXpFV0ZfVkFGME1reUgxLW9SV045ZlV3WTg5dG5QUFhReUtGRmluZE9IbE5aVUpWS0IzTEp0M3pWVFFN?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry a vendu à découvert l'action Nvidia. S'apprête-t-il à faire une autre fortune ?",
      "m": 1,
      "e": 0
     }
@@ -2249,14 +2248,24 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T22:25:05.000Z",
+     "title": "Broadcom falls 11% after analyst Ming-Chi Kuo says Google cut 2027 orders for its TPU chips",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQLWd5VFkyTDBLN0o0cnptNmgzUjBJZkgzYjVYU2Q0MU1aaTIzVWVad0FaemQ3SVNMY1F1VmRHVm9UQ3hkOWNtVlgwdHVBOU1ONzh3b1N3ZzJtZnJCU01YWU04V3NGMGt0VXpHZUVVNFh4WE90UmdnRVNHcmRHNzFuZGduY05OcUFuX3c1NHNKenNvZmFBOHdkWFVqTnY5Y0l3a2ZBemtjcFpUeU50TVlocw?oc=5",
+     "source": "MLQ.ai",
+     "kind": "presse",
+     "title_fr": "Broadcom chute de 11 % après que l'analyste Ming-Chi Kuo a déclaré que Google avait réduit ses commandes de puces TPU pour 2027",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-20T15:23:29.000Z",
      "title": "Google shifts 2027 AI chip orders from Broadcom to MediaTek, Ming-Chi Kuo says",
      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNN2hQQXRuRFNYb0Yxb2JfMWxXMVc5ZXJ1MzQ4X2l1VnZUc2p5VEYxRDIwOTNacWVla1c1LTJ5S0pzNEJWNEVkNzI2MkNqZWRKenFkejBNN3FaUG5UR0VIUlhoN2ItN3UtN3Q2XzVTR0tQWTc5bWhxNjBBRmdNVjJsTWp6czNQcXZ5VUtGdmgwMWZveTlRbEVGX3pzNjZXV2JmdWYyc1lzd050eFRMcHdFRTlyTlVWVmF4SFl6YlNMcDA5cXAyZ0dPUG1FUmlVZDY4M3hqWW15TQ?oc=5",
      "source": "TradingView",
      "kind": "presse",
      "title_fr": "Google déplace ses commandes de puces d'IA pour 2027 de Broadcom vers MediaTek, déclare Ming-Chi Kuo",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-13T01:04:37.000Z",
@@ -2578,7 +2587,8 @@
      "source": "Benzinga",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Bill Gates affirme qu'il existe une mesure du succès de l'IA tout en saluant le mot de l'année « Human » du Cambridge Dictionary"
     },
     {
      "ts": "2026-11-20T08:28:00.000Z",
@@ -3899,6 +3909,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T13:54:39.000Z",
+     "title": "Gary Gensler warns AI investment bubble may precede 2028 recession",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUy1YS09HQ0ZTTGFibjM3M1VvZFhRc09nbnRFWURoM3FnWjI3bjBSWFdCdHh2OFF1VkdJVGd3QUF0eGUtVDRkLUEtSWJQc1lZZ2pqcE91NlJGeXQyRTJJUEJDQld5d0tSOTJCdHdEQ2FYQi1VbDludnpXTG9kMmhUSk1BS1pISmdCZlFWaEFwTUVjdlJXS2kwRnNiTV9IeHdpV0Zvd2hBTHRwUUxfMlBfRmRLZC0?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Gary Gensler prévient qu'une bulle d'investissement dans l'IA pourrait précéder la récession de 2028",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T13:28:34.000Z",
      "title": "Former SEC Chairman Gary Gensler Says AI Is \"Already a Bubble,\" Set to Pop and Cause Economic Catastrophe",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcGlyQTFCVVM3dndJRnpqNTN1UE1xdU10U0l1TTNmS1pMZ2lJVzBhYWR6ODQ4MTQ3WTVNYmVyZ2wwbDJpbE1Meno0SThlSl83MGRNNUtXd1JXQkJZdWtlcGhSSlVaaXhJc01uLUtEUlZDT2k2eWdOR3VRMkFUbnJqYnBKSGlUdFZR?oc=5",
@@ -3967,16 +3987,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Gary Gensler s'attend à une récession de l'IA sept mois après le halving du Bitcoin (BTC)"
-    },
-    {
-     "ts": "2026-11-17T10:33:21.000Z",
-     "title": "Gary Gensler warns AI investment bubble may bur...",
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPdTRLUWRPTnFjVFZ4cE9DYnc2VjJhM1Zudzh5b1k0bjBJWElEelhnZjNtS1pMdWZsODJaVjB1NkJ0ZnM5NkdqSUpoZWJ3MHctY2h4UjhkX1lGaUZlOFJISVR6b0Fua19uaUo1Y2w0V3N6SExucExCOFUyaVVpSmgxU2EzcmJfUExjOTllSUtBOG9sWEVKeWQ1V0pqN2lHYmQ5cWVKMEFIX2ZNb0Yy?oc=5",
-     "source": "Pluang",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Gary Gensler avertit que la bulle de l'IA pourrait éclater..."
     }
    ]
   },
@@ -4039,6 +4049,16 @@
      "m": 1,
      "e": 0,
      "title_fr": "L'IA pourrait déplacer jusqu'à 20 % des emplois au cours de la prochaine décennie, déclare le PDG d'IBM, Arvind Krishna"
+    },
+    {
+     "ts": "2026-11-16T07:55:02.000Z",
+     "title": "Arvind Krishna says India must boost semiconductors and AI",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmZ4bkl5WG03VnJfMjExTkt4MndBZkZmV0F6cEJTWHRUTHU3LXNUa0RHOVBTT3h1QlhZN21kU2sxYjZvemJPdDJMdC1zTDgtelUtSXBjS05kVGZxQU5JVTZya1VvazBmdGprOEdjSTBkbml0SElMXzlKS01KMTk3ZFlocGQzRTF6SXozekJGajFjWlVmeWhFeHlIRzdLRzVlM29tTDM0cXhUQQ?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Arvind Krishna déclare que l'Inde doit stimuler les semi-conducteurs et l'IA",
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-16T06:57:09.000Z",

@@ -1,78 +1,68 @@
 {
  "v": 1,
- "day": "2026-11-20",
- "generated_at": "2026-11-20T07:37:05.104Z",
+ "day": "2026-11-21",
+ "generated_at": "2026-11-21T01:28:45.153Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Anthropic : montant levé en bourse",
-   "value": "81 Md$",
-   "sub": "L'introduction en bourse d'Anthropic constitue l'une des plus importantes de l'histoire, l'action ayant clôturé en hausse de 17 % par rapport à son prix d'introduction initial.",
+   "title": "Palo Alto Networks : acquisition",
+   "value": "4,5 milliards de dollars",
+   "sub": "L'opération permet à l'entreprise de s'étendre à l'IA d'entreprise en rachetant une startup spécialisée.",
    "ids": [
-    "24c1f016305b",
-    "90ec2d9d6b03"
+    "d076977e7671"
    ],
    "links": [
     {
-     "t": "The National",
-     "u": "https://www.thenationalnews.com/business/markets/2026/11/20/anthropic-share-price-today-ant-listing/"
-    },
-    {
-     "t": "The Hindu",
-     "u": "https://www.thehindu.com/business/anthropic-raises-81-billion-in-ipo-amid-ai-market-volatility/article71721392.ece"
+     "t": "EE Times",
+     "u": "https://www.eetimes.com/palo-alto-networks-expands-into-enterprise-ai-with-4-5b-deal/"
     }
    ],
    "conf": "moyenne",
    "scope": "day",
-   "ts": "2026-11-20T04:40:10.000Z",
-   "title_en": "Anthropic: IPO Amount Raised",
-   "value_en": "$81B",
-   "sub_en": "Anthropic's IPO is one of the largest in history, with the stock closing 17% higher than its initial offering price."
+   "ts": "2026-11-20T15:37:26.000Z",
+   "title_en": "Palo Alto Networks: Acquisition",
+   "value_en": "4.5 billion dollars",
+   "sub_en": "The transaction enables the company to expand into enterprise AI by acquiring a specialized startup."
   },
   {
-   "title": "Nvidia : engagements d'approvisionnement",
-   "value": "203 Md$",
-   "sub": "Les obligations d'achat à long terme de l'entreprise ont doublé pour l'exercice 2028, en raison de la forte demande pour la mémoire et les infrastructures liées à l'intelligence artificielle.",
+   "title": "Pragmatik Labs : valorisation",
+   "value": "5 milliards de dollars",
+   "sub": "La startup d'IA fondée par un ancien dirigeant d'Alibaba a doublé sa valorisation à l'occasion d'une levée de fonds.",
    "ids": [
-    "1627fa84d2ae"
+    "bfecfd9628f7"
    ],
    "links": [
     {
-     "t": "Digitimes",
-     "u": "https://www.digitimes.com/news/a20261118VL226/nvidia-hbm-memory-2028.html"
+     "t": "TechNode",
+     "u": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPN0pnTDdZeXFPaE5kLVVxcGtLbEp6ZVlNYW92Vld0a05tN3ZCRHF0SmhNRWVZeDUwV1ZEZExyc0pmeUVqYzJfMUVsblBoeGVnZmxmUGVFNzh5MzYzMHFPZTNTUnNVcTlMdThKcG85S2RjOUtWUVVUZFoyYy0zeFlLelJ4T1U4ZmN3OFl1Z3puQkszNm9lTXRqaUlrWHIwUUt1WlE?oc=5"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-20T14:14:22.000Z",
+   "title_en": "Pragmatik Labs: Valuation",
+   "value_en": "5 billion dollars",
+   "sub_en": "The AI startup founded by a former Alibaba executive doubled its valuation during a fundraising round."
+  },
+  {
+   "title": "Anthropic : capitalisation boursière",
+   "value": "1 500 milliards de dollars",
+   "sub": "L'entreprise a fait son entrée sur le Nasdaq avec une valorisation initiale record, se plaçant parmi les géants de l'industrie.",
+   "ids": [
+    "1a26151f6749"
+   ],
+   "links": [
+    {
+     "t": "The Verge IA",
+     "u": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq"
     }
    ],
    "conf": "moyenne",
    "scope": "week",
-   "ts": "2026-11-18T10:10:42.000Z",
-   "title_en": "Nvidia: Supply Commitments",
-   "value_en": "$203B",
-   "sub_en": "The company's long-term purchase obligations doubled for fiscal year 2028, driven by surging demand for memory and AI-related infrastructure."
-  },
-  {
-   "title": "Nvidia : garanties d'infrastructure IA",
-   "value": "118 Md$",
-   "sub": "Nvidia a proposé ce montant massif de garanties financières pour sécuriser la construction et le déploiement de nouvelles infrastructures d'intelligence artificielle.",
-   "ids": [
-    "b4b972b2c1c2",
-    "24884812a57e"
-   ],
-   "links": [
-    {
-     "t": "ET Datacenters",
-     "u": "https://news.google.com/rss/articles/CBMinAJBVV95cUxNRTZVV05VbnFPT09oZ1RpSWpzVmEwZ2MwR0lvTWpSM20xcHR5Q0tVZmsyMUFCMTZWcmdaU3hhanRZZEFoMTFNTFp3OFBLN211OHYxUG43bExzNHZFWnZiQ1BPQXhDR0ZDa2tOcl9VcnVsR2gxTDlzX1N1SVhhY3pVQnB1WGxCbEtlZlNVVC00Q2l6TTZhYVZnSm1tSGUtYVQya0Z5TUhQcFBmaER6OUFGWlhILVdJUHZpbEFvMmhVbmt0UFhxUWNCSXJVZFh2N2VlRjFjdV96TGJWYkwyMWt6WndKLVpIakc1MV9FQkFpUDdBSXBVVHpVTk9qWjV4VFZkSW9qR2Y3VjM5bTRfOG15TGRyZ1VNemZZeGlocNIB5AFBVV95cUxOZktlTmstRy1HOVBWdzlqNnhfRGtuYXoxZXZ0RGtpV2l3UWtjT1lyYUtIelotaEdjeFhhQk82TFNtT1llOVV5eGJwamRuYmdtZk5vV2kydk1RMlR2THEzNXI4em12cVRFS3dqZ0ZDTTdkTHZzT1ZFTDdYYjlOUTNMb0gyR3dnZlR6blZMOHU5NTkyd3czOTNzdHNnQ0tDVlFvVFJRNERVeTM1bVltaUVrSl8zaUp6U2Fyd0lLZEZ6VTl2bG5SSm9YUkdOVzlHUWUxTjZjU2pMQUJzWDVndHBZU0JNTjc?oc=5"
-    },
-    {
-     "t": "Data Center Knowledge",
-     "u": "https://www.datacenterknowledge.com/data-center-chips/nvidia-ai-surge-comes-with-118-billion-in-guarantees"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-19T02:36:12.000Z",
-   "title_en": "Nvidia: AI Infrastructure Guarantees",
-   "value_en": "$118B",
-   "sub_en": "Nvidia offered this massive amount in financial guarantees to secure the construction and deployment of new artificial intelligence infrastructures."
+   "ts": "2026-11-19T16:52:01.000Z",
+   "title_en": null,
+   "value_en": null,
+   "sub_en": null
   }
  ]
 }
