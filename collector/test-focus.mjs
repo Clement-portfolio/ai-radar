@@ -114,13 +114,13 @@ let calls = 0;
 const gen = (inp) => { calls++; return inp.map((x) => ({ i: x.i, head: "Titre " + ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf"][x.i], head_en: "Title " + ["alpha", "bravo", "charlie", "delta", "echo", "foxtrot", "golf"][x.i], bullets: [B("detail", `Détail ${["zulu", "yankee", "xray", "whisky", "victor", "uniform", "tango"][x.i]} sur les sites choisis, selon Orion.`, "Detail."), B("explication", `Explication ${["sierra", "romeo", "quebec", "papa", "oscar", "november", "mike"][x.i]} sur le calendrier annoncé.`, "Explanation.")] })); };
 const itemsA = items.filter((i) => !i.id.startsWith("f"));
 let r1 = await makeFocus({ items, now, prev: null, generate: gen, modelName: () => "m" });
-assert.equal(r1.regenerated, true); assert.equal(calls, 1); assert.equal(r1.doc.stories.length, 3, "exactement 3 actualités");
+assert.equal(r1.regenerated, true); const c1 = calls; assert.ok(c1 >= 3 && c1 <= 6, "une requête par histoire, arrêt dès 3 valides"); assert.equal(r1.doc.stories.length, 3, "exactement 3 actualités");
 assert.equal(r1.doc.v, 2); assert.equal(r1.doc.rules.stories, 3);
 assert.ok(r1.doc.stories.every((s) => s.ids.length >= 1 && s.bullets.length >= 2 && s.bullets.length <= 4 && s.bullets_en.length === s.bullets.length && s.kinds.length === s.bullets.length && s.ts));
 let r2 = await makeFocus({ items, now: now + H, prev: r1.doc, generate: gen });
-assert.equal(r2.regenerated, false); assert.equal(calls, 1, "mêmes histoires : aucun nouvel appel");
+assert.equal(r2.regenerated, false); assert.equal(calls, c1, "mêmes histoires : aucun nouvel appel");
 let r3 = await makeFocus({ items, now: now + 7 * H, prev: r1.doc, generate: gen });
-assert.equal(r3.regenerated, true, "plus de 6 h : régénéré"); assert.equal(calls, 2);
+assert.equal(r3.regenerated, true, "plus de 6 h : régénéré"); assert.ok(calls > c1);
 const items2 = [...items, mk("z", 0.5, "Événement majeur tout neuf sur les centres de données", "Un événement.", { category: "energie" }), mk("z2", 0.4, "Événement majeur tout neuf pour les centres de données", "Un événement.", { category: "energie" })];
 let r4 = await makeFocus({ items: items2, now, prev: r1.doc, generate: gen });
 assert.equal(r4.regenerated, true, "nouvelle histoire : régénéré");
@@ -129,16 +129,16 @@ assert.equal(r5.regenerated, false); assert.equal(r5.doc.stories.length, 3, "Gem
 const r6 = await makeFocus({ items, now: now + 8 * H, prev: r1.doc, generate: () => [{ i: 1, head: "Titre", head_en: "", bullets: [B("detail", "Gain de 999 %", ""), B("detail", "Autre 888 %", "")] }] });
 assert.equal(r6.regenerated, false); assert.match(r6.reason, /rejeté/);
 // moins de 3 histoires distinctes valides : on garde l'ancien briefing à 3 histoires
-const r8 = await makeFocus({ items, now: now + 8 * H, prev: r1.doc, generate: (inp) => gen(inp.slice(0, 1)) });
+const r8 = await makeFocus({ items, now: now + 8 * H, prev: r1.doc, generate: (inp) => (inp[0].i === 1 ? gen(inp) : []) });
 assert.equal(r8.regenerated, false); assert.match(r8.reason, /moins de 3/); assert.equal(r8.doc.stories.length, 3);
 // sans ancien briefing, on publie ce qui existe plutôt que rien
-const r9 = await makeFocus({ items, now, prev: null, generate: (inp) => gen(inp.slice(0, 2)) });
+const r9 = await makeFocus({ items, now, prev: null, generate: (inp) => (inp[0].i <= 2 ? gen(inp) : []) });
 assert.equal(r9.regenerated, true); assert.equal(r9.doc.stories.length, 2);
 // 2 histoires valides et un briefing de plus de 18 h : on publie les 2 fraîches plutôt que 3 de la veille
-const r11 = await makeFocus({ items, now: now + 20 * H, prev: r1.doc, generate: (inp) => gen(inp.slice(0, 2)) });
+const r11 = await makeFocus({ items, now: now + 20 * H, prev: r1.doc, generate: (inp) => (inp[0].i <= 2 ? gen(inp) : []) });
 assert.equal(r11.regenerated, true); assert.equal(r11.doc.stories.length, 2, "briefing périmé remplacé par 2 histoires");
 // le modèle renvoie plus d'histoires que nécessaire : les 3 premières valides sont retenues, les suivantes servent de réserve
-const r12 = await makeFocus({ items, now: now + 20 * H, prev: r1.doc, generate: (inp) => { const out = gen(inp); return Array.isArray(out) ? [{ i: out[0].i, head: "", head_en: "", bullets: [] }, ...out] : out; } });
+const r12 = await makeFocus({ items, now: now + 20 * H, prev: r1.doc, generate: (inp) => (inp[0].i === 1 ? [{ i: 1, head: "", head_en: "", bullets: [] }] : gen(inp)) });
 assert.equal(r12.doc.stories.length, 3, "une histoire invalide ne bloque plus le briefing");
 assert.ok(Array.isArray(r12.diag) && r12.diag.length >= 1, "raisons de rejet conservées");
 const oldDoc = { items: [{ id: "a", why: "ancien format" }] };

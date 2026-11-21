@@ -76,7 +76,7 @@ export function relatedFor(story, items, now, max = 3) {
   return out.sort((a, b) => a.ts.localeCompare(b.ts));
 }
 
-export const FOCUS_SYSTEM = `Tu rédiges le « Briefing du jour » d'un site d'actualité sur l'intelligence artificielle et son économie, pour un lecteur non spécialiste qui lit vite. On te donne jusqu'à 6 histoires numérotées (i) ; chacune regroupe des articles récents sur le même sujet (articles : a, title, summary, source, date) et parfois des articles plus anciens (background : j).
+export const FOCUS_SYSTEM = `Tu rédiges le « Briefing du jour » d'un site d'actualité sur l'intelligence artificielle et son économie, pour un lecteur non spécialiste qui lit vite. On te donne jusqu'à 6 histoires numérotées (i) ; chacune regroupe des articles récents sur le même sujet (articles : a, title, summary, why = pourquoi c'est important, déjà rédigé, source, date) et parfois des articles plus anciens (background : j).
 ÉTAPE 1. Classe les histoires de la plus importante à la moins importante et renvoie les 5 meilleures (toutes s'il y en a moins), qui racontent des événements DIFFÉRENTS. Deux histoires du même dossier comptent pour une seule (par exemple une mesure et la réaction à cette mesure, ou la même affaire vue sous deux angles) : n'en garde qu'une et ignore l'autre. Le site n'en publiera que 3, les premières qui sont valides : les suivantes servent de réserve.
 ÉTAPE 2. Pour chaque histoire renvoyée, renvoie, en français :
 - head : le titre, une phrase d'actualité claire, 110 caractères maximum, sans point final. C'est lui, et lui seul, qui dit l'événement.
@@ -134,7 +134,7 @@ export function validateStories(arr, inputs, diag = []) {
     const inp = inputs.find((x) => x.i === Number(r?.i));
     if (!inp) { diag.push("numéro d'histoire inconnu"); continue; }
     const bg = inp.background || [];
-    const own = inp.articles.map((a) => `${a.title} ${a.summary}`).join(" ");
+    const own = inp.articles.map((a) => `${a.title} ${a.summary} ${a.why || ""}`).join(" ");
     const pool = new Set(digitsOf(own + " " + bg.map((b) => `${b.title} ${b.summary}`).join(" ")));
     const okText = (x) => !hasNumberWords(x) && !foreignScript(x) && digitsOf(x).every((d) => pool.has(d));
     const head = clean(r.head);
@@ -197,15 +197,25 @@ export async function makeFocus({ items, now, prev, generate, modelName }) {
   if (!generate) return { doc: base, regenerated: false, reason: "Gemini indisponible : dernier briefing conservé" };
   const inputs = stories.map((s, k) => ({
     i: k + 1,
-    articles: s.items.slice(0, 5).map((a, m) => ({ a: m + 1, title: a.title, summary: a.summary || "", source: a.source, date: a.ts.slice(0, 10) })),
+    articles: s.items.slice(0, 8).map((a, m) => ({ a: m + 1, title: a.title, summary: a.summary || "", why: a.why || "", source: a.source, date: a.ts.slice(0, 10) })),
     background: relatedFor(s, items, now).map((o, m) => ({ j: m + 1, id: o.id, date: o.ts.slice(0, 10), title: o.title, summary: o.summary || "", source: o.source })),
   }));
-  let res = null;
-  try { res = await generate(inputs.map((x) => ({ ...x, background: x.background.map(({ id, ...b }) => b) }))); } catch { res = null; }
-  const diag = [];
-  const valid = validateStories(res, inputs, diag);
-  if (!valid) return { doc: base, regenerated: false, diag, reason: res ? "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || (Array.isArray(res) ? "réponse vide" : "réponse invalide")) : "Gemini indisponible : dernier briefing conservé" };
-  const keep = selectDistinct(valid, stories, FOCUS_RULES.stories, diag);
+  // une requête par histoire, dans l'ordre : le modèle ne choisit plus, chaque histoire est jugée seule ; on s'arrête dès que 3 sont valides et distinctes
+  const diag = [], valid = [];
+  let keep = [], answered = false;
+  for (const inp of inputs) {
+    let res = null;
+    try { res = await generate([{ ...inp, background: inp.background.map(({ id, ...b }) => b) }]); } catch { res = null; }
+    if (!res) { if (!answered) break; continue; }
+    answered = true;
+    const v = validateStories(res, [inp], diag);
+    if (v) valid.push(...v);
+    keep = selectDistinct(valid, stories, FOCUS_RULES.stories, []);
+    if (keep.length >= FOCUS_RULES.stories) break;
+  }
+  keep = selectDistinct(valid, stories, FOCUS_RULES.stories, diag);
+  if (!answered) return { doc: base, regenerated: false, diag, reason: "Gemini indisponible : dernier briefing conservé" };
+  if (!valid.length) return { doc: base, regenerated: false, diag, reason: "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || "réponse vide") };
   // un briefing complet encore récent est conservé ; au-delà de 18 h, 2 histoires fraîches valent mieux que 3 histoires de la veille
   if (keep.length < FOCUS_RULES.stories && good && !(keep.length >= 2 && age > 18 * H)) return { doc: base, regenerated: false, diag, reason: `moins de ${FOCUS_RULES.stories} histoires distinctes et valides (${keep.length}) : dernier briefing conservé` };
   if (!keep.length) return { doc: base, regenerated: false, diag, reason: "briefing rejeté : " + (diag.slice(0, 3).join(" ; ") || "aucune histoire distincte") };
