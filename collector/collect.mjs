@@ -602,7 +602,7 @@ export async function run(opts = {}) {
   const byId = new Map();
   for (const it of [...feedDoc.items, ...added]) byId.set(it.id, it);
   for (const id of dropIds) byId.delete(id);
-  const keep = [...byId.values()].filter((it) => nowMs - new Date(it.ts).getTime() < (it.importance >= 3 ? 180 : it.importance === 2 ? 120 : 45) * 86400000)
+  const keep = [...byId.values()].filter((it) => !isHubPage({ title: it.title, url: it.url })).filter((it) => nowMs - new Date(it.ts).getTime() < (it.importance >= 3 ? 180 : it.importance === 2 ? 120 : 45) * 86400000)
     .sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 1500);
 
   // Aujourd'hui : 5 puces « À retenir » (focus.json)
