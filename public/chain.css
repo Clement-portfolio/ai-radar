@@ -488,3 +488,7 @@ details.nwd>summary{font-size:22px}
 @media(max-width:900px){.dock button{min-width:72px;padding:10px 12px;font-size:12px}}
 
 .lb{width:198px!important}
+
+.fiche .tcol .mb .tr0{min-height:118px}
+.fiche .tcol .tl{flex:1}.fiche .tcol .tv{margin:0}
+.fiche .tcol .sf .why1{-webkit-line-clamp:4;font-size:12px;line-height:1.45;color:var(--mute)}
