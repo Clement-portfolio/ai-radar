@@ -859,3 +859,4 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .frow .chip.insl{text-decoration:none;gap:12px;padding:0 4px 0 16px}
 .insl .insa{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;flex:none;border-radius:50%;background:#fff;color:var(--ink)}
 .insl:hover .insa{transform:scale(1.06)}.insl .insa{transition:transform .2s var(--ease)}
+.frow .chip.insl{margin-right:-4px}

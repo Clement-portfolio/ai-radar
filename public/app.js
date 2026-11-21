@@ -3,7 +3,7 @@
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
-var TABS=["une","actualites","recherche","marche","infrastructure","carte","acteurs","methode"];
+var TABS=["une","actualites","recherche","marche","infrastructure","acteurs","carte","methode"];
 var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
@@ -798,7 +798,7 @@ function rResearch(){
   var panel="";
   if(S.rfo==="dom")panel='<div class="fpanel"><button class="chip'+(S.rd==="ALL"?' on':'')+'" data-rd="ALL">Tous</button>'+doms.map(function(k){var n=all.filter(function(x){return x.domain===k}).length;return n?'<button class="chip'+(S.rd===k?' on':'')+'" data-rd="'+k+'">'+esc(RDOM[k])+' ('+n+')</button>':""}).join("")+'</div>';
   if(S.rfo==="kind")panel='<div class="fpanel"><button class="chip'+(S.rk==="ALL"?' on':'')+'" data-rk="ALL">Toutes</button>'+kinds.map(function(k){var n=all.filter(function(x){return x.kind===k}).length;return n?'<button class="chip'+(S.rk===k?' on':'')+'" data-rk="'+k+'">'+esc(RKIND[k])+' ('+n+')</button>':""}).join("")+'</div>';
-  var h='<h2 class="sec">Recherche</h2><p class="lede">Les percées de l\'IA dans tous les domaines : revues scientifiques, préprints, labos de modèles, recherche des hyperscalers et agences. De la plus récente à la plus ancienne ; les résumés sont tirés du seul résumé publié par la source.</p>'+
+  var h='<h2 class="sec">Recherche</h2><p class="lede">Les percées de l\'IA dans tous les domaines : revues scientifiques, préprints, labos de modèles, recherche des hyperscalers et agences.</p>'+
    '<div class="toolbar frow"><button class="chip fb'+(S.rfo==="dom"?' open':'')+(S.rd!=="ALL"?' set':'')+'" data-rfo="dom">Domaine : '+esc(dl)+' <span>▾</span></button><button class="chip fb'+(S.rfo==="kind"?' open':'')+(S.rk!=="ALL"?' set':'')+'" data-rfo="kind">Source : '+esc(kl)+' <span>▾</span></button><span class="sp"></span><button class="chip'+(S.rtop?' on':'')+'" data-rtop="1">Essentiel seulement</button></div>'+panel;
   if(!R)h+='<div class="empty">Données en cours de collecte : le premier passage a lieu dans les prochaines heures.</div>';
   else if(!items.length)h+='<div class="empty">Aucune entrée pour ces filtres.</div>';
