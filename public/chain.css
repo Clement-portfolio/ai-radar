@@ -492,3 +492,8 @@ details.nwd>summary{font-size:22px}
 .fiche .tcol .mb .tr0{min-height:118px}
 .fiche .tcol .tl{flex:1}.fiche .tcol .tv{margin:0}
 .fiche .tcol .sf .why1{-webkit-line-clamp:4;font-size:12px;line-height:1.45;color:var(--mute)}
+
+.dock{max-width:calc(100% - 24px);overflow-x:auto;scrollbar-width:none}.dock::-webkit-scrollbar{display:none}
+.dock button{flex:none;white-space:nowrap}
+
+@media(max-width:900px){.flt .lay{flex:1 1 100%}.flt .srch{flex:1 1 100%}}
