@@ -114,13 +114,14 @@ function rUne(){
   var H=((S.voix&&S.voix.hot)||[]).slice(0,3);
   if(H.length)h+='<section class="tile dark">'+tHead('Insiders',en?'What they say':'Ce qu’ils disent')+'<div class="tgrid3">'+H.map(function(n){
     return'<figure class="tcard q"><blockquote>'+esc(ctt(!en&&n.title_fr?n.title_fr:n.title))+'</blockquote><figcaption class="tfoot"><span class="who"><b>'+esc(n.n)+'</b><span>'+esc(n.role)+' · '+esc(ago(n.ts))+'</span></span>'+arrowA(link(n.url),en?'Open':'Voir la déclaration',true)+'</figcaption></figure>';
-  }).join("")+'</div>'+cta("acteurs/voix",en?'See Insiders':'Voir les Insiders')+'</section>';
-  h+=xHome(en)+pHome(en);
+  }).join("")+'</div>'+cta("acteurs/voix",en?'See statements':'Voir les déclarations')+'</section>';
+  h+=xHome(en);
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
-  if(fs.length)h+='<section class="tile">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
+  if(fs.length)h+='<section class="tile dark">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
     var ok=en&&f.title_en&&f.value_en;
     return'<div class="tnum"><span class="v">'+esc(ok?f.value_en:f.value)+'</span><span class="l">'+esc(ok?f.title_en:f.title)+'</span><span class="s">'+esc(figScope(f.ts))+' · '+esc(fmtD(f.ts))+'</span></div>';
   }).join("")+'</div>'+cta("marche",en?'See the market':'Voir le marché')+'</section>';
+  h+=pHome(en);
   var L=((S.layers&&S.layers.layers)||[]).filter(function(l){return l.tension!=null}).slice().sort(function(a,b){return b.tension-a.tension}).slice(0,3);
   h+='<div class="duo">';
   h+='<section class="tile half">'+tHead('Infrastructure',en?'Where it’s tight':'Là où ça coince')+'<div class="tlist2">'+L.map(function(l){return'<div class="tli"><span>'+esc(tx(l,'name'))+'</span><b class="t'+(l.tension>=8?'hi':l.tension>=6?'mid':'lo')+'">'+l.tension+'/10</b></div>'}).join("")+'<span class="tnote">'+(en?'Estimated tension, 0 to 10 (editorial).':'Tension estimée de 0 à 10, estimation éditoriale.')+'</span></div>'+
@@ -855,10 +856,10 @@ function xHome(en){
   var all=(S.x&&S.x.items)||[];if(!all.length)return"";
   var now=Date.now(),seen={},pick=all.filter(function(x){return Date.parse(x.ts)>=now-7*864e5&&!x.pending}).map(function(x){return{x:x,sc:(x.imp||1)*10+(x.media===0?2:0)+Math.min(3,Math.log10((x.eng||0)+1))-(now-Date.parse(x.ts))/864e5}}).sort(function(a,b){return b.sc-a.sc}).map(function(o){return o.x}).filter(function(x){var k=x.handle||x.id;if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
   if(!pick.length)return"";
-  return'<section class="tile">'+tHead(en?'On X':'Sur X',en?'What stands out on the platform':'Ce qui ressort sur la plateforme')+'<div class="tgrid3">'+pick.map(function(it){
+  return'<section class="tile">'+tHead(en?'Insiders on X':'Insiders sur X',en?'What stands out on the platform':'Ce qui ressort sur la plateforme')+'<div class="tgrid3">'+pick.map(function(it){
     var w=xWho(it);
     return'<article class="tcard"><span class="kick">'+esc(w.name)+'</span><h3>'+esc(xTitle(it))+'</h3><div class="tfoot"><span>'+esc((w.role?w.role+' · ':'')+ago(it.ts))+'</span>'+arrowA(link(it.url),en?'See the post on X':'Voir le post sur X',true)+'</div></article>';
-  }).join("")+'</div>'+cta("acteurs/voix/x",en?'See On X':'Voir Sur X')+'</section>';
+  }).join("")+'</div>'+cta("acteurs/voix/x",en?'See Insiders on X':'Voir Insiders sur X')+'</section>';
 }
 /* Accueil : probabilités des prochains événements du calendrier (paris Polymarket), un anneau par événement */
 function pRing(p){
@@ -871,7 +872,7 @@ function pHome(en){
   if(!cat.length)return"";
   return'<section class="tile">'+tHead(en?'Calendar':'Calendrier',en?'The odds to watch':'Les probabilités à suivre')+'<div class="tgrid3">'+cat.map(function(c){
     var pr=c.probs.slice().sort(function(a,b){return b.p-a.p}),top=pr[0],sec=pr[1];
-    return'<article class="tcard tprob">'+pRing(top.p)+'<span class="kick">'+esc(c.kind||"")+' · '+esc(c.label)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(top.label)+(sec?'<br><span class="small mute">'+esc(sec.label)+' : '+esc(pctTxt(sec.p))+'</span>':'')+'</p>'+(c.probs_at?'<span class="small mute">'+(en?'Polymarket bet on ':'Pari Polymarket au ')+esc(fmtD(c.probs_at))+'</span>':'')+'</article>';
+    return'<article class="tcard tprob">'+pRing(top.p)+'<span class="kick">'+esc(({"Introduction en Bourse":"IPO"})[c.kind]||c.kind||"")+' · '+esc(c.label)+'</span><h3>'+esc(c.title)+'</h3><p>'+esc(top.label)+(sec?'<br><span class="small mute">'+esc(sec.label)+' : '+esc(pctTxt(sec.p))+'</span>':'')+'</p>'+(c.probs_at?'<span class="small mute">'+(en?'Polymarket bet on ':'Pari Polymarket au ')+esc(fmtD(c.probs_at))+'</span>':'')+'</article>';
   }).join("")+'</div>'+cta("marche/calendrier",en?'See the calendar':'Voir le calendrier')+'</section>';
 }
 function xTitle(it){var t=tx(it,"title");return t||String(it.text||"").slice(0,160)}
