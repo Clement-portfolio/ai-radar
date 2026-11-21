@@ -100,7 +100,7 @@ function buildFound(){
  return h;
 }
 var FND_L=[["euv",[-330,-65,80,0],0],["tsmc",[115,-65,64,0],1],["fnd",[150,84,35,0],1]];
-var FND_C=[["ASML · fabrique les machines",[-265,190,1]],["TSMC et les autres · gravent les puces",[195,190,1]]];
+var FND_C=[["Équipementiers",[-265,190,1]],["Fonderies",[195,190,1]]];
 function buildHall(){
  var h="";
  h+=G("floor","floor");
@@ -151,23 +151,23 @@ function buildPkg(){
 }
 var PKG_L=[["cold",[0,0,52,4]],["dies",[-42,-30,33,3]],["fab",[42,30,33,3]],["hbm",[116,-70,34,3]],["wires",[-92,40,24,2]],["ip",[0,100,24,2]],["cpo",[156,-50,30,2]],["sub",[0,-170,18,1]],["pcb",[-160,160,8,0]],["power",[-250,0,8,0]],["aec",[290,-100,24,1]],["mod",[285,100,32,1]],["las",[272,100,38,2]],["sw2",[500,0,12,1]]];
 var LV=[
+ {id:"fonderies",name:"Fonderies",site:"fonderies",ww:900,cx:0,cy:0,zc:30,rx:56,rz:-24,build:buildFound,L:FND_L,caps:FND_C,lvZoom:""},
  {id:"energie",name:"Énergie",site:"energie",ww:680,cx:-5,cy:0,zc:30,rx:56,rz:-28,build:buildEnergie,L:ENERGIE_L,caps:ENERGIE_C,lvZoom:""},
  {id:"datacenter",name:"Datacenters",site:"datacenter",ww:780,cx:20,cy:20,zc:30,rx:56,rz:-28,build:buildDC,L:DC_L,zi:4,lvZoom:"Zoomer : Salle ▸"},
  {id:"modeles",name:"Modèles",site:"modeles",ww:700,cx:-55,cy:0,zc:30,rx:56,rz:-28,build:buildModeles,L:MOD_L,caps:MOD_C,lvZoom:""},
- {id:"fonderies",name:"Fonderies",site:"fonderies",ww:900,cx:0,cy:0,zc:30,rx:56,rz:-24,build:buildFound,L:FND_L,caps:FND_C,lvZoom:""},
- {id:"hall",name:"Salle",site:"datacenter",parent:1,zi:5,ww:610,cx:-10,cy:10,zc:50,rx:56,rz:-26,build:buildHall,L:HALL_L,lvZoom:"Zoomer : Module ▸"},
+ {id:"hall",name:"Salle",site:"datacenter",parent:2,zi:5,ww:610,cx:-10,cy:10,zc:50,rx:56,rz:-26,build:buildHall,L:HALL_L,lvZoom:"Zoomer : Module ▸"},
  {id:"pkg",name:"Module",site:"datacenter",parent:4,ww:820,cx:125,cy:70,zc:null,rx:58,rz:-35,build:buildPkg,L:PKG_L,lvZoom:""}
 ];
 var SITES=[
+ {id:"fonderies",n:"Fonderies",ly:"fonderie",b:"ASML construit les machines de lithographie ; TSMC et les autres fonderies gravent les puces avec elles.",ic:'<rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>'},
  {id:"energie",n:"Énergie",ly:"energie",b:"Le courant qui alimente les datacenters : turbines à gaz sur site, transformateurs et, plus tard, petits réacteurs.",ic:'<path d="M13 2 4 14h7l-1 8 9-12h-7z"/>'},
  {id:"datacenter",n:"Datacenters",ly:"datacenters",b:"Le bâtiment, son refroidissement et la fibre qui en sort. Double-cliquez le bâtiment pour entrer dans la salle.",ic:'<rect x="2" y="3" width="20" height="8" rx="2"/><rect x="2" y="13" width="20" height="8" rx="2"/><path d="M6 7h.01M6 17h.01"/>'},
- {id:"modeles",n:"Modèles",ly:"modeles",b:"Les modèles tournent dans les datacenters ; les applications captent les usagers et l'argent.",ic:'<path d="M11 3l1.9 5.6L18.5 10.5l-5.6 1.9L11 18l-1.9-5.6L3.5 10.5l5.6-1.9z"/><path d="M19 15l.7 2.1 2.1.7-2.1.7L19 20.6l-.7-2.1-2.1-.7 2.1-.7z"/>'},
- {id:"fonderies",n:"Fonderies",ly:"fonderie",b:"ASML construit les machines de lithographie ; TSMC et les autres fonderies gravent les puces avec elles.",ic:'<rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/>'}
+ {id:"modeles",n:"Modèles",ly:"modeles",b:"Les modèles tournent dans les datacenters ; les applications captent les usagers et l'argent.",ic:'<path d="M11 3l1.9 5.6L18.5 10.5l-5.6 1.9L11 18l-1.9-5.6L3.5 10.5l5.6-1.9z"/><path d="M19 15l.7 2.1 2.1.7-2.1.7L19 20.6l-.7-2.1-2.1-.7 2.1-.7z"/>'}
 ];
 function siteOf(i){for(var k=0;k<SITES.length;k++)if(SITES[k].id===LV[i].site)return k;return 0}
 function LVN(i){var v=LV[i];return v.parent!=null?SITES[siteOf(i)].n+" › "+v.name:v.name}
 function nearest(lv){var same=lv.filter(function(i){return LV[i].site===LV[cur].site});return same.length?same[0]:lv[0]}
-var cur=0,sel={part:null,block:null},gap=60,sg=9,moved=0;
+var cur=0,sel={part:null,block:null},gap=0,sg=0,moved=0;
 var sc=document.getElementById("sc"),ly=document.getElementById("ly"),sh=document.getElementById("shd"),dk=document.getElementById("dock"),bz=document.getElementById("bz"),exw=document.getElementById("bx");
 function tp(part){var ti=tensInfo(part);return ti?'<i class="lt '+cls(ti.t)+'" title="Tension '+ti.t+'/10">'+ti.t+'</i>':""}
 function init(){
@@ -179,17 +179,16 @@ function init(){
   sc.appendChild(el);v.el=el;v.wd=el.querySelector(".world");v.st=el.querySelector(".stack");v.ov=el.querySelector(".ov");v.sv=el.querySelector("svg");
  });
  BUILDING=false;
- dk.innerHTML=SITES.map(function(S,k){var l=LY[S.ly],t=l&&l.t!=null?l.t:null;return'<button type="button" data-site="'+k+'"'+(t!=null?' title="Tension '+t+'/10 · '+tlab(t)+'"':'')+'>'+(t!=null?'<i class="dt '+cls(t)+'"></i>':'')+'<svg viewBox="0 0 24 24" aria-hidden="true">'+S.ic+'</svg><span>'+esc(S.n)+'</span></button>'}).join("");
+ dk.innerHTML=SITES.map(function(S,k){var l=LY[S.ly],t=l&&l.t!=null?l.t:null;return'<button type="button" data-site="'+k+'">'+'<span>'+esc(S.n)+'</span></button>'}).join("");
  buildIndex();
+ fitAll();
  go(0,true);
 }
 function head(){
  var v=LV[cur],S=SITES[siteOf(cur)],deep=v.parent!=null,chain=[],k;
  for(k=cur;k!=null;k=LV[k].parent)chain.unshift(k);
  var crumb=deep?'<div class="crumb">'+chain.map(function(j,n){var nm=n===0?S.n:LV[j].name;return n===chain.length-1?'<b>'+esc(nm)+'</b>':'<button type="button" data-lv="'+j+'">'+esc(nm)+'</button>'}).join("<span>›</span>")+'</div>':"";
- var l=LY[S.ly],tn=!deep&&l&&l.t!=null;
- sh.innerHTML=crumb+'<h2>'+esc(deep?v.name:S.n)+'</h2><p>'+esc(deep?(cur===4?"Les racks de calcul, les liaisons et la boucle d'eau d'une salle.":"Un module de calcul : puce, mémoire, assemblage et liaisons."):S.b)+'</p>'+
-  (tn?'<div class="shm"><i class="tdot '+cls(l.t)+'"></i>Tension '+l.t+'/10 · '+tlab(l.t)+'</div>'+(l.key?'<p class="shk">'+esc(l.key)+'</p>':''):'');
+ sh.innerHTML=crumb+'<h2>'+esc(deep?v.name:S.n)+'</h2>';
  dk.querySelectorAll("button").forEach(function(b,i){b.classList.toggle("on",i===siteOf(cur))});
 }
 function go(i,quiet){
@@ -207,14 +206,28 @@ function chips(){
 function view(){
  var v=LV[cur],W=sc.clientWidth;
  LV.forEach(function(u){
-  var S=Math.min(u.parent!=null?1.1:1.35,Math.max(.4,(W-(W<900?20:400))/u.ww));
-  u.wd.style.setProperty("--rx",u.rx+"deg");u.wd.style.setProperty("--rz",u.rz+"deg");u.wd.style.setProperty("--s",S);
+  var S=u.fk!=null?u.fk:Math.min(u.parent!=null?1.1:1.35,Math.max(.4,(W-(W<900?20:400))/u.ww));
+  u.wd.style.setProperty("--rx",u.rx+"deg");u.wd.style.setProperty("--rz",u.rz+"deg");u.wd.style.setProperty("--s",S);u.wd.style.setProperty("--ox",(u.ox||0)+"px");u.wd.style.setProperty("--oy",(u.oy||0)+"px");
   u.st.style.setProperty("--gap",gap+"px");u.st.style.setProperty("--sg",sg+"px");
   var zc=u.zc==null?-(2*gap+20):-u.zc;
   u.st.style.transform="translate3d("+(-u.cx)+"px,"+(-u.cy)+"px,"+zc+"px)";
  });
  anim();
 }
+function fitLv(u){
+ var W=sc.clientWidth,H=sc.clientHeight,r=sc.getBoundingClientRect(),m=W<900,side=m?14:195,top=u.parent!=null?104:84,bot=H-(m?66:108),els=u.st.querySelectorAll(".bx:not(.ground):not(.floor),.fl");
+ function bb(){var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;els.forEach(function(e){var q=e.getBoundingClientRect();if(!q.width&&!q.height)return;x0=Math.min(x0,q.left);y0=Math.min(y0,q.top);x1=Math.max(x1,q.right);y1=Math.max(y1,q.bottom)});return{w:x1-x0,h:y1-y0,cx:(x0+x1)/2,cy:(y0+y1)/2}}
+ function put(){u.wd.style.setProperty("--s",u.fk);u.wd.style.setProperty("--ox",u.ox+"px");u.wd.style.setProperty("--oy",u.oy+"px")}
+ u.rx=u.rx0;u.rz=u.rz0;u.ox=0;u.oy=0;if(u.fk==null)u.fk=.8;
+ u.wd.style.setProperty("--rx",u.rx+"deg");u.wd.style.setProperty("--rz",u.rz+"deg");
+ u.st.style.setProperty("--gap",gap+"px");u.st.style.setProperty("--sg",sg+"px");u.st.style.transform="translate3d("+(-u.cx)+"px,"+(-u.cy)+"px,"+(u.zc==null?-(2*gap+20):-u.zc)+"px)";
+ var tx=r.left+W/2,ty=r.top+(top+bot)/2;
+ for(var it=0;it<3;it++){put();var b=bb();if(!(b.w>0&&b.h>0))break;
+  if(it<2){var f=Math.min((W-2*side)/b.w,(bot-top)/b.h);u.fk=Math.max(.25,Math.min(2,u.fk*Math.max(.5,Math.min(1.8,f))*.97))}
+  u.ox+=tx-b.cx;u.oy+=ty-b.cy}
+ put();
+}
+function fitAll(){sc.classList.add("nt");LV.forEach(function(u){u.fk=null;fitLv(u)});void sc.offsetWidth;sc.classList.remove("nt");view()}
 var raf=0,until=0;
 function anim(){until=performance.now()+950;if(!raf)raf=requestAnimationFrame(tick)}
 function tick(){place();if(performance.now()<until)raf=requestAnimationFrame(tick);else raf=0}
@@ -224,9 +237,9 @@ function place(){
  v.L.forEach(function(l,i){var a=v.st.querySelector('.an[data-i="'+i+'"]').getBoundingClientRect();P.push({i:i,ax:a.left+a.width/2-r.left,ay:a.top+a.height/2-r.top,sd:l[2]})});
  var auto=P.some(function(o){return o.sd==null}),g0,g1,lines="";
  if(auto){P.sort(function(a,b){return a.ax-b.ax});var half=Math.ceil(P.length/2);g0=P.slice(0,half);g1=P.slice(half)}else{g0=P.filter(function(o){return!o.sd});g1=P.filter(function(o){return o.sd})}
- [[g0,0,0],[g1,W-176,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?40:(v.parent!=null?110:158);
+ [[g0,0,0],[g1,W-198,1]].forEach(function(g){var arr=g[0].sort(function(a,b){return a.ay-b.ay}),prev=g[2]?72:(v.parent!=null?110:158);
   arr.forEach(function(o){var y=Math.max(o.ay-18,prev+44);y=Math.min(y,H-120);prev=y;var el=v.ov.querySelector('.lb[data-i="'+o.i+'"]');el.style.left=g[1]+"px";el.style.top=y+"px";el.classList.toggle("rt",!!g[2]);
-   var lx=g[2]?g[1]:g[1]+176;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ax+'" y2="'+o.ay+'"/><circle cx="'+o.ax+'" cy="'+o.ay+'" r="2.5"/>'});});
+   var lx=g[2]?g[1]:g[1]+198;lines+='<line x1="'+lx+'" y1="'+(y+18)+'" x2="'+o.ax+'" y2="'+o.ay+'"/><circle cx="'+o.ax+'" cy="'+o.ay+'" r="2.5"/>'});});
  v.sv.innerHTML=lines;
  (v.caps||[]).forEach(function(c,j){var a=v.st.querySelector('.an.cp[data-c="'+j+'"]').getBoundingClientRect(),el=v.ov.querySelector('.zc[data-c="'+j+'"]');el.style.left=(a.left+a.width/2-r.left)+"px";el.style.top=(a.top+a.height/2-r.top)+"px"});
 }
@@ -326,7 +339,7 @@ var dr=null;
 sc.addEventListener("pointerdown",function(e){if(e.target.closest(".lb,.acts,.dock,.crumb"))return;var v=LV[cur];dr={x:e.clientX,y:e.clientY,rx:v.rx,rz:v.rz,id:e.pointerId,cap:0};moved=0});
 sc.addEventListener("pointermove",function(e){if(!dr)return;var v=LV[cur];moved=Math.abs(e.clientX-dr.x)+Math.abs(e.clientY-dr.y);if(moved>4&&!dr.cap){dr.cap=1;try{sc.setPointerCapture(dr.id)}catch(_){}}v.rz=dr.rz+(e.clientX-dr.x)*.3;v.rx=Math.max(30,Math.min(72,dr.rx-(e.clientY-dr.y)*.3));view()});
 sc.addEventListener("pointerup",function(){dr=null;setTimeout(function(){moved=0},0)});
-window.addEventListener("resize",function(){chips();view()});
+window.addEventListener("resize",function(){chips();fitAll()});
 /* ---------- marché : parts + demande (chiffres datés et sourcés) ---------- */
 var HBMFILTER=function(o){return o.x>=-130&&o.x<=-102&&o.y>=-99&&o.y<=-55};
 function fmt(v){return String(v).replace(".",",")}

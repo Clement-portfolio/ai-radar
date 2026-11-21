@@ -1051,22 +1051,22 @@
    "r": "Les liaisons (cuivre ou fibre) aboutissent à un commutateur Ethernet ou InfiniBand, qui relie les racks entre eux."
   },
   "euv": {
-   "n": "ASML",
-   "c": "fabrique les machines EUV",
+   "n": "Lithographie EUV",
+   "c": "machines de gravure",
    "b": "fabrication",
    "s": -1,
-   "r": "ASML ne grave aucune puce : elle construit les machines de lithographie qui impriment les motifs sur le silicium. Elle est la seule à vendre des machines EUV, indispensables aux puces IA les plus fines ; chaque fonderie avancée dépend d'elle."
+   "r": "Les machines de lithographie impriment les motifs sur le silicium ; ce ne sont pas des puces. L'EUV, indispensable aux puces IA les plus fines, n'a qu'un seul fabricant (ASML) : chaque fonderie avancée dépend de lui."
   },
   "tsmc": {
-   "n": "TSMC",
+   "n": "Fonderie de pointe",
    "c": "grave les puces IA",
    "b": "fabrication",
    "s": -1,
-   "r": "Le premier fondeur mondial : il grave la quasi-totalité des puces IA de pointe (Nvidia, AMD, puces sur mesure) sur ses lignes 3 nm et 5 nm, et monte le 2 nm."
+   "r": "Le premier fondeur mondial (TSMC) grave la quasi-totalité des puces IA de pointe (Nvidia, AMD, puces sur mesure) sur ses lignes 3 nm et 5 nm, et monte le 2 nm."
   },
   "fnd": {
    "n": "Autres fonderies",
-   "c": "Samsung, SMIC, UMC, GF",
+   "c": "puces avancées et matures",
    "b": "fabrication",
    "s": -1,
    "r": "Les fonderies derrière TSMC : Samsung pour le très avancé, SMIC pour la Chine, UMC et GlobalFoundries surtout pour des puces matures (capteurs, auto, réseau). Elles pèsent un quart du marché des dix premières."
@@ -3489,7 +3489,7 @@
    }
   },
   "euv": {
-   "name": "ASML : lithographie EUV",
+   "name": "Lithographie EUV",
    "pie": {
     "t": "Chiffre d'affaires d'ASML par activité",
     "m": "T3 2026 · 11,7 Md€ au total, arrondis ASML",
@@ -3614,7 +3614,7 @@
    ]
   },
   "tsmc": {
-   "name": "TSMC",
+   "name": "Fonderie de pointe",
    "pie": {
     "t": "Chiffre d'affaires de TSMC par procédé",
     "m": "T3 2026 · part du chiffre d'affaires des wafers, 46,72 Md$ au total",
@@ -3732,7 +3732,7 @@
    ]
   },
   "fnd": {
-   "name": "Fonderies hors TSMC",
+   "name": "Autres fonderies",
    "pie": {
     "t": "Chiffre d'affaires des fonderies hors TSMC",
     "m": "T2 2026 · 13,3 Md$ pour les neuf autres fonderies du top 10 (TSMC : 40,2 Md$)",
@@ -3957,8 +3957,8 @@
   "sw2": "Ces liaisons aboutissent à des commutateurs : voici le marché du réseau.",
   "fibc": "Ces fibres relient le datacenter au réseau : voici le marché du réseau.",
   "aec": "Les câbles cuivre actifs sont vendus par Credo : voici la fiche cuivre et connectique.",
-  "euv": "ASML vend ses machines aux fonderies : voici sa fiche (chiffres propres, hors fonderies).",
-  "fnd": "Les fonderies hors TSMC : voici leur marché (le leader est dans sa propre fiche)."
+  "euv": "Ces machines sont vendues aux fonderies : voici la fiche de leur fabricant (chiffres propres, hors fonderies).",
+  "fnd": "Les fonderies hors pointe : voici leur marché (le leader est dans sa propre fiche)."
  },
  "bmk": {
   "fabrication": "tsmc",

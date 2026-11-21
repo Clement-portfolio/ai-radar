@@ -18,7 +18,7 @@ input[type=range]{accent-color:#000;width:170px}
 .lg{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0 0;font-family:var(--mono);font-size:10.5px;color:var(--mute)}
 .lg b{font-weight:400;cursor:default;padding:1px 0;display:flex;align-items:center;gap:6px}.lg b i{width:12px;height:12px;border:1px solid #000;display:inline-block}
 .scene:active{cursor:grabbing}.hide{display:none!important}
-.world{position:absolute;left:50%;top:47%;width:0;height:0;transform-style:preserve-3d;transform:scale(var(--s,1)) rotateX(var(--rx,58deg)) rotateZ(var(--rz,-35deg))}
+.world{position:absolute;left:50%;top:47%;width:0;height:0;transform-style:preserve-3d;transform:translate(var(--ox,0px),var(--oy,0px)) scale(var(--s,1)) rotateX(var(--rx,58deg)) rotateZ(var(--rz,-35deg))}
 .stack{position:absolute;left:0;top:0;width:0;height:0;transform-style:preserve-3d;transform:translate3d(-125px,0,calc(var(--gap,60px)*-2 - 20px))}
 .bx{position:absolute;left:0;top:0;transform-style:preserve-3d;transition:transform .55s cubic-bezier(.3,.7,.2,1),opacity .25s;--c:#E3E5E8;--cs:#B7BCC3}
 .bx i{position:absolute;left:0;top:0;border:1px solid #000;background:var(--cs);transform-origin:0 0}
@@ -482,3 +482,9 @@ details.nwd>summary{font-size:22px}
  .dock{bottom:10px;gap:2px;padding:4px}.dock button{min-width:70px;padding:8px 10px 7px;font-size:11px}.dock button svg{width:22px;height:22px}
  .acts{top:14px;right:12px}.acts .btn{height:34px;font-size:12px;padding:0 12px}
 }
+
+.nt .lvl{transform:none!important}.nt .lvl,.nt .lvl *{transition:none!important}
+.dock button{min-width:112px;padding:14px 22px;font-size:14px}
+@media(max-width:900px){.dock button{min-width:72px;padding:10px 12px;font-size:12px}}
+
+.lb{width:198px!important}
