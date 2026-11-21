@@ -109,7 +109,7 @@ function rUne(){
   h+='<section class="tile">'+tHead(en?'Top stories':'La une',en?'The three stories of the day':'Les trois histoires du jour')+'<div class="tgrid3">'+st.map(function(x,i){
     var s=x.s,lead=x.arts[0],ok=en&&s.head_en&&s.bullets_en&&s.bullets_en.length===(s.bullets||[]).length;
     var head=ok?s.head_en:s.head,bl=(ok?s.bullets_en:s.bullets)||[];
-    return'<article class="tcard"><span class="kick">0'+(i+1)+' · '+esc(CLABEL[lead.country]||lead.country)+' · '+esc(CATS[lead.category]||lead.category)+'</span><h3>'+esc(head)+'</h3>'+(bl[0]?'<p>'+esc(bl[0])+'</p>':'')+
+    return'<article class="tcard"><span class="kick">'+esc(CLABEL[lead.country]||lead.country)+' · '+esc(CATS[lead.category]||lead.category)+'</span><h3>'+esc(head)+'</h3>'+(bl[0]?'<p>'+esc(bl[0])+'</p>':'')+
      '<div class="tfoot"><span>'+esc(x.arts.slice(0,3).map(function(a){return a.source}).join(", "))+' · '+esc(ago(s.ts||lead.ts))+'</span>'+arrowA(link(lead.url),en?'Read':'Lire l’histoire',true)+'</div></article>';
   }).join("")+'</div>'+cta("actualites",en?'All news':'Toutes les actualités')+'</section>';
   var H=((S.voix&&S.voix.hot)||[]).slice(0,3);

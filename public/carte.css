@@ -57,7 +57,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .fiche .sub{font-size:13px;color:var(--mute);margin:4px 0 12px}
 .fiche dl{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:10px 0}
 .fiche dl>div{padding:14px 16px;border-radius:16px;background:var(--fill)}
-.fiche dt{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--mute);text-transform:uppercase}
+.fiche dt{font-size:12px;font-weight:500;color:var(--mute);text-transform:none}
 .fiche dd{font:600 19px var(--display);letter-spacing:-.015em}
 .fiche p{font-size:15px;color:var(--ink2);margin:8px 0}
 .fiche a{color:var(--accent-ink);text-decoration:none}
