@@ -416,3 +416,26 @@ details.nwd>summary{font-size:22px}
 
 .bx.col.f-mem,.mini .bx.f-mem{--c:#4C9BFF;--cs:#0071E3}.bx.mem-base{--c:#2E86F0;--cs:#0058B0}
 .mini .bx.f-mem i.fr,.mini .bx.f-mem i.rt,.mini .bx.mem-base i.fr,.mini .bx.mem-base i.rt{background:#0058B0}
+
+/* — palette stricte : gris, blanc, noir, bleu — */
+.bx.ip{--c:#ECECF0;--cs:#C9C9CF}.bx.sub{--c:#DADADF;--cs:#B4B4BB}
+.bx.ground{--c:#F0F0F3;--cs:#F0F0F3}.bx.ground i.t{background:linear-gradient(#E3E3E8 1px,transparent 1px) 0 0/40px 40px,linear-gradient(90deg,#E3E3E8 1px,transparent 1px) 0 0/40px 40px,#F0F0F3}
+.bx.floor{--c:#ECECF0;--cs:#ECECF0}.bx.floor i.t{background:linear-gradient(#DADADF 1px,transparent 1px) 0 0/42px 42px,linear-gradient(90deg,#DADADF 1px,transparent 1px) 0 0/42px 42px,#ECECF0}
+.bx.ghost{--c:rgba(0,113,227,.08);--cs:rgba(0,113,227,.10)}.bx.ghost i{border:1px dashed #0071E3}
+.bx.tgt i.t{background:#C9C9CF}.bx.col.tgt i.t,.mini .bx.tgt i.t{background:#A8D0FF}
+.bx.col.cold i.t,.mini .bx.cold i.t{background:repeating-linear-gradient(90deg,#fff 0 9px,#4C9BFF 9px 13px)}
+.bx.col.fan i.t,.mini .bx.fan i.t{background:radial-gradient(circle at 50% 50%,#0058B0 0 3px,#fff 4px 13px,#4C9BFF 14px)}
+.bx.roof i.t{background:repeating-linear-gradient(90deg,#ECECF0 0 28px,#DADADF 28px 30px)}
+.bx.mem-base{--c:#2E86F0;--cs:#0058B0}
+.mini .bx[class*="f-"]:not(.env){--c:#4C9BFF;--cs:#0071E3}
+.mini .bx[class*="f-"]:not(.env) i.fr,.mini .bx[class*="f-"]:not(.env) i.rt{background:#0058B0}
+.mini .bx[class*="f-"]:not(.env) i.bk,.mini .bx[class*="f-"]:not(.env) i.lf{background:#0071E3}
+.mini .bx.f-calc[class*="f-"]:not(.env){--c:#48484A;--cs:#2C2C2E}
+.mini .bx.f-calc[class*="f-"]:not(.env) i.fr,.mini .bx.f-calc[class*="f-"]:not(.env) i.rt{background:#1C1C1E}
+.mini .bx.f-calc[class*="f-"]:not(.env) i.bk,.mini .bx.f-calc[class*="f-"]:not(.env) i.lf{background:#2C2C2E}
+.mini .bx.f-el[class*="f-"]:not(.env){--c:#48484A;--cs:#1C1C1E}
+.mini .bx.f-el[class*="f-"]:not(.env) i{background:#1C1C1E}.mini .bx.f-el[class*="f-"]:not(.env) i.t{background:#48484A}
+.mini .bx i{border-color:rgba(0,40,100,.35)}.mini .bx.env i{border-color:rgba(0,0,0,.10)}
+.fl.col.c-en,.fl.col.c-cool,.fl.col.c-op,.fl.col.c-cu,.mini .fl.c-en,.mini .fl.c-cool,.mini .fl.c-op,.mini .fl.c-cu{background:#0071E3}
+.mini .fl{--el:#0058B0}
+.lb{text-shadow:0 0 4px #F5F5F7,0 0 4px #F5F5F7,0 0 2px #F5F5F7}

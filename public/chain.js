@@ -22,10 +22,10 @@ var PARTS=CH.parts,U=CH.u,BMK=CH.bmk,DET=CH.det,FM=CH.fm,FMAP=CH.fmap,FMVIA=CH.f
 Object.keys(CH.mkt).forEach(function(k){var m=CH.mkt[k],o={};if(m.s)o.s=U[m.s];if(m.d)o.d=U[m.d];MKT[k]=o});
 
 var BY={};CH.blocks.forEach(function(b){BY[b.id]=b});
-var FAM={en:["Énergie","#EBA73A"],cool:["Refroidissement","#5B9BDB"],st:["Structure (bâtiment, boîtier, carte)","#D6CAB5"],calc:["Calcul","#34476B"],mem:["Mémoire","#34BBA0"],li:["Liaisons (électrique, cuivre, fibre, commutateurs)","#8B6FD6"],use:["Usages (modèles, applications)","#79C477"]};
+var FAM={en:["Énergie","#0071E3"],cool:["Refroidissement","#4C9BFF"],st:["Structure (bâtiment, boîtier, carte)","#C9C9CF"],calc:["Calcul","#48484A"],mem:["Mémoire","#0071E3"],li:["Liaisons (électrique, cuivre, fibre, commutateurs)","#1D1D1F"],use:["Usages (modèles, applications)","#0058B0"]};
 var GRP={en:"en",cool:"cool",bld:"st",asm:"st",brd:"st",calc:"calc",mem:"mem",el:"li",cu:"li",op:"li",net:"li",use:"use",use2:"use"};
 var PF={smr:"en",gas:"en",trf:"en",bld:"bld",cool:"cool",fibc:"op",models:"use2",apps:"use",rack:"calc",bus:"en",loop:"cool",sw:"net",fib:"op",cu:"cu",cold:"cool",dies:"calc",fab:"calc",hbm:"mem",wires:"el",ip:"asm",cpo:"op",sub:"asm",pcb:"brd",power:"en",aec:"cu",mod:"op",las:"op",sw2:"net"};
-var FC={en:"#EBA73A",cool:"#5B9BDB",bld:"#E3DACB",calc:"#34476B",mem:"#0071E3",asm:"#D6CAB5",brd:"#BFB29C",cu:"#8B6FD6",op:"#B9A5F0",el:"#5B45A3",net:"#7458C4",use:"#79C477",use2:"#58AB57"};
+var FC={en:"#0071E3",cool:"#4C9BFF",bld:"#C9C9CF",calc:"#48484A",mem:"#0071E3",asm:"#B4B4BB",brd:"#A9A9B0",cu:"#0071E3",op:"#4C9BFF",el:"#1D1D1F",net:"#0071E3",use:"#0071E3",use2:"#0058B0"};
 var ZOOM={bld:1,rack:2};
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 function Z(b,k,extra){return"calc("+b+"px + "+k+" * var(--gap)"+(extra?" + "+extra:"")+")"}
@@ -447,7 +447,7 @@ function duo(){
   '<div class="blk"><div class="st">À quoi ça sert dans l\'infrastructure</div><p>'+esc(b.why)+'</p></div>'+
   '<div class="blk"><div class="st">Dépend de</div><div class="cl">'+(b.needs.length?chs(b.needs):'<span class="src">Rien en amont dans ce schéma.</span>')+'</div></div>'+
   '<div class="blk"><div class="st">Alimente</div><div class="cl">'+(b.feeds.length?chs(b.feeds):'<span class="src">Dernier maillon du schéma.</span>')+'</div></div></div></div>';
- F.innerHTML='<section class="tile"><div class="fhd"><span class="eb">Composant sélectionné</span><h3>'+esc(P.n)+'.</h3><p class="fl2">'+esc(P.c)+' · '+esc(b.name)+'</p></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
+ F.innerHTML='<section class="tile"><div class="fhd"><span class="eb">Composant sélectionné</span><h3>'+esc(P.n)+'</h3><p class="fl2">'+esc(P.c)+' · '+esc(b.name)+'</p></div><div class="fz">'+left+right+'</div>'+mkHtml(part);
  var nw=document.getElementById("nw");if(nw)nw.setAttribute("data-part",part);
  centerMini(F.querySelector(".mini"));report();
 }
