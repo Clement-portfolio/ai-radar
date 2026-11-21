@@ -1,0 +1,48 @@
+name: Collecte X (quotidienne)
+
+on:
+  schedule:
+    - cron: "0 18 * * *" # 21 h à Riyad : fin de journée
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignorer le garde-fou « déjà lu aujourd'hui » (dépense des crédits)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: x-daily
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests (sans appel à X)
+        run: node collector/test-x.mjs
+      - name: Collecte X
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          X_FORCE: ${{ inputs.force && '1' || '0' }}
+        run: node collector/x.mjs
+      - name: Enregistrer les données
+        if: always()
+        run: |
+          git config user.name "ai-radar-bot"
+          git config user.email "ai-radar-bot@users.noreply.github.com"
+          git add public/data/x.json
+          if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
+          git commit -m "Données X du $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

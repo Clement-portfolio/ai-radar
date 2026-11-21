@@ -934,3 +934,10 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
   .lyall .lhead{grid-template-columns:minmax(0,1fr) 44px;gap:8px 16px}.lyall .lhead .lm{grid-column:1;grid-row:2}.lyall .lhead .lgo{grid-column:2;grid-row:1/3}
   .lyall .lstat{white-space:normal}
 }
+
+/* Sur X (Insiders) */
+.xb{display:inline-block;font-size:11.5px;padding:2px 9px;border-radius:999px;background:var(--hair);color:var(--mute);margin-left:8px;white-space:nowrap}
+.xb.xn{background:#e7f3ec;color:#1d6b3f}
+.xb.xw{background:#fbeede;color:#9a5b12}
+.vrow .xq{margin:8px 0 6px;padding:0 0 0 12px;border-left:2px solid var(--hair);font-size:14px;line-height:1.5;color:var(--ink);white-space:pre-line}
+.xnote{margin-top:22px;max-width:70ch}
