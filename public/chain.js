@@ -20,7 +20,7 @@ var NEWEN={"Énergie":"Energy","Datacenters":"Data centers","Modèles":"Models",
 "ASML · fabrique les machines":"ASML · builds the machines","Vers le datacenter":"To the data center","Calcul fourni par les datacenters":"Compute supplied by data centers","TSMC et les autres · gravent les puces":"TSMC and the others · etch the chips",
 "Autres fonderies":"Other foundries","fabrique les machines EUV":"builds the EUV machines","grave les puces IA":"etches the AI chips",
 "Entrer : Salle ▸":"Enter: Hall ▸","Zoomer : Salle ▸":"Zoom: Hall ▸","Zoomer : Module ▸":"Zoom: Module ▸","Passer à :":"Go to:"};
-function report(){try{parent.postMessage({chainH:Math.ceil(document.querySelector(".wrap").getBoundingClientRect().height)},location.origin)}catch(e){}}
+function report(){if(qs.get("mini"))return;try{parent.postMessage({chainH:Math.ceil(document.querySelector(".wrap").getBoundingClientRect().height)},location.origin)}catch(e){}}
 /* demi-écran : la fenêtre du site fait moins des deux tiers de l'écran → disposition en deux colonnes (classe .half) */
 function setHalf(){var pw=innerWidth;try{pw=parent.innerWidth||pw}catch(e){}document.documentElement.classList.toggle("half",pw<=(screen.availWidth||pw)*.66)}
 setHalf();window.addEventListener("resize",setHalf);try{parent.addEventListener("resize",setHalf)}catch(e){}
@@ -532,14 +532,14 @@ function duo(){
  var F=document.getElementById("fc");
  var part=sel.part||(sel.block?BMK[sel.block]:null);
  if(!part||!PARTS[part]){
-  F.innerHTML='<section class="tile"><div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez une pièce sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>'+HINT+'</section>';report();return}
+  F.innerHTML='<section class="tile"><div class="fe"><span class="kicker">Fiche composant</span><p>Cliquez un composant sur le schéma : son zoom, sa fiche technique, son marché et ses actualités s\'affichent ici.</p></div>'+HINT+'</section>';report();return}
  var old=document.getElementById("nw");
  if(part!==lastPart){nwDetOpen=false;nwLimit=NSHOW;nwOpen={}}else if(old)nwDetOpen=old.open;
  lastPart=part;
  var P=PARTS[part],b=BY[P.b],fam=PF[part],dt=DET[part]||[],mh=mini(part);
  function chs(a){return a.map(function(id){return'<button class="chip" data-block="'+id+'">'+esc(BY[id].name)+'</button>'}).join("")}
  var det=dt.length?'<div class="det">'+dt.map(function(r){return'<div><i style="background:'+FC[r[0]]+'"></i><p><b>'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span></p></div>'}).join("")+'</div>':(mh?'<div class="det"><div><i style="background:'+FC[fam]+'"></i><p><span>'+esc(P.r)+'</span></p></div></div>':'');
- var left='<div class="fzl"><span class="kicker">Zoom sur la pièce</span>'+(mh?'<div class="mini">'+mh+'</div><p class="mlg"><i class="mk1" style="background:'+FC[fam]+'"></i>Coloré : la pièce <i class="mk2"></i>Gris : son environnement direct</p>':'<p class="big">'+esc(P.r)+'</p>')+det+'</div>';
+ var left='<div class="fzl"><span class="kicker">Zoom sur le composant</span>'+(mh?'<div class="mini">'+mh+'</div><p class="mlg"><i class="mk1" style="background:'+FC[fam]+'"></i>Coloré : le composant <i class="mk2"></i>Gris : son environnement direct</p>':'<p class="big">'+esc(P.r)+'</p>')+det+'</div>';
  var right='<div class="fzr"><span class="kicker">Fiche technique</span><div class="ft">'+
   '<div class="blk"><div class="st">Ce que c\'est</div><p>'+esc(P.r)+'</p></div>'+
   '<div class="blk"><div class="st">À quoi ça sert dans l\'infrastructure</div><p>'+esc(b.why)+'</p></div>'+
@@ -575,6 +575,17 @@ function centerMini(box){
 }
 window.addEventListener("resize",function(){var m=document.querySelector("#fc .mini");if(m)centerMini(m)});
 
+window.ChainFrame.select=function(p){if(!PARTS[p])return;var lv=[];LV.forEach(function(v,i){if(v.L.some(function(l){return l[0]===p}))lv.push(i)});if(lv.length&&lv.indexOf(cur)<0)go(nearest(lv));pick(p,null)};
 init();setGap(0);
+if(qs.get("sel"))window.ChainFrame.select(qs.get("sel"));
+/* mode « zoom seul » (accueil) : n'affiche que la maquette d'un composant tiré au hasard et renvoie ses données à la page */
+if(qs.get("mini")){(function(){
+ var q=qs.get("mini"),ok=Object.keys(PARTS).filter(function(k){return mini(k)&&tensInfo(k)});
+ var p=ok.indexOf(q)>=0?q:ok[Math.floor(Math.random()*ok.length)];if(!p)return;
+ var P=PARTS[p],b=BY[P.b],ti=tensInfo(p),box=document.createElement("div");
+ document.documentElement.classList.add("mmode");box.className="mini";box.innerHTML=mini(p);document.body.appendChild(box);
+ setTimeout(function(){centerMini(box)},60);window.addEventListener("resize",function(){centerMini(box)});
+ try{parent.postMessage({miniPart:{part:p,n:P.n,r:P.r,why:b.why,block:b.id,bname:b.name,layer:b.layer,t:ti.t,lab:tlab(ti.t)}},location.origin)}catch(e){}
+})()}
 }
 })();

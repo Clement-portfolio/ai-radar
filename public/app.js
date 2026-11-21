@@ -137,23 +137,35 @@ function rUne(){
 var HP={};
 function hpPick(arr,k){if(!arr.length)return null;if(HP[k]==null)HP[k]=Math.floor(Math.random()*arr.length);return arr[HP[k]%arr.length]}
 function hpPie(en){
-  var c=hpPick(((S.shares&&S.shares.charts)||[]).filter(function(x){return x.segments&&x.segments.length>1}),"pie");if(!c)return"";
+  var CH=((S.shares&&S.shares.charts)||[]).filter(function(x){return x.segments&&x.segments.length>1}),c=CH.filter(function(x){return x.id==="countries"})[0]||hpPick(CH,"pie");if(!c)return"";
   var segs=c.segments,leg=segs.slice(0,5).map(function(x,i){return'<li><i style="background:'+dcol(i,x.label)+'"></i><span>'+esc(x.label)+'</span><b>'+fmtPct(x.pct)+'</b></li>'}).join("");
   return'<section class="tile half hpm">'+tHead(en?'Market':'Marché',c.title)+'<p class="hpsub">'+esc(c.metric)+' · '+esc(c.period)+'</p><div class="hpbody">'+donut(segs)+'<ul class="leg">'+leg+'</ul></div>'+
    '<p class="hpsrc">'+esc(c.source)+'</p>'+
    '<div class="hfoot"><button class="tlink" data-go="marche">'+(en?'Explore the market':'Explorer le marché')+' ›</button><button class="arw lg" data-go="marche" aria-label="'+(en?'Market':'Marché')+'">'+ARW+'</button></div></section>';
 }
+function hpRing(t,lab,en){
+  var cls=t>=8?'hi':t>=6?'mid':'lo',C=2*Math.PI*44,d=(Math.max(0,Math.min(10,t))/10*C).toFixed(1);
+  return'<div class="hpring '+cls+'" role="img" aria-label="'+(en?'Tightness ':'Tension ')+t+'/10"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="rt" cx="50" cy="50" r="44"/><circle class="rv" cx="50" cy="50" r="44" stroke-dasharray="'+d+' '+C.toFixed(1)+'" transform="rotate(-90 50 50)"/></svg><span class="rn"><b>'+t+'</b><i>/10</i></span></div>';
+}
+function hpCompHead(d,en){return'<span class="eb">'+(en?'Component':'Composant')+'</span><h2>'+esc(d?d.n:'…')+'</h2>'}
+function hpCompBody(d,en){
+  if(!d)return'<div class="hprow"><div class="hpring lo hpwait"><svg viewBox="0 0 100 100"><circle class="rt" cx="50" cy="50" r="44"/></svg></div></div>';
+  return'<div class="hprow">'+hpRing(d.t,d.lab,en)+'<div class="hptxt"><b class="hplab t'+(d.t>=8?'hi':d.t>=6?'mid':'lo')+'">'+esc(d.lab)+'</b><span class="hpl">'+(en?'tightness':'tension')+' · '+esc(d.bname)+'</span></div></div>'+
+   '<p class="hpwhy">'+esc(d.r)+'</p>';
+}
 function hpComp(en){
-  var LY={};((S.layers&&S.layers.layers)||[]).forEach(function(l){if(l.tension!=null)LY[l.id]=l});
-  var all=[];((S.chain&&S.chain.blocks)||[]).forEach(function(b){var l=LY[b.layer];if(!l)return;(b.subs||[]).forEach(function(u){if(u.why)all.push({b:b,u:u,l:l})})});
-  var x=hpPick(all,"comp");if(!x)return"";
-  var t=x.l.tension,cls=t>=8?'hi':t>=6?'mid':'lo',fig=(x.u.figs||[])[0],bars="";
-  for(var i=1;i<=10;i++)bars+='<i'+(i<=t?' class="on '+cls+'"':'')+'></i>';
-  return'<section class="tile half hpi">'+tHead(en?'Infrastructure':'Infrastructure',x.u.name)+
-   '<div class="hpmeter"><span class="hpbars" aria-hidden="true">'+bars+'</span><span class="hpt"><b class="t'+cls+'">'+t+'/10</b> '+(en?'tightness':'tension')+' · '+esc(tx(x.l,'name'))+'</span></div>'+
-   '<p class="hpwhy">'+esc(x.u.why)+'</p>'+
-   (fig?'<div class="hpfig"><span class="v">'+esc(fig.v)+'</span><span class="l">'+esc(fig.l)+'</span></div>':'')+
-   '<div class="hfoot"><button class="tlink" data-go="infrastructure/'+esc(x.l.id)+'">'+(en?'See this layer':'Voir cette couche')+' ›</button><button class="arw lg" data-go="infrastructure/'+esc(x.l.id)+'" aria-label="Infrastructure">'+ARW+'</button></div></section>';
+  var d=HP.comp||null,src='chain.html?mini='+encodeURIComponent(d?d.part:'rand')+'&lang='+S.lang;
+  var go=d?'data-go="infrastructure" data-part="'+esc(d.part)+'"':'data-go="infrastructure"';
+  return'<section class="tile half hpi"><div class="thead hph">'+hpCompHead(d,en)+'</div>'+
+   '<div class="hpstage" '+go+'><iframe class="hpmini" src="'+src+'" title="'+(en?'3D zoom on an infrastructure component':'Zoom 3D sur un composant de l’infrastructure')+'" scrolling="no" tabindex="-1" loading="lazy"></iframe><span class="hpcap">'+(en?'Zoom on the component':'Zoom sur le composant')+'</span></div>'+
+   '<div class="hpb">'+hpCompBody(d,en)+'</div>'+
+   '<div class="hfoot"><button class="tlink" '+go+'>'+(en?'See this component':'Voir ce composant')+' ›</button><button class="arw lg" '+go+' aria-label="Infrastructure">'+ARW+'</button></div></section>';
+}
+function hpCompFill(d){
+  HP.comp=d;var sec=document.querySelector(".hpi");if(!sec)return;var en=isEn();
+  sec.querySelector(".hph").innerHTML=hpCompHead(d,en);sec.querySelector(".hpb").innerHTML=hpCompBody(d,en);
+  sec.querySelectorAll("[data-go]").forEach(function(e){e.setAttribute("data-part",d.part)});
+  if(window.I18N)I18N.set(S.lang);
 }
 function hpDuo(en){var a=hpPie(en),b=hpComp(en);return a||b?'<div class="duo">'+a+b+'</div>':""}
 function voixHtml(){
@@ -472,7 +484,8 @@ function layerExtra(l){
   return h;
 }
 var chainFrame=null;
-function chainSrc(){return"chain.html?lang="+S.lang}
+function chainSrc(){return"chain.html?lang="+S.lang+(S.chainSel?"&sel="+encodeURIComponent(S.chainSel):"")}
+function chainSelect(p){S.chainSel=p;if(chainFrame){var ok=false;try{var w=chainFrame.contentWindow;if(w&&w.ChainFrame&&w.ChainFrame.select){w.ChainFrame.select(p);ok=true}}catch(e){}if(!ok)chainFrame.src=chainSrc()}}
 function chainHost(){
   var h=$("chain-host");if(!h)return;
   if(!chainFrame){
@@ -498,6 +511,7 @@ function carteLang(){
 }
 window.addEventListener("message",function(e){
   if(e.origin!==location.origin||!e.data)return;
+  if(e.data.miniPart){hpCompFill(e.data.miniPart);return}
   if(typeof e.data.chainH==="number"&&chainFrame){var h=Math.max(300,Math.min(4000,e.data.chainH));chainFrame.style.height=h+"px"}
   if(typeof e.data.carteH==="number"&&carteFrame){var k=Math.max(300,Math.min(4000,e.data.carteH));carteFrame.style.height=k+"px"}
 });
@@ -918,7 +932,7 @@ document.addEventListener("click",function(e){
   if(e.target.closest("[data-arv]")){S.arv=!S.arv;rActeurs();return}
   var t=e.target.closest("[data-tab],[data-fo],[data-c],[data-cat],[data-top],[data-ls],[data-toggle],[data-go],[data-more]");if(!t)return;
   if(t.hasAttribute("data-tab"))return go(t.getAttribute("data-tab"));
-  if(t.hasAttribute("data-go"))return go(t.getAttribute("data-go"));
+  if(t.hasAttribute("data-go")){if(t.getAttribute("data-part"))chainSelect(t.getAttribute("data-part"));return go(t.getAttribute("data-go"))}
   if(t.hasAttribute("data-more")){S.limit+=120;rFeed();return}
   if(t.hasAttribute("data-fo")){var f=t.getAttribute("data-fo");S.fo=S.fo===f?null:f;rFeed();return}
   if(t.hasAttribute("data-c")){S.country=t.getAttribute("data-c");S.limit=120;S.fo=null;renderAll();return}
