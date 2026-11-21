@@ -698,7 +698,7 @@ export async function run(opts = {}) {
   let rech = { doc: rechPrev, summary: { total: 0, added: 0, reason: "erreur" } };
   try {
     const rsrc = opts.rechercheSources || JSON.parse(await fs.readFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "recherche-sources.json"), "utf8")).sources;
-    rech = await collectRecherche({ sources: rsrc, http: (u, o = {}) => http(u, { ...o, retries: 0 }), generate: mkGen(RECH_SYSTEM, RECH_SCHEMA), prev: rechPrev, now: nowMs, log, batch: +env.RECH_BATCH || 20, rounds: +env.RECH_ROUNDS || 2, ...(opts.sleep ? { sleep: opts.sleep } : {}) });
+    rech = await collectRecherche({ sources: rsrc, http: (u, o = {}) => http(u, { ...o, retries: 0 }), generate: mkGen(RECH_SYSTEM, RECH_SCHEMA), translate: mkGen(VOIX_SYSTEM, VOIX_SCHEMA), prev: rechPrev, now: nowMs, log, batch: +env.RECH_BATCH || 20, rounds: +env.RECH_ROUNDS || 2, ...(opts.sleep ? { sleep: opts.sleep } : {}) });
     await resolveGoogleLinks({ items: rech.doc.items, fetchImpl, max: +env.GNEWS_MAX || 0, log });
   } catch (e) { rech.summary.reason = String(e.message || e).slice(0, 120); }
   log(`Recherche : ${rech.summary.total} entrée(s), ${rech.summary.added} nouvelle(s)${rech.summary.failed ? `, ${rech.summary.failed} flux en échec` : ""} — ${rech.summary.reason}`);

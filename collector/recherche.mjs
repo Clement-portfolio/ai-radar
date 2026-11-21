@@ -200,7 +200,7 @@ export function applyRow(r, inp) {
  *  prev      document précédent
  *  now       horodatage (ms)
  */
-export async function collectRecherche({ sources, http, generate, prev, now = Date.now(), log = () => {}, batch = 20, rounds = 2, perSource = 8, limits = {}, sleep = (t) => new Promise((r) => setTimeout(r, t)) }) {
+export async function collectRecherche({ sources, http, generate, translate, prev, now = Date.now(), log = () => {}, batch = 20, rounds = 2, perSource = 8, limits = {}, sleep = (t) => new Promise((r) => setTimeout(r, t)) }) {
   const prevItems = Array.isArray(prev?.items) ? prev.items : [];
   const rej = Object.fromEntries(Object.entries(prev?.rej || {}).filter(([, t]) => now - t < REJ_DAYS * DAY));
   const since = now - (prevItems.length ? LOOKBACK : FIRST_LOOKBACK) * DAY;
@@ -271,7 +271,27 @@ export async function collectRecherche({ sources, http, generate, prev, now = Da
     if (c.tier <= 2 || (c.up || 0) >= 30) { items.set(c.id, itemOf(c, { pending: true })); added++; }
   }
   for (const it of items.values()) if (classified.has(it.id)) delete it.pending;
-  if (!reason) reason = `${ai} classée(s) par l'IA, ${rejected} écartée(s)`;
+  // titres restés dans la langue d'origine (le modèle a recopié l'anglais) : une passe de traduction dédiée, y compris pour les entrées déjà publiées
+  let titled = 0;
+  if (translate) {
+    const todo = [...items.values()].filter((x) => !x.tr_tried && !x.pending && x.title && normTitle(x.title) === normTitle(x.orig || x.title) && !foreignScript(x.title) && x.title.length > 12).slice(0, 60);
+    if (todo.length) {
+      let res = null;
+      try { res = await translate(todo.map((it, i) => ({ i, en: it.title }))); } catch { res = null; }
+      if (Array.isArray(res)) {
+        for (const x of todo) x.tr_tried = true;
+        for (const r of res) {
+          const it = todo[Number(r?.i)], fr = clean(r?.fr);
+          if (!it || !fr || fr.length > it.title.length * 2 + 40 || normTitle(fr) === normTitle(it.title) || foreignScript(fr)) continue;
+          const fixed = normalizeFr(it.title, fr);
+          if (!digitsOf(stripAmounts(fixed)).every((d) => digitsOf(stripAmounts(it.title)).includes(d)) || !unitsOk(it.title, fixed, "fr", true)) continue;
+          if (!it.title_en) it.title_en = it.title;
+          it.title = fixed; delete it.title_fr_missing; titled++;
+        }
+      }
+    }
+  }
+  if (!reason) reason = `${ai} classée(s) par l'IA, ${rejected} écartée(s)${titled ? `, ${titled} titre(s) traduit(s)` : ""}`;
 
   const cutoff = now - RETAIN_DAYS * DAY;
   const list = [...items.values()].filter((x) => Date.parse(x.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, MAX_ITEMS);

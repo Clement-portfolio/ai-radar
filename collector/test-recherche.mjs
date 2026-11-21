@@ -88,4 +88,16 @@ assert.equal(new Set(r4.doc.items.map((x) => x.id)).size, r4.doc.items.length);
 const old = { ...r1.doc.items[0], id: "old", ts: new Date(now - 70 * 864e5).toISOString() };
 const r5 = await collectRecherche({ sources, http, generate: gen, prev: { ...r1.doc, items: [...r1.doc.items, old] }, now, log: () => {} });
 assert.ok(!r5.doc.items.some((x) => x.id === "old"), "entrée de plus de 60 jours retirée");
+
+// titre resté en anglais : passe de traduction dédiée (chiffres préservés, une seule tentative par entrée)
+const stuck = { ...r1.doc.items[0], id: "stuck", title_en: undefined, title: "Nanostructures strengthen titanium alloys", orig: "Nanostructures strengthen titanium alloys", ts: new Date(now).toISOString() };
+let tcalls = 0;
+const tr = async (inp) => { tcalls++; return inp.map((x) => ({ i: x.i, fr: x.en === stuck.title ? "Des nanostructures renforcent les alliages de titane" : x.en })); };
+const r6 = await collectRecherche({ sources, http, generate: gen, translate: tr, prev: { ...r1.doc, items: [...r1.doc.items, stuck] }, now: now + 3600e3, log: () => {} });
+const fixed = r6.doc.items.find((x) => x.id === "stuck");
+assert.equal(fixed.title, "Des nanostructures renforcent les alliages de titane", "titre traduit");
+assert.equal(fixed.title_en, "Nanostructures strengthen titanium alloys");
+const t0 = tcalls;
+await collectRecherche({ sources, http, generate: gen, translate: tr, prev: r6.doc, now: now + 7200e3, log: () => {} });
+assert.equal(tcalls, t0, "plus de nouvel appel pour les entrées déjà traitées");
 console.log("test-recherche : OK");
