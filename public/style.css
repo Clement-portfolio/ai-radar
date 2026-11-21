@@ -855,3 +855,7 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
   #v-recherche .row.rr .rsrc{grid-column:1/-1;grid-row:3;flex-direction:row;align-items:baseline;gap:8px;max-width:none}
   .rsrcs ul{columns:1}
 }
+
+.insl{text-decoration:none;gap:10px;padding-right:6px}
+.insl .insa{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#fff;color:var(--ink)}
+.insl:hover .insa{transform:scale(1.06)}.insl .insa{transition:transform .2s var(--ease)}
