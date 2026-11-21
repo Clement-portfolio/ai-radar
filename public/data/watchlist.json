@@ -1,6 +1,6 @@
 {
  "_note": "Watchlist par composant de l'infrastructure. k = acteur clé, e = émergent. Alias commençant par « = » : casse respectée. kw = mots-clés sectoriels (un article sans nom d'entreprise y est rattaché). q = requêtes Google News (14 jours). Le trading (cours, consensus, objectifs d'analystes) est exclu : voir collector/watch.mjs.",
- "as_of": "2026-11-18",
+ "as_of": "2026-11-21",
  "groups": [
   {
    "id": "smr",
@@ -1573,6 +1573,360 @@
     "SMEE OR Naura OR SiCarrier China lithography EUV"
    ],
    "cx": "foundr|fab\\b|chip|semiconductor|lithograph|wafer|EUV"
+  },
+  {
+   "id": "litho",
+   "name": "Lithographie et équipements de fabrication",
+   "parts": [
+    "euv"
+   ],
+   "scope": "Machines de lithographie EUV et DUV, optique, sources de lumière, métrologie et résines",
+   "kw": "\\bEUV\\b|High-NA|lithograph|photoresist|chip ?making equipment|semiconductor equipment|wafer fab equipment|\\bWFE\\b|export controls? (?:on )?(?:chip|semiconductor|equipment)",
+   "q": [
+    "ASML EUV High-NA lithography",
+    "Zeiss SMT OR TRUMPF OR Lasertec OR Canon OR Nikon lithography EUV",
+    "Applied Materials OR \"Lam Research\" OR KLA OR \"Tokyo Electron\" chipmaking equipment",
+    "SMEE OR Naura OR SiCarrier OR Xlight lithography EUV light source"
+   ],
+   "cx": "lithograph|EUV|chip|semiconductor|wafer|fab\\b",
+   "cos": [
+    {
+     "n": "ASML",
+     "c": "EU",
+     "k": "k"
+    },
+    {
+     "n": "Zeiss SMT",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "Carl Zeiss SMT"
+     ],
+     "w": 1
+    },
+    {
+     "n": "TRUMPF",
+     "c": "EU",
+     "k": "k",
+     "a": [
+      "Trumpf"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Applied Materials",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Lam Research",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "KLA",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=KLA"
+     ]
+    },
+    {
+     "n": "Tokyo Electron",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Lasertec",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Canon",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Nikon",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Gigaphoton",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "ASM International",
+     "c": "EU",
+     "k": "e",
+     "a": [
+      "ASMI"
+     ]
+    },
+    {
+     "n": "SMEE",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "=SMEE"
+     ]
+    },
+    {
+     "n": "Naura",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "AMEC",
+     "c": "CN",
+     "k": "e",
+     "a": [
+      "=AMEC"
+     ]
+    },
+    {
+     "n": "SiCarrier",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "Xlight",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "Substrate",
+     "c": "US",
+     "k": "e",
+     "a": [
+      "=Substrate"
+     ],
+     "w": 1,
+     "x": 1
+    },
+    {
+     "n": "JSR",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "=JSR"
+     ],
+     "w": 1,
+     "x": 1
+    },
+    {
+     "n": "Hoya",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    }
+   ]
+  },
+  {
+   "id": "leadfab",
+   "name": "Fonderies de pointe (3 nm, 2 nm)",
+   "parts": [
+    "tsmc"
+   ],
+   "scope": "Fonderies qui gravent les puces IA les plus avancées",
+   "kw": "foundr(?:y|ies)|\\b[12]\\d? ?nm\\b|\\b18A\\b|\\bA16\\b|\\bN2\\b|\\bN3\\b|process nodes?",
+   "q": [
+    "TSMC 2nm 3nm production capacity",
+    "Samsung Foundry OR \"Intel Foundry\" OR Rapidus 2nm 18A",
+    "TSMC Arizona OR Japan OR Germany fab"
+   ],
+   "cx": "foundr|\\bfab\\b|wafer|\\b[1-9] ?nm\\b|\\bN2\\b|\\b18A\\b|process node",
+   "cos": [
+    {
+     "n": "TSMC",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "Taiwan Semiconductor"
+     ]
+    },
+    {
+     "n": "Samsung Foundry",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Intel Foundry",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "Intel 18A",
+      "Intel 14A"
+     ]
+    },
+    {
+     "n": "Rapidus",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Synopsys",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Cadence",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=Cadence Design"
+     ],
+     "x": 1
+    },
+    {
+     "n": "Arm",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "=Arm Holdings",
+      "=Arm Ltd"
+     ],
+     "x": 1,
+     "w": 1
+    },
+    {
+     "n": "Nvidia",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "AMD",
+     "c": "US",
+     "k": "k",
+     "a": [
+      "=AMD"
+     ],
+     "w": 1
+    },
+    {
+     "n": "Broadcom",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Apple",
+     "c": "US",
+     "k": "k",
+     "w": 1
+    },
+    {
+     "n": "MediaTek",
+     "c": "OTHER",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Qualcomm",
+     "c": "US",
+     "k": "e",
+     "w": 1
+    },
+    {
+     "n": "Alchip",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Global Unichip",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "GUC"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "otherfab",
+   "name": "Autres fonderies (procédés matures et spécialisés)",
+   "parts": [
+    "fnd"
+   ],
+   "scope": "Fonderies derrière TSMC : Chine, Taïwan, États-Unis, Europe",
+   "kw": "foundr(?:y|ies)|mature nodes?|legacy (?:chips|nodes?)|\\b(?:28|40|55|65|90) ?nm\\b",
+   "q": [
+    "SMIC OR \"Hua Hong\" foundry capacity utilization",
+    "UMC OR GlobalFoundries OR \"Tower Semiconductor\" OR \"Vanguard International\" foundry",
+    "mature node foundry China legacy chips"
+   ],
+   "cx": "foundr|fab\\b|chip|semiconductor|wafer|node",
+   "cos": [
+    {
+     "n": "SMIC",
+     "c": "CN",
+     "k": "k"
+    },
+    {
+     "n": "Hua Hong",
+     "c": "CN",
+     "k": "k",
+     "a": [
+      "Huahong"
+     ]
+    },
+    {
+     "n": "UMC",
+     "c": "OTHER",
+     "k": "k",
+     "a": [
+      "=UMC",
+      "United Microelectronics"
+     ]
+    },
+    {
+     "n": "GlobalFoundries",
+     "c": "US",
+     "k": "k"
+    },
+    {
+     "n": "Samsung Foundry",
+     "c": "OTHER",
+     "k": "k"
+    },
+    {
+     "n": "Tower Semiconductor",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "Vanguard International",
+     "c": "OTHER",
+     "k": "e"
+    },
+    {
+     "n": "PSMC",
+     "c": "OTHER",
+     "k": "e",
+     "a": [
+      "Powerchip"
+     ]
+    },
+    {
+     "n": "Nexchip",
+     "c": "CN",
+     "k": "e"
+    },
+    {
+     "n": "SkyWater",
+     "c": "US",
+     "k": "e"
+    },
+    {
+     "n": "X-FAB",
+     "c": "EU",
+     "k": "e"
+    }
+   ]
   },
   {
    "id": "memory",
