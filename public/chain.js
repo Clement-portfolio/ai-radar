@@ -170,7 +170,7 @@ function siteOf(i){for(var k=0;k<SITES.length;k++)if(SITES[k].id===LV[i].site)re
 function LVN(i){var v=LV[i];return v.parent!=null?SITES[siteOf(i)].n+" › "+v.name:v.name}
 function nearest(lv){var same=lv.filter(function(i){return LV[i].site===LV[cur].site});return same.length?same[0]:lv[0]}
 var cur=0,sel={part:null,block:null},gap=0,sg=0,moved=0;
-var sc=document.getElementById("sc"),ly=document.getElementById("ly"),sh=document.getElementById("shd"),dk=document.getElementById("dock"),bz=document.getElementById("bz"),exw=document.getElementById("bx");
+var sc=document.getElementById("sc"),ly=document.getElementById("ly"),sh=document.getElementById("shd"),dk=document.getElementById("dock"),bz=document.getElementById("bz"),rl=document.getElementById("rl"),exw=document.getElementById("bx");
 function tp(part){var ti=tensInfo(part);return ti?'<i class="lt '+cls(ti.t)+'" title="Tension '+ti.t+'/10">'+ti.t+'</i>':""}
 function init(){
  BUILDING=true;
@@ -188,12 +188,12 @@ function init(){
 function head(){
  var v=LV[cur],S=SITES[siteOf(cur)],deep=v.parent!=null,sid=v.site,ids=[];
  LV.forEach(function(u,j){if(u.site===sid)ids.push(j)});
- var crumb=ids.length>1?'<div class="rail" role="tablist">'+ids.map(function(j,n){return'<button type="button" role="tab" data-lv="'+j+'" class="'+(j===cur?"on":"")+'">'+esc(n===0?(S.rl||S.n):LV[j].name)+'</button>'}).join("")+'</div>':"";
- sh.innerHTML=crumb+'<h2>'+esc(deep?v.name:S.n)+'</h2>';
+ rl.innerHTML=ids.length>1?ids.map(function(j,n){return'<button type="button" class="btn'+(j===cur?" on":"")+'" data-lv="'+j+'">'+esc(n===0?(S.rl||S.n):LV[j].name)+'</button>'}).join(""):"";
+ sh.innerHTML='<h2>'+esc(deep?v.name:S.n)+'</h2>';
 }
 function dockBuild(){
  var v=LV[cur],seen={},ps=[];v.L.forEach(function(l){if(!seen[l[0]]&&PARTS[l[0]]){seen[l[0]]=1;ps.push(l[0])}});
- dk.innerHTML=ps.map(function(p){var zi=v.zi,inn=zi!=null&&ZOOM[p]===LV[zi].id;return'<button type="button" data-dp="'+p+'"><span>'+esc(cap(PARTS[p].n))+(inn?' <i class="in" data-enter="'+zi+'" title="Entrer : '+esc(LV[zi].name)+'">▸</i>':"")+'</span></button>'}).join("");
+ dk.innerHTML=ps.map(function(p){return'<button type="button" data-dp="'+p+'"><span>'+esc(cap(PARTS[p].n))+'</span></button>'}).join("");
  dk.classList.toggle("hide",ps.length>7&&sc.clientWidth>=900);
  dk.querySelectorAll("button").forEach(function(e){e.classList.toggle("on",e.getAttribute("data-dp")===sel.part)})}
 function go(i,quiet){
@@ -333,7 +333,6 @@ function chooseSearch(e){
 })();
 document.addEventListener("click",function(e){
  var c=e.target.closest("[data-block]");if(c){pickLayer(c.getAttribute("data-block"));return}
- var en=e.target.closest("[data-enter]");if(en){go(+en.getAttribute("data-enter"));return}
  var dp=e.target.closest("[data-dp]");if(dp){var pp=dp.getAttribute("data-dp");pick(pp,PARTS[pp].b);return}
  var z=e.target.closest("[data-lv]");if(z){go(+z.getAttribute("data-lv"));return}
  var dsb=e.target.closest("[data-site]");if(dsb){var sid=SITES[+dsb.getAttribute("data-site")].id;for(var q=0;q<LV.length;q++)if(LV[q].id===sid){go(q);break}return}

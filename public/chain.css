@@ -507,3 +507,11 @@ details.nwd>summary{font-size:22px}
 .bx.glass i{background:rgba(255,255,255,.2)!important;border-color:rgba(0,0,0,.18)!important}
 .scene .bx.glass.col i{background:rgba(76,155,255,.22)!important}
 @media(max-width:700px){#bz{display:none!important}}
+
+/* niveaux : trois encadrés à gauche de « Réinitialiser la vue » */
+.acts{flex-direction:row;align-items:center;justify-content:flex-end;flex-wrap:wrap;width:auto;max-width:calc(100% - 32px)}
+.acts .rl{display:contents}
+#bz{display:none!important}
+@media(max-width:700px){.acts{left:12px;right:12px;justify-content:flex-start}.shd{padding-top:52px}.acts .btn{padding:0 10px}}
+.acts .btn.on{background:#0071E3;color:#fff}
+@media(max-width:700px){.acts{gap:5px}.acts .btn{padding:0 9px;font-size:11.5px;height:32px}.shd{padding-top:44px}}
