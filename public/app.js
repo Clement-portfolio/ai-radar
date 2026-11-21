@@ -2,7 +2,7 @@
 "use strict";
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
-var CATS={modeles:"Modèles",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
+var CATS={modeles:"LLMs",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
 var TABS=["une","actualites","recherche","marche","infrastructure","acteurs","carte","methode"];
 var S={lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"pile",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100};
 
@@ -805,7 +805,7 @@ function rActeurs(){
 }
 
 /* Recherche : papiers, labos de modèles, recherche des hyperscalers, agences */
-var RDOM={modeles:"Modèles et agents",robotique:"Robotique",biologie:"Biologie",sante:"Santé",espace:"Espace",energie:"Énergie et climat",materiaux:"Matériaux et chimie",calcul:"Puces et calcul",sciences:"Sciences",securite:"Sûreté et sécurité",autre:"Autres domaines"};
+var RDOM={modeles:"LLMs et agents",robotique:"Robotique",biologie:"Biologie",sante:"Santé",espace:"Espace",energie:"Énergie et climat",materiaux:"Matériaux et chimie",calcul:"Puces et calcul",sciences:"Sciences",securite:"Sûreté et sécurité",autre:"Autres domaines"};
 var RKIND={journal:"Revues",preprint:"Préprints",frontier:"Labos de modèles",hyper:"Hyperscalers",agence:"Agences"};
 function rrowHTML(it){
   var sm=tx(it,"summary"),note=it.pending?'<i class="small">(titre d\'origine, non classé par l\'IA)</i>':(it.title_fr_missing&&!isEn()?'<i class="small">(titre d\'origine)</i>':"");
