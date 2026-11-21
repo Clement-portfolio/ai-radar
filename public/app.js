@@ -811,10 +811,11 @@ function rrowHTML(it){
   var sm=tx(it,"summary"),note=it.pending?'<i class="small">(titre d\'origine, non classé par l\'IA)</i>':(it.title_fr_missing&&!isEn()?'<i class="small">(titre d\'origine)</i>':"");
   return '<div class="row rr i'+(it.imp||1)+'"><span class="time">'+esc(fmtTime(it.ts))+'</span><span class="tag rd-'+esc(it.domain)+'">'+esc(RDOM[it.domain]||it.domain)+'</span>'+
    '<div class="rtxt"><a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,"title"))+'</a>'+(sm?'<p class="rsm">'+esc(sm)+'</p>':'')+(note?'<p class="rsm">'+note+'</p>':'')+'</div>'+
-   '<span class="rsrc">'+esc(it.source)+'<em class="rk">'+esc(RKIND[it.kind]||"")+'</em></span></div>';
+   '<span class="rsrc">'+esc(it.source)+'<em class="rk">'+esc(RKIND[it.kind]||"")+'</em></span>'+
+   '<a class="rtog" href="'+esc(link(it.url))+'" target="_blank" rel="noopener" aria-label="Lire">'+ARW+'</a></div>';
 }
 function rResearch(){
-  var el=$("v-recherche");if(!el)return;
+  var el=$("v-recherche");if(!el)return;el.classList.toggle("essmode",!!S.rtop);
   var R=S.rech,all=(R&&R.items)||[];
   var doms=Object.keys(RDOM),kinds=Object.keys(RKIND);
   var items=all.filter(function(x){return S.rd==="ALL"||x.domain===S.rd}).filter(function(x){return S.rk==="ALL"||x.kind===S.rk}).filter(function(x){return!S.rtop||(x.imp||1)>=3});
@@ -823,7 +824,7 @@ function rResearch(){
   if(S.rfo==="dom")panel='<div class="fpanel"><button class="chip'+(S.rd==="ALL"?' on':'')+'" data-rd="ALL">Tous</button>'+doms.map(function(k){var n=all.filter(function(x){return x.domain===k}).length;return n?'<button class="chip'+(S.rd===k?' on':'')+'" data-rd="'+k+'">'+esc(RDOM[k])+' ('+n+')</button>':""}).join("")+'</div>';
   if(S.rfo==="kind")panel='<div class="fpanel"><button class="chip'+(S.rk==="ALL"?' on':'')+'" data-rk="ALL">Toutes</button>'+kinds.map(function(k){var n=all.filter(function(x){return x.kind===k}).length;return n?'<button class="chip'+(S.rk===k?' on':'')+'" data-rk="'+k+'">'+esc(RKIND[k])+' ('+n+')</button>':""}).join("")+'</div>';
   var h='<h2 class="sec">Recherche</h2><p class="lede">Les percées de l\'IA dans tous les domaines : revues scientifiques, préprints, labos de modèles, recherche des hyperscalers et agences.</p>'+
-   '<div class="toolbar frow"><button class="chip fb'+(S.rfo==="dom"?' open':'')+(S.rd!=="ALL"?' set':'')+'" data-rfo="dom">Domaine : '+esc(dl)+' <span>▾</span></button><button class="chip fb'+(S.rfo==="kind"?' open':'')+(S.rk!=="ALL"?' set':'')+'" data-rfo="kind">Source : '+esc(kl)+' <span>▾</span></button><span class="sp"></span><button class="chip'+(S.rtop?' on':'')+'" data-rtop="1">Essentiel seulement</button></div>'+panel;
+   '<div class="toolbar frow"><button class="chip fb'+(S.rfo==="dom"?' open':'')+(S.rd!=="ALL"?' set':'')+'" data-rfo="dom">Domaine : '+esc(dl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><button class="chip fb'+(S.rfo==="kind"?' open':'')+(S.rk!=="ALL"?' set':'')+'" data-rfo="kind">Source : '+esc(kl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><span class="sp"></span><button class="chip'+(S.rtop?' on':'')+'" data-rtop="1">Essentiel seulement</button></div>'+panel;
   if(!R)h+='<div class="empty">Données en cours de collecte : le premier passage a lieu dans les prochaines heures.</div>';
   else if(!items.length)h+='<div class="empty">Aucune entrée pour ces filtres.</div>';
   var dayCount={};items.forEach(function(x){var d=dayKey(x.ts);dayCount[d]=(dayCount[d]||0)+1});
