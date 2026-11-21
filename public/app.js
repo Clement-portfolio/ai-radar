@@ -93,6 +93,7 @@ function essHTML(it,n){
 }
 var ARW='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>';
 function arrowA(href,label,ext){return'<a class="arw" href="'+esc(href)+'"'+(ext?' target="_blank" rel="noopener"':'')+' aria-label="'+esc(label)+'">'+ARW+'</a>'}
+function figV(v){return String(v).replace(/(\d[\d\u00a0\u202f .,]*\d|\d)\s*(milliards?|millions?)\s+(?:de|d['’])\s*(dollars?|euros?)/gi,function(_,n,u,c){return n.trim()+' '+(/^milliard/i.test(u)?'Md':'M')+(/^dollar/i.test(c)?'$':'€')})}
 function tHead(eb,ttl){return'<div class="thead"><span class="eb">'+esc(eb)+'</span><h2>'+esc(ttl)+'</h2></div>'}
 function cta(go,label){return'<div class="tcta"><button class="pill" data-go="'+esc(go)+'">'+esc(label)+'</button></div>'}
 function rUne(){
@@ -119,7 +120,7 @@ function rUne(){
   var fs=((S.figs&&S.figs.figures)||[]).slice(0,3);
   if(fs.length)h+='<section class="tile dark">'+tHead(en?'Key figures':'Chiffres du jour',en?'Three numbers to remember':'Trois chiffres à retenir')+'<div class="tnums">'+fs.map(function(f){
     var ok=en&&f.title_en&&f.value_en;
-    return'<div class="tnum"><span class="v">'+esc(ok?f.value_en:f.value)+'</span><span class="l">'+esc(ok?f.title_en:f.title)+'</span><span class="s">'+esc(figScope(f.ts))+' · '+esc(fmtD(f.ts))+'</span></div>';
+    return'<div class="tnum"><span class="v">'+esc(figV(ok?f.value_en:f.value))+'</span><span class="l">'+esc(ok?f.title_en:f.title)+'</span><span class="s">'+esc(figScope(f.ts))+' · '+esc(fmtD(f.ts))+'</span></div>';
   }).join("")+'</div>'+cta("marche",en?'See the market':'Voir le marché')+'</section>';
   h+=pHome(en);
   var L=((S.layers&&S.layers.layers)||[]).filter(function(l){return l.tension!=null}).slice().sort(function(a,b){return b.tension-a.tension}).slice(0,3);
@@ -170,7 +171,7 @@ function figCard(f,byId){
   var ls=(f.links&&f.links.length)?f.links:arts.map(function(a){return{t:a.source,u:a.url}});
   var hi=f.conf?f.conf==="haute":arts.some(function(a){return a.confidence==="haute"});
   var src=ls.map(function(l){return'<a href="'+esc(link(l.u))+'" target="_blank" rel="noopener">'+esc(l.t)+' ↗</a>'}).join("");
-  return'<div class="share stat1"><h4>'+esc(en?f.title_en:f.title)+'</h4><div class="bigv">'+esc(en?f.value_en:f.value)+'</div><div class="sm2">'+esc(en?f.sub_en:f.sub)+'</div>'+
+  return'<div class="share stat1"><h4>'+esc(en?f.title_en:f.title)+'</h4><div class="bigv">'+esc(figV(en?f.value_en:f.value))+'</div><div class="sm2">'+esc(en?f.sub_en:f.sub)+'</div>'+
    '<div class="sf">'+src+(ls.length?' '+conf(hi?"haute":"moyenne"):'')+'</div><div class="fr"><span class="small"><span>'+esc(figScope(f.ts))+'</span> · <span>'+esc(fmtD(f.ts))+'</span></span></div></div>';
 }
 function figsHtml(byId){

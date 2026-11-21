@@ -1,6 +1,6 @@
 // Tests des « Chiffres clés » de la Une (hors réseau).
 import assert from "node:assert/strict";
-import { figureCandidates, validateFigures, pickFigures, makeFigures, scopeOf, FIG_RULES } from "./chiffres.mjs";
+import { figureCandidates, validateFigures, pickFigures, makeFigures, scopeOf, FIG_RULES, compactMoney } from "./chiffres.mjs";
 
 const now = Date.parse("2026-11-18T16:00:00Z");
 const H = 3600e3, D = 24 * H;
@@ -82,4 +82,10 @@ assert.equal(r5.regenerated, false); assert.equal(r5.doc.figures.length, 3, "Gem
 const r6 = await makeFigures({ items, now: now + 9 * H, prev: r1.doc, generate: () => mkRes([1]).map((x) => ({ ...x, value: "999 %" })) });
 assert.equal(r6.regenerated, false); assert.match(r6.reason, /rejetés/);
 assert.equal((await makeFigures({ items: [mk("q", 2, "Rien de chiffré", "")], now, prev: null, generate: gen })).regenerated, false, "aucun article chiffré : rien à publier");
+assert.equal(compactMoney("225 milliards de dollars"), "225 Md$");
+assert.equal(compactMoney("1 500 milliards de dollars"), "1 500 Md$");
+assert.equal(compactMoney("1,5 milliard d'euros"), "1,5 Md€");
+assert.equal(compactMoney("300 millions de dollars"), "300 M$");
+assert.equal(compactMoney("92,3 Md$"), "92,3 Md$");
+assert.equal(compactMoney("+4 %"), "+4 %");
 console.log("Tests « Chiffres clés » : OK");

@@ -34,7 +34,7 @@ export const FIG_SYSTEM = `Tu choisis les « chiffres clés » d'un site d'actua
 Renvoie jusqu'à 8 chiffres clés, du plus marquant au moins marquant. Chaque chiffre est tiré d'un ou deux articles (ids = leurs numéros a) et mesure UNE chose : un résultat financier, un montant levé ou investi, un gain ou une perte de valeur en Bourse, une capacité, un volume, une part de marché, un nombre d'utilisateurs. Deux chiffres ne portent jamais sur le même sujet ni sur le même article. Préfère les chiffres des 24 dernières heures, mais renvoie aussi des chiffres plus anciens de la semaine et du mois. Certains articles sont des communiqués de résultats officiels d'entreprises, en anglais : pour un résultat d'entreprise, le chiffre vedette (value) est le CHIFFRE D'AFFAIRES du trimestre avec sa variation par rapport au TRIMESTRE PRÉCÉDENT (« Q/Q » dans le communiqué), jamais le bénéfice par action. Dans sub, donne d'abord la comparaison avec le trimestre précédent (montant précédent et variation) puis la variation sur un an ; le BPA n'est qu'un élément de contexte en fin de phrase. Si le communiqué ne donne pas la variation sur le trimestre précédent, utilise la variation sur un an. Écris en français.
 Pour chacun, en français :
 - title : ce que mesure le chiffre, 70 caractères maximum (ex. « Nvidia : revenus du trimestre »).
-- value : le chiffre tel qu'il est écrit dans l'article, avec son unité, 40 caractères maximum (ex. « 115,8 Md$ » ou « +4 % »).
+- value : le chiffre tel qu'il est écrit dans l'article, avec son unité, 40 caractères maximum (ex. « 115,8 Md$ » ou « +4 % »). Écris toujours les montants avec l'unité abrégée (« Md$ », « M$ », « Md€ », « M€ »), jamais « milliards de dollars » en toutes lettres.
 - sub : une ou deux phrases de contexte ou de détail, 230 caractères maximum, qui apprennent quelque chose que title et value ne disent pas (comparaison, attentes, cause, période). Ne répète pas le titre.
 - title_en, value_en, sub_en : les mêmes textes traduits fidèlement en anglais.
 Règles impératives :
@@ -70,7 +70,7 @@ export function validateFigures(arr, inputs, now, diag = []) {
   arr.forEach((r, k) => {
     const ids = [...new Set((Array.isArray(r?.ids) ? r.ids : []).map(Number))].filter((a) => inputs.some((x) => x.a === a)).slice(0, FIG_RULES.maxArticles);
     const arts = ids.map((a) => inputs.find((x) => x.a === a));
-    const title = clean(r?.title), value = clean(r?.value), sub = clean(r?.sub);
+    const title = clean(r?.title), value = compactMoney(clean(r?.value)), sub = clean(r?.sub);
     const tag = `chiffre ${k + 1}`;
     if (!arts.length) return diag.push(`${tag} : aucun article cité valide`);
     if (!title || title.length > 80 || !value || value.length > 45 || !sub || sub.length > 260) return diag.push(`${tag} : texte vide ou trop long`);
@@ -135,4 +135,9 @@ export async function makeFigures({ items, now, prev, generate, modelName }) {
     doc: { v: 1, day, generated_at: new Date(now).toISOString(), model: modelName ? modelName() : null, figures: picked.map(({ k, vd, ...f }) => f) },
     regenerated: true, reason: picked.length < FIG_RULES.count ? `chiffres régénérés (${picked.length} sur ${FIG_RULES.count})` : "chiffres régénérés",
   };
+}
+
+/** « 225 milliards de dollars » → « 225 Md$ », « 300 millions d'euros » → « 300 M€ » : une seule écriture des montants dans « Chiffres du jour ». */
+export function compactMoney(v) {
+  return String(v).replace(/(\d[\d\u00a0\u202f .,]*\d|\d)\s*(milliards?|millions?)\s+(?:de|d['’])\s*(dollars?|euros?)/gi, (_, n, u, c) => `${n.trim()} ${/^milliard/i.test(u) ? "Md" : "M"}${/^dollar/i.test(c) ? "$" : "€"}`);
 }
