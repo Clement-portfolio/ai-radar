@@ -204,7 +204,7 @@ function go(i,quiet){
  head();chips();mark();view();
 }
 function chips(){
- ly.innerHTML=SITES.map(function(S,k){return'<button class="chip" data-site="'+k+'" title="'+esc(S.b)+'"><b>'+(k+1)+'</b>'+esc(S.n)+'</button>'}).join("");
+ ly.innerHTML=SITES.map(function(S,k){return'<button class="chip" data-site="'+k+'" title="'+esc(S.b)+'">'+esc(S.n)+'</button>'}).join("");
  ly.querySelectorAll(".chip").forEach(function(e){e.classList.toggle("sel",+e.getAttribute("data-site")===siteOf(cur))});
  dockBuild();
 }
@@ -290,14 +290,14 @@ var SX=[],SR=[],SI=-1;
 function norm(t){return String(t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase()}
 function buildIndex(){
  SX=[];
- CH.blocks.forEach(function(b){var subs=(b.subs||[]).map(function(x){return x.name}).join(" ");SX.push({k:"b",id:b.id,name:b.name,sub:"Couche "+b.n+" · "+b.short,t:norm(b.name+" "+b.short+" "+subs),nt:norm(b.name),ex:[]})});
+ CH.blocks.forEach(function(b){var subs=(b.subs||[]).map(function(x){return x.name}).join(" ");SX.push({k:"b",id:b.id,name:b.name,sub:"Couche · "+b.short,t:norm(b.name+" "+b.short+" "+subs),nt:norm(b.name),ex:[]})});
  Object.keys(PARTS).forEach(function(p){
   var P=PARTS[p],b=BY[P.b],ex=[],key=FMAP[p],f=key&&FM[key];
   if(f){ex.push(f.name);if(f.pie)f.pie.items.forEach(function(i){ex.push(i.n)})}
   var m=MKT[p];if(m&&m.s)m.s.items.forEach(function(i){ex.push(i.n)});
   var lvs=[];LV.forEach(function(v,i){if(v.L.some(function(l){return l[0]===p}))lvs.push(i)});
   if(!lvs.length||!b)return;
-  SX.push({k:"p",id:p,name:P.n,sub:"Couche "+b.n+" "+b.name+" · "+LVN(lvs[0]),t:norm(P.n+" "+P.c+" "+P.r+" "+ex.join(" ")),nt:norm(P.n+" "+P.c),ex:ex,lv:lvs})});
+  SX.push({k:"p",id:p,name:P.n,sub:"Couche "+b.name+" · "+LVN(lvs[0]),t:norm(P.n+" "+P.c+" "+P.r+" "+ex.join(" ")),nt:norm(P.n+" "+P.c),ex:ex,lv:lvs})});
 }
 function doSearch(q){
  var qn=norm(q).trim(),tk=qn.split(/\s+/).filter(Boolean),res=document.getElementById("res");
@@ -535,7 +535,7 @@ function duo(){
  if(part!==lastPart){nwDetOpen=false;nwLimit=NSHOW;nwOpen={}}else if(old)nwDetOpen=old.open;
  lastPart=part;
  var P=PARTS[part],b=BY[P.b],fam=PF[part],dt=DET[part]||[],mh=mini(part);
- function chs(a){return a.map(function(id){return'<button class="chip" data-block="'+id+'">'+BY[id].n+' '+esc(BY[id].name)+'</button>'}).join("")}
+ function chs(a){return a.map(function(id){return'<button class="chip" data-block="'+id+'">'+esc(BY[id].name)+'</button>'}).join("")}
  var det=dt.length?'<div class="det">'+dt.map(function(r){return'<div><i style="background:'+FC[r[0]]+'"></i><p><b>'+esc(r[1])+'</b> <span>'+esc(r[2])+'</span></p></div>'}).join("")+'</div>':(mh?'<div class="det"><div><i style="background:'+FC[fam]+'"></i><p><span>'+esc(P.r)+'</span></p></div></div>':'');
  var left='<div class="fzl"><span class="kicker">Zoom sur la pièce</span>'+(mh?'<div class="mini">'+mh+'</div><p class="mlg"><i class="mk1" style="background:'+FC[fam]+'"></i>Coloré : la pièce <i class="mk2"></i>Gris : son environnement direct</p>':'<p class="big">'+esc(P.r)+'</p>')+det+'</div>';
  var right='<div class="fzr"><span class="kicker">Fiche technique</span><div class="ft">'+
