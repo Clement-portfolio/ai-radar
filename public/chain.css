@@ -377,7 +377,7 @@ details.nwd[open]>summary::before{content:"";transform:rotate(180deg)}
 .lay{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 40px),transparent);padding-right:30px}
 
 /* barre de filtres : même modèle que Actualités (cadre blanc arrondi, pastilles de 44 px, actif en noir) */
-.flt{padding:10px;border-radius:30px;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.05);gap:8px;align-items:center}
+.flt{padding:10px;border-radius:30px;background:#fff;gap:8px;align-items:center}
 .lay{flex-wrap:wrap;overflow:visible;-webkit-mask-image:none;mask-image:none;padding-right:0;gap:8px}
 .lay .chip,.chip{min-height:44px;padding:0 18px;font-size:15px}
 .lay .chip b{font-size:13px}
