@@ -14,16 +14,17 @@ export const SIEGE = {
   ABB: "Suisse", "Hitachi Energy": "Suisse",
   Nittobo: "Japon", Ibiden: "Japon", "Mitsubishi Heavy Industries": "Japon", "Mitsubishi Electric": "Japon", "Sumitomo Electric": "Japon",
   Humain: "Arabie saoudite", G42: "Émirats arabes unis",
+  Nebius: "Pays-Bas", IREN: "Australie",
 };
 const PAYS = { US: "États-Unis", CN: "Chine", EU: "Europe", GULF: "Golfe", JP: "Japon", UK: "Royaume-Uni", OTHER: "Autres" };
 
 const ALIAS = { Google: "Alphabet", "Samsung Foundry": "Samsung", "Tower Semiconductor": "Tower" };
-const TERMS = { Alphabet: ["Alphabet", "Google"], Meta: ["Meta"], Microsoft: ["Microsoft"], Amazon: ["Amazon", "AWS"], Samsung: ["Samsung"], Nvidia: ["Nvidia"] };
+const TERMS = { "Moonshot AI": ["Moonshot AI", "Kimi"], "Zhipu AI": ["Zhipu AI", "Zhipu", "Z.ai"], Alphabet: ["Alphabet", "Google"], Meta: ["Meta"], Microsoft: ["Microsoft"], Amazon: ["Amazon", "AWS"], Samsung: ["Samsung"], Nvidia: ["Nvidia"] };
 
 export const slug = (s) => String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const esc = (s) => String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 /** Noms qui sont aussi des mots courants : on exige la casse exacte (ou le sigle en majuscules) pour ne pas les prendre pour l'entreprise. */
-const AMBIGUOUS = new Set(["Arm", "Meta", "Credo", "Tower", "Coherent", "ASE", "Eaton"]);
+const AMBIGUOUS = new Set(["Arm", "Meta", "Credo", "Tower", "Coherent", "ASE", "Eaton", "IREN"]);
 /** Nom d'acteur isolé dans un texte : pas collé à une autre lettre (évite « AMD » dans « AMDOCS »). */
 export const nameRe = (names) => {
   const amb = names.some((n) => AMBIGUOUS.has(n));

@@ -146,7 +146,7 @@ function hpPie(en){
 }
 function hpActors(en){
   var A=(S.acteurs&&S.acteurs.actors)||[];if(!A.length)return"";
-  var EX={infra:["Nvidia","TSMC","ASML"],hyper:["Amazon","Microsoft","Alphabet"],labs:["OpenAI"]};
+  var EX={infra:["Nvidia","TSMC","ASML"],hyper:["Amazon","Microsoft","Alphabet"],labs:["Anthropic","OpenAI","DeepSeek"]};
   var rows=["infra","hyper","labs"].map(function(g){
     var L=A.filter(function(a){return aGroup(a)===g});if(!L.length)return"";
     var names=EX[g].filter(function(n){return L.some(function(a){return a.n===n})});if(!names.length)names=L.slice(0,3).map(function(a){return a.n});
@@ -610,9 +610,9 @@ function aMd(v){var b=v/1e9;return b>=1?(Math.round(b*10)/10).toString().replace
 function aSigned(x){if(x==null)return"";var v=Math.abs(x)>=10?Math.round(x):Math.round(x*10)/10;return(v>0?"+":v<0?"−":"")+String(Math.abs(v)).replace(".",",")+" %"}
 function aLink(u,t){return'<a href="'+esc(link(u))+'" target="_blank" rel="noopener">'+esc(t)+' ↗</a>'}
 function aById(id){return((S.acteurs&&S.acteurs.actors)||[]).filter(function(a){return a.id===id})[0]}
-var AHYPER=["alphabet","amazon","microsoft","meta","alibaba","bytedance"],ALAB=["openai"];
+var AHYPER=["alphabet","amazon","microsoft","meta","alibaba","bytedance"];
 var AGN={infra:["Infrastructure IA","AI infrastructure"],hyper:["Hyperscalers","Hyperscalers"],labs:["Laboratoires IA","Frontier labs"]};
-function aGroup(a){return ALAB.indexOf(a.id)>=0?"labs":AHYPER.indexOf(a.id)>=0?"hyper":"infra"}
+function aGroup(a){return a.roles.some(function(r){return r.blockId==="modeles"})?"labs":AHYPER.indexOf(a.id)>=0?"hyper":"infra"}
 var AFILT=[
   {k:"fond",fr:"Fonderies",en:"Foundries",blocks:["Fabrication","Assemblage"],tip:["Gravure, lithographie, assemblage avancé","Etching, lithography, advanced packaging"]},
   {k:"ener",fr:"Énergie",en:"Energy",blocks:["Énergie"],tip:["Turbines, réseau, nucléaire","Turbines, grid, nuclear"]},

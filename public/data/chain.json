@@ -208,6 +208,33 @@
        "u": "https://www.tomshardware.com/tech-industry/artificial-intelligence/half-of-planned-us-data-center-builds-have-been-delayed-or-canceled-growth-limited-by-shortages-of-power-infrastructure-and-parts-from-china-the-ai-build-out-flips-the-breakers"
       }
      ]
+    },
+    {
+     "name": "Neoclouds : cloud de calcul spécialisé",
+     "why": "Spécialistes de la location de puissance de calcul GPU, utilisée surtout par les laboratoires d'IA et les grandes entreprises, en dehors des grands clouds.",
+     "actors": [
+      {
+       "n": "CoreWeave",
+       "c": "US"
+      },
+      {
+       "n": "Nebius",
+       "c": "EU"
+      },
+      {
+       "n": "IREN",
+       "c": "OTHER"
+      },
+      {
+       "n": "Nscale",
+       "c": "UK"
+      },
+      {
+       "n": "Crusoe",
+       "c": "US"
+      }
+     ],
+     "figs": []
     }
    ]
   },
@@ -837,7 +864,27 @@
     "memoire",
     "reseau"
    ],
-   "subs": []
+   "subs": [
+    {
+     "name": "Laboratoires de modèles de pointe",
+     "why": "Les laboratoires qui entraînent et publient les grands modèles de langage : c'est leur demande de calcul, de mémoire et de réseau qui tire toute la chaîne.",
+     "actors": [
+      {
+       "n": "Anthropic",
+       "c": "US"
+      },
+      {
+       "n": "OpenAI",
+       "c": "US"
+      },
+      {
+       "n": "DeepSeek, Moonshot AI, Zhipu AI, MiniMax",
+       "c": "CN"
+      }
+     ],
+     "figs": []
+    }
+   ]
   },
   {
    "id": "applications",

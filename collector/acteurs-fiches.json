@@ -438,6 +438,36 @@
   },
   "x-energy": {
    "desc": "Américain, petits réacteurs nucléaires à haute température (Xe-100) ; partenariat annoncé avec Amazon."
+  },
+  "anthropic": {
+   "desc": "Laboratoire américain d'IA, éditeur des modèles Claude ; vend l'accès par API et par abonnement, et s'appuie sur de grands clouds pour son calcul."
+  },
+  "coreweave": {
+   "desc": "Fournisseur américain de cloud GPU pour l'IA, coté au Nasdaq ; loue de la puissance de calcul Nvidia à des laboratoires et à des entreprises."
+  },
+  "nebius": {
+   "desc": "Société néerlandaise de cloud d'IA, issue de l'ancien groupe Yandex ; construit des datacenters et loue du calcul GPU."
+  },
+  "iren": {
+   "desc": "Société australienne d'infrastructure numérique, issue du minage de bitcoin ; exploite des datacenters alimentés par des énergies renouvelables et loue du calcul GPU pour l'IA."
+  },
+  "nscale": {
+   "desc": "Société britannique d'infrastructure d'IA : cloud GPU et datacenters, avec une activité centrée sur l'Europe."
+  },
+  "crusoe": {
+   "desc": "Société américaine de cloud et de datacenters pour l'IA, née de la valorisation du gaz de torchère en calcul ; construit des campus d'IA."
+  },
+  "deepseek": {
+   "desc": "Laboratoire chinois d'IA, éditeur des modèles DeepSeek, publiés en poids ouverts."
+  },
+  "moonshot-ai": {
+   "desc": "Laboratoire chinois d'IA derrière l'assistant Kimi et les modèles du même nom."
+  },
+  "zhipu-ai": {
+   "desc": "Laboratoire chinois d'IA issu de l'université Tsinghua, éditeur des modèles GLM (marque Z.ai)."
+  },
+  "minimax": {
+   "desc": "Laboratoire chinois d'IA, éditeur des modèles MiniMax et de produits grand public comme Hailuo et Talkie."
   }
  }
 }

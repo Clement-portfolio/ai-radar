@@ -17,6 +17,7 @@ export const SEC_ACTORS = [
   { name: "Coherent", cik: "820318" }, { name: "Lumentum", cik: "1633978" }, { name: "Amphenol", cik: "820313" }, { name: "Vertiv", cik: "1674101" },
   { name: "Eaton", cik: "1551182" }, { name: "GE Vernova", cik: "1996810" }, { name: "Cadence", cik: "813672" }, { name: "Synopsys", cik: "883241" },
   { name: "Oklo", cik: "1849056" }, { name: "NuScale", cik: "1822966" },
+  { name: "CoreWeave", cik: "1769628" }, { name: "IREN", cik: "1878848" },
 ];
 // Carnet de commandes contractuel déclaré (RPO = obligations de performance restantes), valeur à une date, pas sur une période.
 export const BACKLOG = ["RevenueRemainingPerformanceObligation"];
