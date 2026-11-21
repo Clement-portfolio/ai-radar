@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-21T12:31:42.736Z",
+ "generated_at": "2026-11-21T15:51:41.152Z",
  "people": [
   {
    "id": "sam-altman",
@@ -2076,7 +2076,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Bill Ackman renforce sa position dans Netflix au T3 ; quitte Hertz, réduit celle dans Microsoft"
     }
    ]
   },
@@ -2467,7 +2468,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Jeff Bezos dit que votre famille « n'aura pas besoin » de 2 salaires grâce à l'IA. Avant de démissionner, voici le calcul pour 1 revenu"
     },
     {
      "ts": "2026-11-18T02:03:00.000Z",
@@ -4676,7 +4678,18 @@
    "co": "Alibaba",
    "actor": "alibaba",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-21T15:47:31.000Z",
+     "title": "Alibaba Sinks 25% in a Month as Chip Curbs Threaten Its 20 GW Plan: Eddie Wu Warns of “Downward Revision”",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVmRIV0stUTRmeGpUV2hzQnNnT0lMYThVZnhES3dlSDBZSW1zZXgxanpfM2NBQm1ma0JPS2xaUWtUV0FPOUZDajlfbjdRbnVrWXQyOUt0TEwxTWxSU3d3dVpHazRvbjVRcmhSU1BBRy10MFhJT0FuS0NpcjJQdFBkemRPbElJRm5BREp3NXdjVk9OdzZ0V2lzbU13NG9fTHhVakdDdDdES043c3NwRmtqSHhONmQ0ZFQzcy1LaU1kdzZxR0FrS1Y4?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse",
+     "title_fr": "Alibaba chute de 25 % en un mois alors que les restrictions sur les puces menacent son plan de 20 GW : Eddie Wu avertit d'une « révision à la baisse »",
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "mukesh-ambani",

@@ -1,68 +1,68 @@
 {
  "v": 1,
  "day": "2026-11-21",
- "generated_at": "2026-11-21T01:28:45.153Z",
+ "generated_at": "2026-11-21T15:51:41.152Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Palo Alto Networks : acquisition",
-   "value": "4,5 milliards de dollars",
-   "sub": "L'opération permet à l'entreprise de s'étendre à l'IA d'entreprise en rachetant une startup spécialisée.",
+   "title": "Databricks : valorisation visée",
+   "value": "225 milliards de dollars",
+   "sub": "L'entreprise négocie une levée de fonds massive qui porterait sa valorisation globale à ce montant record dans le secteur technologique.",
    "ids": [
-    "d076977e7671"
+    "1f2687967e4b"
    ],
    "links": [
     {
-     "t": "EE Times",
-     "u": "https://www.eetimes.com/palo-alto-networks-expands-into-enterprise-ai-with-4-5b-deal/"
+     "t": "Channel Newsasia",
+     "u": "https://www.channelnewsasia.com/business/databricks-in-early-talks-raise-funds-225-billion-valuation-wsj-reports-6570836"
     }
    ],
    "conf": "moyenne",
    "scope": "day",
-   "ts": "2026-11-20T15:37:26.000Z",
-   "title_en": "Palo Alto Networks: Acquisition",
-   "value_en": "4.5 billion dollars",
-   "sub_en": "The transaction enables the company to expand into enterprise AI by acquiring a specialized startup."
+   "ts": "2026-11-20T23:40:57.000Z",
+   "title_en": "Databricks: target valuation",
+   "value_en": "$225 billion",
+   "sub_en": "The company is negotiating a massive fundraising round that would bring its overall valuation to this record amount in the tech sector."
   },
   {
-   "title": "Pragmatik Labs : valorisation",
-   "value": "5 milliards de dollars",
-   "sub": "La startup d'IA fondée par un ancien dirigeant d'Alibaba a doublé sa valorisation à l'occasion d'une levée de fonds.",
+   "title": "Microsoft : revenus du trimestre",
+   "value": "92,3 Md$",
+   "sub": "Le chiffre d'affaires du trimestre a progressé de 19 % par rapport au premier trimestre de l'exercice fiscal précédent. Le bénéfice net s'est établi à 36,6 milliards de dollars.",
    "ids": [
-    "bfecfd9628f7"
+    "d2bc3e899c34"
    ],
    "links": [
     {
-     "t": "TechNode",
-     "u": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPN0pnTDdZeXFPaE5kLVVxcGtLbEp6ZVlNYW92Vld0a05tN3ZCRHF0SmhNRWVZeDUwV1ZEZExyc0pmeUVqYzJfMUVsblBoeGVnZmxmUGVFNzh5MzYzMHFPZTNTUnNVcTlMdThKcG85S2RjOUtWUVVUZFoyYy0zeFlLelJ4T1U4ZmN3OFl1Z3puQkszNm9lTXRqaUlrWHIwUUt1WlE?oc=5"
+     "t": "Microsoft (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436122/msft-ex99_1.htm"
     }
    ],
-   "conf": "moyenne",
-   "scope": "day",
-   "ts": "2026-11-20T14:14:22.000Z",
-   "title_en": "Pragmatik Labs: Valuation",
-   "value_en": "5 billion dollars",
-   "sub_en": "The AI startup founded by a former Alibaba executive doubled its valuation during a fundraising round."
+   "conf": "haute",
+   "scope": "month",
+   "ts": "2026-10-28T20:04:44.000Z",
+   "title_en": "Microsoft: quarterly revenue",
+   "value_en": "$92.3 billion",
+   "sub_en": "Quarterly revenue increased by 19% compared to the corresponding period of the previous fiscal year. Net income reached $36.6 billion."
   },
   {
-   "title": "Anthropic : capitalisation boursière",
-   "value": "1 500 milliards de dollars",
-   "sub": "L'entreprise a fait son entrée sur le Nasdaq avec une valorisation initiale record, se plaçant parmi les géants de l'industrie.",
+   "title": "Amazon : ventes nettes du trimestre",
+   "value": "201,9 Md$",
+   "sub": "Les ventes nettes ont progressé de 12 % par rapport aux 180,2 milliards de dollars enregistrés au troisième trimestre 2025. Le bénéfice net s'est établi à 20,7 milliards de dollars.",
    "ids": [
-    "1a26151f6749"
+    "823e0ec9d64d"
    ],
    "links": [
     {
-     "t": "The Verge IA",
-     "u": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq"
+     "t": "Amazon (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
     }
    ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-19T16:52:01.000Z",
-   "title_en": null,
-   "value_en": null,
-   "sub_en": null
+   "conf": "haute",
+   "scope": "month",
+   "ts": "2026-10-29T20:05:27.000Z",
+   "title_en": "Amazon: quarterly net sales",
+   "value_en": "$201.9 billion",
+   "sub_en": "Net sales increased by 12% compared to $180.2 billion in the third quarter of 2025. Net income reached $20.7 billion."
   }
  ]
 }

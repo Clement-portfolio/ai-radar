@@ -5,16 +5,16 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-21T13:08:42.284Z",
+ "generated_at": "2026-11-21T15:51:41.152Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
+  "0396da82d35c+06e6d380e3a5+133408be93f9+1dfd0f40ba72+272d99eb97b0+83eb8920a967+871fa7926cd4+8838b8c2d698+8df8ab3d4ae8+92ca8c823c3c+96a6c848a0d0+b7121aa76176+d30c8e933f5d+dabbfcbec428+ea05cfb5b9ab+f7ed75cce7a0+fcd152f94053",
   "09a497f98e64+3778953e71a6+5db9be893d58+8daf2e1f77bd+94d599ca1343+db8f13db2a39+e0ac844ba9e5+e20cbf90b852+f2ad34d486f9",
-  "0396da82d35c+133408be93f9+1dfd0f40ba72+2a888cccd81b+4aacf31011a3+4fedf2b73e6e+4ff277b88683+76a25eb27bdf+7daef9fdaa1b+7f3c247631e5+83eb8920a967+871fa7926cd4+8838b8c2d698+a628189a2219+b1f950c01034+b7121aa76176+bab1a902faa1+c554d88a231d+cf4dad18e37f+d30c8e933f5d+d6f405a6a912+ed6320e874d8+efef379689b1+f4fe310fb2c6+f7ed75cce7a0+fcd152f94053",
+  "01ad01e5cd41+07b3803b9303+364825014eaf+407420f377ab+499e87d18729+50e1e25269a9+86d3aeca06e8+8e2a2f996f96+9f91f68231f9+bc1d56d7d3cd+d48fe5cca15f+e9a32acc23d6",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+c48900998378+f1b7c64ada91",
   "47650c445adb+7c86141884e3+a25bfe4a44cc+e9c2330af5a7",
   "1d0523b60f6f+376956b25183+4b9c8cdeff32+bd693f5f4e0c+cd767daa7782+d8fbec9f2d14",
-  "01ad01e5cd41+2511beafb119+3ee7a75e87fa+499e87d18729+8e2a2f996f96+d0f3964a2126+e48e2cd0b4e2",
-  "260e64ed6f92+52f8100482ff+9b10aa3778dc+f2da25e696e2",
+  "27277ae24135+580518075063+9f91d11995ea",
   "bbb72de1e1a5+c97da236b03c+d89470b71910+e85265dd1b32+ee4ac4dd7186"
  ],
  "stories": [
@@ -25,48 +25,25 @@
     "94d599ca1343",
     "3778953e71a6"
    ],
-   "head": "Samsung et TSMC durcissent leurs exportations de puces IA vers la Chine face aux règles américaines",
+   "head": "Samsung et TSMC durcissent leurs exportations de puces IA face aux nouvelles règles américaines",
    "bullets": [
-    "TSMC a renforcé ses contrôles à l'exportation pour se conformer aux nouvelles exigences du Département du Commerce des États-Unis.",
-    "Ces mesures visent à limiter l'accès de la Chine aux technologies de fabrication de semi-conducteurs les plus avancées."
+    "Samsung suspend ses livraisons de puces IA vers la Chine pour se conformer aux dernières régulations du Département du Commerce américain.",
+    "Les nouvelles restrictions américaines visent également à limiter les transferts indirects de technologies vers les centres de données situés en Asie du Sud-Est.",
+    "Ces mesures perturbent les chaînes d'approvisionnement mondiales et les projets d'infrastructures technologiques des pays émergents de la région."
    ],
    "kinds": [
+    "detail",
     "detail",
     "explication"
    ],
-   "head_en": "Samsung and TSMC tighten AI chip exports to China following new US regulations",
+   "head_en": "Samsung and TSMC tighten AI chip exports following new US regulations",
    "bullets_en": [
-    "TSMC has strengthened its export controls to comply with the new requirements of the US Department of Commerce.",
-    "These measures aim to limit China's access to the most advanced semiconductor manufacturing technologies."
+    "Samsung is suspending AI chip shipments to China to comply with the latest US Department of Commerce regulations.",
+    "New US restrictions also aim to limit indirect technology transfers to data centers located in Southeast Asia.",
+    "These measures disrupt global supply chains and technology infrastructure projects in emerging countries in the region."
    ],
    "ctx_ids": [],
    "ts": "2026-11-21T11:45:01.000Z"
-  },
-  {
-   "ids": [
-    "133408be93f9",
-    "d6f405a6a912",
-    "ed6320e874d8",
-    "4aacf31011a3"
-   ],
-   "head": "Anthropic réalise la plus grande introduction en bourse de l'histoire technologique",
-   "bullets": [
-    "L'entreprise a vendu 1 127 000 000 actions à un prix unitaire de 83 dollars pour lever un total de 93,5 milliards de dollars.",
-    "Cette opération consacre la domination financière des laboratoires d'intelligence artificielle malgré les craintes d'une bulle spéculative sur les marchés.",
-    "Cette introduction en bourse sur le Nasdaq était très attendue par les investisseurs comme un test majeur pour l'ensemble du secteur de l'intelligence artificielle."
-   ],
-   "kinds": [
-    "detail",
-    "explication",
-    "contexte"
-   ],
-   "head_en": null,
-   "bullets_en": null,
-   "ctx_ids": [
-    "58e8987b4f93",
-    "06f57261d639"
-   ],
-   "ts": "2026-11-20T15:15:43.000Z"
   },
   {
    "ids": [
@@ -75,22 +52,50 @@
     "c48900998378",
     "7e6c0139750f"
    ],
-   "head": "Un mathématicien d'Anthropic affirme avoir résolu l'hypothèse de Riemann avec l'aide de Claude",
+   "head": "Un chercheur d'Anthropic affirme avoir prouvé l'hypothèse de Riemann avec l'aide de l'IA Claude",
    "bullets": [
-    "Le mathématicien Levent Alpöge annonce avoir prouvé ce problème vieux de 167 ans en collaborant avec l'assistant.",
-    "Cette annonce concerne la résolution de l'un des problèmes du prix du millénaire, souvent qualifié de saint Graal des mathématiques."
+    "Le mathématicien Levent Alpöge a utilisé l'assistant Claude pour résoudre ce problème vieux de 167 ans.",
+    "La résolution de ce problème du millénaire via un modèle d'IA marque une étape historique pour le raisonnement des machines."
    ],
    "kinds": [
     "detail",
-    "detail"
+    "explication"
    ],
-   "head_en": "An Anthropic mathematician claims to have solved the Riemann hypothesis with Claude's help",
+   "head_en": "An Anthropic researcher claims to have proven the Riemann hypothesis with the help of AI Claude",
    "bullets_en": [
-    "Mathematician Levent Alpöge announces he has proven this 167-year-old problem by collaborating with the assistant.",
-    "This announcement concerns the solution of one of the Millennium Prize problems, often described as the holy grail of mathematics."
+    "Mathematician Levent Alpöge used the Claude assistant to solve this 167-year-old problem.",
+    "Solving this millennium problem via an AI model marks a historic milestone for machine reasoning."
    ],
    "ctx_ids": [],
    "ts": "2026-11-21T10:19:04.000Z"
+  },
+  {
+   "ids": [
+    "580518075063",
+    "9f91d11995ea",
+    "27277ae24135"
+   ],
+   "head": "Le Nasdaq chute de 5,3 % et efface ses gains de l'année après l'entrée en bourse d'Anthropic",
+   "bullets": [
+    "L'indice Nasdaq perd 5,3 % lors de cette séance de vente massive qui coïncide avec le deuxième jour de cotation d'Anthropic.",
+    "Anthropic venait d'atteindre une valorisation de 2 000 milliards de dollars lors de ses débuts au Nasdaq.",
+    "Les investisseurs se sont délestés de leurs actions liées à l'intelligence artificielle pour réallouer leurs portefeuilles vers Anthropic."
+   ],
+   "kinds": [
+    "detail",
+    "contexte",
+    "explication"
+   ],
+   "head_en": "The Nasdaq drops 5.3% and erases its yearly gains following Anthropic's market debut",
+   "bullets_en": [
+    "The Nasdaq index loses 5.3% during this massive sell-off session coinciding with Anthropic's second day of trading.",
+    "Anthropic had just reached a valuation of 2 trillion dollars during its debut on the Nasdaq.",
+    "Investors dumped their artificial intelligence-related stocks to reallocate their portfolios toward Anthropic."
+   ],
+   "ctx_ids": [
+    "bab1a902faa1"
+   ],
+   "ts": "2026-11-20T22:47:42.000Z"
   }
  ]
 }
