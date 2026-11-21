@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { dayPlan, buildQuery, collectX, applyRow, pressRelay, silentAccounts, chunkList, X_RULES } from "./x.mjs";
+import { pickDay, dayPlan, buildQuery, collectX, applyRow, pressRelay, silentAccounts, chunkList, X_RULES } from "./x.mjs";
 
 const cfg = JSON.parse(fs.readFileSync(new URL("./x-accounts.json", import.meta.url), "utf8"));
 const now = Date.parse("2026-11-21T18:00:00Z");
@@ -91,6 +91,21 @@ const feed = [
 ];
 assert.equal(pressRelay(post, feed, Date.parse("2026-11-21T18:00:00Z")), 2, "2 médias différents");
 assert.equal(pressRelay({ text: "Totally unrelated robotics humanoid walking demonstration video", ts: post.ts }, feed, Date.parse("2026-11-21T18:00:00Z")), 0);
+
+
+// choix du jour : varié (2 posts par compte, 3 sur le marché, pas de doublon de propos)
+const mk = (id, h, d, imp, text, extra = {}) => ({ id, handle: h, aid: h, tier: "t1", text, eng: 10, media: 0, v: { imp, domain: d, kind: "annonce" }, ...extra });
+const pool = [
+  ...[1, 2, 3, 4].map((k) => mk("k" + k, "Kobeissi", "marche", 3, `market selloff number ${k} unique wording ${k}${k} alpha${k} beta${k} gamma${k}`)),
+  mk("m1", "a", "marche", 3, "stocks fall sharply alpha omega sigma delta epsilon"), mk("m2", "b", "marche", 3, "equities tumble again zeta theta kappa lambda"),
+  mk("d1", "x", "calcul", 2, "Rubin shipments start in Q1 according to supply chain model"), mk("d2", "y", "calcul", 2, "Rubin shipments start in Q1 according to supply chain model today"),
+  mk("r1", "z", "robotique", 2, "humanoid production line paused according to people familiar"),
+];
+const day = pickDay(pool, 12);
+assert.ok(day.filter((f) => f.handle === "Kobeissi").length <= 2, "2 posts par compte au plus");
+assert.ok(day.filter((f) => f.v.domain === "marche").length <= 3, "3 posts de marché au plus");
+assert.ok(!(day.some((f) => f.id === "d1") && day.some((f) => f.id === "d2")), "même propos : une seule fois");
+assert.ok(day.some((f) => f.v.domain === "robotique"), "les autres domaines passent");
 
 // comptes muets
 assert.ok(silentAccounts(cfg, { stats: { sama: { read: 3 } } }).length === handles.length - 1);

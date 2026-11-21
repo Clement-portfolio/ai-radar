@@ -10,7 +10,7 @@ import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { foreignScript } from "./translate.mjs";
 
 const DAY = 864e5, H = 3600e3;
-export const X_RULES = { retainDays: 30, maxItems: 600, perDay: 10, minRead: 10, windowH: 26, relayDays: 4, relaySim: 0.25, textMax: 500 };
+export const X_RULES = { retainDays: 30, maxItems: 600, perDay: 12, minRead: 10, windowH: 26, relayDays: 4, relaySim: 0.25, textMax: 500 };
 export const KINDS = ["annonce", "analyse", "donnee", "rumeur", "autre"];
 export const DOMAINS = ["modeles", "calcul", "robotique", "espace", "biologie", "sante", "energie", "securite", "marche", "politique", "autre"];
 
@@ -61,8 +61,8 @@ export async function fetchChunk({ fetchImpl, token, query, max, start, withUser
 /* ---------- tri par l'IA ---------- */
 export const X_SYSTEM = `Tu prépares la rubrique « Sur X » d'un site qui suit le développement de l'intelligence artificielle. Pour chaque post (i, author, text, tier) renvoie :
 - keep : true seulement si le post apporte un contenu concret sur l'IA ou sa chaîne (modèle, produit, résultat, benchmark, puces et calcul, datacenters, robotique, espace lié à l'IA, financement, partenariat, recrutement ou départ marquant, réglementation, donnée chiffrée). false pour : humour, autopromotion, publicité, annonce de fil sans contenu (« 🧵 »), remerciement, vœux, concours, opinion sans fait, politique sans lien avec l'IA, sujet sans rapport.
-- kind : annonce (l'auteur annonce ou rapporte lui-même un fait), analyse (interprétation, commentaire), donnee (chiffre, graphique, benchmark), rumeur (non confirmé : « j'entends », « sources », « rumeur »), ou autre.
-- domain, un de : modeles, calcul (puces, mémoire, serveurs, datacenters), robotique, espace, biologie, sante, energie, securite, marche (valorisation, résultats, flux financiers de l'IA), politique, autre.
+- kind : annonce (l'auteur énonce un fait sans réserve, de première main ou rapporté), analyse (interprétation, commentaire), donnee (chiffre, graphique, benchmark), rumeur UNIQUEMENT si l'auteur lui-même marque l'incertitude (« j'entends », « selon des sources », « rumeur », « serait »), jamais pour un fait énoncé sans réserve ; sinon autre.
+- domain, un de : modeles, calcul (puces, mémoire, serveurs, datacenters), robotique, espace, biologie, sante, energie, securite, marche (bourse, valorisation, résultats, flux financiers : à réserver aux posts de marché dont l'IA est le sujet), politique, autre.
 - imp : 1 à 3. 3 = fait important ou rare, de première main ; 2 = utile ; 1 = anecdotique. Peu de 3.
 - title_fr : UNE phrase en français (140 caractères au plus) qui dit ce que le post affirme, au discours rapporté (« X annonce que… », « Y estime que… »), sans guillemets, sans rien ajouter. Même niveau d'affirmation que l'auteur : une rumeur reste une rumeur.
 - title_en : la même phrase en anglais.
@@ -112,6 +112,27 @@ export function pressRelay(post, feed, now) {
     if (i >= 3 && i / Math.min(a.size, b.size) >= X_RULES.relaySim) media.add(it.source);
   }
   return media.size;
+}
+
+
+/** Choix du jour : par importance, mais varié — au plus 2 posts par compte, 3 sur le marché, jamais deux fois le même propos ; les posts que la presse n'a pas relayés et les comptes de l'étage 1 passent devant. */
+export function pickDay(rows, n = X_RULES.perDay) {
+  const left = rows.map((f) => ({ f, t: toks(f.text) })), out = [], byAuthor = {}, byDomain = {};
+  const base = (f) => f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(3, Math.log10((f.eng || 0) + 1));
+  while (out.length < n && left.length) {
+    let bi = -1, bs = -1e9;
+    left.forEach((x, k) => {
+      const a = x.f.handle || x.f.aid;
+      if ((byAuthor[a] || 0) >= 2 || (x.f.v.domain === "marche" && (byDomain.marche || 0) >= 3)) return;
+      if (out.some((o) => { const i = [...x.t].filter((w) => o.t.has(w)).length; return i >= 4 && i / Math.min(x.t.size, o.t.size) >= 0.6; })) return;
+      const sc = base(x.f) - 6 * (byAuthor[a] || 0) - (x.f.v.domain === "marche" ? 3 * (byDomain.marche || 0) : 0);
+      if (sc > bs) { bs = sc; bi = k; }
+    });
+    if (bi < 0) break;
+    const x = left.splice(bi, 1)[0], a = x.f.handle || x.f.aid;
+    byAuthor[a] = (byAuthor[a] || 0) + 1; byDomain[x.f.v.domain] = (byDomain[x.f.v.domain] || 0) + 1; out.push(x);
+  }
+  return out.map((x) => x.f);
 }
 
 /* ---------- collecte ---------- */
@@ -202,9 +223,9 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
     if (f.v) rows.push(f);
     else if (noAI && !f.done && f.tier === "t1" && f.handle) rows.push({ ...f, v: { kind: "autre", domain: "autre", imp: 1, pending: true } });
   }
-  rows.sort((a, b) => b.v.imp - a.v.imp || b.eng - a.eng);
-  for (const f of rows.slice(0, X_RULES.perDay)) {
-    const media = pressRelay(f, feed, now);
+  for (const f of rows) f.media = pressRelay(f, feed, now);
+  for (const f of pickDay(rows)) {
+    const media = f.media;
     const it = { id: f.id, url: f.handle ? `https://x.com/${f.handle}/status/${f.id}` : `https://x.com/i/status/${f.id}`, handle: f.handle || "", tier: f.tier, ts: f.ts, text: f.text, kind: f.v.kind, domain: f.v.domain, imp: f.v.imp, media, eng: f.eng };
     if (f.v.title) it.title = f.v.title; else if (!f.v.pending) it.title_fr_missing = true;
     if (f.v.title_en) it.title_en = f.v.title_en;
