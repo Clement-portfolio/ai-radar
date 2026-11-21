@@ -1185,3 +1185,6 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 .hpl .lname{color:var(--ink)}
 @media(max-width:620px){.seg2{display:flex;width:100%}.seg2 a,.seg2 button{flex:1 1 auto;padding:0 10px;font-size:13px;min-height:38px}}
 .hpact .lhead{gap:0 16px;padding:20px 0}.hpact .lhead .lgo{grid-row:1}
+
+.hpl .lstat{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(min-width:1001px){.duo .tile.half{height:560px;min-height:0}.hpinf:not(.hpact) .lhead{padding:14px 0}}

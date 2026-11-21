@@ -126,13 +126,20 @@ function rUne(){
   var L=((S.layers&&S.layers.layers)||[]).filter(function(l){return l.tension!=null}).slice().sort(function(a,b){return b.tension-a.tension}).slice(0,3);
   h+='<div class="duo">';
   h+='<section class="tile half hpinf">'+tHead('Infrastructure',en?'Where it’s tight':'Là où ça coince')+'<div class="hpl">'+L.map(function(l){
-    return'<div class="layer"><button class="lhead" data-go="infrastructure/'+esc(l.id)+'" aria-label="'+esc(tx(l,'name'))+'"><span class="lmain"><span class="lname">'+esc(tx(l,'name'))+'</span><span class="lstat">'+esc(l.key_stat||'')+'</span></span><span class="lm">'+layerBar(l)+'</span><span class="lgo">'+ARW+'</span></button></div>'}).join("")+'</div>'+
+    return'<div class="layer"><button class="lhead" data-go="infrastructure/'+esc(l.id)+'" aria-label="'+esc(tx(l,'name'))+'"><span class="lmain"><span class="lname">'+esc(tx(l,'name'))+'</span><span class="lstat">'+esc(shortStat(l.key_stat,en))+'</span></span><span class="lm">'+layerBar(l)+'</span><span class="lgo">'+ARW+'</span></button></div>'}).join("")+'</div>'+
      '<div class="hfoot"><button class="tlink" data-go="infrastructure">'+(en?'Explore infrastructure':'Explorer l’infrastructure')+' ›</button><button class="arw lg" data-go="infrastructure" aria-label="Infrastructure">'+ARW+'</button></div></section>';
   h+='<section class="tile half">'+tHead(en?'Map':'Carte',en?'Where the compute is':'Où est la puissance de calcul')+'<div class="tglobe"><img src="img/globe-mini.svg" alt="" width="210" height="210"></div>'+
      '<div class="hfoot"><button class="tlink" data-go="carte">'+(en?'Explore the map':'Explorer la carte')+' ›</button><button class="arw lg" data-go="carte" aria-label="'+(en?'Map':'Carte')+'">'+ARW+'</button></div></section>';
   h+='</div>';
   h+=hpDuo(en);
   el.innerHTML=h;
+}
+/* Accueil : phrase courte (avant le premier « ; », sans source entre parenthèses) */
+function shortStat(t,en){
+  t=String(t||"");if(en&&window.I18N)t=I18N.tr(t);
+  t=t.split(/\s*;\s*/)[0].trim();
+  var m=t.match(/^(.*?)\s*\(([^()]*)\)$/);if(m&&/[A-Za-zÀ-ÿ]{3}/.test(m[2])&&m[1])t=m[1];
+  return /[.!?…]$/.test(t)?t:t+".";
 }
 /* Accueil : un camembert et un composant tirés au hasard, une fois par chargement de la page */
 var HP={};
@@ -932,7 +939,7 @@ document.addEventListener("click",function(e){
   var vvb=e.target.closest("[data-vv]");if(vvb){S.vv=vvb.getAttribute("data-vv");S.vfo=null;vRefresh();return}
   if(e.target.closest("[data-ve]")){S.ve=!S.ve;S.vlimit=80;vRefresh();return}
   if(e.target.closest("[data-vmore]")){S.vlimit+=80;vRefresh();return}
-  var ag=e.target.closest("[data-ag]");if(ag){S.ag=ag.getAttribute("data-ag");S.ab="ALL";rActeurs();return}
+  var ag=e.target.closest("[data-ag]");if(ag&&!ag.hasAttribute("data-go")){S.ag=ag.getAttribute("data-ag");S.ab="ALL";rActeurs();return}
   var afo=e.target.closest("[data-afo]");if(afo){S.afo=!S.afo;rActeurs();return}
   var ab=e.target.closest("[data-ab]");if(ab){S.ab=ab.getAttribute("data-ab");S.afo=false;rActeurs();return}
   if(e.target.closest("[data-arv]")){S.arv=!S.arv;rActeurs();return}
