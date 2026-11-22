@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-22T15:51:45.444Z",
+ "generated_at": "2026-11-22T18:54:32.756Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1683,6 +1683,36 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-22T18:48:39.000Z",
+     "title": "Bessent says we \"need answers\" on role Nvidia played in sending AI chips to China, suggests Alice Huang is \"kind of a canard\"",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQ0w1SkRVbmd2cF9NcmxBeHYyeTdIdjQwR3c0VG5KT0g1UHlxRm15S1B4ZE1KbUVXOHhlMXhuS1VOeEFnd3VkQmNES2ZpekFDbERtQzFJUVNYXzJHZ0VvdDlUZFVQTWsxOUlJeWRGQnI4ZElsMTc3eklnUDRBcEFmLXF4Z3o?oc=5",
+     "source": "CBS News",
+     "kind": "presse",
+     "title_fr": "Bessent affirme que nous \"avons besoin de réponses\" sur le rôle joué par Nvidia dans l'envoi de puces d'IA en Chine, et suggère qu'Alice Huang est \"en quelque sorte un faux fuyant\"",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-22T17:55:31.000Z",
+     "title": "Scott Bessent Calls on Nvidia to Provide Answers on Chip Sales to China",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPNU9MT1BaVjdSS2pURVRCVjNXdm02bzJhTU9Uc1lVUEI1TkpLb2lJaXVYblJyZWtYWjRiV0NLZTVaay11all2cUUtaThtUDFQYjU0UzVQMTVEajRrNC1USTQ0S05QQ2NFc2xBa3cxajMtTzFNOEVPeEZJYXMtRTBHdGZ2bG4wbzZsSHc?oc=5",
+     "source": "The New York Times",
+     "kind": "presse",
+     "title_fr": "Scott Bessent demande à Nvidia de fournir des réponses sur la vente de puces à la Chine",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-22T17:53:07.000Z",
+     "title": "US seeks answers on Nvidia's sale of chips to China, Bessent says",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQcm1fbVJENmFGZU81bGR4WXVfeDMwdWdaY0xNbmVBN3hmaXVVeVBLelJxT3dubnROYnVkM2NCRXRfcFFvMGNtZ0FlM3c5LWt1WUVGclQzY1ZJTVBCR2d2dXozSXRqN0VIM1NsV0d2YVJLRjJpRnlIcVRNSlZqeURwLWhKa1V4dUNvWDdlZmNoMnQxQ1d6WlVGalNpdjVSZm9PMXRzUA?oc=5",
+     "source": "Reuters",
+     "kind": "presse",
+     "title_fr": "Les États-Unis recherchent des réponses sur la vente de puces de Nvidia à la Chine, déclare Bessent",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T16:28:20.000Z",
      "title": "Bessent says no further restrictions are needed for Nvidia chip exports to China",
      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGhFLVdNQVNlbl9tSXFrRmI4LS1VQmhxamhUS0F0WjhFMmoydGtBbG5Lc1AzbklUekQ0NDdvWDM0Q2Nfd2dOUTZEdE9MVnZCUVJtc1p3M0R4M2VjVS1zNUdXWWF1R2ZnNmpQU2lJSXNQQlM5WUk3cF92bDB3c3F5N3d6ZEEySktWeVRmSkE4SXR3R3JUaXhObmhjdmgzSEgxNTV6d3N0M2k5UU9uSDBsRXZiNzIxRWJsQmfSAb8BQVVfeXFMUElMcEVVRXcweUZhTloxWGJFdlN0UWx2ZDBBSm5DRzhiejNJZlgtWWV2eUpiQ0diajZlZ3BrbmZEMTJRZnU2eVBJWkwxdGNzTkprSElzTk05VXhKREVDcnYwN0t4aXl2V2VFbHZ4SWNuWEVvUXA5bEE1dm94UWU3aTBQT0phSEEydHdEMWYzSkNvbWtlbHVlajJRblRfUUc3eFBXTFZmd2VYQWh2RjMwZzM3N2ZYQ0l3OWhqS29mQm8?oc=5",
@@ -1731,36 +1761,6 @@
      "title_fr": "Bessent déclare que Jensen Huang n'a pas été mentionné lors des discussions avec la Chine",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-20T15:52:58.000Z",
-     "title": "Trump says he discussed Jensen Huang with Xi; Bessent tells CNBC Nvidia chip export policy is unchanged",
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBZY0VGNGFCdGNHVmYycjVUbzFUR0FXcEJrMndDTnJLVDR5Z0VmMHVwS2dTbE5WZTdudnJLNzZJbXdXdXpqUUxCSmR6cUVFeHN4SDV2Ykk1MHlhWGRpNnBoeEpsNnRTempqSzhmdGduNmRQRjFRRExuTdIBfkFVX3lxTE56cjI2TnhQdVVjLVdxdXFYN044dU1UNlZjTFN3eEFYaWsxOERGMmF2S0FsRERhQnBhdWJQekd1dl9tYzFSM1lhVFRPLTVPdlBQdmZfRGppT3lfVFRoZUd2Y29selZXVkRUcUt3bEhMZW53dUlSSlJiLTFWY3FQUQ?oc=5",
-     "source": "CNBC",
-     "kind": "presse",
-     "title_fr": "Trump déclare avoir discuté de Jensen Huang avec Xi ; Bessent indique à CNBC que la politique d'exportation des puces Nvidia reste inchangée",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-20T15:33:55.000Z",
-     "title": "Bessent says Trump and Xi saw robust discussion on trade policy, AI",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPY0EtUzdLOWktNkJxZU55MDJpamRQcXY0YmxjWW81ekQ3S2xYX3BNRjVPMmFuQV9ZQk9MemRVdGJydTg4OWo2aVJ5VTh6ejBlUUwtdXJpb2pJMHllVWdMdTUwdmh2ZVdUUmVzOFQ5ZncxcEdqSDRkN09XcnQxZXZCTVZWZm5JVThMUVNSMTVrb1ltc0hpTGcycG81T3MtM0U?oc=5",
-     "source": "investingLive",
-     "kind": "presse",
-     "title_fr": "Bessent déclare que Trump et Xi ont eu des discussions approfondies sur la politique commerciale et l'IA",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-20T02:45:04.000Z",
-     "title": "Bessent Urges Nvidia to Pick Outsider as Next CEO",
-     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNelVNRDFXQmNHV3JpOFRyaWl2N3h1WnNXNXNXS2FOOHg4dklQNVZfNktCNUdyZ3pNSGtENWRIbE1sYThZZk1QODBNTndERElkRmQ0MHlReHJQU2ZlRDdaYTFqdzA5anBUTXJjVmwwV0hvcW1hS1pPc01zSF9lTXFrTC15RnFzdlJfN2VuYzVuUQ?oc=5",
-     "source": "WSJ",
-     "kind": "presse",
-     "title_fr": "Bessent exhorte Nvidia à choisir une personne externe comme prochain PDG",
-     "m": 1,
-     "e": 1
     }
    ]
   },
@@ -3135,6 +3135,26 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-22T18:29:01.000Z",
+     "title": "Director of National Intelligence Jay Clayton warns US tech outages could continue amid ongoing system upgr...",
+     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNczVBNHluWTlnNHpMTU5TY0dBU2FNRlQ1dllPMXZHNFFfdXZXWDV6aW5zYnI1SDlWb0RyaTA0LWhEQnRVeHNPUlBrT2NuQ2xtb2RRLVBrRnByZUFmSnR3MktOU2E4eXNZc2c3UVdzWFF3SnlTang2LS1pNDFzMURyTGhuQzZVOEUxN0Y0UkxnaGpfY0otTlpXd3RvS2dINnhvZUZKTUp0Rk0tT0dCQ1g5SUtNcE01X2pfOUVIbl92Q3gzcHZpd1V5VEJzRUdGSlpxWjRMWFlEQk92VndhZ3BtNUE5MlhKT0s1djlxV9IB8gFBVV95cUxPREZqeFF0dDlDeEw2UC04UkNBVXRicllhUlFrZVBaS2tIcnEybEl3TGY0eGNHWG9leVBjZzBqRkVlZ2pEV0xMb0R0MDFyLXdoaHZsM1htUUFDeGdQNjBDd0ZSQ3A4VVJZX3U3ZFV4QkthRmpKd3ZFa0pWdDh5V09qYlZ3ZTBLLXZoRGdwbzMyQ2lhQWc0c2lwSXo4NGxpLWNBd2NteFpMR3U3OU5ZLXA2QlpDZW9MaHNNY1Vmc1dzNkR0SlBxZmI4S3JsWnBZVWpVUGY2d0I5cE80cTBDcTlMWE5CX01zOXo5Vng0M0hiUGVTZw?oc=5",
+     "source": "Firstpost",
+     "kind": "presse",
+     "title_fr": "Le directeur du renseignement national Jay Clayton prévient que les pannes technologiques aux États-Unis pourraient continuer au milieu des mises à niveau...",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-22T16:17:53.000Z",
+     "title": "Director of National Intelligence Jay Clayton warns Americans of 'bumps in the road' after tech outages",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPc0UyZUdJbmJyV3E2MkFmMjlaVU43ZXItWDZNd2JtdVFKcGEwMlNENHpLdWJ0dGlqNk5iTXhvc0xXRkI5TVhzSHg3bTFTdzN6MkNkT1pnRktNRWFFazZCTkQ2dlNrZGhjTGI4cWxKaDhKbTg3R2dSbXE2N19aU2plcktMUGFNYmpqLVdkbkVLU3ZDd9IBlwFBVV95cUxQRmQ4Rjd1WnZHMVZWb1BKNTYwWFdzV1JRWWY3SllzSm5EOG5yZjlvNmhma0JEUWhJbHIwNkxHUGZfTTZqUHVQV0ZyR0JfQmx5VFNVR29OaTByQ1VhS3hmVFdNUkJlUmlnbElzSDNXc3Y1VjNkdm9nUTVOTUtYdUNsWHdNajJ5eGhPZVB1Uk5QMmZ4VzV1Q3Fj?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Le directeur du renseignement national Jay Clayton prévient les Américains de « turbulences » après les pannes technologiques",
+     "m": 2,
+     "e": 1
+    },
     {
      "ts": "2026-11-22T14:14:12.000Z",
      "title": "DNI Jay Clayton confirms that China did in fact access top of the line AI chips that were subject to export controls",
@@ -4878,24 +4898,24 @@
      "e": 1
     },
     {
+     "ts": "2026-11-19T19:23:51.000Z",
+     "title": "Fed’s Goolsbee says AI boom risks overheating economy",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQa1ozRDdneFJnTzY1dXJDNUZIekVpTzVZMXZ2Ylpob015TEJ5czV4N1hxcEhFSGY2UEhCekhiUzJUVkg4UEkxVWtONHc4MHhCQ3hTSGlrN2pWbTcxV1R5czYzc1dDTXZxRkFXNzVaRkxnWDFtNWVHV2IwTkYzSEoybHBFbElnSnUwaTFmc2RzMHpxMENfV0pMSGVpN1RpelRHNjBCaWVWOA?oc=5",
+     "source": "Investing.com",
+     "kind": "presse",
+     "title_fr": "Goolsbee de la Fed affirme que le boom de l'IA risque de faire surchauffer l'économie",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T18:59:56.000Z",
      "title": "Goolsbee says the Fed's job right now is to keep AI surge from overheating the economy",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPem1LUUZ0MzVCaURJTHpfcktwS0tMWGMydV9rNlFwSE1uWkQ5eFNsZ1locTBSMzAtOFhmNHJpUWVBaXVrTnRGeEpaLThoRXpKaU93TExUV3hlNE5TLU5aVzFoT1loQzhXOWNJZlpTWElmZ0ljRTJtMFNWUnlDSTY4bW1ROEkyTmFsaWJmVTlSS2VTa3JmTjdXazlxeWpYa0pwd1BSR2NJNTBlVkFNbllhMHA3LUU?oc=5",
      "source": "Reuters",
      "kind": "presse",
      "title_fr": "Goolsbee déclare que le travail de la Fed en ce moment est d'empêcher la poussée de l'IA de surchauffer l'économie",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-19T18:56:39.000Z",
-     "title": "Goolsbee says the Fed’s job right now is to keep AI surge from overheating the economy By Reuters",
-     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQMkU4Nk8xSDZCVldubzRfWGhaTXBDZnozd1pPdU94QjR2c1h1aGE5aHJtNFpNcEE4czlJcFRnMm1kLUh6cHRRWWFnWE8tN2UzWnVJQm85VnpCQVJwVmFGeEdxY1dKeW5YTGpvMkRDeXRCNmViZkhMSTdyUzJHMVZia054UmZ2WThSWWhqUy1mOFpkLWR3VWswVkljRVhSbDM3al9mNTFvN05BUGRJRHhNcFpadTJkQmVCRVNxd2NkZDFXdlN1YlZrS0QwZnEyNnZEMGVZ?oc=5",
-     "source": "Investing.com",
-     "kind": "presse",
-     "title_fr": "Goolsbee déclare que le rôle de la Fed en ce moment est d'empêcher la flambée de l'IA de surchauffer l'économie Par Reuters",
-     "m": 2,
-     "e": 1
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -5411,21 +5431,35 @@
  ],
  "hot": [
   {
-   "score": 1.15,
+   "score": 3.27,
    "id": "jay-clayton",
    "n": "Jay Clayton",
    "role": "Directeur du renseignement national, tsar de l'IA",
    "actor": null,
-   "ts": "2026-11-22T14:14:12.000Z",
-   "title": "DNI Jay Clayton confirms that China did in fact access top of the line AI chips that were subject to export controls",
-   "title_fr": "Le directeur du renseignement national Jay Clayton confirme que la Chine a effectivement eu accès à des puces d'IA haut de gamme soumises à des contrôles à l'exportation",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5wNHRCUEdULXZXcmhsMUY1RGhaQ1piMUJsVGY5WkpEMmFTSURWc2xJWGRxc2FkNjJhb0hYVWsxTnRkOEd2MDZUMklPQkdUSnNGMHNqOGR2a2loUXdRUGo0aVdGbTFpZXc?oc=5",
-   "source": "X",
+   "ts": "2026-11-22T18:29:01.000Z",
+   "title": "Director of National Intelligence Jay Clayton warns US tech outages could continue amid ongoing system upgr...",
+   "title_fr": "Le directeur du renseignement national Jay Clayton prévient que les pannes technologiques aux États-Unis pourraient continuer au milieu des mises à niveau...",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNczVBNHluWTlnNHpMTU5TY0dBU2FNRlQ1dllPMXZHNFFfdXZXWDV6aW5zYnI1SDlWb0RyaTA0LWhEQnRVeHNPUlBrT2NuQ2xtb2RRLVBrRnByZUFmSnR3MktOU2E4eXNZc2c3UVdzWFF3SnlTang2LS1pNDFzMURyTGhuQzZVOEUxN0Y0UkxnaGpfY0otTlpXd3RvS2dINnhvZUZKTUp0Rk0tT0dCQ1g5SUtNcE01X2pfOUVIbl92Q3gzcHZpd1V5VEJzRUdGSlpxWjRMWFlEQk92VndhZ3BtNUE5MlhKT0s1djlxV9IB8gFBVV95cUxPREZqeFF0dDlDeEw2UC04UkNBVXRicllhUlFrZVBaS2tIcnEybEl3TGY0eGNHWG9leVBjZzBqRkVlZ2pEV0xMb0R0MDFyLXdoaHZsM1htUUFDeGdQNjBDd0ZSQ3A4VVJZX3U3ZFV4QkthRmpKd3ZFa0pWdDh5V09qYlZ3ZTBLLXZoRGdwbzMyQ2lhQWc0c2lwSXo4NGxpLWNBd2NteFpMR3U3OU5ZLXA2QlpDZW9MaHNNY1Vmc1dzNkR0SlBxZmI4S3JsWnBZVWpVUGY2d0I5cE80cTBDcTlMWE5CX01zOXo5Vng0M0hiUGVTZw?oc=5",
+   "source": "Firstpost",
+   "kind": "presse",
+   "outlets": 2
+  },
+  {
+   "score": 1.59,
+   "id": "scott-bessent",
+   "n": "Scott Bessent",
+   "role": "Secrétaire américain au Trésor",
+   "actor": null,
+   "ts": "2026-11-22T18:48:39.000Z",
+   "title": "Bessent says we \"need answers\" on role Nvidia played in sending AI chips to China, suggests Alice Huang is \"kind of a canard\"",
+   "title_fr": "Bessent affirme que nous \"avons besoin de réponses\" sur le rôle joué par Nvidia dans l'envoi de puces d'IA en Chine, et suggère qu'Alice Huang est \"en quelque sorte un faux fuyant\"",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQ0w1SkRVbmd2cF9NcmxBeHYyeTdIdjQwR3c0VG5KT0g1UHlxRm15S1B4ZE1KbUVXOHhlMXhuS1VOeEFnd3VkQmNES2ZpekFDbERtQzFJUVNYXzJHZ0VvdDlUZFVQTWsxOUlJeWRGQnI4ZElsMTc3eklnUDRBcEFmLXF4Z3o?oc=5",
+   "source": "CBS News",
    "kind": "presse",
    "outlets": 1
   },
   {
-   "score": 0.92,
+   "score": 0.72,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5435,20 +5469,6 @@
    "title_fr": "Le président Donald Trump annonce la création du groupe de travail sur l'IA « Super Intelligence Force »",
    "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
    "source": "ABC News",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.61,
-   "id": "satya-nadella",
-   "n": "Satya Nadella",
-   "role": "PDG de Microsoft",
-   "actor": "microsoft",
-   "ts": "2026-11-22T03:26:40.000Z",
-   "title": "Microsoft CEO Satya Nadella addresses buyout offered to about 60,000 employees",
-   "title_fr": "Le PDG de Microsoft Satya Nadella aborde l'offre de rachat proposée à environ 60 000 employés",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzlUd1gtTzBYRm80b0V3YnFMUko2NXJVRDlGZEl3SHpfNjNXMFlaQThtaWp6ejVKZzdNWE9XcE1pLWxEdXVXRGNsemtSdjhCQzNNMWxBV3ZFa0RVQTBUcHVhNC1oWUhxUEF4TGROd0tuNGd4N05RRDV0NUlONVowY1VXQkM3M1Yxam1SVkRzUGhsOGVjbDNLcVlIZlpGYS1vdXB6RERVNWdaczZqSnJPaGdYWV83RGQwWWFtYldYbzA4N2V4bmpRckdUMUdzQVJDWVpnSFZObGR0dFNwOVE?oc=5",
-   "source": "KIRO 7 News Seattle",
    "kind": "presse",
    "outlets": 1
   }
