@@ -5,17 +5,17 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-21T21:46:52.164Z",
+ "generated_at": "2026-11-22T01:11:58.345Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "0396da82d35c+06e6d380e3a5+133408be93f9+1dfd0f40ba72+272d99eb97b0+83eb8920a967+871fa7926cd4+8838b8c2d698+8df8ab3d4ae8+92ca8c823c3c+96a6c848a0d0+b7121aa76176+d30c8e933f5d+dabbfcbec428+ea05cfb5b9ab+f7ed75cce7a0+fcd152f94053",
   "09a497f98e64+3778953e71a6+5db9be893d58+8daf2e1f77bd+94d599ca1343+db8f13db2a39+e0ac844ba9e5+e20cbf90b852+f2ad34d486f9",
+  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+c48900998378+da1d6f4a2cd7+f1b7c64ada91",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5a8f7d1dc4aa+5fc039618c60+cd767daa7782+d8fbec9f2d14",
-  "01ad01e5cd41+364825014eaf+407420f377ab+499e87d18729+50e1e25269a9+86d3aeca06e8+8ab217dd39cd+8e2a2f996f96+9f91f68231f9+e9a32acc23d6",
-  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+c48900998378+f1b7c64ada91",
+  "01ad01e5cd41+364825014eaf+499e87d18729+50e1e25269a9+86d3aeca06e8+8ab217dd39cd+8e2a2f996f96+9f91f68231f9+e9a32acc23d6",
   "47650c445adb+7c86141884e3+a25bfe4a44cc+e9c2330af5a7",
-  "2a26a4e548f3+33850c1d501b+399baa5b5687+60b091351fb7+61af5bd8e7f5+62d5ff960a4f+7f993b0e7fbe+a26538825c12+a5a8206957ca+e98b5918b0f3+eb3e38bfef40",
-  "27277ae24135+580518075063+9f91d11995ea"
+  "4ebf2d8451cd+5636a3f28c6e+85d5e10f531a+fc01b14e6ad1",
+  "2a26a4e548f3+33850c1d501b+399baa5b5687+60b091351fb7+61af5bd8e7f5+62d5ff960a4f+7f993b0e7fbe+a26538825c12+a5a8206957ca+e98b5918b0f3+eb3e38bfef40"
  ],
  "stories": [
   {
@@ -25,19 +25,23 @@
     "f7ed75cce7a0",
     "d30c8e933f5d"
    ],
-   "head": "Anthropic réalise une introduction en bourse record au Nasdaq",
+   "head": "Anthropic réalise l'introduction en bourse la plus importante de l'histoire",
    "bullets": [
-    "L'entreprise fait ses débuts en bourse avec une valorisation atteignant 1 750 milliards de dollars lors de la plus grande introduction de l'histoire.",
-    "La cotation publique débute alors que le marché fait face à une chute marquée des actions technologiques, incluant Nvidia.",
-    "Cette opération historique consacre la domination des laboratoires de pointe et modifie le paysage financier de l'industrie technologique mondiale."
+    "L'entreprise entre en bourse sur le Nasdaq avec une valorisation atteignant 2 000 milliards de dollars pour ses débuts.",
+    "La société a levé un montant de 107 milliards de dollars avant de lancer sa cotation publique.",
+    "Cette cotation coïncide avec une chute marquée des actions technologiques à Wall Street, incluant Nvidia."
    ],
    "kinds": [
     "detail",
     "detail",
     "explication"
    ],
-   "head_en": null,
-   "bullets_en": null,
+   "head_en": "Anthropic completes the largest initial public offering in history",
+   "bullets_en": [
+    "The company goes public on the Nasdaq with a valuation reaching 2 trillion dollars for its debut.",
+    "The company raised an amount of 107 billion dollars before launching its public listing.",
+    "This listing coincides with a sharp drop in technology stocks on Wall Street, including Nvidia."
+   ],
    "ctx_ids": [],
    "ts": "2026-11-21T13:00:01.000Z"
   },
@@ -48,56 +52,49 @@
     "94d599ca1343",
     "3778953e71a6"
    ],
-   "head": "Samsung suspend ses livraisons de puces IA en Chine après de nouvelles restrictions américaines",
+   "head": "Samsung suspend ses livraisons de puces IA en Chine après le durcissement des restrictions américaines",
    "bullets": [
     "Le Département du Commerce américain durcit ses règles d'exportation de puces vers l'Asie du Sud-Est pour contrer les transferts indirects.",
-    "Cette décision perturbe les chaînes d'assemblage et de fabrication sous-traitées dans la région ainsi que le développement des centres de données.",
-    "Le fabricant taïwanais MSI prévoit un impact logistique d'un mois suite à ces nouvelles mesures."
+    "TSMC renforce les contrôles à l'exportation vers la Chine pour se conformer aux nouvelles régulations des États-Unis.",
+    "Ces mesures visent à combler une faille majeure dans les contrôles en ciblant les flux de puces vers les hubs de la région."
    ],
    "kinds": [
     "detail",
-    "explication",
-    "detail"
+    "detail",
+    "explication"
    ],
-   "head_en": "Samsung suspends AI chip shipments to China following new US restrictions",
+   "head_en": "Samsung suspends AI chip shipments to China following tighter US restrictions",
    "bullets_en": [
     "The US Department of Commerce is tightening chip export rules to Southeast Asia to counter indirect transfers.",
-    "This decision disrupts subcontracted assembly and manufacturing supply chains in the region as well as the development of data centers.",
-    "Taiwanese manufacturer MSI expects a one-month logistics impact following these new measures."
+    "TSMC is strengthening export controls to China to comply with the new US regulations.",
+    "These measures aim to close a major loophole in controls by targeting chip flows to hubs in the region."
    ],
    "ctx_ids": [],
    "ts": "2026-11-21T11:45:01.000Z"
   },
   {
    "ids": [
-    "5fc039618c60",
-    "1d0523b60f6f",
-    "d8fbec9f2d14",
-    "cd767daa7782"
+    "da1d6f4a2cd7",
+    "5eefaf1660e7",
+    "39cc7b62b7b0",
+    "f1b7c64ada91"
    ],
-   "head": "Trump veut interdire aux entreprises américaines de construire des datacenters à l'étranger",
+   "head": "Un mathématicien d'Anthropic résout l'hypothèse de Riemann avec l'aide de Claude",
    "bullets": [
-    "Le gouvernement menace d'imposer des taxes élevées ou une taxe énorme sur les centres de données construits hors des États-Unis.",
-    "Cette décision politique majeure vise à contrer la Chine et à contraindre les entreprises technologiques nationales à maintenir leurs investissements sur le sol américain.",
-    "Les États-Unis ont durci leurs mesures pour empêcher le contournement des restrictions sur les puces IA vers la Chine et le développement des centres de données en Asie du Sud-Est."
+    "Le mathématicien Levent Alpöge annonce avoir prouvé cette énigme mathématique historique vieille de 167 ans.",
+    "Cette résolution constitue une étape historique pour le raisonnement des machines et valide les capacités de l'intelligence artificielle dans la recherche fondamentale."
    ],
    "kinds": [
     "detail",
-    "explication",
-    "contexte"
+    "explication"
    ],
-   "head_en": "Trump wants to ban US companies from building datacenters abroad",
+   "head_en": "An Anthropic mathematician solves the Riemann hypothesis with the help of Claude",
    "bullets_en": [
-    "The government threatens to impose high taxes or a huge tax on data centers built outside the United States.",
-    "This major policy decision aims to counter China and force domestic tech companies to keep their investments on US soil.",
-    "The United States tightened its measures to prevent the circumvention of AI chip restrictions to China and the development of data centers in Southeast Asia."
+    "Mathematician Levent Alpöge announces he has proven this 167-year-old historical mathematical enigma.",
+    "This resolution marks a historic milestone for machine reasoning and validates the capabilities of artificial intelligence in fundamental research."
    ],
-   "ctx_ids": [
-    "5db9be893d58",
-    "3778953e71a6",
-    "a26538825c12"
-   ],
-   "ts": "2026-11-21T16:29:39.000Z"
+   "ctx_ids": [],
+   "ts": "2026-11-21T16:52:00.000Z"
   }
  ]
 }
