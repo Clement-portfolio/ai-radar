@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-22T01:11:58.345Z",
+ "generated_at": "2026-11-22T03:58:14.233Z",
  "people": [
   {
    "id": "sam-altman",
@@ -303,6 +303,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-22T03:26:40.000Z",
+     "title": "Microsoft CEO Satya Nadella addresses buyout offered to about 60,000 employees",
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzlUd1gtTzBYRm80b0V3YnFMUko2NXJVRDlGZEl3SHpfNjNXMFlaQThtaWp6ejVKZzdNWE9XcE1pLWxEdXVXRGNsemtSdjhCQzNNMWxBV3ZFa0RVQTBUcHVhNC1oWUhxUEF4TGROd0tuNGd4N05RRDV0NUlONVowY1VXQkM3M1Yxam1SVkRzUGhsOGVjbDNLcVlIZlpGYS1vdXB6RERVNWdaczZqSnJPaGdYWV83RGQwWWFtYldYbzA4N2V4bmpRckdUMUdzQVJDWVpnSFZObGR0dFNwOVE?oc=5",
+     "source": "KIRO 7 News Seattle",
+     "kind": "presse",
+     "title_fr": "Le PDG de Microsoft Satya Nadella aborde l'offre de rachat proposée à environ 60 000 employés",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T15:37:58.000Z",
      "title": "After Microsoft 365's nearly 24-hour outage, Satya Nadella warns AI could help attackers operate at nation-state scale",
      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQY1BhX0M4aE5JR0YzcWFBYzZtc24tNHFxMWRzVmxPeEprXzRTWXcwVU4tcXlqV1RYa0IwMXlOUHBhd0lXT2wxNXV4NmhKZEJpcE90U2hPSWNHX0V4Q3ZWMXVqd2U0SzVmaG5CZnlmNjZ2VExuWVgyNGctVFZRMGNJYWZQVzJaQmd0OHJtRk1Sd0E?oc=5",
@@ -367,16 +377,6 @@
      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZWVzWkxaaHhSMm1vcFVPSTJ0cUVOQ0pDMmp6ZjVodEJwTjg5Zzl4MXc4XzBMM0VqZ0ViUkd0ZjZJZlRUTjZaSjdmYmVtMzZaNlpWcFhBdV83OElxTUFUQkRkUDdXN3ZhangzOGdXNjh2S3g1bFRhMTROSzZvY2hxVW8tUDhHRGIwNjBXR253Nnd3bmMyM0NuVmJwNnZwN2VrT2liN3BueWpaQQ?oc=5",
      "source": "TechCrunch",
      "kind": "presse",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-18T23:57:36.000Z",
-     "title": "Video: Satya Nadella Explains How A.I. May Cause Future Outages",
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNaVM4UGc3M2NIN040M0J3VjBwM2hQR1VuaDFJRzNSVUo3eGhBNXRsSXRPVEthT1pTVjZkUlJDelZkcGN6dl9TRHpfT2x6djB6VnA0c0lkNDRubXFGSE9kSnF1d0NXbXhmQjhXOGFFNWs1c1AyOG1ucVI1Qi1YVUxyZ2g1RnRKRU9yTmdMX3VYeExiVEV5RDFqSnVOYXpoNko0SGM2eE13?oc=5",
-     "source": "The New York Times",
-     "kind": "presse",
-     "title_fr": "Vidéo : Satya Nadella explique comment l'IA pourrait causer de futures pannes",
      "m": 1,
      "e": 0
     }
@@ -766,6 +766,16 @@
    "actor": "microsoft",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-22T03:09:00.000Z",
+     "title": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with",
+     "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPVFRZQzloamJkRE40M2pJREVaeHlxbC10ejRFcXZkWFU1Sk1aY2ltWVppRnJrb0Njek9TRlVVa21WdFpORTZwdDV2aVcwLUJyNml6NVlJenBLeXcyWk9zYThseU9xa0d0b1J6amV5cmFzV0lUY3F3RzVHWm1ib3RkUkhUTDdxVFlHbTFnb0xJT0M1dGhqYVlzMHJJdmt4TkstZXcyWmV2YmVVdU1fZk9VaFl3RWJUbFhVX3R4S09uMW1lWGtINXEzcjE4NndIWGstcnVndERBM2M5MjUybWZoaS1HUTVrd1NjMXpuQXhpbXJCd1FXUlZENm42NnZpbUVWRFFZQnNDNmFfYjBPY19VMnZiaGxyX1RmS1JEZDdEcVZvZVZ0MG0yQTdfVFp0X09lTnE2edIBugJBVV95cUxQTUNKVlFja3M0cmVqY3ZWSXlXVnZac0swMlJ4SDhrcFBkR1lOTVJlMFlHczJtMzRsYnVYSnJwdWVLczdPaXowRTdDMS1JOVp6QzVGb2h0ZzRlVGZNY1g2LU55LWpXcFQ4S3BIRVBSSWJ4OENleVBOZnN0c3ZZZDlCbkM3ZFpWLWhROFd3UlJvRm5OeWl2U3NCcm1JOEs3WGU5LUJKMmVTWnV1cllqZVV3MFZqM2lxV3hlMG9ZVUlaODhFVV80RTI3d1JhQ202SjlLX0tibGlfUFgwLTVNQWZ3MFNlTjNEMnlTR2FvbDNsMXltazZTSmtFaXBvQlJrdENJQ21ONEtockxkSG9GMnBpN1ZBdUdLSjJmMFdOWDlmSlU5VEdXX0VyNTJ5WXJCZkdsUXJ3Y2YxOVVodw?oc=5",
+     "source": "The Times of India",
+     "kind": "presse",
+     "title_fr": "Alors que Voyager 1 de la NASA atteint une distance d'un jour-lumière de la Terre, le PDG de Microsoft AI Mustafa Suleyman déclare : Construit avec",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-07T08:00:00.000Z",
      "title": "Microsoft AI CEO Mustafa Suleyman reacts to Delaware’s AI agent proposal, says it is ‘deeply concerning t",
@@ -3449,6 +3459,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-21T00:30:06.000Z",
+     "title": "'Revolution': Fed Chair Kevin Warsh says US likely 'big winner' in AI race",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxORjdpWmFQS21LeVR2NDdrZThjSmltaHR1UDFUTW1oTnRXemtsZk9LR1RGbEZ0bWNnaWVxak1LQkk0eW1GLTBwRVctM1NHeGlpY1p2eTdFb2ZpenZ5NUNLTG1HRVRCRVFaVEJIYW1xdTdMWnZ6Y19aNC1Say0zY3hENDAtdVVHUkRneWE4M19BeEJfZVZ6MmFUcE530gGfAUFVX3lxTFBNTjRHTkxhLUxEdDdkUG9oZDJCaTVxbHdVUzZncTI2Y19WQ3hLZFNNZGJ6cE5kUHNYM2tWZ0ozWnR1M1VsTVBxOUxyUkRDLWdYY2ozUndIaE15R3huSWZ0MDItdVE5MndqclRKbG9lQ2VHc2xZQkpiXzc4M1c3QXRCbWFoWnFDSW1GWlJ0YXRrNHBtYnhpckt5WHJNRWJKcw?oc=5",
+     "source": "ABC News",
+     "kind": "presse",
+     "title_fr": "'Révolution' : le président de la Fed Kevin Warsh affirme que les États-Unis seront probablement le 'grand gagnant' de la course à l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-17T03:11:17.000Z",
      "title": "Fed Chair Kevin Warsh warned that AI could trigger job losses or a stock bust if it disappoints",
      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1pWEw0UWFBNENEZnNwRnI2Z3hTb3p0RFdtZjJWUGFiSElqS0JkN2VOd3FheWZQU2pPVlJaUEZveTR6VE5qTHJkaU9BRDRGVjMzN3dlYTVSd3l3ckRzbFpVMWRtRHpHeFZvT2FuRG93?oc=5",
@@ -3517,16 +3537,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Le président de la Fed, Kevin Warsh, s'exprime en direct aujourd'hui sur l'IA et la technologie"
-    },
-    {
-     "ts": "2026-11-16T17:26:53.000Z",
-     "title": "Fed chair Kevin Warsh says AI boom could help sustain ‘substantially higher’ US growth",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPX3h5VmhlVnFXRnoyYTFyd2dVbDhrRlNKT1gzNEoxQ01CQ1hJYW53UXRDMkhnUndZX21zWGpMaHNDZ2FIUHl2TGdpX2N1emdJY19jZmY3RzZjdnQwTUswbldMLS1pOUQ2d2ZiNjFDbVU5elc2elN5OTVYZGFyYXBnQVBiZzM?oc=5",
-     "source": "Financial Times",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le président de la Fed, Kevin Warsh, déclare que le boom de l'IA pourrait aider à soutenir une croissance américaine « nettement plus élevée »"
     }
    ]
   },
@@ -4969,6 +4979,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-22T02:19:00.000Z",
+     "title": "Tom Lee Says AI Sell-Off Is ‘Max Pain’ Before A ‘Big Payoff’ For Patient Investors",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQSVp3Mll1Sjg5QV9YUG56R3IzbmdEVDVMRndRYzdMYk5nejhhQlFtWEVDeTI2SHczN204RDJLVVNmRWQwU3pTQWlVZ2dWdHZoMFZTT0xUTVV1c1g4ZjRhdElrcmhVWGJvc0xfb2F6SlZoemRrY3Y2a2hXN1Q0bFQ2c3NYMER4M1VWVHNUb0RMZ0dVWXh4NkxKS1lScmdBb01CTjN2ZnFsVEd3RmZlMHFJRXdqenNMOXdYdjVvdm5vcHN3QlBJNHg0c0dGZTVDT1RzVndIVmx3?oc=5",
+     "source": "TradingView",
+     "kind": "presse",
+     "title_fr": "Tom Lee affirme que la vente massive d'IA est une « douleur maximale » avant un « gros gain » pour les investisseurs patients",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T14:15:00.000Z",
      "title": "Tom Lee Sees Long-Term Tech Stock Opportunity After Anthropic IPO Selloff",
      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ1lGX0NlZ19oaERGZjYxcEVMYjVKaUhfMlNXcnBEcFhKbnRxT3lxYnpWQ21YNUtNalE5R2x0amgxc2hLNGF6Y2JnRHFhUV9oeGFDTEVta25qakFOYmR0OWpmdGxIdkt6OUdwNnBXWm5PRFJXYk55akliS1VyeXJXcWlROW9KQ3phWnUzaUFxdDh3R1hoY0tpeVVXenlMdnlnY3ZMMHJkX1dZQlR4TW000gG8AUFVX3lxTE9sYXhqOTFhY2NMekZMczd2b2xOb19RRzNEZnh0MWxaUmhXc29JdDdGcDd2ODZCNW9fbGM3Z2pXSUk5Tk5nak9vRzZxYXNTdlBCMENpazZpcWhQMURZcXNKVHJMTXFvR2JCYWlFSE1BWkQydDEzU0pWTGRXbXY1YnhPaTJiTXRScktnSmJBRG9kRm1OT29SYjlUTC1HRVdpc2JkaEV5Ykc1OThYNU5FODQ0UWVTaU04ZUlXZjR4?oc=5",
@@ -5037,16 +5057,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Tom Lee qualifie le retour de Jensen Huang de « choquant » : Trump l'aurait incité à se battre pour son poste"
-    },
-    {
-     "ts": "2026-11-13T08:00:41.000Z",
-     "title": "Tom Lee Says ‘Buy The Dip’ In NVDA After Huang Exit Even As Bitcoin Plunges Below $70,000: ‘Best Risk/Reward In AI’",
-     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNVU9XNWdqa3UtU0FrSzFMMEJuR2RNS2pHYkZhSDNnY2NEWlYyY2ZXZE9CR3pUZndUS1hFT0o1RkR0bk1JQjBYa0tuNUNVRFY0ZTN1ZDUyXzhMbUhxTXh6T1BhQUxGMkFrajMwUVlxU0xCNkRqdEZWbkN0QjlZODJveTN4R2Y5c1BzU3RwNU53c2dfeWdiQ2ZrQUlhTU9xcGdDdzN6dkZ4RWUxYjI4d2Y1dVJMS1psb3JyTEtyZEdXRlFnZ2gxTE1TbElpYTBZUDR3LVlhTmJ4TExiYklDRUgxSEhhdWJXLXNnc09rTUNPMmhsdmVjXzBsVVNQblF0VEU?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Tom Lee conseille de « profiter de la baisse » de l'action Nvidia après le départ de Huang, même si le bitcoin plonge sous les 70 000 dollars : « Le meilleur ratio risque/rendement de l'IA »"
     }
    ]
   },
@@ -5364,7 +5374,35 @@
  ],
  "hot": [
   {
-   "score": 1,
+   "score": 1.54,
+   "id": "satya-nadella",
+   "n": "Satya Nadella",
+   "role": "PDG de Microsoft",
+   "actor": "microsoft",
+   "ts": "2026-11-22T03:26:40.000Z",
+   "title": "Microsoft CEO Satya Nadella addresses buyout offered to about 60,000 employees",
+   "title_fr": "Le PDG de Microsoft Satya Nadella aborde l'offre de rachat proposée à environ 60 000 employés",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzlUd1gtTzBYRm80b0V3YnFMUko2NXJVRDlGZEl3SHpfNjNXMFlaQThtaWp6ejVKZzdNWE9XcE1pLWxEdXVXRGNsemtSdjhCQzNNMWxBV3ZFa0RVQTBUcHVhNC1oWUhxUEF4TGROd0tuNGd4N05RRDV0NUlONVowY1VXQkM3M1Yxam1SVkRzUGhsOGVjbDNLcVlIZlpGYS1vdXB6RERVNWdaczZqSnJPaGdYWV83RGQwWWFtYldYbzA4N2V4bmpRckdUMUdzQVJDWVpnSFZObGR0dFNwOVE?oc=5",
+   "source": "KIRO 7 News Seattle",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.94,
+   "id": "mustafa-suleyman",
+   "n": "Mustafa Suleyman",
+   "role": "Directeur de Microsoft AI",
+   "actor": "microsoft",
+   "ts": "2026-11-22T03:09:00.000Z",
+   "title": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with",
+   "title_fr": "Alors que Voyager 1 de la NASA atteint une distance d'un jour-lumière de la Terre, le PDG de Microsoft AI Mustafa Suleyman déclare : Construit avec",
+   "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPVFRZQzloamJkRE40M2pJREVaeHlxbC10ejRFcXZkWFU1Sk1aY2ltWVppRnJrb0Njek9TRlVVa21WdFpORTZwdDV2aVcwLUJyNml6NVlJenBLeXcyWk9zYThseU9xa0d0b1J6amV5cmFzV0lUY3F3RzVHWm1ib3RkUkhUTDdxVFlHbTFnb0xJT0M1dGhqYVlzMHJJdmt4TkstZXcyWmV2YmVVdU1fZk9VaFl3RWJUbFhVX3R4S09uMW1lWGtINXEzcjE4NndIWGstcnVndERBM2M5MjUybWZoaS1HUTVrd1NjMXpuQXhpbXJCd1FXUlZENm42NnZpbUVWRFFZQnNDNmFfYjBPY19VMnZiaGxyX1RmS1JEZDdEcVZvZVZ0MG0yQTdfVFp0X09lTnE2edIBugJBVV95cUxQTUNKVlFja3M0cmVqY3ZWSXlXVnZac0swMlJ4SDhrcFBkR1lOTVJlMFlHczJtMzRsYnVYSnJwdWVLczdPaXowRTdDMS1JOVp6QzVGb2h0ZzRlVGZNY1g2LU55LWpXcFQ4S3BIRVBSSWJ4OENleVBOZnN0c3ZZZDlCbkM3ZFpWLWhROFd3UlJvRm5OeWl2U3NCcm1JOEs3WGU5LUJKMmVTWnV1cllqZVV3MFZqM2lxV3hlMG9ZVUlaODhFVV80RTI3d1JhQ202SjlLX0tibGlfUFgwLTVNQWZ3MFNlTjNEMnlTR2FvbDNsMXltazZTSmtFaXBvQlJrdENJQ21ONEtockxkSG9GMnBpN1ZBdUdLSjJmMFdOWDlmSlU5VEdXX0VyNTJ5WXJCZkdsUXJ3Y2YxOVVodw?oc=5",
+   "source": "The Times of India",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.81,
    "id": "xi-jinping",
    "n": "Xi Jinping",
    "role": "Président de la Chine",
@@ -5374,34 +5412,6 @@
    "title_fr": "L'éclatement de la bulle de l'IA constitue une menace croissante pour l'économie chinoise et un « moment de réel danger » pour le président Xi Jinping, prévient un analyste",
    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZG5tbmx0N1dqVUw3NEtYNF9DU21hdXZNMlIzX21VV1ZrTG5wNWNlT0V2VVhhOFBsUjdHMFFaZW1sQVg1b2xZeWlodm1tREVoWTluTHhZWnMzVUl6a2JqcE5nblpZS1hlSjZRS2ZqNV95OFBTa05wUlpWMWJrUmlnTDhHazRXWEpHZW5yV1hPWGx4a21XYnZV?oc=5",
    "source": "Fortune",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.82,
-   "id": "scott-bessent",
-   "n": "Scott Bessent",
-   "role": "Secrétaire américain au Trésor",
-   "actor": null,
-   "ts": "2026-11-21T16:28:20.000Z",
-   "title": "Bessent says no further restrictions are needed for Nvidia chip exports to China",
-   "title_fr": "Bessent déclare qu'aucune restriction supplémentaire n'est nécessaire pour les exportations de puces Nvidia vers la Chine",
-   "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGhFLVdNQVNlbl9tSXFrRmI4LS1VQmhxamhUS0F0WjhFMmoydGtBbG5Lc1AzbklUekQ0NDdvWDM0Q2Nfd2dOUTZEdE9MVnZCUVJtc1p3M0R4M2VjVS1zNUdXWWF1R2ZnNmpQU2lJSXNQQlM5WUk3cF92bDB3c3F5N3d6ZEEySktWeVRmSkE4SXR3R3JUaXhObmhjdmgzSEgxNTV6d3N0M2k5UU9uSDBsRXZiNzIxRWJsQmfSAb8BQVVfeXFMUElMcEVVRXcweUZhTloxWGJFdlN0UWx2ZDBBSm5DRzhiejNJZlgtWWV2eUpiQ0diajZlZ3BrbmZEMTJRZnU2eVBJWkwxdGNzTkprSElzTk05VXhKREVDcnYwN0t4aXl2V2VFbHZ4SWNuWEVvUXA5bEE1dm94UWU3aTBQT0phSEEydHdEMWYzSkNvbWtlbHVlajJRblRfUUc3eFBXTFZmd2VYQWh2RjMwZzM3N2ZYQ0l3OWhqS29mQm8?oc=5",
-   "source": "PBS",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.63,
-   "id": "eddie-wu",
-   "n": "Eddie Wu",
-   "role": "PDG d'Alibaba",
-   "actor": "alibaba",
-   "ts": "2026-11-21T15:47:31.000Z",
-   "title": "Alibaba Sinks 25% in a Month as Chip Curbs Threaten Its 20 GW Plan: Eddie Wu Warns of “Downward Revision”",
-   "title_fr": "Alibaba chute de 25 % en un mois alors que les restrictions sur les puces menacent son plan de 20 GW : Eddie Wu avertit d'une « révision à la baisse »",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVmRIV0stUTRmeGpUV2hzQnNnT0lMYThVZnhES3dlSDBZSW1zZXgxanpfM2NBQm1ma0JPS2xaUWtUV0FPOUZDajlfbjdRbnVrWXQyOUt0TEwxTWxSU3d3dVpHazRvbjVRcmhSU1BBRy10MFhJT0FuS0NpcjJQdFBkemRPbElJRm5BREp3NXdjVk9OdzZ0V2lzbU13NG9fTHhVakdDdDdES043c3NwRmtqSHhONmQ0ZFQzcy1LaU1kdzZxR0FrS1Y4?oc=5",
-   "source": "TIKR.com",
    "kind": "presse",
    "outlets": 1
   }
