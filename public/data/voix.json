@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-22T12:58:42.287Z",
+ "generated_at": "2026-11-22T15:51:45.444Z",
  "people": [
   {
    "id": "sam-altman",
@@ -196,7 +196,7 @@
    "actor": null,
    "alerts": [
     {
-     "ts": "2026-11-19T00:37:36.000Z",
+     "ts": "2026-11-19T00:11:00.000Z",
      "title": "Elon Musk on Jensen Huang's Nvidia exit",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeF9DQXpFNUVtQzJuQ2drb1RXMVlrTzRSVHliTzlBVEJnUXgxdUtlNFdiU19MZUZLMi1tVjhEQUgzMlQySWUtUl8xSHFxUUhsem8wXzN4UWN4NmVxYTM2RmYtYTU2LXQ1bDBsU0xYQWk3c0JBOVYxZy1FV2xFMlRLM1RBYW9ZOGhS?oc=5",
      "source": "CNBC"
@@ -1403,6 +1403,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-14T03:53:47.000Z",
+     "title": "AI could wipe out humans in next 3 years: Nobel laureate Geoffrey Hinton warns; says we may lose control as...",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNeXBISlljOGZNa1dDTEZKSWJycVVTS3FaU2tSOWtlY3gwNUppT3ZvdXBDV2ZrSk5UUHRKOVpET0lBZl9QT0kyd0J6S0VfYWM2NVNiNXhpT2tVamxhNi1MdVRobFJjMDRBc3RBVmRwbHVnR01VUDlQYUJvaHAzei1Hd1dYME8xYS04aGNaLWF5R0x6S1RGejdmb3k2ZFVfd1VjbFRlSXJ4N3JZdWJFZXY2NndPZThGR2VIMXdWb0dyMlVZbG9OSzRxMVYtN19yaW14N2djb1l30gHbAUFVX3lxTE1RVzU3SVVFNjktQ2ZTX0xBTDg2SzNGMWl2ODVwR3k5ejRtbkZIZzBCUWwxN2N3QjRXeWIyMUU5U3h1cDV0eTlGR3psSnhSZ1BhTFlZY1BFVGl2ODJ4Z3UtZzNEM3NhdXpkUHVGXzc4ZURYbjVuR0NxcmJuaEs4SzVBZkI1V255Q2d3LTd0Wk9HRTBkR2N1Q2hqdFJkZWE4WlpueEpIZUhraU5GVHZCbWlOUE9lOFItbVFoNmh1enU4bW12TlBUaDZGTFY2SmIyOXplSDdjWjB5UkpuTQ?oc=5",
+     "source": "Bhaskar English",
+     "kind": "presse",
+     "title_fr": "L'IA pourrait anéantir les humains au cours des 3 prochaines années : avertit le prix Nobel Geoffrey Hinton ; il affirme que nous pourrions perdre le contrôle alors que...",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-10T08:00:00.000Z",
      "title": "AI 'Chornobyl' by 2027? Geoffrey Hinton Warns of Cyberattacks on Power and Financial Systems",
      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPVzlFSkR4X3YyWEJ4OVRxTnlPMFZkMmtVSnY3RkxmbFdhLVVrZXZFYjYtbVJ0cnAtZDRYTkZsY3VkbkFlcWdXdlFEVmRZa2xfWGRpZ3puMFpCUldMNUFPaXR0Q1NudDZtNGpfYThmZEdoRjM3Sm43ZllkSFpDMmlKLXRhdFJvQQ?oc=5",
@@ -1459,16 +1469,6 @@
      "source": "NeoTeo",
      "kind": "presse",
      "title_fr": "Geoffrey Hinton met en garde contre une possible perturbation de l'énergie et de la finance par l'IA",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-06T07:51:05.000Z",
-     "title": "Geoffrey Hinton Warns of AI Risks, Says World May Face a Major AI Crisis by 2027",
-     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQU2NOc2lCVGlxalBWaF9QQzQ5MGNja2pfdEo3SFpmWVE3TTBZMEdQdXRQV2Jya0V2NkJzNmFLb0pJTXJfV0lPd3JaX3Qxb2I5akhIMkpHNzIxOGZNMjc4cEQ1bWN6OV9ISjZVanhwc2dEdExOelpqQTdoQUZlQ0FreWFwZVNUWFNkcFBac3k4WDVYNlM0MHhTOHN4a0F4MXhETTVPcVRZanJhd3NoS2VFSGc0ZVNabnVSWHd1ZHNBazVQc3ZWME56ZnpUYm44eldmTFE?oc=5",
-     "source": "Convergence Now",
-     "kind": "presse",
-     "title_fr": "Geoffrey Hinton met en garde contre les risques de l'IA et déclare que le monde pourrait faire face à une crise majeure de l'IA d'ici 2027",
      "m": 1,
      "e": 0
     }
@@ -1854,7 +1854,14 @@
    "role": "Sénateur républicain du Missouri",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-20T19:16:00.000Z",
+     "title": "Missouri’s Josh Hawley leaves door open for presidential run after midterm losses",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56YUtGdmxFTzBKdXJLRDlTc0hPRWg1LS1DajBjUlNyWE5KNXNtS3ctRW1wM3FTRVNySUExSnpUZlZtNG5OVFhBeDJsV2xWZDR6Wi1xNmt2TFBTYXRtX3hQeDA3N2hUbnFUdjR6MjlLVjAxUTBqTHNBWnlDZzRnUdIBfkFVX3lxTE00ZWZWd0tOSGdDUl81ZVZRS1ZZWUVDZERwdTF6eUdTUDBKMHFudDVmZmpFdjc5ajdtQjB4aERTNzhTcXpzRk9rNmkwcmc3NTdBcHB4bDJXWjZZaTVzT2dMLVBlVXBjRU0zLWZmZFZBRzJOcl9aWGp5WlJlUVM2QQ?oc=5",
+     "source": "Kansas City Star"
+    }
+   ],
    "items": [
     {
      "ts": "2026-11-18T19:50:00.000Z",
@@ -3128,6 +3135,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-22T14:14:12.000Z",
+     "title": "DNI Jay Clayton confirms that China did in fact access top of the line AI chips that were subject to export controls",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5wNHRCUEdULXZXcmhsMUY1RGhaQ1piMUJsVGY5WkpEMmFTSURWc2xJWGRxc2FkNjJhb0hYVWsxTnRkOEd2MDZUMklPQkdUSnNGMHNqOGR2a2loUXdRUGo0aVdGbTFpZXc?oc=5",
+     "source": "X",
+     "kind": "presse",
+     "title_fr": "Le directeur du renseignement national Jay Clayton confirme que la Chine a effectivement eu accès à des puces d'IA haut de gamme soumises à des contrôles à l'exportation",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-18T17:43:00.000Z",
      "title": "Nat'l intelligence director Jay Clayton tells House recent tech outages weren’t coordinated attack",
@@ -5394,7 +5411,21 @@
  ],
  "hot": [
   {
-   "score": 1.14,
+   "score": 1.15,
+   "id": "jay-clayton",
+   "n": "Jay Clayton",
+   "role": "Directeur du renseignement national, tsar de l'IA",
+   "actor": null,
+   "ts": "2026-11-22T14:14:12.000Z",
+   "title": "DNI Jay Clayton confirms that China did in fact access top of the line AI chips that were subject to export controls",
+   "title_fr": "Le directeur du renseignement national Jay Clayton confirme que la Chine a effectivement eu accès à des puces d'IA haut de gamme soumises à des contrôles à l'exportation",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5wNHRCUEdULXZXcmhsMUY1RGhaQ1piMUJsVGY5WkpEMmFTSURWc2xJWGRxc2FkNjJhb0hYVWsxTnRkOEd2MDZUMklPQkdUSnNGMHNqOGR2a2loUXdRUGo0aVdGbTFpZXc?oc=5",
+   "source": "X",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.92,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5408,7 +5439,7 @@
    "outlets": 1
   },
   {
-   "score": 0.77,
+   "score": 0.61,
    "id": "satya-nadella",
    "n": "Satya Nadella",
    "role": "PDG de Microsoft",
@@ -5418,20 +5449,6 @@
    "title_fr": "Le PDG de Microsoft Satya Nadella aborde l'offre de rachat proposée à environ 60 000 employés",
    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzlUd1gtTzBYRm80b0V3YnFMUko2NXJVRDlGZEl3SHpfNjNXMFlaQThtaWp6ejVKZzdNWE9XcE1pLWxEdXVXRGNsemtSdjhCQzNNMWxBV3ZFa0RVQTBUcHVhNC1oWUhxUEF4TGROd0tuNGd4N05RRDV0NUlONVowY1VXQkM3M1Yxam1SVkRzUGhsOGVjbDNLcVlIZlpGYS1vdXB6RERVNWdaczZqSnJPaGdYWV83RGQwWWFtYldYbzA4N2V4bmpRckdUMUdzQVJDWVpnSFZObGR0dFNwOVE?oc=5",
    "source": "KIRO 7 News Seattle",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.69,
-   "id": "chey-tae-won",
-   "n": "Chey Tae-won",
-   "role": "Président du groupe SK",
-   "actor": "sk-hynix",
-   "ts": "2026-11-22T04:40:30.000Z",
-   "title": "SK Group Chairman Chey Tae-won Calls for Overhaul of University Education in AI Era",
-   "title_fr": "Le président de SK Group, Chey Tae-won, appelle à une refonte de l'éducation universitaire à l'ère de l'IA",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObjA2aFhNMjNRa2dFWkVIOGNpT2lTWElBNFNFVTVFd09IbUZmRmN5SmRxTWxJLWI4ZHlBVldNd0dVaE5pS3NnUFBPMmFzNWh0ck9ERDRQNWU4QjNaaTlFamxYUXdESkItNkNnYTQyMHJwc3JKRHV6dWY4SXlkakVVLWFiUkpBbVVp?oc=5",
-   "source": "조선일보",
    "kind": "presse",
    "outlets": 1
   }
