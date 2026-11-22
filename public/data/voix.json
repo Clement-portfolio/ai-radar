@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-22T07:15:19.250Z",
+ "generated_at": "2026-11-22T12:58:42.287Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1549,6 +1549,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-22T08:36:59.000Z",
+     "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
+     "source": "ABC News",
+     "kind": "presse",
+     "title_fr": "Le président Donald Trump annonce la création du groupe de travail sur l'IA « Super Intelligence Force »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T01:52:30.000Z",
      "title": "Trump calls for Nvidia to reinstate ‘brilliant’ Jensen Huang",
      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTTRWaFJBYUVZRUszSnpjai1ZUWJLRVhEQlJndHJKZnFwUlplbk16S0VjeU9jaU93WThFLXlsTG5BWHlxelBYeWk3RUJaZWNjT0xfWGlmcEowaEQ0OWtZaWlqdzhxcDBEVzZoR241dWtIUnQtRUZYeWZDTWJ6ZzRwY2xEWTVBMk5ENnQ3RWp0bGRGd0JPYnZCZzltTEh3WUxEa0HSAacBQVVfeXFMUEJ3bXdXd0NKcVo0cjV4RnJiOEp4MkUtZTFWTTZUQXYtNkVpNHdNZUV3eUVXOFVxZG1nVlV5NElUMlotSzhXcFlONktxNHFVYWZNOG5iUE5idEtuckwybDZxX01BZmt3WEw4MTJ5TzBEVHd6NlZtYUY3elBxZ0kzWmluRjZmWU9vMF93UzdlVjlvcUdtb014V3AxOTJCQ2lrV29sUUIxeWs?oc=5",
@@ -1616,16 +1626,6 @@
      "kind": "presse",
      "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises technologiques américaines qui construisent des centres de données d'IA dans d'autres pays",
      "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-20T17:45:38.000Z",
-     "title": "Trump vows to stop U.S. companies from building data centers abroad, threatens 'tremendous tax'",
-     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1JRGVqM1Z4V2NpZ3Z4QWU0YTlvMzVZNDRyRFBxbW5JUktoRzVhWW1sTTh0UE13aWw1UmFiUTFUN3BkRHNpVURLdlNqMVVLWkJNUTlGc2pIaVN1S2xPUllGeGdFTWdnOVRGajUxUTBGdGhueXMwc1NKUEYwemPSAYIBQVVfeXFMTkplV2N4Mk5zbGJBNndiWVFBS3FSNGV4WkRzYWJGNXU3THB6QTR2eGRuWTFkQkYtM3lRb0dJRDNrRDN4Ymp1QlNoNXNqZHEyTE5BczVhRXgtNS1DM2tHbUc0cUVjalNUdEs3RmJuZlRuRk5aWHMxNmFJR1VJQU5LR01sZw?oc=5",
-     "source": "CNBC",
-     "kind": "presse",
-     "title_fr": "Trump promet d'empêcher les entreprises américaines de construire des centres de données à l'étranger et menace d'une « taxe énorme »",
-     "m": 1,
      "e": 1
     }
    ]
@@ -1908,6 +1908,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-19T17:24:43.000Z",
+     "title": "Anthropic Pops To Over $100 On First Trades, Senator Warren Calls For New Rules On AI",
+     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOV0d4blJhbFNERjRQTmp0aGxxeGl6Szg0cXhJU3ltdnVIWUZLYW81Nzc5N1hwZEtKeURVTXRGZEUxMnVwd0dkajhickc5MlE1UHJYVlVIOXJESGNmYlByenJIaGZQbkZ3VTh6SDFNdlVLMVB6dTA0aXVNVjJPa2NDSGpreHlDRlVnN3Y4c19mMlBzZkM1aUJWTTVvQzRRTFp0WGVBelhoeHE5aFJhLUhKN015TXd4WkdZRnZPT0ZZU055YnAxS1JqZFV4Q0M?oc=5",
+     "source": "Crowdfund Insider",
+     "kind": "presse",
+     "title_fr": "Anthropic grimpe à plus de 100 $ lors des premiers échanges, la sénatrice Warren appelle à de nouvelles règles sur l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-14T20:46:41.000Z",
      "title": "Elizabeth Warren Says NVIDIA Leaders Remain Accountable After Huang’s Exit",
@@ -5384,7 +5394,21 @@
  ],
  "hot": [
   {
-   "score": 1.19,
+   "score": 1.14,
+   "id": "donald-trump",
+   "n": "Donald Trump",
+   "role": "Président des États-Unis",
+   "actor": null,
+   "ts": "2026-11-22T08:36:59.000Z",
+   "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
+   "title_fr": "Le président Donald Trump annonce la création du groupe de travail sur l'IA « Super Intelligence Force »",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
+   "source": "ABC News",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.77,
    "id": "satya-nadella",
    "n": "Satya Nadella",
    "role": "PDG de Microsoft",
@@ -5398,7 +5422,7 @@
    "outlets": 1
   },
   {
-   "score": 1.07,
+   "score": 0.69,
    "id": "chey-tae-won",
    "n": "Chey Tae-won",
    "role": "Président du groupe SK",
@@ -5408,20 +5432,6 @@
    "title_fr": "Le président de SK Group, Chey Tae-won, appelle à une refonte de l'éducation universitaire à l'ère de l'IA",
    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObjA2aFhNMjNRa2dFWkVIOGNpT2lTWElBNFNFVTVFd09IbUZmRmN5SmRxTWxJLWI4ZHlBVldNd0dVaE5pS3NnUFBPMmFzNWh0ck9ERDRQNWU4QjNaaTlFamxYUXdESkItNkNnYTQyMHJwc3JKRHV6dWY4SXlkakVVLWFiUkpBbVVp?oc=5",
    "source": "조선일보",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.73,
-   "id": "mustafa-suleyman",
-   "n": "Mustafa Suleyman",
-   "role": "Directeur de Microsoft AI",
-   "actor": "microsoft",
-   "ts": "2026-11-22T03:09:00.000Z",
-   "title": "As NASA's Voyager 1 reaches one light-day from Earth, Microsoft AI CEO Mustafa Suleyman says: Built with",
-   "title_fr": "Alors que Voyager 1 de la NASA atteint une distance d'un jour-lumière de la Terre, le PDG de Microsoft AI Mustafa Suleyman déclare : Construit avec",
-   "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPVFRZQzloamJkRE40M2pJREVaeHlxbC10ejRFcXZkWFU1Sk1aY2ltWVppRnJrb0Njek9TRlVVa21WdFpORTZwdDV2aVcwLUJyNml6NVlJenBLeXcyWk9zYThseU9xa0d0b1J6amV5cmFzV0lUY3F3RzVHWm1ib3RkUkhUTDdxVFlHbTFnb0xJT0M1dGhqYVlzMHJJdmt4TkstZXcyWmV2YmVVdU1fZk9VaFl3RWJUbFhVX3R4S09uMW1lWGtINXEzcjE4NndIWGstcnVndERBM2M5MjUybWZoaS1HUTVrd1NjMXpuQXhpbXJCd1FXUlZENm42NnZpbUVWRFFZQnNDNmFfYjBPY19VMnZiaGxyX1RmS1JEZDdEcVZvZVZ0MG0yQTdfVFp0X09lTnE2edIBugJBVV95cUxQTUNKVlFja3M0cmVqY3ZWSXlXVnZac0swMlJ4SDhrcFBkR1lOTVJlMFlHczJtMzRsYnVYSnJwdWVLczdPaXowRTdDMS1JOVp6QzVGb2h0ZzRlVGZNY1g2LU55LWpXcFQ4S3BIRVBSSWJ4OENleVBOZnN0c3ZZZDlCbkM3ZFpWLWhROFd3UlJvRm5OeWl2U3NCcm1JOEs3WGU5LUJKMmVTWnV1cllqZVV3MFZqM2lxV3hlMG9ZVUlaODhFVV80RTI3d1JhQ202SjlLX0tibGlfUFgwLTVNQWZ3MFNlTjNEMnlTR2FvbDNsMXltazZTSmtFaXBvQlJrdENJQ21ONEtockxkSG9GMnBpN1ZBdUdLSjJmMFdOWDlmSlU5VEdXX0VyNTJ5WXJCZkdsUXJ3Y2YxOVVodw?oc=5",
-   "source": "The Times of India",
    "kind": "presse",
    "outlets": 1
   }
