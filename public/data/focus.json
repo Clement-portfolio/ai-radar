@@ -5,14 +5,14 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-22T03:58:14.233Z",
- "model": "gemini-3.5-flash-lite",
+ "generated_at": "2026-11-22T07:15:19.250Z",
+ "model": "gemini-3.1-flash-lite",
  "sig": [
   "0396da82d35c+06d4e32e1256+06e6d380e3a5+1dfd0f40ba72+4316f933cb3e+4b1f1703bbc0+83eb8920a967+871fa7926cd4+8838b8c2d698+b4b972b2c1c2+cb02ca1a7848+d0fd0bdf0608+d30c8e933f5d",
-  "09a497f98e64+3778953e71a6+5db9be893d58+8daf2e1f77bd+94d599ca1343+db8f13db2a39+e0ac844ba9e5+e20cbf90b852+f2ad34d486f9",
+  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
+  "09a497f98e64+3778953e71a6+5db9be893d58+8daf2e1f77bd+94d599ca1343+db8f13db2a39+e20cbf90b852+f2ad34d486f9",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5a8f7d1dc4aa+5fc039618c60+cd767daa7782+d8fbec9f2d14",
-  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
-  "01ad01e5cd41+364825014eaf+499e87d18729+50e1e25269a9+86d3aeca06e8+8ab217dd39cd+8e2a2f996f96+9f91f68231f9+e9a32acc23d6",
+  "364825014eaf+86d3aeca06e8+8ab217dd39cd+8e2a2f996f96+9f91f68231f9+e9a32acc23d6",
   "133408be93f9+272d99eb97b0+92ca8c823c3c+96a6c848a0d0+dabbfcbec428+ea05cfb5b9ab+f7ed75cce7a0+fcd152f94053",
   "47650c445adb+7c86141884e3+a25bfe4a44cc+e9c2330af5a7",
   "2a26a4e548f3+33850c1d501b+399baa5b5687+60b091351fb7+61af5bd8e7f5+62d5ff960a4f+7f993b0e7fbe+a26538825c12+a5a8206957ca+e98b5918b0f3+eb3e38bfef40"
@@ -20,54 +20,24 @@
  "stories": [
   {
    "ids": [
-    "cb02ca1a7848",
-    "4b1f1703bbc0",
-    "06d4e32e1256",
-    "d30c8e933f5d"
+    "da1d6f4a2cd7",
+    "ace651c11496",
+    "5eefaf1660e7",
+    "39cc7b62b7b0"
    ],
-   "head": "Anthropic entre en bourse avec une valorisation record",
+   "head": "Un chercheur d'Anthropic annonce avoir résolu l'hypothèse de Riemann grâce au modèle Claude",
    "bullets": [
-    "La société a levé 107,3 milliards de dollars avant ses débuts sur le marché financier.",
-    "Cette opération confirme l'appétit massif des investisseurs pour les leaders de l'IA générative."
+    "Le mathématicien Levent Alpöge est à l'origine de cette annonce concernant ce problème mathématique du XIXe siècle.",
+    "Cette démonstration attend d'être vérifiée par la communauté scientifique internationale."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Anthropic enters the stock market with a record valuation",
-   "bullets_en": [
-    "The company raised 107.3 billion dollars before its debut on the financial market.",
-    "This operation confirms the massive appetite of investors for leaders in generative AI."
-   ],
+   "head_en": null,
+   "bullets_en": null,
    "ctx_ids": [],
-   "ts": "2026-11-22T03:54:45.000Z"
-  },
-  {
-   "ids": [
-    "09a497f98e64",
-    "f2ad34d486f9",
-    "94d599ca1343",
-    "3778953e71a6"
-   ],
-   "head": "Samsung suspend ses livraisons de puces IA en Chine face aux nouvelles règles américaines",
-   "bullets": [
-    "Le Département du Commerce américain durcit ses règles d'exportation de puces vers l'Asie du Sud-Est pour contrer les transferts indirects.",
-    "Le fabricant MSI prévoit un impact logistique d'une durée d'un mois suite à ces restrictions.",
-    "Ces mesures visent à combler une faille majeure dans les contrôles à l'exportation en ciblant les flux de puces vers les hubs de la région."
-   ],
-   "kinds": [
-    "detail",
-    "detail",
-    "explication"
-   ],
-   "head_en": "Samsung suspends AI chip shipments to China in response to new US rules",
-   "bullets_en": [
-    "The US Department of Commerce is tightening its chip export rules to Southeast Asia to counter indirect transfers.",
-    "Manufacturer MSI expects a one-month logistical impact following these restrictions.",
-    "These measures aim to close a major loophole in export controls by targeting chip flows to hubs in the region."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-21T11:45:01.000Z"
+   "ts": "2026-11-21T16:52:00.000Z"
   },
   {
    "ids": [
@@ -76,26 +46,46 @@
     "d8fbec9f2d14",
     "cd767daa7782"
    ],
-   "head": "Donald Trump menace de taxer les datacenters d'IA à l'étranger",
+   "head": "Trump veut interdire les datacenters d'IA à l'étranger",
    "bullets": [
-    "Cette mesure vise à contrer la Chine et à contraindre les infrastructures critiques de l'intelligence artificielle à demeurer sur le sol américain.",
-    "Les restrictions américaines sur les puces d'intelligence artificielle avaient déjà compliqué le développement de ces structures en Asie du Sud-Est."
+    "Le gouvernement envisage d'imposer des taxes élevées aux entreprises technologiques construisant ces infrastructures hors des États-Unis.",
+    "Cette décision vise à contrer la Chine et à contraindre les acteurs du secteur à maintenir leurs investissements sur le sol américain."
    ],
    "kinds": [
-    "explication",
-    "contexte"
+    "detail",
+    "explication"
    ],
-   "head_en": "Donald Trump threatens to tax overseas AI datacenters",
+   "head_en": "Trump wants to ban AI datacenters abroad",
    "bullets_en": [
-    "This measure aims to counter China and force critical artificial intelligence infrastructure to remain on US soil.",
-    "US restrictions on artificial intelligence chips had already complicated the development of these structures in Southeast Asia."
+    "The government plans to impose high taxes on technology companies building these infrastructures outside the United States.",
+    "This decision aims to counter China and force industry players to keep their investments on American soil."
    ],
-   "ctx_ids": [
-    "5db9be893d58",
-    "3778953e71a6",
-    "a26538825c12"
-   ],
+   "ctx_ids": [],
    "ts": "2026-11-21T16:29:39.000Z"
+  },
+  {
+   "ids": [
+    "9f91f68231f9",
+    "8ab217dd39cd",
+    "e9a32acc23d6",
+    "8e2a2f996f96"
+   ],
+   "head": "Donald Trump appelle au retour de Jensen Huang à la tête de Nvidia",
+   "bullets": [
+    "Le conseil d'administration de Nvidia a officiellement confirmé qu'il ne prévoyait pas de réintégrer l'ancien PDG.",
+    "La démission de Jensen Huang fait suite à des révélations sur des comportements qualifiés de mensonges par le conseil d'administration."
+   ],
+   "kinds": [
+    "detail",
+    "explication"
+   ],
+   "head_en": "Donald Trump calls for Jensen Huang's return to lead Nvidia",
+   "bullets_en": [
+    "Nvidia's board of directors has officially confirmed that it does not plan to reinstate the former CEO.",
+    "Jensen Huang's resignation follows revelations regarding behaviors described as lies by the board of directors."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-21T14:14:02.000Z"
   }
  ]
 }
