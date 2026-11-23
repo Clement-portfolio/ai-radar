@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-22T18:54:32.756Z",
+ "generated_at": "2026-11-23T01:19:20.299Z",
  "people": [
   {
    "id": "sam-altman",
@@ -12,6 +12,16 @@
    "actor": "openai",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-18T22:51:51.000Z",
+     "title": "Video: Why Sam Altman and Greg Brockman Say Humans Must Stay in Control of A.I.",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdXNqV0l4RFNCSmdteGNybkNEcmZaOHhSV2p1M3AydmJSeU1fWDhKbTJWV3ViVDNzbk5ZVVoxWjNuM1BxUE9NMjQxc1hiaGM2LVp0ZEtHM0E5Z2RZbVI4Y3R0VHJyZTJlWUdBMGxXNjFEVlNJWFk4R0RuMVlQMkh1aVQwZHVDdnZxWFRvUi1JemNlZDJaUkx0ejh3OTNZekt0Wlp5clpveUxBc0FUTEpmLQ?oc=5",
+     "source": "The New York Times",
+     "kind": "presse",
+     "title_fr": "Vidéo : Regarder : Pourquoi Sam Altman et Greg Brockman affirment que les humains doivent garder le contrôle de l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-18T20:07:01.000Z",
      "title": "Sam Altman says his life is so weird that he's unfazed by Andrew Garfield portraying him in upcoming movie",
@@ -81,16 +91,6 @@
      "m": 3,
      "e": 1,
      "title_fr": "Sam Altman déclare qu'il est difficile d'imaginer la révolution de l'IA sans Jensen Huang"
-    },
-    {
-     "ts": "2026-11-16T20:41:28.000Z",
-     "title": "Sam Altman says he wants everyone ‘to have a lot of RAM’",
-     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQZWdtdnpvU3VZeFJBWXdTR2F1TC1Iekxic1oxTk9wN3M0b29nM0pWMUNsa2dKVFpSSE1XTG1QTXphUFVIVDY5YkJoX0JaVnRZS2J4UDJmMHJQU3lkMVVEdVd3MTJra2JwTzJpeHlpWEo1QUh4ZTVlcDA4ZU0tOUYyeUEwbzhMa1BpUnl4V1JRTGNWZWdtYVE?oc=5",
-     "source": "The Verge",
-     "kind": "presse",
-     "title_fr": "Sam Altman déclare qu'il veut que tout le monde « ait beaucoup de RAM »",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -204,6 +204,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-22T17:49:00.000Z",
+     "title": "Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'",
+     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
+     "source": "Business Insider",
+     "kind": "presse",
+     "title_fr": "Elon Musk prévient que les retards des centres de données pourraient laisser les entreprises d'IA à court de liquidités : « Ça va être dingue »",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-19T15:39:00.000Z",
      "title": "Musk: ‘There’s no one that can really replace’ Huang at Nvidia",
      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYjJyMG05eUtPZVJTOHoxRlViVEdBZlFFanlLdDRCWGZtS1VyUkEyQk5kVWJFMm1qU0YxRG9MYXZjTTdLRVBqNUVyV0FWX3pCa010WF9EUzV0Vk41ekptT1RaZWdIc2M5cGhNQjdDLUFLZ3ZtWU1Cc2NWX1FwbHNuOWdpV091Z9IBiwFBVV95cUxOWk1oYUJBMEl0cTdZLU8xUUtXdDF6VkF0ejhtTTFqeWhHVUUxdldCU1pHRTBpa1JUbDZ1T3pwT2RjZEZDM2pua1ItSlFsY3JlcF8xZDlHN3NRbUdSWUJHWHBtcDVaTWtwc0dSdUx1b0V0ekR4Y2d3bDB1ZkZ3U1VLdFlBVEJpUFdWT3Fn?oc=5",
@@ -271,16 +281,6 @@
      "kind": "presse",
      "title_fr": "Elon Musk affirme qu'évincer Jensen Huang revient à « virer Michael Jordan de son équipe »",
      "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-18T18:21:33.000Z",
-     "title": "Grimes & Elon Musk Feud Over AI ‘Sex Slave,’ Singer Urges Ex to ‘Step Up’ and Be ‘the King He Used to Be’",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNM1FnQ2FTeUFpM054QWZjanhwNWRiQWZadHlUN1FfM2RtdXJ2dkdpZEYzeFFpazFlckhYeGtvYm1QQWR4d3VDU1V4TGxfZGNDUUowLUdjSkdja0owdWczcjlUVmZRaGpKbEpJeGdyZFJNRlNNa2hEZm5ia0FzdHpTMHZmSlBWZ3RobzM2YXduMlV0anB2ZE4wWnRLZUVuSFBoVmViZndWTHZlMzQ?oc=5",
-     "source": "Billboard",
-     "kind": "presse",
-     "title_fr": "Grimes et Elon Musk se disputent à propos d'une « esclave sexuelle » IA, la chanteuse exhorte son ex à « se surpasser » et à être « le roi qu'il était »",
-     "m": 1,
      "e": 1
     }
    ]
@@ -731,6 +731,16 @@
      "source": "CNBC",
      "kind": "presse",
      "title_fr": "Exclusivité CNBC : Transcription : Le président et PDG d'Amazon, Andy Jassy, s'entretient avec Scott Wapner de CNBC dans le « Halftime Report » aujourd'hui",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-17T18:14:43.000Z",
+     "title": "Amazon: Jassy Defends American Investments in AI",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNU1d1TjBVRGJWLXFESlNJNmM5TXpkRXRnbEl6czdoVFVqQ1JJYkxEQW00ZVNRZXZBV3o5eEFIZGVfTEIzTndqREVLY29qN3NSc1pqUXgtaGZ4cFY3cFZ2dFFJZWE5bVIxMlRVWHgzblFYM2poRDhwOGM3TjRRb2U3MnhVbGV2VDEw?oc=5",
+     "source": "Brief IA",
+     "kind": "presse",
+     "title_fr": "Amazon : Jassy défend les investissements américains dans l'IA",
      "m": 1,
      "e": 0
     },
@@ -1713,6 +1723,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-22T15:31:00.000Z",
+     "title": "Bessent says Trump administration has \"been in touch\" with Nvidia leadership but still needs answers",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNZ3NyOHBBa1ItYzJsNVNxbUpNMTJ5V2N2aTdNcGhkd1czLWdHZDNuZjVSUy01Ri1nbjZBa2NPd1BocFluaFZiMm9Sa3dOS2pTUTlqdC1rQno1dzIwSFdveTRvaTlveERMaE1nTlVDMTFjcG5uT3B5MV9wTDAyeGxKU3NkRC1YeENETDlFVnV5U01CeW9sSzZ4T3hIMl9pR0NDcXBJdXB1cDhzMWhXN0c3LXB4U2p6N2JzUm13eTRYVi1FalR4MWZjSQ?oc=5",
+     "source": "CBS News",
+     "kind": "presse",
+     "title_fr": "Bessent déclare que l'administration Trump a « été en contact » avec la direction de Nvidia mais a encore besoin de réponses",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T16:28:20.000Z",
      "title": "Bessent says no further restrictions are needed for Nvidia chip exports to China",
      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGhFLVdNQVNlbl9tSXFrRmI4LS1VQmhxamhUS0F0WjhFMmoydGtBbG5Lc1AzbklUekQ0NDdvWDM0Q2Nfd2dOUTZEdE9MVnZCUVJtc1p3M0R4M2VjVS1zNUdXWWF1R2ZnNmpQU2lJSXNQQlM5WUk3cF92bDB3c3F5N3d6ZEEySktWeVRmSkE4SXR3R3JUaXhObmhjdmgzSEgxNTV6d3N0M2k5UU9uSDBsRXZiNzIxRWJsQmfSAb8BQVVfeXFMUElMcEVVRXcweUZhTloxWGJFdlN0UWx2ZDBBSm5DRzhiejNJZlgtWWV2eUpiQ0diajZlZ3BrbmZEMTJRZnU2eVBJWkwxdGNzTkprSElzTk05VXhKREVDcnYwN0t4aXl2V2VFbHZ4SWNuWEVvUXA5bEE1dm94UWU3aTBQT0phSEEydHdEMWYzSkNvbWtlbHVlajJRblRfUUc3eFBXTFZmd2VYQWh2RjMwZzM3N2ZYQ0l3OWhqS29mQm8?oc=5",
@@ -1751,16 +1771,6 @@
      "title_fr": "Trump et Xi se sont mis d'accord sur une restriction de l'IA dans les actions militaires, déclare Bessent",
      "m": 2,
      "e": 1
-    },
-    {
-     "ts": "2026-11-20T16:39:00.000Z",
-     "title": "Bessent says Jensen Huang did not come up during China discussions",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPUVdUVGVSZEE1NGVqWGlobFE4c3BjajhqbFQ4ckNhYjI5OWNJTnFhb3hhNndROEM0bVA5MWZuaElUR1hxOHg5QVlyV3JUS1VScGtwc0hVbFY5aloyenhrMlo1WXM3OEhnSzkzQk1ILTladlcwMmtGVmZ0LXNUYlpGSllSekXSAYoBQVVfeXFMTnRQZjRyMHdxMjhBOEN5WDI5cWRkVzRacnkwQ3pNU0RXLXZpTW16elRfME1lQWdjSFgyaG1DMkF6aE9kdURvWGVhcnF4SGFlNm5sQ2xHb0xTNDRRb09aY1VJSDdnNU0zbWJuNnpvZVozaG1RNFFDNnlGdlE5WDh1TExPQ0FTTERoazlB?oc=5",
-     "source": "The Hill",
-     "kind": "presse",
-     "title_fr": "Bessent déclare que Jensen Huang n'a pas été mentionné lors des discussions avec la Chine",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -2037,12 +2047,32 @@
    ],
    "items": [
     {
+     "ts": "2026-11-19T16:27:02.000Z",
+     "title": "Bill Ackman Says His Microsoft “Sale” Was Really a Swap Into Options",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUnh2T1J6SWVnYjVqZnFMM1dwV1BiSnZLUm9xVnplUmhHajl1T0pwXzJncXJReVlDMGZwV3gxQ2h4NzM4VXNkcmJFQTExeVBTcEVaVHo3SmdRWE1RVk1GQ2hyYjU4R3g0UzBndnZRck8tb0RZeTNsZVJ2Y2R1NHJnb25meWtLcFRjN1kyS1pJN2hWby1JbDZkR0lRUDBQdw?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Bill Ackman affirme que sa « vente » de Microsoft était en réalité un échange contre des options",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T16:20:00.000Z",
      "title": "Bill Ackman says Nvidia's board is failing you — and not just because it fired Jensen Huang after one Zoom call, at most",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQLUowNHBFcFFTdklOUEpROVhXeE80OGxQSmplRHhpXzA0ek9EMHBWUU40Q2c1MEdPOHJ3UExfOGhkU1RYdDA1VFBIaUtTaWpsV2ZTLVRYQXVFelR5Mm0yNmFWYXIzcm84QmZQTU43UkZzbGI1ZTh5QjhVVzgwMHNONlROVmI0UUl1MkJqN25sOHl3ZFJXQTQ3Wk8tRQ?oc=5",
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Bill Ackman déclare que le conseil d'administration de Nvidia vous fait défaut — et pas seulement parce qu'il a licencié Jensen Huang après un seul appel Zoom, au maximum",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-18T23:42:52.000Z",
+     "title": "$1.6 Billion Loss: Billionaire Bill Ackman Says He Was ‘A Little Bit Surprised’ by Berkshire’s $10 Billion Alphabet Bet, ‘They Got It at a 6% Discount, But So What?’",
+     "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPZUUwbXYxVHBoSzQxeDJVUEMtQ2laaFMzc192UkNrTmxWXzh1WkM2XzdLcS1meDBCd0diQ3RkWGVHNktHRTc3WG9lUklaZnlMNVFic3Nka1N6T0ZmRFlGdU5Ic0lJY3hUNERDVWo1S2EzQTd2V0FNQWZhTHFtNTc2NkhqZzExYTJOeDgyNlg2dVVudTdBMVdoRlZaakFGM3M0SW9aekh2a1NjQ2RjNjJhUVZubGZrQUpJLXN6clRMS3k4dzV1RnlUeng3d2w3dmVPc2J0NHNDcDRseGZ5T0RyRDhtUldQWFFSY0c4cTJWVmxnekxCNTdyZU1XNVNzdHE0NUVoTjQ0V2pOUFdVNnhxSENOcW9rUnA5RU1OaU1Yc2FBSW8?oc=5",
+     "source": "Barchart.com",
+     "kind": "presse",
+     "title_fr": "1,6 milliard de dollars de perte : Le milliardaire Bill Ackman se dit « un peu surpris » par le pari de 10 milliards de dollars de Berkshire sur Alphabet, « Ils l'ont eu avec un rabais de 6 %, mais et alors ? »",
      "m": 1,
      "e": 0
     },
@@ -2093,26 +2123,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Bill Ackman a réduit sa participation dans Microsoft. Votre fonds S&P 500 ne le peut pas.",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-17T15:10:58.000Z",
-     "title": "Bill Ackman Just Sold 35% of His Microsoft Stake",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTE5zMWhvZGZJRVBtTTFsOWxJQmcxeEpPRlhhQXlibk1yYXVwQWtUaVNvTE1NMzFoS0haa2NDWHVKU3VVV18yeHlVODlMY3UxMm9KSkFqZ0RHdDZNdjZ2cDhHUjF1LTZQa0VTYnRzM2Q3cVJCbUJOQ2cySjRxcFhLQ3NNWVhJVWY4WHZRbi1kMU1nT3c?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Bill Ackman vient de vendre 35 % de sa participation dans Microsoft",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-17T13:44:00.000Z",
-     "title": "Bill Ackman says it’s ‘unlikely’ he’ll get involved to bring Huang back",
-     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNQ3ZlR05ZeUd5a3FEUEF2bnJyVy1mNnRyRzVwQnVCLWNqQlVCRTFVNXZaS0ZNeDR6TExDYldWNFRlamZsTk8zby1PcllGdUNsYk1NUzZOLTkxVVZzbTZvVjhoR2dHMm9uY2Ziam9jUHlTMU54eUIwSjB0SXVFV1g4ak8zdFcxS3g4UjBoTDB6MXFyZml1R185bVpZcUpXY3FUeXZHRWQwRTliTDdxWDk4?oc=5",
-     "source": "Semafor",
-     "kind": "presse",
-     "title_fr": "Bill Ackman déclare qu'il est « peu probable » qu'il s'implique pour faire revenir Huang",
      "m": 1,
      "e": 0
     }
@@ -3136,6 +3146,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T00:07:21.000Z",
+     "title": "Jay Clayton warns Americans to expect more tech outages during system upgrades",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUS1ESmpHWjlYbnJHZ3Q4VWRQQXd3MzFWNHcxVjJFcC1HSHJWb1diaDNMQ3ZSZF9ISEtmRG95MmVOazdfRkFpTzRGcmVOZU1wazBWT3BISzhTSkxCdHlJaW9QdUVCRUxaWGFXU0tzaFhzLVI1S0FSUlQzOG9JUTRpMEhMRFNLaWl0T3Myb2tsUi1MdUhkeXozU1JxeVM4YnJEdlJyUEZtNlJ4ckU?oc=5",
+     "source": "news.lavx.hu",
+     "kind": "presse",
+     "title_fr": "Jay Clayton prévient les Américains qu'il faut s'attendre à d'autres pannes technologiques lors des mises à niveau des systèmes",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-22T23:50:48.000Z",
+     "title": "Jay Clayton Warns of More US Tech Outages After a Week of Failures",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQREJvMVgxd3RyZkFhWmRVMWNSdXpzSklPb2x3RWpaZEk2UGlnTjFFS0pfZ2k5UkR5MUJzdHlEeGJ0U0NvU01OYzRIcEhlT3FuY09oYlpPZGQ2VjZGdUNSZDFHS3I3NmtiOWNQR3Y5dUpmYUNiN0F5UlBTT0JOOEtxc1pUZw?oc=5",
+     "source": "JournalArta",
+     "kind": "presse",
+     "title_fr": "Jay Clayton met en garde contre de nouvelles pannes technologiques aux États-Unis après une semaine de défaillances",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-22T18:29:01.000Z",
      "title": "Director of National Intelligence Jay Clayton warns US tech outages could continue amid ongoing system upgr...",
      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNczVBNHluWTlnNHpMTU5TY0dBU2FNRlQ1dllPMXZHNFFfdXZXWDV6aW5zYnI1SDlWb0RyaTA0LWhEQnRVeHNPUlBrT2NuQ2xtb2RRLVBrRnByZUFmSnR3MktOU2E4eXNZc2c3UVdzWFF3SnlTang2LS1pNDFzMURyTGhuQzZVOEUxN0Y0UkxnaGpfY0otTlpXd3RvS2dINnhvZUZKTUp0Rk0tT0dCQ1g5SUtNcE01X2pfOUVIbl92Q3gzcHZpd1V5VEJzRUdGSlpxWjRMWFlEQk92VndhZ3BtNUE5MlhKT0s1djlxV9IB8gFBVV95cUxPREZqeFF0dDlDeEw2UC04UkNBVXRicllhUlFrZVBaS2tIcnEybEl3TGY0eGNHWG9leVBjZzBqRkVlZ2pEV0xMb0R0MDFyLXdoaHZsM1htUUFDeGdQNjBDd0ZSQ3A4VVJZX3U3ZFV4QkthRmpKd3ZFa0pWdDh5V09qYlZ3ZTBLLXZoRGdwbzMyQ2lhQWc0c2lwSXo4NGxpLWNBd2NteFpMR3U3OU5ZLXA2QlpDZW9MaHNNY1Vmc1dzNkR0SlBxZmI4S3JsWnBZVWpVUGY2d0I5cE80cTBDcTlMWE5CX01zOXo5Vng0M0hiUGVTZw?oc=5",
@@ -3144,6 +3174,16 @@
      "title_fr": "Le directeur du renseignement national Jay Clayton prévient que les pannes technologiques aux États-Unis pourraient continuer au milieu des mises à niveau...",
      "m": 2,
      "e": 1
+    },
+    {
+     "ts": "2026-11-22T17:03:00.000Z",
+     "title": "DNI Clayton says China likely obtained Nvidia AI chips",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPXzFxaVhYcDFONTlweU5ZNzdmc29RY1NQaTNtVnRKa3dTUENrRWpuV0hmNE5nSXExLVJzSW9FX25NM1BNazVpaUlZWDM1cm5iSV8tNUR5Z2w5UHFKOXJ6NXl0Tlo4dGpjb1FXZEp3NW1sVmR2Z3hUeVdFZlU5WjFRT3E2eWJ5SFk?oc=5",
+     "source": "CNN",
+     "kind": "presse",
+     "title_fr": "Le directeur du Renseignement national Clayton déclare que la Chine a probablement obtenu des puces d'IA Nvidia",
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-22T16:17:53.000Z",
@@ -5431,21 +5471,35 @@
  ],
  "hot": [
   {
-   "score": 3.27,
+   "score": 3.08,
    "id": "jay-clayton",
    "n": "Jay Clayton",
    "role": "Directeur du renseignement national, tsar de l'IA",
    "actor": null,
-   "ts": "2026-11-22T18:29:01.000Z",
-   "title": "Director of National Intelligence Jay Clayton warns US tech outages could continue amid ongoing system upgr...",
-   "title_fr": "Le directeur du renseignement national Jay Clayton prévient que les pannes technologiques aux États-Unis pourraient continuer au milieu des mises à niveau...",
-   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNczVBNHluWTlnNHpMTU5TY0dBU2FNRlQ1dllPMXZHNFFfdXZXWDV6aW5zYnI1SDlWb0RyaTA0LWhEQnRVeHNPUlBrT2NuQ2xtb2RRLVBrRnByZUFmSnR3MktOU2E4eXNZc2c3UVdzWFF3SnlTang2LS1pNDFzMURyTGhuQzZVOEUxN0Y0UkxnaGpfY0otTlpXd3RvS2dINnhvZUZKTUp0Rk0tT0dCQ1g5SUtNcE01X2pfOUVIbl92Q3gzcHZpd1V5VEJzRUdGSlpxWjRMWFlEQk92VndhZ3BtNUE5MlhKT0s1djlxV9IB8gFBVV95cUxPREZqeFF0dDlDeEw2UC04UkNBVXRicllhUlFrZVBaS2tIcnEybEl3TGY0eGNHWG9leVBjZzBqRkVlZ2pEV0xMb0R0MDFyLXdoaHZsM1htUUFDeGdQNjBDd0ZSQ3A4VVJZX3U3ZFV4QkthRmpKd3ZFa0pWdDh5V09qYlZ3ZTBLLXZoRGdwbzMyQ2lhQWc0c2lwSXo4NGxpLWNBd2NteFpMR3U3OU5ZLXA2QlpDZW9MaHNNY1Vmc1dzNkR0SlBxZmI4S3JsWnBZVWpVUGY2d0I5cE80cTBDcTlMWE5CX01zOXo5Vng0M0hiUGVTZw?oc=5",
-   "source": "Firstpost",
+   "ts": "2026-11-23T00:07:21.000Z",
+   "title": "Jay Clayton warns Americans to expect more tech outages during system upgrades",
+   "title_fr": "Jay Clayton prévient les Américains qu'il faut s'attendre à d'autres pannes technologiques lors des mises à niveau des systèmes",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUS1ESmpHWjlYbnJHZ3Q4VWRQQXd3MzFWNHcxVjJFcC1HSHJWb1diaDNMQ3ZSZF9ISEtmRG95MmVOazdfRkFpTzRGcmVOZU1wazBWT3BISzhTSkxCdHlJaW9QdUVCRUxaWGFXU0tzaFhzLVI1S0FSUlQzOG9JUTRpMEhMRFNLaWl0T3Myb2tsUi1MdUhkeXozU1JxeVM4YnJEdlJyUEZtNlJ4ckU?oc=5",
+   "source": "news.lavx.hu",
    "kind": "presse",
    "outlets": 2
   },
   {
-   "score": 1.59,
+   "score": 1.17,
+   "id": "elon-musk",
+   "n": "Elon Musk",
+   "role": "PDG de Tesla et de SpaceX",
+   "actor": null,
+   "ts": "2026-11-22T17:49:00.000Z",
+   "title": "Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'",
+   "title_fr": "Elon Musk prévient que les retards des centres de données pourraient laisser les entreprises d'IA à court de liquidités : « Ça va être dingue »",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
+   "source": "Business Insider",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.97,
    "id": "scott-bessent",
    "n": "Scott Bessent",
    "role": "Secrétaire américain au Trésor",
@@ -5455,20 +5509,6 @@
    "title_fr": "Bessent affirme que nous \"avons besoin de réponses\" sur le rôle joué par Nvidia dans l'envoi de puces d'IA en Chine, et suggère qu'Alice Huang est \"en quelque sorte un faux fuyant\"",
    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQ0w1SkRVbmd2cF9NcmxBeHYyeTdIdjQwR3c0VG5KT0g1UHlxRm15S1B4ZE1KbUVXOHhlMXhuS1VOeEFnd3VkQmNES2ZpekFDbERtQzFJUVNYXzJHZ0VvdDlUZFVQTWsxOUlJeWRGQnI4ZElsMTc3eklnUDRBcEFmLXF4Z3o?oc=5",
    "source": "CBS News",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.72,
-   "id": "donald-trump",
-   "n": "Donald Trump",
-   "role": "Président des États-Unis",
-   "actor": null,
-   "ts": "2026-11-22T08:36:59.000Z",
-   "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
-   "title_fr": "Le président Donald Trump annonce la création du groupe de travail sur l'IA « Super Intelligence Force »",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
-   "source": "ABC News",
    "kind": "presse",
    "outlets": 1
   }

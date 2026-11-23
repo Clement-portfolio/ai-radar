@@ -1,13 +1,33 @@
 {
  "v": 1,
- "day": "2026-11-22",
- "generated_at": "2026-11-22T18:54:32.756Z",
+ "day": "2026-11-23",
+ "generated_at": "2026-11-23T01:19:20.299Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
+   "title": "Anthropic : valorisation en bourse",
+   "value": "1 500 Md$",
+   "sub": "Une valorisation record atteinte lors de son introduction en bourse, suscitant l'espoir de dons massifs pour le secteur caritatif.",
+   "ids": [
+    "ca82b864bdca"
+   ],
+   "links": [
+    {
+     "t": "The Independent",
+     "u": "https://www.independent.co.uk/news/anthropic-new-york-scott-bessent-the-new-york-times-sam-bankmanfried-b3089410.html"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-22T13:00:06.000Z",
+   "title_en": "Anthropic: market valuation",
+   "value_en": "$1,500B",
+   "sub_en": "A record valuation reached during its initial public offering, raising hopes for massive donations to the charity sector."
+  },
+  {
    "title": "Amazon : acquisition de Decart",
    "value": "7,5 Md$",
-   "sub": "Amazon est entré en phase finale de négociation pour racheter la start-up d'intelligence artificielle Decart pour ce montant.",
+   "sub": "Le montant de l'accord en phase finale de négociation pour le rachat de la startup d'intelligence artificielle Decart par Amazon.",
    "ids": [
     "cb02ca1a7848",
     "4b1f1703bbc0"
@@ -26,53 +46,28 @@
    "scope": "day",
    "ts": "2026-11-22T03:54:45.000Z",
    "title_en": "Amazon: Decart acquisition",
-   "value_en": "7.5 B$",
-   "sub_en": "Amazon entered final negotiation phases to acquire the artificial intelligence start-up Decart for this amount."
+   "value_en": "$7.5B",
+   "sub_en": "The amount of the agreement in final negotiation for Amazon to acquire artificial intelligence startup Decart."
   },
   {
-   "title": "Anthropic : valorisation boursière initiale",
-   "value": "1 750 Md$",
-   "sub": "L'entreprise a fait ses débuts lors de la plus grande introduction en bourse jamais réalisée, levant un total de 93,5 Md$ après exercice de l'option de surallocation.",
+   "title": "Palo Alto Networks : acquisition",
+   "value": "4,5 Md$",
+   "sub": "Le montant investi par Palo Alto Networks pour étendre ses activités à l'IA d'entreprise via le rachat d'une startup.",
    "ids": [
-    "133408be93f9",
-    "d6f405a6a912"
+    "d076977e7671"
    ],
    "links": [
     {
-     "t": "서울경제",
-     "u": "https://en.sedaily.com/market/2026/11/21/anthropic-debuts-at-175-trillion-in-largest-ever-ipo"
-    },
-    {
-     "t": "CNBC Tech",
-     "u": "https://www.cnbc.com/2026/11/20/anthropic-ipo-greenshoe.html"
+     "t": "EE Times",
+     "u": "https://www.eetimes.com/palo-alto-networks-expands-into-enterprise-ai-with-4-5b-deal/"
     }
    ],
    "conf": "moyenne",
    "scope": "week",
-   "ts": "2026-11-20T15:15:43.000Z",
-   "title_en": "Anthropic: initial market valuation",
-   "value_en": "1,750 B$",
-   "sub_en": "The company made its debut in the largest IPO ever executed, raising a total of 93.5 B$ following the exercise of the overallotment option."
-  },
-  {
-   "title": "SpaceX : financement pour des puces IA",
-   "value": "32 Md$",
-   "sub": "SpaceX a finalisé un accord de financement par emprunt destiné à l'acquisition de puces d'intelligence artificielle, s'ajoutant à d'autres investissements massifs dans les datacenters.",
-   "ids": [
-    "06d4e32e1256"
-   ],
-   "links": [
-    {
-     "t": "Taipeitimes",
-     "u": "https://www.taipeitimes.com/News/biz/archives/2026/11/21/2003868108"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-20T16:49:57.000Z",
-   "title_en": "SpaceX: AI chips debt financing",
-   "value_en": "32 B$",
-   "sub_en": "SpaceX finalized a debt financing agreement aimed at acquiring artificial intelligence chips, complementing other massive investments in data centers."
+   "ts": "2026-11-20T15:37:26.000Z",
+   "title_en": "Palo Alto Networks: acquisition",
+   "value_en": "$4.5B",
+   "sub_en": "The amount invested by Palo Alto Networks to expand its business into enterprise AI by acquiring a startup."
   }
  ]
 }
