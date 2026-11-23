@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-23T19:07:51.760Z",
+ "generated_at": "2026-11-23T21:57:31.531Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1638,6 +1638,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T19:55:09.000Z",
+     "title": "Trump Is Said to Have Directed Effort to Reinstate Nvidia Chief",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE41T3Z1VnJLSk9LLURuSVhPYVJEdHZmUXIwQzYteGVERktDYm55NEpKNU1jMEFpbzgtTmVURzlzU2drN0Juc19HR0tCREl2MUJRWjFaTGFCd3FJWVEwNUwwalc3RktTcHVLMDVfMnZCVU9DLUZMaWZ1dnd3?oc=5",
+     "source": "The New York Times",
+     "kind": "presse",
+     "title_fr": "Trump aurait ordonné des efforts pour réintégrer le patron de Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-23T19:19:17.000Z",
      "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him ‘best thing’ for U.S.",
      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWlhuUEVYcUhfSzZoYm1EM3RHZ1NmdkJkZ0JqX01MZzZJbzRZdFdMVl8tV1BGWG5Ba1FwWnlwVUNUVVNiN25OQ2JPLUN3TGotNjd3UEMyVGcyc0lIVWJsWDFvN2FodTdwSnVzWnhsRXNpc3NrNHVNOGlEdGFUVVBOdHV3VGFwOVJ0eVBWSEQwaUk3QkFodnhSNWc2QmJhN3h5eGR6enBWcUxFbnVsZ0RhUDJFa25BWUQ0Vnh6NThn?oc=5",
@@ -1706,16 +1716,6 @@
      "title_fr": "Trump déclare à CNBC « J'ai conclu l'accord » pour réintégrer Jensen Huang chez Nvidia",
      "m": 3,
      "e": 1
-    },
-    {
-     "ts": "2026-11-23T15:00:00.000Z",
-     "title": "Trump says US government ‘has no reason to believe’ Huang poses national security risk",
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNLVFlMTZSd2hBRHJEZHNITEFqWUVoYkVhQjJ4Q2tzM3RocnF6dW53X1hpald6TW1HU3NrTTQyNkllNDljeWwySmtMbHBLTi11ZzctYUlWN3Rodll6NTVMdXNncjFlNW1iMVBnZzhXZjlfSzZfSDlaTFEtcXppelBDRU1HVl9hYWpwXzUzTno4bmM4SWZ5X3JOTw?oc=5",
-     "source": "Politico",
-     "kind": "presse",
-     "title_fr": "Trump affirme que le gouvernement américain « n'a aucune raison de croire » que Huang présente un risque pour la sécurité nationale",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -1771,6 +1771,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T18:54:56.000Z",
+     "title": "Peterson: Here’s what Bessent’s about-face on Jensen Huang reveals about Trump and China",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOVjZya0NLX2VRMFc5MFdsTUtRNEJGUmRrRDNreUxjWTlhc0oxbnNTVHo0TmJUWF8wdXhxa1QydDV4c3VvRVdtbEdvZzJDX0NhenZQZkxLSG85Qml3dE4xdkdlcXpmQVdfZEZ4ZjR4QzJNQ25DZzdZMUNVaVMzdjR0alFR0gGHAUFVX3lxTE9xT1NrT2Q2TVlKUTNpaFc5R3ZtdDdFMFlEQWFiLVVIbjF6N2ZxTnc0TDBnaGJBcEs0bTUzNDBFOEZzSWJpV082bllSSFltWHJSMlhjanFaZ3VEWERaR3YyUE9vbW00MFlfa3BMbHBKMFYzVnc5S0VNNnIwSmgzUnhmNFk2QUU4NA?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Peterson : Voici ce que le revirement de Bessent sur Jensen Huang révèle sur Trump et la Chine",
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-23T05:35:00.000Z",
      "title": "Trump wants Jensen Huang back at Nvidia. Scott Bessent says he may fit the bill.",
@@ -1838,18 +1848,8 @@
      "source": "South China Morning Post",
      "kind": "presse",
      "title_fr": "Xi et Trump conviennent que les décisions militaires en matière d'IA doivent impliquer des humains, selon Bessent",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-20T18:07:21.000Z",
-     "title": "Trump, Xi agreed that military AI decisions should involve humans, Bessent says",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQSnJIY2MzcUJjNVY3MzNYaGxKYUIySGw3TzNnVjltNDBIS2JPOHV4Y1BTaDRTRTRxSWp3R0M4Z3VSeU1IWmdoTGl6SU15bHh6UkZobTZ3aWpxUmU5c2dsODBPTjI3V0NQTEhjMWZBWE1fZnNQVHdYcjdONk43LVhleEdaUEs2d0hsV3dqMURGRUcyQzZnTFduVGZuTmJMU0taYzNreTJ4c2ZqeWV6b0l2X1FCQm5SQllFa09PZFRIcGJ5aGs?oc=5",
-     "source": "Reuters",
-     "kind": "presse",
-     "title_fr": "Trump et Xi ont convenu que les décisions militaires en matière d'IA devaient impliquer des humains, déclare Bessent",
-     "m": 2,
-     "e": 1
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -2010,6 +2010,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T18:51:55.000Z",
+     "title": "Sen. Warren Criticizes Nvidia Decision to Reinstate CEO Jensen Huang, Urges Tighter Export Controls",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9oWU1WeU9Qak1oUUZVbGdPakVYeWFwNXJKOWJVbkVoMUhFVmYwWXV5SFB2UlZsaC1CdzdtLTZKUktxRDg2Z2FwX0RKNk1kei1HSXZ2dg?oc=5",
+     "source": "bloomingbit",
+     "kind": "presse",
+     "title_fr": "La sénatrice Warren critique la décision de Nvidia de réintégrer le PDG Jensen Huang et demande un durcissement des contrôles à l'exportation",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-23T18:18:04.000Z",
      "title": "Elizabeth Warren Calls Out Nvidia After Jensen Huang Returns as CEO",
@@ -2254,6 +2264,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-23T03:19:00.000Z",
+     "title": "Michael Burry on Nvidia Board? ‘Big Short’ Investor Jokes He’d ‘Volunteer’ as NVDA Stock Sinks 40%",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPUFJtZzBWMnNaVnFSNUhiUkdyYkYwcVA4U05SWnMzLTBDQjRvYTVTRzlaOGxjWFIzUVhPYlhxVmJRUk85RF8xaHlqVi1XdTFIZkNUMDhCVFdpTzBSWmRpNWJpRjRaM3laMDA4Y2RkdG1aZVFPOEJOSU1XYkhSU0xRMkpqWElPMG9zYURiaEY5WWJqME5jVjBNS0Yycw?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry au conseil d'administration de Nvidia ? L'investisseur de « The Big Short » plaisante en disant qu'il serait « volontaire » alors que l'action NVDA chute de 40 %",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T14:44:59.000Z",
      "title": "Michael Burry Says ‘I Told You So’ as Wall Street Caught Off Guard by AI Selloff",
      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVTgwQ2oya0hPSUNqcXlRWDVDQ0NfT2I4Snh0c3NGZmw1OWZOejZVM2ZkS3puWlNSVUpDRzdyZTJ3TjBaZGhUZWFydDV5a3laX3dDeUNnOEJudEZPTVZhZ1dfY2ZERmUxOEZza1hSR1FjdDQ1VF9FTDB6WTFSR3VCTjVITmVvVHU1M3ZxRzhCcUVPSndnX2JxRA?oc=5",
@@ -2310,16 +2330,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Michael Burry affirme avoir mis en garde contre l'IA avec NVIDIA et CoreWeave : Déjà-vu de The Big Short ?",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-20T01:03:00.000Z",
-     "title": "Michael Burry Says He Tried to Warn You About Nvidia, CoreWeave and Nebius. Here's What the 'Big Short' Investor Saw",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZGRrc1VrMldqYWVBbVlYN0hWeDBZX25tWDdzaVZvWnZaNGtpM1BuMGtYS0ozMWo3WjNEazhneVlMRXk2X0hYbEZXdWhva20xZFpaQjlObzlnWnFYU3JhcnlpZ3M3eWFNZDRKZXN0ZjFQV21pR0dJYWFOdWJlNURieGpmcENSdElaOUI3NXd6MUg5X2VNTlF1MWNR?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry affirme avoir essayé de vous avertir au sujet de Nvidia, CoreWeave et Nebius. Voici ce qu'a vu l'investisseur de 'The Big Short'",
      "m": 2,
      "e": 1
     }
@@ -3372,6 +3382,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T19:31:33.000Z",
+     "title": "Schumer says Democrats will investigate Huang, Nvidia and the administration",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOdVVGZ0pJWndKQ1M4Y01TUlgzVTBxQzlSWlZDNldWYWNsbVdsYjc1aHVYV08tUjg3NV9TYmpWZmgwandha1A4bzZ5dkc2cVJLZ21VOVBkYWg3SXl4a3dieXNfVGotN2U4czVpNkU1MFVXT2h1YkQ5T21yMkloNUdQZXM1YlFtdVF5aG54RjRJTE1uYm8wWTc0eHhlbkY?oc=5",
+     "source": "MLQ.ai",
+     "kind": "presse",
+     "title_fr": "Schumer affirme que les démocrates enquêteront sur Huang, Nvidia et l'administration",
+     "m": 3,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T19:14:12.000Z",
      "title": "Sen Chuck Schumer Vows Probe Into Reinstated Nvidia CEO Jensen Huang, Trump Over Spy Claims",
      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTnpxbERnSENCNUF5YVd6a3BmemVGWXQ2dHpjS01LUzBSOEhXMDM5NzdOdXpPNFJrTkRKLWp1SEk3RF91V01nSFRZRW1CYXV4OWdFeDhMTDZzcUV4TXVKX2hIaElXdlpyZU5feDB1TTRkZ2tnYkRMNlVNdWI5MC1nR09qVER2dUhZajFYdXYwdmE0bU1fc2lPWGdtQm4zVDd5NnczZ00tSzgwMHZ3c0haRGVR?oc=5",
@@ -3398,7 +3418,7 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "title_fr": "Schumer promet que les démocrates enquêteront sur Jensen Huang et l'administration Trump",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -3408,7 +3428,7 @@
      "source": "bloomingbit",
      "kind": "presse",
      "title_fr": "Schumer affirme que les démocrates vont enquêter sur l'administration Trump et les dirigeants de Nvidia concernant le retour de Jensen Huang",
-     "m": 3,
+     "m": 4,
      "e": 1
     },
     {
@@ -3440,16 +3460,6 @@
      "title_fr": "Schumer critique vivement l'administration Trump après que le département du Commerce a approuvé la vente de puces d'IA à des entreprises chinoises",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-12T23:56:34.000Z",
-     "title": "Chuck Schumer calls for investigation into Nvidia after Jensen Huang’s resignation and raises questions on Trump administration",
-     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQTHQtUE5RUHhvRV83ZVFVRWpTRHZZeDlsV3k5eHVGek9YaG80c0NsRDR4VXYxc2VTZmNaclRFTVpvMmVyZXhMXzZIaFBUX3dvWjl6NFZkVG1oOVhTbEtuVU9Db2ZMTWpGd0hwbFozY1dHZGU4Q0FyU3RCY0l4Z3hNWS1rcVRxM1dKS2JwSg?oc=5",
-     "source": "AOL.com",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chuck Schumer appelle à une enquête sur Nvidia après la démission de Jensen Huang et soulève des questions sur l'administration Trump"
     }
    ]
   },
@@ -3599,6 +3609,46 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T21:38:11.000Z",
+     "title": "AWS CEO Matt Garman says AI safety depends on engineering, not an emergency brake",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVk03TFRkOTl1Y2d0bjhHclVWb2RMWncxTW1XcEtxdGdUTXNwTHljRFJLZzI1Q2lKSnduTEk0aVVkRjV5VERTQ1NiZGpSMC0zc1ZOa3hsdzNnd1VLcmNVTExjVDhUQUE5UlptSXk4YngzLWQ2TkdjUkVVSXFzLUZOM1ZxQ3gySTdCSnZrZVBvbEd5OE5Qbko4T216LWlabElLQklB?oc=5",
+     "source": "MLQ.ai",
+     "kind": "presse",
+     "title_fr": "Le PDG d'AWS, Matt Garman, affirme que la sécurité de l'IA dépend de l'ingénierie, et non d'un frein d'urgence",
+     "m": 3,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T21:13:18.000Z",
+     "title": "AWS CEO Matt Garman Says AI Models Need External Boundaries",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPbW1iOEg0LW4weE9FWF9pb0pTUW9UcXNvQWpOMW41MGs5OERMOVBKR0pfRG1LbjNyNF83bVNHdkdmNFNHVU9CQUxnVDNFSDV6cmxLNjhPUnE0a0N1RVk3VWVVVDQ4bUpCVXE0ZGR4NXZ2TGxUOHNOV0lWLWZRZ2hfc2FPYlVCbHpyU0d4dG5DQmV2WDV5Zlh2Z1FqRlZRWDlqOVhycmI1alZMV1VrZmtfVHBRc2pTaFZm?oc=5",
+     "source": "PYMNTS.com",
+     "kind": "presse",
+     "title_fr": "Le PDG d'AWS, Matt Garman, affirme que les modèles d'IA ont besoin de frontières externes",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-23T19:45:44.000Z",
+     "title": "AWS's Garman says AI safety can't hang on an emergency brake",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdFF1SVo3cGRyY1V3UkFMRWlfTUFHTVk2bFVpTzR3MHVVYU5fT25fY0hjQklYYTRMLVo1OENwT2I1bDY1cnREUFhzekpnLVZOWVRuS3lyanh3TGVWWEJXc21qWEpZTC1SblpBa3JnTGduRHpYVjJLcFBldkJMOTFEQ0pR?oc=5",
+     "source": "PPC Land",
+     "kind": "presse",
+     "title_fr": "Garman d'AWS affirme que la sécurité de l'IA ne peut pas dépendre d'un frein d'urgence",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T19:26:55.000Z",
+     "title": "AWS CEO Matt Garman says trustworthy AI depends on engineering controls",
+     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2U1OW5fS3lraXJCTWN4Vm9LX19MVzZoWDNSVzctV2UzZFZEOVpFdjNkOHBZd010NTJOaWg5R1hhLXJzY3ItSUVSbGh3TDkzWWlIZ3V1VWtNNlNXM2NEYWhpeERxLWhrMENEejlnMGIxQUtEeDNrNV9qSUtQYU9DNjRMMXdyeWxPWVlmeE8yTzk2WnhGdEItNXRvMENxaTVKNmc?oc=5",
+     "source": "news.lavx.hu",
+     "kind": "presse",
+     "title_fr": "Le PDG d'AWS, Matt Garman, affirme qu'une IA de confiance dépend de contrôles d'ingénierie",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T18:09:14.000Z",
      "title": "Amazon AWS CEO Matt Garman says better engineering, not a ‘kill switch’, is key to safer AI systems | Hindustan Times",
      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM0RESks3UjZ1OFR2UWtDbkQzOGFtbFdPdkFnMElCQ3hfa0JyUWhERFFzUGdUM21RcjNIWmJuNm1EWkJXeXlUV0dJY2VmcEpSeUVvNHdESHdKNzc2Y0VoX1pIYmtDVGJtXzNyWW81WUlHc0tnNkJRVXVMcjFXUXdPNHltRmlaYjAxZTJtdFpNYXBWdjMtZ2xQU2szWDVvNWlXXzUwWHZVRHJJR1QzdXdiT1dNTmVzMXV4M0phb3BVeFdpVEtiaUJnQlloOGFzU1ppaVg1aTVTUGQ1NGFDT3VMR0d4cTlweGdUOWJ1ZGpHcWJCcTFVd0N6MkNR0gH_AUFVX3lxTFBDZDJsX2NqdXNnTXYteTRKQ2EtTUZWMG5rUEJrUThRbG54ZU93aGx4Q2d0d2xpZEI4ckpWUXFrRk9TZjllSW51cW8tLVJHVUhQRWN0Q3FrVkRDUzBpakpPX1JHU2Q2bGRqckR4MzhtTVpKcG1EZVlpampKLXdXWEgtaWVGRFJpbWxHMElBNGxST29QRERMWjNqZnFYYk5qa1ZIRUVzVlVfOExRaGwzZGtuaHN6M2w5OTVhd3FUSUZnTXRrekxnVkZWdlh6c2hWcnhjeHR3RFpUZ1ZPUERoQnhRaGFxSG1oUTNZX3Nxd0FoSjZKMEdiSEhxZFNUbHh6TQ?oc=5",
@@ -3636,16 +3686,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Le PDG d'AWS, Matt Garman, déclare que l'inférence IA est encore en dessous de 1 % de son échelle finale"
-    },
-    {
-     "ts": "2026-11-10T17:08:00.000Z",
-     "title": "AWS CEO Matt Garman says the cloud giant is heading for $1 trillion, but will be short of capacity for two years",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5MOTlvZmExc3Vjb2QzQnFtemNzUGVCVGdpX05aYzJMV3ptWlRYNEZ1UjlIMXpWeU1mLVNxemJsaHphQzBXelV1WVZJNGR2WFczSnBlMjlJUklUdk0?oc=5",
-     "source": "BigGo Finance",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le PDG d'AWS, Matt Garman, déclare que le géant du cloud se dirige vers 1 000 milliards de dollars, mais qu'il manquera de capacité pendant deux ans"
     }
    ]
   },
@@ -3666,6 +3706,16 @@
     }
    ],
    "items": [
+    {
+     "ts": "2026-11-23T15:00:12.000Z",
+     "title": "Rene Haas: ‘I’ve never been more confident about Arm’s future’",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBWZXItSGpVNW5kMUVCU19JbHo2OUl3RVliU3NZSTlRMHVLN05LeDA2TDdvUTlNWlpkRE1WaXROdC1sVnVldk9Yd29RVmthX080cEtGNWZrNjJ6UmZOR012UjFSbDg5Q0xvUGdOZWViZ0hYNHJzVFlONS00NGlBZw?oc=5",
+     "source": "The Next Web",
+     "kind": "presse",
+     "title_fr": "Rene Haas : « Je n'ai jamais été aussi confiant quant à l'avenir d'Arm »",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-23T13:09:36.000Z",
      "title": "Potential Nvidia CEO Candidate Rene Haas Calls Jensen Huang a 'Legend,' Expects 'No Change' in Arm-Nvidia",
@@ -5452,7 +5502,14 @@
    "role": "Fondateur de Niles Investment Management",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-23T19:45:58.000Z",
+     "title": "‘All the same issues that were here before Jensen resigned are still here’ – Dan Niles",
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPUWVvTmgwcEdIdGQxM0JEbUJsTEVGWTl3di15a2xmUTRvdThpcEoxdmc5SDBuallxMWlmdkd6WktGNEZVTTI3MjlCanFENlhhMVlQNlh0aC1uYVpGaGZiZ1JRNndCUk1LVzZnQXVxcld0bGNfaUJRZXFkbEVqZkg0V294T1g0Nzk1d3VzZ2lKb3lWUTNvSWJublVoR2ZnVHJyZXdkMHVkNWlPRS1qNFBzMXkwbi1kQ05WR25nczl6eF9qOVpNc0NZVkMtWlpYcHgtcXJwd3FYX2FKbkllX0E?oc=5",
+     "source": "TradingView"
+    }
+   ],
    "items": [
     {
      "ts": "2026-11-21T04:58:46.000Z",
@@ -5676,21 +5733,35 @@
  ],
  "hot": [
   {
-   "score": 4.4,
+   "score": 4.39,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
    "actor": null,
-   "ts": "2026-11-23T16:40:00.000Z",
-   "title": "Trump says he ‘convinced’ Nvidia board to reinstate Jensen Huang",
-   "title_fr": "Trump affirme avoir « convaincu » le conseil d'administration de Nvidia de réintégrer Jensen Huang",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQnpMZDZ5QWdIdklHQzlnZ3JyYXJSc0d3WHo4cFN1QkY2ejhWbVNlRnVkQ0czeWI0Zm1iOEVsWUFONzhQbjdRTXQyZDA1MDNwR0JYaVVkZ0kyVVRXWEkzWVptMkpNMFNTdmhrMlpDcW01N3NPcFlNSUJTdHZQOWYwWEdsMjZpYkw0U2Nvc3IxSXdJamtIOXdOWWxPX0F3TENUdUZMdFJvUdIBrAFBVV95cUxNUzdkeExVOUJ5a1RjUDhyQ2ZtNmVTanZJT28taVp1bk00MlQyd2xCdHZ2WXpuSEJWR0FSTlNzT1FDdlM1UEFOT045MnU3Z1kwY1laZ0dNMWljdmZQcHNQZlhtRUxsdEd0MWJPN0QtWEVJVzExbFQtaUxwTUQtMjdDdGVvQm9VTU83SDBYcVBfT1d4RXBqeXN2R2I4d1FMcE1LNWxrQ05oR3Rxcy1C?oc=5",
-   "source": "The Hill",
+   "ts": "2026-11-23T19:19:17.000Z",
+   "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him ‘best thing’ for U.S.",
+   "title_fr": "Trump exhorte Nvidia à réintégrer Jensen Huang, le qualifiant de « meilleure chose » pour les États-Unis",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWlhuUEVYcUhfSzZoYm1EM3RHZ1NmdkJkZ0JqX01MZzZJbzRZdFdMVl8tV1BGWG5Ba1FwWnlwVUNUVVNiN25OQ2JPLUN3TGotNjd3UEMyVGcyc0lIVWJsWDFvN2FodTdwSnVzWnhsRXNpc3NrNHVNOGlEdGFUVVBOdHV3VGFwOVJ0eVBWSEQwaUk3QkFodnhSNWc2QmJhN3h5eGR6enBWcUxFbnVsZ0RhUDJFa25BWUQ0Vnh6NThn?oc=5",
+   "source": "The Washington Post",
    "kind": "presse",
-   "outlets": 5
+   "outlets": 3
   },
   {
-   "score": 2.22,
+   "score": 2.52,
+   "id": "matt-garman",
+   "n": "Matt Garman",
+   "role": "PDG d'AWS (Amazon Web Services)",
+   "actor": "amazon",
+   "ts": "2026-11-23T21:38:11.000Z",
+   "title": "AWS CEO Matt Garman says AI safety depends on engineering, not an emergency brake",
+   "title_fr": "Le PDG d'AWS, Matt Garman, affirme que la sécurité de l'IA dépend de l'ingénierie, et non d'un frein d'urgence",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVk03TFRkOTl1Y2d0bjhHclVWb2RMWncxTW1XcEtxdGdUTXNwTHljRFJLZzI1Q2lKSnduTEk0aVVkRjV5VERTQ1NiZGpSMC0zc1ZOa3hsdzNnd1VLcmNVTExjVDhUQUE5UlptSXk4YngzLWQ2TkdjUkVVSXFzLUZOM1ZxQ3gySTdCSnZrZVBvbEd5OE5Qbko4T216LWlabElLQklB?oc=5",
+   "source": "MLQ.ai",
+   "kind": "presse",
+   "outlets": 3
+  },
+  {
+   "score": 1.79,
    "id": "jay-clayton",
    "n": "Jay Clayton",
    "role": "Directeur du renseignement national, tsar de l'IA",
@@ -5700,20 +5771,6 @@
    "title_fr": "Le directeur du renseignement national Jay Clayton affirme que la Chine a probablement obtenu des puces IA de Nvidia",
    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSnpKcDRiYmp5VjBPNnpwNENnZmRhd3pxaUdYaVZuaXVpZ3RiS0o1SmlPajlXYVl5eTVtSm5iNGdzVXZKTXdnaXYzcXpkc0R0bUVmelpYRElOWW9yc25TbFl1bWtEVm5nNUxQSjE0X2syblpyQXpNZUhOUnpiZHB0V3k4WW9uVk1qeTRTOUtBVHlBY1pMZFdMbUVId1BRemZfSHFPbi1iY3JtVGVpeEpId2oydjBla2VSTWUyU01JWkIwWUFPMnNiRXI5ejRkSTdrV1ZjMTRIWWpTa1BiTFpGTHJFMFZQWHJ3TkNhWnRR?oc=5",
    "source": "WKYC",
-   "kind": "presse",
-   "outlets": 2
-  },
-  {
-   "score": 1.69,
-   "id": "chuck-schumer",
-   "n": "Chuck Schumer",
-   "role": "Sénateur de New York, chef des démocrates",
-   "actor": null,
-   "ts": "2026-11-23T16:25:53.000Z",
-   "title": "Schumer vows Democrats will investigate Jensen Huang and the Trump administration",
-   "title_fr": "Schumer promet que les démocrates enquêteront sur Jensen Huang et l'administration Trump",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOEQwZVJpT1JGejhncTRtMnAzQkdMcG1RVTlJcW50QkY4UVpDRUZ0VWxlNlVLSEMweGpNT2U1Q1NLQndpbFU3UFlldWFnc2xGT2YyOVVjeVc2cW90THFmR21NeVJVeHAyaXluaUY4ODUyZHg0TmROM3ZpQlc3WS0xWGdseGRCYkdhd1FB?oc=5",
-   "source": "Crypto Briefing",
    "kind": "presse",
    "outlets": 2
   }
