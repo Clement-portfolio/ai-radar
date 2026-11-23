@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-23T07:40:47.089Z",
+ "generated_at": "2026-11-23T10:19:33.193Z",
  "people": [
   {
    "id": "sam-altman",
@@ -378,7 +378,8 @@
      "source": "TechCrunch",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Le PDG de Microsoft Satya Nadella explique pourquoi il a demandé à 60K employés de démissionner"
     }
    ]
   },
@@ -941,7 +942,8 @@
      "source": "Inc.com",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Alex Karp de Palantir recrute des travailleurs neurodivergents. La recherche dit que leur succès dépendra de 1 facteur"
     },
     {
      "ts": "2026-11-14T18:54:02.000Z",
@@ -1413,6 +1415,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-20T10:49:32.000Z",
+     "title": "Geoffrey Hinton warns advanced AI systems are developing unintelligible languages",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbkljSDNNWGdyR2lNYndBeVFoZzE5OVFzbXFtZld2NFNDSnlLcm1IYl92N0RPM2JpdXV3eTRtTVdaVGEwSjBDZWU4bHMzZ3NiSWNkb1h2bk1nLWxaOWlKVzhVT2ptZldSTEYzYlFhdml5enVUNDVGdUpqTUlrc2NnS3l1VlZpVTZ0clNGeXVlZlktWFdJRjRGS1V6Znk0UEhFVW9qV29jNHpqZDNRTXlQb2Z5a1JubFB6Z3Nhd3dINlpqc1Vxc3Jv?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Geoffrey Hinton prévient que les systèmes d'IA avancés développent des langages inintelligibles",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-14T12:35:27.000Z",
      "title": "Geoffrey Hinton warns EU leaders AI could outsmart humans within 18 months",
      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE84MmYyZlBkNHhPQWU3dlh4QWdEX09rci05VmhkX1FvRXpYWTFIWTczd19OYTl3OVQ5RVVrRHBkVlNlcW5FOHg2UGgtWUxuZmdSYkxkdTBWcklWR1hGRmY5Skt4Q2ZlRjdZLWk4cUF6MTh2QQ?oc=5",
@@ -1481,16 +1493,6 @@
      "title_fr": "Geoffrey Hinton s'attend à un Tchernobyl de l'IA d'ici l'année prochaine",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-06T08:00:00.000Z",
-     "title": "Geoffrey Hinton warns of possible AI disruption to power and finance",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxObUNxaWp1T1FRRXRQcXduRm5sYVpFc0RGMU14eFh0a2pQaXJoWEZIQlJQamhEeUl1ZUhqa1N5ZV9ZUUtTdjJ1QVl5dHFBbHBXYlBIcFRoeXkyTmxpV1gwd3JLVFlQNXNUSXJJeE82c05Wel9UODZGdlJ6aVBnTEVJeF9HWGxkdjNTRjhLSnpSaGZmd0poSHNqbzVn?oc=5",
-     "source": "NeoTeo",
-     "kind": "presse",
-     "title_fr": "Geoffrey Hinton met en garde contre une possible perturbation de l'énergie et de la finance par l'IA",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -1502,8 +1504,35 @@
    "role": "Président exécutif d'AMI Labs, ex-Meta",
    "co": "AMI Labs",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-23T09:12:55.000Z",
+     "title": "Yann LeCun Calls Dario Amodei's AI Approach 'Medieval', Questions OpenAI Exit",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUWxzUkI1cGFCU2VhMVhoTHJrWjdQeTZpSTRDZGRfdkdiNThnckpVblM3Ty1SdW01VDhHemRhSXREbXJSaGpTeUJkakNNVGs4OWI1dmxjWTNESWFGOHN6dkpwb1lDWVdtY3Qxb2ZNWGJVd1VvX3lOTHRld2duS1ZfUWNLU3dPZkJFSVdnM0Q3ak8xeFI1RmlzYm40M1hoaFdzaDJLblVhcEk0Vzc3ejQ5ZHhPVDN0UdIBuwFBVV95cUxPVUhMeVZJV0VLaUR0VE54OVZXSlloUldWLTdNbkd0VXgxNUNxMDd5cXBNMXAxOXhHT0M1VXZZd2EtU2pFVWZLT3pzcUFWdEp5U0tQREgxYkJpeDlYUFVrUElyMFg1NUZIbDVTSnpudi1VaWdMNGJUN1oyT1owdTdZOWdGN3MtYktKeVVKTGszalREbE5RNnB5WkZ1cjJvOXdiY3hWTVhyU05qNjJWY1V5V3V5MzNYdGU2WDFr?oc=5",
+     "source": "The Hans India"
+    }
+   ],
    "items": [
+    {
+     "ts": "2026-11-23T10:21:18.000Z",
+     "title": "Musk Declares AI Superintelligence, Yann LeCun Questions Tesla's Self-Driving Claims",
+     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY0dqanQ2Q3JTVFQ3XzlxTWNJODJwai10d3MyWlJqQlBpckFqRlpQVllFa2YyTjFOSHdlamFObDhuSldqaFZKQnBkbXRaQVF2S1RqQ0JFLUE5c2lTWGk3cWp6d2x2dzFGbzBNdmVwWTlYdFQ2YWdTSjBIeTF5LUQzNEYwbFp2TjM5eUZwZnh4TmFINnZhUWpqSDBiSnhRRXdCVkNKVGFzQjJMd29HWWlpOGc0elREdkpDUzhiejliZUlPQdIBxwFBVV95cUxNc1RXRlVrZEhJYW1xaDEwNDNZM0xKcXN5ZTlDWGwzTlRuanJSNFc5b0ZZWE1URlVLRWtGOGxvY1Utd0xZM004Sm1Cc2hndGVKTDNkUzVhTVNzSXRCMVRnXzdRdUdZVUE5WGx2VlBKa09DR1BjZ1JiVVdxTkdJOE1pcFF4VkxpSzN6V0xFaDd3a2d2NldzTzFFUnlkQTdJOHFOSWtwSHNxb0xZMDA3Q0FLYW9TWkN1WG0tbkdJcHdJREc4UFliUnZv?oc=5",
+     "source": "The Hans India",
+     "kind": "presse",
+     "title_fr": "Musk déclare la superintelligence de l'IA, Yann LeCun remet en question les affirmations de Tesla concernant la conduite autonome",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-23T09:12:55.000Z",
+     "title": "Yann LeCun Calls Dario Amodei's AI Approach 'Medieval', Questions OpenAI Exit",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQUWxzUkI1cGFCU2VhMVhoTHJrWjdQeTZpSTRDZGRfdkdiNThnckpVblM3Ty1SdW01VDhHemRhSXREbXJSaGpTeUJkakNNVGs4OWI1dmxjWTNESWFGOHN6dkpwb1lDWVdtY3Qxb2ZNWGJVd1VvX3lOTHRld2duS1ZfUWNLU3dPZkJFSVdnM0Q3ak8xeFI1RmlzYm40M1hoaFdzaDJLblVhcEk0Vzc3ejQ5ZHhPVDN0UdIBuwFBVV95cUxPVUhMeVZJV0VLaUR0VE54OVZXSlloUldWLTdNbkd0VXgxNUNxMDd5cXBNMXAxOXhHT0M1VXZZd2EtU2pFVWZLT3pzcUFWdEp5U0tQREgxYkJpeDlYUFVrUElyMFg1NUZIbDVTSnpudi1VaWdMNGJUN1oyT1owdTdZOWdGN3MtYktKeVVKTGszalREbE5RNnB5WkZ1cjJvOXdiY3hWTVhyU05qNjJWY1V5V3V5MzNYdGU2WDFr?oc=5",
+     "source": "The Hans India",
+     "kind": "presse",
+     "title_fr": "Yann LeCun qualifie l'approche de l'IA de Dario Amodei de « médiévale » et s'interroge sur le départ d'OpenAI",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-23T05:40:38.000Z",
      "title": "Will Open Technology or Restrictions Shape the Future of AI? Yann LeCun Calls Out Amodei’s Stance as ‘Medieval’",
@@ -1589,6 +1618,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T06:02:45.000Z",
+     "title": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations",
+     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPbG4xZTAydWxlbWc4YXplRThOSkF1UXl3clBjbFNPLWdsUkdLZUR2b3dIckk4TklIRm5zb1ptQXVHcHJZX0tvR1M1QjJhWGZpWEE0aUZXaTVmYzctYTBTczJnNHk5THAwcC1mMFp6RkRDT2N2ZFhyMEtiUmw3d2lKdVNET0pEUjFTbWtNR0NaaDMyN0FTdlFXNWJzdXlKVkpabEJJakhnZGlEZDBQN2lKd1haWlNvZDliTHZBUFNIQmdDeDdsRFctYjVNYmMxdm9Lbk0xWHVvN1BUQ2hsYXc?oc=5",
+     "source": "Forbes",
+     "kind": "presse",
+     "title_fr": "Trump exhorte le conseil d'administration de Nvidia à faire revenir Jensen Huang sur fond de nouvelles révélations concernant l'agence d'espionnage chinoise",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-22T08:36:59.000Z",
      "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
@@ -1657,16 +1696,6 @@
      "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises qui construisent des centres de données dans d'autres pays",
      "m": 2,
      "e": 1
-    },
-    {
-     "ts": "2026-11-20T18:02:17.000Z",
-     "title": "Trump says he plans to penalize US tech companies that build AI data centers in other countries",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOXzZtTzFabmQ1dkJOQ1VfVi1xbzdHeDR5dnJ2TzVCc2NIc3JrQVRJTXBGWVY5NFl1YUltSWExM013b18wZWlZbHZ1ZXRTa1Vja1pscFNZNE9raHlqc3FhRDBKNWFSZm1EQUdxMDJhSjRhY1ZPNkQ1ZGVqbHczcU5qNktxaFlfQUlGYThBYUROSzkwYjNTQlFta1lBQ29hbkXSAaQBQVVfeXFMUDl1ajJqM05vYkFNbENfbnZxMy11MG95RUgyV1JkbXkyTWw5c0VqbmZFNmY0Nk9iWklMd182aDZiaEtraTMybUY1Q3JRTDl0bmNOdW1MeFhOQ0w3VkFBUVdWMzI2Uk40YmtSQkRKZ0dZYVNBTnFkYkN6b3hsblNvdGNIR0NISzg0TEtvYVZLQ3ktQ0VpMG8yRkNNYU9YajkxVE5TSGU?oc=5",
-     "source": "ABC News",
-     "kind": "presse",
-     "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises technologiques américaines qui construisent des centres de données d'IA dans d'autres pays",
-     "m": 2,
-     "e": 1
     }
    ]
   },
@@ -1722,6 +1751,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T05:35:00.000Z",
+     "title": "Trump wants Jensen Huang back at Nvidia. Scott Bessent says he may fit the bill.",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaXVqa3ZHT0VlU3RzWDZyZ1JHbllBcHVfY3Z6Mk9oYUhuTHF4Y1JFQ2s4LUJaN1pKcXkycnNXWFBKSGN6c0tkVGdkRkJIUnZNYngxaTBWOE9ZQXFOSTBwTG9tNXZvZGpicVAwcVBhSXJMblVWX3hXV3dNb0p1NzNhTWkzVV93SldtTDVzQlVfTDFFa19MbEZ4Zml2Skc?oc=5",
+     "source": "Business Insider",
+     "kind": "presse",
+     "title_fr": "Trump veut le retour de Jensen Huang chez Nvidia. Scott Bessent dit qu'il pourrait faire l'affaire.",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-22T18:48:39.000Z",
      "title": "Bessent says we \"need answers\" on role Nvidia played in sending AI chips to China, suggests Alice Huang is \"kind of a canard\"",
@@ -1789,16 +1828,6 @@
      "source": "Reuters",
      "kind": "presse",
      "title_fr": "Trump et Xi ont convenu que les décisions militaires en matière d'IA devaient impliquer des humains, déclare Bessent",
-     "m": 3,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-20T16:51:46.000Z",
-     "title": "Trump, Xi Agreed on AI Curb in Military Action, Bessent Says",
-     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVm5TekZSLUtpWTgxRE1Ba3BZLW5JSTNtbUozNXdPMkIzcVRaOUhmZFZ5MWZ0NzBNNlRHN3NYUUliLWlrZlZFaXMtQ2NaUmZiTzZ6WTlKcHE4cHR5dElzYy0yWmszSmN2U08xWFNVU1hQTEE4TEF1VTdaTHh5aktwUU1YOWFsOW9WOXltTkFqazl5eGRsZ1lfU1BseENvbm5ROUFsa1lOTDRaWWlzSmpkMA?oc=5",
-     "source": "Bloomberg.com",
-     "kind": "presse",
-     "title_fr": "Trump et Xi se sont mis d'accord sur une restriction de l'IA dans les actions militaires, déclare Bessent",
      "m": 2,
      "e": 1
     }
@@ -2169,6 +2198,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-21T14:44:59.000Z",
+     "title": "Michael Burry Says ‘I Told You So’ as Wall Street Caught Off Guard by AI Selloff",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVTgwQ2oya0hPSUNqcXlRWDVDQ0NfT2I4Snh0c3NGZmw1OWZOejZVM2ZkS3puWlNSVUpDRzdyZTJ3TjBaZGhUZWFydDV5a3laX3dDeUNnOEJudEZPTVZhZ1dfY2ZERmUxOEZza1hSR1FjdDQ1VF9FTDB6WTFSR3VCTjVITmVvVHU1M3ZxRzhCcUVPSndnX2JxRA?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry dit « Je vous l'avais bien dit » alors que Wall Street est prise au dépourvu par la vague de ventes liées à l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T22:30:00.000Z",
      "title": "Michael Burry warns AI stocks mirror 1929 and 2000 crashes — and singles out Nvidia's risky deals",
      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUppLWR4d2dnRV9rVHBJVTRhWlpVSjBWUWM2T2ZfeFZOeGVHYk13LUY0T1ZNX1M1VTMxUWlkV0s3ZGhScHhJZ2ZaTUVCSm9kZEd2Qm9Bb3BxczJmVW5mQng2eGZOUll6T0xQb2VVQlhDdTRqT3Z2SzlRR3R2R0lUdFFIVDVFR0kzSnhoaWxQMEZobERjN3JiZzVR?oc=5",
@@ -2235,16 +2274,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Michael Burry a passé son tour sur les options d'achat Nvidia avant les résultats : voici ce qui a attiré son attention chez Alibaba, Netflix et JD",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-17T16:53:23.000Z",
-     "title": "Michael Burry Donates Alphabet Shares, Then Buys the Software Stock Wall Street Fears Most",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSzBKa0Rrbi1IVUJPN2d1dnpFX3NKcEF5eXprNGNHV0E3eDYyU3J2UlBmMGFDam1qRVAzODE4bzJ1NHJwSEc0Z2luSHdxR1RPb2h2RTZfM2R4Z2gxUVEwc0piZXF6bDR2UEN6a1VjUlJGaHg4TEhTUExiQjkyQ3ZDc01EczFqSks1dGhXZlJuaFh2RDlMV2lhVjhfdVVuaXJyOW9GSQ?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry cède ses actions Alphabet, puis achète le titre logiciel que Wall Street craint le plus",
      "m": 1,
      "e": 0
     }
@@ -2782,6 +2811,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T10:27:12.000Z",
+     "title": "Moore's Law is not dead, says former Intel CEO Pat Gelsinger",
+     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBVTEk3Uk9ES2ZxRk9IejZCT3NtOWpwcE9LNzBxU3JUZ21rbDVsanFReUEyVUFweHA1d1N3eW5qVnN0VXdWaDBSeG9TN0l5TWFFSXpRWXZYazBPS01IQ1RZbXlsaHBiUHBYaHE4ZHFVX3Z3MWRoN19jOV9HWnRuRVE?oc=5",
+     "source": "YourStory.com",
+     "kind": "presse",
+     "title_fr": "La loi de Moore n'est pas morte, déclare l'ancien PDG d'Intel Pat Gelsinger",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-23T02:40:28.000Z",
      "title": "Gelsinger Says Chip Scaling Still Has Room to Grow",
@@ -4402,6 +4441,16 @@
      "title_fr": "« Aucune » preuve que la récente cascade de pannes technologiques soit liée, déclare Rubio"
     },
     {
+     "ts": "2026-11-18T06:03:11.000Z",
+     "title": "WORLD IN BRIEF: Nvidia rules out Huang’s return, Rubio dismisses cyberattack fears, Guinea miners stockpile gold after export curbs and other stories",
+     "url": "https://news.google.com/rss/articles/CBMikAJBVV95cUxNeDd0NHJLUVVYMXJERVdhZXZCOTc0VE9RaHBoMFFUNzVuNFBtTmRCNTZOUmRVZTA3aWYxWmlzZmxvQWxQMlZySG9iOFpMMFdtckRadWJlYmpBMThsRFUxMmVEVmR5SnZTU3RLTk9QTW16NC1MRlRUUGJXUlJ1OVpxVm9sRzJDa2Z6WlJJbWtHR29pSjljaGtqQXlmWnNua0Y3ZkQwU0pINzMtVElfVldxM2dvY0dYcmJNM2hXYkVydHlMalVlZHdxVnpPM0NpWUlVdTRwcmJwZHRTWXk3UjdpcUQzRDAyaEd3VlA1SVBKamoyYmdYV0l4dDhCcGJtTEx0VEFSWE4wNjFCcmQ4MlhfZg?oc=5",
+     "source": "Business News Nigeria",
+     "kind": "presse",
+     "title_fr": "LE MONDE EN BREF : Nvidia exclut le retour de Huang, Rubio écarte les craintes de cyberattaque, les mineurs de Guinée stockent de l'or après des restrictions à l'exportation et d'autres actualités",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T04:57:06.000Z",
      "title": "Rubio says tech outages are not part of 'systemic attack' against US",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ZTldVX09QbktRUEg2RG1HNXF4N25jS2o3U3k2b0NUM19pTGxHOEhZMmI4czRXNFVJVmJFU2VYQ1EzMkRGczlaeE1mU1pyRld1UUFWZkRkR21SSkk?oc=5",
@@ -4440,16 +4489,6 @@
      "m": 2,
      "e": 1,
      "title_fr": "Rubio a averti Trump au sujet de la liaison du PDG de Nvidia avec une « espionne » chinoise il y a des mois. L'a-t-il ignoré ?"
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Rubio warned Trump about China spy link to Nvidia CEO Jensen Huang. What happened next?",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPY2tPTTB2MmJOcklXcVgtLUdVMllRRWZJOUxYcV94S05uTkxWWGxma2ZzOGgxcFVTeGpOUzYzdmR2SjQ3eGwxUHhqeldQRG43bXpnaXV2NUxUM1lKSG1vWGVGRDVTeC1oWVVfWGdXWE9iTUZRREJTOExEWTRwVHhzZHdqcUhfOHhrT1d0NXNSVEdpNGFVUUxBOXdVNnlGV0IxNUp1WGJRU1FtcUZRcDcxeGhRR0xWeXlpZnhxRzRRUmd2N19WcHfSAcwBQVVfeXFMTXd1YWtxUVhoenJMNlFINDFKR0FpX3p2Vk5WY1FBaE5hNGh0ckJUVElXTElrTVJ4Y0JTZzZ1SVNzM09mdmNmZ1NXMVUtU2U5VTFWX09Md2hjbVJnOXc5YXZVek9Zai1LYkwwcnVucS10a3pQdjVCU0FkdnRfRUdWeHNvdThFUXRCRGZtMWQzcmltaUJHb3ZPYlJNazdVeGV4aF9adHFqVkViWUJaNzN6cF9IMWVSSjJqVExtSkU1WWd2cGtPNDNCcDBsM2cw?oc=5",
-     "source": "The Indian Express",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Rubio a averti Trump au sujet du lien d'espionnage chinois avec le PDG de Nvidia, Jensen Huang. Que s'est-il passé ensuite ?"
     }
    ]
   },
@@ -4612,12 +4651,42 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T07:22:25.000Z",
+     "title": "Chey Tae-won: “I’ll Pay 944 Billion Won in Property Division”; Nine-Year Legal Battle Nears End",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1JNEoxenItY2RrNzFadzQtVzhXUXZxUnQ0WWI1Nm82UnhXQU9ldmxnbURTZ214QzBidjFveHBjc0xJRlhuYzB0cXhUSElqRlVsUmd3?oc=5",
+     "source": "매일경제",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won : « Je paierai 944 milliards de wons pour le partage des biens » ; une bataille juridique de neuf ans touche à sa fin",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-22T07:33:40.000Z",
+     "title": "Chey Tae-won Calls for Fully Redesigned Universities in AI Era",
+     "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNkhUbmxWN1FGZGgyb1hsUTAwNVZURjNMVVg5c0pWWm9nUVZObktqdnppemsyaml3LTBRVE9oM0JEdUwwVHpPYnA4b3dlU19MOWg5VHdZN1NMOWpxUE9ydTZzOHlYTi1GSVBlcnR0STVuM1Vyd24xQ0RxZkRjS1JpcW5Rc0dJX09CcG94UEpyMl9aWklaem1jMDhraWpSZkRud3k0?oc=5",
+     "source": "Seoul Economic Daily",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won appelle à une refonte complète des universités à l'ère de l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-22T04:40:30.000Z",
      "title": "SK Group Chairman Chey Tae-won Calls for Overhaul of University Education in AI Era",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxObjA2aFhNMjNRa2dFWkVIOGNpT2lTWElBNFNFVTVFd09IbUZmRmN5SmRxTWxJLWI4ZHlBVldNd0dVaE5pS3NnUFBPMmFzNWh0ck9ERDRQNWU4QjNaaTlFamxYUXdESkItNkNnYTQyMHJwc3JKRHV6dWY4SXlkakVVLWFiUkpBbVVp?oc=5",
      "source": "조선일보",
      "kind": "presse",
      "title_fr": "Le président de SK Group, Chey Tae-won, appelle à une refonte de l'éducation universitaire à l'ère de l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-20T07:35:00.000Z",
+     "title": "Chey Tae-won calls for Korea-Japan AI cooperation at Tokyo Forum",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBrZkdWdVBOcGZsWjB4Q3NVX0V5TWc4S0NGa2dveHAtVVlGUlFMT2Rqam9qSmdLdmVtNlRuWmNOYURRY1lLMmZnSGw3d2FJWlZvYklZMURPZw?oc=5",
+     "source": "헤럴드경제",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won appelle à une coopération Corée-Japon dans l'IA lors du Forum de Tokyo",
      "m": 1,
      "e": 0
     },
@@ -4642,6 +4711,16 @@
      "title_fr": "Chey Tae-won appelle à une plus grande indépendance du conseil d'administration pour maximiser la valeur actionnariale"
     },
     {
+     "ts": "2026-11-18T01:24:32.000Z",
+     "title": "Chey Tae-won calls for cash incentives to tackle social problems, says AI can maximize efficiency",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9FR0lvVmk4R3duV04tX1g0ZXFjQVk1NERyQ040YURPR05MTTRZNDliYWI0cTl0cVd6WkVXZTd5Rmwtell4WnhHZEt2b1hqZnN3cUtTSEt3?oc=5",
+     "source": "헤럴드경제",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won appelle à des incitations financières pour résoudre les problèmes sociaux et déclare que l'IA peut maximiser l'efficacité",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-15T05:31:11.000Z",
      "title": "Chey Tae-won: “Install an AI Flywheel”... SK Rebalancing 2.0 Kicks Off",
      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9LWXpkQTRfeEF5bEVqcEtzdDFJSmJfNGdJejFSb2owWjJMMjE4bEg0UmItN0VjTjZmdnhnX1lKM2c1OU5sV29BSjlaVW4telRnaURJ?oc=5",
@@ -4650,36 +4729,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Chey Tae-won : « Installer un volant d'inertie IA »... Le rééquilibrage 2.0 de SK démarre"
-    },
-    {
-     "ts": "2026-11-15T01:11:00.000Z",
-     "title": "Chey Tae-won urges SK to build AI flywheel and target token economy",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQZlRXUWExVTMtdmZPV0RLMnZzdks1a0JBcWdXekpVeTVyb0tDMGxjeGh5QTQ4QjdDeDhpTFBVeURkQnN3ZnQ4WlJnWUNOSTQyMFNYdjIxZV9BQnk0ZWFfNG9QOTNmX1pjU3h5c2pRdWRhZWFzV1BWaE9GVExHcmZyd0tR0gGWAUFVX3lxTE54QnRpUjl6UjcyX2JxY0tXM1RadENqakxlMWIzS0tyQ3UybVp4dkRnYTRLM1VYOXdKSHZrWlUyX0Jnd1FHS0gyXzA0bC12Rmp5enc4dVlfV1hTa3BZNTlOZzBmNllKQks3dVNUZFBqYV92QU5OQXQ4RVptd2FJajBhbnlMQ1c3VlR5U0hnTDYzVUQtRk5Ldw?oc=5",
-     "source": "Chosunbiz",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chey Tae-won exhorte SK à construire un volant d'inertie IA et à cibler l'économie des jetons"
-    },
-    {
-     "ts": "2026-11-15T00:35:39.000Z",
-     "title": "Chey Tae-won calls for 'AI flywheel' to drive SK Group's growth cycle",
-     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ITUVwZXhiTGNRV2ZSYTBYNmx3SzV0OXY0enpCUFF3Y3djVGRGQXN0WXhYZF9MdVlMUlMzRWpkYzEtblJMTnFrLVJKZnVRekVsYzVmcUVxOA?oc=5",
-     "source": "헤럴드경제",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chey Tae-won appelle à un « volant d'inertie IA » pour stimuler le cycle de croissance du groupe SK"
-    },
-    {
-     "ts": "2026-11-13T09:24:00.000Z",
-     "title": "Chey Tae-won Urges Action on Korea-Japan Economic Roadmap",
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOTjBHSDRrN2ZNUkZGRXprSFV1dXotb0lCZkNBTmVJVG9DdFJ2R0ZmeTk4UUlzbEJUZE1UNTh1WVBVVWY5MmlLZjMwQ04tWEo2YWYyQnlBdDlhN2xjZHcyQ1hVUjFFWEdaOGZjSXBpNkU3eUc1YkxOLWlSbDBYWGxWRlpIV1Biek5m?oc=5",
-     "source": "조선일보",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chey Tae-won exhorte à agir sur la feuille de route économique Corée-Japon"
     }
    ]
   },
@@ -5521,7 +5570,7 @@
  ],
  "hot": [
   {
-   "score": 1.89,
+   "score": 1.54,
    "id": "jay-clayton",
    "n": "Jay Clayton",
    "role": "Directeur du renseignement national, tsar de l'IA",
@@ -5535,30 +5584,30 @@
    "outlets": 2
   },
   {
-   "score": 1.08,
-   "id": "elon-musk",
-   "n": "Elon Musk",
-   "role": "PDG de Tesla et de SpaceX",
+   "score": 1.5,
+   "id": "donald-trump",
+   "n": "Donald Trump",
+   "role": "Président des États-Unis",
    "actor": null,
-   "ts": "2026-11-23T02:32:00.000Z",
-   "title": "Elon Musk Says 2027 AI Cash Crunch Will Be ‘Nuts’ — Analysts Still See SpaceX Emerging As The Biggest AI Hyperscaler",
-   "title_fr": "Elon Musk affirme que la pénurie de liquidités liée à l'IA en 2027 sera « folle » — Les analystes voient toujours SpaceX s'imposer comme le plus grand hyperscaler de l'IA",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajVmOVlwUDIzNmZ0QXN1SjRWNU1RaDNieEdPZ3JGRHUwV1NkcDRQOE9uY1MxTmVFY1I2MWJ1SHhjbmZQZHJfYURpTDJ3d2dBZWJUV3FXYS1wbjRvSUp3M0hrQWpWZzdCNm4xTFpuNUZLdHg2VzBLU0F0VldsQkFqUndrWndoRU0xeTM0NDZvYw?oc=5",
-   "source": "Yahoo Finance",
+   "ts": "2026-11-23T06:02:45.000Z",
+   "title": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations",
+   "title_fr": "Trump exhorte le conseil d'administration de Nvidia à faire revenir Jensen Huang sur fond de nouvelles révélations concernant l'agence d'espionnage chinoise",
+   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPbG4xZTAydWxlbWc4YXplRThOSkF1UXl3clBjbFNPLWdsUkdLZUR2b3dIckk4TklIRm5zb1ptQXVHcHJZX0tvR1M1QjJhWGZpWEE0aUZXaTVmYzctYTBTczJnNHk5THAwcC1mMFp6RkRDT2N2ZFhyMEtiUmw3d2lKdVNET0pEUjFTbWtNR0NaaDMyN0FTdlFXNWJzdXlKVkpabEJJakhnZGlEZDBQN2lKd1haWlNvZDliTHZBUFNIQmdDeDdsRFctYjVNYmMxdm9Lbk0xWHVvN1BUQ2hsYXc?oc=5",
+   "source": "Forbes",
    "kind": "presse",
    "outlets": 1
   },
   {
-   "score": 0.77,
-   "id": "yann-lecun",
-   "n": "Yann LeCun",
-   "role": "Président exécutif d'AMI Labs, ex-Meta",
+   "score": 1.11,
+   "id": "scott-bessent",
+   "n": "Scott Bessent",
+   "role": "Secrétaire américain au Trésor",
    "actor": null,
-   "ts": "2026-11-23T03:48:00.000Z",
-   "title": "Yann LeCun vs Dario Amodei: AI Godfather Slams Anthropic CEO",
-   "title_fr": "Yann LeCun contre Dario Amodei : le parrain de l'IA critique vertement le PDG d'Anthropic",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qWWNULWszYzZEVUNtR2NkY3JMdktEWGl0VWd3UFJBSW9fX000Y1NnLXI3cExxR3M3TV9JWmV0N3pwMTMtNkZHLVlRRllPVVY0Z2dmYU1DY0t5SWtxSEZValJ4TmxXN3NZVTZwaFlSYVhCVkRjYkYw?oc=5",
-   "source": "theopenpress.in",
+   "ts": "2026-11-23T05:35:00.000Z",
+   "title": "Trump wants Jensen Huang back at Nvidia. Scott Bessent says he may fit the bill.",
+   "title_fr": "Trump veut le retour de Jensen Huang chez Nvidia. Scott Bessent dit qu'il pourrait faire l'affaire.",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaXVqa3ZHT0VlU3RzWDZyZ1JHbllBcHVfY3Z6Mk9oYUhuTHF4Y1JFQ2s4LUJaN1pKcXkycnNXWFBKSGN6c0tkVGdkRkJIUnZNYngxaTBWOE9ZQXFOSTBwTG9tNXZvZGpicVAwcVBhSXJMblVWX3hXV3dNb0p1NzNhTWkzVV93SldtTDVzQlVfTDFFa19MbEZ4Zml2Skc?oc=5",
+   "source": "Business Insider",
    "kind": "presse",
    "outlets": 1
   }
