@@ -5,15 +5,15 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-23T04:12:14.473Z",
- "model": "gemini-3.5-flash-lite",
+ "generated_at": "2026-11-23T07:40:47.089Z",
+ "model": "gemini-3.1-flash-lite",
  "sig": [
   "1e073af14e01+33850c1d501b+60b091351fb7+61af5bd8e7f5+a26538825c12+a5a8206957ca+eb3e38bfef40",
   "06e6d380e3a5+074a762c0968+0b56d8c56f62+2683456db008+7f3c247631e5+81d2446f8b94+b2623c09c93b+ca82b864bdca+dde262384a9f+e06c1a5f3c69+e22812a5ccc9+ea05cfb5b9ab+ed0e695380ca+f4fe310fb2c6",
-  "03a5687591e9+07b3803b9303+1c8609b9a0a4+6553a4e9576a+8ab217dd39cd+9f91f68231f9+b33fa45cb319+bc1d56d7d3cd+d48fe5cca15f+f1eabb98d7bf",
+  "03a5687591e9+1c8609b9a0a4+6553a4e9576a+8ab217dd39cd+b33fa45cb319+d48fe5cca15f+f1eabb98d7bf",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5a8f7d1dc4aa+5fc039618c60+cd767daa7782+d8fbec9f2d14",
-  "12695ff91cba+4bea16bd0ba0+93f8bbbce302+99bee53828f8+f29e5534e1b5",
+  "12695ff91cba+4bea16bd0ba0+5875dce0fc81+93f8bbbce302+99bee53828f8+f29e5534e1b5",
   "6e761ba2ef28",
   "be40cfa5ae56"
  ],
@@ -28,16 +28,16 @@
    "head": "Les États-Unis durcissent les restrictions sur l'exportation de puces IA vers la Chine",
    "bullets": [
     "Un prêt de 480 millions de dollars destiné à ByteDance pour l'achat de puces Nvidia a été gelé par ces nouvelles mesures.",
-    "Le renforcement des contrôles vise à empêcher le contournement des embargos technologiques et à limiter le développement des capacités chinoises."
+    "Cette décision vise à empêcher le contournement des embargos technologiques et à freiner le développement des capacités militaires chinoises."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "The United States tightens restrictions on the export of AI chips to China",
+   "head_en": "The United States tightens restrictions on AI chip exports to China",
    "bullets_en": [
     "A 480 million dollar loan intended for ByteDance to purchase Nvidia chips has been frozen by these new measures.",
-    "The reinforcement of controls aims to prevent the circumvention of technological embargoes and limit the development of Chinese capabilities."
+    "This decision aims to prevent the circumvention of technological embargoes and curb the development of Chinese military capabilities."
    ],
    "ctx_ids": [],
    "ts": "2026-11-22T23:50:56.000Z"
@@ -49,49 +49,51 @@
     "ca82b864bdca",
     "0b56d8c56f62"
    ],
-   "head": "Anthropic réalise une introduction en bourse record en levant 81,3 milliards de dollars",
+   "head": "Anthropic réalise une introduction en bourse record de 81,3 milliards de dollars",
    "bullets": [
-    "L'opération évalue le fabricant de Claude à 1 500 milliards de dollars lors de son entrée sur le Nasdaq.",
-    "L'action a progressé de 34 % lors de ses premiers pas boursiers.",
-    "Cette cotation historique teste l'appétit et la confiance des investisseurs envers l'économie de l'intelligence artificielle."
+    "L'opération évalue le fabricant de Claude à 1 500 milliards de dollars pour ses débuts sur le Nasdaq.",
+    "L'action a progressé de 34 % lors de sa première séance de cotation.",
+    "Cette levée de fonds historique sert de test majeur pour mesurer la confiance des investisseurs envers l'économie de l'intelligence artificielle."
    ],
    "kinds": [
     "detail",
     "detail",
     "explication"
    ],
-   "head_en": "Anthropic achieves record initial public offering raising 81.3 billion dollars",
-   "bullets_en": [
-    "The transaction values the maker of Claude at 1 500 billion dollars upon its entry onto the Nasdaq.",
-    "The stock rose by 34 percent during its initial market trading steps.",
-    "This historic listing tests investor appetite and confidence towards the artificial intelligence economy."
-   ],
+   "head_en": null,
+   "bullets_en": null,
    "ctx_ids": [],
    "ts": "2026-11-23T03:30:00.000Z"
   },
   {
    "ids": [
-    "da1d6f4a2cd7",
-    "ace651c11496",
-    "5eefaf1660e7",
-    "39cc7b62b7b0"
+    "03a5687591e9",
+    "6553a4e9576a",
+    "8ab217dd39cd",
+    "1c8609b9a0a4"
    ],
-   "head": "Un mathématicien d'Anthropic affirme avoir résolu l'hypothèse de Riemann avec l'aide de Claude",
+   "head": "Donald Trump plaide pour le retour de Jensen Huang à la tête de Nvidia",
    "bullets": [
-    "Le mathématicien Levent Alpöge indique avoir trouvé une preuve pour cette énigme mathématique vieille de 167 ans à l'aide de l'assistant.",
-    "Cette annonce constitue une étape historique pour tester les capacités de raisonnement avancé des grands modèles de langage sur des problèmes fondamentaux."
+    "L'ancien président américain a confirmé avoir évoqué la situation du dirigeant lors d'un entretien avec le président chinois Xi Jinping.",
+    "Ces déclarations interviennent quelques jours après la publication des premiers résultats financiers de Nvidia suivant le départ de Jensen Huang.",
+    "L'intervention souligne l'importance stratégique de l'entreprise dans la géopolitique mondiale et le développement de l'intelligence artificielle."
    ],
    "kinds": [
     "detail",
+    "contexte",
     "explication"
    ],
-   "head_en": "An Anthropic mathematician claims to have solved the Riemann hypothesis with the help of Claude",
+   "head_en": "Donald Trump calls for Jensen Huang's return to lead Nvidia",
    "bullets_en": [
-    "Mathematician Levent Alpöge indicates he found a proof for this 167-year-old mathematical puzzle with the help of the assistant.",
-    "This announcement marks a historic step for testing the advanced reasoning capabilities of large language models on fundamental problems."
+    "The former US president confirmed having discussed the executive's situation during a meeting with Chinese President Xi Jinping.",
+    "These statements come a few days after the release of Nvidia's first financial results following Jensen Huang's departure.",
+    "The intervention highlights the company's strategic importance in global geopolitics and the development of artificial intelligence."
    ],
-   "ctx_ids": [],
-   "ts": "2026-11-21T16:52:00.000Z"
+   "ctx_ids": [
+    "52a17fa9dbeb",
+    "ae688f23ea4f"
+   ],
+   "ts": "2026-11-23T03:30:00.000Z"
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-23T04:12:14.473Z",
+ "generated_at": "2026-11-23T07:40:47.089Z",
  "people": [
   {
    "id": "sam-altman",
@@ -204,6 +204,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-23T02:32:00.000Z",
+     "title": "Elon Musk Says 2027 AI Cash Crunch Will Be ‘Nuts’ — Analysts Still See SpaceX Emerging As The Biggest AI Hyperscaler",
+     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajVmOVlwUDIzNmZ0QXN1SjRWNU1RaDNieEdPZ3JGRHUwV1NkcDRQOE9uY1MxTmVFY1I2MWJ1SHhjbmZQZHJfYURpTDJ3d2dBZWJUV3FXYS1wbjRvSUp3M0hrQWpWZzdCNm4xTFpuNUZLdHg2VzBLU0F0VldsQkFqUndrWndoRU0xeTM0NDZvYw?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Elon Musk affirme que la pénurie de liquidités liée à l'IA en 2027 sera « folle » — Les analystes voient toujours SpaceX s'imposer comme le plus grand hyperscaler de l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-22T17:49:00.000Z",
      "title": "Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'",
      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
@@ -269,19 +279,9 @@
      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMERTbkxTeDRtV2pTNDFBWUxsV2Z2clNPRzhwY29IakdMMjNBNk1ZWlZPMXhRWmdZNHlqaW1JNERrMWtpZ0lNX01HMlBtSjRKM2hVS3FCR3pHR1dkN3VxTTR4WnhiaW5ITlBHMm5vX29KelZQbUVEVmlWUUNVRndDcGl6YVpSZGd4T2VndDh2X3ZDeVhQV1E2NXlR?oc=5",
      "source": "Yahoo Finance",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
+     "m": 1,
+     "e": 0,
      "title_fr": "Elon Musk déclare qu'évincer Jensen Huang de Nvidia revient à renvoyer Michael Jordan d'une équipe gagnante"
-    },
-    {
-     "ts": "2026-11-18T23:25:17.000Z",
-     "title": "Elon Musk says ousting Jensen Huang is like ‘kicking Michael Jordan off your team’",
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQa3VvcGJNZlJiaXZoWFBfdDFoWWpRTkcxby1rcVJNMGFGRWdoYmpOam5VWjlXNTVONWFfd0hLaTRnOFFnRUtPNEhsdmhNUWwyeDFJZE1HME45RnV5TF80dzBUUVJSVjFwc1B1VVkycnNXTzJiMGJfS0czM1JkS3BZMl9BdUktVUVrMlZWajB5eGp2NmVydm1Fcng2TXpwZmlIR3RVeGhFUEdkZDdSZVNiZTVkWXhaQQ?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "title_fr": "Elon Musk affirme qu'évincer Jensen Huang revient à « virer Michael Jordan de son équipe »",
-     "m": 2,
-     "e": 1
     }
    ]
   },
@@ -1504,6 +1504,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T05:40:38.000Z",
+     "title": "Will Open Technology or Restrictions Shape the Future of AI? Yann LeCun Calls Out Amodei’s Stance as ‘Medieval’",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQeHo2MVlySTZtcm53RHdJSkUxMXBMUlMxYWh3alRST1l3X29xeUEwVlk1ZXhua0hHejl0Q3NISzhkTlJENVZ6aU1lRW81X3lMUTJTZW5oam9oV0l3dENVczlTZi1pcVdlanNraTZ4bV9WQTNHV256d0I4NjFpT0FJTy16SW0wRnNvM2U4blNGV05aODFBTmhMcXlkdDRXbzFYNG51RGE5RDJ4aGQyMVVGWUtqNU1sd3JXblJBQ3habnBqVkhz?oc=5",
+     "source": "The 420.in",
+     "kind": "presse",
+     "title_fr": "La technologie ouverte ou les restrictions façonneront-elles l'avenir de l'IA ? Yann LeCun qualifie la position d'Amodei de « médiévale »",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-23T03:48:00.000Z",
      "title": "Yann LeCun vs Dario Amodei: AI Godfather Slams Anthropic CEO",
@@ -3176,6 +3186,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T06:05:30.000Z",
+     "title": "Jay Clayton Predicts More Tech Outages From Patching, Won't Explain Suspected FBI, USDA Hacks",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdUlqdFRVaVhUWHltRVgxcWJ3RkZaQjZ2MGRYUnJZNDU1QVRnNDBlY3JyMkNFZVlaRnZ4VWJqVnVPSkZPeWtqaVBkVzR4bml3aDYtYkVzNjlGX0dZT29Yb29INThHZE1GRy1lejhwOVkzeWJBd0xZVVJ1Njd0UGplWHc0eWtXMjdmR2MzWVRMeFBGV3JlcjgxZ1l6a3B6TjdyUXFPbnBnbTFLUzE0RmxGOTFIQmR4YlVHekJJOXNpS1V1SExBczVXYzV4bU5UNkdCUlZiTWxfSQ?oc=5",
+     "source": "Tech Times",
+     "kind": "presse",
+     "title_fr": "Jay Clayton prédit davantage de pannes technologiques dues aux correctifs et refuse d'expliquer les piratages présumés du FBI et de l'USDA",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T00:07:21.000Z",
      "title": "Jay Clayton warns Americans to expect more tech outages during system upgrades",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUS1ESmpHWjlYbnJHZ3Q4VWRQQXd3MzFWNHcxVjJFcC1HSHJWb1diaDNMQ3ZSZF9ISEtmRG95MmVOazdfRkFpTzRGcmVOZU1wazBWT3BISzhTSkxCdHlJaW9QdUVCRUxaWGFXU0tzaFhzLVI1S0FSUlQzOG9JUTRpMEhMRFNLaWl0T3Myb2tsUi1MdUhkeXozU1JxeVM4YnJEdlJyUEZtNlJ4ckU?oc=5",
@@ -3244,16 +3264,6 @@
      "title_fr": "Le directeur du renseignement national Jay Clayton déclare à la Chambre des représentants que les récentes pannes technologiques n'étaient pas une attaque coordonnée",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-17T21:35:36.000Z",
-     "title": "Jay Clayton addresses concerns amid widespread tech outages",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNT2duLWJ6V3ZiRm01OVhNbW9jZjBLSnFRODlyNlU3RzlhRWNVX2JyTm9McXl6VnNMNGhNbHV4Qkx2X3Y0RXhDazBrN1lWd0tOa3p5TlJQbU1vRWQtRi1jOGY5dzgwTV9RNHlhcXVHc2J2eEZpV29FcE8zbnpHaGd1OWtHMGp5ME1QVF9iZTVYemctWjBZVG55NFVfV01xM3PSAaQBQVVfeXFMTVMxT2tIeVc5elpjNzBRZVZsNnItVHhGOEk5TEJsUTktRzgwRzhuMlJXYk1Rc0x4TDA0YUFJZ1MzQU9qbWlUd0E5SmtyUkdwRHRGMmR1SUdKc2hodVp3Zl9xcGZKdmpLRHpnNko4V0ZCc0FHREJEOWMwMWlBc3F2LTJ3by11dWlPZnNzbHNYRU5BQ3JaMkdoLUttckRJQzFmYnUxX0c?oc=5",
-     "source": "Fox Business",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Jay Clayton aborde les préoccupations liées aux pannes technologiques généralisées"
     }
    ]
   },
@@ -5467,6 +5477,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T01:03:00.000Z",
+     "title": "US Senator Bernie Sanders renews call for AI development pause, seeks ban on superintelligence",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNWXJ4NHBGSkQ1T1JHRENDTWpMY1RXMEN1QmgtZWF6YkhDLUxQRmRmakdaTGZxajZ6azY5YUZacVpFX21yOVZMQm9Ka0t4a0xWUHdMMGJVWkJGMnYyMmVCbHZVNkNsTVVQSW5yOGxoX2ZPcTdfZ1hXbVR3aTNTZUFpRndwZnhmaU01dXpycWVhUWpaV09iTmJucHJhUTB6Y2Z0UTRvMERMbWpVV1ljS0dzdHhCY1l0LWJkNzNudDVaTzdfdHA4YnhGbQ?oc=5",
+     "source": "www.irishsun.com",
+     "kind": "presse",
+     "title_fr": "Le sénateur américain Bernie Sanders renouvelle son appel à une pause dans le développement de l'IA et demande l'interdiction de la superintelligence",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-16T17:15:09.000Z",
      "title": "Bernie Sanders Tells Big Tech Their $3 Trillion in AI Debt Rides on a 'High-Stakes Gamble' — If It Fails",
      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxOelc4Vy1NLWpuU0ZyQk9OSUpLRVBkNmdtMWVpb0c2SkpEdXJaaENRa2VaTEd6MktkSG5Tb0JqdXdqdzFTY3llMUZ2UE9xUmQtYmgyOGV4U2tkOGpKbEFLRFk0MzJlbzh0aUozM1E2Sjc1TEJpVzJqbHNudnQ0ZlBNaVlWLVVxdDBBWWlZTFlvT2VvX1VKZWYzMEZITVBCQXR5RFo3UmZFOVlMRzlsTEJWd3FpbVJCYnRhYzN2YjhCX284bHhmc2pBbWwxeGl2N2ZUbUFGeEpuYkhqUXYzcllSS3VQbEF6QU9XZFk2R3lDVnQ5b3I4czE0RTBjYXJrZ1ZnSEkxd0tB?oc=5",
@@ -5501,7 +5521,7 @@
  ],
  "hot": [
   {
-   "score": 2.47,
+   "score": 1.89,
    "id": "jay-clayton",
    "n": "Jay Clayton",
    "role": "Directeur du renseignement national, tsar de l'IA",
@@ -5515,7 +5535,21 @@
    "outlets": 2
   },
   {
-   "score": 1.01,
+   "score": 1.08,
+   "id": "elon-musk",
+   "n": "Elon Musk",
+   "role": "PDG de Tesla et de SpaceX",
+   "actor": null,
+   "ts": "2026-11-23T02:32:00.000Z",
+   "title": "Elon Musk Says 2027 AI Cash Crunch Will Be ‘Nuts’ — Analysts Still See SpaceX Emerging As The Biggest AI Hyperscaler",
+   "title_fr": "Elon Musk affirme que la pénurie de liquidités liée à l'IA en 2027 sera « folle » — Les analystes voient toujours SpaceX s'imposer comme le plus grand hyperscaler de l'IA",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajVmOVlwUDIzNmZ0QXN1SjRWNU1RaDNieEdPZ3JGRHUwV1NkcDRQOE9uY1MxTmVFY1I2MWJ1SHhjbmZQZHJfYURpTDJ3d2dBZWJUV3FXYS1wbjRvSUp3M0hrQWpWZzdCNm4xTFpuNUZLdHg2VzBLU0F0VldsQkFqUndrWndoRU0xeTM0NDZvYw?oc=5",
+   "source": "Yahoo Finance",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.77,
    "id": "yann-lecun",
    "n": "Yann LeCun",
    "role": "Président exécutif d'AMI Labs, ex-Meta",
@@ -5525,20 +5559,6 @@
    "title_fr": "Yann LeCun contre Dario Amodei : le parrain de l'IA critique vertement le PDG d'Anthropic",
    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qWWNULWszYzZEVUNtR2NkY3JMdktEWGl0VWd3UFJBSW9fX000Y1NnLXI3cExxR3M3TV9JWmV0N3pwMTMtNkZHLVlRRllPVVY0Z2dmYU1DY0t5SWtxSEZValJ4TmxXN3NZVTZwaFlSYVhCVkRjYkYw?oc=5",
    "source": "theopenpress.in",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.93,
-   "id": "elon-musk",
-   "n": "Elon Musk",
-   "role": "PDG de Tesla et de SpaceX",
-   "actor": null,
-   "ts": "2026-11-22T17:49:00.000Z",
-   "title": "Elon Musk warns data center delays could leave AI companies short on cash: 'Going to be nuts'",
-   "title_fr": "Elon Musk prévient que les retards des centres de données pourraient laisser les entreprises d'IA à court de liquidités : « Ça va être dingue »",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVHlWLTdIcTV3OGZTb1Bpb1phbGJwXzdGQmRtc2MxSnZPaEgyN3ZaZmt2OHIxQ3k4OUdCQU1DLUhQTnRmNGxkVWJSU0hWdWVvSWF6R21ZbTh4Q1owZC1USFhiTlFMLVBZN2Z6Y3g5WXdxRHZuYkViRlFsVENOZzZMdTNMVTdiSjdkUDI1QTFnNVJBR213Qml6OUMzME53YkRo?oc=5",
-   "source": "Business Insider",
    "kind": "presse",
    "outlets": 1
   }
