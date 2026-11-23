@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-23T10:19:33.193Z",
+ "generated_at": "2026-11-23T19:07:51.760Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1514,12 +1514,32 @@
    ],
    "items": [
     {
+     "ts": "2026-11-23T14:02:20.000Z",
+     "title": "AI Godfather Yann LeCun Attacks Anthropic CEO Dario Amodei, Says He Wants To Control AI",
+     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPV3RFM1pGZDZMb0hJWjlzU3FkWTljWWwydVNWamNXb0kzZkl5UzJsRTRLX0NlVlpyY3FzQXAzQkw4ZUZrdE9SbVBndmx6Q2JSa3lNbVNaTEdDUHNyeTVFdkNmVU9mdDkxc0R5ckZQdEt5Yi1JUFE3MnhjZlVoQTRGQ1A5TXNiWnp0VmVDLVAzUjlEdURlUlJ2X0p6bDFFUF9qU2ZLa3dyeWRad0cwd2VjckQweFRzVEVBdVBCNDlJSGV6bnYzallCb05JTkhsOW1iSjZmVkpNVjFXbWRkV2NUR0pTbGtxM0XSAewBQVVfeXFMTi1LNU9Wc0h6ZXRrSDJJak1PVnhDYnlFYjRWUzRWYmFkMEdTdm40aFpIaGZHSW8tZ0FDUW9QbnY3WTdFMmNiSV9RcFRNUERyYUR3d3h6VTRFTnUwYVpZTUV3S0tQV2k4ekRPVDZZbzRYMGpiMVFad2lCNG92aE1naVNvOXVHakFmZmx3TnZ1Q2ZGbXVrOG82VGREVnhidndUUEpGaHZHQVZrOFNQU0lXV3VPNDRrSUEzbkl0RHdER3BzdVFLT0Q3X1BLNm5jY0oxWWVhMmZ6V2VSZ2NRLUVjTm1rengwVDd2cXoyOXI?oc=5",
+     "source": "Times Now",
+     "kind": "presse",
+     "title_fr": "Le parrain de l'IA Yann LeCun attaque le PDG d'Anthropic, Dario Amodei, et affirme qu'il veut contrôler l'IA",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T10:21:18.000Z",
      "title": "Musk Declares AI Superintelligence, Yann LeCun Questions Tesla's Self-Driving Claims",
      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY0dqanQ2Q3JTVFQ3XzlxTWNJODJwai10d3MyWlJqQlBpckFqRlpQVllFa2YyTjFOSHdlamFObDhuSldqaFZKQnBkbXRaQVF2S1RqQ0JFLUE5c2lTWGk3cWp6d2x2dzFGbzBNdmVwWTlYdFQ2YWdTSjBIeTF5LUQzNEYwbFp2TjM5eUZwZnh4TmFINnZhUWpqSDBiSnhRRXdCVkNKVGFzQjJMd29HWWlpOGc0elREdkpDUzhiejliZUlPQdIBxwFBVV95cUxNc1RXRlVrZEhJYW1xaDEwNDNZM0xKcXN5ZTlDWGwzTlRuanJSNFc5b0ZZWE1URlVLRWtGOGxvY1Utd0xZM004Sm1Cc2hndGVKTDNkUzVhTVNzSXRCMVRnXzdRdUdZVUE5WGx2VlBKa09DR1BjZ1JiVVdxTkdJOE1pcFF4VkxpSzN6V0xFaDd3a2d2NldzTzFFUnlkQTdJOHFOSWtwSHNxb0xZMDA3Q0FLYW9TWkN1WG0tbkdJcHdJREc4UFliUnZv?oc=5",
      "source": "The Hans India",
      "kind": "presse",
      "title_fr": "Musk déclare la superintelligence de l'IA, Yann LeCun remet en question les affirmations de Tesla concernant la conduite autonome",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-23T10:01:18.000Z",
+     "title": "LeCun Says Amodei Hypes AI Danger to Outlaw Open Models",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNVWhVMnhVVkk5ZE5hNzdNZ1RmVWk1cGNfZXA3SVI1NVNMYzBvOU9BZmM5MGl1TlhSbmtpZmRVZXpyNElZZi1ncEloQ00wQjZIT3FNUWdlMUtpVTJ3QW54cGY1ZmhIc0t1Sjg5RXZvSzdJeXVfNU4xMEtxS3pvdVdPNC02eFVILUxuUEdj?oc=5",
+     "source": "FourWeekMBA",
+     "kind": "presse",
+     "title_fr": "LeCun affirme qu'Amodei exagère le danger de l'IA pour interdire les modèles ouverts",
      "m": 1,
      "e": 0
     },
@@ -1550,8 +1570,8 @@
      "source": "theopenpress.in",
      "kind": "presse",
      "title_fr": "Yann LeCun contre Dario Amodei : le parrain de l'IA critique vertement le PDG d'Anthropic",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-18T01:51:14.000Z",
@@ -1618,84 +1638,84 @@
    "alerts": [],
    "items": [
     {
-     "ts": "2026-11-23T06:02:45.000Z",
-     "title": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations",
-     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPbG4xZTAydWxlbWc4YXplRThOSkF1UXl3clBjbFNPLWdsUkdLZUR2b3dIckk4TklIRm5zb1ptQXVHcHJZX0tvR1M1QjJhWGZpWEE0aUZXaTVmYzctYTBTczJnNHk5THAwcC1mMFp6RkRDT2N2ZFhyMEtiUmw3d2lKdVNET0pEUjFTbWtNR0NaaDMyN0FTdlFXNWJzdXlKVkpabEJJakhnZGlEZDBQN2lKd1haWlNvZDliTHZBUFNIQmdDeDdsRFctYjVNYmMxdm9Lbk0xWHVvN1BUQ2hsYXc?oc=5",
-     "source": "Forbes",
+     "ts": "2026-11-23T19:19:17.000Z",
+     "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him ‘best thing’ for U.S.",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWlhuUEVYcUhfSzZoYm1EM3RHZ1NmdkJkZ0JqX01MZzZJbzRZdFdMVl8tV1BGWG5Ba1FwWnlwVUNUVVNiN25OQ2JPLUN3TGotNjd3UEMyVGcyc0lIVWJsWDFvN2FodTdwSnVzWnhsRXNpc3NrNHVNOGlEdGFUVVBOdHV3VGFwOVJ0eVBWSEQwaUk3QkFodnhSNWc2QmJhN3h5eGR6enBWcUxFbnVsZ0RhUDJFa25BWUQ0Vnh6NThn?oc=5",
+     "source": "The Washington Post",
      "kind": "presse",
-     "title_fr": "Trump exhorte le conseil d'administration de Nvidia à faire revenir Jensen Huang sur fond de nouvelles révélations concernant l'agence d'espionnage chinoise",
-     "m": 1,
+     "title_fr": "Trump exhorte Nvidia à réintégrer Jensen Huang, le qualifiant de « meilleure chose » pour les États-Unis",
+     "m": 3,
      "e": 1
     },
     {
-     "ts": "2026-11-22T08:36:59.000Z",
-     "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
-     "source": "ABC News",
+     "ts": "2026-11-23T18:14:17.000Z",
+     "title": "Trump says he assured Nvidia that Jensen Huang posed no national security threat",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNc3l1T3NpNEY5eFRTQ0xVT2tBNjQyS3JFaUF3SmQydUpCY0RaZEFZWDgyaUdhTUR2R2xzamVmcTJjeHFzRDN2eVpEVjVneE5QWHc0ZXlrSWc3T0gwSFlUY1k4ZjYzbm1GbWVxWVdxYW1XU1daZWNCZkVGeUFRRkxZQnpJS1JpZHY1UGRYVTExM29fbTRmbkpOU3hWUVl6Y1BPUjQxZzlOQ2sxUQ?oc=5",
+     "source": "Reuters",
      "kind": "presse",
-     "title_fr": "Le président Donald Trump annonce la création du groupe de travail sur l'IA « Super Intelligence Force »",
+     "title_fr": "Trump affirme avoir assuré à Nvidia que Jensen Huang ne représentait aucune menace pour la sécurité nationale",
      "m": 1,
      "e": 0
     },
     {
-     "ts": "2026-11-21T01:52:30.000Z",
-     "title": "Trump calls for Nvidia to reinstate ‘brilliant’ Jensen Huang",
-     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOTTRWaFJBYUVZRUszSnpjai1ZUWJLRVhEQlJndHJKZnFwUlplbk16S0VjeU9jaU93WThFLXlsTG5BWHlxelBYeWk3RUJaZWNjT0xfWGlmcEowaEQ0OWtZaWlqdzhxcDBEVzZoR241dWtIUnQtRUZYeWZDTWJ6ZzRwY2xEWTVBMk5ENnQ3RWp0bGRGd0JPYnZCZzltTEh3WUxEa0HSAacBQVVfeXFMUEJ3bXdXd0NKcVo0cjV4RnJiOEp4MkUtZTFWTTZUQXYtNkVpNHdNZUV3eUVXOFVxZG1nVlV5NElUMlotSzhXcFlONktxNHFVYWZNOG5iUE5idEtuckwybDZxX01BZmt3WEw4MTJ5TzBEVHd6NlZtYUY3elBxZ0kzWmluRjZmWU9vMF93UzdlVjlvcUdtb014V3AxOTJCQ2lrV29sUUIxeWs?oc=5",
-     "source": "Al Jazeera",
+     "ts": "2026-11-23T17:52:37.000Z",
+     "title": "Trump says he spoke ‘directly and indirectly’ with Nvidia’s board about reinstating Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQUXR0YW84cmFNLVlDWndjbUh2cmJmRkZwcVgyRXQ2T3h1TUFFM25GdGx2TERpbGRqT1J4NUxiRm9KeW9udThIbVZyOTkxT1ExN1o5U0Nld0kwU3gzQXJGeEs1TENaYjFGSktCdzN1ell2cXVQaS0yUjgyV1M0OC1xYXRQMUIzZkQ2QlZjWUN6ei1ScjBpcFZ1UWIwVE1CRTlfZXJxMDhEY0ljRGc?oc=5",
+     "source": "NBC News",
      "kind": "presse",
-     "title_fr": "Trump appelle Nvidia à réintégrer le « brillant » Jensen Huang",
-     "m": 1,
+     "title_fr": "Trump affirme avoir parlé « directement et indirectement » avec le conseil d'administration de Nvidia au sujet de la réintégration de Jensen Huang",
+     "m": 2,
      "e": 1
     },
     {
-     "ts": "2026-11-20T20:34:56.000Z",
-     "title": "WATCH: Trump says he would love former Nvidia CEO Jensen Huang to 'be given a second chance'",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNU3BVTXVMUXRwSVVLdFdsX25kbXFDaVhDSWUyRFkwODBqblBzVEF2Z09nZVVSNE4wN0ExY2QwWGtIRGVEc1kwMG50ZDNQdlMwdjVqeno5UXRTTmZsWFc0SS1XekZxYmh1Y2VRWnVLdzBiWW1sOU9Cc09mT0RqTU5DckJrZ2M1VTlPSk10enFsQmxkMlRad2Z1NEhSY0UzX21DQm5Pd211ODVuYjItdVpNc3VlNDJtTkZDOEZpYmJjdHpmRmR1MXfSAcsBQVVfeXFMTmVCc29jeC0zU2R3U1I4d0cwbmtSTU5kbG9hQVdlNTZ6aHRCVmg1N0VYaTVwek9qbUNfcThZcXFBMnhlTC05a1ZJOFVjSVI3UFdaZ09mTkpibUVIdDZEVFFteXZNYndoZklIVU1uc0xnN3FPQlh3clUyZWU5VFhMZ0pCZmhsY3g4cE5zVGZRVU1pSW9YdnRfMHN1LUV4Vk5yWU5yXy1LTXBKRmlJejRLeEIyYzhvcVVMX1pya2ZPMjVhSHhvUEdyUnBPNDA?oc=5",
+     "ts": "2026-11-23T16:49:51.000Z",
+     "title": "Donald Trump says he 'convinced' Nvidia to reinstate Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGLU9yX2djdGRQV01hM0llUENSZ0U3a1YzQU1WdWx5Z0dMMVJGUFduWkhJTjBxOHVVeE9SN1lyaE1sNjdJYWVENzhrRUJ2cXNUZEZHaUpRUHE0UXM?oc=5",
+     "source": "BBC",
+     "kind": "presse",
+     "title_fr": "Donald Trump affirme avoir « convaincu » Nvidia de réintégrer Jensen Huang",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T16:40:00.000Z",
+     "title": "Trump says he ‘convinced’ Nvidia board to reinstate Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQnpMZDZ5QWdIdklHQzlnZ3JyYXJSc0d3WHo4cFN1QkY2ejhWbVNlRnVkQ0czeWI0Zm1iOEVsWUFONzhQbjdRTXQyZDA1MDNwR0JYaVVkZ0kyVVRXWEkzWVptMkpNMFNTdmhrMlpDcW01N3NPcFlNSUJTdHZQOWYwWEdsMjZpYkw0U2Nvc3IxSXdJamtIOXdOWWxPX0F3TENUdUZMdFJvUdIBrAFBVV95cUxNUzdkeExVOUJ5a1RjUDhyQ2ZtNmVTanZJT28taVp1bk00MlQyd2xCdHZ2WXpuSEJWR0FSTlNzT1FDdlM1UEFOT045MnU3Z1kwY1laZ0dNMWljdmZQcHNQZlhtRUxsdEd0MWJPN0QtWEVJVzExbFQtaUxwTUQtMjdDdGVvQm9VTU83SDBYcVBfT1d4RXBqeXN2R2I4d1FMcE1LNWxrQ05oR3Rxcy1C?oc=5",
+     "source": "The Hill",
+     "kind": "presse",
+     "title_fr": "Trump affirme avoir « convaincu » le conseil d'administration de Nvidia de réintégrer Jensen Huang",
+     "m": 5,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T16:22:25.000Z",
+     "title": "What Trump told PBS News about Jensen Huang before Nvidia reinstatement",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQblhVTUpEUHVvbmVtTHhHWVBHb1dfYi1MZDN2aXdBUUJRamtYeDVMVnVKejc2ek5ycDZqbjBjbEFqNG0yYUd0VUVTQi1tUm1yMENpaVZWd0R2WEJUVG9zd3ZKaWswczZwQWdQaVA1RXdnY290M0YtSk5QdFBmLTFObEgtZm51VzJTMVV0S2ZJamliSXBwN1EwZzFubG1CSmVVYzA1SHZpLV9jekNtLWfSAbMBQVVfeXFMTkpsV050bGZndlhOaDdsLWpadmxmaVB6NUh3MU5rU3hnMUdLcEdTczJhSFgwckt6bXNXRzNFMGptdnd6b0pmdDROc1pjaVkydm03d0V3Rnhqa1NLZnRNMm1HVXZpOFE4Q0JHaC1wV3hXa1lieEhpN2RRTUpvYW1ma0tzNWxoRHFrYVVLM05jd1VmY05iMDcxaGpQSGxNWlp2SW1SUEI0bk0xVk1ZYjZiZWtuSGc?oc=5",
      "source": "PBS",
      "kind": "presse",
-     "title_fr": "REGARDER : Trump déclare qu'il aimerait que l'ancien PDG de Nvidia, Jensen Huang, « ait une seconde chance »",
+     "title_fr": "Ce que Trump a dit à PBS News à propos de Jensen Huang avant sa réintégration chez Nvidia",
      "m": 1,
      "e": 0
     },
     {
-     "ts": "2026-11-20T19:50:00.000Z",
-     "title": "US tech companies that build AI data centers in other countries will be penalized, Trump says",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWEtzQUtZSkNqOE9ReXZEMTlIRVNjOEdzRVp0b1E1UkFiYncyMGpadjRFV1ZSeDJqSnJuRnhhZ3JvRkt3ZG9BNlN3Z0VESFpTbHFTREp6bzVFWnBKZVNweW5wUUVpMzFaZk14UzA3RFVveWdDUW9rVjI1dTZOeEVVeGl5Ql9QYVFpdWl3cm15VHg4SlZNVXR3dWVuTm0xVk1HZkZZdg?oc=5",
-     "source": "AP News",
+     "ts": "2026-11-23T15:08:28.000Z",
+     "title": "Trump tells CNBC ‘I made the deal’ to reinstate Nvidia’s Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ab2habU9pTTllNmRCRDdqTjgwQ3hsVFZDX1hhVkJxaVVCWHNhYjRHLXFMaWtnME41NGZ1Z1REMkh1d2Y0NUJGamJSdVJQcV9rZEV1aW9nUlhHQWN1WkFSU3RRMnZrNEpobEp5bVBoY9IBdEFVX3lxTFBXNkNGSW1MaGlybGVOX0YtaVI0YVFfd3NYMi1BenZKN2Ewd1JJT3NMMjdpaElsRF9jSThyVzBHYlg4dUxocjBjYnV1dml4czdrWHR4akNId1g3SVJYa0oyRkdEUHJPMnRUVFpkbUpxWHRtWUxE?oc=5",
+     "source": "CNBC",
      "kind": "presse",
-     "title_fr": "Les entreprises technologiques américaines qui construisent des centres de données d'IA dans d'autres pays seront pénalisées, déclare Trump",
-     "m": 2,
+     "title_fr": "Trump déclare à CNBC « J'ai conclu l'accord » pour réintégrer Jensen Huang chez Nvidia",
+     "m": 3,
      "e": 1
     },
     {
-     "ts": "2026-11-20T18:49:44.000Z",
-     "title": "Trump says US to penalize firms building data centers abroad",
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT3hEcEp0SWhZNmU0eXhJUEU3ekVWWkQ3SVp1ZWlQeUZPRVBKUkx6R08yMkVGSWo5S3JWelR4STNQN2pCanZjaTE2ZWl0anlHQjJjWExCVFBVaVF4Uy1HNEZrRWZoNnVhVmx0WFBQNUg5cTA2UEpxZHpHcTRZSXctTU9jMHhPclFTdUQ3NktmbkJNS203N0dVeHA4R1pTRFRieHY3NnZWNA?oc=5",
-     "source": "Reuters",
+     "ts": "2026-11-23T15:00:00.000Z",
+     "title": "Trump says US government ‘has no reason to believe’ Huang poses national security risk",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNLVFlMTZSd2hBRHJEZHNITEFqWUVoYkVhQjJ4Q2tzM3RocnF6dW53X1hpald6TW1HU3NrTTQyNkllNDljeWwySmtMbHBLTi11ZzctYUlWN3Rodll6NTVMdXNncjFlNW1iMVBnZzhXZjlfSzZfSDlaTFEtcXppelBDRU1HVl9hYWpwXzUzTno4bmM4SWZ5X3JOTw?oc=5",
+     "source": "Politico",
      "kind": "presse",
-     "title_fr": "Trump déclare que les États-Unis vont pénaliser les entreprises qui construisent des centres de données à l'étranger",
+     "title_fr": "Trump affirme que le gouvernement américain « n'a aucune raison de croire » que Huang présente un risque pour la sécurité nationale",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-20T18:40:12.000Z",
-     "title": "Trump says only older chips should be sold to China",
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOFEtNXdjeFdVNFdzb2gyY0R6cENORm5IRHNyNWY0RWVYcEY0SHRpQ2RTZEEzT0RnTnhWUVNHNV9qaVl0N1RjaExzcUtCdmFybmwzSUFKUG42T1ZLT19UTm1YbFdESzVtQWxQeHhaZWVBSXA3aGdSVDB4NTd6ZzdRS1NKbl80YVV4RlpiYXE3VVRFMXVvVktaQ2pwcDk?oc=5",
-     "source": "Reuters",
-     "kind": "presse",
-     "title_fr": "Trump déclare que seuls les puces plus anciennes devraient être vendues à la Chine",
-     "m": 1,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-20T18:02:17.000Z",
-     "title": "Trump says he plans to penalize companies that build data centers in other countries",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOXzZtTzFabmQ1dkJOQ1VfVi1xbzdHeDR5dnJ2TzVCc2NIc3JrQVRJTXBGWVY5NFl1YUltSWExM013b18wZWlZbHZ1ZXRTa1Vja1pscFNZNE9raHlqc3FhRDBKNWFSZm1EQUdxMDJhSjRhY1ZPNkQ1ZGVqbHczcU5qNktxaFlfQUlGYThBYUROSzkwYjNTQlFta1lBQ29hbkU?oc=5",
-     "source": "ABC News",
-     "kind": "presse",
-     "title_fr": "Trump déclare qu'il prévoit de pénaliser les entreprises qui construisent des centres de données dans d'autres pays",
-     "m": 2,
-     "e": 1
     }
    ]
   },
@@ -1925,10 +1945,16 @@
    "actor": null,
    "alerts": [
     {
-     "ts": "2026-11-20T19:16:00.000Z",
+     "ts": "2026-11-20T19:23:08.000Z",
      "title": "Missouri’s Josh Hawley leaves door open for presidential run after midterm losses",
      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56YUtGdmxFTzBKdXJLRDlTc0hPRWg1LS1DajBjUlNyWE5KNXNtS3ctRW1wM3FTRVNySUExSnpUZlZtNG5OVFhBeDJsV2xWZDR6Wi1xNmt2TFBTYXRtX3hQeDA3N2hUbnFUdjR6MjlLVjAxUTBqTHNBWnlDZzRnUdIBfkFVX3lxTE00ZWZWd0tOSGdDUl81ZVZRS1ZZWUVDZERwdTF6eUdTUDBKMHFudDVmZmpFdjc5ajdtQjB4aERTNzhTcXpzRk9rNmkwcmc3NTdBcHB4bDJXWjZZaTVzT2dMLVBlVXBjRU0zLWZmZFZBRzJOcl9aWGp5WlJlUVM2QQ?oc=5",
      "source": "Kansas City Star"
+    },
+    {
+     "ts": "2026-11-20T15:34:59.000Z",
+     "title": "Josh Hawley leaves door open to 2028 presidential bid after previously ruling it out",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMFZEQkZ5czBwY05LVzZuRjFfLUV2REZlbmEwRTgxa0ZDYjRLM2Z6X3dmMU9qazZzbUJUVWFCdnNSQVJhUmsxS2doamttdjRQcDdVc3dlV29YLTl0QkF1V1d2aE1XSEl0YVExRE80a0NzVXJBb090US1pRUp1RklueWh5RQ?oc=5",
+     "source": "Mezha.net"
     }
    ],
    "items": [
@@ -1984,6 +2010,26 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T18:18:04.000Z",
+     "title": "Elizabeth Warren Calls Out Nvidia After Jensen Huang Returns as CEO",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQcUI3S2hJS1pEcGtwSTAxcGl0NDZvNVlLeWQ1a1RpNnRnaGhJTGo1NEFOeGFEeTdpbnNWT21ON0ROdWFPY1U2Q2NyR3FDVUozcElXOVJaZWF5ZWpGdDh5LUxseDJmNnZPSDZjRDNXNnhPVTJtUEFNQmFfZS13dzYwU3NEX2MxQ1lUNkp3aC0tLVo0TlV5ZGZvZlIwcDhJQQ?oc=5",
+     "source": "Crave Online",
+     "kind": "presse",
+     "title_fr": "Elizabeth Warren interpelle Nvidia après le retour de Jensen Huang en tant que PDG",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T17:50:08.000Z",
+     "title": "Elizabeth Warren calls Nvidia’s reinstatement of Jensen Huang reckless",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbnFLcG8xMTJsWk5oVm9FSjR2Tks2N3ByVnBDakk5aG9QajFiUDlDRXAtQU9qMDlnMlNadkJFQnBUWEJYb0FXTm14ZGxDWlFMVDNMa0FxS25OZzRTb180bGJUWnVMbjBYWXpQd01oRmEySTk4VXNTWEp3ZXNEMk04b0ZNUQ?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "Elizabeth Warren qualifie la réintégration de Jensen Huang par Nvidia d'imprudente",
+     "m": 2,
+     "e": 1
+    },
     {
      "ts": "2026-11-19T17:24:43.000Z",
      "title": "Anthropic Pops To Over $100 On First Trades, Senator Warren Calls For New Rules On AI",
@@ -2198,6 +2244,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T16:55:02.000Z",
+     "title": "Michael Burry Slams Nvidia Over Jensen Huang Comeback: 'Godspeed'",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSk13b2o0YUlNbHNNSC1YTG5kUnA0QXB3R0paTHNNa0QwMENNeWc5MzNzMU1paFphYTFFbDc0WFd5OG1DVUIzQzBTN0o3ZmtuMFl0NTR6ZzJmbVNxd2Y5VFl0NVdUT2FVazR0NzhCbk5yc0M5dHlrbE5ZeXJXZmJRWGZzMElGQm1XT3pXenVlS0kxeUV2Ry1VYmRaS1lDSl9jcy1fZUVpRVlLT0VadnY3OERwRVJ5NldIUWFaTmN3NDI?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "title_fr": "Michael Burry critique Nvidia après le retour de Jensen Huang : « Bonne chance »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T14:44:59.000Z",
      "title": "Michael Burry Says ‘I Told You So’ as Wall Street Caught Off Guard by AI Selloff",
      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQVTgwQ2oya0hPSUNqcXlRWDVDQ0NfT2I4Snh0c3NGZmw1OWZOejZVM2ZkS3puWlNSVUpDRzdyZTJ3TjBaZGhUZWFydDV5a3laX3dDeUNnOEJudEZPTVZhZ1dfY2ZERmUxOEZza1hSR1FjdDQ1VF9FTDB6WTFSR3VCTjVITmVvVHU1M3ZxRzhCcUVPSndnX2JxRA?oc=5",
@@ -2266,16 +2322,6 @@
      "title_fr": "Michael Burry affirme avoir essayé de vous avertir au sujet de Nvidia, CoreWeave et Nebius. Voici ce qu'a vu l'investisseur de 'The Big Short'",
      "m": 2,
      "e": 1
-    },
-    {
-     "ts": "2026-11-18T05:15:00.000Z",
-     "title": "Michael Burry Passed On Nvidia Calls Before Earnings — Here’s What Caught His Eye At Alibaba, Netflix And JD",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQWEx3ZUwwVzNVYnhXUjNNdC02WWdnNElUcklFa3ZsNnZGTmZrZkVMeWcwQXdTaW5GdFp0VTlIVUpYb2IwWmRKMjFpQTJqVmNZRVdUdnFlQ28zQzloUW9xTjFxcUhsb2pfU1pKMExHYTRJYldwdkRvUzZfR1ZIa19oNk42RDlMdVppNjliclc1LWZNSF83YWptNXI3Rzl0dzQ?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry a passé son tour sur les options d'achat Nvidia avant les résultats : voici ce qui a attiré son attention chez Alibaba, Netflix et JD",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -2416,6 +2462,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T10:25:00.000Z",
+     "title": "Masayoshi Son Says Anthropic Was \"One of My Failures\" — The Cost of Betting Everything on OpenAI, as SoftBank Shares Lose Two-Thirds From Their Peak",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1yS2tvZ0d6VnNzTnBmV3hFVUlncE1DaDl5ekFBMm1KNDhSUmRsM2FTc2JqRW81MzdXN0Z0Z2J1ZnR1R1VRTWYtcG1UcGtPVnhNM25VTnJTQjB6MW5kNEJrUDE2R09VQ3kxdnpqS3RxTFZST2syWHc?oc=5",
+     "source": "BigGo Finance",
+     "kind": "presse",
+     "title_fr": "Masayoshi Son affirme qu'Anthropic a été « l'un de mes échecs » — Le coût de tout miser sur OpenAI, alors que les actions de SoftBank ont perdu les deux tiers de leur valeur par rapport à leur sommet",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T11:21:11.000Z",
      "title": "Masayoshi Son's Big OpenAI Bet Faces a New Test as SoftBank Shares Crash",
      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPaldpV3ZCd2tHWmVaRjdodGFyd0V1R2phMjl1aEJIeUVvS2V6UC1kcFdrZ1ROdG5KZjdGZjlYM3U4bHNMblpiLXJmWUJLYW85NkZ3Sng4WWh3b0N4VUdxeEtwa3BfbnpPampheHFfcFlrWlIzeGQ5V0tyOTN6SFQyQ1poSkdFUm5ySWFHQm1qV0VKSVQzSlMtcmZFUzQtck9rU084SVg4Z1cxQkdfMy1LMHhIR2JSVmd5dXdUQVZCSDRHTmwzT1l0b0pQVGU?oc=5",
@@ -2482,16 +2538,6 @@
      "source": "TradingView",
      "kind": "presse",
      "title_fr": "Masayoshi Son affirme que ne pas investir dans Anthropic est une erreur ; SoftBank continuera de miser sur OpenAI",
-     "m": 4,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-18T10:05:00.000Z",
-     "title": "Masayoshi Son Admits Mistake: SoftBank's OpenAI Bet Cost It Anthropic",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5Mdmg5cWJPYVJLbWs5VGFpVFg5Mkk5cXVqU3prWlBJbkNJMjVycHdlMDFmMmZaNkJjdnR0UVBJZG5ycUFBcDdZTWlaSnh4OGJDS0NESlc2LS02MDNZTXNnaDNydTU2TmNKMjdrYXYxNXltZHJmUlE?oc=5",
-     "source": "BigGo Finance",
-     "kind": "presse",
-     "title_fr": "Masayoshi Son admet une erreur : le pari de SoftBank sur OpenAI lui a coûté Anthropic",
      "m": 4,
      "e": 1
     }
@@ -3053,6 +3099,15 @@
    ],
    "items": [
     {
+     "ts": "2026-11-23T18:17:18.000Z",
+     "title": "Peter Thiel Bets Big on Semiconductors in Q3 And He Might Be Down 33% Already",
+     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPM3YwaUlfdm9DeGUtVkE2XzhJal9uOWdkUVhLdWNwOWx5RTJfVXc3YUJlX0tTM3JGejRtUnpOb1dLeTNRb0hZeG9saU1odGZiWnc1NGZaYTBsaFNtQkRpc1FhMWtyV0J4WmlPTGJQcE1zN0ZhM0Njd0Iyc1hEbnFBSUZxX09nREFDcGJEejhnS1dEOHVZSUUxR3BJWGZmeDcwVHhGSXlpejRTejVRckpDY3l5OGpBaExTLXdlaDE5RDlaOEFLc1M3cg?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T11:12:42.000Z",
      "title": "Peter Thiel Sold Every Utility Stock He Owned and Bet $161 Million on One Chip ETF. It's Down $37 Million Since",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcU5TTjBaNWhPbjBmcFFuTEZ2Qi1uQkF3ZHlldG1Cakc4d05OakpBSmlGZkpEa2dyOU5CanpZTkVqdWlQUUhJOWpFeS1EQ0dXeWRrQ0ZEdElmbXZoa0tYTUZCbzh4WlQ2V0FVXzNVcmoxT0JPZGtVMFFsLVpVQnRlT1pyY0xRWGFBZUhWb0Z3NS1ZOHVPdS05c3g0TQ?oc=5",
@@ -3225,6 +3280,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T17:06:00.000Z",
+     "title": "DNI Jay Clayton says China likely obtained Nvidia AI chips",
+     "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSnpKcDRiYmp5VjBPNnpwNENnZmRhd3pxaUdYaVZuaXVpZ3RiS0o1SmlPajlXYVl5eTVtSm5iNGdzVXZKTXdnaXYzcXpkc0R0bUVmelpYRElOWW9yc25TbFl1bWtEVm5nNUxQSjE0X2syblpyQXpNZUhOUnpiZHB0V3k4WW9uVk1qeTRTOUtBVHlBY1pMZFdMbUVId1BRemZfSHFPbi1iY3JtVGVpeEpId2oydjBla2VSTWUyU01JWkIwWUFPMnNiRXI5ejRkSTdrV1ZjMTRIWWpTa1BiTFpGTHJFMFZQWHJ3TkNhWnRR?oc=5",
+     "source": "WKYC",
+     "kind": "presse",
+     "title_fr": "Le directeur du renseignement national Jay Clayton affirme que la Chine a probablement obtenu des puces IA de Nvidia",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T10:43:10.000Z",
+     "title": "Jay Clayton Warns of Technology Outages During System Upgrades",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BUTd4eDJMSTZDYlU5d1JkX1NIeEMyS1g4YmdDTzZQZXNQQ0ZKWWpWYjd1OTByVXVyZWdFQU9TU2J5Ri1RT09IRjdMQXNXUE9rZFJDc3czMFQ5bkJSWUpKUGtYblZhSFh4OUVRMnFR?oc=5",
+     "source": "Demokratis.co.id",
+     "kind": "presse",
+     "title_fr": "Jay Clayton met en garde contre les pannes technologiques lors des mises à niveau des systèmes",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T06:05:30.000Z",
      "title": "Jay Clayton Predicts More Tech Outages From Patching, Won't Explain Suspected FBI, USDA Hacks",
      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNdUlqdFRVaVhUWHltRVgxcWJ3RkZaQjZ2MGRYUnJZNDU1QVRnNDBlY3JyMkNFZVlaRnZ4VWJqVnVPSkZPeWtqaVBkVzR4bml3aDYtYkVzNjlGX0dZT29Yb29INThHZE1GRy1lejhwOVkzeWJBd0xZVVJ1Njd0UGplWHc0eWtXMjdmR2MzWVRMeFBGV3JlcjgxZ1l6a3B6TjdyUXFPbnBnbTFLUzE0RmxGOTFIQmR4YlVHekJJOXNpS1V1SExBczVXYzV4bU5UNkdCUlZiTWxfSQ?oc=5",
@@ -3241,7 +3316,7 @@
      "source": "news.lavx.hu",
      "kind": "presse",
      "title_fr": "Jay Clayton prévient les Américains qu'il faut s'attendre à d'autres pannes technologiques lors des mises à niveau des systèmes",
-     "m": 2,
+     "m": 4,
      "e": 1
     },
     {
@@ -3255,13 +3330,23 @@
      "e": 1
     },
     {
+     "ts": "2026-11-22T23:50:45.000Z",
+     "title": "Upgrades for the AI Age Could Bring More Outages, DNI Jay Clayton Warns",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNElkWFlxbklGN3JvWEt6b2VmdzdWSDlvaWtrbE05RkdMTnp5TG9iRUtYcUg3LTZIX3lMYUx0V3JNdzR3d25Lai1MMEVnZHU2QUt1cjNvOEpETU45eGlJZ0p3R1o2amVrMjJremM1UjVFM3pWc3otSU5yUlJLZ1EwM0lfNy1FQQ?oc=5",
+     "source": "Technobezz",
+     "kind": "presse",
+     "title_fr": "Les mises à niveau pour l'ère de l'IA pourraient entraîner davantage de pannes, avertit le directeur du renseignement national Jay Clayton",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-22T18:29:01.000Z",
      "title": "Director of National Intelligence Jay Clayton warns US tech outages could continue amid ongoing system upgr...",
      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNczVBNHluWTlnNHpMTU5TY0dBU2FNRlQ1dllPMXZHNFFfdXZXWDV6aW5zYnI1SDlWb0RyaTA0LWhEQnRVeHNPUlBrT2NuQ2xtb2RRLVBrRnByZUFmSnR3MktOU2E4eXNZc2c3UVdzWFF3SnlTang2LS1pNDFzMURyTGhuQzZVOEUxN0Y0UkxnaGpfY0otTlpXd3RvS2dINnhvZUZKTUp0Rk0tT0dCQ1g5SUtNcE01X2pfOUVIbl92Q3gzcHZpd1V5VEJzRUdGSlpxWjRMWFlEQk92VndhZ3BtNUE5MlhKT0s1djlxV9IB8gFBVV95cUxPREZqeFF0dDlDeEw2UC04UkNBVXRicllhUlFrZVBaS2tIcnEybEl3TGY0eGNHWG9leVBjZzBqRkVlZ2pEV0xMb0R0MDFyLXdoaHZsM1htUUFDeGdQNjBDd0ZSQ3A4VVJZX3U3ZFV4QkthRmpKd3ZFa0pWdDh5V09qYlZ3ZTBLLXZoRGdwbzMyQ2lhQWc0c2lwSXo4NGxpLWNBd2NteFpMR3U3OU5ZLXA2QlpDZW9MaHNNY1Vmc1dzNkR0SlBxZmI4S3JsWnBZVWpVUGY2d0I5cE80cTBDcTlMWE5CX01zOXo5Vng0M0hiUGVTZw?oc=5",
      "source": "Firstpost",
      "kind": "presse",
      "title_fr": "Le directeur du renseignement national Jay Clayton prévient que les pannes technologiques aux États-Unis pourraient continuer au milieu des mises à niveau...",
-     "m": 2,
+     "m": 1,
      "e": 1
     },
     {
@@ -3271,38 +3356,8 @@
      "source": "CNN",
      "kind": "presse",
      "title_fr": "Le directeur du Renseignement national Clayton déclare que la Chine a probablement obtenu des puces d'IA Nvidia",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-22T16:17:53.000Z",
-     "title": "Director of National Intelligence Jay Clayton warns Americans of 'bumps in the road' after tech outages",
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPc0UyZUdJbmJyV3E2MkFmMjlaVU43ZXItWDZNd2JtdVFKcGEwMlNENHpLdWJ0dGlqNk5iTXhvc0xXRkI5TVhzSHg3bTFTdzN6MkNkT1pnRktNRWFFazZCTkQ2dlNrZGhjTGI4cWxKaDhKbTg3R2dSbXE2N19aU2plcktMUGFNYmpqLVdkbkVLU3ZDd9IBlwFBVV95cUxQRmQ4Rjd1WnZHMVZWb1BKNTYwWFdzV1JRWWY3SllzSm5EOG5yZjlvNmhma0JEUWhJbHIwNkxHUGZfTTZqUHVQV0ZyR0JfQmx5VFNVR29OaTByQ1VhS3hmVFdNUkJlUmlnbElzSDNXc3Y1VjNkdm9nUTVOTUtYdUNsWHdNajJ5eGhPZVB1Uk5QMmZ4VzV1Q3Fj?oc=5",
-     "source": "CNBC",
-     "kind": "presse",
-     "title_fr": "Le directeur du renseignement national Jay Clayton prévient les Américains de « turbulences » après les pannes technologiques",
      "m": 2,
      "e": 1
-    },
-    {
-     "ts": "2026-11-22T14:14:12.000Z",
-     "title": "DNI Jay Clayton confirms that China did in fact access top of the line AI chips that were subject to export controls",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5wNHRCUEdULXZXcmhsMUY1RGhaQ1piMUJsVGY5WkpEMmFTSURWc2xJWGRxc2FkNjJhb0hYVWsxTnRkOEd2MDZUMklPQkdUSnNGMHNqOGR2a2loUXdRUGo0aVdGbTFpZXc?oc=5",
-     "source": "X",
-     "kind": "presse",
-     "title_fr": "Le directeur du renseignement national Jay Clayton confirme que la Chine a effectivement eu accès à des puces d'IA haut de gamme soumises à des contrôles à l'exportation",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-18T17:43:00.000Z",
-     "title": "Nat'l intelligence director Jay Clayton tells House recent tech outages weren’t coordinated attack",
-     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNUXg0VzB1Mmdjb3NrMERZam1jQVVUR3BodEplWFdDemJ3T09YZ3M5XzdxQ3l0VDhGMlVJQjYwT2hmU0ZUbkdZRW1XWXYwTXdHYUVtLURNNzU0NVVCYVZCeXV6dlctZGpKazJVVDBTVmdOVVVNTFd5cE9hU0hna21pc3p0RjUzRXo5WTV6eFFyTEVobnhQV1ZGSUZWeldFWEdaanMxMWJacWE4X2x5cEJOZVF5VjNBeDJkbTNDcGcwamZmQ0gwZ0J5QWpaNV9wenZM?oc=5",
-     "source": "CBS News",
-     "kind": "presse",
-     "title_fr": "Le directeur du renseignement national Jay Clayton déclare à la Chambre des représentants que les récentes pannes technologiques n'étaient pas une attaque coordonnée",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -3316,6 +3371,56 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T19:14:12.000Z",
+     "title": "Sen Chuck Schumer Vows Probe Into Reinstated Nvidia CEO Jensen Huang, Trump Over Spy Claims",
+     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTnpxbERnSENCNUF5YVd6a3BmemVGWXQ2dHpjS01LUzBSOEhXMDM5NzdOdXpPNFJrTkRKLWp1SEk3RF91V01nSFRZRW1CYXV4OWdFeDhMTDZzcUV4TXVKX2hIaElXdlpyZU5feDB1TTRkZ2tnYkRMNlVNdWI5MC1nR09qVER2dUhZajFYdXYwdmE0bU1fc2lPWGdtQm4zVDd5NnczZ00tSzgwMHZ3c0haRGVR?oc=5",
+     "source": "CoinGape",
+     "kind": "presse",
+     "title_fr": "Le sénateur Chuck Schumer promet une enquête sur le PDG réintégré de Nvidia, Jensen Huang, et Trump concernant des allégations d'espionnage",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-23T17:14:25.000Z",
+     "title": "Schumer warns of national security risks over Trump backing Jensen Huang's reinstatement at Nvidia",
+     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPRENWUTN1N1VSMXROcktwYmUzT2RQeVdxaGpQdzdlRGxKelRIbjlDSFJsMFR3LTkwbmNUZG1hYjFoeXRZM1lDOE5HYzZhYlBfek0zSWhQc0tPZVdoRWo3NFlKa0l3M2I2M3d6bGxBMTA4REswek1Ic0g0b0JiYTVVa083SjdUcHI1R2NkR3FCMF9iVG9zOEQ2Rk1wbEQ5eERmTE5QZnhjakMwZ2FFVVI2LXJaOHJRaEw4TGFwXzkwdmxBaXo3TEh3ckJ3VWJKN0dYUGRQRjRR?oc=5",
+     "source": "Anadolu Ajansı",
+     "kind": "presse",
+     "title_fr": "Schumer met en garde contre les risques pour la sécurité nationale liés au soutien de Trump à la réintégration de Jensen Huang chez Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-23T16:25:53.000Z",
+     "title": "Schumer vows Democrats will investigate Jensen Huang and the Trump administration",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOEQwZVJpT1JGejhncTRtMnAzQkdMcG1RVTlJcW50QkY4UVpDRUZ0VWxlNlVLSEMweGpNT2U1Q1NLQndpbFU3UFlldWFnc2xGT2YyOVVjeVc2cW90THFmR21NeVJVeHAyaXluaUY4ODUyZHg0TmROM3ZpQlc3WS0xWGdseGRCYkdhd1FB?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "Schumer promet que les démocrates enquêteront sur Jensen Huang et l'administration Trump",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T16:18:23.000Z",
+     "title": "Schumer Says Democrats to Investigate Trump Administration, Nvidia Executives Over Jensen Huang Return",
+     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9xdzR1VU5wQjd5bExfLUJuOHd3cTdnNk1ISlpMeVM1VmJGYU1fWU85U19Ma0pqT083QUlNZmpSUkVSSDNLY1daV1d5UFEwbVRTdUpPdA?oc=5",
+     "source": "bloomingbit",
+     "kind": "presse",
+     "title_fr": "Schumer affirme que les démocrates vont enquêter sur l'administration Trump et les dirigeants de Nvidia concernant le retour de Jensen Huang",
+     "m": 3,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T16:13:51.000Z",
+     "title": "Chuck Schumer Says Democrats Will Use Full Resources to Investigate Nvidia CEO Jensen Huang, U.S. Government and Other Executives",
+     "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxOVGFwTlFyQjZoWGRaYlM1eks3RU14Ny1LMk0tcnJqUEJaRi1qaVNKN1p4T3ZqM05xb29qM0hqbzNSMElKb0dlMHVuR0ZnV2F0S1pEQzBPOW4wSVMtajhHNHI1OG1tM1dORU1NQldqanFabjE4T191dWxXM3pSdEgxdk9qU2JJMzBhTnJJQkpjM3RQYzgwVUFjaXhFMnNPTlFvZHduMjZyLVpOdGRaUXVfbmR0c0ZPdjJjZFpoWEp3bk1JX3ZHZ3Z4UmM3STZvTnBteUxpV2JISUdmdUwyVlFual81bmFfVUV6QzlFbmZQYktWQXY1ODdlS1I0T2ZOdWQtU3l0RFlfaVpPY0J5Wk9UcEJudTNZZlBFWEE?oc=5",
+     "source": "TradingView",
+     "kind": "presse",
+     "title_fr": "Chuck Schumer affirme que les démocrates utiliseront toutes leurs ressources pour enquêter sur le PDG de Nvidia Jensen Huang, le gouvernement américain et d'autres dirigeants",
+     "m": 2,
+     "e": 1
+    },
     {
      "ts": "2026-11-21T07:25:58.000Z",
      "title": "Chuck Schumer Says Trump, Lutnick ‘Sold Out America’ by Approving Nvidia, AMD AI Chip Sales to China: ‘Th",
@@ -3345,46 +3450,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Chuck Schumer appelle à une enquête sur Nvidia après la démission de Jensen Huang et soulève des questions sur l'administration Trump"
-    },
-    {
-     "ts": "2026-11-12T16:11:55.000Z",
-     "title": "Schumer Calls Trump’s Defense of Nvidia CEO a “Dereliction of Duty”",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOUg4ZzQxX1NWMEVVVmtHRURWcXJqYmV2UDVLWkxlOHRsOVVJazZnY2FKM0lrV1R4cEVOUEg3VFhISUJ2cUVFQU9XNGhWeVJuUUotODNyM0d4QllwU1ZrUld3MlFtMUpMUWMxYnpJaUNaNkJ4T0tHM2JZY3E1M3hzZUR2RERDbUV6bXF3YWlBb2tfQU5QMlJKVlZn?oc=5",
-     "source": "Yahoo",
-     "kind": "presse",
-     "m": 4,
-     "e": 1,
-     "title_fr": "Schumer qualifie la défense du PDG de Nvidia par Trump de « manquement au devoir »"
-    },
-    {
-     "ts": "2026-11-10T19:22:16.000Z",
-     "title": "Schumer Says Trump’s Defense of Nvidia CEO Jensen Huang Is Concerning",
-     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9DT2Z2MU1LaXA5V1p4eVlQd3BvdnlZRVl5VW5IZnl2Y0xSeUp6alVSaXVaU1FEZXJSWXZHV2FqVXB6WHFxUVplWkNIbTRjV0dLd1JvZQ?oc=5",
-     "source": "bloomingbit",
-     "kind": "presse",
-     "m": 4,
-     "e": 1,
-     "title_fr": "Schumer déclare que la défense du PDG de Nvidia, Jensen Huang, par Trump est préoccupante"
-    },
-    {
-     "ts": "2026-11-10T18:59:34.000Z",
-     "title": "Schumer says Congress must have answers on Trump defense of Nvidia CEO",
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPRXRFWENPMFlwYTdzQm92RjVjUXBtZTJMczU4bEFCRndvcVZfOGZlTFVXeXVLMXF4b2tMRHJhMkM3bmpPT2hvczFVZnNLb0FBY1dxM1JWN3RJbDRJYkRrMVMwT0hOcEhUODU3NkFsYmRidVY1ZE5Wd0lDV2pNUF9xM1BKX0pyTHNDb3pDTWJ4anNQV3FXV0VVbnhna21oel9PUER4WnZ5NjVYaldUQVA5SlhSS1p2eTNRMjlMR1g3eDJ4dm9UUVNzatIBzgFBVV95cUxNd2ZVbGhnN2w0anJRVTRKS0JDOUgyU3c2S1ZJbHVJNENjbnlQbnU0ZFZjT1J2RVpKR2RSX01nQUtURjZTNTlTSzdsS19GSjNCd01CUEhISkpDcjE3am5kVllGV21xYlV5NEE4M0dFN2VrMWdUUGptMi1kUkZWQXcwQ2ZJQW5ZbWhPRnlVWmxZSUMxX1M0dHh4Zk5XVnVzZjFpWkJyaTlCQWxLX3pHZFF4TGJVZnczWWpidm9lR1FnNUpFS1VyZWdkNHFjc0hYQQ?oc=5",
-     "source": "Devdiscourse",
-     "kind": "presse",
-     "title_fr": "Schumer déclare que le Congrès doit obtenir des réponses sur la défense du PDG de Nvidia par Trump",
-     "m": 4,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Schumer calls for answers on Trump's defense of Nvidia CEO",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBBME5sdlpyMkNWQWlRbE9zVWZiaGtrTTNVQVAzX19Rb2RpNWhtWnVyNlkxRFFva1RsbE1NSjBOU0NaRXN6MjY3VHpfak11YnJPRUVTekZuMGFocGFKM1M5WVM4cUdWRDA?oc=5",
-     "source": "Reuters",
-     "kind": "presse",
-     "m": 4,
-     "e": 1,
-     "title_fr": "Schumer demande des réponses sur la défense du PDG de Nvidia par Trump"
     }
    ]
   },
@@ -3447,6 +3512,16 @@
      "source": "Yahoo",
      "kind": "presse",
      "title_fr": "Le gouverneur Newsom dévoile de nouvelles réglementations sur l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-19T18:37:25.000Z",
+     "title": "User Clip: Gov. Newsom Announces Social Media & AI Protections for Children",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYldza0t4MVJrYi12Nkx4ZXNtalVOYlM0QTFBVmdCdEZjU1M3eXQyQUJZVENPZnVNbjc3b3lPN0NGdUpyQUpSdkZwbk4yRFU0c0VKTFNVWWozcVlSaEpmQVpucXVia0Njb1RoNzBnTktxaWI4SnA0OGZTYTFRc09tZHd2cFFSUG9fbEtuUU9hOXI2V0pnYXU1aFRiUVJHdVRCZVUxenhOQnJackxSMV9iUnRVbk80NGdZWU1YbU40T24?oc=5",
+     "source": "C-SPAN",
+     "kind": "presse",
+     "title_fr": "Extrait utilisateur : Le gouverneur Newsom annonce des protections pour les enfants concernant les réseaux sociaux et l'IA",
      "m": 1,
      "e": 0
     },
@@ -3524,6 +3599,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T18:09:14.000Z",
+     "title": "Amazon AWS CEO Matt Garman says better engineering, not a ‘kill switch’, is key to safer AI systems | Hindustan Times",
+     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM0RESks3UjZ1OFR2UWtDbkQzOGFtbFdPdkFnMElCQ3hfa0JyUWhERFFzUGdUM21RcjNIWmJuNm1EWkJXeXlUV0dJY2VmcEpSeUVvNHdESHdKNzc2Y0VoX1pIYmtDVGJtXzNyWW81WUlHc0tnNkJRVXVMcjFXUXdPNHltRmlaYjAxZTJtdFpNYXBWdjMtZ2xQU2szWDVvNWlXXzUwWHZVRHJJR1QzdXdiT1dNTmVzMXV4M0phb3BVeFdpVEtiaUJnQlloOGFzU1ppaVg1aTVTUGQ1NGFDT3VMR0d4cTlweGdUOWJ1ZGpHcWJCcTFVd0N6MkNR0gH_AUFVX3lxTFBDZDJsX2NqdXNnTXYteTRKQ2EtTUZWMG5rUEJrUThRbG54ZU93aGx4Q2d0d2xpZEI4ckpWUXFrRk9TZjllSW51cW8tLVJHVUhQRWN0Q3FrVkRDUzBpakpPX1JHU2Q2bGRqckR4MzhtTVpKcG1EZVlpampKLXdXWEgtaWVGRFJpbWxHMElBNGxST29QRERMWjNqZnFYYk5qa1ZIRUVzVlVfOExRaGwzZGtuaHN6M2w5OTVhd3FUSUZnTXRrekxnVkZWdlh6c2hWcnhjeHR3RFpUZ1ZPUERoQnhRaGFxSG1oUTNZX3Nxd0FoSjZKMEdiSEhxZFNUbHh6TQ?oc=5",
+     "source": "Hindustan Times",
+     "kind": "presse",
+     "title_fr": "Le PDG d'Amazon AWS, Matt Garman, affirme qu'une meilleure ingénierie, et non un « bouton d'arrêt », est la clé pour des systèmes d'IA plus sûrs | Hindustan Times",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-14T17:39:29.000Z",
      "title": "AWS CEO Matt Garman calls space AI data centers impractical",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaWpIQ3AtQWhKLUFxaDBjYnFyY2lLZFl5dWlvYTRHd2dqN1dKTzZhY1BhUW8tZl83QVR0NlJPMjVTdm42Z3N0ZjVaQ0t6dWhLajE4SUd5UTMtY1B3M1dEdU9FX0RCTHVfZUxWeU15LXlKRVkzcUNaY3g5Nmc4X0xTYm9sdG9OcS03Q08zcVpPXzMwc2xxWTlfU3lrYlhPeXNMVG1YeXZiT3ozSWc?oc=5",
@@ -3580,7 +3665,18 @@
      "source": "Investing.com"
     }
    ],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-23T13:09:36.000Z",
+     "title": "Potential Nvidia CEO Candidate Rene Haas Calls Jensen Huang a 'Legend,' Expects 'No Change' in Arm-Nvidia",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpPSFRPbmx6NW1RdUw3UzByVmdJUERsMTNoZlc5OWFFNFJ3NzJySXFvR2w4YlF0ajNQZmY3OEk3Q1RCaGpYTUx2YUI0UFByZDBuZHVuMXh0NUtQZWs0MWIxTlNCczZZN0k5RkZTczFzX2hMbzZUaE0yemdmRlBpLUxZTi1uR1g4UXlDRGxJRnRlLXhZbFVhUzl1NV9VVXV4dVlrSTJuT2ZmdlJtUXcwMTd0RmwyNXVCN0c1M2tZaWpOaGEtWHhvdlBIN0RQV0NVbHlBRmI4UVAtcjFvNHgwNVlFWElBdFBURWQxeTJaLUx3b2N1RENzTE43MDRMU2s?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "title_fr": "Le candidat potentiel au poste de PDG de Nvidia, Rene Haas, qualifie Jensen Huang de « légende » et ne s'attend à « aucun changement » dans la relation Arm-Nvidia",
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "mike-sicilia",
@@ -4359,6 +4455,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T15:32:00.000Z",
+     "title": "Trump brings JD Vance into Nvidia CEO comeback story, says investors should welcome Huang’s return",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPeE1PSkJyS3FxYkxUMDVodVZIMmJrVjlLU01HdW0zMFQ5SExMZkVWNlE5cjUtSlctSjhOTjdXdlhqN0x1cnFXeXhCM1A5d1dSeXZieGY3UDJNYWZOQWNZNHQxNU05T2lBa3NVbjNzenllSGMtdVVpQkdrLXFOeDVEbkNRWDhET3VsdEZ6M3hFVzdqMWJ4QlNSaDFDbmlndTJhUlpocm13RTVwYzBtRHc3dTROMlZDZ2ZabWhpYUlEem5BcVpxOHNadmVmOXFfZw?oc=5",
+     "source": "Business Upturn",
+     "kind": "presse",
+     "title_fr": "Trump implique JD Vance dans l'histoire du retour du PDG de Nvidia et affirme que les investisseurs devraient se réjouir du retour de Huang",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T14:28:10.000Z",
      "title": "JD Vance Says the Real Reason America's Entire Flight System Crumbled Was Trans Athletes, Not AI",
      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBiRWtwUEUyVHZuYndXdTEyZFFIb1FiRmdxcHlISTZESXNPeTNGQkxqc3Fib1FjNDRIeW15NHZiOV9NZXhHUXNfUFhqSFIwT3haYV9Ca1RveVRmd2Y5WGNIUVI3dnlGWnFXMkh6VFVSWWdtOEo3SVFN?oc=5",
@@ -4651,14 +4757,24 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T13:11:00.000Z",
+     "title": "Chey Tae-won Says He Will Pay Full 944 Billion Won... Will 9-Year Legal Battle Finally End?",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9fVm9vamJGME9pUHRiSVNGUW5IeHlKN2VpUFFiRjFGajdCVHUtNHBtQjZPNUZ6OFBtTE9OVWk5UTY3V2VjWUhPY3pCNTNGSWZzRzdPZWQ4NFF1ZHF5eDdsWERJdVhDaWNOcVY1MmdB0gFmQVVfeXFMTlJPUlpnaTVaVW9RZE9QQ3E4eVUyQjlJZ0pNajh1Ul82dm1hY1pTQ2xRbFZjYVR4SU80RndzdUFMa0dZRmc3WXV6R0duWUFhZDhRVThoLThMNE5KZ1otVEVMYUdodXBn?oc=5",
+     "source": "SBS 뉴스",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won affirme qu'il paiera la totalité des 944 milliards de wons... La bataille juridique de 9 ans va-t-elle enfin prendre fin ?",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T07:22:25.000Z",
      "title": "Chey Tae-won: “I’ll Pay 944 Billion Won in Property Division”; Nine-Year Legal Battle Nears End",
      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1JNEoxenItY2RrNzFadzQtVzhXUXZxUnQ0WWI1Nm82UnhXQU9ldmxnbURTZ214QzBidjFveHBjc0xJRlhuYzB0cXhUSElqRlVsUmd3?oc=5",
      "source": "매일경제",
      "kind": "presse",
      "title_fr": "Chey Tae-won : « Je paierai 944 milliards de wons pour le partage des biens » ; une bataille juridique de neuf ans touche à sa fin",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-22T07:33:40.000Z",
@@ -4719,16 +4835,6 @@
      "title_fr": "Chey Tae-won appelle à des incitations financières pour résoudre les problèmes sociaux et déclare que l'IA peut maximiser l'efficacité",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-15T05:31:11.000Z",
-     "title": "Chey Tae-won: “Install an AI Flywheel”... SK Rebalancing 2.0 Kicks Off",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9LWXpkQTRfeEF5bEVqcEtzdDFJSmJfNGdJejFSb2owWjJMMjE4bEg0UmItN0VjTjZmdnhnX1lKM2c1OU5sV29BSjlaVW4telRnaURJ?oc=5",
-     "source": "매일경제",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chey Tae-won : « Installer un volant d'inertie IA »... Le rééquilibrage 2.0 de SK démarre"
     }
    ]
   },
@@ -5570,46 +5676,46 @@
  ],
  "hot": [
   {
-   "score": 1.54,
-   "id": "jay-clayton",
-   "n": "Jay Clayton",
-   "role": "Directeur du renseignement national, tsar de l'IA",
-   "actor": null,
-   "ts": "2026-11-23T00:07:21.000Z",
-   "title": "Jay Clayton warns Americans to expect more tech outages during system upgrades",
-   "title_fr": "Jay Clayton prévient les Américains qu'il faut s'attendre à d'autres pannes technologiques lors des mises à niveau des systèmes",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUS1ESmpHWjlYbnJHZ3Q4VWRQQXd3MzFWNHcxVjJFcC1HSHJWb1diaDNMQ3ZSZF9ISEtmRG95MmVOazdfRkFpTzRGcmVOZU1wazBWT3BISzhTSkxCdHlJaW9QdUVCRUxaWGFXU0tzaFhzLVI1S0FSUlQzOG9JUTRpMEhMRFNLaWl0T3Myb2tsUi1MdUhkeXozU1JxeVM4YnJEdlJyUEZtNlJ4ckU?oc=5",
-   "source": "news.lavx.hu",
-   "kind": "presse",
-   "outlets": 2
-  },
-  {
-   "score": 1.5,
+   "score": 4.4,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
    "actor": null,
-   "ts": "2026-11-23T06:02:45.000Z",
-   "title": "Trump Urges Nvidia Board To Bring Back Jensen Huang Amid New Chinese Spy Agency Revelations",
-   "title_fr": "Trump exhorte le conseil d'administration de Nvidia à faire revenir Jensen Huang sur fond de nouvelles révélations concernant l'agence d'espionnage chinoise",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPbG4xZTAydWxlbWc4YXplRThOSkF1UXl3clBjbFNPLWdsUkdLZUR2b3dIckk4TklIRm5zb1ptQXVHcHJZX0tvR1M1QjJhWGZpWEE0aUZXaTVmYzctYTBTczJnNHk5THAwcC1mMFp6RkRDT2N2ZFhyMEtiUmw3d2lKdVNET0pEUjFTbWtNR0NaaDMyN0FTdlFXNWJzdXlKVkpabEJJakhnZGlEZDBQN2lKd1haWlNvZDliTHZBUFNIQmdDeDdsRFctYjVNYmMxdm9Lbk0xWHVvN1BUQ2hsYXc?oc=5",
-   "source": "Forbes",
+   "ts": "2026-11-23T16:40:00.000Z",
+   "title": "Trump says he ‘convinced’ Nvidia board to reinstate Jensen Huang",
+   "title_fr": "Trump affirme avoir « convaincu » le conseil d'administration de Nvidia de réintégrer Jensen Huang",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQnpMZDZ5QWdIdklHQzlnZ3JyYXJSc0d3WHo4cFN1QkY2ejhWbVNlRnVkQ0czeWI0Zm1iOEVsWUFONzhQbjdRTXQyZDA1MDNwR0JYaVVkZ0kyVVRXWEkzWVptMkpNMFNTdmhrMlpDcW01N3NPcFlNSUJTdHZQOWYwWEdsMjZpYkw0U2Nvc3IxSXdJamtIOXdOWWxPX0F3TENUdUZMdFJvUdIBrAFBVV95cUxNUzdkeExVOUJ5a1RjUDhyQ2ZtNmVTanZJT28taVp1bk00MlQyd2xCdHZ2WXpuSEJWR0FSTlNzT1FDdlM1UEFOT045MnU3Z1kwY1laZ0dNMWljdmZQcHNQZlhtRUxsdEd0MWJPN0QtWEVJVzExbFQtaUxwTUQtMjdDdGVvQm9VTU83SDBYcVBfT1d4RXBqeXN2R2I4d1FMcE1LNWxrQ05oR3Rxcy1C?oc=5",
+   "source": "The Hill",
    "kind": "presse",
-   "outlets": 1
+   "outlets": 5
   },
   {
-   "score": 1.11,
-   "id": "scott-bessent",
-   "n": "Scott Bessent",
-   "role": "Secrétaire américain au Trésor",
+   "score": 2.22,
+   "id": "jay-clayton",
+   "n": "Jay Clayton",
+   "role": "Directeur du renseignement national, tsar de l'IA",
    "actor": null,
-   "ts": "2026-11-23T05:35:00.000Z",
-   "title": "Trump wants Jensen Huang back at Nvidia. Scott Bessent says he may fit the bill.",
-   "title_fr": "Trump veut le retour de Jensen Huang chez Nvidia. Scott Bessent dit qu'il pourrait faire l'affaire.",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaXVqa3ZHT0VlU3RzWDZyZ1JHbllBcHVfY3Z6Mk9oYUhuTHF4Y1JFQ2s4LUJaN1pKcXkycnNXWFBKSGN6c0tkVGdkRkJIUnZNYngxaTBWOE9ZQXFOSTBwTG9tNXZvZGpicVAwcVBhSXJMblVWX3hXV3dNb0p1NzNhTWkzVV93SldtTDVzQlVfTDFFa19MbEZ4Zml2Skc?oc=5",
-   "source": "Business Insider",
+   "ts": "2026-11-23T17:06:00.000Z",
+   "title": "DNI Jay Clayton says China likely obtained Nvidia AI chips",
+   "title_fr": "Le directeur du renseignement national Jay Clayton affirme que la Chine a probablement obtenu des puces IA de Nvidia",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSnpKcDRiYmp5VjBPNnpwNENnZmRhd3pxaUdYaVZuaXVpZ3RiS0o1SmlPajlXYVl5eTVtSm5iNGdzVXZKTXdnaXYzcXpkc0R0bUVmelpYRElOWW9yc25TbFl1bWtEVm5nNUxQSjE0X2syblpyQXpNZUhOUnpiZHB0V3k4WW9uVk1qeTRTOUtBVHlBY1pMZFdMbUVId1BRemZfSHFPbi1iY3JtVGVpeEpId2oydjBla2VSTWUyU01JWkIwWUFPMnNiRXI5ejRkSTdrV1ZjMTRIWWpTa1BiTFpGTHJFMFZQWHJ3TkNhWnRR?oc=5",
+   "source": "WKYC",
    "kind": "presse",
-   "outlets": 1
+   "outlets": 2
+  },
+  {
+   "score": 1.69,
+   "id": "chuck-schumer",
+   "n": "Chuck Schumer",
+   "role": "Sénateur de New York, chef des démocrates",
+   "actor": null,
+   "ts": "2026-11-23T16:25:53.000Z",
+   "title": "Schumer vows Democrats will investigate Jensen Huang and the Trump administration",
+   "title_fr": "Schumer promet que les démocrates enquêteront sur Jensen Huang et l'administration Trump",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQOEQwZVJpT1JGejhncTRtMnAzQkdMcG1RVTlJcW50QkY4UVpDRUZ0VWxlNlVLSEMweGpNT2U1Q1NLQndpbFU3UFlldWFnc2xGT2YyOVVjeVc2cW90THFmR21NeVJVeHAyaXluaUY4ODUyZHg0TmROM3ZpQlc3WS0xWGdseGRCYkdhd1FB?oc=5",
+   "source": "Crypto Briefing",
+   "kind": "presse",
+   "outlets": 2
   }
  ]
 }

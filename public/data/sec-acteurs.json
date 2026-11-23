@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-23T01:19:20.299Z",
+ "updated_at": "2026-11-23T19:07:51.760Z",
  "companies": [
   {
    "name": "Nvidia",
@@ -2194,7 +2194,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-22T18:54:32.756Z",
+    "fetched_at": "2026-11-23T19:07:51.760Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm"
    },
    "capex": {
@@ -2206,7 +2206,7 @@
     "filed": "2026-11-12",
     "accn": "0001769628-26-000465",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-22T18:54:32.756Z",
+    "fetched_at": "2026-11-23T19:07:51.760Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm"
    },
    "backlog": {
@@ -2218,7 +2218,7 @@
     "filed": "2026-11-12",
     "accn": "0001769628-26-000465",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-22T18:54:32.756Z",
+    "fetched_at": "2026-11-23T19:07:51.760Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm"
    },
    "stakes": [
@@ -2233,7 +2233,7 @@
      "filed": "2026-11-12"
     }
    ],
-   "read_at": "2026-11-22T18:54:32.756Z"
+   "read_at": "2026-11-23T19:07:51.760Z"
   },
   {
    "name": "IREN",
@@ -2291,7 +2291,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-22T18:54:32.756Z",
+    "fetched_at": "2026-11-23T19:07:51.760Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm"
    },
    "capex": {
@@ -2303,7 +2303,7 @@
     "filed": "2026-11-05",
     "accn": "0001878848-26-000066",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-22T18:54:32.756Z",
+    "fetched_at": "2026-11-23T19:07:51.760Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm"
    },
    "backlog": {
@@ -2315,11 +2315,11 @@
     "filed": "2026-11-05",
     "accn": "0001878848-26-000066",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-22T18:54:32.756Z",
+    "fetched_at": "2026-11-23T19:07:51.760Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm"
    },
    "stakes": null,
-   "read_at": "2026-11-22T18:54:32.756Z"
+   "read_at": "2026-11-23T19:07:51.760Z"
   }
  ]
 }

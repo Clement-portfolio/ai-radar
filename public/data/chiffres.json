@@ -1,73 +1,68 @@
 {
  "v": 1,
  "day": "2026-11-23",
- "generated_at": "2026-11-23T01:19:20.299Z",
- "model": "gemini-3.5-flash-lite",
+ "generated_at": "2026-11-23T19:07:51.760Z",
+ "model": "gemini-3.1-flash-lite",
  "figures": [
   {
-   "title": "Anthropic : valorisation en bourse",
-   "value": "1 500 Md$",
-   "sub": "Une valorisation record atteinte lors de son introduction en bourse, suscitant l'espoir de dons massifs pour le secteur caritatif.",
+   "title": "SmartSens : investissement en Chine",
+   "value": "225 M$",
+   "sub": "Le montant est alloué au développement de la capacité de fonderie pour des capteurs d'image CIS 40nm.",
    "ids": [
-    "ca82b864bdca"
+    "a81feeecc86c"
    ],
    "links": [
     {
-     "t": "The Independent",
-     "u": "https://www.independent.co.uk/news/anthropic-new-york-scott-bessent-the-new-york-times-sam-bankmanfried-b3089410.html"
+     "t": "Digitimes",
+     "u": "https://www.digitimes.com/news/a20261123VL211/cis-capacity-40nm-investment-manufacturing.html"
     }
    ],
    "conf": "moyenne",
    "scope": "day",
-   "ts": "2026-11-22T13:00:06.000Z",
-   "title_en": "Anthropic: market valuation",
-   "value_en": "$1,500B",
-   "sub_en": "A record valuation reached during its initial public offering, raising hopes for massive donations to the charity sector."
+   "ts": "2026-11-23T07:15:00.000Z",
+   "title_en": "SmartSens: investment in China",
+   "value_en": "225 million $",
+   "sub_en": "The amount is allocated to developing foundry capacity for 40nm CIS image sensors."
   },
   {
-   "title": "Amazon : acquisition de Decart",
-   "value": "7,5 Md$",
-   "sub": "Le montant de l'accord en phase finale de négociation pour le rachat de la startup d'intelligence artificielle Decart par Amazon.",
+   "title": "Nvidia : capitalisation boursière perdue",
+   "value": "2,7 Md$",
+   "sub": "Cette perte de valeur a été enregistrée lors des échanges nocturnes suite à une vente massive sur le secteur de l'IA.",
    "ids": [
-    "cb02ca1a7848",
-    "4b1f1703bbc0"
+    "f109a7775df1"
    ],
    "links": [
     {
-     "t": "조선일보",
-     "u": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeTlfTHFQZjVqbmhvOGYwWGN6RThtLXhSZlR2bzRTM21NZXpvTU16cUNBYUN2aGRXMllJczZXaXl3TWNZZGdEVXh2M0IwN2hQNzR4cVdzaHBidGFNVXFIRGFnc1h5d3owM0NpZXdDN1k5TDNMZGJnenloVjJ2ZDF0Q3o0cGtZLW9I?oc=5"
-    },
-    {
-     "t": "Financial Times",
-     "u": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNTEFvVDlwcmNmNEl1WGpwZ3A3TzF3ZkNLSDFrUHA3XzY3REJxa3Jyc3pjUnVLdXdydFp3eTBYR1E1elQzVllDV1JQVzJENFNhV3RjVWl1eFB3dWFZS1BQWlRpTC1WZWZ1OV9CZmdhQnNtdmUxb25DWS16SEVodXVlRnBFUFQ?oc=5"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "day",
-   "ts": "2026-11-22T03:54:45.000Z",
-   "title_en": "Amazon: Decart acquisition",
-   "value_en": "$7.5B",
-   "sub_en": "The amount of the agreement in final negotiation for Amazon to acquire artificial intelligence startup Decart."
-  },
-  {
-   "title": "Palo Alto Networks : acquisition",
-   "value": "4,5 Md$",
-   "sub": "Le montant investi par Palo Alto Networks pour étendre ses activités à l'IA d'entreprise via le rachat d'une startup.",
-   "ids": [
-    "d076977e7671"
-   ],
-   "links": [
-    {
-     "t": "EE Times",
-     "u": "https://www.eetimes.com/palo-alto-networks-expands-into-enterprise-ai-with-4-5b-deal/"
+     "t": "36Kr",
+     "u": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IUW81bm1NSEg0UVl0OEpQUjR6ZFVrbUo0YUFkMGdxQThGcGpVT1l4eTM0eWgzcHNjeWlaV3gzck9wQkgzUkpXczdvd2tlZ1F5M3NJ?oc=5"
     }
    ],
    "conf": "moyenne",
    "scope": "week",
-   "ts": "2026-11-20T15:37:26.000Z",
-   "title_en": "Palo Alto Networks: acquisition",
-   "value_en": "$4.5B",
-   "sub_en": "The amount invested by Palo Alto Networks to expand its business into enterprise AI by acquiring a startup."
+   "ts": "2026-11-21T04:22:10.000Z",
+   "title_en": "Nvidia: market cap loss",
+   "value_en": "2.7 trillion $",
+   "sub_en": "This value loss was recorded during late-night trading following a massive sell-off in the AI sector."
+  },
+  {
+   "title": "SpaceX : financement pour puces IA",
+   "value": "32 Md$",
+   "sub": "La société a finalisé un accord de dette pour acquérir des processeurs Nvidia. Ce montant s'inscrit dans un investissement global massif.",
+   "ids": [
+    "06d4e32e1256"
+   ],
+   "links": [
+    {
+     "t": "Taipeitimes",
+     "u": "https://www.taipeitimes.com/News/biz/archives/2026/11/21/2003868108"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-20T16:49:57.000Z",
+   "title_en": "SpaceX: AI chip financing",
+   "value_en": "32 billion $",
+   "sub_en": "The company finalized a debt agreement to acquire Nvidia processors. This amount is part of a massive overall investment."
   }
  ]
 }

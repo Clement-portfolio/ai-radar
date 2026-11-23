@@ -5,19 +5,46 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-23T10:19:33.193Z",
- "model": "gemini-3.6-flash",
+ "generated_at": "2026-11-23T19:07:51.760Z",
+ "model": "gemini-3.1-flash-lite",
  "sig": [
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5fc039618c60+cd767daa7782+cfa454b7233b+d8fbec9f2d14",
   "0396da82d35c+0e23291eaaa5+1dfd0f40ba72+4316f933cb3e+83eb8920a967+871fa7926cd4+8838b8c2d698+b4b972b2c1c2+cb02ca1a7848+d0fd0bdf0608+d30c8e933f5d",
-  "0335ba73541c+2a26a4e548f3+337b7b18e815+bbb72de1e1a5+c97da236b03c+e98b5918b0f3+fc937f08c88e",
+  "1e073af14e01+33850c1d501b+61af5bd8e7f5+a26538825c12+a5a8206957ca+eb3e38bfef40",
   "03a5687591e9+1c8609b9a0a4+6553a4e9576a+8ab217dd39cd+d48fe5cca15f+f1eabb98d7bf",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
-  "12695ff91cba+5875dce0fc81+93f8bbbce302+99bee53828f8+f29e5534e1b5",
+  "1ecc1bf37f6f+260e64ed6f92+52f8100482ff+9b10aa3778dc+f2da25e696e2",
   "8ee0c5001a5e",
-  "20ba41579a86+80c35197658e+8daf2e1f77bd+c90ab3405ad2+dc69baa5c634"
+  "6e761ba2ef28"
  ],
  "stories": [
+  {
+   "ids": [
+    "cfa454b7233b",
+    "5fc039618c60",
+    "1d0523b60f6f",
+    "d8fbec9f2d14"
+   ],
+   "head": "Trump veut interdire ou taxer la construction de datacenters IA hors des États-Unis",
+   "bullets": [
+    "Cette mesure vise à contraindre les géants de la tech à maintenir leurs investissements critiques sur le sol américain.",
+    "La décision intervient alors que les États-Unis durcissent leurs restrictions sur l'exportation de puces IA pour contrer la Chine."
+   ],
+   "kinds": [
+    "explication",
+    "contexte"
+   ],
+   "head_en": "Trump plans to ban or tax the construction of AI data centers outside the United States",
+   "bullets_en": [
+    "This measure aims to force tech giants to keep their critical investments on American soil.",
+    "The decision comes as the United States tightens its restrictions on AI chip exports to counter China."
+   ],
+   "ctx_ids": [
+    "3778953e71a6",
+    "a26538825c12"
+   ],
+   "ts": "2026-11-23T10:17:17.000Z"
+  },
   {
    "ids": [
     "cb02ca1a7848",
@@ -25,75 +52,45 @@
     "871fa7926cd4",
     "0396da82d35c"
    ],
-   "head": "Anthropic fait ses débuts en Bourse avec une valorisation de 1 500 milliards de dollars",
+   "head": "Anthropic fait son entrée en bourse avec une valorisation record de 1 500 milliards de dollars",
    "bullets": [
-    "Le prix de l'action pour son introduction en Bourse a été fixé à 83 dollars.",
-    "L'entreprise a levé un montant record de 107,3 milliards de dollars avant sa cotation.",
-    "Cette levée de fonds vise à financer les infrastructures de calcul nécessaires aux modèles d'IA.",
-    "La volatilité entourant Nvidia a créé un contexte jugé favorable pour cette entrée en Bourse."
-   ],
-   "kinds": [
-    "detail",
-    "detail",
-    "explication",
-    "contexte"
-   ],
-   "head_en": null,
-   "bullets_en": null,
-   "ctx_ids": [
-    "0199a625a8a1"
-   ],
-   "ts": "2026-11-23T08:30:00.000Z"
-  },
-  {
-   "ids": [
-    "03a5687591e9",
-    "6553a4e9576a",
-    "8ab217dd39cd",
-    "1c8609b9a0a4"
-   ],
-   "head": "Donald Trump appelle au retour de Jensen Huang à la tête de Nvidia",
-   "bullets": [
-    "Le sujet a été abordé brièvement par Donald Trump lors d'un entretien avec le président chinois Xi Jinping sur l'intelligence artificielle.",
-    "Le départ de Jensen Huang a suscité des inquiétudes sur la poursuite de la croissance de Nvidia et de l'ensemble du secteur de l'IA."
-   ],
-   "kinds": [
-    "detail",
-    "contexte"
-   ],
-   "head_en": "Donald Trump calls for Jensen Huang to return as head of Nvidia",
-   "bullets_en": [
-    "The topic was briefly brought up by Donald Trump during a meeting with Chinese President Xi Jinping on artificial intelligence.",
-    "Jensen Huang's departure raised concerns about the continued growth of Nvidia and the broader AI sector."
-   ],
-   "ctx_ids": [
-    "ae688f23ea4f"
-   ],
-   "ts": "2026-11-23T03:30:00.000Z"
-  },
-  {
-   "ids": [
-    "da1d6f4a2cd7",
-    "ace651c11496",
-    "5eefaf1660e7",
-    "39cc7b62b7b0"
-   ],
-   "head": "Un chercheur d'Anthropic affirme avoir résolu l'hypothèse de Riemann grâce à l'IA Claude",
-   "bullets": [
-    "Le mathématicien Levent Alpöge a utilisé l'assistant Claude pour concevoir cette démonstration, qui reste en attente de vérification.",
-    "L'hypothèse de Riemann est une énigme mathématique vieille de 167 ans figurant parmi les problèmes du prix du millénaire."
+    "L'entreprise fixe le prix de son introduction en bourse à 83 dollars par action.",
+    "La société réalise une levée de fonds préalable de 107 milliards de dollars."
    ],
    "kinds": [
     "detail",
     "detail"
    ],
-   "head_en": "An Anthropic researcher claims to have solved the Riemann hypothesis using Claude AI",
-   "bullets_en": [
-    "Mathematician Levent Alpöge used the Claude assistant to design this proof, which remains pending verification.",
-    "The Riemann hypothesis is a 167-year-old mathematical enigma listed among the Millennium Prize Problems."
-   ],
+   "head_en": null,
+   "bullets_en": null,
    "ctx_ids": [],
-   "ts": "2026-11-21T16:52:00.000Z"
+   "ts": "2026-11-23T08:30:00.000Z"
+  },
+  {
+   "ids": [
+    "a26538825c12",
+    "a5a8206957ca",
+    "33850c1d501b",
+    "eb3e38bfef40"
+   ],
+   "head": "Les États-Unis renforcent les restrictions sur les puces IA pour contrer les contournements chinois",
+   "bullets": [
+    "Les nouvelles mesures bloquent un financement de 480 millions de dollars destiné à l'achat de puces Nvidia par ByteDance.",
+    "Le Congrès américain avait déjà intensifié son soutien aux restrictions suite à des controverses impliquant Nvidia."
+   ],
+   "kinds": [
+    "detail",
+    "contexte"
+   ],
+   "head_en": "The United States tightens AI chip restrictions to counter Chinese circumvention",
+   "bullets_en": [
+    "The new measures block 480 million dollars in funding intended for ByteDance's purchase of Nvidia chips.",
+    "The US Congress had already intensified its support for restrictions following controversies involving Nvidia."
+   ],
+   "ctx_ids": [
+    "bbb72de1e1a5"
+   ],
+   "ts": "2026-11-22T23:50:56.000Z"
   }
  ]
 }
