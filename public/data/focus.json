@@ -5,43 +5,19 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-23T01:19:20.299Z",
+ "generated_at": "2026-11-23T04:12:14.473Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "0396da82d35c+06e6d380e3a5+074a762c0968+0b8aa72489cc+133408be93f9+1dfd0f40ba72+2a888cccd81b+76a25eb27bdf+7f3c247631e5+81d2446f8b94+83eb8920a967+855aa6c2f478+871fa7926cd4+8838b8c2d698+8df8ab3d4ae8+92ca8c823c3c+b2623c09c93b+b7121aa76176+c62dfa821dd6+d30c8e933f5d+ea05cfb5b9ab+ed6320e874d8+efef379689b1+f7ed75cce7a0+fcd152f94053",
   "1e073af14e01+33850c1d501b+60b091351fb7+61af5bd8e7f5+a26538825c12+a5a8206957ca+eb3e38bfef40",
+  "06e6d380e3a5+074a762c0968+0b56d8c56f62+2683456db008+7f3c247631e5+81d2446f8b94+b2623c09c93b+ca82b864bdca+dde262384a9f+e06c1a5f3c69+e22812a5ccc9+ea05cfb5b9ab+ed0e695380ca+f4fe310fb2c6",
+  "03a5687591e9+07b3803b9303+1c8609b9a0a4+6553a4e9576a+8ab217dd39cd+9f91f68231f9+b33fa45cb319+bc1d56d7d3cd+d48fe5cca15f+f1eabb98d7bf",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5a8f7d1dc4aa+5fc039618c60+cd767daa7782+d8fbec9f2d14",
-  "364825014eaf+86d3aeca06e8+8ab217dd39cd+9f91f68231f9+e40c41a47eb2",
-  "47650c445adb+7c86141884e3+a25bfe4a44cc+e9c2330af5a7",
+  "12695ff91cba+4bea16bd0ba0+93f8bbbce302+99bee53828f8+f29e5534e1b5",
   "6e761ba2ef28",
   "be40cfa5ae56"
  ],
  "stories": [
-  {
-   "ids": [
-    "b2623c09c93b",
-    "133408be93f9",
-    "c62dfa821dd6",
-    "ed6320e874d8"
-   ],
-   "head": "Anthropic réalise la plus grande introduction en bourse de l'histoire pour une entreprise d'IA",
-   "bullets": [
-    "L'action s'envole de plus de 30 % lors de ces débuts boursiers massifs.",
-    "Cette cotation teste la confiance du marché et valide la valorisation extrême des laboratoires de pointe malgré le scepticisme ambiant."
-   ],
-   "kinds": [
-    "detail",
-    "explication"
-   ],
-   "head_en": "Anthropic completes the largest IPO in history for an AI company",
-   "bullets_en": [
-    "The stock jumps by over 30 percent during this massive stock market debut.",
-    "This listing tests market confidence and validates the extreme valuation of leading laboratories despite prevailing skepticism."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-22T13:12:13.000Z"
-  },
   {
    "ids": [
     "a26538825c12",
@@ -52,7 +28,7 @@
    "head": "Les États-Unis durcissent les restrictions sur l'exportation de puces IA vers la Chine",
    "bullets": [
     "Un prêt de 480 millions de dollars destiné à ByteDance pour l'achat de puces Nvidia a été gelé par ces nouvelles mesures.",
-    "Cette politique vise à limiter l'accès de la Chine aux technologies de pointe et à empêcher le contournement des embargos technologiques."
+    "Le renforcement des contrôles vise à empêcher le contournement des embargos technologiques et à limiter le développement des capacités chinoises."
    ],
    "kinds": [
     "detail",
@@ -61,39 +37,61 @@
    "head_en": "The United States tightens restrictions on the export of AI chips to China",
    "bullets_en": [
     "A 480 million dollar loan intended for ByteDance to purchase Nvidia chips has been frozen by these new measures.",
-    "This policy aims to limit China's access to advanced technologies and prevent the circumvention of technological embargoes."
+    "The reinforcement of controls aims to prevent the circumvention of technological embargoes and limit the development of Chinese capabilities."
    ],
    "ctx_ids": [],
    "ts": "2026-11-22T23:50:56.000Z"
   },
   {
    "ids": [
-    "5fc039618c60",
-    "1d0523b60f6f",
-    "d8fbec9f2d14",
-    "cd767daa7782"
+    "dde262384a9f",
+    "b2623c09c93b",
+    "ca82b864bdca",
+    "0b56d8c56f62"
    ],
-   "head": "Trump veut interdire les datacenters d'IA à l'étranger ou taxer leur construction",
+   "head": "Anthropic réalise une introduction en bourse record en levant 81,3 milliards de dollars",
    "bullets": [
-    "Le gouvernement envisage d'imposer des taxes lourdes sur les centres de données construits hors des États-Unis.",
-    "Cette décision vise à contrer la Chine et à contraindre les entreprises technologiques nationales à maintenir leurs investissements sur le sol américain.",
-    "Le Département du Commerce américain a durci ses règles d'exportation de puces vers l'Asie du Sud-Est pour contrer les transferts indirects."
+    "L'opération évalue le fabricant de Claude à 1 500 milliards de dollars lors de son entrée sur le Nasdaq.",
+    "L'action a progressé de 34 % lors de ses premiers pas boursiers.",
+    "Cette cotation historique teste l'appétit et la confiance des investisseurs envers l'économie de l'intelligence artificielle."
    ],
    "kinds": [
     "detail",
-    "explication",
-    "contexte"
+    "detail",
+    "explication"
    ],
-   "head_en": "Trump wants to ban AI datacenters abroad or tax their construction",
+   "head_en": "Anthropic achieves record initial public offering raising 81.3 billion dollars",
    "bullets_en": [
-    "The government plans to impose heavy taxes on data centers built outside the United States.",
-    "This decision aims to counter China and force national tech companies to keep their investments on American soil.",
-    "The US Department of Commerce tightened its chip export rules to Southeast Asia to counter indirect transfers."
+    "The transaction values the maker of Claude at 1 500 billion dollars upon its entry onto the Nasdaq.",
+    "The stock rose by 34 percent during its initial market trading steps.",
+    "This historic listing tests investor appetite and confidence towards the artificial intelligence economy."
    ],
-   "ctx_ids": [
-    "3778953e71a6"
+   "ctx_ids": [],
+   "ts": "2026-11-23T03:30:00.000Z"
+  },
+  {
+   "ids": [
+    "da1d6f4a2cd7",
+    "ace651c11496",
+    "5eefaf1660e7",
+    "39cc7b62b7b0"
    ],
-   "ts": "2026-11-21T16:29:39.000Z"
+   "head": "Un mathématicien d'Anthropic affirme avoir résolu l'hypothèse de Riemann avec l'aide de Claude",
+   "bullets": [
+    "Le mathématicien Levent Alpöge indique avoir trouvé une preuve pour cette énigme mathématique vieille de 167 ans à l'aide de l'assistant.",
+    "Cette annonce constitue une étape historique pour tester les capacités de raisonnement avancé des grands modèles de langage sur des problèmes fondamentaux."
+   ],
+   "kinds": [
+    "detail",
+    "explication"
+   ],
+   "head_en": "An Anthropic mathematician claims to have solved the Riemann hypothesis with the help of Claude",
+   "bullets_en": [
+    "Mathematician Levent Alpöge indicates he found a proof for this 167-year-old mathematical puzzle with the help of the assistant.",
+    "This announcement marks a historic step for testing the advanced reasoning capabilities of large language models on fundamental problems."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-21T16:52:00.000Z"
   }
  ]
 }
