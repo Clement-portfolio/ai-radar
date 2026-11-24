@@ -350,14 +350,16 @@
         "TSM",
         "$TSM"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "TSMC"
     },
     {
       "name": "ASML",
       "terms": [
         "ASML"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "ASML"
     },
     {
       "name": "Nvidia",
@@ -366,14 +368,16 @@
         "NVDA",
         "$NVDA"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "NVDA"
     },
     {
       "name": "AMD",
       "terms": [
         "AMD"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "AMD"
     },
     {
       "name": "Broadcom",
@@ -382,7 +386,8 @@
         "AVGO",
         "$AVGO"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "AVGO"
     },
     {
       "name": "Qualcomm",
@@ -391,7 +396,8 @@
         "QCOM",
         "$QCOM"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "QCOM"
     },
     {
       "name": "Marvell",
@@ -400,7 +406,8 @@
         "MRVL",
         "$MRVL"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "MRVL"
     },
     {
       "name": "Coherent",
@@ -409,7 +416,8 @@
         "COHR",
         "$COHR"
       ],
-      "group": "optics"
+      "group": "optics",
+      "query_term": "COHR"
     },
     {
       "name": "Lumentum",
@@ -418,7 +426,8 @@
         "LITE",
         "$LITE"
       ],
-      "group": "optics"
+      "group": "optics",
+      "query_term": "LITE"
     },
     {
       "name": "Arista Networks",
@@ -428,14 +437,16 @@
         "ANET",
         "$ANET"
       ],
-      "group": "networking"
+      "group": "networking",
+      "query_term": "ANET"
     },
     {
       "name": "CXMT",
       "terms": [
         "CXMT"
       ],
-      "group": "memory"
+      "group": "memory",
+      "query_term": "CXMT"
     },
     {
       "name": "SK Hynix",
@@ -443,7 +454,8 @@
         "SK Hynix",
         "Hynix"
       ],
-      "group": "memory"
+      "group": "memory",
+      "query_term": "Hynix"
     },
     {
       "name": "Micron",
@@ -452,14 +464,16 @@
         "MU",
         "$MU"
       ],
-      "group": "memory"
+      "group": "memory",
+      "query_term": "MU"
     },
     {
       "name": "Samsung",
       "terms": [
         "Samsung"
       ],
-      "group": "memory"
+      "group": "memory",
+      "query_term": "Samsung"
     },
     {
       "name": "SanDisk",
@@ -468,7 +482,8 @@
         "SNDK",
         "$SNDK"
       ],
-      "group": "memory"
+      "group": "memory",
+      "query_term": "SNDK"
     },
     {
       "name": "GlobalFoundries",
@@ -477,7 +492,8 @@
         "GFS",
         "$GFS"
       ],
-      "group": "semiconductors"
+      "group": "semiconductors",
+      "query_term": "GFS"
     },
     {
       "name": "Google",
@@ -486,7 +502,8 @@
         "GOOGL",
         "$GOOGL"
       ],
-      "group": "hyperscalers"
+      "group": "hyperscalers",
+      "query_term": "GOOGL"
     },
     {
       "name": "Amazon",
@@ -496,7 +513,8 @@
         "AMZN",
         "$AMZN"
       ],
-      "group": "hyperscalers"
+      "group": "hyperscalers",
+      "query_term": "AMZN"
     },
     {
       "name": "Oracle",
@@ -505,14 +523,16 @@
         "ORCL",
         "$ORCL"
       ],
-      "group": "hyperscalers"
+      "group": "hyperscalers",
+      "query_term": "ORCL"
     },
     {
       "name": "SpaceX",
       "terms": [
         "SpaceX"
       ],
-      "group": "diversified"
+      "group": "diversified",
+      "query_term": "SpaceX"
     },
     {
       "name": "Microsoft",
@@ -521,7 +541,8 @@
         "MSFT",
         "$MSFT"
       ],
-      "group": "hyperscalers"
+      "group": "hyperscalers",
+      "query_term": "MSFT"
     },
     {
       "name": "Apple",
@@ -530,7 +551,8 @@
         "AAPL",
         "$AAPL"
       ],
-      "group": "diversified"
+      "group": "diversified",
+      "query_term": "AAPL"
     },
     {
       "name": "Meta",
@@ -539,21 +561,24 @@
         "META",
         "$META"
       ],
-      "group": "hyperscalers"
+      "group": "hyperscalers",
+      "query_term": "META"
     },
     {
       "name": "OpenAI",
       "terms": [
         "OpenAI"
       ],
-      "group": "frontier_labs"
+      "group": "frontier_labs",
+      "query_term": "OpenAI"
     },
     {
       "name": "Anthropic",
       "terms": [
         "Anthropic"
       ],
-      "group": "frontier_labs"
+      "group": "frontier_labs",
+      "query_term": "Anthropic"
     },
     {
       "name": "Moonshot AI",
@@ -562,7 +587,8 @@
         "Moonshot",
         "Kimi"
       ],
-      "group": "frontier_labs"
+      "group": "frontier_labs",
+      "query_term": "Moonshot"
     },
     {
       "name": "Alibaba",
@@ -571,14 +597,16 @@
         "BABA",
         "$BABA"
       ],
-      "group": "frontier_labs"
+      "group": "frontier_labs",
+      "query_term": "BABA"
     },
     {
       "name": "DeepSeek",
       "terms": [
         "DeepSeek"
       ],
-      "group": "frontier_labs"
+      "group": "frontier_labs",
+      "query_term": "DeepSeek"
     },
     {
       "name": "Vistra",
@@ -587,7 +615,8 @@
         "VST",
         "$VST"
       ],
-      "group": "energy"
+      "group": "energy",
+      "query_term": "VST"
     },
     {
       "name": "Constellation Energy",
@@ -596,7 +625,8 @@
         "CEG",
         "$CEG"
       ],
-      "group": "energy"
+      "group": "energy",
+      "query_term": "CEG"
     },
     {
       "name": "Oklo",
@@ -605,7 +635,8 @@
         "OKLO",
         "$OKLO"
       ],
-      "group": "energy"
+      "group": "energy",
+      "query_term": "OKLO"
     },
     {
       "name": "X-Energy",
@@ -613,7 +644,8 @@
         "X-Energy",
         "X Energy"
       ],
-      "group": "energy"
+      "group": "energy",
+      "query_term": "\"X-Energy\""
     }
   ],
   "priority_terms": [
@@ -658,55 +690,6 @@
     "leaderboard",
     "evaluation",
     "speech"
-  ],
-  "search_terms": [
-    "TSMC",
-    "ASML",
-    "NVDA",
-    "AMD",
-    "AVGO",
-    "QCOM",
-    "MRVL",
-    "COHR",
-    "LITE",
-    "ANET",
-    "CXMT",
-    "Hynix",
-    "MU",
-    "Samsung",
-    "SNDK",
-    "GFS",
-    "GOOGL",
-    "AMZN",
-    "ORCL",
-    "SpaceX",
-    "MSFT",
-    "AAPL",
-    "META",
-    "OpenAI",
-    "Anthropic",
-    "Moonshot",
-    "BABA",
-    "DeepSeek",
-    "VST",
-    "CEG",
-    "OKLO",
-    "\"X-Energy\"",
-    "AI",
-    "GPU",
-    "GPUs",
-    "TPU",
-    "TPUs",
-    "HBM",
-    "memory",
-    "DRAM",
-    "inference",
-    "datacenter",
-    "FED",
-    "benchmark",
-    "speech",
-    "capex",
-    "silicon"
   ],
   "source_classes": {
     "analyst": [
@@ -787,5 +770,22 @@
     "executive": 0.7,
     "official": 0.65,
     "specialist": 1
-  }
+  },
+  "search_priority_terms": [
+    "AI",
+    "GPU",
+    "GPUs",
+    "TPU",
+    "TPUs",
+    "HBM",
+    "memory",
+    "DRAM",
+    "inference",
+    "datacenter",
+    "FED",
+    "benchmark",
+    "capex",
+    "silicon",
+    "power"
+  ]
 }
