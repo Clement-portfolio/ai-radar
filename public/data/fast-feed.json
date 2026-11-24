@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-24T20:40:30.001Z",
+ "generated_at": "2026-11-24T20:45:29.500Z",
  "items": [
+  {
+   "id": "49f5ab57d9b4",
+   "ts": "2026-11-24T20:45:28.465Z",
+   "title": "Corporate Japan logs record first-half profit on AI demand, soft yen",
+   "orig": "Corporate Japan logs record first-half profit on AI demand, soft yen",
+   "summary": "",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/companies/corporate-japan-logs-record-first-half-profit-on-ai-demand-soft-yen",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "93114210a39c",
+   "ts": "2026-11-24T20:42:25.000Z",
+   "title": "Nvidia’s Huang apologizes to staff, says he is in therapy: reports",
+   "orig": "Nvidia’s Huang apologizes to staff, says he is in therapy: reports",
+   "summary": "Nvidia CEO Jensen Huang apologized for breaching company conduct and announced he is undergoing therapy after being reinstated as CEO.",
+   "country": "GULF",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/world/nvidias-huang-apologizes-to-staff-says-he-is-in-therapy-reports-3013926",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "1479a2d5f115",
    "ts": "2026-11-24T20:34:53.000Z",
