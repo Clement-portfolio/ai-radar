@@ -323,12 +323,12 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   }
   // « ce qui se dit le plus » : le même propos chez plusieurs comptes différents le même jour
   for (const f of rows) {
-    Object.assign(f, scorePost(f, cfg));
     const a = toks(f.text); const au = new Set();
     for (const g of fresh) { if (g === f || (g.handle || g.aid) === (f.handle || f.aid)) continue; const b = toks(g.text); let i = 0; for (const w of a) if (b.has(w)) i++; if (i >= 3 && i / Math.min(a.size, b.size) >= 0.3) au.add(g.handle || g.aid); }
     f.buzz = au.size;
   }
   for (const f of rows) f.media = pressRelay(f, feed, now);
+  for (const f of rows) Object.assign(f, scorePost(f, cfg));
   for (const f of pickDay(rows)) {
     const media = f.media;
     const it = { id: f.id, priority: f.priority, priority_score: Math.round(f.score), source_class: f.source_class, watchlist: f.watchlist, signals: f.signals, url: f.handle ? `https://x.com/${f.handle}/status/${f.id}` : `https://x.com/i/status/${f.id}`, handle: f.handle || "", tier: f.tier, ts: f.ts, text: f.text, kind: f.v.kind, domain: f.v.domain, imp: f.v.imp, media, eng: f.eng };
