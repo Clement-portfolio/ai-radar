@@ -1,12 +1,23 @@
-name: Flux rapide — actualités
+name: Collecte rapide — Actualités et Insiders Presse (5 min)
 
 on:
-  schedule:
-    - cron: "2-59/5 * * * *"
+  # Déclenchement toutes les 5 min par cron-job.org via workflow_dispatch.
+  # Pas de schedule GitHub ici : cela évite un doublon de collecte.
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - "collector/fast.mjs"
+      - "collector/fast-voix.mjs"
+      - "public/app.js"
+      - "server.js"
+      - ".github/workflows/fast-collect.yml"
+  pull_request:
+    paths:
+      - "collector/fast.mjs"
+      - "collector/fast-voix.mjs"
+      - "public/app.js"
+      - "server.js"
       - ".github/workflows/fast-collect.yml"
 
 concurrency:
@@ -17,13 +28,28 @@ permissions:
   contents: write
 
 jobs:
+  tests:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Vérifications rapides
+        run: |
+          node --check collector/fast-voix.mjs
+          node --check public/app.js
+          node collector/test-voix.mjs
+
   collect-fast:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -31,12 +57,14 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node collector/fast.mjs
-      - name: Publier le flux rapide
+      - name: Collecte rapide Insiders Presse
+        run: node collector/fast-voix.mjs
+      - name: Publier les flux rapides
         run: |
           git config user.name "ai-radar-bot"
           git config user.email "ai-radar-bot@users.noreply.github.com"
-          git add public/data/fast-feed.json public/data/fast-translation.json
+          git add public/data/fast-feed.json public/data/fast-translation.json public/data/voix-fast.json
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
-          git commit -m "Flux rapide — actualités"
-          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git commit -m "Flux rapides — actualités et insiders presse"
+          git pull --rebase -X theirs origin main
+          git push origin HEAD:main

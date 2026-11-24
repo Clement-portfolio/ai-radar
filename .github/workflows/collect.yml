@@ -1,12 +1,19 @@
-name: Collecte AI Radar
+name: Collecte approfondie — Actualités, Recherche et Insiders Presse (3 h)
 
 on:
   schedule:
     - cron: "17 */3 * * *"
   workflow_dispatch:
   push:
+    branches: [main]
     paths:
       - "collector/**"
+      - "!collector/fast-voix.mjs"
+      - ".github/workflows/collect.yml"
+  pull_request:
+    paths:
+      - "collector/**"
+      - "!collector/fast-voix.mjs"
       - ".github/workflows/collect.yml"
 
 concurrency:
@@ -17,22 +24,32 @@ permissions:
   contents: write
 
 jobs:
+  tests:
+    if: github.event_name == 'push' || github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Tests hors ligne
+        run: |
+          node collector/test.mjs
+          node collector/test-x.mjs
+          node collector/test-voix.mjs
+
   collect:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }} # toujours le dernier état de la branche, même si ce lancement a été déclenché par un ancien commit
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Tests
-        if: github.event_name == 'push' # ~13 min : inutile à chaque collecte planifiée, le code n'a pas changé depuis le dernier push
-        run: |
-          node collector/test.mjs
-          node collector/test-x.mjs
-      - name: Collecte
+      - name: Collecte approfondie
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
@@ -50,5 +67,5 @@ jobs:
           git add public/data
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Données du $(date -u +'%Y-%m-%d %H:%M') UTC"
-          git pull --rebase -X theirs origin "${GITHUB_REF_NAME}" # en cas de collision avec une autre collecte, nos données du jour l'emportent
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          git pull --rebase -X theirs origin main
+          git push origin HEAD:main
