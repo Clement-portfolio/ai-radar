@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-24T21:00:41.179Z",
+ "generated_at": "2026-11-24T21:05:57.755Z",
  "items": [
   {
    "id": "49f5ab57d9b4",
    "ts": "2026-11-24T20:45:28.465Z",
-   "title": "Corporate Japan logs record first-half profit on AI demand, soft yen",
+   "title": "Les entreprises japonaises enregistrent un profit record au premier semestre grâce à la demande en IA et au yen faible",
    "orig": "Corporate Japan logs record first-half profit on AI demand, soft yen",
    "summary": "",
    "country": "OTHER",
@@ -14,12 +14,14 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/companies/corporate-japan-logs-record-first-half-profit-on-ai-demand-soft-yen",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les entreprises japonaises enregistrent un profit record au premier semestre grâce à la demande en IA et au yen faible",
+   "title_en": "Corporate Japan logs record first-half profit on AI demand, soft yen"
   },
   {
    "id": "93114210a39c",
    "ts": "2026-11-24T20:42:25.000Z",
-   "title": "Nvidia’s Huang apologizes to staff, says he is in therapy: reports",
+   "title": "Jensen Huang (Nvidia) s'excuse auprès du personnel et déclare suivre une thérapie, selon des rapports",
    "orig": "Nvidia’s Huang apologizes to staff, says he is in therapy: reports",
    "summary": "Nvidia CEO Jensen Huang apologized for breaching company conduct and announced he is undergoing therapy after being reinstated as CEO.",
    "country": "GULF",
@@ -29,12 +31,15 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/world/nvidias-huang-apologizes-to-staff-says-he-is-in-therapy-reports-3013926",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Jensen Huang (Nvidia) s'excuse auprès du personnel et déclare suivre une thérapie, selon des rapports",
+   "title_en": "Nvidia’s Huang apologizes to staff, says he is in therapy: reports",
+   "summary_en": "Nvidia CEO Jensen Huang apologized for breaching company conduct and announced he is undergoing therapy after being reinstated as CEO."
   },
   {
    "id": "1b44b530b35c",
    "ts": "2026-11-24T20:38:08.000Z",
-   "title": "I gave Gemini access to my Wallet, and it immediately started saving me money",
+   "title": "J'ai donné accès à mon Wallet à Gemini, et il a immédiatement commencé à me faire économiser de l'argent",
    "orig": "I gave Gemini access to my Wallet, and it immediately started saving me money",
    "summary": "Gemini gave me a little tough love and told me what I needed to hear about my finances.",
    "country": "US",
@@ -44,12 +49,15 @@
    "source": "ZDNet IA",
    "url": "https://www.zdnet.com/innovation/gemini-wallet-personal-intelligence/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "J'ai donné accès à mon Wallet à Gemini, et il a immédiatement commencé à me faire économiser de l'argent",
+   "title_en": "I gave Gemini access to my Wallet, and it immediately started saving me money",
+   "summary_en": "Gemini gave me a little tough love and told me what I needed to hear about my finances."
   },
   {
    "id": "633191f79474",
    "ts": "2026-11-24T20:37:40.000Z",
-   "title": "How Meta is using Instagram to get an ad boost from its Muse personal AI agent",
+   "title": "Comment Meta utilise Instagram pour booster ses publicités grâce à son agent IA personnel Muse",
    "orig": "How Meta is using Instagram to get an ad boost from its Muse personal AI agent",
    "summary": "Meta doesn't serve ads in its Muse personal agent, but the tool is already boosting the company's ad business, a senior executive told CNBC.",
    "country": "US",
@@ -59,12 +67,15 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/24/meta-instagram-muse-ad-revenue.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Comment Meta utilise Instagram pour booster ses publicités grâce à son agent IA personnel Muse",
+   "title_en": "How Meta is using Instagram to get an ad boost from its Muse personal AI agent",
+   "summary_en": "Meta doesn't serve ads in its Muse personal agent, but the tool is already boosting the company's ad business, a senior executive told CNBC."
   },
   {
    "id": "1479a2d5f115",
    "ts": "2026-11-24T20:34:53.000Z",
-   "title": "What's going on with the Riemann hypothesis?",
+   "title": "Que se passe-t-il avec l'hypothèse de Riemann ?",
    "orig": "What's going on with the Riemann hypothesis?",
    "summary": "A new AI-assisted proof seems to be solid, but we're not sure what it tells us.",
    "country": "US",
@@ -74,7 +85,10 @@
    "source": "Ars Technica",
    "url": "https://arstechnica.com/ai/2026/11/whats-going-on-with-the-riemann-hypothesis/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Que se passe-t-il avec l'hypothèse de Riemann ?",
+   "title_en": "What's going on with the Riemann hypothesis?",
+   "summary_en": "A new AI-assisted proof seems to be solid, but we're not sure what it tells us."
   },
   {
    "id": "7a59d4c41a3e",
