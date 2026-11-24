@@ -11,10 +11,22 @@ assert.ok(plan.reduce((s, p) => s + p.max, 0) <= cfg.caps.run, "plafond par pass
 assert.ok(plan.every((p) => p.query.length <= 500 && p.max >= 10 && p.max <= 100), "requêtes et tailles valides");
 assert.ok(plan.every((p) => /-is:retweet -is:reply/.test(p.query)), "retweets et réponses exclus");
 const t2a = plan.filter((p) => p.tier === "t2").flatMap((p) => p.handles), t2b = plan2.filter((p) => p.tier === "t2").flatMap((p) => p.handles);
-assert.ok(plan.every((p) => p.handles.length > 0), "lots de comptes non vides");
-assert.ok(plan.filter((p) => p.tier === "flux").every((p) => /\(AI OR /.test(p.query)), "flux filtré par mots-clés IA");
+assert.ok(plan.every((p) => p.handles.length > 0), "lots de comptes non vides");\nassert.ok(new Set(plan.slice(0,3).map((p)=>p.tier)).size === 3, "les trois familles de sources sont réparties dans le budget");
+assert.ok(plan.every((p) => p.query.includes("TSMC") && p.query.includes("AI")), "watchlist et signaux IA appliqués à chaque compte suivi");
 assert.equal(buildQuery(["a", "b"]), "(from:a OR from:b) -is:retweet -is:reply");
 assert.equal(chunkList([1, 2, 3, 4, 5], 2).length, 3);
+
+
+// Watchlist : les publications hors IA des entreprises diversifiées sont exclues.
+assert.equal(matchRelevance("SpaceX and Qualcomm launch a terrestrial 5G network", cfg).relevant, false);
+assert.equal(matchRelevance("Apple expands AI server capacity for its new model training", cfg).relevant, true);
+assert.equal(matchRelevance("Nvidia reports HBM supply constraints for AI accelerators", cfg).relevant, true);
+assert.equal(matchRelevance("The FED discusses rates with no AI or semiconductor context", cfg).relevant, false);
+assert.equal(matchRelevance("Phonic 1.1 leads the Speech to Speech benchmark", cfg).relevant, true);
+assert.equal(sourceClass("PhotonCap", "t1", cfg), "analyst");
+assert.equal(sourceClass("OpenAI", "t2", cfg), "official");
+const ranked = scorePost({handle:"PhotonCap",tier:"t1",text:"TSMC raises CoWoS capacity for AI GPU demand",relevance:{watchlist:["TSMC"],signals:["AI","GPU","CoWoS"]},v:{imp:3},eng:20},cfg);
+assert.equal(ranked.priority,"P1");
 
 // réponses simulées de X
 let calls = [], usersAsked = 0;
