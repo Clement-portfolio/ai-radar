@@ -83,15 +83,17 @@ export function scorePost(post, cfg) {
 export function dayPlan(cfg, now) {
   const cap = { ...cfg.caps, day: Math.min(cfg.caps.day, cfg.caps.run || cfg.caps.day) };
   const terms = cfg.search_terms || cfg.flux_terms || [];
-  const plan = [];
+  const groups = { t1: [], t2: [], flux: [] };
   const add = (name, list, total) => {
     const chunks = queryChunks(list, terms, 500); if (!chunks.length) return;
     const per = Math.max(X_RULES.minRead, Math.floor(total / chunks.length));
-    for (const c of chunks) plan.push({ tier: name, handles: c, max: Math.min(100, per), query: buildQuery(c, terms) });
+    for (const c of chunks) groups[name].push({ tier: name, handles: c, max: Math.min(100, per), query: buildQuery(c, terms) });
   };
   add("t1", cfg.t1, cap.t1);
   add("t2", cfg.t2, cap.t2);
   add("flux", cfg.flux, cap.flux);
+  const plan = [];
+  for (let i = 0; i < Math.max(groups.t1.length, groups.t2.length, groups.flux.length); i++) for (const tier of ["t1","t2","flux"]) if (groups[tier][i]) plan.push(groups[tier][i]);
   const slot = Math.floor(now / (12 * H));
   if (plan.length > 1) { const shift = (slot * 3) % plan.length; plan.push(...plan.splice(0, shift)); }
   let sum = plan.reduce((s, p) => s + p.max, 0);
