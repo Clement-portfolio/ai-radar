@@ -1,10 +1,46 @@
 {
- "generated_at": "2026-11-24T21:30:37.496Z",
+ "generated_at": "2026-11-24T21:36:03.609Z",
  "items": [
+  {
+   "id": "71615ee1ebfd",
+   "ts": "2026-11-24T21:33:29.000Z",
+   "title": "Même les meilleurs agents IA ont du mal avec la vie quotidienne",
+   "orig": "Even the best AI agents struggle with everyday life",
+   "summary": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Modèles",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Même les meilleurs agents IA ont du mal avec la vie quotidienne",
+   "title_en": "Even the best AI agents struggle with everyday life",
+   "summary_en": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems."
+  },
+  {
+   "id": "b1e5839c1dc5",
+   "ts": "2026-11-24T21:32:38.000Z",
+   "title": "Walmart s'associe à Meta pour proposer les offres du Black Friday sur l'agent IA Muse",
+   "orig": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+   "summary": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Walmart s'associe à Meta pour proposer les offres du Black Friday sur l'agent IA Muse",
+   "title_en": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+   "summary_en": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent."
+  },
   {
    "id": "4d83f53e63e2",
    "ts": "2026-11-24T21:19:52.000Z",
-   "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+   "title": "Maple lève 5,3 millions de dollars pour créer des produits d'IA qui protègent vos données, même d'elle-même",
    "orig": "Maple raises $5.3M to build AI products that protect your data, even from itself",
    "summary": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data.",
    "country": "US",
@@ -14,7 +50,10 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Maple lève 5,3 millions de dollars pour créer des produits d'IA qui protègent vos données, même d'elle-même",
+   "title_en": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+   "summary_en": "The startup's encrypted AI architecture is designed to prevent even the company itself from accessing users' private data."
   },
   {
    "id": "49f5ab57d9b4",
@@ -752,7 +791,7 @@
   {
    "id": "3c6728c1bfd1",
    "ts": "2026-11-24T13:00:00.000Z",
-   "title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+   "title": "Les modèles GPT-6 démontrent des capacités intrinsèques de conception de protéines",
    "orig": "GPT-6 models demonstrate intrinsic protein-design capabilities",
    "summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
    "country": "US",
@@ -762,7 +801,10 @@
    "source": "OpenAI",
    "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
    "confidence": "haute",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les modèles GPT-6 démontrent des capacités intrinsèques de conception de protéines",
+   "title_en": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+   "summary_en": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets."
   },
   {
    "id": "00cedad7d3f4",
