@@ -11,7 +11,7 @@ assert.ok(nonLatinShare("") === 0);
 const mk = (id, ts, title, o = {}) => ({ id, ts, title, orig: o.orig || title, summary: o.summary ?? "Résumé.", ...o });
 const items = [
   mk("a", "2026-11-17T02:00:00Z", "川普訪華前，美國推進新規封堵晶片出口漏洞", { summary: "Les États-Unis durcissent les règles avant la visite.", orig: "川普訪華前，美國推進新規封堵晶片出口漏洞" }),
-  mk("b", "2026-11-17T01:00:00Z", "Nvidia livre sa puce", { summary: "Livraison de 3 lots.", why: "Les clients cloud reçoivent la puce.", orig: "Nvidia ships its chip" }),
+  mk("b", "2026-11-17T01:00:00Z", "Nvidia ships its chip", { summary: "Livraison de 3 lots.", why: "Les clients cloud reçoivent la puce.", orig: "Nvidia ships its chip" }),
   mk("c", "2026-11-16T01:00:00Z", "Déjà traduit", { title_en: "Already translated" }),
   mk("d", "2026-11-17T03:00:00Z", "Non classé", { pending: true }),
 ];
@@ -27,7 +27,7 @@ assert.equal(seen[0].i, 0, "titre non latin traité en premier");
 assert.equal(items[0].title.startsWith("Avant la visite"), true, "titre chinois remplacé par le français");
 assert.equal(items[0].orig, "川普訪華前，美國推進新規封堵晶片出口漏洞", "titre d'origine conservé");
 assert.equal(items[0].title_en.startsWith("Before Trump"), true);
-assert.equal(items[1].title, "Nvidia livre sa puce", "titre latin non modifié");
+assert.equal(items[1].title, "Nvidia livre sa puce", "titre anglais traduit en français");
 assert.equal(items[1].why_en, "Cloud customers receive the chip.");
 assert.equal(items[2].title_en, "Already translated", "article déjà traduit intact");
 
