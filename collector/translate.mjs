@@ -44,13 +44,17 @@ export function applyTranslations(arr, inputs, byIdx) {
     const pool = new Set(digitsOf(stripAmounts(all)));
     const ok = (s, lang, strict = false, src = all) => digitsOf(stripAmounts(s)).every((d) => pool.has(d)) && unitsOk(src, s, lang, strict);
     let touched = false;
-    if (foreignScript(it.title)) {
-      const t = normalizeFr(inp.orig || inp.title, clean(r.title_fr));
-      if (t && t.length <= 220 && !foreignScript(t) && ok(t, "fr", true, inp.orig || inp.title)) { it.title = t; touched = true; }
-      else if (it.summary && !foreignScript(it.summary)) { // secours : le résumé français, déjà validé, sert de titre
-        const first = clean(it.summary).split(/(?<=[.!?])\s/)[0];
-        it.title = first.length <= 150 ? first.replace(/\.$/, "") : first.slice(0, 147).replace(/\s+\S*$/, "") + "…"; touched = true;
-      }
+    // Le titre principal du site est toujours en français, y compris lorsque la source est anglophone.
+    const tf = clean(r.title_fr);
+    if (tf && tf.length <= 220 && !foreignScript(tf) && ok(tf, "fr", true, inp.orig || inp.title)) {
+      it.title = normalizeFr(inp.orig || inp.title, tf);
+      it.title_fr = it.title;
+      touched = true;
+    } else if (foreignScript(it.title) && it.summary && !foreignScript(it.summary)) {
+      // Secours : le résumé français, déjà validé, sert de titre.
+      const first = clean(it.summary).split(/(?<=[.!?])\s/)[0];
+      it.title = first.length <= 150 ? first.replace(/\.$/, "") : first.slice(0, 147).replace(/\s+\S*$/, "") + "…";
+      touched = true;
     }
     const te = clean(r.title_en);
     if (te && te.length <= 240 && !foreignScript(te) && ok(te, "en", true, inp.orig || inp.title)) {
