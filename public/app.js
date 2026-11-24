@@ -848,7 +848,7 @@ function xSwitch(){
 }
 /* Accueil : les posts X les plus importants des derniers jours (un par compte), avec accès direct à Insiders / Sur X */
 function xHome(en){
-  var all=(S.x&&S.x.items)||[];if(!all.length)return"";
+  var all=((S.x&&S.x.items)||[]).filter(function(x){return x.priority!=="P4"});if(!all.length)return"";
   var now=Date.now(),seen={},pick=all.filter(function(x){return Date.parse(x.ts)>=now-7*864e5&&!x.pending}).map(function(x){return{x:x,sc:(x.imp||1)*10+(x.media===0?2:0)+Math.min(3,Math.log10((x.eng||0)+1))-(now-Date.parse(x.ts))/864e5}}).sort(function(a,b){return b.sc-a.sc}).map(function(o){return o.x}).filter(function(x){var k=x.handle||x.id;if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
   if(!pick.length)return"";
   return'<section class="tile">'+tHead(en?'Insiders on X':'Insiders sur X',en?'What stands out on the platform':'Ce qui ressort sur la plateforme')+'<div class="tgrid3">'+pick.map(function(it){
@@ -892,7 +892,7 @@ function xHtml(){
   var en=isEn(),X=S.x,all=(X&&X.items)||[];
   if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: collections run at 8 am and 8 pm (Riyadh time).':'Aucun post collecté pour l\'instant : les collectes ont lieu à 8 h et 20 h (heure de Riyad).')+'</div>';
   var kinds=Object.keys(XKIND);
-  var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")+" "+xWho(x).name+" "+xWho(x).role).indexOf(q)>=0});
+  var items=all.filter(function(x){return x.priority!=="P4"}).filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")+" "+xWho(x).name+" "+xWho(x).role).indexOf(q)>=0});
   var pr={P1:4,P2:3,P3:2,P4:1};
   items.sort(function(a,b){var d=dayKey(b.ts).localeCompare(dayKey(a.ts));return d||(pr[b.priority]||0)-(pr[a.priority]||0)||(b.priority_score||0)-(a.priority_score||0)||Date.parse(b.ts)-Date.parse(a.ts)});
   var CH='<span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>';
