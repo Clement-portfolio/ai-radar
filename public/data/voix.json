@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-24T17:29:53.582Z",
+ "generated_at": "2026-11-24T19:05:04.978Z",
  "people": [
   {
    "id": "sam-altman",
@@ -2059,6 +2059,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T18:25:00.000Z",
+     "title": "Sen. Warren: 'Stronger' urgency to investigate Jensen Huang after Nvidia comeback",
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOLXJlRGxmWGhUcmJqZzRabjY0WG9hQ1RKWDBaOVA3MkdIcmN4MldPejc3UFRrWU4xQ2Y1M2tHRUxhZ2NIVmxvOHp2UDBHdWluUFh5SFhxTnM4c2lTM0pNUHVzWlR0czR5QmQ5S0VzX0lUZGQ5bVpiZjRvSklEYmwxWEVLd19yUlpoNUVZdy1GbllsMTNJY1pVaXVRclZOeWJHQ0dFbUJVbHlEMFB6d0I1TlpSSnREZHlMWXFqdG1BR1poQlB1bUhQZUczMWRLZFpPdmZhalZlU25XbUhfNzNnNTBDcDF4d2FjRmVZbHFPMDVaQjd1?oc=5",
+     "source": "WKYC",
+     "kind": "presse",
+     "title_fr": "La sénatrice Warren : urgence « plus forte » d'enquêter sur Jensen Huang après le retour en force d'Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-24T00:54:00.000Z",
      "title": "Elizabeth Warren demands Trump admin explain ‘input’ in decision to reinstate Nvidia CEO",
      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYmVDTG1FV2lLYllXXzB4amtEc05JY0JRUlkzSWFyaVpNTDRyc0k0Q2xVNFV6bUhwMXUwSUdDUjhsODlKdVlJX3djaVFNZWdEdURuT3Z0MDRQVmZDZGYwa1hoQmsyQ3JhTWlrdEt2RDFtZ3lSVV9yUlprU0hTakxVbkdOSzBtaTJDOUxPZUJXOTVESUx2UlpJMXVnRnJQaTQtZWxlaERLZEhkWUNVZjlaeUNiN1JBRE9lcnFVQ1FDdi1UUWdHWVA0aEUzSEROdw?oc=5",
@@ -2125,16 +2135,6 @@
      "source": "Crowdfund Insider",
      "kind": "presse",
      "title_fr": "Anthropic grimpe à plus de 100 $ lors des premiers échanges, la sénatrice Warren appelle à de nouvelles règles sur l'IA",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-14T20:46:41.000Z",
-     "title": "Elizabeth Warren Says NVIDIA Leaders Remain Accountable After Huang’s Exit",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBsWUtXdnAxTldYNUp0NllUNFpnZHduVG9mMWZSdDQtZFFxSTVfVnduM0tLbXp1UERHY3h1NlF1VjFpUnd2Z0d3QkMzVmxGczFKOF9kWkRJRTRKX2M?oc=5",
-     "source": "www.tokenpost.com",
-     "kind": "presse",
-     "title_fr": "Elizabeth Warren déclare que les dirigeants de Nvidia restent comptables après le départ d'Huang",
      "m": 1,
      "e": 0
     }
@@ -3126,6 +3126,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T17:32:26.000Z",
+     "title": "Video | Can AI Cure Diseases In Years? Stuart Russell Explains",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPakpfelUxMEhnRkVocFVpWTRONDUzbFVrZ2huVi1kRVhKSGNOSHlVNkZ4dEtOQXBTZ3lqcHlLNUprcWk4R091dWJyekx2UlVGbTc5ZDlWSEV5RjRhY2tHSzB0WkY2TTZTeTFGWDRCZE5PbkR3M1NhWnpfZ3FWb2IxMDQxU3lNR2xFenNHdVctUEY4Zw?oc=5",
+     "source": "NDTV",
+     "kind": "presse",
+     "title_fr": "Vidéo | L'IA peut-elle guérir des maladies en quelques années ? Stuart Russell s' explique",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-14T18:02:19.000Z",
      "title": "AI Expert Stuart Russell Calls For Mandatory Safety Testing Of Advanced AI Systems",
      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPN0Q3WEJXSjlpRnozSlhObDVET2JWMERiT1RHTmVJVU1TYWJYZGFXRmNyMzFKNzJCSXFzaS1FWW1LcGJibFpiYktjeXJ6YUJhQVItQXdVNDdrR2ZPLVh4Q21FdlE3eDNCd3h5VmMwNzVEVlJpTGVqNmtjOWMxY1FhT0hJbFVMOEk1Z19tS3NzZHhiakhPY0E5SVB1MWlUbTh6bHJr?oc=5",
@@ -3707,6 +3717,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T18:05:00.000Z",
+     "title": "'Get the foundation right': AWS CEO Matt Garman says AI safety can't rely on an 'emergency brake', calls for companies to be bold in their deployment",
+     "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxPTWhkZGpLeklGSzhpQXY1ZDdaVk9Gc2VXNmI5QmpCZ2pBbXgzZS1WMFNzc09rNGpBTzJxVUhEQk81Q0ZLS3BJLTdzNHRPdnJ2Qm1nbC1POHVINGFPTEc0M09ON2ZSYWs1cmtUelFybDZRWnFNZE5haHpmVTlKd213SDg0TFpVSGY2OVJWbGxKTktDeV9pRS1XOVpTX3FTbTc3ZVkxc1BVUTZvZHBwbUtFOWV4MDdwcUxKZG54MHc0VjJQUXgzdUlReXVjd3FmZXk4RzNHWHQtblZYY3drM0VRZGFJcFRZTzJLVHdrdGx4bzR3aFJsU1ZHTDRxNktOWUEwWXc?oc=5",
+     "source": "TechRadar",
+     "kind": "presse",
+     "title_fr": "« Poser les bonnes bases » : le PDG d'AWS Matt Garman affirme que la sécurité de l'IA ne peut pas dépendre d'un « frein d'urgence », et appelle les entreprises à faire preuve d'audace dans leur déploiement",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-24T16:03:59.000Z",
      "title": "AWS CEO Matt Garman says companies need stronger security to control AI models",
      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYkJFSjJ4MkJzUWpzdmdaSTljeU1pN29pSUpfeWg3RXZXdG10c3h4bnZ2OTdULUhuSFNsV2N6d3VyT3Yyc0RVbDhNRkJ1azdQcHNiRnl3MXRZY29rbk1hdFBnWnQyVDhzV1d4U19LTHpzd1pBMHZseXBFbXNYMUlqVjgyaVEwZDBVRGhpSkdCUlJScTQydl8tcG1MQ25pZHA1bm5SdzJCZDZxLTFGOHdMbVY1VGllYkVRcjNaNFdJUmJoRTdNdFJFRDZ1UkdzYU54bThiSVV2ZHNJRHdCNkVVZ1hZNnoyTzJmVk5tbTl3QWhDVzDSAfgBQVVfeXFMT1JWWG5CUnR4VGxTenROdGtQc2lIXzhuNlFRM0YxcjZGMW1vRHcxNms4SlNtNnBjN1ZPTDBQbVpDaWFGSmY1RVI0UTRlXzNDUmxudUNUWHB1OXlUMFA0OEljM2JUTUxBelhvNDF2al9xMUU5MktpVS1FTl9UQmsyTGM2cmlScDJvMkNLVGMtLThWWTFMYmF1dkl5THNJd2M3U0x1eUhmS2RYTVh2ZUNod0lsaVZZWmNPWk1pRm1TWUZFUTdNcW03SThVSWRQcF9jaEFGaHdzeWg4Q3dncnFta2t1NGV4amJUV2UyUHE5QjhhSGU3Sm9KaXE?oc=5",
@@ -3775,16 +3795,6 @@
      "title_fr": "Le PDG d'AWS, Matt Garman, affirme qu'une IA de confiance dépend de contrôles d'ingénierie",
      "m": 2,
      "e": 1
-    },
-    {
-     "ts": "2026-11-23T18:09:14.000Z",
-     "title": "Amazon AWS CEO Matt Garman says better engineering, not a ‘kill switch’, is key to safer AI systems | Hindustan Times",
-     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOM0RESks3UjZ1OFR2UWtDbkQzOGFtbFdPdkFnMElCQ3hfa0JyUWhERFFzUGdUM21RcjNIWmJuNm1EWkJXeXlUV0dJY2VmcEpSeUVvNHdESHdKNzc2Y0VoX1pIYmtDVGJtXzNyWW81WUlHc0tnNkJRVXVMcjFXUXdPNHltRmlaYjAxZTJtdFpNYXBWdjMtZ2xQU2szWDVvNWlXXzUwWHZVRHJJR1QzdXdiT1dNTmVzMXV4M0phb3BVeFdpVEtiaUJnQlloOGFzU1ppaVg1aTVTUGQ1NGFDT3VMR0d4cTlweGdUOWJ1ZGpHcWJCcTFVd0N6MkNR0gH_AUFVX3lxTFBDZDJsX2NqdXNnTXYteTRKQ2EtTUZWMG5rUEJrUThRbG54ZU93aGx4Q2d0d2xpZEI4ckpWUXFrRk9TZjllSW51cW8tLVJHVUhQRWN0Q3FrVkRDUzBpakpPX1JHU2Q2bGRqckR4MzhtTVpKcG1EZVlpampKLXdXWEgtaWVGRFJpbWxHMElBNGxST29QRERMWjNqZnFYYk5qa1ZIRUVzVlVfOExRaGwzZGtuaHN6M2w5OTVhd3FUSUZnTXRrekxnVkZWdlh6c2hWcnhjeHR3RFpUZ1ZPUERoQnhRaGFxSG1oUTNZX3Nxd0FoSjZKMEdiSEhxZFNUbHh6TQ?oc=5",
-     "source": "Hindustan Times",
-     "kind": "presse",
-     "title_fr": "Le PDG d'Amazon AWS, Matt Garman, affirme qu'une meilleure ingénierie, et non un « bouton d'arrêt », est la clé pour des systèmes d'IA plus sûrs | Hindustan Times",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -3880,6 +3890,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-18T15:30:05.000Z",
+     "title": "Fed Chair Kevin Warsh Sees Two AI Futures: Productivity Boom or Painful Market Reversal and Job Losses",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSHBGcEtaVllFWndoUUZMSy0zTUJ0YU1nalRGRnZReGJHZDlKYWlvSmhnNHp6UXdmVDRjaG4zeDFTUWk5TENHNHZhalRZcHFpS0d0bkJWaXdBNW9GTWU5U3h5eXlVVm81QlVsRkN3NXR2all5NE1nUTNRODJvem5VVDZjWGpGXy1adHZ0eTF5RlRIbGdl?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Le président de la Fed Kevin Warsh envisage deux futurs pour l'IA : un boom de la productivité ou un retournement douloureux du marché et des pertes d'emplois",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-17T03:11:17.000Z",
      "title": "Fed Chair Kevin Warsh warned that AI could trigger job losses or a stock bust if it disappoints",
      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1pWEw0UWFBNENEZnNwRnI2Z3hTb3p0RFdtZjJWUGFiSElqS0JkN2VOd3FheWZQU2pPVlJaUEZveTR6VE5qTHJkaU9BRDRGVjMzN3dlYTVSd3l3ckRzbFpVMWRtRHpHeFZvT2FuRG93?oc=5",
@@ -3938,16 +3958,6 @@
      "m": 2,
      "e": 1,
      "title_fr": "Comment l'IA va-t-elle bouleverser l'économie ? Warsh déclare que la Fed commence à le comprendre."
-    },
-    {
-     "ts": "2026-11-16T17:30:00.000Z",
-     "title": "Fed Chair Kevin Warsh Speaks Live Today on AI and Tech",
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUF80Vjl6WXY4cERrTWV1cnpkRFB1dUNNVDNDUEJuZFJVVVFPYzZJcnJDQXYtazZFTndNV0wyVEQ0UHN0ZExjYld1cG9RWDF3T0o5MEpHZ3VvSUYzYzdiRjQ1SEtEZmVyVnM1NnZKdFRVby1mQkxnVk5sdjB1Y0JiUHhyUWpkdzBi?oc=5",
-     "source": "Barron's",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le président de la Fed, Kevin Warsh, s'exprime en direct aujourd'hui sur l'IA et la technologie"
     }
    ]
   },
@@ -5859,7 +5869,7 @@
  ],
  "hot": [
   {
-   "score": 1.79,
+   "score": 1.59,
    "id": "matt-garman",
    "n": "Matt Garman",
    "role": "PDG d'AWS (Amazon Web Services)",
@@ -5873,7 +5883,7 @@
    "outlets": 2
   },
   {
-   "score": 1.72,
+   "score": 1.52,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5887,7 +5897,7 @@
    "outlets": 3
   },
   {
-   "score": 1.03,
+   "score": 0.91,
    "id": "cc-wei",
    "n": "C.C. Wei",
    "role": "PDG de TSMC",

@@ -1,13 +1,38 @@
 {
  "v": 1,
  "day": "2026-11-24",
- "generated_at": "2026-11-24T01:15:52.620Z",
+ "generated_at": "2026-11-24T19:05:04.978Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "CrowdStrike rachète Zscaler",
+   "title": "Amazon : acquisition de Decart",
+   "value": "7,5 Md$",
+   "sub": "Le rachat vise à renforcer les capacités en IA d'Amazon et à soutenir le déploiement de ses puces Trainium.",
+   "ids": [
+    "c3a2aba6c39e",
+    "f955d48edeaa"
+   ],
+   "links": [
+    {
+     "t": "SiliconANGLE",
+     "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaXR5TS11S0V5ZmZCOERDYlI1OG9vWG9UX3ZQZHoyYndOX0VrdExNYmNVbjBFNzBqdGMwY0ZDM0RjdWhxVWJFU0o0eG04N2oyZzNMVGdTbVRVMV9SUFNld3FaSnlOcl9ZSGQ4OGhLNXdYdzJwNFI2Mkh6M3BfLVIwN0hzVkF3Q3diQmxzN3BNUkVxREZsZHBJRmRfalVMTXc5dE55LQ?oc=5"
+    },
+    {
+     "t": "TechCrunch IA",
+     "u": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-24T01:40:00.000Z",
+   "title_en": "Amazon: Decart acquisition",
+   "value_en": "$7.5B",
+   "sub_en": "The acquisition aims to strengthen Amazon's AI capabilities and support the deployment of its Trainium chips."
+  },
+  {
+   "title": "CrowdStrike : acquisition de Zscaler",
    "value": "44 Md$",
-   "sub": "Cette acquisition majeure est motivée par la nécessité de renforcer les défenses face aux cyberattaques dopées à l'intelligence artificielle.",
+   "sub": "Une opération motivée par la nécessité de renforcer les défenses face aux cyberattaques dopées à l'intelligence artificielle.",
    "ids": [
     "0c56e1950266"
    ],
@@ -18,56 +43,31 @@
     }
    ],
    "conf": "moyenne",
-   "scope": "day",
+   "scope": "week",
    "ts": "2026-11-23T17:50:30.000Z",
-   "title_en": "CrowdStrike Acquires Zscaler",
+   "title_en": "CrowdStrike: Zscaler acquisition",
    "value_en": "$44B",
-   "sub_en": "This major acquisition is driven by the need to strengthen defenses against AI-boosted cyberattacks."
+   "sub_en": "A transaction driven by the need to strengthen defenses against AI-boosted cyberattacks."
   },
   {
-   "title": "Amazon rachète Decart",
-   "value": "7,5 Md$",
-   "sub": "Amazon s'empare de la technologie et de l'équipe de recherche de Decart afin de soutenir le déploiement de ses puces Trainium.",
+   "title": "Amazon : revenus du trimestre",
+   "value": "201,9 Md$",
+   "sub": "En hausse de 12 % par rapport au troisième trimestre 2025 (180,2 Md$). Le bénéfice net s'établit à 20,7 Md$, contre 21,2 Md$ un an auparavant.",
    "ids": [
-    "f955d48edeaa",
-    "cb02ca1a7848"
+    "823e0ec9d64d"
    ],
    "links": [
     {
-     "t": "TechCrunch IA",
-     "u": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
-    },
-    {
-     "t": "조선일보",
-     "u": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeTlfTHFQZjVqbmhvOGYwWGN6RThtLXhSZlR2bzRTM21NZXpvTU16cUNBYUN2aGRXMllJczZXaXl3TWNZZGdEVXh2M0IwN2hQNzR4cVdzaHBidGFNVXFIRGFnc1h5d3owM0NpZXdDN1k5TDNMZGJnenloVjJ2ZDF0Q3o0cGtZLW9I?oc=5"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "day",
-   "ts": "2026-11-23T17:14:23.000Z",
-   "title_en": "Amazon Acquires Decart",
-   "value_en": "$7.5B",
-   "sub_en": "Amazon is acquiring Decart's technology and research team to support the deployment of its Trainium chips."
-  },
-  {
-   "title": "Alphabet : revenus du trimestre",
-   "value": "127,6 Md$",
-   "sub": "Les revenus consolidés ont progressé de 25 % sur un an, portés par une croissance record de 103 % pour Google Cloud à 30,7 milliards de dollars. Le bénéfice net s'est établi à 26,2 milliards de dollars pour le trimestre.",
-   "ids": [
-    "24137ef1349d"
-   ],
-   "links": [
-    {
-     "t": "Alphabet (communiqué de résultats, SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm"
+     "t": "Amazon (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
     }
    ],
    "conf": "haute",
    "scope": "month",
-   "ts": "2026-10-28T20:01:33.000Z",
-   "title_en": "Alphabet: Quarterly Revenue",
-   "value_en": "$127.6B",
-   "sub_en": "Consolidated revenues increased 25% year-over-year, driven by record 103% growth for Google Cloud to $30.7 billion. Net income reached $26.2 billion for the quarter."
+   "ts": "2026-10-29T20:05:27.000Z",
+   "title_en": "Amazon: quarterly revenue",
+   "value_en": "$201.9B",
+   "sub_en": "Up 12% compared to the third quarter of 2025 ($180.2B). Net income stands at $20.7B, compared to $21.2B a year earlier."
   }
  ]
 }
