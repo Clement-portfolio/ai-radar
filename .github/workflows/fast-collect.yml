@@ -21,7 +21,7 @@ on:
       - ".github/workflows/fast-collect.yml"
 
 concurrency:
-  group: fast-collect
+  group: fast-collect-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:

@@ -17,7 +17,7 @@ on:
       - ".github/workflows/collect.yml"
 
 concurrency:
-  group: collecte
+  group: collecte-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:
