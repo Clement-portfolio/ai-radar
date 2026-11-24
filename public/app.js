@@ -889,7 +889,7 @@ function xRow(it){
    '<div class="meta"><a href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+(en?'See the post on X':'Voir le post sur X')+' ↗</a>'+(it.handle?' <span class="xb">@'+esc(it.handle)+'</span>':'')+'</div></div></div>';
 }
 function xHtml(){
-  var en=isEn(),X=S.x,all=(X&&X.items)||[];
+  var en=isEn(),X=S.x,all=((X&&X.items)||[]).filter(function(x){return x.priority!=="P4"});
   if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: collections run at 8 am and 8 pm (Riyadh time).':'Aucun post collecté pour l\'instant : les collectes ont lieu à 8 h et 20 h (heure de Riyad).')+'</div>';
   var kinds=Object.keys(XKIND);
   var items=all.filter(function(x){return x.priority!=="P4"}).filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")+" "+xWho(x).name+" "+xWho(x).role).indexOf(q)>=0});
