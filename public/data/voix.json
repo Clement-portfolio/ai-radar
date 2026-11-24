@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-24T16:26:43.966Z",
+ "generated_at": "2026-11-24T17:29:53.582Z",
  "people": [
   {
    "id": "sam-altman",
@@ -708,7 +708,8 @@
      "source": "BigGo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 1
+     "e": 1,
+     "title_fr": "Trump nomme C.C. Wei trois fois, le qualifie de génie et prédit des droits de douane sur les puces atteignant 200 % en deux ans"
     }
    ]
   },
@@ -2377,7 +2378,8 @@
      "source": "Yahoo Finance UK",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Michael Burry affirme qu'il a « essayé de prévenir » les investisseurs que Nvidia, CoreWeave et Nebius couraient vers des difficultés"
     },
     {
      "ts": "2026-11-20T14:59:00.000Z",
@@ -2482,7 +2484,8 @@
      "source": "Wccftech",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "NVIDIA, sous la direction du PDG de retour Jensen Huang, fait face à des restrictions plus strictes sur les ventes de GPU, à une réduction de la location, à des enquêtes sur les expéditions et à des poursuites judiciaires, selon l'analyste Ming-Chi Kuo"
     },
     {
      "ts": "2026-11-20T22:25:05.000Z",
@@ -3710,7 +3713,8 @@
      "source": "The Economic Times",
      "kind": "presse",
      "m": 2,
-     "e": 1
+     "e": 1,
+     "title_fr": "Le PDG d'AWS, Matt Garman, affirme que les entreprises ont besoin d'une sécurité renforcée pour contrôler les modèles d'IA"
     },
     {
      "ts": "2026-11-24T05:21:21.000Z",
@@ -3964,7 +3968,8 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Brad Gerstner affirme qu'Anthropic vaudra 3 000 milliards de dollars d'ici la fin de l'année prochaine. Est-ce réaliste ?"
     },
     {
      "ts": "2026-11-18T20:00:07.000Z",
@@ -4714,7 +4719,8 @@
      "source": "BBC",
      "kind": "presse",
      "m": 1,
-     "e": 0
+     "e": 0,
+     "title_fr": "Regarder : Marco Rubio affirme que les récentes pannes technologiques sont « complètement sans lien » les unes avec les autres"
     },
     {
      "ts": "2026-11-18T04:57:06.000Z",
@@ -5050,6 +5056,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-16T08:00:00.000Z",
+     "title": "Pony Ma’s Internal Speech: The AI Wave Is Already Here—Tencent Must Transform From Army to Navy, With Everyone On Board",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1OcTA5VTI4SVBNdExlMEw0aFk4cnJJbHRVbm03T3E0WlhQcER2RGhSRGQ5clNvVE5NWi1HR3JqX2ZNc3ppSjRFWWlWdUhBMVU2dWhQSS1aRQ?oc=5",
+     "source": "深潮TechFlow",
+     "kind": "presse",
+     "title_fr": "Le discours interne de Pony Ma : La vague de l'IA est déjà là — Tencent doit passer de l'armée à la marine, avec tout le monde à bord",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-12T06:33:09.000Z",
      "title": "Tencent's Pony Ma says half of staff will move to AI-native work",
@@ -5843,21 +5859,21 @@
  ],
  "hot": [
   {
-   "score": 1.94,
+   "score": 1.79,
    "id": "matt-garman",
    "n": "Matt Garman",
    "role": "PDG d'AWS (Amazon Web Services)",
    "actor": "amazon",
    "ts": "2026-11-24T16:03:59.000Z",
    "title": "AWS CEO Matt Garman says companies need stronger security to control AI models",
-   "title_fr": "",
+   "title_fr": "Le PDG d'AWS, Matt Garman, affirme que les entreprises ont besoin d'une sécurité renforcée pour contrôler les modèles d'IA",
    "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYkJFSjJ4MkJzUWpzdmdaSTljeU1pN29pSUpfeWg3RXZXdG10c3h4bnZ2OTdULUhuSFNsV2N6d3VyT3Yyc0RVbDhNRkJ1azdQcHNiRnl3MXRZY29rbk1hdFBnWnQyVDhzV1d4U19LTHpzd1pBMHZseXBFbXNYMUlqVjgyaVEwZDBVRGhpSkdCUlJScTQydl8tcG1MQ25pZHA1bm5SdzJCZDZxLTFGOHdMbVY1VGllYkVRcjNaNFdJUmJoRTdNdFJFRDZ1UkdzYU54bThiSVV2ZHNJRHdCNkVVZ1hZNnoyTzJmVk5tbTl3QWhDVzDSAfgBQVVfeXFMT1JWWG5CUnR4VGxTenROdGtQc2lIXzhuNlFRM0YxcjZGMW1vRHcxNms4SlNtNnBjN1ZPTDBQbVpDaWFGSmY1RVI0UTRlXzNDUmxudUNUWHB1OXlUMFA0OEljM2JUTUxBelhvNDF2al9xMUU5MktpVS1FTl9UQmsyTGM2cmlScDJvMkNLVGMtLThWWTFMYmF1dkl5THNJd2M3U0x1eUhmS2RYTVh2ZUNod0lsaVZZWmNPWk1pRm1TWUZFUTdNcW03SThVSWRQcF9jaEFGaHdzeWg4Q3dncnFta2t1NGV4amJUV2UyUHE5QjhhSGU3Sm9KaXE?oc=5",
    "source": "The Economic Times",
    "kind": "presse",
    "outlets": 2
   },
   {
-   "score": 1.86,
+   "score": 1.72,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5871,14 +5887,14 @@
    "outlets": 3
   },
   {
-   "score": 1.12,
+   "score": 1.03,
    "id": "cc-wei",
    "n": "C.C. Wei",
    "role": "PDG de TSMC",
    "actor": "tsmc",
    "ts": "2026-11-24T08:25:00.000Z",
    "title": "Trump Names C.C. Wei Three Times, Calls Him a Genius, Predicts Chip Tariffs Hitting 200% in Two Years",
-   "title_fr": "",
+   "title_fr": "Trump nomme C.C. Wei trois fois, le qualifie de génie et prédit des droits de douane sur les puces atteignant 200 % en deux ans",
    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IZU81d0lHOHY2ZkVxSGwtVVhUSmtHWTVwVDVOQTM1cEhqcXJfRGtSMERZbkdTMUZMWE9aUzh4QWxHYVVCZFhURXZHYXBHMER5VVJRRmFlVEZRQ1VoN1pSTVZkVjJxVngwZ0JzRFFvQnhXd0JVMWc?oc=5",
    "source": "BigGo Finance",
    "kind": "presse",
