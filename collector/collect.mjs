@@ -409,7 +409,7 @@ export async function makeClassifier(env, fetchImpl, log, deadInit = []) {
       if (/API_KEY_INVALID|API key not valid/i.test(body)) { state.error = "clé Gemini invalide (API_KEY_INVALID)"; state.fatal = true; return null; }
       if (r.status === 429) {
         const m = body.match(/"retryDelay":\s*"(\d+)/); const delay = m ? +m[1] : 30;
-        if (/PerDay|per day|limit: 0/i.test(body) || delay > 70 || tries >= 2) { dead.add(model); k++; tries = 0; continue; }
+        if (/free_tier_requests|quota exceeded|PerDay|per day|limit:\s*0/i.test(body) || delay > 70 || tries >= 2) { dead.add(model); k++; tries = 0; continue; }
         tries++; await sleep((delay + 2) * 1000); continue;
       }
       if (r.status === 403 && /API key|PERMISSION|leaked/i.test(body)) { state.error = "clé Gemini refusée : " + msg; state.fatal = true; return null; }
