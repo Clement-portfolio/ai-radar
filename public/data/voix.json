@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-24T13:22:35.973Z",
+ "generated_at": "2026-11-24T16:26:43.966Z",
  "people": [
   {
    "id": "sam-altman",
@@ -585,16 +585,16 @@
    "actor": "amd",
    "alerts": [
     {
+     "ts": "2026-11-20T18:25:00.000Z",
+     "title": "AMD CEO Lisa Su Breaks Silence on Jensen Huang's Resignation: \"The Noise Will Subside Soon\"",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1rU1A4MWt6V1lHVm4ycTBsNzdmWnd6S2tDVHgxclV4Uk11bmFMTXVrWDVGamR6OVZGM3ZWTnRURzhfVW9SbjJrZ0IzS1hLMjdpb2dFVTRadjlMRTg0aFhZdnRXOG8wZVo0RHRJUVJPc0RDVDNLVnc?oc=5",
+     "source": "BigGo Finance"
+    },
+    {
      "ts": "2026-11-19T15:50:09.000Z",
      "title": "AMD's Lisa Su speaks out on her cousin Jensen Huang's Nvidia exit",
      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQRzFoMGM1OEZGSk9sUHBDU05meVBOdEVEa29kaWtueGROX2szejBZcEVrd3dsMDc2SENqcldIZE04YkJFX2syN1F4U25nNGlnZG9PdlhUWl9ZTUN5M0RNUk5DRzJ3dWZLV0FnQUR0S2RpSkhwMWc0U0ltNEpFTUdVaTVnOS1IZk9PNXF3QS0tTk5YU0pPaWxmZHhQYWFlMXEyTjVhMjFFZHdNdjdyN2hmeQ?oc=5",
      "source": "Business Insider Africa"
-    },
-    {
-     "ts": "2026-11-19T15:50:00.000Z",
-     "title": "AMD's Lisa Su Speaks Out on Her Cousin Jensen Huang's Nvidia Exit",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPZFZfNjZyS0cyZm16d0VJcGFBdWxINlRka0VXZVJOQXlUU0pfR0FpVXlZZVlwS2ZWcEpKcUF0UlpoY2E5UEpNRlVoQVhYa0lzV3VqMlM4VWl6QUsxTTBQZnBweEo2Y1dBanEyUjVEQXpzakZ3NGxlcFB0ZzlyOElTcTFTbk9DMWd0cXJIOGkwVExVd283?oc=5",
-     "source": "Business Insider"
     }
    ],
    "items": [
@@ -700,7 +700,17 @@
    "co": "TSMC",
    "actor": "tsmc",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-24T08:25:00.000Z",
+     "title": "Trump Names C.C. Wei Three Times, Calls Him a Genius, Predicts Chip Tariffs Hitting 200% in Two Years",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IZU81d0lHOHY2ZkVxSGwtVVhUSmtHWTVwVDVOQTM1cEhqcXJfRGtSMERZbkdTMUZMWE9aUzh4QWxHYVVCZFhURXZHYXBHMER5VVJRRmFlVEZRQ1VoN1pSTVZkVjJxVngwZ0JzRFFvQnhXd0JVMWc?oc=5",
+     "source": "BigGo Finance",
+     "kind": "presse",
+     "m": 1,
+     "e": 1
+    }
+   ]
   },
   {
    "id": "andy-jassy",
@@ -2361,24 +2371,23 @@
      "e": 0
     },
     {
+     "ts": "2026-11-20T14:59:09.000Z",
+     "title": "Michael Burry says he 'tried to warn' investors that Nvidia, CoreWeave, and Nebius were headed for trouble",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeHhLdlhMZWJkRENiTDJpU0ZkVFNSSEtZMFVrcVJTZjdCNDFob2hnbEdpcGFmUGtVbmRMdzg2U3BXUjEwT3VGN3lGcTlaaDZDdDhGb3NUYldkRmlxQzdmUDNRWmd2ZHE1dkY4dV84aGMxX09ld2FHVHNTTEhNdEJFTXJFRXQ?oc=5",
+     "source": "Yahoo Finance UK",
+     "kind": "presse",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-20T14:59:00.000Z",
      "title": "'Big Short' Michael Burry says he 'tried to warn' about Nvidia, CoreWeave, Nebius stocks",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMkZVMDlacnZFTUdQWmc0dGpKNUl5UFpTdjBPM1ZXdWFsN1RNazJabnpwYnk3WE9fM3Vrb1dSdFF2QkIwSzZPdGRJaW9TOFhKUzFQZml6UU4zSlAwXy1aMW5VTlZhN1RMdjJsNWdXR2VmSTdpRjh4enRBUHl3Rjc1N0c2UWxiTVVzcTRhWXdLRTFvd1c3M2hqOUJ0Z25WU3BvTndDTQ?oc=5",
      "source": "Business Insider",
      "kind": "presse",
      "title_fr": "Michael Burry de « The Big Short » déclare qu'il a « essayé de prévenir » concernant les actions de Nvidia, CoreWeave et Nebius",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-20T03:34:00.000Z",
-     "title": "Michael Burry Says He ‘Tried to Warn’ About Nvidia, CoreWeave: Shay Boloor Comes Back With ‘I Also Warned Everyone About Rain Once…’",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPZFFKSkwycTlMZHhXNUd0a095MTZ0aTFwQmpmV0RaWG8xaGJnQ0ZzZmRNVFZQMEZDdm5oTXEzSl85U0RaOUVPazMyZVYxNHFsTjdXSFJwTkxoTVZtM1QxV2xLN2FKV0tUaVBrekM0cXd4RHhuTlF0amMxTTFPWVVsX0tvNHN6WUNYVzFsR2xJX1UtVnRUZVgtWXB3?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry déclare qu'il a « essayé de prévenir » concernant Nvidia et CoreWeave : Shay Boloor rétorque avec « J'ai aussi prévenu tout le monde à propos de la pluie une fois... »",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     }
    ]
   },
@@ -2466,6 +2475,15 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-24T14:08:36.000Z",
+     "title": "NVIDIA Under Returning CEO Jensen Huang Faces Tighter GPU Sales Restrictions, Curtailed Leasing, Shipment Investigations And Lawsuits, Says Analyst Ming-Chi Kuo",
+     "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQeVNKY3VPVDVTWVM1eGZ6ZEMxTFcwc0lvS2EyOE94STNDVG04RUxvcDVRdGpFYktrUHRCRDVlUklxeVk4S1ZiZW8zMlNSVm5sVURHcUFVMVJzbDltSVgzU0ZycGRBZnNOZWs5Si14RkQ0NDA1c1NPaTV2MVphMTlJZW5FZG1IV3VnRXZWV0lXajNqTVdqYTZoa3hzemxjbG8wZ1BLckptUmFRaU45SkN6OXRIeElmMnB4NFQ4ckRYX254eW1lVXBaYlkzSURyV1Qta2lmRnY5UTIyYUdaTHlyY1VUTW1DYnVMR3UyOHRzVFhQaEVieHA3VXVMN3pEcUluWEVidTI4bXRjQlXSAZACQVVfeXFMUHp2LUdGZjJ6MHhKdzBOSWZMWmN6SGtUa09BTEpHR1JDR3dxa21BNjEya0huY0t2UXF6TUNjNmVmN2JUdG83ai1PS1RHV1Y3azEtZGxkc1gzODN5WkliX1dkMHZ5VnA3YllsR05Jc0pmekFWbGRwZGJ6aXo4UVRrbmxndXJHQ1lWT1JJeFdseVJ1ekxmeVJpeFZwTk1QV24wVFlXNEF3WmxLTF85bEJRVzZtYkJVeEdnM3IzUU9td1dVaG9PQWpwUHlhUGtNVXhFVHRNNmp2eVBRWkttWHNOWldNXzhGT1MyZzdKUXNXM1RVSlFxb0RlSHJVYUUxZEpIWDF1TlR1NEQtZ1BLOHh1TEc?oc=5",
+     "source": "Wccftech",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-20T22:25:05.000Z",
      "title": "Broadcom falls 11% after analyst Ming-Chi Kuo says Google cut 2027 orders for its TPU chips",
@@ -3686,6 +3704,15 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T16:03:59.000Z",
+     "title": "AWS CEO Matt Garman says companies need stronger security to control AI models",
+     "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYkJFSjJ4MkJzUWpzdmdaSTljeU1pN29pSUpfeWg3RXZXdG10c3h4bnZ2OTdULUhuSFNsV2N6d3VyT3Yyc0RVbDhNRkJ1azdQcHNiRnl3MXRZY29rbk1hdFBnWnQyVDhzV1d4U19LTHpzd1pBMHZseXBFbXNYMUlqVjgyaVEwZDBVRGhpSkdCUlJScTQydl8tcG1MQ25pZHA1bm5SdzJCZDZxLTFGOHdMbVY1VGllYkVRcjNaNFdJUmJoRTdNdFJFRDZ1UkdzYU54bThiSVV2ZHNJRHdCNkVVZ1hZNnoyTzJmVk5tbTl3QWhDVzDSAfgBQVVfeXFMT1JWWG5CUnR4VGxTenROdGtQc2lIXzhuNlFRM0YxcjZGMW1vRHcxNms4SlNtNnBjN1ZPTDBQbVpDaWFGSmY1RVI0UTRlXzNDUmxudUNUWHB1OXlUMFA0OEljM2JUTUxBelhvNDF2al9xMUU5MktpVS1FTl9UQmsyTGM2cmlScDJvMkNLVGMtLThWWTFMYmF1dkl5THNJd2M3U0x1eUhmS2RYTVh2ZUNod0lsaVZZWmNPWk1pRm1TWUZFUTdNcW03SThVSWRQcF9jaEFGaHdzeWg4Q3dncnFta2t1NGV4amJUV2UyUHE5QjhhSGU3Sm9KaXE?oc=5",
+     "source": "The Economic Times",
+     "kind": "presse",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-24T05:21:21.000Z",
      "title": "AWS CEO Garman says AI safety needs engineering, not just kill switches",
      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNTVBfX3lTUmxWcGZnUTZQNnBMdW1uNTNoWEVneEczTGxBUmRvMnhLUk1LbWlPbXlDRl9YN0J5VklzRmFDR2lFaDliMUVDdnlCMEYyM2xibUUtOVY0WHpXeVpYRzJRTVZkXzFBcG1rOFFTcTlZVlYxR3pGXzdUQ3NIajRiVDlNWFhKVzZaT2pQdVNUZDhrT2ZQR3Z3dF9oMFNiTmRj?oc=5",
@@ -3722,8 +3749,8 @@
      "source": "PYMNTS.com",
      "kind": "presse",
      "title_fr": "Le PDG d'AWS, Matt Garman, affirme que les modèles d'IA ont besoin de frontières externes",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-23T19:45:44.000Z",
@@ -3754,16 +3781,6 @@
      "title_fr": "Le PDG d'Amazon AWS, Matt Garman, affirme qu'une meilleure ingénierie, et non un « bouton d'arrêt », est la clé pour des systèmes d'IA plus sûrs | Hindustan Times",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-14T17:39:29.000Z",
-     "title": "AWS CEO Matt Garman calls space AI data centers impractical",
-     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaWpIQ3AtQWhKLUFxaDBjYnFyY2lLZFl5dWlvYTRHd2dqN1dKTzZhY1BhUW8tZl83QVR0NlJPMjVTdm42Z3N0ZjVaQ0t6dWhLajE4SUd5UTMtY1B3M1dEdU9FX0RCTHVfZUxWeU15LXlKRVkzcUNaY3g5Nmc4X0xTYm9sdG9OcS03Q08zcVpPXzMwc2xxWTlfU3lrYlhPeXNMVG1YeXZiT3ozSWc?oc=5",
-     "source": "NewsBytes",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le PDG d'AWS, Matt Garman, qualifie les centres de données IA dans l'espace d'impraticables"
     }
    ]
   },
@@ -3941,6 +3958,15 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T14:47:18.000Z",
+     "title": "Brad Gerstner Says Anthropic Will Be Worth $3 Trillion by the End of Next Year. Is That Realistic?",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUlFVY3k5WmVQdWhMRElKWUpWc0NJQUhZczdGNkRUUnlYbk5hSG5FSWpITTZONm5hYzNWQ1V0aXp5ZDdHaDZoQTEzb1dWVXA2cXo0SzhLVjZ6MzRkYzhUMHJtQXBpbXRCaVFvaWlMLXRqRjV2bFpBNDVRQ1RsSWppSEhZQUVaa2szQnctcm1IZWJ4LWN6QzRXTlNBajRrN2M?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T20:00:07.000Z",
      "title": "Bessent Wants an Outside CEO. Brad Gerstner Says Nvidia Should Wait on Jensen Huang",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZlRaUFlVc2dlNHRjX2xDNFVBYmRxRm1VWGcxRTdmaXpaUVg5SV82TWY3ckRlY3RWdFhUejlpYWo0V0s0RE5WVUpfbzgwUWdLSTVWd1ExT0xrTTFhdEZLTlROWHlIcXlYVmtqaGU2ZEFYVF9tOWpGZERnTDlrcGswNG12WWNmVjhycFFmMWtVRzdUUlV2Yi1FQlBIYw?oc=5",
@@ -3996,8 +4022,8 @@
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc05wSmtFLWNaRnVfNUlOM29EX1ZRZXk2Vlp0eTloM1VsN1F2aGNEWUMwUTdEc2RtdGY5X3dlLVBLNnprTURPbkR6N0p3ZTZLb1pFcWxJMVA3cnNWVi1OSFlvX3pqQjVXRnBSM2lrUVBfT3R4eXBxZmdrelYwTXBBdGhYR1ZqTWVLRG5DX0Utak96NTFUc0E?oc=5",
      "source": "news.lavx.hu",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
+     "m": 1,
+     "e": 0,
      "title_fr": "Brad Gerstner d'Altimeter prévoit un pari de 5 milliards de dollars sur l'introduction en bourse d'Anthropic"
     },
     {
@@ -4009,16 +4035,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Gerstner parie 5 milliards de dollars sur Anthropic plutôt que sur Nvidia : « L'ère de l'infrastructure IA est terminée »"
-    },
-    {
-     "ts": "2026-11-16T18:32:03.000Z",
-     "title": "Altimeter intends to invest $5 billion in Anthropic’s IPO, Gerstner says",
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOQzZJZHRNMTB2YkpxTWl5N0dyS1hnckwzWnI4aTZ3eGpLOTY1NHdnN1AxUTZXWWhJeERaeUlkQVFONTUyR19zQ0p4dlVPYm04NGpZNFJyaFhFNDdER085SUl4TFlWWDRWZnVoWW5MS3RZVVI0bUQxMVpPVGdfZnlKNW9KYXZEdk9UTXBvWk9FWDVBdlRFeU5XZlBCYzRkVWdPaUQ5ajhMbw?oc=5",
-     "source": "Superpower Daily",
-     "kind": "presse",
-     "title_fr": "Altimeter a l'intention d'investir 5 milliards de dollars dans l'introduction en bourse d'Anthropic, déclare Gerstner",
-     "m": 2,
-     "e": 1
     }
    ]
   },
@@ -4642,7 +4658,14 @@
    "role": "Secrétaire d'État américain",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-24T13:36:38.000Z",
+     "title": "Scaramucci Says Rubio and Bessent ‘Should Resign’: What Do Prediction Markets Say?",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPbzNKRWxkdmZBcHAxc0tSZEdPWjctbC15Sk5ZMlNUTmFUUTZOOXNrZm8zbGZJZUdPLTIyQzNmNlNCdjNKMmwxZ2M1OEtkdmR3QVJrMnlZSGxzTmZvcDAtajZqZnFwM2gzSi1WRmxVTXJSZDU3Q3BIeHJZZXNsZTV6TVNtYVZQc1JfRTcwUGNsZWs3Zk1pR3J3V2NFY05WNGFMWmszSlRDZXJfNm1nZEJxVVRLV2FLRmFzTXBjRU50QlhSMXN1NnZvOGRPajR5dXRVT3Y3QmJNWQ?oc=5",
+     "source": "Benzinga"
+    }
+   ],
    "items": [
     {
      "ts": "2026-11-18T06:46:00.000Z",
@@ -4685,6 +4708,15 @@
      "e": 0
     },
     {
+     "ts": "2026-11-18T05:10:02.000Z",
+     "title": "Watch: Marco Rubio says recent tech outages are 'completely unrelated' to one another",
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE4yWEdIaHczX2pKNHV6dGxIb2t5N0F5djMxSWNGWU0xSUh2YXRiUnNHemNzWmJmVlFBWHVla3dsUzhMcDZNdVdjNW5EbXdmQjlvQ0pNTHZqODM?oc=5",
+     "source": "BBC",
+     "kind": "presse",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T04:57:06.000Z",
      "title": "Rubio says tech outages are not part of 'systemic attack' against US",
      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5ZTldVX09QbktRUEg2RG1HNXF4N25jS2o3U3k2b0NUM19pTGxHOEhZMmI4czRXNFVJVmJFU2VYQ1EzMkRGczlaeE1mU1pyRld1UUFWZkRkR21SSkk?oc=5",
@@ -4710,19 +4742,9 @@
      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPUVhlOXRxbi0zT0dQXzlYdzJqYjF4ekRNTjlSYmdIWEp3b2dfR2JIRFVlX1FQeFhhZUszck5tR0QzYXpSVVRRbmhTUXJRV2VGS2xXZk4tRDh0SjZSNHpCRzJfeUVJbEZPUkFxa2N6MkNPeUtsZnBkNkVZeldrM2daa1JUX0ZMM2l6akE5QmhBZ0MzT1U?oc=5",
      "source": "Yahoo",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
+     "m": 1,
+     "e": 0,
      "title_fr": "Rubio a averti Trump au sujet de l'affaire d'espionnage chinoise présumée du PDG de Nvidia : rapport explosif"
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Rubio warned Trump about Nvidia CEO's affair with Chinese 'spy' months ago. Did he ignore it?",
-     "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQMmtodmJDLXJ1TUY2Y0JJN2lvajNEMGNic0xHcHN5TzZVMEliUzJlTC04dnlIN284Y0tTenVGMC1xbjYyS1dkZnBNU21STE82MmV4cEI5T2lzRFpLZ2ZsQ3ZacHpMRTVodUEzN0plNk9yQVg2YXNiUGJZR1N3VUdBaUhscUxyOTFFbHNUZG5CN09LcVlmTXZQSDVWMGptNzZKRXRSLWswdnJ1d0c2Nk5XczdxRE5XR3JkT0toSFl1TFVUMk1RYjMwb0FFZDZReDludWIyeFc2WmYwUDhCQXpfem5GYy1vekhMenVkZUlvRnXSAfYBQVVfeXFMTmE1U2sxTWQ5S05jNXNObUg1QUpGX0VCZ0E4THdNaU80Z0RsUTdGNm54emlGMWZLclIyS3FQUXNiTTlOOXNEYklfbVlKcUg5b2F2eUZvVndKM05INDZxeWltaXA3cFpoQ0J0cno5bFBlWDN6azlkWGFWdjdKcTkwQWdHbjgwQjZQdUhZOFFXTGtCR05RV3JQYjBVcHNrSk9PZ1JyYmhNUUNqR2VxdGdlY0ptMS1Nc05XcF9QRmNWUmIzdWI1VDNvVDNjVi0yblVPcDFxNFFDTVhtSjRvYVRYTlViOExsWFlMZllvMWhWU1FfRlIyRzR3?oc=5",
-     "source": "The Times of India",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Rubio a averti Trump au sujet de la liaison du PDG de Nvidia avec une « espionne » chinoise il y a des mois. L'a-t-il ignoré ?"
     }
    ]
   },
@@ -5821,7 +5843,21 @@
  ],
  "hot": [
   {
-   "score": 2.36,
+   "score": 1.94,
+   "id": "matt-garman",
+   "n": "Matt Garman",
+   "role": "PDG d'AWS (Amazon Web Services)",
+   "actor": "amazon",
+   "ts": "2026-11-24T16:03:59.000Z",
+   "title": "AWS CEO Matt Garman says companies need stronger security to control AI models",
+   "title_fr": "",
+   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYkJFSjJ4MkJzUWpzdmdaSTljeU1pN29pSUpfeWg3RXZXdG10c3h4bnZ2OTdULUhuSFNsV2N6d3VyT3Yyc0RVbDhNRkJ1azdQcHNiRnl3MXRZY29rbk1hdFBnWnQyVDhzV1d4U19LTHpzd1pBMHZseXBFbXNYMUlqVjgyaVEwZDBVRGhpSkdCUlJScTQydl8tcG1MQ25pZHA1bm5SdzJCZDZxLTFGOHdMbVY1VGllYkVRcjNaNFdJUmJoRTdNdFJFRDZ1UkdzYU54bThiSVV2ZHNJRHdCNkVVZ1hZNnoyTzJmVk5tbTl3QWhDVzDSAfgBQVVfeXFMT1JWWG5CUnR4VGxTenROdGtQc2lIXzhuNlFRM0YxcjZGMW1vRHcxNms4SlNtNnBjN1ZPTDBQbVpDaWFGSmY1RVI0UTRlXzNDUmxudUNUWHB1OXlUMFA0OEljM2JUTUxBelhvNDF2al9xMUU5MktpVS1FTl9UQmsyTGM2cmlScDJvMkNLVGMtLThWWTFMYmF1dkl5THNJd2M3U0x1eUhmS2RYTVh2ZUNod0lsaVZZWmNPWk1pRm1TWUZFUTdNcW03SThVSWRQcF9jaEFGaHdzeWg4Q3dncnFta2t1NGV4amJUV2UyUHE5QjhhSGU3Sm9KaXE?oc=5",
+   "source": "The Economic Times",
+   "kind": "presse",
+   "outlets": 2
+  },
+  {
+   "score": 1.86,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5835,30 +5871,16 @@
    "outlets": 3
   },
   {
-   "score": 0.77,
-   "id": "matt-garman",
-   "n": "Matt Garman",
-   "role": "PDG d'AWS (Amazon Web Services)",
-   "actor": "amazon",
-   "ts": "2026-11-23T21:38:11.000Z",
-   "title": "AWS CEO Matt Garman says AI safety depends on engineering, not an emergency brake",
-   "title_fr": "Le PDG d'AWS, Matt Garman, affirme que la sécurité de l'IA dépend de l'ingénierie, et non d'un frein d'urgence",
-   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQVk03TFRkOTl1Y2d0bjhHclVWb2RMWncxTW1XcEtxdGdUTXNwTHljRFJLZzI1Q2lKSnduTEk0aVVkRjV5VERTQ1NiZGpSMC0zc1ZOa3hsdzNnd1VLcmNVTExjVDhUQUE5UlptSXk4YngzLWQ2TkdjUkVVSXFzLUZOM1ZxQ3gySTdCSnZrZVBvbEd5OE5Qbko4T216LWlabElLQklB?oc=5",
-   "source": "MLQ.ai",
-   "kind": "presse",
-   "outlets": 3
-  },
-  {
-   "score": 0.75,
-   "id": "eric-schmidt",
-   "n": "Eric Schmidt",
-   "role": "Ancien PDG de Google, investisseur en IA",
-   "actor": null,
-   "ts": "2026-11-24T09:03:20.000Z",
-   "title": "Eric Schmidt and Alexandr Wang urge human control of AI",
-   "title_fr": "Eric Schmidt et Alexandr Wang appellent à un contrôle humain de l'IA",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONEhwTGd0WUdkd3ZxdTJIYUNlVXpGM2NnSmJFZXBVMGdsTGZMUHVmZ1VNSUpBQzg2YnlIZmFfS2J4bHRmekF2cHRGVjhDbnRXc2JfQ1BpSUF6VHZWNkJ6bFVDU1pTSDRIRnNFWlhyYUlyS3N2d2FaOWhzRWxRZE4tNlFCc0pHNEZScDRldXZzcEtwMkJrdng4UC1lY3pWX2dEZDNmYg?oc=5",
-   "source": "NewsBytes",
+   "score": 1.12,
+   "id": "cc-wei",
+   "n": "C.C. Wei",
+   "role": "PDG de TSMC",
+   "actor": "tsmc",
+   "ts": "2026-11-24T08:25:00.000Z",
+   "title": "Trump Names C.C. Wei Three Times, Calls Him a Genius, Predicts Chip Tariffs Hitting 200% in Two Years",
+   "title_fr": "",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IZU81d0lHOHY2ZkVxSGwtVVhUSmtHWTVwVDVOQTM1cEhqcXJfRGtSMERZbkdTMUZMWE9aUzh4QWxHYVVCZFhURXZHYXBHMER5VVJRRmFlVEZRQ1VoN1pSTVZkVjJxVngwZ0JzRFFvQnhXd0JVMWc?oc=5",
+   "source": "BigGo Finance",
    "kind": "presse",
    "outlets": 1
   }
