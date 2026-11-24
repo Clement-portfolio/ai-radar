@@ -28,6 +28,7 @@ assert.equal(items[0].title.startsWith("Avant la visite"), true, "titre chinois 
 assert.equal(items[0].orig, "川普訪華前，美國推進新規封堵晶片出口漏洞", "titre d'origine conservé");
 assert.equal(items[0].title_en.startsWith("Before Trump"), true);
 assert.equal(items[1].title, "Nvidia livre sa puce", "titre anglais traduit en français");
+assert.equal(items[1].title_fr, "Nvidia livre sa puce", "version française conservée explicitement");
 assert.equal(items[1].why_en, "Cloud customers receive the chip.");
 assert.equal(items[2].title_en, "Already translated", "article déjà traduit intact");
 
