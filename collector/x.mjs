@@ -182,9 +182,9 @@ export function pressRelay(post, feed, now) {
 
 
 /** Choix du jour : par importance, mais varié — au plus 2 posts par compte, 3 sur le marché, jamais deux fois le même propos ; les posts que la presse n'a pas relayés et les comptes de l'étage 1 passent devant. */
-export function pickDay(rows, n = X_RULES.perDay) {
+export function pickDay(rows, n = X_RULES.perRun) {
   const left = rows.map((f) => ({ f, t: toks(f.text) })), out = [], byAuthor = {}, byDomain = {};
-  const base = (f) => f.score ?? (f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(5, 1.5 * Math.log10((f.eng || 0) + 1)) + Math.min(4, 2 * (f.buzz || 0));
+  const base = (f) => f.score ?? (f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(5, 1.5 * Math.log10((f.eng || 0) + 1)) + Math.min(4, 2 * (f.buzz || 0)));
   while (out.length < n && left.length) {
     let bi = -1, bs = -1e9;
     left.forEach((x, k) => {
@@ -283,8 +283,9 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   // tri par l'IA : on garde ce qui apporte un contenu concret (les textes trop longs pour être résumés ne sont pas envoyés)
   const items = new Map(prevItems.map((x) => [x.id, x]));
   let classified = 0, ai = false;
-  const cand = fresh.filter((f) => !f.long);
-  rep.long = fresh.length - cand.length;
+  const cand = fresh.filter((f) => !f.long && f.relevance?.relevant);
+  rep.long = fresh.filter((f) => f.long).length;
+  rep.filtered = fresh.length - rep.long - cand.length;
   const who = (f) => { const l = String(f.handle || "").toLowerCase(); return { name: whoLow[l]?.name || profiles[l]?.name || "", role: whoLow[l]?.en || "" }; };
   const mk = (f, k, extra) => ({ i: k, author: "@" + (f.handle || "?"), ...who(f), source_class: f.source_class, watchlist_hits: f.relevance?.watchlist || [], signal_hits: f.relevance?.signals || [], text: f.text, tier: f.tier, ...extra });
   if (cand.length && generate) {
@@ -322,6 +323,7 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   }
   // « ce qui se dit le plus » : le même propos chez plusieurs comptes différents le même jour
   for (const f of rows) {
+    Object.assign(f, scorePost(f, cfg));
     const a = toks(f.text); const au = new Set();
     for (const g of fresh) { if (g === f || (g.handle || g.aid) === (f.handle || f.aid)) continue; const b = toks(g.text); let i = 0; for (const w of a) if (b.has(w)) i++; if (i >= 3 && i / Math.min(a.size, b.size) >= 0.3) au.add(g.handle || g.aid); }
     f.buzz = au.size;
