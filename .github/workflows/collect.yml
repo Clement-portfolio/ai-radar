@@ -29,7 +29,9 @@ jobs:
           node-version: 22
       - name: Tests
         if: github.event_name == 'push' # ~13 min : inutile à chaque collecte planifiée, le code n'a pas changé depuis le dernier push
-        run: node collector/test.mjs
+        run: |
+          node collector/test.mjs
+          node collector/test-x.mjs
       - name: Collecte
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
