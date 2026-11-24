@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-24T23:15:27.245Z",
+ "generated_at": "2026-11-24T23:20:50.520Z",
  "items": [
   {
    "id": "f9da5aedcbdb",
@@ -1420,7 +1420,7 @@
   {
    "id": "99b93f3e1098",
    "ts": "2026-11-24T00:00:00.000Z",
-   "title": "Clay helps sales teams win with Codex and ChatGPT",
+   "title": "Clay aide les équipes commerciales à gagner avec Codex et ChatGPT",
    "orig": "Clay helps sales teams win with Codex and ChatGPT",
    "summary": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning.",
    "country": "US",
@@ -1430,7 +1430,10 @@
    "source": "OpenAI",
    "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
    "confidence": "haute",
-   "pending": true
+   "pending": true,
+   "title_fr": "Clay aide les équipes commerciales à gagner avec Codex et ChatGPT",
+   "title_en": "Clay helps sales teams win with Codex and ChatGPT",
+   "summary_en": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning."
   },
   {
    "id": "57e40fb55f78",
