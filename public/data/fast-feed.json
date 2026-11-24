@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-24T16:20:31.792Z",
+ "generated_at": "2026-11-24T16:25:31.831Z",
  "items": [
+  {
+   "id": "e29f11884fda",
+   "ts": "2026-11-24T16:20:34.000Z",
+   "title": "ABB to acquire cooling fan company Ziehl-Abegg for $2.65bn",
+   "orig": "ABB to acquire cooling fan company Ziehl-Abegg for $2.65bn",
+   "summary": "Fan business serves data centers and other HVAC markets",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/ziehl-abegg-is-a-growing-technology-leader-with-a-compelling-portfolio-and-a-significant-presence-in-some-of-the-worlds-most-dynamic-markets-at-the-heart-of-our-success-are-our-employees-whose-expertise-dedication-and-innovative-spirit-have-made-us/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "2d33c1429306",
    "ts": "2026-11-24T16:16:56.000Z",
@@ -148,6 +163,21 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/massed-compute-deploys-gpus-at-american-tower-data-center-in-raleigh-north-carolina/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "73d308913867",
+   "ts": "2026-11-24T15:47:17.000Z",
+   "title": "Jensen Huang faces DC grilling the same day Nvidia releases new products at GTC",
+   "orig": "Jensen Huang faces DC grilling the same day Nvidia releases new products at GTC",
+   "summary": "Jensen Huang is back as CEO of Nvidia and immediately faces the challenge of leading the chip giant and defending himself in Washington.",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-congress-gtc.html",
    "confidence": "moyenne",
    "pending": true
   },
