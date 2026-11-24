@@ -878,6 +878,7 @@ function xWho(it){
 function xRow(it){
   var en=isEn(),k=vKey(it.id),kd=XKIND[it.kind]||XKIND.autre,w=xWho(it);
   var body=en?(it.text||""):(it.text_fr||it.text||"");
+  var pLabel=it.priority?'<span class="xb">'+esc(it.priority)+'</span>':"";
   var relay=it.kind==="rumeur"?'<span class="xb">'+(en?'Unconfirmed':'Non confirmé')+'</span>':'';
   relay+=it.media>0?'<span class="xb">'+(en?'Picked up by '+it.media+' outlet'+(it.media>1?'s':''):'Repris par '+it.media+' média'+(it.media>1?'s':''))+'</span>':'<span class="xb">'+(en?'Not yet covered by the press':'Non relayé par la presse')+'</span>';
   return '<div class="vrow'+(S.open[k]?' open':'')+'"><span class="time">'+esc(fmtTime(it.ts))+'</span><span class="vwho"><a href="https://x.com/'+esc(it.handle)+'" target="_blank" rel="noopener">'+esc(w.name)+'</a><span class="small">'+esc(w.role||("@"+(it.handle||"?")))+'</span></span>'+
@@ -889,6 +890,8 @@ function xRow(it){
 function xHtml(){
   var en=isEn(),X=S.x,all=(X&&X.items)||[];
   if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: the first pass runs at 9 pm (Riyadh time).':'Aucun post collecté pour l\'instant : le premier passage a lieu à 21 h (heure de Riyad).')+'</div>';
+  var pr={P1:4,P2:3,P3:2,P4:1};
+  items.sort(function(a,b){var d=dayKey(b.ts).localeCompare(dayKey(a.ts));return d||(pr[b.priority]||0)-(pr[a.priority]||0)||(b.priority_score||0)-(a.priority_score||0)||Date.parse(b.ts)-Date.parse(a.ts)});
   var kinds=Object.keys(XKIND);
   var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")+" "+xWho(x).name+" "+xWho(x).role).indexOf(q)>=0});
   var CH='<span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>';
