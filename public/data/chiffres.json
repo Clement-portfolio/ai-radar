@@ -1,68 +1,73 @@
 {
  "v": 1,
- "day": "2026-11-23",
- "generated_at": "2026-11-23T19:07:51.760Z",
- "model": "gemini-3.1-flash-lite",
+ "day": "2026-11-24",
+ "generated_at": "2026-11-24T01:15:52.620Z",
+ "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "SmartSens : investissement en Chine",
-   "value": "225 M$",
-   "sub": "Le montant est alloué au développement de la capacité de fonderie pour des capteurs d'image CIS 40nm.",
+   "title": "CrowdStrike rachète Zscaler",
+   "value": "44 Md$",
+   "sub": "Cette acquisition majeure est motivée par la nécessité de renforcer les défenses face aux cyberattaques dopées à l'intelligence artificielle.",
    "ids": [
-    "a81feeecc86c"
+    "0c56e1950266"
    ],
    "links": [
     {
-     "t": "Digitimes",
-     "u": "https://www.digitimes.com/news/a20261123VL211/cis-capacity-40nm-investment-manufacturing.html"
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html"
     }
    ],
    "conf": "moyenne",
    "scope": "day",
-   "ts": "2026-11-23T07:15:00.000Z",
-   "title_en": "SmartSens: investment in China",
-   "value_en": "225 million $",
-   "sub_en": "The amount is allocated to developing foundry capacity for 40nm CIS image sensors."
+   "ts": "2026-11-23T17:50:30.000Z",
+   "title_en": "CrowdStrike Acquires Zscaler",
+   "value_en": "$44B",
+   "sub_en": "This major acquisition is driven by the need to strengthen defenses against AI-boosted cyberattacks."
   },
   {
-   "title": "Nvidia : capitalisation boursière perdue",
-   "value": "2,7 Md$",
-   "sub": "Cette perte de valeur a été enregistrée lors des échanges nocturnes suite à une vente massive sur le secteur de l'IA.",
+   "title": "Amazon rachète Decart",
+   "value": "7,5 Md$",
+   "sub": "Amazon s'empare de la technologie et de l'équipe de recherche de Decart afin de soutenir le déploiement de ses puces Trainium.",
    "ids": [
-    "f109a7775df1"
+    "f955d48edeaa",
+    "cb02ca1a7848"
    ],
    "links": [
     {
-     "t": "36Kr",
-     "u": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1IUW81bm1NSEg0UVl0OEpQUjR6ZFVrbUo0YUFkMGdxQThGcGpVT1l4eTM0eWgzcHNjeWlaV3gzck9wQkgzUkpXczdvd2tlZ1F5M3NJ?oc=5"
+     "t": "TechCrunch IA",
+     "u": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+    },
+    {
+     "t": "조선일보",
+     "u": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOeTlfTHFQZjVqbmhvOGYwWGN6RThtLXhSZlR2bzRTM21NZXpvTU16cUNBYUN2aGRXMllJczZXaXl3TWNZZGdEVXh2M0IwN2hQNzR4cVdzaHBidGFNVXFIRGFnc1h5d3owM0NpZXdDN1k5TDNMZGJnenloVjJ2ZDF0Q3o0cGtZLW9I?oc=5"
     }
    ],
    "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-21T04:22:10.000Z",
-   "title_en": "Nvidia: market cap loss",
-   "value_en": "2.7 trillion $",
-   "sub_en": "This value loss was recorded during late-night trading following a massive sell-off in the AI sector."
+   "scope": "day",
+   "ts": "2026-11-23T17:14:23.000Z",
+   "title_en": "Amazon Acquires Decart",
+   "value_en": "$7.5B",
+   "sub_en": "Amazon is acquiring Decart's technology and research team to support the deployment of its Trainium chips."
   },
   {
-   "title": "SpaceX : financement pour puces IA",
-   "value": "32 Md$",
-   "sub": "La société a finalisé un accord de dette pour acquérir des processeurs Nvidia. Ce montant s'inscrit dans un investissement global massif.",
+   "title": "Alphabet : revenus du trimestre",
+   "value": "127,6 Md$",
+   "sub": "Les revenus consolidés ont progressé de 25 % sur un an, portés par une croissance record de 103 % pour Google Cloud à 30,7 milliards de dollars. Le bénéfice net s'est établi à 26,2 milliards de dollars pour le trimestre.",
    "ids": [
-    "06d4e32e1256"
+    "24137ef1349d"
    ],
    "links": [
     {
-     "t": "Taipeitimes",
-     "u": "https://www.taipeitimes.com/News/biz/archives/2026/11/21/2003868108"
+     "t": "Alphabet (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000080/googexhibit991q32026.htm"
     }
    ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-20T16:49:57.000Z",
-   "title_en": "SpaceX: AI chip financing",
-   "value_en": "32 billion $",
-   "sub_en": "The company finalized a debt agreement to acquire Nvidia processors. This amount is part of a massive overall investment."
+   "conf": "haute",
+   "scope": "month",
+   "ts": "2026-10-28T20:01:33.000Z",
+   "title_en": "Alphabet: Quarterly Revenue",
+   "value_en": "$127.6B",
+   "sub_en": "Consolidated revenues increased 25% year-over-year, driven by record 103% growth for Google Cloud to $30.7 billion. Net income reached $26.2 billion for the quarter."
   }
  ]
 }

@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-23T21:57:31.531Z",
+ "generated_at": "2026-11-24T01:15:52.620Z",
  "people": [
   {
    "id": "sam-altman",
@@ -303,6 +303,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-23T21:59:59.000Z",
+     "title": "Microsoft Ignite 2026: Satya Nadella predicts rise of the ‘software factory’",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMWZzT1pmRTAzNHFGa1pJQXdXQ01jYUdfNkRnR2xETUJUb0lsRWJndkV5dDhYTkRoSmtncXhDM1VNT09pQTdmaHpXbWd4TnFIclZZNEFBMTh1X3pDSzdmYWo5YTQ5S3VzaDQ0QWxQdnpPdjZpMndXanFRZ0h1Q2d4ZEQwblhLalV3WnJTWUpzWHh2aGJhb01ZTzZPUHl4eFo3ZzBoRGxXa0tGV2FCbHBUS1dEcUQ?oc=5",
+     "source": "Technology Record",
+     "kind": "presse",
+     "title_fr": "Microsoft Ignite 2026 : Satya Nadella prédit l'essor de la « software factory »",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-22T03:26:40.000Z",
      "title": "Microsoft CEO Satya Nadella addresses buyout offered to about 60,000 employees",
      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxObzlUd1gtTzBYRm80b0V3YnFMUko2NXJVRDlGZEl3SHpfNjNXMFlaQThtaWp6ejVKZzdNWE9XcE1pLWxEdXVXRGNsemtSdjhCQzNNMWxBV3ZFa0RVQTBUcHVhNC1oWUhxUEF4TGROd0tuNGd4N05RRDV0NUlONVowY1VXQkM3M1Yxam1SVkRzUGhsOGVjbDNLcVlIZlpGYS1vdXB6RERVNWdaczZqSnJPaGdYWV83RGQwWWFtYldYbzA4N2V4bmpRckdUMUdzQVJDWVpnSFZObGR0dFNwOVE?oc=5",
@@ -370,16 +380,6 @@
      "title_fr": "Satya Nadella déclare que les agents d'IA vont remodeler le Web, la main-d'œuvre et la cyberdéfense",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-19T00:42:56.000Z",
-     "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZWVzWkxaaHhSMm1vcFVPSTJ0cUVOQ0pDMmp6ZjVodEJwTjg5Zzl4MXc4XzBMM0VqZ0ViUkd0ZjZJZlRUTjZaSjdmYmVtMzZaNlpWcFhBdV83OElxTUFUQkRkUDdXN3ZhangzOGdXNjh2S3g1bFRhMTROSzZvY2hxVW8tUDhHRGIwNjBXR253Nnd3bmMyM0NuVmJwNnZwN2VrT2liN3BueWpaQQ?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le PDG de Microsoft Satya Nadella explique pourquoi il a demandé à 60K employés de démissionner"
     }
    ]
   },
@@ -1229,6 +1229,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-18T23:36:13.000Z",
+     "title": "OpenAI’s Greg Brockman says cybersecurity will eventually be a bigger business than coding",
+     "url": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1kZEVXRjE5VjN1UThhbE5KSU4zanB6Ym1zT2J0LW5kYjFIbnNlOEc3WWxHTVJKSmpxVlBCcm4tUHFNSXhF?oc=5",
+     "source": "Digg",
+     "kind": "presse",
+     "title_fr": "Greg Brockman d'OpenAI affirme que la cybersécurité sera fin de compte un marché plus important que la programmation",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T22:51:51.000Z",
      "title": "Video: Watch: Why Sam Altman and Greg Brockman Say Humans Must Stay in Control of A.I.",
      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNdXNqV0l4RFNCSmdteGNybkNEcmZaOHhSV2p1M3AydmJSeU1fWDhKbTJWV3ViVDNzbk5ZVVoxWjNuM1BxUE9NMjQxc1hiaGM2LVp0ZEtHM0E5Z2RZbVI4Y3R0VHJyZTJlWUdBMGxXNjFEVlNJWFk4R0RuMVlQMkh1aVQwZHVDdnZxWFRvUi1JemNlZDJaUkx0ejh3OTNZekt0Wlp5clpveUxBc0FUTEpmLQ?oc=5",
@@ -1275,16 +1285,6 @@
      "source": "X",
      "kind": "presse",
      "title_fr": "🚨Le nouvel argument de vente de l'IA : nous guérirons le cancer, peut-être même la mort. Le président d'OpenAI, Greg Brockman, déclare que l'IA pourrait rendre la mort facultative et apporter des avancées majeures contre les maladies d'ici 12 à 18 mois. Le timing est fascinant. Après des années à vendre l'IA à travers",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-08T08:00:00.000Z",
-     "title": "Greg Brockman says OpenAI could be IPO-ready in 2027",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOVC1laHpxVmRjVlQzY2pJT0tHNVB4em9BNElKeFVVRnVLYzlod2ZLblpaSGpzZHBUNHlnNmpmYXZjNW41S1dQdUxyTHA2WThKZUN3MV94dHZWeU53VXRsUHh4X3BfVjZpb2p4VW5pLXl3N2pEUHpkWlhDYWlVeTJEYVU5UXQ?oc=5",
-     "source": "NeoTeo",
-     "kind": "presse",
-     "title_fr": "Greg Brockman déclare qu'OpenAI pourrait être prêt pour une introduction en bourse en 2027",
      "m": 1,
      "e": 0
     }
@@ -2011,6 +2011,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T00:54:00.000Z",
+     "title": "Elizabeth Warren demands Trump admin explain ‘input’ in decision to reinstate Nvidia CEO",
+     "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYmVDTG1FV2lLYllXXzB4amtEc05JY0JRUlkzSWFyaVpNTDRyc0k0Q2xVNFV6bUhwMXUwSUdDUjhsODlKdVlJX3djaVFNZWdEdURuT3Z0MDRQVmZDZGYwa1hoQmsyQ3JhTWlrdEt2RDFtZ3lSVV9yUlprU0hTakxVbkdOSzBtaTJDOUxPZUJXOTVESUx2UlpJMXVnRnJQaTQtZWxlaERLZEhkWUNVZjlaeUNiN1JBRE9lcnFVQ1FDdi1UUWdHWVA0aEUzSEROdw?oc=5",
+     "source": "MassLive",
+     "kind": "presse",
+     "title_fr": "Elizabeth Warren exige que l'administration Trump explique son « intervention » dans la décision de réembaucher le PDG de Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-23T22:00:05.000Z",
+     "title": "Sen. Warren Says ‘Huang and Nvidia Still Owe Congress Answers’: Nvidia CEO Ready to Testify",
+     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxQeFpFVUtzTHU0SVpBTXVXclJ5a3lBc3ZpRGxua2Q4dW5JRHJLcVZWZ25yWDV0cWtKaXRUZHlpNHhDUlFmRVNZeGsxeTdvbXFVdFFJNXVqWkZtcnRlNndtRHBGdVEzQXBaUnRTMG5YYmZtM2w0ZFc5bHY1bmhrSEI3M1BvTEpoZVVWa0N3bTQxcnFoQnFWdG0wX01sbHJmcGhnZFVWeFU4Z1loU2lEX2dfTC1OemNzOThMcURqeGYzWVVpWFJXOUpVSVpGWkk0UzRORWQ4TUYwakc?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "title_fr": "La sénatrice Warren affirme que « Huang et Nvidia doivent toujours des réponses au Congrès » : le PDG de Nvidia prêt à témoigner",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-23T18:51:55.000Z",
      "title": "Sen. Warren Criticizes Nvidia Decision to Reinstate CEO Jensen Huang, Urges Tighter Export Controls",
      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9oWU1WeU9Qak1oUUZVbGdPakVYeWFwNXJKOWJVbkVoMUhFVmYwWXV5SFB2UlZsaC1CdzdtLTZKUktxRDg2Z2FwX0RKNk1kei1HSXZ2dg?oc=5",
@@ -2067,26 +2087,6 @@
      "source": "TOKENPOST",
      "kind": "presse",
      "title_fr": "La sénatrice Elizabeth Warren déclare que le départ d'Huang ne met pas fin à l'obligation de rendre des comptes",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "Elizabeth Warren Slams Trump for 'Wining and Dining' AI Billionaires Instead of Protecting Americans: 'It Needs to Stop'",
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQZUhJZTI0Y2h4LUhKM2NrZXB5Njd2aDlFSWh3NXh5VGJscE55UWVIalBON0VnZ2JOOE4tMmdMR3dGRWJFdW03d1FoaXRBRnNyeDZqZzRmemQ0OW14MDRnREEwdW5wN05yREM5TFo1Wks0bmxBRFJxOGxxMElJV2xXNDg2RGRGZGdSeW51NWFyVXY5eGpocVVxSnVSaw?oc=5",
-     "source": "Yahoo",
-     "kind": "presse",
-     "title_fr": "Elizabeth Warren critique vivement Trump pour « faire bombance et dîner » avec des milliardaires de l'IA au lieu de protéger les Américains : « Cela doit cesser »",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-09T21:06:57.000Z",
-     "title": "Sen. Elizabeth Warren Said to Take Senate Banking Gavel in January, Push Tougher Crypto, AI Rules",
-     "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1tU1p5MjhmR29pNU9wU1B0T2dLRUdqSHZnVGMwMGNVTk0xOGxmR3p0V09DQ0RjdW4yY2prZ2RXV0ZWckFSXzNCMGdXV1A1R3AzaW5DUg?oc=5",
-     "source": "bloomingbit",
-     "kind": "presse",
-     "title_fr": "La sénatrice Elizabeth Warren appelée à prendre le marteau de la commission bancaire du Sénat en janvier, pour imposer des règles plus strictes sur la crypto et l'IA",
      "m": 1,
      "e": 0
     }
@@ -2984,6 +2984,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-21T17:17:28.000Z",
+     "title": "Jack Clark Sees AI Speeding Science as Agents Reach 27 Hours",
+     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZTBYeHZNSE5seWNxdVBzUFc0a3JHZVhjdXFuYnczV19Jem5xMGV3bWkxRDJCUF9PVW80TzVoTXFEeV8xNmF5UnNaX0cwNnFySlJpQXhNOTdvbDJFVGdZZE9OX1dHTmgxWG5sOGRYMU9sNlpNQnZRdEtCV1BXczEzU01BVGQ3M2VHX2M4ZTZsYmtRdw?oc=5",
+     "source": "FourWeekMBA",
+     "kind": "presse",
+     "title_fr": "Jack Clark estime que l'IA accélère la science alors que les agents atteignent 27 heures",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-18T10:46:13.000Z",
      "title": "AI will accelerate scientific progress, says Jack Clark",
      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaXNQc2IyZktaZ2J1bWNOR19qOUtqdDJxOEhRTjRsNXBNZ3Rlb1dLZmpISGk4cUxscm94RnNrSzlKanZEZDBqY2dPNUl3b1hubmRyTjNxdWJ1UEl3S0ZvbXE1RWpYWkM0MTZ4OUVWemhadXVsbVBDRlFVNHN5YTNvelRuWHpDSDJnQ0hFN1dhNG5SWUg4bGZiM0tKSF9rMTlUVF81dzdkRGN5OWM?oc=5",
@@ -3170,6 +3180,16 @@
      "title_fr": "Le milliardaire capital-risqueur Vinod Khosla déclare qu'il faut juger l'IA par son utilisation, pas par le cours des actions"
     },
     {
+     "ts": "2026-11-10T08:00:00.000Z",
+     "title": "Vinod Khosla Bets AI Will End the 'Static Web,' Adds ¥2.5 Billion to Coframe",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1Ia1RIOTZCQkNmWjRBYjA3a1BycVBIS21XM2dHdXNlMlNrY3NKdkZhLTdFMFFKT0NjV3B4TVFSeHN2bmFLb2psTzhtcFpyVWNZdm1hbFk5TkhRNWNLOFNsU0pnYTJSRmxPWXdpNS0wV2UtcXM3NUE?oc=5",
+     "source": "BigGo Finance",
+     "kind": "presse",
+     "title_fr": "Vinod Khosla parie que l'IA mettra fin au « Web statique » et injecte 2,5 milliards de yens dans Coframe",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-05T22:54:29.000Z",
      "title": "Vinod Khosla says he passed on Anthropic to protect his OpenAI insight",
      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOSTZnYjVPbXBSVlNuOFYybjY3djlkN3BXaU5HNWlUSVVyalczdk5ybmJSbG0weTIzU2hkVWR4WDRGandrbGV1d1VIUUhhbU1wRTdGVTJlczlkYTdISEJ4ZW1PRW5xWXFHclV6T0xORGpJS25QZlJlVFhJZTQ5bE9oWQ?oc=5",
@@ -3198,6 +3218,16 @@
     }
    ],
    "items": [
+    {
+     "ts": "2026-11-24T00:00:00.000Z",
+     "title": "Chamath Says Microsoft “Clearly Is Going to Need to Have a Frontier Model.” Nadella Is Betting It Won’t",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcWdpRGM4cU5wVUd1ejdPU2NaaXY1MzB2TFAwT0wyVkdWS3FoemowUTc2d29sSi02VFB2X1haOWQ0UU5IanpXU2hzbmE5Z181RUxfMDFUN2V4UXNlRVRxaHVwZHM2dk1YSURTUVBReVQ5bmRlcVVGNFFvVURKbk80bGpkRkc5SU9WR2dVMWhsa3plUjlyMkNaeTFOcUFXU0NsMUgzcDBjQ0lnSDJ1SFpiZHlmVXhTYzlwVWJiSmhiYWk2am8?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse",
+     "title_fr": "Chamath affirme que Microsoft « va clairement devoir se doter d'un modèle de frontière ». Nadella parie que non",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-17T09:57:25.000Z",
      "title": "Ted Lieu Pushes Back On AI Theories Behind US Outages, Says ‘Trump Administration Needs to Deal With Facts’ As Chamath Palihapitiya Calls for Software Overhaul",
@@ -3266,16 +3296,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "SpaceX d'Elon Musk pourrait gagner plus de pouvoir sur les coûts de calcul de l'IA alors que les démocrates ralentissent l'expansion des centres de données, déclare Chamath Palihapitiya : « Le mouvement de faiseur de rois »"
-    },
-    {
-     "ts": "2026-11-08T07:33:00.000Z",
-     "title": "Chamath Palihapitiya Warns AI Data Center Slowdown Could Be A ‘Disproportionate’ Blow To Anthropic And OpenAI",
-     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQcDlnZm1ibEdjYUp6VU82ZWFHazJIN0ZRenpjY1ZkSVd0QmRERnptVzMzalp1cTgyTFQwdnplTTV6TEt3bm9tOXlXUVJ4d0xrZWpVbDZNNjFVZ1Q1b0FWeldiSUFSeHZKczJpOUdkbkR6c2ljQ2VZd1pJd3Y4OThvV1JidUNmYnk3czd6NTVKYjJYLUI3OHU0SkZZS19PbXU3cmZSZmZZSHRibDMzMER1QjN2T0tsTmcwZ3pURTBEVjd0ZlVyX3NDaTNuWlduUERUVWZ6eElieXNseXpTX0Y0eE1KV3dsZWthLVBBWkNCMGtPZnhRTEJGTjZoYw?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chamath Palihapitiya prévient que le ralentissement des centres de données IA pourrait être un coup « disproportionné » pour Anthropic et OpenAI"
     }
    ]
   },
@@ -4229,6 +4249,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T00:38:33.000Z",
+     "title": "Anduril’s Palmer Luckey warns AI is widening the gap between attackers and legacy defenses",
+     "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNTzRjWGhGdTlkSXpHOUJMR3RDdHpKQkd1b0FOTkxJY2hyRW1nOGwyMVZHUlVTc1lKQmdSSUxENXFWRm1rMTFVVzZabmVKS0RBSEY3alJpUmlSU1B2eGRSODBrVVFnWllUb2VBYndhMFlNcVcyNENYTjh1T2hZLXN6TFNQTmJadTdBN2c?oc=5",
+     "source": "Mezha.net",
+     "kind": "presse",
+     "title_fr": "Palmer Luckey d'Anduril prévient que l'IA creuse l'écart entre les attaquants et les défenses traditionnelles",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-24T00:27:17.000Z",
+     "title": "‘It’s time to start running’: Anduril CEO Palmer Luckey says AI-powered cyberattacks are moving faster than outdated defenses",
+     "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPbVc3NzZNczhBNmQ5bDMtTjcxTExnTTladm5rOVc4VFd2S3lhOExfUjJyZ1Itb2RxTk9fb3dNTTlFTmhlbFAwbnhVYUpDd2FWcExqb1hWTHhIbTNYTUxfZWxnTEZCY3k5bzV1MjFpd1VCamFPeXQ1ZWtvaTZRNmkxM2Y1eGdyUjRNR3FJeDlRU0xYVTh6djhYX25fWVQ5bGlZVEVvN19hQXB3azItcEctUmhXaGVkaDZqVUpMem9OcnUwaktzNmlBSjR6YjVzNl9YZjRCbFdGRE9QbkJUTVJCMVJiejl1NDl2dFdsODVOY3Fpdw?oc=5",
+     "source": "TechRadar",
+     "kind": "presse",
+     "title_fr": "« Il est temps de commencer à courir » : le PDG d'Anduril Palmer Luckey affirme que les cyberattaques propulsées par l'IA progressent plus vite que les défenses obsolètes",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T09:44:20.000Z",
      "title": "'He's Not Quite a God': Palmer Luckey Opens Up About Facebook Firing, Explains Why He'd Still Make a Deal",
      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWERJR3FyUV9UOW05Y1ZnaElOamFpLURkZ2VralU4dHR5QkFXTVRhNWRfQTA1Y24yZXdCdWxjVVNYZFdxaEtPeEpadlBvbktYNW50UU1fZEZfVEgzY1JwNDV5OTdyYXVwTUVuc3pPUE1sV2FqdXlBTHpRNW4wcVlDY1ZyU2lpMW1fbWZseXdaOTliVFlzSjZB?oc=5",
@@ -4254,8 +4294,8 @@
      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE15Z01nSHRxTXBtelowakJTaXpTY1V0ajRib0NsU0FKcmxiNG9vOFdadFZ4UFUwZkNub3VhangxMUhuY0lONVVSUkE3eDdFYk1laXh3NlR3ai1NdnEzMjdhTW5iSW85bzhoY1Zr?oc=5",
      "source": "USA Herald",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
+     "m": 1,
+     "e": 0,
      "title_fr": "Palmer Luckey avertit que les pirates informatiques utilisant l'IA dépassent les défenses américaines"
     },
     {
@@ -4287,26 +4327,6 @@
      "m": 2,
      "e": 1,
      "title_fr": "Palmer Luckey avertit que les États-Unis sont confrontés à un « décalage » en matière d'IA"
-    },
-    {
-     "ts": "2026-11-18T21:34:13.000Z",
-     "title": "Palmer Luckey warns AI-powered cyberattacks are outpacing defenses: 'It's time to start running'",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbUZQeERUVWc1bmE5b04xdmthWVItckhBMTQ2bUlNbDRxZmtTeGdObUZyYUEwOUlOQlE3RXoxS2wwZnZheVlTekZqaTlLM095eG0xemtjUk9PQjQ3QnByNjh6YUYxOHVjOHprcGtYVWpPNG9sUFlpZFk0TW9MR195VUdGUXJ0V3ZST1JGbV9zTFVmYnR0T2JfXzNGUENveEdzTHJiTF9DY3psYjdMaUd5eFZKV0xBT0hFWWllaGtfQmdMNFRmVWc?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Palmer Luckey avertit que les cyberattaques alimentées par l'IA dépassent les défenses : « Il est temps de commencer à courir »"
-    },
-    {
-     "ts": "2026-11-18T21:31:21.000Z",
-     "title": "Palmer Luckey thinks China is 'thrilled to have Jensen out,' so he wants the ousted Nvidia CEO reinstated",
-     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPWGxhQzJoNUE0aFlkMUlfcFlxX3had28xcUE4alhiazRWclR4dFBfM0c5NkRVS0xUODhqTXZnLW1rNFFqX1llZ2E1dWxwajczZ1pnc1FheW5kLWJfNDhMcHAyWnRtZ0RMa09Ya0RaYUVEMks4dFNiWkliUnR3Vkp6VEpsNHc2Y0RVNUxyNkVHVnhqWTdzYjhTRHQxTU56Q1BpUkt0NGpfb19jSzRlMmxUczFaWTZZUDZqVTV1eEowQ2VvMlUtUEwyM216NER2X3hRX2xv?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Palmer Luckey pense que la Chine est « ravie que Jensen soit parti », il veut donc que le PDG évincé de Nvidia soit réintégré"
     }
    ]
   },
@@ -5733,7 +5753,7 @@
  ],
  "hot": [
   {
-   "score": 4.39,
+   "score": 3.4,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5747,7 +5767,7 @@
    "outlets": 3
   },
   {
-   "score": 2.52,
+   "score": 1.95,
    "id": "matt-garman",
    "n": "Matt Garman",
    "role": "PDG d'AWS (Amazon Web Services)",
@@ -5761,18 +5781,18 @@
    "outlets": 3
   },
   {
-   "score": 1.79,
-   "id": "jay-clayton",
-   "n": "Jay Clayton",
-   "role": "Directeur du renseignement national, tsar de l'IA",
-   "actor": null,
-   "ts": "2026-11-23T17:06:00.000Z",
-   "title": "DNI Jay Clayton says China likely obtained Nvidia AI chips",
-   "title_fr": "Le directeur du renseignement national Jay Clayton affirme que la Chine a probablement obtenu des puces IA de Nvidia",
-   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPSnpKcDRiYmp5VjBPNnpwNENnZmRhd3pxaUdYaVZuaXVpZ3RiS0o1SmlPajlXYVl5eTVtSm5iNGdzVXZKTXdnaXYzcXpkc0R0bUVmelpYRElOWW9yc25TbFl1bWtEVm5nNUxQSjE0X2syblpyQXpNZUhOUnpiZHB0V3k4WW9uVk1qeTRTOUtBVHlBY1pMZFdMbUVId1BRemZfSHFPbi1iY3JtVGVpeEpId2oydjBla2VSTWUyU01JWkIwWUFPMnNiRXI5ejRkSTdrV1ZjMTRIWWpTa1BiTFpGTHJFMFZQWHJ3TkNhWnRR?oc=5",
-   "source": "WKYC",
+   "score": 1.62,
+   "id": "satya-nadella",
+   "n": "Satya Nadella",
+   "role": "PDG de Microsoft",
+   "actor": "microsoft",
+   "ts": "2026-11-23T21:59:59.000Z",
+   "title": "Microsoft Ignite 2026: Satya Nadella predicts rise of the ‘software factory’",
+   "title_fr": "Microsoft Ignite 2026 : Satya Nadella prédit l'essor de la « software factory »",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMWZzT1pmRTAzNHFGa1pJQXdXQ01jYUdfNkRnR2xETUJUb0lsRWJndkV5dDhYTkRoSmtncXhDM1VNT09pQTdmaHpXbWd4TnFIclZZNEFBMTh1X3pDSzdmYWo5YTQ5S3VzaDQ0QWxQdnpPdjZpMndXanFRZ0h1Q2d4ZEQwblhLalV3WnJTWUpzWHh2aGJhb01ZTzZPUHl4eFo3ZzBoRGxXa0tGV2FCbHBUS1dEcUQ?oc=5",
+   "source": "Technology Record",
    "kind": "presse",
-   "outlets": 2
+   "outlets": 1
   }
  ]
 }
