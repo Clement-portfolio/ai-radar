@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-24T21:45:28.592Z",
+ "generated_at": "2026-11-24T21:50:29.524Z",
  "items": [
+  {
+   "id": "72fd424c711a",
+   "ts": "2026-11-24T21:48:27.000Z",
+   "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+   "orig": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+   "summary": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
+   "country": "US",
+   "category": "politique",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "870306a07940",
+   "ts": "2026-11-24T21:39:24.000Z",
+   "title": "AI debt markets shudder as Nvidia's top \"banker\" returns",
+   "orig": "AI debt markets shudder as Nvidia's top \"banker\" returns",
+   "summary": "Fears about some companies' AI debt ramped higher Tuesday, a day after Jensen Huang's return as Nvidia CEO.",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/24/nvidia-jensen-huang-ai-credit-markets.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "71615ee1ebfd",
    "ts": "2026-11-24T21:33:29.000Z",
@@ -36,6 +66,21 @@
    "title_fr": "Walmart s'associe à Meta pour proposer les offres du Black Friday sur l'agent IA Muse",
    "title_en": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
    "summary_en": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent."
+  },
+  {
+   "id": "c55ba18e4cc4",
+   "ts": "2026-11-24T21:29:03.000Z",
+   "title": "Dell earnings beat on AI strength, company authorizes $25 billion buyback",
+   "orig": "Dell earnings beat on AI strength, company authorizes $25 billion buyback",
+   "summary": "The company's overall sales more than doubled on an annual basis during the third quarter, driven by AI server demand.",
+   "country": "US",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/24/dell-earnings-report-q3-2027.html",
+   "confidence": "moyenne",
+   "pending": true
   },
   {
    "id": "4d83f53e63e2",
