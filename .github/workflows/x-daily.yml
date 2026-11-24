@@ -1,8 +1,8 @@
-name: Collecte X (quotidienne)
+name: Collecte X (matin et soir)
 
 on:
   schedule:
-    - cron: "0 18 * * *" # 21 h à Riyad : fin de journée
+    - cron: "0 5,17 * * *" # 08 h et 20 h à Riyad
   workflow_dispatch:
     inputs:
       force:

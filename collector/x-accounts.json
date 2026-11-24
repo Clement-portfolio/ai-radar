@@ -1,11 +1,13 @@
 {
-  "_note": "Comptes X suivis. Étage 1 : lu chaque jour. Étage 2 : une moitié par jour (rotation sur 2 jours). Flux : comptes à très gros volume, lus uniquement sur les posts qui contiennent un mot-clé IA. Le plafond total est de 100 posts lus par passage. Ordre de l'étage 1 : les comptes les plus bavards d'abord (une même requête renvoie les posts les plus récents : un compte très actif évincerait les autres), puis les comptes plus discrets.",
+  "_note": "Comptes X suivis. Collecte deux fois par jour à 08 h et 20 h (Riyad). Plafond de 28 posts par passage, 55 par jour et 1 650 par mois. Les profils consultés sont également plafonnés à 100 par mois.",
   "caps": {
     "t1": 54,
     "t2": 30,
     "flux": 15,
-    "day": 100,
-    "month": 2400
+    "day": 55,
+    "month": 1650,
+    "run": 30,
+    "user_month": 100
   },
   "chunk": 9,
   "t1": [
