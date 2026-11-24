@@ -92,10 +92,10 @@ export function dayPlan(cfg, now) {
   add("t1", cfg.t1, cap.t1);
   add("t2", cfg.t2, cap.t2);
   add("flux", cfg.flux, cap.flux);
+  const slot = Math.floor(now / (12 * H));
+  for (const tier of ["t1","t2","flux"]) { const g = groups[tier]; if (g.length > 1) { const shift = slot % g.length; g.push(...g.splice(0, shift)); } }
   const plan = [];
   for (let i = 0; i < Math.max(groups.t1.length, groups.t2.length, groups.flux.length); i++) for (const tier of ["t1","t2","flux"]) if (groups[tier][i]) plan.push(groups[tier][i]);
-  const slot = Math.floor(now / (12 * H));
-  if (plan.length > 1) { const shift = ((slot % Math.ceil(plan.length / 3)) * 3) % plan.length; plan.push(...plan.splice(0, shift)); }
   let sum = plan.reduce((s, p) => s + p.max, 0);
   for (let i = plan.length - 1; i >= 0 && sum > cap.day; i--) { const cut = Math.min(plan[i].max - X_RULES.minRead, sum - cap.day); plan[i].max -= cut; sum -= cut; }
   while (sum > cap.day && plan.length) { sum -= plan.pop().max; }
@@ -234,6 +234,7 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const lastRun = prev?.last_run_ts ? Date.parse(prev.last_run_ts) : 0;
   const start = Math.max(now - 7 * DAY + 60e3, lastRun ? lastRun - 10 * 60e3 : now - X_RULES.windowH * H);
   const budget = Math.floor(Math.min(perRun, daily - (force ? 0 : readToday), cfg.caps.month - readMonth) / X_RULES.minRead) * X_RULES.minRead;
+  if (budget < X_RULES.minRead) return { doc: prev || null, summary: { ...rep, reason: "budget restant inférieur au minimum de 10 lectures par requête", month: readMonth } };
   let plan = dayPlan(cfg, now);
   { let left = budget; plan = plan.filter((p) => { if (left < X_RULES.minRead) return false; p.max = Math.floor(Math.min(p.max, left) / X_RULES.minRead) * X_RULES.minRead; if (p.max < X_RULES.minRead) return false; left -= p.max; return true; }); }
   const known = new Set(prevItems.map((x) => x.id));
