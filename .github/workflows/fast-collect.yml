@@ -28,12 +28,14 @@ jobs:
         with:
           node-version: 22
       - name: Collecte RSS légère
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node collector/fast.mjs
       - name: Publier le flux rapide
         run: |
           git config user.name "ai-radar-bot"
           git config user.email "ai-radar-bot@users.noreply.github.com"
-          git add public/data/fast-feed.json
+          git add public/data/fast-feed.json public/data/fast-translation.json
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Flux rapide — actualités"
           git pull --rebase -X theirs origin "${GITHUB_REF_NAME}"

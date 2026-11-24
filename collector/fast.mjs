@@ -3,7 +3,8 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
-import { parseFeed, ruleClassify, isHubPage } from "./collect.mjs";
+import { parseFeed, ruleClassify, isHubPage, makeClassifier } from "./collect.mjs";
+import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA } from "./translate.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA = path.join(HERE, "..", "public", "data");
@@ -55,6 +56,36 @@ await pool(feeds,8,async s=>{
 const merged=new Map();
 for(const item of [...previous.items,...cands]) merged.set(item.id,item);
 const items=[...merged.values()].filter(x=>Date.now()-Date.parse(x.ts)<72*3600000).sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,400);
+
+// Traduction anglaise en lots, sans ralentir la collecte RSS : au plus un appel Gemini toutes les 30 minutes.
+const translationStatePath=path.join(DATA,"fast-translation.json");
+const translationState=JSON.parse(await fs.readFile(translationStatePath,"utf8").catch(()=>"{}"));
+const now=Date.now();
+const lastAttempt=Date.parse(translationState.last_attempt_at||"");
+const untranslated=items.filter(x=>!x.title_en).slice(0,30);
+if(process.env.GEMINI_API_KEY&&untranslated.length&&(!Number.isFinite(lastAttempt)||now-lastAttempt>=30*60*1000)){
+  translationState.last_attempt_at=new Date(now).toISOString();
+  try{
+    const clones=untranslated.map(x=>({...x,pending:false}));
+    const classifier=await makeClassifier(process.env,fetch,(m)=>console.log(m));
+    if(!classifier.state.fatal){
+      const result=await translateMissing({
+        items:clones,
+        generate:inputs=>classifier.call(inputs,{system:TRANSLATE_SYSTEM,schema:TRANSLATE_SCHEMA}),
+        max:30,
+        rounds:1
+      });
+      const byId=new Map(clones.map(x=>[x.id,x]));
+      for(const item of untranslated){
+        const translated=byId.get(item.id);
+        if(!translated)continue;
+        for(const key of ["title","title_en","summary_en","why_en"])if(translated[key])item[key]=translated[key];
+      }
+      console.log("Traduction rapide : "+result.reason);
+    }else console.log("Traduction rapide ignorée : "+classifier.state.error);
+  }catch(e){console.log("Traduction rapide indisponible : "+String(e.message||e).slice(0,160));}
+  await fs.writeFile(translationStatePath,JSON.stringify(translationState,null,1));
+}
 await fs.mkdir(DATA,{recursive:true});
 await fs.writeFile(path.join(DATA,"fast-feed.json"),JSON.stringify({generated_at:new Date().toISOString(),items},null,1));
 console.log("Flux rapide : "+feeds.length+" sources, "+cands.length+" nouvelles actualités, "+items.length+" conservées.");
