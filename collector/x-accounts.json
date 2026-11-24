@@ -1,5 +1,5 @@
 {
-  "_note": "Comptes X suivis. Collecte deux fois par jour à 08 h et 20 h (Riyad). Plafond de 28 posts par passage, 55 par jour et 1 650 par mois. Les profils consultés sont également plafonnés à 100 par mois.",
+  "_note": "Comptes X suivis : seules leurs publications sont interrogées. La watchlist et les signaux IA filtrent ces publications ; aucune recherche globale sur X n'est déclenchée. Collecte à 08 h et 20 h (Riyad). Plafond dur : 1 650 posts et 100 consultations de profils par mois. Les termes ambigus « SI » ne sont pas utilisés seuls ; « silicon » est suivi explicitement.",
   "caps": {
     "t1": 54,
     "t2": 30,
@@ -9,7 +9,7 @@
     "run": 30,
     "user_month": 100
   },
-  "chunk": 9,
+  "chunk": 3,
   "t1": [
     "rohanpaul_ai",
     "realnickmugalli",
@@ -341,5 +341,459 @@
       "en": "Computer hardware news outlet"
     }
   },
-  "_who_note": "Nom et rôle affichés dans « Sur X » (à compléter ou corriger à la main). Si le nom est vide, le nom d'affichage du compte sur X est utilisé. Comptes sans rôle : ils s'affichent avec leur nom seul."
+  "_who_note": "Nom et rôle affichés dans « Sur X » (à compléter ou corriger à la main). Si le nom est vide, le nom d'affichage du compte sur X est utilisé. Comptes sans rôle : ils s'affichent avec leur nom seul.",
+  "watchlist": [
+    {
+      "name": "TSMC",
+      "terms": [
+        "TSMC",
+        "TSM",
+        "$TSM"
+      ],
+      "group": "semiconductors",
+      "query_term": "TSMC"
+    },
+    {
+      "name": "ASML",
+      "terms": [
+        "ASML"
+      ],
+      "group": "semiconductors",
+      "query_term": "ASML"
+    },
+    {
+      "name": "Nvidia",
+      "terms": [
+        "Nvidia",
+        "NVDA",
+        "$NVDA"
+      ],
+      "group": "semiconductors",
+      "query_term": "NVDA"
+    },
+    {
+      "name": "AMD",
+      "terms": [
+        "AMD"
+      ],
+      "group": "semiconductors",
+      "query_term": "AMD"
+    },
+    {
+      "name": "Broadcom",
+      "terms": [
+        "Broadcom",
+        "AVGO",
+        "$AVGO"
+      ],
+      "group": "semiconductors",
+      "query_term": "AVGO"
+    },
+    {
+      "name": "Qualcomm",
+      "terms": [
+        "Qualcomm",
+        "QCOM",
+        "$QCOM"
+      ],
+      "group": "semiconductors",
+      "query_term": "QCOM"
+    },
+    {
+      "name": "Marvell",
+      "terms": [
+        "Marvell",
+        "MRVL",
+        "$MRVL"
+      ],
+      "group": "semiconductors",
+      "query_term": "MRVL"
+    },
+    {
+      "name": "Coherent",
+      "terms": [
+        "Coherent",
+        "COHR",
+        "$COHR"
+      ],
+      "group": "optics",
+      "query_term": "COHR"
+    },
+    {
+      "name": "Lumentum",
+      "terms": [
+        "Lumentum",
+        "LITE",
+        "$LITE"
+      ],
+      "group": "optics",
+      "query_term": "LITE"
+    },
+    {
+      "name": "Arista Networks",
+      "terms": [
+        "Arista Networks",
+        "Arista",
+        "ANET",
+        "$ANET"
+      ],
+      "group": "networking",
+      "query_term": "ANET"
+    },
+    {
+      "name": "CXMT",
+      "terms": [
+        "CXMT"
+      ],
+      "group": "memory",
+      "query_term": "CXMT"
+    },
+    {
+      "name": "SK Hynix",
+      "terms": [
+        "SK Hynix",
+        "Hynix"
+      ],
+      "group": "memory",
+      "query_term": "Hynix"
+    },
+    {
+      "name": "Micron",
+      "terms": [
+        "Micron",
+        "MU",
+        "$MU"
+      ],
+      "group": "memory",
+      "query_term": "MU"
+    },
+    {
+      "name": "Samsung",
+      "terms": [
+        "Samsung"
+      ],
+      "group": "memory",
+      "query_term": "Samsung"
+    },
+    {
+      "name": "SanDisk",
+      "terms": [
+        "SanDisk",
+        "SNDK",
+        "$SNDK"
+      ],
+      "group": "memory",
+      "query_term": "SNDK"
+    },
+    {
+      "name": "GlobalFoundries",
+      "terms": [
+        "GlobalFoundries",
+        "GFS",
+        "$GFS"
+      ],
+      "group": "semiconductors",
+      "query_term": "GFS"
+    },
+    {
+      "name": "Google",
+      "terms": [
+        "Google",
+        "GOOGL",
+        "$GOOGL"
+      ],
+      "group": "hyperscalers",
+      "query_term": "GOOGL"
+    },
+    {
+      "name": "Amazon",
+      "terms": [
+        "Amazon",
+        "AWS",
+        "AMZN",
+        "$AMZN"
+      ],
+      "group": "hyperscalers",
+      "query_term": "AMZN"
+    },
+    {
+      "name": "Oracle",
+      "terms": [
+        "Oracle",
+        "ORCL",
+        "$ORCL"
+      ],
+      "group": "hyperscalers",
+      "query_term": "ORCL"
+    },
+    {
+      "name": "SpaceX",
+      "terms": [
+        "SpaceX"
+      ],
+      "group": "diversified",
+      "query_term": "SpaceX"
+    },
+    {
+      "name": "Microsoft",
+      "terms": [
+        "Microsoft",
+        "MSFT",
+        "$MSFT"
+      ],
+      "group": "hyperscalers",
+      "query_term": "MSFT"
+    },
+    {
+      "name": "Apple",
+      "terms": [
+        "Apple",
+        "AAPL",
+        "$AAPL"
+      ],
+      "group": "diversified",
+      "query_term": "AAPL"
+    },
+    {
+      "name": "Meta",
+      "terms": [
+        "Meta",
+        "META",
+        "$META"
+      ],
+      "group": "hyperscalers",
+      "query_term": "META"
+    },
+    {
+      "name": "OpenAI",
+      "terms": [
+        "OpenAI"
+      ],
+      "group": "frontier_labs",
+      "query_term": "OpenAI"
+    },
+    {
+      "name": "Anthropic",
+      "terms": [
+        "Anthropic"
+      ],
+      "group": "frontier_labs",
+      "query_term": "Anthropic"
+    },
+    {
+      "name": "Moonshot AI",
+      "terms": [
+        "Moonshot AI",
+        "Moonshot",
+        "Kimi"
+      ],
+      "group": "frontier_labs",
+      "query_term": "Moonshot"
+    },
+    {
+      "name": "Alibaba",
+      "terms": [
+        "Alibaba",
+        "BABA",
+        "$BABA"
+      ],
+      "group": "frontier_labs",
+      "query_term": "BABA"
+    },
+    {
+      "name": "DeepSeek",
+      "terms": [
+        "DeepSeek"
+      ],
+      "group": "frontier_labs",
+      "query_term": "DeepSeek"
+    },
+    {
+      "name": "Vistra",
+      "terms": [
+        "Vistra",
+        "VST",
+        "$VST"
+      ],
+      "group": "energy",
+      "query_term": "VST"
+    },
+    {
+      "name": "Constellation Energy",
+      "terms": [
+        "Constellation Energy",
+        "CEG",
+        "$CEG"
+      ],
+      "group": "energy",
+      "query_term": "CEG"
+    },
+    {
+      "name": "Oklo",
+      "terms": [
+        "Oklo",
+        "OKLO",
+        "$OKLO"
+      ],
+      "group": "energy",
+      "query_term": "OKLO"
+    },
+    {
+      "name": "X-Energy",
+      "terms": [
+        "X-Energy",
+        "X Energy"
+      ],
+      "group": "energy",
+      "query_term": "\"X-Energy\""
+    }
+  ],
+  "priority_terms": [
+    "AI",
+    "artificial intelligence",
+    "GPU",
+    "GPUs",
+    "TPU",
+    "TPUs",
+    "HBM",
+    "memory",
+    "DRAM",
+    "NAND",
+    "inference",
+    "training",
+    "datacenter",
+    "data center",
+    "semiconductor",
+    "chip",
+    "chips",
+    "accelerator",
+    "silicon",
+    "silicon photonics",
+    "advanced packaging",
+    "CoWoS",
+    "AI capex",
+    "capex",
+    "power capacity",
+    "grid connection",
+    "cooling",
+    "networking",
+    "optical interconnect",
+    "FED",
+    "Federal Reserve",
+    "benchmark",
+    "benchmarks",
+    "model",
+    "models",
+    "LLM",
+    "LLMs",
+    "reasoning",
+    "leaderboard",
+    "evaluation",
+    "speech",
+    "robot",
+    "robotics",
+    "humanoid",
+    "physical AI",
+    "world model",
+    "AI agent",
+    "agents",
+    "robots"
+  ],
+  "source_classes": {
+    "analyst": [
+      "realnickmugalli",
+      "PhotonCap",
+      "SemiAnalysis_",
+      "silicondata",
+      "trendforce",
+      "Dylan522p",
+      "EpochAIResearch",
+      "METR_Evals",
+      "ArtificialAnlys",
+      "benedictevans",
+      "KobeissiLetter",
+      "MacroMicroMe"
+    ],
+    "insider": [
+      "aaronburnett",
+      "ppdd"
+    ],
+    "researcher": [
+      "rohanpaul_ai",
+      "emollick",
+      "Frenchie_",
+      "zephyr_z9",
+      "insane_analyst",
+      "ParadisLabs",
+      "iamfabian",
+      "siliconcodesign",
+      "blockspace",
+      "lmarena_ai",
+      "_akhaliq",
+      "simonw",
+      "swyx",
+      "natolambert",
+      "dwarkesh_sp",
+      "ylecun",
+      "karpathy",
+      "JeffDean",
+      "fchollet",
+      "DrJimFan",
+      "jackclarkSF"
+    ],
+    "media": [
+      "DeItaone",
+      "wallstengine",
+      "tomshardware"
+    ],
+    "official": [
+      "OpenAI",
+      "AnthropicAI",
+      "GoogleDeepMind",
+      "AIatMeta",
+      "xai",
+      "MistralAI",
+      "deepseek_ai",
+      "Alibaba_Qwen"
+    ],
+    "executive": [
+      "sama",
+      "gdb",
+      "demishassabis",
+      "mustafasuleyman",
+      "AravSrinivas",
+      "satyanadella",
+      "sundarpichai",
+      "PalmerLuckey",
+      "pmarca",
+      "elonmusk",
+      "adcock_brett"
+    ]
+  },
+  "source_weights": {
+    "analyst": 1.35,
+    "insider": 1.3,
+    "researcher": 1.15,
+    "media": 1,
+    "executive": 0.7,
+    "official": 0.65,
+    "specialist": 1
+  },
+  "search_priority_terms": [
+    "AI",
+    "GPU",
+    "GPUs",
+    "TPU",
+    "TPUs",
+    "HBM",
+    "memory",
+    "inference",
+    "datacenter",
+    "FED",
+    "benchmark",
+    "power",
+    "robot",
+    "robotics",
+    "CoWoS"
+  ]
 }

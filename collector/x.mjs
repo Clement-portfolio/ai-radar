@@ -10,7 +10,7 @@ import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { foreignScript } from "./translate.mjs";
 
 const DAY = 864e5, H = 3600e3;
-export const X_RULES = { retainDays: 30, maxItems: 600, perDay: 12, minRead: 10, windowH: 26, relayDays: 4, relaySim: 0.25, textMax: 500, longMax: 700 };
+export const X_RULES = { retainDays: 30, maxItems: 600, perDay: 40, perRun: 20, minRead: 10, windowH: 26, relayDays: 4, relaySim: 0.25, textMax: 500, longMax: 700 };
 export const KINDS = ["annonce", "info", "analyse", "donnee", "rumeur", "autre"];
 export const DOMAINS = ["modeles", "calcul", "robotique", "espace", "biologie", "sante", "energie", "securite", "marche", "politique", "autre"];
 
@@ -18,33 +18,84 @@ export const DOMAINS = ["modeles", "calcul", "robotique", "espace", "biologie", 
 export function chunkList(list, n) {
   const out = []; for (let i = 0; i < list.length; i += n) out.push(list.slice(i, i + n)); return out;
 }
+function rawQuery(handles, terms = []) {
+  const from = "(" + handles.map((h) => "from:" + h).join(" OR ") + ")";
+  const kw = terms.length ? " (" + terms.join(" OR ") + ")" : "";
+  return from + kw + " -is:retweet -is:reply";
+}
 export function buildQuery(handles, terms = []) {
-  const from = "(" + handles.map((h) => `from:${h}`).join(" OR ") + ")";
-  const kw = terms.length ? ` (${terms.join(" OR ")})` : "";
-  const q = `${from}${kw} -is:retweet -is:reply`;
+  const q = rawQuery(handles, terms);
   if (q.length > 500) throw new Error("requête trop longue");
   return q;
 }
-/** Comptes lus ce jour : étage 1 en entier, la moitié de l'étage 2 (alternance selon le jour). */
+function queryChunks(list, terms, limit = 500) {
+  const out = []; let part = [];
+  for (const h of list) {
+    const next = [...part, h];
+    if (part.length && rawQuery(next, terms).length > limit) { out.push(part); part = [h]; }
+    else part = next;
+    if (rawQuery(part, terms).length > limit) throw new Error("les mots-clés dépassent la limite de X");
+  }
+  if (part.length) out.push(part);
+  return out;
+}
+const SEARCH_CONTEXT = ["AI","artificial intelligence","GPU","GPUs","TPU","TPUs","HBM","inference","training","datacenter","data center","accelerator","compute","silicon photonics","advanced packaging","CoWoS","AI capex","power capacity","grid connection","cooling","optical interconnect","hyperscaler","robot","robots","robotics","humanoid","physical AI","world model"];
+const DIRECT_AI = ["AI","artificial intelligence","GPU","GPUs","TPU","TPUs","inference","training","datacenter","data center","AI model","AI infrastructure","accelerator","compute","LLM","frontier model","robot","robots","robotics","humanoid","physical AI","world model","AI agent"];
+const STRATEGIC = ["investment","invests","capex","capacity","supply","shortage","contract","orders","shipment","shipments","production","fab","datacenter","data center","power","gigawatt","megawatt","customer","revenue","earnings","partnership","acquisition","funding","deployment","buildout","HBM","CoWoS","advanced packaging"];
+const escapeRe = (s) => String(s).replace(/[.*+?^\${}()|[\]\\]/g, "\\$&");
+function hasTerm(text, term) {
+  const cleanTerm = String(term).replace(/^\$/, "").trim();
+  const pattern = cleanTerm.split(/\s+/).map(escapeRe).join("[\\s-]+");
+  return new RegExp("(^|[^\\p{L}\\p{N}])" + pattern + "($|[^\\p{L}\\p{N}])", "iu").test(String(text || ""));
+}
+export function matchRelevance(text, cfg) {
+  const source = String(text || "");
+  const watchlist = (cfg.watchlist || []).filter((w) => (w.terms || []).some((term) => hasTerm(source, term)));
+  const signals = (cfg.priority_terms || []).filter((term) => hasTerm(source, term));
+  const aiContext = SEARCH_CONTEXT.some((term) => hasTerm(source, term));
+  const directContext = DIRECT_AI.some((term) => hasTerm(source, term));
+  const relevantWatchlist = watchlist.filter((w) => w.group === "diversified" ? directContext : aiContext);
+  const directSignals = signals.filter((s) => ["GPU","GPUs","TPU","TPUs","HBM","inference","training","datacenter","data center","accelerator","CoWoS","advanced packaging","silicon photonics","optical interconnect","power capacity","grid connection","cooling","hyperscaler","benchmark","benchmarks","model","models","LLM","LLMs","reasoning","leaderboard","evaluation","speech","robot","robots","robotics","humanoid","physical AI","world model","AI agent","agents"].includes(s));
+  const relevant = relevantWatchlist.length > 0 || directSignals.length > 0 || (signals.includes("FED") && directContext) || (signals.includes("AI") && signals.length >= 2 && aiContext);
+  return { relevant, watchlist: relevantWatchlist.map((w) => w.name), signals, aiContext };
+}
+export function sourceClass(handle, tier, cfg) {
+  const h = String(handle || "").toLowerCase();
+  for (const [kind, handles] of Object.entries(cfg.source_classes || {})) if (handles.some((v) => String(v).toLowerCase() === h)) return kind;
+  return tier === "t2" ? "executive" : tier === "flux" ? "media" : "specialist";
+}
+export function scorePost(post, cfg) {
+  const cls = post.source_class || sourceClass(post.handle, post.tier, cfg);
+  const weight = cfg.source_weights?.[cls] ?? 1;
+  const watchHits = post.relevance?.watchlist?.length || 0;
+  const signalHits = post.relevance?.signals?.length || 0;
+  const strategicHits = STRATEGIC.filter((term) => hasTerm(post.text, term)).length;
+  const imp = post.v?.imp || 1;
+  const score = imp * 10 + Math.min(10, watchHits * 4) + Math.min(7, signalHits * 1.2) + Math.min(5, strategicHits * 1.5) + (weight - 1) * 10 + (post.media === 0 ? 2 : 0) + Math.min(3, 0.5 * Math.log10((post.eng || 0) + 1)) + Math.min(4, post.buzz || 0);
+  let priority = "P4";
+  if (imp >= 2 && watchHits > 0 && strategicHits > 0) priority = "P1";
+  else if (imp >= 3 && (watchHits > 0 || signalHits >= 2) && ["analyst","insider","researcher","media"].includes(cls)) priority = "P1";
+  else if (imp >= 2 && (watchHits > 0 || signalHits >= 2)) priority = "P2";
+  else if (imp >= 2 || watchHits > 0 || signalHits > 0) priority = "P3";
+  return { score, priority, source_class: cls, watchlist: post.relevance?.watchlist || [], signals: post.relevance?.signals || [] };
+}
+/** Seuls les comptes suivis sont interrogés ; watchlist et signaux IA filtrent leurs publications. */
 export function dayPlan(cfg, now) {
-  const half = Math.floor(now / DAY) % 2;
-  const t2 = cfg.t2.filter((_, i) => i % 2 === half);
   const cap = { ...cfg.caps, day: Math.min(cfg.caps.day, cfg.caps.run || cfg.caps.day) };
-  const plan = [];
-  const add = (name, list, total, terms) => {
-    const chunks = chunkList(list, cfg.chunk || 9); if (!chunks.length) return;
+  const terms = [...new Set([...(cfg.watchlist || []).map((w) => w.query_term).filter(Boolean), ...(cfg.search_priority_terms || cfg.flux_terms || [])])];
+  const groups = { t1: [], t2: [], flux: [] };
+  const add = (name, list, total) => {
+    const chunks = queryChunks(list, terms, 500); if (!chunks.length) return;
     const per = Math.max(X_RULES.minRead, Math.floor(total / chunks.length));
-    for (const c of chunks) plan.push({ tier: name, handles: c, max: Math.min(100, per), query: buildQuery(c, terms) });
+    for (const c of chunks) groups[name].push({ tier: name, handles: c, max: Math.min(100, per), query: buildQuery(c, terms) });
   };
   add("t1", cfg.t1, cap.t1);
-  add("t2", t2, cap.t2);
-  add("flux", cfg.flux, cap.flux, cfg.flux_terms);
-  // Le second passage commence par les lots suivants pour élargir la couverture des comptes.
-  if (Math.floor(now / (12 * H)) % 2 === 1 && plan.length > 1) {
-    const shift = Math.min(3, plan.length - 1);
-    plan.push(...plan.splice(0, shift));
-  }
-  // Le plafond par passage prime : on rogne les derniers lots sans requête sous 10 résultats.
+  add("t2", cfg.t2, cap.t2);
+  add("flux", cfg.flux, cap.flux);
+  const slot = Math.floor(now / (12 * H));
+  for (const tier of ["t1","t2","flux"]) { const g = groups[tier]; if (g.length > 1) { const shift = slot % g.length; g.push(...g.splice(0, shift)); } }
+  const plan = [];
+  for (let i = 0; i < Math.max(groups.t1.length, groups.t2.length, groups.flux.length); i++) for (const tier of ["t1","t2","flux"]) if (groups[tier][i]) plan.push(groups[tier][i]);
   let sum = plan.reduce((s, p) => s + p.max, 0);
   for (let i = plan.length - 1; i >= 0 && sum > cap.day; i--) { const cut = Math.min(plan[i].max - X_RULES.minRead, sum - cap.day); plan[i].max -= cut; sum -= cut; }
   while (sum > cap.day && plan.length) { sum -= plan.pop().max; }
@@ -75,7 +126,7 @@ export async function lookupUsers({ fetchImpl, token, ids, base = "https://api.x
 }
 
 /* ---------- tri par l'IA ---------- */
-export const X_SYSTEM = `Tu prépares la rubrique « Sur X » d'un site qui suit le développement de l'intelligence artificielle. Le lecteur veut les IDÉES PRINCIPALES de ce qui compte : informations importantes, informations exclusives, et ce dont la plateforme parle le plus. Pour chaque post (i, author, name, role, text, tier) renvoie :
+export const X_SYSTEM = `Tu prépares la rubrique « Sur X » d'un site qui suit le développement de l'intelligence artificielle. Priorité aux faits concernant la watchlist et aux analyses d’analystes/insiders ; les comptes officiels, dirigeants et fondateurs sont moins prioritaires. Un post sur Apple ou SpaceX n’est pertinent que s’il concerne explicitement l’IA ou son infrastructure. Distingue une information industrielle structurante (capacité, commandes, contrats, investissement, pénurie, production, énergie/datacenter) d’un benchmark ou d’une annonce mineure : un classement de benchmark n’est pas automatiquement stratégique. Le lecteur veut les IDÉES PRINCIPALES de ce qui compte : informations importantes, informations exclusives, et ce dont la plateforme parle le plus. Pour chaque post (i, author, name, role, source_class, watchlist_hits, signal_hits, text, tier) renvoie :
 - keep : true seulement si le post, À LUI SEUL, apporte un fait ou un chiffre précis et compréhensible sur l'IA ou sa chaîne (modèle, produit, résultat, benchmark, puces et calcul, datacenters, robotique, espace lié à l'IA, financement, partenariat, recrutement ou départ marquant, réglementation, donnée chiffrée), ET si son idée principale se dit en une phrase. false pour : humour, autopromotion, publicité, argumentaire commercial sur son propre produit ou sa propre société sans chiffre, benchmark, prix, client ni date vérifiables, lancement sans dire ce qui est lancé (« nous avons lancé X » sans contenu), texte long ou fil dont l'idée ne se résume pas en une phrase, argumentation en plusieurs points, annonce de fil sans contenu (« 🧵 »), remerciement, vœux, concours, opinion sans fait, politique sans lien avec l'IA, sujet sans rapport, post qui renvoie à une image, une vidéo ou un fil absents sans dire ce qu'ils montrent, post dont tu ne peux pas écrire un titre précis (nom, fait, chiffre).
 - kind : annonce = l'auteur, ou l'organisation qu'il dirige ou représente, annonce SA PROPRE nouvelle (sortie, lancement précis, partenariat, financement, recrutement, résultat) ; info = l'auteur relaie ou rapporte un fait venant d'un tiers (« FT: … », « BREAKING: … », « selon … », un résultat d'autrui) ; analyse = interprétation, commentaire, estimation ; donnee = chiffre, graphique, benchmark ; rumeur UNIQUEMENT si l'auteur lui-même marque l'incertitude (« j'entends », « selon des sources », « rumeur », « serait »), jamais pour un fait énoncé sans réserve ; sinon autre. Un compte d'analyste ou de média qui rapporte la nouvelle d'un autre = info, jamais annonce.
 - domain, un de : modeles, calcul (puces, mémoire, serveurs, datacenters), robotique, espace, biologie, sante, energie, securite, marche (bourse, valorisation, résultats, flux financiers : à réserver aux posts de marché dont l'IA est le sujet), politique, autre.
@@ -133,14 +184,14 @@ export function pressRelay(post, feed, now) {
 
 
 /** Choix du jour : par importance, mais varié — au plus 2 posts par compte, 3 sur le marché, jamais deux fois le même propos ; les posts que la presse n'a pas relayés et les comptes de l'étage 1 passent devant. */
-export function pickDay(rows, n = X_RULES.perDay) {
+export function pickDay(rows, n = X_RULES.perRun) {
   const left = rows.map((f) => ({ f, t: toks(f.text) })), out = [], byAuthor = {}, byDomain = {};
-  const base = (f) => f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(5, 1.5 * Math.log10((f.eng || 0) + 1)) + Math.min(4, 2 * (f.buzz || 0));
+  const base = (f) => f.score ?? (f.v.imp * 10 + (f.media === 0 ? 3 : 0) + (f.tier === "t1" ? 3 : f.tier === "t2" ? 1 : 0) + Math.min(5, 1.5 * Math.log10((f.eng || 0) + 1)) + Math.min(4, 2 * (f.buzz || 0)));
   while (out.length < n && left.length) {
     let bi = -1, bs = -1e9;
     left.forEach((x, k) => {
       const a = x.f.handle || x.f.aid;
-      if ((byAuthor[a] || 0) >= 2 || (x.f.v.domain === "marche" && (byDomain.marche || 0) >= 3)) return;
+      if ((byAuthor[a] || 0) >= 3 || (x.f.v.domain === "marche" && (byDomain.marche || 0) >= 3)) return;
       if (out.some((o) => { const i = [...x.t].filter((w) => o.t.has(w)).length; return i >= 4 && i / Math.min(x.t.size, o.t.size) >= 0.6; })) return;
       const sc = base(x.f) - 6 * (byAuthor[a] || 0) - (x.f.v.domain === "marche" ? 3 * (byDomain.marche || 0) : 0);
       if (sc > bs) { bs = sc; bi = k; }
@@ -169,6 +220,10 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const ids = { ...(prev?.ids || {}) };
   const usage = { days: { ...(prev?.usage?.days || {}) }, months: { ...(prev?.usage?.months || {}) }, userMonths: { ...(prev?.usage?.userMonths || {}) } };
   const dayKey = new Date(now).toISOString().slice(0, 10), monthKey = dayKey.slice(0, 7);
+  if (usage.userMonths[monthKey] == null) {
+    const lastRun = Date.parse(prev?.last_run_ts || "");
+    usage.userMonths[monthKey] = lastRun >= Date.parse(monthKey + "-01T00:00:00Z") ? Math.min(cfg.caps.user_month ?? 100, Object.keys(ids).length) : 0;
+  }
   const readToday = usage.days[dayKey] || 0, readMonth = usage.months[monthKey] || 0;
   const stats = { ...(prev?.stats || {}) };
   const profiles = { ...(prev?.profiles || {}) };
@@ -182,9 +237,10 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
 
   const lastRun = prev?.last_run_ts ? Date.parse(prev.last_run_ts) : 0;
   const start = Math.max(now - 7 * DAY + 60e3, lastRun ? lastRun - 10 * 60e3 : now - X_RULES.windowH * H);
-  const budget = Math.min(perRun, daily - (force ? 0 : readToday), cfg.caps.month - readMonth);
+  const budget = Math.floor(Math.min(perRun, daily - (force ? 0 : readToday), cfg.caps.month - readMonth) / X_RULES.minRead) * X_RULES.minRead;
+  if (budget < X_RULES.minRead) return { doc: prev || null, summary: { ...rep, reason: "budget restant inférieur au minimum de 10 lectures par requête", month: readMonth } };
   let plan = dayPlan(cfg, now);
-  { let left = budget; plan = plan.filter((p) => { if (left < X_RULES.minRead) return false; p.max = Math.min(p.max, left); left -= p.max; return true; }); }
+  { let left = budget; plan = plan.filter((p) => { if (left < X_RULES.minRead) return false; p.max = Math.floor(Math.min(p.max, left) / X_RULES.minRead) * X_RULES.minRead; if (p.max < X_RULES.minRead) return false; left -= p.max; return true; }); }
   const known = new Set(prevItems.map((x) => x.id));
   const raw = [];
   for (const p of plan) {
@@ -226,17 +282,19 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
     const full = plainText(p.text); if (!full) continue;
     const text = full;
     const m = p.public_metrics || {};
-    fresh.push({ id: p.id, handle, aid: p.author_id, tier: p.tier, ts: p.created_at, text: text.slice(0, X_RULES.textMax), long: full.length > X_RULES.longMax, lang: p.lang, eng: (m.like_count || 0) + 2 * (m.retweet_count || 0) + (m.reply_count || 0) + (m.quote_count || 0) });
+    fresh.push({ id: p.id, handle, aid: p.author_id, tier: p.tier, source_class: sourceClass(handle, p.tier, cfg), ts: p.created_at, text: text.slice(0, X_RULES.textMax), long: full.length > X_RULES.longMax, lang: p.lang, eng: (m.like_count || 0) + 2 * (m.retweet_count || 0) + (m.reply_count || 0) + (m.quote_count || 0) });
   }
   for (const f of fresh) { const s = stats[f.handle || f.aid] ||= { read: 0, kept: 0 }; s.read++; s.last = f.ts > (s.last || "") ? f.ts : s.last; }
+  for (const f of fresh) f.relevance = matchRelevance(f.text, cfg);
 
   // tri par l'IA : on garde ce qui apporte un contenu concret (les textes trop longs pour être résumés ne sont pas envoyés)
   const items = new Map(prevItems.map((x) => [x.id, x]));
   let classified = 0, ai = false;
-  const cand = fresh.filter((f) => !f.long);
-  rep.long = fresh.length - cand.length;
+  const cand = fresh.filter((f) => !f.long && f.relevance?.relevant);
+  rep.long = fresh.filter((f) => f.long).length;
+  rep.filtered = fresh.length - rep.long - cand.length;
   const who = (f) => { const l = String(f.handle || "").toLowerCase(); return { name: whoLow[l]?.name || profiles[l]?.name || "", role: whoLow[l]?.en || "" }; };
-  const mk = (f, k, extra) => ({ i: k, author: "@" + (f.handle || "?"), ...who(f), text: f.text, tier: f.tier, ...extra });
+  const mk = (f, k, extra) => ({ i: k, author: "@" + (f.handle || "?"), ...who(f), source_class: f.source_class, watchlist_hits: f.relevance?.watchlist || [], signal_hits: f.relevance?.signals || [], text: f.text, tier: f.tier, ...extra });
   if (cand.length && generate) {
     for (let i = 0; i < cand.length; i += 25) {
       const part = cand.slice(i, i + 25);
@@ -277,9 +335,15 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
     f.buzz = au.size;
   }
   for (const f of rows) f.media = pressRelay(f, feed, now);
-  for (const f of pickDay(rows)) {
+  for (const f of rows) Object.assign(f, scorePost(f, cfg));
+  for (const it of items.values()) if (!it.priority) {
+    const rel = matchRelevance(it.text || "", cfg);
+    const rank = scorePost({ handle: it.handle, tier: it.tier, source_class: sourceClass(it.handle, it.tier, cfg), text: it.text || "", relevance: rel, v: { imp: it.imp || 1 }, media: it.media, eng: it.eng }, cfg);
+    Object.assign(it, rank, { priority_score: Math.round(rank.score) });
+  }
+  for (const f of pickDay(rows.filter((f) => f.priority !== "P4"))) {
     const media = f.media;
-    const it = { id: f.id, url: f.handle ? `https://x.com/${f.handle}/status/${f.id}` : `https://x.com/i/status/${f.id}`, handle: f.handle || "", tier: f.tier, ts: f.ts, text: f.text, kind: f.v.kind, domain: f.v.domain, imp: f.v.imp, media, eng: f.eng };
+    const it = { id: f.id, priority: f.priority, priority_score: Math.round(f.score), source_class: f.source_class, watchlist: f.watchlist, signals: f.signals, url: f.handle ? `https://x.com/${f.handle}/status/${f.id}` : `https://x.com/i/status/${f.id}`, handle: f.handle || "", tier: f.tier, ts: f.ts, text: f.text, kind: f.v.kind, domain: f.v.domain, imp: f.v.imp, media, eng: f.eng };
     if (f.v.title) it.title = f.v.title; else if (!f.v.pending) it.title_fr_missing = true;
     if (f.v.title_en) it.title_en = f.v.title_en;
     if (f.v.text_fr) it.text_fr = f.v.text_fr;
@@ -294,7 +358,7 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const whoOut = {};
   for (const h of [...cfg.t1, ...cfg.t2, ...cfg.flux]) { const v = (cfg.who || {})[h] || {}, e = { name: v.name || profiles[h.toLowerCase()]?.name || "", fr: v.fr || "", en: v.en || "" }; if (e.name || e.fr) whoOut[h] = e; }
   const doc = { v: 1, generated_at: new Date(now).toISOString(), last_run_ts: ok && rep.calls ? new Date(now).toISOString() : prev?.last_run_ts || null, items: list, ids, usage, stats, profiles, who: whoOut };
-  if (!rep.reason) rep.reason = rep.errors.length && !rep.read ? "aucun post lu : " + rep.errors[0] : `${rep.read} post(s) lus, ${rep.kept} retenu(s), ${rep.added} publié(s)${rep.dropped ? `, ${rep.dropped} écarté(s) sans titre fiable` : ""}${rep.long ? `, ${rep.long} trop long(s)` : ""}${ai ? "" : " (sans tri IA)"}`;
+  if (!rep.reason) rep.reason = rep.errors.length && !rep.read ? "aucun post lu : " + rep.errors[0] : `${rep.read} post(s) lus, ${rep.kept} retenu(s), ${rep.added} publié(s)${rep.filtered ? `, ${rep.filtered} hors watchlist/signaux IA` : ""}${rep.dropped ? `, ${rep.dropped} écarté(s) sans titre fiable` : ""}${rep.long ? `, ${rep.long} trop long(s)` : ""}${ai ? "" : " (sans tri IA)"}`;
   return { doc, summary: { ...rep, month: usage.months[monthKey], classified } };
 }
 
