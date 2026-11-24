@@ -37,9 +37,19 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null}),getJSON("data/x.json").catch(function(){return null}),getJSON("data/fast-feed.json").catch(function(){return {items:[]}})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null}),getJSON("data/x.json").catch(function(){return null}),getJSON("data/fast-feed.json").catch(function(){return {items:[]}}),getJSON("data/voix-fast.json").catch(function(){return null})]).then(function(r){
     var merged=new Map();(r[19].items||[]).forEach(function(x){merged.set(x.id||x.url,x)});(r[0].items||[]).forEach(function(x){merged.set(x.id||x.url,x)});S.feed=Array.from(merged.values()).sort(function(a,b){return b.ts.localeCompare(a.ts)});
-    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];S.voix=r[15];S.rech=r[16];S.chain=r[17];S.x=r[18]||null;if(window.I18N)I18N.extra(r[10]);
+    S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];
+    var voix=r[15]||{people:[]},fastVoix=r[20]||{people:[]},people=new Map((voix.people||[]).map(function(p){return[p.id,p]}));
+    (fastVoix.people||[]).forEach(function(fp){
+      var p=people.get(fp.id);
+      if(!p){p={id:fp.id,cat:fp.cat,w:fp.w,n:fp.n,role:fp.role,co:fp.co,actor:fp.actor,alerts:[],items:[]};people.set(fp.id,p)}
+      var items=new Map((fp.items||[]).map(function(it){return[it.url,it]}));
+      (p.items||[]).forEach(function(it){items.set(it.url,it)});
+      p.items=Array.from(items.values()).sort(function(a,b){return b.ts.localeCompare(a.ts)}).slice(0,8);
+    });
+    voix.people=Array.from(people.values());voix.fast_generated_at=fastVoix.generated_at||null;
+    S.voix=voix;S.rech=r[16];S.chain=r[17];S.x=r[18]||null;if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
