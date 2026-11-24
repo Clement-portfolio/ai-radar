@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-24T07:24:27.786Z",
+ "generated_at": "2026-11-24T13:22:35.973Z",
  "people": [
   {
    "id": "sam-altman",
@@ -140,9 +140,19 @@
      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPalRwdWZKMnJHeUU2WVljUDlQbU9xNkVkVmJmNm40VktJUlpsNFBGUjRTNEtib0ZjQ3NrUk1LSmZETU5sdEtfYXZIUFRPblNGRFJVUFR5emFDQVp3ZHgxNXdxaWdpMXV6bUg2d0MzaURLMldFNm40d0lPNEJUalF4bGNWOEJWX2FHdWZFNVFEVnJVTVBCeWFSZ0p3NWZheHNfWVZr?oc=5",
      "source": "Bloomberg.com",
      "kind": "presse",
-     "m": 1,
-     "e": 0,
+     "m": 2,
+     "e": 1,
      "title_fr": "Regardez Dario Amodei dire que la sécurité est dans l'ADN d'Anthropic"
+    },
+    {
+     "ts": "2026-11-19T14:56:42.000Z",
+     "title": "Dario Amodei Says Safety Is Part of Anthropic's DNA",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOaGU4U3F2eDhpVVo5SS12ZnJPMndaaTlKOXdCSnZoZTI1YXVSRVFkOWNsWENlMGJGWmtCQ0pJeENHV29tbFh4Vkx5TjRyMWtoTHlPN1l2ZzAtU0x1eWpCbHkwM1BYQmktV21QV1Nvb2R0UHUtTkJvOUx0WVZ6b0tDNmZR?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Dario Amodei dit que la sécurité fait partie de l'ADN d'Anthropic",
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-19T12:07:59.000Z",
@@ -171,16 +181,6 @@
      "source": "Business Insider",
      "kind": "presse",
      "title_fr": "Les 4 types de personnes que Dario Amodei a déclaré ne pas vouloir embaucher — et ce qu'Anthropic recherche à la place",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-13T19:02:00.000Z",
-     "title": "Anthropic CEO Dario Amodei says compute is a 'huge uncertainty' as he pitches IPO",
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxObGloQzIwU0kxN3RZRUFORDBOU3plaGQxNnNPby03NmZ5TG1jcGxwMjhlS3RNb2hKQkdtbzh2Z293VEU1NF9yaXZHaFkwLXNFa0RINXZkdnd2TEd2enpNdHBPbTBPbkZFeGNpYjM3V2s1QW1lZ2FXX3V5VVJHclJEMG80dWVhU2g3M01sXzlXc0Jtdw?oc=5",
-     "source": "Business Insider",
-     "kind": "presse",
-     "title_fr": "Le PDG d'Anthropic, Dario Amodei, déclare que la puissance de calcul est une « énorme incertitude » alors qu'il prépare l'introduction en bourse",
      "m": 1,
      "e": 0
     }
@@ -552,7 +552,28 @@
    "co": "Meta",
    "actor": "meta",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-23T21:35:00.000Z",
+     "title": "‘Superintelligence is arriving’: Mark Zuckerberg’s AI chief warns humanity may lose control—the same week the Nasdaq wiped out its entire 2026 gain",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLVdscU5CTnZHSUFhSUd4czB5ckpDeWc5SFlKd1pETDNwZnF4N2thRWM0SVBtQU5qYm1JNDJXRE5xMVhmTllGTDdvS3o4YUszRjBXcldEczZrLW5YdGdhb2hjU2J2STlaMHR1VjRrdUNZbEk4UXE0aFp3V3JrYU9naFNVdkJIVkROMnV3X2hZMG1CNjJzSDVKQURmUkFxZTUwejhsRF9KdjEtZEI4bkc1RnZJM3c?oc=5",
+     "source": "Fortune",
+     "kind": "presse",
+     "title_fr": "« La superintelligence arrive » : le chef de l'IA de Mark Zuckerberg avertit que l'humanité pourrait perdre le contrôle — la même semaine où le Nasdaq a effacé l'intégralité de ses gains de 2026",
+     "m": 1,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T17:45:00.000Z",
+     "title": "Mark Zuckerberg admits the AI restructuring isn't going all that great, report says",
+     "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE92cG1WUU1veGNzQnZVNzFWMlNtQjRJRk13NVV4c0YwX2JWdEpvX0RaQzd5dnRDalRGS3V1Q3JiMjhjWWlwWmR0MHVQR2xSZmlfRWU2Y0YwY3d6eW5VbXp1WFgwV2E?oc=5",
+     "source": "Mashable",
+     "kind": "presse",
+     "title_fr": "Mark Zuckerberg admet que la restructuration de l'IA ne se passe pas si bien que ça, selon un rapport",
+     "m": 1,
+     "e": 1
+    }
+   ]
   },
   {
    "id": "lisa-su",
@@ -1431,6 +1452,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T13:31:58.000Z",
+     "title": "Geoffrey Hinton said to stop training radiologists. A decade later, the Bay Area is 600 imaging techs short",
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQR3QzdmVmZnllcE82OXk1SFk3bDAxZHpYNmtCR2hJYWNfWm1tX0lNUjFFZFJWNWk1VWV2dFMtU3BOZlVyMFppZ1FuYThMNVprYVY5MlpfSGt5a05KQUlsQmhmWGRLZFo2Z3J4c1Z2MnJsNHVRRHJYMGR0ZVdQZzY0dg?oc=5",
+     "source": "Fortune",
+     "kind": "presse",
+     "title_fr": "Geoffrey Hinton a dit d'arrêter de former des radiologues. Une décennie plus tard, il manque 600 techniciens en imagerie dans la Bay Area",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-24T07:06:00.000Z",
+     "title": "AI models may be creating their own language: ‘Godfather of AI’ Geoffrey Hinton warns humans could lose track",
+     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQMjV6R2JRRUtNR2xXS2hFS0sxSVd0NkF4NVlrSHFxcmtsOXcxUEVvNkhJZTFkTnBhcklzVGJfMERJUW9FYXdPRTJ0TkY2dk55WjhRRmZoUDZDVjAzemlETFpxZXBac01JRGFvZFZXY0VKZ2ZmSnNuLWdZSm5QN1RSaTF4NFRvUGI5aHlIM2ZkWC14X25UanZ2S2N4S0JMVVROeDE5MGxFUHR3Y0tyZU1kdHBnRzBFbHprd19KcDZNQjFlT1BsMGJsbXozUE0zVTBYMGtRc3ZXQUpVRHgzZEx1S2lnRFZaWGtGVkxr0gHwAUFVX3lxTFBjR1pZVE9LS0w2MEhydld5aG1ma2RCSWRRaEpNa3lXQzRzcXphOE1fQnlOU0lFdXZVVHRObWRJUWR5UWUwNHotMmVzY0lKUE5rNE9mLS05dktqNXZYNFpjSndkQUNCQk85QVlzZXNJX2JLYnpSa05IWE5CbG1kcXBZSTMwMi0yWFRVbXNEMTczN3laQVZNNk9QYWFJMzN1SFdvZURUVXJDWHBxcGp1cnl0Y1k5QVk5NS1VQU14LUt3NEFZQ3BLSDZQdkdmTjA4ZUVuN1ZyTlpOU3BlT1VnODZJTms1SWwzejNqOEdoR3o5UA?oc=5",
+     "source": "WION",
+     "kind": "presse",
+     "title_fr": "Les modèles d'IA pourraient créer leur propre langage : le « parrain de l'IA » Geoffrey Hinton avertit que les humains pourraient perdre le fil",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T10:49:32.000Z",
      "title": "Geoffrey Hinton warns advanced AI systems are developing unintelligible languages",
      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQbkljSDNNWGdyR2lNYndBeVFoZzE5OVFzbXFtZld2NFNDSnlLcm1IYl92N0RPM2JpdXV3eTRtTVdaVGEwSjBDZWU4bHMzZ3NiSWNkb1h2bk1nLWxaOWlKVzhVT2ptZldSTEYzYlFhdml5enVUNDVGdUpqTUlrc2NnS3l1VlZpVTZ0clNGeXVlZlktWFdJRjRGS1V6Znk0UEhFVW9qV29jNHpqZDNRTXlQb2Z5a1JubFB6Z3Nhd3dINlpqc1Vxc3Jv?oc=5",
@@ -1487,26 +1528,6 @@
      "source": "Pasquale Pillitteri",
      "kind": "presse",
      "title_fr": "Hinton met en garde contre un Tchernobyl de l'IA d'ici 2027, une panne d'électricité ou une interruption bancaire d'une semaine",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-07T08:00:00.000Z",
-     "title": "«Our own Chernobyl» caused by artificial intelligence: Hinton warns of a global crisis",
-     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcWRmWElXUTdpSkV2QXpuMm1YZ2d1SmVBdU05U24xVTFkeS05NFdWUXJiNjI4WlFLTjFKMnhPVVJVdWFTbEVxX210OTduYm02cUh1cHp2NG0zbTEzbzFydktEaWxzNTRQQVg0bUJDeGg0b3F5a1paZVhLb1hSMG54OUxlR1NTVWlu?oc=5",
-     "source": "UkrMedia News",
-     "kind": "presse",
-     "title_fr": "« Notre propre Tchernobyl » causé par l'intelligence artificielle : Hinton met en garde contre une crise mondiale",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-06T08:00:00.000Z",
-     "title": "Geoffrey Hinton Expects an AI Chernobyl by Next Year",
-     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUEpoTVRPQkswZ3FRSWwzU01DMllWOElKa2hjOVJBaXdjQV91SGF5SUltc3N5UzhWcXBfdi1PN3pKa0l6V3VuVWVBaGZWX2h5d19rbGZCQ3l1cjZYajNZQ1NOUFV1UDdjemNXVEVNcXA3LTQ1MmxNY3dPWWRFMDkwNWRQbVRHRThIdUZDcE85eDNTc3dDekZZT243MlRxUHRVNkpCTnVCNlpQdlFM?oc=5",
-     "source": "Medium",
-     "kind": "presse",
-     "title_fr": "Geoffrey Hinton s'attend à un Tchernobyl de l'IA d'ici l'année prochaine",
      "m": 1,
      "e": 0
     }
@@ -1654,6 +1675,26 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T06:06:12.000Z",
+     "title": "Nvidia reinstates Jensen Huang after Trump speaks ‘directly’ to board",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQmNHaTN2YnhWcEZ0QVVkbkdNamZzRU5VWFRYd0JhaDVpaEpveDRzc2F6X21RS1lqZjIxbVZUaXhsYllvelpqQjdfYWtuYm0yVUV4eEdoT00xNV9aalVLSm9SNFVReTZQVXpqU2Z5WXBwNHo0RDBfY2FuaENWUy16UHNPU1E0eV9pUGN5VlByS0RzM09BS1NVQ3FlbENIMjB6WkcyQ2lOb3BRUldJZHJBdW1Ebm8yZVk?oc=5",
+     "source": "The Washington Post",
+     "kind": "presse",
+     "title_fr": "Nvidia réintègre Jensen Huang après que Trump a parlé « directement » au conseil d'administration",
+     "m": 3,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-23T21:53:49.000Z",
+     "title": "Exclusive CNBC Transcript: See how Trump 'made the deal' to reinstate Huang as Nvidia CEO",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVGFfdC1FLTNsMXhVX1E5cnJyRjRRQzAzTXRoSGRRWXFqV29LTmFfc2xfcjNMT3FmWkI4SjZMbzFtc0M2amxseU5BNUVpYktkN2U3elJLRGJOcW9fbXFyOVYwSWJ5V1VCSktwcTZJQnFUelVMbXJ4dGZhRlJWcUV1NHBJc2dRR3BtUldUQzNXSUtMZlNhWEt5SHZTcHBqMmx3cFYtUdIBqgFBVV95cUxQdk1tZ0ttVkNkeURyNHB4Zk9Mc3d2ZDFQYS13ZFFtYXQ4d19Td2t1YXkzXzA1d0x3THJrNi1oaXJaUTdCRmVBS0tkaXVPN2JQbHZfbEowem4xc2l6M1g2djUxaU9TUWxFeTZWMkpOUF9hazhWVW5TeWpxQWpnU3FXd01CbFBZd0stVGNXM0JwZ0ROY2lzQVJaWWxWdVY5eXNnbTdEVkplTHBqdw?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Transcription exclusive de CNBC : découvrez comment Trump a « conclu l'accord » pour réintégrer Huang en tant que PDG de Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-23T19:55:09.000Z",
      "title": "Trump Is Said to Have Directed Effort to Reinstate Nvidia Chief",
      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE41T3Z1VnJLSk9LLURuSVhPYVJEdHZmUXIwQzYteGVERktDYm55NEpKNU1jMEFpbzgtTmVURzlzU2drN0Juc19HR0tCREl2MUJRWjFaTGFCd3FJWVEwNUwwalc3RktTcHVLMDVfMnZCVU9DLUZMaWZ1dnd3?oc=5",
@@ -1690,7 +1731,7 @@
      "source": "NBC News",
      "kind": "presse",
      "title_fr": "Trump affirme avoir parlé « directement et indirectement » avec le conseil d'administration de Nvidia au sujet de la réintégration de Jensen Huang",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -1700,7 +1741,7 @@
      "source": "BBC",
      "kind": "presse",
      "title_fr": "Donald Trump affirme avoir « convaincu » Nvidia de réintégrer Jensen Huang",
-     "m": 4,
+     "m": 3,
      "e": 1
     },
     {
@@ -1710,27 +1751,7 @@
      "source": "The Hill",
      "kind": "presse",
      "title_fr": "Trump affirme avoir « convaincu » le conseil d'administration de Nvidia de réintégrer Jensen Huang",
-     "m": 5,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-23T16:22:25.000Z",
-     "title": "What Trump told PBS News about Jensen Huang before Nvidia reinstatement",
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQblhVTUpEUHVvbmVtTHhHWVBHb1dfYi1MZDN2aXdBUUJRamtYeDVMVnVKejc2ek5ycDZqbjBjbEFqNG0yYUd0VUVTQi1tUm1yMENpaVZWd0R2WEJUVG9zd3ZKaWswczZwQWdQaVA1RXdnY290M0YtSk5QdFBmLTFObEgtZm51VzJTMVV0S2ZJamliSXBwN1EwZzFubG1CSmVVYzA1SHZpLV9jekNtLWfSAbMBQVVfeXFMTkpsV050bGZndlhOaDdsLWpadmxmaVB6NUh3MU5rU3hnMUdLcEdTczJhSFgwckt6bXNXRzNFMGptdnd6b0pmdDROc1pjaVkydm03d0V3Rnhqa1NLZnRNMm1HVXZpOFE4Q0JHaC1wV3hXa1lieEhpN2RRTUpvYW1ma0tzNWxoRHFrYVVLM05jd1VmY05iMDcxaGpQSGxNWlp2SW1SUEI0bk0xVk1ZYjZiZWtuSGc?oc=5",
-     "source": "PBS",
-     "kind": "presse",
-     "title_fr": "Ce que Trump a dit à PBS News à propos de Jensen Huang avant sa réintégration chez Nvidia",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-23T15:08:28.000Z",
-     "title": "Trump tells CNBC ‘I made the deal’ to reinstate Nvidia’s Jensen Huang",
-     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9ab2habU9pTTllNmRCRDdqTjgwQ3hsVFZDX1hhVkJxaVVCWHNhYjRHLXFMaWtnME41NGZ1Z1REMkh1d2Y0NUJGamJSdVJQcV9rZEV1aW9nUlhHQWN1WkFSU3RRMnZrNEpobEp5bVBoY9IBdEFVX3lxTFBXNkNGSW1MaGlybGVOX0YtaVI0YVFfd3NYMi1BenZKN2Ewd1JJT3NMMjdpaElsRF9jSThyVzBHYlg4dUxocjBjYnV1dml4czdrWHR4akNId1g3SVJYa0oyRkdEUHJPMnRUVFpkbUpxWHRtWUxE?oc=5",
-     "source": "CNBC",
-     "kind": "presse",
-     "title_fr": "Trump déclare à CNBC « J'ai conclu l'accord » pour réintégrer Jensen Huang chez Nvidia",
-     "m": 3,
+     "m": 4,
      "e": 1
     }
    ]
@@ -2749,6 +2770,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-24T09:03:20.000Z",
+     "title": "Eric Schmidt and Alexandr Wang urge human control of AI",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONEhwTGd0WUdkd3ZxdTJIYUNlVXpGM2NnSmJFZXBVMGdsTGZMUHVmZ1VNSUpBQzg2YnlIZmFfS2J4bHRmekF2cHRGVjhDbnRXc2JfQ1BpSUF6VHZWNkJ6bFVDU1pTSDRIRnNFWlhyYUlyS3N2d2FaOWhzRWxRZE4tNlFCc0pHNEZScDRldXZzcEtwMkJrdng4UC1lY3pWX2dEZDNmYg?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Eric Schmidt et Alexandr Wang appellent à un contrôle humain de l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-16T22:56:47.000Z",
      "title": "Dario Amodei’s Wife, Cami Clark: Epstein Emails, Eric Schmidt and What Anthropic’s IPO Reveals",
@@ -5388,12 +5419,32 @@
      "e": 0
     },
     {
+     "ts": "2026-11-20T15:51:51.000Z",
+     "title": "Tom Lee Calls Tech Selloff a Buy, Cites Cisco 1997 Rebound",
+     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE8zWkVKT1RwUUY3bEoybU9TamlocWRVTzlJOWRvUXNPb1ViRXBBQklaNlU3cTduOWtLWnM4SzAtVzczQW1nckt1N3B6WHVrMl9jN0ZaYzVheXRlZFVEejk2NFdhdW5DbDZ4S1phY3JGeENKUQ?oc=5",
+     "source": "FinanceFeeds",
+     "kind": "presse",
+     "title_fr": "Tom Lee qualifie la vente massive de la tech d'opportunité d'achat, citant le rebond de Cisco en 1997",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-20T14:15:00.000Z",
      "title": "Tom Lee Sees Long-Term Tech Stock Opportunity After Anthropic IPO Selloff",
      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ1lGX0NlZ19oaERGZjYxcEVMYjVKaUhfMlNXcnBEcFhKbnRxT3lxYnpWQ21YNUtNalE5R2x0amgxc2hLNGF6Y2JnRHFhUV9oeGFDTEVta25qakFOYmR0OWpmdGxIdkt6OUdwNnBXWm5PRFJXYk55akliS1VyeXJXcWlROW9KQ3phWnUzaUFxdDh3R1hoY0tpeVVXenlMdnlnY3ZMMHJkX1dZQlR4TW000gG8AUFVX3lxTE9sYXhqOTFhY2NMekZMczd2b2xOb19RRzNEZnh0MWxaUmhXc29JdDdGcDd2ODZCNW9fbGM3Z2pXSUk5Tk5nak9vRzZxYXNTdlBCMENpazZpcWhQMURZcXNKVHJMTXFvR2JCYWlFSE1BWkQydDEzU0pWTGRXbXY1YnhPaTJiTXRScktnSmJBRG9kRm1OT29SYjlUTC1HRVdpc2JkaEV5Ykc1OThYNU5FODQ0UWVTaU04ZUlXZjR4?oc=5",
      "source": "Analytics Insight",
      "kind": "presse",
      "title_fr": "Tom Lee anticipe une opportunité à long terme sur les actions technologiques après la chute liée à l'IPO d'Anthropic",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-20T05:18:00.000Z",
+     "title": "Anthropic Defies Tech Rout On Debut — Tom Lee Sees ‘Big Payoff’ Ahead And Says Cisco’s Wild 1997 Ride Shows Why",
+     "url": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxOME1CRWZSZzlwWGxHdlFQVVpoMVI5Sk5NX3p3VHQycXcxak9mMmRnYTVHSThiak55QkY3VXpxeEFJTkRwWWVMTzVxUXNTUEd6bExRMmFVcmpILVp0eTZNNE9HY2lWMWJac3NvZXVKQ2pFOFRGUlNkWWJjVzNOTGZfcHhZQk5wQXBjd09CcmRVREJpSHNVdEtrRmJvZktHaDJuc19TWGM1dUM3ZGYtRTRDeldUazdMYzdqQnBNLXNqd2kyanBKZ3pPQUpGMk5jaW1hRnJmaDN1VUo1Tms0UlBUclE4WVVyYnZRdlNyb2ZwdVJ6bEFRVjlZb0xGSlQ?oc=5",
+     "source": "TradingView",
+     "kind": "presse",
+     "title_fr": "Anthropic défie la déroute de la tech lors de ses débuts — Tom Lee voit un « gros gain » à venir et dit que le parcours mouvementé de Cisco en 1997 montre pourquoi",
      "m": 1,
      "e": 0
     },
@@ -5433,29 +5484,9 @@
      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMmgzU2hvLVJtSjQ0T3AyLWlJdUlqeDUyUUJ0ajJVcXRyRlE4YUFiU29QZE16OHhWd2RrS1EzdXJkTlBYMW51d3BUS190RGVnbmxsOExjWE91SmNMYmE3dy1pZGF5SS0wejB2NUZfVWNjSHR5NnNIMGVRS0x5RjY1WkZlbGtWOE1CLTBWVWE3dExlSmZURkYzSHBTRHlRLUgwNDFweUNOVjBwdVNLc2VzaFMxTVBjNkU?oc=5",
      "source": "TradingView",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Tom Lee considère que le marché de l'IA reste intact malgré la chute de 12 % du Nasdaq"
-    },
-    {
-     "ts": "2026-11-17T01:00:00.000Z",
-     "title": "Tom Lee Sees No Cracks in the AI Trade Despite Nasdaq's 12% Drop",
-     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1TZHZGZXd3REJPdUNaeXhTZGFpQWFWWDJjVHdqd082bU5mV1BxMXM4cEF0SHVPYURzTERMVjFHdTNSNmZySzhWWUF5Zjltb0lfSi1ZUXkxWVVzNllQQXlLTWNB?oc=5",
-     "source": "BeInCrypto",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Tom Lee ne voit aucune faiblesse dans le marché de l'IA malgré la chute de 12 % du Nasdaq"
-    },
-    {
-     "ts": "2026-11-13T19:02:51.000Z",
-     "title": "Tom Lee Says Jensen Huang's Return Would Be ‘Shocking’: Trump Reportedly Urged Him To Fight For His Job",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNUXpQWGUweVI2a2JLUWpfVXhoeUxmYkZXQWlJLV9LUHdGb2hkNGlzbG1qcjdPNmxuX3pQVUNUTmJuR2JoYlpIUG1iQi1QcFhhbUpJbFY4MWJzX2Z3dURXYW9VQ2Q4MVV4V01WQkt0TFFXU1lsZkZ4My1mcmhIb0F4Z1l0NWhiS2NiR3d4TXc3ajQ5OVlE?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
      "m": 1,
      "e": 0,
-     "title_fr": "Tom Lee qualifie le retour de Jensen Huang de « choquant » : Trump l'aurait incité à se battre pour son poste"
+     "title_fr": "Tom Lee considère que le marché de l'IA reste intact malgré la chute de 12 % du Nasdaq"
     }
    ]
   },
@@ -5790,21 +5821,21 @@
  ],
  "hot": [
   {
-   "score": 2.12,
+   "score": 2.36,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
    "actor": null,
-   "ts": "2026-11-23T19:19:17.000Z",
-   "title": "Trump urges Nvidia to reinstate Jensen Huang, calling him ‘best thing’ for U.S.",
-   "title_fr": "Trump exhorte Nvidia à réintégrer Jensen Huang, le qualifiant de « meilleure chose » pour les États-Unis",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQWlhuUEVYcUhfSzZoYm1EM3RHZ1NmdkJkZ0JqX01MZzZJbzRZdFdMVl8tV1BGWG5Ba1FwWnlwVUNUVVNiN25OQ2JPLUN3TGotNjd3UEMyVGcyc0lIVWJsWDFvN2FodTdwSnVzWnhsRXNpc3NrNHVNOGlEdGFUVVBOdHV3VGFwOVJ0eVBWSEQwaUk3QkFodnhSNWc2QmJhN3h5eGR6enBWcUxFbnVsZ0RhUDJFa25BWUQ0Vnh6NThn?oc=5",
+   "ts": "2026-11-24T06:06:12.000Z",
+   "title": "Nvidia reinstates Jensen Huang after Trump speaks ‘directly’ to board",
+   "title_fr": "Nvidia réintègre Jensen Huang après que Trump a parlé « directement » au conseil d'administration",
+   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQmNHaTN2YnhWcEZ0QVVkbkdNamZzRU5VWFRYd0JhaDVpaEpveDRzc2F6X21RS1lqZjIxbVZUaXhsYllvelpqQjdfYWtuYm0yVUV4eEdoT00xNV9aalVLSm9SNFVReTZQVXpqU2Z5WXBwNHo0RDBfY2FuaENWUy16UHNPU1E0eV9pUGN5VlByS0RzM09BS1NVQ3FlbENIMjB6WkcyQ2lOb3BRUldJZHJBdW1Ebm8yZVk?oc=5",
    "source": "The Washington Post",
    "kind": "presse",
    "outlets": 3
   },
   {
-   "score": 1.22,
+   "score": 0.77,
    "id": "matt-garman",
    "n": "Matt Garman",
    "role": "PDG d'AWS (Amazon Web Services)",
@@ -5818,16 +5849,16 @@
    "outlets": 3
   },
   {
-   "score": 1.01,
-   "id": "satya-nadella",
-   "n": "Satya Nadella",
-   "role": "PDG de Microsoft",
-   "actor": "microsoft",
-   "ts": "2026-11-23T21:59:59.000Z",
-   "title": "Microsoft Ignite 2026: Satya Nadella predicts rise of the ‘software factory’",
-   "title_fr": "Microsoft Ignite 2026 : Satya Nadella prédit l'essor de la « software factory »",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMWZzT1pmRTAzNHFGa1pJQXdXQ01jYUdfNkRnR2xETUJUb0lsRWJndkV5dDhYTkRoSmtncXhDM1VNT09pQTdmaHpXbWd4TnFIclZZNEFBMTh1X3pDSzdmYWo5YTQ5S3VzaDQ0QWxQdnpPdjZpMndXanFRZ0h1Q2d4ZEQwblhLalV3WnJTWUpzWHh2aGJhb01ZTzZPUHl4eFo3ZzBoRGxXa0tGV2FCbHBUS1dEcUQ?oc=5",
-   "source": "Technology Record",
+   "score": 0.75,
+   "id": "eric-schmidt",
+   "n": "Eric Schmidt",
+   "role": "Ancien PDG de Google, investisseur en IA",
+   "actor": null,
+   "ts": "2026-11-24T09:03:20.000Z",
+   "title": "Eric Schmidt and Alexandr Wang urge human control of AI",
+   "title_fr": "Eric Schmidt et Alexandr Wang appellent à un contrôle humain de l'IA",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxONEhwTGd0WUdkd3ZxdTJIYUNlVXpGM2NnSmJFZXBVMGdsTGZMUHVmZ1VNSUpBQzg2YnlIZmFfS2J4bHRmekF2cHRGVjhDbnRXc2JfQ1BpSUF6VHZWNkJ6bFVDU1pTSDRIRnNFWlhyYUlyS3N2d2FaOWhzRWxRZE4tNlFCc0pHNEZScDRldXZzcEtwMkJrdng4UC1lY3pWX2dEZDNmYg?oc=5",
+   "source": "NewsBytes",
    "kind": "presse",
    "outlets": 1
   }

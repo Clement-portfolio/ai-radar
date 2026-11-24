@@ -5,13 +5,13 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-24T07:24:27.786Z",
- "model": "gemini-3.5-flash-lite",
+ "generated_at": "2026-11-24T13:22:35.973Z",
+ "model": "gemini-3-flash-preview",
  "sig": [
   "08f69edf5cd8+2a6ea8dac20b+390761ac5d39+7646bfa59b7a+7bdc82557174+7d1b0e758ce7+7ee2945f013b+82dc9a9a5cfd+bcbe955e1657+c456643744aa+cd9e34803b9b+dd245aec9e89",
   "0c56e1950266+4b1f1703bbc0+c3a2aba6c39e+cb02ca1a7848+def41b9598d6+f955d48edeaa",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5fc039618c60+cd767daa7782+cfa454b7233b+d8fbec9f2d14",
-  "07b3803b9303+0fa20d13e8af+1b14383b1d83+1c0a1e1598f2+1c8609b9a0a4+22fd7ca2e2d6+3a6c6f14ac09+49fe75757113+55a943f96493+5dc55a044437+6553a4e9576a+66cc673a6baa+69f64fbae113+6d46c005192f+71f693cffefe+86f36aa729ca+8a72a2b77a1e+97d2878c5e73+9f91f68231f9+a165733dbba2+a33229a60892+ac55a4874f2b+ad3978edda31+b33fa45cb319+bb2085849fe9+cb8d7daff59c+d2a4386c874f+d48fe5cca15f+efa75c0d5fa1+fc3a90d264a7+fe2f73778320",
+  "07b3803b9303+0fa20d13e8af+1b14383b1d83+1c0a1e1598f2+22fd7ca2e2d6+3a6c6f14ac09+49fe75757113+55a943f96493+5dc55a044437+6553a4e9576a+66cc673a6baa+69f64fbae113+6d46c005192f+71f693cffefe+86f36aa729ca+8a72a2b77a1e+97d2878c5e73+9f91f68231f9+a165733dbba2+a33229a60892+ac55a4874f2b+ad3978edda31+b33fa45cb319+bb2085849fe9+cb8d7daff59c+d2a4386c874f+d48fe5cca15f+efa75c0d5fa1+fc3a90d264a7+fe2f73778320",
   "08ca4f57d6cb+0e77edd2c1e8+49258f2ca6af+62898b4a825e",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
   "7cc760e8ae10+94d599ca1343+f2ad34d486f9",
@@ -25,22 +25,22 @@
     "390761ac5d39",
     "2a6ea8dac20b"
    ],
-   "head": "Les États-Unis placent l'entreprise Megaspeed sur liste noire commerciale",
+   "head": "Les États-Unis placent l'entreprise Megaspeed sur liste noire après un scandale impliquant Nvidia",
    "bullets": [
-    "Le département du Commerce américain ajoute l'entreprise singapourienne Megaspeed à sa liste noire suite à un scandale d'espionnage et de détournement de puces.",
-    "Le Premier ministre de Singapour annonce l'ouverture d'une enquête sur la société après les sanctions décidées par Washington.",
-    "Cette décision intervient après la démission de Jensen Huang de Nvidia et l'arrêt de la vente des puces H200 en Chine."
+    "Le département du Commerce américain ajoute l'entreprise singapourienne Megaspeed à sa liste noire commerciale.",
+    "Le Premier ministre de Singapour annonce l'ouverture d'une enquête sur la société suite aux accusations américaines.",
+    "Jensen Huang a démissionné de Nvidia suite à une affaire liée à des ventes de puces en Chine, selon des informations précédentes."
    ],
    "kinds": [
     "detail",
     "detail",
     "contexte"
    ],
-   "head_en": "The United States places Megaspeed on commercial blacklist",
+   "head_en": "The United States places Megaspeed on a blacklist following a scandal involving Nvidia",
    "bullets_en": [
-    "The US Department of Commerce adds Singaporean company Megaspeed to its blacklist following an espionage and chip diversion scandal.",
-    "The Prime Minister of Singapore announces an investigation into the company following the sanctions decided by Washington.",
-    "This decision comes after Jensen Huang's resignation from Nvidia and the halt of H200 chip sales in China."
+    "The US Department of Commerce adds the Singaporean company Megaspeed to its commercial blacklist.",
+    "The Prime Minister of Singapore announces an investigation into the company following US accusations.",
+    "Jensen Huang resigned from Nvidia following a matter related to chip sales in China, according to previous reports."
    ],
    "ctx_ids": [
     "2fc737ddb995",
@@ -55,19 +55,22 @@
     "1d0523b60f6f",
     "d8fbec9f2d14"
    ],
-   "head": "Trump veut interdire aux entreprises américaines de construire des datacenters à l'étranger",
+   "head": "Trump veut interdire ou taxer la construction de datacenters d'IA américains à l'étranger",
    "bullets": [
-    "Cette mesure protectionniste vise à contrer la Chine et à contraindre les acteurs technologiques à maintenir leurs infrastructures sur le sol américain.",
-    "Le Département du Commerce américain a durci ses règles d'exportation de puces vers l'Asie du Sud-Est pour empêcher les transferts indirects."
+    "Le gouvernement menace d'imposer des taxes lourdes sur les centres de données construits hors des États-Unis.",
+    "Cette décision politique majeure vise à contraindre les entreprises technologiques nationales à maintenir leurs investissements dans les infrastructures au pays et à contrer la Chine.",
+    "Le Département du Commerce américain a durci ses règles d'exportation de puces vers l'Asie du Sud-Est pour contrer les transferts indirects."
    ],
    "kinds": [
+    "detail",
     "explication",
     "contexte"
    ],
-   "head_en": "Trump wants to ban US companies from building datacenters abroad",
+   "head_en": "Trump wants to ban or tax the construction of US AI datacenters abroad",
    "bullets_en": [
-    "This protectionist measure aims to counter China and force tech players to keep their infrastructures on US soil.",
-    "The US Department of Commerce tightened its chip export rules to Southeast Asia to prevent indirect transfers."
+    "The government threatens to impose heavy taxes on data centers built outside the United States.",
+    "This major political decision aims to force national technology companies to keep their infrastructure investments in the country and to counter China.",
+    "The US Department of Commerce tightened its chip export rules to Southeast Asia to counter indirect transfers."
    ],
    "ctx_ids": [
     "3778953e71a6"
@@ -76,27 +79,27 @@
   },
   {
    "ids": [
-    "0e77edd2c1e8",
-    "08ca4f57d6cb",
-    "49258f2ca6af",
-    "62898b4a825e"
+    "22fd7ca2e2d6",
+    "3a6c6f14ac09",
+    "fc3a90d264a7",
+    "0fa20d13e8af"
    ],
-   "head": "L'Oregon et la Virginie poursuivent SpaceX pour les deepfakes sexuels de l'IA Grok",
+   "head": "Donald Trump affirme avoir orchestré le retour de Jensen Huang à la tête de Nvidia",
    "bullets": [
-    "Les procureurs généraux des États de l'Oregon et de Virginie mènent cette action en justice commune.",
-    "La plainte vise les failles de sécurité et les non-respects des lois de protection des consommateurs face aux dérives de l'outil."
+    "Le président américain a missionné son vice-président JD Vance pour convaincre le conseil d'administration de l'entreprise de réintégrer son dirigeant.",
+    "Donald Trump a déclaré avoir agi après une rencontre avec le président chinois Xi Jinping, qualifiant le maintien de Jensen Huang de meilleure chose pour les États-Unis."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Oregon and Virginia sue SpaceX over sexually explicit deepfakes from the AI Grok",
+   "head_en": "Donald Trump claims to have orchestrated Jensen Huang's return as Nvidia CEO",
    "bullets_en": [
-    "The attorneys general of the states of Oregon and Virginia are leading this joint lawsuit.",
-    "The lawsuit targets security flaws and violations of consumer protection laws regarding the tool's abuses."
+    "The US President tasked Vice President JD Vance with persuading the company's board of directors to reinstate its leader.",
+    "Donald Trump stated he acted following a meeting with Chinese President Xi Jinping, describing Jensen Huang's retention as the best thing for the United States."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-23T18:26:47.000Z"
+   "ts": "2026-11-24T04:06:39.000Z"
   }
  ]
 }
