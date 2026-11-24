@@ -4,7 +4,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { parseFeed, ruleClassify, isHubPage, makeClassifier } from "./collect.mjs";
-import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA } from "./translate.mjs";
+import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA = path.join(HERE, "..", "public", "data");
@@ -62,11 +62,11 @@ const translationStatePath=path.join(DATA,"fast-translation.json");
 const translationState=JSON.parse(await fs.readFile(translationStatePath,"utf8").catch(()=>"{}"));
 const now=Date.now();
 const lastAttempt=Date.parse(translationState.last_attempt_at||"");
-const untranslated=items.filter(x=>!x.title_en).slice(0,30);
+const untranslated=items.filter(x=>!x.title_fr||foreignScript(x.title)).slice(0,30);
 if(process.env.GEMINI_API_KEY&&untranslated.length&&(!Number.isFinite(lastAttempt)||now-lastAttempt>=30*60*1000)){
   translationState.last_attempt_at=new Date(now).toISOString();
   try{
-    const clones=untranslated.map(x=>({...x,pending:false}));
+    const clones=untranslated.map(x=>({...x,pending:false,title_en:x.title_fr?x.title_en:""}));
     const classifier=await makeClassifier(process.env,fetch,(m)=>console.log(m));
     if(!classifier.state.fatal){
       const result=await translateMissing({
@@ -79,7 +79,7 @@ if(process.env.GEMINI_API_KEY&&untranslated.length&&(!Number.isFinite(lastAttemp
       for(const item of untranslated){
         const translated=byId.get(item.id);
         if(!translated)continue;
-        for(const key of ["title","title_en","summary_en","why_en"])if(translated[key])item[key]=translated[key];
+        for(const key of ["title","title_fr","title_en","summary_en","why_en"])if(translated[key])item[key]=translated[key];
       }
       console.log("Traduction rapide : "+result.reason);
     }else console.log("Traduction rapide ignorée : "+classifier.state.error);
