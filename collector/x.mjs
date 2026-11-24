@@ -220,6 +220,10 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const ids = { ...(prev?.ids || {}) };
   const usage = { days: { ...(prev?.usage?.days || {}) }, months: { ...(prev?.usage?.months || {}) }, userMonths: { ...(prev?.usage?.userMonths || {}) } };
   const dayKey = new Date(now).toISOString().slice(0, 10), monthKey = dayKey.slice(0, 7);
+  if (usage.userMonths[monthKey] == null) {
+    const lastRun = Date.parse(prev?.last_run_ts || "");
+    usage.userMonths[monthKey] = lastRun >= Date.parse(monthKey + "-01T00:00:00Z") ? Math.min(cfg.caps.user_month ?? 100, Object.keys(ids).length) : 0;
+  }
   const readToday = usage.days[dayKey] || 0, readMonth = usage.months[monthKey] || 0;
   const stats = { ...(prev?.stats || {}) };
   const profiles = { ...(prev?.profiles || {}) };
