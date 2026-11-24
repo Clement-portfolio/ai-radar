@@ -7,7 +7,7 @@ const now = Date.parse("2026-11-21T18:00:00Z");
 
 // plan : plafond de 100 posts, requêtes sous la limite de X, rotation de l'étage 2, filtre IA sur le flux
 const plan = dayPlan(cfg, now), plan2 = dayPlan(cfg, now + 864e5);
-assert.ok(plan.reduce((s, p) => s + p.max, 0) <= cfg.caps.day, "plafond du jour");
+assert.ok(plan.reduce((s, p) => s + p.max, 0) <= cfg.caps.run, "plafond par passage");
 assert.ok(plan.every((p) => p.query.length <= 500 && p.max >= 10 && p.max <= 100), "requêtes et tailles valides");
 assert.ok(plan.every((p) => /-is:retweet -is:reply/.test(p.query)), "retweets et réponses exclus");
 const t2a = plan.filter((p) => p.tier === "t2").flatMap((p) => p.handles), t2b = plan2.filter((p) => p.tier === "t2").flatMap((p) => p.handles);
@@ -38,8 +38,8 @@ const gen = async (inputs) => inputs.map((x) => ({ i: x.i, keep: x.i % 2 === 0, 
 const sleep = async () => {};
 
 const r1 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: null, feed: [], now, sleep });
-assert.ok(r1.summary.read > 0 && r1.summary.read <= cfg.caps.day, "lecture sous le plafond");
-assert.ok(r1.doc.items.length > 0 && r1.doc.items.length <= X_RULES.perDay, "au plus 10 entrées par passage");
+assert.ok(r1.summary.read > 0 && r1.summary.read <= cfg.caps.run, "lecture sous le plafond par passage");
+assert.ok(r1.doc.items.length > 0 && r1.doc.items.length <= X_RULES.perDay, "au plus 12 entrées par passage");
 assert.ok(r1.doc.items.every((x) => x.handle && /^https:\/\/x\.com\/\w+\/status\/\d+$/.test(x.url)), "pseudo et lien du post");
 assert.ok(r1.doc.items.every((x) => x.title && !/["«»]/.test(x.title)), "titre rapporté, sans guillemets");
 assert.ok(usersAsked > 0, "premier passage : les pseudos d'auteurs sont demandés (un appel groupé)");
