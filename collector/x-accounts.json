@@ -689,7 +689,14 @@
     "reasoning",
     "leaderboard",
     "evaluation",
-    "speech"
+    "speech",
+    "robot",
+    "robotics",
+    "humanoid",
+    "physical AI",
+    "world model",
+    "AI agent",
+    "agents"
   ],
   "source_classes": {
     "analyst": [
@@ -785,7 +792,8 @@
     "FED",
     "benchmark",
     "capex",
-    "silicon",
-    "power"
+    "power",
+    "robot",
+    "robotics"
   ]
 }
