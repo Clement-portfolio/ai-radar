@@ -61,7 +61,7 @@ assert.ok(usersAsked > 0, "premier passage : les pseudos d'auteurs sont demandé
 assert.ok(!Object.keys(r1.doc.stats).some((k) => /^\d+$/.test(k)), "statistiques par pseudo, pas par identifiant");
 assert.ok(Object.keys(r1.doc.ids).length > 0 && r1.doc.usage.days["2026-11-21"] === r1.summary.read, "identifiants et lectures mémorisés");
 assert.equal(Object.keys(r1.doc.usage.batchCursors).length, r1.summary.calls, "curseur enregistré pour chaque lot interrogé");
-assert.equal(startTimes[0], new Date(now - 7 * 864e5 + 60e3).toISOString().replace(/\\.\\d+Z$/, "Z"), "première lecture : fenêtre de rattrapage de 7 jours");
+assert.equal(startTimes[0], new Date(now - 7 * 864e5 + 60e3).toISOString().replace(/\.\d+Z$/, "Z"), "première lecture : fenêtre de rattrapage de 7 jours");
 assert.ok(!r1.doc.items.some((x) => /https?:\/\//.test(x.text)), "liens retirés du texte");
 
 // Chaque lot conserve son propre curseur : un lot non interrogé depuis plusieurs jours ne perd pas ses posts.
@@ -69,7 +69,7 @@ const cursorKey = plan[0].handles.join(",");
 const cursorDoc = { ...r1.doc, usage: { ...r1.doc.usage, batchCursors: { ...r1.doc.usage.batchCursors, [cursorKey]: new Date(now - 4 * 3600e3).toISOString() } } };
 startTimes = []; calls = [];
 await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: cursorDoc, feed: [], now: now + 600e3, sleep });
-assert.equal(startTimes[0], new Date(now - 4 * 3600e3 - 10 * 60e3).toISOString().replace(/\\.\\d+Z$/, "Z"), "le curseur du lot prime sur le dernier passage global");
+assert.equal(startTimes[0], new Date(now - 4 * 3600e3 - 10 * 60e3).toISOString().replace(/\.\d+Z$/, "Z"), "le curseur du lot prime sur le dernier passage global");
 
 // même jour : plafond atteint → aucun appel ; avec force → relit
 const c0 = calls.length;
