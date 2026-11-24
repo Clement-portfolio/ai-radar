@@ -71,7 +71,7 @@ export function scorePost(post, cfg) {
   const signalHits = post.relevance?.signals?.length || 0;
   const strategicHits = STRATEGIC.filter((term) => hasTerm(post.text, term)).length;
   const imp = post.v?.imp || 1;
-  const score = imp * 10 + Math.min(10, watchHits * 4) + Math.min(7, signalHits * 1.2) + Math.min(5, strategicHits * 1.5) + weight * 3 + (post.media === 0 ? 2 : 0) + Math.min(3, 0.5 * Math.log10((post.eng || 0) + 1)) + Math.min(4, post.buzz || 0);
+  const score = imp * 10 + Math.min(10, watchHits * 4) + Math.min(7, signalHits * 1.2) + Math.min(5, strategicHits * 1.5) + (weight - 1) * 10 + (post.media === 0 ? 2 : 0) + Math.min(3, 0.5 * Math.log10((post.eng || 0) + 1)) + Math.min(4, post.buzz || 0);
   let priority = "P4";
   if (imp >= 2 && watchHits > 0 && strategicHits > 0) priority = "P1";
   else if (imp >= 3 && (watchHits > 0 || signalHits >= 2) && ["analyst","insider","researcher","media"].includes(cls)) priority = "P1";
@@ -95,7 +95,7 @@ export function dayPlan(cfg, now) {
   const plan = [];
   for (let i = 0; i < Math.max(groups.t1.length, groups.t2.length, groups.flux.length); i++) for (const tier of ["t1","t2","flux"]) if (groups[tier][i]) plan.push(groups[tier][i]);
   const slot = Math.floor(now / (12 * H));
-  if (plan.length > 1) { const shift = (slot * 3) % plan.length; plan.push(...plan.splice(0, shift)); }
+  if (plan.length > 1) { const shift = ((slot % Math.ceil(plan.length / 3)) * 3) % plan.length; plan.push(...plan.splice(0, shift)); }
   let sum = plan.reduce((s, p) => s + p.max, 0);
   for (let i = plan.length - 1; i >= 0 && sum > cap.day; i--) { const cut = Math.min(plan[i].max - X_RULES.minRead, sum - cap.day); plan[i].max -= cut; sum -= cut; }
   while (sum > cap.day && plan.length) { sum -= plan.pop().max; }
