@@ -25,6 +25,7 @@ assert.equal(matchRelevance("Apple expands AI server capacity for its new model 
 assert.equal(matchRelevance("Nvidia reports HBM supply constraints for AI accelerators", cfg).relevant, true);
 assert.equal(matchRelevance("The FED holds rates steady as inflation cools", cfg).relevant, false);
 assert.equal(matchRelevance("Phonic 1.1 leads the Speech to Speech benchmark", cfg).relevant, true);
+assert.equal(matchRelevance("Robots learn a world model from internet video", cfg).relevant, true);
 assert.equal(sourceClass("PhotonCap", "t1", cfg), "analyst");
 assert.equal(sourceClass("OpenAI", "t2", cfg), "official");
 const ranked = scorePost({handle:"PhotonCap",tier:"t1",text:"TSMC raises CoWoS capacity for AI GPU demand",relevance:{watchlist:["TSMC"],signals:["AI","GPU","CoWoS"]},v:{imp:3},eng:20},cfg);
