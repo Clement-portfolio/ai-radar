@@ -696,7 +696,8 @@
     "physical AI",
     "world model",
     "AI agent",
-    "agents"
+    "agents",
+    "robots"
   ],
   "source_classes": {
     "analyst": [
@@ -786,14 +787,13 @@
     "TPUs",
     "HBM",
     "memory",
-    "DRAM",
     "inference",
     "datacenter",
     "FED",
     "benchmark",
-    "capex",
     "power",
     "robot",
-    "robotics"
+    "robotics",
+    "CoWoS"
   ]
 }
