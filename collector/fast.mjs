@@ -62,8 +62,10 @@ const translationStatePath=path.join(DATA,"fast-translation.json");
 const translationState=JSON.parse(await fs.readFile(translationStatePath,"utf8").catch(()=>"{}"));
 const now=Date.now();
 const lastAttempt=Date.parse(translationState.last_attempt_at||"");
+const retryAfter=Date.parse(translationState.retry_after_at||"");
+const cooldownUntil=Number.isFinite(retryAfter)?retryAfter:(Number.isFinite(lastAttempt)?lastAttempt+30*60*1000:0);
 const untranslated=items.filter(x=>!x.title_fr||foreignScript(x.title)).slice(0,30);
-if(process.env.GEMINI_API_KEY&&untranslated.length&&(!Number.isFinite(lastAttempt)||now-lastAttempt>=30*60*1000)){
+if(process.env.GEMINI_API_KEY&&untranslated.length&&now>=cooldownUntil){
   translationState.last_attempt_at=new Date(now).toISOString();
   try{
     const clones=untranslated.map(x=>({...x,pending:false,title_en:x.title_fr?x.title_en:""}));
@@ -82,8 +84,27 @@ if(process.env.GEMINI_API_KEY&&untranslated.length&&(!Number.isFinite(lastAttemp
         for(const key of ["title","title_fr","title_en","summary_en","why_en"])if(translated[key])item[key]=translated[key];
       }
       console.log("Traduction rapide : "+result.reason);
-    }else console.log("Traduction rapide ignorée : "+classifier.state.error);
-  }catch(e){console.log("Traduction rapide indisponible : "+String(e.message||e).slice(0,160));}
+      if(result.changed>0)translationState.last_success_at=new Date(now).toISOString();
+      if(classifier.state.fatal&&/quota/i.test(classifier.state.error||"")){
+        const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Riyadh",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date(now));
+        const get=k=>parts.find(p=>p.type===k)?.value;
+        let nextReset=Date.UTC(Number(get("year")),Number(get("month"))-1,Number(get("day")),8,5);
+        if(nextReset<=now)nextReset+=24*60*60*1000;
+        translationState.retry_after_at=new Date(nextReset).toISOString();
+        console.log("Traduction en pause jusqu'au renouvellement estimé du quota Gemini.");
+      }else translationState.retry_after_at=new Date(now+30*60*1000).toISOString();
+    }else{
+      console.log("Traduction rapide ignorée : "+classifier.state.error);
+      const parts=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Riyadh",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date(now));
+      const get=k=>parts.find(p=>p.type===k)?.value;
+      let nextReset=Date.UTC(Number(get("year")),Number(get("month"))-1,Number(get("day")),8,5);
+      if(nextReset<=now)nextReset+=24*60*60*1000;
+      translationState.retry_after_at=/quota/i.test(classifier.state.error||"")?new Date(nextReset).toISOString():new Date(now+6*60*60*1000).toISOString();
+    }
+  }catch(e){
+    console.log("Traduction rapide indisponible : "+String(e.message||e).slice(0,160));
+    translationState.retry_after_at=new Date(now+30*60*1000).toISOString();
+  }
   await fs.writeFile(translationStatePath,JSON.stringify(translationState,null,1));
 }
 await fs.mkdir(DATA,{recursive:true});
