@@ -1,4 +1,4 @@
-// Collecte X (Twitter) : un passage par jour, plafonné à 100 posts lus. Chaque post lu coûte 0,005 $ : on ne lit que le nécessaire.
+// Collecte X (Twitter) : deux passages par jour, plafonnés à 28 posts chacun et 55 par jour. Chaque post lu coûte 0,005 $.
 // Principes : requêtes « from:a OR from:b » par petits lots (le coût suit les posts renvoyés, pas les appels), retweets et réponses exclus,
 // fenêtre depuis le dernier passage, identifiants d'auteurs mémorisés pour ne plus demander les auteurs (« expansions », facturés en plus),
 // tri par l'IA (hors coût X), détection de ce que la presse a déjà relayé.
@@ -162,7 +162,7 @@ export function pickDay(rows, n = X_RULES.perDay) {
 export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [], now = Date.now(), log = () => {}, force = false, base, sleep = (t) => new Promise((r) => setTimeout(r, t)) }) {
   const prevItems = Array.isArray(prev?.items) ? prev.items : [];
   const ids = { ...(prev?.ids || {}) };
-  const usage = { days: { ...(prev?.usage?.days || {}) }, months: { ...(prev?.usage?.months || {}) } };
+  const usage = { days: { ...(prev?.usage?.days || {}) }, months: { ...(prev?.usage?.months || {}) }, userMonths: { ...(prev?.usage?.userMonths || {}) } };
   const dayKey = new Date(now).toISOString().slice(0, 10), monthKey = dayKey.slice(0, 7);
   const readToday = usage.days[dayKey] || 0, readMonth = usage.months[monthKey] || 0;
   const stats = { ...(prev?.stats || {}) };
@@ -170,13 +170,14 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const whoLow = Object.fromEntries(Object.entries(cfg.who || {}).map(([h, v]) => [h.toLowerCase(), v]));
   const rep = { read: 0, kept: 0, added: 0, calls: 0, reason: "", errors: [] };
   const daily = cfg.caps.day;
+  const perRun = cfg.caps.run || daily;
   if (!token) return { doc: prev || null, summary: { ...rep, reason: "X non configuré (secret X_BEARER_TOKEN absent)" } };
   if (!force && readToday >= daily) return { doc: prev || null, summary: { ...rep, reason: `plafond du jour déjà atteint (${readToday}/${daily})` } };
   if (readMonth >= cfg.caps.month) return { doc: prev || null, summary: { ...rep, reason: `plafond du mois atteint (${readMonth}/${cfg.caps.month})` } };
 
   const lastRun = prev?.last_run_ts ? Date.parse(prev.last_run_ts) : 0;
   const start = Math.max(now - 7 * DAY + 60e3, lastRun ? lastRun - 10 * 60e3 : now - X_RULES.windowH * H);
-  const budget = Math.min(daily - (force ? 0 : readToday), cfg.caps.month - readMonth);
+  const budget = Math.min(perRun, daily - (force ? 0 : readToday), cfg.caps.month - readMonth);
   let plan = dayPlan(cfg, now);
   { let left = budget; plan = plan.filter((p) => { if (left < X_RULES.minRead) return false; p.max = Math.min(p.max, left); left -= p.max; return true; }); }
   const known = new Set(prevItems.map((x) => x.id));
@@ -201,10 +202,16 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   let byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n]));
   const unknownIds = [...new Set(raw.map((p) => p.author_id).filter((a) => a && (!byId[a] || (!profiles[byId[a]] && !whoLow[byId[a]]?.name))))];
   if (unknownIds.length) {
-    try {
-      for (const [id, u] of Object.entries(await lookupUsers({ fetchImpl, token, ids: unknownIds, base }))) { ids[u.username.toLowerCase()] = id; if (u.name) profiles[u.username.toLowerCase()] = { name: u.name }; }
-      byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n])); rep.users = unknownIds.length;
-    } catch (e) { rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message); }
+    const userMonth = usage.userMonths[monthKey] || 0;
+    const userBudget = Math.max(0, (cfg.caps.user_month ?? 100) - userMonth);
+    const toLookup = unknownIds.slice(0, userBudget);
+    if (toLookup.length) {
+      try {
+        for (const [id, u] of Object.entries(await lookupUsers({ fetchImpl, token, ids: toLookup, base }))) { ids[u.username.toLowerCase()] = id; if (u.name) profiles[u.username.toLowerCase()] = { name: u.name }; }
+        byId = Object.fromEntries(Object.entries(ids).map(([n, id]) => [id, n])); rep.users = toLookup.length;
+        usage.userMonths[monthKey] = userMonth + toLookup.length;
+      } catch (e) { rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message); }
+    }
   }
   const handleCase = Object.fromEntries([...cfg.t1, ...cfg.t2, ...cfg.flux].map((h) => [h.toLowerCase(), h]));
   const fresh = [], seen = new Set();
