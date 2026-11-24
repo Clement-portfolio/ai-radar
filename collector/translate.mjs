@@ -51,8 +51,8 @@ export function applyTranslations(arr, inputs, byIdx) {
       touched = true;
     } else if (foreignScript(it.title) && it.summary && !foreignScript(it.summary)) {
       // Secours : le résumé français, déjà validé, sert de titre.
-      const first = clean(it.summary).split(/(?<=[.!?])\\s/)[0];
-      it.title = first.length <= 150 ? first.replace(/\\.$/, "") : first.slice(0, 147).replace(/\\s+\\S*$/, "") + "…";
+      const first = clean(it.summary).split(/(?<=[.!?])\s/)[0];
+      it.title = first.length <= 150 ? first.replace(/\.$/, "") : first.slice(0, 147).replace(/\s+\S*$/, "") + "…";
       touched = true;
     }
     const te = clean(r.title_en);
