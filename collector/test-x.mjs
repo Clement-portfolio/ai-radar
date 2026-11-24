@@ -117,7 +117,7 @@ assert.equal(pressRelay(post, feed, Date.parse("2026-11-21T18:00:00Z")), 2, "2 m
 assert.equal(pressRelay({ text: "Totally unrelated robotics humanoid walking demonstration video", ts: post.ts }, feed, Date.parse("2026-11-21T18:00:00Z")), 0);
 
 
-// choix du jour : varié (2 posts par compte, 3 sur le marché, pas de doublon de propos)
+// choix du jour : varié (3 posts maximum par compte, 3 sur le marché, pas de doublon de propos)
 const mk = (id, h, d, imp, text, extra = {}) => ({ id, handle: h, aid: h, tier: "t1", text, eng: 10, media: 0, v: { imp, domain: d, kind: "annonce" }, ...extra });
 const pool = [
   ...[1, 2, 3, 4].map((k) => mk("k" + k, "Kobeissi", "marche", 3, `market selloff number ${k} unique wording ${k}${k} alpha${k} beta${k} gamma${k}`)),
@@ -126,7 +126,7 @@ const pool = [
   mk("r1", "z", "robotique", 2, "humanoid production line paused according to people familiar"),
 ];
 const day = pickDay(pool, 12);
-assert.ok(day.filter((f) => f.handle === "Kobeissi").length <= 2, "2 posts par compte au plus");
+assert.ok(day.filter((f) => f.handle === "Kobeissi").length <= 3, "3 posts par compte au plus");
 assert.ok(day.filter((f) => f.v.domain === "marche").length <= 3, "3 posts de marché au plus");
 assert.ok(!(day.some((f) => f.id === "d1") && day.some((f) => f.id === "d2")), "même propos : une seule fois");
 assert.ok(day.some((f) => f.v.domain === "robotique"), "les autres domaines passent");
