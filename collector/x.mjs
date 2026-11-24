@@ -39,7 +39,7 @@ function queryChunks(list, terms, limit = 500) {
   if (part.length) out.push(part);
   return out;
 }
-const SEARCH_CONTEXT = ["AI","artificial intelligence","GPU","GPUs","TPU","TPUs","HBM","memory","DRAM","NAND","inference","training","datacenter","data center","semiconductor","chip","chips","accelerator","silicon","silicon photonics","advanced packaging","CoWoS","AI capex","power capacity","grid connection","cooling","networking","optical interconnect","hyperscaler"];
+const SEARCH_CONTEXT = ["AI","artificial intelligence","GPU","GPUs","TPU","TPUs","HBM","inference","training","datacenter","data center","accelerator","compute","silicon photonics","advanced packaging","CoWoS","AI capex","power capacity","grid connection","cooling","optical interconnect","hyperscaler"];
 const DIRECT_AI = ["AI","artificial intelligence","GPU","GPUs","TPU","TPUs","inference","training","datacenter","data center","AI model","AI infrastructure","accelerator","compute","LLM","frontier model"];
 const STRATEGIC = ["investment","invests","capex","capacity","supply","shortage","contract","orders","shipment","shipments","production","fab","datacenter","data center","power","gigawatt","megawatt","customer","revenue","earnings","partnership","acquisition","funding","deployment","buildout","HBM","CoWoS","advanced packaging"];
 const escapeRe = (s) => String(s).replace(/[.*+?^\${}()|[\]\\]/g, "\\$&");
@@ -55,8 +55,8 @@ export function matchRelevance(text, cfg) {
   const aiContext = SEARCH_CONTEXT.some((term) => hasTerm(source, term));
   const directContext = DIRECT_AI.some((term) => hasTerm(source, term));
   const relevantWatchlist = watchlist.filter((w) => w.group === "diversified" ? directContext : aiContext);
-  const specificSignals = signals.filter((s) => !["AI","artificial intelligence","FED","Federal Reserve","capex"].includes(s));
-  const relevant = relevantWatchlist.length > 0 || specificSignals.length > 0 || (signals.includes("FED") && directContext) || (signals.includes("AI") && signals.length >= 2 && aiContext);
+  const directSignals = signals.filter((s) => ["GPU","GPUs","TPU","TPUs","HBM","inference","training","datacenter","data center","accelerator","CoWoS","advanced packaging","silicon photonics","optical interconnect","power capacity","grid connection","cooling","hyperscaler","benchmark","benchmarks","model","models","LLM","LLMs","reasoning","leaderboard","evaluation","speech"].includes(s));
+  const relevant = relevantWatchlist.length > 0 || directSignals.length > 0 || (signals.includes("FED") && directContext) || (signals.includes("AI") && signals.length >= 2 && aiContext);
   return { relevant, watchlist: relevantWatchlist.map((w) => w.name), signals, aiContext };
 }
 export function sourceClass(handle, tier, cfg) {
