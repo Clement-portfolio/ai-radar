@@ -1,0 +1,224 @@
+{
+ "v": 1,
+ "generated_at": "2026-11-24T17:29:57.273Z",
+ "query_count": 1,
+ "people": [
+  {
+   "id": "sam-altman",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Sam Altman",
+   "role": "PDG d'OpenAI",
+   "co": "OpenAI",
+   "actor": "openai",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "dario-amodei",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Dario Amodei",
+   "role": "PDG d'Anthropic",
+   "co": "Anthropic",
+   "actor": null,
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "elon-musk",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Elon Musk",
+   "role": "PDG de Tesla et de SpaceX",
+   "co": "SpaceX / xAI",
+   "actor": null,
+   "alerts": [],
+   "items": [
+    {
+     "ts": "2026-11-24T16:30:07.000Z",
+     "title": "Elon Musk Slams ‘Fair-Weather Friends’ as Worthless After Backing Jensen Huang: ‘Everyone Likes You When",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOWjQzQzRkVF9XV2thSnFNTGo1QUNpYl9BNFk5cTBhczJtZUtCUl9YektTcW1yaG10YlZuaUh4eGRGMjc5TGlieVFBdWxORncwcWtzQ0dnS3FkV1JyTmtsVkJqQXR4RjZmaVMtdDV2YW9Yc193bEFwcEN4ZGk5VmVPa296UGZ3LXg0b3doNnhFMy1fdFNVZGZwOEZzUnlPUVdJMFY0S3RZSUxnTTlIQi1PTzZBRDAyR2FYRUJCQno5Z3hJSm9McjhSNjhFaXREV1d1SjJYb3NlUVdjbThkUUVuc2lRMDJZalk3TXBaaDloQV9Wbklv?oc=5",
+     "source": "Benzinga",
+     "kind": "presse"
+    },
+    {
+     "ts": "2026-11-24T15:55:00.000Z",
+     "title": "Musk says Tesla self-driving makes seniors safer, but its fine print says they must watch the road",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNmNSODBRY3VUbElSVkdNd2xqWG5sTTIweG9JWjNaX2ZiSGVfQ3dUNFZZVVRBd2xCMTFuLVVUa1BkRzRTMlY2QU96SkFBUzV4Z1RuMlhGcmQyR2h4VkVuTVYwMWZja01UUG5jWElBazluZ28xeUd3eGxxamFxd3ItMmpLNDNsZHd1d2RicVpnV01ZS3lhREdJeWl1b0ZtTGlRXzllR2sxU1Y5WGZTYWFVVWwyWS1uUVd3UVE?oc=5",
+     "source": "Fortune",
+     "kind": "presse"
+    },
+    {
+     "ts": "2026-11-24T13:19:38.000Z",
+     "title": "Jensen Huang's return is a long-term mistake for Nvidia, says 'Elon Musk' author Walter Isaacson",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQc0J1RHpjR3NnTUlFUGlPX1hGb3NsSkp4QVU2LXZhRWtMWFIyMkJMU0hWOWpaOUYzM0JiWklOaGliSFc3eXF6NkxFaEJpQVY1UU13ZmRoT2pCY0pnWTR4TGdjaUliaTUxLVRJQm56SjNPUE1ucWo2R2R4NXFybG5ncjhURFgwTXlqblNzeXBKaEFVRC0ybWtvMTI1RGxfd0ItbUtQWktpazE3YnBYME5Lek1iWjh2NnhCbmR4UjNpaXltN2NDdlpXTUdHaW5TLWtP?oc=5",
+     "source": "CNBC",
+     "kind": "presse"
+    },
+    {
+     "ts": "2026-11-24T12:22:00.000Z",
+     "title": "Elon Musk Reportedly Told Staff SpaceX Is Falling Behind in AI",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFV4c2MzanVKdkRZQnFsb3FqdGtHTXA1TEZPYURVd3I1YzI0NFFYQzBlYjVWVHc4cTEweXhaUVQ1a3Ffa2NzZU9TZE9aRHRTc19CVnVrS3ZEZkw3SEVDbWFzT0trQWNoM0N6RlgxemE0Y205N1BqSjNRZEM3dmUtcXd3Y1c3dFUyQ1p3b1lmOEVYZV9kekVINVNOTGRtckg3TmF4Z1dpQU0wUQ?oc=5",
+     "source": "24/7 Wall St.",
+     "kind": "presse"
+    },
+    {
+     "ts": "2026-11-24T12:20:24.000Z",
+     "title": "Elon Musk Warns AI Firms Could Face a Cash Crisis in 2027",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBNRFdVV01SRzlmUEF4UDBPREd6MmN1NTR6eHVfUUxuWHZyQ1RKZGw3Z1pfYnlYNTBtUThoVDlMSTlqQ1NPTjd0NzRDRkNmYWRMbXZwWWh5cGU?oc=5",
+     "source": "Cryptonews.net",
+     "kind": "presse"
+    }
+   ]
+  },
+  {
+   "id": "satya-nadella",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Satya Nadella",
+   "role": "PDG de Microsoft",
+   "co": "Microsoft",
+   "actor": "microsoft",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "sundar-pichai",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Sundar Pichai",
+   "role": "PDG d'Alphabet (Google)",
+   "co": "Alphabet",
+   "actor": "alphabet",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "demis-hassabis",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Demis Hassabis",
+   "role": "PDG de Google DeepMind",
+   "co": "Google DeepMind",
+   "actor": "alphabet",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "mark-zuckerberg",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Mark Zuckerberg",
+   "role": "PDG de Meta",
+   "co": "Meta",
+   "actor": "meta",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "lisa-su",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Lisa Su",
+   "role": "PDG d'AMD",
+   "co": "AMD",
+   "actor": "amd",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "hock-tan",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Hock Tan",
+   "role": "PDG de Broadcom",
+   "co": "Broadcom",
+   "actor": "broadcom",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "cc-wei",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "C.C. Wei",
+   "role": "PDG de TSMC",
+   "co": "TSMC",
+   "actor": "tsmc",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "andy-jassy",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Andy Jassy",
+   "role": "PDG d'Amazon",
+   "co": "Amazon",
+   "actor": "amazon",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "lip-bu-tan",
+   "cat": "dirigeants",
+   "w": 1.6,
+   "n": "Lip-Bu Tan",
+   "role": "PDG d'Intel",
+   "co": "Intel",
+   "actor": "intel-foundry",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "kwak-noh-jung",
+   "cat": "dirigeants",
+   "w": 1,
+   "n": "Kwak Noh-jung",
+   "role": "PDG de SK hynix",
+   "co": "SK hynix",
+   "actor": "sk-hynix",
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "michael-intrator",
+   "cat": "dirigeants",
+   "w": 1,
+   "n": "Michael Intrator",
+   "role": "PDG de CoreWeave",
+   "co": "CoreWeave",
+   "actor": null,
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "stacy-rasgon",
+   "cat": "investisseurs",
+   "w": 1,
+   "n": "Stacy Rasgon",
+   "role": "Analyste semi-conducteurs (Bernstein)",
+   "co": "",
+   "actor": null,
+   "alerts": [],
+   "items": []
+  },
+  {
+   "id": "dylan-patel",
+   "cat": "investisseurs",
+   "w": 1,
+   "n": "Dylan Patel",
+   "role": "Fondateur de SemiAnalysis",
+   "co": "SemiAnalysis",
+   "actor": null,
+   "alerts": [],
+   "items": []
+  }
+ ]
+}
