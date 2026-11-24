@@ -5,75 +5,69 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-24T19:05:04.978Z",
+ "generated_at": "2026-11-24T22:03:51.000Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "08f69edf5cd8+2a6ea8dac20b+2ca795adfbbb+390761ac5d39+7646bfa59b7a+7d1b0e758ce7+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
+  "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+390761ac5d39+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
+  "012a59ac5286+03a5687591e9+07b3803b9303+08685ddbf818+0fa20d13e8af+12493e69fa51+1b14383b1d83+1c0a1e1598f2+1db90e300fc0+1ebbb225f078+22fd7ca2e2d6+2fec91190f60+354bf133bd07+38340f7df7bb+4044a23d60df+43d32363a274+4b29b6901fc2+55a943f96493+5dc55a044437+613b95800cde+616283a566b6+6553a4e9576a+657d6742e35a+66cc673a6baa+68a0e195ceda+69f64fbae113+6d46c005192f+71f693cffefe+7c0a81286ce5+7dcc5db7e628+83425ff88d62+86f36aa729ca+97d2878c5e73+9f91f68231f9+a078aa976acb+a165733dbba2+a33229a60892+ac55a4874f2b+ad3978edda31+b33fa45cb319+b5178fbec424+b8a8e1606a64+cb8d7daff59c+d2a4386c874f+efa75c0d5fa1+f27eb2633696+f4b6cf75fcfb+fc3a90d264a7",
   "0c56e1950266+4b1f1703bbc0+c3a2aba6c39e+cb02ca1a7848+def41b9598d6+f955d48edeaa",
-  "012a59ac5286+0fa20d13e8af+1c0a1e1598f2+1ebbb225f078+22fd7ca2e2d6+43d32363a274+613b95800cde+6553a4e9576a+69f64fbae113+86f36aa729ca+a165733dbba2+a33229a60892+cb8d7daff59c+d2a4386c874f+efa75c0d5fa1+f07be23db17f",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5fc039618c60+cd767daa7782+cfa454b7233b+d8fbec9f2d14",
+  "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
   "08ca4f57d6cb+0e77edd2c1e8+49258f2ca6af+62898b4a825e",
-  "074a762c0968+0b56d8c56f62+2683456db008+b2623c09c93b+ca82b864bdca+dde262384a9f+e22812a5ccc9+f4fe310fb2c6",
   "43a1e3d33ca6+fd5a3afdee21",
-  "8bc8fed2fbe6+91684e243003+a9cf7c8001a6"
+  "0013b7149f1d+57518ddbacad+91a061a2dbb7+d72729ce009a+f2da25e696e2+f8cbfe51c72f"
  ],
  "stories": [
   {
    "ids": [
     "2ca795adfbbb",
+    "295cb82f7621",
     "dd245aec9e89",
-    "390761ac5d39",
-    "2a6ea8dac20b"
+    "390761ac5d39"
    ],
-   "head": "Le gouvernement américain place l'entreprise Megaspeed sur sa liste noire commerciale",
+   "head": "Les États-Unis placent l'entreprise Megaspeed sur liste noire commerciale",
    "bullets": [
-    "Le département du Commerce américain restreint les exportations vers cette société basée à Singapour.",
-    "Le Premier ministre de Singapour annonce l'ouverture d'une enquête à la suite de cette décision américaine.",
-    "Cette sanction intervient à la suite de soupçons de détournement de puces d'intelligence artificielle et d'un scandale d'espionnage lié à Nvidia."
+    "Le département du Commerce américain a ajouté la firme singapourienne Megaspeed et ses filiales à sa liste noire dans le cadre d'une enquête sur la contrebande de puces.",
+    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête sur l'entreprise suite aux accusations américaines de détournement de puces.",
+    "Cette sanction vise à restreindre l'accès à certaines technologies et à empêcher le contournement des contrôles à l'exportation vers la Chine."
    ],
    "kinds": [
     "detail",
     "detail",
     "explication"
    ],
-   "head_en": "The US government places Megaspeed on its commercial blacklist",
+   "head_en": "The United States places Megaspeed on commercial blacklist",
    "bullets_en": [
-    "The US Department of Commerce restricts exports to the Singapore-based company.",
-    "The Prime Minister of Singapore announces the opening of an investigation following this US decision.",
-    "This sanction comes following suspicions of artificial intelligence chip diversion and an espionage scandal linked to Nvidia."
+    "The US Department of Commerce has added Singaporean firm Megaspeed and its subsidiaries to its blacklist as part of an investigation into chip smuggling.",
+    "The Prime Minister of Singapore has announced an investigation into the company following US allegations of chip diversion.",
+    "This sanction aims to restrict access to certain technologies and prevent the circumvention of export controls to China."
    ],
    "ctx_ids": [],
    "ts": "2026-11-24T16:00:41.000Z"
   },
   {
    "ids": [
+    "f27eb2633696",
+    "68a0e195ceda",
     "613b95800cde",
-    "22fd7ca2e2d6",
-    "012a59ac5286",
-    "0fa20d13e8af"
+    "22fd7ca2e2d6"
    ],
-   "head": "Donald Trump revendique un rôle clé dans le retour de Jensen Huang à la tête de Nvidia",
+   "head": "Donald Trump orchestre le retour de Jensen Huang à la tête de Nvidia",
    "bullets": [
-    "Le président américain affirme avoir sollicité JD Vance pour convaincre le conseil d'administration de l'entreprise.",
-    "Cette déclaration contredit les affirmations du secrétaire au Trésor, qui niait toute discussion entre les présidents américain et chinois sur ce sujet.",
-    "L'administration justifie cette intervention par l'importance stratégique des semi-conducteurs pour la sécurité nationale des États-Unis."
+    "Le conseil d'administration de Nvidia a réintégré Jensen Huang au poste de PDG après avoir initialement refusé son offre de retour.",
+    "Donald Trump affirme être intervenu dans ce dossier pour stabiliser les marchés financiers et soutenir le secteur de l'intelligence artificielle."
    ],
    "kinds": [
     "detail",
-    "contexte",
     "explication"
    ],
-   "head_en": "Donald Trump claims a key role in Jensen Huang's return as CEO of Nvidia",
+   "head_en": "Donald Trump orchestrates the return of Jensen Huang as head of Nvidia",
    "bullets_en": [
-    "The US President claims to have tasked JD Vance with persuading the company's board of directors.",
-    "This statement contradicts claims from the Treasury Secretary, who denied any discussion between the US and Chinese presidents on this matter.",
-    "The administration justifies this intervention by the strategic importance of semiconductors for US national security."
+    "Nvidia's board of directors reinstated Jensen Huang as CEO after initially rejecting his offer to return.",
+    "Donald Trump claims to have intervened in this matter to stabilize financial markets and support the artificial intelligence sector."
    ],
-   "ctx_ids": [
-    "fd3fd94a8a01",
-    "6d46c005192f"
-   ],
-   "ts": "2026-11-24T13:45:00.000Z"
+   "ctx_ids": [],
+   "ts": "2026-11-24T15:40:00.000Z"
   },
   {
    "ids": [
@@ -82,19 +76,19 @@
     "1d0523b60f6f",
     "d8fbec9f2d14"
    ],
-   "head": "Donald Trump menace de bloquer ou de taxer les datacenters d'IA construits à l'étranger",
+   "head": "Donald Trump menace les datacenters américains à l'étranger d'une taxe énorme",
    "bullets": [
-    "Cette décision vise à contraindre les acteurs technologiques nationaux à maintenir leurs investissements sur le sol américain et à contrer la Chine.",
-    "Le Département du Commerce américain a durci ses règles d'exportation de puces vers l'Asie du Sud-Est pour empêcher les transferts indirects."
+    "Cette mesure vise à contrer la Chine et à contraindre les acteurs technologiques nationaux à maintenir leurs infrastructures critiques sur le sol américain.",
+    "Le Département du Commerce américain a durci ses règles d'exportation de puces vers l'Asie du Sud-Est pour contrer les transferts indirects."
    ],
    "kinds": [
     "explication",
     "contexte"
    ],
-   "head_en": "Donald Trump threatens to block or tax AI datacenters built abroad",
+   "head_en": "Donald Trump threatens US datacenters abroad with a massive tax",
    "bullets_en": [
-    "This decision aims to force national tech players to keep their investments on American soil and counter China.",
-    "The US Department of Commerce has tightened its chip export rules to Southeast Asia to prevent indirect transfers."
+    "This measure aims to counter China and force domestic tech players to keep their critical infrastructure on US soil.",
+    "The US Department of Commerce tightened its chip export rules to Southeast Asia to counter indirect transfers."
    ],
    "ctx_ids": [
     "3778953e71a6"
