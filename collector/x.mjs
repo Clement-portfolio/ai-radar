@@ -218,7 +218,7 @@ export function pickDay(rows, n = X_RULES.perRun) {
 export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [], now = Date.now(), log = () => {}, force = false, base, sleep = (t) => new Promise((r) => setTimeout(r, t)) }) {
   const prevItems = Array.isArray(prev?.items) ? prev.items : [];
   const ids = { ...(prev?.ids || {}) };
-  const usage = { days: { ...(prev?.usage?.days || {}) }, months: { ...(prev?.usage?.months || {}) }, userMonths: { ...(prev?.usage?.userMonths || {}) } };
+  const usage = { days: { ...(prev?.usage?.days || {}) }, months: { ...(prev?.usage?.months || {}) }, userMonths: { ...(prev?.usage?.userMonths || {}) }, batchCursors: { ...(prev?.usage?.batchCursors || {}) } };
   const dayKey = new Date(now).toISOString().slice(0, 10), monthKey = dayKey.slice(0, 7);
   if (usage.userMonths[monthKey] == null) {
     const lastRun = Date.parse(prev?.last_run_ts || "");
@@ -235,8 +235,7 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   if (!force && readToday >= daily) return { doc: prev || null, summary: { ...rep, reason: `plafond du jour déjà atteint (${readToday}/${daily})` } };
   if (readMonth >= cfg.caps.month) return { doc: prev || null, summary: { ...rep, reason: `plafond du mois atteint (${readMonth}/${cfg.caps.month})` } };
 
-  const lastRun = prev?.last_run_ts ? Date.parse(prev.last_run_ts) : 0;
-  const start = Math.max(now - 7 * DAY + 60e3, lastRun ? lastRun - 10 * 60e3 : now - X_RULES.windowH * H);
+  const fallbackStart = now - 7 * DAY + 60e3;
   const budget = Math.floor(Math.min(perRun, daily - (force ? 0 : readToday), cfg.caps.month - readMonth) / X_RULES.minRead) * X_RULES.minRead;
   if (budget < X_RULES.minRead) return { doc: prev || null, summary: { ...rep, reason: "budget restant inférieur au minimum de 10 lectures par requête", month: readMonth } };
   let plan = dayPlan(cfg, now);
@@ -245,7 +244,10 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const raw = [];
   for (const p of plan) {
     let got;
-    try { got = await fetchChunk({ fetchImpl, token, query: p.query, max: p.max, start, base }); rep.calls++; }
+    const batchKey = p.handles.join(",");
+    const cursor = Date.parse(usage.batchCursors[batchKey] || "");
+    const batchStart = Number.isFinite(cursor) && cursor > 0 ? Math.max(fallbackStart, cursor - 10 * 60e3) : fallbackStart;
+    try { got = await fetchChunk({ fetchImpl, token, query: p.query, max: p.max, start: batchStart, base }); rep.calls++; usage.batchCursors[batchKey] = new Date(now).toISOString(); }
     catch (e) {
       rep.errors.push(String(e.message).slice(0, 160)); log("X : " + e.message);
       if ([401, 402, 403, 429].includes(e.status)) break; // accès, crédit ou limite : inutile d'insister
