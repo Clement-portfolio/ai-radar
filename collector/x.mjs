@@ -82,7 +82,7 @@ export function scorePost(post, cfg) {
 /** Seuls les comptes suivis sont interrogés ; watchlist et signaux IA filtrent leurs publications. */
 export function dayPlan(cfg, now) {
   const cap = { ...cfg.caps, day: Math.min(cfg.caps.day, cfg.caps.run || cfg.caps.day) };
-  const terms = cfg.search_terms || cfg.flux_terms || [];
+  const terms = [...new Set([...(cfg.watchlist || []).map((w) => w.query_term).filter(Boolean), ...(cfg.search_priority_terms || cfg.flux_terms || [])])];
   const groups = { t1: [], t2: [], flux: [] };
   const add = (name, list, total) => {
     const chunks = queryChunks(list, terms, 500); if (!chunks.length) return;
