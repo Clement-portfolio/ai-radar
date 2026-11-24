@@ -39,15 +39,15 @@ export function dayPlan(cfg, now) {
   add("t1", cfg.t1, cap.t1);
   add("t2", t2, cap.t2);
   add("flux", cfg.flux, cap.flux, cfg.flux_terms);
-  // le plafond du jour prime : on rogne les derniers lots (flux, puis étage 2) si les minimums de 10 le dépassent
+  // Le second passage commence par les lots suivants pour élargir la couverture des comptes.
+  if (Math.floor(now / (12 * H)) % 2 === 1 && plan.length > 1) {
+    const shift = Math.min(3, plan.length - 1);
+    plan.push(...plan.splice(0, shift));
+  }
+  // Le plafond par passage prime : on rogne les derniers lots sans requête sous 10 résultats.
   let sum = plan.reduce((s, p) => s + p.max, 0);
   for (let i = plan.length - 1; i >= 0 && sum > cap.day; i--) { const cut = Math.min(plan[i].max - X_RULES.minRead, sum - cap.day); plan[i].max -= cut; sum -= cut; }
   while (sum > cap.day && plan.length) { sum -= plan.pop().max; }
-  // Le second passage décale l'ordre des lots pour ne pas toujours lire les mêmes comptes.
-  if (Math.floor(now / (12 * H)) % 2 === 1 && plan.length > 1) {
-    const shift = Math.min(3, plan.length - 1);
-    plan = [...plan.slice(shift), ...plan.slice(0, shift)];
-  }
   return plan;
 }
 
