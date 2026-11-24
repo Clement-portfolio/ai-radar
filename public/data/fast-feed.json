@@ -1,6 +1,51 @@
 {
- "generated_at": "2026-11-24T15:28:39.942Z",
+ "generated_at": "2026-11-24T16:03:35.209Z",
  "items": [
+  {
+   "id": "2ad655294d33",
+   "ts": "2026-11-24T16:00:27.000Z",
+   "title": "ASUS Turbo Radeon AI PRO R9700 Review",
+   "orig": "ASUS Turbo Radeon AI PRO R9700 Review",
+   "summary": "Today we are taking a look at ASUS's high-end Radeon AI inference card for workstations, the Turbo Radeon AI Pro R9700. With 32GB of RAM and a $2000 price tag, the card is a highly affordable way to fill out a workstation for local AI inference The post ASUS T",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "ServeTheHome",
+   "url": "https://www.servethehome.com/asus-turbo-radeon-pro-ai-r9700-review/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "5845ed4863b4",
+   "ts": "2026-11-24T15:51:07.000Z",
+   "title": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+   "orig": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+   "summary": "Amazon’s decision to acquire Decart for a reported $7.5 billion is part of its efforts to improve the efficiency of its Trainium chips.",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "928911c57a2c",
+   "ts": "2026-11-24T15:49:26.000Z",
+   "title": "Massed Compute deploys GPUs at American Tower data center in Raleigh, North Carolina",
+   "orig": "Massed Compute deploys GPUs at American Tower data center in Raleigh, North Carolina",
+   "summary": "Scale of deployment not shared",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/massed-compute-deploys-gpus-at-american-tower-data-center-in-raleigh-north-carolina/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "970dfb2c65e5",
    "ts": "2026-11-24T15:22:29.000Z",
