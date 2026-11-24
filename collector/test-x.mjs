@@ -68,7 +68,7 @@ assert.match(r2.summary.reason, /plafond du jour/);
 
 // Le reliquat inférieur au minimum X de 10 posts ne déclenche aucune requête (pas de sous-comptage).
 const beforeSmallBudget = calls.length;
-const smallBudget = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...known, usage: { days: { "2026-11-21": 50 }, months: {} } }, feed: [], now: now + 600e3, sleep });
+const smallBudget = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...r1.doc, usage: { days: { "2026-11-21": 50 }, months: {} } }, feed: [], now: now + 600e3, sleep });
 assert.equal(calls.length, beforeSmallBudget, "pas d'appel X avec moins de 10 lectures de budget");
 assert.match(smallBudget.summary.reason, /minimum de 10/);
 
