@@ -878,7 +878,8 @@ function xWho(it){
 function xRow(it){
   var en=isEn(),k=vKey(it.id),kd=XKIND[it.kind]||XKIND.autre,w=xWho(it);
   var body=en?(it.text||""):(it.text_fr||it.text||"");
-  var pLabel=it.priority?'<span class="xb">'+esc(it.priority)+'</span>':"";
+  var pNames={P1:en?"Strategic":"Stratégique",P2:en?"Important":"Important",P3:en?"Secondary":"Secondaire",P4:en?"Minor":"Mineur"};
+  var pLabel=it.priority?'<span class="xb">'+esc(it.priority+" · "+(pNames[it.priority]||""))+'</span>':"";
   var relay=it.kind==="rumeur"?'<span class="xb">'+(en?'Unconfirmed':'Non confirmé')+'</span>':'';
   relay+=it.media>0?'<span class="xb">'+(en?'Picked up by '+it.media+' outlet'+(it.media>1?'s':''):'Repris par '+it.media+' média'+(it.media>1?'s':''))+'</span>':'<span class="xb">'+(en?'Not yet covered by the press':'Non relayé par la presse')+'</span>';
   return '<div class="vrow'+(S.open[k]?' open':'')+'"><span class="time">'+esc(fmtTime(it.ts))+'</span><span class="vwho"><a href="https://x.com/'+esc(it.handle)+'" target="_blank" rel="noopener">'+esc(w.name)+'</a><span class="small">'+esc(w.role||("@"+(it.handle||"?")))+'</span></span>'+
