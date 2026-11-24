@@ -1,5 +1,5 @@
 {
-  "_note": "Comptes X suivis : seules leurs publications sont interrogées. La watchlist et les signaux IA filtrent ces publications ; aucune recherche globale sur X n'est déclenchée. Collecte à 08 h et 20 h (Riyad). Plafond dur : 1 650 posts et 100 consultations de profils par mois.",
+  "_note": "Comptes X suivis : seules leurs publications sont interrogées. La watchlist et les signaux IA filtrent ces publications ; aucune recherche globale sur X n'est déclenchée. Collecte à 08 h et 20 h (Riyad). Plafond dur : 1 650 posts et 100 consultations de profils par mois. Les termes ambigus « SI » ne sont pas utilisés seuls ; « silicon » est suivi explicitement.",
   "caps": {
     "t1": 54,
     "t2": 30,
@@ -647,7 +647,17 @@
     "networking",
     "optical interconnect",
     "FED",
-    "Federal Reserve"
+    "Federal Reserve",
+    "benchmark",
+    "benchmarks",
+    "model",
+    "models",
+    "LLM",
+    "LLMs",
+    "reasoning",
+    "leaderboard",
+    "evaluation",
+    "speech"
   ],
   "search_terms": [
     "TSMC",
@@ -693,7 +703,12 @@
     "datacenter",
     "chip",
     "capex",
-    "FED"
+    "FED",
+    "benchmark",
+    "model",
+    "LLM",
+    "reasoning",
+    "speech"
   ],
   "source_classes": {
     "analyst": [
