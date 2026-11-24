@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
-import { pickDay, dayPlan, buildQuery, collectX, applyRow, pressRelay, silentAccounts, chunkList, X_RULES } from "./x.mjs";
+import { pickDay, dayPlan, buildQuery, collectX, applyRow, pressRelay, silentAccounts, chunkList, X_RULES, matchRelevance, sourceClass, scorePost } from "./x.mjs";
 
 const cfg = JSON.parse(fs.readFileSync(new URL("./x-accounts.json", import.meta.url), "utf8"));
 const now = Date.parse("2026-11-21T18:00:00Z");
@@ -11,7 +11,11 @@ assert.ok(plan.reduce((s, p) => s + p.max, 0) <= cfg.caps.run, "plafond par pass
 assert.ok(plan.every((p) => p.query.length <= 500 && p.max >= 10 && p.max <= 100), "requêtes et tailles valides");
 assert.ok(plan.every((p) => /-is:retweet -is:reply/.test(p.query)), "retweets et réponses exclus");
 const t2a = plan.filter((p) => p.tier === "t2").flatMap((p) => p.handles), t2b = plan2.filter((p) => p.tier === "t2").flatMap((p) => p.handles);
-assert.ok(plan.every((p) => p.handles.length > 0), "lots de comptes non vides");\nassert.ok(new Set(plan.slice(0,3).map((p)=>p.tier)).size === 3, "les trois familles de sources sont réparties dans le budget");
+assert.ok(plan.every((p) => p.handles.length > 0), "lots de comptes non vides");
+assert.ok(new Set(plan.slice(0,3).map((p)=>p.tier)).size === 3, "les trois familles de sources sont réparties dans le budget");
+assert.equal(X_RULES.perRun, 20);
+assert.equal(X_RULES.perDay, 40);
+assert.ok(new Set(plan.slice(0,3).map((p)=>p.tier)).size === 3, "les trois familles de sources sont réparties dans le budget");
 assert.ok(plan.every((p) => p.query.includes("TSMC") && p.query.includes("AI")), "watchlist et signaux IA appliqués à chaque compte suivi");
 assert.equal(buildQuery(["a", "b"]), "(from:a OR from:b) -is:retweet -is:reply");
 assert.equal(chunkList([1, 2, 3, 4, 5], 2).length, 3);
