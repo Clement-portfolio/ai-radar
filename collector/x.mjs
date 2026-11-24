@@ -29,7 +29,7 @@ export function buildQuery(handles, terms = []) {
 export function dayPlan(cfg, now) {
   const half = Math.floor(now / DAY) % 2;
   const t2 = cfg.t2.filter((_, i) => i % 2 === half);
-  const cap = cfg.caps;
+  const cap = { ...cfg.caps, day: Math.min(cfg.caps.day, cfg.caps.run || cfg.caps.day) };
   const plan = [];
   const add = (name, list, total, terms) => {
     const chunks = chunkList(list, cfg.chunk || 9); if (!chunks.length) return;
@@ -43,6 +43,11 @@ export function dayPlan(cfg, now) {
   let sum = plan.reduce((s, p) => s + p.max, 0);
   for (let i = plan.length - 1; i >= 0 && sum > cap.day; i--) { const cut = Math.min(plan[i].max - X_RULES.minRead, sum - cap.day); plan[i].max -= cut; sum -= cut; }
   while (sum > cap.day && plan.length) { sum -= plan.pop().max; }
+  // Le second passage décale l'ordre des lots pour ne pas toujours lire les mêmes comptes.
+  if (Math.floor(now / (12 * H)) % 2 === 1 && plan.length > 1) {
+    const shift = Math.min(3, plan.length - 1);
+    plan = [...plan.slice(shift), ...plan.slice(0, shift)];
+  }
   return plan;
 }
 
