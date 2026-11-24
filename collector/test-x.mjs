@@ -6,11 +6,10 @@ const cfg = JSON.parse(fs.readFileSync(new URL("./x-accounts.json", import.meta.
 const now = Date.parse("2026-11-21T18:00:00Z");
 
 // plan : plafond de 100 posts, requêtes sous la limite de X, rotation de l'étage 2, filtre IA sur le flux
-const plan = dayPlan(cfg, now), plan2 = dayPlan(cfg, now + 864e5);
+const plan = dayPlan(cfg, now);
 assert.ok(plan.reduce((s, p) => s + p.max, 0) <= cfg.caps.run, "plafond par passage");
 assert.ok(plan.every((p) => p.query.length <= 500 && p.max >= 10 && p.max <= 100), "requêtes et tailles valides");
 assert.ok(plan.every((p) => /-is:retweet -is:reply/.test(p.query)), "retweets et réponses exclus");
-const t2a = plan.filter((p) => p.tier === "t2").flatMap((p) => p.handles), t2b = plan2.filter((p) => p.tier === "t2").flatMap((p) => p.handles);
 assert.ok(plan.every((p) => p.handles.length > 0), "lots de comptes non vides");
 assert.ok(new Set(plan.slice(0,3).map((p)=>p.tier)).size === 3, "les trois familles de sources sont réparties dans le budget");
 assert.equal(X_RULES.perRun, 20);
@@ -52,7 +51,8 @@ const sleep = async () => {};
 
 const r1 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: null, feed: [], now, sleep });
 assert.ok(r1.summary.read > 0 && r1.summary.read <= cfg.caps.run, "lecture sous le plafond par passage");
-assert.ok(r1.doc.items.length > 0 && r1.doc.items.length <= X_RULES.perDay, "au plus 12 entrées par passage");
+assert.ok(r1.doc.items.length > 0 && r1.doc.items.length <= X_RULES.perRun, "au plus 20 entrées par passage");
+assert.ok(r1.doc.items.every((x) => ["P1","P2","P3","P4"].includes(x.priority) && x.source_class), "priorité et profil de source conservés dans le feed");
 assert.ok(r1.doc.items.every((x) => x.handle && /^https:\/\/x\.com\/\w+\/status\/\d+$/.test(x.url)), "pseudo et lien du post");
 assert.ok(r1.doc.items.every((x) => x.title && !/["«»]/.test(x.title)), "titre rapporté, sans guillemets");
 assert.ok(usersAsked > 0, "premier passage : les pseudos d'auteurs sont demandés (un appel groupé)");
@@ -65,6 +65,12 @@ const c0 = calls.length;
 const r2 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...r1.doc, usage: { ...r1.doc.usage, days: { "2026-11-21": 100 } } }, feed: [], now: now + 600e3, sleep });
 assert.equal(calls.length, c0, "plafond du jour : aucun appel");
 assert.match(r2.summary.reason, /plafond du jour/);
+
+// Le reliquat inférieur au minimum X de 10 posts ne déclenche aucune requête (pas de sous-comptage).
+const beforeSmallBudget = calls.length;
+const smallBudget = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...known, usage: { days: { "2026-11-21": 50 }, months: {} } }, feed: [], now: now + 600e3, sleep });
+assert.equal(calls.length, beforeSmallBudget, "pas d'appel X avec moins de 10 lectures de budget");
+assert.match(smallBudget.summary.reason, /minimum de 10/);
 
 // lendemain : identifiants connus → plus de demande d'auteurs pour les comptes qui en ont un
 const known = r1.doc, ua = usersAsked;
