@@ -48,6 +48,7 @@ export function applyTranslations(arr, inputs, byIdx) {
     const tf = clean(r.title_fr);
     if (tf && tf.length <= 220 && !foreignScript(tf) && ok(tf, "fr", true, inp.orig || inp.title)) {
       it.title = normalizeFr(inp.orig || inp.title, tf);
+      it.title_fr = it.title;
       touched = true;
     } else if (foreignScript(it.title) && it.summary && !foreignScript(it.summary)) {
       // Secours : le résumé français, déjà validé, sert de titre.
