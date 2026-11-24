@@ -889,9 +889,7 @@ function xRow(it){
 }
 function xHtml(){
   var en=isEn(),X=S.x,all=(X&&X.items)||[];
-  if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: the first pass runs at 9 pm (Riyadh time).':'Aucun post collecté pour l\'instant : les collectes ont lieu à 8 h et 20 h (heure de Riyad).')+'</div>';
-  var pr={P1:4,P2:3,P3:2,P4:1};
-  items.sort(function(a,b){var d=dayKey(b.ts).localeCompare(dayKey(a.ts));return d||(pr[b.priority]||0)-(pr[a.priority]||0)||(b.priority_score||0)-(a.priority_score||0)||Date.parse(b.ts)-Date.parse(a.ts)});
+  if(!X||!all.length)return '<div class="empty">'+(en?'No post collected yet: collections run at 8 am and 8 pm (Riyadh time).':'Aucun post collecté pour l\'instant : les collectes ont lieu à 8 h et 20 h (heure de Riyad).')+'</div>';
   var kinds=Object.keys(XKIND);
   var items=all.filter(function(x){return S.xk==="ALL"||x.kind===S.xk}).filter(function(x){return!S.xnr||!(x.media>0)}).filter(function(x){var q=nz(S.xq).trim();return!q||nz(xTitle(x)+" "+(x.text||"")+" "+(x.text_fr||"")+" "+(x.handle||"")+" "+xWho(x).name+" "+xWho(x).role).indexOf(q)>=0});
   var pr={P1:4,P2:3,P3:2,P4:1};
