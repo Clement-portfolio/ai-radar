@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T04:12:47.043Z",
+ "generated_at": "2026-11-25T07:28:21.866Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1562,13 +1562,23 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T04:45:10.000Z",
+     "title": "Anthropic CEO Dario Amodei Wanted Control of AI at OpenAI, Claims Yann LeCun",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQci1pWmJWZzhJUm1pb09FV3pONDNrVlROYXNUVlZpdmtfNmRVNGZ6dkg1ZEtEajJNaDZZT0pMYmlZQ2VSY3Z5VmRPUklOS1dTRnoydURpU1hJa2dTQjY3ZU1HQjhDLWE2TmdHX0M2ZWpua3djNzBEZzRMcmJzdTNZSFg3eF9KUjE2TDhzdklnQmRWRkxUbzNPamhTRlNpZkV6VWdvdHk0SElXNlJFZVFlUg?oc=5",
+     "source": "Mashable India",
+     "kind": "presse",
+     "title_fr": "Le PDG d'Anthropic, Dario Amodei, voulait le contrôle de l'IA chez OpenAI, affirme Yann LeCun",
+     "m": 3,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T14:02:20.000Z",
      "title": "AI Godfather Yann LeCun Attacks Anthropic CEO Dario Amodei, Says He Wants To Control AI",
      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPV3RFM1pGZDZMb0hJWjlzU3FkWTljWWwydVNWamNXb0kzZkl5UzJsRTRLX0NlVlpyY3FzQXAzQkw4ZUZrdE9SbVBndmx6Q2JSa3lNbVNaTEdDUHNyeTVFdkNmVU9mdDkxc0R5ckZQdEt5Yi1JUFE3MnhjZlVoQTRGQ1A5TXNiWnp0VmVDLVAzUjlEdURlUlJ2X0p6bDFFUF9qU2ZLa3dyeWRad0cwd2VjckQweFRzVEVBdVBCNDlJSGV6bnYzallCb05JTkhsOW1iSjZmVkpNVjFXbWRkV2NUR0pTbGtxM0XSAewBQVVfeXFMTi1LNU9Wc0h6ZXRrSDJJak1PVnhDYnlFYjRWUzRWYmFkMEdTdm40aFpIaGZHSW8tZ0FDUW9QbnY3WTdFMmNiSV9RcFRNUERyYUR3d3h6VTRFTnUwYVpZTUV3S0tQV2k4ekRPVDZZbzRYMGpiMVFad2lCNG92aE1naVNvOXVHakFmZmx3TnZ1Q2ZGbXVrOG82VGREVnhidndUUEpGaHZHQVZrOFNQU0lXV3VPNDRrSUEzbkl0RHdER3BzdVFLT0Q3X1BLNm5jY0oxWWVhMmZ6V2VSZ2NRLUVjTm1rengwVDd2cXoyOXI?oc=5",
      "source": "Times Now",
      "kind": "presse",
      "title_fr": "Le parrain de l'IA Yann LeCun attaque le PDG d'Anthropic, Dario Amodei, et affirme qu'il veut contrôler l'IA",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -1618,7 +1628,7 @@
      "source": "theopenpress.in",
      "kind": "presse",
      "title_fr": "Yann LeCun contre Dario Amodei : le parrain de l'IA critique vertement le PDG d'Anthropic",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -1628,16 +1638,6 @@
      "source": "Wisevoter",
      "kind": "presse",
      "title_fr": "LeCun prédit une brève fenêtre de cyberattaques permises par l'IA",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-09T08:00:00.000Z",
-     "title": "Yann LeCun and Brown researchers unveil counterfactual world models for robots",
-     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1BYTRHcnhLaWNCQnZUMkt3VFZLRFlFTlVjVGZJbFNCaV93aE0yc2ZtRThsbUZZN1d5c3RVX3BKZU1xUW5pLWRaWVFJbTZVT1pyOVBhLWQ4SGtqRDhoN0pBeUx2U3lsMTRDZEhFaEQzVjNTcFhZZzB3?oc=5",
-     "source": "Crypto Briefing",
-     "kind": "presse",
-     "title_fr": "Yann LeCun et des chercheurs de Brown dévoilent des modèles de monde contrefactuels pour les robots",
      "m": 1,
      "e": 0
     }
@@ -3221,6 +3221,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T05:12:21.000Z",
+     "title": "Peter Thiel's entity buys Palantir stock in three open-market purchases at $142.91 to $144.61 a share, Form 4 shows",
+     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbXlHVE5STWgtY3BvRVY5Y2VSYTVXYUVkV0FwY3F3ckpDRG8wNi1QOVYtLU1hTVRqQy1kUkxXLUZoTGNuU1RwQ1ZKc3ZYZWhURjBpdzBVal9HV3NSeXRTN095S0FfQ3I1U0M3YlNGVEtuN1M2RGFRcUJhNXBSS2ZLbnQzM0sxa1JKeU9mSFo5NkJYMTY1bTBVNkEtd011NDUwMHd4RlJ4YUNtNGxqZldxY1VaV1NEWHhwR0p2bnlReDlzSmVGOW1CalBR?oc=5",
+     "source": "MLQ.ai",
+     "kind": "presse",
+     "title_fr": "L'entité de Peter Thiel achète des actions Palantir lors de trois transactions sur le marché ouvert entre 142,91 $ et 144,61 $ l'action, selon le formulaire 4",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T02:08:59.000Z",
      "title": "Peter Thiel buys $122.3M of Palantir Technologies stock",
      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOMTM5eVo1UEdraE1ZRGthb092NEVmWXlidlVHMV84NnNUTE05MEFMYXVfVlIybEtyai1MUGp6QW5kRndhY3lkSm02aHdjMUptZWgzbGJidWVtdDFVbUxya0dUSVdBWkx5WjZvUUpjTktHOWw1X2NPWTVsN0prYjdKTERGYTlKZUlRbmEybFAzd1ZFdXo0cjFPUWdmX0drbXFWTlgtUk9VSUJFWktYeFZLazdrazNNdFQ3eWc?oc=5",
@@ -4021,9 +4031,19 @@
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZlRaUFlVc2dlNHRjX2xDNFVBYmRxRm1VWGcxRTdmaXpaUVg5SV82TWY3ckRlY3RWdFhUejlpYWo0V0s0RE5WVUpfbzgwUWdLSTVWd1ExT0xrTTFhdEZLTlROWHlIcXlYVmtqaGU2ZEFYVF9tOWpGZERnTDlrcGswNG12WWNmVjhycFFmMWtVRzdUUlV2Yi1FQlBIYw?oc=5",
      "source": "Yahoo Finance",
      "kind": "presse",
-     "m": 1,
-     "e": 0,
+     "m": 2,
+     "e": 1,
      "title_fr": "Bessent veut un PDG externe. Brad Gerstner déclare que Nvidia devrait attendre pour Jensen Huang"
+    },
+    {
+     "ts": "2026-11-18T20:00:07.000Z",
+     "title": "Bessent Wants Outsider; Gerstner Says Nvidia Should Wait - NVIDIA (NASDAQ:NVDA)",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQdnJBVEV3NmpMMWNLUldVX0dnRm9PS21TMUtuVk9JSzlLMGJpMW9CbDUxU2JOQnktWHlabmtiWnJNQXJOSWE2dHBTMEMwTjFSR1hCd3dmSG9VcEUxSXV0LVdtcVZkcTBnbVliSTFBamFDZDlVdFJZU1dINW0zQU5BUDE2LVBSV2dvU0RqTA?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "title_fr": "Bessent veut un outsider ; Gerstner dit que Nvidia devrait attendre - NVIDIA (NASDAQ:NVDA)",
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-18T02:48:38.000Z",
@@ -4074,16 +4094,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Brad Gerstner d'Altimeter prévoit un pari de 5 milliards de dollars sur l'introduction en bourse d'Anthropic"
-    },
-    {
-     "ts": "2026-11-16T20:25:00.000Z",
-     "title": "Gerstner Bets $5 Billion on Anthropic Instead of Nvidia: \"The AI Infrastructure Era Is Over\"",
-     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5CWGhEcXk1WEdia2xBc2MyUXZoUnJLbk1Pd3ZnR0FTZE9PYWJGRlh6WEZJYUFFSTRKSVk5T1pNZWc0ZWJhZ0FtNEFzbVlZaXk3cmt4VmxJLWo5MUhZS0UzcDd5Tmc4SDZVdHFtZVJhUFVrZzZnNWc?oc=5",
-     "source": "BigGo Finance",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Gerstner parie 5 milliards de dollars sur Anthropic plutôt que sur Nvidia : « L'ère de l'infrastructure IA est terminée »"
     }
    ]
   },
@@ -4993,6 +5003,16 @@
      "e": 1
     },
     {
+     "ts": "2026-11-22T15:34:23.000Z",
+     "title": "Chey Tae-won Urges Overhaul of University Education for AI Era",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRTJrZjB6T09Kb0NyUEtCMjFYbzdGdlFGSVRwNEZvOWRZZnFGZk02TjR1bDJXX3k3bUk2a0lXdEVGMHVUU3lFWlhGSVFRTHRxNkgxb2lvZHo3VE5rakdGdHRGVlQxZ1NoeFZTSU9ESGMzWl9mMmtzdllDaUNocUVnYkFrRGt5RkpP?oc=5",
+     "source": "조선일보",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won exhorte à refondre l'éducation universitaire pour l'ère de l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-22T07:33:40.000Z",
      "title": "Chey Tae-won Calls for Fully Redesigned Universities in AI Era",
      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNkhUbmxWN1FGZGgyb1hsUTAwNVZURjNMVVg5c0pWWm9nUVZObktqdnppemsyaml3LTBRVE9oM0JEdUwwVHpPYnA4b3dlU19MOWg5VHdZN1NMOWpxUE9ydTZzOHlYTi1GSVBlcnR0STVuM1Vyd24xQ0RxZkRjS1JpcW5Rc0dJX09CcG94UEpyMl9aWklaem1jMDhraWpSZkRud3k0?oc=5",
@@ -5041,16 +5061,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Chey Tae-won appelle à une plus grande indépendance du conseil d'administration pour maximiser la valeur actionnariale"
-    },
-    {
-     "ts": "2026-11-18T01:24:32.000Z",
-     "title": "Chey Tae-won calls for cash incentives to tackle social problems, says AI can maximize efficiency",
-     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9FR0lvVmk4R3duV04tX1g0ZXFjQVk1NERyQ040YURPR05MTTRZNDliYWI0cTl0cVd6WkVXZTd5Rmwtell4WnhHZEt2b1hqZnN3cUtTSEt3?oc=5",
-     "source": "헤럴드경제",
-     "kind": "presse",
-     "title_fr": "Chey Tae-won appelle à des incitations financières pour résoudre les problèmes sociaux et déclare que l'IA peut maximiser l'efficacité",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -5915,7 +5925,21 @@
  ],
  "hot": [
   {
-   "score": 0.78,
+   "score": 1.3,
+   "id": "yann-lecun",
+   "n": "Yann LeCun",
+   "role": "Président exécutif d'AMI Labs, ex-Meta",
+   "actor": null,
+   "ts": "2026-11-25T04:45:10.000Z",
+   "title": "Anthropic CEO Dario Amodei Wanted Control of AI at OpenAI, Claims Yann LeCun",
+   "title_fr": "Le PDG d'Anthropic, Dario Amodei, voulait le contrôle de l'IA chez OpenAI, affirme Yann LeCun",
+   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQci1pWmJWZzhJUm1pb09FV3pONDNrVlROYXNUVlZpdmtfNmRVNGZ6dkg1ZEtEajJNaDZZT0pMYmlZQ2VSY3Z5VmRPUklOS1dTRnoydURpU1hJa2dTQjY3ZU1HQjhDLWE2TmdHX0M2ZWpua3djNzBEZzRMcmJzdTNZSFg3eF9KUjE2TDhzdklnQmRWRkxUbzNPamhTRlNpZkV6VWdvdHk0SElXNlJFZVFlUg?oc=5",
+   "source": "Mashable India",
+   "kind": "presse",
+   "outlets": 2
+  },
+  {
+   "score": 0.61,
    "id": "matt-garman",
    "n": "Matt Garman",
    "role": "PDG d'AWS (Amazon Web Services)",
@@ -5929,30 +5953,16 @@
    "outlets": 2
   },
   {
-   "score": 0.75,
-   "id": "donald-trump",
-   "n": "Donald Trump",
-   "role": "Président des États-Unis",
+   "score": 0.59,
+   "id": "peter-thiel",
+   "n": "Peter Thiel",
+   "role": "Cofondateur de Palantir, investisseur",
    "actor": null,
-   "ts": "2026-11-24T06:06:12.000Z",
-   "title": "Nvidia reinstates Jensen Huang after Trump speaks ‘directly’ to board",
-   "title_fr": "Nvidia réintègre Jensen Huang après que Trump a parlé « directement » au conseil d'administration",
-   "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQmNHaTN2YnhWcEZ0QVVkbkdNamZzRU5VWFRYd0JhaDVpaEpveDRzc2F6X21RS1lqZjIxbVZUaXhsYllvelpqQjdfYWtuYm0yVUV4eEdoT00xNV9aalVLSm9SNFVReTZQVXpqU2Z5WXBwNHo0RDBfY2FuaENWUy16UHNPU1E0eV9pUGN5VlByS0RzM09BS1NVQ3FlbENIMjB6WkcyQ2lOb3BRUldJZHJBdW1Ebm8yZVk?oc=5",
-   "source": "The Washington Post",
-   "kind": "presse",
-   "outlets": 3
-  },
-  {
-   "score": 0.68,
-   "id": "geoffrey-hinton",
-   "n": "Geoffrey Hinton",
-   "role": "Prix Nobel, pionnier du deep learning",
-   "actor": null,
-   "ts": "2026-11-24T22:41:00.000Z",
-   "title": "Geoffrey Hinton Warns About the Risks of Advanced AI",
-   "title_fr": "Geoffrey Hinton met en garde contre les risques de l'IA avancée",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwN0w2c1FDd21iWDRiZHk5amZPUE1PVV96bUJyYWMzY2I3d1BGX041V0l2RnlnVXk3MldTQzU4enNYRThlbVNJdWpVaHRjTU5icU9DVEFJaDVyTHc?oc=5",
-   "source": "cwibc.co.id",
+   "ts": "2026-11-25T05:12:21.000Z",
+   "title": "Peter Thiel's entity buys Palantir stock in three open-market purchases at $142.91 to $144.61 a share, Form 4 shows",
+   "title_fr": "L'entité de Peter Thiel achète des actions Palantir lors de trois transactions sur le marché ouvert entre 142,91 $ et 144,61 $ l'action, selon le formulaire 4",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbXlHVE5STWgtY3BvRVY5Y2VSYTVXYUVkV0FwY3F3ckpDRG8wNi1QOVYtLU1hTVRqQy1kUkxXLUZoTGNuU1RwQ1ZKc3ZYZWhURjBpdzBVal9HV3NSeXRTN095S0FfQ3I1U0M3YlNGVEtuN1M2RGFRcUJhNXBSS2ZLbnQzM0sxa1JKeU9mSFo5NkJYMTY1bTBVNkEtd011NDUwMHd4RlJ4YUNtNGxqZldxY1VaV1NEWHhwR0p2bnlReDlzSmVGOW1CalBR?oc=5",
+   "source": "MLQ.ai",
    "kind": "presse",
    "outlets": 1
   }
