@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T12:15:29.413Z",
+ "generated_at": "2026-11-25T12:24:00.283Z",
  "query_count": 1,
  "people": [
   {
@@ -35,6 +35,14 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T12:14:00.000Z",
+     "title": "'Don't mess with X,' Elon Musk says after platform secures default judgment in alleged bitcoin content-farm case",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOZzBIM1pYZmc3enBfd1czc2k2WEUza2hsWU1wb05aWUFtX08xV003bHZYSmVRQmhuZjZZckZuekkwRE9Ca3hCNkVuVUNiYW50OFZ0WHlUSGQ5V25MNFFtZ1I0aUlYLS00MmxwdHM0ZU44c0JQOUd3LXo2U0ZURXFWR0FicVZWQTkzb3hMT3VvUFZvaG5Dd1pmMDNVWWUtajFZX2JPOFpqR2pzcGI1ZUluRWh1dklOYzRIQVhrbGN2RXFhd3d1RERiczdxeWt5NHlUdjZ6YWFxbk1kdjRvS0haek5FeE1Ra3VxR1BxVTdRRWw5VElQRkVXUU5R?oc=5",
+     "source": "The Block",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-25T05:41:16.000Z",
      "title": "Elon Musk Confirms Free Starlink Hardware for Eligible Americans as SpaceX Gives Up $738 Million in Federal Grants",
@@ -89,14 +97,6 @@
      "title_fr": "",
      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPOFV4c2MzanVKdkRZQnFsb3FqdGtHTXA1TEZPYURVd3I1YzI0NFFYQzBlYjVWVHc4cTEweXhaUVQ1a3Ffa2NzZU9TZE9aRHRTc19CVnVrS3ZEZkw3SEVDbWFzT0trQWNoM0N6RlgxemE0Y205N1BqSjNRZEM3dmUtcXd3Y1c3dFUyQ1p3b1lmOEVYZV9kekVINVNOTGRtckg3TmF4Z1dpQU0wUQ?oc=5",
      "source": "24/7 Wall St.",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-24T12:20:24.000Z",
-     "title": "Elon Musk Warns AI Firms Could Face a Cash Crisis in 2027",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBNRFdVV01SRzlmUEF4UDBPREd6MmN1NTR6eHVfUUxuWHZyQ1RKZGw3Z1pfYnlYNTBtUThoVDlMSTlqQ1NPTjd0NzRDRkNmYWRMbXZwWWh5cGU?oc=5",
-     "source": "Cryptonews.net",
      "kind": "presse"
     }
    ]

@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T12:15:29.354Z",
+ "generated_at": "2026-11-25T12:24:00.230Z",
  "items": [
   {
    "id": "5da63334eee3",
    "ts": "2026-11-25T12:12:22.000Z",
-   "title": "Cryptominer Sato Technologies secures neocloud Datum as customer for Canadian data center",
+   "title": "Le mineur de cryptomonnaies Sato Technologies obtient le client neocloud Datum pour son centre de données canadien",
    "orig": "Cryptominer Sato Technologies secures neocloud Datum as customer for Canadian data center",
    "summary": "Company looking to pivot towards AI cloud and colocation",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/cryptominer-sato-technologies-secures-neocloud-datum-as-customer-for-canadian-data-center/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Le mineur de cryptomonnaies Sato Technologies obtient le client neocloud Datum pour son centre de données canadien",
+   "title_en": "Cryptominer Sato Technologies secures neocloud Datum as customer for Canadian data center",
+   "summary_en": "Company looking to pivot towards AI cloud and colocation"
   },
   {
    "id": "9c61cf01347a",
    "ts": "2026-11-25T12:06:48.000Z",
-   "title": "Decision delayed on Prime Group plan to convert self-storage facility into data center in South Carolina",
+   "title": "Décision reportée sur le projet de Prime Group de convertir une installation de self-stockage en centre de données en Caroline du Sud",
    "orig": "Decision delayed on Prime Group plan to convert self-storage facility into data center in South Carolina",
    "summary": "Councilors allow more time for discussion and feedback",
    "country": "US",
@@ -29,12 +32,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/decision-delayed-on-prime-group-plan-to-convert-self-storage-facility-into-data-center-in-south-carolina/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Décision reportée sur le projet de Prime Group de convertir une installation de self-stockage en centre de données en Caroline du Sud",
+   "title_en": "Decision delayed on Prime Group plan to convert self-storage facility into data center in South Carolina",
+   "summary_en": "Councilors allow more time for discussion and feedback"
   },
   {
    "id": "e076ce336403",
    "ts": "2026-11-25T12:01:30.000Z",
-   "title": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
+   "title": "La société de trading quantitatif XTX Markets lance un centre de données de 22,5 MW à Kajaani, en Finlande",
    "orig": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
    "summary": "Second building to be operational in 2027",
    "country": "US",
@@ -44,12 +50,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/quant-trading-firm-xtx-markets-launches-225mw-data-center-in-kajaani-finland/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "La société de trading quantitatif XTX Markets lance un centre de données de 22,5 MW à Kajaani, en Finlande",
+   "title_en": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
+   "summary_en": "Second building to be operational in 2027"
   },
   {
    "id": "f5bb5e8a9ad3",
    "ts": "2026-11-25T12:00:28.000Z",
-   "title": "AI can do the calculations. Theoretical physicists are figuring out what comes next.",
+   "title": "L'IA peut effectuer les calculs. Les physiciens théoriciens cherchent ce qui viendra ensuite.",
    "orig": "AI can do the calculations. Theoretical physicists are figuring out what comes next.",
    "summary": "Frontier AI is already solving problems that once took top physicists a full day.",
    "country": "US",
@@ -59,7 +68,10 @@
    "source": "Ars Technica",
    "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "L'IA peut effectuer les calculs. Les physiciens théoriciens cherchent ce qui viendra ensuite.",
+   "title_en": "AI can do the calculations. Theoretical physicists are figuring out what comes next.",
+   "summary_en": "Frontier AI is already solving problems that once took top physicists a full day."
   },
   {
    "id": "effc3b7a884c",
@@ -78,6 +90,24 @@
    "title_fr": "Applied Digital met en service une salle de données de 25 MW sur le centre de données Polaris Forge 2 dans le Dakota du Nord",
    "title_en": "Applied Digital brings online 25MW data hall at Polaris Forge 2 data center in North Dakota",
    "summary_en": "Base-build commissioning for first 75MW completed"
+  },
+  {
+   "id": "eb58171fabfd",
+   "ts": "2026-11-25T11:43:37.000Z",
+   "title": "Les contrats à terme s'enfoncent dans le rouge alors que les inquiétudes technologiques resurgissent",
+   "orig": "Futures sink further into the red as tech worries resurge",
+   "summary": "Huang defies calls for Nvidia succession planning, sending shares lower premarket",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/25/futures-sink-further-into-the-red-as-tech-worries-resurge.html",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Les contrats à terme s'enfoncent dans le rouge alors que les inquiétudes technologiques resurgissent",
+   "title_en": "Futures sink further into the red as tech worries resurge",
+   "summary_en": "Huang defies calls for Nvidia succession planning, sending shares lower premarket"
   },
   {
    "id": "3c56acdc665a",
