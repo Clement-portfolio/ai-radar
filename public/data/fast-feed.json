@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T14:30:40.516Z",
+ "generated_at": "2026-11-25T14:35:51.736Z",
  "items": [
   {
    "id": "8ddb2a889c1f",
    "ts": "2026-11-25T14:20:36.000Z",
-   "title": "Nexent Capital launches $1 billion AI and energy infrastructure fund",
+   "title": "Nexent Capital lance un fonds de 1 milliard de dollars pour l'IA et les infrastructures énergétiques",
    "orig": "Nexent Capital launches $1 billion AI and energy infrastructure fund",
    "summary": "Fund targeting AI infrastructure and energy projects across North America and India",
    "country": "OTHER",
@@ -14,12 +14,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/nexent-capital-launches-1-billion-ai-and-energy-infrastructure-fund/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Nexent Capital lance un fonds de 1 milliard de dollars pour l'IA et les infrastructures énergétiques",
+   "title_en": "Nexent Capital launches $1 billion AI and energy infrastructure fund",
+   "summary_en": "Fund targeting AI infrastructure and energy projects across North America and India"
   },
   {
    "id": "c4937692d5d7",
    "ts": "2026-11-25T14:12:33.000Z",
-   "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+   "title": "Amazon serait en pourparlers pour mettre fin au blocage de l'agent d'achat IA Muse",
    "orig": "Amazon is reportedly in talks to end Muse AI shopping block",
    "summary": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent recommends and the pot",
    "country": "US",
@@ -29,12 +32,15 @@
    "source": "The Verge IA",
    "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Amazon serait en pourparlers pour mettre fin au blocage de l'agent d'achat IA Muse",
+   "title_en": "Amazon is reportedly in talks to end Muse AI shopping block",
+   "summary_en": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent recommends and the pot"
   },
   {
    "id": "6b84c93cda4e",
    "ts": "2026-11-25T14:10:39.000Z",
-   "title": "Promera acquires Irish electrical contractor B&G to expand data center offering",
+   "title": "Promera acquiert l'entrepreneur électricien irlandais B&G pour étendre son offre de datacenters",
    "orig": "Promera acquires Irish electrical contractor B&G to expand data center offering",
    "summary": "B&G provides critical power infrastructure services for the data center market",
    "country": "US",
@@ -44,12 +50,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/promera-acquires-irish-electrical-contractor-bg-to-expand-data-center-offering/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Promera acquiert l'entrepreneur électricien irlandais B&G pour étendre son offre de datacenters",
+   "title_en": "Promera acquires Irish electrical contractor B&G to expand data center offering",
+   "summary_en": "B&G provides critical power infrastructure services for the data center market"
   },
   {
    "id": "28175a595e60",
    "ts": "2026-11-25T14:10:18.000Z",
-   "title": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+   "title": "Amazon et Meta seraient en pourparlers pour lever le blocage de l'agent IA Muse",
    "orig": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
    "summary": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
    "country": "US",
@@ -59,12 +68,15 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Amazon et Meta seraient en pourparlers pour lever le blocage de l'agent IA Muse",
+   "title_en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+   "summary_en": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse."
   },
   {
    "id": "626d05b76d45",
    "ts": "2026-11-25T14:01:01.000Z",
-   "title": "South African gov't floats converting old power stations into data centers",
+   "title": "Le gouvernement sud-africain envisage de convertir d'anciennes centrales électriques en datacenters",
    "orig": "South African gov't floats converting old power stations into data centers",
    "summary": "President Cyril Ramaphosa suggested the move during a recent visit to San Jose, California",
    "country": "US",
@@ -74,12 +86,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/south-african-govt-floats-converting-old-power-stations-into-data-centers/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Le gouvernement sud-africain envisage de convertir d'anciennes centrales électriques en datacenters",
+   "title_en": "South African gov't floats converting old power stations into data centers",
+   "summary_en": "President Cyril Ramaphosa suggested the move during a recent visit to San Jose, California"
   },
   {
    "id": "9949223886f2",
    "ts": "2026-11-25T14:00:00.000Z",
-   "title": "AMD Tackles DRAM Shortages with AI and Flash Storage",
+   "title": "AMD s'attaque aux pénuries de DRAM grâce à l'IA et au stockage flash",
    "orig": "AMD Tackles DRAM Shortages with AI and Flash Storage",
    "summary": "AMD MEXT uses AI to park cold memory pages in flash, cutting DRAM costs and easing data center shortages. The post AMD Tackles DRAM Shortages with AI and Flash Storage appeared first on EE Times .",
    "country": "US",
@@ -89,7 +104,10 @@
    "source": "EE Times",
    "url": "https://www.eetimes.com/amd-tackles-dram-shortages-with-ai-and-flash-storage/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "AMD s'attaque aux pénuries de DRAM grâce à l'IA et au stockage flash",
+   "title_en": "AMD Tackles DRAM Shortages with AI and Flash Storage",
+   "summary_en": "AMD MEXT uses AI to park cold memory pages in flash, cutting DRAM costs and easing data center shortages. The post AMD Tackles DRAM Shortages with AI and Flash Storage appeared first on EE Times ."
   },
   {
    "id": "d2d425122d99",
