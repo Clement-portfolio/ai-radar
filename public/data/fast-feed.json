@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T01:25:22.471Z",
+ "generated_at": "2026-11-25T01:31:57.165Z",
  "items": [
   {
    "id": "e4addef3cba7",
    "ts": "2026-11-25T01:13:56.000Z",
-   "title": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
+   "title": "Le retour de Jensen Huang chez Nvidia montre que la course à l'IA entre les États-Unis et la Chine ne se limite pas aux puces",
    "orig": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
    "summary": "Jensen Huang's return as Nvidia CEO demonstrates that the U.S.-China artificial intelligence race is not just about semiconductors, but tech talent too.",
    "country": "CN",
@@ -14,12 +14,15 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/25/jensen-huang-nvidia-ai-talent-race.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Le retour de Jensen Huang chez Nvidia montre que la course à l'IA entre les États-Unis et la Chine ne se limite pas aux puces",
+   "title_en": "Jensen Huang's Nvidia return shows the U.S.-China AI race is about more than chips",
+   "summary_en": "Jensen Huang's return as Nvidia CEO demonstrates that the U.S.-China artificial intelligence race is not just about semiconductors, but tech talent too."
   },
   {
    "id": "aa5a6071a5b9",
    "ts": "2026-11-25T00:58:56.000Z",
-   "title": "Analog Devices broadens growth beyond AI as industrial demand recovers",
+   "title": "Analog Devices élargit sa croissance au-delà de l'IA alors que la demande industrielle se redresse",
    "orig": "Analog Devices broadens growth beyond AI as industrial demand recovers",
    "summary": "Analog Devices (ADI) closed fiscal 2026 with a record quarter that combined rapid growth in data center products with a wider recovery across its traditional end markets. Management said more than two-thirds of the year's growth came from non-AI markets, sugge",
    "country": "OTHER",
@@ -29,12 +32,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL202/growth-analog-devices-industrial-demand-2026.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Analog Devices élargit sa croissance au-delà de l'IA alors que la demande industrielle se redresse",
+   "title_en": "Analog Devices broadens growth beyond AI as industrial demand recovers",
+   "summary_en": "Analog Devices (ADI) closed fiscal 2026 with a record quarter that combined rapid growth in data center products with a wider recovery across its traditional end markets. Management said more than two-thirds of the year's growth came from non-AI markets, sugge"
   },
   {
    "id": "a6d1be05cb0c",
    "ts": "2026-11-25T00:46:28.000Z",
-   "title": "Taiwan cuts carbon emissions for fourth straight year despite AI expansion",
+   "title": "Taïwan réduit ses émissions de carbone pour la quatrième année consécutive malgré l'expansion de l'IA",
    "orig": "Taiwan cuts carbon emissions for fourth straight year despite AI expansion",
    "summary": "As countries remain divided over phasing out fossil fuels following the recent conclusion of the 31st Conference of the Parties to the United Nations Framework Convention on Climate Change (COP31) in Antalya, Turkiye, Taiwan's semiconductor industry faces moun",
    "country": "OTHER",
@@ -46,7 +52,8 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "Taiwan cuts carbon emissions for fourth straight year despite AI expansion",
-   "summary_en": "As countries remain divided over phasing out fossil fuels following the recent conclusion of the 31st Conference of the Parties to the United Nations Framework Convention on Climate Change (COP31) in Antalya, Turkiye, Taiwan's semiconductor industry faces moun"
+   "summary_en": "As countries remain divided over phasing out fossil fuels following the recent conclusion of the 31st Conference of the Parties to the United Nations Framework Convention on Climate Change (COP31) in Antalya, Turkiye, Taiwan's semiconductor industry faces moun",
+   "title_fr": "Taïwan réduit ses émissions de carbone pour la quatrième année consécutive malgré l'expansion de l'IA"
   },
   {
    "id": "fdd984e28055",
