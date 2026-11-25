@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T08:40:29.866Z",
+ "generated_at": "2026-11-25T08:45:38.723Z",
  "items": [
   {
    "id": "6a1f2f006d64",
    "ts": "2026-11-25T08:35:22.630Z",
-   "title": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
+   "title": "La fusion d'opérateurs télécoms à Singapour met en lumière la poussée des infrastructures d'IA sur fond d'incertitude",
    "orig": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
    "summary": "",
    "country": "OTHER",
@@ -14,12 +14,14 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/telecommunication/singapore-telco-merger-highlights-ai-infrastructure-push-amid-uncertainty",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "La fusion d'opérateurs télécoms à Singapour met en lumière la poussée des infrastructures d'IA sur fond d'incertitude",
+   "title_en": "Singapore telco merger highlights AI infrastructure push amid uncertainty"
   },
   {
    "id": "8af9638ce27a",
    "ts": "2026-11-25T08:01:39.000Z",
-   "title": "Blog Review: Nov. 25",
+   "title": "Revue de blogs : 25 nov.",
    "orig": "Blog Review: Nov. 25",
    "summary": "PCIe SVC; co-packaged optics; liquid-cooled data center model; LUT-GEMM; automotive traceability. The post Blog Review: Nov. 25 appeared first on Semiconductor Engineering .",
    "country": "US",
@@ -29,7 +31,10 @@
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/blog-review-nov-25-3/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Revue de blogs : 25 nov.",
+   "title_en": "Blog Review: Nov. 25",
+   "summary_en": "PCIe SVC; co-packaged optics; liquid-cooled data center model; LUT-GEMM; automotive traceability. The post Blog Review: Nov. 25 appeared first on Semiconductor Engineering ."
   },
   {
    "id": "9f0c4f05587a",
