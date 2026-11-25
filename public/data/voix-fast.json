@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T19:47:08.078Z",
+ "generated_at": "2026-11-25T19:50:29.067Z",
  "query_count": 1,
  "people": [
   {
@@ -33,6 +33,14 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T19:44:24.000Z",
+     "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQYUpCVnRsTUZodmZXMnpjbmtQT0lSM2VhdHI3elpLdG5CazQ2TjlzcHdiMExjX3J6NTJTcUNfLXNZVW4xUk9uV3FXS0xCRGxfY3VST2tHUFJYaUhkaFFfS1FVR2hTbVFDa0QxaE1ERWh2aWk3QjZnbzFHY052Zk1JTWVyWDF2QzRXRGtJQ0ZTbUJSNmVHM25BTU9mQzUzbHZMU0I2RVBRaVJZcUN2X3VGdGVFMlYyVEtBTHE0?oc=5",
+     "source": "TechCrunch",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-25T19:28:57.000Z",
      "title": "“It’s absurd”: Dario Amodei denies claims he wants to hand human free will over to AI",
