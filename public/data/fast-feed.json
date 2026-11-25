@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T16:05:32.471Z",
+ "generated_at": "2026-11-25T16:10:56.132Z",
  "items": [
   {
    "id": "fec44873dc65",
    "ts": "2026-11-25T16:00:59.000Z",
-   "title": "Nothing offers a full look at its AI earbuds and charging case",
+   "title": "Nothing dévoile un aperçu complet de ses écouteurs IA et de son boîtier de charge",
    "orig": "Nothing offers a full look at its AI earbuds and charging case",
    "summary": "Nothing is showing off a much more detailed look at its upcoming AI earbuds ahead of their December 8th release. The Ear Note buds can record your calls, while their charging case can record, transcribe, and summarize your conversations. Like the Ear 3, the Ea",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "The Verge IA",
    "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Nothing dévoile un aperçu complet de ses écouteurs IA et de son boîtier de charge",
+   "title_en": "Nothing offers a full look at its AI earbuds and charging case",
+   "summary_en": "Nothing is showing off a much more detailed look at its upcoming AI earbuds ahead of their December 8th release. The Ear Note buds can record your calls, while their charging case can record, transcribe, and summarize your conversations. Like the Ear 3, the Ea"
   },
   {
    "id": "066fd0904fb9",
    "ts": "2026-11-25T16:00:00.000Z",
-   "title": "Sponsored: The case for an integrated power and cooling approach for AI workloads",
+   "title": "Sponsorisé : Plaidoyer pour une approche intégrée de l'alimentation et du refroidissement des charges de travail d'IA",
    "orig": "Sponsored: The case for an integrated power and cooling approach for AI workloads",
    "summary": "As compute densities continue to scale, power availability, and heat rejection set the bar for data center performance",
    "country": "US",
@@ -29,12 +32,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/opinions/the-case-for-an-integrated-power-and-cooling-approach-for-ai-workloads/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Sponsorisé : Plaidoyer pour une approche intégrée de l'alimentation et du refroidissement des charges de travail d'IA",
+   "title_en": "Sponsored: The case for an integrated power and cooling approach for AI workloads",
+   "summary_en": "As compute densities continue to scale, power availability, and heat rejection set the bar for data center performance"
   },
   {
    "id": "a05f839240ee",
    "ts": "2026-11-25T15:54:23.000Z",
-   "title": "Google, Blue Origin Plan Orbital AI Compute Test",
+   "title": "Google et Blue Origin prévoient un test de calcul IA en orbite",
    "orig": "Google, Blue Origin Plan Orbital AI Compute Test",
    "summary": "The 2029 mission will deploy rack-scale computing satellites, with cooling, autonomous recovery, and hardware longevity likely to determine whether orbital infrastructure can support commercial workloads.",
    "country": "US",
@@ -44,12 +50,15 @@
    "source": "Data Center Knowledge",
    "url": "https://www.datacenterknowledge.com/edge-data-centers/google-blue-origin-plan-orbital-ai-compute-test",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Google et Blue Origin prévoient un test de calcul IA en orbite",
+   "title_en": "Google, Blue Origin Plan Orbital AI Compute Test",
+   "summary_en": "The 2029 mission will deploy rack-scale computing satellites, with cooling, autonomous recovery, and hardware longevity likely to determine whether orbital infrastructure can support commercial workloads."
   },
   {
    "id": "f6730ac844fe",
    "ts": "2026-11-25T15:41:43.000Z",
-   "title": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+   "title": "Les data centers IA deviennent plus difficiles à construire, et les néoclouds en ressentent l'impact",
    "orig": "AI data centers are becoming harder to build, and neoclouds are feeling it",
    "summary": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt. The message to developers is that land, power and a finished building matter mo",
    "country": "US",
@@ -59,7 +68,10 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les data centers IA deviennent plus difficiles à construire, et les néoclouds en ressentent l'impact",
+   "title_en": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+   "summary_en": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt. The message to developers is that land, power and a finished building matter mo"
   },
   {
    "id": "8ddb2a889c1f",
@@ -172,7 +184,7 @@
   {
    "id": "d2d425122d99",
    "ts": "2026-11-25T13:31:39.000Z",
-   "title": "US Army offers more land to private AI data centers, across nine sites - must include power generation",
+   "title": "L'armée américaine propose plus de terrains à des data centers IA privés sur neuf sites, avec obligation d'inclure de la production d'énergie",
    "orig": "US Army offers more land to private AI data centers, across nine sites - must include power generation",
    "summary": "Land next to ammo dumps now available for data center development",
    "country": "US",
@@ -184,12 +196,13 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "US Army offers more land to private AI data centers, across nine sites - must include power generation",
-   "summary_en": "Land next to ammo dumps now available for data center development"
+   "summary_en": "Land next to ammo dumps now available for data center development",
+   "title_fr": "L'armée américaine propose plus de terrains à des data centers IA privés sur neuf sites, avec obligation d'inclure de la production d'énergie"
   },
   {
    "id": "1403f89aa6f7",
    "ts": "2026-11-25T13:27:54.000Z",
-   "title": "Three data center projects planned around Phoenix, Arizona",
+   "title": "Trois projets de data centers prévus autour de Phoenix, en Arizona",
    "orig": "Three data center projects planned around Phoenix, Arizona",
    "summary": "Projects planned in Buckeye, Eloy, and Casa Grande",
    "country": "US",
@@ -201,7 +214,8 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "Three data center projects planned around Phoenix, Arizona",
-   "summary_en": "Projects planned in Buckeye, Eloy, and Casa Grande"
+   "summary_en": "Projects planned in Buckeye, Eloy, and Casa Grande",
+   "title_fr": "Trois projets de data centers prévus autour de Phoenix, en Arizona"
   },
   {
    "id": "5dfeef1bce80",
