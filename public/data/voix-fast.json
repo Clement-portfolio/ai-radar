@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T10:05:34.557Z",
+ "generated_at": "2026-11-25T10:10:28.943Z",
  "query_count": 1,
  "people": [
   {
@@ -110,7 +110,16 @@
    "co": "Microsoft",
    "actor": "microsoft",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T09:26:25.000Z",
+     "title": "Satya Nadella Says “Six Months Behind Is a Great Place to Be.” That’s a Warning for Anthropic",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPcE5wNmViWjFlWE9UdDRwZWZVLTQ0V0NFaEZCZThzMjA2a0FKLTQ2RnJGenZ0d081ejVJQ0s5UzdBWGNsU1ZhZWR1aVQxNXVodG4yamQtemZOTVljMlNwYVhkTmZCOXcwcHZwZmxaWm1MTjZLMkRtb2hNNTAyRTZVOTNEa0JOR1UzUHV5aEZTY2VWQkxzRldOV01KOHJ6M2JlNEtSRnZ1Q0pDdHpvaUlOdktDcFNOTXZ6eUUxZ2RfM0RvTElNUHFnWnlFaEdSVm9EaXRteEFvZmxxMjZ3OWhTc09qSWJ3d2M4Y1MtbA?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse"
+    }
+   ]
   },
   {
    "id": "sundar-pichai",
