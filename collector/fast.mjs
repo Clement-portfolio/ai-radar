@@ -108,5 +108,6 @@ if(process.env.GEMINI_API_KEY&&untranslated.length&&now>=cooldownUntil){
   await fs.writeFile(translationStatePath,JSON.stringify(translationState,null,1));
 }
 await fs.mkdir(DATA,{recursive:true});
-await fs.writeFile(path.join(DATA,"fast-feed.json"),JSON.stringify({generated_at:new Date().toISOString(),items},null,1));
+// Écriture uniquement si le contenu change : sinon chaque passage créerait un commit inutile (l'heure de génération seule suffisait).
+if(JSON.stringify(items)!==JSON.stringify(previous.items))await fs.writeFile(path.join(DATA,"fast-feed.json"),JSON.stringify({generated_at:new Date().toISOString(),items},null,1));
 console.log("Flux rapide : "+feeds.length+" sources, "+cands.length+" nouvelles actualités, "+items.length+" conservées.");
