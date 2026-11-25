@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T13:28:29.648Z",
+ "generated_at": "2026-11-25T16:17:11.650Z",
  "people": [
   {
    "id": "sam-altman",
@@ -214,6 +214,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-23T18:37:02.000Z",
+     "title": "Elon Musk Warns AI Companies Could Be in Serious Trouble Next Year",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNMGl3LURiZXpnMEtURnI0eE9RbWNrYXdpN25oU0c1LXBFekhNMWJNSkxRYjF5SlViMHdTRUlSMFhuM2tpMUJsS3hoNXB3RXU4UXZ4ZkJxZ3hBMzV2RVVkS0REWmtsOHNOSnF4eG93TEVDSUlBZWxxYmhVaU95MnRPVWloay04eXV5enU2LUVNZHNvZEJwSXI0?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Elon Musk avertit que les entreprises d'IA pourraient être en de graves difficultés l'année prochaine",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T02:32:00.000Z",
      "title": "Elon Musk Says 2027 AI Cash Crunch Will Be ‘Nuts’ — Analysts Still See SpaceX Emerging As The Biggest AI Hyperscaler",
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajVmOVlwUDIzNmZ0QXN1SjRWNU1RaDNieEdPZ3JGRHUwV1NkcDRQOE9uY1MxTmVFY1I2MWJ1SHhjbmZQZHJfYURpTDJ3d2dBZWJUV3FXYS1wbjRvSUp3M0hrQWpWZzdCNm4xTFpuNUZLdHg2VzBLU0F0VldsQkFqUndrWndoRU0xeTM0NDZvYw?oc=5",
@@ -272,16 +282,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Elon Musk déclare que Nvidia a fait une « erreur » en se séparant de Jensen Huang : il qualifie l'ex-PDG de « Michael Jordan peut-être à son apogée »"
-    },
-    {
-     "ts": "2026-11-19T01:08:04.000Z",
-     "title": "DealBook Summit: Elon Musk Paints Himself as Political Moderate, Says He Is ‘Not MAGA’",
-     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1ZYjB2UXJGcEo1ZE0xNVhkMHU4VnU5NmNYWS1NUkRhYWVhdFdTSTRMNlUxcFRuVlF4VHVQSWVlZzR5VjNOOXZQdGR5R2lzVUM2aWZ2aVhhRkVxZDVVVzhJTTkzU29HeUVtOUxpcmIyN1lDdnFqb1ZvYQ?oc=5",
-     "source": "The New York Times",
-     "kind": "presse",
-     "title_fr": "Sommet DealBook : Elon Musk se dépeint en modéré politique et déclare qu'il n'est « pas MAGA »",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -399,6 +399,16 @@
    "actor": "alphabet",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-23T17:45:00.000Z",
+     "title": "Google CEO Sundar Pichai testifies before Congress",
+     "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNUUYzZDdZRGwwSFN2RFQ4dUkyX094UHNTeVVycGZJbjVIeGZKNXBfZGRaSTRxNzNqRnZqRkpnSUdiVnhHN25JczJFbDdtRDBOREpFdEk5RVBDcHVvY2Z0WU9sWWVTOVlQYkd0S0V3SmpuYWJjc0g1QWhscGRYaTI0Yg?oc=5",
+     "source": "Mashable",
+     "kind": "presse",
+     "title_fr": "Le PDG de Google Sundar Pichai témoigne devant le Congrès",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-19T08:05:32.000Z",
      "title": "“One small step for TPUs”: Google CEO Sundar Pichai announces Project Suncatcher to test AI compute in Space",
@@ -711,6 +721,26 @@
    "actor": "tsmc",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T13:36:06.000Z",
+     "title": "TSMC Is Still Up 27% in a Year After the AI Rout. C.C. Wei Says Demand Is “Far Above” Supply",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVWdqTU03dG5yVUdNN29yUjJjaTRTTk9CNEU5eURxb3Q0UktIcG9JUnFIV1p2ektLR0pmUm5zeGN1RVpZNzlZcEYzVEp2NWxTem5iQXZjMk12eW42czJQNEdWS0tCdWltaHY4d3RCV2czQzBoTXpIQm1Td0dyNU8yZm9FVjM0VWZYb2JGWkZZNDNKdmVwUDRaa3FLZ1RIRGk2QlNkSFNVNmxZODJ3TnlEZmRXX0tSbWNUT1BTb2xPSnhmYXkzQmU2TzM4cDBqUUVBMTdOU1ZCWngwYzZhdXdwQnBoZGkxZHFsN3c?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse",
+     "title_fr": "TSMC est toujours en hausse de 27 % en un an après la déroute de l'IA. C.C. Wei déclare que la demande est « bien supérieure » à l'offre",
+     "m": 1,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-25T09:42:03.000Z",
+     "title": "TSMC sets Dec. 4 Arizona celebration with Trump, C.C. Wei expected",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYmhXT3pPbzQyejlPMjRpWGhWSU5JaGJsRW92bnNTWGpIYXpnVmhzOWF1b1I4a2k0U0dzRTN6QUduNFNhRHdhSlZTMjFvbUhhdEFDVm1ON3IxSF9sNmdTaThPdVBQTUliaEU3NlF3Q0hOSWU0ZVRFcDI2RTU5bG15SHVXczZtQ3RNVWVB?oc=5",
+     "source": "digitimes",
+     "kind": "presse",
+     "title_fr": "TSMC fixe une célébration en Arizona le 4 déc. avec Trump, C.C. Wei est attendu",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-24T08:25:00.000Z",
      "title": "Trump Names C.C. Wei Three Times, Calls Him a Genius, Predicts Chip Tariffs Hitting 200% in Two Years",
@@ -2086,6 +2116,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T10:25:31.000Z",
+     "title": "Elizabeth Warren Calls Nvidia’s Jensen Huang Reinstatement ‘Reckless’, Says it Raises U.S National Security Concerns",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQQ1BQWVJBLU5KeUU5NVdJVHAzNHpXX1JrcVNHZmEtOWlQOUpPYnZYYlM2OXBHQVpvV2lvNnFvMEtYTUtPc05tTTF3VmNnSXhUT3lDa2dmSVhSNFZQeWhZVFpQUVpMenhqUkpUc1BEanptXzYzRGJVcnhrUEsyUlJSY3JQWXRnci1tX1cwYk0tSmxlQXNBSGxla2xQQmRMaDhKVDMxWTRScFVZNk5ta1ZscWJfNEFBaE5uaTVMZmlEZkdWOV9YSGx1LUNJX3pyOTJablE0?oc=5",
+     "source": "Tekedia",
+     "kind": "presse",
+     "title_fr": "Elizabeth Warren qualifie la réintégration de Jensen Huang chez Nvidia de « téméraire », affirme que cela soulève des préoccupations de sécurité nationale pour les États-Unis",
+     "m": 3,
+     "e": 1
+    },
+    {
      "ts": "2026-11-24T18:25:00.000Z",
      "title": "Sen. Warren: 'Stronger' urgency to investigate Jensen Huang after Nvidia comeback",
      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOLXJlRGxmWGhUcmJqZzRabjY0WG9hQ1RKWDBaOVA3MkdIcmN4MldPejc3UFRrWU4xQ2Y1M2tHRUxhZ2NIVmxvOHp2UDBHdWluUFh5SFhxTnM4c2lTM0pNUHVzWlR0czR5QmQ5S0VzX0lUZGQ5bVpiZjRvSklEYmwxWEVLd19yUlpoNUVZdy1GbllsMTNJY1pVaXVRclZOeWJHQ0dFbUJVbHlEMFB6d0I1TlpSSnREZHlMWXFqdG1BR1poQlB1bUhQZUczMWRLZFpPdmZhalZlU25XbUhfNzNnNTBDcDF4d2FjRmVZbHFPMDVaQjd1?oc=5",
@@ -2132,7 +2172,7 @@
      "source": "Crave Online",
      "kind": "presse",
      "title_fr": "Elizabeth Warren interpelle Nvidia après le retour de Jensen Huang en tant que PDG",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -2142,7 +2182,7 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "title_fr": "Elizabeth Warren qualifie la réintégration de Jensen Huang par Nvidia d'imprudente",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -2152,16 +2192,6 @@
      "source": "The Boston Globe",
      "kind": "presse",
      "title_fr": "« Profondément irresponsable » : dans une interview au Globe, Elizabeth Warren déclare vouloir une enquête du Congrès sur Nvidia",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-19T17:24:43.000Z",
-     "title": "Anthropic Pops To Over $100 On First Trades, Senator Warren Calls For New Rules On AI",
-     "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOV0d4blJhbFNERjRQTmp0aGxxeGl6Szg0cXhJU3ltdnVIWUZLYW81Nzc5N1hwZEtKeURVTXRGZEUxMnVwd0dkajhickc5MlE1UHJYVlVIOXJESGNmYlByenJIaGZQbkZ3VTh6SDFNdlVLMVB6dTA0aXVNVjJPa2NDSGpreHlDRlVnN3Y4c19mMlBzZkM1aUJWTTVvQzRRTFp0WGVBelhoeHE5aFJhLUhKN015TXd4WkdZRnZPT0ZZU055YnAxS1JqZFV4Q0M?oc=5",
-     "source": "Crowdfund Insider",
-     "kind": "presse",
-     "title_fr": "Anthropic grimpe à plus de 100 $ lors des premiers échanges, la sénatrice Warren appelle à de nouvelles règles sur l'IA",
      "m": 1,
      "e": 0
     }
@@ -2716,7 +2746,18 @@
    "co": "",
    "actor": null,
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T11:21:48.000Z",
+     "title": "Jim Chanos Says Alphabet Is the Only Hyperscaler “Actually Putting Up Those Numbers.” Time to Buy?",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMkt5eDd3TExGdkpVTUFFNkg4elM3emVFeW9RNERfSUk4WGtGRmlwbnZJS2dCd25yOTUtaTI0Tmd4YnE4SlhLQnNLQlc2Y3BBdmEzcXJCT2pwazJJZTR0eFlXZ183SlZUSnk4RV9LMGdDdjF5d05MbVd4S3lzaklzM3FRQUlqMHdFTkpLNXpVeWtUUDNDbk9KYXdR?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Jim Chanos affirme qu'Alphabet est le seul hyperscaler à « afficher réellement ces chiffres ». Est-ce le moment d'acheter ?",
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "jeff-bezos",
@@ -3251,13 +3292,33 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T13:53:00.000Z",
+     "title": "Palantir’s CEO Alex Karp Sold $75 Million. Co-Founder Peter Thiel Bought $122 Million",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdlJQczctX1U2WUY4ZlJEd29ldUt0V2J4cVRObTkxY2ZOWnQ2UW52YjRRWWYyTzhiOS1HQ1pZX1NJV1o0NGR0RjFsNXZFQ2pFLUxBUUxBZV9XQjZMRW1LYTBoQVViTmdBcDg1WGlmSDVHbE8wYnF3QVN2cnFPWlFqb3hxWVZGYjhtRm1lVXRZMEh4RUdnenVyUjRMdzlKeXRMTnQ3UEtFb3NtXzJlZEEtY0VfMFU3alBtSVZzXzF0VG94VHM?oc=5",
+     "source": "24/7 Wall St.",
+     "kind": "presse",
+     "title_fr": "Le PDG de Palantir Alex Karp a vendu 75 millions de dollars. Le cofondateur Peter Thiel a acheté 122 millions de dollars",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-25T13:27:40.000Z",
+     "title": "Peter Thiel Buys $122M In Palantir Shares Amid AI Volatility",
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOR19CZGlRMjlHWWFfV1B0V05aOHd6am9aaktjLWF2ZUpwZ3ktMEFINENqVlZ2dHI2STFZYnpzZzVPY3Jla1c2T3FRcHNVRDRPWEh4S2YzV0VBM3RVMnR0TG92TmxxVGJwdlFCM0dYREpqbG9HTEZvVHoyMXMyUUFIUV9fVEM0b3VWUjJKSEp5Z3hZR3hFN0dDVy16UjE0Q2xoZU0wckdpNHdVQThYRldsVm9RRGswNEtHX0R2SGVDWVJBTW93UmxZV1JSSFpjX1dPa3RsYzQ1QU82cDFMU3ZFQQ?oc=5",
+     "source": "Forbes Middle East",
+     "kind": "presse",
+     "title_fr": "Peter Thiel achète pour 122 millions de dollars d'actions Palantir dans un contexte de volatilité de l'IA",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-25T11:49:17.000Z",
      "title": "Billionaire Peter Thiel Buys $122 Million In Palantir Shares Amid AI Stock Turmoil",
      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ1pHNno1SlJqUkNKSUU4RzhrZllSTVZkOUtSRjB2V3BQRmJsQUpZMGgxeVBDM3ZJVEhFSEJIWGk1NzhVQ2dkUGdudlFHRDFCZExibTBUNHlpb0NrS0ZSYU80V2hwbFlLcU4ybFFTbUJ2RkFGSFRaQ3NxbWZHYnlPcl9WSUZkZkVNa2lZbmtOTU1VMG5uR2M2V2J6Q0JrM05OMTk1cEVIbVU5Q2lRZzZhc3JOWFdSWVZSdUsyY0xXR044T2lTYUxzTlBsS21ScjRC?oc=5",
      "source": "Forbes",
      "kind": "presse",
      "title_fr": "Le milliardaire Peter Thiel achète pour 122 millions de dollars d'actions Palantir dans un contexte de turbulences sur les actions liées à l'IA",
-     "m": 4,
+     "m": 5,
      "e": 1
     },
     {
@@ -3309,25 +3370,6 @@
      "title_fr": "Le directeur de Palantir (PLTR), Peter Thiel, achète des actions via sa LLC dans le cadre d'un plan de trading préexistant.",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-23T18:17:18.000Z",
-     "title": "Peter Thiel Bets Big on Semiconductors in Q3 And He Might Be Down 33% Already",
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPM3YwaUlfdm9DeGUtVkE2XzhJal9uOWdkUVhLdWNwOWx5RTJfVXc3YUJlX0tTM3JGejRtUnpOb1dLeTNRb0hZeG9saU1odGZiWnc1NGZaYTBsaFNtQkRpc1FhMWtyV0J4WmlPTGJQcE1zN0ZhM0Njd0Iyc1hEbnFBSUZxX09nREFDcGJEejhnS1dEOHVZSUUxR3BJWGZmeDcwVHhGSXlpejRTejVRckpDY3l5OGpBaExTLXdlaDE5RDlaOEFLc1M3cg?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-18T11:12:42.000Z",
-     "title": "Peter Thiel Sold Every Utility Stock He Owned and Bet $161 Million on One Chip ETF. It's Down $37 Million Since",
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOcU5TTjBaNWhPbjBmcFFuTEZ2Qi1uQkF3ZHlldG1Cakc4d05OakpBSmlGZkpEa2dyOU5CanpZTkVqdWlQUUhJOWpFeS1EQ0dXeWRrQ0ZEdElmbXZoa0tYTUZCbzh4WlQ2V0FVXzNVcmoxT0JPZGtVMFFsLVpVQnRlT1pyY0xRWGFBZUhWb0Z3NS1ZOHVPdS05c3g0TQ?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Peter Thiel a vendu toutes les actions de services publics qu'il possédait et a misé 161 millions de dollars sur un ETF de puces. Il est en baisse de 37 millions de dollars depuis"
     }
    ]
   },
@@ -3665,6 +3707,36 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T15:17:38.000Z",
+     "title": "Kevin Hassett says Nvidia is central to America’s AI race with China",
+     "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4xNWhDRXFOQ2ZOamdxN3JqdGF6WXBEOTV4RG1Tc09oVGh4NEpDUVBURHNURFVSeER2NWZpQUFqdHJuVGo3UjBOaGRGN3ZlVjM4eXZDZkNGX05pZWF6UEZNZjNnUjJoTmpoMmpR?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "Kevin Hassett déclare que Nvidia est au cœur de la course à l'IA de l'Amérique contre la Chine",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-25T15:16:44.000Z",
+     "title": "Hassett says he never discussed his Nvidia stake with Trump",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBSbDlTRkRyRkdQczV0cktObkt5WGMzM0dmSzZDRkJ4OFBYeV9rTGNadXNpck9kaHJiSEJiclhfc2s0VTBlNDVNb0JoQk5IdlB1MjFhX2J1QnQ2bGszbTE1SjlJZEMyVHRxWnRKZW5LMzItcFhNUm1Z?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "Hassett déclare n'avoir jamais discuté de sa participation dans Nvidia avec Trump",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-25T00:00:00.000Z",
+     "title": "Hassett Says Nvidia Will Be Big Reason Why US Wins AI Battle",
+     "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPT2tySFZwbHVkRUx1ZzdOaVJOWGEyb1JfNk41WlB2YlZCazJRWjAyRk9JT3gyNll6bDRrS0stMWo4YzExTDRwZlJHX2pLa2k5dExjTkNDOFFjV1ZBWWM4RkNQRVhIXzdHSkE2WnpYcEN1c0s1ajVQdjA0c01JaU1rRy1JT29nMFkwZXVKd1dwNHZab2NIS2pZOFlpSlFJdmFsMzQ3SDZzQUZzSC1YeVNleg?oc=5",
+     "source": "Bloomberg.com",
+     "kind": "presse",
+     "title_fr": "Hassett déclare que Nvidia sera une raison majeure pour laquelle les États-Unis gagneront la bataille de l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-06T14:22:46.000Z",
      "title": "Kevin Hassett says US economy can thrive despite data center slowdown",
@@ -5948,7 +6020,18 @@
    "co": "",
    "actor": null,
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T13:57:08.000Z",
+     "title": "USTR Jamieson Greer says Washington must keep Nvidia on top",
+     "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBvZXhqQV9GZ0dTbnhnVFpmbkFYLUtDZDA3WEZHc293WkhVTURXVWFHdndGYTR4N1VGcUwyV25yOEF0VDljXzNrTFhxVmhPcFMtWmpid3F4QVJSMHp4RWlJTnF6WVNZOWNUdGpqS0piUHNFNDhJZzZR?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "L'USTR Jamieson Greer déclare que Washington doit maintenir Nvidia au sommet",
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "bernie-sanders",
@@ -6005,7 +6088,21 @@
  ],
  "hot": [
   {
-   "score": 1.85,
+   "score": 1.69,
+   "id": "cc-wei",
+   "n": "C.C. Wei",
+   "role": "PDG de TSMC",
+   "actor": "tsmc",
+   "ts": "2026-11-25T13:36:06.000Z",
+   "title": "TSMC Is Still Up 27% in a Year After the AI Rout. C.C. Wei Says Demand Is “Far Above” Supply",
+   "title_fr": "TSMC est toujours en hausse de 27 % en un an après la déroute de l'IA. C.C. Wei déclare que la demande est « bien supérieure » à l'offre",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVWdqTU03dG5yVUdNN29yUjJjaTRTTk9CNEU5eURxb3Q0UktIcG9JUnFIV1p2ektLR0pmUm5zeGN1RVpZNzlZcEYzVEp2NWxTem5iQXZjMk12eW42czJQNEdWS0tCdWltaHY4d3RCV2czQzBoTXpIQm1Td0dyNU8yZm9FVjM0VWZYb2JGWkZZNDNKdmVwUDRaa3FLZ1RIRGk2QlNkSFNVNmxZODJ3TnlEZmRXX0tSbWNUT1BTb2xPSnhmYXkzQmU2TzM4cDBqUUVBMTdOU1ZCWngwYzZhdXdwQnBoZGkxZHFsN3c?oc=5",
+   "source": "TIKR.com",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 1.65,
    "id": "peter-thiel",
    "n": "Peter Thiel",
    "role": "Cofondateur de Palantir, investisseur",
@@ -6016,10 +6113,10 @@
    "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ1pHNno1SlJqUkNKSUU4RzhrZllSTVZkOUtSRjB2V3BQRmJsQUpZMGgxeVBDM3ZJVEhFSEJIWGk1NzhVQ2dkUGdudlFHRDFCZExibTBUNHlpb0NrS0ZSYU80V2hwbFlLcU4ybFFTbUJ2RkFGSFRaQ3NxbWZHYnlPcl9WSUZkZkVNa2lZbmtOTU1VMG5uR2M2V2J6Q0JrM05OMTk1cEVIbVU5Q2lRZzZhc3JOWFdSWVZSdUsyY0xXR044T2lTYUxzTlBsS21ScjRC?oc=5",
    "source": "Forbes",
    "kind": "presse",
-   "outlets": 4
+   "outlets": 5
   },
   {
-   "score": 1.4,
+   "score": 1.13,
    "id": "lip-bu-tan",
    "n": "Lip-Bu Tan",
    "role": "PDG d'Intel",
@@ -6031,20 +6128,6 @@
    "source": "Dealroom",
    "kind": "presse",
    "outlets": 1
-  },
-  {
-   "score": 0.82,
-   "id": "yann-lecun",
-   "n": "Yann LeCun",
-   "role": "Président exécutif d'AMI Labs, ex-Meta",
-   "actor": null,
-   "ts": "2026-11-25T04:45:10.000Z",
-   "title": "Anthropic CEO Dario Amodei Wanted Control of AI at OpenAI, Claims Yann LeCun",
-   "title_fr": "Le PDG d'Anthropic, Dario Amodei, voulait le contrôle de l'IA chez OpenAI, affirme Yann LeCun",
-   "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQci1pWmJWZzhJUm1pb09FV3pONDNrVlROYXNUVlZpdmtfNmRVNGZ6dkg1ZEtEajJNaDZZT0pMYmlZQ2VSY3Z5VmRPUklOS1dTRnoydURpU1hJa2dTQjY3ZU1HQjhDLWE2TmdHX0M2ZWpua3djNzBEZzRMcmJzdTNZSFg3eF9KUjE2TDhzdklnQmRWRkxUbzNPamhTRlNpZkV6VWdvdHk0SElXNlJFZVFlUg?oc=5",
-   "source": "Mashable India",
-   "kind": "presse",
-   "outlets": 2
   }
  ]
 }
