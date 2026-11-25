@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-25T14:10:30.265Z",
+ "generated_at": "2026-11-25T14:15:30.662Z",
  "items": [
+  {
+   "id": "c4937692d5d7",
+   "ts": "2026-11-25T14:12:33.000Z",
+   "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+   "orig": "Amazon is reportedly in talks to end Muse AI shopping block",
+   "summary": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent recommends and the pot",
+   "country": "US",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "6b84c93cda4e",
+   "ts": "2026-11-25T14:10:39.000Z",
+   "title": "Promera acquires Irish electrical contractor B&G to expand data center offering",
+   "orig": "Promera acquires Irish electrical contractor B&G to expand data center offering",
+   "summary": "B&G provides critical power infrastructure services for the data center market",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/promera-acquires-irish-electrical-contractor-bg-to-expand-data-center-offering/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "28175a595e60",
    "ts": "2026-11-25T14:10:18.000Z",
