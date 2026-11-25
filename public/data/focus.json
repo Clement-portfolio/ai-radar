@@ -5,17 +5,17 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-25T01:21:41.160Z",
+ "generated_at": "2026-11-25T04:12:47.043Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
-  "03a5687591e9+08685ddbf818+12493e69fa51+1ebbb225f078+22fd7ca2e2d6+2fec91190f60+354bf133bd07+38340f7df7bb+4401da3fa47f+4b29b6901fc2+5dc55a044437+613b95800cde+616283a566b6+6553a4e9576a+657d6742e35a+69f64fbae113+6d46c005192f+71f693cffefe+7c0a81286ce5+7dcc5db7e628+92d3bc1d587a+97d2878c5e73+a165733dbba2+a33229a60892+b5178fbec424+cb8d7daff59c+f27eb2633696",
+  "03a5687591e9+08685ddbf818+12493e69fa51+1ebbb225f078+22fd7ca2e2d6+2fec91190f60+354bf133bd07+38340f7df7bb+4401da3fa47f+4b29b6901fc2+5dc55a044437+613b95800cde+616283a566b6+657d6742e35a+69f64fbae113+6d46c005192f+71f693cffefe+7c0a81286ce5+7dcc5db7e628+92d3bc1d587a+97d2878c5e73+a165733dbba2+a33229a60892+b5178fbec424+cb8d7daff59c+f27eb2633696",
   "0c56e1950266+4b1f1703bbc0+c3a2aba6c39e+cb02ca1a7848+def41b9598d6+f955d48edeaa",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5fc039618c60+cd767daa7782+cfa454b7233b+d8fbec9f2d14",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
   "08ca4f57d6cb+0e77edd2c1e8+49258f2ca6af+62898b4a825e",
   "05e8bcaf8862+376956b25183+4b9c8cdeff32+66e6972db296+bd693f5f4e0c",
-  "43a1e3d33ca6+fd5a3afdee21"
+  "a2798bf757b8"
  ],
  "stories": [
   {
@@ -25,24 +25,27 @@
     "dd245aec9e89",
     "390761ac5d39"
    ],
-   "head": "Les États-Unis placent l'entreprise Megaspeed sur liste noire commerciale",
+   "head": "Les États-Unis placent l'entreprise Megaspeed sur leur liste noire commerciale",
    "bullets": [
-    "Le département du Commerce américain ajoute la firme singapourienne Megaspeed et ses filiales à sa liste noire dans le cadre d'une enquête sur la contrebande de puces.",
-    "Le Premier ministre de Singapour annonce l'ouverture d'une enquête sur l'entreprise Megaspeed suite aux accusations et sanctions des États-Unis.",
-    "Cette sanction vise à renforcer les restrictions à l'exportation de puces d'intelligence artificielle vers la Chine et à empêcher les contournements de l'embargo."
+    "Le département du Commerce américain a ciblé la firme de Singapour et ses filiales dans le cadre d'une enquête sur la contrebande de puces.",
+    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête nationale sur la société à la suite des sanctions américaines.",
+    "Cette décision intervient alors que le scandale concernant les ventes et l'accès de la Chine aux puces de Nvidia prend de l'ampleur."
    ],
    "kinds": [
     "detail",
     "detail",
-    "explication"
+    "contexte"
    ],
-   "head_en": "The United States places Megaspeed on commercial blacklist",
+   "head_en": "The United States places Megaspeed on its commercial blacklist",
    "bullets_en": [
-    "The US Department of Commerce adds Singaporean firm Megaspeed and its subsidiaries to its blacklist as part of a chip smuggling investigation.",
-    "The Prime Minister of Singapore announces the opening of an investigation into Megaspeed following US accusations and sanctions.",
-    "This sanction aims to strengthen export restrictions on artificial intelligence chips to China and prevent embargo circumvention."
+    "The US Department of Commerce targeted the Singapore firm and its subsidiaries as part of a chip smuggling investigation.",
+    "The Prime Minister of Singapore announced the opening of a national investigation into the company following the US sanctions.",
+    "This decision comes as the scandal concerning sales and China's access to Nvidia chips grows."
    ],
-   "ctx_ids": [],
+   "ctx_ids": [
+    "15d5b22ca8b3",
+    "a5a8206957ca"
+   ],
    "ts": "2026-11-24T16:00:41.000Z"
   },
   {
@@ -52,21 +55,30 @@
     "4401da3fa47f",
     "22fd7ca2e2d6"
    ],
-   "head": "Donald Trump intervient pour forcer le retour de Jensen Huang à la tête de Nvidia",
+   "head": "Donald Trump revendique un rôle dans le retour de Jensen Huang à la tête de Nvidia",
    "bullets": [
-    "Le président Donald Trump et le vice-président Vance ont appelé directement le conseil d'administration de Nvidia pour obtenir cette réintégration.",
-    "Donald Trump affirme avoir conclu cet accord après une rencontre avec Xi Jinping."
+    "Le conseil d'administration de Nvidia a réintégré Jensen Huang au poste de PDG, quelques jours après avoir refusé son offre de retour.",
+    "Le président Donald Trump déclare avoir parlé directement et indirectement avec le conseil d'administration de l'entreprise et avoir sollicité le vice-président Vance.",
+    "L'exécutif américain affirme être intervenu à la suite de discussions avec le président chinois Xi Jinping afin de stabiliser les marchés financiers.",
+    "La Californie avait ouvert une enquête sur Nvidia concernant le scandale de Jensen Huang, et son départ récent avait modifié la feuille de route de l'entreprise."
    ],
    "kinds": [
     "detail",
-    "detail"
+    "detail",
+    "explication",
+    "contexte"
    ],
-   "head_en": "Donald Trump intervenes to force Jensen Huang's return to lead Nvidia",
+   "head_en": "Donald Trump claims a role in the return of Jensen Huang as head of Nvidia",
    "bullets_en": [
-    "President Donald Trump and Vice President Vance directly called Nvidia's board of directors to secure this reinstatement.",
-    "Donald Trump claims to have reached this agreement after a meeting with Xi Jinping."
+    "Nvidia's board of directors reinstated Jensen Huang as CEO just days after rejecting his offer to return.",
+    "US President Donald Trump stated that he spoke directly and indirectly with Nvidia's board of directors and enlisted Vice President Vance.",
+    "The US executive branch claims to have intervened following discussions with Chinese President Xi Jinping in order to stabilize financial markets.",
+    "California had opened an investigation into Nvidia regarding the Jensen Huang scandal, and his recent departure had altered the company's roadmap."
    ],
-   "ctx_ids": [],
+   "ctx_ids": [
+    "a82d2279d323",
+    "d1a4e078c869"
+   ],
    "ts": "2026-11-24T15:40:00.000Z"
   },
   {
@@ -76,20 +88,17 @@
     "5eefaf1660e7",
     "39cc7b62b7b0"
    ],
-   "head": "Un mathématicien d'Anthropic affirme avoir résolu l'hypothèse de Riemann avec l'aide de Claude",
+   "head": "Un mathématicien d'Anthropic affirme avoir résolu l'hypothèse de Riemann avec Claude",
    "bullets": [
-    "Le mathématicien Levent Alpöge est à l'origine de cette annonce concernant la résolution de l'hypothèse de Riemann.",
-    "La démonstration utilise l'assistant Claude pour résoudre un problème mathématique vieux de 167 ans."
+    "Le mathématicien Levent Alpöge annonce cette avancée réalisée avec l'assistant développé par Anthropic.",
+    "Cette résolution concerne un problème mathématique datant du XIXe siècle et lié au prix du millénaire."
    ],
    "kinds": [
     "detail",
-    "detail"
+    "explication"
    ],
-   "head_en": "An Anthropic mathematician claims to have solved the Riemann hypothesis with the help of Claude",
-   "bullets_en": [
-    "Mathematician Levent Alpöge is behind this announcement regarding the resolution of the Riemann hypothesis.",
-    "The proof uses the Claude assistant to solve a 167-year-old mathematical problem."
-   ],
+   "head_en": null,
+   "bullets_en": null,
    "ctx_ids": [],
    "ts": "2026-11-21T16:52:00.000Z"
   }
