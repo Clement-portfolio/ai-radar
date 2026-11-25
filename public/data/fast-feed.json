@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T08:05:23.138Z",
+ "generated_at": "2026-11-25T08:10:57.911Z",
  "items": [
   {
    "id": "9f0c4f05587a",
    "ts": "2026-11-25T08:01:01.000Z",
-   "title": "Chip Industry Technical Paper Roundup: Nov. 25",
+   "title": "Revue d'articles techniques sur l'industrie des puces : 25 nov.",
    "orig": "Chip Industry Technical Paper Roundup: Nov. 25",
    "summary": "Hybrid-bonded 3D NAND analog IMC; defect-aware chiplet matching for HI yield; HBF latency reduction for GPU systems; backside clock meshes for BSPDN; LLM-agent verification for post-quantum HW; self-supervised CMP virtual metrology; e-beam stitching losses in ",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "Semiconductor Engineering",
    "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-nov-25-2/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Revue d'articles techniques sur l'industrie des puces : 25 nov.",
+   "title_en": "Chip Industry Technical Paper Roundup: Nov. 25",
+   "summary_en": "Hybrid-bonded 3D NAND analog IMC; defect-aware chiplet matching for HI yield; HBF latency reduction for GPU systems; backside clock meshes for BSPDN; LLM-agent verification for post-quantum HW; self-supervised CMP virtual metrology; e-beam stitching losses in"
   },
   {
    "id": "1a7561546565",
    "ts": "2026-11-25T07:50:00.000Z",
-   "title": "Analysis: Nvidia leadership settled, but US export rules still cloud outlook for Taiwan server makers",
+   "title": "Analyse : la direction de Nvidia stabilisée, mais les règles d'exportation américaines assombrissent toujours les perspectives des fabricants de serveurs taïwanais",
    "orig": "Analysis: Nvidia leadership settled, but US export rules still cloud outlook for Taiwan server makers",
    "summary": "Jensen Huang's return as Nvidia CEO has eased uncertainty over the chipmaker's leadership, but Taiwan's AI server manufacturers are more concerned about whether Washington will revise its new AI chip export rules.",
    "country": "OTHER",
@@ -29,12 +32,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD214/jensen-huang-nvidia-taiwan-ceo-chips.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Analyse : la direction de Nvidia stabilisée, mais les règles d'exportation américaines assombrissent toujours les perspectives des fabricants de serveurs taïwanais",
+   "title_en": "Analysis: Nvidia leadership settled, but US export rules still cloud outlook for Taiwan server makers",
+   "summary_en": "Jensen Huang's return as Nvidia CEO has eased uncertainty over the chipmaker's leadership, but Taiwan's AI server manufacturers are more concerned about whether Washington will revise its new AI chip export rules."
   },
   {
    "id": "fa11c630f4c5",
    "ts": "2026-11-25T07:29:00.000Z",
-   "title": "EU hybrid car quotas echo US curbs on AI computing via third countries",
+   "title": "Les quotas de l'UE sur les voitures hybrides rappellent les restrictions américaines sur le calcul IA via des pays tiers",
    "orig": "EU hybrid car quotas echo US curbs on AI computing via third countries",
    "summary": "The EU is expected to announce annual import quotas for hybrid and plug-in hybrid cars, extending limits aimed at China to Japan, South Korea, the UK and Turkey, Automotive News Europe reported. The plan parallels US efforts to cut off access to advanced AI co",
    "country": "CN",
@@ -44,12 +50,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD207/eu-automakers-uk-nvidia-jensen-huang.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les quotas de l'UE sur les voitures hybrides rappellent les restrictions américaines sur le calcul IA via des pays tiers",
+   "title_en": "EU hybrid car quotas echo US curbs on AI computing via third countries",
+   "summary_en": "The EU is expected to announce annual import quotas for hybrid and plug-in hybrid cars, extending limits aimed at China to Japan, South Korea, the UK and Turkey, Automotive News Europe reported. The plan parallels US efforts to cut off access to advanced AI co"
   },
   {
    "id": "9b62b9e7360e",
    "ts": "2026-11-25T07:15:00.000Z",
-   "title": "Fujitsu's 2nm Monaka server chip draws strong early demand",
+   "title": "La puce serveur Monaka 2 nm de Fujitsu suscite une forte demande initiale",
    "orig": "Fujitsu's 2nm Monaka server chip draws strong early demand",
    "summary": "Fujitsu's new Monaka server chip has drawn stronger-than-expected initial demand, driven by customers seeking alternatives to US and Chinese suppliers, the company's chief technology officer said. The 2-nanometer Arm-based processor targets Intel and Advanced ",
    "country": "CN",
@@ -59,12 +68,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD220/fujitsu-demand-processor-sales-cpu.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "La puce serveur Monaka 2 nm de Fujitsu suscite une forte demande initiale",
+   "title_en": "Fujitsu's 2nm Monaka server chip draws strong early demand",
+   "summary_en": "Fujitsu's new Monaka server chip has drawn stronger-than-expected initial demand, driven by customers seeking alternatives to US and Chinese suppliers, the company's chief technology officer said. The 2-nanometer Arm-based processor targets Intel and Advanced"
   },
   {
    "id": "79087397a3fd",
    "ts": "2026-11-25T07:08:40.000Z",
-   "title": "Anthropic and OpenAI staff reportedly warn unreleased models may be too powerful to release safely",
+   "title": "Le personnel d'Anthropic et d'OpenAI avertirait que des modèles non publiés pourraient être trop puissants pour être lancés en toute sécurité",
    "orig": "Anthropic and OpenAI staff reportedly warn unreleased models may be too powerful to release safely",
    "summary": "Many employees at Anthropic and OpenAI no longer believe the companies' most powerful unreleased models can be released safely, Axios reported on November 24, 2026, citing more than two dozen sources familiar with the internal debates. The sources said rapid g",
    "country": "OTHER",
@@ -74,7 +86,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL225/openai-anthropic-llm-2026.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Le personnel d'Anthropic et d'OpenAI avertirait que des modèles non publiés pourraient être trop puissants pour être lancés en toute sécurité",
+   "title_en": "Anthropic and OpenAI staff reportedly warn unreleased models may be too powerful to release safely",
+   "summary_en": "Many employees at Anthropic and OpenAI no longer believe the companies' most powerful unreleased models can be released safely, Axios reported on November 24, 2026, citing more than two dozen sources familiar with the internal debates. The sources said rapid g"
   },
   {
    "id": "a22ef5d968cb",
@@ -187,7 +202,7 @@
   {
    "id": "65a818bd449b",
    "ts": "2026-11-25T05:00:00.000Z",
-   "title": "From AI Platforms to Industry Innovation: How NVIDIA Connects Startups to Build an AI Ecosystem",
+   "title": "Des plateformes d'IA à l'innovation industrielle : comment NVIDIA connecte les startups pour construire un écosystème d'IA",
    "orig": "From AI Platforms to Industry Innovation: How NVIDIA Connects Startups to Build an AI Ecosystem",
    "summary": "For AI startups, the real challenge is often not building AI itself, but getting it to work reliably in the real world. The post From AI Platforms to Industry Innovation: How NVIDIA Connects Startups to Build an AI Ecosystem appeared first on EE Times .",
    "country": "US",
@@ -197,7 +212,10 @@
    "source": "EE Times",
    "url": "https://www.eetimes.com/from-ai-platforms-to-industry-innovation-how-nvidia-connects-startups-to-build-an-ai-ecosystem/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Des plateformes d'IA à l'innovation industrielle : comment NVIDIA connecte les startups pour construire un écosystème d'IA",
+   "title_en": "From AI Platforms to Industry Innovation: How NVIDIA Connects Startups to Build an AI Ecosystem",
+   "summary_en": "For AI startups, the real challenge is often not building AI itself, but getting it to work reliably in the real world. The post From AI Platforms to Industry Innovation: How NVIDIA Connects Startups to Build an AI Ecosystem appeared first on EE Times ."
   },
   {
    "id": "3d324a020365",
