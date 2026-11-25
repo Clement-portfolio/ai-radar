@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-25T14:01:13.221Z",
+ "generated_at": "2026-11-25T14:05:26.025Z",
  "items": [
+  {
+   "id": "626d05b76d45",
+   "ts": "2026-11-25T14:01:01.000Z",
+   "title": "South African gov't floats converting old power stations into data centers",
+   "orig": "South African gov't floats converting old power stations into data centers",
+   "summary": "President Cyril Ramaphosa suggested the move during a recent visit to San Jose, California",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/south-african-govt-floats-converting-old-power-stations-into-data-centers/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "9949223886f2",
+   "ts": "2026-11-25T14:00:00.000Z",
+   "title": "AMD Tackles DRAM Shortages with AI and Flash Storage",
+   "orig": "AMD Tackles DRAM Shortages with AI and Flash Storage",
+   "summary": "AMD MEXT uses AI to park cold memory pages in flash, cutting DRAM costs and easing data center shortages. The post AMD Tackles DRAM Shortages with AI and Flash Storage appeared first on EE Times .",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "EE Times",
+   "url": "https://www.eetimes.com/amd-tackles-dram-shortages-with-ai-and-flash-storage/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "d2d425122d99",
    "ts": "2026-11-25T13:31:39.000Z",
