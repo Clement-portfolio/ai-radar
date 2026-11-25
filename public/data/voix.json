@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T16:17:11.650Z",
+ "generated_at": "2026-11-25T18:58:37.306Z",
  "people": [
   {
    "id": "sam-altman",
@@ -605,7 +605,7 @@
    "actor": "amd",
    "alerts": [
     {
-     "ts": "2026-11-20T23:00:35.000Z",
+     "ts": "2026-11-20T18:25:00.000Z",
      "title": "AMD CEO Lisa Su Breaks Silence on Jensen Huang's Resignation: \"The Noise Will Subside Soon\"",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1rU1A4MWt6V1lHVm4ycTBsNzdmWnd6S2tDVHgxclV4Uk11bmFMTXVrWDVGamR6OVZGM3ZWTnRURzhfVW9SbjJrZ0IzS1hLMjdpb2dFVTRadjlMRTg0aFhZdnRXOG8wZVo0RHRJUVJPc0RDVDNLVnc?oc=5",
      "source": "BigGo Finance"
@@ -918,6 +918,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T18:33:18.000Z",
+     "title": "AI data centres now buy about as many CPUs as GPUs, down from a ratio of 8 to 1, as inference and agents take over, says Intel's Lip-Bu Tan",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOYjI1UEwydnRaaGpHVWpXdTlxWXl0NnhQZEowTWZIMWVzVkJJX280TUVCaUtaWmNyVUQxMzh2VXhUb3I2U1R3MmlfaGpBUUpjYjE4MWZiVnFVTnhyeTc4LTJlbVpkZk9hS3FIbWVKS0FrUVh5cVI1dVBLMGk0bXE5MkMtWHNiZkI3bHBTTjFFNEdyZF9FZHFmS3ptODhwdXdUVXFfN0FhZWtzN0RNQ1JSVmJhRXdxYjBJbzNzLVlvUTRpWFM1c08wbW1tcTQzXzYtcU1KdGw5WFhaTWlReHViM0hSZGNfZzN0aUNSd3dXUEFCY0l5QjNadHlvTU90N1E?oc=5",
+     "source": "Dealroom",
+     "kind": "presse",
+     "title_fr": "Les centres de données d'IA achètent désormais presque autant de CPU que de GPU, contre un ratio de 8 pour 1 auparavant, alors que l'inférence et les agents prennent le dessus, déclare Lip-Bu Tan d'Intel",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T11:43:43.000Z",
      "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpLaVpoaFJTUDVtS25IYzFHOUNqbEZpaGNlNTBrUVRUeXVsWDBqNlBZYjJBSmFUbXFOV0U3UklWNmFuajZBQTZEbl8wZDY2NHRnT3NwclBVTEdaY2Nvc1U2Y29GcU9TdkJzNXpOWjdkWU1XWjg3dDRFdDVhbEZMX1ZEcGR1N21sX3ktMHNDUV9kTGFTMEZzOEV5ZXN3ZDRRWm9Qd0dNdGtlaUs2RnM0LVRoMFhkVGc5eXFVaHR6QkZsNUp2UHRBLWowNG11elRicWN2bHo1ckluNk0tRzYyeWNzaXZhd0FCRzVCcDlYUGlfZm1adWZNdnJ5dTFPMTg?oc=5",
@@ -958,7 +968,18 @@
    "co": "ASML",
    "actor": "asml",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T18:53:38.000Z",
+     "title": "ASML CEO Fouquet says cutting China off entirely would backfire",
+     "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNY19TVm00cWMyaDBxUEEtU2xCbW5kZ0FjZ3lLTjNwa3FmU3ZnTkJtd2ZfN0ZVbTFSdl9KYV9MdExRajRpNXdmcFhuWWkzaHE3X0Frd0tQOFc3YnMwUkhZRzNyTWpLMm5BbUNmNFBFV19BaGpRQVlEU09qWkNrV1ByV1VScHdvajQ4OHF4NA?oc=5",
+     "source": "MLQ.ai",
+     "kind": "presse",
+     "title_fr": "Le PDG d'ASML, Fouquet, déclare qu'isoler totalement la Chine se retournerait contre nous",
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "kwak-noh-jung",
@@ -3115,6 +3136,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-19T16:18:40.000Z",
+     "title": "Anthropic Will ‘Listen’ to Communities On Future Data Center Construction Plans, Daniela Amodei Says",
+     "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNSkpZcmQxNWlnSGVZZDRZTkhydGhrR1N2OXhLOUVKYVlQU29odldfR0dYME5lOHRPUVpEMnUwemcwbWZQNUlkZE1ZdEE4TzRhc0NPRXdQNEdka2FOdWZBN21HaE82MXlGTzQ3b1hNRzd0TlQ2b2pJelhVNzhxT3o2ZDRkNzN5WVlVRF9FNDJuSDlUUzVyZy0yYkZWcnpGd3ZGQ0IxUUtqNG5oVDBjOElCY0Z0STgwa3dCbFpuTE5FM3BabFRRRGhkbE9lSTZDeTc5NWE5U2hGekd3Q3d6STZR?oc=5",
+     "source": "Forbes",
+     "kind": "presse",
+     "title_fr": "Anthropic « écoutera » les communautés sur les futurs plans de construction de centres de données, déclare Daniela Amodei",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-06T08:00:00.000Z",
      "title": "Anthropic president Daniela Amodei told wedding guests to fantasize about 'romantic hookups' with stuffed animals",
      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOVXlST2k1dTNCaG5oUmU5RVA3V213RG1ydnhSbGVzbWFmaGtxN2k0M2JDVVRwUEdtVHlwbVZhYTd1RDl6aDhSVkptUkVpQkh2UVg0ams3M0JvN0xrSGg3RHRpVFpZYWhiYm9EX3FydmdKcHBkNFBEV1huVkFQbjRiY3l6bUh1aXhSRWJFejNvZ2U0UEhsLWtBeUstYzkxNk1DUzVLUUJrTGkyTXZQR1hxQ3hwVHdnYWlwYUNwMTJoQUl3ZDBLTUdfdlViSUphSlBlcUswTVJnSE1nRS1ENXJfLVc3UUNjZw?oc=5",
@@ -3292,6 +3323,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T18:18:42.000Z",
+     "title": "Peter Thiel Sold $2.6B of Palantir Stock. Now He's Buying. - Palantir Technologies (NASDAQ:PLTR)",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVUdoMkRnR1FJWnUzSWpyZjJORGxWQnR4WmptbnNsNlRqSGNCSlBqcWhiZ3pjeTNxelBMRS1GaTBjbDlGTXFPdEJBYnlCcDdMYVZsME90MEF3cFd6OHJSN2hmVWxFUWxQS3dtSGVHaWNVclkza1Zxd21yUFg0NnFXbmI3SXlNMGR5dmFMSm52VEg5bElfeVgwSjVrYnRPWGVJNEY1Qw?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "title_fr": "Peter Thiel a vendu 2,6 milliards de dollars d'actions Palantir. Maintenant, il achète. - Palantir Technologies (NASDAQ:PLTR)",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-25T13:53:00.000Z",
      "title": "Palantir’s CEO Alex Karp Sold $75 Million. Co-Founder Peter Thiel Bought $122 Million",
      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdlJQczctX1U2WUY4ZlJEd29ldUt0V2J4cVRObTkxY2ZOWnQ2UW52YjRRWWYyTzhiOS1HQ1pZX1NJV1o0NGR0RjFsNXZFQ2pFLUxBUUxBZV9XQjZMRW1LYTBoQVViTmdBcDg1WGlmSDVHbE8wYnF3QVN2cnFPWlFqb3hxWVZGYjhtRm1lVXRZMEh4RUdnenVyUjRMdzlKeXRMTnQ3UEtFb3NtXzJlZEEtY0VfMFU3alBtSVZzXzF0VG94VHM?oc=5",
@@ -3358,18 +3399,8 @@
      "source": "Investing.com",
      "kind": "presse",
      "title_fr": "Peter Thiel achète pour 122,3 millions de dollars d'actions de Palantir Technologies",
-     "m": 4,
+     "m": 5,
      "e": 1
-    },
-    {
-     "ts": "2026-11-25T01:43:00.000Z",
-     "title": "Palantir (PLTR) director Peter Thiel’s LLC buys shares under a preexisting trading plan.",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbnpZM01JZTNzTnZDRXh3ODAyaUx3ajA0ZzRuQjc2WmFpWHBXR25xNzBHVUJHOEtPdXBVZkJldERBRGRGMHl3NHR2NnJINnBmeUJ3enJJYWNreTdQRGM2Yk5MNXA5SVhHcmkyLW85Zl90NjZva3Y3YU5iWU1PeDdfVGg4cHk4bGo1Z1F5NEFvOXhMS0FYZGllaEc4VUFub1VUa3VLTXRBcXpZMmt1Yy1KcFRORWtmdi03OFd3?oc=5",
-     "source": "Stock Titan",
-     "kind": "presse",
-     "title_fr": "Le directeur de Palantir (PLTR), Peter Thiel, achète des actions via sa LLC dans le cadre d'un plan de trading préexistant.",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -5751,6 +5782,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T18:17:00.000Z",
+     "title": "NVIDIA Is Down 31% in a Month. Mohamed El-Erian Says It's \"Too Big to Wobble.\" Can NVDA Stock Get Back to $200?",
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRW5GMk9yUmhJUmlBODBpMm5ORTJjNVZzWnd0VmU0QVY4aTVuYVJ3TGFCdDFUSW1jNk1mMjRuUmRjSW9HRmNrMG9VMHhkOUNQdEZSUWhVSjhjVHlJQjUzbmJTV2pnNW9pbEhDRUJjUUlNZWp1WGhaenVaN0hESDJrSEdXTll4NTYxUGJtU3JYWF9pcFBiTnZNSld0TmQ3NF9URks3Uml0RmJxbkpvMGo4NHlnT2g4S3JiMEg2Z2RSS3cyTWRFSU9TUWU3XzJwY2E0NTZqUFlIa2g4NWFBamE1VQ?oc=5",
+     "source": "24/7 Wall St.",
+     "kind": "presse",
+     "title_fr": "NVIDIA a chuté de 31 % en un mois. Mohamed El-Erian déclare que c'est « trop gros pour vaciller ». L'action NVDA peut-elle revenir à 200 dollars ?",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-24T23:58:47.000Z",
      "title": "Nasdaq Drops As NVDA, ANT, SPCX Slide: Mohamed El-Erian Says Market Warning Signals Go Well Beyond Nvidia",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdmpXWFJJNGZIS1lxREhEemtWek5UZEtVQTVvaml5bmVISVlLTnZtVDNXNV9iZmxKNGZTSU04b0FQWkpGNmdmMlA2b3VaN2RTTmFOR1RISk1LTmpicWJSLUJZd0YyM2NOUlJzMGNHSUcyMGRGdG9vRTNhOVEzU1JjRldDT3UxSjJ4V19xRWxIYWk4QVRBc1E?oc=5",
@@ -5819,16 +5860,6 @@
      "title_fr": "El-Erian affirme que les vainqueurs des élections de mi-mandat aux États-Unis font face à un test de marché — met en garde contre l'asphyxie de l'IA et exhorte à la discipline budgétaire",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-06T08:00:00.000Z",
-     "title": "Mohamed El-Erian Says America’s AI ‘Let It Rip’ Approach Has Fallen Short as Midterm Backlash Grows — Bil",
-     "url": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNbTdOMW1EQ21OMDdrUXpITWNIdUwyaFVRajNtVzJJb3IzWjFSZktRR2ZvVEg2cUp3ZUVZOWpBR24tX3d0ZWJCVnRRSnNNQkQzLXRjYXBCMGpUaFAybnpGUEEtYUxwaWFmeGFtZXRrQ0xqZElQX1ZNN194dUJjcVVFclItczluaVQzT20zNHZfV0puNE0tQl9uY2N3ZTZLR25NUUU3XzRuc0U4eUlfckx0MnBUbldzaDlGRDY5X2VUYTd5dnpnSkpWNVQweV84YXBDSFdzb3NPZEliX2pBNktDQnJVYU1QUTRqel9xM2pvVE1fRUh2VHJrWHRRdFpDLTdtUGJ2RlJ1SmU2RmlhenJVODZDdWVCazJqUDN6WHEyMEs?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Mohamed El-Erian affirme que l'approche américaine axée sur le tout-à-l'IA a montré ses limites alors que la réaction politique s'intensifie à mi-mandat — Bil"
     }
    ]
   },
@@ -6088,7 +6119,35 @@
  ],
  "hot": [
   {
-   "score": 1.69,
+   "score": 1.73,
+   "id": "peter-thiel",
+   "n": "Peter Thiel",
+   "role": "Cofondateur de Palantir, investisseur",
+   "actor": null,
+   "ts": "2026-11-25T18:18:42.000Z",
+   "title": "Peter Thiel Sold $2.6B of Palantir Stock. Now He's Buying. - Palantir Technologies (NASDAQ:PLTR)",
+   "title_fr": "Peter Thiel a vendu 2,6 milliards de dollars d'actions Palantir. Maintenant, il achète. - Palantir Technologies (NASDAQ:PLTR)",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNVUdoMkRnR1FJWnUzSWpyZjJORGxWQnR4WmptbnNsNlRqSGNCSlBqcWhiZ3pjeTNxelBMRS1GaTBjbDlGTXFPdEJBYnlCcDdMYVZsME90MEF3cFd6OHJSN2hmVWxFUWxQS3dtSGVHaWNVclkza1Zxd21yUFg0NnFXbmI3SXlNMGR5dmFMSm52VEg5bElfeVgwSjVrYnRPWGVJNEY1Qw?oc=5",
+   "source": "Benzinga",
+   "kind": "presse",
+   "outlets": 2
+  },
+  {
+   "score": 1.55,
+   "id": "lip-bu-tan",
+   "n": "Lip-Bu Tan",
+   "role": "PDG d'Intel",
+   "actor": "intel-foundry",
+   "ts": "2026-11-25T18:33:18.000Z",
+   "title": "AI data centres now buy about as many CPUs as GPUs, down from a ratio of 8 to 1, as inference and agents take over, says Intel's Lip-Bu Tan",
+   "title_fr": "Les centres de données d'IA achètent désormais presque autant de CPU que de GPU, contre un ratio de 8 pour 1 auparavant, alors que l'inférence et les agents prennent le dessus, déclare Lip-Bu Tan d'Intel",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOYjI1UEwydnRaaGpHVWpXdTlxWXl0NnhQZEowTWZIMWVzVkJJX280TUVCaUtaWmNyVUQxMzh2VXhUb3I2U1R3MmlfaGpBUUpjYjE4MWZiVnFVTnhyeTc4LTJlbVpkZk9hS3FIbWVKS0FrUVh5cVI1dVBLMGk0bXE5MkMtWHNiZkI3bHBTTjFFNEdyZF9FZHFmS3ptODhwdXdUVXFfN0FhZWtzN0RNQ1JSVmJhRXdxYjBJbzNzLVlvUTRpWFM1c08wbW1tcTQzXzYtcU1KdGw5WFhaTWlReHViM0hSZGNfZzN0aUNSd3dXUEFCY0l5QjNadHlvTU90N1E?oc=5",
+   "source": "Dealroom",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 1.37,
    "id": "cc-wei",
    "n": "C.C. Wei",
    "role": "PDG de TSMC",
@@ -6098,34 +6157,6 @@
    "title_fr": "TSMC est toujours en hausse de 27 % en un an après la déroute de l'IA. C.C. Wei déclare que la demande est « bien supérieure » à l'offre",
    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQVWdqTU03dG5yVUdNN29yUjJjaTRTTk9CNEU5eURxb3Q0UktIcG9JUnFIV1p2ektLR0pmUm5zeGN1RVpZNzlZcEYzVEp2NWxTem5iQXZjMk12eW42czJQNEdWS0tCdWltaHY4d3RCV2czQzBoTXpIQm1Td0dyNU8yZm9FVjM0VWZYb2JGWkZZNDNKdmVwUDRaa3FLZ1RIRGk2QlNkSFNVNmxZODJ3TnlEZmRXX0tSbWNUT1BTb2xPSnhmYXkzQmU2TzM4cDBqUUVBMTdOU1ZCWngwYzZhdXdwQnBoZGkxZHFsN3c?oc=5",
    "source": "TIKR.com",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 1.65,
-   "id": "peter-thiel",
-   "n": "Peter Thiel",
-   "role": "Cofondateur de Palantir, investisseur",
-   "actor": null,
-   "ts": "2026-11-25T11:49:17.000Z",
-   "title": "Billionaire Peter Thiel Buys $122 Million In Palantir Shares Amid AI Stock Turmoil",
-   "title_fr": "Le milliardaire Peter Thiel achète pour 122 millions de dollars d'actions Palantir dans un contexte de turbulences sur les actions liées à l'IA",
-   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ1pHNno1SlJqUkNKSUU4RzhrZllSTVZkOUtSRjB2V3BQRmJsQUpZMGgxeVBDM3ZJVEhFSEJIWGk1NzhVQ2dkUGdudlFHRDFCZExibTBUNHlpb0NrS0ZSYU80V2hwbFlLcU4ybFFTbUJ2RkFGSFRaQ3NxbWZHYnlPcl9WSUZkZkVNa2lZbmtOTU1VMG5uR2M2V2J6Q0JrM05OMTk1cEVIbVU5Q2lRZzZhc3JOWFdSWVZSdUsyY0xXR044T2lTYUxzTlBsS21ScjRC?oc=5",
-   "source": "Forbes",
-   "kind": "presse",
-   "outlets": 5
-  },
-  {
-   "score": 1.13,
-   "id": "lip-bu-tan",
-   "n": "Lip-Bu Tan",
-   "role": "PDG d'Intel",
-   "actor": "intel-foundry",
-   "ts": "2026-11-25T11:43:43.000Z",
-   "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
-   "title_fr": "Les propres puces d'Intel seront au niveau du processus de pointe de TSMC d'ici fin 2027 ou 2028 sur le 14A, et les rendements du 18A sont désormais d'environ 70 %, déclare Lip-Bu Tan",
-   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpLaVpoaFJTUDVtS25IYzFHOUNqbEZpaGNlNTBrUVRUeXVsWDBqNlBZYjJBSmFUbXFOV0U3UklWNmFuajZBQTZEbl8wZDY2NHRnT3NwclBVTEdaY2Nvc1U2Y29GcU9TdkJzNXpOWjdkWU1XWjg3dDRFdDVhbEZMX1ZEcGR1N21sX3ktMHNDUV9kTGFTMEZzOEV5ZXN3ZDRRWm9Qd0dNdGtlaUs2RnM0LVRoMFhkVGc5eXFVaHR6QkZsNUp2UHRBLWowNG11elRicWN2bHo1ckluNk0tRzYyeWNzaXZhd0FCRzVCcDlYUGlfZm1adWZNdnJ5dTFPMTg?oc=5",
-   "source": "Dealroom",
    "kind": "presse",
    "outlets": 1
   }

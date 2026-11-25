@@ -5,17 +5,17 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-25T13:28:29.648Z",
- "model": "gemini-3.1-flash-lite",
+ "generated_at": "2026-11-25T18:58:37.306Z",
+ "model": "gemini-3-flash-preview",
  "sig": [
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+a41df70f5141+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
-  "03a5687591e9+12493e69fa51+1ebbb225f078+22fd7ca2e2d6+2fec91190f60+354bf133bd07+38340f7df7bb+43d32363a274+4401da3fa47f+613b95800cde+6553a4e9576a+68a0e195ceda+69f64fbae113+6d46c005192f+7c0a81286ce5+86f36aa729ca+92d3bc1d587a+97d2878c5e73+9eed3fb59cee+9f91f68231f9+a33229a60892+ac55a4874f2b+ad546544b1c7+b5178fbec424+cb8d7daff59c+d2a4386c874f+efa75c0d5fa1+f27eb2633696+fc3a90d264a7",
-  "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+c8ea64c1c7c6",
+  "012a59ac5286+07b3803b9303+0fa20d13e8af+1b14383b1d83+1c0a1e1598f2+1db90e300fc0+276b2f2f3253+3a6c6f14ac09+3d9d25dd26bb+4401da3fa47f+55a943f96493+58c62ab8c65b+5dc55a044437+613b95800cde+6553a4e9576a+657d6742e35a+66cc673a6baa+68a0e195ceda+69f64fbae113+6d46c005192f+71f693cffefe+86f36aa729ca+8ab217dd39cd+97d2878c5e73+9daa256e2871+9eed3fb59cee+9f91f68231f9+a078aa976acb+a165733dbba2+ac55a4874f2b+ad3978edda31+ad546544b1c7+b33fa45cb319+b8a8e1606a64+bc1d56d7d3cd+bf1bbceebeaf+cb8d7daff59c+d2a4386c874f+e25e47ddb5c8+efa75c0d5fa1+f27eb2633696+fc3a90d264a7",
+  "2e21ff90ad8e+3074a2422f9f+e17d72621a35+f190f3e82d1a",
+  "24eadded30b3+2d821be6a070+52f8100482ff+580518075063+9b10aa3778dc",
+  "0ab7c8a38cc8+2ab8531a409c+4b9fa1644715+9992e60ece71",
   "08b074f7bce0+0c1301471b50+1d0523b60f6f+5fc039618c60+cd767daa7782+cfa454b7233b+d8fbec9f2d14",
-  "0fba0bfd1fd8+1ffa2354dfd2+388f4aa5f277+8005585bab7e+a7d949f15f03+a98abb838c2f+e1046f8d9561",
   "00ee960a19df+39cc7b62b7b0+54e28ec4c7f5+5eefaf1660e7+66ea04eb3cac+7e6c0139750f+89495d761169+93ab50d501b8+ace651c11496+c48900998378+da1d6f4a2cd7+dae8de25d2ce+f1b7c64ada91",
-  "08ca4f57d6cb+0e77edd2c1e8+49258f2ca6af+62898b4a825e",
-  "44d438a5de51+6e761ba2ef28"
+  "08ca4f57d6cb+0e77edd2c1e8+49258f2ca6af+62898b4a825e"
  ],
  "stories": [
   {
@@ -27,7 +27,7 @@
    ],
    "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire pour contrebande de puces",
    "bullets": [
-    "Le département du Commerce américain sanctionne l'entreprise singapourienne Megaspeed et une filiale d'Alibaba pour leur rôle dans le détournement de processeurs Nvidia vers la Chine.",
+    "Le département du Commerce américain sanctionne l'entreprise singapourienne Megaspeed et une filiale d'Alibaba pour leur implication dans le contournement des restrictions sur les puces Nvidia.",
     "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête nationale sur les activités de Megaspeed à la suite de ces mesures de rétorsion américaines."
    ],
    "kinds": [
@@ -36,7 +36,7 @@
    ],
    "head_en": "US adds Megaspeed and Alibaba subsidiary to trade blacklist over chip smuggling",
    "bullets_en": [
-    "The US Department of Commerce sanctions Singaporean firm Megaspeed and an Alibaba subsidiary for their role in diverting Nvidia processors to China.",
+    "The US Department of Commerce sanctions Singaporean firm Megaspeed and an Alibaba subsidiary for their involvement in bypassing Nvidia chip restrictions.",
     "The Prime Minister of Singapore announced the opening of a national investigation into Megaspeed's activities following these US retaliatory measures."
    ],
    "ctx_ids": [],
@@ -44,57 +44,54 @@
   },
   {
    "ids": [
+    "3d9d25dd26bb",
     "f27eb2633696",
     "68a0e195ceda",
-    "613b95800cde",
-    "4401da3fa47f"
+    "613b95800cde"
    ],
-   "head": "Donald Trump a orchestré le retour de Jensen Huang à la tête de Nvidia",
+   "head": "Donald Trump a fait pression sur Nvidia pour réintégrer Jensen Huang au poste de PDG",
    "bullets": [
-    "Le président américain a sollicité le vice-président Vance pour faire pression sur le conseil d'administration de l'entreprise.",
-    "Cette intervention fait suite à des discussions entre Donald Trump et Xi Jinping, visant à stabiliser les marchés financiers et le secteur de l'IA.",
-    "Le départ initial de Jensen Huang avait engendré des incertitudes majeures sur la chaîne d'approvisionnement taïwanaise et le calendrier d'innovation de Nvidia."
-   ],
-   "kinds": [
-    "detail",
-    "explication",
-    "contexte"
-   ],
-   "head_en": "Donald Trump orchestrated the return of Jensen Huang to the head of Nvidia",
-   "bullets_en": [
-    "The US president enlisted Vice President Vance to pressure the company's board of directors.",
-    "This intervention follows discussions between Donald Trump and Xi Jinping, aimed at stabilizing financial markets and the AI sector.",
-    "The initial departure of Jensen Huang had created major uncertainties for the Taiwanese supply chain and Nvidia's innovation roadmap."
-   ],
-   "ctx_ids": [
-    "c084ac97c258",
-    "365e7a453b3d"
-   ],
-   "ts": "2026-11-25T01:03:05.000Z"
-  },
-  {
-   "ids": [
-    "6b5ed59faea8",
-    "2734842cc26d",
-    "5d42c8972e7d",
-    "40ae610a7f32"
-   ],
-   "head": "TSMC envisage une nouvelle usine de puces de 2 nm au Texas pour 22,6 milliards de dollars",
-   "bullets": [
-    "Le projet porte sur la construction d'un campus dédié à la fabrication de semi-conducteurs dans le comté de Brazos.",
-    "Cet investissement vise à répondre à la demande croissante en puces pour l'intelligence artificielle et à renforcer la production locale aux États-Unis."
+    "Le président et le vice-président Vance ont directement contacté le conseil d'administration de l'entreprise pour solliciter ce retour",
+    "Cette intervention visait à stabiliser les marchés financiers en replaçant le fondateur à la tête du géant des puces"
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "TSMC plans a new 2nm chip plant in Texas for $22.6 billion",
+   "head_en": "Donald Trump pressured Nvidia to reinstate Jensen Huang as CEO",
    "bullets_en": [
-    "The project involves building a campus dedicated to semiconductor manufacturing in Brazos County.",
-    "This investment aims to meet the growing demand for artificial intelligence chips and strengthen local production in the United States."
+    "The president and Vice President Vance directly contacted the company's board of directors to request this return",
+    "This intervention aimed to stabilize financial markets by placing the founder back at the head of the chip giant"
    ],
    "ctx_ids": [],
-   "ts": "2026-11-25T09:42:03.000Z"
+   "ts": "2026-11-25T14:19:00.000Z"
+  },
+  {
+   "ids": [
+    "f190f3e82d1a",
+    "2e21ff90ad8e",
+    "3074a2422f9f",
+    "e17d72621a35"
+   ],
+   "head": "Applied Digital signe un contrat de 5,4 milliards de dollars avec un hyperscaler pour l'IA",
+   "bullets": [
+    "Le bail porte sur une capacité informatique de 150 MW sur une durée de 18 ans.",
+    "Cet accord porte les revenus contractuels totaux de l'entreprise à plus de 41 milliards de dollars.",
+    "Ce contrat massif répond à la demande croissante des grands fournisseurs de cloud pour des infrastructures physiques dédiées à l'IA générative."
+   ],
+   "kinds": [
+    "detail",
+    "detail",
+    "explication"
+   ],
+   "head_en": "Applied Digital signs $5.4 billion deal with hyperscaler for AI",
+   "bullets_en": [
+    "The lease covers 150 MW of computing capacity over an 18-year period.",
+    "This agreement brings the company's total contracted revenue to over $41 billion.",
+    "This massive contract meets the growing demand from major cloud providers for physical infrastructure dedicated to generative AI."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-25T06:58:08.000Z"
   }
  ]
 }
