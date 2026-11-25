@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T11:40:28.713Z",
+ "generated_at": "2026-11-25T11:45:33.174Z",
  "query_count": 1,
  "people": [
   {
@@ -207,7 +207,16 @@
    "co": "Intel",
    "actor": "intel-foundry",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T11:43:43.000Z",
+     "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpLaVpoaFJTUDVtS25IYzFHOUNqbEZpaGNlNTBrUVRUeXVsWDBqNlBZYjJBSmFUbXFOV0U3UklWNmFuajZBQTZEbl8wZDY2NHRnT3NwclBVTEdaY2Nvc1U2Y29GcU9TdkJzNXpOWjdkWU1XWjg3dDRFdDVhbEZMX1ZEcGR1N21sX3ktMHNDUV9kTGFTMEZzOEV5ZXN3ZDRRWm9Qd0dNdGtlaUs2RnM0LVRoMFhkVGc5eXFVaHR6QkZsNUp2UHRBLWowNG11elRicWN2bHo1ckluNk0tRzYyeWNzaXZhd0FCRzVCcDlYUGlfZm1adWZNdnJ5dTFPMTg?oc=5",
+     "source": "Dealroom",
+     "kind": "presse"
+    }
+   ]
   },
   {
    "id": "kwak-noh-jung",
