@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T20:15:27.919Z",
+ "generated_at": "2026-11-25T20:21:11.254Z",
  "items": [
   {
    "id": "8bae682544f1",
    "ts": "2026-11-25T20:10:29.834Z",
-   "title": "Huang back at Nvidia as China builds own chip production system",
+   "title": "Huang de retour chez Nvidia alors que la Chine construit son propre système de production de puces",
    "orig": "Huang back at Nvidia as China builds own chip production system",
    "summary": "",
    "country": "CN",
@@ -14,12 +14,14 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/opinion/huang-back-at-nvidia-as-china-builds-own-chip-production-system",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Huang de retour chez Nvidia alors que la Chine construit son propre système de production de puces",
+   "title_en": "Huang back at Nvidia as China builds own chip production system"
   },
   {
    "id": "4c44ce30146b",
    "ts": "2026-11-25T20:03:27.000Z",
-   "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+   "title": "OpenAI affirme que les utilisateurs intensifs de ChatGPT pourraient atteindre les limites plus tôt avec la fusion de Chat et Work",
    "orig": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
    "summary": "OpenAI will introduce a single usage meter across ChatGPT as it combines the Chat and Work experiences.",
    "country": "US",
@@ -29,12 +31,15 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "OpenAI affirme que les utilisateurs intensifs de ChatGPT pourraient atteindre les limites plus tôt avec la fusion de Chat et Work",
+   "title_en": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+   "summary_en": "OpenAI will introduce a single usage meter across ChatGPT as it combines the Chat and Work experiences."
   },
   {
    "id": "e7d7a2ca3b37",
    "ts": "2026-11-25T19:54:57.000Z",
-   "title": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
+   "title": "Jensen Huang a enfreint le code de conduite de Nvidia, et ses employés pourraient ne pas l'oublier",
    "orig": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
    "summary": "Most codes of conduct serve as a reflection of corporate culture. In Nvidia's case, that could have consequences.",
    "country": "US",
@@ -44,7 +49,10 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Jensen Huang a enfreint le code de conduite de Nvidia, et ses employés pourraient ne pas l'oublier",
+   "title_en": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
+   "summary_en": "Most codes of conduct serve as a reflection of corporate culture. In Nvidia's case, that could have consequences."
   },
   {
    "id": "372ac8913322",
