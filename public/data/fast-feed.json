@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-25T08:30:38.140Z",
+ "generated_at": "2026-11-25T08:35:24.805Z",
  "items": [
+  {
+   "id": "6a1f2f006d64",
+   "ts": "2026-11-25T08:35:22.630Z",
+   "title": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
+   "orig": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
+   "summary": "",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/telecommunication/singapore-telco-merger-highlights-ai-infrastructure-push-amid-uncertainty",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "8af9638ce27a",
+   "ts": "2026-11-25T08:01:39.000Z",
+   "title": "Blog Review: Nov. 25",
+   "orig": "Blog Review: Nov. 25",
+   "summary": "PCIe SVC; co-packaged optics; liquid-cooled data center model; LUT-GEMM; automotive traceability. The post Blog Review: Nov. 25 appeared first on Semiconductor Engineering .",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Semiconductor Engineering",
+   "url": "https://semiengineering.com/blog-review-nov-25-3/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "9f0c4f05587a",
    "ts": "2026-11-25T08:01:01.000Z",
