@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T18:40:29.155Z",
+ "generated_at": "2026-11-25T18:45:28.962Z",
  "query_count": 1,
  "people": [
   {
@@ -235,6 +235,14 @@
    "actor": "intel-foundry",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T18:33:18.000Z",
+     "title": "AI data centres now buy about as many CPUs as GPUs, down from a ratio of 8 to 1, as inference and agents take over, says Intel's Lip-Bu Tan",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOYjI1UEwydnRaaGpHVWpXdTlxWXl0NnhQZEowTWZIMWVzVkJJX280TUVCaUtaWmNyVUQxMzh2VXhUb3I2U1R3MmlfaGpBUUpjYjE4MWZiVnFVTnhyeTc4LTJlbVpkZk9hS3FIbWVKS0FrUVh5cVI1dVBLMGk0bXE5MkMtWHNiZkI3bHBTTjFFNEdyZF9FZHFmS3ptODhwdXdUVXFfN0FhZWtzN0RNQ1JSVmJhRXdxYjBJbzNzLVlvUTRpWFM1c08wbW1tcTQzXzYtcU1KdGw5WFhaTWlReHViM0hSZGNfZzN0aUNSd3dXUEFCY0l5QjNadHlvTU90N1E?oc=5",
+     "source": "Dealroom",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-25T11:43:43.000Z",
      "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
