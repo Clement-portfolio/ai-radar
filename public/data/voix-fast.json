@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T20:21:11.327Z",
+ "generated_at": "2026-11-25T20:25:28.012Z",
  "query_count": 1,
  "people": [
   {
@@ -33,6 +33,14 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T20:19:05.000Z",
+     "title": "Dario Amodei rejects AI rule and warns against AI building its successors without human oversight",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNeGRJNmZJbUtyQVhrTFNiMHJLZERVN29SWURWVDdYV3p4UjBISG5TLVRJM2FJZEJnaTdfLXJtMUFIdFExUGNKVVByXzRid0hlcmVCajNDZkhuR3BQenZxNHRRMG0yRFV2aGVUY1NETWpzczJBUV91RnY4aEZTNXhJMzFTNlpkU05DbFV1cjhLUlJZTEcyYU5iYmQ1MFplUVJGakJCZFoxQ3pQTDlSaW54MEx5eEQwRFVqSjloWWNkeG1RWEFmVlZvZEh3RQ?oc=5",
+     "source": "Superpower Daily",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-25T19:44:24.000Z",
      "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
