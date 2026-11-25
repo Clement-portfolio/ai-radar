@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-25T12:05:23.832Z",
+ "generated_at": "2026-11-25T12:10:29.549Z",
  "items": [
+  {
+   "id": "e076ce336403",
+   "ts": "2026-11-25T12:01:30.000Z",
+   "title": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
+   "orig": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
+   "summary": "Second building to be operational in 2027",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/quant-trading-firm-xtx-markets-launches-225mw-data-center-in-kajaani-finland/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "f5bb5e8a9ad3",
+   "ts": "2026-11-25T12:00:28.000Z",
+   "title": "AI can do the calculations. Theoretical physicists are figuring out what comes next.",
+   "orig": "AI can do the calculations. Theoretical physicists are figuring out what comes next.",
+   "summary": "Frontier AI is already solving problems that once took top physicists a full day.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "effc3b7a884c",
    "ts": "2026-11-25T11:46:00.000Z",
