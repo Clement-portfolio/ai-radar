@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T04:10:29.686Z",
+ "generated_at": "2026-11-25T04:20:47.545Z",
  "items": [
   {
    "id": "f959ad388c8a",
    "ts": "2026-11-25T03:25:00.000Z",
-   "title": "US Congress advances three AI chip export bills as CEO returns to Nvidia",
+   "title": "Le Congrès américain fait progresser trois projets de loi sur l'exportation de puces d'IA alors que le PDG revient chez Nvidia",
    "orig": "US Congress advances three AI chip export bills as CEO returns to Nvidia",
    "summary": "The Financial Times recently reported that the US Congress is preparing to tighten AI chip export controls, with three major bills receiving bipartisan support as lawmakers seek to close loopholes governing exports of advanced AI chips. With a new Democratic-l",
    "country": "OTHER",
@@ -14,7 +14,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD211/ai-chip-nvidia-chips-equipment.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Le Congrès américain fait progresser trois projets de loi sur l'exportation de puces d'IA alors que le PDG revient chez Nvidia",
+   "title_en": "US Congress advances three AI chip export bills as CEO returns to Nvidia",
+   "summary_en": "The Financial Times recently reported that the US Congress is preparing to tighten AI chip export controls, with three major bills receiving bipartisan support as lawmakers seek to close loopholes governing exports of advanced AI chips. With a new Democratic-l"
   },
   {
    "id": "a97dec2365c9",
