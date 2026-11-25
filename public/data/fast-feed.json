@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T18:55:23.391Z",
+ "generated_at": "2026-11-25T19:01:18.527Z",
  "items": [
   {
    "id": "b55bc4430d95",
    "ts": "2026-11-25T18:54:05.000Z",
-   "title": "You can turn Claude artifacts into Windows and Mac apps now – here’s how",
+   "title": "Vous pouvez désormais transformer les artefacts Claude en applications Windows et Mac – voici comment",
    "orig": "You can turn Claude artifacts into Windows and Mac apps now – here’s how",
    "summary": "Anthropic’s new ‘install as app’ feature makes it easy to turn your Claude artifacts into desktop apps on your computer – with some limitations.",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "ZDNet IA",
    "url": "https://www.zdnet.com/innovation/claude-artifacts-desktop-apps-mac-windows/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Vous pouvez désormais transformer les artefacts Claude en applications Windows et Mac – voici comment",
+   "title_en": "You can turn Claude artifacts into Windows and Mac apps now – here’s how",
+   "summary_en": "Anthropic’s new ‘install as app’ feature makes it easy to turn your Claude artifacts into desktop apps on your computer – with some limitations."
   },
   {
    "id": "37b5c9ba9326",
    "ts": "2026-11-25T18:52:55.000Z",
-   "title": "Where scientists draw the line on AI agents",
+   "title": "Où les scientifiques tracent la limite concernant les agents d'IA",
    "orig": "Where scientists draw the line on AI agents",
    "summary": "",
    "country": "US",
@@ -29,12 +32,14 @@
    "source": "Hugging Face blog",
    "url": "https://huggingface.co/blog/allenai/where-scientists-draw-the-line-on-ai-agents",
    "confidence": "haute",
-   "pending": true
+   "pending": true,
+   "title_fr": "Où les scientifiques tracent la limite concernant les agents d'IA",
+   "title_en": "Where scientists draw the line on AI agents"
   },
   {
    "id": "2136a8e159c4",
    "ts": "2026-11-25T18:23:12.000Z",
-   "title": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
+   "title": "Un ressortissant saoudien dans l'affaire d'écoute d'OpenAI est libéré sous caution après la tentative du DOJ de bloquer sa libération",
    "orig": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
    "summary": "Alfozan, a former OpenAI engineer, is expected to be fitted with an ankle monitor, his attorney, David Rizk, previously told CNBC.",
    "country": "GULF",
@@ -44,12 +49,15 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/25/openai-bugging-aflozan-bond-release-saudi.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Un ressortissant saoudien dans l'affaire d'écoute d'OpenAI est libéré sous caution après la tentative du DOJ de bloquer sa libération",
+   "title_en": "Saudi national in OpenAI bugging case is out on bond after DOJ tries to block release",
+   "summary_en": "Alfozan, a former OpenAI engineer, is expected to be fitted with an ankle monitor, his attorney, David Rizk, previously told CNBC."
   },
   {
    "id": "ac6e047a0164",
    "ts": "2026-11-25T18:22:59.000Z",
-   "title": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+   "title": "SpaceX obtient l'approbation de la FCC pour déployer 1 million de satellites centres de données orbitaux",
    "orig": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
    "summary": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups.",
    "country": "US",
@@ -59,7 +67,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "SpaceX obtient l'approbation de la FCC pour déployer 1 million de satellites centres de données orbitaux",
+   "title_en": "SpaceX wins FCC approval to deploy 1 million orbital data center satellites",
+   "summary_en": "SpaceX won approval from the FCC to put 1 million orbital data center satellites into space, a proposal that was opposed by Amazon and other groups."
   },
   {
    "id": "c2211ba4f6cd",
