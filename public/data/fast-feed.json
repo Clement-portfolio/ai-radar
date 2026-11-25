@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T03:05:23.079Z",
+ "generated_at": "2026-11-25T03:11:03.025Z",
  "items": [
   {
    "id": "a97dec2365c9",
    "ts": "2026-11-25T02:47:52.000Z",
-   "title": "MediaTek expands research footprint in edge AI, cloud AI",
+   "title": "MediaTek étend son empreinte dans la recherche en IA edge et IA cloud",
    "orig": "MediaTek expands research footprint in edge AI, cloud AI",
    "summary": "MediaTek announced on November 24 that 17 of its papers were selected in 2026 for presentation or publication at leading international academic conferences and journals in IC design, artificial intelligence (AI), and communications. The research papers are par",
    "country": "OTHER",
@@ -14,7 +14,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261124PD236/mediatek-technology-2026-ic-design-2027.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "MediaTek étend son empreinte dans la recherche en IA edge et IA cloud",
+   "title_en": "MediaTek expands research footprint in edge AI, cloud AI",
+   "summary_en": "MediaTek announced on November 24 that 17 of its papers were selected in 2026 for presentation or publication at leading international academic conferences and journals in IC design, artificial intelligence (AI), and communications. The research papers are par"
   },
   {
    "id": "c9c6101f6d2a",
@@ -29,7 +32,9 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL212/jensen-huang-nvidia-ceo-anthropic-financing.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_en": "Five questions on what Jensen Huang's return means for the AI industry",
+   "summary_en": "Jensen Huang's reinstatement as Nvidia CEO on November 23, 11 days after he resigned, has reassured the companies that build AI hardware more than those that depend on it. Stocks cheered for a day and then retreated, while credit markets and export policy bare"
   },
   {
    "id": "e6e5943d0062",
@@ -44,12 +49,14 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD204/nvidia-jensen-huang-ai-chip-hardware-exports.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_en": "Jensen faces a trio of tests as US AI chip controls extend to the cloud",
+   "summary_en": "Jensen Huang returned to lead Nvidia just 11 days after formally resigning. During his brief absence, Washington extended its AI chip controls beyond hardware exports to cover cross-border cloud computing access. Huang now faces three tests: restoring trust in"
   },
   {
    "id": "50121ade3fbd",
    "ts": "2026-11-25T02:23:20.000Z",
-   "title": "Dell says AI demand will pull further ahead of supply in 2027 as memory crunch persists",
+   "title": "Dell affirme que la demande en IA dépassera encore l'offre en 2027 en raison de la pénurie persistante de mémoire",
    "orig": "Dell says AI demand will pull further ahead of supply in 2027 as memory crunch persists",
    "summary": "Dell Technologies is pushing back against concerns that AI infrastructure spending is nearing a peak, telling analysts that the gap between demand and component supply will widen in 2027 and that tight memory supply will keep server prices rising.",
    "country": "OTHER",
@@ -59,7 +66,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL210/dell-demand-2027-infrastructure-dram.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Dell affirme que la demande en IA dépassera encore l'offre en 2027 en raison de la pénurie persistante de mémoire",
+   "title_en": "Dell says AI demand will pull further ahead of supply in 2027 as memory crunch persists",
+   "summary_en": "Dell Technologies is pushing back against concerns that AI infrastructure spending is nearing a peak, telling analysts that the gap between demand and component supply will widen in 2027 and that tight memory supply will keep server prices rising."
   },
   {
    "id": "eb92979acdbe",
@@ -74,7 +84,9 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL214/huawei-foldable-shipments-price-display.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_en": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
+   "summary_en": "Huawei kept the Mate X8's starting price at CNY12,999 (approx. US$1,950), matching last year's Mate X7, even as it added a thinner body, a flatter display and its Kirin 9050 Pro chip. At its November 24 launch in Shanghai, the company also introduced the MateB"
   },
   {
    "id": "e5cd248eff02",
@@ -97,7 +109,7 @@
   {
    "id": "83c550fb7a61",
    "ts": "2026-11-25T02:07:46.000Z",
-   "title": "Jensen Huang returns to Nvidia with China's enterprise SSD recovery still hostage to GPU shortages",
+   "title": "Jensen Huang revient chez Nvidia alors que la reprise des SSD d'entreprise en Chine reste otage des pénuries de GPU",
    "orig": "Jensen Huang returns to Nvidia with China's enterprise SSD recovery still hostage to GPU shortages",
    "summary": "Jensen Huang's return to lead Nvidia just 11 days after resigning drew a positive market reaction. Supply chain sources expect pressure on China's AI hardware shipments to intensify, with Nvidia's board set to tighten oversight and the US continuing to restric",
    "country": "CN",
@@ -107,12 +119,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD203/nvidia-jensen-huang-ssd-production-market.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Jensen Huang revient chez Nvidia alors que la reprise des SSD d'entreprise en Chine reste otage des pénuries de GPU",
+   "title_en": "Jensen Huang returns to Nvidia with China's enterprise SSD recovery still hostage to GPU shortages",
+   "summary_en": "Jensen Huang's return to lead Nvidia just 11 days after resigning drew a positive market reaction. Supply chain sources expect pressure on China's AI hardware shipments to intensify, with Nvidia's board set to tighten oversight and the US continuing to restric"
   },
   {
    "id": "5986ad26a767",
    "ts": "2026-11-25T02:06:44.000Z",
-   "title": "Trump floats government stake in Nvidia and leaves pardon option for Huang open",
+   "title": "Trump évoque une participation de l'État dans Nvidia et laisse ouverte l'option d'une grâce pour Huang",
    "orig": "Trump floats government stake in Nvidia and leaves pardon option for Huang open",
    "summary": "US President Donald Trump has said the government could still take an equity stake in Nvidia and that a pardon for reinstated CEO Jensen Huang remains \"an option.\" An Nvidia stake would extend Washington's run of corporate shareholdings from critical minerals ",
    "country": "OTHER",
@@ -122,7 +137,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL213/nvidia-usa-government-donald-trump-intel.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Trump évoque une participation de l'État dans Nvidia et laisse ouverte l'option d'une grâce pour Huang",
+   "title_en": "Trump floats government stake in Nvidia and leaves pardon option for Huang open",
+   "summary_en": "US President Donald Trump has said the government could still take an equity stake in Nvidia and that a pardon for reinstated CEO Jensen Huang remains \"an option.\" An Nvidia stake would extend Washington's run of corporate shareholdings from critical minerals"
   },
   {
    "id": "8243b02e631d",
@@ -1199,7 +1217,7 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "summary_en": "RIYADH: From artificial intelligence-powered environmental monitoring tools to smart systems designed to protect critical infrastructure, thousands of innovators gathered in Riyadh on Monday as the SAIF International Security and Innovation Exhibition and Comp."
+   "summary_en": "RIYADH: From artificial intelligence-powered environmental monitoring tools to smart systems designed to protect critical infrastructure, thousands of innovators gathered in Riyadh on Monday as the SAIF International Security and Innovation Exhibition and Comp"
   },
   {
    "id": "fe4f313b570c",
