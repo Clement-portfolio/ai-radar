@@ -1,6 +1,51 @@
 {
- "generated_at": "2026-11-25T05:00:41.499Z",
+ "generated_at": "2026-11-25T05:05:23.978Z",
  "items": [
+  {
+   "id": "3d324a020365",
+   "ts": "2026-11-25T04:44:04.000Z",
+   "title": "Analysis: Huang's brief exit exposes South Korea's reliance on Nvidia",
+   "orig": "Analysis: Huang's brief exit exposes South Korea's reliance on Nvidia",
+   "summary": "Jensen Huang's return as Nvidia CEO has eased concerns over South Korea's AI infrastructure investments, but his brief departure also exposed the country's dependence on the US chipmaker for both computing capacity and the development of its domestic AI chip i",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261125VL217/nvidia-jensen-huang-south-korea-infrastructure-capacity.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "677568792313",
+   "ts": "2026-11-25T04:28:44.000Z",
+   "title": "China's first chip equipment quality standard puts supplier reliability in focus",
+   "orig": "China's first chip equipment quality standard puts supplier reliability in focus",
+   "summary": "China has issued its first dedicated quality management standard for semiconductor equipment and components, giving fabs and their suppliers a common framework for qualifying parts, auditing vendors and keeping production lines supplied. The voluntary standard",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261125VL216/china-equipment-component-production-supplier.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "f4aa87ac0d93",
+   "ts": "2026-11-25T04:11:32.000Z",
+   "title": "Jensen Huang's return to Nvidia steadies AI financing chain as chipmakers face new funding test",
+   "orig": "Jensen Huang's return to Nvidia steadies AI financing chain as chipmakers face new funding test",
+   "summary": "Nvidia's board voted unanimously on November 23 to immediately reinstate Jensen Huang as president, CEO, and director, reversing his resignation after just 11 days and temporarily ending concerns over a leadership crisis. For the AI chip industry, the turmoil ",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261125PD208/ai-chip-chipmakers-financing-funding-nvidia-jensen-huang.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "f959ad388c8a",
    "ts": "2026-11-25T03:25:00.000Z",
