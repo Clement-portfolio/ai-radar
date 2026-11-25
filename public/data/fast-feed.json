@@ -1,6 +1,51 @@
 {
- "generated_at": "2026-11-25T15:55:24.532Z",
+ "generated_at": "2026-11-25T16:05:32.471Z",
  "items": [
+  {
+   "id": "fec44873dc65",
+   "ts": "2026-11-25T16:00:59.000Z",
+   "title": "Nothing offers a full look at its AI earbuds and charging case",
+   "orig": "Nothing offers a full look at its AI earbuds and charging case",
+   "summary": "Nothing is showing off a much more detailed look at its upcoming AI earbuds ahead of their December 8th release. The Ear Note buds can record your calls, while their charging case can record, transcribe, and summarize your conversations. Like the Ear 3, the Ea",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Modèles",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "066fd0904fb9",
+   "ts": "2026-11-25T16:00:00.000Z",
+   "title": "Sponsored: The case for an integrated power and cooling approach for AI workloads",
+   "orig": "Sponsored: The case for an integrated power and cooling approach for AI workloads",
+   "summary": "As compute densities continue to scale, power availability, and heat rejection set the bar for data center performance",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/opinions/the-case-for-an-integrated-power-and-cooling-approach-for-ai-workloads/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "a05f839240ee",
+   "ts": "2026-11-25T15:54:23.000Z",
+   "title": "Google, Blue Origin Plan Orbital AI Compute Test",
+   "orig": "Google, Blue Origin Plan Orbital AI Compute Test",
+   "summary": "The 2029 mission will deploy rack-scale computing satellites, with cooling, autonomous recovery, and hardware longevity likely to determine whether orbital infrastructure can support commercial workloads.",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Énergie",
+   "source": "Data Center Knowledge",
+   "url": "https://www.datacenterknowledge.com/edge-data-centers/google-blue-origin-plan-orbital-ai-compute-test",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "f6730ac844fe",
    "ts": "2026-11-25T15:41:43.000Z",

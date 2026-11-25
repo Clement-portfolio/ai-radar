@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T15:55:24.607Z",
+ "generated_at": "2026-11-25T16:05:32.545Z",
  "query_count": 1,
  "people": [
   {
@@ -194,7 +194,16 @@
    "co": "TSMC",
    "actor": "tsmc",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T09:42:03.000Z",
+     "title": "TSMC sets Dec. 4 Arizona celebration with Trump, C.C. Wei expected",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYmhXT3pPbzQyejlPMjRpWGhWSU5JaGJsRW92bnNTWGpIYXpnVmhzOWF1b1I4a2k0U0dzRTN6QUduNFNhRHdhSlZTMjFvbUhhdEFDVm1ON3IxSF9sNmdTaThPdVBQTUliaEU3NlF3Q0hOSWU0ZVRFcDI2RTU5bG15SHVXczZtQ3RNVWVB?oc=5",
+     "source": "digitimes",
+     "kind": "presse"
+    }
+   ]
   },
   {
    "id": "andy-jassy",
