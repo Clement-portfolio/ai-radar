@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T15:40:54.268Z",
+ "generated_at": "2026-11-25T15:55:24.607Z",
  "query_count": 1,
  "people": [
   {
@@ -12,7 +12,16 @@
    "co": "OpenAI",
    "actor": "openai",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T11:19:47.000Z",
+     "title": "Sam Altman Says It’s “an Ill-Advised Moment to Go Public.” That’s a Big Risk for Oracle",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMmpsaVU2VnFKb2VNSTE4Z09BdTZlT19nbTVJNzltLWRvc0g4VlI2QTd0LXgzTnBTdzdlamFLX0w0a3VWWklIWWtYbi0xN3hORlByVDZPQmZCR0hJcEVYQzJHQ2x2aHpXM19hT0kyb2tCQVRzSW5CdmF1Z2h2QnNCaXVOc190QkpYdC1aVU9TZ2VRMTVwTUZF?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse"
+    }
+   ]
   },
   {
    "id": "dario-amodei",
