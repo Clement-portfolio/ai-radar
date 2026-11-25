@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T17:10:29.127Z",
+ "generated_at": "2026-11-25T17:18:52.382Z",
  "items": [
   {
    "id": "dce6d1562e25",
    "ts": "2026-11-25T17:00:42.000Z",
-   "title": "Panthalassa, floating data centers, and the power of the ocean",
+   "title": "Panthalassa, les centres de données flottants et la puissance de l'océan",
    "orig": "Panthalassa, floating data centers, and the power of the ocean",
    "summary": "Peter Thiel-backed startup has big plans to put compute at sea",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/analysis/panthalassa-floating-data-centers-and-the-power-of-the-ocean/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Panthalassa, les centres de données flottants et la puissance de l'océan",
+   "title_en": "Panthalassa, floating data centers, and the power of the ocean",
+   "summary_en": "Peter Thiel-backed startup has big plans to put compute at sea"
   },
   {
    "id": "c1bea812c0b8",
    "ts": "2026-11-25T16:53:02.000Z",
-   "title": "Trio of Japanese real estate developers invest in 15MW Hokkaido data center development",
+   "title": "Un trio de promoteurs immobiliers japonais investit dans un projet de centre de données de 15 mégawatts à Hokkaido",
    "orig": "Trio of Japanese real estate developers invest in 15MW Hokkaido data center development",
    "summary": "Daibiru, Sankei Building, and Osaka Gas Urban Development take a dip into data centers",
    "country": "OTHER",
@@ -29,12 +32,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/trio-of-japanese-real-estate-developers-invest-in-15mw-hokkaido-data-center-development/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Un trio de promoteurs immobiliers japonais investit dans un projet de centre de données de 15 mégawatts à Hokkaido",
+   "title_en": "Trio of Japanese real estate developers invest in 15MW Hokkaido data center development",
+   "summary_en": "Daibiru, Sankei Building, and Osaka Gas Urban Development take a dip into data centers"
   },
   {
    "id": "7b7cb44d5be8",
    "ts": "2026-11-25T16:47:14.000Z",
-   "title": "Ars Live recap: Don’t expect military attacks on data centers to stop",
+   "title": "Bilan d'Ars Live : ne vous attendez pas à ce que les attaques militaires contre les centres de données s'arrêtent",
    "orig": "Ars Live recap: Don’t expect military attacks on data centers to stop",
    "summary": "Militaries have many reasons to target data centers and the cloud in wartime.",
    "country": "US",
@@ -44,7 +50,10 @@
    "source": "Ars Technica",
    "url": "https://arstechnica.com/gadgets/2026/11/ars-live-recap-dont-expect-military-attacks-on-data-centers-to-stop/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Bilan d'Ars Live : ne vous attendez pas à ce que les attaques militaires contre les centres de données s'arrêtent",
+   "title_en": "Ars Live recap: Don’t expect military attacks on data centers to stop",
+   "summary_en": "Militaries have many reasons to target data centers and the cloud in wartime."
   },
   {
    "id": "a7ea3218904f",
@@ -1541,7 +1550,7 @@
   {
    "id": "d8d6777ecf09",
    "ts": "2026-11-25T00:00:00.000Z",
-   "title": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
+   "title": "Inférence d'Inkling 2 Mini par recherche collinéaire sur une seule carte RTX PRO 6000",
    "orig": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000",
    "summary": "",
    "country": "US",
@@ -1551,7 +1560,9 @@
    "source": "Hugging Face blog",
    "url": "https://huggingface.co/blog/inkling-2-mini-inference-hillclimb",
    "confidence": "haute",
-   "pending": true
+   "pending": true,
+   "title_fr": "Inférence d'Inkling 2 Mini par recherche collinéaire sur une seule carte RTX PRO 6000",
+   "title_en": "Hill-climbing Inkling 2 Mini inference on one RTX PRO 6000"
   },
   {
    "id": "f9da5aedcbdb",
