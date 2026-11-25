@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T07:28:21.866Z",
+ "generated_at": "2026-11-25T13:28:29.648Z",
  "people": [
   {
    "id": "sam-altman",
@@ -204,6 +204,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-24T12:22:13.000Z",
+     "title": "Elon Musk Reportedly Told Staff SpaceX Is Falling Behind in AI",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPSDBVX1M2enhzQTZCNTRlVmlBaGoyUmJad1l6VlZKaWVCd1AzZGZrV1B6cG5ENlczZVZ4VnRwNkdaZElFVWRsZkY0bFV0MTR2czdrMDNSdU92Zmd3X1VqNHR0dFltSXRuemd3X2JpSU04YVdiSS1TVHM4N0hqMGg2YzF2YnhpSHNrWWNkYjU0bURSOWg0b0ZpM2RSTQ?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Elon Musk aurait déclaré à son personnel que SpaceX prend du retard dans l'IA",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-23T02:32:00.000Z",
      "title": "Elon Musk Says 2027 AI Cash Crunch Will Be ‘Nuts’ — Analysts Still See SpaceX Emerging As The Biggest AI Hyperscaler",
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajVmOVlwUDIzNmZ0QXN1SjRWNU1RaDNieEdPZ3JGRHUwV1NkcDRQOE9uY1MxTmVFY1I2MWJ1SHhjbmZQZHJfYURpTDJ3d2dBZWJUV3FXYS1wbjRvSUp3M0hrQWpWZzdCNm4xTFpuNUZLdHg2VzBLU0F0VldsQkFqUndrWndoRU0xeTM0NDZvYw?oc=5",
@@ -272,16 +282,6 @@
      "title_fr": "Sommet DealBook : Elon Musk se dépeint en modéré politique et déclare qu'il n'est « pas MAGA »",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-19T00:23:00.000Z",
-     "title": "Elon Musk Says Nvidia Ousting Jensen Huang Is Like Kicking Michael Jordan Off A Winning Team",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQMERTbkxTeDRtV2pTNDFBWUxsV2Z2clNPRzhwY29IakdMMjNBNk1ZWlZPMXhRWmdZNHlqaW1JNERrMWtpZ0lNX01HMlBtSjRKM2hVS3FCR3pHR1dkN3VxTTR4WnhiaW5ITlBHMm5vX29KelZQbUVEVmlWUUNVRndDcGl6YVpSZGd4T2VndDh2X3ZDeVhQV1E2NXlR?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Elon Musk déclare qu'évincer Jensen Huang de Nvidia revient à renvoyer Michael Jordan d'une équipe gagnante"
     }
    ]
   },
@@ -498,7 +498,17 @@
      "source": "Times Now",
      "kind": "presse",
      "title_fr": "« Une marée noire arrive » : le cofondateur de Google DeepMind, Demis Hassabis, met en garde contre une IA qui devient incontrôlable",
-     "m": 2,
+     "m": 3,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-16T08:59:28.000Z",
+     "title": "DeepMind CEO Demis Hassabis warns AI growth like oil spill",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxORkE0ZWhJWW54VjJ5U1h5T2JiVTN1SWpveTBIZncxTFhjRmRmc045ZnJhcDhKNU5TUy14WDZpeVlsMVdOWWZ3cEYzMWg3Z3diMVRYZ3lfbnhBQVZjY2xJQmMyQ0tsVUNUbVBUSUZJMXUwclFvZHo3LTZjZlY0WmhjSlJmVDBOY19Pem1Xb2VlcVNmSjNsLTVXM3dvUFNIeHoxLVNFRGUwb1U?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Le PDG de DeepMind, Demis Hassabis, avertit que la croissance de l'IA ressemble à une marée noire",
+     "m": 3,
      "e": 1
     },
     {
@@ -538,7 +548,7 @@
      "source": "Inc.com",
      "kind": "presse",
      "title_fr": "Demis Hassabis de DeepMind prévient qu'une « marée noire » de l'IA arrive à moins que l'industrie ne change de cap",
-     "m": 2,
+     "m": 3,
      "e": 1
     }
    ]
@@ -877,6 +887,16 @@
    "actor": "intel-foundry",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T11:43:43.000Z",
+     "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpLaVpoaFJTUDVtS25IYzFHOUNqbEZpaGNlNTBrUVRUeXVsWDBqNlBZYjJBSmFUbXFOV0U3UklWNmFuajZBQTZEbl8wZDY2NHRnT3NwclBVTEdaY2Nvc1U2Y29GcU9TdkJzNXpOWjdkWU1XWjg3dDRFdDVhbEZMX1ZEcGR1N21sX3ktMHNDUV9kTGFTMEZzOEV5ZXN3ZDRRWm9Qd0dNdGtlaUs2RnM0LVRoMFhkVGc5eXFVaHR6QkZsNUp2UHRBLWowNG11elRicWN2bHo1ckluNk0tRzYyeWNzaXZhd0FCRzVCcDlYUGlfZm1adWZNdnJ5dTFPMTg?oc=5",
+     "source": "Dealroom",
+     "kind": "presse",
+     "title_fr": "Les propres puces d'Intel seront au niveau du processus de pointe de TSMC d'ici fin 2027 ou 2028 sur le 14A, et les rendements du 18A sont désormais d'environ 70 %, déclare Lip-Bu Tan",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-19T09:11:46.000Z",
      "title": "Intel CEO Lip-Bu Tan says Intel has signed its first outside 18A customer",
@@ -1847,6 +1867,26 @@
      "e": 0
     },
     {
+     "ts": "2026-11-23T04:55:00.000Z",
+     "title": "Scott Bessent Says 'We Do Need Answers' From Nvidia on China Chip Sales: Stock Climbs Nearly 7% Overnight on Robinhood",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPS2FLS1dmQ0hxa2toSU9rX0lEOGltWjVMOVZDWnBzU24yOEVUY2IxUnRvU1pQMFozc0V2MEVUdVJRbTNMbTVqb2N2N2oxWW9yVFl5SHJoa1YwcVFTb21ZTEpjOHh1VE9jaXh2MGZ4dEN6bEJTdjlGN3Z1M2tWZEhoZnZsa1dsMFp1dVBZb0U5T3NMZlJtd29BalRlSFo3WVE?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Scott Bessent déclare « Nous avons besoin de réponses » de la part de Nvidia sur les ventes de puces en Chine : l'action grimpe de près de 7 % du jour au lendemain sur Robinhood",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-22T22:26:00.000Z",
+     "title": "US Treasury Secretary Scott Bessent warns on Fed hike as AI bubble fears mount",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOYW9tNlE1aFVVZ2RiMEJfYk96bnRMMnNaUnVMcVVMVlVEWTlsa0RFbWh2QXphbWJHQW4tbjBTVTY5LU4yWlB4RFpBZENqaDVaOEFEMVhISklFNmREZEt2bUNaNE13MmJDZmVFTU9lMFpfR0RZRE5HbnhCTVBHeXJsWGNMam95M0ZobUpna09oYm1iSzg4bHRpQg?oc=5",
+     "source": "Semafor",
+     "kind": "presse",
+     "title_fr": "Le secrétaire au Trésor américain Scott Bessent met en garde contre une hausse de la Fed alors que les craintes d'une bulle de l'IA augmentent",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-22T18:48:39.000Z",
      "title": "Bessent says we \"need answers\" on role Nvidia played in sending AI chips to China, suggests Alice Huang is \"kind of a canard\"",
      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPQ0w1SkRVbmd2cF9NcmxBeHYyeTdIdjQwR3c0VG5KT0g1UHlxRm15S1B4ZE1KbUVXOHhlMXhuS1VOeEFnd3VkQmNES2ZpekFDbERtQzFJUVNYXzJHZ0VvdDlUZFVQTWsxOUlJeWRGQnI4ZElsMTc3eklnUDRBcEFmLXF4Z3o?oc=5",
@@ -1863,8 +1903,8 @@
      "source": "The New York Times",
      "kind": "presse",
      "title_fr": "Scott Bessent demande à Nvidia de fournir des réponses sur la vente de puces à la Chine",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-22T17:53:07.000Z",
@@ -1883,26 +1923,6 @@
      "source": "CBS News",
      "kind": "presse",
      "title_fr": "Bessent déclare que l'administration Trump a « été en contact » avec la direction de Nvidia mais a encore besoin de réponses",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-21T16:28:20.000Z",
-     "title": "Bessent says no further restrictions are needed for Nvidia chip exports to China",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdGhFLVdNQVNlbl9tSXFrRmI4LS1VQmhxamhUS0F0WjhFMmoydGtBbG5Lc1AzbklUekQ0NDdvWDM0Q2Nfd2dOUTZEdE9MVnZCUVJtc1p3M0R4M2VjVS1zNUdXWWF1R2ZnNmpQU2lJSXNQQlM5WUk3cF92bDB3c3F5N3d6ZEEySktWeVRmSkE4SXR3R3JUaXhObmhjdmgzSEgxNTV6d3N0M2k5UU9uSDBsRXZiNzIxRWJsQmfSAb8BQVVfeXFMUElMcEVVRXcweUZhTloxWGJFdlN0UWx2ZDBBSm5DRzhiejNJZlgtWWV2eUpiQ0diajZlZ3BrbmZEMTJRZnU2eVBJWkwxdGNzTkprSElzTk05VXhKREVDcnYwN0t4aXl2V2VFbHZ4SWNuWEVvUXA5bEE1dm94UWU3aTBQT0phSEEydHdEMWYzSkNvbWtlbHVlajJRblRfUUc3eFBXTFZmd2VYQWh2RjMwZzM3N2ZYQ0l3OWhqS29mQm8?oc=5",
-     "source": "PBS",
-     "kind": "presse",
-     "title_fr": "Bessent déclare qu'aucune restriction supplémentaire n'est nécessaire pour les exportations de puces Nvidia vers la Chine",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-21T07:17:15.000Z",
-     "title": "Xi, Trump agree military AI decisions must involve humans, Bessent says",
-     "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQVloyS0N1eVl5Z203ZkxoWkpFQmc3UFE3V2ZadGxWSjYyT21PRXo0RXdib1ZrZFpKN3IwMzB3YlJSQmRJNUtNaWhIVjlhTWk2ekoybFR0SkJvZG9lYVZFUTV3c1R4SDlDdkVZUnY0VW9nUFQ0bkFYR3lKMW90Rlk5QkRFcWVVN0hvUmJSQ0s2TGFyZFNkcGNPeWVFaDd1d21TTDRaRXBZMm1JcklHUVFwTGZlVE8wRzJJWG0wZThQVlBFMU8ySUHSAcYBQVVfeXFMT19VMVYzcU53TjZOQUZMR0RrLVVDQVc2LVlBVmNOR3lMR3ZZM0wxY216TFMzTGI2VUF1SnRiYzllemd5QlVheENzRXpaVjZSSlJHYWdUZW5MT0tkWEF6U1RiTUpBcmxFbGRGeThtaXYtX09zeDlUQWZFV2tuNGRadjdTdkVUSWJtd0NrdHBReWlUX2d3OW9RWFp1RWc2eFZENThrT0dEcXA2YnZNcmlTQXFZREFUcVdGclh5anBrSWVDel9NVzdR?oc=5",
-     "source": "South China Morning Post",
-     "kind": "presse",
-     "title_fr": "Xi et Trump conviennent que les décisions militaires en matière d'IA doivent impliquer des humains, selon Bessent",
      "m": 1,
      "e": 0
     }
@@ -2326,6 +2346,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T10:09:40.000Z",
+     "title": "Michael Burry Sells Remaining Nasdaq-100 Puts, Eyes Fresh Nvidia Short Near $200: ‘I Am Long Undervalued Common Stocks’",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNa24yNldmdm9ka0ZMV3lCenF3S0RjMmduUVZmdGRoTFN5S0xHNUdOQzhUY2JTV2JiQnYzN1p3S3FRdDlnb2p3TmlMVnpzQlRxVXpybVdWdk92bFNxZlFJT3IyOHlVT1VLOEM3SEwzLXJtbVBDRjlzOE9zODJ2eUlmVHhTdzN5OGJiSVBmOXk0bW9PUTU4RjFDUGxfcXYwYnhNRVdGRg?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry vend ses options de vente restantes sur le Nasdaq-100, envisage une nouvelle vente à découvert de Nvidia près de 200 $ : « Je suis long sur des actions ordinaires sous-évaluées »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-24T19:02:17.000Z",
      "title": "Michael Burry Says Nvidia's ‘Precarious Normal’ Returns With Jensen Huang Back At The Helm: Loads Up On JD, Tencent, BYD Stocks",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOa080M09UTThMak8tMmItczlCb1RxZkEybElIVmNRZ0RKRDJqaUQ4dlRaaVlYUEl0dzI2cEI0Zkx2X0pQand6UlViQmg1NVg1RGZGSnpXTnZfUThvUHcyWGlMVkJaWGxrMlZRUjFwYXlaYXlPREhoVmFpMWw0MHBQaWFpNlpaNWtMMmktaDFwdEFQMThrZmpiWDItXzhsc2Uyb1pjMg?oc=5",
@@ -2392,16 +2422,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Michael Burry dit « Je vous l'avais bien dit » alors que Wall Street est prise au dépourvu par la vague de ventes liées à l'IA",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-20T22:30:00.000Z",
-     "title": "Michael Burry warns AI stocks mirror 1929 and 2000 crashes — and singles out Nvidia's risky deals",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOOUppLWR4d2dnRV9rVHBJVTRhWlpVSjBWUWM2T2ZfeFZOeGVHYk13LUY0T1ZNX1M1VTMxUWlkV0s3ZGhScHhJZ2ZaTUVCSm9kZEd2Qm9Bb3BxczJmVW5mQng2eGZOUll6T0xQb2VVQlhDdTRqT3Z2SzlRR3R2R0lUdFFIVDVFR0kzSnhoaWxQMEZobERjN3JiZzVR?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry prévient que les actions liées à l'IA reflètent les krachs de 1929 et 2000 — et pointe du doigt les accords risqués de Nvidia",
      "m": 1,
      "e": 0
     }
@@ -3140,6 +3160,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T07:56:00.000Z",
+     "title": "\"They're seeing disturbing signs\": OpenAI and Anthropic have reportedly halted training on some models, says expert Stuart Russell",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxON2ptaGl2clhBc1RjYVV1ZUhMY29FQThkdy1lbWRDejFETGlON1RtaE43RFotN0dLaE5PRlhfRHJiWkJ1RjU0c3BTNHV6VGVWa00tZElrdllXMktPbmVBZ1laQXBNUG9TaUJ1WE5uOXEyMmR0OVNhQnRJc0xVek5MQV9LMXBBdVZv?oc=5",
+     "source": "AOL.com",
+     "kind": "presse",
+     "title_fr": "« Ils voient des signes inquiétants » : OpenAI et Anthropic auraient interrompu l'entraînement de certains modèles, déclare l'expert Stuart Russell",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-24T17:32:26.000Z",
      "title": "Video | Can AI Cure Diseases In Years? Stuart Russell Explains",
      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPakpfelUxMEhnRkVocFVpWTRONDUzbFVrZ2huVi1kRVhKSGNOSHlVNkZ4dEtOQXBTZ3lqcHlLNUprcWk4R091dWJyekx2UlVGbTc5ZDlWSEV5RjRhY2tHSzB0WkY2TTZTeTFGWDRCZE5PbkR3M1NhWnpfZ3FWb2IxMDQxU3lNR2xFenNHdVctUEY4Zw?oc=5",
@@ -3221,6 +3251,36 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T11:49:17.000Z",
+     "title": "Billionaire Peter Thiel Buys $122 Million In Palantir Shares Amid AI Stock Turmoil",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ1pHNno1SlJqUkNKSUU4RzhrZllSTVZkOUtSRjB2V3BQRmJsQUpZMGgxeVBDM3ZJVEhFSEJIWGk1NzhVQ2dkUGdudlFHRDFCZExibTBUNHlpb0NrS0ZSYU80V2hwbFlLcU4ybFFTbUJ2RkFGSFRaQ3NxbWZHYnlPcl9WSUZkZkVNa2lZbmtOTU1VMG5uR2M2V2J6Q0JrM05OMTk1cEVIbVU5Q2lRZzZhc3JOWFdSWVZSdUsyY0xXR044T2lTYUxzTlBsS21ScjRC?oc=5",
+     "source": "Forbes",
+     "kind": "presse",
+     "title_fr": "Le milliardaire Peter Thiel achète pour 122 millions de dollars d'actions Palantir dans un contexte de turbulences sur les actions liées à l'IA",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-25T11:21:00.000Z",
+     "title": "Palantir Stock: Billionaire Investor Peter Thiel Buys $122M During Dip",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNVnhqZWxaSjMzUTBpU2JXRGdSQi1kUThlWFNhOUk3LWVseXU5djdUQXJIYzgydVVwT2lFVzNBUVhoNjhuN051cF9JbFZ6bHNzSkg0eWk3ZGFRZUtYcHBiRGxaR0wwNC02T09zaFBPZVlhbnowM1ZmcDk1QjJIV09acjZRNlRCa0doWG5DajY4VXl6LS14WlBwQ3RHNUgySDg?oc=5",
+     "source": "TipRanks",
+     "kind": "presse",
+     "title_fr": "Action Palantir : l'investisseur milliardaire Peter Thiel achète pour 122 millions de dollars pendant la baisse",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-25T10:14:22.000Z",
+     "title": "American billionaire Peter Thiel buys $122 million of Palantir shares as stock slides",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbVZkR2tBZDNrTjdXV1B5ZnRvMGVzVURRR1FKbFlQbEFmNUE3RnBzUzRzRmlUOFN4UUVaaGJ4ZWNXbnV3aW5xd01wYlpUb0F1ODBDajVwaTZIR3RHSklVTG1Qc2UxUTdtdjJNWFJGUFltR1UzTFdsMFE1d2wwRE5QbmF6YmNVeVcxNk0wSHl0OXdpY0MyNEhfaGFSSFAzMFpQbndoWjBDaVBCak9MZjhzQ1JHeFI5NzVCcURuNXFHWmRYSDF6bzJN?oc=5",
+     "source": "Billionaires.Africa",
+     "kind": "presse",
+     "title_fr": "Le milliardaire américain Peter Thiel achète pour 122 millions de dollars d'actions Palantir alors que le titre chute",
+     "m": 4,
+     "e": 1
+    },
+    {
      "ts": "2026-11-25T05:12:21.000Z",
      "title": "Peter Thiel's entity buys Palantir stock in three open-market purchases at $142.91 to $144.61 a share, Form 4 shows",
      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbXlHVE5STWgtY3BvRVY5Y2VSYTVXYUVkV0FwY3F3ckpDRG8wNi1QOVYtLU1hTVRqQy1kUkxXLUZoTGNuU1RwQ1ZKc3ZYZWhURjBpdzBVal9HV3NSeXRTN095S0FfQ3I1U0M3YlNGVEtuN1M2RGFRcUJhNXBSS2ZLbnQzM0sxa1JKeU9mSFo5NkJYMTY1bTBVNkEtd011NDUwMHd4RlJ4YUNtNGxqZldxY1VaV1NEWHhwR0p2bnlReDlzSmVGOW1CalBR?oc=5",
@@ -3237,6 +3297,16 @@
      "source": "Investing.com",
      "kind": "presse",
      "title_fr": "Peter Thiel achète pour 122,3 millions de dollars d'actions de Palantir Technologies",
+     "m": 4,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-25T01:43:00.000Z",
+     "title": "Palantir (PLTR) director Peter Thiel’s LLC buys shares under a preexisting trading plan.",
+     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbnpZM01JZTNzTnZDRXh3ODAyaUx3ajA0ZzRuQjc2WmFpWHBXR25xNzBHVUJHOEtPdXBVZkJldERBRGRGMHl3NHR2NnJINnBmeUJ3enJJYWNreTdQRGM2Yk5MNXA5SVhHcmkyLW85Zl90NjZva3Y3YU5iWU1PeDdfVGg4cHk4bGo1Z1F5NEFvOXhMS0FYZGllaEc4VUFub1VUa3VLTXRBcXpZMmt1Yy1KcFRORWtmdi03OFd3?oc=5",
+     "source": "Stock Titan",
+     "kind": "presse",
+     "title_fr": "Le directeur de Palantir (PLTR), Peter Thiel, achète des actions via sa LLC dans le cadre d'un plan de trading préexistant.",
      "m": 1,
      "e": 0
     },
@@ -3258,26 +3328,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Peter Thiel a vendu toutes les actions de services publics qu'il possédait et a misé 161 millions de dollars sur un ETF de puces. Il est en baisse de 37 millions de dollars depuis"
-    },
-    {
-     "ts": "2026-11-13T17:26:01.000Z",
-     "title": "A Peter Thiel-backed startup says its AI can find a 14-point IQ gap between your embryos. Here’s what the experts say.",
-     "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOQ3JPQ0lmOXhUbDY3Tnl5MC04bkJ5UF9DdnJBektQMjBic0hEQ0tNbk5MTnNFT2FHUFNDLTRPT3NMVXFubUowdE1ZZHRJaS15a2oyM2ZHN0sxTVVKaXVFbnJWbWhPeGQyVmtjSWE2RDMzOXpYalhaXzNQTnhNTUNDTTFtcXYxQ2R1czhJRklCaG4yVURZZHJCcE90dzY2MXhmbHB6UEhNdHEtamlrZE03YlJ5c3VTVFUxZ3lOSS1KM0trWG1Ucl95Y2Y3azEtM2p2WllXc1BIWE1YQjlBUmc?oc=5",
-     "source": "Komando.com",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Une startup soutenue par Peter Thiel déclare que son IA peut trouver un écart de QI de 14 points entre vos embryons. Voici ce que disent les experts."
-    },
-    {
-     "ts": "2026-11-11T20:30:09.000Z",
-     "title": "Peter Thiel’s Longtime Business Partner Says AI Is Absolutely in a Bubble: ‘This Will Correct’",
-     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPbVlPWEVhREQ4MDUxYllrQkdfQVFrOVgxMjZsQ3RwSlZzN0pOMHZ4U2JiMWNCZmJjME1hZWVXZk9tTmktejdIU1ZlTzgxWms1TUFLalYwaWJfdXJ2WDNkT0tBUEttYmlTSkZTV2ZIT054VHRaNFl6RzNRNkRyOGZKTkZpYWh0Y0VmbVl4eVFWaTQxVkE1U3laelg4UVllc1BKVll2emZ6Q05ydXhTRmtObFpmTUlOUXMtYXFGaHNzZXVWRThNUlQ4SlRfdjdteDFZdXZ3c1FxV2RybFE?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le partenaire commercial de longue date de Peter Thiel déclare que l'IA est absolument dans une bulle : « Cela va se corriger »"
     }
    ]
   },
@@ -3842,7 +3892,7 @@
    "actor": "arm",
    "alerts": [
     {
-     "ts": "2026-11-19T00:14:07.000Z",
+     "ts": "2026-11-19T09:14:29.000Z",
      "title": "Nvidia reportedly approaches Arm CEO Rene Haas for top job after Jensen Huang exit",
      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNX1hwcVRUS19qR0VDZ0VRVFVsSG9XUWZ1SDZFelhhXzVGVFBnRU1teUVfMjlENUdyT3VKaGNpUmI0YnhPWGVvZ1FGYUxjYjVwbFpwcVhkSzdZTU9mNjllbGgycmFCT2dsUFNfT04xUXl4S0V1UVQ2TWljUXlOeUg3TUJpOE1KUXU1QkdhdWpzdjBwZkxkS0RyQ194U19sOC1MVWZIczQ5dmNIX2dyMDBiV0Z1MnBENjlwOFZvZmpwam82RkkwSzJ6RkJkZGtxQU43SWFQOWRB?oc=5",
      "source": "Investing.com"
@@ -4140,6 +4190,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T11:43:43.000Z",
+     "title": "AI's sell-off is a recalibration of the growth curve, not the peak, and Goldman will need fewer engineers in five years, says David Solomon",
+     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxNanZTUERYckZiNS1UbXRFdFhTbU5GVVBWblF5d29fajlwZ0xRbXFCeGVIT3dHZDNHM2UtcHBvVzZ6dmhHalhEMXhHMEJ2STlORHNmWUx4TGJlWlI5UTVBZXFYVUZ6OFRBdE14TXRtVURDRnI4T2VXaEVJaF9DU1VJTmNtTG5OcUdzbkVYaDVqR0ZtbmNoVHNWZkYwRUZzMFNjNU4tNVN3TElYVjRTNXJnUHU4VUdrYk1vNElLM0d3NjJheURNVmUta1UwQzZLZUtROFBFd0t2SkNVRm81MDYzd2JuTXBJdUZSVmo1cXBQcUhuUU1DeUhwUGVSWXNDWlk?oc=5",
+     "source": "Dealroom",
+     "kind": "presse",
+     "title_fr": "La vente massive liée à l'IA est un recalibrage de la courbe de croissance, pas le pic, et Goldman aura besoin de moins d'ingénieurs dans cinq ans, déclare David Solomon",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-09T18:34:06.000Z",
      "title": "David Solomon says Goldman Sachs sees strong AI infrastructure demand",
      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOb2pzVHFhZ05jRThPYk5ZSk0zM2JyWFVXNE1BWC1ra3FaRm9RRzdkUUNZN0Q0NFh6MlFyYzVSQVFJSmlZSWNFM2lTZmM4RTl3NzFCc2FHZUhuX0w2TW40cGlnRGRXSEZSVXFSWW9ZOGNYdFRmc1pBcEJpSXdOeTd5bTdmTWx6OV84cUVMSkNOckdiQzlFZXQtOUhWV2xJWWh4Z2Z1ZnVmWW15TFB3SjRqU2hXek1ZelJk?oc=5",
@@ -4213,6 +4273,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T11:43:43.000Z",
+     "title": "AI spending as a share of GDP already tops every tech cycle in 200 years, and tech will soon be six of the top 10 bond issuers, says Apollo's Marc Rowan",
+     "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxPYTJOb0tJZ3JDWE5acURjN2h1Vmp1dmtuQ2hoSDI1c3R4ZV9wN0FwU1lnWFl0alk3bFgzRWRDYTEzcDZWZkZEWEJhUVdhcEpoZXBNUGhPQ1RCWTlxSlk3YlRScjVqd2t5OEVyVXBhV1REcjc2dGQ5eUxrR0RNeHNQb2JlT0g5a3B2VHZxM1V3UkVTNVZ6U05KWU9oOEhORHFYZy1ES0NHU1hqdkRibWtJcnFPaDAta1Z6Ty11MDdxTWFLVUQyUlBsV1V0NFpwT0FFU0g1MW1UZ1BGTjFRTFYyaXkwN2ZCSVI0NUFXU0U0NEt2UWcyQUhQYUFTdFVVTVh4aTBLenZUT3RKcjVIcDdQenZ3?oc=5",
+     "source": "Dealroom",
+     "kind": "presse",
+     "title_fr": "Les dépenses en IA en tant que part du PIB dépassent déjà tous les cycles technologiques depuis 200 ans, et la technologie représentera bientôt six des 10 principaux émetteurs d'obligations, déclare Marc Rowan d'Apollo",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-17T20:33:09.000Z",
      "title": "Apollo CEO Marc Rowan Says AI Boom Could Require Up to $8 Trillion, Reshape US Credit Markets",
@@ -4856,6 +4926,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-25T09:47:04.000Z",
+     "title": "AI models are becoming commodity infrastructure while Big Tech spends $700B on capex, so the value will move up the stack, says Benedict Evans",
+     "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxOeWYtX21BOXNHai1OR2IxclZ0blpZXzRfQU5oUk1hUjB1WHRnS2tGbnRUSEhyNVNQR2h0ZkwxUVNoOGZBYkRSRUZtZzNLU251ZnVaUDg0VEUxMlZ4aHZraU1SdlhPVUZTckl2aWJ1a0ZicktxTzFGZzFQVk53X0FOS0RuOGVqSzU1NVlKQU9NNllhTDdiLVFGMGEyMUtZcnl2UTBLcTZzd3NqWWpmU1VxRFlublZJSlIwVGh6NktWSS1QUUg4N1FmaWNTd2ZCMEREZWgxNUhFQzIxMm5JS01XbFpoNFExLU1rc0tmMC1EXzdDcmVRUmU1SUoyVEQ4UnpTaDFj?oc=5",
+     "source": "Dealroom",
+     "kind": "presse",
+     "title_fr": "Les modèles d'IA deviennent une infrastructure de base alors que les géants de la tech dépensent 700 milliards de dollars en dépenses d'investissement, donc la valeur remontera dans la chaîne, déclare Benedict Evans",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-13T11:08:00.000Z",
      "title": "Anthropic’s IPO Papers Can’t Answer the $750 Billion AI Question, Benedict Evans Says",
@@ -5507,6 +5587,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T12:00:19.000Z",
+     "title": "S&P 500 ‘Quite Cheap’ After Selloff: Tom Lee Counters Citadel’s 2018 Warning, Says AI ‘Supply Shock’ Could Ease",
+     "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPazlvaURLaGs3Y1BYRjNEdlRxU3RMMkh1WUF5R3RyaXBwaWpQWE85VlVZczJ6TzM4LXhIalgteFJ1Y01rTHhMeWdFd08wMm9XQk1IZnFWclNsRWJKLS1RT044R1JlYy1kWTAxMjBQcEFRWU9feG5VSG0xU3lVOVVJci1CbHQyMWd6eGNINWxDaUF6R3JENDRYaFRDNW9nREVFWk8tYjU5a09RUVhCTFdhbTJYR1djVGUyMi1kY0s2SE4zbEtLVVcxWnpEUzE2djEwZnY0cFBqalNfa2t1SkNPVFEyT2RTaVhwU3BEbWFKYm04RTNFSlQ4?oc=5",
+     "source": "TradingView",
+     "kind": "presse",
+     "title_fr": "Le S&P 500 est « assez bon marché » après la vente massive : Tom Lee contredit l'avertissement de 2018 de Citadel et déclare que le « choc d'offre » de l'IA pourrait s'atténuer",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-22T02:19:00.000Z",
      "title": "Tom Lee Says AI Sell-Off Is ‘Max Pain’ Before A ‘Big Payoff’ For Patient Investors",
      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQSVp3Mll1Sjg5QV9YUG56R3IzbmdEVDVMRndRYzdMYk5nejhhQlFtWEVDeTI2SHczN204RDJLVVNmRWQwU3pTQWlVZ2dWdHZoMFZTT0xUTVV1c1g4ZjRhdElrcmhVWGJvc0xfb2F6SlZoemRrY3Y2a2hXN1Q0bFQ2c3NYMER4M1VWVHNUb0RMZ0dVWXh4NkxKS1lScmdBb01CTjN2ZnFsVEd3RmZlMHFJRXdqenNMOXdYdjVvdm5vcHN3QlBJNHg0c0dGZTVDT1RzVndIVmx3?oc=5",
@@ -5575,16 +5665,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Le scénario haussier pour l'IA résiste malgré la vente massive, car Nvidia n'est pas le seul moteur de l'innovation, affirme Tom Lee"
-    },
-    {
-     "ts": "2026-11-17T01:09:00.000Z",
-     "title": "Tom Lee Sees AI Trade Intact Despite Nasdaq's 12% Drop",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMmgzU2hvLVJtSjQ0T3AyLWlJdUlqeDUyUUJ0ajJVcXRyRlE4YUFiU29QZE16OHhWd2RrS1EzdXJkTlBYMW51d3BUS190RGVnbmxsOExjWE91SmNMYmE3dy1pZGF5SS0wejB2NUZfVWNjSHR5NnNIMGVRS0x5RjY1WkZlbGtWOE1CLTBWVWE3dExlSmZURkYzSHBTRHlRLUgwNDFweUNOVjBwdVNLc2VzaFMxTVBjNkU?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Tom Lee considère que le marché de l'IA reste intact malgré la chute de 12 % du Nasdaq"
     }
    ]
   },
@@ -5925,7 +6005,35 @@
  ],
  "hot": [
   {
-   "score": 1.3,
+   "score": 1.85,
+   "id": "peter-thiel",
+   "n": "Peter Thiel",
+   "role": "Cofondateur de Palantir, investisseur",
+   "actor": null,
+   "ts": "2026-11-25T11:49:17.000Z",
+   "title": "Billionaire Peter Thiel Buys $122 Million In Palantir Shares Amid AI Stock Turmoil",
+   "title_fr": "Le milliardaire Peter Thiel achète pour 122 millions de dollars d'actions Palantir dans un contexte de turbulences sur les actions liées à l'IA",
+   "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPQ1pHNno1SlJqUkNKSUU4RzhrZllSTVZkOUtSRjB2V3BQRmJsQUpZMGgxeVBDM3ZJVEhFSEJIWGk1NzhVQ2dkUGdudlFHRDFCZExibTBUNHlpb0NrS0ZSYU80V2hwbFlLcU4ybFFTbUJ2RkFGSFRaQ3NxbWZHYnlPcl9WSUZkZkVNa2lZbmtOTU1VMG5uR2M2V2J6Q0JrM05OMTk1cEVIbVU5Q2lRZzZhc3JOWFdSWVZSdUsyY0xXR044T2lTYUxzTlBsS21ScjRC?oc=5",
+   "source": "Forbes",
+   "kind": "presse",
+   "outlets": 4
+  },
+  {
+   "score": 1.4,
+   "id": "lip-bu-tan",
+   "n": "Lip-Bu Tan",
+   "role": "PDG d'Intel",
+   "actor": "intel-foundry",
+   "ts": "2026-11-25T11:43:43.000Z",
+   "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
+   "title_fr": "Les propres puces d'Intel seront au niveau du processus de pointe de TSMC d'ici fin 2027 ou 2028 sur le 14A, et les rendements du 18A sont désormais d'environ 70 %, déclare Lip-Bu Tan",
+   "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpLaVpoaFJTUDVtS25IYzFHOUNqbEZpaGNlNTBrUVRUeXVsWDBqNlBZYjJBSmFUbXFOV0U3UklWNmFuajZBQTZEbl8wZDY2NHRnT3NwclBVTEdaY2Nvc1U2Y29GcU9TdkJzNXpOWjdkWU1XWjg3dDRFdDVhbEZMX1ZEcGR1N21sX3ktMHNDUV9kTGFTMEZzOEV5ZXN3ZDRRWm9Qd0dNdGtlaUs2RnM0LVRoMFhkVGc5eXFVaHR6QkZsNUp2UHRBLWowNG11elRicWN2bHo1ckluNk0tRzYyeWNzaXZhd0FCRzVCcDlYUGlfZm1adWZNdnJ5dTFPMTg?oc=5",
+   "source": "Dealroom",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.82,
    "id": "yann-lecun",
    "n": "Yann LeCun",
    "role": "Président exécutif d'AMI Labs, ex-Meta",
@@ -5937,34 +6045,6 @@
    "source": "Mashable India",
    "kind": "presse",
    "outlets": 2
-  },
-  {
-   "score": 0.61,
-   "id": "matt-garman",
-   "n": "Matt Garman",
-   "role": "PDG d'AWS (Amazon Web Services)",
-   "actor": "amazon",
-   "ts": "2026-11-24T16:03:59.000Z",
-   "title": "AWS CEO Matt Garman says companies need stronger security to control AI models",
-   "title_fr": "Le PDG d'AWS, Matt Garman, affirme que les entreprises ont besoin d'une sécurité renforcée pour contrôler les modèles d'IA",
-   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNYkJFSjJ4MkJzUWpzdmdaSTljeU1pN29pSUpfeWg3RXZXdG10c3h4bnZ2OTdULUhuSFNsV2N6d3VyT3Yyc0RVbDhNRkJ1azdQcHNiRnl3MXRZY29rbk1hdFBnWnQyVDhzV1d4U19LTHpzd1pBMHZseXBFbXNYMUlqVjgyaVEwZDBVRGhpSkdCUlJScTQydl8tcG1MQ25pZHA1bm5SdzJCZDZxLTFGOHdMbVY1VGllYkVRcjNaNFdJUmJoRTdNdFJFRDZ1UkdzYU54bThiSVV2ZHNJRHdCNkVVZ1hZNnoyTzJmVk5tbTl3QWhDVzDSAfgBQVVfeXFMT1JWWG5CUnR4VGxTenROdGtQc2lIXzhuNlFRM0YxcjZGMW1vRHcxNms4SlNtNnBjN1ZPTDBQbVpDaWFGSmY1RVI0UTRlXzNDUmxudUNUWHB1OXlUMFA0OEljM2JUTUxBelhvNDF2al9xMUU5MktpVS1FTl9UQmsyTGM2cmlScDJvMkNLVGMtLThWWTFMYmF1dkl5THNJd2M3U0x1eUhmS2RYTVh2ZUNod0lsaVZZWmNPWk1pRm1TWUZFUTdNcW03SThVSWRQcF9jaEFGaHdzeWg4Q3dncnFta2t1NGV4amJUV2UyUHE5QjhhSGU3Sm9KaXE?oc=5",
-   "source": "The Economic Times",
-   "kind": "presse",
-   "outlets": 2
-  },
-  {
-   "score": 0.59,
-   "id": "peter-thiel",
-   "n": "Peter Thiel",
-   "role": "Cofondateur de Palantir, investisseur",
-   "actor": null,
-   "ts": "2026-11-25T05:12:21.000Z",
-   "title": "Peter Thiel's entity buys Palantir stock in three open-market purchases at $142.91 to $144.61 a share, Form 4 shows",
-   "title_fr": "L'entité de Peter Thiel achète des actions Palantir lors de trois transactions sur le marché ouvert entre 142,91 $ et 144,61 $ l'action, selon le formulaire 4",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQbXlHVE5STWgtY3BvRVY5Y2VSYTVXYUVkV0FwY3F3ckpDRG8wNi1QOVYtLU1hTVRqQy1kUkxXLUZoTGNuU1RwQ1ZKc3ZYZWhURjBpdzBVal9HV3NSeXRTN095S0FfQ3I1U0M3YlNGVEtuN1M2RGFRcUJhNXBSS2ZLbnQzM0sxa1JKeU9mSFo5NkJYMTY1bTBVNkEtd011NDUwMHd4RlJ4YUNtNGxqZldxY1VaV1NEWHhwR0p2bnlReDlzSmVGOW1CalBR?oc=5",
-   "source": "MLQ.ai",
-   "kind": "presse",
-   "outlets": 1
   }
  ]
 }
