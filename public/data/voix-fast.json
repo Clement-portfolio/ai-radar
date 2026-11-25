@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-25T18:30:38.877Z",
+ "generated_at": "2026-11-25T18:35:22.579Z",
  "query_count": 1,
  "people": [
   {
@@ -32,7 +32,16 @@
    "co": "Anthropic",
    "actor": null,
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-25T18:29:30.000Z",
+     "title": "Anthropic CEO Dario Amodei warns against handing governance to AI",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1HanY3NzRNSXlLWjk5ZV9GZU5nYmdBUzVjMWVEbFhGcTFRX1U5bHZfRkpLbkx1SkQyRktpcGg3eVdRQmZHUTM0dURsT0xGcDVqMVdORUgwOUJZU3p1emlQcEFxc3ZhRGlfUjNwWnlKVS05d3dXQm1SeG43QzE?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse"
+    }
+   ]
   },
   {
    "id": "elon-musk",
