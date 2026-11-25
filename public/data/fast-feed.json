@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T18:20:29.742Z",
+ "generated_at": "2026-11-25T18:25:42.984Z",
  "items": [
   {
    "id": "c2211ba4f6cd",
    "ts": "2026-11-25T18:11:46.000Z",
-   "title": "Want to buy your kid an AI toy this Christmas? Not in New York.",
+   "title": "Vous voulez acheter un jouet IA à votre enfant pour Noël ? Pas à New York.",
    "orig": "Want to buy your kid an AI toy this Christmas? Not in New York.",
    "summary": "New York has banned AI chatbot toys for five years as new research from Common Sense Media reveals troubling safety failures, including exposure to inappropriate content and risks to emotional development.",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Vous voulez acheter un jouet IA à votre enfant pour Noël ? Pas à New York.",
+   "title_en": "Want to buy your kid an AI toy this Christmas? Not in New York.",
+   "summary_en": "New York has banned AI chatbot toys for five years as new research from Common Sense Media reveals troubling safety failures, including exposure to inappropriate content and risks to emotional development."
   },
   {
    "id": "70f9c32b514f",
    "ts": "2026-11-25T18:07:00.000Z",
-   "title": "Gen Z is the least interested in AI at work – and it’s not even close",
+   "title": "La génération Z est celle qui s'intéresse le moins à l'IA au travail, et de loin",
    "orig": "Gen Z is the least interested in AI at work – and it’s not even close",
    "summary": "Younger workers don’t find AI useful, according to a recent survey.",
    "country": "US",
@@ -29,7 +32,10 @@
    "source": "ZDNet IA",
    "url": "https://www.zdnet.com/innovation/gen-z-employees-ai-survey/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "La génération Z est celle qui s'intéresse le moins à l'IA au travail, et de loin",
+   "title_en": "Gen Z is the least interested in AI at work – and it’s not even close",
+   "summary_en": "Younger workers don’t find AI useful, according to a recent survey."
   },
   {
    "id": "1343f7f3b435",
