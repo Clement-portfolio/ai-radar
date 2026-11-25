@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-25T06:01:08.626Z",
+ "generated_at": "2026-11-25T06:05:31.307Z",
  "items": [
+  {
+   "id": "46ce97d83d69",
+   "ts": "2026-11-25T05:58:34.000Z",
+   "title": "TSMC sees AI inference fueling chip demand for years",
+   "orig": "TSMC sees AI inference fueling chip demand for years",
+   "summary": "TSMC expects demand for AI chips to remain strong for years as inference becomes an increasingly important driver of growth, executives said at a company event in Munich on November 24, according to German technology publication Oiger .",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Fonderie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261125VL222/tsmc-ai-inference-chips-demand-design.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "98798bbb6682",
+   "ts": "2026-11-25T05:49:08.000Z",
+   "title": "Commentary: Can China's AI chipmakers break Nvidia's hold on developers?",
+   "orig": "Commentary: Can China's AI chipmakers break Nvidia's hold on developers?",
+   "summary": "\"Even a novelist wouldn't dare write a twist like this,\" Xijin Hu, former editor-in-chief of the Global Times , wrote in a commentary for ifeng . He cast Jensen Huang's reinstatement at Nvidia as \"the return of the king.\" Within 15 days of Huang's departure, N",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261125PD206/nvidia-chipmakers-sales-software-chips.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "3d324a020365",
    "ts": "2026-11-25T04:44:04.000Z",
