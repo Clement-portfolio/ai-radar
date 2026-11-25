@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-25T08:45:38.723Z",
+ "generated_at": "2026-11-25T08:50:31.996Z",
  "items": [
+  {
+   "id": "b125e8570098",
+   "ts": "2026-11-25T08:46:00.000Z",
+   "title": "Google planning 1.2GW data center near Châteauroux, France - report",
+   "orig": "Google planning 1.2GW data center near Châteauroux, France - report",
+   "summary": "Company applies for connection request for second data center in area",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/google-planning-12gw-data-center-near-ch%C3%A2teauroux-france-report/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "6a1f2f006d64",
    "ts": "2026-11-25T08:35:22.630Z",
