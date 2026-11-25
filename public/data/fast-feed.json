@@ -1,10 +1,28 @@
 {
- "generated_at": "2026-11-25T20:40:28.747Z",
+ "generated_at": "2026-11-25T21:01:07.390Z",
  "items": [
+  {
+   "id": "54a49e0b8445",
+   "ts": "2026-11-25T20:57:09.000Z",
+   "title": "L'alternative à la recherche Google Kagi lance un rival de Gmail",
+   "orig": "Google search alternative Kagi launches Gmail rival",
+   "summary": "The pitch is an unusual combination of privacy promises and AI features.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Modèles",
+   "source": "Ars Technica",
+   "url": "https://arstechnica.com/gadgets/2026/11/google-search-alternative-kagi-launches-gmail-rival/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "L'alternative à la recherche Google Kagi lance un rival de Gmail",
+   "title_en": "Google search alternative Kagi launches Gmail rival",
+   "summary_en": "The pitch is an unusual combination of privacy promises and AI features."
+  },
   {
    "id": "ca47f69449a3",
    "ts": "2026-11-25T20:36:47.000Z",
-   "title": "MCRPS Power Supply for Enterprise Data Centers",
+   "title": "Alimentation MCRPS pour les centres de données d'entreprise",
    "orig": "MCRPS Power Supply for Enterprise Data Centers",
    "summary": "The 5.6 kW MCRPS reference design from Infineon provides a viable solution for next-generation common redundant PSUs in enterprise servers. The post MCRPS Power Supply for Enterprise Data Centers appeared first on EE Times .",
    "country": "US",
@@ -14,12 +32,15 @@
    "source": "EE Times",
    "url": "https://www.eetimes.com/mcrps-power-supply-for-enterprise-data-centers/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Alimentation MCRPS pour les centres de données d'entreprise",
+   "title_en": "MCRPS Power Supply for Enterprise Data Centers",
+   "summary_en": "The 5.6 kW MCRPS reference design from Infineon provides a viable solution for next-generation common redundant PSUs in enterprise servers. The post MCRPS Power Supply for Enterprise Data Centers appeared first on EE Times ."
   },
   {
    "id": "ece0e45d6081",
    "ts": "2026-11-25T20:31:09.552Z",
-   "title": "Japan's Preferred Networks sows seeds of physical AI with robots, software and chips",
+   "title": "Preferred Networks au Japon sème les graines de l'IA physique avec des robots, des logiciels et des puces",
    "orig": "Japan's Preferred Networks sows seeds of physical AI with robots, software and chips",
    "summary": "",
    "country": "OTHER",
@@ -29,7 +50,9 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-preferred-networks-sows-seeds-of-physical-ai-with-robots-software-and-chips2",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Preferred Networks au Japon sème les graines de l'IA physique avec des robots, des logiciels et des puces",
+   "title_en": "Japan's Preferred Networks sows seeds of physical AI with robots, software and chips"
   },
   {
    "id": "8bae682544f1",
