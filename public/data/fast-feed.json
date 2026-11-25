@@ -1,10 +1,28 @@
 {
- "generated_at": "2026-11-25T11:45:33.084Z",
+ "generated_at": "2026-11-25T11:50:46.248Z",
  "items": [
+  {
+   "id": "effc3b7a884c",
+   "ts": "2026-11-25T11:46:00.000Z",
+   "title": "Applied Digital met en service une salle de données de 25 MW sur le centre de données Polaris Forge 2 dans le Dakota du Nord",
+   "orig": "Applied Digital brings online 25MW data hall at Polaris Forge 2 data center in North Dakota",
+   "summary": "Base-build commissioning for first 75MW completed",
+   "country": "US",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/applied-digital-brings-online-25mw-data-hall-at-polaris-forge-2-data-center-in-north-dakota/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Applied Digital met en service une salle de données de 25 MW sur le centre de données Polaris Forge 2 dans le Dakota du Nord",
+   "title_en": "Applied Digital brings online 25MW data hall at Polaris Forge 2 data center in North Dakota",
+   "summary_en": "Base-build commissioning for first 75MW completed"
+  },
   {
    "id": "3c56acdc665a",
    "ts": "2026-11-25T11:36:38.000Z",
-   "title": "Fluidstack launches modular data center product, Blackbird",
+   "title": "Fluidstack lance un produit de centre de données modulaire, Blackbird",
    "orig": "Fluidstack launches modular data center product, Blackbird",
    "summary": "System is designed for rapid deployment",
    "country": "US",
@@ -14,7 +32,10 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/fluidstack-launches-modular-data-center-product-blackbird/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Fluidstack lance un produit de centre de données modulaire, Blackbird",
+   "title_en": "Fluidstack launches modular data center product, Blackbird",
+   "summary_en": "System is designed for rapid deployment"
   },
   {
    "id": "1d2b3c7b611b",
@@ -55,7 +76,7 @@
   {
    "id": "297873571588",
    "ts": "2026-11-25T11:00:01.000Z",
-   "title": "Trump’s meddling in Huang scandal reignites voter angst over tech’s outsized political power",
+   "title": "L'ingérence de Trump dans le scandale Huang relance l'inquiétude des électeurs face au pouvoir politique démesuré de la tech",
    "orig": "Trump’s meddling in Huang scandal reignites voter angst over tech’s outsized political power",
    "summary": "Nvidia’s decision to reinstate CEO Jensen Huang after pressure from Trump is intensifying bipartisan scrutiny of tech companies' ties to the administration.",
    "country": "US",
@@ -65,7 +86,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/25/huang-reinstatement-reignites-voter-angst-over-techs-outsized-power.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "L'ingérence de Trump dans le scandale Huang relance l'inquiétude des électeurs face au pouvoir politique démesuré de la tech",
+   "title_en": "Trump’s meddling in Huang scandal reignites voter angst over tech’s outsized political power",
+   "summary_en": "Nvidia’s decision to reinstate CEO Jensen Huang after pressure from Trump is intensifying bipartisan scrutiny of tech companies' ties to the administration."
   },
   {
    "id": "799ac5f30b5d",
