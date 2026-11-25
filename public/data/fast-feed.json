@@ -1,10 +1,28 @@
 {
- "generated_at": "2026-11-25T13:25:22.874Z",
+ "generated_at": "2026-11-25T13:30:51.036Z",
  "items": [
+  {
+   "id": "5dfeef1bce80",
+   "ts": "2026-11-25T13:22:52.000Z",
+   "title": "Le gouvernement britannique cherche un nouveau secrétaire axé sur les investissements dans l'IA, rattaché au ministre de l'IA",
+   "orig": "UK government seeks new AI investment-focused secretary, reporting to country's AI Minister",
+   "summary": "The role will interface with the Prime Minister and lead on key AI investment initiatives",
+   "country": "EU",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/uk-government-seeks-new-ai-investment-focused-secretary-reporting-to-countrys-ai-minister/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Le gouvernement britannique cherche un nouveau secrétaire axé sur les investissements dans l'IA, rattaché au ministre de l'IA",
+   "title_en": "UK government seeks new AI investment-focused secretary, reporting to country's AI Minister",
+   "summary_en": "The role will interface with the Prime Minister and lead on key AI investment initiatives"
+  },
   {
    "id": "9edbb62c9bcf",
    "ts": "2026-11-25T13:00:00.000Z",
-   "title": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
+   "title": "Les questions auxquelles Jensen Huang et Nvidia devront encore répondre au sujet de Megaspeed",
    "orig": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
    "summary": "Huang still faces questions from Congress and his own board about his romantic relationship with an alleged chip smuggler.",
    "country": "US",
@@ -14,7 +32,10 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les questions auxquelles Jensen Huang et Nvidia devront encore répondre au sujet de Megaspeed",
+   "title_en": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
+   "summary_en": "Huang still faces questions from Congress and his own board about his romantic relationship with an alleged chip smuggler."
   },
   {
    "id": "75143ad99cf8",
