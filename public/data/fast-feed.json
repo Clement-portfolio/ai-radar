@@ -1,6 +1,42 @@
 {
- "generated_at": "2026-11-25T10:25:24.520Z",
+ "generated_at": "2026-11-25T10:35:46.889Z",
  "items": [
+  {
+   "id": "799ac5f30b5d",
+   "ts": "2026-11-25T10:23:40.000Z",
+   "title": "Link Logistics de Blackstone vise un centre de données près de Minneapolis, dans le Minnesota",
+   "orig": "Blackstone's Link Logistics eyes data center outside Minneapolis, Minnesota",
+   "summary": "Logistics real estate firm moves further into data centers",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/blackstones-link-logistics-eyes-data-center-outside-minneapolis-minnesota/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Link Logistics de Blackstone vise un centre de données près de Minneapolis, dans le Minnesota",
+   "title_en": "Blackstone's Link Logistics eyes data center outside Minneapolis, Minnesota",
+   "summary_en": "Logistics real estate firm moves further into data centers"
+  },
+  {
+   "id": "b0deea04c96b",
+   "ts": "2026-11-25T10:00:00.000Z",
+   "title": "L'IA met à rude épreuve les systèmes d'accès aux documents publics américains",
+   "orig": "AI is straining America’s open records systems",
+   "summary": "In Panton, Vermont, population 660, town clerk Kyle Rowe did it all. He crafted budgets, paid vendors, handled property tax disputes, and served as the town’s zoning supervisor and presiding elections officer. During morning office hours at the town hall—a woo",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "MIT Technology Review IA",
+   "url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "L'IA met à rude épreuve les systèmes d'accès aux documents publics américains",
+   "title_en": "AI is straining America’s open records systems",
+   "summary_en": "In Panton, Vermont, population 660, town clerk Kyle Rowe did it all. He crafted budgets, paid vendors, handled property tax disputes, and served as the town’s zoning supervisor and presiding elections officer. During morning office hours at the town hall—a woo"
+  },
   {
    "id": "2aae310acdf2",
    "ts": "2026-11-25T09:58:41.000Z",
@@ -22,7 +58,7 @@
   {
    "id": "95b79f81955e",
    "ts": "2026-11-25T09:42:03.000Z",
-   "title": "TSMC plans celebration for Arizona milestone as it weighs US$22.6 billion Texas campus",
+   "title": "TSMC prévoit de célébrer une étape franchie en Arizona tout en étudiant un campus de 22,6 milliards de dollars au Texas",
    "orig": "TSMC plans celebration for Arizona milestone as it weighs US$22.6 billion Texas campus",
    "summary": "TSMC is preparing to celebrate a new milestone in Arizona, even as it weighs a $22.6 billion fab in Texas and faces fresh tariff threats from Washington.",
    "country": "OTHER",
@@ -32,12 +68,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL232/tsmc-arizona-texas-fab-expansion.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "TSMC prévoit de célébrer une étape franchie en Arizona tout en étudiant un campus de 22,6 milliards de dollars au Texas",
+   "title_en": "TSMC plans celebration for Arizona milestone as it weighs US$22.6 billion Texas campus",
+   "summary_en": "TSMC is preparing to celebrate a new milestone in Arizona, even as it weighs a $22.6 billion fab in Texas and faces fresh tariff threats from Washington."
   },
   {
    "id": "092b38ddcfaf",
    "ts": "2026-11-25T09:02:13.000Z",
-   "title": "Texas comptroller backs US$354 million tax break for TSMC",
+   "title": "Le contrôleur des comptes du Texas soutient une exonération fiscale de 354 millions de dollars pour TSMC",
    "orig": "Texas comptroller backs US$354 million tax break for TSMC",
    "summary": "The Texas Comptroller of Public Accounts has recommended a property tax break worth an estimated US$354 million for TSMC's proposed US$22.6 billion semiconductor manufacturing campus in Brazos County, as the chipmaker weighs Texas against Arizona for its next ",
    "country": "OTHER",
@@ -47,7 +86,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL228/tsmc-texas-investment-tax-incentive-arizona.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Le contrôleur des comptes du Texas soutient une exonération fiscale de 354 millions de dollars pour TSMC",
+   "title_en": "Texas comptroller backs US$354 million tax break for TSMC",
+   "summary_en": "The Texas Comptroller of Public Accounts has recommended a property tax break worth an estimated US$354 million for TSMC's proposed US$22.6 billion semiconductor manufacturing campus in Brazos County, as the chipmaker weighs Texas against Arizona for its next"
   },
   {
    "id": "dd04863bad2d",
