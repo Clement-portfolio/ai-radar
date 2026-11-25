@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T17:45:29.436Z",
+ "generated_at": "2026-11-25T17:51:07.242Z",
  "items": [
   {
    "id": "1343f7f3b435",
    "ts": "2026-11-25T17:44:51.000Z",
-   "title": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+   "title": "La FCC approuve le projet de SpaceX de placer jusqu'à 1 million de satellites centres de données dans l'espace",
    "orig": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
    "summary": "In an announcement on Wednesday, the FCC says it authorized SpaceX to deploy up to 1 million AI chip-equipped satellites as part of the Elon Musk-owned company's \"Starmind\" initiative. With several others also pursuing the idea of putting AI data centers in sp",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "The Verge IA",
    "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "La FCC approuve le projet de SpaceX de placer jusqu'à 1 million de satellites centres de données dans l'espace",
+   "title_en": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+   "summary_en": "In an announcement on Wednesday, the FCC says it authorized SpaceX to deploy up to 1 million AI chip-equipped satellites as part of the Elon Musk-owned company's \"Starmind\" initiative. With several others also pursuing the idea of putting AI data centers in space"
   },
   {
    "id": "92419877312e",
    "ts": "2026-11-25T17:35:58.000Z",
-   "title": "State AGs fight Character.AI’s plan to auction off users’ private chats",
+   "title": "Des procureurs généraux d'États s'opposent au projet de Character.AI de vendre aux enchères les conversations privées des utilisateurs",
    "orig": "State AGs fight Character.AI’s plan to auction off users’ private chats",
    "summary": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said.",
    "country": "US",
@@ -29,12 +32,15 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Des procureurs généraux d'États s'opposent au projet de Character.AI de vendre aux enchères les conversations privées des utilisateurs",
+   "title_en": "State AGs fight Character.AI’s plan to auction off users’ private chats",
+   "summary_en": "The proposed Character.ai bankruptcy sale includes sensitive personal data from more than 21 million U.S. accounts, including 2.1 million registered to minors, the state AGs said."
   },
   {
    "id": "7683ad360aa9",
    "ts": "2026-11-25T17:34:58.000Z",
-   "title": "AI Makes Formal Verification Practical",
+   "title": "L'IA rend la vérification formelle pratique",
    "orig": "AI Makes Formal Verification Practical",
    "summary": "AI model startup Harmonic is expanding into formal verification for software and hardware. The post AI Makes Formal Verification Practical appeared first on EE Times .",
    "country": "US",
@@ -44,12 +50,33 @@
    "source": "EE Times",
    "url": "https://www.eetimes.com/ai-makes-formal-verification-practical/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "L'IA rend la vérification formelle pratique",
+   "title_en": "AI Makes Formal Verification Practical",
+   "summary_en": "AI model startup Harmonic is expanding into formal verification for software and hardware. The post AI Makes Formal Verification Practical appeared first on EE Times ."
+  },
+  {
+   "id": "de2d93616713",
+   "ts": "2026-11-25T17:28:24.000Z",
+   "title": "Les vendeurs de Nvidia cherchent de nouveaux acheteurs alors que les États-Unis restreignent l'accès de la Chine aux puces IA, selon des sources à CNBC",
+   "orig": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access, sources tell CNBC",
+   "summary": "Nvidia GPU sellers are seeking new buyers after new U.S. rules tightened remote access to advanced AI chips for China-linked customers",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/25/nvidia-china-ai-chip-remote-access.html",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Les vendeurs de Nvidia cherchent de nouveaux acheteurs alors que les États-Unis restreignent l'accès de la Chine aux puces IA, selon des sources à CNBC",
+   "title_en": "Nvidia sellers seek new buyers as U.S. curbs China AI chip access, sources tell CNBC",
+   "summary_en": "Nvidia GPU sellers are seeking new buyers after new U.S. rules tightened remote access to advanced AI chips for China-linked customers"
   },
   {
    "id": "d346e42f31fc",
    "ts": "2026-11-25T17:12:57.000Z",
-   "title": "Etsy clarifies AI terms after seller backlash",
+   "title": "Etsy clarifie ses conditions d'utilisation de l'IA après la réaction des vendeurs",
    "orig": "Etsy clarifies AI terms after seller backlash",
    "summary": "One veteran illustrator dismisses revisions as \"sugar coating.\"",
    "country": "US",
@@ -59,7 +86,28 @@
    "source": "Ars Technica",
    "url": "https://arstechnica.com/tech-policy/2026/11/etsy-clarifies-ai-terms-after-seller-backlash/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Etsy clarifie ses conditions d'utilisation de l'IA après la réaction des vendeurs",
+   "title_en": "Etsy clarifies AI terms after seller backlash",
+   "summary_en": "One veteran illustrator dismisses revisions as \"sugar coating.\""
+  },
+  {
+   "id": "e3007f25728e",
+   "ts": "2026-11-25T17:10:17.000Z",
+   "title": "Nvidia mène la chute des valeurs technologiques alors que le rebond de Huang s'essouffle et que les inquiétudes liées à l'IA reviennent",
+   "orig": "Nvidia leads tech sell-off as Huang comeback rally fizzles and AI concerns return",
+   "summary": "Nvidia and other AI-linked stocks fell as investors weighed AI spending, inflation and higher-rate risks.",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/25/nvidia-ai-stock-tech-selloff.html",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Nvidia mène la chute des valeurs technologiques alors que le rebond de Huang s'essouffle et que les inquiétudes liées à l'IA reviennent",
+   "title_en": "Nvidia leads tech sell-off as Huang comeback rally fizzles and AI concerns return",
+   "summary_en": "Nvidia and other AI-linked stocks fell as investors weighed AI spending, inflation and higher-rate risks."
   },
   {
    "id": "dce6d1562e25",
