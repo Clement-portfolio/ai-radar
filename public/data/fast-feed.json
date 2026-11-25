@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-25T09:10:32.162Z",
+ "generated_at": "2026-11-25T09:15:52.531Z",
  "items": [
   {
    "id": "dd04863bad2d",
    "ts": "2026-11-25T09:00:00.000Z",
-   "title": "Sponsored: Demystifying the data center is necessary for AI innovation",
+   "title": "Sponsorisé : Démystifier le centre de données est nécessaire à l'innovation en IA",
    "orig": "Sponsored: Demystifying the data center is necessary for AI innovation",
    "summary": "As public opposition to data centers rises, the industry has a responsibility to engage and educate – but also to build responsibly",
    "country": "US",
@@ -14,12 +14,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/marketwatch/demystifying-the-data-center-is-necessary-for-ai-innovation/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Sponsorisé : Démystifier le centre de données est nécessaire à l'innovation en IA",
+   "title_en": "Sponsored: Demystifying the data center is necessary for AI innovation",
+   "summary_en": "As public opposition to data centers rises, the industry has a responsibility to engage and educate – but also to build responsibly"
   },
   {
    "id": "c5ea8b770cb7",
    "ts": "2026-11-25T08:59:51.000Z",
-   "title": "Winbond Widens Edge AI Reach, Certifies NOR Flash",
+   "title": "Winbond élargit sa portée dans l'IA Edge et certifie la mémoire NOR Flash",
    "orig": "Winbond Widens Edge AI Reach, Certifies NOR Flash",
    "summary": "Winbond is pairing bandwidth and density to meet the edge’s demand for faster, safer memory without the custom-design price tag. The post Winbond Widens Edge AI Reach, Certifies NOR Flash appeared first on EE Times .",
    "country": "US",
@@ -29,12 +32,15 @@
    "source": "EE Times",
    "url": "https://www.eetimes.com/winbond-widens-edge-ai-reach-certifies-nor-flash/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Winbond élargit sa portée dans l'IA Edge et certifie la mémoire NOR Flash",
+   "title_en": "Winbond Widens Edge AI Reach, Certifies NOR Flash",
+   "summary_en": "Winbond is pairing bandwidth and density to meet the edge’s demand for faster, safer memory without the custom-design price tag. The post Winbond Widens Edge AI Reach, Certifies NOR Flash appeared first on EE Times ."
   },
   {
    "id": "b125e8570098",
    "ts": "2026-11-25T08:46:00.000Z",
-   "title": "Google planning 1.2GW data center near Châteauroux, France - report",
+   "title": "Google projette un centre de données de 1,2 GW près de Châteauroux en France, selon un rapport",
    "orig": "Google planning 1.2GW data center near Châteauroux, France - report",
    "summary": "Company applies for connection request for second data center in area",
    "country": "US",
@@ -44,7 +50,10 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/google-planning-12gw-data-center-near-ch%C3%A2teauroux-france-report/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Google projette un centre de données de 1,2 GW près de Châteauroux en France, selon un rapport",
+   "title_en": "Google planning 1.2GW data center near Châteauroux, France - report",
+   "summary_en": "Company applies for connection request for second data center in area"
   },
   {
    "id": "6a1f2f006d64",
@@ -66,7 +75,7 @@
   {
    "id": "22bb4ef37313",
    "ts": "2026-11-25T08:35:00.000Z",
-   "title": "Tesla's AI4.5 downgrade exposes the memory bottleneck behind physical AI",
+   "title": "La rétrogradation d'AI4.5 de Tesla révèle le goulot d'étranglement mémoire derrière l'IA physique",
    "orig": "Tesla's AI4.5 downgrade exposes the memory bottleneck behind physical AI",
    "summary": "The ramifications of the prolonged memory squeeze are reverberating further across supply chains serving applications at the edge, as Elon Musk's ambitions in physical AI increasingly collide with the constraints imposed by the global memory shortage.",
    "country": "OTHER",
@@ -76,12 +85,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL221/tesla-hardware-automotive-silicon-cost.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "La rétrogradation d'AI4.5 de Tesla révèle le goulot d'étranglement mémoire derrière l'IA physique",
+   "title_en": "Tesla's AI4.5 downgrade exposes the memory bottleneck behind physical AI",
+   "summary_en": "The ramifications of the prolonged memory squeeze are reverberating further across supply chains serving applications at the edge, as Elon Musk's ambitions in physical AI increasingly collide with the constraints imposed by the global memory shortage."
   },
   {
    "id": "4dbe354d285c",
    "ts": "2026-11-25T08:32:31.000Z",
-   "title": "Huawei, CXMT take aim at Korean rivals with new memory designs",
+   "title": "Huawei et CXMT visent leurs rivaux coréens avec de nouveaux designs de mémoire",
    "orig": "Huawei, CXMT take aim at Korean rivals with new memory designs",
    "summary": "Huawei Technologies and ChangXin Memory Technologies (CXMT) are set to present new memory chip designs in February 2027 as they seek to compete with South Korean rivals in customized high-bandwidth memory (HBM) and advanced DRAM manufacturing.",
    "country": "CN",
@@ -91,12 +103,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125VL226/huawei-cxmt-dram-hbm-design.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Huawei et CXMT visent leurs rivaux coréens avec de nouveaux designs de mémoire",
+   "title_en": "Huawei, CXMT take aim at Korean rivals with new memory designs",
+   "summary_en": "Huawei Technologies and ChangXin Memory Technologies (CXMT) are set to present new memory chip designs in February 2027 as they seek to compete with South Korean rivals in customized high-bandwidth memory (HBM) and advanced DRAM manufacturing."
   },
   {
    "id": "6b967ea26c08",
    "ts": "2026-11-25T08:21:50.000Z",
-   "title": "DIGITIMES Insight: AI factory bottleneck shifts from computing to power, opening new opportunities for Taiwanese suppliers",
+   "title": "Analyse DIGITIMES : Le goulot d'étranglement des usines d'IA passe du calcul à l'énergie, ouvrant de nouvelles opportunités pour les fournisseurs taïwanais",
    "orig": "DIGITIMES Insight: AI factory bottleneck shifts from computing to power, opening new opportunities for Taiwanese suppliers",
    "summary": "DIGITIMES Intelligence observes that the bottleneck in AI factory deployment is shifting from computing power to electrical power.",
    "country": "OTHER",
@@ -106,7 +121,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD218/data-center-power-supply-nvidia-taiwan.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Analyse DIGITIMES : Le goulot d'étranglement des usines d'IA passe du calcul à l'énergie, ouvrant de nouvelles opportunités pour les fournisseurs taïwanais",
+   "title_en": "DIGITIMES Insight: AI factory bottleneck shifts from computing to power, opening new opportunities for Taiwanese suppliers",
+   "summary_en": "DIGITIMES Intelligence observes that the bottleneck in AI factory deployment is shifting from computing power to electrical power."
   },
   {
    "id": "8af9638ce27a",
