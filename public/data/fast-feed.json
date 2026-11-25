@@ -1,6 +1,42 @@
 {
- "generated_at": "2026-11-25T11:15:26.797Z",
+ "generated_at": "2026-11-25T11:20:42.369Z",
  "items": [
+  {
+   "id": "1d2b3c7b611b",
+   "ts": "2026-11-25T11:20:02.000Z",
+   "title": "Un campus de centres de données de 350 MW proposé en Nouvelle-Galles du Sud, en Australie",
+   "orig": "350MW data center campus proposed in New South Wales, Australia",
+   "summary": "Project planned near Mulwala substation and solar farm",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/350mw-data-center-campus-proposed-in-new-south-wales-australia/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Un campus de centres de données de 350 MW proposé en Nouvelle-Galles du Sud, en Australie",
+   "title_en": "350MW data center campus proposed in New South Wales, Australia",
+   "summary_en": "Project planned near Mulwala substation and solar farm"
+  },
+  {
+   "id": "9ad758d4f47c",
+   "ts": "2026-11-25T11:15:18.000Z",
+   "title": "Digital Realty rachète des bureaux vacants près de Chicago et prévoit un campus de centres de données de 156 MW",
+   "orig": "Digital Realty buys vacant office outside Chicago, plans 156MW data center campus",
+   "summary": "Company also buys horse racetrack in Cook County",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/digital-realty-buys-vacant-office-outside-chicago-plans-156mw-data-center-campus/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Digital Realty rachète des bureaux vacants près de Chicago et prévoit un campus de centres de données de 156 MW",
+   "title_en": "Digital Realty buys vacant office outside Chicago, plans 156MW data center campus",
+   "summary_en": "Company also buys horse racetrack in Cook County"
+  },
   {
    "id": "799ac5f30b5d",
    "ts": "2026-11-25T10:23:40.000Z",
