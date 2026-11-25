@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-25T12:30:36.321Z",
+ "generated_at": "2026-11-25T12:35:22.814Z",
  "items": [
+  {
+   "id": "fd48d85420c4",
+   "ts": "2026-11-25T12:35:21.479Z",
+   "title": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
+   "orig": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
+   "summary": "",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/business-deals/singapore-telco-merger-highlights-ai-infrastructure-push-amid-uncertainty",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "a1f6613c7f77",
+   "ts": "2026-11-25T12:30:42.000Z",
+   "title": "Man charged over explosion at electrical substation serving Apple data center in Mesa, Arizona",
+   "orig": "Man charged over explosion at electrical substation serving Apple data center in Mesa, Arizona",
+   "summary": "Incident caused $148,000 worth of damage",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/man-charged-over-explosion-at-electrical-substation-serving-apple-data-center-in-mesa-arizona/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "5da63334eee3",
    "ts": "2026-11-25T12:12:22.000Z",
