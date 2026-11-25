@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-24T22:03:51.000Z",
+ "generated_at": "2026-11-25T01:21:41.160Z",
  "people": [
   {
    "id": "sam-altman",
@@ -585,7 +585,7 @@
    "actor": "amd",
    "alerts": [
     {
-     "ts": "2026-11-20T18:25:00.000Z",
+     "ts": "2026-11-20T23:00:35.000Z",
      "title": "AMD CEO Lisa Su Breaks Silence on Jensen Huang's Resignation: \"The Noise Will Subside Soon\"",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1rU1A4MWt6V1lHVm4ycTBsNzdmWnd6S2tDVHgxclV4Uk11bmFMTXVrWDVGamR6OVZGM3ZWTnRURzhfVW9SbjJrZ0IzS1hLMjdpb2dFVTRadjlMRTg0aFhZdnRXOG8wZVo0RHRJUVJPc0RDVDNLVnc?oc=5",
      "source": "BigGo Finance"
@@ -1463,6 +1463,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T22:41:00.000Z",
+     "title": "Geoffrey Hinton Warns About the Risks of Advanced AI",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwN0w2c1FDd21iWDRiZHk5amZPUE1PVV96bUJyYWMzY2I3d1BGX041V0l2RnlnVXk3MldTQzU4enNYRThlbVNJdWpVaHRjTU5icU9DVEFJaDVyTHc?oc=5",
+     "source": "cwibc.co.id",
+     "kind": "presse",
+     "title_fr": "Geoffrey Hinton met en garde contre les risques de l'IA avancée",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-24T13:31:58.000Z",
      "title": "Geoffrey Hinton said to stop training radiologists. A decade later, the Bay Area is 600 imaging techs short",
      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQR3QzdmVmZnllcE82OXk1SFk3bDAxZHpYNmtCR2hJYWNfWm1tX0lNUjFFZFJWNWk1VWV2dFMtU3BOZlVyMFppZ1FuYThMNVprYVY5MlpfSGt5a05KQUlsQmhmWGRLZFo2Z3J4c1Z2MnJsNHVRRHJYMGR0ZVdQZzY0dg?oc=5",
@@ -1489,8 +1499,8 @@
      "source": "NewsBytes",
      "kind": "presse",
      "title_fr": "Geoffrey Hinton prévient que les systèmes d'IA avancés développent des langages inintelligibles",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-14T12:35:27.000Z",
@@ -1529,16 +1539,6 @@
      "source": "MLQ.ai",
      "kind": "presse",
      "title_fr": "Geoffrey Hinton avertit qu'un « Tchernobyl » de l'IA, tel qu'une panne de réseau ou une interruption financière d'une semaine, pourrait survenir cette année ou l'année prochaine",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-08T08:00:00.000Z",
-     "title": "Hinton warns of an AI Chernobyl by 2027, a week-long blackout or bank outage",
-     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPU3J0V2hIeUJNRXlEUXdxRGdGMzhSMnI1RTUxODlLb3gtWlNGNkVKVE8zWDVhR2t5Um1xNS1DT1RlYXlFbXdrLVNVQ0YwYkhUbmpHczRvdW5SWFRMckhYUEJNMXFOdTRBUEx6c2k4cV9GcExZTEZvMUdTLTREbllJNXVrb3hPWEZjaEJN?oc=5",
-     "source": "Pasquale Pillitteri",
-     "kind": "presse",
-     "title_fr": "Hinton met en garde contre un Tchernobyl de l'IA d'ici 2027, une panne d'électricité ou une interruption bancaire d'une semaine",
      "m": 1,
      "e": 0
     }
@@ -1683,7 +1683,14 @@
    "role": "Président des États-Unis",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-24T22:56:00.000Z",
+     "title": "Exclusive | Trump leaves door open to Jensen Huang pardon — and urges him not to plead 5th to Congress next week",
+     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNdHVzd2h3em1OLWJ2ekNOTzZTMHZTSGVZdXFMcmJtM08ya1h3aWRUeXRBQnhRdGxCMldNZkh1Z0NzaFIxeEdMRmhZZ0hlMFFHUm9zcWM2a21MMEp3WjFQVk5kZVgxWDdldHFBSE0tdXJYT0RFSXpWbWJvMU4yX00wUW1UejRRRGZlT1Uzei1CbXdJeXl5a1A3TWNvN1BlQkpQaXh4WGp3Z0xoUTQ3dnVPdHBHOUZCN0Nza0FCRTF3eVpOUGE5cnFHVHhJUVNvN3AzQ3hz?oc=5",
+     "source": "New York Post"
+    }
+   ],
    "items": [
     {
      "ts": "2026-11-24T06:06:12.000Z",
@@ -2309,8 +2316,35 @@
    "role": "Investisseur (« The Big Short »)",
    "co": "",
    "actor": null,
-   "alerts": [],
+   "alerts": [
+    {
+     "ts": "2026-11-24T07:45:33.000Z",
+     "title": "Michael Burry cuts Nvidia puts by 75%, exits semiconductor ETF puts (NVDA:NASDAQ)",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYkUzbHVfNW0wTm9rLUxqQ2tFcU03NWQ1X2RzenlwS0FUTFgzRmF2OFpyUW9pS0RRNUsydUVDSVY0S01TWllvcHNURDMweXFzc0dXalczZ3F0dl9BR3VObU9NR21YbDZZaXBhVFZiSXFpQUNvQThTSy1rX3I5c2EzSW9IMmp5Um5teWE0TVNRRGVpMXhUYXpGMVZQSHVxQmtEUGx3LVZ3?oc=5",
+     "source": "Seeking Alpha"
+    }
+   ],
    "items": [
+    {
+     "ts": "2026-11-24T19:02:17.000Z",
+     "title": "Michael Burry Says Nvidia's ‘Precarious Normal’ Returns With Jensen Huang Back At The Helm: Loads Up On JD, Tencent, BYD Stocks",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOa080M09UTThMak8tMmItczlCb1RxZkEybElIVmNRZ0RKRDJqaUQ4dlRaaVlYUEl0dzI2cEI0Zkx2X0pQand6UlViQmg1NVg1RGZGSnpXTnZfUThvUHcyWGlMVkJaWGxrMlZRUjFwYXlaYXlPREhoVmFpMWw0MHBQaWFpNlpaNWtMMmktaDFwdEFQMThrZmpiWDItXzhsc2Uyb1pjMg?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry déclare que la « normale précaire » de Nvidia est de retour avec Jensen Huang aux commandes : il achète massivement des actions JD, Tencent et BYD",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-24T07:45:33.000Z",
+     "title": "Michael Burry cuts Nvidia puts by 75%, exits semiconductor ETF puts (NVDA:NASDAQ)",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYkUzbHVfNW0wTm9rLUxqQ2tFcU03NWQ1X2RzenlwS0FUTFgzRmF2OFpyUW9pS0RRNUsydUVDSVY0S01TWllvcHNURDMweXFzc0dXalczZ3F0dl9BR3VObU9NR21YbDZZaXBhVFZiSXFpQUNvQThTSy1rX3I5c2EzSW9IMmp5Um5teWE0TVNRRGVpMXhUYXpGMVZQSHVxQmtEUGx3LVZ3?oc=5",
+     "source": "Seeking Alpha",
+     "kind": "presse",
+     "title_fr": "Michael Burry réduit de 75 % ses options de vente sur Nvidia et solde ses options sur l'ETF des semi-conducteurs (NVDA:NASDAQ)",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-24T03:45:00.000Z",
      "title": "Michael Burry Sold Half His NVIDIA Puts Before Huang's Return Sparked a 31% Rally",
@@ -2370,26 +2404,6 @@
      "title_fr": "Michael Burry prévient que les actions liées à l'IA reflètent les krachs de 1929 et 2000 — et pointe du doigt les accords risqués de Nvidia",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-20T17:11:33.000Z",
-     "title": "Michael Burry sells near-term Nvidia puts but keeps longer-dated short position",
-     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yMks3LTMzdkhuS21Wa25jM2NheHBHS042dW1aZThaOUYtZlNKc2VXWkk1XzVjbkNaVlIxT3liUUZwTTZEUGdHQmJXTUktVEhuRnBfSk1RWkQ3MDdPcm8tRFRtVXZ6Ykh6MXNsYTAwNWxaZHc?oc=5",
-     "source": "Crypto Briefing",
-     "kind": "presse",
-     "title_fr": "Michael Burry vend des options de vente Nvidia à court terme mais conserve une position the vendeur à plus long terme",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-20T14:59:09.000Z",
-     "title": "Michael Burry says he 'tried to warn' investors that Nvidia, CoreWeave, and Nebius were headed for trouble",
-     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNeHhLdlhMZWJkRENiTDJpU0ZkVFNSSEtZMFVrcVJTZjdCNDFob2hnbEdpcGFmUGtVbmRMdzg2U3BXUjEwT3VGN3lGcTlaaDZDdDhGb3NUYldkRmlxQzdmUDNRWmd2ZHE1dkY4dV84aGMxX09ld2FHVHNTTEhNdEJFTXJFRXQ?oc=5",
-     "source": "Yahoo Finance UK",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Michael Burry affirme qu'il a « essayé de prévenir » les investisseurs que Nvidia, CoreWeave et Nebius couraient vers des difficultés"
     }
    ]
   },
@@ -5555,6 +5569,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-24T23:58:47.000Z",
+     "title": "Nasdaq Drops As NVDA, ANT, SPCX Slide: Mohamed El-Erian Says Market Warning Signals Go Well Beyond Nvidia",
+     "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQdmpXWFJJNGZIS1lxREhEemtWek5UZEtVQTVvaml5bmVISVlLTnZtVDNXNV9iZmxKNGZTSU04b0FQWkpGNmdmMlA2b3VaN2RTTmFOR1RISk1LTmpicWJSLUJZd0YyM2NOUlJzMGNHSUcyMGRGdG9vRTNhOVEzU1JjRldDT3UxSjJ4V19xRWxIYWk4QVRBc1E?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Le Nasdaq chute alors que NVDA, ANT et SPCX reculent : Mohamed El-Erian affirme que les signaux d'alerte du marché vont bien au-delà de Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T22:01:00.000Z",
      "title": "Anthropic Closes Up 17% While Nasdaq Falls; Mohamed El-Erian Calls It ‘Making Room’ For AI",
      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNTUwtaE1Qcm9BYlZVaWQtVkJocUVQUVFETXFQa0M2NEtfdXcxYjM5ZGxrclRqTS1uZGozWUE4Unh5d2haUXpfRDFtdDIwWllsWGZvM1RMVlNXcEt6NDkxUWJTT1ZPYWNKcXJsRUpuRmFHNHVnWk1fUkQzTGdSV0dDbFh5TURYSmpxd0xoRzNHZGYxaUk0YzJmdTFLbS1vcDBfTkVReDFfUkZncEZCVi1mU2tPOFhBeDVySmdYR0Jpb2ZRU05zSnNDRzZhSlRFZ0ppbHN5RWVsVE92M1p0a1ZoejMxQkg?oc=5",
@@ -5623,16 +5647,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Mohamed El-Erian affirme que l'approche américaine axée sur le tout-à-l'IA a montré ses limites alors que la réaction politique s'intensifie à mi-mandat — Bil"
-    },
-    {
-     "ts": "2026-11-05T17:48:18.000Z",
-     "title": "El-Erian Says Stock Market Is ‘Overdoing It’ On AI Fears As Nasdaq Enters Correction Territory",
-     "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPX19naHAxbzFYRUZidVE0Y1M1TWxZM2RVM0RvcmY0V1o5bkdWYWY1bkZVUndzdmhldjBkOHBkNm9GRU5KbVRQQ0xNczFiMWNkUDRBcVdIb1BkNzI1ckN2bkxSYThBblhDMjVUWVNNelRsTDBoNXlTejZJRkhwVjRlU0RTdlVYb2VDVFRkdEY1dWNqdThwZUpVUGRrSDE4eHdXODJPT0VINEU4WTBlOE11SG5RcVNTS3RIc1piQkpvS1YteUJ3U2JPRkRqeWVTYTNhc2JxWVM2b3BmMHk0U0E1VFJVUVpqVnM?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "El-Erian affirme que la bourse « exagère » ses craintes concernant l'IA alors que le Nasdaq entre en territoire de correction"
     }
    ]
   },
@@ -5881,7 +5895,7 @@
  ],
  "hot": [
   {
-   "score": 1.26,
+   "score": 0.98,
    "id": "matt-garman",
    "n": "Matt Garman",
    "role": "PDG d'AWS (Amazon Web Services)",
@@ -5895,7 +5909,7 @@
    "outlets": 2
   },
   {
-   "score": 1.21,
+   "score": 0.94,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
@@ -5909,16 +5923,16 @@
    "outlets": 3
   },
   {
-   "score": 0.73,
-   "id": "cc-wei",
-   "n": "C.C. Wei",
-   "role": "PDG de TSMC",
-   "actor": "tsmc",
-   "ts": "2026-11-24T08:25:00.000Z",
-   "title": "Trump Names C.C. Wei Three Times, Calls Him a Genius, Predicts Chip Tariffs Hitting 200% in Two Years",
-   "title_fr": "Trump nomme C.C. Wei trois fois, le qualifie de génie et prédit des droits de douane sur les puces atteignant 200 % en deux ans",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9IZU81d0lHOHY2ZkVxSGwtVVhUSmtHWTVwVDVOQTM1cEhqcXJfRGtSMERZbkdTMUZMWE9aUzh4QWxHYVVCZFhURXZHYXBHMER5VVJRRmFlVEZRQ1VoN1pSTVZkVjJxVngwZ0JzRFFvQnhXd0JVMWc?oc=5",
-   "source": "BigGo Finance",
+   "score": 0.85,
+   "id": "geoffrey-hinton",
+   "n": "Geoffrey Hinton",
+   "role": "Prix Nobel, pionnier du deep learning",
+   "actor": null,
+   "ts": "2026-11-24T22:41:00.000Z",
+   "title": "Geoffrey Hinton Warns About the Risks of Advanced AI",
+   "title_fr": "Geoffrey Hinton met en garde contre les risques de l'IA avancée",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBwN0w2c1FDd21iWDRiZHk5amZPUE1PVV96bUJyYWMzY2I3d1BGX041V0l2RnlnVXk3MldTQzU4enNYRThlbVNJdWpVaHRjTU5icU9DVEFJaDVyTHc?oc=5",
+   "source": "cwibc.co.id",
    "kind": "presse",
    "outlets": 1
   }

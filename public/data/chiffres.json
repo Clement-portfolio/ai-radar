@@ -1,38 +1,33 @@
 {
  "v": 1,
- "day": "2026-11-24",
- "generated_at": "2026-11-24T19:05:04.978Z",
+ "day": "2026-11-25",
+ "generated_at": "2026-11-25T01:21:41.160Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Amazon : acquisition de Decart",
-   "value": "7,5 Md$",
-   "sub": "Le rachat vise à renforcer les capacités en IA d'Amazon et à soutenir le déploiement de ses puces Trainium.",
+   "title": "Application par l'IA de la conception de protéines",
+   "value": "GPT-6",
+   "sub": "Les nouveaux modèles démontrent des capacités intrinsèques de conception de structures et de séquences de protéines, avec des preuves de liaison confirmées en laboratoire.",
    "ids": [
-    "c3a2aba6c39e",
-    "f955d48edeaa"
+    "3c6728c1bfd1"
    ],
    "links": [
     {
-     "t": "SiliconANGLE",
-     "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaXR5TS11S0V5ZmZCOERDYlI1OG9vWG9UX3ZQZHoyYndOX0VrdExNYmNVbjBFNzBqdGMwY0ZDM0RjdWhxVWJFU0o0eG04N2oyZzNMVGdTbVRVMV9SUFNld3FaSnlOcl9ZSGQ4OGhLNXdYdzJwNFI2Mkh6M3BfLVIwN0hzVkF3Q3diQmxzN3BNUkVxREZsZHBJRmRfalVMTXc5dE55LQ?oc=5"
-    },
-    {
-     "t": "TechCrunch IA",
-     "u": "https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/"
+     "t": "OpenAI",
+     "u": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities"
     }
    ],
-   "conf": "moyenne",
+   "conf": "haute",
    "scope": "day",
-   "ts": "2026-11-24T01:40:00.000Z",
-   "title_en": "Amazon: Decart acquisition",
-   "value_en": "$7.5B",
-   "sub_en": "The acquisition aims to strengthen Amazon's AI capabilities and support the deployment of its Trainium chips."
+   "ts": "2026-11-24T13:00:00.000Z",
+   "title_en": "AI application in protein design",
+   "value_en": "GPT-6",
+   "sub_en": "The new models demonstrate intrinsic capabilities in designing protein structures and sequences, with binding evidence confirmed in the laboratory."
   },
   {
-   "title": "CrowdStrike : acquisition de Zscaler",
+   "title": "CrowdStrike : rachat de Zscaler",
    "value": "44 Md$",
-   "sub": "Une opération motivée par la nécessité de renforcer les défenses face aux cyberattaques dopées à l'intelligence artificielle.",
+   "sub": "Cette acquisition est motivée par la nécessité de renforcer les défenses face aux cyberattaques dopées à l'intelligence artificielle.",
    "ids": [
     "0c56e1950266"
    ],
@@ -45,29 +40,29 @@
    "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-23T17:50:30.000Z",
-   "title_en": "CrowdStrike: Zscaler acquisition",
+   "title_en": "CrowdStrike: Acquisition of Zscaler",
    "value_en": "$44B",
-   "sub_en": "A transaction driven by the need to strengthen defenses against AI-boosted cyberattacks."
+   "sub_en": "This acquisition is driven by the need to strengthen defenses against AI-boosted cyberattacks."
   },
   {
-   "title": "Amazon : revenus du trimestre",
-   "value": "201,9 Md$",
-   "sub": "En hausse de 12 % par rapport au troisième trimestre 2025 (180,2 Md$). Le bénéfice net s'établit à 20,7 Md$, contre 21,2 Md$ un an auparavant.",
+   "title": "Nvidia : revenus du trimestre",
+   "value": "115,8 Md$",
+   "sub": "En hausse de 20 % par rapport au trimestre précédent (96,2 Md$) et de 103 % sur un an. Le bénéfice par action dilué GAAP s'établit à 2,70 dollars.",
    "ids": [
-    "823e0ec9d64d"
+    "55e7265b76e2"
    ],
    "links": [
     {
-     "t": "Amazon (communiqué de résultats, SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/amzn-20260930xex991.htm"
+     "t": "Nvidia (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
     }
    ],
    "conf": "haute",
    "scope": "month",
-   "ts": "2026-10-29T20:05:27.000Z",
-   "title_en": "Amazon: quarterly revenue",
-   "value_en": "$201.9B",
-   "sub_en": "Up 12% compared to the third quarter of 2025 ($180.2B). Net income stands at $20.7B, compared to $21.2B a year earlier."
+   "ts": "2026-11-17T21:20:51.000Z",
+   "title_en": "Nvidia: Quarterly revenue",
+   "value_en": "$115.8B",
+   "sub_en": "Up 20% from the previous quarter ($96.2B) and up 103% year-over-year. GAAP diluted earnings per share came in at $2.70."
   }
  ]
 }
