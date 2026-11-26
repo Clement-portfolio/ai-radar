@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T22:30:37.646Z",
+ "generated_at": "2026-11-26T23:31:09.329Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T22:40:37.646Z",
+ "translate_retry_at": "2026-11-26T23:41:09.329Z",
  "people": [
   {
    "id": "sam-altman",
@@ -157,6 +157,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T23:27:52.000Z",
+     "title": "Elon Musk announces two SpaceX shares for every American child",
+     "title_fr": "Elon Musk annonce deux actions SpaceX pour chaque enfant américain",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOd2dGZjF6amU3UkVZbU13UlVFSlIwX2ZRcUtkWmJtbHRRd2dQR29DdU44TXd0YVk1SXVnd19qWjBSMXh2X21abDhaUkE0YmZzM0xPMmRncTEwcThSSFdLaFcwcTRCYmYwN1kyRkZfWXktNTJaRFROblZCbnVBMlc2d3ZhbVI3cWJDSmlKWWNiZ1pZbElSUTVUMDlWSkdCSGJDNmdOX2xnNnFVQQ?oc=5",
+     "source": "Washington Examiner",
+     "kind": "presse",
+     "srcs": [
+      "washington examiner"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-26T21:31:30.000Z",
      "title": "Elon Musk Says He Will Be Donating Another Share Of SpaceX To All Kids In America Every Year",
      "title_fr": "Elon Musk déclare qu'il fera don d'une autre part de SpaceX à tous les enfants américains chaque année",
@@ -246,23 +259,6 @@
      ],
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-26T15:03:51.000Z",
-     "title": "Elon Musk says he will give two SpaceX shares to 'every child in America'",
-     "title_fr": "Elon Musk déclare qu'il donnera deux actions SpaceX à \"chaque enfant en Amérique\"",
-     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lM0N5b1NCeVNzSlU2T1hoQXh2QmdIZ2xSVEJyb3U0MTcyOTBYVzZBM0dNT1NvbUNsUUxWdlI2UTI1a3lBbVZ5YXBiU25EZ1k4RkhnSzZvWENFQlN5dmJ4TTc1c2Vsd2NlQ0VXejhwRU4xOFZL?oc=5",
-     "source": "Yahoo News Canada",
-     "kind": "presse",
-     "srcs": [
-      "yahoo news canada",
-      "the indian express",
-      "forbes",
-      "digg",
-      "the hindu"
-     ],
-     "m": 5,
-     "e": 1
     }
    ]
   },

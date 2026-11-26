@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-26T22:50:28.939Z",
+ "generated_at": "2026-11-26T23:31:08.637Z",
  "items": [
+  {
+   "id": "03c50a0968f3",
+   "ts": "2026-11-26T23:26:04.000Z",
+   "title": "JERA au Japon entame des discussions avec Anthropic et Meta pour construire des centres de données, selon le Nikkei",
+   "orig": "Japan’s JERA enters talks with Anthropic, Meta to build data centers, Nikkei reports",
+   "summary": "Japan’s JERA is in discussions with Anthropic, Meta, and other tech giants to build data centers in Tokyo. The negotiations also involve Amazon, Microsoft, and Google.",
+   "country": "GULF",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/world/japans-jera-enters-talks-with-anthropic-meta-to-build-data-centers-nikkei-reports-3014204",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "JERA au Japon entame des discussions avec Anthropic et Meta pour construire des centres de données, selon le Nikkei",
+   "title_en": "Japan’s JERA enters talks with Anthropic, Meta to build data centers, Nikkei reports",
+   "summary_en": "Japan’s JERA is in discussions with Anthropic, Meta, and other tech giants to build data centers in Tokyo. The negotiations also involve Amazon, Microsoft, and Google."
+  },
   {
    "id": "4a405679c04d",
    "ts": "2026-11-26T22:41:23.000Z",
-   "title": "Trump calls for 200% semiconductor tariff; Taiwan says cap is 15%",
+   "title": "Trump demande un droit de douane de 200 % sur les semi-conducteurs ; Taïwan affirme que la limite est de 15 %",
    "orig": "Trump calls for 200% semiconductor tariff; Taiwan says cap is 15%",
    "summary": "The Office of the US Trade Representative (USTR) on November 25 US Eastern Time released its Section 301 investigation report on \"structural overcapacity,\" recommending tariffs on 14 economies. Taiwan's Executive Yuan said on November 26 that Taiwanese semicon",
    "country": "OTHER",
@@ -14,12 +33,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD234/taiwan-investigation-overcapacity-2026-investment.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Trump demande un droit de douane de 200 % sur les semi-conducteurs ; Taïwan affirme que la limite est de 15 %",
+   "title_en": "Trump calls for 200% semiconductor tariff; Taiwan says cap is 15%",
+   "summary_en": "The Office of the US Trade Representative (USTR) on November 25 US Eastern Time released its Section 301 investigation report on \"structural overcapacity,\" recommending tariffs on 14 economies. Taiwan's Executive Yuan said on November 26 that Taiwanese semicon"
   },
   {
    "id": "049885e86e43",
    "ts": "2026-11-26T22:40:56.000Z",
-   "title": "Netherlands pushes back on US MATCH Act to protect ASML's China business",
+   "title": "Les Pays-Bas s'opposent à la loi américaine MATCH Act pour protéger les activités d'ASML en Chine",
    "orig": "Netherlands pushes back on US MATCH Act to protect ASML's China business",
    "summary": "The Netherlands is resisting US pressure to tighten semiconductor export controls on China, with Foreign Minister Tom Berendsen saying on November 25 that the government is working to block Congress from passing the Multilateral Alignment of Technology Control",
    "country": "CN",
@@ -29,12 +52,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD231/netherlands-asml-business-dutch-equipment.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les Pays-Bas s'opposent à la loi américaine MATCH Act pour protéger les activités d'ASML en Chine",
+   "title_en": "Netherlands pushes back on US MATCH Act to protect ASML's China business",
+   "summary_en": "The Netherlands is resisting US pressure to tighten semiconductor export controls on China, with Foreign Minister Tom Berendsen saying on November 25 that the government is working to block Congress from passing the Multilateral Alignment of Technology Control"
   },
   {
    "id": "8ad5696493b0",
    "ts": "2026-11-26T22:39:55.000Z",
-   "title": "Japan backs robot foundation models for manufacturing, construction, logistics",
+   "title": "Le Japon soutient les modèles de fondation pour la robotique dans la fabrication, la construction et la logistique",
    "orig": "Japan backs robot foundation models for manufacturing, construction, logistics",
    "summary": "Japan's Ministry of Economy, Trade and Industry (METI) and the New Energy and Industrial Technology Development Organization (NEDO) announced the latest results of the Generative AI Accelerator Challenge (GENIAC) in Tokyo in September 2026, selecting 13 compan",
    "country": "OTHER",
@@ -44,12 +71,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD228/japan-robot-foundation-models-nedo.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le Japon soutient les modèles de fondation pour la robotique dans la fabrication, la construction et la logistique",
+   "title_en": "Japan backs robot foundation models for manufacturing, construction, logistics",
+   "summary_en": "Japan's Ministry of Economy, Trade and Industry (METI) and the New Energy and Industrial Technology Development Organization (NEDO) announced the latest results of the Generative AI Accelerator Challenge (GENIAC) in Tokyo in September 2026, selecting 13 compan"
   },
   {
    "id": "d7b7ae638c81",
    "ts": "2026-11-26T22:38:34.000Z",
-   "title": "NTU team develops two generations of Transformer learning processor chips for edge AI",
+   "title": "Une équipe de la NTU développe deux générations de puces de processeur d'apprentissage Transformer pour l'IA en périphérie",
    "orig": "NTU team develops two generations of Transformer learning processor chips for edge AI",
    "summary": "A National Taiwan University (NTU) team has developed two generations of Transformer learning processor chips over four years, reaching a peak energy efficiency of 157 TOPS/W with its second-generation design, and has taped out a next-generation chip on TSMC's",
    "country": "OTHER",
@@ -59,12 +90,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD226/efficiency-npu-ntu-data-nstc.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Une équipe de la NTU développe deux générations de puces de processeur d'apprentissage Transformer pour l'IA en périphérie",
+   "title_en": "NTU team develops two generations of Transformer learning processor chips for edge AI",
+   "summary_en": "A National Taiwan University (NTU) team has developed two generations of Transformer learning processor chips over four years, reaching a peak energy efficiency of 157 TOPS/W with its second-generation design, and has taped out a next-generation chip on TSMC's"
   },
   {
    "id": "7abdbc99a04f",
    "ts": "2026-11-26T22:38:12.000Z",
-   "title": "China, Japan and Korea shift AI PCB race to Southeast Asia",
+   "title": "La Chine, le Japon et la Corée déplacent leur course aux circuits imprimés pour l'IA vers l'Asie du Sud-Est",
    "orig": "China, Japan and Korea shift AI PCB race to Southeast Asia",
    "summary": "Global customers are pushing to diversify their supply chains, and PCB makers in China, Japan and South Korea are reworking their overseas manufacturing plans in response, though each is investing in a different direction. That is the latest finding from the T",
    "country": "CN",
@@ -74,12 +109,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD225/pcb-substrate-materials-manufacturing-production.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La Chine, le Japon et la Corée déplacent leur course aux circuits imprimés pour l'IA vers l'Asie du Sud-Est",
+   "title_en": "China, Japan and Korea shift AI PCB race to Southeast Asia",
+   "summary_en": "Global customers are pushing to diversify their supply chains, and PCB makers in China, Japan and South Korea are reworking their overseas manufacturing plans in response, though each is investing in a different direction. That is the latest finding from the T"
   },
   {
    "id": "64642a19e377",
    "ts": "2026-11-26T22:37:45.000Z",
-   "title": "Analysis: SoftBank eyes quantum-AI data centers by 2029",
+   "title": "Analyse : SoftBank vise des centres de données quantiques et d'IA d'ici 2029",
    "orig": "Analysis: SoftBank eyes quantum-AI data centers by 2029",
    "summary": "SoftBank aims to commercialize data centers that combine quantum computing with artificial intelligence (AI) by 2029, working with Japanese national research institute RIKEN and US quantum computing company Quantinuum as Japan seeks commercial returns from its",
    "country": "OTHER",
@@ -89,12 +128,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL226/data-quantum-computing-commercial-toppan-2025.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Analyse : SoftBank vise des centres de données quantiques et d'IA d'ici 2029",
+   "title_en": "Analysis: SoftBank eyes quantum-AI data centers by 2029",
+   "summary_en": "SoftBank aims to commercialize data centers that combine quantum computing with artificial intelligence (AI) by 2029, working with Japanese national research institute RIKEN and US quantum computing company Quantinuum as Japan seeks commercial returns from its"
   },
   {
    "id": "afc0b81f849d",
    "ts": "2026-11-26T22:37:28.000Z",
-   "title": "Kaimei expects fourth-quarter revenue to slip from third-quarter peak as AI project delays weigh",
+   "title": "Kaimei s'attend à une baisse du chiffre d'affaires du quatrième trimestre par rapport au pic du troisième trimestre en raison des retards de projets d'IA",
    "orig": "Kaimei expects fourth-quarter revenue to slip from third-quarter peak as AI project delays weigh",
    "summary": "Kaimei Electronic, a subsidiary of Yageo, expects its fourth-quarter 2026 revenue to fall from a third-quarter peak as delayed AI projects and earlier customer stockpiling soften orders, though it remains cautiously optimistic about its medium- to long-term pr",
    "country": "OTHER",
@@ -104,12 +147,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD223/demand-revenue-2026-2027-market.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Kaimei s'attend à une baisse du chiffre d'affaires du quatrième trimestre par rapport au pic du troisième trimestre en raison des retards de projets d'IA",
+   "title_en": "Kaimei expects fourth-quarter revenue to slip from third-quarter peak as AI project delays weigh",
+   "summary_en": "Kaimei Electronic, a subsidiary of Yageo, expects its fourth-quarter 2026 revenue to fall from a third-quarter peak as delayed AI projects and earlier customer stockpiling soften orders, though it remains cautiously optimistic about its medium- to long-term pr"
   },
   {
    "id": "ec4ed1c00e31",
    "ts": "2026-11-26T22:37:04.000Z",
-   "title": "AI servers keep EVA Air's US-bound freighters full &mdash; 2027 hinges on post-election AI demand",
+   "title": "Les serveurs d'IA maintiennent les cargos d'EVA Air vers les États-Unis pleins — 2027 dépend de la demande d'IA post-électorale",
    "orig": "AI servers keep EVA Air's US-bound freighters full &mdash; 2027 hinges on post-election AI demand",
    "summary": "EVA Air expects strong passenger and cargo markets in 2027, with AI supply-chain demand driving exports of servers and electronic components. President Clay Sun said he expects AI-related shipments to stay high next year. He also cautioned that AI demand faces",
    "country": "OTHER",
@@ -119,7 +166,11 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD220/ai-server-shipments-demand-exports-revenue-2027.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les serveurs d'IA maintiennent les cargos d'EVA Air vers les États-Unis pleins — 2027 dépend de la demande d'IA post-électorale",
+   "title_en": "AI servers keep EVA Air's US-bound freighters full — 2027 hinges on post-election AI demand",
+   "summary_en": "EVA Air expects strong passenger and cargo markets in 2027, with AI supply-chain demand driving exports of servers and electronic components. President Clay Sun said he expects AI-related shipments to stay high next year. He also cautioned that AI demand faces"
   },
   {
    "id": "31d750272712",
@@ -134,12 +185,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD219/taiwan-president-manufacturing-supply-chain-management.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_en": "FarEasTone urges firms to tackle pain points before ROI, citing its own NT$1M AI start",
+   "summary_en": "Companies should stop agonizing over AI payback and start by solving business pain points, FarEasTone Telecommunications president Chee Ching said on November 25, describing how the telecom operator launched its AI transformation on a NT$1 million (US$30,378.1"
   },
   {
    "id": "6b4ded8a8084",
    "ts": "2026-11-26T22:33:19.000Z",
-   "title": "Hackers target Taiwan's semiconductor supply chain, fishing and food sectors",
+   "title": "Des pirates informatiques ciblent la chaîne d'approvisionnement des semi-conducteurs à Taïwan ainsi que les secteurs de la pêche et de l'alimentation",
    "orig": "Hackers target Taiwan's semiconductor supply chain, fishing and food sectors",
    "summary": "Nine hacker groups are running 18 active campaigns against Taiwan as AI speeds up attacks, Cyfirma says",
    "country": "OTHER",
@@ -149,12 +203,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD211/taiwan-automation-cybersecurity-government.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Des pirates informatiques ciblent la chaîne d'approvisionnement des semi-conducteurs à Taïwan ainsi que les secteurs de la pêche et de l'alimentation",
+   "title_en": "Hackers target Taiwan's semiconductor supply chain, fishing and food sectors",
+   "summary_en": "Nine hacker groups are running 18 active campaigns against Taiwan as AI speeds up attacks, Cyfirma says"
   },
   {
    "id": "d7fd118fd336",
    "ts": "2026-11-26T22:32:19.000Z",
-   "title": "Hiwin Mikrosystem's 3Q26 revenue jumps 77% as CPO test orders extend visibility to mid-2027",
+   "title": "Le chiffre d'affaires du troisième trimestre 2026 de Hiwin Mikrosystem bondit de 77 % grâce à des commandes de tests CPO prolongeant la visibilité jusqu'à la mi-2027",
    "orig": "Hiwin Mikrosystem's 3Q26 revenue jumps 77% as CPO test orders extend visibility to mid-2027",
    "summary": "Taiwan-based precision motion-control maker Hiwin Mikrosystem posted third-quarter 2026 revenue of NT$1.218 billion (approx. US$37 million), up 77% year-over-year, as it moves into co-packaged optics (CPO) testing, silicon photonics (SiPh), advanced packaging,",
    "country": "OTHER",
@@ -164,12 +222,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD202/hiwin-technologies-cpo-profit-revenue-2026-testing.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le chiffre d'affaires du troisième trimestre 2026 de Hiwin Mikrosystem bondit de 77 % grâce à des commandes de tests CPO prolongeant la visibilité jusqu'à la mi-2027",
+   "title_en": "Hiwin Mikrosystem's 3Q26 revenue jumps 77% as CPO test orders extend visibility to mid-2027",
+   "summary_en": "Taiwan-based precision motion-control maker Hiwin Mikrosystem posted third-quarter 2026 revenue of NT$1.218 billion (approx. US$37 million), up 77% year-over-year, as it moves into co-packaged optics (CPO) testing, silicon photonics (SiPh), advanced packaging,"
   },
   {
    "id": "4c7e2e805f06",
    "ts": "2026-11-26T22:00:38.400Z",
-   "title": "Japan's JERA aims to build Anthropic, Meta data centers near power plants",
+   "title": "JERA au Japon vise à construire des centres de données pour Anthropic et Meta près des centrales électriques",
    "orig": "Japan's JERA aims to build Anthropic, Meta data centers near power plants",
    "summary": "",
    "country": "OTHER",
@@ -179,12 +241,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-jera-aims-to-build-anthropic-meta-data-centers-near-power-plants",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "JERA au Japon vise à construire des centres de données pour Anthropic et Meta près des centrales électriques",
+   "title_en": "Japan's JERA aims to build Anthropic, Meta data centers near power plants"
   },
   {
    "id": "dbe831c2fcb6",
    "ts": "2026-11-26T21:27:22.000Z",
-   "title": "The long road to a post-AI world",
+   "title": "La longue route vers un monde post-IA",
    "orig": "The long road to a post-AI world",
    "summary": "In the 1980s, France’s Minitel system was a staple in many households, used for booking train tickets and searching phone directories. No one called it the “internet”; it was simply Minitel. A decade later, the World Wide Web emerged, and “internet” became a h",
    "country": "GULF",
@@ -194,12 +259,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/opinion/the-long-road-to-a-post-ai-world-3014007",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La longue route vers un monde post-IA",
+   "title_en": "The long road to a post-AI world",
+   "summary_en": "In the 1980s, France’s Minitel system was a staple in many households, used for booking train tickets and searching phone directories. No one called it the “internet”; it was simply Minitel. A decade later, the World Wide Web emerged, and “internet” became a h"
   },
   {
    "id": "7642abd418ad",
    "ts": "2026-11-26T21:24:08.000Z",
-   "title": "Parents navigate the challenges of raising children in the AI age",
+   "title": "Les parents font face aux défis de l'éducation des enfants à l'ère de l'IA",
    "orig": "Parents navigate the challenges of raising children in the AI age",
    "summary": "JEDDAH: As artificial intelligence becomes increasingly embedded in education and everyday life, parents face a new challenge: helping children benefit from the technology without becoming overly dependent on it. For some families, that means allowing children",
    "country": "GULF",
@@ -209,12 +278,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/eye-on-ai/parents-navigate-the-challenges-of-raising-children-in-the-ai-age-3008715",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les parents font face aux défis de l'éducation des enfants à l'ère de l'IA",
+   "title_en": "Parents navigate the challenges of raising children in the AI age",
+   "summary_en": "JEDDAH: As artificial intelligence becomes increasingly embedded in education and everyday life, parents face a new challenge: helping children benefit from the technology without becoming overly dependent on it. For some families, that means allowing children"
   },
   {
    "id": "cb8615f1abd1",
    "ts": "2026-11-26T21:13:44.000Z",
-   "title": "Saudi officials tour Interior Ministry pavilion at SAIF",
+   "title": "Des responsables saoudiens visitent le pavillon du ministère de l'Intérieur au salon SAIF",
    "orig": "Saudi officials tour Interior Ministry pavilion at SAIF",
    "summary": "RIYADH: Thamer Al-Harbi, assistant minister of interior for technology affairs, and Ahmed Al-Suwaiyan, governor of the Digital Government Authority, visited the Ministry of Interior’s pavilion at the Security and Innovation Fair, held as part of the Global Sec",
    "country": "GULF",
@@ -224,12 +297,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/saudi-arabia/saudi-officials-tour-interior-ministry-pavilion-at-saif-3014116",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Des responsables saoudiens visitent le pavillon du ministère de l'Intérieur au salon SAIF",
+   "title_en": "Saudi officials tour Interior Ministry pavilion at SAIF",
+   "summary_en": "RIYADH: Thamer Al-Harbi, assistant minister of interior for technology affairs, and Ahmed Al-Suwaiyan, governor of the Digital Government Authority, visited the Ministry of Interior’s pavilion at the Security and Innovation Fair, held as part of the Global Sec"
   },
   {
    "id": "c881f1e71110",
    "ts": "2026-11-26T20:03:54.000Z",
-   "title": "Nvidia hits pause on chip shipments to Southeast Asia",
+   "title": "Nvidia suspend ses expéditions de puces vers l'Asie du Sud-Est",
    "orig": "Nvidia hits pause on chip shipments to Southeast Asia",
    "summary": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China.",
    "country": "CN",
@@ -239,12 +316,16 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/26/nvidia-hits-pause-on-chip-shipments-to-southeast-asia/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Nvidia suspend ses expéditions de puces vers l'Asie du Sud-Est",
+   "title_en": "Nvidia hits pause on chip shipments to Southeast Asia",
+   "summary_en": "Nvidia has told manufacturing partners to pause server shipments to Malaysia, Singapore, Thailand and Indonesia as the U.S. tightens its push to keep AI chips out of China."
   },
   {
    "id": "8976cd5c91a0",
    "ts": "2026-11-26T17:20:35.806Z",
-   "title": "Nvidia, Kioxia team on AI server memory as alternative to South Korean chips",
+   "title": "Nvidia et Kioxia s'associent sur la mémoire des serveurs d'IA comme alternative aux puces sud-coréennes",
    "orig": "Nvidia, Kioxia team on AI server memory as alternative to South Korean chips",
    "summary": "",
    "country": "OTHER",
@@ -254,12 +335,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/tech/semiconductors/nvidia-kioxia-team-on-ai-server-memory-as-alternative-to-south-korean-chips",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Nvidia et Kioxia s'associent sur la mémoire des serveurs d'IA comme alternative aux puces sud-coréennes",
+   "title_en": "Nvidia, Kioxia team on AI server memory as alternative to South Korean chips"
   },
   {
    "id": "3c4561dec21e",
    "ts": "2026-11-26T17:07:51.000Z",
-   "title": "Nvidia backs startup developing chiller-free data center cooling system",
+   "title": "Nvidia soutient une startup développant un système de refroidissement de centre de données sans refroidisseur",
    "orig": "Nvidia backs startup developing chiller-free data center cooling system",
    "summary": "Y Combinator venture Madrone secures $500k seed funding",
    "country": "US",
@@ -269,12 +353,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/nvidia-backs-startup-developing-chiller-free-data-center-cooling-system/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Nvidia soutient une startup développant un système de refroidissement de centre de données sans refroidisseur",
+   "title_en": "Nvidia backs startup developing chiller-free data center cooling system",
+   "summary_en": "Y Combinator venture Madrone secures $500k seed funding"
   },
   {
    "id": "7ccf066bac78",
    "ts": "2026-11-26T17:03:28.000Z",
-   "title": "500MW data center project planned outside San Diego, California",
+   "title": "Projet de centre de données de 500 mégawatts prévu près de San Diego en Californie",
    "orig": "500MW data center project planned outside San Diego, California",
    "summary": "Spanish renewable firm Ignis behind project",
    "country": "US",
@@ -284,12 +372,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/500mw-data-center-project-planned-outside-san-diego-california/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Projet de centre de données de 500 mégawatts prévu près de San Diego en Californie",
+   "title_en": "500MW data center project planned outside San Diego, California",
+   "summary_en": "Spanish renewable firm Ignis behind project"
   },
   {
    "id": "69858100db21",
    "ts": "2026-11-26T16:20:41.000Z",
-   "title": "Modern data center cooling",
+   "title": "Refroidissement moderne des centres de données",
    "orig": "Modern data center cooling",
    "summary": "Everything you need to know about liquid cooling",
    "country": "US",
@@ -299,7 +391,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/whitepapers/modern-data-center-cooling/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Refroidissement moderne des centres de données",
+   "title_en": "Modern data center cooling",
+   "summary_en": "Everything you need to know about liquid cooling"
   },
   {
    "id": "6f99f08b0c5d",
