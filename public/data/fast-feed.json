@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-26T13:50:31.085Z",
+ "generated_at": "2026-11-26T14:01:15.262Z",
  "items": [
+  {
+   "id": "eebe25b79361",
+   "ts": "2026-11-26T14:00:00.000Z",
+   "title": "Combler le fossé entre la recherche et la fabrication dans l'industrie des semi-conducteurs au Canada",
+   "orig": "Bridging the Research-to-Manufacturing Gap in Canada’s Semiconductor Industry",
+   "summary": "Quantum computing, sovereign AI, ocean electronics, and advanced materials: six stories on how Canada is connecting its technology strengths—and confronting the challenge of scale. The post Bridging the Research-to-Manufacturing Gap in Canada’s Semiconductor I",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "EE Times",
+   "url": "https://www.eetimes.com/bridging-the-research-to-manufacturing-gap-in-canadas-semiconductor-industry/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Combler le fossé entre la recherche et la fabrication dans l'industrie des semi-conducteurs au Canada",
+   "title_en": "Bridging the Research-to-Manufacturing Gap in Canada’s Semiconductor Industry",
+   "summary_en": "Quantum computing, sovereign AI, ocean electronics, and advanced materials: six stories on how Canada is connecting its technology strengths—and confronting the challenge of scale. The post Bridging the Research-to-Manufacturing Gap in Canada’s Semiconductor I"
+  },
   {
    "id": "6a93beeb4e12",
    "ts": "2026-11-26T13:46:57.000Z",
-   "title": "Saudi Arabia calls for continued human oversight over AI advances at UN",
+   "title": "L'Arabie saoudite appelle à un maintien de la supervision humaine sur les avancées de l'IA à l'ONU",
    "orig": "Saudi Arabia calls for continued human oversight over AI advances at UN",
    "summary": "RIYADH: Saudi Arabia wants to ensure human oversight remains a fundamental principle in the use of artificial intelligence, and seeks greater transparency and precautionary measures for AI’s safe and responsible application. Fares Al-Otaibi, acting head of Sau",
    "country": "GULF",
@@ -14,12 +33,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/saudi-arabia/saudi-arabia-calls-for-continued-human-oversight-over-ai-advances-at-un-3014125",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'Arabie saoudite appelle à un maintien de la supervision humaine sur les avancées de l'IA à l'ONU",
+   "title_en": "Saudi Arabia calls for continued human oversight over AI advances at UN",
+   "summary_en": "RIYADH: Saudi Arabia wants to ensure human oversight remains a fundamental principle in the use of artificial intelligence, and seeks greater transparency and precautionary measures for AI’s safe and responsible application. Fares Al-Otaibi, acting head of Sau"
   },
   {
    "id": "ac53afd51c0a",
    "ts": "2026-11-26T12:51:43.000Z",
-   "title": "Etix launches 23MW data center in Bangkok, Thailand",
+   "title": "Etix lance un centre de données de 23 mégawatts à Bangkok, en Thaïlande",
    "orig": "Etix launches 23MW data center in Bangkok, Thailand",
    "summary": "Company's second facility in the Thai capital",
    "country": "US",
@@ -29,7 +52,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/etix-launches-23mw-data-center-in-bangkok-thailand/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Etix lance un centre de données de 23 mégawatts à Bangkok, en Thaïlande",
+   "title_en": "Etix launches 23MW data center in Bangkok, Thailand",
+   "summary_en": "Company's second facility in the Thai capital"
   },
   {
    "id": "d35df4bdd093",
@@ -100,7 +127,8 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "8,208 GPUs deployed by Sharon AI for ESDS Software Solution in Australia",
-   "summary_en": "Contract was signed earlier this year"
+   "summary_en": "Contract was signed earlier this year",
+   "tr_try": 1
   },
   {
    "id": "9d31399c3773",
@@ -207,7 +235,8 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
-   "summary_en": "Will be dedicated to complex tensor operations, physical AI, large model training, and dense scientific simulation"
+   "summary_en": "Will be dedicated to \"complex tensor operations, physical AI, large model training, and dense scientific simulation\"",
+   "tr_try": 1
   },
   {
    "id": "6985f271a9e5",
@@ -338,7 +367,7 @@
   {
    "id": "2898f32d09fa",
    "ts": "2026-11-26T08:42:26.000Z",
-   "title": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
+   "title": "Les actions mondiales rebondissent alors que les investisseurs font abstraction des tarifs douaniers américains et des craintes liées à l'IA",
    "orig": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
    "summary": "Investors appeared to have shrugged off a fresh set of tariffs unveiled by the White House on Wednesday, targeting more than a dozen major trading partners.",
    "country": "US",
@@ -349,9 +378,10 @@
    "url": "https://www.cnbc.com/2026/11/26/stock-markets-today-.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
+   "title_fr": "Les actions mondiales rebondissent alors que les investisseurs font abstraction des tarifs douaniers américains et des craintes liées à l'IA",
    "title_en": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
-   "summary_en": "Investors appeared to have shrugged off a fresh set of tariffs unveiled by the White House on Wednesday, targeting more than a dozen major trading partners."
+   "summary_en": "Investors appeared to have shrugged off a fresh set of tariffs unveiled by the White House on Wednesday, targeting more than a dozen major trading partners.",
+   "tr_try": 1
   },
   {
    "id": "4f0d4826ded0",
@@ -410,7 +440,7 @@
   {
    "id": "db6892e02d02",
    "ts": "2026-11-26T07:33:30.000Z",
-   "title": "Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites",
+   "title": "Nvidia suspendrait les livraisons de serveurs vers quatre pays d'Asie du Sud-Est alors que la nouvelle règle américaine sur les puces frappe",
    "orig": "Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites",
    "summary": "Nvidia has told its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia, the Financial Times ( FT ) reported on November 26, as a new US rule against Chinese companies' rented access to AI computing hits the region's",
    "country": "CN",
@@ -421,9 +451,10 @@
    "url": "https://www.digitimes.com/news/a20261126VL220/nvidia-chips-manufacturing-shipping-data.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites",
+   "title_fr": "Nvidia suspendrait les livraisons de serveurs vers quatre pays d'Asie du Sud-Est alors que la nouvelle règle américaine sur les puces frappe",
    "title_en": "Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites",
-   "summary_en": "Nvidia has told its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia, the Financial Times ( FT ) reported on November 26, as a new US rule against Chinese companies' rented access to AI computing hits the region's"
+   "summary_en": "Nvidia has told its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia, the Financial Times ( FT ) reported on November 26, as a new US rule against Chinese companies' rented access to AI computing hits the region's",
+   "tr_try": 1
   },
   {
    "id": "9971f204aba0",
@@ -464,7 +495,7 @@
   {
    "id": "a4563c394c9a",
    "ts": "2026-11-26T06:24:36.000Z",
-   "title": "China scales, Japan supplies, Korea builds &mdash; three AI playbooks behind a 60%-plus grip on the global PCB market",
+   "title": "La Chine met à l'échelle, le Japon fournit, la Corée fabrique : trois stratégies d'IA derrière une emprise de plus de 60 % sur le marché mondial des PCB",
    "orig": "China scales, Japan supplies, Korea builds &mdash; three AI playbooks behind a 60%-plus grip on the global PCB market",
    "summary": "Growing global investment in AI infrastructure is lifting demand for high-end printed circuit boards (PCBs), IC substrates and high-speed interconnects, and Asia's leading PCB makers are speeding up changes to their product lines and capacity. The Taiwan Print",
    "country": "CN",
@@ -475,14 +506,15 @@
    "url": "https://www.digitimes.com/news/a20261125PD229/pcb-investment-demand-high-end-infrastructure.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "China scales, Japan supplies, Korea builds &mdash; three AI playbooks behind a 60%-plus grip on the global PCB market",
+   "title_fr": "La Chine met à l'échelle, le Japon fournit, la Corée fabrique : trois stratégies d'IA derrière une emprise de plus de 60 % sur le marché mondial des PCB",
    "title_en": "China scales, Japan supplies, Korea builds &mdash; three AI playbooks behind a 60%-plus grip on the global PCB market",
-   "summary_en": "Growing global investment in AI infrastructure is lifting demand for high-end printed circuit boards (PCBs), IC substrates and high-speed interconnects, and Asia's leading PCB makers are speeding up changes to their product lines and capacity. The Taiwan Print"
+   "summary_en": "Growing global investment in AI infrastructure is lifting demand for high-end printed circuit boards (PCBs), IC substrates and high-speed interconnects, and Asia's leading PCB makers are speeding up changes to their product lines and capacity. The Taiwan Print",
+   "tr_try": 1
   },
   {
    "id": "00b247ef1e19",
    "ts": "2026-11-26T06:16:22.000Z",
-   "title": "Huang is back in Nvidia, but Washington's chip squeeze on China is only tightening",
+   "title": "Huang est de retour chez Nvidia, mais le resserrement des restrictions de Washington sur les puces en Chine ne fait que se durcir",
    "orig": "Huang is back in Nvidia, but Washington's chip squeeze on China is only tightening",
    "summary": "After just 11 days away from the job, Jensen Huang is back at the helm of Nvidia, the maker of the world's most advanced AI chips. However, his return has so far not changed the momentum of an unfolding US political crackdown on Chinese access to advanced chip",
    "country": "CN",
@@ -493,14 +525,15 @@
    "url": "https://www.digitimes.com/news/a20261126VL219/nvidia-jensen-huang-chips-data.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Huang is back in Nvidia, but Washington's chip squeeze on China is only tightening",
+   "title_fr": "Huang est de retour chez Nvidia, mais le resserrement des restrictions de Washington sur les puces en Chine ne fait que se durcir",
    "title_en": "Huang is back in Nvidia, but Washington's chip squeeze on China is only tightening",
-   "summary_en": "After just 11 days away from the job, Jensen Huang is back at the helm of Nvidia, the maker of the world's most advanced AI chips. However, his return has so far not changed the momentum of an unfolding US political crackdown on Chinese access to advanced chip"
+   "summary_en": "After just 11 days away from the job, Jensen Huang is back at the helm of Nvidia, the maker of the world's most advanced AI chips. However, his return has so far not changed the momentum of an unfolding US political crackdown on Chinese access to advanced chip",
+   "tr_try": 1
   },
   {
    "id": "660b5d44ffeb",
    "ts": "2026-11-26T06:05:35.000Z",
-   "title": "In-depth: Shanghai party chief probe tests playbook that landed SMIC and Tesla",
+   "title": "En profondeur : l'enquête sur le chef du parti de Shanghai teste la stratégie qui a permis d'attirer SMIC et Tesla",
    "orig": "In-depth: Shanghai party chief probe tests playbook that landed SMIC and Tesla",
    "summary": "Shanghai Party Secretary Chen Jining is reportedly under investigation. The news has sent a shock through one of China's key technology hubs and its political and business circles. Shanghai's industry has gone through several major shifts over nearly 30 years:",
    "country": "CN",
@@ -511,14 +544,15 @@
    "url": "https://www.digitimes.com/news/a20261126PD207/shanghai-tesla-smic-investment-investigation.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "In-depth: Shanghai party chief probe tests playbook that landed SMIC and Tesla",
+   "title_fr": "En profondeur : l'enquête sur le chef du parti de Shanghai teste la stratégie qui a permis d'attirer SMIC et Tesla",
    "title_en": "In-depth: Shanghai party chief probe tests playbook that landed SMIC and Tesla",
-   "summary_en": "Shanghai Party Secretary Chen Jining is reportedly under investigation. The news has sent a shock through one of China's key technology hubs and its political and business circles. Shanghai's industry has gone through several major shifts over nearly 30 years:"
+   "summary_en": "Shanghai Party Secretary Chen Jining is reportedly under investigation. The news has sent a shock through one of China's key technology hubs and its political and business circles. Shanghai's industry has gone through several major shifts over nearly 30 years:",
+   "tr_try": 1
   },
   {
    "id": "d3aa48daa62d",
    "ts": "2026-11-26T05:05:36.000Z",
-   "title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+   "title": "S'appuyer sur Nemotron 3.5 Parse : données ouvertes, réglage fin et inférence plus rapide",
    "orig": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
    "summary": "",
    "country": "US",
@@ -529,13 +563,14 @@
    "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
    "confidence": "haute",
    "pending": true,
-   "title_fr": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
-   "title_en": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference"
+   "title_fr": "S'appuyer sur Nemotron 3.5 Parse : données ouvertes, réglage fin et inférence plus rapide",
+   "title_en": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+   "tr_try": 1
   },
   {
    "id": "6f77cdf398ab",
    "ts": "2026-11-26T04:51:49.000Z",
-   "title": "Tata Electronics reportedly opens talks with contractors for phase 2 of Assam chip packaging plant",
+   "title": "Tata Electronics ouvrirait des discussions avec des sous-traitants pour la phase 2 de son usine d'emballage de puces dans l'Assam",
    "orig": "Tata Electronics reportedly opens talks with contractors for phase 2 of Assam chip packaging plant",
    "summary": "Tata Electronics is lining up the second phase of its semiconductor assembly and test plant in Assam before the facility has been formally inaugurated, extending a project described as India's first indigenous semiconductor assembly and test facility.",
    "country": "OTHER",
@@ -546,14 +581,15 @@
    "url": "https://www.digitimes.com/news/a20261126VL205/tata-group-india-fab-chips-packaging-plant-cleanroom.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Tata Electronics reportedly opens talks with contractors for phase 2 of Assam chip packaging plant",
+   "title_fr": "Tata Electronics ouvrirait des discussions avec des sous-traitants pour la phase 2 de son usine d'emballage de puces dans l'Assam",
    "title_en": "Tata Electronics reportedly opens talks with contractors for phase 2 of Assam chip packaging plant",
-   "summary_en": "Tata Electronics is lining up the second phase of its semiconductor assembly and test plant in Assam before the facility has been formally inaugurated, extending a project described as India's first indigenous semiconductor assembly and test facility."
+   "summary_en": "Tata Electronics is lining up the second phase of its semiconductor assembly and test plant in Assam before the facility has been formally inaugurated, extending a project described as India's first indigenous semiconductor assembly and test facility.",
+   "tr_try": 1
   },
   {
    "id": "edb5cfb927e1",
    "ts": "2026-11-26T04:30:14.000Z",
-   "title": "Huawei offers free chip patent licenses to take on Nvidia",
+   "title": "Huawei propose des licences de brevets de puces gratuites pour concurrencer Nvidia",
    "orig": "Huawei offers free chip patent licenses to take on Nvidia",
    "summary": "Huawei Technologies is offering free patent licenses for its UnifiedBus chip interconnect technology and has set up dedicated semiconductor and artificial intelligence (AI) patent teams as it seeks to attract overseas hardware suppliers and build a computing e",
    "country": "CN",
@@ -564,14 +600,15 @@
    "url": "https://www.digitimes.com/news/a20261126VL211/huawei-ascend-patent-ip-nvidia.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Huawei offers free chip patent licenses to take on Nvidia",
+   "title_fr": "Huawei propose des licences de brevets de puces gratuites pour concurrencer Nvidia",
    "title_en": "Huawei offers free chip patent licenses to take on Nvidia",
-   "summary_en": "Huawei Technologies is offering free patent licenses for its UnifiedBus chip interconnect technology and has set up dedicated semiconductor and artificial intelligence (AI) patent teams as it seeks to attract overseas hardware suppliers and build a computing e"
+   "summary_en": "Huawei Technologies is offering free patent licenses for its UnifiedBus chip interconnect technology and has set up dedicated semiconductor and artificial intelligence (AI) patent teams as it seeks to attract overseas hardware suppliers and build a computing e",
+   "tr_try": 1
   },
   {
    "id": "59efa58e8ae0",
    "ts": "2026-11-26T04:29:11.000Z",
-   "title": "US warns of memory glut as Samsung, SK Hynix expand",
+   "title": "Les États-Unis mettent en garde contre une surabondance de puces mémoire alors que Samsung et SK Hynix étendent leur production",
    "orig": "US warns of memory glut as Samsung, SK Hynix expand",
    "summary": "The US has warned that South Korea's government-backed memory chip expansion could lead to a glut even as AI demand strains global supplies. The findings name Samsung Electronics and SK Hynix, although memory chips are excluded from the proposed tariffs.",
    "country": "OTHER",
@@ -582,9 +619,10 @@
    "url": "https://www.digitimes.com/news/a20261126VL217/samsung-sk-hynix-demand-investment-expansion.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "US warns of memory glut as Samsung, SK Hynix expand",
+   "title_fr": "Les États-Unis mettent en garde contre une surabondance de puces mémoire alors que Samsung et SK Hynix étendent leur production",
    "title_en": "US warns of memory glut as Samsung, SK Hynix expand",
-   "summary_en": "The US has warned that South Korea's government-backed memory chip expansion could lead to a glut even as AI demand strains global supplies. The findings name Samsung Electronics and SK Hynix, although memory chips are excluded from the proposed tariffs."
+   "summary_en": "The US has warned that South Korea's government-backed memory chip expansion could lead to a glut even as AI demand strains global supplies. The findings name Samsung Electronics and SK Hynix, although memory chips are excluded from the proposed tariffs.",
+   "tr_try": 1
   },
   {
    "id": "ddb1abc9de33",
@@ -625,7 +663,7 @@
   {
    "id": "3c730600985a",
    "ts": "2026-11-26T03:25:25.000Z",
-   "title": "How new US export controls and fragile trade truces triggered sell-off in China's domestic GPU sector",
+   "title": "Comment les nouveaux contrôles à l'exportation des États-Unis et les trêves commerciales fragiles ont déclenché une vente massive dans le secteur des GPU domestiques en Chine",
    "orig": "How new US export controls and fragile trade truces triggered sell-off in China's domestic GPU sector",
    "summary": "On November 25, 2026, China's leading domestic GPU developers, including MetaX, Moore Threads, Biren Technology, and Iluvatar CoreX, suffered a sharp, synchronized sell-off. By market close, three of the four stocks hit all-time lows.",
    "country": "CN",
@@ -636,9 +674,10 @@
    "url": "https://www.digitimes.com/news/a20261126VL212/us-china-trade-war-gpu-supply-chain-demand-2026.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "How new US export controls and fragile trade truces triggered sell-off in China's domestic GPU sector",
+   "title_fr": "Comment les nouveaux contrôles à l'exportation des États-Unis et les trêves commerciales fragiles ont déclenché une vente massive dans le secteur des GPU domestiques en Chine",
    "title_en": "How new US export controls and fragile trade truces triggered sell-off in China's domestic GPU sector",
-   "summary_en": "On November 25, 2026, China's leading domestic GPU developers, including MetaX, Moore Threads, Biren Technology, and Iluvatar CoreX, suffered a sharp, synchronized sell-off. By market close, three of the four stocks hit all-time lows."
+   "summary_en": "On November 25, 2026, China's leading domestic GPU developers, including MetaX, Moore Threads, Biren Technology, and Iluvatar CoreX, suffered a sharp, synchronized sell-off. By market close, three of the four stocks hit all-time lows.",
+   "tr_try": 1
   },
   {
    "id": "154574b91190",
@@ -679,7 +718,7 @@
   {
    "id": "04707d0983fb",
    "ts": "2026-11-26T02:15:51.000Z",
-   "title": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
+   "title": "« Votre stand vous attend » : Denny's accueille de nouveau Jensen Huang en tant que PDG de Nvidia",
    "orig": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
    "summary": "Denny's reaffirmed its longstanding ties with Jensen Huang following his return as Nvidia CEO, revealing that a plaque had been restored.",
    "country": "US",
@@ -690,14 +729,15 @@
    "url": "https://www.cnbc.com/2026/11/26/dennys-jensen-huang-nvidia.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
+   "title_fr": "« Votre stand vous attend » : Denny's accueille de nouveau Jensen Huang en tant que PDG de Nvidia",
    "title_en": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
-   "summary_en": "Denny's reaffirmed its longstanding ties with Jensen Huang following his return as Nvidia CEO, revealing that a plaque had been restored."
+   "summary_en": "Denny's reaffirmed its longstanding ties with Jensen Huang following his return as Nvidia CEO, revealing that a plaque had been restored.",
+   "tr_try": 1
   },
   {
    "id": "543fd760b505",
    "ts": "2026-11-26T02:08:45.000Z",
-   "title": "Resonac targets 2027 production of photosensitive film for panel packaging",
+   "title": "Resonac vise une production en 2027 de film photosensible pour l'emballage sur panneau",
    "orig": "Resonac targets 2027 production of photosensitive film for panel packaging",
    "summary": "Resonac has developed a photosensitive insulating film for panel-level semiconductor packaging, targeting mass production in 2027 as chipmakers look to larger package formats for high-performance devices.",
    "country": "OTHER",
@@ -708,9 +748,10 @@
    "url": "https://www.digitimes.com/news/a20261126PR202/resonac-packaging-production-2027-demand.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Resonac targets 2027 production of photosensitive film for panel packaging",
+   "title_fr": "Resonac vise une production en 2027 de film photosensible pour l'emballage sur panneau",
    "title_en": "Resonac targets 2027 production of photosensitive film for panel packaging",
-   "summary_en": "Resonac has developed a photosensitive insulating film for panel-level semiconductor packaging, targeting mass production in 2027 as chipmakers look to larger package formats for high-performance devices."
+   "summary_en": "Resonac has developed a photosensitive insulating film for panel-level semiconductor packaging, targeting mass production in 2027 as chipmakers look to larger package formats for high-performance devices.",
+   "tr_try": 1
   },
   {
    "id": "ce9f059a9144",
@@ -769,7 +810,7 @@
   {
    "id": "24882fc09980",
    "ts": "2026-11-26T01:55:29.000Z",
-   "title": "AI-driven automation is reshaping factory design, driving demand for larger sites, says Gudeng chairman",
+   "title": "L'automatisation pilotée par l'IA redessine la conception des usines et stimule la demande pour des sites plus grands, selon le président de Gudeng",
    "orig": "AI-driven automation is reshaping factory design, driving demand for larger sites, says Gudeng chairman",
    "summary": "AI is driving investment across the global semiconductor and technology industries, fueling demand for new manufacturing facilities in Taiwan.",
    "country": "OTHER",
@@ -780,9 +821,10 @@
    "url": "https://www.digitimes.com/news/a20261125PD227/demand-automation-manufacturing-chairman-investment.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "AI-driven automation is reshaping factory design, driving demand for larger sites, says Gudeng chairman",
+   "title_fr": "L'automatisation pilotée par l'IA redessine la conception des usines et stimule la demande pour des sites plus grands, selon le président de Gudeng",
    "title_en": "AI-driven automation is reshaping factory design, driving demand for larger sites, says Gudeng chairman",
-   "summary_en": "AI is driving investment across the global semiconductor and technology industries, fueling demand for new manufacturing facilities in Taiwan."
+   "summary_en": "AI is driving investment across the global semiconductor and technology industries, fueling demand for new manufacturing facilities in Taiwan.",
+   "tr_try": 1
   },
   {
    "id": "13bd500f5379",
@@ -799,7 +841,8 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "EnliTech's semiconductor inspection share nears 50% as NT$1 billion plant targets SiPh mass production",
-   "summary_en": "Surging demand for high-speed optical transmission in AI data centers is propelling silicon photonics (SiPh) from R&D into volume production, marking a pivotal operational shift for optical inspection equipment maker EnliTech. On November 25, the company broke"
+   "summary_en": "Surging demand for high-speed optical transmission in AI data centers is propelling silicon photonics (SiPh) from R&D into volume production, marking a pivotal operational shift for optical inspection equipment maker EnliTech. On November 25, the company broke",
+   "tr_try": 1
   },
   {
    "id": "bee872523568",
@@ -840,7 +883,7 @@
   {
    "id": "b5898858c034",
    "ts": "2026-11-26T01:26:28.000Z",
-   "title": "Seoul Semiconductor begins mass production of WICOP Pixel RGB backlights for LCD TVs",
+   "title": "Seoul Semiconductor lance la production de masse des rétroéclairages WICOP Pixel RGB pour téléviseurs LCD",
    "orig": "Seoul Semiconductor begins mass production of WICOP Pixel RGB backlights for LCD TVs",
    "summary": "Seoul Semiconductor said it has entered full-scale mass production of WICOP Pixel, an RGB backlight technology developed by its subsidiary Seoul Viosys, and has begun expanding supply to global TV manufacturers, pitching the technology as a way for standard LC",
    "country": "OTHER",
@@ -851,14 +894,15 @@
    "url": "https://www.digitimes.com/news/a20261126PR201/seoul-semiconductor-production-lcd-technology-tv.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Seoul Semiconductor begins mass production of WICOP Pixel RGB backlights for LCD TVs",
+   "title_fr": "Seoul Semiconductor lance la production de masse des rétroéclairages WICOP Pixel RGB pour téléviseurs LCD",
    "title_en": "Seoul Semiconductor begins mass production of WICOP Pixel RGB backlights for LCD TVs",
-   "summary_en": "Seoul Semiconductor said it has entered full-scale mass production of WICOP Pixel, an RGB backlight technology developed by its subsidiary Seoul Viosys, and has begun expanding supply to global TV manufacturers, pitching the technology as a way for standard LC"
+   "summary_en": "Seoul Semiconductor said it has entered full-scale mass production of WICOP Pixel, an RGB backlight technology developed by its subsidiary Seoul Viosys, and has begun expanding supply to global TV manufacturers, pitching the technology as a way for standard LC",
+   "tr_try": 1
   },
   {
    "id": "b5a2313703e3",
    "ts": "2026-11-26T01:14:43.000Z",
-   "title": "Samsung Display to become ams OSRAM's largest shareholder in microLED push",
+   "title": "Samsung Display va devenir le plus grand actionnaire d'ams OSRAM dans le cadre de son offensive dans les microLED",
    "orig": "Samsung Display to become ams OSRAM's largest shareholder in microLED push",
    "summary": "Samsung Display has signed an agreement to acquire a 9.1% equity interest in Ams Osram for approximately EUR210 million (US$230.14 million), a deal that is expected to make it the largest shareholder in the light-emission and optical-sensing semiconductor comp",
    "country": "OTHER",
@@ -869,9 +913,10 @@
    "url": "https://www.digitimes.com/news/a20261126PR200/sdc-microled-technology-investment-partnership.html",
    "confidence": "moyenne",
    "pending": true,
-   "title_fr": "Samsung Display to become ams OSRAM's largest shareholder in microLED push",
+   "title_fr": "Samsung Display va devenir le plus grand actionnaire d'ams OSRAM dans le cadre de son offensive dans les microLED",
    "title_en": "Samsung Display to become ams OSRAM's largest shareholder in microLED push",
-   "summary_en": "Samsung Display has signed an agreement to acquire a 9.1% equity interest in Ams Osram for approximately EUR210 million (230.14 millions de dollars), a deal that is expected to make it the largest shareholder in the light-emission and optical-sensing semiconductor comp"
+   "summary_en": "Samsung Display has signed an agreement to acquire a 9.1% equity interest in Ams Osram for approximately EUR210 million (US$230.14 million), a deal that is expected to make it the largest shareholder in the light-emission and optical-sensing semiconductor comp",
+   "tr_try": 1
   },
   {
    "id": "506b74d1aabd",
@@ -2466,7 +2511,8 @@
    "pending": true,
    "title_en": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
    "summary_en": "Huawei kept the Mate X8's starting price at CNY12,999 (approx. US$1,950), matching last year's Mate X7, even as it added a thinner body, a flatter display and its Kirin 9050 Pro chip. At its November 24 launch in Shanghai, the company also introduced the MateB",
-   "title_fr": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950"
+   "title_fr": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
+   "tr_try": 1
   },
   {
    "id": "e5cd248eff02",
@@ -3615,7 +3661,8 @@
    "pending": true,
    "title_en": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
    "summary_en": "RIYADH: From artificial intelligence-powered environmental monitoring tools to smart systems designed to protect critical infrastructure, thousands of innovators gathered in Riyadh on Monday as the SAIF International Security and Innovation Exhibition and Comp",
-   "title_fr": "SAIF opens in Riyadh with 1,200 solutions from 55 countries"
+   "title_fr": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
+   "tr_try": 1
   },
   {
    "id": "fe4f313b570c",
@@ -3793,7 +3840,8 @@
    "pending": true,
    "title_en": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
    "summary_en": "Cluster deployed for unnamed inference infrastructure provider",
-   "title_fr": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center"
+   "title_fr": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
+   "tr_try": 1
   },
   {
    "id": "dc9673abe3a2",
