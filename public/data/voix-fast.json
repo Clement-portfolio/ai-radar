@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T17:30:46.409Z",
+ "generated_at": "2026-11-26T17:50:29.275Z",
  "query_count": 1,
  "translate_retry_at": "2026-11-26T18:00:46.409Z",
  "people": [
@@ -52,6 +52,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T14:47:53.000Z",
+     "title": "Amodei rejects AI rule after Axios report on Anthropic staff",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE81c3ZjV1dUcldCMUNBZzhyU1dpY1QtSHU5bVJhVHJORGhfUXJCZGZqQmJNTC1BalRNY1hjbHliWmhKbEsyTEJzTmR2NXkwVVB4T1RjckphQnpEbEFXOTZrYThNUno3MmhFUlhKTnpvajVzN3RoS0RRZnVR?oc=5",
+     "source": "The Rundown AI",
+     "kind": "presse",
+     "srcs": [
+      "the rundown ai"
+     ],
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-26T11:32:09.000Z",
      "title": "Anthropic CEO Dario Amodei Says Some AI Deployments May Need to Slow So Workers Can Adapt",
