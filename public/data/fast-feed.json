@@ -1,10 +1,28 @@
 {
- "generated_at": "2026-11-26T16:10:32.882Z",
+ "generated_at": "2026-11-26T16:22:43.276Z",
  "items": [
+  {
+   "id": "6f99f08b0c5d",
+   "ts": "2026-11-26T16:20:30.995Z",
+   "title": "Les entreprises d'IA ayant de faibles garanties risquent des inspections selon un projet de loi japonais",
+   "orig": "AI firms with poor safeguards face inspections under Japan draft law",
+   "summary": "",
+   "country": "OTHER",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/ai-firms-with-poor-safeguards-face-inspections-under-japan-draft-law",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les entreprises d'IA ayant de faibles garanties risquent des inspections selon un projet de loi japonais",
+   "title_en": "AI firms with poor safeguards face inspections under Japan draft law"
+  },
   {
    "id": "ec74e9ba2187",
    "ts": "2026-11-26T16:00:00.000Z",
-   "title": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn’t a virtue",
+   "title": "Alors qu'Anthropic entre en bourse, Grand Theft Auto VI prouve pourquoi l'efficacité n'est pas une vertu",
    "orig": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn’t a virtue",
    "summary": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time.",
    "country": "US",
@@ -14,12 +32,16 @@
    "source": "TechCrunch IA",
    "url": "https://techcrunch.com/2026/11/26/as-anthropic-ipos-grand-theft-auto-vi-proves-why-efficiency-isnt-a-virtue/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Alors qu'Anthropic entre en bourse, Grand Theft Auto VI prouve pourquoi l'efficacité n'est pas une vertu",
+   "title_en": "As Anthropic IPOs, Grand Theft Auto VI proves why efficiency isn’t a virtue",
+   "summary_en": "On the same day that Anthropic entered the public market, a painstakingly human video game became one of most successful entertainment launches of all time."
   },
   {
    "id": "6ea7b9fd8c36",
    "ts": "2026-11-26T16:00:00.000Z",
-   "title": "Sponsored: From pipeline to power: what will determine which data centre projects get built?",
+   "title": "Sponsorisé : Du projet à l'alimentation électrique : qu'est-ce qui déterminera quels projets de centres de données seront construits ?",
    "orig": "Sponsored: From pipeline to power: what will determine which data centre projects get built?",
    "summary": "The data centre pipeline is booming, but proposed capacity does not automatically translate into electricity demand. Understanding which projects are credible, and which can realistically secure power, is becoming essential",
    "country": "US",
@@ -29,7 +51,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/opinions/from-pipeline-to-power-what-will-determine-which-data-centre-projects-get-built/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Sponsorisé : Du projet à l'alimentation électrique : qu'est-ce qui déterminera quels projets de centres de données seront construits ?",
+   "title_en": "Sponsored: From pipeline to power: what will determine which data centre projects get built?",
+   "summary_en": "The data centre pipeline is booming, but proposed capacity does not automatically translate into electricity demand. Understanding which projects are credible, and which can realistically secure power, is becoming essential"
   },
   {
    "id": "e1bc44b77bc9",
