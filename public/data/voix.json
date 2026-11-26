@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T07:26:42.142Z",
+ "generated_at": "2026-11-26T10:17:47.359Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1258,6 +1258,12 @@
    "actor": "nvidia",
    "alerts": [
     {
+     "ts": "2026-11-23T15:39:05.000Z",
+     "title": "If Colette Kress leaves Nvidia, there'll be no one left to challenge Jensen Huang",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMG5ZUHlQS3NLWEgteElhOEotNFpIREFENVE1V3VSOUFDYVZXY0Q2S0RLbnRwZzVRaEQtMEVkenhMVThtVmJDYmFrd3FfTU5iLTJmdFNyUURoUGtoVk9reEVXekQzbzNSQ2FWUi0zOXNhYkI4a3ZhUk9HTjVnODRWMjBQRHZqc1loblRzQmtmSzYtN3pOR0tVaWdwSW1NeHNPSjJFa2stWWIxQTFiUldIb0oxLWtjY05IUFdGdWhqamZEYzFY?oc=5",
+     "source": "Yahoo Finance"
+    },
+    {
      "ts": "2026-11-19T05:11:00.000Z",
      "title": "What Nvidia’s Interim CEO, Colette Kress, Said to Employees After Jensen Huang’s Resignation",
      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNa2dJSnFrVWt3REVkbE5CbllIMi1jZnFlRmtPbmZJM09SbmpoOEhVWElRVElyY00xc29ZLXA5T2wtRWFHQ0YzMG1jdjRPZWM4d2RaR05ja3Y3TGx5LURKVTk4allMbzduWC1uNVJSZmM4SlB6SjBiSVdWLXI5OW83V1RZcjF1SmctMzhaMXlHOXNSOXQycWc?oc=5",
@@ -1653,6 +1659,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-26T01:31:01.000Z",
+     "title": "AI Compute Is Getting Expensive. Yann LeCun Says We’re Scaling the Wrong Thing",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOc2Z4b1YwVHJwSndwa0dJRi05b3g1U19SS0pZRUhhOW9aN20xTGNQaWtiMk1TaGh3MF9ZXy1tT056V1hpcUllQU43aFFDYm11U2JYdFQzVFdqZG51WUhKek9YMVF3Mmk1dTJ2Q2lyX3hmdml6RnlOUmZLakI5ZFRwTEgwVGVrT1VyQnh4SVhnbGVlVVRwYktlR2xOLU80aS11Z3V1c2tVcGdLa2NRaFRkbUNYQU5hc2M?oc=5",
+     "source": "Medium",
+     "kind": "presse",
+     "title_fr": "Le calcul pour l'IA devient cher. Yann LeCun affirme que nous ne mettons pas à l'échelle la bonne chose",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T04:45:10.000Z",
      "title": "Anthropic CEO Dario Amodei Wanted Control of AI at OpenAI, Claims Yann LeCun",
      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQci1pWmJWZzhJUm1pb09FV3pONDNrVlROYXNUVlZpdmtfNmRVNGZ6dkg1ZEtEajJNaDZZT0pMYmlZQ2VSY3Z5VmRPUklOS1dTRnoydURpU1hJa2dTQjY3ZU1HQjhDLWE2TmdHX0M2ZWpua3djNzBEZzRMcmJzdTNZSFg3eF9KUjE2TDhzdklnQmRWRkxUbzNPamhTRlNpZkV6VWdvdHk0SElXNlJFZVFlUg?oc=5",
@@ -1721,16 +1737,6 @@
      "title_fr": "Yann LeCun contre Dario Amodei : le parrain de l'IA critique vertement le PDG d'Anthropic",
      "m": 3,
      "e": 1
-    },
-    {
-     "ts": "2026-11-18T01:51:14.000Z",
-     "title": "LeCun Predicts Brief Window of AI-Enabled Cyberattacks",
-     "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNZWFpMXJQaEhRNmhLYzZnSTR0WGR3VzF0WF92NmFzclNwQk42WTZWaUZYdW5lbWFjdjAwWlVJRHZfcTI1eWtKb1JzQ21PZTk0Y0I0NU5KaTN2MFhsbFA2TkJNdWpSczFYYlk1Tm8zcXAzSms2Qi1jZ1ZzTG45elhtSXVPN0tydDlwazh6VVEyNA?oc=5",
-     "source": "Wisevoter",
-     "kind": "presse",
-     "title_fr": "LeCun prédit une brève fenêtre de cyberattaques permises par l'IA",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -2976,6 +2982,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T07:56:00.000Z",
+     "title": "Mehdi Hasan points to what's \"so frustrating\" after Bill Gates explains why open-source AI will make life living hell for banks, hospitals, and more",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRVBfU1NYQWpkUTdla2ZQcDctWFQ3NTkycXhadENVVEUtbGhQSC1lMXp5QUd0dENwUE9zanQ0b0VKblhOTk9qTFdGTS1XV0lLcUJJd3JGYVFHOS1EVHJYVG1CLWgzdVJPcDJwa1l4ZG5ocjhWdllpYjA5U0stT05YNnY1R01pYnM?oc=5",
+     "source": "AOL.com",
+     "kind": "presse",
+     "title_fr": "Mehdi Hasan pointe du doigt ce qui est « si frustrant » après que Bill Gates a expliqué pourquoi l'IA open source va rendre la vie infernale aux banques, aux hôpitaux et à d'autres",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T21:26:20.000Z",
      "title": "Bill Gates Says AI Makes Nuclear Weapons 'Look Like Nothing'",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUy1zRzBPc3VWWW5nU1AxUUl6WFJCWVZVUUZ0enVRdzdJdUtXeC1GdjFTYjlzLVVMeER5LW03UVNLeFlkWDlJMHNUbVZiYlNNNi01ZFozQmNBTG1rODVWcDgyWFZ5cGJqSmlIeXI4VTRyRjlpaU1EREhEeDl0bGMwSGlxcXl6THBM?oc=5",
@@ -3044,16 +3060,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "« De nombreux emplois disparaîtront pour toujours » : Bill Gates prévient que l'IA pourrait anéantir des carrières en une décennie. Protégez votre salaire"
-    },
-    {
-     "ts": "2026-11-14T13:31:41.000Z",
-     "title": "Bill Gates Warns AI Can Already Threaten Hospitals, Power Grids and Banks",
-     "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1qME1ZVy1PSDRFX0MzeDhic1Y3dEgwQWVZR01lNUFPdXJ5cEc2NHZHMVc2OUp6Wk42cHNxWU5BbnFmMGJ4REhBb1dxVkxCZkRZZTBxT3hvWUQ2Q0hsYklfV3haTThFQ3RsUFJxLXRKbEc1UQ?oc=5",
-     "source": "The 420.in",
-     "kind": "presse",
-     "title_fr": "Bill Gates prévient que l'IA peut déjà menacer les hôpitaux, les réseaux électriques et les banques",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -4445,6 +4451,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T07:37:00.000Z",
+     "title": "Howard Marks: \"We Can't Avoid AI Investing... Power and Infrastructure Are the Answer\"",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5MZVZzdm5aQkZtMVl5dWt5dFMwMnpHQVFIOE5EQlRwZzVnZDB2WkZvOWJPUXZfSUJ2LXJjTGgycEttYUxJOVYzUVBjWTYwUjJjek4tdjlfZkZpc2NnY2FFUEs3VDhTdDl6MWRNS1JRaFlJT2x5d2c?oc=5",
+     "source": "BigGo Finance",
+     "kind": "presse",
+     "title_fr": "Howard Marks : « Nous ne pouvons pas éviter d'investir dans l'IA... L'énergie et l'infrastructure sont la solution »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-21T20:06:36.000Z",
      "title": "Howard Marks warns OpenAI and Anthropic their AI lead may not last",
      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ONE5MQmxwWVk5Z3psaE1Kbk13aUlKWWs0SlY1ejBVS1V1T2RaUkZzVGhVNU9YZkdta3l2ZkVERldKNFAtRGNfaVMtUDVsZGN1eHlYV01Td3VlNXp5c2Q1UlRUMGY2Zm9UNmNIVVNsTDY?oc=5",
@@ -4513,16 +4529,6 @@
      "m": 2,
      "e": 1,
      "title_fr": "L'avertissement de Warren Buffett en 1979 pourrait être la leçon parfaite pour le boom actuel de l'IA, déclare Howard Marks : « L'incertitude... »"
-    },
-    {
-     "ts": "2026-11-11T20:49:49.000Z",
-     "title": "Howard Marks says AI’s trillion-dollar payoff is a ‘matter of faith’ (AIQ:NASDAQ)",
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUWE3WkIwdzhGTWp0UmUxU25NZ3BxR3hxMGd5T3E4RjBSQlpNWEFybXBfT3M5dGhEb04zVnZ5WUJjYVJVSTl0Z2t5ZmdZNnNTdENhT2kxZXp0Vmx4MXRmLXNadGI4YWZMU3d1MzAyTFpKMXBhQXFpSU9LclQzcHN5ZDRUbzNrSDVVWmxhSl9YWTRCYWhXbGlxMzdQcGhjMnFJMkxQdENB?oc=5",
-     "source": "Seeking Alpha",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Howard Marks affirme que le rendement de mille milliards de dollars de l'IA relève d'un « acte de foi » (AIQ:NASDAQ)"
     }
    ]
   },
@@ -6185,7 +6191,7 @@
  ],
  "hot": [
   {
-   "score": 2.1,
+   "score": 1.68,
    "id": "jd-vance",
    "n": "JD Vance",
    "role": "Vice-président des États-Unis",
@@ -6199,7 +6205,7 @@
    "outlets": 3
   },
   {
-   "score": 1.4,
+   "score": 1.12,
    "id": "peter-thiel",
    "n": "Peter Thiel",
    "role": "Cofondateur de Palantir, investisseur",
@@ -6213,7 +6219,7 @@
    "outlets": 5
   },
   {
-   "score": 0.86,
+   "score": 0.69,
    "id": "sundar-pichai",
    "n": "Sundar Pichai",
    "role": "PDG d'Alphabet (Google)",
