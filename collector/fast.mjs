@@ -4,7 +4,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { parseFeed, ruleClassify, isHubPage, makeClassifier } from "./collect.mjs";
-import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
+import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript, englishTitle } from "./translate.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const DATA = path.join(HERE, "..", "public", "data");
@@ -64,11 +64,12 @@ const now=Date.now();
 const lastAttempt=Date.parse(translationState.last_attempt_at||"");
 const retryAfter=Date.parse(translationState.retry_after_at||"");
 const cooldownUntil=Number.isFinite(retryAfter)?retryAfter:(Number.isFinite(lastAttempt)?lastAttempt+30*60*1000:0);
-const untranslated=items.filter(x=>!x.title_fr||foreignScript(x.title)).slice(0,30);
+const untranslated=items.filter(x=>(!x.title_fr||foreignScript(x.title)||englishTitle(x.title))&&(x.tr_try||0)<3).slice(0,30);
 if(process.env.GEMINI_API_KEY&&untranslated.length&&now>=cooldownUntil){
   translationState.last_attempt_at=new Date(now).toISOString();
   try{
-    const clones=untranslated.map(x=>({...x,pending:false,title_en:x.title_fr?x.title_en:""}));
+    untranslated.forEach(x=>{x.tr_try=(x.tr_try||0)+1}); // trois essais au plus par titre
+    const clones=untranslated.map(x=>({...x,pending:false,title_en:x.title_fr&&!englishTitle(x.title)?x.title_en:""}));
     const classifier=await makeClassifier(process.env,fetch,(m)=>console.log(m));
     if(!classifier.state.fatal){
       const result=await translateMissing({

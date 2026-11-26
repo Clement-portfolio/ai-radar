@@ -30,8 +30,14 @@ export const TRANSLATE_SCHEMA = {
 
 const clean = (s) => String(s || "").trim().replace(/\s+/g, " ");
 
+/** Titre resté en anglais : au moins deux mots outils anglais et aucun mot outil français. */
+const EN_STOP = /\b(?:the|of|and|to|in|for|with|is|are|on|its|as|by|from|at|will)\b/gi;
+const FR_STOP = /\b(?:le|la|les|des|du|une|un|pour|avec|dans|sur|est|sont|et|de|au|aux|en|par|qui|que)\b/i;
+export const englishTitle = (s) => { s = String(s || ""); return !FR_STOP.test(s) && (s.match(EN_STOP) || []).length >= 2; };
+const same = (a, b) => String(a).toLowerCase().replace(/\W+/g, " ").trim() === String(b).toLowerCase().replace(/\W+/g, " ").trim();
+
 /** Un article demande un passage si son titre est dans une autre écriture, ou s'il n'a pas encore de version anglaise. */
-export const needsTranslation = (it) => !it.pending && (foreignScript(it.title) || !it.title_en);
+export const needsTranslation = (it) => !it.pending && (foreignScript(it.title) || !it.title_en || englishTitle(it.title));
 
 /** Applique la réponse du modèle ; chaque champ n'est gardé que si ses chiffres viennent des textes d'origine. */
 export function applyTranslations(arr, inputs, byIdx) {
@@ -46,7 +52,7 @@ export function applyTranslations(arr, inputs, byIdx) {
     let touched = false;
     // Le titre principal du site est toujours en français, y compris lorsque la source est anglophone.
     const tf = clean(r.title_fr);
-    if (tf && tf.length <= 220 && !foreignScript(tf) && ok(tf, "fr", true, inp.orig || inp.title)) {
+    if (tf && tf.length <= 220 && !foreignScript(tf) && !(englishTitle(tf) && same(tf, inp.orig || inp.title)) && ok(tf, "fr", true, inp.orig || inp.title)) {
       it.title = normalizeFr(inp.orig || inp.title, tf);
       it.title_fr = it.title;
       touched = true;

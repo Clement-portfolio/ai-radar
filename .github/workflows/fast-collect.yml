@@ -59,6 +59,8 @@ jobs:
         run: node collector/fast.mjs
       - name: Collecte rapide Insiders Presse
         continue-on-error: true # une panne de Google News ne doit pas empêcher de publier les actualités
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: node collector/fast-voix.mjs
       - name: Publier les flux rapides
         run: |

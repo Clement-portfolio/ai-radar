@@ -247,10 +247,10 @@ export async function translateVoix({ doc, generate, max = 140 }) {
 
 /* ---------- Déclarations brûlantes du jour (Une) : classement mécanique, sans IA ---------- */
 export const HOT_RULES = { hours: 48, half: 9, top: 3, weight: { dirigeants: 1, pouvoirs: 1, cadres: 0.8, chercheurs: 0.8, investisseurs: 0.7 }, strong: 1.3, sim: 0.4 };
-const STRONG = /\b(?:warns?|warned|resign\w*|slams?|admits?|predicts?|reveals?|vows?|rejects?|denies|demands?|urges?|calls? for|shorts?|sells?|sold|downgrades?|insists?|blasts?|accuses?)\b/i;
+export const STRONG = /\b(?:warns?|warned|resign\w*|slams?|admits?|predicts?|reveals?|vows?|rejects?|denies|demands?|urges?|calls? for|shorts?|sells?|sold|downgrades?|insists?|blasts?|accuses?)\b/i;
 const STOP = new Set("the a an of to in on for and or at by with as is are was be it its this that from after says said say will would about over into than not has have had who his her their".split(" "));
-const toks = (t) => new Set(String(t).toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
-const jac = (a, b) => { let i = 0; for (const x of a) if (b.has(x)) i++; return i ? i / (a.size + b.size - i) : 0; };
+export const toks = (t) => new Set(String(t).toLowerCase().replace(/[^a-z0-9\s]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
+export const jac = (a, b) => { let i = 0; for (const x of a) if (b.has(x)) i++; return i ? i / (a.size + b.size - i) : 0; };
 
 /**
  * Annote chaque déclaration : `m` = nombre de médias distincts qui reprennent le même propos de la même personne,
