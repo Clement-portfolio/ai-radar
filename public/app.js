@@ -883,8 +883,8 @@ function xSwitch(){
 /* Accueil : les posts X les plus importants des derniers jours (un par compte), avec accès direct à Insiders / Sur X */
 function xHome(en){
   var all=((S.x&&S.x.items)||[]).filter(function(x){return x.priority!=="P4"});if(!all.length)return"";
-  var now=Date.now(),seen={},pick=all.filter(function(x){return Date.parse(x.ts)>=now-7*864e5&&!x.pending}).map(function(x){return{x:x,sc:(x.imp||1)*10+(x.media===0?2:0)+Math.min(3,Math.log10((x.eng||0)+1))-(now-Date.parse(x.ts))/864e5}}).sort(function(a,b){return b.sc-a.sc}).map(function(o){return o.x}).filter(function(x){var k=x.handle||x.id;if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
-  if(!pick.length)return"";
+  var now=Date.now(),seen={},pick=all.filter(function(x){return Date.parse(x.ts)>=now-864e5&&!x.pending}).map(function(x){return{x:x,sc:(x.imp||1)*10+(x.media===0?2:0)+Math.min(3,Math.log10((x.eng||0)+1))-(now-Date.parse(x.ts))/864e5}}).sort(function(a,b){return b.sc-a.sc}).map(function(o){return o.x}).filter(function(x){var k=x.handle||x.id;if(seen[k])return false;seen[k]=1;return true}).slice(0,3);
+  if(!pick.length)return'<section class="tile">'+tHead(en?'Insiders on X':'Insiders sur X',en?'What stands out on the platform':'Ce qui ressort sur la plateforme')+'<p class="empty">'+(en?'No standout post in the last 24 hours (collections run at 8 am and 8 pm, Riyadh time).':'Aucun post marquant ces dernières 24 h (collectes à 8 h et 20 h, heure de Riyad).')+'</p>'+cta("acteurs/voix/x",en?'See Insiders on X':'Voir Insiders sur X')+'</section>';
   return'<section class="tile">'+tHead(en?'Insiders on X':'Insiders sur X',en?'What stands out on the platform':'Ce qui ressort sur la plateforme')+'<div class="tgrid3">'+pick.map(function(it){
     var w=xWho(it);
     return'<article class="tcard"><span class="kick">'+esc(w.name)+'</span><h3>'+esc(xTitle(it))+'</h3><div class="tfoot"><span>'+esc((w.role?w.role+' · ':'')+ago(it.ts))+'</span>'+arrowA(link(it.url),en?'See the post on X':'Voir le post sur X',true)+'</div></article>';
