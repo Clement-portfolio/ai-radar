@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-26T12:30:38.264Z",
+ "generated_at": "2026-11-26T12:40:28.723Z",
  "items": [
+  {
+   "id": "eb1ade440b1a",
+   "ts": "2026-11-26T12:33:07.000Z",
+   "title": "8,208 GPUs deployed by Sharon AI for ESDS Software Solution in Australia",
+   "orig": "8,208 GPUs deployed by Sharon AI for ESDS Software Solution in Australia",
+   "summary": "Contract was signed earlier this year",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/8208-gpus-deployed-by-sharon-ai-for-esds-software-solution-in-australia/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "9d31399c3773",
+   "ts": "2026-11-26T12:28:40.000Z",
+   "title": "Vertiv expands 800VDC power portfolio for AI data center market",
+   "orig": "Vertiv expands 800VDC power portfolio for AI data center market",
+   "summary": "Adds systems for AI compute pods and data halls, alongside new solid-state transformer",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/vertiv-expands-800vdc-power-portfolio-for-ai-data-center-market/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "72d076d05bd9",
    "ts": "2026-11-26T12:25:00.000Z",
