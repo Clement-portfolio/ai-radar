@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T13:27:54.322Z",
+ "generated_at": "2026-11-26T13:59:15.384Z",
  "people": [
   {
    "id": "sam-altman",
@@ -6221,21 +6221,7 @@
  ],
  "hot": [
   {
-   "score": 1.32,
-   "id": "geoffrey-hinton",
-   "n": "Geoffrey Hinton",
-   "role": "Prix Nobel, pionnier du deep learning",
-   "actor": null,
-   "ts": "2026-11-26T10:56:00.000Z",
-   "title": "In 2016, ‘Godfather of AI’ Geoffrey Hinton said to ‘stop training radiologists’; a decade later, San Fran",
-   "title_fr": "En 2016, le « parrain de l'IA » Geoffrey Hinton a conseillé d'« arrêter de former des radiologues » ; une décennie plus tard, San Francisco",
-   "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQM3pkYnZnQ21ST0xHVXVFbERpdDlQYnFUUnc0VTNGM2ppVlp3c05pYXNiNkt0UFFxbmx0MGdzdDg0MTFLclJ6R3ZvMWgyTHVSX05ycU5kVGNlMi10N1pyZmc3NlhJSUQyZnp5VWpiQ0x6dTY2RmFUcDdHcHpkem1TU1dDSlc2QThIMjk5X0c4WHdNMGdUZjZFWmFXeFJ6dVlRbGU0cEZ0UGpZRjQ3c1djVTg3bGprX0VmMTFJTTRxcmNfSWJHak9KcEdfR1FJWTltcUxqSEdFcWVWYlhsSjdndmN6c3dWMk54TEZlR2Y0TnIyeENfUGg5WUg4MGllRGpaTWc4T3RFdDRETzR3ZTFlSC0wYW1USWY3MWZ1WW1GLU1PY1lkOTNndk5UYl9fcURmSWV2X0NnYzYzYjRhT1F0V1FGT2w3OVdnOHhkcTZiY0xCNzRQYVA3bDlSb3I5Ujlsd1B4eGFR0gHrAkFVX3lxTE1iRWthdlNjemlWVjR5Nms3WjlGTnlscjZLWmZBRmJqeHU0SVY1OTJkMFlOTmZEZDNzRzR0SzJZNmNfZjhleVR0VHdhNVNEZF9YcHIzV1NUSlJhbGY0QkJPYm1IY0lubXJuVFl6a1BGZk5uTUpOMzBTNHZsV3dqb2xLMWs0OFl0bUoxbEV0a05rWVRnbHlKR2ljZUwxVGN1clNyeGRvaEJfZVhxMG9MRTVmMkhzY1NUdGt4cGdwRFJjazNienBUbEh0dndKUmhxM3JSMVRra29KWldjMjZEY0lhX1NfSUttSzVwYlNZV3dudlNSYTYwS0NyN2J3dW9tQVRqSHZtRjZDelQwQjltMEdoZV8zU0VKZmNKS0V4Y0loXzdZX2E0SWlDLW9WYlhoeTVOZVZBakV2QmlERnlJbExQYTExcUVYZUxBRkt4ZlVmSVVhYlNOTTZpZEhoM0x0bFNlTVhjSXFMTjZKaw?oc=5",
-   "source": "The Times of India",
-   "kind": "presse",
-   "outlets": 2
-  },
-  {
-   "score": 1.32,
+   "score": 1.27,
    "id": "jd-vance",
    "n": "JD Vance",
    "role": "Vice-président des États-Unis",
@@ -6249,7 +6235,21 @@
    "outlets": 3
   },
   {
-   "score": 1.27,
+   "score": 1.26,
+   "id": "geoffrey-hinton",
+   "n": "Geoffrey Hinton",
+   "role": "Prix Nobel, pionnier du deep learning",
+   "actor": null,
+   "ts": "2026-11-26T10:56:00.000Z",
+   "title": "In 2016, ‘Godfather of AI’ Geoffrey Hinton said to ‘stop training radiologists’; a decade later, San Fran",
+   "title_fr": "En 2016, le « parrain de l'IA » Geoffrey Hinton a conseillé d'« arrêter de former des radiologues » ; une décennie plus tard, San Francisco",
+   "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQM3pkYnZnQ21ST0xHVXVFbERpdDlQYnFUUnc0VTNGM2ppVlp3c05pYXNiNkt0UFFxbmx0MGdzdDg0MTFLclJ6R3ZvMWgyTHVSX05ycU5kVGNlMi10N1pyZmc3NlhJSUQyZnp5VWpiQ0x6dTY2RmFUcDdHcHpkem1TU1dDSlc2QThIMjk5X0c4WHdNMGdUZjZFWmFXeFJ6dVlRbGU0cEZ0UGpZRjQ3c1djVTg3bGprX0VmMTFJTTRxcmNfSWJHak9KcEdfR1FJWTltcUxqSEdFcWVWYlhsSjdndmN6c3dWMk54TEZlR2Y0TnIyeENfUGg5WUg4MGllRGpaTWc4T3RFdDRETzR3ZTFlSC0wYW1USWY3MWZ1WW1GLU1PY1lkOTNndk5UYl9fcURmSWV2X0NnYzYzYjRhT1F0V1FGT2w3OVdnOHhkcTZiY0xCNzRQYVA3bDlSb3I5Ujlsd1B4eGFR0gHrAkFVX3lxTE1iRWthdlNjemlWVjR5Nms3WjlGTnlscjZLWmZBRmJqeHU0SVY1OTJkMFlOTmZEZDNzRzR0SzJZNmNfZjhleVR0VHdhNVNEZF9YcHIzV1NUSlJhbGY0QkJPYm1IY0lubXJuVFl6a1BGZk5uTUpOMzBTNHZsV3dqb2xLMWs0OFl0bUoxbEV0a05rWVRnbHlKR2ljZUwxVGN1clNyeGRvaEJfZVhxMG9MRTVmMkhzY1NUdGt4cGdwRFJjazNienBUbEh0dndKUmhxM3JSMVRra29KWldjMjZEY0lhX1NfSUttSzVwYlNZV3dudlNSYTYwS0NyN2J3dW9tQVRqSHZtRjZDelQwQjltMEdoZV8zU0VKZmNKS0V4Y0loXzdZX2E0SWlDLW9WYlhoeTVOZVZBakV2QmlERnlJbExQYTExcUVYZUxBRkt4ZlVmSVVhYlNOTTZpZEhoM0x0bFNlTVhjSXFMTjZKaw?oc=5",
+   "source": "The Times of India",
+   "kind": "presse",
+   "outlets": 2
+  },
+  {
+   "score": 1.22,
    "id": "christophe-fouquet",
    "n": "Christophe Fouquet",
    "role": "PDG d'ASML",
