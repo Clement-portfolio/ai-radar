@@ -66,20 +66,21 @@ assert.ok(!r1.doc.items.some((x) => /https?:\/\//.test(x.text)), "liens retirés
 
 // Chaque lot conserve son propre curseur : un lot non interrogé depuis plusieurs jours ne perd pas ses posts.
 const cursorKey = plan[0].handles.join(",");
-const cursorDoc = { ...r1.doc, usage: { ...r1.doc.usage, batchCursors: { ...r1.doc.usage.batchCursors, [cursorKey]: new Date(now - 4 * 3600e3).toISOString() } } };
+const cursorDoc = { ...r1.doc, usage: { ...r1.doc.usage, batchCursors: { ...Object.fromEntries(dayPlan({ ...cfg, caps: { ...cfg.caps, day: 9999, run: 9999 } }, now).map((p) => [p.handles.join(","), new Date(now).toISOString()])), [cursorKey]: new Date(now - 4 * 3600e3).toISOString() } } };
 startTimes = []; calls = [];
 await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: cursorDoc, feed: [], now: now + 600e3, sleep });
+// le lot interrogé depuis le plus longtemps passe en premier
 assert.equal(startTimes[0], new Date(now - 4 * 3600e3 - 10 * 60e3).toISOString().replace(/\.\d+Z$/, "Z"), "le curseur du lot prime sur le dernier passage global");
 
 // même jour : plafond atteint → aucun appel ; avec force → relit
 const c0 = calls.length;
-const r2 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...r1.doc, usage: { ...r1.doc.usage, days: { "2026-11-21": 100 } } }, feed: [], now: now + 600e3, sleep });
+const r2 = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...r1.doc, usage: { ...r1.doc.usage, days: { "2026-11-21": cfg.caps.day } } }, feed: [], now: now + 600e3, sleep });
 assert.equal(calls.length, c0, "plafond du jour : aucun appel");
 assert.match(r2.summary.reason, /plafond du jour/);
 
 // Le reliquat inférieur au minimum X de 10 posts ne déclenche aucune requête (pas de sous-comptage).
 const beforeSmallBudget = calls.length;
-const smallBudget = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...r1.doc, usage: { days: { "2026-11-21": 50 }, months: {} } }, feed: [], now: now + 600e3, sleep });
+const smallBudget = await collectX({ cfg, fetchImpl: mkFetch(), token: "T", generate: gen, prev: { ...r1.doc, usage: { days: { "2026-11-21": cfg.caps.day - 5 }, months: {} } }, feed: [], now: now + 600e3, sleep });
 assert.equal(calls.length, beforeSmallBudget, "pas d'appel X avec moins de 10 lectures de budget");
 assert.match(smallBudget.summary.reason, /minimum de 10/);
 
@@ -177,4 +178,18 @@ assert.ok(day.some((f) => f.v.domain === "robotique"), "les autres domaines pass
 
 // comptes muets
 assert.ok(silentAccounts(cfg, { stats: { sama: { read: 3 } } }).length === handles.length - 1);
+// Ordre de passage : les lots jamais interrogés d'abord, puis le plus ancien curseur
+{
+  const big = { ...cfg, caps: { ...cfg.caps, day: 9999, run: 9999, month: 99999 } };
+  const cur = {}, all = dayPlan(big, now);
+  const k = (p) => p.handles.join(",");
+  const t1 = all.filter((p) => p.tier === "t1");
+  if (t1.length >= 3) {
+    cur[k(t1[0])] = new Date(now - 3600e3).toISOString(); cur[k(t1[1])] = new Date(now - 48 * 3600e3).toISOString();
+    const ord = dayPlan(big, now, cur).filter((p) => p.tier === "t1").map(k);
+    assert.equal(ord.length, t1.length, "aucun lot perdu");
+    assert.ok(ord.indexOf(k(t1[2])) < ord.indexOf(k(t1[1])), "un lot jamais interrogé passe avant tous les autres");
+    assert.ok(ord.indexOf(k(t1[1])) < ord.indexOf(k(t1[0])), "48 h avant 1 h");
+  }
+}
 console.log("test-x : OK");

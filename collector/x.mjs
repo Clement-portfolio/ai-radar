@@ -80,7 +80,7 @@ export function scorePost(post, cfg) {
   return { score, priority, source_class: cls, watchlist: post.relevance?.watchlist || [], signals: post.relevance?.signals || [] };
 }
 /** Seuls les comptes suivis sont interrogés ; watchlist et signaux IA filtrent leurs publications. */
-export function dayPlan(cfg, now) {
+export function dayPlan(cfg, now, cursors = null) {
   const cap = { ...cfg.caps, day: Math.min(cfg.caps.day, cfg.caps.run || cfg.caps.day) };
   const terms = [...new Set([...(cfg.watchlist || []).map((w) => w.query_term).filter(Boolean), ...(cfg.search_priority_terms || cfg.flux_terms || [])])];
   const groups = { t1: [], t2: [], flux: [] };
@@ -92,8 +92,13 @@ export function dayPlan(cfg, now) {
   add("t1", cfg.t1, cap.t1);
   add("t2", cfg.t2, cap.t2);
   add("flux", cfg.flux, cap.flux);
+  // ordre de passage : le lot interrogé depuis le plus longtemps d'abord (jamais interrogé = en tête) ; sans curseurs, rotation par demi-journée
   const slot = Math.floor(now / (12 * H));
-  for (const tier of ["t1","t2","flux"]) { const g = groups[tier]; if (g.length > 1) { const shift = slot % g.length; g.push(...g.splice(0, shift)); } }
+  for (const tier of ["t1","t2","flux"]) {
+    const g = groups[tier];
+    if (cursors) { const at = (c) => Date.parse(cursors[c.handles.join(",")] || "") || 0; g.sort((a, b) => at(a) - at(b)); }
+    else if (g.length > 1) { const shift = slot % g.length; g.push(...g.splice(0, shift)); }
+  }
   const plan = [];
   for (let i = 0; i < Math.max(groups.t1.length, groups.t2.length, groups.flux.length); i++) for (const tier of ["t1","t2","flux"]) if (groups[tier][i]) plan.push(groups[tier][i]);
   let sum = plan.reduce((s, p) => s + p.max, 0);
@@ -238,7 +243,7 @@ export async function collectX({ cfg, fetchImpl, token, generate, prev, feed = [
   const fallbackStart = now - 7 * DAY + 60e3;
   const budget = Math.floor(Math.min(perRun, daily - (force ? 0 : readToday), cfg.caps.month - readMonth) / X_RULES.minRead) * X_RULES.minRead;
   if (budget < X_RULES.minRead) return { doc: prev || null, summary: { ...rep, reason: "budget restant inférieur au minimum de 10 lectures par requête", month: readMonth } };
-  let plan = dayPlan(cfg, now);
+  let plan = dayPlan(cfg, now, usage.batchCursors);
   { let left = budget; plan = plan.filter((p) => { if (left < X_RULES.minRead) return false; p.max = Math.floor(Math.min(p.max, left) / X_RULES.minRead) * X_RULES.minRead; if (p.max < X_RULES.minRead) return false; left -= p.max; return true; }); }
   const known = new Set(prevItems.map((x) => x.id));
   const raw = [];
