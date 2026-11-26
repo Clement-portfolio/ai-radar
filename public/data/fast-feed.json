@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T09:02:40.672Z",
+ "generated_at": "2026-11-26T09:10:36.416Z",
  "items": [
   {
    "id": "303a3a20899f",
@@ -36,6 +36,21 @@
    "title_fr": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
    "title_en": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
    "summary_en": "Investors appeared to have shrugged off a fresh set of tariffs unveiled by the White House on Wednesday, targeting more than a dozen major trading partners."
+  },
+  {
+   "id": "4f0d4826ded0",
+   "ts": "2026-11-26T08:12:06.000Z",
+   "title": "Chip substrate makers face 30-month waits for key equipment",
+   "orig": "Chip substrate makers face 30-month waits for key equipment",
+   "summary": "Delivery times for some equipment used to manufacture advanced chip substrates have stretched from six months to 30 months as manufacturers race to expand production to meet surging demand for artificial intelligence (AI) chips.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126VL223/fc-bga-equipment-substrate-capacity-demand-production.html",
+   "confidence": "moyenne",
+   "pending": true
   },
   {
    "id": "b97070990254",
