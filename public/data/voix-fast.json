@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T19:40:41.830Z",
+ "generated_at": "2026-11-26T20:10:30.175Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T19:50:41.830Z",
+ "translate_retry_at": "2026-11-26T20:20:30.175Z",
  "people": [
   {
    "id": "sam-altman",
@@ -144,6 +144,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T20:00:08.000Z",
+     "title": "Elon Musk Says ‘True’ After Jensen Huang Warns You’ll Lose Your Job to Someone Who Uses AI, Not to AI Itself",
+     "title_fr": "Elon Musk dit « Vrai » après que Jensen Huang a prévenu que vous perdrez votre emploi face à quelqu'un qui utilise l'IA, et non face à l'IA elle-même",
+     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOOVZrS01raWNvQ291YnY3QjZnQ1kxN0V1dGxNSTlBUEpITlM1RzF5Qzd6bVJZRWR6N2FTZEF1V294ZGJlNTdmXzVaOVJvcXVQcGhfNjc2R3RGSkl0ZE5NR2p2ajg2RV81NzR4TGZHVUNSTHI3NlBZZnFzSzNaX1Q2bzJKQmpZODR0ZEl0TG9BamwzaUU1eXpzS1BPS19oaVJSaWd4dS1WWGFrSG9RanVQRmpYLTVNb1VjRkI2Mi12emcxcnVEdVBmdW9tcWF1SW95cnV2Mm5qRzhRTmJTLWZNM3FyVQ?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "srcs": [
+      "benzinga"
+     ],
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-26T19:30:08.000Z",
      "title": "Elon Musk Says ‘Pretty Much Everyone’s Going to Want One, if Not Two’ Tesla Robots Once They Can Wash Dir",
      "title_fr": "Elon Musk affirme que « pratiquement tout le monde voudra un, voire deux » robots Tesla une fois qu'ils sauront faire la vaisselle",
@@ -212,19 +225,6 @@
       "benzinga"
      ],
      "m": 3,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-26T12:15:00.000Z",
-     "title": "Elon Musk warns AI’s 2027 cash shortage will be ‘nuts’ as industry could need billions more. Protect your retirement",
-     "title_fr": "Elon Musk prévient que la pénurie de liquidités de l'IA en 2027 sera « dingue » car l'industrie pourrait avoir besoin de milliards de dollars supplémentaires. Protégez votre retraite",
-     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVmRodWVsMWI2a1FMaDdhUTRmSmdHLThMVDN3Tm8zOVBnbGVxQk5GSWQ5ZW9oYXlJbkVzd0ZBMzkyajBIS2VlZUg1N2t3QnZNS1NwTUhmcjEwMmdDaDV6U05HNGF0X3A5NDFGSWM0a055S3ZuQ3lVWHN5OGt4SzNwQ2M3MkNMUWs5NXQxSEpaaGs?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "srcs": [
-      "yahoo finance"
-     ],
-     "m": 1,
      "e": 1
     }
    ]
