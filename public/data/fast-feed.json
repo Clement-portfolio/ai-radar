@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-26T12:52:15.305Z",
+ "generated_at": "2026-11-26T13:00:43.634Z",
  "items": [
+  {
+   "id": "ac53afd51c0a",
+   "ts": "2026-11-26T12:51:43.000Z",
+   "title": "Etix launches 23MW data center in Bangkok, Thailand",
+   "orig": "Etix launches 23MW data center in Bangkok, Thailand",
+   "summary": "Company's second facility in the Thai capital",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/etix-launches-23mw-data-center-in-bangkok-thailand/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "d35df4bdd093",
    "ts": "2026-11-26T12:47:36.000Z",
