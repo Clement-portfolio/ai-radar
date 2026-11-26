@@ -1,30 +1,30 @@
 {
- "updated_at": "2026-11-26T10:38:14.231Z",
+ "updated_at": "2026-11-26T13:35:17.759Z",
  "mode": "live",
  "last_run": {
-  "started_at": "2026-11-26T10:17:47.359Z",
-  "duration_s": 1227,
-  "candidates": 2687,
-  "new_unique": 204,
-  "queued": 200,
+  "started_at": "2026-11-26T13:27:54.322Z",
+  "duration_s": 443,
+  "candidates": 2729,
+  "new_unique": 201,
+  "queued": 194,
   "classified_calls": 3,
-  "model": "gemini-3-flash-preview",
-  "added": 200,
-  "fallback": 50,
+  "model": "gemini-3.5-flash-lite",
+  "added": 192,
+  "fallback": 44,
   "watch": {
-   "total": 247,
+   "total": 250,
    "counts": {
     "smr": 14,
     "gas": 9,
-    "grid": 20,
+    "grid": 21,
     "dcbuild": 21,
-    "cooling": 18,
+    "cooling": 19,
     "elec": 22,
     "chips": 45,
-    "foundry": 44,
-    "litho": 12,
+    "foundry": 46,
+    "litho": 13,
     "leadfab": 31,
-    "otherfab": 15,
+    "otherfab": 16,
     "memory": 23,
     "packaging": 16,
     "substrate": 7,
@@ -35,18 +35,18 @@
     "apps": 20
    }
   },
-  "rejected": 0,
+  "rejected": 2,
   "total_items": 1500,
   "errors": [],
   "translate": {
-   "changed": 34,
-   "reason": "34 articles traduits",
+   "changed": 0,
+   "reason": "rien à traduire",
    "left": 0
   },
   "gnews": {
    "changed": 0,
    "failed": 0,
-   "left": 628,
+   "left": 625,
    "reason": "rien à faire"
   },
   "i18n": {
@@ -58,20 +58,20 @@
    "regenerated": true,
    "reason": "briefing régénéré",
    "diag": [
-    "histoire 1 : puce retirée (aucun fait nouveau)",
-    "histoire 2 : puce retirée (nombre ou écriture non conforme)",
-    "histoire 3 : puce retirée (aucun fait nouveau)"
+    "histoire 2 : titre vide, trop long, creux ou non conforme",
+    "histoire 4 : titre vide, trop long, creux ou non conforme",
+    "histoire 5 : puce retirée (aucun fait nouveau)"
    ]
   },
   "figures": {
-   "regenerated": false,
-   "reason": "chiffres du jour déjà publiés",
+   "regenerated": true,
+   "reason": "chiffres régénérés",
    "results": "0 communiqué(s) ajouté(s)"
   },
   "sec": {
-   "refreshed": true,
-   "ok": 5,
-   "skipped": 0,
+   "refreshed": false,
+   "ok": 0,
+   "skipped": 5,
    "ko": []
   },
   "acteurs": {
@@ -86,11 +86,11 @@
    }
   },
   "voix": {
-   "added": 91,
+   "added": 93,
    "failed": 0,
-   "total": 484,
+   "total": 487,
    "reason": "",
-   "translate": "3 titre(s) traduit(s)"
+   "translate": "8 titre(s) traduit(s)"
   },
   "datacenters": {
    "sites": 96,
@@ -112,73 +112,40 @@
    "stale": []
   },
   "shares": {
-   "refreshed": true,
+   "refreshed": false,
    "charts": {
-    "hbm": "ok : T2 2026",
-    "foundry": "pas de nouvelle publication"
+    "hbm": "ignoré (lu récemment)",
+    "foundry": "ignoré (lu récemment)"
    }
   },
   "evolution": {
-   "refreshed": true,
+   "refreshed": false,
    "tasks": {
-    "ownersShare": "ok",
-    "owners": "ok",
-    "designers": "ok",
-    "sales": "ok",
-    "capex": "ok",
-    "hbm": "ok",
-    "train": "ok",
-    "eci_gap": "ok",
-    "price_perf": "ok",
-    "btos": "ok"
+    "ownersShare": "déjà à jour",
+    "owners": "déjà à jour",
+    "designers": "déjà à jour",
+    "sales": "déjà à jour",
+    "capex": "déjà à jour",
+    "hbm": "déjà à jour",
+    "train": "déjà à jour",
+    "eci_gap": "déjà à jour",
+    "price_perf": "déjà à jour",
+    "btos": "déjà à jour"
    }
   },
   "gemini": [
    "modèles disponibles : gemini-3.8-flash, gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash, gemini-3.5-flash-lite, gemini-3.1-flash-lite, gemini-3.1-flash-lite-preview, gemini-3-flash-preview, gemini-2.5-flash, gemini-2.5-flash-lite",
+   "écartés aujourd'hui (quota ou retirés) : gemini-3.7-flash, gemini-3.6-flash, gemini-3.5-flash",
    "gemini-3.8-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.6-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.8-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.6-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
    "gemini-3.8-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.7-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.6-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash : réseau (The operation was aborted due to timeout)",
+   "gemini-3.8-flash : HTTP 429 { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests ",
    "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.1-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.8-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.6-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.8-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.6-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.5-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.8-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.7-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.6-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.8-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.7-flash : HTTP 429 { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash, description: Generate content requests ",
-   "gemini-3.6-flash : HTTP 429 { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests ",
-   "gemini-3.5-flash : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.5-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.1-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a",
-   "gemini-3.8-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.5-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.8-flash : réseau (The operation was aborted due to timeout)",
-   "gemini-3.5-flash : HTTP 429 { \"error\": { \"code\": 429, \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.6-flash, description: Generate content requests "
+   "gemini-3.1-flash-lite : HTTP 503 { \"error\": { \"code\": 503, \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try a"
   ],
   "yield": [
    {
     "name": "googlenews · US",
-    "k": 6309,
+    "k": 6413,
     "r": 2
    },
    {
@@ -188,7 +155,7 @@
    },
    {
     "name": "Digitimes",
-    "k": 252,
+    "k": 253,
     "r": 1
    },
    {
@@ -197,28 +164,28 @@
     "r": 0
    },
    {
-    "name": "googlenews · GB",
-    "k": 163,
-    "r": 4
-   },
-   {
     "name": "googlenews · SA",
-    "k": 166,
+    "k": 170,
     "r": 1
    },
    {
+    "name": "googlenews · GB",
+    "k": 164,
+    "r": 4
+   },
+   {
     "name": "newsdata · KR",
-    "k": 141,
+    "k": 146,
     "r": 2
    },
    {
     "name": "Hugging Face blog",
-    "k": 130,
+    "k": 132,
     "r": 0
    },
    {
     "name": "DatacenterDynamics",
-    "k": 102,
+    "k": 110,
     "r": 3
    },
    {
@@ -272,6 +239,11 @@
     "r": 8
    },
    {
+    "name": "Tom's Hardware",
+    "k": 63,
+    "r": 7
+   },
+   {
     "name": "newsdata · AE",
     "k": 68,
     "r": 0
@@ -282,28 +254,23 @@
     "r": 0
    },
    {
-    "name": "Tom's Hardware",
-    "k": 57,
-    "r": 7
-   },
-   {
     "name": "newsdata · IN",
-    "k": 59,
+    "k": 60,
     "r": 2
    },
    {
     "name": "googlenews · IN",
-    "k": 59,
+    "k": 61,
     "r": 0
    },
    {
     "name": "googlenews · JP",
-    "k": 55,
+    "k": 56,
     "r": 2
    },
    {
     "name": "edgar",
-    "k": 49,
+    "k": 51,
     "r": 6
    },
    {
@@ -312,12 +279,12 @@
     "r": 5
    },
    {
-    "name": "The Verge IA",
-    "k": 49,
+    "name": "SCMP Tech",
+    "k": 51,
     "r": 1
    },
    {
-    "name": "SCMP Tech",
+    "name": "The Verge IA",
     "k": 49,
     "r": 1
    },
@@ -332,13 +299,13 @@
     "r": 1
    },
    {
-    "name": "newsdata · TW",
+    "name": "googlenews · DE",
     "k": 44,
     "r": 0
    },
    {
-    "name": "googlenews · DE",
-    "k": 43,
+    "name": "newsdata · TW",
+    "k": 44,
     "r": 0
    },
    {
@@ -358,13 +325,13 @@
    },
    {
     "name": "Wired IA",
-    "k": 32,
+    "k": 33,
     "r": 4
    },
    {
     "name": "googlenews · KR",
     "k": 34,
-    "r": 0
+    "r": 1
    },
    {
     "name": "Arab News",
@@ -372,12 +339,24 @@
     "r": 6
    },
    {
-    "name": "googlenews · FR",
-    "k": 30,
-    "r": 1
+    "name": "newsdata · GB",
+    "k": 31,
+    "r": 0
    }
   ],
   "rejected_samples": [
+   {
+    "ti": "Butterball Turkey hotline ramps up staffing, prepared to help with Thanksgiving cooking needs",
+    "s": "Cbs News",
+    "r": "Mention anecdotique de l'IA sans rapport direct avec l'économie ou l'i",
+    "d": "2026-11-26"
+   },
+   {
+    "ti": "제 역할 전혀 못하는 ETF…AI·반도체만 담고 투자자는 단타 친다",
+    "s": "매일경제",
+    "r": "Rubrique d'opinion financière générale sans fait nouveau.",
+    "d": "2026-11-26"
+   },
    {
     "ti": "東証10時 日経平均は堅調 AI・半導体に買い続く",
     "s": "日本経済新聞",
@@ -545,38 +524,14 @@
     "s": "The National",
     "r": "Course de Formule 1 sans rapport avec l'IA.",
     "d": "2026-11-22"
-   },
-   {
-    "ti": "「三菱、パワー半導体統合語る」「ロボが実験」 注目5本",
-    "s": "日本経済新聞",
-    "r": "Page de sélection d'articles de presse sans fait précis.",
-    "d": "2026-11-21"
-   },
-   {
-    "ti": "This week on Tom's Hardware Premium: 21 November 2026",
-    "s": "Tom's Hardware",
-    "r": "Page de sélection d'articles sans fait précis.",
-    "d": "2026-11-21"
    }
   ],
   "sources": [
-   {
-    "name": "Google DeepMind",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
    {
     "name": "OpenAI",
     "kind": "rss",
     "ok": true,
     "n": 25
-   },
-   {
-    "name": "NVIDIA blog",
-    "kind": "rss",
-    "ok": true,
-    "n": 18
    },
    {
     "name": "AWS Machine Learning",
@@ -585,16 +540,22 @@
     "n": 20
    },
    {
-    "name": "TechCrunch IA",
+    "name": "NVIDIA blog",
     "kind": "rss",
     "ok": true,
-    "n": 20
+    "n": 18
    },
    {
     "name": "Hugging Face blog",
     "kind": "rss",
     "ok": true,
     "n": 25
+   },
+   {
+    "name": "TechCrunch IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
    },
    {
     "name": "The Verge IA",
@@ -604,6 +565,18 @@
    },
    {
     "name": "Ars Technica",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Wired IA",
+    "kind": "rss",
+    "ok": true,
+    "n": 10
+   },
+   {
+    "name": "Google AI",
     "kind": "rss",
     "ok": true,
     "n": 20
@@ -621,16 +594,10 @@
     "n": 25
    },
    {
-    "name": "Google AI",
+    "name": "Google DeepMind",
     "kind": "rss",
     "ok": true,
-    "n": 20
-   },
-   {
-    "name": "Wired IA",
-    "kind": "rss",
-    "ok": true,
-    "n": 10
+    "n": 25
    },
    {
     "name": "DatacenterDynamics",
@@ -645,13 +612,13 @@
     "n": 25
    },
    {
-    "name": "EE Times",
+    "name": "Utility Dive",
     "kind": "rss",
     "ok": true,
     "n": 10
    },
    {
-    "name": "Utility Dive",
+    "name": "EE Times",
     "kind": "rss",
     "ok": true,
     "n": 10
@@ -663,10 +630,10 @@
     "n": 25
    },
    {
-    "name": "Pandaily",
+    "name": "SCMP Tech",
     "kind": "rss",
     "ok": true,
-    "n": 20
+    "n": 25
    },
    {
     "name": "The Next Platform",
@@ -681,10 +648,28 @@
     "n": 24
    },
    {
-    "name": "SCMP Tech",
+    "name": "Euractiv",
     "kind": "rss",
     "ok": true,
     "n": 25
+   },
+   {
+    "name": "SemiAnalysis",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Pandaily",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
+   },
+   {
+    "name": "Import AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 20
    },
    {
     "name": "Semiconductor Engineering",
@@ -693,19 +678,7 @@
     "n": 10
    },
    {
-    "name": "Euractiv",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "Interconnects",
-    "kind": "rss",
-    "ok": true,
-    "n": 20
-   },
-   {
-    "name": "ChinaTalk",
     "kind": "rss",
     "ok": true,
     "n": 20
@@ -717,16 +690,10 @@
     "n": 25
    },
    {
-    "name": "Microsoft News (IA)",
+    "name": "ChinaTalk",
     "kind": "rss",
     "ok": true,
-    "n": 10
-   },
-   {
-    "name": "Meta Newsroom",
-    "kind": "rss",
-    "ok": true,
-    "n": 10
+    "n": 20
    },
    {
     "name": "VentureBeat IA",
@@ -736,16 +703,16 @@
     "err": "HTTP 429"
    },
    {
-    "name": "Mistral AI",
+    "name": "Meta Newsroom",
     "kind": "rss",
     "ok": true,
-    "n": 25
+    "n": 10
    },
    {
-    "name": "The National",
+    "name": "Microsoft News (IA)",
     "kind": "rss",
     "ok": true,
-    "n": 25
+    "n": 10
    },
    {
     "name": "Nikkei Asia",
@@ -754,7 +721,13 @@
     "n": 25
    },
    {
-    "name": "Arab News",
+    "name": "Mistral AI",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "The National",
     "kind": "rss",
     "ok": true,
     "n": 25
@@ -773,30 +746,10 @@
     "n": 25
    },
    {
-    "name": "Rest of World",
-    "kind": "rss",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 403"
-   },
-   {
-    "name": "IEEE Spectrum",
-    "kind": "rss",
-    "ok": true,
-    "n": 25
-   },
-   {
     "name": "ServeTheHome",
     "kind": "rss",
     "ok": true,
     "n": 6
-   },
-   {
-    "name": "SemiAnalysis",
-    "kind": "rss",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 403"
    },
    {
     "name": "ZDNet IA",
@@ -805,17 +758,29 @@
     "n": 25
    },
    {
+    "name": "IEEE Spectrum",
+    "kind": "rss",
+    "ok": true,
+    "n": 25
+   },
+   {
+    "name": "Rest of World",
+    "kind": "rss",
+    "ok": false,
+    "n": 0,
+    "err": "HTTP 403"
+   },
+   {
     "name": "Data Center Knowledge",
     "kind": "rss",
     "ok": true,
     "n": 25
    },
    {
-    "name": "Import AI",
+    "name": "Arab News",
     "kind": "rss",
-    "ok": false,
-    "n": 0,
-    "err": "HTTP 403"
+    "ok": true,
+    "n": 25
    },
    {
     "name": "TrendForce",
@@ -824,25 +789,25 @@
     "n": 20
    },
    {
-    "name": "Google News États-Unis · OpenAI Anthropic Google Gemini",
-    "kind": "googlenews",
-    "ok": true,
-    "n": 12
-   },
-   {
     "name": "Google News États-Unis · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News États-Unis · artificial intelligence",
+    "name": "Google News États-Unis · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
     "name": "Google News États-Unis · AI data center electricity power",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News États-Unis · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -866,13 +831,13 @@
     "n": 12
    },
    {
-    "name": "Google News États-Unis · Trump administration AI",
+    "name": "Google News États-Unis · Lutnick Commerce Department chips",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News États-Unis · Lutnick Commerce Department chips",
+    "name": "Google News États-Unis · Trump administration AI",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -908,13 +873,13 @@
     "n": 12
    },
    {
-    "name": "Google News Royaume-Uni · AI chips Nvidia data center",
+    "name": "Google News Royaume-Uni · artificial intelligence",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Royaume-Uni · artificial intelligence",
+    "name": "Google News Royaume-Uni · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -938,13 +903,7 @@
     "n": 12
    },
    {
-    "name": "Google News France · IA puces datacenter",
-    "kind": "googlenews",
-    "ok": true,
-    "n": 10
-   },
-   {
-    "name": "Google News Royaume-Uni · Trump AI chips Nvidia China",
+    "name": "Google News France · intelligence artificielle",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -956,13 +915,13 @@
     "n": 12
    },
    {
-    "name": "Google News France · intelligence artificielle",
+    "name": "Google News France · IA puces datacenter",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
+    "name": "Google News Royaume-Uni · Trump AI chips Nvidia China",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -974,7 +933,7 @@
     "n": 12
    },
    {
-    "name": "Google News Émirats · AI chips Nvidia data center",
+    "name": "Google News Émirats · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -986,13 +945,13 @@
     "n": 12
    },
    {
-    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
+    "name": "Google News Émirats · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Taïwan · 人工智慧 晶片",
+    "name": "Google News Arabie saoudite · الذكاء الاصطناعي",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -1004,7 +963,13 @@
     "n": 12
    },
    {
-    "name": "Google News Inde · AI chips Nvidia data center",
+    "name": "Google News Taïwan · 人工智慧 晶片",
+    "kind": "googlenews",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Google News Corée · 인공지능 반도체",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -1016,13 +981,13 @@
     "n": 12
    },
    {
-    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
+    "name": "Google News Inde · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
    },
    {
-    "name": "Google News Singapour · AI chips Nvidia data center",
+    "name": "Google News Inde · OpenAI Anthropic Google Gemini",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -1040,7 +1005,7 @@
     "n": 12
    },
    {
-    "name": "Google News Corée · 인공지능 반도체",
+    "name": "Google News Singapour · AI chips Nvidia data center",
     "kind": "googlenews",
     "ok": true,
     "n": 12
@@ -1049,13 +1014,13 @@
     "name": "Watchlist gas · \"GE Vernova\" OR \"Siemens Energy\" OR \"Mitsubishi ",
     "kind": "watchlist",
     "ok": true,
-    "n": 28
+    "n": 26
    },
    {
     "name": "Watchlist smr · Westinghouse OR Holtec OR \"Last Energy\" OR \"Aalo",
     "kind": "watchlist",
     "ok": true,
-    "n": 13
+    "n": 28
    },
    {
     "name": "Watchlist smr · small modular reactor data center",
@@ -1073,19 +1038,19 @@
     "name": "Watchlist gas · gas turbine shortage backlog",
     "kind": "watchlist",
     "ok": true,
-    "n": 6
-   },
-   {
-    "name": "Watchlist grid · \"Hitachi Energy\" OR \"Siemens Energy\" OR \"Hyundai",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 30
+    "n": 5
    },
    {
     "name": "Watchlist gas · \"Bloom Energy\" OR Caterpillar OR Wärtsilä on-sit",
     "kind": "watchlist",
     "ok": true,
-    "n": 30
+    "n": 28
+   },
+   {
+    "name": "Watchlist grid · \"Hitachi Energy\" OR \"Siemens Energy\" OR \"Hyundai",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 20
    },
    {
     "name": "Watchlist grid · data center grid interconnection large load PJM ",
@@ -1100,13 +1065,19 @@
     "n": 30
    },
    {
+    "name": "Watchlist dcbuild · CoreWeave OR Nebius OR IREN OR Nscale OR Crusoe ",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 30
+   },
+   {
     "name": "Watchlist dcbuild · Stargate OR Humain OR G42 OR Khazna data center ",
     "kind": "watchlist",
     "ok": true,
     "n": 15
    },
    {
-    "name": "Watchlist dcbuild · CoreWeave OR Nebius OR IREN OR Nscale OR Crusoe ",
+    "name": "Watchlist cooling · \"Schneider Electric\" OR Motivair OR Modine OR Tr",
     "kind": "watchlist",
     "ok": true,
     "n": 30
@@ -1115,13 +1086,13 @@
     "name": "Watchlist cooling · liquid cooling data center Nvidia Blackwell OR R",
     "kind": "watchlist",
     "ok": true,
-    "n": 8
+    "n": 9
    },
    {
     "name": "Watchlist cooling · Vertiv OR nVent OR CoolIT OR LiquidStack OR Acce",
     "kind": "watchlist",
     "ok": true,
-    "n": 24
+    "n": 30
    },
    {
     "name": "Watchlist dcbuild · Equinix OR \"Digital Realty\" OR Vantage OR Aligne",
@@ -1133,7 +1104,7 @@
     "name": "Watchlist elec · \"Delta Electronics\" OR Legrand OR \"Monolithic Po",
     "kind": "watchlist",
     "ok": true,
-    "n": 12
+    "n": 11
    },
    {
     "name": "Watchlist elec · 800V DC data center power Nvidia Vertiv OR Eaton",
@@ -1145,16 +1116,22 @@
     "name": "Watchlist elec · solid-state transformer data center",
     "kind": "watchlist",
     "ok": true,
-    "n": 22
+    "n": 30
    },
    {
-    "name": "Watchlist cooling · \"Schneider Electric\" OR Motivair OR Modine OR Tr",
+    "name": "Watchlist chips · Cerebras OR Groq OR Etched OR Tenstorrent OR Sam",
     "kind": "watchlist",
     "ok": true,
     "n": 30
    },
    {
     "name": "Watchlist chips · Nvidia OR AMD OR Broadcom OR Marvell AI accelera",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 26
+   },
+   {
+    "name": "Watchlist chips · TPU OR Trainium OR Maia OR MTIA custom AI chip",
     "kind": "watchlist",
     "ok": true,
     "n": 30
@@ -1166,28 +1143,16 @@
     "n": 30
    },
    {
-    "name": "Watchlist chips · Cerebras OR Groq OR Etched OR Tenstorrent OR Sam",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 30
-   },
-   {
-    "name": "Watchlist chips · TPU OR Trainium OR Maia OR MTIA custom AI chip",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 30
-   },
-   {
-    "name": "Watchlist foundry · TSMC OR \"Samsung Foundry\" OR \"Intel Foundry\" OR ",
+    "name": "Watchlist foundry · ASML OR \"Applied Materials\" OR \"Lam Research\" OR",
     "kind": "watchlist",
     "ok": true,
     "n": 21
    },
    {
-    "name": "Watchlist foundry · ASML OR \"Applied Materials\" OR \"Lam Research\" OR",
+    "name": "Watchlist foundry · TSMC OR \"Samsung Foundry\" OR \"Intel Foundry\" OR ",
     "kind": "watchlist",
     "ok": true,
-    "n": 20
+    "n": 22
    },
    {
     "name": "Watchlist foundry · SMEE OR Naura OR SiCarrier China lithography EUV",
@@ -1199,13 +1164,7 @@
     "name": "Watchlist litho · ASML EUV High-NA lithography",
     "kind": "watchlist",
     "ok": true,
-    "n": 8
-   },
-   {
-    "name": "Watchlist foundry · Synopsys OR Cadence OR \"Siemens EDA\" AI chip des",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 30
+    "n": 9
    },
    {
     "name": "Watchlist litho · Zeiss SMT OR TRUMPF OR Lasertec OR Canon OR Niko",
@@ -1214,10 +1173,10 @@
     "n": 3
    },
    {
-    "name": "Watchlist litho · SMEE OR Naura OR SiCarrier OR Xlight lithography",
+    "name": "Watchlist foundry · Synopsys OR Cadence OR \"Siemens EDA\" AI chip des",
     "kind": "watchlist",
     "ok": true,
-    "n": 0
+    "n": 30
    },
    {
     "name": "Watchlist litho · Applied Materials OR \"Lam Research\" OR KLA OR \"T",
@@ -1226,16 +1185,22 @@
     "n": 13
    },
    {
-    "name": "Watchlist leadfab · TSMC 2nm 3nm production capacity",
+    "name": "Watchlist litho · SMEE OR Naura OR SiCarrier OR Xlight lithography",
     "kind": "watchlist",
     "ok": true,
-    "n": 10
+    "n": 0
    },
    {
     "name": "Watchlist leadfab · Samsung Foundry OR \"Intel Foundry\" OR Rapidus 2n",
     "kind": "watchlist",
     "ok": true,
     "n": 2
+   },
+   {
+    "name": "Watchlist leadfab · TSMC 2nm 3nm production capacity",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 9
    },
    {
     "name": "Watchlist otherfab · SMIC OR \"Hua Hong\" foundry capacity utilization",
@@ -1247,7 +1212,7 @@
     "name": "Watchlist leadfab · TSMC Arizona OR Japan OR Germany fab",
     "kind": "watchlist",
     "ok": true,
-    "n": 27
+    "n": 28
    },
    {
     "name": "Watchlist otherfab · mature node foundry China legacy chips",
@@ -1262,13 +1227,19 @@
     "n": 29
    },
    {
+    "name": "Watchlist memory · \"SK hynix\" OR Micron OR \"Samsung\" HBM4",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 30
+   },
+   {
     "name": "Watchlist memory · Hanmi OR BESI OR ASMPT OR Hanwha TC bonder HBM",
     "kind": "watchlist",
     "ok": true,
     "n": 4
    },
    {
-    "name": "Watchlist memory · \"SK hynix\" OR Micron OR \"Samsung\" HBM4",
+    "name": "Watchlist memory · DRAM shortage OR supercycle AI memory",
     "kind": "watchlist",
     "ok": true,
     "n": 30
@@ -1280,22 +1251,16 @@
     "n": 30
    },
    {
-    "name": "Watchlist memory · DRAM shortage OR supercycle AI memory",
+    "name": "Watchlist packaging · Amkor OR \"ASE Technology\" OR JCET OR Powertech p",
     "kind": "watchlist",
     "ok": true,
-    "n": 30
+    "n": 15
    },
    {
     "name": "Watchlist packaging · CoWoS capacity TSMC OR ASE OR Amkor advanced pac",
     "kind": "watchlist",
     "ok": true,
-    "n": 13
-   },
-   {
-    "name": "Watchlist packaging · Amkor OR \"ASE Technology\" OR JCET OR Powertech p",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 15
+    "n": 24
    },
    {
     "name": "Watchlist packaging · hybrid bonding OR \"panel-level packaging\" OR gla",
@@ -1322,43 +1287,37 @@
     "n": 6
    },
    {
-    "name": "Watchlist optics · Coherent OR Lumentum OR Innolight OR Eoptolink O",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 21
-   },
-   {
     "name": "Watchlist optics · \"Ayar Labs\" OR Lightmatter OR \"Celestial AI\" OR ",
     "kind": "watchlist",
     "ok": true,
     "n": 3
    },
    {
-    "name": "Watchlist copper · Credo OR Amphenol OR \"TE Connectivity\" OR Molex ",
+    "name": "Watchlist optics · Coherent OR Lumentum OR Innolight OR Eoptolink O",
     "kind": "watchlist",
     "ok": true,
-    "n": 13
+    "n": 21
    },
    {
     "name": "Watchlist copper · \"Astera Labs\" OR Marvell OR Semtech retimer OR A",
     "kind": "watchlist",
     "ok": true,
-    "n": 10
-   },
-   {
-    "name": "Watchlist optics · co-packaged optics Nvidia OR Broadcom silicon ph",
-    "kind": "watchlist",
-    "ok": true,
-    "n": 30
+    "n": 9
    },
    {
     "name": "Watchlist optics · Corning OR Prysmian OR Fujikura OR YOFC optical ",
     "kind": "watchlist",
     "ok": true,
-    "n": 30
+    "n": 14
    },
    {
-    "name": "Watchlist copper · copper demand AI data center",
+    "name": "Watchlist copper · Credo OR Amphenol OR \"TE Connectivity\" OR Molex ",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 12
+   },
+   {
+    "name": "Watchlist optics · co-packaged optics Nvidia OR Broadcom silicon ph",
     "kind": "watchlist",
     "ok": true,
     "n": 30
@@ -1370,19 +1329,19 @@
     "n": 2
    },
    {
-    "name": "Watchlist network · Nvidia Spectrum-X OR InfiniBand OR NVLink OR \"Ul",
+    "name": "Watchlist network · Arista OR Cisco OR Celestica OR Accton AI networ",
     "kind": "watchlist",
     "ok": true,
-    "n": 29
+    "n": 27
    },
    {
-    "name": "Watchlist network · Arista OR Cisco OR Celestica OR Accton AI networ",
+    "name": "Watchlist copper · copper demand AI data center",
     "kind": "watchlist",
     "ok": true,
     "n": 30
    },
    {
-    "name": "Watchlist models · DeepSeek OR Qwen OR Moonshot OR Kimi OR Zhipu OR",
+    "name": "Watchlist network · Nvidia Spectrum-X OR InfiniBand OR NVLink OR \"Ul",
     "kind": "watchlist",
     "ok": true,
     "n": 30
@@ -1400,6 +1359,12 @@
     "n": 30
    },
    {
+    "name": "Watchlist models · DeepSeek OR Qwen OR Moonshot OR Kimi OR Zhipu OR",
+    "kind": "watchlist",
+    "ok": true,
+    "n": 30
+   },
+   {
     "name": "Watchlist models · open-weight model release",
     "kind": "watchlist",
     "ok": true,
@@ -1412,13 +1377,13 @@
     "n": 30
    },
    {
-    "name": "Watchlist apps · Perplexity OR Harvey OR Glean OR Sierra enterpri",
+    "name": "Watchlist apps · Cursor OR Cognition OR Replit OR Lovable AI codi",
     "kind": "watchlist",
     "ok": true,
-    "n": 29
+    "n": 30
    },
    {
-    "name": "Watchlist apps · Cursor OR Cognition OR Replit OR Lovable AI codi",
+    "name": "Watchlist apps · Perplexity OR Harvey OR Glean OR Sierra enterpri",
     "kind": "watchlist",
     "ok": true,
     "n": 30
@@ -1561,13 +1526,13 @@
     "name": "Hacker News · AI",
     "kind": "hn",
     "ok": true,
-    "n": 11
+    "n": 12
    },
    {
     "name": "Hacker News · LLM",
     "kind": "hn",
     "ok": true,
-    "n": 8
+    "n": 7
    },
    {
     "name": "Hacker News · OpenAI",
@@ -1579,7 +1544,7 @@
     "name": "Hacker News · Nvidia",
     "kind": "hn",
     "ok": true,
-    "n": 6
+    "n": 4
    },
    {
     "name": "Hacker News · DeepSeek",
@@ -1591,7 +1556,7 @@
     "name": "Hugging Face Daily Papers",
     "kind": "hf",
     "ok": true,
-    "n": 5
+    "n": 2
    },
    {
     "name": "arXiv",
@@ -1667,5 +1632,5 @@
    }
   ]
  },
- "last_attempt": "2026-11-26T10:38:14.231Z"
+ "last_attempt": "2026-11-26T13:35:17.759Z"
 }

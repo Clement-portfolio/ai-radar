@@ -5,44 +5,42 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-26T10:17:47.359Z",
- "model": "gemini-3.1-flash-lite-preview",
+ "generated_at": "2026-11-26T13:27:54.322Z",
+ "model": "gemini-3.5-flash-lite",
  "sig": [
-  "1343f7f3b435+379e55a2e099+506b74d1aabd+740f81f2e5d1+ac6e047a0164+b0576938c855+d59a9fd96499+e9a493fbbd87",
+  "012a59ac5286+0fa20d13e8af+1233880d0e73+1c0a1e1598f2+1db90e300fc0+1ebbb225f078+2f55336101d3+35df4b85bc2e+4044a23d60df+4401da3fa47f+4b29b6901fc2+55a943f96493+5b49248f4f87+5cf3ec0a8d51+5dc55a044437+5eec9faeab2b+613b95800cde+657d6742e35a+66cc673a6baa+69f64fbae113+71f693cffefe+7c0a81286ce5+86f36aa729ca+93114210a39c+959f99dc5b4c+9daa256e2871+a165733dbba2+a8a55424e532+ad546544b1c7+bf1bbceebeaf+c9c1054b7a8d+cb8d7daff59c+ce30f58198f0+d2a4386c874f+e5cd248eff02+efa75c0d5fa1+fc3a90d264a7",
+  "1343f7f3b435+379e55a2e099+4440cdffde33+506b74d1aabd+740f81f2e5d1+ac6e047a0164+b0576938c855+d59a9fd96499+e9a493fbbd87",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+a41df70f5141+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
-  "337b7b18e815+4f56303dfa34+6f1c574d5831+767f93adc9c0+78a8ff0c3e9e+bc5bfb43b2ec+e9b809d2e10d+ee27956d3b8e",
-  "5dc55a044437+657d6742e35a+71f693cffefe+a4372e6a82f0+f8cdc496b0bc",
+  "16b9ff9d80af+9cbfa8def305+db6892e02d02+dc69baa5c634+dc7f497f02ae",
   "1d46f92411fb+2f09260e4b9f+397cc8e156aa+d2c99c65552e+d9fad293ecfb",
+  "337b7b18e815+4f56303dfa34+6f1c574d5831+767f93adc9c0+78a8ff0c3e9e+bc5bfb43b2ec+ee27956d3b8e",
   "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+c8ea64c1c7c6",
-  "0fba0bfd1fd8+1ffa2354dfd2+388f4aa5f277+8005585bab7e+a7d949f15f03+a98abb838c2f+e1046f8d9561",
-  "822f02026944"
+  "00b247ef1e19+02f0c60f242d+03dc35853dbb+203986bc5a13+412483738c4e+8bae682544f1+9eed3fb59cee+b7f86747d5e6+c9a06983856b+ca87ec84f38b+e4a74397df78+f5e5c5573114+fb7aaff6b6f6"
  ],
  "stories": [
   {
    "ids": [
-    "740f81f2e5d1",
-    "506b74d1aabd",
-    "e9a493fbbd87",
-    "379e55a2e099"
+    "35df4b85bc2e",
+    "959f99dc5b4c",
+    "e5cd248eff02",
+    "1233880d0e73"
    ],
-   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données IA",
+   "head": "Donald Trump évoque une grâce présidentielle pour le PDG de Nvidia Jensen Huang",
    "bullets": [
-    "L'administration américaine et la FCC ont validé le projet baptisé Starmind porté par Elon Musk.",
-    "SpaceX avait annoncé un investissement de 74 milliards de dollars dans les centres de données dédiés à l'intelligence artificielle."
+    "Donald Trump a exhorté Jensen Huang à ne pas invoquer le Cinquième Amendement et à dire la vérité devant le Congrès.",
+    "Le président américain a exercé des pressions sur le conseil d'administration de Nvidia, avec l'aide du vice-président Vance, pour favoriser le retour de Jensen Huang à la tête de l'entreprise."
    ],
    "kinds": [
     "detail",
-    "contexte"
+    "detail"
    ],
-   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for AI data centers",
+   "head_en": "Donald Trump mentions a presidential pardon for Nvidia CEO Jensen Huang",
    "bullets_en": [
-    "The US administration and the FCC validated the project named Starmind led by Elon Musk.",
-    "SpaceX had announced a 74 billion dollar investment in data centers dedicated to artificial intelligence."
+    "Donald Trump urged Jensen Huang to not invoke the Fifth Amendment and to tell the truth before Congress.",
+    "The US president exerted pressure on Nvidia's board of directors, with the help of Vice President Vance, to favor Jensen Huang's return to lead the company."
    ],
-   "ctx_ids": [
-    "0643a693415e"
-   ],
-   "ts": "2026-11-26T01:52:00.000Z"
+   "ctx_ids": [],
+   "ts": "2026-11-26T11:00:00.000Z"
   },
   {
    "ids": [
@@ -53,44 +51,51 @@
    ],
    "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire",
    "bullets": [
-    "Le département du Commerce américain a sanctionné ces entreprises en raison de leur implication dans le scandale de contrebande de puces Nvidia.",
-    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête sur l'entreprise Megaspeed suite à cette décision."
+    "Le département du Commerce américain a pris cette décision dans le cadre d'une enquête sur la contrebande de puces Nvidia vers la Chine.",
+    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête sur l'entreprise Megaspeed après ces sanctions.",
+    "Les autorités américaines avaient ouvert une enquête sur Megaspeed et Alice Huang en raison de soupçons de contournement des restrictions sur les puces Nvidia."
    ],
    "kinds": [
     "detail",
-    "detail"
+    "detail",
+    "contexte"
    ],
-   "head_en": "The United States places Megaspeed and an Alibaba subsidiary on blacklist",
+   "head_en": "The US places Megaspeed and an Alibaba subsidiary on a blacklist",
    "bullets_en": [
-    "The US Department of Commerce sanctioned these companies due to their involvement in the Nvidia chip smuggling scandal.",
-    "The Prime Minister of Singapore announced the opening of an investigation into Megaspeed following this decision."
+    "The US Department of Commerce made this decision as part of an investigation into the smuggling of Nvidia chips to China.",
+    "The Prime Minister of Singapore announced the opening of an investigation into Megaspeed following these sanctions.",
+    "US authorities had opened an investigation into Megaspeed and Alice Huang due to suspected circumvention of restrictions on Nvidia chips."
    ],
-   "ctx_ids": [],
+   "ctx_ids": [
+    "d525cb09aeca"
+   ],
    "ts": "2026-11-25T12:30:00.000Z"
   },
   {
    "ids": [
-    "767f93adc9c0",
-    "bc5bfb43b2ec",
-    "78a8ff0c3e9e",
-    "4f56303dfa34"
+    "d9fad293ecfb",
+    "d2c99c65552e",
+    "1d46f92411fb"
    ],
-   "head": "Des réseaux secrets permettent à la Chine d'obtenir des puces IA malgré les sanctions américaines",
+   "head": "Le Nasdaq chute de 4,6 % et le marché entre en zone de turbulences sur fond de craintes de bulle IA",
    "bullets": [
-    "Des enquêtes révèlent l'implication d'organismes d'État chinois dans des opérations de contrebande pour contourner les contrôles à l'exportation.",
-    "L'utilisation de réseaux complexes fragilise la crédibilité des politiques commerciales américaines visant à limiter les capacités IA chinoises."
+    "Le KOSPI en Corée du Sud a reculé de 6,16 % en raison des inquiétudes sur le secteur.",
+    "Le Nasdaq 100 est entré en marché baissier sous la pression des pertes liées à l'intelligence artificielle.",
+    "Cette correction boursière reflète une remise en question de la confiance des investisseurs dans la rentabilité immédiate des investissements dans l'IA."
    ],
    "kinds": [
     "detail",
+    "detail",
     "explication"
    ],
-   "head_en": "Secret networks allow China to obtain AI chips despite US sanctions",
+   "head_en": "The Nasdaq drops 4.6% and the market enters turbulent territory amid AI bubble fears",
    "bullets_en": [
-    "Investigations reveal the involvement of Chinese state agencies in smuggling operations to bypass export controls.",
-    "The use of complex networks undermines the credibility of US trade policies aimed at limiting Chinese AI capabilities."
+    "The KOSPI in South Korea fell 6.16% due to concerns over the sector.",
+    "The Nasdaq 100 entered a bear market under pressure from losses linked to artificial intelligence.",
+    "This stock correction reflects a questioning of investor confidence in the immediate profitability of AI investments."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-26T05:45:41.000Z"
+   "ts": "2026-11-26T00:36:48.000Z"
   }
  ]
 }

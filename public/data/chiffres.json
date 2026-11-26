@@ -1,13 +1,58 @@
 {
  "v": 1,
  "day": "2026-11-26",
- "generated_at": "2026-11-26T07:26:42.142Z",
- "model": "gemini-3.5-flash-lite",
+ "generated_at": "2026-11-26T13:27:54.322Z",
+ "model": "gemini-3.1-flash-lite-preview",
  "figures": [
   {
-   "title": "Union européenne : investissement IA",
+   "title": "SpaceX : déploiement de satellites",
+   "value": "1 million",
+   "sub": "La FCC a autorisé le déploiement d'une constellation de satellites équipés de puces IA pour créer des centres de données orbitaux.",
+   "ids": [
+    "506b74d1aabd",
+    "ac6e047a0164"
+   ],
+   "links": [
+    {
+     "t": "Arab News",
+     "u": "https://www.arabnews.com/world/fcc-says-spacex-can-deploy-1-million-satellites-for-data-centers-in-space-scientists-are-skeptical-3014071"
+    },
+    {
+     "t": "CNBC Tech",
+     "u": "https://www.cnbc.com/2026/11/25/spacex-fcc-satellite-approval.html"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-26T01:00:03.000Z",
+   "title_en": "SpaceX: satellite deployment",
+   "value_en": "1 million",
+   "sub_en": "The FCC authorized the deployment of a constellation of satellites equipped with AI chips to create orbital data centers."
+  },
+  {
+   "title": "Investissement dans l'IA par JPMorgan",
+   "value": "450 Md$",
+   "sub": "JPMorgan prévoit que les entreprises emprunteront ce montant sur les marchés obligataires en 2027 pour financer leurs dépenses d'investissement en IA.",
+   "ids": [
+    "c38765969e36"
+   ],
+   "links": [
+    {
+     "t": "Mint",
+     "u": "https://www.livemint.com/market/jpmorgan-sees-450-billion-ai-debt-blitz-in-2027-before-plateau-11795643437075.html"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-25T21:50:36.000Z",
+   "title_en": "AI investment by JPMorgan",
+   "value_en": "$450 billion",
+   "sub_en": "JPMorgan forecasts that companies will borrow this amount in bond markets in 2027 to fund their AI capital expenditures."
+  },
+  {
+   "title": "Fonds européen pour l'IA",
    "value": "50 Md€",
-   "sub": "L'Union européenne prévoit un fonds de 50 milliards d'euros pour soutenir l'intelligence artificielle et l'informatique quantique afin de rattraper son retard technologique.",
+   "sub": "L'Union européenne prévoit ce fonds pour soutenir les technologies critiques comme l'intelligence artificielle et l'informatique quantique.",
    "ids": [
     "a72ddf481a1e",
     "c60cd8412b39"
@@ -23,51 +68,11 @@
     }
    ],
    "conf": "moyenne",
-   "scope": "day",
+   "scope": "week",
    "ts": "2026-11-25T10:51:00.000Z",
-   "title_en": "European Union: AI Investment",
-   "value_en": "€50 billion",
-   "sub_en": "The European Union is planning a €50 billion fund to support artificial intelligence and quantum computing to bridge its technological gap."
-  },
-  {
-   "title": "CrowdStrike : rachat de Zscaler",
-   "value": "44 Md$",
-   "sub": "CrowdStrike va acquérir Zscaler pour 44 milliards de dollars afin de renforcer ses solutions de cybersécurité face à la recrudescence des cyberattaques dopées à l'intelligence artificielle.",
-   "ids": [
-    "0c56e1950266"
-   ],
-   "links": [
-    {
-     "t": "CNBC Tech",
-     "u": "https://www.cnbc.com/2026/11/23/crowdstrike-zscaler-aquisition-ai-cyberattacks.html"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-23T17:50:30.000Z",
-   "title_en": "CrowdStrike: Acquisition of Zscaler",
-   "value_en": "$44 billion",
-   "sub_en": "CrowdStrike will acquire Zscaler for $44 billion to strengthen its cybersecurity defenses against a surge in AI-driven cyberattacks."
-  },
-  {
-   "title": "Amazon : rachat de Decart",
-   "value": "7,5 Md$",
-   "sub": "Amazon acquiert les actifs clés de la startup spécialisée en intelligence artificielle Decart pour un montant de 7,5 milliards de dollars afin de renforcer ses capacités technologiques.",
-   "ids": [
-    "c3a2aba6c39e"
-   ],
-   "links": [
-    {
-     "t": "SiliconANGLE",
-     "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaXR5TS11S0V5ZmZCOERDYlI1OG9vWG9UX3ZQZHoyYndOX0VrdExNYmNVbjBFNzBqdGMwY0ZDM0RjdWhxVWJFU0o0eG04N2oyZzNMVGdTbVRVMV9SUFNld3FaSnlOcl9ZSGQ4OGhLNXdYdzJwNFI2Mkh6M3BfLVIwN0hzVkF3Q3diQmxzN3BNUkVxREZsZHBJRmRfalVMTXc5dE55LQ?oc=5"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-24T01:40:00.000Z",
-   "title_en": "Amazon: Acquisition of Decart",
-   "value_en": "$7.5 billion",
-   "sub_en": "Amazon is acquiring key assets of AI startup Decart for $7.5 billion to strengthen its technological capabilities."
+   "title_en": "European AI fund",
+   "value_en": "50 Md€",
+   "sub_en": "The European Union plans this fund to support critical technologies such as artificial intelligence and quantum computing."
   }
  ]
 }
