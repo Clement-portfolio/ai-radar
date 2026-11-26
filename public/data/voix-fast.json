@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T19:00:44.704Z",
+ "generated_at": "2026-11-26T19:20:52.707Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T19:10:44.704Z",
+ "translate_retry_at": "2026-11-26T19:30:52.707Z",
  "people": [
   {
    "id": "sam-altman",
@@ -143,6 +143,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T17:10:20.000Z",
+     "title": "SpaceX Stock for Children? Elon Musk Announces New Trump Accounts Initiative",
+     "title_fr": "Des actions SpaceX pour les enfants ? Elon Musk annonce une nouvelle initiative de comptes Trump",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeXFxbFpaZkZWZVc0eTVfMDZoVTJKRUIySWdJbWhzdXhRR0U3ZVJqV1poT1BESzZtMl84MGpQcVBJMEZhUncxZVNzSUVLTTVQV1BIN1B3UnAwVVgwdjEydVdnemtpZTMtTy1XMnBqTjlWakxOczIzMGhmejM1ZG4wWG5kQTFQMHg0bTdtQVExU0VnaGFDSmZNdFZleWc5RzZiczNLa2tmOA?oc=5",
+     "source": "Coinpaper",
+     "kind": "presse",
+     "srcs": [
+      "coinpaper"
+     ],
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-26T16:40:00.000Z",
      "title": "Elon Musk says he’ll gift every US kid 1 of his own SpaceX shares, plus 1 from SpaceX — but there’s a catch to claim",
