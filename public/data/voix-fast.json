@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T13:59:18.362Z",
+ "generated_at": "2026-11-26T14:40:50.791Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T14:09:18.362Z",
+ "translate_retry_at": "2026-11-26T15:10:50.791Z",
  "people": [
   {
    "id": "sam-altman",
@@ -130,6 +130,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T14:38:00.000Z",
+     "title": "Elon Musk says SpaceX could be worth $128 quintillion if it does 2 things",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZmdmeUdwdTlBdEVHVzM0RFNVdm5haGNkX3lwdHE3R1NVdUdTRmM1R1dBME9fbUVuQTZteGhiN2RsVkMxc2dwVmlHR0h3b2VJM3YwanBaTzZfcm9hbFNtOXY1UWFzRVBnczVWMjZ6ZzVNT1RYejlBYkJGV3MycHlweWQxeHJBZ1ZfT3BlTkdNYXVxZDJkLVROUzlUcWkwaXg0LXZzNERQMGhrcGstZW40Vnpmdw?oc=5",
+     "source": "Business Insider",
+     "kind": "presse",
+     "srcs": [
+      "business insider"
+     ],
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-26T13:25:26.000Z",
      "title": "Elon Musk Says SpaceX Could Be Worth ‘A Million Times’ the Global Economy if It Makes Life Multiplanetary",
