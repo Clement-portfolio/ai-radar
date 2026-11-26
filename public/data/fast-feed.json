@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-26T11:01:39.996Z",
+ "generated_at": "2026-11-26T11:10:39.018Z",
  "items": [
   {
    "id": "6d8d7e7b110c",
@@ -53,6 +53,21 @@
    "pending": true,
    "title_en": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
    "summary_en": "Will be dedicated to \"complex tensor operations, physical AI, large model training, and dense scientific simulation\""
+  },
+  {
+   "id": "6985f271a9e5",
+   "ts": "2026-11-26T10:35:08.000Z",
+   "title": "DRAM contract prices stay high as supply-demand squeeze persists",
+   "orig": "DRAM contract prices stay high as supply-demand squeeze persists",
+   "summary": "The Taiwan Institute of Economic Research (TIER) said on October 25 that strong AI chip demand is keeping advanced process capacity fully utilized, while tight global DRAM supply and demand are supporting high contract prices and lifting manufacturers' revenue",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PD230/taiwan-dram-demand-capacity-business.html",
+   "confidence": "moyenne",
+   "pending": true
   },
   {
    "id": "37e4e2d72f4f",
