@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T05:50:29.140Z",
+ "generated_at": "2026-11-26T06:01:16.240Z",
  "query_count": 1,
  "people": [
   {
@@ -33,6 +33,14 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T05:48:00.000Z",
+     "title": "Should AI ever rule humans? Anthropic CEO Dario Amodei calls the idea of handing political power to machines “absurd” and a “terrible idea”",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQT3g0b0hVYzJqVzBvYjNqMXVNcE5mYmZwV0dUbml2MWdodjViUHpXRlA1TmxtM0JRcVI3VHdBR3R6SGxEdUF5R3BFVXdaVDllRUs0OTAzXzZzRmxPNFI2QTdIbVFnVmUtZHRISkJYV2JmdjBYTHNpR2MyUjlNSTY0dW9rdzhTdlRpVThyVmNvdndZM0dOZV82NTBPdDZZMThISTc5SE5IeUVQcTNvSWZ1M29NUjN5eHUzSjFYR2Y2OFo4MGJDdE5kbENDR3diV0JzRFRMV21WQl9sUUtTckhERWFNcTJXQWxCLXQxcmtlMFZKOGJ6VFZOWFpjb0Y5MHM0TWRYc1VYQlEtMkdXdDFKdmtKLW9RUFB3Z0tsUlZteHBBV19DTXhR?oc=5",
+     "source": "Education Times",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-26T04:13:14.000Z",
      "title": "Does Anthropic Want AI to Run the World? CEO Dario Amodei Pushes Back Against ‘Surrender Human Free Will’",
@@ -87,14 +95,6 @@
      "title_fr": "",
      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNeGRJNmZJbUtyQVhrTFNiMHJLZERVN29SWURWVDdYV3p4UjBISG5TLVRJM2FJZEJnaTdfLXJtMUFIdFExUGNKVVByXzRid0hlcmVCajNDZkhuR3BQenZxNHRRMG0yRFV2aGVUY1NETWpzczJBUV91RnY4aEZTNXhJMzFTNlpkU05DbFV1cjhLUlJZTEcyYU5iYmQ1MFplUVJGakJCZFoxQ3pQTDlSaW54MEx5eEQwRFVqSjloWWNkeG1RWEFmVlZvZEh3RQ?oc=5",
      "source": "Superpower Daily",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-25T20:15:50.000Z",
-     "title": "Anthropic CEO Dario Amodei says letting AI govern society would be \"a bad idea\"",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRFFBVnY1ekpBVTZ5LS1HMnM2eVRLeG1sS211V1NDMDA2cGJyTElCWlVCTWVGWC1WalM1TFMyWnROOVphOThCMHNwWHNzMHRmMExWU0prZGhJZ2dBcUx1NndMQk45R0lYOE9DWmd4enJiU2lSUUx3Zk84RlB6QlVNb3lGOV93TGdELWRGTGJ4alJxVllmNUpkeTk2TTlMR1lzREE1Nw?oc=5",
-     "source": "The Decoder",
      "kind": "presse"
     }
    ]
