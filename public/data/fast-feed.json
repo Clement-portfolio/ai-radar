@@ -1,6 +1,60 @@
 {
- "generated_at": "2026-11-26T12:40:28.723Z",
+ "generated_at": "2026-11-26T12:52:15.305Z",
  "items": [
+  {
+   "id": "d35df4bdd093",
+   "ts": "2026-11-26T12:47:36.000Z",
+   "title": "Tecto annonce TREC1, son premier centre de données à Recife, au Brésil",
+   "orig": "Tecto announces TREC1, its first data center in Recife, Brazil",
+   "summary": "The facility will have an initial capacity of 1MW, scalable up to 6MW",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/tecto-announces-trec1-its-first-data-center-in-recife-and-connects-pernambuco-to-its-operations-in-fortaleza/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Tecto annonce TREC1, son premier centre de données à Recife, au Brésil",
+   "title_en": "Tecto announces TREC1, its first data center in Recife, Brazil",
+   "summary_en": "The facility will have an initial capacity of 1MW, scalable up to 6MW"
+  },
+  {
+   "id": "5db5c85fe4b2",
+   "ts": "2026-11-26T12:45:09.000Z",
+   "title": "La compagnie publique indienne de gaz naturel recherche un partenaire d'investissement pour un projet de centre de données",
+   "orig": "India's state-owned natural gas company seeks investment partner for data center project",
+   "summary": "Company aims to develop 5MW+ facility at compressor station in Faridabad, Haryana",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/indias-state-owned-natural-gas-company-seeks-investment-partner-for-data-center-project/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "La compagnie publique indienne de gaz naturel recherche un partenaire d'investissement pour un projet de centre de données",
+   "title_en": "India's state-owned natural gas company seeks investment partner for data center project",
+   "summary_en": "Company aims to develop 5MW+ facility at compressor station in Faridabad, Haryana"
+  },
+  {
+   "id": "76271f87ac82",
+   "ts": "2026-11-26T12:41:51.000Z",
+   "title": "IQM va livrer un ordinateur quantique Radiance R3 au centre de données de QAI en Corée du Sud",
+   "orig": "IQM to deliver Radiance R3 quantum computer to QAI data center in South Korea",
+   "summary": "System to be delivered by end of 2027",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/iqm-to-deliver-radiance-r3-quantum-computer-to-qai-data-center-in-south-korea/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "IQM va livrer un ordinateur quantique Radiance R3 au centre de données de QAI en Corée du Sud",
+   "title_en": "IQM to deliver Radiance R3 quantum computer to QAI data center in South Korea",
+   "summary_en": "System to be delivered by end of 2027"
+  },
   {
    "id": "eb1ade440b1a",
    "ts": "2026-11-26T12:33:07.000Z",
@@ -14,12 +68,14 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/8208-gpus-deployed-by-sharon-ai-for-esds-software-solution-in-australia/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_en": "8,208 GPUs deployed by Sharon AI for ESDS Software Solution in Australia",
+   "summary_en": "Contract was signed earlier this year"
   },
   {
    "id": "9d31399c3773",
    "ts": "2026-11-26T12:28:40.000Z",
-   "title": "Vertiv expands 800VDC power portfolio for AI data center market",
+   "title": "Vertiv élargit son portefeuille d'alimentation 800VDC pour le marché des centres de données d'intelligence artificielle",
    "orig": "Vertiv expands 800VDC power portfolio for AI data center market",
    "summary": "Adds systems for AI compute pods and data halls, alongside new solid-state transformer",
    "country": "US",
@@ -29,12 +85,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/vertiv-expands-800vdc-power-portfolio-for-ai-data-center-market/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Vertiv élargit son portefeuille d'alimentation 800VDC pour le marché des centres de données d'intelligence artificielle",
+   "title_en": "Vertiv expands 800VDC power portfolio for AI data center market",
+   "summary_en": "Adds systems for AI compute pods and data halls, alongside new solid-state transformer"
   },
   {
    "id": "72d076d05bd9",
    "ts": "2026-11-26T12:25:00.000Z",
-   "title": "Fortitude Capital plans 202MW AI data center campus in Sines, Portugal",
+   "title": "Fortitude Capital planifie un campus de centres de données d'intelligence artificielle de 202 mégawatts à Sines, au Portugal",
    "orig": "Fortitude Capital plans 202MW AI data center campus in Sines, Portugal",
    "summary": "Fortitude Capital expands investment activities to include digital infrastructure",
    "country": "US",
@@ -44,12 +103,15 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/fortitude-capital-plans-a-202-mw-ai-campus-in-sines/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Fortitude Capital planifie un campus de centres de données d'intelligence artificielle de 202 mégawatts à Sines, au Portugal",
+   "title_en": "Fortitude Capital plans 202MW AI data center campus in Sines, Portugal",
+   "summary_en": "Fortitude Capital expands investment activities to include digital infrastructure"
   },
   {
    "id": "54a5327eb269",
    "ts": "2026-11-26T11:49:48.000Z",
-   "title": "Cheyenne Light applies to build transmission infrastructure for three Microsoft data centers in Wyoming",
+   "title": "Cheyenne Light demande à construire une infrastructure de transport pour trois centres de données Microsoft dans le Wyoming",
    "orig": "Cheyenne Light applies to build transmission infrastructure for three Microsoft data centers in Wyoming",
    "summary": "Microsoft set to foot the bill",
    "country": "US",
@@ -59,7 +121,10 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/cheyenne-light-applies-to-build-transmission-infrastructure-for-three-microsoft-data-centers-in-wyoming/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Cheyenne Light demande à construire une infrastructure de transport pour trois centres de données Microsoft dans le Wyoming",
+   "title_en": "Cheyenne Light applies to build transmission infrastructure for three Microsoft data centers in Wyoming",
+   "summary_en": "Microsoft set to foot the bill"
   },
   {
    "id": "6d8d7e7b110c",
@@ -112,12 +177,12 @@
    "confidence": "moyenne",
    "pending": true,
    "title_en": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
-   "summary_en": "Will be dedicated to \"complex tensor operations, physical AI, large model training, and dense scientific simulation\""
+   "summary_en": "Will be dedicated to complex tensor operations, physical AI, large model training, and dense scientific simulation"
   },
   {
    "id": "6985f271a9e5",
    "ts": "2026-11-26T10:35:08.000Z",
-   "title": "DRAM contract prices stay high as supply-demand squeeze persists",
+   "title": "Les prix des contrats DRAM restent élevés alors que les tensions entre l'offre et la demande persistent",
    "orig": "DRAM contract prices stay high as supply-demand squeeze persists",
    "summary": "The Taiwan Institute of Economic Research (TIER) said on October 25 that strong AI chip demand is keeping advanced process capacity fully utilized, while tight global DRAM supply and demand are supporting high contract prices and lifting manufacturers' revenue",
    "country": "OTHER",
@@ -127,7 +192,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD230/taiwan-dram-demand-capacity-business.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les prix des contrats DRAM restent élevés alors que les tensions entre l'offre et la demande persistent",
+   "title_en": "DRAM contract prices stay high as supply-demand squeeze persists",
+   "summary_en": "The Taiwan Institute of Economic Research (TIER) said on October 25 that strong AI chip demand is keeping advanced process capacity fully utilized, while tight global DRAM supply and demand are supporting high contract prices and lifting manufacturers' revenue"
   },
   {
    "id": "37e4e2d72f4f",
