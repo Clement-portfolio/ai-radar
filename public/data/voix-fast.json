@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T20:30:38.772Z",
+ "generated_at": "2026-11-26T21:20:31.335Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T20:40:38.772Z",
+ "translate_retry_at": "2026-11-26T21:30:31.335Z",
  "people": [
   {
    "id": "sam-altman",
@@ -143,6 +143,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T21:09:13.000Z",
+     "title": "SpaceX Stock — Elon Musk Predicts $9.5B Share Price as Kids Get Shares",
+     "title_fr": "Action SpaceX : Elon Musk prédit un cours de 9,5 milliards de dollars alors que des enfants reçoivent des actions",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcDhwQy1aQ0pPLVVGcDdnYWJtQXdlVGZfeUNvaWZzUDlieGg3NDFVQWlHcmU4TUt1Ti0zNDI4aktsNENNci1renE2SUtYeTB6Y244ZE9aSGgzOHg2QTZCWndOYjFPSXRoZUhfbFRHUWY5WVBMTUdmVGVsaTNpQ2I4aUpR?oc=5",
+     "source": "The Korea Daily",
+     "kind": "presse",
+     "srcs": [
+      "the korea daily"
+     ],
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-26T20:27:00.000Z",
      "title": "Musk reveals name for AI supercomputer in southeast Arizona",
