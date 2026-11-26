@@ -5,11 +5,11 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-25T20:27:26.580Z",
+ "generated_at": "2026-11-26T01:22:48.381Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+a41df70f5141+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
-  "012a59ac5286+07b3803b9303+0fa20d13e8af+1b14383b1d83+1c0a1e1598f2+1db90e300fc0+276b2f2f3253+3a6c6f14ac09+3d9d25dd26bb+4401da3fa47f+55a943f96493+58c62ab8c65b+5dc55a044437+613b95800cde+6553a4e9576a+657d6742e35a+66cc673a6baa+68a0e195ceda+69f64fbae113+6d46c005192f+71f693cffefe+86f36aa729ca+8ab217dd39cd+9daa256e2871+9eed3fb59cee+9f91f68231f9+a078aa976acb+a165733dbba2+ac55a4874f2b+ad3978edda31+ad546544b1c7+b33fa45cb319+b8a8e1606a64+bc1d56d7d3cd+bf1bbceebeaf+cb8d7daff59c+d2a4386c874f+e25e47ddb5c8+efa75c0d5fa1+f27eb2633696+fc3a90d264a7",
+  "012a59ac5286+07b3803b9303+0fa20d13e8af+1b14383b1d83+1c0a1e1598f2+1db90e300fc0+276b2f2f3253+3a6c6f14ac09+3d9d25dd26bb+4401da3fa47f+55a943f96493+58c62ab8c65b+5dc55a044437+613b95800cde+6553a4e9576a+657d6742e35a+66cc673a6baa+68a0e195ceda+69f64fbae113+71f693cffefe+86f36aa729ca+8ab217dd39cd+9daa256e2871+9eed3fb59cee+9f91f68231f9+a078aa976acb+a165733dbba2+ac55a4874f2b+ad3978edda31+ad546544b1c7+b33fa45cb319+b8a8e1606a64+bc1d56d7d3cd+bf1bbceebeaf+cb8d7daff59c+d2a4386c874f+e25e47ddb5c8+efa75c0d5fa1+f27eb2633696+fc3a90d264a7",
   "337b7b18e815+4f56303dfa34+6f1c574d5831+767f93adc9c0+78a8ff0c3e9e+bc5bfb43b2ec+ee27956d3b8e",
   "2e21ff90ad8e+3074a2422f9f+e17d72621a35+f190f3e82d1a",
   "24eadded30b3+2d821be6a070+52f8100482ff+580518075063+9b10aa3778dc",
@@ -25,19 +25,19 @@
     "295cb82f7621",
     "82dc9a9a5cfd"
    ],
-   "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire pour contrebande de puces",
+   "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire",
    "bullets": [
-    "Le département du Commerce américain sanctionne l'entreprise singapourienne Megaspeed et une filiale d'Alibaba pour leur implication dans le détournement de processeurs Nvidia vers la Chine.",
-    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête nationale sur les activités de Megaspeed à la suite de ces mesures de rétorsion américaines."
+    "Le département du Commerce américain a pris cette mesure dans le cadre d'une enquête sur la contrebande de puces Nvidia.",
+    "Le Premier ministre de Singapour a annoncé une enquête sur la société après les accusations américaines de détournement de puces d'IA."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "US adds Megaspeed and Alibaba subsidiary to trade blacklist over chip smuggling",
+   "head_en": "The United States places Megaspeed and an Alibaba subsidiary on a blacklist",
    "bullets_en": [
-    "The US Department of Commerce sanctions Singaporean firm Megaspeed and an Alibaba subsidiary for their involvement in diverting Nvidia processors to China.",
-    "The Prime Minister of Singapore announced the opening of a national investigation into Megaspeed's activities following these US retaliatory measures."
+    "The US Department of Commerce took this measure as part of an investigation into Nvidia chip smuggling.",
+    "The Prime Minister of Singapore announced an investigation into the company following US allegations of AI chip diversion."
    ],
    "ctx_ids": [],
    "ts": "2026-11-25T12:30:00.000Z"
@@ -49,19 +49,19 @@
     "68a0e195ceda",
     "613b95800cde"
    ],
-   "head": "Donald Trump intervient pour replacer Jensen Huang à la tête de Nvidia",
+   "head": "Donald Trump est intervenu pour réinstaller Jensen Huang à la tête de Nvidia",
    "bullets": [
-    "Le président Donald Trump a directement appelé le conseil d'administration de Nvidia et a sollicité le vice-président pour favoriser ce retour.",
-    "Cette ingérence politique sans précédent de l'exécutif américain dans la gouvernance d'une entreprise technologique stratégique soulève des questions sur l'indépendance de sa direction."
+    "Le président a sollicité le vice-président Vance pour faire pression sur le conseil d'administration de l'entreprise",
+    "Cette manœuvre visait officiellement à stabiliser les marchés financiers en imposant le retour du dirigeant"
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Donald Trump intervenes to reinstate Jensen Huang as CEO of Nvidia",
+   "head_en": "Donald Trump intervened to reinstate Jensen Huang as CEO of Nvidia",
    "bullets_en": [
-    "President Donald Trump directly called Nvidia's board of directors and solicited the vice president to favor this return.",
-    "This unprecedented political interference by the US executive branch in the governance of a strategic technology company raises questions about the independence of its management."
+    "The president enlisted Vice President Vance to pressure the company's board of directors",
+    "This maneuver was officially aimed at stabilizing financial markets by forcing the leader's return"
    ],
    "ctx_ids": [],
    "ts": "2026-11-25T14:19:00.000Z"
@@ -75,20 +75,20 @@
    ],
    "head": "Applied Digital signe un contrat de 5,4 milliards de dollars pour un centre de données IA",
    "bullets": [
-    "L'accord porte sur une capacité informatique de 150 MW avec un fournisseur cloud majeur.",
-    "Le contrat de location a une durée de 18 ans.",
-    "Ce nouveau bail porte les revenus contractuels totaux de l'entreprise au-delà de 41 milliards de dollars."
+    "Le bail porte sur une capacité informatique de 150 MW pour une durée de 18 ans.",
+    "Ce contrat illustre la demande massive et continue des hyperscalers pour des infrastructures de datacenters dédiées à l'intelligence artificielle.",
+    "Ce nouvel accord porte le chiffre d'affaires contractuel total de l'entreprise au-delà de 41 milliards de dollars."
    ],
    "kinds": [
     "detail",
-    "detail",
+    "explication",
     "detail"
    ],
-   "head_en": "Applied Digital signs a 5.4 billion dollar deal for an AI data center",
+   "head_en": "Applied Digital signs a 5,4 billion dollar deal for an AI data center",
    "bullets_en": [
-    "The agreement covers 150 MW of computing capacity with a major cloud provider.",
-    "The lease contract has a duration of 18 years.",
-    "This new lease brings the company's total contracted revenue beyond 41 billion dollars."
+    "The lease covers 150 MW of computing capacity for a duration of 18 years.",
+    "This contract illustrates the massive and continuous demand from hyperscalers for data center infrastructures dedicated to artificial intelligence.",
+    "This new agreement brings the company's total contracted revenue beyond 41 billion dollars."
    ],
    "ctx_ids": [],
    "ts": "2026-11-25T06:58:08.000Z"
