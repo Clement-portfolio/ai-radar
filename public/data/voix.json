@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T19:05:08.327Z",
+ "generated_at": "2026-11-26T22:00:33.741Z",
  "people": [
   {
    "id": "sam-altman",
@@ -39,7 +39,7 @@
      "source": "Forbes",
      "kind": "presse",
      "title_fr": "Sam Altman d'OpenAI déclare qu'il est « difficile d'imaginer » l'industrie de l'IA sans Jensen Huang",
-     "m": 3,
+     "m": 2,
      "e": 1
     },
     {
@@ -59,7 +59,7 @@
      "source": "TechCrunch",
      "kind": "presse",
      "title_fr": "Le PDG d'OpenAI, Sam Altman, déclare qu'il est « difficile d'imaginer l'industrie de l'IA sans Jensen »",
-     "m": 3,
+     "m": 2,
      "e": 1
     },
     {
@@ -73,6 +73,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-17T08:00:00.000Z",
+     "title": "Sam Altman Says He Doesn't Want to Take RAM Away From Users, but Data Centers Are Still More Efficient",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CV09kS3FXUkg0NzdwV1A0bmg1WHZCbU9rUTNtYTVGZnBRZjRkbURKQU51N0Utal9zQW0tbno0ZHNjYkFWcWhnUC00SUhPZWh1ZXAzcTNTMkRmblHSAWBBVV95cUxOckpxSHd0RWxpTk9rX2pucUFVR2lUWXdtdHA5bGRic1FGZ21YdmRLelJZbmRCa1pERjBGWnBRYlhkUXJlTEZTU0xUTW9FOGlhY2hSc1pJSUkxX3RzLXdjMmw?oc=5",
+     "source": "Mezha",
+     "kind": "presse",
+     "title_fr": "Sam Altman affirme qu'il ne veut pas retirer de mémoire vive aux utilisateurs, mais que les centres de données restent plus efficaces",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-16T22:06:00.000Z",
      "title": "Sam Altman says he's not worried about OpenAI's IPO plan",
      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQNXI3cnpJZjBrWXU2ZGhCb2tVNThZZkdpdHdLek81ajFzMDVhSjkyQkhyRkhQTXJCWUhaT2tpN1pJQzF6YUdscWVqOXhrTzZEanF4cjRZaDFIMHdtOFJOc241d2VwVHUzTkhidnJCN0J2T3gzcXlKYU8xUVRlOWlOT3NiSkNnT0tfYUE?oc=5",
@@ -81,16 +91,6 @@
      "title_fr": "Sam Altman déclare qu'il n'est pas inquiet concernant le projet d'introduction en bourse d'OpenAI",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-16T21:35:04.000Z",
-     "title": "Sam Altman says AI revolution hard to imagine without Jensen Huang",
-     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBlUmVhT005Vy1ZU3ZhWDZReTYxYmMxU1dZUFNhXzc5dGN4TjhJdFF2czY5bUlhQVlmeXZ2SV9XaUR0dDYtTFpzM1Bidjh0OTVNQ3JFVDl3YWpOeUlGbXUyRG5sVVAzWm8?oc=5",
-     "source": "Reuters",
-     "kind": "presse",
-     "m": 3,
-     "e": 1,
-     "title_fr": "Sam Altman déclare qu'il est difficile d'imaginer la révolution de l'IA sans Jensen Huang"
     }
    ]
   },
@@ -876,14 +876,24 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T18:01:59.000Z",
+     "title": "Microsoft AI CEO Suleyman Says AI Chip Glut Fears Are Misplaced",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yZ2twclhiNWxZRDBjbUcwSzl5VXh4OHNhN3RmSUlESHJOdmpMYkRJSC05RHd3aGp6Tm1NUVJFX1ZtOEFCQ2tMTlZHZXg0Q1h1WHp4bkJFdEs2aEU?oc=5",
+     "source": "www.tokenpost.com",
+     "kind": "presse",
+     "title_fr": "Le PDG de Microsoft AI, Suleyman, affirme que les craintes d'une surabondance de puces IA sont infondées",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-26T17:55:53.000Z",
      "title": "Microsoft AI CEO Mustafa Suleyman dismisses fears of an AI chip glut",
      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTWczd2k4Mm5XbkhJZVlFbEJYbmZsWjlHcDBlYUdibzNkU25POWpmOUh2NVhrQ19xSGtESGRsR05CVlFpZzMzcnhHN2M1djRmRWRpUVIwMHJELXRVLUM5UmlTT1hSeWN2a3JVY1U1OVQtcTdlc3ppRUhybVQ3WXpyN29B?oc=5",
      "source": "Crypto Briefing",
      "kind": "presse",
      "title_fr": "Mustafa Suleyman, PDG de Microsoft AI, rejette les craintes d'une surabondance de puces pour l'IA",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-24T06:40:00.000Z",
@@ -4975,7 +4985,7 @@
    "actor": null,
    "alerts": [
     {
-     "ts": "2026-11-26T15:23:24.000Z",
+     "ts": "2026-11-26T16:21:04.000Z",
      "title": "Rubio Exit Rumours Swirl After Trump and Vance Sideline Him in Nvidia Deal",
      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPMUdTLV9qT2RWLVdZWDI1bUdBSjFKR3AxT3Y0QWVFVlVwVlRnSVdRaHo5bEdDaUR1NGw2ektVWk5SUU0zV0lYTXBEUWVaMmV3eHJ5S2M3aUozOUtOMWJGR2cwdUU5R1ZERUZTc2JRR0oxUjhnZEJEdldta2FmdGdxcVl2bFNQa0xBTDhsNTdaQ0NtOVJGRWNybGI1WjJ6RGxLZDV0T01HcUxFSm9iZzh5MnNHaUx3QQ?oc=5",
      "source": "Hungarian Conservative"
@@ -6262,7 +6272,21 @@
  ],
  "hot": [
   {
-   "score": 0.99,
+   "score": 1.47,
+   "id": "mustafa-suleyman",
+   "n": "Mustafa Suleyman",
+   "role": "Directeur de Microsoft AI",
+   "actor": "microsoft",
+   "ts": "2026-11-26T18:01:59.000Z",
+   "title": "Microsoft AI CEO Suleyman Says AI Chip Glut Fears Are Misplaced",
+   "title_fr": "Le PDG de Microsoft AI, Suleyman, affirme que les craintes d'une surabondance de puces IA sont infondées",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yZ2twclhiNWxZRDBjbUcwSzl5VXh4OHNhN3RmSUlESHJOdmpMYkRJSC05RHd3aGp6Tm1NUVJFX1ZtOEFCQ2tMTlZHZXg0Q1h1WHp4bkJFdEs2aEU?oc=5",
+   "source": "www.tokenpost.com",
+   "kind": "presse",
+   "outlets": 2
+  },
+  {
+   "score": 0.79,
    "id": "jd-vance",
    "n": "JD Vance",
    "role": "Vice-président des États-Unis",
@@ -6276,21 +6300,7 @@
    "outlets": 4
   },
   {
-   "score": 0.91,
-   "id": "mustafa-suleyman",
-   "n": "Mustafa Suleyman",
-   "role": "Directeur de Microsoft AI",
-   "actor": "microsoft",
-   "ts": "2026-11-26T17:55:53.000Z",
-   "title": "Microsoft AI CEO Mustafa Suleyman dismisses fears of an AI chip glut",
-   "title_fr": "Mustafa Suleyman, PDG de Microsoft AI, rejette les craintes d'une surabondance de puces pour l'IA",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTWczd2k4Mm5XbkhJZVlFbEJYbmZsWjlHcDBlYUdibzNkU25POWpmOUh2NVhrQ19xSGtESGRsR05CVlFpZzMzcnhHN2M1djRmRWRpUVIwMHJELXRVLUM5UmlTT1hSeWN2a3JVY1U1OVQtcTdlc3ppRUhybVQ3WXpyN29B?oc=5",
-   "source": "Crypto Briefing",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.85,
+   "score": 0.68,
    "id": "geoffrey-hinton",
    "n": "Geoffrey Hinton",
    "role": "Prix Nobel, pionnier du deep learning",
