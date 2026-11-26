@@ -5,17 +5,17 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-26T16:12:23.195Z",
+ "generated_at": "2026-11-26T17:43:45.655Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "16b9ff9d80af+42272da9d711+9cbfa8def305+aadb027d973f+afa08db982a9+db6892e02d02+dc69baa5c634+dc7f497f02ae+f0f0fb98c15e",
-  "1343f7f3b435+4440cdffde33+506b74d1aabd+740f81f2e5d1+ac6e047a0164+b0576938c855+d59a9fd96499+e73cece637cf+e9a493fbbd87+ea7846207d79+f1200a6ae9c1",
+  "1343f7f3b435+379e55a2e099+506b74d1aabd+740f81f2e5d1+7a7175ef0317+ac6e047a0164+b0576938c855+c52f36f68e67+d59a9fd96499+e9a493fbbd87+ea7846207d79",
   "012a59ac5286+0fa20d13e8af+1233880d0e73+1c0a1e1598f2+1db90e300fc0+1ebbb225f078+2f55336101d3+35df4b85bc2e+4044a23d60df+4401da3fa47f+4b29b6901fc2+55a943f96493+5b49248f4f87+5cf3ec0a8d51+5dc55a044437+5eec9faeab2b+613b95800cde+657d6742e35a+66cc673a6baa+69f64fbae113+71f693cffefe+7c0a81286ce5+86f36aa729ca+93114210a39c+959f99dc5b4c+9daa256e2871+a165733dbba2+a8a55424e532+ad546544b1c7+bf1bbceebeaf+c9c1054b7a8d+cb8d7daff59c+ce30f58198f0+d2a4386c874f+e5cd248eff02+efa75c0d5fa1+fc3a90d264a7",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+a41df70f5141+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
   "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+c8ea64c1c7c6",
   "1d46f92411fb+2f09260e4b9f+397cc8e156aa+d2c99c65552e+d9fad293ecfb",
-  "7f852450c684+c0afb00f6c44+c5d8e0fed595+d0346efc5629+e9b809d2e10d",
-  "0a0218381e56+3430cc86f807+3f483ec94a3c+4d34ad2c63d7+6600f56df21a+76a1ecfd8e4b+7a59d4c41a3e+84e6033d7025+99360c4211a2+a59b740fd89d+b7175444dd03+b8e5519408fd+c9c6101f6d2a+caa508a8959c+e2b7af907e84+e40c41a47eb2+ecab1061c917+f4aa87ac0d93+f7e99522702f+fe2f73778320"
+  "0a0218381e56+3430cc86f807+3f483ec94a3c+4d34ad2c63d7+6600f56df21a+76a1ecfd8e4b+7a59d4c41a3e+84e6033d7025+99360c4211a2+a59b740fd89d+b7175444dd03+b8e5519408fd+c9c6101f6d2a+caa508a8959c+e2b7af907e84+e40c41a47eb2+ecab1061c917+f4aa87ac0d93+f7e99522702f+fe2f73778320",
+  "05e8bcaf8862+66e6972db296+7f852450c684+9a846c49257a+a033e5a89094+c1dc41f0728a+c89240affac7"
  ],
  "stories": [
   {
@@ -27,20 +27,49 @@
    ],
    "head": "Nvidia suspend ses livraisons de serveurs d'IA vers 4 pays d'Asie du Sud-Est",
    "bullets": [
-    "La Malaisie, Singapour, la Thaïlande et l'Indonésie sont concernés par cette suspension de livraisons de serveurs.",
-    "Cette décision vise à empêcher le contournement des sanctions et l'accès indirect de la Chine aux technologies de pointe américaines."
+    "La Malaisie, Singapour, la Thaïlande et l'Indonésie sont concernées par cette suspension de livraisons de serveurs.",
+    "Cette décision fait suite au durcissement des directives et des contrôles à l'exportation du Département du Commerce américain.",
+    "Les importations d'équipements de fabrication de puces de Singapour vers la Chine avaient doublé pour atteindre 3,46 milliards de dollars avant ces mesures."
+   ],
+   "kinds": [
+    "detail",
+    "explication",
+    "contexte"
+   ],
+   "head_en": "Nvidia suspends AI server shipments to 4 Southeast Asian countries",
+   "bullets_en": [
+    "Malaysia, Singapore, Thailand, and Indonesia are affected by this suspension of server shipments.",
+    "This decision follows the tightening of export guidelines and controls by the US Department of Commerce.",
+    "Chip-making equipment imports from Singapore to China had doubled to reach 3.46 billion dollars prior to these measures."
+   ],
+   "ctx_ids": [
+    "1e073af14e01"
+   ],
+   "ts": "2026-11-26T14:39:35.000Z"
+  },
+  {
+   "ids": [
+    "c52f36f68e67",
+    "7a7175ef0317",
+    "ea7846207d79",
+    "740f81f2e5d1"
+   ],
+   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données spatiaux",
+   "bullets": [
+    "La constellation baptisée Starmind vise à soutenir les besoins en calcul de l'intelligence artificielle.",
+    "Ce projet permet de contourner les contraintes énergétiques terrestres face aux besoins massifs futurs."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Nvidia suspends AI server shipments to 4 Southeast Asian countries",
+   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for space data centers",
    "bullets_en": [
-    "Malaysia, Singapore, Thailand, and Indonesia are affected by this suspension of server shipments.",
-    "This decision aims to prevent the circumvention of sanctions and indirect access by China to advanced American technologies."
+    "The constellation named Starmind aims to support artificial intelligence computing needs.",
+    "This project helps bypass terrestrial energy constraints in the face of massive future needs."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-26T14:39:35.000Z"
+   "ts": "2026-11-26T05:24:45.000Z"
   },
   {
    "ids": [
@@ -49,54 +78,25 @@
     "e5cd248eff02",
     "1233880d0e73"
    ],
-   "head": "Donald Trump évoque une possible grâce présidentielle pour le PDG de Nvidia Jensen Huang",
+   "head": "Donald Trump évoque une grâce présidentielle pour le PDG de Nvidia Jensen Huang",
    "bullets": [
-    "Donald Trump a exhorté Jensen Huang à ne pas invoquer le Cinquième Amendement lors de son audition au Congrès.",
-    "Le président américain est intervenu pour favoriser le retour de Jensen Huang à la tête de Nvidia afin de stabiliser les marchés financiers.",
-    "Donald Trump a appelé directement le conseil d'administration de Nvidia et a sollicité le vice-président Vance pour faire revenir le dirigeant."
+    "Donald Trump a exhorté le dirigeant à ne pas invoquer le Cinquième Amendement avant son audition devant un comité de la Chambre.",
+    "Le président américain a publiquement déclaré vouloir que Jensen Huang dise la vérité au Congrès.",
+    "Cette prise de position intervient après des interventions de l'exécutif pour favoriser le retour du dirigeant à la tête de Nvidia afin de stabiliser les marchés financiers."
    ],
    "kinds": [
     "detail",
-    "explication",
-    "detail"
+    "detail",
+    "explication"
    ],
    "head_en": "Donald Trump raises the possibility of a presidential pardon for Nvidia CEO Jensen Huang",
    "bullets_en": [
-    "Donald Trump urged Jensen Huang not to invoke the Fifth Amendment during his congressional hearing.",
-    "The US president intervened to facilitate Jensen Huang's return as head of Nvidia in order to stabilize financial markets.",
-    "Donald Trump directly called Nvidia's board of directors and solicited Vice President Vance to bring the executive back."
+    "Donald Trump urged the executive not to invoke the Fifth Amendment ahead of his testimony before a House committee.",
+    "The US President publicly stated that he wants Jensen Huang to tell the truth to Congress.",
+    "This stance comes after executive interventions to favor the executive's return to the head of Nvidia in order to stabilize financial markets."
    ],
    "ctx_ids": [],
    "ts": "2026-11-26T11:00:00.000Z"
-  },
-  {
-   "ids": [
-    "2fe930384672",
-    "2ca795adfbbb",
-    "295cb82f7621",
-    "82dc9a9a5cfd"
-   ],
-   "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire",
-   "bullets": [
-    "Le département du Commerce américain a pris cette décision dans le cadre d'une enquête sur la contrebande de puces Nvidia.",
-    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête sur l'entreprise Megaspeed suite à ces mesures.",
-    "Les autorités américaines avaient ouvert une enquête sur Megaspeed et Alice Huang pour des soupçons de contournement des restrictions."
-   ],
-   "kinds": [
-    "detail",
-    "detail",
-    "contexte"
-   ],
-   "head_en": "The United States places Megaspeed and an Alibaba subsidiary on blacklist",
-   "bullets_en": [
-    "The US Department of Commerce made this decision as part of an investigation into Nvidia chip smuggling.",
-    "The Prime Minister of Singapore announced the opening of an investigation into Megaspeed following these measures.",
-    "US authorities had launched an investigation into Megaspeed and Alice Huang over suspicions of bypassing restrictions."
-   ],
-   "ctx_ids": [
-    "d525cb09aeca"
-   ],
-   "ts": "2026-11-25T12:30:00.000Z"
   }
  ]
 }
