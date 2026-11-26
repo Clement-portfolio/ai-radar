@@ -1,7 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T13:30:57.719Z",
+ "generated_at": "2026-11-26T13:59:18.362Z",
  "query_count": 1,
+ "translate_retry_at": "2026-11-26T14:09:18.362Z",
  "people": [
   {
    "id": "sam-altman",
@@ -16,18 +17,28 @@
     {
      "ts": "2026-11-26T04:35:28.000Z",
      "title": "OpenAI tests Private Inference with select customers, says Sam Altman",
-     "title_fr": "",
+     "title_fr": "OpenAI teste l'inférence privée avec certains clients, déclare Sam Altman",
      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcVRmRmlNVmtzelF6ZDc3NlRPZ0ZyS3JYMTZWNFlEYkpDR01SMHNxV2lGQVFEYnVyM0FFSzZXMnFIbmpsVGJuenZmMF9jaWgtLU1BWDFPYXFNVjc0Rmh5R21FZzZmTUNDYkZyNzZCdnRvWWVNM3lxLW9MNllkQVBlSE1MUWYtZXprT08xYW9iVkRCMDFuUkJsQWs2VG10U09DMmd4RDBXR3JETEpYVTdMM2lFdU5OZ9IBuwFBVV95cUxQeUJ4N0x0eWROeTlUbjQ3b2xlUS0yM2gyTjJ5UG9vMlhRcU41REVrcWxwRGtTVjJkVy05b3lFSWdvYjd0LUdHOUR3Sy1HUnpiQUZ0X2lJaFI5clM3eVBFYlAyMmNxUVdsUzJlTHUzeHd3SWIxOHc1QU1ZYU5ZTWpKR1lvR0dBZW9HMTVpS0taa2Q2NW9RalBMRHJxWTlfNUdwNUhSZlV1Sy1yd0RFUjFxd2VaVXhZQzR2RU00?oc=5",
      "source": "Storyboard18",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "storyboard18"
+     ],
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-25T11:19:47.000Z",
      "title": "Sam Altman Says It’s “an Ill-Advised Moment to Go Public.” That’s a Big Risk for Oracle",
-     "title_fr": "",
+     "title_fr": "Sam Altman déclare que c'est « un moment mal choisi pour entrer en bourse ». C'est un gros risque pour Oracle",
      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQMmpsaVU2VnFKb2VNSTE4Z09BdTZlT19nbTVJNzltLWRvc0g4VlI2QTd0LXgzTnBTdzdlamFLX0w0a3VWWklIWWtYbi0xN3hORlByVDZPQmZCR0hJcEVYQzJHQ2x2aHpXM19hT0kyb2tCQVRzSW5CdmF1Z2h2QnNCaXVOc190QkpYdC1aVU9TZ2VRMTVwTUZF?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "yahoo finance"
+     ],
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -44,66 +55,68 @@
     {
      "ts": "2026-11-26T11:32:09.000Z",
      "title": "Anthropic CEO Dario Amodei Says Some AI Deployments May Need to Slow So Workers Can Adapt",
-     "title_fr": "",
+     "title_fr": "Le PDG d'Anthropic, Dario Amodei, déclare que certains déploiements d'IA pourraient devoir ralentir pour que les travailleurs puissent s'adapter",
      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPdktWYzdTU0pVM2R5eTFiRFBUcFp6MDloc1ZwZjlCTkVlanhfaDhVbW5VTHdGT3gwM3dVYzhBNjM3QWo1Ui1oNm9LN0diZW9zU09fVTBOQ05DU1ZjdzIzM3JmTUx5WjM5OU96R0prRGhOZjNWZzV0RWF1TUhYYW1iYkpiT25LSVlDajJqdHl5TUszY1NYdUhkWXhjdm9TRmNiamxrM0Y4Slo3dlgycldTRm9SWlNVV19lOXNwNg?oc=5",
      "source": "Metaintro",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-26T10:04:29.000Z",
-     "title": "Anthropic CEO Dario Amodei calls handing power to AI “absurd”",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1zYTdNUTBDMGFSdVhpb3NlSnFITzBiX3BxM3BmaGFudmJybl85UUxZUVgySjQ1LW5EZWRmRXVuYjVDOThCSWE4TjYzTEF5dEN4TmVGM0pwUHFYajBwRTN5dVJRRkdnVll2Qjc0a0d5NzRsd0dESjR5SGE5cFdCdw?oc=5",
-     "source": "YourStory.com",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "metaintro"
+     ],
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-26T09:35:00.000Z",
      "title": "Anthropic CEO Dario Amodei denies he wants humans to surrender free will to AI; says: It's absurd to...",
-     "title_fr": "",
+     "title_fr": "Le PDG d'Anthropic, Dario Amodei, nie vouloir que les humains abandonnent leur libre arbitre à l'IA ; il déclare : C'est absurde de...",
      "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxQWHhwZzhGY2NFMkI5b0hVMGlGejVveTBrTVJEdzJZNVJNQ3FGT012NHJpd2pJMnY3d0xiY1djbVFScW1vOXk4cmNRdVMyYkw3czcwZHAyMW9yOWlHQTBvanBvVTN0UlNIYk54WkQ2RW44NEozOVBzN214azRySmI0b1E1ZXBVZFE2ZXR6RVd5ZG1jNVlCZE5iSTk5V2dfRy1zdF9XaFljaEY1MllETS15cTJscGQ2c01YWUJQakdSWjVsZWRwbHc0Si13S01HUExPUDZEbjdzYm9UR1VIUEd1Qk1DbTdjNzVQVGVVb1Q3Q0hieThFMS1CQ2w3WURkV0hNWFIyWVR1YjZyQnpTYlHSAZMCQVVfeXFMUE1iY3QyQW1iVXhrSTNDVFdmU0FaQ1Y1MFVYNk1EYUhsWFNSQ0R0M3YtOVBMNGJ4SG13R28xZDAxRjU3ZG1Nd19zbUl2VmxHR3NPWk1rQUdRdDZnMVB2aS1ob3BMdVkwYU9waVlOUXIweWNRbnRrZE9pLS16VTlfRTN1MkY4QzhSTEpSNmNLbDJwbFc1Z1NNQk1peldpZW9QNU5qUEZEQVluMkhtQ0tzQlVEaUJDNDA3QUtOUWdzaTRlNHR1djd3dkFVSVJaSDhWUHNDamZiY2FHTnY3UW9KQ0ZGQ2ZUekRUa0xyQ3ZqdThMczRtWFhTVzZyS211NXdlaUMwTmd1aWRuSElBWWZGY2tXaTg?oc=5",
      "source": "The Times of India",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "the times of india",
+      "the economic times"
+     ],
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-26T09:24:11.000Z",
      "title": "Dario Amodei hits back at claims Anthropic wants humanity to ‘surrender control’ to AI",
-     "title_fr": "",
+     "title_fr": "Dario Amodei réfute les affirmations selon lesquelles Anthropic veut que l'humanité « abandonne le contrôle » à l'IA",
      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRVBGbEQxdnVUWmtRX0pENFRsVl9ZWDBBX3RHYmJTUWY2N1RFbVhjVU1iNG5KakpFWG5HRHdOM1lJWWhDVHJwbXhWcmJXQmlrdGZTOTJRYmM2bEdJcDRMTm1SMG11aUl6V2RUU1dpUGwyTWo0R1B6LWhNQTJKRmVNenJlc1F5TWVOT1ZJeVZFWEtqMTZrb1lmcl9GQThhVzZUdEhiV253am1mQko4cDJuZko3aGdKaUxBaVhTWjVndThvNFVxb3diUWs1TjNRdmNQcGfSAdgBQVVfeXFMUGRLM2VTU1R1dzZkSDNFUmpvSGJsSlNCN1lCQ1FuWmhYOHhGOFE2S21adWg3SmRtSWZIVmNQUmM3N1diSGhFT0VxQjVRUXYtLW16cVNZcnU1Z0hITWZ6WUtHWkJRYlFtUmVxX09kVVdENlFlWFFOakRxV0hjSk9sVWRsRnpCcXl3WUNBRDJWNUNVNGxXZ09kdUxXNW1vTE5OWmh2NjVaSEk4aUJlbkt6WEpNX0owdmprMHk5bUc2QUVxZzRPMWd6WHFwUEtMX1pTN2hsVkZRTkNx?oc=5",
      "source": "The Indian Express",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-26T07:27:23.000Z",
-     "title": "Surrendering Human Control To AI? Anthropic CEO Dario Amodei Calls It 'Absurd'",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxORzZVUmlQak5XQktDc1FhRUNtUGRTM1A5TmFIZUVaRE51YXpPQjF1MDBTZ2Y5VWdMcTF6N01MMnpza3lZVVByQW1HSUJvX0N2YURBcmhSeThrdEdGRHZxSVA4OEhkczFBRE9uRENLQ2JpR2poQWVhUWZZZ0dQQkVSYUV0cFpTWFQ5dGRBY3M3dXVuX2dOak5BS0JMekJHSDlnUTNnd0ZtcGU4Z3RZZ2hGRUdUUmtSZEROZVl5eUR2YWdIN3l6dERBbtIB0AFBVV95cUxOT2gwQWJKRlQtZGVGTTZ1ZTJucmxRencxT0p3NkJMMDJyZ0lCS3JCalgxOHY4cmZndGdQaEx5Q1ZaQ0x1Z2dOQmNDVG9OeGZPa2x0UmszalVkYUd1Vk5aVG1LZ3pyQU1aR1ZOM1NOV2Y2NVYzZ2luLV90Z0xocXlfa0FrV3ViNTl2MTI2Vk14bktCOG5ldk9wcDduaDJTRHJ3LU5VX2p4SmlFb29sTkw0WE1OY3JJbkNra2dNUVNRM3V3TjlnLWN0S2JDbDVsd2hF?oc=5",
-     "source": "NDTV",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "the indian express"
+     ],
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-26T05:48:00.000Z",
      "title": "Should AI ever rule humans? Anthropic CEO Dario Amodei calls the idea of handing political power to machines “absurd” and a “terrible idea”",
-     "title_fr": "",
+     "title_fr": "L'IA devrait-elle un jour diriger les humains ? Le PDG d'Anthropic, Dario Amodei, qualifie l'idée de confier le pouvoir politique aux machines d'« absurde » et d'« idée terrible »",
      "url": "https://news.google.com/rss/articles/CBMipwJBVV95cUxQT3g0b0hVYzJqVzBvYjNqMXVNcE5mYmZwV0dUbml2MWdodjViUHpXRlA1TmxtM0JRcVI3VHdBR3R6SGxEdUF5R3BFVXdaVDllRUs0OTAzXzZzRmxPNFI2QTdIbVFnVmUtZHRISkJYV2JmdjBYTHNpR2MyUjlNSTY0dW9rdzhTdlRpVThyVmNvdndZM0dOZV82NTBPdDZZMThISTc5SE5IeUVQcTNvSWZ1M29NUjN5eHUzSjFYR2Y2OFo4MGJDdE5kbENDR3diV0JzRFRMV21WQl9sUUtTckhERWFNcTJXQWxCLXQxcmtlMFZKOGJ6VFZOWFpjb0Y5MHM0TWRYc1VYQlEtMkdXdDFKdmtKLW9RUFB3Z0tsUlZteHBBV19DTXhR?oc=5",
      "source": "Education Times",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "education times"
+     ],
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-26T04:13:14.000Z",
      "title": "Does Anthropic Want AI to Run the World? CEO Dario Amodei Pushes Back Against ‘Surrender Human Free Will’",
-     "title_fr": "",
+     "title_fr": "Anthropic veut-il que l'IA dirige le monde ? Le PDG Dario Amodei rejette l'idée d'« abandonner le libre arbitre humain »",
      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaWhLVnVINC1WWFU0ci1lU3RwRHpCano1MFRoaDlXVmkyREFpR1V6bEhyWFBIY3dRYWs2Q2dsVTFqVjBlSS0wRVdVWnk3eTRFaWtQbzJEa1BXRmhBbXRaWUVwM3B0eFY4WDY1T1lOekpwUGczOHMtbkt6MlFqY0dmaXNncUs?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-26T04:02:36.000Z",
-     "title": "Anthropic chief Dario Amodei denies wanting humans to 'surrender' free will to AI",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQOXR4cEFseGNsRXBVWndjRUpSaHhYay13OElURmR2UXVkcGZOZ0piQlQzUi1UdG41Smg2VHN1a25Mb254Ync5M01USVpRMmpsWnNRT2JYWkd3eTJBS2dNLVdNcFFTd2haUjloMmxWTnpqc2xZZzdUMURaWVpqb0dtY0c5VW1LUUV6UHhkU3NreVRPVThFTmdhUmNXSS1rSTlhS0lpazhKVUx1NUp6bjBLUEJULVd1aWFrZUMxcFZJdGhUQk8yN045bDkwdDVoUWIyMzRKM0xMdVp1VGFJMHV4SW9vMDFBVEpNUjRWeE1VVkhCQldP0gH6AUFVX3lxTE5aYXNUcjBxVF91REVZaEtZSEkzNXNWWC1zQ1RxZll2U1BTN3JRR2xQeTlWV1FibE92aV9Velg0M28ycmphTWJpNTdOTGhLZDVIZFZPOS01RmNjbk93Q0g1VTA3eGg1NnFwMW1DVFZXSHdQQUVxOFZXbjQ0RnVQWjBOR3k0MTVKV1loZnpVaDFNVFZ4UDdFVEtYaVFxU2ZWU2R6STlNWklnWnBaZ1hCTFNhbFY2ZGNNSzN6alJod195TjJySVpFSjhITDVKeEpsT3ZzTjVCLVZGU0JmRE12VDE2REhKek9hQVljSTh3VXJ0UWkwUWdfd1JfOHc?oc=5",
-     "source": "The Economic Times",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "benzinga"
+     ],
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -120,66 +133,70 @@
     {
      "ts": "2026-11-26T13:25:26.000Z",
      "title": "Elon Musk Says SpaceX Could Be Worth ‘A Million Times’ the Global Economy if It Makes Life Multiplanetary",
-     "title_fr": "",
+     "title_fr": "Elon Musk déclare que SpaceX pourrait valoir « un million de fois » l'économie mondiale si elle rend la vie multiplanétaire",
      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxORnR5bWIxNEU4U282U3ByeWkwOV9iM1hfcTIxWThId3d1ZV9RSFhKSWE3X3M0bTlSNURraGpsOWVVT1MtSWdmcFZBNTlJRll5M1k5U052Q2JXMk5SOXZZelBZUHNUbGFMYzFBdFZwNTM2Y2VpSGZOWGlVcWZvSUdZN0h5aHNrTEVqa1ZqOWhhblh2NG1kSTEzX3lzd05GTDNOOHRKcEk1dzdhRC1MYTN6T1Y1SER5Y1FFRjM1M3hISTQxc0E2eV9NdjhUSUVsM1NDR3NiUDByOUNIa3diWHdPOXY5ZnQ1eXR5RGtPZHZlSHFCWVBxX3gtNFpKaV9yTUQ0VFlmVnp1Um1ITHlDbk4za3p0YkdZS0RaV21z?oc=5",
      "source": "Benzinga",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "benzinga"
+     ],
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-26T12:15:00.000Z",
      "title": "Elon Musk warns AI’s 2027 cash shortage will be ‘nuts’ as industry could need billions more. Protect your retirement",
-     "title_fr": "",
+     "title_fr": "Elon Musk prévient que la pénurie de liquidités de l'IA en 2027 sera « dingue » car l'industrie pourrait avoir besoin de milliards de dollars supplémentaires. Protégez votre retraite",
      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNVmRodWVsMWI2a1FMaDdhUTRmSmdHLThMVDN3Tm8zOVBnbGVxQk5GSWQ5ZW9oYXlJbkVzd0ZBMzkyajBIS2VlZUg1N2t3QnZNS1NwTUhmcjEwMmdDaDV6U05HNGF0X3A5NDFGSWM0a055S3ZuQ3lVWHN5OGt4SzNwQ2M3MkNMUWs5NXQxSEpaaGs?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "yahoo finance"
+     ],
+     "m": 1,
+     "e": 1
     },
     {
      "ts": "2026-11-26T11:45:10.000Z",
      "title": "'Where Will That Come From?': Elon Musk Warns AI Firms Need Hundreds of Billions in Working Capital as Oracle Says It's Covered",
-     "title_fr": "",
+     "title_fr": "« D'où cela viendra-t-il ? » : Elon Musk prévient que les entreprises d'IA ont besoin de centaines de milliards de dollars en fonds de roulement alors qu'Oracle affirme être couvert",
      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPR0VQSm5LVUp3LXZJbE5xSE1YMk5GWnBUSzFSTloybjV1TmJuWThld29Mc2xXaUszSC1CR3NvYUptQjR1QWFKZEs4YU4tNTFkdkpxbENSTzlBN0VNbm5Gd2lzMGdfSWN4M0F3ZGVRQ3VCQmViN1VqUW9yZm81YVRPRzRnX2R0TGpfZ3piNDlUYXB0MjUy?oc=5",
      "source": "Yahoo Finance",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "yahoo finance"
+     ],
+     "m": 1,
+     "e": 1
     },
     {
      "ts": "2026-11-26T10:00:26.000Z",
      "title": "SpaceX to transfer first shares to ‘every child in US’ next month, says Elon Musk",
-     "title_fr": "",
+     "title_fr": "SpaceX transférera ses premières actions à « chaque enfant aux États-Unis » le mois prochain, déclare Elon Musk",
      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFNfbm9xYUstUUdEZUk4UVdMRWJFQ25DX0phak81Mm1LcndtSmVzU2hfUmN0MFhEbWhnR1hvNnVxRUF2b3NuV0l3cF9RaVVXc2hUSTU2M1U1djhmZ1FvUC12SmptalMyREExZGVHVjJRQnhGYko0RzdoLURjY0Z1RnFMaGFySlhROHgwMGI2TmhJMnd0LVRRX3dkNFd0TnNOMEtYYjN0akRQY05ITlM1VUtFZ0VCcHhPUXV2X1ZR0gHEAUFVX3lxTE5SZHdzUTl5d1p4SENsdG94dEFIVDdCRVlYYTJsVENXMzFOX0RYSGVkNjBQYWxLQUdpTkpnRkFESFFySWNqYU1MNW1BX0w2VUJEcFlJSkg2WEFiYU5ic05WLWRCQ0pESE5KYU0zQU5mTzNRRl9PS29id1djNzFDblZ1Y3RmNmVzb1k5NUl3U0RMMHRIZWx3TDhmWjF3WVdHYmhJZHJJaFhIZ2NGMFh2c1pqN2MtXzFUaVdaYkhNSlVpR3Z6NG0?oc=5",
      "source": "The Indian Express",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-26T08:57:55.000Z",
-     "title": "Elon Musk Says Every American Child Will Receive Two SpaceX Shares—Here’s When",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPbFI0elF5RGV6RXZPM0lCUVlmN1Jwa1I0cHpxRDFhOGc5UGVRaUw3aHFxcU1QTEhpNUxhVVNwaTFPOU1YSzJRUTU1aDBEN3FSbk1Bc25pUDhtYUxPcTk3OTNPZzhHQmRIVGc4X0hmQU04ZVFkM2pNbkJCaWVSZ2pCaFhVVG8yT0g0b0YtREtNSlZFcnFsMk1VaElYeTZZVWtJRDhLV3Z4b1kzNmNXclBOb2k0WTQ2eGpPckxqaHFUNXMzMmhudzRsSmlhRW1HSWV3?oc=5",
-     "source": "Forbes",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-26T08:56:46.000Z",
-     "title": "Elon Musk says every U.S. child will get two SpaceX shares",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE90YjRzdUZ4amphWFRXU3Itb2gwUS1PbXYxSU0wS25SWjRSVkgweTdYRjkwOWcxNVRzNXB3dlBsNXNzbnhHSFlHaUJ0d3ZSM3dhVmc?oc=5",
-     "source": "Digg",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "the indian express",
+      "forbes",
+      "digg",
+      "the hindu"
+     ],
+     "m": 4,
+     "e": 1
     },
     {
      "ts": "2026-11-26T08:22:02.000Z",
      "title": "Elon Musk Announces Massive SpaceX Giveaway to American Kids — His Own Fortune Is Now Part of the Deal",
-     "title_fr": "",
+     "title_fr": "Elon Musk annonce une distribution massive d'actions SpaceX aux enfants américains — sa propre fortune fait désormais partie de l'accord",
      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNcG56d2FBcXJ5b2NNVTZnMjU2eWwxb3IzTkN2REp3Vjh4T0pQUFZjR1h6b1RVZ2k0aFprVDdKWm5LeXp5NElIakJvcS1PMFRrZVRGNExheDJ1azY4Q2RIYkRUSktZVHduaVJNQkxGOUYxemo1ZThDWkhnV2IwT29YSkR6aG02eU85OHBpZ3JidWpvU0R0NzdDVmRhOFRtNGNjdDNucGduWjJkem43Rmt0ME1qdGZCTi1yVzJHc05Lc3dHQQ?oc=5",
      "source": "Parade Magazine",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-26T07:39:48.000Z",
-     "title": "Elon Musk says every child in U.S. will get two SpaceX shares",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOc0Y1RVNzX3RuTHZ4MWpmdXFUSXVQeUZsMzl5aDFvc0tRRXpkLVhJb1IwTVd6NVdxWERoS1A1WGFDMEJBRHBxRkFRQkRqR2I2ajNZUWljTHhTSzFqdVVTcnpyNW82OVR3ZnE0QXYtdURJVG93bWtjWU8xZFp3WEZMeU5mZ054WjBxMmlYTHpjZ2ZfN0VUS0lNVjAxcEY4Z3JzUWVEY0VPTEZza3ctQldyMndvZFdTVzdqb2JlVHVSazDSAccBQVVfeXFMTVRpczFMNHNTcmZ0X0YzbXVzcnZwZ1BOWGFZLXhQeDd6cnJzajFuSGc1UXRNMTk0OUdpUEVtN1JXMk9rdVlzaE5YclA3UjJ5empMTnBzV3RNWTZTd1UyUFNMUXN1Y2hKLU0tdUhyai1WR3FWOFlHUmJ1U1N4d2dhdDJOOXJMazN3MTI2S1p1RHJBLUZzQ0VGeUZscjBTRzJYd3hkWUFiREdFT0FfRFZaVHpnSHVsaGhLS0c5S1BCTUtPcGlCOXBrcw?oc=5",
-     "source": "The Hindu",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "parade magazine"
+     ],
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -196,18 +213,28 @@
     {
      "ts": "2026-11-25T19:13:24.000Z",
      "title": "Satya Nadella Says “the Floor of Cyber Attacks Has Fallen.” Microsoft Just Declared Code Red After a 24-Hour Outage",
-     "title_fr": "",
+     "title_fr": "Satya Nadella déclare que « le niveau des cyberattaques a chuté ». Microsoft vient de déclarer une alerte rouge après une panne de 24 heures",
      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxQQ3pKMFAzdHlaV0Z1VFRpUGVYRDBudXU4blFCbmJDUTlPT0NGVDZLejRkSHJiUVVzUE9aRm9Jd0NXZ2poaWoxX0xmYWZjWEwwQ0g3bzlDekZtVE9sX0Jmdi03REJ0Wm15aXpfMnFidkNfS3luYUNfNXJxYkxnX0tuR2dyWUI5Tk1ocVc1a0NMRHRRUUVSVF9oN01EYl9yaHdtQmU4eHVnUjViSjVmMEVVTFRIeGRnVUZPSWdVUWY2ODlUZlhJLWxwV3pnc295dXNmNTZLSnhySUxDLVJlWER5NTNEQkdVZlFDWlZHQXhENy1JWTNoSVFhYW0tVFpldm15NjlDTWdENjdmbGM?oc=5",
      "source": "TIKR.com",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "tikr.com"
+     ],
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-25T09:26:25.000Z",
      "title": "Satya Nadella Says “Six Months Behind Is a Great Place to Be.” That’s a Warning for Anthropic",
-     "title_fr": "",
+     "title_fr": "Satya Nadella déclare qu'« avoir six mois de retard est une excellente position ». C'est un avertissement pour Anthropic",
      "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPcE5wNmViWjFlWE9UdDRwZWZVLTQ0V0NFaEZCZThzMjA2a0FKLTQ2RnJGenZ0d081ejVJQ0s5UzdBWGNsU1ZhZWR1aVQxNXVodG4yamQtemZOTVljMlNwYVhkTmZCOXcwcHZwZmxaWm1MTjZLMkRtb2hNNTAyRTZVOTNEa0JOR1UzUHV5aEZTY2VWQkxzRldOV01KOHJ6M2JlNEtSRnZ1Q0pDdHpvaUlOdktDcFNOTXZ6eUUxZ2RfM0RvTElNUHFnWnlFaEdSVm9EaXRteEFvZmxxMjZ3OWhTc09qSWJ3d2M4Y1MtbA?oc=5",
      "source": "TIKR.com",
-     "kind": "presse"
+     "kind": "presse",
+     "srcs": [
+      "tikr.com"
+     ],
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -275,16 +302,7 @@
    "co": "TSMC",
    "actor": "tsmc",
    "alerts": [],
-   "items": [
-    {
-     "ts": "2026-11-25T09:42:03.000Z",
-     "title": "TSMC sets Dec. 4 Arizona celebration with Trump, C.C. Wei expected",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPYmhXT3pPbzQyejlPMjRpWGhWSU5JaGJsRW92bnNTWGpIYXpnVmhzOWF1b1I4a2k0U0dzRTN6QUduNFNhRHdhSlZTMjFvbUhhdEFDVm1ON3IxSF9sNmdTaThPdVBQTUliaEU3NlF3Q0hOSWU0ZVRFcDI2RTU5bG15SHVXczZtQ3RNVWVB?oc=5",
-     "source": "digitimes",
-     "kind": "presse"
-    }
-   ]
+   "items": []
   },
   {
    "id": "andy-jassy",
@@ -306,24 +324,7 @@
    "co": "Intel",
    "actor": "intel-foundry",
    "alerts": [],
-   "items": [
-    {
-     "ts": "2026-11-25T18:33:18.000Z",
-     "title": "AI data centres now buy about as many CPUs as GPUs, down from a ratio of 8 to 1, as inference and agents take over, says Intel's Lip-Bu Tan",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOYjI1UEwydnRaaGpHVWpXdTlxWXl0NnhQZEowTWZIMWVzVkJJX280TUVCaUtaWmNyVUQxMzh2VXhUb3I2U1R3MmlfaGpBUUpjYjE4MWZiVnFVTnhyeTc4LTJlbVpkZk9hS3FIbWVKS0FrUVh5cVI1dVBLMGk0bXE5MkMtWHNiZkI3bHBTTjFFNEdyZF9FZHFmS3ptODhwdXdUVXFfN0FhZWtzN0RNQ1JSVmJhRXdxYjBJbzNzLVlvUTRpWFM1c08wbW1tcTQzXzYtcU1KdGw5WFhaTWlReHViM0hSZGNfZzN0aUNSd3dXUEFCY0l5QjNadHlvTU90N1E?oc=5",
-     "source": "Dealroom",
-     "kind": "presse"
-    },
-    {
-     "ts": "2026-11-25T11:43:43.000Z",
-     "title": "Intel's own chips will be on par with TSMC's leading process by late 2027 or 2028 on 14A, and 18A yields are now about 70%, says Lip-Bu Tan",
-     "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxPVXpLaVpoaFJTUDVtS25IYzFHOUNqbEZpaGNlNTBrUVRUeXVsWDBqNlBZYjJBSmFUbXFOV0U3UklWNmFuajZBQTZEbl8wZDY2NHRnT3NwclBVTEdaY2Nvc1U2Y29GcU9TdkJzNXpOWjdkWU1XWjg3dDRFdDVhbEZMX1ZEcGR1N21sX3ktMHNDUV9kTGFTMEZzOEV5ZXN3ZDRRWm9Qd0dNdGtlaUs2RnM0LVRoMFhkVGc5eXFVaHR6QkZsNUp2UHRBLWowNG11elRicWN2bHo1ckluNk0tRzYyeWNzaXZhd0FCRzVCcDlYUGlfZm1adWZNdnJ5dTFPMTg?oc=5",
-     "source": "Dealroom",
-     "kind": "presse"
-    }
-   ]
+   "items": []
   },
   {
    "id": "kwak-noh-jung",
