@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T21:20:31.335Z",
+ "generated_at": "2026-11-26T22:10:27.459Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T21:30:31.335Z",
+ "translate_retry_at": "2026-11-26T22:20:27.459Z",
  "people": [
   {
    "id": "sam-altman",
@@ -144,6 +144,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T21:31:30.000Z",
+     "title": "Elon Musk Says He Will Be Donating Another Share Of SpaceX To All Kids In America Every Year",
+     "title_fr": "Elon Musk déclare qu'il fera don d'une autre part de SpaceX à tous les enfants américains chaque année",
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOZFdfY1JYdU9yaDVYOHdOdWRORk1SeHV0dHhLNjJiSGYxMnFWMGhFREpDMW40clZSaGNOSlRiSFhvdl91UnZ4enJsTDAxVlNjU29BdnRUaGFzWFZocXVLWHM1VndwS2pkQ2loNVY5ZXowTERKSmotNGtJNDFzVGw4a1RsdWhyNjRMR1c0bGhvVEd1RUJxOWtwMlliaVBFaFFnbHA4MFhuel9mYU5fUnhWQVZUTXU3dVd3dEQ5MVpMZlRfS1pUcENadUhjMTZFLUdkU2FkMVRWTEUyTlhyOXdvQXFVYUZHUmRmYWJsNEVrbVJ1elFn?oc=5",
+     "source": "TradingView",
+     "kind": "presse",
+     "srcs": [
+      "tradingview"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-26T21:09:13.000Z",
      "title": "SpaceX Stock — Elon Musk Predicts $9.5B Share Price as Kids Get Shares",
      "title_fr": "Action SpaceX : Elon Musk prédit un cours de 9,5 milliards de dollars alors que des enfants reçoivent des actions",
@@ -236,21 +249,6 @@
       "the hindu"
      ],
      "m": 5,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-26T14:38:55.000Z",
-     "title": "Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion",
-     "title_fr": "Elon Musk affirme que SpaceX, une entreprise « multiplanétaire », pourrait valoir 118 quintillions de dollars. Oui, quintillions",
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZC1kVm4zUC1XMmt3d3NSOUdwNTNUMEhTblpIU0JJZlAxRjRVdExPX3FIR3Y1ZHNDLTFfWFhhYXFaQnp3RlpXSE8wX0ItSmM1U3llNnc2UExLV1hBN0g4ZE9DQUJSN0VrLTJFMGhOLWFTWlFiWlFITWRtSzJCZk9wa0dwN3g5LXVLVlN1dU9KRGF3aXg4OG9jVjJqVzlMT0JTMTdVNHN3ZW1YVTlXS0E?oc=5",
-     "source": "Decrypt",
-     "kind": "presse",
-     "srcs": [
-      "decrypt",
-      "business insider",
-      "benzinga"
-     ],
-     "m": 3,
      "e": 1
     }
    ]
