@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-26T10:10:28.669Z",
+ "generated_at": "2026-11-26T10:50:29.550Z",
  "items": [
+  {
+   "id": "7f203ea7843c",
+   "ts": "2026-11-26T10:45:02.000Z",
+   "title": "Man dies after suffering burns in fire at Bitcoin mining data center in Georgia",
+   "orig": "Man dies after suffering burns in fire at Bitcoin mining data center in Georgia",
+   "summary": "Another person remains in a critical condition following the blaze",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/man-dies-after-suffering-burns-in-fire-at-bitcoin-mining-data-center-in-georgia/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "2c7d83ef9d6e",
+   "ts": "2026-11-26T10:42:59.000Z",
+   "title": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
+   "orig": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
+   "summary": "Will be dedicated to \"complex tensor operations, physical AI, large model training, and dense scientific simulation\"",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/us-air-force-plans-30000-gpu-hpc-and-ai-supercomputer/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "37e4e2d72f4f",
    "ts": "2026-11-26T09:58:19.000Z",
