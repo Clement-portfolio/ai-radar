@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T09:41:32.671Z",
+ "generated_at": "2026-11-26T09:50:34.648Z",
  "query_count": 1,
  "people": [
   {
@@ -13,6 +13,14 @@
    "actor": "openai",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T04:35:28.000Z",
+     "title": "OpenAI tests Private Inference with select customers, says Sam Altman",
+     "title_fr": "",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPcVRmRmlNVmtzelF6ZDc3NlRPZ0ZyS3JYMTZWNFlEYkpDR01SMHNxV2lGQVFEYnVyM0FFSzZXMnFIbmpsVGJuenZmMF9jaWgtLU1BWDFPYXFNVjc0Rmh5R21FZzZmTUNDYkZyNzZCdnRvWWVNM3lxLW9MNllkQVBlSE1MUWYtZXprT08xYW9iVkRCMDFuUkJsQWs2VG10U09DMmd4RDBXR3JETEpYVTdMM2lFdU5OZ9IBuwFBVV95cUxQeUJ4N0x0eWROeTlUbjQ3b2xlUS0yM2gyTjJ5UG9vMlhRcU41REVrcWxwRGtTVjJkVy05b3lFSWdvYjd0LUdHOUR3Sy1HUnpiQUZ0X2lJaFI5clM3eVBFYlAyMmNxUVdsUzJlTHUzeHd3SWIxOHc1QU1ZYU5ZTWpKR1lvR0dBZW9HMTVpS0taa2Q2NW9RalBMRHJxWTlfNUdwNUhSZlV1Sy1yd0RFUjFxd2VaVXhZQzR2RU00?oc=5",
+     "source": "Storyboard18",
+     "kind": "presse"
+    },
     {
      "ts": "2026-11-25T11:19:47.000Z",
      "title": "Sam Altman Says It’s “an Ill-Advised Moment to Go Public.” That’s a Big Risk for Oracle",
