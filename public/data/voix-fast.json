@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T15:10:55.794Z",
+ "generated_at": "2026-11-26T15:50:47.630Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T15:40:55.794Z",
+ "translate_retry_at": "2026-11-26T16:00:47.630Z",
  "people": [
   {
    "id": "sam-altman",
@@ -131,6 +131,23 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T15:03:51.000Z",
+     "title": "Elon Musk says he will give two SpaceX shares to 'every child in America'",
+     "title_fr": "Elon Musk déclare qu'il donnera deux actions SpaceX à \"chaque enfant en Amérique\"",
+     "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1lM0N5b1NCeVNzSlU2T1hoQXh2QmdIZ2xSVEJyb3U0MTcyOTBYVzZBM0dNT1NvbUNsUUxWdlI2UTI1a3lBbVZ5YXBiU25EZ1k4RkhnSzZvWENFQlN5dmJ4TTc1c2Vsd2NlQ0VXejhwRU4xOFZL?oc=5",
+     "source": "Yahoo News Canada",
+     "kind": "presse",
+     "srcs": [
+      "yahoo news canada",
+      "the indian express",
+      "forbes",
+      "digg",
+      "the hindu"
+     ],
+     "m": 5,
+     "e": 1
+    },
+    {
      "ts": "2026-11-26T14:38:55.000Z",
      "title": "Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion",
      "title_fr": "",
@@ -169,22 +186,6 @@
       "yahoo finance"
      ],
      "m": 1,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-26T10:00:26.000Z",
-     "title": "SpaceX to transfer first shares to ‘every child in US’ next month, says Elon Musk",
-     "title_fr": "SpaceX transférera ses premières actions à « chaque enfant aux États-Unis » le mois prochain, déclare Elon Musk",
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZFNfbm9xYUstUUdEZUk4UVdMRWJFQ25DX0phak81Mm1LcndtSmVzU2hfUmN0MFhEbWhnR1hvNnVxRUF2b3NuV0l3cF9RaVVXc2hUSTU2M1U1djhmZ1FvUC12SmptalMyREExZGVHVjJRQnhGYko0RzdoLURjY0Z1RnFMaGFySlhROHgwMGI2TmhJMnd0LVRRX3dkNFd0TnNOMEtYYjN0akRQY05ITlM1VUtFZ0VCcHhPUXV2X1ZR0gHEAUFVX3lxTE5SZHdzUTl5d1p4SENsdG94dEFIVDdCRVlYYTJsVENXMzFOX0RYSGVkNjBQYWxLQUdpTkpnRkFESFFySWNqYU1MNW1BX0w2VUJEcFlJSkg2WEFiYU5ic05WLWRCQ0pESE5KYU0zQU5mTzNRRl9PS29id1djNzFDblZ1Y3RmNmVzb1k5NUl3U0RMMHRIZWx3TDhmWjF3WVdHYmhJZHJJaFhIZ2NGMFh2c1pqN2MtXzFUaVdaYkhNSlVpR3Z6NG0?oc=5",
-     "source": "The Indian Express",
-     "kind": "presse",
-     "srcs": [
-      "the indian express",
-      "forbes",
-      "digg",
-      "the hindu"
-     ],
-     "m": 4,
      "e": 1
     }
    ]
