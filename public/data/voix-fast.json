@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T20:10:30.175Z",
+ "generated_at": "2026-11-26T20:30:38.772Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T20:20:30.175Z",
+ "translate_retry_at": "2026-11-26T20:40:38.772Z",
  "people": [
   {
    "id": "sam-altman",
@@ -143,6 +143,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T20:27:00.000Z",
+     "title": "Musk reveals name for AI supercomputer in southeast Arizona",
+     "title_fr": "Musk révèle le nom du superordinateur d'IA dans le sud-est de l'Arizona",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN3pZeG5jMDBDdzhtRElKNWxfWURBTmZrSVNxblhtdC0yYXJ6ckdXVV9YNHVydGRBMzlzbmpGNzVTVEtObmk0ZFZUd1FCaVdqZE5tSmdualZobXZZdEJXbFJSbmdmRDZ6SXAwVXJMZ21rcUpsWmtESDNrUXBKVmhDQ1dkeXVPbUNaUkFvOTZUUHZtakpUQUJHcGpOdHJyd2lHbWNOU0FCWk8wR1hsTldwTVVxLU1TaUIxX0pvSW9B?oc=5",
+     "source": "azcentral.com and The Arizona Republic",
+     "kind": "presse",
+     "srcs": [
+      "azcentral.com and the arizona republic"
+     ],
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-26T20:00:08.000Z",
      "title": "Elon Musk Says ‘True’ After Jensen Huang Warns You’ll Lose Your Job to Someone Who Uses AI, Not to AI Itself",
