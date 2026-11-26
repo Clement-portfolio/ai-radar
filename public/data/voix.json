@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T04:08:09.009Z",
+ "generated_at": "2026-11-26T07:26:42.142Z",
  "people": [
   {
    "id": "sam-altman",
@@ -2423,6 +2423,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-25T22:59:31.000Z",
+     "title": "Michael Burry closes his Nasdaq bets and shifts to value, but still plans an Nvidia short",
+     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQVFJKYjF3WlJpbmc2OVk2QWJpMzgyVll4UGphbmxwY19LT01XenBDWmFPcUxwNEpLREdsT0pUQzEzYkhibTM4a09nTDJTM0NSVnRvZC1lZGNhZ2MxN2FHUTkwVElkd2E0M2JlOWZmR2JGVDVSbHI3dHdfMG44emkxZ0JQTlMwcmh1bGlSMWwyQVo5RE5zVmQzcTRaTGdGdjk4LWp1ei1pZUlUbTJfdTRyRE5kLWt3YlB0cG5rZEloX3BkLVY4WlFiRkJDdUNJclU4?oc=5",
+     "source": "investingLive",
+     "kind": "presse",
+     "title_fr": "Michael Burry clôt ses paris sur le Nasdaq et se tourne vers la valeur, mais prévoit toujours de vendre Nvidia à découvert",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T19:13:45.000Z",
      "title": "Michael Burry Loads Up on 3 Chinese Stocks; Sticks to Nvidia Bearish Bet",
      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWUNHTm9Qakozcnczd2hxR21qUFRnYjBORTFjY09lblpNQnVSQ29kTFBDSFMzM1RiVUFFWTVrd2d4V05UMW1TTTJxSVlVYmxOOWczSHlQNDU0X09JVGxzVGdSeU05NDBKSERpc21IejNneXdieXZwTDZSdVhYdkxDb2NSSVFYMGtWZ0hNWksybjdkVVl1TkdLaFN3?oc=5",
@@ -2489,16 +2499,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Michael Burry a vendu la moitié de ses options de vente sur Nvidia avant que le retour de Huang ne déclenche une hausse de 31 %",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-24T03:23:00.000Z",
-     "title": "Michael Burry Bought Nvidia Calls, Cut His Semiconductor Shorts Before The Rally – But He’s Not Done Questioning Jensen Huang",
-     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOSVpyWUREczZzblh5R1NGNEhIY0NtZ1duRmlxdXlUZnJxdmxsakN0WUdJNzJTT2ttd1M3em53Y3BzTEUyQjRGV2lpaGJsU21PRVhGR0xuZmw3blVNN1l1RkN1dS1CV2tqenVpVGJBUVhMWElhUXk1TU95Ul9wUGRBd21PdkhLZklBWkdSeTd5OUxNVEQ5dklNLTRhU0Joa3c?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry a acheté des options d'achat Nvidia et réduit ses positions courtes sur les semi-conducteurs avant la hausse – mais il continue de questionner Jensen Huang",
      "m": 1,
      "e": 0
     }
@@ -4867,14 +4867,24 @@
      "e": 0
     },
     {
+     "ts": "2026-11-26T01:19:41.000Z",
+     "title": "Why does JD Vance say Nvidia CEO Jensen Huang does not need a pardon?",
+     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSWpwbTN0Wk9UVFZEN2gxdTczWl9Yenc0MUVGbkFLM2hCMXFEVE5vNXdSREFhZ3dkdlppd0g1STd1VmtvdERrUHlnX2syQnVuR3JVaW5jMEFPRG55VmpMRXFZMUNSQXNsU01TMEhXemlWRXo3eTZDQ0hRODE0cUkwMW5hdk85ZlJMV3ZaNHg3cDVLYWpqcnZXTG4zT2NLMG1Qal9QM1FR0gGrAUFVX3lxTFBLejNsb1o4WWEzYnJydlo1YmN2LU03TldjZW85UDgtd3MtZ1dyVFdTUEJoZFdweWZ2QTFZR2wzazRfLXctTkFMRGp4RFhydzF3aWpBLUV5VmsyeUtoTDVTRjRoLTV0b0JJaEY2Wjg1N2oxNXZmZzlyWFJXT3RIT3NlQmI1aFd4REpvQkJGbnV5UGtQTVR3dVA5X2VVNWlfbzJpRUlvYlhwRG1qSQ?oc=5",
+     "source": "Mathrubhumi English",
+     "kind": "presse",
+     "title_fr": "Pourquoi JD Vance dit-il que le PDG de Nvidia, Jensen Huang, n'a pas besoin de grâce présidentielle ?",
+     "m": 3,
+     "e": 1
+    },
+    {
      "ts": "2026-11-26T01:13:03.000Z",
      "title": "JD Vance says Jensen Huang won't need pardon as scrutiny of Nvidia scandal builds in Washington",
      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPdUt3RS1pNzVRQzg5YnNWMHhQOG40YXpiRkJzRXBYSE9zTHh0V1FiUTdJb0RMajNaVFJMS1hfdE5DRVp6VXJJVGgtaURDV1U0R05GRjJPUGRkUjZrWlFKOHdsRDNwWVVIbTRhZjczMUpWbUQycmNFNXJfSS1GazVDRU1Qdl8tbkJveWFwZGxpa0JMM1NveFBLNGJaMzlDS2RZN1FxckkzZ016MC1FdDBBUkNQNlBHTmFmM204clItdFNveUtLVWEyUTFadktaYXBza0gzQW9uaTFfd9IB2gFBVV95cUxPdUt3RS1pNzVRQzg5YnNWMHhQOG40YXpiRkJzRXBYSE9zTHh0V1FiUTdJb0RMajNaVFJMS1hfdE5DRVp6VXJJVGgtaURDV1U0R05GRjJPUGRkUjZrWlFKOHdsRDNwWVVIbTRhZjczMUpWbUQycmNFNXJfSS1GazVDRU1Qdl8tbkJveWFwZGxpa0JMM1NveFBLNGJaMzlDS2RZN1FxckkzZ016MC1FdDBBUkNQNlBHTmFmM204clItdFNveUtLVWEyUTFadktaYXBza0gzQW9uaTFfdw?oc=5",
      "source": "The Korea Times",
      "kind": "presse",
      "title_fr": "JD Vance affirme que Jensen Huang n'aura pas besoin de grâce alors que le scandale autour de Nvidia s'intensifie à Washington",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-26T00:55:27.000Z",
@@ -4883,6 +4893,16 @@
      "source": "India TV News",
      "kind": "presse",
      "title_fr": "Nvidia fait face à un nouveau examen minutieux concernant ses ventes de puces liées à la Chine ; JD Vance déclare que Jensen Huang n'a pas besoin de grâce",
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-25T19:58:53.000Z",
+     "title": "JD Vance Defends Jensen Huang Amid Chinese Intelligence Allegations",
+     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSDFtX2h6Z3VEQUlCV0lyLWRsUlhTY1IydnNPc3RwaTNjeXkwRExyOFlnTnFSdFYxdEp6bHFNSlg2bXV5ZHhXQWFtRUdBcDdReVlEYm5mbUo3dzRCTl8tR1AtQlZHNlFMOGN3MGpBU2ZtRHNENUxLNU1pUmVEQ2pEYTRoeVhPb3o3Zk83SW0zdE5Dak5oWWN6Rw?oc=5",
+     "source": "tippinsights",
+     "kind": "presse",
+     "title_fr": "JD Vance défend Jensen Huang sur fond d'accusations d'espionnage chinois",
      "m": 1,
      "e": 0
     },
@@ -4915,26 +4935,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "JD Vance déclare que la vraie raison pour laquelle tout le système aérien américain s'est effondré était les athlètes trans, pas l'IA"
-    },
-    {
-     "ts": "2026-11-18T14:01:00.000Z",
-     "title": "JD Vance Addresses Emergency Fears as Google Warns of AI Hackers",
-     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQaFpuUVppQjNVYXVvcFU2TnR0T29fUE53bXRZcy1GczVHZ1ZSdTV5dDlzSkVMOVp5d3RJY1dGbHNqQmhuSDBQOVZHeHB2VUFFMDUxNC1pZ29rWGJ0YlMyQzZ6VjFpcHhhaXdzaUd2WWFxbDVYMllKM01hZXNwVjRidlc5UmszMTd5cUNrUzltRm04OG5ZeUU4Rkl6TWptdw?oc=5",
-     "source": "Men's Journal",
-     "kind": "presse",
-     "m": 1,
-     "e": 1,
-     "title_fr": "JD Vance aborde les craintes d'urgence alors que Google met en garde contre les pirates informatiques utilisant l'IA"
-    },
-    {
-     "ts": "2026-11-17T14:27:29.000Z",
-     "title": "JD Vance tells Americans 'prepare for all outcomes' as Google issues ominous warning over tech outages",
-     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQb1ZuclRPa0h5US10NFplZGVOdElkQ05IYm1MczVmeml3WWI0OXdCWUlQY1EwTFZyTm43a2RKbTl5WGpsZUJsRzRXMmhuUkNRLUNTaXdpcFBITzc2bHNSN1BvM2xMU1htOXNCanpSR3RlWkZHYW55ak1MS1E0MDVZMTNfX2FFdmgzOUY5M1NtR3ZEYVXSAZgBQVVfeXFMT3J2WC1ELVhyeEFjRld0NnloMk9RdHBkaEZKTHJLQ0U0cE9RZkFpZzFRRV9jQ2tfVFQwWThKSUp2blNjVFRBWkxzQWxzSE45SjdQdDE3UGxxX19CNlNPWFg3Znl5bFhJVGk0NUp0dmdTTThYVThyc240R2RTWEVkQUo5dUtvOE5qenV1M0NLelhJdndhbHBVdHA?oc=5",
-     "source": "Daily Mail",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "JD Vance dit aux Américains de « se préparer à toutes les éventualités » alors que Google émet un avertissement inquiétant sur les pannes technologiques"
     }
    ]
   },
@@ -6185,7 +6185,21 @@
  ],
  "hot": [
   {
-   "score": 1.81,
+   "score": 2.1,
+   "id": "jd-vance",
+   "n": "JD Vance",
+   "role": "Vice-président des États-Unis",
+   "actor": null,
+   "ts": "2026-11-26T01:19:41.000Z",
+   "title": "Why does JD Vance say Nvidia CEO Jensen Huang does not need a pardon?",
+   "title_fr": "Pourquoi JD Vance dit-il que le PDG de Nvidia, Jensen Huang, n'a pas besoin de grâce présidentielle ?",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSWpwbTN0Wk9UVFZEN2gxdTczWl9Yenc0MUVGbkFLM2hCMXFEVE5vNXdSREFhZ3dkdlppd0g1STd1VmtvdERrUHlnX2syQnVuR3JVaW5jMEFPRG55VmpMRXFZMUNSQXNsU01TMEhXemlWRXo3eTZDQ0hRODE0cUkwMW5hdk85ZlJMV3ZaNHg3cDVLYWpqcnZXTG4zT2NLMG1Qal9QM1FR0gGrAUFVX3lxTFBLejNsb1o4WWEzYnJydlo1YmN2LU03TldjZW85UDgtd3MtZ1dyVFdTUEJoZFdweWZ2QTFZR2wzazRfLXctTkFMRGp4RFhydzF3aWpBLUV5VmsyeUtoTDVTRjRoLTV0b0JJaEY2Wjg1N2oxNXZmZzlyWFJXT3RIT3NlQmI1aFd4REpvQkJGbnV5UGtQTVR3dVA5X2VVNWlfbzJpRUlvYlhwRG1qSQ?oc=5",
+   "source": "Mathrubhumi English",
+   "kind": "presse",
+   "outlets": 3
+  },
+  {
+   "score": 1.4,
    "id": "peter-thiel",
    "n": "Peter Thiel",
    "role": "Cofondateur de Palantir, investisseur",
@@ -6199,21 +6213,7 @@
    "outlets": 5
   },
   {
-   "score": 1.21,
-   "id": "jd-vance",
-   "n": "JD Vance",
-   "role": "Vice-président des États-Unis",
-   "actor": null,
-   "ts": "2026-11-26T03:11:14.000Z",
-   "title": "JD Vance defends Huang's return to Nvidia, blames 'anonymous sources'",
-   "title_fr": "JD Vance défend le retour de Huang chez Nvidia et accuse des \"sources anonymes\"",
-   "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOZHV6Q3ZmU2ppc200Ylk4UXVqNU9NUWxaM2hGWU9SaGtwZ0owLVBOcmk5X08yd3luTDB1ZUFYeDBzQURQV2pRdm85OGdqTThNc08tVTFsNl9KZDJ5cDdueXY2YVNwUzZrb2tSbTZVa09CM2FBNWZCU3JtZFQwTk14TjRIRjJGcVBzVEhWMHRvQ3g2RXAtSTNka3F5UUc0ajB0b29jQ0V4QllNUU9uQXBmWTI2U0VKUENzUDM4b3N3NTdRS3lzYlJhd2szb9IB0AFBVV95cUxNMWlJWW5mV2tVXzVyT3Mycng3cWt0aU1VNmZ3c29uaEU2Z1dVMFZWM2UwRGoyTmRiZkpDNkFlWkRGRnlZUDB2OENWZkY4SXg1SjVacm5iREZIcUg0R3V0UUx6Z2dsYm9CTnFORDV1RGJvWlFjbHJCZll1bTdyb0JiU1hITXhXekxqMjVzSVJESmRjd19tUmZmcGc2elJPVk1iY09qWFgzSi1ReVFmY2tXV29uMDNoS0NmZkxCbmJaVE9zcElWRWo3ZUNVSldHc0Jy?oc=5",
-   "source": "Business Standard",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 1.11,
+   "score": 0.86,
    "id": "sundar-pichai",
    "n": "Sundar Pichai",
    "role": "PDG d'Alphabet (Google)",

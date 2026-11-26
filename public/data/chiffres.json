@@ -1,13 +1,38 @@
 {
  "v": 1,
  "day": "2026-11-26",
- "generated_at": "2026-11-26T01:22:48.381Z",
- "model": "gemini-3.1-flash-lite",
+ "generated_at": "2026-11-26T07:26:42.142Z",
+ "model": "gemini-3.5-flash-lite",
  "figures": [
+  {
+   "title": "Union européenne : investissement IA",
+   "value": "50 Md€",
+   "sub": "L'Union européenne prévoit un fonds de 50 milliards d'euros pour soutenir l'intelligence artificielle et l'informatique quantique afin de rattraper son retard technologique.",
+   "ids": [
+    "a72ddf481a1e",
+    "c60cd8412b39"
+   ],
+   "links": [
+    {
+     "t": "Channel Newsasia",
+     "u": "https://www.channelnewsasia.com/world/eu-plans-50-billion-euro-investment-in-ai-quantum-computing-6581386"
+    },
+    {
+     "t": "Al-sharq Al-awsat",
+     "u": "https://english.aawsat.com/node/5345450"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-25T10:51:00.000Z",
+   "title_en": "European Union: AI Investment",
+   "value_en": "€50 billion",
+   "sub_en": "The European Union is planning a €50 billion fund to support artificial intelligence and quantum computing to bridge its technological gap."
+  },
   {
    "title": "CrowdStrike : rachat de Zscaler",
    "value": "44 Md$",
-   "sub": "Cette acquisition stratégique vise à renforcer les capacités de cybersécurité face à la recrudescence des cyberattaques dopées à l'intelligence artificielle.",
+   "sub": "CrowdStrike va acquérir Zscaler pour 44 milliards de dollars afin de renforcer ses solutions de cybersécurité face à la recrudescence des cyberattaques dopées à l'intelligence artificielle.",
    "ids": [
     "0c56e1950266"
    ],
@@ -20,49 +45,29 @@
    "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-23T17:50:30.000Z",
-   "title_en": "CrowdStrike: acquisition of Zscaler",
-   "value_en": "44 $B",
-   "sub_en": "This strategic acquisition aims to strengthen cybersecurity capabilities in response to the rise of AI-powered cyberattacks."
+   "title_en": "CrowdStrike: Acquisition of Zscaler",
+   "value_en": "$44 billion",
+   "sub_en": "CrowdStrike will acquire Zscaler for $44 billion to strengthen its cybersecurity defenses against a surge in AI-driven cyberattacks."
   },
   {
-   "title": "Genesis AI : levée de fonds",
-   "value": "500 M$",
-   "sub": "La startup spécialisée dans la robotique a obtenu ce financement majeur pour accélérer le développement de ses technologies basées sur l'IA.",
+   "title": "Amazon : rachat de Decart",
+   "value": "7,5 Md$",
+   "sub": "Amazon acquiert les actifs clés de la startup spécialisée en intelligence artificielle Decart pour un montant de 7,5 milliards de dollars afin de renforcer ses capacités technologiques.",
    "ids": [
-    "a98abb838c2f"
+    "c3a2aba6c39e"
    ],
    "links": [
     {
-     "t": "WSJ",
-     "u": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPTWFFQXhWNzlaWHRMZ2E5dWdTY0pIa2dVci0wa0VETFVvZXRzS2Z3Vm9uenBueTdiNFVpQmxXTHBGUm1IS04tdEJuaTJKY0hoVHhsSWVhOGNFeUcyc09LSlV3aG05bzMycGZDa29JM3hvRFp1bm1UV1ZLblBFdzBMdVdMSzh4Zlk3M1drZm8tNUIyQ00?oc=5"
+     "t": "SiliconANGLE",
+     "u": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaXR5TS11S0V5ZmZCOERDYlI1OG9vWG9UX3ZQZHoyYndOX0VrdExNYmNVbjBFNzBqdGMwY0ZDM0RjdWhxVWJFU0o0eG04N2oyZzNMVGdTbVRVMV9SUFNld3FaSnlOcl9ZSGQ4OGhLNXdYdzJwNFI2Mkh6M3BfLVIwN0hzVkF3Q3diQmxzN3BNUkVxREZsZHBJRmRfalVMTXc5dE55LQ?oc=5"
     }
    ],
    "conf": "moyenne",
    "scope": "week",
-   "ts": "2026-11-24T19:56:46.000Z",
-   "title_en": "Genesis AI: funding round",
-   "value_en": "500 $M",
-   "sub_en": "The robotics startup secured this major funding to accelerate the development of its AI-based technologies."
-  },
-  {
-   "title": "Nvidia : revenus du trimestre",
-   "value": "115,8 Md$",
-   "sub": "En hausse de 20 % par rapport au trimestre précédent (96,2 Md$) et de 103 % sur un an. Le bénéfice par action dilué s'établit à 2,70 $.",
-   "ids": [
-    "55e7265b76e2"
-   ],
-   "links": [
-    {
-     "t": "Nvidia (communiqué de résultats, SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
-    }
-   ],
-   "conf": "haute",
-   "scope": "month",
-   "ts": "2026-11-17T21:20:51.000Z",
-   "title_en": "Nvidia: quarterly revenue",
-   "value_en": "115.8 $B",
-   "sub_en": "Up 20% from the previous quarter ($96.2 B) and 103% year-over-year. Diluted earnings per share reached $2.70."
+   "ts": "2026-11-24T01:40:00.000Z",
+   "title_en": "Amazon: Acquisition of Decart",
+   "value_en": "$7.5 billion",
+   "sub_en": "Amazon is acquiring key assets of AI startup Decart for $7.5 billion to strengthen its technological capabilities."
   }
  ]
 }
