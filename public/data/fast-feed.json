@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-26T15:00:43.959Z",
+ "generated_at": "2026-11-26T15:10:55.107Z",
  "items": [
+  {
+   "id": "9843ac08ee00",
+   "ts": "2026-11-26T15:00:41.000Z",
+   "title": "KT Cloud signe un bail de 60 MW dans un centre de données à Ansan, en Corée du Sud",
+   "orig": "KT Cloud signs 60MW lease at data center in Ansan, South Korea",
+   "summary": "Data center being developed by Keppel Ltd",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/kt-cloud-signs-60mw-lease-at-data-center-in-ansan-south-korea/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "KT Cloud signe un bail de 60 MW dans un centre de données à Ansan, en Corée du Sud",
+   "title_en": "KT Cloud signs 60MW lease at data center in Ansan, South Korea",
+   "summary_en": "Data center being developed by Keppel Ltd"
+  },
   {
    "id": "55f99f9b8bc2",
    "ts": "2026-11-26T14:50:37.000Z",
-   "title": "University of Augsburg breaks ground on new data center at Augsburg Innovation Park, Germany",
+   "title": "L'Université d'Augsbourg lance les travaux d'un nouveau centre de données au parc d'innovation d'Augsbourg, en Allemagne",
    "orig": "University of Augsburg breaks ground on new data center at Augsburg Innovation Park, Germany",
    "summary": "Scheduled for completion in 2029",
    "country": "US",
@@ -14,12 +33,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/university-of-augsburg-breaks-ground-on-new-data-center-at-augsburg-innovation-park-germany/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'Université d'Augsbourg lance les travaux d'un nouveau centre de données au parc d'innovation d'Augsbourg, en Allemagne",
+   "title_en": "University of Augsburg breaks ground on new data center at Augsburg Innovation Park, Germany",
+   "summary_en": "Scheduled for completion in 2029"
   },
   {
    "id": "7e3855dddb3e",
    "ts": "2026-11-26T14:49:01.000Z",
-   "title": "Pennsylvania police arrest suspects over threats to Olyphant council after controversial data center vote",
+   "title": "La police de Pennsylvanie arrête des suspects pour des menaces contre le conseil d'Olyphant après un vote controversé sur un centre de données",
    "orig": "Pennsylvania police arrest suspects over threats to Olyphant council after controversial data center vote",
    "summary": "Threats tied to a up to 1GW project in Lackawanna County",
    "country": "US",
@@ -29,7 +52,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/pennsylvania-police-arrest-suspects-over-threats-to-olyphant-council-after-controversial-data-center-vote/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La police de Pennsylvanie arrête des suspects pour des menaces contre le conseil d'Olyphant après un vote controversé sur un centre de données",
+   "title_en": "Pennsylvania police arrest suspects over threats to Olyphant council after controversial data center vote",
+   "summary_en": "Threats tied to a up to 1GW project in Lackawanna County"
   },
   {
    "id": "cd4f6632a5f7",
@@ -196,7 +223,7 @@
    "pending": true,
    "title_en": "8,208 GPUs deployed by Sharon AI for ESDS Software Solution in Australia",
    "summary_en": "Contract was signed earlier this year",
-   "tr_try": 2
+   "tr_try": 3
   },
   {
    "id": "9d31399c3773",
@@ -304,7 +331,7 @@
    "pending": true,
    "title_en": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
    "summary_en": "Will be dedicated to \"complex tensor operations, physical AI, large model training, and dense scientific simulation\"",
-   "tr_try": 2
+   "tr_try": 3
   },
   {
    "id": "6985f271a9e5",
@@ -897,7 +924,7 @@
   {
    "id": "13bd500f5379",
    "ts": "2026-11-26T01:55:19.000Z",
-   "title": "EnliTech's semiconductor inspection share nears 50% as NT$1 billion plant targets SiPh mass production",
+   "title": "La part d'inspection des semi-conducteurs d'EnliTech approche les 50 % alors qu'une usine de 1 milliard de dollars vise la production de masse de SiPh",
    "orig": "EnliTech's semiconductor inspection share nears 50% as NT$1 billion plant targets SiPh mass production",
    "summary": "Surging demand for high-speed optical transmission in AI data centers is propelling silicon photonics (SiPh) from R&D into volume production, marking a pivotal operational shift for optical inspection equipment maker EnliTech. On November 25, the company broke",
    "country": "OTHER",
@@ -910,7 +937,8 @@
    "pending": true,
    "title_en": "EnliTech's semiconductor inspection share nears 50% as NT$1 billion plant targets SiPh mass production",
    "summary_en": "Surging demand for high-speed optical transmission in AI data centers is propelling silicon photonics (SiPh) from R&D into volume production, marking a pivotal operational shift for optical inspection equipment maker EnliTech. On November 25, the company broke",
-   "tr_try": 2
+   "tr_try": 3,
+   "title_fr": "La part d'inspection des semi-conducteurs d'EnliTech approche les 50 % alors qu'une usine de 1 milliard de dollars vise la production de masse de SiPh"
   },
   {
    "id": "bee872523568",
@@ -2580,7 +2608,7 @@
    "title_en": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
    "summary_en": "Huawei kept the Mate X8's starting price at CNY12,999 (approx. US$1,950), matching last year's Mate X7, even as it added a thinner body, a flatter display and its Kirin 9050 Pro chip. At its November 24 launch in Shanghai, the company also introduced the MateB",
    "title_fr": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
-   "tr_try": 2
+   "tr_try": 3
   },
   {
    "id": "e5cd248eff02",
@@ -3730,7 +3758,7 @@
    "title_en": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
    "summary_en": "RIYADH: From artificial intelligence-powered environmental monitoring tools to smart systems designed to protect critical infrastructure, thousands of innovators gathered in Riyadh on Monday as the SAIF International Security and Innovation Exhibition and Comp",
    "title_fr": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "tr_try": 2
+   "tr_try": 3
   },
   {
    "id": "fe4f313b570c",
@@ -3909,7 +3937,7 @@
    "title_en": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
    "summary_en": "Cluster deployed for unnamed inference infrastructure provider",
    "title_fr": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
-   "tr_try": 2
+   "tr_try": 3
   },
   {
    "id": "dc9673abe3a2",
