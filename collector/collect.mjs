@@ -9,6 +9,7 @@ import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { translateData, I18N_SYSTEM, I18N_SCHEMA } from "./i18n.mjs";
 import { resolveGoogleLinks } from "./gnews.mjs";
 import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
+import { buildStories, summarizeStories, STORY_SYSTEM, STORY_SCHEMA } from "./stories.mjs";
 import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
 import { collectResults } from "./resultats.mjs";
@@ -627,6 +628,18 @@ export async function run(opts = {}) {
   try { if (W) watchRes = buildWatch({ prev: watchPrev, items: keep, W, now: nowMs }); }
   catch (e) { watchRes.summary.reason = String(e.message || e).slice(0, 120); }
   log("Watchlist : " + (watchRes.summary.total != null ? `${watchRes.summary.total} articles rattachés (${watchRes.summary.tagged} mis à jour)` : watchRes.summary.reason));
+  // Actualités regroupées : un titre et un résumé par actualité couverte par plusieurs médias (le flux rapide est pris en compte) ; ne bloque jamais la collecte
+  const storiesPrev = await readJson("stories.json", null);
+  let stories = { doc: null, reason: "erreur" };
+  try {
+    const fastDoc = await readJson("fast-feed.json", { items: [] }), pool = new Map();
+    for (const x of fastDoc.items || []) pool.set(x.id, x);
+    for (const x of keep) pool.set(x.id, x);
+    const built = buildStories({ items: [...pool.values()], prev: storiesPrev, now: nowMs });
+    const sum = await summarizeStories({ stories: built, byId: pool, generate: mkGen(STORY_SYSTEM, STORY_SCHEMA) });
+    stories = { doc: { v: 1, generated_at: new Date(nowMs).toISOString(), stories: built }, reason: `${built.length} histoire(s) ; ${sum.reason}` };
+  } catch (e) { stories.reason = String(e.message || e).slice(0, 120); }
+  log("Actualités regroupées : " + stories.reason);
   const generateFocus = mkGen(FOCUS_SYSTEM, FOCUS_SCHEMA);
   const focusPrev = await readJson("focus.json", null);
   let focus = { doc: focusPrev, regenerated: false, reason: "erreur" };
@@ -731,7 +744,7 @@ export async function run(opts = {}) {
   const lastRun = {
     started_at: new Date(started).toISOString(), duration_s: Math.round((Date.now() - started) / 1000),
     candidates: cands.length, new_unique: uniq.length, queued: queue.length, classified_calls: calls, model: classifier?.state.model || null,
-    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason, ...(focus.diag && focus.diag.length ? { diag: focus.diag.slice(0, 8) } : {}) }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, voix: voix.summary, datacenters: dcRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
+    added: added.length, fallback, watch: watchRes.summary.counts ? { total: watchRes.summary.total, counts: watchRes.summary.counts } : watchRes.summary, rejected: rejectedNow, total_items: keep.length, errors, stories: stories.reason, translate: { changed: tr.changed, reason: tr.reason, left: tr.left || 0 }, gnews: { changed: gl.changed, failed: gl.failed, left: gl.left, reason: gl.reason }, i18n: { added: enRes.added, left: enRes.left, reason: enRes.reason }, focus: { regenerated: focus.regenerated, reason: focus.reason, ...(focus.diag && focus.diag.length ? { diag: focus.diag.slice(0, 8) } : {}) }, figures: { regenerated: figs.regenerated, reason: figs.reason, results: resSrc.reason }, sec: secRes.summary, acteurs: { n: acteurs ? acteurs.actors.length : 0, sec: secAct.summary }, voix: voix.summary, datacenters: dcRes.summary, chain: { changes: chainRes.changes, skipped: chainRes.skipped, stale: chainRes.stale.map((s) => s.key) }, shares: sharesRes.summary, evolution: evoRes.summary, gemini: classifier?.state.diag || [], yield: Object.entries(yieldStats).map(([name, v]) => ({ name, k: v.k, r: v.r })).sort((a, b) => (b.k + b.r) - (a.k + a.r)).slice(0, 40), rejected_samples: rejSamples.slice(-30).reverse(), sources: health,
   };
   const out = { ...status, last_run: lastRun, last_attempt: new Date().toISOString(), mode: "live" };
   if (okCount > 0) out.updated_at = new Date().toISOString();
@@ -740,6 +753,7 @@ export async function run(opts = {}) {
     if (okCount > 0 && (added.length || tr.changed || gl.changed || gl.failed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
+    if (stories.doc && JSON.stringify({ ...stories.doc, generated_at: 0 }) !== JSON.stringify({ ...(storiesPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "stories.json"), JSON.stringify(stories.doc));
     if (figs.doc) await fs.writeFile(path.join(dataDir, "chiffres.json"), JSON.stringify(figs.doc, null, 1));
     if (resSrc.doc) await fs.writeFile(path.join(dataDir, "chiffres-src.json"), JSON.stringify(resSrc.doc, null, 1));
     if (watchRes.doc && JSON.stringify({ ...watchRes.doc, updated_at: 0 }) !== JSON.stringify({ ...(watchPrev || {}), updated_at: 0 })) await fs.writeFile(path.join(dataDir, "watch.json"), JSON.stringify(watchRes.doc));

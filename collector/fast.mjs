@@ -4,6 +4,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { parseFeed, ruleClassify, isHubPage, makeClassifier } from "./collect.mjs";
+import { buildStories } from "./stories.mjs";
 import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript, englishTitle } from "./translate.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -111,4 +112,12 @@ if(process.env.GEMINI_API_KEY&&untranslated.length&&now>=cooldownUntil){
 await fs.mkdir(DATA,{recursive:true});
 // Écriture uniquement si le contenu change : sinon chaque passage créerait un commit inutile (l'heure de génération seule suffisait).
 if(JSON.stringify(items)!==JSON.stringify(previous.items))await fs.writeFile(path.join(DATA,"fast-feed.json"),JSON.stringify({generated_at:new Date().toISOString(),items},null,1));
+// Regroupement mécanique des articles (titres et résumés rédigés par l'IA conservés, nouveaux groupes sans résumé jusqu'à la collecte complète)
+try{
+  const storiesPath=path.join(DATA,"stories.json");
+  const storiesPrev=JSON.parse(await fs.readFile(storiesPath,"utf8").catch(()=>"null"));
+  const pool=new Map();for(const x of items)pool.set(x.id,x);for(const x of main.items)pool.set(x.id,x);
+  const built=buildStories({items:[...pool.values()],prev:storiesPrev,now:Date.now()});
+  if(JSON.stringify(built)!==JSON.stringify((storiesPrev&&storiesPrev.stories)||[]))await fs.writeFile(storiesPath,JSON.stringify({v:1,generated_at:new Date().toISOString(),stories:built}));
+}catch(e){console.log("Regroupement ignoré : "+String(e.message||e).slice(0,120))}
 console.log("Flux rapide : "+feeds.length+" sources, "+cands.length+" nouvelles actualités, "+items.length+" conservées.");

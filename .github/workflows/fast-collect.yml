@@ -41,6 +41,7 @@ jobs:
           node --check collector/fast-voix.mjs
           node --check public/app.js
           node collector/test-voix.mjs
+          node collector/test-stories.mjs
 
   collect-fast:
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
@@ -66,7 +67,7 @@ jobs:
         run: |
           git config user.name "ai-radar-bot"
           git config user.email "ai-radar-bot@users.noreply.github.com"
-          git add public/data/fast-feed.json public/data/fast-translation.json public/data/voix-fast.json
+          git add public/data/fast-feed.json public/data/fast-translation.json public/data/voix-fast.json public/data/stories.json
           if git diff --cached --quiet; then echo "Rien de nouveau"; exit 0; fi
           git commit -m "Flux rapides — actualités et insiders presse"
           git pull --rebase -X theirs origin main

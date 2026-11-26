@@ -37,7 +37,7 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null}),getJSON("data/x.json").catch(function(){return null}),getJSON("data/fast-feed.json").catch(function(){return {items:[]}}),getJSON("data/voix-fast.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null}),getJSON("data/x.json").catch(function(){return null}),getJSON("data/fast-feed.json").catch(function(){return {items:[]}}),getJSON("data/voix-fast.json").catch(function(){return null}),getJSON("data/stories.json").catch(function(){return null})]).then(function(r){
     var merged=new Map();(r[19].items||[]).forEach(function(x){merged.set(x.id||x.url,x)});(r[0].items||[]).forEach(function(x){merged.set(x.id||x.url,x)});S.feed=Array.from(merged.values()).sort(function(a,b){return b.ts.localeCompare(a.ts)});
     S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];
     var voix=r[15]||{people:[]},fastVoix=r[20]||{people:[]},people=new Map((voix.people||[]).map(function(p){return[p.id,p]}));
@@ -49,7 +49,7 @@ function loadData(){
       p.items=Array.from(items.values()).sort(function(a,b){return b.ts.localeCompare(a.ts)}).slice(0,8);
     });
     voix.people=Array.from(people.values());voix.fast_generated_at=fastVoix.generated_at||null;
-    S.voix=voix;S.rech=r[16];S.chain=r[17];S.x=r[18]||null;if(window.I18N)I18N.extra(r[10]);
+    S.voix=voix;S.rech=r[16];S.chain=r[17];S.x=r[18]||null;S.stories=r[21]||null;if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -198,6 +198,29 @@ function figsHtml(byId){
   return'<section class="figs"><div class="sgroup">Chiffres clés <em>du jour et de la semaine, chacun daté et sourcé</em></div><div class="cards3">'+fs.map(function(f){return figCard(f,byId)}).join("")+'</div></section>';
 }
 
+/* Actualités regroupées : une histoire = un titre, un résumé, et la liste des articles qui la couvrent (les filtres restent appliqués article par article) */
+function groupFeed(items){
+  var st=(S.stories&&S.stories.stories)||[],by={},mem={},done={},out=[];
+  st.forEach(function(s){(s.ids||[]).forEach(function(id){by[id]=s})});
+  items.forEach(function(x){var s=by[x.id];if(s)(mem[s.id]=mem[s.id]||[]).push(x)});
+  items.forEach(function(x){
+    var s=by[x.id];
+    if(!s||mem[s.id].length<2){out.push({it:x});return}
+    if(done[s.id])return;done[s.id]=1;out.push({g:s,arts:mem[s.id]});
+  });
+  return out;
+}
+function groupHTML(g,arts){
+  var en=isEn(),k='g'+g.id,open=S.open[k]?' open':'',media={},imax=1,lead=arts[0];
+  arts.forEach(function(a){media[a.source]=1;if((a.importance||1)>imax)imax=a.importance||1;if((a.importance||1)>(lead.importance||1))lead=a});
+  var nm=Object.keys(media).length,head=tx(g,'head')||tx(lead,'title'),sum=tx(g,'summary')||(lead.pending?"":tx(lead,'summary'))||"";
+  var badge=arts.length+(en?' articles':' articles')+' · '+nm+(en?' outlets':' médias');
+  var list=arts.map(function(a){return'<li><span class="time">'+esc(fmtTime(a.ts))+'</span><a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(tx(a,'title'))+'</a><span class="rsrc">'+esc(a.source)+cdot(a.confidence)+'</span></li>'}).join("");
+  return '<div class="row grp i'+imax+open+'"><span class="time">'+esc(fmtTime(arts[0].ts))+'</span>'+ctag(lead.country)+
+   '<button class="ttl gt" data-toggle="'+esc(k)+'">'+esc(head)+'</button><span class="rsrc gb">'+esc(badge)+'</span>'+
+   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="'+(en?'Show the articles':'Afficher les articles')+'">'+ARW+'</button>'+
+   '<div class="sum">'+(sum?'<p>'+esc(sum)+'</p>':'')+'<ul class="glist">'+list+'</ul></div></div>';
+}
 function rFeed(){
   var el=$("v-actualites");el.classList.toggle("essmode",!!S.top);
   var cats=[["ALL","Toutes"]].concat(Object.keys(CATS).map(function(k){return[k,CATS[k]]}));
@@ -210,13 +233,14 @@ function rFeed(){
   var h='<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l\'article.</p>'+
    '<div class="toolbar frow"><button class="chip fb'+(S.fo==="pays"?' open':'')+(S.country!=="ALL"?' set':'')+'" data-fo="pays">Pays : '+esc(cn)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><button class="chip fb'+(S.fo==="cat"?' open':'')+(S.cat!=="ALL"?' set':'')+'" data-fo="cat">Catégorie : '+esc(cl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><span class="sp"></span><a class="chip insl" href="#recherche" title="Percées scientifiques et recherche en IA">Recherche<span class="insa"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a><a class="chip insl" href="#acteurs/voix" title="'+nDup+' article(s) déjà dans Insiders, non répétés ici">Insiders<span class="insa"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a><button class="chip'+(S.top?' on':'')+'" data-top="1">Essentiel seulement</button></div>'+panel;
   if(!items.length)h+='<div class="empty">Aucune actualité pour ces filtres.</div>';
-  var dayCount={};items.forEach(function(x){var d=dayKey(x.ts);dayCount[d]=(dayCount[d]||0)+1});var day="";var total=items.length;items=items.slice(0,S.limit);
-  items.forEach(function(it){
-    var d=dayKey(it.ts);
-    if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(it.ts))+' <span>'+(dayCount[d]||0)+' articles</span></div>'}
-    h+=rowHTML(it);
+  var dayCount={};items.forEach(function(x){var d=dayKey(x.ts);dayCount[d]=(dayCount[d]||0)+1});var day="";
+  var rows=groupFeed(items),total=rows.length;rows=rows.slice(0,S.limit);
+  rows.forEach(function(r){
+    var t=r.g?r.arts[0].ts:r.it.ts,d=dayKey(t);
+    if(d!==day){day=d;h+='<div class="day">'+esc(fmtDay(t))+' <span>'+(dayCount[d]||0)+' articles</span></div>'}
+    h+=r.g?groupHTML(r.g,r.arts):rowHTML(r.it);
   });
-  if(total>items.length)h+='<div style="text-align:center;padding:24px 0"><button class="btn" data-more="1">Voir '+Math.min(120,total-items.length)+' articles de plus ('+(total-items.length)+' restants)</button></div>';
+  if(total>rows.length)h+='<div style="text-align:center;padding:24px 0"><button class="btn" data-more="1">Voir '+Math.min(120,total-rows.length)+' actualités de plus ('+(total-rows.length)+' restantes)</button></div>';
   el.innerHTML=h;
 }
 

@@ -15,12 +15,11 @@ assert.equal(frDate("2026-11-04"), "4 nov. 2026");
 assert.equal(labelOf(dueIdx(Date.parse("2026-11-18T12:00:00Z"), 50)), "T2 26");
 assert.equal(labelOf(dueIdx(Date.parse("2026-11-20T12:00:00Z"), 50)), "T3 26");
 assert.equal(labelOf(dueIdx(Date.parse("2026-11-20T12:00:00Z"), 75)), "T2 26");
-// fraîcheur sur les vraies fiches : rien d'en retard le 18 nov. 2026, la fiche fonderie l'est le 20 nov.
-assert.deepEqual(staleCharts(chain, Date.parse("2026-11-18T12:00:00Z")).map((s) => s.key), []);
-const st = staleCharts(chain, Date.parse("2026-11-20T12:00:00Z"));
-assert.ok(st.some((s) => s.key === "fab" && s.last === "T2 26" && s.due === "T3 26"), "fonderie en retard le 20 nov.");
-assert.ok(!st.some((s) => s.key === "net"), "réseau (Nvidia décalé) pas encore en retard avec 75 jours");
-assert.ok(!st.some((s) => s.key === "cool"), "refroidissement à jour");
+// fraîcheur sur les vraies fiches (les graphiques ayant été mis à jour, rien n'est en retard fin novembre 2026 ; la fiche fonderie l'est fin février 2027)
+assert.deepEqual(staleCharts(chain, Date.parse("2026-11-20T12:00:00Z")).map((s) => s.key), []);
+const st = staleCharts(chain, Date.parse("2027-02-20T12:00:00Z"));
+assert.ok(st.some((s) => s.key === "fab" && s.last === "T3 26" && s.due === "T4 26"), "fonderie en retard le 20 févr. 2027");
+assert.ok(!staleCharts(chain, Date.parse("2027-01-20T12:00:00Z")).some((s) => s.key === "fab"), "fonderie à jour en janvier 2027");
 
 // SEC simulée : trimestres de Vertiv, nVent et Modine, avec un nouveau T4 26
 const cool = chain.fm.cool.chart;

@@ -9,12 +9,12 @@ const H = 3600e3, DAY = 24 * H;
 /** Règles du briefing, appliquées par le code (et non seulement demandées au modèle). */
 export const FOCUS_RULES = { stories: 3, candidates: 8, minBullets: 2, maxBullets: 4, kinds: ["detail", "contexte", "explication"], distinctOverlap: 0.22, headOverlap: 0.3 };
 
-function tokens(t) {
+export function tokens(t) {
   // mots de plus de 3 lettres, et noms propres courts (Xi, Hu, Li : majuscule puis minuscule ; « IA », « US », « UE » restent exclus)
   return new Set(String(t || "").split(/[^\p{L}\p{N}]+/u).filter((w) => w.length > 3 || /^\p{Lu}\p{Ll}$/u.test(w)).map((w) => w.toLowerCase().normalize("NFKD").replace(/\p{M}/gu, "")).filter((w) => w.length > 1));
 }
-function shared(a, b) { let i = 0; for (const x of a) if (b.has(x)) i++; return i; }
-function sim(a, b) { const i = shared(a, b); return i >= 3 ? i / (a.size + b.size - i) : 0; }
+export function shared(a, b) { let i = 0; for (const x of a) if (b.has(x)) i++; return i; }
+export function sim(a, b) { const i = shared(a, b); return i >= 3 ? i / (a.size + b.size - i) : 0; }
 const titleToks = (i) => tokens(i.title);
 /** Deux articles ne se regroupent que s'ils partagent au moins 2 mots de titre ET la même catégorie ou la même couche. */
 function compat(a, b) {
@@ -42,7 +42,7 @@ export function pickStories(items, now, n = FOCUS_RULES.candidates, distinct = F
     const arts = g.items.slice().sort((a, b) => (b.importance - a.importance) || (Date.parse(b.ts) - Date.parse(a.ts)));
     const media = new Set(arts.map((a) => a.source));
     const newest = Math.max(...arts.map((a) => Date.parse(a.ts)));
-    const score = arts[0].importance * 10 + Math.min(6, 1.5 * (media.size - 1)) + Math.min(6, 0.75 * arts.filter((a) => a.importance >= 3).length) + 3 * arts.filter((a) => a.importance >= 3).length / arts.length + Math.max(0, 8 - ((now - newest) / H) / 12) + (arts.some((a) => a.confidence === "haute") ? 2 : 0);
+    const score = arts[0].importance * 10 + Math.min(8, 2 * (media.size - 1)) + Math.min(6, 0.75 * arts.filter((a) => a.importance >= 3).length) + 3 * arts.filter((a) => a.importance >= 3).length / arts.length + Math.max(0, 8 - ((now - newest) / H) / 12) + (arts.some((a) => a.confidence === "haute") ? 2 : 0);
     return { lead: arts[0], items: arts, media: media.size, newest, score, toks: tokens(arts.slice(0, 2).map((a) => a.title).join(" ")) };
   }).sort((a, b) => b.score - a.score);
   // choix glouton : un léger malus pour un sujet de même catégorie déjà retenu ; une histoire trop proche d'une histoire déjà retenue

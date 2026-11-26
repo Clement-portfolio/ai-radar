@@ -132,4 +132,5 @@ await import("./test-watch.mjs");
 await import("./test-chainauto.mjs");
 await import("./test-recherche.mjs");
 await import("./test-x.mjs");
+await import("./test-stories.mjs");
 console.log("TOUS LES TESTS PASSENT");
