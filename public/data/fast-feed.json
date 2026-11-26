@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-26T16:22:43.276Z",
+ "generated_at": "2026-11-26T16:30:39.447Z",
  "items": [
+  {
+   "id": "69858100db21",
+   "ts": "2026-11-26T16:20:41.000Z",
+   "title": "Modern data center cooling",
+   "orig": "Modern data center cooling",
+   "summary": "Everything you need to know about liquid cooling",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/whitepapers/modern-data-center-cooling/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "6f99f08b0c5d",
    "ts": "2026-11-26T16:20:30.995Z",
