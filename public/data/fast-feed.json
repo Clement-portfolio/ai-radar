@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-26T14:40:50.732Z",
+ "generated_at": "2026-11-26T15:00:43.959Z",
  "items": [
+  {
+   "id": "55f99f9b8bc2",
+   "ts": "2026-11-26T14:50:37.000Z",
+   "title": "University of Augsburg breaks ground on new data center at Augsburg Innovation Park, Germany",
+   "orig": "University of Augsburg breaks ground on new data center at Augsburg Innovation Park, Germany",
+   "summary": "Scheduled for completion in 2029",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/university-of-augsburg-breaks-ground-on-new-data-center-at-augsburg-innovation-park-germany/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "7e3855dddb3e",
+   "ts": "2026-11-26T14:49:01.000Z",
+   "title": "Pennsylvania police arrest suspects over threats to Olyphant council after controversial data center vote",
+   "orig": "Pennsylvania police arrest suspects over threats to Olyphant council after controversial data center vote",
+   "summary": "Threats tied to a up to 1GW project in Lackawanna County",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/pennsylvania-police-arrest-suspects-over-threats-to-olyphant-council-after-controversial-data-center-vote/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "cd4f6632a5f7",
    "ts": "2026-11-26T14:30:36.000Z",
@@ -4402,23 +4432,6 @@
    "title_fr": "Le conseil d'administration de Nvidia réintègre Jensen Huang au poste de PDG",
    "title_en": "Nvidia Board Reinstates Jensen Huang as CEO",
    "summary_en": "Nvidia goes back to business as usual following Huang's resignation and reinstatement after a week. The post Nvidia Board Reinstates Jensen Huang as CEO appeared first on EE Times ."
-  },
-  {
-   "id": "209f945b1ae8",
-   "ts": "2026-11-23T14:56:29.000Z",
-   "title": "Jensen Huang de nouveau à la tête de Nvidia",
-   "orig": "Jensen Huang Back In Charge Of Nvidia",
-   "summary": "",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "The Next Platform",
-   "url": "https://www.nextplatform.com/ai/2026/11/23/jensen-huang-back-in-charge-of-nvidia/5311691",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Jensen Huang de nouveau à la tête de Nvidia",
-   "title_en": "Jensen Huang Back In Charge Of Nvidia"
   }
  ]
 }
