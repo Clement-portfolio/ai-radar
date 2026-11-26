@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-26T16:30:39.447Z",
+ "generated_at": "2026-11-26T17:10:28.100Z",
  "items": [
+  {
+   "id": "3c4561dec21e",
+   "ts": "2026-11-26T17:07:51.000Z",
+   "title": "Nvidia backs startup developing chiller-free data center cooling system",
+   "orig": "Nvidia backs startup developing chiller-free data center cooling system",
+   "summary": "Y Combinator venture Madrone secures $500k seed funding",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/nvidia-backs-startup-developing-chiller-free-data-center-cooling-system/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "7ccf066bac78",
+   "ts": "2026-11-26T17:03:28.000Z",
+   "title": "500MW data center project planned outside San Diego, California",
+   "orig": "500MW data center project planned outside San Diego, California",
+   "summary": "Spanish renewable firm Ignis behind project",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/500mw-data-center-project-planned-outside-san-diego-california/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "69858100db21",
    "ts": "2026-11-26T16:20:41.000Z",
