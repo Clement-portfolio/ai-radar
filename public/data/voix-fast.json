@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T14:40:50.791Z",
+ "generated_at": "2026-11-26T14:47:47.661Z",
  "query_count": 1,
  "translate_retry_at": "2026-11-26T15:10:50.791Z",
  "people": [
@@ -131,30 +131,19 @@
    "alerts": [],
    "items": [
     {
-     "ts": "2026-11-26T14:38:00.000Z",
-     "title": "Elon Musk says SpaceX could be worth $128 quintillion if it does 2 things",
+     "ts": "2026-11-26T14:38:55.000Z",
+     "title": "Elon Musk Says ‘Multiplanetary’ SpaceX Could Be Worth $118 Quintillion. Yes, Quintillion",
      "title_fr": "",
-     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQZmdmeUdwdTlBdEVHVzM0RFNVdm5haGNkX3lwdHE3R1NVdUdTRmM1R1dBME9fbUVuQTZteGhiN2RsVkMxc2dwVmlHR0h3b2VJM3YwanBaTzZfcm9hbFNtOXY1UWFzRVBnczVWMjZ6ZzVNT1RYejlBYkJGV3MycHlweWQxeHJBZ1ZfT3BlTkdNYXVxZDJkLVROUzlUcWkwaXg0LXZzNERQMGhrcGstZW40Vnpmdw?oc=5",
-     "source": "Business Insider",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOZC1kVm4zUC1XMmt3d3NSOUdwNTNUMEhTblpIU0JJZlAxRjRVdExPX3FIR3Y1ZHNDLTFfWFhhYXFaQnp3RlpXSE8wX0ItSmM1U3llNnc2UExLV1hBN0g4ZE9DQUJSN0VrLTJFMGhOLWFTWlFiWlFITWRtSzJCZk9wa0dwN3g5LXVLVlN1dU9KRGF3aXg4OG9jVjJqVzlMT0JTMTdVNHN3ZW1YVTlXS0E?oc=5",
+     "source": "Decrypt",
      "kind": "presse",
      "srcs": [
-      "business insider"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-26T13:25:26.000Z",
-     "title": "Elon Musk Says SpaceX Could Be Worth ‘A Million Times’ the Global Economy if It Makes Life Multiplanetary",
-     "title_fr": "Elon Musk déclare que SpaceX pourrait valoir « un million de fois » l'économie mondiale si elle rend la vie multiplanétaire",
-     "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxORnR5bWIxNEU4U282U3ByeWkwOV9iM1hfcTIxWThId3d1ZV9RSFhKSWE3X3M0bTlSNURraGpsOWVVT1MtSWdmcFZBNTlJRll5M1k5U052Q2JXMk5SOXZZelBZUHNUbGFMYzFBdFZwNTM2Y2VpSGZOWGlVcWZvSUdZN0h5aHNrTEVqa1ZqOWhhblh2NG1kSTEzX3lzd05GTDNOOHRKcEk1dzdhRC1MYTN6T1Y1SER5Y1FFRjM1M3hISTQxc0E2eV9NdjhUSUVsM1NDR3NiUDByOUNIa3diWHdPOXY5ZnQ1eXR5RGtPZHZlSHFCWVBxX3gtNFpKaV9yTUQ0VFlmVnp1Um1ITHlDbk4za3p0YkdZS0RaV21z?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "srcs": [
+      "decrypt",
+      "business insider",
       "benzinga"
      ],
-     "m": 1,
-     "e": 0
+     "m": 3,
+     "e": 1
     },
     {
      "ts": "2026-11-26T12:15:00.000Z",
@@ -197,19 +186,6 @@
      ],
      "m": 4,
      "e": 1
-    },
-    {
-     "ts": "2026-11-26T08:22:02.000Z",
-     "title": "Elon Musk Announces Massive SpaceX Giveaway to American Kids — His Own Fortune Is Now Part of the Deal",
-     "title_fr": "Elon Musk annonce une distribution massive d'actions SpaceX aux enfants américains — sa propre fortune fait désormais partie de l'accord",
-     "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNcG56d2FBcXJ5b2NNVTZnMjU2eWwxb3IzTkN2REp3Vjh4T0pQUFZjR1h6b1RVZ2k0aFprVDdKWm5LeXp5NElIakJvcS1PMFRrZVRGNExheDJ1azY4Q2RIYkRUSktZVHduaVJNQkxGOUYxemo1ZThDWkhnV2IwT29YSkR6aG02eU85OHBpZ3JidWpvU0R0NzdDVmRhOFRtNGNjdDNucGduWjJkem43Rmt0ME1qdGZCTi1yVzJHc05Lc3dHQQ?oc=5",
-     "source": "Parade Magazine",
-     "kind": "presse",
-     "srcs": [
-      "parade magazine"
-     ],
-     "m": 1,
-     "e": 0
     }
    ]
   },
