@@ -1,10 +1,28 @@
 {
- "generated_at": "2026-11-26T10:50:29.550Z",
+ "generated_at": "2026-11-26T11:01:39.996Z",
  "items": [
+  {
+   "id": "6d8d7e7b110c",
+   "ts": "2026-11-26T10:52:42.000Z",
+   "title": "Bharti Airtel va développer trois centres de données dans l'Assam, en Inde",
+   "orig": "Bharti Airtel to develop three data centers in Assam, India",
+   "summary": "Company targets developments in Guwahati, Jorhat, and Silchar",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/bharti-airtel-to-develop-three-data-centers-in-assam-india/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "Bharti Airtel va développer trois centres de données dans l'Assam, en Inde",
+   "title_en": "Bharti Airtel to develop three data centers in Assam, India",
+   "summary_en": "Company targets developments in Guwahati, Jorhat, and Silchar"
+  },
   {
    "id": "7f203ea7843c",
    "ts": "2026-11-26T10:45:02.000Z",
-   "title": "Man dies after suffering burns in fire at Bitcoin mining data center in Georgia",
+   "title": "Un homme décède après avoir subi des brûlures dans un incendie dans un centre de données de minage de Bitcoin en Géorgie",
    "orig": "Man dies after suffering burns in fire at Bitcoin mining data center in Georgia",
    "summary": "Another person remains in a critical condition following the blaze",
    "country": "US",
@@ -14,7 +32,10 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/man-dies-after-suffering-burns-in-fire-at-bitcoin-mining-data-center-in-georgia/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Un homme décède après avoir subi des brûlures dans un incendie dans un centre de données de minage de Bitcoin en Géorgie",
+   "title_en": "Man dies after suffering burns in fire at Bitcoin mining data center in Georgia",
+   "summary_en": "Another person remains in a critical condition following the blaze"
   },
   {
    "id": "2c7d83ef9d6e",
@@ -29,12 +50,14 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/us-air-force-plans-30000-gpu-hpc-and-ai-supercomputer/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_en": "US Air Force plans 30,000-GPU HPC and AI supercomputer",
+   "summary_en": "Will be dedicated to \"complex tensor operations, physical AI, large model training, and dense scientific simulation\""
   },
   {
    "id": "37e4e2d72f4f",
    "ts": "2026-11-26T09:58:19.000Z",
-   "title": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
+   "title": "SK Hynix recherche l'expertise de TSMC sur les 3 nanomètres alors que Micron intensifie ses recrutements",
    "orig": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
    "summary": "SK Hynix is seeking engineers with experience in TSMC's 3nm process to develop customized high-bandwidth memory (HBM), while US rival Micron Technology is stepping up recruitment in South Korea to support its Asian expansion.",
    "country": "OTHER",
@@ -44,12 +67,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL224/sk-hynix-tsmc-micron-3nm-hbm.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "SK Hynix recherche l'expertise de TSMC sur les 3 nanomètres alors que Micron intensifie ses recrutements",
+   "title_en": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
+   "summary_en": "SK Hynix is seeking engineers with experience in TSMC's 3nm process to develop customized high-bandwidth memory (HBM), while US rival Micron Technology is stepping up recruitment in South Korea to support its Asian expansion."
   },
   {
    "id": "d73563559186",
    "ts": "2026-11-26T09:54:40.000Z",
-   "title": "42 state AGs are trying to stop Character.AI from selling users’ chats",
+   "title": "42 procureurs généraux d'État tentent d'empêcher Character.AI de vendre les discussions des utilisateurs",
    "orig": "42 state AGs are trying to stop Character.AI from selling users’ chats",
    "summary": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction ",
    "country": "US",
@@ -59,12 +85,15 @@
    "source": "The Verge IA",
    "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "42 procureurs généraux d'État tentent d'empêcher Character.AI de vendre les discussions des utilisateurs",
+   "title_en": "42 state AGs are trying to stop Character.AI from selling users’ chats",
+   "summary_en": "A coalition of 42 state attorneys general is trying to prevent Character.AI from selling off user data as it navigates Chapter 11 bankruptcy proceedings. In a deluge of nearly identical press releases, the various AGs accuse the company of planning to auction"
   },
   {
    "id": "ab1fd2e58650",
    "ts": "2026-11-26T09:40:14.000Z",
-   "title": "Samsung, DB HiTek eye 8-inch foundry price hikes as AI demand surges",
+   "title": "Samsung et DB HiTek envisagent des hausses de prix pour les fonderies de 8 pouces alors que la demande en IA explose",
    "orig": "Samsung, DB HiTek eye 8-inch foundry price hikes as AI demand surges",
    "summary": "Major semiconductor foundries using 8-inch (200mm) wafers are operating at or near full capacity and seeking further price increases as demand for power chips used in AI data centers grows and major chipmakers scale back older production lines.",
    "country": "OTHER",
@@ -74,12 +103,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL227/demand-price-samsung-production-capacity.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Samsung et DB HiTek envisagent des hausses de prix pour les fonderies de 8 pouces alors que la demande en IA explose",
+   "title_en": "Samsung, DB HiTek eye 8-inch foundry price hikes as AI demand surges",
+   "summary_en": "Major semiconductor foundries using 8-inch (200mm) wafers are operating at or near full capacity and seeking further price increases as demand for power chips used in AI data centers grows and major chipmakers scale back older production lines."
   },
   {
    "id": "c80349c02a5e",
    "ts": "2026-11-26T09:17:24.000Z",
-   "title": "Xpeng targets 2026 year-end mass production for Iron humanoid robot",
+   "title": "Xpeng vise une production de masse de son robot humanoïde Iron pour la fin 2026",
    "orig": "Xpeng targets 2026 year-end mass production for Iron humanoid robot",
    "summary": "Chinese electric vehicle (EV) maker Xpeng held its AI Day 2026 in Guangzhou, China, on November 25, sharing its latest developments in physical artificial intelligence (AI), with its Iron humanoid robot. The company plans to begin mass production by the end of",
    "country": "CN",
@@ -89,12 +121,15 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD200/xpeng-humanoid-robot-production-2026.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Xpeng vise une production de masse de son robot humanoïde Iron pour la fin 2026",
+   "title_en": "Xpeng targets 2026 year-end mass production for Iron humanoid robot",
+   "summary_en": "Chinese electric vehicle (EV) maker Xpeng held its AI Day 2026 in Guangzhou, China, on November 25, sharing its latest developments in physical artificial intelligence (AI), with its Iron humanoid robot. The company plans to begin mass production by the end of"
   },
   {
    "id": "403442a1249f",
    "ts": "2026-11-26T08:59:11.000Z",
-   "title": "Latin America has the copper and energy the AI build-out needs. Infrastructure is the test",
+   "title": "L'Amérique latine possède le cuivre et l'énergie nécessaires au développement de l'IA. L'infrastructure est le test",
    "orig": "Latin America has the copper and energy the AI build-out needs. Infrastructure is the test",
    "summary": "Latin America’s copper, oil, gas and rare earths could benefit from rising AI energy demand, if infrastructure and fiscal policy attract investment.",
    "country": "US",
@@ -104,7 +139,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/26/latin-america-copper-energy-ai-investment.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "L'Amérique latine possède le cuivre et l'énergie nécessaires au développement de l'IA. L'infrastructure est le test",
+   "title_en": "Latin America has the copper and energy the AI build-out needs. Infrastructure is the test",
+   "summary_en": "Latin America’s copper, oil, gas and rare earths could benefit from rising AI energy demand, if infrastructure and fiscal policy attract investment."
   },
   {
    "id": "303a3a20899f",
@@ -145,7 +183,7 @@
   {
    "id": "4f0d4826ded0",
    "ts": "2026-11-26T08:12:06.000Z",
-   "title": "Chip substrate makers face 30-month waits for key equipment",
+   "title": "Les fabricants de substrats de puces font face à des attente de 30 mois pour les équipements clés",
    "orig": "Chip substrate makers face 30-month waits for key equipment",
    "summary": "Delivery times for some equipment used to manufacture advanced chip substrates have stretched from six months to 30 months as manufacturers race to expand production to meet surging demand for artificial intelligence (AI) chips.",
    "country": "OTHER",
@@ -155,7 +193,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL223/fc-bga-equipment-substrate-capacity-demand-production.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Les fabricants de substrats de puces font face à des attente de 30 mois pour les équipements clés",
+   "title_en": "Chip substrate makers face 30-month waits for key equipment",
+   "summary_en": "Delivery times for some equipment used to manufacture advanced chip substrates have stretched from six months to 30 months as manufacturers race to expand production to meet surging demand for artificial intelligence (AI) chips."
   },
   {
    "id": "b97070990254",
