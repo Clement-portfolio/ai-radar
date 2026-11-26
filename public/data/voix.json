@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T13:59:15.384Z",
+ "generated_at": "2026-11-26T14:47:45.054Z",
  "people": [
   {
    "id": "sam-altman",
@@ -5686,6 +5686,16 @@
      "title_fr": "Le gouverneur de la Fed, Michael Barr, avertit que les risques de financement de l'IA pourraient menacer la stabilité financière"
     },
     {
+     "ts": "2026-11-16T10:24:15.000Z",
+     "title": "Federal Reserve Governor Michael Barr warns AI poses big risk",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOVE9xUzA0VUJPdTNQbTJIYmdGVmVuRkpXQ1RlRWlWd2ZWbjVQUDdhZG5NNzltZUZqWmdJd084LW9CMXNlNXluZ1dsVDlBbHBUb3EteG5MZk5LejJ6T1ZJM2tYbHFOYUE0RzhVc2g1Qk9yck1PQkplazRSZXBiY2Q5N04tTEVLYVdTZEVUNnlybGlSSHIwRFVMc1Qwdnc3bzJQeHVjYnl1OHo4Vlc4OHc?oc=5",
+     "source": "NewsBytes",
+     "kind": "presse",
+     "title_fr": "Le gouverneur de la Réserve fédérale Michael Barr prévient que l'IA présente un risque majeur",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-16T10:17:38.000Z",
      "title": "Fed Governor Michael Barr warns of AI risks to financial system — Channel NewsAsia",
      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUW9WVzFIbVlxWUNQdkwwbnZwTWxra2lnNnF5VzM5eFdqZHdFQWFtdElOLWdMd1M2SVZVUUZKQm9pU2NIdnU2ZkZfRmJ0eElUNGc2OGtzVHZBSUlERDM1anJ3dER3SkxINzRMUlRMOFNQNzBnNHNlZ3E5dFR4RnFnVmpEeTZ4UmZtRm9INUZvb2k5WmJlYTVTdElkdWcweVdVSGxra0p6dzBNb0NKS1drY3RDNlBjNGc?oc=5",
@@ -6221,21 +6231,7 @@
  ],
  "hot": [
   {
-   "score": 1.27,
-   "id": "jd-vance",
-   "n": "JD Vance",
-   "role": "Vice-président des États-Unis",
-   "actor": null,
-   "ts": "2026-11-26T01:19:41.000Z",
-   "title": "Why does JD Vance say Nvidia CEO Jensen Huang does not need a pardon?",
-   "title_fr": "Pourquoi JD Vance dit-il que le PDG de Nvidia, Jensen Huang, n'a pas besoin de grâce présidentielle ?",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSWpwbTN0Wk9UVFZEN2gxdTczWl9Yenc0MUVGbkFLM2hCMXFEVE5vNXdSREFhZ3dkdlppd0g1STd1VmtvdERrUHlnX2syQnVuR3JVaW5jMEFPRG55VmpMRXFZMUNSQXNsU01TMEhXemlWRXo3eTZDQ0hRODE0cUkwMW5hdk85ZlJMV3ZaNHg3cDVLYWpqcnZXTG4zT2NLMG1Qal9QM1FR0gGrAUFVX3lxTFBLejNsb1o4WWEzYnJydlo1YmN2LU03TldjZW85UDgtd3MtZ1dyVFdTUEJoZFdweWZ2QTFZR2wzazRfLXctTkFMRGp4RFhydzF3aWpBLUV5VmsyeUtoTDVTRjRoLTV0b0JJaEY2Wjg1N2oxNXZmZzlyWFJXT3RIT3NlQmI1aFd4REpvQkJGbnV5UGtQTVR3dVA5X2VVNWlfbzJpRUlvYlhwRG1qSQ?oc=5",
-   "source": "Mathrubhumi English",
-   "kind": "presse",
-   "outlets": 3
-  },
-  {
-   "score": 1.26,
+   "score": 1.19,
    "id": "geoffrey-hinton",
    "n": "Geoffrey Hinton",
    "role": "Prix Nobel, pionnier du deep learning",
@@ -6249,7 +6245,21 @@
    "outlets": 2
   },
   {
-   "score": 1.22,
+   "score": 1.19,
+   "id": "jd-vance",
+   "n": "JD Vance",
+   "role": "Vice-président des États-Unis",
+   "actor": null,
+   "ts": "2026-11-26T01:19:41.000Z",
+   "title": "Why does JD Vance say Nvidia CEO Jensen Huang does not need a pardon?",
+   "title_fr": "Pourquoi JD Vance dit-il que le PDG de Nvidia, Jensen Huang, n'a pas besoin de grâce présidentielle ?",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSWpwbTN0Wk9UVFZEN2gxdTczWl9Yenc0MUVGbkFLM2hCMXFEVE5vNXdSREFhZ3dkdlppd0g1STd1VmtvdERrUHlnX2syQnVuR3JVaW5jMEFPRG55VmpMRXFZMUNSQXNsU01TMEhXemlWRXo3eTZDQ0hRODE0cUkwMW5hdk85ZlJMV3ZaNHg3cDVLYWpqcnZXTG4zT2NLMG1Qal9QM1FR0gGrAUFVX3lxTFBLejNsb1o4WWEzYnJydlo1YmN2LU03TldjZW85UDgtd3MtZ1dyVFdTUEJoZFdweWZ2QTFZR2wzazRfLXctTkFMRGp4RFhydzF3aWpBLUV5VmsyeUtoTDVTRjRoLTV0b0JJaEY2Wjg1N2oxNXZmZzlyWFJXT3RIT3NlQmI1aFd4REpvQkJGbnV5UGtQTVR3dVA5X2VVNWlfbzJpRUlvYlhwRG1qSQ?oc=5",
+   "source": "Mathrubhumi English",
+   "kind": "presse",
+   "outlets": 3
+  },
+  {
+   "score": 1.15,
    "id": "christophe-fouquet",
    "n": "Christophe Fouquet",
    "role": "PDG d'ASML",

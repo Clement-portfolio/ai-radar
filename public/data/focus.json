@@ -5,19 +5,46 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-26T13:27:54.322Z",
+ "generated_at": "2026-11-26T14:47:45.054Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
+  "1343f7f3b435+4440cdffde33+506b74d1aabd+740f81f2e5d1+ac6e047a0164+b0576938c855+d59a9fd96499+e73cece637cf+e9a493fbbd87+ea7846207d79+f1200a6ae9c1",
+  "16b9ff9d80af+42272da9d711+9cbfa8def305+afa08db982a9+db6892e02d02+dc69baa5c634+dc7f497f02ae",
   "012a59ac5286+0fa20d13e8af+1233880d0e73+1c0a1e1598f2+1db90e300fc0+1ebbb225f078+2f55336101d3+35df4b85bc2e+4044a23d60df+4401da3fa47f+4b29b6901fc2+55a943f96493+5b49248f4f87+5cf3ec0a8d51+5dc55a044437+5eec9faeab2b+613b95800cde+657d6742e35a+66cc673a6baa+69f64fbae113+71f693cffefe+7c0a81286ce5+86f36aa729ca+93114210a39c+959f99dc5b4c+9daa256e2871+a165733dbba2+a8a55424e532+ad546544b1c7+bf1bbceebeaf+c9c1054b7a8d+cb8d7daff59c+ce30f58198f0+d2a4386c874f+e5cd248eff02+efa75c0d5fa1+fc3a90d264a7",
-  "1343f7f3b435+379e55a2e099+4440cdffde33+506b74d1aabd+740f81f2e5d1+ac6e047a0164+b0576938c855+d59a9fd96499+e9a493fbbd87",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+a41df70f5141+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
-  "16b9ff9d80af+9cbfa8def305+db6892e02d02+dc69baa5c634+dc7f497f02ae",
+  "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+c8ea64c1c7c6",
   "1d46f92411fb+2f09260e4b9f+397cc8e156aa+d2c99c65552e+d9fad293ecfb",
   "337b7b18e815+4f56303dfa34+6f1c574d5831+767f93adc9c0+78a8ff0c3e9e+bc5bfb43b2ec+ee27956d3b8e",
-  "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+c8ea64c1c7c6",
-  "00b247ef1e19+02f0c60f242d+03dc35853dbb+203986bc5a13+412483738c4e+8bae682544f1+9eed3fb59cee+b7f86747d5e6+c9a06983856b+ca87ec84f38b+e4a74397df78+f5e5c5573114+fb7aaff6b6f6"
+  "0a0218381e56+3430cc86f807+3f483ec94a3c+4d34ad2c63d7+6600f56df21a+76a1ecfd8e4b+7a59d4c41a3e+84e6033d7025+99360c4211a2+a59b740fd89d+b7175444dd03+b8e5519408fd+c9c6101f6d2a+caa508a8959c+e2b7af907e84+e40c41a47eb2+ecab1061c917+f4aa87ac0d93+f7e99522702f+fe2f73778320"
  ],
  "stories": [
+  {
+   "ids": [
+    "42272da9d711",
+    "afa08db982a9",
+    "9cbfa8def305",
+    "dc7f497f02ae"
+   ],
+   "head": "Nvidia suspend ses livraisons de serveurs vers 4 pays d'Asie du Sud-Est",
+   "bullets": [
+    "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
+    "La décision fait suite à une règle d'exportation du Département du Commerce américain.",
+    "L'arrêt vise à bloquer le contournement des sanctions sur les puces d'intelligence artificielle."
+   ],
+   "kinds": [
+    "detail",
+    "detail",
+    "explication"
+   ],
+   "head_en": "Nvidia suspends server shipments to 4 Southeast Asian countries",
+   "bullets_en": [
+    "The measure affects Malaysia, Singapore, Thailand, and Indonesia.",
+    "The decision follows an export rule from the US Department of Commerce.",
+    "The stoppage aims to block the circumvention of sanctions on artificial intelligence chips."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-26T14:17:50.000Z"
+  },
   {
    "ids": [
     "35df4b85bc2e",
@@ -25,19 +52,22 @@
     "e5cd248eff02",
     "1233880d0e73"
    ],
-   "head": "Donald Trump évoque une grâce présidentielle pour le PDG de Nvidia Jensen Huang",
+   "head": "Donald Trump évoque une possible grâce présidentielle pour le PDG de Nvidia Jensen Huang",
    "bullets": [
-    "Donald Trump a exhorté Jensen Huang à ne pas invoquer le Cinquième Amendement et à dire la vérité devant le Congrès.",
-    "Le président américain a exercé des pressions sur le conseil d'administration de Nvidia, avec l'aide du vice-président Vance, pour favoriser le retour de Jensen Huang à la tête de l'entreprise."
+    "Le président américain exhorte le dirigeant à ne pas invoquer le Cinquième Amendement lors de son audition devant le Congrès.",
+    "Cette intervention fait suite aux pressions exercées par Donald Trump et le vice-président Vance pour favoriser le retour de Jensen Huang à la tête de l'entreprise.",
+    "Le chef de l'État conditionne cette éventuelle grâce à une transparence totale et à la vérité lors des témoignages parlementaires."
    ],
    "kinds": [
     "detail",
+    "explication",
     "detail"
    ],
-   "head_en": "Donald Trump mentions a presidential pardon for Nvidia CEO Jensen Huang",
+   "head_en": "Donald Trump mentions a possible presidential pardon for Nvidia CEO Jensen Huang",
    "bullets_en": [
-    "Donald Trump urged Jensen Huang to not invoke the Fifth Amendment and to tell the truth before Congress.",
-    "The US president exerted pressure on Nvidia's board of directors, with the help of Vice President Vance, to favor Jensen Huang's return to lead the company."
+    "The US President urges the executive not to invoke the Fifth Amendment during his hearing before Congress.",
+    "This intervention follows the pressure exerted by Donald Trump and Vice President Vance to facilitate the return of Jensen Huang to the head of the company.",
+    "The head of state conditions this potential pardon on total transparency and truthfulness during parliamentary testimonies."
    ],
    "ctx_ids": [],
    "ts": "2026-11-26T11:00:00.000Z"
@@ -51,51 +81,20 @@
    ],
    "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire",
    "bullets": [
-    "Le département du Commerce américain a pris cette décision dans le cadre d'une enquête sur la contrebande de puces Nvidia vers la Chine.",
-    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête sur l'entreprise Megaspeed après ces sanctions.",
-    "Les autorités américaines avaient ouvert une enquête sur Megaspeed et Alice Huang en raison de soupçons de contournement des restrictions sur les puces Nvidia."
+    "Le département du Commerce américain sanctionne ces entreprises dans le cadre d'une enquête sur la contrebande de puces Nvidia vers la Chine.",
+    "Le Premier ministre de Singapour annonce l'ouverture d'une enquête sur la société Megaspeed suite à ces mesures restrictives."
    ],
    "kinds": [
-    "detail",
-    "detail",
-    "contexte"
-   ],
-   "head_en": "The US places Megaspeed and an Alibaba subsidiary on a blacklist",
-   "bullets_en": [
-    "The US Department of Commerce made this decision as part of an investigation into the smuggling of Nvidia chips to China.",
-    "The Prime Minister of Singapore announced the opening of an investigation into Megaspeed following these sanctions.",
-    "US authorities had opened an investigation into Megaspeed and Alice Huang due to suspected circumvention of restrictions on Nvidia chips."
-   ],
-   "ctx_ids": [
-    "d525cb09aeca"
-   ],
-   "ts": "2026-11-25T12:30:00.000Z"
-  },
-  {
-   "ids": [
-    "d9fad293ecfb",
-    "d2c99c65552e",
-    "1d46f92411fb"
-   ],
-   "head": "Le Nasdaq chute de 4,6 % et le marché entre en zone de turbulences sur fond de craintes de bulle IA",
-   "bullets": [
-    "Le KOSPI en Corée du Sud a reculé de 6,16 % en raison des inquiétudes sur le secteur.",
-    "Le Nasdaq 100 est entré en marché baissier sous la pression des pertes liées à l'intelligence artificielle.",
-    "Cette correction boursière reflète une remise en question de la confiance des investisseurs dans la rentabilité immédiate des investissements dans l'IA."
-   ],
-   "kinds": [
-    "detail",
     "detail",
     "explication"
    ],
-   "head_en": "The Nasdaq drops 4.6% and the market enters turbulent territory amid AI bubble fears",
+   "head_en": "The United States places Megaspeed and an Alibaba subsidiary on blacklist",
    "bullets_en": [
-    "The KOSPI in South Korea fell 6.16% due to concerns over the sector.",
-    "The Nasdaq 100 entered a bear market under pressure from losses linked to artificial intelligence.",
-    "This stock correction reflects a questioning of investor confidence in the immediate profitability of AI investments."
+    "The US Department of Commerce sanctions these companies as part of an investigation into the smuggling of Nvidia chips to China.",
+    "The Prime Minister of Singapore announces the opening of an investigation into Megaspeed following these restrictive measures."
    ],
    "ctx_ids": [],
-   "ts": "2026-11-26T00:36:48.000Z"
+   "ts": "2026-11-25T12:30:00.000Z"
   }
  ]
 }
