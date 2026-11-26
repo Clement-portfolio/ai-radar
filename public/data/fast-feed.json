@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-26T03:00:41.100Z",
+ "generated_at": "2026-11-26T03:10:28.180Z",
  "items": [
+  {
+   "id": "5fe04a826f8b",
+   "ts": "2026-11-26T02:34:08.000Z",
+   "title": "Nvidia leadership turmoil puts customer due diligence in spotlight across AI supply chain",
+   "orig": "Nvidia leadership turmoil puts customer due diligence in spotlight across AI supply chain",
+   "summary": "Know your customer (KYC) has become a buzzword across the AI supply chain following the recent controversy surrounding Nvidia CEO Jensen Huang. Suppliers are increasingly cautious about crossing geopolitical red lines while seeking to avoid financial risks ari",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PD205/nvidia-supply-chain-ceo-development.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "04707d0983fb",
    "ts": "2026-11-26T02:15:51.000Z",
@@ -13,6 +28,21 @@
    "layer": "Puces",
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/26/dennys-jensen-huang-nvidia.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "543fd760b505",
+   "ts": "2026-11-26T02:08:45.000Z",
+   "title": "Resonac targets 2027 production of photosensitive film for panel packaging",
+   "orig": "Resonac targets 2027 production of photosensitive film for panel packaging",
+   "summary": "Resonac has developed a photosensitive insulating film for panel-level semiconductor packaging, targeting mass production in 2027 as chipmakers look to larger package formats for high-performance devices.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PR202/resonac-packaging-production-2027-demand.html",
    "confidence": "moyenne",
    "pending": true
   },
