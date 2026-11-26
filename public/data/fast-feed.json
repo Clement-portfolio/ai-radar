@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-26T10:00:43.654Z",
+ "generated_at": "2026-11-26T10:10:28.669Z",
  "items": [
+  {
+   "id": "37e4e2d72f4f",
+   "ts": "2026-11-26T09:58:19.000Z",
+   "title": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
+   "orig": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
+   "summary": "SK Hynix is seeking engineers with experience in TSMC's 3nm process to develop customized high-bandwidth memory (HBM), while US rival Micron Technology is stepping up recruitment in South Korea to support its Asian expansion.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Mémoire HBM",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126VL224/sk-hynix-tsmc-micron-3nm-hbm.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "d73563559186",
    "ts": "2026-11-26T09:54:40.000Z",
@@ -13,6 +28,36 @@
    "layer": "Modèles",
    "source": "The Verge IA",
    "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "ab1fd2e58650",
+   "ts": "2026-11-26T09:40:14.000Z",
+   "title": "Samsung, DB HiTek eye 8-inch foundry price hikes as AI demand surges",
+   "orig": "Samsung, DB HiTek eye 8-inch foundry price hikes as AI demand surges",
+   "summary": "Major semiconductor foundries using 8-inch (200mm) wafers are operating at or near full capacity and seeking further price increases as demand for power chips used in AI data centers grows and major chipmakers scale back older production lines.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Fonderie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126VL227/demand-price-samsung-production-capacity.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "c80349c02a5e",
+   "ts": "2026-11-26T09:17:24.000Z",
+   "title": "Xpeng targets 2026 year-end mass production for Iron humanoid robot",
+   "orig": "Xpeng targets 2026 year-end mass production for Iron humanoid robot",
+   "summary": "Chinese electric vehicle (EV) maker Xpeng held its AI Day 2026 in Guangzhou, China, on November 25, sharing its latest developments in physical artificial intelligence (AI), with its Iron humanoid robot. The company plans to begin mass production by the end of",
+   "country": "CN",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Énergie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PD200/xpeng-humanoid-robot-production-2026.html",
    "confidence": "moyenne",
    "pending": true
   },
