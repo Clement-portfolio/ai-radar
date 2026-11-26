@@ -1,6 +1,24 @@
 {
- "generated_at": "2026-11-26T08:50:29.474Z",
+ "generated_at": "2026-11-26T09:02:40.672Z",
  "items": [
+  {
+   "id": "303a3a20899f",
+   "ts": "2026-11-26T08:55:48.000Z",
+   "title": "EU Rules Bring New Safety Requirements for Farm Robots",
+   "orig": "EU Rules Bring New Safety Requirements for Farm Robots",
+   "summary": "New EU regulations will tighten safety and compliance requirements for farms deploying AI-powered robots and autonomous machinery. The post EU Rules Bring New Safety Requirements for Farm Robots appeared first on EE Times .",
+   "country": "EU",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "EE Times",
+   "url": "https://www.eetimes.com/eu-rules-bring-new-safety-requirements-for-farm-robots/",
+   "confidence": "moyenne",
+   "pending": true,
+   "title_fr": "EU Rules Bring New Safety Requirements for Farm Robots",
+   "title_en": "EU Rules Bring New Safety Requirements for Farm Robots",
+   "summary_en": "New EU regulations will tighten safety and compliance requirements for farms deploying AI-powered robots and autonomous machinery. The post EU Rules Bring New Safety Requirements for Farm Robots appeared first on EE Times ."
+  },
   {
    "id": "2898f32d09fa",
    "ts": "2026-11-26T08:42:26.000Z",
@@ -14,7 +32,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/26/stock-markets-today-.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
+   "title_en": "Global stocks rally as investors shrug off U.S. tariffs and AI jitters",
+   "summary_en": "Investors appeared to have shrugged off a fresh set of tariffs unveiled by the White House on Wednesday, targeting more than a dozen major trading partners."
   },
   {
    "id": "b97070990254",
@@ -29,7 +50,10 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/marketwatch/safety-at-scale/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Sponsored: Safety at scale",
+   "title_en": "Sponsored: Safety at scale",
+   "summary_en": "With no time to slow down, safety must come built-in to data center construction projects, say Milwaukee Tools’ experts"
   },
   {
    "id": "7673334b6eb7",
@@ -44,7 +68,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL222/sk-hynix-micron-chipmakers-demand-chips.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Micron, Samsung, SK Hynix strike multiyear memory deals",
+   "title_en": "Micron, Samsung, SK Hynix strike multiyear memory deals",
+   "summary_en": "The world's three largest memory chipmakers are securing multiyear supply agreements as shortages driven by AI demand push customers to commit cash years before chips are delivered."
   },
   {
    "id": "db6892e02d02",
@@ -59,7 +86,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL220/nvidia-chips-manufacturing-shipping-data.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites",
+   "title_en": "Nvidia reportedly halts server shipments to four Southeast Asian countries as new US chip rule bites",
+   "summary_en": "Nvidia has told its manufacturing partners to stop shipping servers to Malaysia, Singapore, Thailand, and Indonesia, the Financial Times ( FT ) reported on November 26, as a new US rule against Chinese companies' rented access to AI computing hits the region's"
   },
   {
    "id": "9971f204aba0",
@@ -74,7 +104,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD224/donald-trump-nvidia-jensen-huang-taiwan.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Commentary: Taiwan supply chains monitor Trump's potential interference with Nvidia",
+   "title_en": "Commentary: Taiwan supply chains monitor Trump's potential interference with Nvidia",
+   "summary_en": "Nvidia's board agreed to reinstate former CEO Jensen Huang, prompting stock markets in the US, Japan, South Korea and Taiwan to rally. After the one-day surge, US President Donald Trump claimed credit for the board's decision, raising concerns that his governi"
   },
   {
    "id": "2044ad785db9",
@@ -89,7 +122,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD214/supply-chain-gpu-data-center-gtc-data.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Exclusive: AI supply chain faces shipment delays as KYC expands",
+   "title_en": "Exclusive: AI supply chain faces shipment delays as KYC expands",
+   "summary_en": "The US Department of Commerce's Bureau of Industry and Security (BIS) export control rules, effective November 19, 2026, expand customer reviews and shipment restrictions across the AI server supply chain. The rules cover not only GPU destinations, buyers, and"
   },
   {
    "id": "a4563c394c9a",
@@ -104,7 +140,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD229/pcb-investment-demand-high-end-infrastructure.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "China scales, Japan supplies, Korea builds &mdash; three AI playbooks behind a 60%-plus grip on the global PCB market",
+   "title_en": "China scales, Japan supplies, Korea builds &mdash; three AI playbooks behind a 60%-plus grip on the global PCB market",
+   "summary_en": "Growing global investment in AI infrastructure is lifting demand for high-end printed circuit boards (PCBs), IC substrates and high-speed interconnects, and Asia's leading PCB makers are speeding up changes to their product lines and capacity. The Taiwan Print"
   },
   {
    "id": "00b247ef1e19",
@@ -119,7 +158,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL219/nvidia-jensen-huang-chips-data.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Huang is back in Nvidia, but Washington's chip squeeze on China is only tightening",
+   "title_en": "Huang is back in Nvidia, but Washington's chip squeeze on China is only tightening",
+   "summary_en": "After just 11 days away from the job, Jensen Huang is back at the helm of Nvidia, the maker of the world's most advanced AI chips. However, his return has so far not changed the momentum of an unfolding US political crackdown on Chinese access to advanced chip"
   },
   {
    "id": "660b5d44ffeb",
@@ -134,7 +176,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD207/shanghai-tesla-smic-investment-investigation.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "In-depth: Shanghai party chief probe tests playbook that landed SMIC and Tesla",
+   "title_en": "In-depth: Shanghai party chief probe tests playbook that landed SMIC and Tesla",
+   "summary_en": "Shanghai Party Secretary Chen Jining is reportedly under investigation. The news has sent a shock through one of China's key technology hubs and its political and business circles. Shanghai's industry has gone through several major shifts over nearly 30 years:"
   },
   {
    "id": "d3aa48daa62d",
@@ -149,7 +194,9 @@
    "source": "Hugging Face blog",
    "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
    "confidence": "haute",
-   "pending": true
+   "pending": true,
+   "title_fr": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+   "title_en": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference"
   },
   {
    "id": "6f77cdf398ab",
@@ -164,7 +211,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL205/tata-group-india-fab-chips-packaging-plant-cleanroom.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Tata Electronics reportedly opens talks with contractors for phase 2 of Assam chip packaging plant",
+   "title_en": "Tata Electronics reportedly opens talks with contractors for phase 2 of Assam chip packaging plant",
+   "summary_en": "Tata Electronics is lining up the second phase of its semiconductor assembly and test plant in Assam before the facility has been formally inaugurated, extending a project described as India's first indigenous semiconductor assembly and test facility."
   },
   {
    "id": "edb5cfb927e1",
@@ -179,7 +229,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL211/huawei-ascend-patent-ip-nvidia.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Huawei offers free chip patent licenses to take on Nvidia",
+   "title_en": "Huawei offers free chip patent licenses to take on Nvidia",
+   "summary_en": "Huawei Technologies is offering free patent licenses for its UnifiedBus chip interconnect technology and has set up dedicated semiconductor and artificial intelligence (AI) patent teams as it seeks to attract overseas hardware suppliers and build a computing e"
   },
   {
    "id": "59efa58e8ae0",
@@ -194,7 +247,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL217/samsung-sk-hynix-demand-investment-expansion.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "US warns of memory glut as Samsung, SK Hynix expand",
+   "title_en": "US warns of memory glut as Samsung, SK Hynix expand",
+   "summary_en": "The US has warned that South Korea's government-backed memory chip expansion could lead to a glut even as AI demand strains global supplies. The findings name Samsung Electronics and SK Hynix, although memory chips are excluded from the proposed tariffs."
   },
   {
    "id": "ddb1abc9de33",
@@ -209,7 +265,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL209/infrastructure-spacex-management-financing-fcc.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "SpaceX's million-satellite approval pushes AI infrastructure into a new supply-chain frontier",
+   "title_en": "SpaceX's million-satellite approval pushes AI infrastructure into a new supply-chain frontier",
+   "summary_en": "As aggressive AI infrastructure buildouts continue to stretch the limits of power availability, land, and thermal management, SpaceX's longstanding ambition to extend the competitive boundaries of AI computing beyond Earth is moving closer to realization."
   },
   {
    "id": "282b0b901992",
@@ -224,7 +283,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD230/topco-materials-revenue-adas-business.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Topco Technologies targets double-digit AI materials revenue share",
+   "title_en": "Topco Technologies targets double-digit AI materials revenue share",
+   "summary_en": "Topco Technologies aims to raise AI materials to a double-digit share of revenue from current levels of 9% to 10%, while expanding into materials for humanoid robots, advanced driver-assistance systems (ADAS), energy storage, and cosmetics, chairman Chen-cheng"
   },
   {
    "id": "3c730600985a",
@@ -239,7 +301,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL212/us-china-trade-war-gpu-supply-chain-demand-2026.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "How new US export controls and fragile trade truces triggered sell-off in China's domestic GPU sector",
+   "title_en": "How new US export controls and fragile trade truces triggered sell-off in China's domestic GPU sector",
+   "summary_en": "On November 25, 2026, China's leading domestic GPU developers, including MetaX, Moore Threads, Biren Technology, and Iluvatar CoreX, suffered a sharp, synchronized sell-off. By market close, three of the four stocks hit all-time lows."
   },
   {
    "id": "154574b91190",
@@ -254,7 +319,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/26/nvidia-market-governance-risk.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "S&P warns Nvidia credit rating could be cut over 'rising' management and governance risk",
+   "title_en": "S&P warns Nvidia credit rating could be cut over 'rising' management and governance risk",
+   "summary_en": "S&P Global Ratings said Nvidia's credit rating could be cut by one notch as it flagged \"rising\" management and governance risk at the chipmaker."
   },
   {
    "id": "5fe04a826f8b",
@@ -269,7 +337,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD205/nvidia-supply-chain-ceo-development.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Nvidia leadership turmoil puts customer due diligence in spotlight across AI supply chain",
+   "title_en": "Nvidia leadership turmoil puts customer due diligence in spotlight across AI supply chain",
+   "summary_en": "Know your customer (KYC) has become a buzzword across the AI supply chain following the recent controversy surrounding Nvidia CEO Jensen Huang. Suppliers are increasingly cautious about crossing geopolitical red lines while seeking to avoid financial risks ari"
   },
   {
    "id": "04707d0983fb",
@@ -284,7 +355,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/26/dennys-jensen-huang-nvidia.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
+   "title_en": "‘Your booth is waiting’: Denny’s welcomes Jensen Huang back as Nvidia CEO",
+   "summary_en": "Denny's reaffirmed its longstanding ties with Jensen Huang following his return as Nvidia CEO, revealing that a plaque had been restored."
   },
   {
    "id": "543fd760b505",
@@ -299,7 +373,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PR202/resonac-packaging-production-2027-demand.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Resonac targets 2027 production of photosensitive film for panel packaging",
+   "title_en": "Resonac targets 2027 production of photosensitive film for panel packaging",
+   "summary_en": "Resonac has developed a photosensitive insulating film for panel-level semiconductor packaging, targeting mass production in 2027 as chipmakers look to larger package formats for high-performance devices."
   },
   {
    "id": "ce9f059a9144",
@@ -314,7 +391,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD205/leo-2027-growth-laser-data.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "LEO satellite boom, space-based AI fuel Lightel KY 's 2027 growth outlook as capacity expansion accelerates",
+   "title_en": "LEO satellite boom, space-based AI fuel Lightel KY 's 2027 growth outlook as capacity expansion accelerates",
+   "summary_en": "The accelerating pace of global low-Earth-orbit (LEO) satellite launches, combined with growing interest among satellite operators in space-based AI data centers, is driving demand for laser communication terminals (LCTs) and related optical components."
   },
   {
    "id": "5d6963f673f2",
@@ -329,7 +409,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD209/isscc-ieee-taiwan-2027-chairman.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "ISSCC 2027 selects 10 Taiwan papers",
+   "title_en": "ISSCC 2027 selects 10 Taiwan papers",
+   "summary_en": "The IEEE International Solid-State Circuits Conference (ISSCC), known as the Olympics of chip design, has announced its 2027 paper selections. Taiwan submitted 58 papers and had 10 accepted, while China including Hong Kong and Macao submitted 460 and had 124 a"
   },
   {
    "id": "bff7e6993180",
@@ -344,7 +427,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD226/ai-server-revenue-psu-market-2026.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Jih Lin Technology targets AI server PSUs with Clip leadframes",
+   "title_en": "Jih Lin Technology targets AI server PSUs with Clip leadframes",
+   "summary_en": "Power leadframe maker Jih Lin Technology is entering the AI server power supply unit (PSU) market with its Clip leadframe products, which are being validated by six customers. The company said recovering industrial automation and automotive demand, along with"
   },
   {
    "id": "24882fc09980",
@@ -359,7 +445,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD227/demand-automation-manufacturing-chairman-investment.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "AI-driven automation is reshaping factory design, driving demand for larger sites, says Gudeng chairman",
+   "title_en": "AI-driven automation is reshaping factory design, driving demand for larger sites, says Gudeng chairman",
+   "summary_en": "AI is driving investment across the global semiconductor and technology industries, fueling demand for new manufacturing facilities in Taiwan."
   },
   {
    "id": "13bd500f5379",
@@ -374,7 +463,9 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261125PD228/inspection-siph-production-demand-plant.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_en": "EnliTech's semiconductor inspection share nears 50% as NT$1 billion plant targets SiPh mass production",
+   "summary_en": "Surging demand for high-speed optical transmission in AI data centers is propelling silicon photonics (SiPh) from R&D into volume production, marking a pivotal operational shift for optical inspection equipment maker EnliTech. On November 25, the company broke"
   },
   {
    "id": "bee872523568",
@@ -389,7 +480,10 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/26/mispricing-risk-fund-managers-ai-volatility.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Where the market may be mispricing risk most: AI boom, volatility, high-yield bonds",
+   "title_en": "Where the market may be mispricing risk most: AI boom, volatility, high-yield bonds",
+   "summary_en": "The AI boom could trigger a recession, but data centers remain an attractive investment opportunity, a hedge fund manager said."
   },
   {
    "id": "5b614351e602",
@@ -422,7 +516,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PR201/seoul-semiconductor-production-lcd-technology-tv.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Seoul Semiconductor begins mass production of WICOP Pixel RGB backlights for LCD TVs",
+   "title_en": "Seoul Semiconductor begins mass production of WICOP Pixel RGB backlights for LCD TVs",
+   "summary_en": "Seoul Semiconductor said it has entered full-scale mass production of WICOP Pixel, an RGB backlight technology developed by its subsidiary Seoul Viosys, and has begun expanding supply to global TV manufacturers, pitching the technology as a way for standard LC"
   },
   {
    "id": "b5a2313703e3",
@@ -437,7 +534,10 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PR200/sdc-microled-technology-investment-partnership.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "title_fr": "Samsung Display to become ams OSRAM's largest shareholder in microLED push",
+   "title_en": "Samsung Display to become ams OSRAM's largest shareholder in microLED push",
+   "summary_en": "Samsung Display has signed an agreement to acquire a 9.1% equity interest in Ams Osram for approximately EUR210 million (230.14 millions de dollars), a deal that is expected to make it the largest shareholder in the light-emission and optical-sensing semiconductor comp"
   },
   {
    "id": "506b74d1aabd",
