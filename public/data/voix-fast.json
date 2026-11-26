@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T22:10:27.459Z",
+ "generated_at": "2026-11-26T22:30:37.646Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T22:20:27.459Z",
+ "translate_retry_at": "2026-11-26T22:40:37.646Z",
  "people": [
   {
    "id": "sam-altman",
@@ -52,6 +52,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-26T17:15:20.000Z",
+     "title": "Dario Amodei Rejects the Abandonment of Free Will to AI",
+     "title_fr": "Dario Amodei rejette l'abandon du libre arbitre à l'IA",
+     "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPVmZqS1NSeGNlMTBMNFhZQ1JtWnU2VVdrUTVRQnF2ZHdjdS1TcjY2bTVjekhwXzMyU2F2NnFrdkdYZ0FtX2p3ZXZNYmo0Y0t1UkhNT3VXRV9FMHRPM1ZrTjJycDNOenBORGM4UmxkY2VzN2t5dzBiR2U4YUk0NDZtdUxNQ0VQbnJvTkxvempnX1lKTFE?oc=5",
+     "source": "Brief IA",
+     "kind": "presse",
+     "srcs": [
+      "brief ia"
+     ],
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-26T14:47:53.000Z",
      "title": "Amodei rejects AI rule after Axios report on Anthropic staff",
