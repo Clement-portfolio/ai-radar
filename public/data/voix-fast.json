@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T16:40:32.278Z",
+ "generated_at": "2026-11-27T18:40:31.253Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T16:50:32.278Z",
+ "translate_retry_at": "2026-11-27T18:50:31.253Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T18:30:03.000Z",
+     "title": "‘Superfan’ Elon Musk Says ‘China Is Cool’ as Tesla Boosts Production in Shanghai: ‘The More the US and China Cooperate, the Better Off Both Will Be’",
+     "title_fr": "Le « superfan » Elon Musk dit que « la Chine est cool » alors que Tesla augmente la production à Shanghai : « Plus les États-Unis et la Chine coopèrent, mieux les deux se porteront »",
+     "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxOTnZsYnpoTVZaRDBEVkdrTXEzTjZkblVFaXlqZ0s1aGlvMFEwZEhIU2VaN3pjVTAtR3oyazBFeVk1LWRBMi1CSG1sdVA1UTJQcU9WdDVRVnZzMXU2VG9UNGhpTm5mZ3JqaWlXMXE2M3RjNTBRRGlPNmVFZ0ZtTXdvNXJmUEZNcVhPZUJGa2NwUFZrUkkwalJ2ZUFKWDJxRmEwOURlazJRYkJzZTJnZGdpWHQxWU1oR2lLUkVucHc0YmpWS09iaUZ4bl9iWlZ5NjFpNlJncklUSDdUU2hjdG9RVmJvLU1meTRSMjY2V3dQckpuMXRtSTdwVEE5VFViZi1YaldiQ0NpcDJVSmRidzRRb2ln?oc=5",
+     "source": "Barchart.com",
+     "kind": "presse",
+     "srcs": [
+      "barchart.com"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-27T16:22:31.000Z",
      "title": "Elon Musk Doubles Down on Giving Back With Plan to Distribute SpaceX Shares to Children",
      "title_fr": "Elon Musk insiste sur le partage avec son plan de distribution d'actions SpaceX aux enfants",
@@ -259,19 +272,6 @@
       "washington examiner"
      ],
      "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-27T09:08:27.000Z",
-     "title": "SpaceX Shares Soar As Musk Vows To Expand Stock Giveaway—Pledges A Share To Every Child Each Year",
-     "title_fr": "Les actions de SpaceX s'envolent alors que Musk s'engage à élargir la distribution d'actions — promettant une action à chaque enfant chaque année",
-     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPcHA1RzB6RFRPSDBtOXNkc3dWTGxMQjlscy00ZnktNVdDcldtekQ1VWFfRlFWWEdPdHVQR2xxRnhRcnhGSDYySWJyY0FHb2tST3ZkUGdUT28tSDRhMzdveGtlSmRSekptNmZyQVczdEZGbVhwaU5lRXVzZ2lmNmVoOVBrZUM4VF9PamJTZGxYR3ZsWEx2d2FMSEQ2ME9QSlA2WGpTdDJoOTFkWjdUaHJMeTlYUFlCUjJjaHlWVzJNdGIxWm9UTFktSHZCNFZmYTFFN2dYX1BzVVhEajI5RWdvQUpCMTNMdw?oc=5",
-     "source": "Forbes",
-     "kind": "presse",
-     "srcs": [
-      "forbes"
-     ],
-     "m": 1,
      "e": 1
     }
    ]
