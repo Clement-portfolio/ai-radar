@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T12:00:51.191Z",
+ "generated_at": "2026-11-27T13:20:30.258Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T12:10:51.191Z",
+ "translate_retry_at": "2026-11-27T13:30:30.258Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,20 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T13:04:21.000Z",
+     "title": "Elon Musk says he’s giving 2 SpaceX shares to every American child with an active Trump account",
+     "title_fr": "Elon Musk dit qu'il donne 2 actions SpaceX à chaque enfant américain avec un compte Trump actif",
+     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOOXl1dUo4RkFxTWkyeXpUeEFLN2phRzZIX3ZxS0djbDAxOHVCNjBFRm52ajJMeDJ0TWo0eVc4M0RINklCUi03SGVKN1RRaGFDZTRCZ3J1dnoyM0daeWQtMVJ2S3piWURLalZPdWVDaWxLVGxsMkgyT3VqbXBCY1BPYjNobmpINWViNndTRl91aFI2cV90NTluNHliQjRBOGVZQTRpaUc0VENuLWd6QnJHa1hyS2EyTDBTYUg5bkQ3U1JKeGJaTDF5Njg5YmlJdnJsTWFyM0xpdHptd9IB3wFBVV95cUxQQk9SNDBnSHFtS1k3eHd3NmwwX3pFUWxIaHhQZWF0MnFXVUdNbWhtU2RZSWdfSjdMWEVCdjBiY0VJbUlhekQtRmNMMUFESk9MVzJHRjN2ZzJxZUd1LUEtaVFicUFYWGVuQWlBXzVuT1BqS2syb0t4bHk5NFJTSHhZSXk3WE5NRzVLZkxDTVBBOEpSRjIwX2VUOUVQMVRTWUxnLXVJSlpJSThZckZONTRlN3N1ZWprUVhkXzU0clp3VUcxWEh0Q1pzSGJlb0Y0Yk5VN2xSSXRIampqSUotdGxZ?oc=5",
+     "source": "FOX40",
+     "kind": "presse",
+     "srcs": [
+      "fox40",
+      "washington examiner"
+     ],
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-27T09:08:27.000Z",
      "title": "SpaceX Shares Soar As Musk Vows To Expand Stock Giveaway—Pledges A Share To Every Child Each Year",
      "title_fr": "Les actions de SpaceX s'envolent alors que Musk s'engage à élargir la distribution d'actions — promettant une action à chaque enfant chaque année",
@@ -221,19 +235,6 @@
      "e": 1
     },
     {
-     "ts": "2026-11-26T23:27:52.000Z",
-     "title": "Elon Musk announces two SpaceX shares for every American child",
-     "title_fr": "Elon Musk annonce deux actions SpaceX pour chaque enfant américain",
-     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOd2dGZjF6amU3UkVZbU13UlVFSlIwX2ZRcUtkWmJtbHRRd2dQR29DdU44TXd0YVk1SXVnd19qWjBSMXh2X21abDhaUkE0YmZzM0xPMmRncTEwcThSSFdLaFcwcTRCYmYwN1kyRkZfWXktNTJaRFROblZCbnVBMlc2d3ZhbVI3cWJDSmlKWWNiZ1pZbElSUTVUMDlWSkdCSGJDNmdOX2xnNnFVQQ?oc=5",
-     "source": "Washington Examiner",
-     "kind": "presse",
-     "srcs": [
-      "washington examiner"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
      "ts": "2026-11-26T21:31:30.000Z",
      "title": "Elon Musk Says He Will Be Donating Another Share Of SpaceX To All Kids In America Every Year",
      "title_fr": "Elon Musk déclare qu'il fera don d'une autre part de SpaceX à tous les enfants américains chaque année",
@@ -255,19 +256,6 @@
      "kind": "presse",
      "srcs": [
       "the korea daily"
-     ],
-     "m": 1,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-26T20:27:00.000Z",
-     "title": "Musk reveals name for AI supercomputer in southeast Arizona",
-     "title_fr": "Musk révèle le nom du superordinateur d'IA dans le sud-est de l'Arizona",
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN3pZeG5jMDBDdzhtRElKNWxfWURBTmZrSVNxblhtdC0yYXJ6ckdXVV9YNHVydGRBMzlzbmpGNzVTVEtObmk0ZFZUd1FCaVdqZE5tSmdualZobXZZdEJXbFJSbmdmRDZ6SXAwVXJMZ21rcUpsWmtESDNrUXBKVmhDQ1dkeXVPbUNaUkFvOTZUUHZtakpUQUJHcGpOdHJyd2lHbWNOU0FCWk8wR1hsTldwTVVxLU1TaUIxX0pvSW9B?oc=5",
-     "source": "azcentral.com and The Arizona Republic",
-     "kind": "presse",
-     "srcs": [
-      "azcentral.com and the arizona republic"
      ],
      "m": 1,
      "e": 1
