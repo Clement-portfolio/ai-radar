@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T16:00:42.723Z",
+ "generated_at": "2026-11-27T16:11:26.282Z",
  "items": [
   {
    "id": "3d6bcf07a0dd",
@@ -42,7 +42,7 @@
   {
    "id": "dd0a4889278b",
    "ts": "2026-11-27T15:27:11.000Z",
-   "title": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+   "title": "Les agents d'achat en IA ont le vent en poupe, mais Amazon et un nombre croissant de sites menacent de freiner leur croissance",
    "orig": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
    "summary": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at Amazon and other retailers.",
    "country": "US",
@@ -52,7 +52,11 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les agents d'achat en IA ont le vent en poupe, mais Amazon et un nombre croissant de sites menacent de freiner leur croissance",
+   "title_en": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+   "summary_en": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at Amazon and other retailers."
   },
   {
    "id": "5b94218559e8",
@@ -5184,60 +5188,6 @@
    "title_fr": "De l'agriculture de précision à l'agriculture autonome : le rôle de l'IA en périphérie et de la robotique",
    "title_en": "From Precision to Autonomous Agriculture: The Role of Edge AI and Robotics",
    "summary_en": "Edge AI and robotics bring greater precision and autonomy to agricultural machinery, from targeted spraying to harvesting. The post From Precision to Autonomous Agriculture: The Role of Edge AI and Robotics appeared first on EE Times ."
-  },
-  {
-   "id": "70f3d3a63449",
-   "ts": "2026-11-24T16:10:00.000Z",
-   "title": "Pourquoi un investisseur de Crusoe mise sur le solaire et les batteries pour alimenter les futurs centres de données IA",
-   "orig": "Why a Crusoe investor is betting on solar and batteries to power future AI data centers",
-   "summary": "Next-generation data centers will need tens of gigawatts of power every year. One of Crusoe's investors thinks solar and energy storage are the obvious choice.",
-   "country": "US",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/24/why-a-crusoe-investor-is-betting-on-solar-and-batteries-to-power-future-ai-data-centers/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Pourquoi un investisseur de Crusoe mise sur le solaire et les batteries pour alimenter les futurs centres de données IA",
-   "title_en": "Why a Crusoe investor is betting on solar and batteries to power future AI data centers",
-   "summary_en": "Next-generation data centers will need tens of gigawatts of power every year. One of Crusoe's investors thinks solar and energy storage are the obvious choice."
-  },
-  {
-   "id": "19f2f984a80d",
-   "ts": "2026-11-24T16:09:23.000Z",
-   "title": "Le New York Times avertit les photographes de ne pas mettre à jour Photoshop à cause des fonctionnalités IA",
-   "orig": "The New York Times warns photographers not to update Photoshop over AI features",
-   "summary": "The New York Times is asking freelance photographers not to use the newest version of Adobe Photoshop because features in the 2027 update use AI \"in ways that may not be apparent to users.\" In an email seen by The Verge and posted on Threads, two of the Times'",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "The Verge IA",
-   "url": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Le New York Times avertit les photographes de ne pas mettre à jour Photoshop à cause des fonctionnalités IA",
-   "title_en": "The New York Times warns photographers not to update Photoshop over AI features",
-   "summary_en": "The New York Times is asking freelance photographers not to use the newest version of Adobe Photoshop because features in the 2027 update use AI \"in ways that may not be apparent to users.\" In an email seen by The Verge and posted on Threads, two of the Times'"
-  },
-  {
-   "id": "bbaf6332f2bf",
-   "ts": "2026-11-24T16:02:37.000Z",
-   "title": "Pinterest permettra désormais aux parents de limiter le contenu généré par IA que voient leurs adolescents",
-   "orig": "Pinterest will now let parents limit the AI-generated content their teens see",
-   "summary": "While other social platforms have focused on restricting teens' access to AI chatbots, Pinterest is addressing the AI content filling their feeds.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/24/pinterest-will-now-let-parents-limit-the-ai-generated-content-their-teens-see/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Pinterest permettra désormais aux parents de limiter le contenu généré par IA que voient leurs adolescents",
-   "title_en": "Pinterest will now let parents limit the AI-generated content their teens see",
-   "summary_en": "While other social platforms have focused on restricting teens' access to AI chatbots, Pinterest is addressing the AI content filling their feeds."
   }
  ]
 }
