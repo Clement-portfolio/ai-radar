@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T12:51:17.641Z",
+ "generated_at": "2026-11-27T13:00:44.529Z",
  "items": [
+  {
+   "id": "b8e218b10b9b",
+   "ts": "2026-11-27T12:50:33.000Z",
+   "title": "UAE's BitHash targets AI data centers, eyes 250MW project in Oman",
+   "orig": "UAE's BitHash targets AI data centers, eyes 250MW project in Oman",
+   "summary": "Another cryptominer plans AI capacity",
+   "country": "GULF",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/uaes-bithash-targets-ai-data-centers-eyes-250mw-project-in-oman/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "cdffb76acca1",
    "ts": "2026-11-27T12:30:57.000Z",
@@ -5243,24 +5258,6 @@
    "title_fr": "NewYork GreenCloud soumet une demande pour construire un centre de données de 14,4 MW alimenté par la biomasse à Ione, en Californie",
    "title_en": "NewYork GreenCloud submits application to build 14.4MW biomass powered data center in Ione, California",
    "summary_en": "Company acquired the biomass site in January"
-  },
-  {
-   "id": "3c6728c1bfd1",
-   "ts": "2026-11-24T13:00:00.000Z",
-   "title": "Les modèles GPT-6 démontrent des capacités intrinsèques de conception de protéines",
-   "orig": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-   "summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Modèles",
-   "source": "OpenAI",
-   "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
-   "confidence": "haute",
-   "pending": true,
-   "title_fr": "Les modèles GPT-6 démontrent des capacités intrinsèques de conception de protéines",
-   "title_en": "GPT-6 models demonstrate intrinsic protein-design capabilities",
-   "summary_en": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding across five targets."
   }
  ]
 }
