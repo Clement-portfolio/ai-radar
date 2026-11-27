@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-27T17:20:29.701Z",
+ "generated_at": "2026-11-27T17:32:54.496Z",
  "items": [
+  {
+   "id": "7f587eebbaae",
+   "ts": "2026-11-27T17:20:29.000Z",
+   "title": "Le Premier ministre néerlandais discutera des contrôles à l'exportation de semi-conducteurs de la loi MATCH avec Trump au G20",
+   "orig": "Dutch PM to discuss MATCH Act chipmaking export controls with Trump at G20",
+   "summary": "AMSTERDAM: Dutch Prime Minister Rob Jetten plans to discuss the US MATCH Act with President Donald Trump at the G20 summit in Miami next month amid concerns about the impact in Europe of proposed export controls on chipmaking equipment to China. The Netherland",
+   "country": "GULF",
+   "category": "politique",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/world/dutch-pm-to-discuss-match-act-chipmaking-export-controls-with-trump-at-g20-3014295",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le Premier ministre néerlandais discutera des contrôles à l'exportation de semi-conducteurs de la loi MATCH avec Trump au G20",
+   "title_en": "Dutch PM to discuss MATCH Act chipmaking export controls with Trump at G20",
+   "summary_en": "AMSTERDAM: Dutch Prime Minister Rob Jetten plans to discuss the US MATCH Act with President Donald Trump at the G20 summit in Miami next month amid concerns about the impact in Europe of proposed export controls on chipmaking equipment to China. The Netherland"
+  },
   {
    "id": "1a618304b99a",
    "ts": "2026-11-27T17:16:00.000Z",
-   "title": "Built different: Inside TRG’s homegrown data center business",
+   "title": "Bâti différemment : dans les coulisses de l'activité de centres de données maison de TRG",
    "orig": "Built different: Inside TRG’s homegrown data center business",
    "summary": "From a family-run hosting business in Atlanta to a growing data center operator in Houston",
    "country": "US",
@@ -14,7 +33,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/analysis/trg-data-center-houston-atlanta/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Bâti différemment : dans les coulisses de l'activité de centres de données maison de TRG",
+   "title_en": "Built different: Inside TRG’s homegrown data center business",
+   "summary_en": "From a family-run hosting business in Atlanta to a growing data center operator in Houston"
   },
   {
    "id": "7297aba0c067",
