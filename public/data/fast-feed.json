@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T14:31:04.881Z",
+ "generated_at": "2026-11-27T14:40:29.751Z",
  "items": [
+  {
+   "id": "5ac1ac564890",
+   "ts": "2026-11-27T14:30:41.000Z",
+   "title": "Nexus DC files to build two data center buildings at site in Hubbard, Texas",
+   "orig": "Nexus DC files to build two data center buildings at site in Hubbard, Texas",
+   "summary": "Adds to two other data center buildings it is planning to construct on the site",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/nexus-dc-files-to-build-two-data-center-buildings-at-site-in-hubbard-texas/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "8efb77a3fc0c",
    "ts": "2026-11-27T14:22:45.000Z",
