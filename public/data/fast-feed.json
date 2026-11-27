@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T12:11:48.716Z",
+ "generated_at": "2026-11-27T12:30:37.543Z",
  "items": [
+  {
+   "id": "7f5cc3c9ae84",
+   "ts": "2026-11-27T12:20:29.000Z",
+   "title": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+   "orig": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+   "summary": "In talks with Meta, Anthropic, Google, Microsoft, and Amazon",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "77abd94719dc",
    "ts": "2026-11-27T12:00:29.000Z",
@@ -19,6 +34,21 @@
    "title_fr": "Une société d'investissement soutenue par le fonds souverain du Koweït rachète la participation majoritaire de GIC dans xScale",
    "title_en": "Kuwait wealth fund-backed investment firm purchases GIC’s majority stake in xScale",
    "summary_en": "Equinix will continue to manage and operate the data centers, while retaining its 20 percent share"
+  },
+  {
+   "id": "0fbf0f5ec005",
+   "ts": "2026-11-27T12:00:22.000Z",
+   "title": "The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?",
+   "orig": "The Tech Download: Will Jensen Huang’s return be the spark the shaky AI market needs?",
+   "summary": "AI stocks have fallen in recent times as investors question the sustainability of the AI boom.",
+   "country": "US",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/27/tech-download-jensen-huang-ai-market.html",
+   "confidence": "moyenne",
+   "pending": true
   },
   {
    "id": "56456d505799",
@@ -5240,61 +5270,6 @@
    "title_fr": "La startup de cloud IA Marlowe obtient 277 millions de dollars en financement d'amorçage",
    "title_en": "AI cloud startup Marlowe secures $277m in seed funding",
    "summary_en": "Company founded by former Microsoft VPs Dan Lewis and Kutta Srinivasan"
-  },
-  {
-   "id": "c3d03f91d719",
-   "ts": "2026-11-24T12:30:34.000Z",
-   "title": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
-   "orig": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
-   "summary": "Cluster deployed for unnamed inference infrastructure provider",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/ltn-compute-to-deploy-10000-gpu-cluster-at-chennai-data-center/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_en": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
-   "summary_en": "Cluster deployed for unnamed inference infrastructure provider",
-   "title_fr": "LTN Compute to deploy 10,000-GPU cluster at Chennai Data Center",
-   "tr_try": 3
-  },
-  {
-   "id": "dc9673abe3a2",
-   "ts": "2026-11-24T12:30:34.000Z",
-   "title": "Proper Voltage lance une armoire de batteries sodium-ion pour les systèmes UPS des centres de données",
-   "orig": "Proper Voltage launches sodium-ion battery cabinet for data center UPS systems",
-   "summary": "Partners with Unigrid on the battery system",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/proper-voltage-launches-sodium-ion-battery-cabinet-for-data-center-ups-systems/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Proper Voltage lance une armoire de batteries sodium-ion pour les systèmes UPS des centres de données",
-   "title_en": "Proper Voltage launches sodium-ion battery cabinet for data center UPS systems",
-   "summary_en": "Partners with Unigrid on the battery system"
-  },
-  {
-   "id": "fb7a1ad02384",
-   "ts": "2026-11-24T12:30:05.000Z",
-   "title": "Amazon affirme que les agents IA des pirates ont trouvé et exploité une faille 0-day avec peu d'intervention humaine",
-   "orig": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
-   "summary": "The Cairn AI framework is proving to be a boon for defenders and attackers.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "Ars Technica",
-   "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Amazon affirme que les agents IA des pirates ont trouvé et exploité une faille 0-day avec peu d'intervention humaine",
-   "title_en": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
-   "summary_en": "The Cairn AI framework is proving to be a boon for defenders and attackers."
   }
  ]
 }
