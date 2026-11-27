@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-27T14:01:45.924Z",
+ "generated_at": "2026-11-27T14:10:30.730Z",
  "items": [
+  {
+   "id": "0538cc63b8b8",
+   "ts": "2026-11-27T14:10:29.552Z",
+   "title": "Japan's JERA aims to build data centers for Anthropic, other AI players near power plants",
+   "orig": "Japan's JERA aims to build data centers for Anthropic, other AI players near power plants",
+   "summary": "",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-jera-aims-to-build-data-centers-for-anthropic-other-ai-players-near-power-plants",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "aa463f83b618",
+   "ts": "2026-11-27T14:00:38.000Z",
+   "title": "SpaceX installs $250m worth of Tesla Megapack batteries at Starbase data center site in Texas - report",
+   "orig": "SpaceX installs $250m worth of Tesla Megapack batteries at Starbase data center site in Texas - report",
+   "summary": "Company seeking to develop up to $24bn data center and natural gas power plant at the site",
+   "country": "US",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/spacex-installs-250m-worth-of-tesla-megapack-batteries-at-starbase-data-center-site-in-texas-report/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "0f9957586415",
    "ts": "2026-11-27T14:00:01.000Z",
@@ -5326,24 +5356,6 @@
    "title_fr": "Jensen Huang est de retour en tant que PDG de Nvidia, mais les enquêtes et les risques demeurent",
    "title_en": "Jensen Huang is back as Nvidia CEO, but investigations and risks remain",
    "summary_en": "Jensen Huang is back as Nvidia CEO, but the company still faces an internal investigation and California and federal scrutiny."
-  },
-  {
-   "id": "2734842cc26d",
-   "ts": "2026-11-24T14:10:27.000Z",
-   "title": "TSMC dépose une demande pour une future usine de puces de 2 nm dans le comté de Brazos, au Texas",
-   "orig": "TSMC files application for proposed 2nm chip fab in Brazos County, Texas",
-   "summary": "Chipmaker said no final decision had been made about building a fab in county that neighbors SpaceX’s TeraFab project",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Fonderie",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/tsmc-files-application-for-proposed-2nm-chip-fab-in-brazos-county-texas/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "TSMC dépose une demande pour une future usine de puces de 2 nm dans le comté de Brazos, au Texas",
-   "title_en": "TSMC files application for proposed 2nm chip fab in Brazos County, Texas",
-   "summary_en": "Chipmaker said no final decision had been made about building a fab in county that neighbors SpaceX’s TeraFab project"
   }
  ]
 }
