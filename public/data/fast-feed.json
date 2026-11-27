@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T10:50:29.434Z",
+ "generated_at": "2026-11-27T11:30:42.528Z",
  "items": [
+  {
+   "id": "52a481cafd26",
+   "ts": "2026-11-27T11:26:59.000Z",
+   "title": "Tract plans second data center campus in the UK",
+   "orig": "Tract plans second data center campus in the UK",
+   "summary": "Company seeks approval for 13-building campus in Stockton-on-Tees",
+   "country": "EU",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/tract-plans-second-data-center-campus-in-the-uk/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "3e4d6004fd36",
    "ts": "2026-11-27T10:13:44.000Z",
