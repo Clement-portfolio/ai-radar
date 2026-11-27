@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T15:50:30.249Z",
+ "generated_at": "2026-11-27T16:00:43.622Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T16:00:30.249Z",
+ "translate_retry_at": "2026-11-27T16:10:43.622Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T15:43:06.000Z",
+     "title": "Elon Musk says he will expand on Trump Account share donations",
+     "title_fr": "Elon Musk affirme qu'il développera les dons d'actions du compte de Trump",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQX2NHY1ozODhCSlEwWjE4NG92aXFLSjJWWE5QTlJmaUUyaFhMQjRZZ0NoSEpHS0JjNTJqM1I1QXN4Vjl0dHJFdnl3OTdwRlNZRDdnR3FzdnYtcjQ4TWZ0TmdpRVk3eVpMSS0wOG5VVnNSSmNfemhJbkYzTEdRNV9vb3plWFV4bGUzZWxtS1hQQURTQTV6Q1MzMzdTMA?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "srcs": [
+      "cnbc"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-27T14:59:56.000Z",
      "title": "Elon Musk Thinks SpaceX Could Be Worth $128 Quintillion",
      "title_fr": "Elon Musk pense que SpaceX pourrait valoir 128 quintillions de dollars",
@@ -257,19 +270,6 @@
      "kind": "presse",
      "srcs": [
       "benzinga"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-27T01:48:06.000Z",
-     "title": "Elon Musk: ‘Every child in America’ will soon receive SpaceX stock",
-     "title_fr": "Elon Musk : « Chaque enfant en Amérique » recevra bientôt des actions de SpaceX",
-     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWEU2UkpXS0ZRd1RxVWpYR3ItWXBnNFZXVnlwcTV0OEJGUVVWZnMxaWxNN3AzNHYxRXVDbmJSbE1fRm9iSXBtNkxiNms2cEJ0QWJueDlGaXVDTzJ2d2h0YUJXUTc2RUNNczNucm5pMGNaNmdyc05DMXNlUFR6UTNMWUtsNVJid0hZT0d2MW5TRFg2QXZWWE5TNU1ST2JObVpkT1BaVy1VMllmVUlodE5tUkN5UFlqN2FqSnc?oc=5",
-     "source": "WKMG",
-     "kind": "presse",
-     "srcs": [
-      "wkmg"
      ],
      "m": 1,
      "e": 0
