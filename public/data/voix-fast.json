@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T14:50:35.140Z",
+ "generated_at": "2026-11-27T15:01:28.694Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T15:00:35.140Z",
+ "translate_retry_at": "2026-11-27T15:11:28.694Z",
  "people": [
   {
    "id": "sam-altman",
@@ -168,6 +168,19 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T14:48:00.000Z",
+     "title": "This might be the real reason Elon Musk says Tesla’s AI5 chip is going to Optimus",
+     "title_fr": "C'est peut-être la vraie raison pour laquelle Elon Musk affirme que la puce AI5 de Tesla est destinée à Optimus",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAtdUp5RnN0bmdvZTNhd283bFZFeGZQQzBmMEo0N0ZNMU1iZDF0bWFwakdPTWg3ZmtLZENjM242N3R5U21SdzU4aFpXY3ZXbXFhSWRSSkhuMTNEbWx2UXcwNXlyUE5LRVkzTmFZOTBBU1lSS3NTVUhERGhR?oc=5",
+     "source": "Electrek",
+     "kind": "presse",
+     "srcs": [
+      "electrek"
+     ],
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-27T13:53:00.000Z",
      "title": "Elon Musk Says All American Kids Will Get Another SpaceX Share Every Year",

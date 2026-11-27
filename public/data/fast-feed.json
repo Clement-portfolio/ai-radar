@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-27T14:40:29.751Z",
+ "generated_at": "2026-11-27T15:01:27.817Z",
  "items": [
   {
    "id": "5ac1ac564890",
    "ts": "2026-11-27T14:30:41.000Z",
-   "title": "Nexus DC files to build two data center buildings at site in Hubbard, Texas",
+   "title": "Nexus DC projette de construire deux nouveaux bâtiments de centres de données sur un site à Hubbard, au Texas",
    "orig": "Nexus DC files to build two data center buildings at site in Hubbard, Texas",
    "summary": "Adds to two other data center buildings it is planning to construct on the site",
    "country": "US",
@@ -14,7 +14,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/nexus-dc-files-to-build-two-data-center-buildings-at-site-in-hubbard-texas/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Nexus DC projette de construire deux nouveaux bâtiments de centres de données sur un site à Hubbard, au Texas",
+   "title_en": "Nexus DC files to build two data center buildings at site in Hubbard, Texas",
+   "summary_en": "Adds to two other data center buildings it is planning to construct on the site"
   },
   {
    "id": "8efb77a3fc0c",
@@ -5324,42 +5328,6 @@
    "title_fr": "Relever les enjeux des réseaux d'entreprise avec la modernisation par l'IA",
    "title_en": "Raising the stakes for enterprise networks with AI modernization",
    "summary_en": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quickly becoming the biggest source of demand on the network. Now, agentic AI is adding to the load. Tasks conducted by AI agents generate an es"
-  },
-  {
-   "id": "f8cdc496b0bc",
-   "ts": "2026-11-24T14:56:50.000Z",
-   "title": "Comment Trump et la Silicon Valley ont forcé Nvidia à reprendre Jensen Huang",
-   "orig": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
-   "summary": "Huang’s allies enlisted Trump and Vance to pressure Nvidia’s board into taking him back.",
-   "country": "US",
-   "category": "politique",
-   "importance": 1,
-   "layer": "Régulation",
-   "source": "Ars Technica",
-   "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Comment Trump et la Silicon Valley ont forcé Nvidia à reprendre Jensen Huang",
-   "title_en": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
-   "summary_en": "Huang’s allies enlisted Trump and Vance to pressure Nvidia’s board into taking him back."
-  },
-  {
-   "id": "a4fa2904f25e",
-   "ts": "2026-11-24T14:53:30.000Z",
-   "title": "Applied Digital signe un bail de 18 ans pour 5,4 milliards de dollars avec un hyperscaler non nommé",
-   "orig": "Applied Digital signs $5.4bn 18-year lease with unnamed hyperscaler",
-   "summary": "Will provide hyperscaler with 150MW of capacity",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/applied-digital-signs-54bn-18-year-lease-with-unnamed-hyperscaler/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Applied Digital signe un bail de 18 ans pour 5,4 milliards de dollars avec un hyperscaler non nommé",
-   "title_en": "Applied Digital signs $5.4bn 18-year lease with unnamed hyperscaler",
-   "summary_en": "Will provide hyperscaler with 150MW of capacity"
   }
  ]
 }
