@@ -1,10 +1,48 @@
 {
- "generated_at": "2026-11-27T15:30:39.936Z",
+ "generated_at": "2026-11-27T15:40:47.094Z",
  "items": [
+  {
+   "id": "3d6bcf07a0dd",
+   "ts": "2026-11-27T15:30:35.000Z",
+   "title": "L'avantage du silicone : pourquoi les centres de données de nouvelle génération ont besoin d'une peau respirante",
+   "orig": "The silicone advantage: why next-gen data centers need a breathable skin",
+   "summary": "And how silicone can shield construction schedule from seasonal weather disruptions",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/opinions/the-silicone-advantage-why-next-gen-data-centers-need-a-breathable-skin/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'avantage du silicone : pourquoi les centres de données de nouvelle génération ont besoin d'une peau respirante",
+   "title_en": "The silicone advantage: why next-gen data centers need a breathable skin",
+   "summary_en": "And how silicone can shield construction schedule from seasonal weather disruptions"
+  },
+  {
+   "id": "cb88202eeea6",
+   "ts": "2026-11-27T15:29:16.000Z",
+   "title": "Solutions de centres de données hyperscale pour un déclassement en toute confiance",
+   "orig": "Hyperscale data center solutions for confident decommissioning",
+   "summary": "Safe, secure, and seamless",
+   "country": "US",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/whitepapers/hyperscale-data-center-solutions-for-confident-decommissioning/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Solutions de centres de données hyperscale pour un déclassement en toute confiance",
+   "title_en": "Hyperscale data center solutions for confident decommissioning",
+   "summary_en": "Safe, secure, and seamless"
+  },
   {
    "id": "5b94218559e8",
    "ts": "2026-11-27T15:12:39.000Z",
-   "title": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
+   "title": "La spin-off de Sony Altair vise la connectivité Edge AI avec une levée de 100 millions de dollars - rapport",
    "orig": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
    "summary": "Chipsets already testing with Ericsson amid AI-enabled wearables pivot",
    "country": "US",
@@ -14,7 +52,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/sony-spin-off-altair-targets-edge-ai-connectivity-with-100m-raise-report/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La spin-off de Sony Altair vise la connectivité Edge AI avec une levée de 100 millions de dollars - rapport",
+   "title_en": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
+   "summary_en": "Chipsets already testing with Ericsson amid AI-enabled wearables pivot"
   },
   {
    "id": "5ac1ac564890",
