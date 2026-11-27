@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-27T16:40:31.592Z",
+ "generated_at": "2026-11-27T16:50:49.079Z",
  "items": [
   {
    "id": "7297aba0c067",
    "ts": "2026-11-27T16:30:36.054Z",
-   "title": "Japan's data center subsidies to weigh local impact as backlash grows",
+   "title": "Les subventions japonaises pour les centres de données évalueront l'impact local face à la grogne croissante",
    "orig": "Japan's data center subsidies to weigh local impact as backlash grows",
    "summary": "",
    "country": "OTHER",
@@ -14,12 +14,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/japan-s-data-center-subsidies-to-weigh-local-impact-as-backlash-grows",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les subventions japonaises pour les centres de données évalueront l'impact local face à la grogne croissante",
+   "title_en": "Japan's data center subsidies to weigh local impact as backlash grows"
   },
   {
    "id": "b30f2c055085",
    "ts": "2026-11-27T16:29:32.000Z",
-   "title": "Datlantis pitches underwater data centers powered by offshore wind",
+   "title": "Datlantis propose des centres de données sous-marins alimentés par l'éolien en mer",
    "orig": "Datlantis pitches underwater data centers powered by offshore wind",
    "summary": "Elsewhere, Russia prepares to send floating data center to the Antarctic",
    "country": "US",
@@ -29,7 +32,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/datlantis-pitches-underwater-data-centers-powered-by-offshore-wind/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Datlantis propose des centres de données sous-marins alimentés par l'éolien en mer",
+   "title_en": "Datlantis pitches underwater data centers powered by offshore wind",
+   "summary_en": "Elsewhere, Russia prepares to send floating data center to the Antarctic"
   },
   {
    "id": "3d6bcf07a0dd",
@@ -5146,24 +5153,6 @@
    "title_fr": "Vantage abandonne ses projets de centre de données Trident après le moratoire de la ville d'Aurora au Colorado",
    "title_en": "Vantage drops plans for Trident data center after Colorado's Aurora City passes moratorium",
    "summary_en": "Would have been the largest data center in Colorado"
-  },
-  {
-   "id": "85ad47dc9b77",
-   "ts": "2026-11-24T16:46:00.000Z",
-   "title": "Tidal va bannir et supprimer des millions de pistes générées par IA alors que le contenu de faible qualité inonde le streaming musical",
-   "orig": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
-   "summary": "The company said it will still accept songs that were made with AI assistance, but not fully generated.",
-   "country": "US",
-   "category": "regul",
-   "importance": 1,
-   "layer": "Régulation",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/24/tidal-to-ban-and-remove-millions-of-ai-generated-tracks-as-ai-slop-inundates-music-streaming/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Tidal va bannir et supprimer des millions de pistes générées par IA alors que le contenu de faible qualité inonde le streaming musical",
-   "title_en": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
-   "summary_en": "The company said it will still accept songs that were made with AI assistance, but not fully generated."
   }
  ]
 }
