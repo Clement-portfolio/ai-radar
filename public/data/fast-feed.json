@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T16:20:30.384Z",
+ "generated_at": "2026-11-27T16:30:37.252Z",
  "items": [
+  {
+   "id": "7297aba0c067",
+   "ts": "2026-11-27T16:30:36.054Z",
+   "title": "Japan's data center subsidies to weigh local impact as backlash grows",
+   "orig": "Japan's data center subsidies to weigh local impact as backlash grows",
+   "summary": "",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/technology/japan-s-data-center-subsidies-to-weigh-local-impact-as-backlash-grows",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "3d6bcf07a0dd",
    "ts": "2026-11-27T15:30:35.000Z",
@@ -5134,42 +5149,6 @@
    "title_fr": "Tidal va bannir et supprimer des millions de pistes générées par IA alors que le contenu de faible qualité inonde le streaming musical",
    "title_en": "Tidal to ban and remove millions of AI-generated tracks as AI slop inundates music streaming",
    "summary_en": "The company said it will still accept songs that were made with AI assistance, but not fully generated."
-  },
-  {
-   "id": "b6222c5bc341",
-   "ts": "2026-11-24T16:30:00.000Z",
-   "title": "Les deepfakes de Jensen Huang sont la nouvelle tendance de contenu IA de faible qualité",
-   "orig": "Jensen Huang deepfakes are the hot new AI slop",
-   "summary": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket. Suddenly, from behind him, Alice Hua",
-   "country": "CN",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "The Verge IA",
-   "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Les deepfakes de Jensen Huang sont la nouvelle tendance de contenu IA de faible qualité",
-   "title_en": "Jensen Huang deepfakes are the hot new AI slop",
-   "summary_en": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket. Suddenly, from behind him, Alice Hua"
-  },
-  {
-   "id": "e29f11884fda",
-   "ts": "2026-11-24T16:20:34.000Z",
-   "title": "ABB va acquérir le fabricant de ventilateurs de refroidissement Ziehl-Abegg pour 2,65 milliards de dollars",
-   "orig": "ABB to acquire cooling fan company Ziehl-Abegg for $2.65bn",
-   "summary": "Fan business serves data centers and other HVAC markets",
-   "country": "US",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/ziehl-abegg-is-a-growing-technology-leader-with-a-compelling-portfolio-and-a-significant-presence-in-some-of-the-worlds-most-dynamic-markets-at-the-heart-of-our-success-are-our-employees-whose-expertise-dedication-and-innovative-spirit-have-made-us/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "ABB va acquérir le fabricant de ventilateurs de refroidissement Ziehl-Abegg pour 2,65 milliards de dollars",
-   "title_en": "ABB to acquire cooling fan company Ziehl-Abegg for $2.65bn",
-   "summary_en": "Fan business serves data centers and other HVAC markets"
   }
  ]
 }
