@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T01:50:29.147Z",
+ "generated_at": "2026-11-27T04:50:48.811Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T02:00:29.147Z",
+ "translate_retry_at": "2026-11-27T05:00:48.811Z",
  "people": [
   {
    "id": "sam-altman",
@@ -14,6 +14,19 @@
    "actor": "openai",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T03:50:35.000Z",
+     "title": "Not AI or ChatGPT, Sam Altman reveals what matters most to him and who keeps him from going crazy",
+     "title_fr": "Ce n'est ni l'IA ni ChatGPT, Sam Altman révèle ce qui compte le plus pour lui et qui l'empêche de devenir fou",
+     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPNjJ0VTNaUTc2UlZZTzRsQUtkM1RSUHducGM1R211cThrcUlmT1o0RU1qcHdRZ3hkbjlPdmdjb0xreXF4M1RSeFA0NFFZejVJOHBiTjZVYmRhVGVyQUhoQTU0TnZiSkZjcWZuWElqbk1GcGlkaEc1R2tneDhFSGxBb3ctLVl2S2JPN2NCTmZqVDdEY1J6UFZnWjhWanE2TVNpbjFLYUE5ZmdNRzBRaXkwYlkxQWFpQjBWQ0lMY3RJaXBjbGNZUEt0aUJzM1hGcENXb3RFVVRfOXRicF8ycWF3Q3VJd19CX0xPMi1udmRuNVVYbDVpOXfSAfsBQVVfeXFMTnVkNG05SWpkaTdsc0EzLVF6WHNlbmJ1Yk9sWFM4WWJaMGFjSzBsamFLZlNKVVlQUlVpR1U1WEtmUVo5NDlyODNhbElZT3dwSUJ3TG5QRG10VXhiS0xfUE5lZ08wYzM2NUpHcE9NWGNCdWNkYmFOZDRNV1B2Y0ZxMTVjc3NVRkpDd1NNYnRyR2lFZk1KQW9vYzlBcGFKNmZyUlk2RF9iWlpBMHpNSUdPRWQ3OGtuSFdZQnBzaTZNZTFNbE9QOG5MQ3dTdFZWQUo1NjlRYlVib2hMdHpLaFdUN1F0Snk1Tjk5XzR1V3ZjTXV1NWxXWlcycEdnZDg?oc=5",
+     "source": "India Today",
+     "kind": "presse",
+     "srcs": [
+      "india today"
+     ],
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-26T04:35:28.000Z",
      "title": "OpenAI tests Private Inference with select customers, says Sam Altman",
