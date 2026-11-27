@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T15:01:27.817Z",
+ "generated_at": "2026-11-27T15:20:36.341Z",
  "items": [
+  {
+   "id": "5b94218559e8",
+   "ts": "2026-11-27T15:12:39.000Z",
+   "title": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
+   "orig": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
+   "summary": "Chipsets already testing with Ericsson amid AI-enabled wearables pivot",
+   "country": "US",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/sony-spin-off-altair-targets-edge-ai-connectivity-with-100m-raise-report/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "5ac1ac564890",
    "ts": "2026-11-27T14:30:41.000Z",
@@ -5310,24 +5325,6 @@
    "title_fr": "L'action d'Anthropic tombe sous son prix d'introduction en bourse de 83 dollars, mais les analystes restent largement positifs",
    "title_en": "Anthropic stock falls below $83 IPO price, but analysts are still largely positive",
    "summary_en": "Anthropic has been sinking steadily since the stock opened at $111.50 on the Nasdaq on Nov. 19."
-  },
-  {
-   "id": "a1954c7a4413",
-   "ts": "2026-11-24T15:15:16.000Z",
-   "title": "Relever les enjeux des réseaux d'entreprise avec la modernisation par l'IA",
-   "orig": "Raising the stakes for enterprise networks with AI modernization",
-   "summary": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quickly becoming the biggest source of demand on the network. Now, agentic AI is adding to the load. Tasks conducted by AI agents generate an es",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "MIT Technology Review IA",
-   "url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Relever les enjeux des réseaux d'entreprise avec la modernisation par l'IA",
-   "title_en": "Raising the stakes for enterprise networks with AI modernization",
-   "summary_en": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quickly becoming the biggest source of demand on the network. Now, agentic AI is adding to the load. Tasks conducted by AI agents generate an es"
   }
  ]
 }
