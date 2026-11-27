@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T08:30:38.247Z",
+ "generated_at": "2026-11-27T09:00:53.133Z",
  "items": [
+  {
+   "id": "284160f656ff",
+   "ts": "2026-11-27T08:56:46.000Z",
+   "title": "Huawei’s Next Big AI Move: HBM Workaround",
+   "orig": "Huawei’s Next Big AI Move: HBM Workaround",
+   "summary": "The Shenzhen-based tech firm will provide details about its custom HBM design at ISSCC 2027 in San Francisco early next year. The post Huawei’s Next Big AI Move: HBM Workaround appeared first on EE Times .",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Mémoire HBM",
+   "source": "EE Times",
+   "url": "https://www.eetimes.com/huawei-next-big-ai-move-hbm-workaround/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "c16fdd2a9e21",
    "ts": "2026-11-27T08:00:00.000Z",
@@ -5152,24 +5167,6 @@
    "title_fr": "La capacité de mémoire de Samsung jusqu'en 2029 est largement sous contrat, selon un rapport coréen",
    "title_en": "Samsung memory capacity through 2029 largely under contract, Korean report says",
    "summary_en": "AI data center demand is pushing memory supply negotiations years into the future. Most of Samsung Electronics' memory chip production capacity for 2027 through 2029 is already secured under contract, South Korean outlet Economy Tribune reported on November 21"
-  },
-  {
-   "id": "2b4b25b3d992",
-   "ts": "2026-11-24T08:51:30.000Z",
-   "title": "Analyse : Six millions de commandes en jeu - Le déficit d'approvisionnement en Nvidia de la Chine persiste malgré le retour de Huang",
-   "orig": "Analysis: Six million orders on the line &ndash; China's Nvidia supply gap persists despite Huang's return",
-   "summary": "Jensen Huang's reinstatement as Nvidia CEO on November 23 has restored confidence in the global AI computing market, but Chinese cloud providers face a more fundamental challenge: securing sufficient computing capacity under increasingly restrictive US export ",
-   "country": "CN",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL213/nvidia-jensen-huang-gpu-ceo-market.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Analyse : Six millions de commandes en jeu - Le déficit d'approvisionnement en Nvidia de la Chine persiste malgré le retour de Huang",
-   "title_en": "Analysis: Six million orders on the line &ndash; China's Nvidia supply gap persists despite Huang's return",
-   "summary_en": "Jensen Huang's reinstatement as Nvidia CEO on November 23 has restored confidence in the global AI computing market, but Chinese cloud providers face a more fundamental challenge: securing sufficient computing capacity under increasingly restrictive US export"
   }
  ]
 }
