@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-27T07:50:30.242Z",
+ "generated_at": "2026-11-27T08:01:34.726Z",
  "items": [
   {
    "id": "265a64f6984d",
    "ts": "2026-11-27T07:50:29.288Z",
-   "title": "China's Sany pushes AI into heavy machinery as overseas sales grow",
+   "title": "Le chinois Sany intègre l'IA dans les machines lourdes alors que ses ventes à l'étranger augmentent",
    "orig": "China's Sany pushes AI into heavy machinery as overseas sales grow",
    "summary": "",
    "country": "CN",
@@ -14,12 +14,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/china-s-sany-pushes-ai-into-heavy-machinery-as-overseas-sales-grow",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le chinois Sany intègre l'IA dans les machines lourdes alors que ses ventes à l'étranger augmentent",
+   "title_en": "China's Sany pushes AI into heavy machinery as overseas sales grow"
   },
   {
    "id": "4cee3b5f7986",
    "ts": "2026-11-27T07:09:10.000Z",
-   "title": "Lebanon’s judiciary becomes new battleground between state and Hezbollah",
+   "title": "La justice libanaise devient le nouveau terrain d'affrontement entre l'État et le Hezbollah",
    "orig": "Lebanon’s judiciary becomes new battleground between state and Hezbollah",
    "summary": "Lebanon’s judiciary has emerged as a key battleground between the state and Hezbollah as prosecutions widen to target the group’s officials and members in the Dahr al-Baidar explosives case and the suspected cell in northern Lebanon. The proceedings come amid ",
    "country": "GULF",
@@ -29,12 +32,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/middle-east/lebanons-judiciary-becomes-new-battleground-between-state-and-hezbollah-3014227",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La justice libanaise devient le nouveau terrain d'affrontement entre l'État et le Hezbollah",
+   "title_en": "Lebanon’s judiciary becomes new battleground between state and Hezbollah",
+   "summary_en": "Lebanon’s judiciary has emerged as a key battleground between the state and Hezbollah as prosecutions widen to target the group’s officials and members in the Dahr al-Baidar explosives case and the suspected cell in northern Lebanon. The proceedings come amid"
   },
   {
    "id": "a20b80fc12fb",
    "ts": "2026-11-27T06:50:32.082Z",
-   "title": "Sany pushes AI into heavy machinery as overseas sales grow",
+   "title": "Sany intègre l'IA dans les machines lourdes alors que ses ventes à l'étranger augmentent",
    "orig": "Sany pushes AI into heavy machinery as overseas sales grow",
    "summary": "",
    "country": "OTHER",
@@ -44,12 +51,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/sany-pushes-ai-into-heavy-machinery-as-overseas-sales-grow",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Sany intègre l'IA dans les machines lourdes alors que ses ventes à l'étranger augmentent",
+   "title_en": "Sany pushes AI into heavy machinery as overseas sales grow"
   },
   {
    "id": "220d690ff6ed",
    "ts": "2026-11-27T06:41:41.000Z",
-   "title": "Japan's JERA in talks with Anthropic, Meta on AI data centers",
+   "title": "Le japonais JERA en discussions avec Anthropic et Meta sur des centres de données IA",
    "orig": "Japan's JERA in talks with Anthropic, Meta on AI data centers",
    "summary": "Japan's largest power producer, JERA, is in talks with Anthropic, Meta, Amazon, Microsoft, and Google to develop data centers near its power plants in the Tokyo area, JERA global CEO and chair Yukio Kani told Nikkei in a recent interview.",
    "country": "OTHER",
@@ -59,7 +69,11 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127VL212/anthropic-meta-data-infrastructure-electricity.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le japonais JERA en discussions avec Anthropic et Meta sur des centres de données IA",
+   "title_en": "Japan's JERA in talks with Anthropic, Meta on AI data centers",
+   "summary_en": "Japan's largest power producer, JERA, is in talks with Anthropic, Meta, Amazon, Microsoft, and Google to develop data centers near its power plants in the Tokyo area, JERA global CEO and chair Yukio Kani told Nikkei in a recent interview."
   },
   {
    "id": "a76cae0bb54d",
@@ -74,12 +88,15 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_en": "German software major SAP weighs cutting at least 10,000 jobs in AI push: Bloomberg",
+   "summary_en": "SAP is weighing cuts of at least 10,000 jobs as it reshapes its software business around AI, Bloomberg reported."
   },
   {
    "id": "dc7e1a0397fc",
    "ts": "2026-11-27T06:30:35.479Z",
-   "title": "Editor's Choice: How will the global chip game unfold in 2027?",
+   "title": "Choix de la rédaction : comment la bataille mondiale des puces va-t-elle évoluer en 2027 ?",
    "orig": "Editor's Choice: How will the global chip game unfold in 2027?",
    "summary": "",
    "country": "OTHER",
@@ -89,12 +106,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-how-will-the-global-chip-game-unfold-in-2027",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Choix de la rédaction : comment la bataille mondiale des puces va-t-elle évoluer en 2027 ?",
+   "title_en": "Editor's Choice: How will the global chip game unfold in 2027?"
   },
   {
    "id": "78c43f7fc484",
    "ts": "2026-11-27T06:09:26.000Z",
-   "title": "Silicon 4.0 arrives as AI rewrites semiconductor economics, says Etron Chairman",
+   "title": "L'ère du Silicon 4.0 arrive alors que l'IA réécrit l'économie des semi-conducteurs, selon le président d'Etron",
    "orig": "Silicon 4.0 arrives as AI rewrites semiconductor economics, says Etron Chairman",
    "summary": "National Yang Ming Chiao Tung University (NYCU) has awarded an honorary doctorate to Etron Chairman and NYCU Chair Professor Nicky Lu, who said in a keynote speech that AI is penetrating industries across the board and contributing more than double digits to T",
    "country": "OTHER",
@@ -104,12 +124,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD217/etron-ai-server-semiconductors-taiwan-2026.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'ère du Silicon 4.0 arrive alors que l'IA réécrit l'économie des semi-conducteurs, selon le président d'Etron",
+   "title_en": "Silicon 4.0 arrives as AI rewrites semiconductor economics, says Etron Chairman",
+   "summary_en": "National Yang Ming Chiao Tung University (NYCU) has awarded an honorary doctorate to Etron Chairman and NYCU Chair Professor Nicky Lu, who said in a keynote speech that AI is penetrating industries across the board and contributing more than double digits to T"
   },
   {
    "id": "7776f1f909fa",
    "ts": "2026-11-27T04:27:44.000Z",
-   "title": "China's Weimob to form Nvidia RTX PRO 5500 cluster as chip export restrictions loom",
+   "title": "Le chinois Weimob va créer un cluster Nvidia RTX PRO 5500 face aux restrictions d'exportation de puces",
    "orig": "China's Weimob to form Nvidia RTX PRO 5500 cluster as chip export restrictions loom",
    "summary": "Weimob, a Chinese provider of cloud-based commerce software and marketing services, announced its planned purchase of 5,000 Nvidia RTX PRO 5500 graphics cards for its own AI-powered services as well as possibly leasing compute. The upcoming purchase reflects a",
    "country": "CN",
@@ -119,12 +143,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127VL210/nvidia-rtx-chips-software-production.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le chinois Weimob va créer un cluster Nvidia RTX PRO 5500 face aux restrictions d'exportation de puces",
+   "title_en": "China's Weimob to form Nvidia RTX PRO 5500 cluster as chip export restrictions loom",
+   "summary_en": "Weimob, a Chinese provider of cloud-based commerce software and marketing services, announced its planned purchase of 5,000 Nvidia RTX PRO 5500 graphics cards for its own AI-powered services as well as possibly leasing compute. The upcoming purchase reflects a"
   },
   {
    "id": "a7509ef32f2e",
    "ts": "2026-11-27T04:13:09.000Z",
-   "title": "SpaceX million-satellite plan exposes hurdles to space-based data centers",
+   "title": "Le projet d'un million de satellites de SpaceX met en lumière les obstacles des centres de données spatiaux",
    "orig": "SpaceX million-satellite plan exposes hurdles to space-based data centers",
    "summary": "The US Federal Communications Commission (FCC) has approved SpaceX's plan to deploy one million space-based data center satellites, paving the way for AI infrastructure to extend beyond Earth.",
    "country": "OTHER",
@@ -134,12 +162,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD211/spacex-data-fcc-launch-capacity.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le projet d'un million de satellites de SpaceX met en lumière les obstacles des centres de données spatiaux",
+   "title_en": "SpaceX million-satellite plan exposes hurdles to space-based data centers",
+   "summary_en": "The US Federal Communications Commission (FCC) has approved SpaceX's plan to deploy one million space-based data center satellites, paving the way for AI infrastructure to extend beyond Earth."
   },
   {
    "id": "b7ff646d87d4",
    "ts": "2026-11-27T04:12:57.000Z",
-   "title": "DIGITIMES Insight: KV cache growth will not translate one-for-one into CXL memory demand",
+   "title": "DIGITIMES Insight : la croissance du cache KV ne se traduira pas directement par une hausse équivalente de la demande de mémoire CXL",
    "orig": "DIGITIMES Insight: KV cache growth will not translate one-for-one into CXL memory demand",
    "summary": "The rapid growth of KV cache in AI inference will not translate proportionally into demand for CXL memory, because host DRAM usually takes the data moved out of HBM first, according to DIGITIMES. CXL becomes necessary only when host DRAM is constrained, the da",
    "country": "OTHER",
@@ -149,12 +181,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126PD215/cxl-memory-dram-data-demand-growth.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "DIGITIMES Insight : la croissance du cache KV ne se traduira pas directement par une hausse équivalente de la demande de mémoire CXL",
+   "title_en": "DIGITIMES Insight: KV cache growth will not translate one-for-one into CXL memory demand",
+   "summary_en": "The rapid growth of KV cache in AI inference will not translate proportionally into demand for CXL memory, because host DRAM usually takes the data moved out of HBM first, according to DIGITIMES. CXL becomes necessary only when host DRAM is constrained, the da"
   },
   {
    "id": "95787bafe9c6",
    "ts": "2026-11-27T04:09:08.000Z",
-   "title": "Can AI resist temptation? Anthropic finds lower violation rates in new Claude models",
+   "title": "L'IA peut-elle résister à la tentation ? Anthropic constate des taux de violation plus faibles dans ses nouveaux modèles Claude",
    "orig": "Can AI resist temptation? Anthropic finds lower violation rates in new Claude models",
    "summary": "Anthropic has used simulated tests to assess whether artificial intelligence (AI) can resist temptation and follow rules. The results found that its new-generation Claude models still attempted to cross boundaries, but violations involving the use of external ",
    "country": "OTHER",
@@ -164,7 +200,11 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD203/anthropic-claude-data-security.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'IA peut-elle résister à la tentation ? Anthropic constate des taux de violation plus faibles dans ses nouveaux modèles Claude",
+   "title_en": "Can AI resist temptation? Anthropic finds lower violation rates in new Claude models",
+   "summary_en": "Anthropic has used simulated tests to assess whether artificial intelligence (AI) can resist temptation and follow rules. The results found that its new-generation Claude models still attempted to cross boundaries, but violations involving the use of external"
   },
   {
    "id": "02d7dcc78552",
@@ -218,7 +258,7 @@
    "url": "https://www.digitimes.com/news/a20261127VL209/samsung-2030-equipment-2026-manufacturing.html",
    "confidence": "moyenne",
    "pending": true,
-   "tr_try": 1,
+   "tr_try": 2,
    "title_en": "Samsung chip fabs could deploy over 10,000 robots by 2030",
    "summary_en": "The number of robots operating in Samsung Electronics' semiconductor facilities could rise from about 100 in 2026 to more than 10,000 by 2030 as the South Korean chipmaker seeks to automate tasks that still require human labor."
   },
@@ -5313,60 +5353,6 @@
    "title_fr": "Vérification de UCIe.mem : vérification flexible pour les chiplets de calcul et de mémoire",
    "title_en": "Verifying UCIe.mem: Flexible Verification For Compute And Memory Chiplets",
    "summary_en": "Validate UCIe.mem implementations across development stages while reusing a common verification environment. The post Verifying UCIe.mem: Flexible Verification For Compute And Memory Chiplets appeared first on Semiconductor Engineering ."
-  },
-  {
-   "id": "9ac652ca93eb",
-   "ts": "2026-11-24T08:00:00.000Z",
-   "title": "Sponsorisé : La superpuissance IA du technicien",
-   "orig": "Sponsored: The technician’s AI superpower",
-   "summary": "As AI factories grow more complex, AI-driven alarm management and remote expertise are helping operators cut through the noise and make faster, smarter service decisions",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/marketwatch/the-technicians-ai-superpower/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Sponsorisé : La superpuissance IA du technicien",
-   "title_en": "Sponsored: The technician’s AI superpower",
-   "summary_en": "As AI factories grow more complex, AI-driven alarm management and remote expertise are helping operators cut through the noise and make faster, smarter service decisions"
-  },
-  {
-   "id": "38e637fd2cf0",
-   "ts": "2026-11-24T08:00:00.000Z",
-   "title": "Sponsorisé : Bitera termine l'audit SOC 2 Type II, renforçant la gouvernance selon les normes internationales",
-   "orig": "Sponsored: Bitera completes SOC 2 Type II Audit, strengthening governance to international standards",
-   "summary": "The carrier-neutral data center in Jakarta’s Kuningan district has also maintained 100 percent power availability since opening in 2024",
-   "country": "US",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/product-news/bitera-completes-soc-2-type-ii-audit-strengthening-governance-to-international-standards/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Sponsorisé : Bitera termine l'audit SOC 2 Type II, renforçant la gouvernance selon les normes internationales",
-   "title_en": "Sponsored: Bitera completes SOC 2 Type II Audit, strengthening governance to international standards",
-   "summary_en": "The carrier-neutral data center in Jakarta’s Kuningan district has also maintained 100 percent power availability since opening in 2024"
-  },
-  {
-   "id": "295cb82f7621",
-   "ts": "2026-11-24T07:55:13.000Z",
-   "title": "Les États-Unis placent Megaspeed sur liste noire dans le cadre d'une enquête sur la contrebande de puces Nvidia ; Alibaba conteste l'inscription de sa filiale",
-   "orig": "US blacklists Megaspeed amid Nvidia chip smuggling probe; Alibaba disputes affiliate listing",
-   "summary": "The US Department of Commerce added Singapore-based cloud firm Megaspeed and six of its Southeast Asian affiliates to its trade blacklist on Monday, escalating a federal crackdown on alleged artificial intelligence chip smuggling to China amid intense scrutiny",
-   "country": "CN",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL222/nvidia-alibaba-probe-entity-list-blacklist.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Les États-Unis placent Megaspeed sur liste noire dans le cadre d'une enquête sur la contrebande de puces Nvidia ; Alibaba conteste l'inscription de sa filiale",
-   "title_en": "US blacklists Megaspeed amid Nvidia chip smuggling probe; Alibaba disputes affiliate listing",
-   "summary_en": "The US Department of Commerce added Singapore-based cloud firm Megaspeed and six of its Southeast Asian affiliates to its trade blacklist on Monday, escalating a federal crackdown on alleged artificial intelligence chip smuggling to China amid intense scrutiny"
   }
  ]
 }
