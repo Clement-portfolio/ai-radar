@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T09:00:53.133Z",
+ "generated_at": "2026-11-27T09:10:28.170Z",
  "items": [
   {
    "id": "284160f656ff",
@@ -17,6 +17,21 @@
    "pending": true
   },
   {
+   "id": "a600e54ee3d0",
+   "ts": "2026-11-27T08:40:40.000Z",
+   "title": "Bank of Korea flags risks to memory chip boom",
+   "orig": "Bank of Korea flags risks to memory chip boom",
+   "summary": "Memory chip prices could fall well below current projections by 2028 if AI investment slows, financing conditions tighten, and Chinese manufacturers expand production, according to a Bank of Korea study released on November 26.",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127VL213/memory-exports-financing-investment-2027-2028.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
    "id": "c16fdd2a9e21",
    "ts": "2026-11-27T08:00:00.000Z",
    "title": "Sponsored: How Akashi Data Center is preparing for the AI era",
@@ -28,6 +43,21 @@
    "layer": "Datacenters",
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/product-news/how-akashi-data-center-is-preparing-for-the-ai-era/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "31c50a88f23f",
+   "ts": "2026-11-27T07:53:57.000Z",
+   "title": "From lab to fab: Taiwan's supply chain holds key to mass-producing silicon photonics and CPO",
+   "orig": "From lab to fab: Taiwan's supply chain holds key to mass-producing silicon photonics and CPO",
+   "summary": "The first Silicon Photonics Technology Applications Exhibition will run from April 21 to 23, 2027, as AI speeds up the development of silicon photonics (SiPh) and co-packaged optics (CPO). The show will cover SiPh, CPO, high-speed optical communications, AI da",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD225/siph-cpo-equipment-2027.html",
    "confidence": "moyenne",
    "pending": true
   },
@@ -48,6 +78,36 @@
    "tr_try": 1,
    "title_fr": "Le chinois Sany intègre l'IA dans les machines lourdes alors que ses ventes à l'étranger augmentent",
    "title_en": "China's Sany pushes AI into heavy machinery as overseas sales grow"
+  },
+  {
+   "id": "54290b040a0b",
+   "ts": "2026-11-27T07:43:28.000Z",
+   "title": "Phone chip demand may stay weak in 2027, recovery seen in 2028",
+   "orig": "Phone chip demand may stay weak in 2027, recovery seen in 2028",
+   "summary": "Research firms and industry sources expect the smartphone market to remain sluggish in 2027, with a more noticeable recovery potentially not arriving until 2028. Overall market conditions are expected to remain similar to those in 2026, with Apple and Samsung ",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD220/smartphone-demand-recovery-2027-2028.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "4e7ff1be6fcf",
+   "ts": "2026-11-27T07:23:26.000Z",
+   "title": "TSMC's A14 ready for chip design",
+   "orig": "TSMC's A14 ready for chip design",
+   "summary": "TSMC's next-generation A14 process is ready for chip design, as the world's largest contract chipmaker prepares for volume production of its 1.4nm-class technology in 2028.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Fonderie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127VL211/tsmc-ic-design-production-capacity.html",
+   "confidence": "moyenne",
+   "pending": true
   },
   {
    "id": "4cee3b5f7986",
