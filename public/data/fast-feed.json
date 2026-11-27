@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T16:30:37.252Z",
+ "generated_at": "2026-11-27T16:40:31.592Z",
  "items": [
   {
    "id": "7297aba0c067",
@@ -13,6 +13,21 @@
    "layer": "Datacenters",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/japan-s-data-center-subsidies-to-weigh-local-impact-as-backlash-grows",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "b30f2c055085",
+   "ts": "2026-11-27T16:29:32.000Z",
+   "title": "Datlantis pitches underwater data centers powered by offshore wind",
+   "orig": "Datlantis pitches underwater data centers powered by offshore wind",
+   "summary": "Elsewhere, Russia prepares to send floating data center to the Antarctic",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/datlantis-pitches-underwater-data-centers-powered-by-offshore-wind/",
    "confidence": "moyenne",
    "pending": true
   },

@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T16:00:43.622Z",
+ "generated_at": "2026-11-27T16:40:32.278Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T16:10:43.622Z",
+ "translate_retry_at": "2026-11-27T16:50:32.278Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T16:22:31.000Z",
+     "title": "Elon Musk Doubles Down on Giving Back With Plan to Distribute SpaceX Shares to Children",
+     "title_fr": "Elon Musk insiste sur le partage avec son plan de distribution d'actions SpaceX aux enfants",
+     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS1NjMUY1LUw2cHU3UU1ZSGc3dEF4S0FWOFB6TDRoblNIRkNKNDJXaDYtV2c4T1FkQVpKVGVVTUJ6VFFMd0dTLUpELTA3aHRva1JQa0lRVFNKTnVWMDlwWXN6UzdGNkpaLTh6eVI4MVphUy1pdDV5eGd2S2JIbUFzTExYTlhYb0tHV3gwSWpVanNSYU44VUJWS3pCaTJXYnY4MFR3T3pmdktuTjA4QXZPaUd1ZTRvREk?oc=5",
+     "source": "Gadget Review",
+     "kind": "presse",
+     "srcs": [
+      "gadget review"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-27T15:43:06.000Z",
      "title": "Elon Musk says he will expand on Trump Account share donations",
      "title_fr": "Elon Musk affirme qu'il développera les dons d'actions du compte de Trump",
@@ -260,19 +273,6 @@
      ],
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-27T05:17:31.000Z",
-     "title": "‘FSD Is GTA’: Elon Musk Says Teslas Have ‘Superhuman Vision’ - Tesla (NASDAQ:TSLA)",
-     "title_fr": "« FSD, c'est GTA » : Elon Musk affirme que les Tesla ont une « vision surhumaine » - Tesla (NASDAQ:TSLA)",
-     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX1V5c2oxN3ZicjBFaVhQYzRrc1B4QVV1TUdlQXJNMXNRdGVnMEhlX1Byc25BTkZxUGNZOHE3M0hRWlFqNExLY0pyMUlwd0RzV19JTHo3dlBWTGpINUgzMmE4d01WVkZxaFpwM2Jfd25Nck5MNTJMMnhKaDFleWtKeUZ0VHliRmJQdXpkaHpGdllJT2NHRmFSc1NR?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "srcs": [
-      "benzinga"
-     ],
-     "m": 1,
-     "e": 0
     }
    ]
   },
