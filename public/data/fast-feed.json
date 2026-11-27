@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T06:50:33.002Z",
+ "generated_at": "2026-11-27T07:10:33.807Z",
  "items": [
+  {
+   "id": "4cee3b5f7986",
+   "ts": "2026-11-27T07:09:10.000Z",
+   "title": "Lebanon’s judiciary becomes new battleground between state and Hezbollah",
+   "orig": "Lebanon’s judiciary becomes new battleground between state and Hezbollah",
+   "summary": "Lebanon’s judiciary has emerged as a key battleground between the state and Hezbollah as prosecutions widen to target the group’s officials and members in the Dahr al-Baidar explosives case and the suspected cell in northern Lebanon. The proceedings come amid ",
+   "country": "GULF",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/middle-east/lebanons-judiciary-becomes-new-battleground-between-state-and-hezbollah-3014227",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "a20b80fc12fb",
    "ts": "2026-11-27T06:50:32.082Z",
@@ -13,6 +28,21 @@
    "layer": "Applications",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/sany-pushes-ai-into-heavy-machinery-as-overseas-sales-grow",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "220d690ff6ed",
+   "ts": "2026-11-27T06:41:41.000Z",
+   "title": "Japan's JERA in talks with Anthropic, Meta on AI data centers",
+   "orig": "Japan's JERA in talks with Anthropic, Meta on AI data centers",
+   "summary": "Japan's largest power producer, JERA, is in talks with Anthropic, Meta, Amazon, Microsoft, and Google to develop data centers near its power plants in the Tokyo area, JERA global CEO and chair Yukio Kani told Nikkei in a recent interview.",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127VL212/anthropic-meta-data-infrastructure-electricity.html",
    "confidence": "moyenne",
    "pending": true
   },
@@ -43,6 +73,21 @@
    "layer": "Puces",
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/editor-s-picks/editor-in-chief-s-picks/editor-s-choice-how-will-the-global-chip-game-unfold-in-2027",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "78c43f7fc484",
+   "ts": "2026-11-27T06:09:26.000Z",
+   "title": "Silicon 4.0 arrives as AI rewrites semiconductor economics, says Etron Chairman",
+   "orig": "Silicon 4.0 arrives as AI rewrites semiconductor economics, says Etron Chairman",
+   "summary": "National Yang Ming Chiao Tung University (NYCU) has awarded an honorary doctorate to Etron Chairman and NYCU Chair Professor Nicky Lu, who said in a keynote speech that AI is penetrating industries across the board and contributing more than double digits to T",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD217/etron-ai-server-semiconductors-taiwan-2026.html",
    "confidence": "moyenne",
    "pending": true
   },
@@ -5343,42 +5388,6 @@
    "title_fr": "Signal rejoint United Airlines et des banques pour limiter les agents IA en raison des risques pour les clients",
    "title_en": "Signal joins United Airlines, banks in limiting AI agents over customer risks",
    "summary_en": "Privacy-focused messaging application Signal has joined United Airlines and JPMorgan Chase in implementing restrictions around artificial intelligence agents."
-  },
-  {
-   "id": "9a46a9d445c1",
-   "ts": "2026-11-24T07:07:44.000Z",
-   "title": "Les actions taïwanaises grimpent de plus de 9 % alors que le retour de Jensen Huang chez Nvidia déclenche un rallye boursier mondial",
-   "orig": "Taiwan stocks soar over 9% as Jensen Huang's return to Nvidia sparks global market rally",
-   "summary": "Global equities staged a dramatic recovery following the surprise return of Jensen Huang as chief executive officer of Nvidia, reigniting investor confidence in the artificial intelligence sector and sparking a massive relief rally across Wall Street and Asia.",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL215/jensen-huang-nvidia-recovery-market-taiwan.html?chid=10",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Les actions taïwanaises grimpent de plus de 9 % alors que le retour de Jensen Huang chez Nvidia déclenche un rallye boursier mondial",
-   "title_en": "Taiwan stocks soar over 9% as Jensen Huang's return to Nvidia sparks global market rally",
-   "summary_en": "Global equities staged a dramatic recovery following the surprise return of Jensen Huang as chief executive officer of Nvidia, reigniting investor confidence in the artificial intelligence sector and sparking a massive relief rally across Wall Street and Asia."
-  },
-  {
-   "id": "27f9ed37ddfb",
-   "ts": "2026-11-24T07:03:58.000Z",
-   "title": "Infineon adapte ses technologies de puces automobiles et industrielles pour faire avancer le développement des robots humanoïdes",
-   "orig": "Infineon adapts automotive and industrial chip technologies to advance the development of humanoid robots",
-   "summary": "Infineon Technologies is adapting its automotive and industrial semiconductor technologies for humanoid robots, with functional safety, dexterity and power efficiency emerging as key development priorities. However, a timeline for significant production will d",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL219/infineon-automotive-industrial-humanoid-robot-gan-development.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Infineon adapte ses technologies de puces automobiles et industrielles pour faire avancer le développement des robots humanoïdes",
-   "title_en": "Infineon adapts automotive and industrial chip technologies to advance the development of humanoid robots",
-   "summary_en": "Infineon Technologies is adapting its automotive and industrial semiconductor technologies for humanoid robots, with functional safety, dexterity and power efficiency emerging as key development priorities. However, a timeline for significant production will d"
   }
  ]
 }
