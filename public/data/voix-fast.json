@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T01:40:29.846Z",
+ "generated_at": "2026-11-27T01:50:29.147Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T01:40:44.455Z",
+ "translate_retry_at": "2026-11-27T02:00:29.147Z",
  "people": [
   {
    "id": "sam-altman",
@@ -143,6 +143,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T01:48:06.000Z",
+     "title": "Elon Musk: ‘Every child in America’ will soon receive SpaceX stock",
+     "title_fr": "Elon Musk : « Chaque enfant en Amérique » recevra bientôt des actions de SpaceX",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWEU2UkpXS0ZRd1RxVWpYR3ItWXBnNFZXVnlwcTV0OEJGUVVWZnMxaWxNN3AzNHYxRXVDbmJSbE1fRm9iSXBtNkxiNms2cEJ0QWJueDlGaXVDTzJ2d2h0YUJXUTc2RUNNczNucm5pMGNaNmdyc05DMXNlUFR6UTNMWUtsNVJid0hZT0d2MW5TRFg2QXZWWE5TNU1ST2JObVpkT1BaVy1VMllmVUlodE5tUkN5UFlqN2FqSnc?oc=5",
+     "source": "WKMG",
+     "kind": "presse",
+     "srcs": [
+      "wkmg"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-27T01:00:00.000Z",
      "title": "Musk vows to give away $27b in SpaceX shares in AI charm offensive",
      "title_fr": "Musk s'engage à céder 27 milliards de dollars d'actions SpaceX lors d'une opération de charme dans l'IA",
@@ -229,19 +242,6 @@
      "kind": "presse",
      "srcs": [
       "benzinga"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-26T17:10:20.000Z",
-     "title": "SpaceX Stock for Children? Elon Musk Announces New Trump Accounts Initiative",
-     "title_fr": "Des actions SpaceX pour les enfants ? Elon Musk annonce une nouvelle initiative de comptes Trump",
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNeXFxbFpaZkZWZVc0eTVfMDZoVTJKRUIySWdJbWhzdXhRR0U3ZVJqV1poT1BESzZtMl84MGpQcVBJMEZhUncxZVNzSUVLTTVQV1BIN1B3UnAwVVgwdjEydVdnemtpZTMtTy1XMnBqTjlWakxOczIzMGhmejM1ZG4wWG5kQTFQMHg0bTdtQVExU0VnaGFDSmZNdFZleWc5RzZiczNLa2tmOA?oc=5",
-     "source": "Coinpaper",
-     "kind": "presse",
-     "srcs": [
-      "coinpaper"
      ],
      "m": 1,
      "e": 0
