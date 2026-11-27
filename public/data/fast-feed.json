@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T07:30:37.727Z",
+ "generated_at": "2026-11-27T07:50:30.242Z",
  "items": [
+  {
+   "id": "265a64f6984d",
+   "ts": "2026-11-27T07:50:29.288Z",
+   "title": "China's Sany pushes AI into heavy machinery as overseas sales grow",
+   "orig": "China's Sany pushes AI into heavy machinery as overseas sales grow",
+   "summary": "",
+   "country": "CN",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/technology/china-s-sany-pushes-ai-into-heavy-machinery-as-overseas-sales-grow",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "4cee3b5f7986",
    "ts": "2026-11-27T07:09:10.000Z",
@@ -5352,24 +5367,6 @@
    "title_fr": "Les États-Unis placent Megaspeed sur liste noire dans le cadre d'une enquête sur la contrebande de puces Nvidia ; Alibaba conteste l'inscription de sa filiale",
    "title_en": "US blacklists Megaspeed amid Nvidia chip smuggling probe; Alibaba disputes affiliate listing",
    "summary_en": "The US Department of Commerce added Singapore-based cloud firm Megaspeed and six of its Southeast Asian affiliates to its trade blacklist on Monday, escalating a federal crackdown on alleged artificial intelligence chip smuggling to China amid intense scrutiny"
-  },
-  {
-   "id": "fe069890ee21",
-   "ts": "2026-11-24T07:41:37.000Z",
-   "title": "NSING a présenté CRA, IA robotique, contrôle moteur et énergie numérique à electronica 2026",
-   "orig": "NSING Featured CRA, AI Robotics, Motor Control and Digital Energy at electronica 2026",
-   "summary": "At electronica 2026 in Munich, NSING exhibited 35 solutions built on N32‑series MCUs, N32WB BLE SoCs and NS350 TPM, covering AI robotics, motor control and digital energy, and presented its CRA compliance offerings. The post NSING Featured CRA, AI Robotics, Mo",
-   "country": "US",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Énergie",
-   "source": "EE Times",
-   "url": "https://www.eetimes.com/nsing-featured-cra-ai-robotics-motor-control-and-digital-energy-at-electronica-2026/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "NSING a présenté CRA, IA robotique, contrôle moteur et énergie numérique à electronica 2026",
-   "title_en": "NSING Featured CRA, AI Robotics, Motor Control and Digital Energy at electronica 2026",
-   "summary_en": "At electronica 2026 in Munich, NSING exhibited 35 solutions built on N32‑series MCUs, N32WB BLE SoCs and NS350 TPM, covering AI robotics, motor control and digital energy, and presented its CRA compliance offerings. The post NSING Featured CRA, AI Robotics, Mo"
   }
  ]
 }
