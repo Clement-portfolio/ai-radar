@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T23:31:09.329Z",
+ "generated_at": "2026-11-27T01:10:48.630Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-26T23:41:09.329Z",
+ "translate_retry_at": "2026-11-27T01:20:48.630Z",
  "people": [
   {
    "id": "sam-altman",
@@ -157,6 +157,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T01:00:00.000Z",
+     "title": "Musk vows to give away $27b in SpaceX shares in AI charm offensive",
+     "title_fr": "Musk s'engage à céder 27 milliards de dollars d'actions SpaceX lors d'une opération de charme dans l'IA",
+     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeTF1YVJQWkwxMHFfODhQcG9nMWVIcktiYzdUdDdJQVR5STVLS280Q2JnVHhiVzdYWjFtbWdIYkFncmJpYWdrYWwtX2hxNjVQUnhWdFNkSFJJMXFVRlpJb2FpWEdIY2xscG1xU1B5VGJhQ3kzZGRVT195b29UUllHZndySWF1bDc3dG1wbTNvS3NjTmdIc1RvQi1NeVRIcldtVFlUYVgtOVZwdFlvOGg1b0N6ZWxLZElaRVFrZW1R?oc=5",
+     "source": "AFR",
+     "kind": "presse",
+     "srcs": [
+      "afr"
+     ],
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-26T23:27:52.000Z",
      "title": "Elon Musk announces two SpaceX shares for every American child",
      "title_fr": "Elon Musk annonce deux actions SpaceX pour chaque enfant américain",
@@ -243,19 +256,6 @@
      "kind": "presse",
      "srcs": [
       "coinpaper"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-26T16:40:00.000Z",
-     "title": "Elon Musk says he’ll gift every US kid 1 of his own SpaceX shares, plus 1 from SpaceX — but there’s a catch to claim",
-     "title_fr": "Elon Musk affirme qu'il offrira à chaque enfant américain 1 de ses propres actions SpaceX, plus 1 de SpaceX — mais il y a une condition pour les réclamer",
-     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxONWFDMHhHdVVUN0NYZ2hRVWMtMGRVNjQzcTh4WmIyaEJpVDAwZTc1bUhuOGpvR25yOGotQ21RNGtUSC00MVdUMjhERDI4bTNfV2xCbW9lX1B4VF9FYW94OERZVHA1N3dkdjRCbTJtOTY4NUFXdVpUZ1QtTkc0ZUw3QnliZ0owdmo5cXFwWFNzTDY?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "srcs": [
-      "yahoo finance"
      ],
      "m": 1,
      "e": 0

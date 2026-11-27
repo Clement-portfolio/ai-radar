@@ -1,10 +1,48 @@
 {
- "generated_at": "2026-11-27T00:10:27.596Z",
+ "generated_at": "2026-11-27T01:10:48.108Z",
  "items": [
+  {
+   "id": "020d9a33d660",
+   "ts": "2026-11-27T00:25:01.000Z",
+   "title": "Tatung décroche une commande de transformateurs de 345 kV aux États-Unis et remporte son premier projet clé en main de centre de données d'IA modulaire",
+   "orig": "Tatung secures 345 kV transformer order in US, lands first modular AIDC turnkey project",
+   "summary": "Tatung has secured orders for 345kV large transformers in Texas and California and won its first turnkey edge AI data center order, the company said at its joint investor conference for the third quarter of 2026 on November 26. It named power, computing and la",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PD235/tatung-aidc-2026-business-equipment.html",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Tatung décroche une commande de transformateurs de 345 kV aux États-Unis et remporte son premier projet clé en main de centre de données d'IA modulaire",
+   "title_en": "Tatung secures 345 kV transformer order in US, lands first modular AIDC turnkey project",
+   "summary_en": "Tatung has secured orders for 345kV large transformers in Texas and California and won its first turnkey edge AI data center order, the company said at its joint investor conference for the third quarter of 2026 on November 26. It named power, computing and la"
+  },
+  {
+   "id": "d1b965b5649b",
+   "ts": "2026-11-27T00:07:41.000Z",
+   "title": "Le président d'Etron exhorte Taïwan à créer un fonds d'IA souverain et balaie les inquiétudes économiques pour 2027",
+   "orig": "Etron chairman urges Taiwan sovereign AI fund, dismisses 2027 economic concerns",
+   "summary": "Etron Technology chairman Nicky Lu called on Taiwan's academia and industry to draw up a sovereign AI development plan and set up a Taiwan sovereign AI fund to build an independent AI hardware and software ecosystem and edge AI systems, dismissing concerns abo",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PD236/taiwan-market-chairman-2027-development.html",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le président d'Etron exhorte Taïwan à créer un fonds d'IA souverain et balaie les inquiétudes économiques pour 2027",
+   "title_en": "Etron chairman urges Taiwan sovereign AI fund, dismisses 2027 economic concerns",
+   "summary_en": "Etron Technology chairman Nicky Lu called on Taiwan's academia and industry to draw up a sovereign AI development plan and set up a Taiwan sovereign AI fund to build an independent AI hardware and software ecosystem and edge AI systems, dismissing concerns abo"
+  },
   {
    "id": "643f10bb17e6",
    "ts": "2026-11-26T23:57:02.000Z",
-   "title": "Huawei pitches Ascend AI chips to South Korean customers",
+   "title": "Huawei présente ses puces d'IA Ascend aux clients sud-coréens",
    "orig": "Huawei pitches Ascend AI chips to South Korean customers",
    "summary": "Huawei Technologies has begun marketing its self-developed Ascend AI chips in South Korea, seeking a foothold in a market where Nvidia is expanding its business through partnerships with domestic chipmakers.",
    "country": "CN",
@@ -14,7 +52,11 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261126VL214/huawei-ascend-chips-nvidia-atlas.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Huawei présente ses puces d'IA Ascend aux clients sud-coréens",
+   "title_en": "Huawei pitches Ascend AI chips to South Korean customers",
+   "summary_en": "Huawei Technologies has begun marketing its self-developed Ascend AI chips in South Korea, seeking a foothold in a market where Nvidia is expanding its business through partnerships with domestic chipmakers."
   },
   {
    "id": "03c50a0968f3",
@@ -201,7 +243,7 @@
    "url": "https://www.digitimes.com/news/a20261126PD219/taiwan-president-manufacturing-supply-chain-management.html",
    "confidence": "moyenne",
    "pending": true,
-   "tr_try": 2,
+   "tr_try": 3,
    "title_en": "FarEasTone urges firms to tackle pain points before ROI, citing its own NT$1M AI start",
    "summary_en": "Companies should stop agonizing over AI payback and start by solving business pain points, FarEasTone Telecommunications president Chee Ching said on November 25, describing how the telecom operator launched its AI transformation on a NT$1 million (US$30,378.1"
   },
