@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T04:11:56.146Z",
+ "generated_at": "2026-11-27T07:26:23.535Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1009,6 +1009,16 @@
    "actor": "asml",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T03:35:00.000Z",
+     "title": "ASML CEO Fouquet warns that excessive restrictions on high-tech exports to China will 'accelerate the domestic development system.'",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5RaURIcFFYOEN5bGRJbVZGZ2c0d2JkS3g3VEVuZlBNTV9yYkFfOWdoMlVRdE1sV1VPanVOTVAySmdEMFZZZDJPV3JDbFlaYlU1VWJpSEY0bTZJMjVJU3RKOTVXVHRqSXZKWWhWalV1YlozSTN0eGNIVk93?oc=5",
+     "source": "GIGAZINE",
+     "kind": "presse",
+     "title_fr": "Le PDG d'ASML, Fouquet, prévient que des restrictions excessives sur les exportations de haute technologie vers la Chine \"accéléreront le système de développement national\"",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-26T13:09:08.000Z",
      "title": "ASML's Fouquet urges US against full China chip export ban",
@@ -6292,7 +6302,21 @@
  ],
  "hot": [
   {
-   "score": 0.91,
+   "score": 0.97,
+   "id": "christophe-fouquet",
+   "n": "Christophe Fouquet",
+   "role": "PDG d'ASML",
+   "actor": "asml",
+   "ts": "2026-11-27T03:35:00.000Z",
+   "title": "ASML CEO Fouquet warns that excessive restrictions on high-tech exports to China will 'accelerate the domestic development system.'",
+   "title_fr": "Le PDG d'ASML, Fouquet, prévient que des restrictions excessives sur les exportations de haute technologie vers la Chine \"accéléreront le système de développement national\"",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5RaURIcFFYOEN5bGRJbVZGZ2c0d2JkS3g3VEVuZlBNTV9yYkFfOWdoMlVRdE1sV1VPanVOTVAySmdEMFZZZDJPV3JDbFlaYlU1VWJpSEY0bTZJMjVJU3RKOTVXVHRqSXZKWWhWalV1YlozSTN0eGNIVk93?oc=5",
+   "source": "GIGAZINE",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.71,
    "id": "mustafa-suleyman",
    "n": "Mustafa Suleyman",
    "role": "Directeur de Microsoft AI",
@@ -6306,7 +6330,7 @@
    "outlets": 2
   },
   {
-   "score": 0.49,
+   "score": 0.38,
    "id": "jd-vance",
    "n": "JD Vance",
    "role": "Vice-président des États-Unis",
@@ -6318,20 +6342,6 @@
    "source": "Mathrubhumi English",
    "kind": "presse",
    "outlets": 4
-  },
-  {
-   "score": 0.42,
-   "id": "geoffrey-hinton",
-   "n": "Geoffrey Hinton",
-   "role": "Prix Nobel, pionnier du deep learning",
-   "actor": null,
-   "ts": "2026-11-26T10:56:00.000Z",
-   "title": "In 2016, ‘Godfather of AI’ Geoffrey Hinton said to ‘stop training radiologists’; a decade later, San Fran",
-   "title_fr": "En 2016, le « parrain de l'IA » Geoffrey Hinton a conseillé d'« arrêter de former des radiologues » ; une décennie plus tard, San Francisco",
-   "url": "https://news.google.com/rss/articles/CBMi5gJBVV95cUxQM3pkYnZnQ21ST0xHVXVFbERpdDlQYnFUUnc0VTNGM2ppVlp3c05pYXNiNkt0UFFxbmx0MGdzdDg0MTFLclJ6R3ZvMWgyTHVSX05ycU5kVGNlMi10N1pyZmc3NlhJSUQyZnp5VWpiQ0x6dTY2RmFUcDdHcHpkem1TU1dDSlc2QThIMjk5X0c4WHdNMGdUZjZFWmFXeFJ6dVlRbGU0cEZ0UGpZRjQ3c1djVTg3bGprX0VmMTFJTTRxcmNfSWJHak9KcEdfR1FJWTltcUxqSEdFcWVWYlhsSjdndmN6c3dWMk54TEZlR2Y0TnIyeENfUGg5WUg4MGllRGpaTWc4T3RFdDRETzR3ZTFlSC0wYW1USWY3MWZ1WW1GLU1PY1lkOTNndk5UYl9fcURmSWV2X0NnYzYzYjRhT1F0V1FGT2w3OVdnOHhkcTZiY0xCNzRQYVA3bDlSb3I5Ujlsd1B4eGFR0gHrAkFVX3lxTE1iRWthdlNjemlWVjR5Nms3WjlGTnlscjZLWmZBRmJqeHU0SVY1OTJkMFlOTmZEZDNzRzR0SzJZNmNfZjhleVR0VHdhNVNEZF9YcHIzV1NUSlJhbGY0QkJPYm1IY0lubXJuVFl6a1BGZk5uTUpOMzBTNHZsV3dqb2xLMWs0OFl0bUoxbEV0a05rWVRnbHlKR2ljZUwxVGN1clNyeGRvaEJfZVhxMG9MRTVmMkhzY1NUdGt4cGdwRFJjazNienBUbEh0dndKUmhxM3JSMVRra29KWldjMjZEY0lhX1NfSUttSzVwYlNZV3dudlNSYTYwS0NyN2J3dW9tQVRqSHZtRjZDelQwQjltMEdoZV8zU0VKZmNKS0V4Y0loXzdZX2E0SWlDLW9WYlhoeTVOZVZBakV2QmlERnlJbExQYTExcUVYZUxBRkt4ZlVmSVVhYlNOTTZpZEhoM0x0bFNlTVhjSXFMTjZKaw?oc=5",
-   "source": "The Times of India",
-   "kind": "presse",
-   "outlets": 2
   }
  ]
 }

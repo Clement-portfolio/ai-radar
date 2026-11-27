@@ -1,13 +1,58 @@
 {
  "v": 1,
  "day": "2026-11-27",
- "generated_at": "2026-11-27T01:26:00.189Z",
+ "generated_at": "2026-11-27T07:26:23.535Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "JPMorgan : prévision de dettes pour l'IA",
+   "title": "JPMorgan : emplois de cols blancs menacés par l'IA",
+   "value": "24 millions",
+   "sub": "Selon une note de JPMorgan, l'adoption croissante de l'intelligence artificielle met en péril ce volume d'emplois qualifiés à travers le monde.",
+   "ids": [
+    "9d59d23ddd11"
+   ],
+   "links": [
+    {
+     "t": "Business Standard",
+     "u": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxObFRzb3NMenYtejh6aS16Z0VCRUZYT182NXZIeW14Nlp3TkF5azhjTjZybFBEMkFSaE9MbnBqZWg1X18xa3M4MHN5WU93dDliZmhMTXpxRXF2NXczdXdDb1IxaVdDbzNMZkJGbWN5cmRNTk1IT0g0dUVUd1pXR0htajBZekN0TEp2TEZ6RlU1bUpaZ3d1SzEtS3hEQ1hVS1YxVE4wOWNQQUtheXpOWG1tYXoyeV93SVgtSkoza0VrMFpTTGllOFdfNzRPaDMzeVZQYTdocy1jRGtndlFBLWo1RHI3NWppcGFSU2hUU3N1WTRJQmPSAfgBQVVfeXFMTlFmSHQ0TjMyYzF3VkZWQjVXZ2VIVU8zSWlvTF9UcUlqQTFDdjJEX3ZQS2FLTzNBNXRMdGo5bWpxWWxBXzV0azJ3bDBfbTJvYVI0Nm5PVExfdkNCSFJtYVp5Yi1USmxzb0JrWXBPeXhDR1VPRldkbzdoQkc2cFRvMkphOFhDV0VEbDBsRFFXNDVFejZvcTVSZVhOZU5QbDdjUjJ1bXJOOFpTY0ZnQ3hFSkJZNWk0aUczemlkbmFMWkUtMHkwcVZESnoxc0dZcU9EblRLT01WcktZajFfTzMtaG9FcEVYdjVoejlfbXRoZlBib1NGMUpCQjk?oc=5"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "day",
+   "ts": "2026-11-27T05:07:42.000Z",
+   "title_en": "JPMorgan: White-collar jobs threatened by AI",
+   "value_en": "24 million",
+   "sub_en": "According to a JPMorgan note, the growing adoption of artificial intelligence puts this volume of skilled jobs at risk globally."
+  },
+  {
+   "title": "Union européenne : investissement dans l'IA et le quantique",
+   "value": "50 Md€",
+   "sub": "L'Union européenne prévoit un fonds de 50 milliards d'euros pour soutenir les technologies critiques comme l'intelligence artificielle et l'informatique quantique.",
+   "ids": [
+    "a72ddf481a1e",
+    "c60cd8412b39"
+   ],
+   "links": [
+    {
+     "t": "Channel Newsasia",
+     "u": "https://www.channelnewsasia.com/world/eu-plans-50-billion-euro-investment-in-ai-quantum-computing-6581386"
+    },
+    {
+     "t": "Al-sharq Al-awsat",
+     "u": "https://english.aawsat.com/node/5345450"
+    }
+   ],
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-25T10:51:00.000Z",
+   "title_en": "European Union: Investment in AI and quantum",
+   "value_en": "€50B",
+   "sub_en": "The European Union plans a €50 billion fund to support critical technologies such as artificial intelligence and quantum computing."
+  },
+  {
+   "title": "JPMorgan : vague de dettes pour l'IA en 2027",
    "value": "450 Md$",
-   "sub": "Montant que les entreprises devraient emprunter sur les marchés obligataires en 2027 pour financer leurs investissements dans l'IA, avant une stabilisation.",
+   "sub": "Selon JPMorgan, les entreprises devraient emprunter ce montant sur les marchés obligataires en 2027 pour financer leurs dépenses d'investissement en IA.",
    "ids": [
     "c38765969e36"
    ],
@@ -20,54 +65,9 @@
    "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-25T21:50:36.000Z",
-   "title_en": "JPMorgan: AI Debt Forecast",
-   "value_en": "$450 billion",
-   "sub_en": "Amount companies are expected to borrow in bond markets in 2027 to finance AI capital expenditures, prior to sector stabilization."
-  },
-  {
-   "title": "Applied Digital : contrat de location d'infrastructure",
-   "value": "5,4 Md$",
-   "sub": "Montant d'un bail de 18 ans signé avec un hyperscaler pour une capacité informatique de 150 MW. La société a officialisé ce partenariat majeur.",
-   "ids": [
-    "f190f3e82d1a",
-    "2e21ff90ad8e"
-   ],
-   "links": [
-    {
-     "t": "ET Datacenters",
-     "u": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNQUVNdEhIdFFicFZfNmlIRGJSTW5mMW5mZndSU2lubjFTRFdfaHFFdGxzQU4tYXBGRUZHeUpMTlZOeXdvbmluanhacEsxdTc2LXdFeUNsRGpibzNOWUZoTk9ySTBzc3hPcmx5UjZHREpiWEZfaTFsM192ei1rSGhCTEF2Wkh5aldiYk1tZ3lEeks1UzA5bHBwMWN0ekFaVkRnZE1IWnRTYXR1NFAxaVBRZlpOT3FCQnVyVWphWmVneUlxekd2eGJaUUw3dDVydU1QWXFtYklpYkdoMmVudHg3LWtvSHdsWF90WlZFSjdaR3pEd9IB9wFBVV95cUxNWW5oZmgyUDZSVEdTTXJpSlRDYWhxVkl4U29lRDdWNnVRd1c4OFFXeUVsTklkYkNLTUVhcVhXWmhEZVpIeW9JTFptcWZndThGUU9NcEctVlNUY3BfbmhsRXhkdEpTNnMwZTZKU1g2ekJZTmkzS0V6RC1MNHVFYWF1LVBNRXpuNWRJTUFRQjl5ZlRXSlM5dTBvUEhraHpBZ21vTzFxQVlMOUkxMVZTVi1IbWthR3FJSVVJcGM2SHJLTnBia1FOMFZ3SGZ6Rmg5c2pwQlNSOXJWSzBqVURDQ3MtZ2VUMmMxT2pUTG5DOEJYT0pUbnFNT09J?oc=5"
-    },
-    {
-     "t": "Data Center Dynamics",
-     "u": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRm85dEJmQjlVYlZVYmJXLXlHOTU2dURLSUtxbUtZNEFsc2pLVEdYOV91X2x0dzg1MnZ1bGNtQjR3MllhZlZvNmh5ZHI4ekhUdHlkQzZINjhydWV1UVBLN0MyV0NpWjlsVkZQeTBiMFJBS1RjTWhQZHFfTkNhSDdWaHV5bFhwTW5LczNUOXhJdGl6UUFfV3E5VXBIajBITkk2djVuVEszQkJhY2hEYkE?oc=5"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-25T06:58:08.000Z",
-   "title_en": "Applied Digital: Infrastructure Lease Contract",
-   "value_en": "$5.4 billion",
-   "sub_en": "Value of an 18-year lease signed with an hyperscaler for 150 MW of computing capacity. The company formalized this major partnership."
-  },
-  {
-   "title": "Dell : rachat d'actions autorisé",
-   "value": "25 Md$",
-   "sub": "Montant du rachat d'actions autorisé par l'entreprise après des résultats trimestriels supérieurs aux attentes et des ventes de serveurs doublées sur un an.",
-   "ids": [
-    "c55ba18e4cc4"
-   ],
-   "links": [
-    {
-     "t": "CNBC Tech",
-     "u": "https://www.cnbc.com/2026/11/24/dell-earnings-report-q3-2027.html"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-24T22:02:57.000Z",
-   "title_en": "Dell: Authorized Share Buyback",
-   "value_en": "$25 billion",
-   "sub_en": "Share repurchase authorization approved by the company following quarterly results that beat expectations and server sales more than doubling year-over-year."
+   "title_en": "JPMorgan: AI debt wave in 2027",
+   "value_en": "$450B",
+   "sub_en": "According to JPMorgan, companies are expected to borrow this amount on bond markets in 2027 to finance their AI capital expenditures."
   }
  ]
 }
