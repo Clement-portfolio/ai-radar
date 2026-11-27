@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-26T22:00:33.741Z",
+ "generated_at": "2026-11-27T01:26:00.189Z",
  "people": [
   {
    "id": "sam-altman",
@@ -105,6 +105,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-26T06:30:12.000Z",
+     "title": "Anthropic CEO Amodei denies wanting humanity to ‘surrender’ free will to AI",
+     "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNU1lFeWR4WThickRrRFF1RS1jOWdOdXNxUDRqZkJQQjhHMnVsZjR4QTN3emM2YlRkcnlrbVFrVl9TUmNJdm9EZXZTTDh0MmZxSzc5Z2hZSjRZMndpU2RuZTlIRXU1WWxlTFZJOXVQTFc2QVRyYWpfc04xN2tDZDZkdERhVjdGaV9lblV0U0x0SHVmYzF5WFkxOC1UODkyaDhoNFF2MWtUSWt0TC0zZVVBWi1TU2Y2TXkzMEHSAb8BQVVfeXFMTXlRMjR0aXQxNjU5emprZTUtUVBYTlZjUlJVQ3NfV1NOY2V0V004bjdhZjJzaU96akpVNmtaaHpUcC1LazBYdE85ZVlSQW95bnBHQS1qTWdlcUlyMENxUmlIVDVydWdyVnZjX2xGRlRPSGxaS0NDeldfdUxHOUNsN0x3YUNQZjJBSGZEY1V0Vm1EQWNtMmlQMnVNQjE3cnhFRktibnF4MnVzaFVQT2EzeldXaHk0WWRvRm8yTlJBd2c?oc=5",
+     "source": "Al Jazeera",
+     "kind": "presse",
+     "title_fr": "Le PDG d'Anthropic, Amodei, nie vouloir que l'humanité « abandonne » son libre arbitre à l'IA",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-25T20:15:50.000Z",
      "title": "Anthropic CEO Dario Amodei says letting AI govern society would be \"a bad idea\"",
      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPRFFBVnY1ekpBVTZ5LS1HMnM2eVRLeG1sS211V1NDMDA2cGJyTElCWlVCTWVGWC1WalM1TFMyWnROOVphOThCMHNwWHNzMHRmMExWU0prZGhJZ2dBcUx1NndMQk45R0lYOE9DWmd4enJiU2lSUUx3Zk84RlB6QlVNb3lGOV93TGdELWRGTGJ4alJxVllmNUpkeTk2TTlMR1lzREE1Nw?oc=5",
@@ -173,16 +183,6 @@
      "title_fr": "Dario Amodei dit que la sécurité fait partie de l'ADN d'Anthropic",
      "m": 2,
      "e": 1
-    },
-    {
-     "ts": "2026-11-19T12:07:59.000Z",
-     "title": "Anthropic CEO Dario Amodei Says Cancer Will Be a Relic in 10 Years. Researchers Say He's Missing 1 Key Factor",
-     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPVGVmNEdkbS1OVjRTRjVCNEd5ZWN4MEdyT1p6d1F2b0pRMko5bW53WEZrbHhOZ1p4T1dkbUpJTjAwQUd3NHYtTHp2bUNCNGUyZHR1TVlldWRHdDZDcUl4OGtGMlJ3Z015bXdnYW1INnFwRFlxb09sNnNRNExINDRjY1pnZXZHdHZmQTRZeXJPLTdoWU9aa0doZWZDZ045SXRfREdCdXNvVjNmT3kyWW1oTWo2ZU4?oc=5",
-     "source": "Inc.com",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Le PDG d'Anthropic, Dario Amodei, déclare que le cancer appartiendra au passé dans 10 ans. Des chercheurs affirment qu'il omet 1 facteur clé"
     }
    ]
   },
@@ -2896,6 +2896,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-17T08:00:00.000Z",
+     "title": "Jeff Bezos says Big Tech is America's latest punching bag",
+     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZkUzblo0MmJhWTQ3S0t3ZFhiTHBJSXJhcmJKX3JjcEVrNm50T1lUSkhpaXFSZk4wOUFVcTMwVm1neGpTemVzWjJMOHdjMUxaM3labmROYzhRVWVBRzBBVHpCbndCWFBzdFZPaVBUdDV1cU1JSVlLbjdTQ1NXTkZnczRmaFdaMnp3RWdOalFpcXA?oc=5",
+     "source": "Business Insider",
+     "kind": "presse",
+     "title_fr": "Jeff Bezos affirme que la tech est le nouveau bouc émissaire de l'Amérique",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-16T23:38:00.000Z",
      "title": "Jeff Bezos says AI could allow people to support families with one paycheck and three-day workweeks",
      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5mclJ3SkZ2TU1KbFFLNVlvMGU3NERWWE5VRFdLMzNydWh6S3dEbUhnNHMxNW1jdlVMRVIzSm1LVEJpUGFGbWsyTGozSmpjZTJqc20tTkZ6UHJ6a1Z6VjBscms4NVdYR19rMEJmLW9JbEp3TnNaeWV2cGJpaFk?oc=5",
@@ -5467,6 +5477,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-25T08:00:00.000Z",
+     "title": "Samsung billionaire Jay Y. Lee rejects Elon Musk's offer to finance chip plant",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZXhxYzJxT2hRN3NpSFp0SjFqcjhkNTMzWE5XWjlFX052VXNQYWFmbkFQaWFpNlBjTlM2ZnZuZVFLdmpXeC1WT2VZc3czdTY3MHJxUXJGMWtsOXFzcDhlWmpHTWNKeFQzOUJ1MURObi1jdl9xNElqU1JvTnpVYUNsUzQzODBFNlFyRXJPUGd6T1hsZHFjUnI5TkgzUE95c0dRNlVhbEVSeE45bXBsTVF5TkVRSTM4ZDIyMm5ITA?oc=5",
+     "source": "Billionaires.Africa",
+     "kind": "presse",
+     "title_fr": "Le milliardaire de Samsung Jay Y. Lee rejette l'offre d'Elon Musk de financer une usine de puces",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-12T08:20:06.000Z",
      "title": "President Lee has brisket lunch at Samsung cafeteria; Lee Jae-yong says, “Gwangju will move faster with the president personally overseeing it”",
      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9PZlZ2LXlDT0c5d3UwcEdSTVhxM0YyMFd1d3U4RlZjMTVnREplVUIweS1Na2xBbkNxOWViM3ZBcVFtRy1xVldRQ3RWQ3hLdWM1RVRxRzRIMno?oc=5",
@@ -6272,7 +6292,7 @@
  ],
  "hot": [
   {
-   "score": 1.47,
+   "score": 1.13,
    "id": "mustafa-suleyman",
    "n": "Mustafa Suleyman",
    "role": "Directeur de Microsoft AI",
@@ -6286,7 +6306,7 @@
    "outlets": 2
   },
   {
-   "score": 0.79,
+   "score": 0.61,
    "id": "jd-vance",
    "n": "JD Vance",
    "role": "Vice-président des États-Unis",
@@ -6300,7 +6320,7 @@
    "outlets": 4
   },
   {
-   "score": 0.68,
+   "score": 0.52,
    "id": "geoffrey-hinton",
    "n": "Geoffrey Hinton",
    "role": "Prix Nobel, pionnier du deep learning",

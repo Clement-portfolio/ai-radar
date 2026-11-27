@@ -5,7 +5,7 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-26T22:00:33.741Z",
+ "generated_at": "2026-11-27T01:26:00.189Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "16b9ff9d80af+42272da9d711+9cbfa8def305+c546670b1e66+c881f1e71110+db6892e02d02+dc69baa5c634+dc7f497f02ae+f0f0fb98c15e",
@@ -14,39 +14,10 @@
   "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+c8ea64c1c7c6",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+a41df70f5141+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
   "1d46f92411fb+2f09260e4b9f+397cc8e156aa+d2c99c65552e+d9fad293ecfb",
-  "0a0218381e56+3430cc86f807+3f483ec94a3c+4d34ad2c63d7+6600f56df21a+76a1ecfd8e4b+7a59d4c41a3e+84e6033d7025+99360c4211a2+a59b740fd89d+b7175444dd03+b8e5519408fd+c9c6101f6d2a+caa508a8959c+e2b7af907e84+e40c41a47eb2+ecab1061c917+f4aa87ac0d93+f7e99522702f+fe2f73778320",
+  "0a0218381e56+3430cc86f807+3f483ec94a3c+4d34ad2c63d7+6600f56df21a+76a1ecfd8e4b+7a59d4c41a3e+84e6033d7025+99360c4211a2+a59b740fd89d+b7175444dd03+b8e5519408fd+c9c6101f6d2a+caa508a8959c+e2b7af907e84+ecab1061c917+f4aa87ac0d93+f7e99522702f+fe2f73778320",
   "767f93adc9c0+78a8ff0c3e9e+bc5bfb43b2ec+ee27956d3b8e"
  ],
  "stories": [
-  {
-   "ids": [
-    "c881f1e71110",
-    "c546670b1e66",
-    "42272da9d711",
-    "9cbfa8def305"
-   ],
-   "head": "Nvidia suspend les livraisons de serveurs d'IA vers l'Asie du Sud-Est",
-   "bullets": [
-    "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
-    "Cette suspension préventive vise à combler les failles d'exportation vers la Chine sous pression du gouvernement américain.",
-    "Les nouvelles mesures de contrôle des exportations de puces par les États-Unis pèsent sur l'avenir des centres de données régionaux."
-   ],
-   "kinds": [
-    "detail",
-    "explication",
-    "contexte"
-   ],
-   "head_en": "Nvidia suspends AI server shipments to Southeast Asia",
-   "bullets_en": [
-    "The measure affects Malaysia, Singapore, Thailand, and Indonesia.",
-    "This preventive suspension aims to close export loopholes to China under pressure from the US government.",
-    "The new US chip export control measures weigh on the future of regional data centers."
-   ],
-   "ctx_ids": [
-    "66e6972db296"
-   ],
-   "ts": "2026-11-26T20:03:54.000Z"
-  },
   {
    "ids": [
     "c52f36f68e67",
@@ -54,19 +25,19 @@
     "ea7846207d79",
     "740f81f2e5d1"
    ],
-   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des datacenters IA dans l'espace",
+   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données spatiaux",
    "bullets": [
-    "Le projet est baptisé Starmind.",
-    "Cette constellation vise à exploiter des modules de calcul orbitaux pour répondre à la demande de puissance de l'intelligence artificielle tout en contournant les contraintes énergétiques terrestres."
+    "Le projet baptisé Starmind doit permettre de soutenir les besoins en calcul et de traiter des volumes massifs de données depuis l'orbite.",
+    "Cette initiative vise à déporter l'infrastructure physique des datacenters hors de la Terre et à exploiter l'énergie solaire pour contourner les contraintes énergétiques terrestres."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for AI datacenters in space",
+   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for space-based data centers",
    "bullets_en": [
-    "The project is named Starmind.",
-    "This constellation aims to operate orbital computing modules to meet artificial intelligence power demand while bypassing terrestrial energy constraints."
+    "The project named Starmind is designed to support computing needs and process massive volumes of data from orbit.",
+    "This initiative aims to move the physical infrastructure of data centers off Earth and leverage solar power to bypass terrestrial energy constraints."
    ],
    "ctx_ids": [],
    "ts": "2026-11-26T05:24:45.000Z"
@@ -80,25 +51,52 @@
    ],
    "head": "Donald Trump évoque une grâce présidentielle pour le PDG de Nvidia Jensen Huang",
    "bullets": [
-    "Donald Trump exhorte le dirigeant à ne pas invoquer le Cinquième Amendement et à dire la vérité devant un comité de la Chambre.",
-    "Le président américain est intervenu auprès du conseil d'administration de Nvidia, avec le vice-président Vance, pour favoriser le retour de Jensen Huang à la tête de l'entreprise.",
-    "Le sénateur John Kennedy a qualifié l'affaire impliquant l'ancien dirigeant de Nvidia et le contournement des sanctions de scandale extrêmement coûteux."
+    "Donald Trump exhorte le dirigeant à ne pas invoquer le Cinquième Amendement avant son audition devant un comité de la Chambre.",
+    "Le président américain a publiquement déclaré exiger que Jensen Huang dise la vérité au Congrès lors de son intervention.",
+    "Ces interventions présidentielles font suite à des pressions exercées par l'exécutif pour favoriser le retour de Jensen Huang à la tête de Nvidia afin de stabiliser les marchés financiers."
    ],
    "kinds": [
     "detail",
     "detail",
-    "contexte"
+    "explication"
    ],
    "head_en": "Donald Trump raises the possibility of a presidential pardon for Nvidia CEO Jensen Huang",
    "bullets_en": [
-    "Donald Trump urges the executive not to invoke the Fifth Amendment and to tell the truth before a House committee.",
-    "The US President intervened with Nvidia's board of directors, alongside Vice President Vance, to favor Jensen Huang's return to head the company.",
-    "Senator John Kennedy described the affair involving the former Nvidia executive and sanctions evasion as an extremely costly scandal."
+    "Donald Trump urges the executive not to plead the Fifth Amendment ahead of his hearing before a House committee.",
+    "The US president publicly stated that he expects Jensen Huang to tell the truth to Congress during his appearance.",
+    "These presidential interventions follow pressure exerted by the executive branch to favor Jensen Huang's return to the head of Nvidia in order to stabilize financial markets."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-26T11:00:00.000Z"
+  },
+  {
+   "ids": [
+    "6b5ed59faea8",
+    "2734842cc26d",
+    "5d42c8972e7d",
+    "6e8e5a329bec"
+   ],
+   "head": "TSMC envisage un projet d'usine de puces de 22,6 milliards de dollars au Texas",
+   "bullets": [
+    "Le projet prévoit la construction d'un campus dans le comté de Brazos pour produire des puces de 2 nm et plus d'ici 2031.",
+    "Cet investissement vise à intensifier la concurrence avec Samsung et à renforcer la production de puces avancées pour l'intelligence artificielle.",
+    "Cette initiative intervient alors que TSMC souligne une pénurie persistante de capacités de production de semi-conducteurs avancés face à la demande d'IA."
+   ],
+   "kinds": [
+    "detail",
+    "explication",
+    "contexte"
+   ],
+   "head_en": "TSMC considers a 22.6 billion dollar chip plant project in Texas",
+   "bullets_en": [
+    "The project involves building a campus in Brazos County to produce 2nm and below chips by 2031.",
+    "This investment aims to intensify competition with Samsung and strengthen the production of advanced chips for artificial intelligence.",
+    "This initiative comes as TSMC highlights a persistent shortage of advanced semiconductor production capacity in the face of AI demand."
    ],
    "ctx_ids": [
-    "61aee1bb7676"
+    "cbeaa4c5a54e"
    ],
-   "ts": "2026-11-26T11:00:00.000Z"
+   "ts": "2026-11-25T09:42:03.000Z"
   }
  ]
 }
