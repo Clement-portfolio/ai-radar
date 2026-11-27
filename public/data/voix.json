@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T10:15:09.144Z",
+ "generated_at": "2026-11-27T13:22:34.869Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1846,6 +1846,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-27T06:55:08.000Z",
+     "title": "Trump Says He Was ‘A Little Concerned’ By Stock Selloff, Insists Nvidia CEO Huang Poses No Security Risk",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPUkhyQUdzczNLV3N4R1hNSG9vZUJaUjRuUno4V1BBV0I1dHdNZkpXUW9ZN0ktZ3NRMXp4RVNMNG1USWY4ZlAtbVQ4S0lGajE3RktkdDR0WGRjMTA3OFI0eHYyZWpjUG1zZmRpZWJNeHgwdkI4cE1ZbVhFM2lCQnVEVWRKU1FfUjloeDFwZ3JuMldNRnpzMlJYd1ZrS0Q3UmtuV0VhRVBhWDBxUmxGZ05hQThER21IUHNSN0VDV0o1Y2czSTE1Mno3ZUlidTFLRFYxLXg1UTdndFU2a1hQQXl4U25IYlhvU2pz?oc=5",
+     "source": "Forbes",
+     "kind": "presse",
+     "title_fr": "Trump déclare qu'il était « un peu inquiet » de la chute des marchés boursiers, et insiste sur le fait que le PDG de Nvidia, Huang, ne représente aucun risque pour la sécurité",
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-27T00:18:00.000Z",
      "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
@@ -1892,7 +1902,7 @@
      "source": "The Washington Post",
      "kind": "presse",
      "title_fr": "Trump exhorte Nvidia à réintégrer Jensen Huang, le qualifiant de « meilleure chose » pour les États-Unis",
-     "m": 2,
+     "m": 1,
      "e": 1
     },
     {
@@ -1912,16 +1922,6 @@
      "source": "NBC News",
      "kind": "presse",
      "title_fr": "Trump affirme avoir parlé « directement et indirectement » avec le conseil d'administration de Nvidia au sujet de la réintégration de Jensen Huang",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-23T16:49:51.000Z",
-     "title": "Donald Trump says he 'convinced' Nvidia to reinstate Jensen Huang",
-     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGLU9yX2djdGRQV01hM0llUENSZ0U3a1YzQU1WdWx5Z0dMMVJGUFduWkhJTjBxOHVVeE9SN1lyaE1sNjdJYWVENzhrRUJ2cXNUZEZHaUpRUHE0UXM?oc=5",
-     "source": "BBC",
-     "kind": "presse",
-     "title_fr": "Donald Trump affirme avoir « convaincu » Nvidia de réintégrer Jensen Huang",
      "m": 2,
      "e": 1
     }
@@ -2372,7 +2372,7 @@
    "actor": null,
    "alerts": [
     {
-     "ts": "2026-11-19T16:20:00.000Z",
+     "ts": "2026-11-19T08:00:00.000Z",
      "title": "Bill Ackman says Nvidia's board is failing you — and not just because it fired Jensen Huang after one Zoom call, at most",
      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQLUowNHBFcFFTdklOUEpROVhXeE80OGxQSmplRHhpXzA0ek9EMHBWUU40Q2c1MEdPOHJ3UExfOGhkU1RYdDA1VFBIaUtTaWpsV2ZTLVRYQXVFelR5Mm0yNmFWYXIzcm84QmZQTU43UkZzbGI1ZTh5QjhVVzgwMHNONlROVmI0UUl1MkJqN25sOHl3ZFJXQTQ3Wk8tRQ?oc=5",
      "source": "Yahoo Finance"
@@ -5295,6 +5295,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-23T16:12:00.000Z",
+     "title": "Chey Tae-won Announces Plan to Pay 944 Billion Won, Potentially Ending 9-Year Legal Battle",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1KaEE4ZGMzOHQ4eEgxRXlIZjhPYlNvZkgtdlNNbmtMSjJJbGM0a3MzclBXdXpOZlBEWVUzNm1uYmZfRDNuQ1oxU3RzbFNkejFOaFlYeDFtRnRoLWdyZDdfOC12cnlBeUF4S0hSRlhR0gFmQVVfeXFMTkppRDVLWDRWNURNZW1Ic0RyUk1CVW5CLW11TUFvMVlXSzFsN2JDNjh6MG1tMVZIdmVqWDlxdDFGOEdXcEo2U0d4REdoaGEwNWl5TlZhVElGcGZ6UF9sWllrM1FjR3JR?oc=5",
+     "source": "SBS 뉴스",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won annonce un plan pour verser 944 milliards de wons, mettant potentiellement fin à une bataille juridique de 9 ans",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-23T13:11:00.000Z",
      "title": "Chey Tae-won Says He Will Pay Full 944 Billion Won... Will 9-Year Legal Battle Finally End?",
      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9fVm9vamJGME9pUHRiSVNGUW5IeHlKN2VpUFFiRjFGajdCVHUtNHBtQjZPNUZ6OFBtTE9OVWk5UTY3V2VjWUhPY3pCNTNGSWZzRzdPZWQ4NFF1ZHF5eDdsWERJdVhDaWNOcVY1MmdB0gFmQVVfeXFMTlJPUlpnaTVaVW9RZE9QQ3E4eVUyQjlJZ0pNajh1Ul82dm1hY1pTQ2xRbFZjYVR4SU80RndzdUFMa0dZRmc3WXV6R0duWUFhZDhRVThoLThMNE5KZ1otVEVMYUdodXBn?oc=5",
@@ -5363,16 +5373,6 @@
      "title_fr": "Chey Tae-won : « Je ferai progresser la gouvernance de SK d'un cran »",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-19T00:39:01.000Z",
-     "title": "Chey Tae-won calls for stronger board independence to maximize shareholder value",
-     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE92SVdLVVlXMmlqTHA0QmlZOVY3bFBEZ2l4RDBFWV8xcDd3aGJCcW1OZHVVU2Q5YWtQMzllNk14NXVhZGU0endDT3NLQ3FEQzlvQWsxd2ZNTQ?oc=5",
-     "source": "헤럴드경제",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Chey Tae-won appelle à une plus grande indépendance du conseil d'administration pour maximiser la valeur actionnariale"
     }
    ]
   },
@@ -5951,6 +5951,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T11:26:15.000Z",
+     "title": "Mohamed El-Erian Says Nvidia Is “Too Big to Wobble.” Its Customers’ Data Center Plans Aren’t",
+     "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNZzVPdkVNTFF2YWJTWVh5OEV4SE51Ry1RdG5TeEJwaHJWdFgwbmwtZl9NWEctck54V1hlTi1mQkdmUmFndWY3YWYxLWRUQk9BajdSRTZWbEtleC1ZeXRiTHpiVU5mb19jMnd6VS02YjU5cXFoX1l5MzgtWXJyTVNiUE9DZ21jWmExakpIN3lKYVNKbnZNaTdYYjk2eGpPRk03QmdnUDNWbTVMQXl0blJTX2NYdGVGdDJpeEV0SlBpWWRIX3NO?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse",
+     "title_fr": "Mohamed El-Erian affirme que Nvidia est « trop gros pour vaciller ». Les plans de centres de données de ses clients ne le sont pas",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T18:17:00.000Z",
      "title": "NVIDIA Is Down 31% in a Month. Mohamed El-Erian Says It's \"Too Big to Wobble.\" Can NVDA Stock Get Back to $200?",
      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNRW5GMk9yUmhJUmlBODBpMm5ORTJjNVZzWnd0VmU0QVY4aTVuYVJ3TGFCdDFUSW1jNk1mMjRuUmRjSW9HRmNrMG9VMHhkOUNQdEZSUWhVSjhjVHlJQjUzbmJTV2pnNW9pbEhDRUJjUUlNZWp1WGhaenVaN0hESDJrSEdXTll4NTYxUGJtU3JYWF9pcFBiTnZNSld0TmQ3NF9URks3Uml0RmJxbkpvMGo4NHlnT2g4S3JiMEg2Z2RSS3cyTWRFSU9TUWU3XzJwY2E0NTZqUFlIa2g4NWFBamE1VQ?oc=5",
@@ -5967,6 +5977,16 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Le Nasdaq chute alors que NVDA, ANT et SPCX reculent : Mohamed El-Erian affirme que les signaux d'alerte du marché vont bien au-delà de Nvidia",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-24T20:33:09.000Z",
+     "title": "Watch Mohamed El-Erian warns of market volatility amid AI bubble questions - America Reports",
+     "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOOVJZRDBUdzg2R3d2cFYyS2ZsYTk2cjJXbDlENFVxOFcxbUZmYi0zZ2JaZ2tYNW01R24xTFRNWDJUQjBfWThUX1BTZzFtVXVFeGpQbGFZMEFDNWxhNEswOXlsTnlPcTRmdElVczBqVEVmNnRFNk00N2NmSDVGRExseHpZTXF0NmxPcnB2bkprb1hfUk93M0FkVlZSMzlqZDdNMVRwTkRlUWxreWZmXzg2Q0NueGp5ZXdDYmxzdA?oc=5",
+     "source": "FOX One",
+     "kind": "presse",
+     "title_fr": "Regardez : Mohamed El-Erian met en garde contre la volatilité des marchés sur fond de questions sur la bulle de l'IA - America Reports",
      "m": 1,
      "e": 0
     },
@@ -6009,26 +6029,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Le conseil d'administration de Nvidia fait face à un « problème vraiment difficile », déclare Mohamed El-Erian"
-    },
-    {
-     "ts": "2026-11-09T08:00:00.000Z",
-     "title": "Mohamed El-Erian Says an AI-Powered Economy Can't Afford to Slam on the Brakes",
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxONldkc3RwSHlVUGxDRFZ1WVJ0bkNfdEk0ME8tajBTb2oyWHpJZXVPa3hCWllGUkZJMFpaVHpIU0g4cFpubGhJd2lYTl8tNUFYU0x2Z3JoMUl3QkhzWmhQbGZjWFMzT3p1TGVSdnJScFpILW1famZVdk1Cb0NLR3V6OFhaR3VwSXMtd0R2VDNBdkpHUzlWUDVUbWhNcWZyZEtCNU1oTm95M1VMd3R4V1E?oc=5",
-     "source": "Globest",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Mohamed El-Erian affirme qu'une économie propulsée par l'IA ne peut pas se permettre de freiner brutalement"
-    },
-    {
-     "ts": "2026-11-09T08:00:00.000Z",
-     "title": "El-Erian Says US Midterm Winners Face Market Test — Warns Against Stifling AI, Urges Fiscal Discipline",
-     "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOM2FjX3U2Sll3OHZFWEN1MEpFZzBBdGtpcTE2MTQwQU13WDQwLWVVQkV2NVJNVnRWcURidWgzYlNBbzBSNU4yRjgxNVEzeXRxM3BzcmFrODJ4UnRvSzNKYmh1WHlwZkpGQ1dNRXF2aU9nV0JUclJsel83VkJoYU1TZnRCdFpHbHhhTVpCSUhlb0RJdWxDX0pLVnFUSVdLbHM4WmkxWFByTmVBZWFMV1ZCdU9qOXlrNHlWdHpJcFZiUlloX21TQ0dvTVZHUkV5Q20zejdIWUQ3WVZrUDlyX21GdXZFN00yc1VlNjR3amJET1NyLTRROGc?oc=5",
-     "source": "Stocktwits",
-     "kind": "presse",
-     "title_fr": "El-Erian affirme que les vainqueurs des élections de mi-mandat aux États-Unis font face à un test de marché — met en garde contre l'asphyxie de l'IA et exhorte à la discipline budgétaire",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -6328,7 +6328,7 @@
  ],
  "hot": [
   {
-   "score": 1.92,
+   "score": 1.51,
    "id": "peter-thiel",
    "n": "Peter Thiel",
    "role": "Cofondateur de Palantir, investisseur",
@@ -6342,30 +6342,30 @@
    "outlets": 4
   },
   {
-   "score": 0.78,
-   "id": "christophe-fouquet",
-   "n": "Christophe Fouquet",
-   "role": "PDG d'ASML",
-   "actor": "asml",
-   "ts": "2026-11-27T03:35:00.000Z",
-   "title": "ASML CEO Fouquet warns that excessive restrictions on high-tech exports to China will 'accelerate the domestic development system.'",
-   "title_fr": "Le PDG d'ASML, Fouquet, prévient que des restrictions excessives sur les exportations de haute technologie vers la Chine \"accéléreront le système de développement national\"",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5RaURIcFFYOEN5bGRJbVZGZ2c0d2JkS3g3VEVuZlBNTV9yYkFfOWdoMlVRdE1sV1VPanVOTVAySmdEMFZZZDJPV3JDbFlaYlU1VWJpSEY0bTZJMjVJU3RKOTVXVHRqSXZKWWhWalV1YlozSTN0eGNIVk93?oc=5",
-   "source": "GIGAZINE",
+   "score": 1.27,
+   "id": "lip-bu-tan",
+   "n": "Lip-Bu Tan",
+   "role": "PDG d'Intel",
+   "actor": "intel-foundry",
+   "ts": "2026-11-27T10:21:00.000Z",
+   "title": "Intel CEO Lip-Bu Tan bets on 141-member ‘dream team’, says ‘my number one priority…’",
+   "title_fr": "Le PDG d'Intel Lip-Bu Tan mise sur une « équipe de rêve » de 141 membres et déclare : « ma priorité numéro un... »",
+   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNR0N5bzFNQ2k2elZXTUUzV0NCVGwxcXpvVGxmbG5jVkE3OFpPeU93RWZIUmJ3bjByVFVULWg0ZmhZVHBSZXVFY013ZjBNdDZnY254dXQ0TFc0YThIektGaWlvOHYyb2hoZVp3ZGhFX3pvMHZ3Rkp2YS1hOGgyemQ2Yzd2TE1PeTVaSzBOVTNzdE44Wi04eHlwU0FIdDV5Vk5aNmsyZzNId0xSTXRmREtTRWNUb21QUTZuaXZkU09lQ1g1dTNwMTBvY1V6X0huUlF1dGpVM1NON0ZONVNYdXpTZ0JGTnVCVDBwTnlFcUhQajZVbG_SAfgBQVVfeXFMTzU0TnZEVXU3cHdqM0JQUE9DNmRHNVZOZXNLeDZUVkRkRHlqXzRRLWJzVmJyYjllYVNjMU1QeDVvYWdkVDZYRUhPMDdfV0R1MWdPU2hONlJwbVBKWDEtQXhibUZ3bklScGx0bGx1d1ZMZDk1U29jRVZST3l0eXpob1FNZm0tUXlCMzVPTVJUaDlnNnJzVWpFVjhWYlZUblgtdW5uR2pOS3Fwa1FTTThmbUNQcElBUWJ4Mlhzcml4YVU1Nmt1aExSVTUtakFzQS1iUUlQTjV2RENhOWRrRm93YjJhSTF3ZWZfekNZSC1nams3TXA4bW54cE8?oc=5",
+   "source": "The Times of India",
    "kind": "presse",
    "outlets": 1
   },
   {
-   "score": 0.74,
+   "score": 1.26,
    "id": "donald-trump",
    "n": "Donald Trump",
    "role": "Président des États-Unis",
    "actor": null,
-   "ts": "2026-11-27T00:18:00.000Z",
-   "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
-   "title_fr": "Le président Donald Trump annonce la création d'un groupe de travail sur l'IA baptisé « Super Intelligence Force »",
-   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
-   "source": "ABC News",
+   "ts": "2026-11-27T06:55:08.000Z",
+   "title": "Trump Says He Was ‘A Little Concerned’ By Stock Selloff, Insists Nvidia CEO Huang Poses No Security Risk",
+   "title_fr": "Trump déclare qu'il était « un peu inquiet » de la chute des marchés boursiers, et insiste sur le fait que le PDG de Nvidia, Huang, ne représente aucun risque pour la sécurité",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPUkhyQUdzczNLV3N4R1hNSG9vZUJaUjRuUno4V1BBV0I1dHdNZkpXUW9ZN0ktZ3NRMXp4RVNMNG1USWY4ZlAtbVQ4S0lGajE3RktkdDR0WGRjMTA3OFI0eHYyZWpjUG1zZmRpZWJNeHgwdkI4cE1ZbVhFM2lCQnVEVWRKU1FfUjloeDFwZ3JuMldNRnpzMlJYd1ZrS0Q3UmtuV0VhRVBhWDBxUmxGZ05hQThER21IUHNSN0VDV0o1Y2czSTE1Mno3ZUlidTFLRFYxLXg1UTdndFU2a1hQQXl4U25IYlhvU2pz?oc=5",
+   "source": "Forbes",
    "kind": "presse",
    "outlets": 1
   }
