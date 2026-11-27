@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T05:31:18.919Z",
+ "generated_at": "2026-11-27T11:50:29.959Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T05:41:18.919Z",
+ "translate_retry_at": "2026-11-27T12:00:29.959Z",
  "people": [
   {
    "id": "sam-altman",
@@ -14,6 +14,19 @@
    "actor": "openai",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T10:56:59.000Z",
+     "title": "Sam Altman Reflects On The Importance Of Family In Heartfelt Thanksgiving Message",
+     "title_fr": "Sam Altman réfléchit à l'importance de la famille dans un message touchant pour Thanksgiving",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPVGlBakU0YVQ3QW1yS0pCZ0Q5cXl1MGRFT1IxLXJaaEJ4X3k0bkJ6TWVJWUZwbXJ2MnRqNVNoZno1ODRCYVhVRkZiVDBGeEdHLVpFN0lNMFFNUlBHOVJldEh3UWcxRlNPbFBOT0ZocGRTOS1xMml4Q3VtMmd1QjZpWDlka0x2R18yMVc0T3pKUXEwcXczbnpQLVJmbkVSamZoeFUxTEY5c1FTcTFYNkVFQzBTNU9xMXRp0gHAAUFVX3lxTE50ZEJ2a09JR25nckwtclVPaW9DRURHR1BMeTNac05HRkJSWDJrbGdSZVA4eHktb2lzZkdQbm9qUTFNcUFxV3pxbkN6YXhYNExxQ1hVYUNtQU9iSzB3RFVBSngyVEZ4M0JkeEh5SHp3NmQ4VFFIRVg0MkdiVVZpVjdYaTN6YkQ0eVFUby1WdTZiT05pd19sZklYdUN6VFE4WnRKaE9pOGZ3VzAyNEFSMjBybUh3ZnhJN3M5TVNWM3ZIdQ?oc=5",
+     "source": "NDTV",
+     "kind": "presse",
+     "srcs": [
+      "ndtv"
+     ],
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-27T03:50:35.000Z",
      "title": "Not AI or ChatGPT, Sam Altman reveals what matters most to him and who keeps him from going crazy",
