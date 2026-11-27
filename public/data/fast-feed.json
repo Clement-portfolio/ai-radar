@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T08:20:28.821Z",
+ "generated_at": "2026-11-27T08:30:38.247Z",
  "items": [
   {
    "id": "c16fdd2a9e21",
@@ -5170,24 +5170,6 @@
    "title_fr": "Analyse : Six millions de commandes en jeu - Le déficit d'approvisionnement en Nvidia de la Chine persiste malgré le retour de Huang",
    "title_en": "Analysis: Six million orders on the line &ndash; China's Nvidia supply gap persists despite Huang's return",
    "summary_en": "Jensen Huang's reinstatement as Nvidia CEO on November 23 has restored confidence in the global AI computing market, but Chinese cloud providers face a more fundamental challenge: securing sufficient computing capacity under increasingly restrictive US export"
-  },
-  {
-   "id": "3b73d0820eae",
-   "ts": "2026-11-24T08:24:01.000Z",
-   "title": "Z.ai dévoile GLM-5.4, inaugurant l'architecture loop transformer et un paradigme de codage général",
-   "orig": "Z.ai unveils GLM-5.4, debuting loop transformer architecture, general coding paradigm",
-   "summary": "Chinese artificial intelligence firm Z.ai officially released its next-generation flagship model, GLM-5.4, marking the company's first flagship model built on a loop transformer architecture and the starting point of its push toward a general coding paradigm.",
-   "country": "CN",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Modèles",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL224/z.ai-flagship-infrastructure.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Z.ai dévoile GLM-5.4, inaugurant l'architecture loop transformer et un paradigme de codage général",
-   "title_en": "Z.ai unveils GLM-5.4, debuting loop transformer architecture, general coding paradigm",
-   "summary_en": "Chinese artificial intelligence firm Z.ai officially released its next-generation flagship model, GLM-5.4, marking the company's first flagship model built on a loop transformer architecture and the starting point of its push toward a general coding paradigm."
   }
  ]
 }
