@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-27T13:10:36.318Z",
+ "generated_at": "2026-11-27T13:31:14.199Z",
  "items": [
+  {
+   "id": "9b96d66b4554",
+   "ts": "2026-11-27T13:20:33.000Z",
+   "title": "BT signe une « première » dans l'AI-RAN britannique avec Ericsson",
+   "orig": "BT in British AI-RAN 'first' with Ericsson",
+   "summary": "EE arm deploys Ericsson's AI-native Scheduler for Link Adaptation across London",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/bt-in-british-ai-ran-first-with-ericsson/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "BT signe une « première » dans l'AI-RAN britannique avec Ericsson",
+   "title_en": "BT in British AI-RAN 'first' with Ericsson",
+   "summary_en": "EE arm deploys Ericsson's AI-native Scheduler for Link Adaptation across London"
+  },
   {
    "id": "ce94c11617a7",
    "ts": "2026-11-27T13:00:53.000Z",
-   "title": "FCC approves SpaceX application to deploy one million satellites for data centers in space",
+   "title": "La FCC approuve la demande de SpaceX pour déployer un million de satellites pour des centres de données dans l'espace",
    "orig": "FCC approves SpaceX application to deploy one million satellites for data centers in space",
    "summary": "Regulator gives green light for massive constellation",
    "country": "US",
@@ -14,12 +33,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/fcc-approves-spacex-application-to-deploy-one-million-satellites-for-data-centers-in-space/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La FCC approuve la demande de SpaceX pour déployer un million de satellites pour des centres de données dans l'espace",
+   "title_en": "FCC approves SpaceX application to deploy one million satellites for data centers in space",
+   "summary_en": "Regulator gives green light for massive constellation"
   },
   {
    "id": "b8e218b10b9b",
    "ts": "2026-11-27T12:50:33.000Z",
-   "title": "UAE's BitHash targets AI data centers, eyes 250MW project in Oman",
+   "title": "BitHash (EAU) vise les centres de données d'IA et lorgne un projet de 250 MW en Oman",
    "orig": "UAE's BitHash targets AI data centers, eyes 250MW project in Oman",
    "summary": "Another cryptominer plans AI capacity",
    "country": "GULF",
@@ -29,7 +52,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/uaes-bithash-targets-ai-data-centers-eyes-250mw-project-in-oman/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "BitHash (EAU) vise les centres de données d'IA et lorgne un projet de 250 MW en Oman",
+   "title_en": "UAE's BitHash targets AI data centers, eyes 250MW project in Oman",
+   "summary_en": "Another cryptominer plans AI capacity"
   },
   {
    "id": "cdffb76acca1",
@@ -5221,58 +5248,6 @@
    "title_fr": "La société taïwanaise d'infrastructure IA Nocera prend une participation de 22 millions de dollars dans le développeur canadien de centres de données IA BitRock",
    "title_en": "Taiwanese AI infrastructure firm Nocera takes $22m stake in Canadian AI data center developer BitRock",
    "summary_en": "Transaction will fund 10MW self-powered data center campus"
-  },
-  {
-   "id": "a40eb355b068",
-   "ts": "2026-11-24T13:24:31.331Z",
-   "title": "Le chinois Huawei affirme avoir une réponse locale aux restrictions américaines sur les outils de conception de puces",
-   "orig": "China's Huawei says it has homegrown answer to US chip design tool curbs",
-   "summary": "",
-   "country": "CN",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Nikkei Asia",
-   "url": "https://asia.nikkei.com/spotlight/huawei-crackdown/china-s-huawei-says-it-has-homegrown-answer-to-us-chip-design-tool-curbs",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Le chinois Huawei affirme avoir une réponse locale aux restrictions américaines sur les outils de conception de puces",
-   "title_en": "China's Huawei says it has homegrown answer to US chip design tool curbs"
-  },
-  {
-   "id": "7eb3a055ff31",
-   "ts": "2026-11-24T13:24:31.331Z",
-   "title": "Forum Nikkei Asia 'Le jeu mondial des puces : nos prédictions pour 2027'",
-   "orig": "Nikkei Asia Forum 'The Global Chip Game: Our predictions for 2027'",
-   "summary": "",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Nikkei Asia",
-   "url": "https://asia.nikkei.com/business/technology/nikkei-asia-forum-the-global-chip-game-our-predictions-for-2027",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Forum Nikkei Asia 'Le jeu mondial des puces : nos prédictions pour 2027'",
-   "title_en": "Nikkei Asia Forum 'The Global Chip Game: Our predictions for 2027'"
-  },
-  {
-   "id": "457646c99f13",
-   "ts": "2026-11-24T13:20:40.000Z",
-   "title": "NewYork GreenCloud soumet une demande pour construire un centre de données de 14,4 MW alimenté par la biomasse à Ione, en Californie",
-   "orig": "NewYork GreenCloud submits application to build 14.4MW biomass powered data center in Ione, California",
-   "summary": "Company acquired the biomass site in January",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/newyork-greencloud-submits-application-to-build-144mw-biomass-powered-data-center-in-ione-california/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "NewYork GreenCloud soumet une demande pour construire un centre de données de 14,4 MW alimenté par la biomasse à Ione, en Californie",
-   "title_en": "NewYork GreenCloud submits application to build 14.4MW biomass powered data center in Ione, California",
-   "summary_en": "Company acquired the biomass site in January"
   }
  ]
 }
