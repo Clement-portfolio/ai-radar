@@ -1,6 +1,51 @@
 {
- "generated_at": "2026-11-27T13:40:29.030Z",
+ "generated_at": "2026-11-27T13:50:30.711Z",
  "items": [
+  {
+   "id": "ec91663222f3",
+   "ts": "2026-11-27T13:44:13.000Z",
+   "title": "Vodafone to triple Safaricom’s data center footprint to 35MW",
+   "orig": "Vodafone to triple Safaricom’s data center footprint to 35MW",
+   "summary": "Telco’s footprint currently totals 9.1MW across six facilities",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/vodafone-to-triple-safaricoms-data-center-footprint-to-35mw/",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "b2edf8b7a5e5",
+   "ts": "2026-11-27T13:42:56.000Z",
+   "title": "Belgian authorities force Google to halt data center construction",
+   "orig": "Belgian authorities force Google to halt data center construction",
+   "summary": "BRUSSELS: Belgian authorities have ordered Google to suspend construction of a data center in the south of the country because of a lack of proper planning permission, a regional official said Friday. “We have identified a major offense: the illegal constructi",
+   "country": "GULF",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/media/belgian-authorities-force-google-to-halt-data-center-construction-3014262",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "c019bd875fe9",
+   "ts": "2026-11-27T13:40:40.000Z",
+   "title": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
+   "orig": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
+   "summary": "Company looks to build another building at CoreWeave-leased campus",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/galaxy-digital-files-for-next-phase-of-development-at-helios-data-center-campus-in-texas/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "d18510fd9df4",
    "ts": "2026-11-27T13:38:23.000Z",
