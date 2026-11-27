@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T04:50:48.811Z",
+ "generated_at": "2026-11-27T05:31:18.919Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T05:00:48.811Z",
+ "translate_retry_at": "2026-11-27T05:41:18.919Z",
  "people": [
   {
    "id": "sam-altman",
@@ -156,6 +156,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T05:17:31.000Z",
+     "title": "‘FSD Is GTA’: Elon Musk Says Teslas Have ‘Superhuman Vision’ - Tesla (NASDAQ:TSLA)",
+     "title_fr": "« FSD, c'est GTA » : Elon Musk affirme que les Tesla ont une « vision surhumaine » - Tesla (NASDAQ:TSLA)",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQX1V5c2oxN3ZicjBFaVhQYzRrc1B4QVV1TUdlQXJNMXNRdGVnMEhlX1Byc25BTkZxUGNZOHE3M0hRWlFqNExLY0pyMUlwd0RzV19JTHo3dlBWTGpINUgzMmE4d01WVkZxaFpwM2Jfd25Nck5MNTJMMnhKaDFleWtKeUZ0VHliRmJQdXpkaHpGdllJT2NHRmFSc1NR?oc=5",
+     "source": "Benzinga",
+     "kind": "presse",
+     "srcs": [
+      "benzinga"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-27T01:48:06.000Z",
      "title": "Elon Musk: ‘Every child in America’ will soon receive SpaceX stock",
      "title_fr": "Elon Musk : « Chaque enfant en Amérique » recevra bientôt des actions de SpaceX",
@@ -245,19 +258,6 @@
      ],
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-26T19:30:08.000Z",
-     "title": "Elon Musk Says ‘Pretty Much Everyone’s Going to Want One, if Not Two’ Tesla Robots Once They Can Wash Dir",
-     "title_fr": "Elon Musk affirme que « pratiquement tout le monde voudra un, voire deux » robots Tesla une fois qu'ils sauront faire la vaisselle",
-     "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQRWtnQS1jTXR1NjQxMWJUQ2NlVFVXc0ZqY0tCdHdCb2szQWNKanhZZlN2V1VYRG1GbUhFUDA0VDZmZU01b0d5TUpNMXpUVk8xOXRRMnRqd1Y2NE1RQXQ5V2Y0akJRQkxNRVZFTHJ3Y2U0VmxEUkN3OUotUGtiNjZteC1hMmhuakh3T09aMTZQdW5LZmxtNm5iQW1fdEVMazlCdGxIQzVOdkZfUlBGVWU1M0pnNk4ybmtMbFdENHBXR1ppcGdlaUtjUXk5VmV3VDRSaUZGbzFnX2RxLXQwc3piY256ZGI3YTVXdHZtd1UzYWFycTVNV2k5U0M2ZTUyM05YNG1WeTVtNlRoUl9EUVZKYnl6bFUwd0dma2dB?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "srcs": [
-      "benzinga"
-     ],
-     "m": 1,
-     "e": 0
     }
    ]
   },
