@@ -1,6 +1,51 @@
 {
- "generated_at": "2026-11-27T04:10:56.512Z",
+ "generated_at": "2026-11-27T04:30:37.931Z",
  "items": [
+  {
+   "id": "a7509ef32f2e",
+   "ts": "2026-11-27T04:13:09.000Z",
+   "title": "SpaceX million-satellite plan exposes hurdles to space-based data centers",
+   "orig": "SpaceX million-satellite plan exposes hurdles to space-based data centers",
+   "summary": "The US Federal Communications Commission (FCC) has approved SpaceX's plan to deploy one million space-based data center satellites, paving the way for AI infrastructure to extend beyond Earth.",
+   "country": "OTHER",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD211/spacex-data-fcc-launch-capacity.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "b7ff646d87d4",
+   "ts": "2026-11-27T04:12:57.000Z",
+   "title": "DIGITIMES Insight: KV cache growth will not translate one-for-one into CXL memory demand",
+   "orig": "DIGITIMES Insight: KV cache growth will not translate one-for-one into CXL memory demand",
+   "summary": "The rapid growth of KV cache in AI inference will not translate proportionally into demand for CXL memory, because host DRAM usually takes the data moved out of HBM first, according to DIGITIMES. CXL becomes necessary only when host DRAM is constrained, the da",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Mémoire HBM",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261126PD215/cxl-memory-dram-data-demand-growth.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "95787bafe9c6",
+   "ts": "2026-11-27T04:09:08.000Z",
+   "title": "Can AI resist temptation? Anthropic finds lower violation rates in new Claude models",
+   "orig": "Can AI resist temptation? Anthropic finds lower violation rates in new Claude models",
+   "summary": "Anthropic has used simulated tests to assess whether artificial intelligence (AI) can resist temptation and follow rules. The results found that its new-generation Claude models still attempted to cross boundaries, but violations involving the use of external ",
+   "country": "OTHER",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Modèles",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD203/anthropic-claude-data-security.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "02d7dcc78552",
    "ts": "2026-11-27T03:40:56.000Z",
