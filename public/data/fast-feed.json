@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-27T14:20:33.849Z",
+ "generated_at": "2026-11-27T14:31:04.881Z",
  "items": [
+  {
+   "id": "8efb77a3fc0c",
+   "ts": "2026-11-27T14:22:45.000Z",
+   "title": "Au-delà de la lithographie : la bataille pour le rendement de fabrication des semi-conducteurs",
+   "orig": "Beyond Lithography: The Battle for Semiconductor Manufacturing Yield",
+   "summary": "The proposed MATCH Act exposes a strategic vulnerability extending beyond ASML to the technologies that determine manufacturing productivity and yield. The post Beyond Lithography: The Battle for Semiconductor Manufacturing Yield appeared first on EE Times .",
+   "country": "EU",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "EE Times",
+   "url": "https://www.eetimes.com/beyond-lithography-the-battle-for-semiconductor-manufacturing-yield/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Au-delà de la lithographie : la bataille pour le rendement de fabrication des semi-conducteurs",
+   "title_en": "Beyond Lithography: The Battle for Semiconductor Manufacturing Yield",
+   "summary_en": "The proposed MATCH Act exposes a strategic vulnerability extending beyond ASML to the technologies that determine manufacturing productivity and yield. The post Beyond Lithography: The Battle for Semiconductor Manufacturing Yield appeared first on EE Times ."
+  },
   {
    "id": "0538cc63b8b8",
    "ts": "2026-11-27T14:10:29.552Z",
-   "title": "Japan's JERA aims to build data centers for Anthropic, other AI players near power plants",
+   "title": "Le japonais JERA ambitionne de construire des centres de données pour Anthropic et d'autres acteurs de l'IA près de ses centrales électriques",
    "orig": "Japan's JERA aims to build data centers for Anthropic, other AI players near power plants",
    "summary": "",
    "country": "OTHER",
@@ -14,12 +33,15 @@
    "source": "Nikkei Asia",
    "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-jera-aims-to-build-data-centers-for-anthropic-other-ai-players-near-power-plants",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le japonais JERA ambitionne de construire des centres de données pour Anthropic et d'autres acteurs de l'IA près de ses centrales électriques",
+   "title_en": "Japan's JERA aims to build data centers for Anthropic, other AI players near power plants"
   },
   {
    "id": "aa463f83b618",
    "ts": "2026-11-27T14:00:38.000Z",
-   "title": "SpaceX installs $250m worth of Tesla Megapack batteries at Starbase data center site in Texas - report",
+   "title": "SpaceX installe pour 250 millions de dollars de batteries Tesla Megapack sur le site de son centre de données Starbase au Texas, selon un rapport",
    "orig": "SpaceX installs $250m worth of Tesla Megapack batteries at Starbase data center site in Texas - report",
    "summary": "Company seeking to develop up to $24bn data center and natural gas power plant at the site",
    "country": "US",
@@ -29,7 +51,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/spacex-installs-250m-worth-of-tesla-megapack-batteries-at-starbase-data-center-site-in-texas-report/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "SpaceX installe pour 250 millions de dollars de batteries Tesla Megapack sur le site de son centre de données Starbase au Texas, selon un rapport",
+   "title_en": "SpaceX installs $250m worth of Tesla Megapack batteries at Starbase data center site in Texas - report",
+   "summary_en": "Company seeking to develop up to $24bn data center and natural gas power plant at the site"
   },
   {
    "id": "0f9957586415",
@@ -5319,25 +5345,6 @@
    "title_fr": "Applied Digital signe un bail de 18 ans pour 5,4 milliards de dollars avec un hyperscaler non nommé",
    "title_en": "Applied Digital signs $5.4bn 18-year lease with unnamed hyperscaler",
    "summary_en": "Will provide hyperscaler with 150MW of capacity"
-  },
-  {
-   "id": "294bb9400033",
-   "ts": "2026-11-24T14:28:38.000Z",
-   "title": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "orig": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "summary": "RIYADH: From artificial intelligence-powered environmental monitoring tools to smart systems designed to protect critical infrastructure, thousands of innovators gathered in Riyadh on Monday as the SAIF International Security and Innovation Exhibition and Comp",
-   "country": "GULF",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "Arab News",
-   "url": "https://www.arabnews.com/saudi-arabia/saif-opens-in-riyadh-with-1200-solutions-from-55-countries-3013852",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_en": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "summary_en": "RIYADH: From artificial intelligence-powered environmental monitoring tools to smart systems designed to protect critical infrastructure, thousands of innovators gathered in Riyadh on Monday as the SAIF International Security and Innovation Exhibition and Comp",
-   "title_fr": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "tr_try": 3
   }
  ]
 }
