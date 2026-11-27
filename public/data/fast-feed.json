@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T08:10:29.657Z",
+ "generated_at": "2026-11-27T08:20:28.821Z",
  "items": [
   {
    "id": "c16fdd2a9e21",
@@ -5188,60 +5188,6 @@
    "title_fr": "Z.ai dévoile GLM-5.4, inaugurant l'architecture loop transformer et un paradigme de codage général",
    "title_en": "Z.ai unveils GLM-5.4, debuting loop transformer architecture, general coding paradigm",
    "summary_en": "Chinese artificial intelligence firm Z.ai officially released its next-generation flagship model, GLM-5.4, marking the company's first flagship model built on a loop transformer architecture and the starting point of its push toward a general coding paradigm."
-  },
-  {
-   "id": "176bc6ebf961",
-   "ts": "2026-11-24T08:11:47.000Z",
-   "title": "Pourquoi l'IA peine à réutiliser les conceptions de puces",
-   "orig": "Why AI Struggles To Reuse Chip Designs",
-   "summary": "AI can accelerate derivative designs, but physical constraints and incomplete data limit how much can be automated. The post Why AI Struggles To Reuse Chip Designs appeared first on Semiconductor Engineering .",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Semiconductor Engineering",
-   "url": "https://semiengineering.com/why-ai-struggles-to-reuse-chip-designs/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Pourquoi l'IA peine à réutiliser les conceptions de puces",
-   "title_en": "Why AI Struggles To Reuse Chip Designs",
-   "summary_en": "AI can accelerate derivative designs, but physical constraints and incomplete data limit how much can be automated. The post Why AI Struggles To Reuse Chip Designs appeared first on Semiconductor Engineering ."
-  },
-  {
-   "id": "9d6c13161607",
-   "ts": "2026-11-24T08:11:34.000Z",
-   "title": "IA contre synthèse de haut niveau",
-   "orig": "AI Vs. High-Level Synthesis",
-   "summary": "AI promises to automate chip design from spec to implementation, but can it match HLS in productivity, verification, and quality of results? The post AI Vs. High-Level Synthesis appeared first on Semiconductor Engineering .",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Semiconductor Engineering",
-   "url": "https://semiengineering.com/ai-vs-high-level-synthesis/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "IA contre synthèse de haut niveau",
-   "title_en": "AI Vs. High-Level Synthesis",
-   "summary_en": "AI promises to automate chip design from spec to implementation, but can it match HLS in productivity, verification, and quality of results? The post AI Vs. High-Level Synthesis appeared first on Semiconductor Engineering ."
-  },
-  {
-   "id": "95f2fb895e1c",
-   "ts": "2026-11-24T08:11:31.000Z",
-   "title": "L'IA peut lire le code, mais peut-elle comprendre la puce ?",
-   "orig": "AI Can Read The Code, But Can It Understand The Chip?",
-   "summary": "Frontier models are improving design automation, but layouts, waveforms, and other semiconductor-specific data presents challenges that general-purpose AI has yet to fully overcome. The post AI Can Read The Code, But Can It Understand The Chip? appeared first ",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Semiconductor Engineering",
-   "url": "https://semiengineering.com/ai-can-read-the-code-but-can-it-understand-the-chip/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "L'IA peut lire le code, mais peut-elle comprendre la puce ?",
-   "title_en": "AI Can Read The Code, But Can It Understand The Chip?",
-   "summary_en": "Frontier models are improving design automation, but layouts, waveforms, and other semiconductor-specific data presents challenges that general-purpose AI has yet to fully overcome. The post AI Can Read The Code, But Can It Understand The Chip? appeared first"
   }
  ]
 }
