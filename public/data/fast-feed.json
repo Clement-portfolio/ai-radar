@@ -1,10 +1,29 @@
 {
- "generated_at": "2026-11-27T12:00:50.553Z",
+ "generated_at": "2026-11-27T12:11:48.716Z",
  "items": [
+  {
+   "id": "77abd94719dc",
+   "ts": "2026-11-27T12:00:29.000Z",
+   "title": "Une société d'investissement soutenue par le fonds souverain du Koweït rachète la participation majoritaire de GIC dans xScale",
+   "orig": "Kuwait wealth fund-backed investment firm purchases GIC’s majority stake in xScale",
+   "summary": "Equinix will continue to manage and operate the data centers, while retaining its 20 percent share",
+   "country": "US",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/kuwait-wealth-fund-backed-investment-firm-purchases-gics-majority-stake-in-xscale/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Une société d'investissement soutenue par le fonds souverain du Koweït rachète la participation majoritaire de GIC dans xScale",
+   "title_en": "Kuwait wealth fund-backed investment firm purchases GIC’s majority stake in xScale",
+   "summary_en": "Equinix will continue to manage and operate the data centers, while retaining its 20 percent share"
+  },
   {
    "id": "56456d505799",
    "ts": "2026-11-27T11:50:37.000Z",
-   "title": "Construction paused at Google data center in Farciennes, Belgium",
+   "title": "La construction du centre de données de Google à Farciennes, en Belgique, est suspendue",
    "orig": "Construction paused at Google data center in Farciennes, Belgium",
    "summary": "Company had been building despite a permit being revoked",
    "country": "US",
@@ -14,12 +33,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/construction-paused-at-google-data-center-in-farciennes-belgium/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La construction du centre de données de Google à Farciennes, en Belgique, est suspendue",
+   "title_en": "Construction paused at Google data center in Farciennes, Belgium",
+   "summary_en": "Company had been building despite a permit being revoked"
   },
   {
    "id": "52a481cafd26",
    "ts": "2026-11-27T11:26:59.000Z",
-   "title": "Tract plans second data center campus in the UK",
+   "title": "Tract projette un deuxième campus de centres de données au Royaume-Uni",
    "orig": "Tract plans second data center campus in the UK",
    "summary": "Company seeks approval for 13-building campus in Stockton-on-Tees",
    "country": "EU",
@@ -29,12 +52,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/tract-plans-second-data-center-campus-in-the-uk/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Tract projette un deuxième campus de centres de données au Royaume-Uni",
+   "title_en": "Tract plans second data center campus in the UK",
+   "summary_en": "Company seeks approval for 13-building campus in Stockton-on-Tees"
   },
   {
    "id": "3e4d6004fd36",
    "ts": "2026-11-27T10:13:44.000Z",
-   "title": "Chinese chip stocks notch biggest ever one-day gains as Beijing signals broader market support",
+   "title": "Les actions des puces chinoises enregistrent leurs plus fortes hausses journalières de l'histoire alors que Pékin signale un soutien accru au marché",
    "orig": "Chinese chip stocks notch biggest ever one-day gains as Beijing signals broader market support",
    "summary": "Chinese stocks rebounded sharply after a rare intraday state media readout cheered investors as top policymakers pledged market liquidity support.",
    "country": "CN",
@@ -44,12 +71,16 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/27/china-chip-stocks-beijing-market-support.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les actions des puces chinoises enregistrent leurs plus fortes hausses journalières de l'histoire alors que Pékin signale un soutien accru au marché",
+   "title_en": "Chinese chip stocks notch biggest ever one-day gains as Beijing signals broader market support",
+   "summary_en": "Chinese stocks rebounded sharply after a rare intraday state media readout cheered investors as top policymakers pledged market liquidity support."
   },
   {
    "id": "94f53e905281",
    "ts": "2026-11-27T10:05:54.000Z",
-   "title": "Chaince Digital launches AI data center unit, targets projects up to 100MW",
+   "title": "Chaince Digital lance une unité de centres de données IA et vise des projets allant jusqu'à 100 MW",
    "orig": "Chaince Digital launches AI data center unit, targets projects up to 100MW",
    "summary": "Chaince Compute partners with Bit Lake in Texas",
    "country": "US",
@@ -59,12 +90,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/chaince-digital-launches-ai-data-center-unit-targets-projects-up-to-100mw/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Chaince Digital lance une unité de centres de données IA et vise des projets allant jusqu'à 100 MW",
+   "title_en": "Chaince Digital launches AI data center unit, targets projects up to 100MW",
+   "summary_en": "Chaince Compute partners with Bit Lake in Texas"
   },
   {
    "id": "99449969532e",
    "ts": "2026-11-27T09:20:19.000Z",
-   "title": "China's chip expansion stalls on two-year tool waits, and missing parts are to blame",
+   "title": "L'expansion des puces en Chine stagne en raison d'attentes d'équipements de deux ans, causées par des pièces manquantes",
    "orig": "China's chip expansion stalls on two-year tool waits, and missing parts are to blame",
    "summary": "China's foundries keep adding capacity, but longer equipment lead times are starting to slow them down. SMIC says the global semiconductor equipment supply chain remains tight. Lead times for some tools have stretched to 16-24 months, and a few now exceed 24 m",
    "country": "CN",
@@ -74,12 +109,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD213/china-semiconductors-capacity-expansion-component-equipment-smic.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'expansion des puces en Chine stagne en raison d'attentes d'équipements de deux ans, causées par des pièces manquantes",
+   "title_en": "China's chip expansion stalls on two-year tool waits, and missing parts are to blame",
+   "summary_en": "China's foundries keep adding capacity, but longer equipment lead times are starting to slow them down. SMIC says the global semiconductor equipment supply chain remains tight. Lead times for some tools have stretched to 16-24 months, and a few now exceed 24 m"
   },
   {
    "id": "2a002de62996",
    "ts": "2026-11-27T09:11:21.000Z",
-   "title": "Dutch tool maker Trymax deepens Japan push with Kanematsu PWS",
+   "title": "Le fabricant néerlandais d'équipements Trymax renforce sa présence au Japon avec Kanematsu PWS",
    "orig": "Dutch tool maker Trymax deepens Japan push with Kanematsu PWS",
    "summary": "Dutch plasma equipment maker Trymax Semiconductor Equipment has named Kanematsu PWS its exclusive sales representative in Japan. The deal is a bet on Japanese power and automotive chipmakers at a time when their investment is weak.",
    "country": "OTHER",
@@ -89,12 +128,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127VL216/dutch-automotive-equipment-investment-japan-production.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le fabricant néerlandais d'équipements Trymax renforce sa présence au Japon avec Kanematsu PWS",
+   "title_en": "Dutch tool maker Trymax deepens Japan push with Kanematsu PWS",
+   "summary_en": "Dutch plasma equipment maker Trymax Semiconductor Equipment has named Kanematsu PWS its exclusive sales representative in Japan. The deal is a bet on Japanese power and automotive chipmakers at a time when their investment is weak."
   },
   {
    "id": "62c878c96a71",
    "ts": "2026-11-27T09:03:45.000Z",
-   "title": "AI cooling will progress toward removal of thermal interface materials, says Jentech president",
+   "title": "Le refroidissement de l'IA évoluera vers la suppression des matériaux d'interface thermique, selon le président de Jentech",
    "orig": "AI cooling will progress toward removal of thermal interface materials, says Jentech president",
    "summary": "Thermal solutions provider Jentech Precision holds an optimistic outlook for 2027 and will proceed with capacity expansion as planned, with its new plant expected to reach full utilization two to three years after beginning production next year. In addition, t",
    "country": "OTHER",
@@ -104,12 +147,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD224/jentech-precision-cooling-materials-2027.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le refroidissement de l'IA évoluera vers la suppression des matériaux d'interface thermique, selon le président de Jentech",
+   "title_en": "AI cooling will progress toward removal of thermal interface materials, says Jentech president",
+   "summary_en": "Thermal solutions provider Jentech Precision holds an optimistic outlook for 2027 and will proceed with capacity expansion as planned, with its new plant expected to reach full utilization two to three years after beginning production next year. In addition, t"
   },
   {
    "id": "284160f656ff",
    "ts": "2026-11-27T08:56:46.000Z",
-   "title": "Huawei’s Next Big AI Move: HBM Workaround",
+   "title": "La prochaine grande étape de Huawei dans l'IA : un contournement pour le HBM",
    "orig": "Huawei’s Next Big AI Move: HBM Workaround",
    "summary": "The Shenzhen-based tech firm will provide details about its custom HBM design at ISSCC 2027 in San Francisco early next year. The post Huawei’s Next Big AI Move: HBM Workaround appeared first on EE Times .",
    "country": "CN",
@@ -119,12 +166,16 @@
    "source": "EE Times",
    "url": "https://www.eetimes.com/huawei-next-big-ai-move-hbm-workaround/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La prochaine grande étape de Huawei dans l'IA : un contournement pour le HBM",
+   "title_en": "Huawei’s Next Big AI Move: HBM Workaround",
+   "summary_en": "The Shenzhen-based tech firm will provide details about its custom HBM design at ISSCC 2027 in San Francisco early next year. The post Huawei’s Next Big AI Move: HBM Workaround appeared first on EE Times ."
   },
   {
    "id": "a600e54ee3d0",
    "ts": "2026-11-27T08:40:40.000Z",
-   "title": "Bank of Korea flags risks to memory chip boom",
+   "title": "La Banque de Corée alerte sur les risques pesant sur le boom des puces mémoire",
    "orig": "Bank of Korea flags risks to memory chip boom",
    "summary": "Memory chip prices could fall well below current projections by 2028 if AI investment slows, financing conditions tighten, and Chinese manufacturers expand production, according to a Bank of Korea study released on November 26.",
    "country": "CN",
@@ -134,12 +185,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127VL213/memory-exports-financing-investment-2027-2028.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La Banque de Corée alerte sur les risques pesant sur le boom des puces mémoire",
+   "title_en": "Bank of Korea flags risks to memory chip boom",
+   "summary_en": "Memory chip prices could fall well below current projections by 2028 if AI investment slows, financing conditions tighten, and Chinese manufacturers expand production, according to a Bank of Korea study released on November 26."
   },
   {
    "id": "c16fdd2a9e21",
    "ts": "2026-11-27T08:00:00.000Z",
-   "title": "Sponsored: How Akashi Data Center is preparing for the AI era",
+   "title": "Sponsorisé : Comment Akashi Data Center se prépare à l'ère de l'IA",
    "orig": "Sponsored: How Akashi Data Center is preparing for the AI era",
    "summary": "The strategy centers on direct liquid cooling, Astana’s harsh climate, and a modular 100MW data center campus",
    "country": "US",
@@ -149,12 +204,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/product-news/how-akashi-data-center-is-preparing-for-the-ai-era/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Sponsorisé : Comment Akashi Data Center se prépare à l'ère de l'IA",
+   "title_en": "Sponsored: How Akashi Data Center is preparing for the AI era",
+   "summary_en": "The strategy centers on direct liquid cooling, Astana’s harsh climate, and a modular 100MW data center campus"
   },
   {
    "id": "31c50a88f23f",
    "ts": "2026-11-27T07:53:57.000Z",
-   "title": "From lab to fab: Taiwan's supply chain holds key to mass-producing silicon photonics and CPO",
+   "title": "Du laboratoire à l'usine : la chaîne d'approvisionnement de Taïwan détient la clé de la production en masse de la photonique sur silicium et du CPO",
    "orig": "From lab to fab: Taiwan's supply chain holds key to mass-producing silicon photonics and CPO",
    "summary": "The first Silicon Photonics Technology Applications Exhibition will run from April 21 to 23, 2027, as AI speeds up the development of silicon photonics (SiPh) and co-packaged optics (CPO). The show will cover SiPh, CPO, high-speed optical communications, AI da",
    "country": "OTHER",
@@ -164,7 +223,11 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD225/siph-cpo-equipment-2027.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Du laboratoire à l'usine : la chaîne d'approvisionnement de Taïwan détient la clé de la production en masse de la photonique sur silicium et du CPO",
+   "title_en": "From lab to fab: Taiwan's supply chain holds key to mass-producing silicon photonics and CPO",
+   "summary_en": "The first Silicon Photonics Technology Applications Exhibition will run from April 21 to 23, 2027, as AI speeds up the development of silicon photonics (SiPh) and co-packaged optics (CPO). The show will cover SiPh, CPO, high-speed optical communications, AI da"
   },
   {
    "id": "265a64f6984d",
@@ -187,7 +250,7 @@
   {
    "id": "54290b040a0b",
    "ts": "2026-11-27T07:43:28.000Z",
-   "title": "Phone chip demand may stay weak in 2027, recovery seen in 2028",
+   "title": "La demande de puces pour smartphones pourrait rester faible en 2027, une reprise est envisagée en 2028",
    "orig": "Phone chip demand may stay weak in 2027, recovery seen in 2028",
    "summary": "Research firms and industry sources expect the smartphone market to remain sluggish in 2027, with a more noticeable recovery potentially not arriving until 2028. Overall market conditions are expected to remain similar to those in 2026, with Apple and Samsung ",
    "country": "CN",
@@ -197,12 +260,16 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127PD220/smartphone-demand-recovery-2027-2028.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "La demande de puces pour smartphones pourrait rester faible en 2027, une reprise est envisagée en 2028",
+   "title_en": "Phone chip demand may stay weak in 2027, recovery seen in 2028",
+   "summary_en": "Research firms and industry sources expect the smartphone market to remain sluggish in 2027, with a more noticeable recovery potentially not arriving until 2028. Overall market conditions are expected to remain similar to those in 2026, with Apple and Samsung"
   },
   {
    "id": "4e7ff1be6fcf",
    "ts": "2026-11-27T07:23:26.000Z",
-   "title": "TSMC's A14 ready for chip design",
+   "title": "Le procédé A14 de TSMC est prêt pour la conception de puces",
    "orig": "TSMC's A14 ready for chip design",
    "summary": "TSMC's next-generation A14 process is ready for chip design, as the world's largest contract chipmaker prepares for volume production of its 1.4nm-class technology in 2028.",
    "country": "OTHER",
@@ -212,7 +279,11 @@
    "source": "Digitimes",
    "url": "https://www.digitimes.com/news/a20261127VL211/tsmc-ic-design-production-capacity.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le procédé A14 de TSMC est prêt pour la conception de puces",
+   "title_en": "TSMC's A14 ready for chip design",
+   "summary_en": "TSMC's next-generation A14 process is ready for chip design, as the world's largest contract chipmaker prepares for volume production of its 1.4nm-class technology in 2028."
   },
   {
    "id": "4cee3b5f7986",
@@ -284,7 +355,7 @@
    "url": "https://www.cnbc.com/2026/11/27/sap-job-cuts-ai-restructuring.html",
    "confidence": "moyenne",
    "pending": true,
-   "tr_try": 1,
+   "tr_try": 2,
    "title_en": "German software major SAP weighs cutting at least 10,000 jobs in AI push: Bloomberg",
    "summary_en": "SAP is weighing cuts of at least 10,000 jobs as it reshapes its software business around AI, Bloomberg reported."
   },
@@ -453,7 +524,7 @@
    "url": "https://www.digitimes.com/news/a20261127VL209/samsung-2030-equipment-2026-manufacturing.html",
    "confidence": "moyenne",
    "pending": true,
-   "tr_try": 2,
+   "tr_try": 3,
    "title_en": "Samsung chip fabs could deploy over 10,000 robots by 2030",
    "summary_en": "The number of robots operating in Samsung Electronics' semiconductor facilities could rise from about 100 in 2026 to more than 10,000 by 2030 as the South Korean chipmaker seeks to automate tasks that still require human labor."
   },
@@ -5224,24 +5295,6 @@
    "title_fr": "Amazon affirme que les agents IA des pirates ont trouvé et exploité une faille 0-day avec peu d'intervention humaine",
    "title_en": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
    "summary_en": "The Cairn AI framework is proving to be a boon for defenders and attackers."
-  },
-  {
-   "id": "552de2bd0d1a",
-   "ts": "2026-11-24T12:02:29.000Z",
-   "title": "DatacenterHawk : L'offre mondiale de centres de données augmente de deux tiers, mais la vacance diminue",
-   "orig": "DatacenterHawk: Global data center supply grows two-thirds, but vacancy shrinks",
-   "summary": "Demand absorbs new capacity as quickly as it’s built",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/datacenterhawk-global-data-center-supply-grows-two-thirds-but-vacancy-shrinks/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "DatacenterHawk : L'offre mondiale de centres de données augmente de deux tiers, mais la vacance diminue",
-   "title_en": "DatacenterHawk: Global data center supply grows two-thirds, but vacancy shrinks",
-   "summary_en": "Demand absorbs new capacity as quickly as it’s built"
   }
  ]
 }
