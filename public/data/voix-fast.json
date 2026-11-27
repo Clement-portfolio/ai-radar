@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T19:21:44.364Z",
+ "generated_at": "2026-11-27T20:10:30.017Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T18:50:31.253Z",
+ "translate_retry_at": "2026-11-27T20:20:30.017Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T19:00:06.000Z",
+     "title": "Elon Musk Predicts Massive Leap in AI Capabilities That Will Make Today’s Tech Look Like ‘Caveman Playing With Sticks’ After OpenAI Reveals Intelligence Metrics",
+     "title_fr": "Elon Musk prédit un bond massif des capacités de l'intelligence artificielle qui fera passer la technologie d'aujourd'hui pour « un homme des cavernes jouant avec des bâtons » après qu'OpenAI a révélé des mesures d'intelligence",
+     "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNENJNmRmeWFlQ0NoVUhLM05nelcwbHZ1WVcxQks1THItNkdOYlpHOWZnMlhBekplNmU0S1NLNkZKak9IVWQ0ZExfY3N5T3NQb2FkaVB2SGlhczVhSzdBQVMxUTl5SUdneWRBUW5EYVdpUGUwS0ZqeHgwdWRJY2lqbkRYRFU0NFlf?oc=5",
+     "source": "Yahoo Tech",
+     "kind": "presse",
+     "srcs": [
+      "yahoo tech"
+     ],
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-27T18:30:03.000Z",
      "title": "‘Superfan’ Elon Musk Says ‘China Is Cool’ as Tesla Boosts Production in Shanghai: ‘The More the US and China Cooperate, the Better Off Both Will Be’",
      "title_fr": "Le « superfan » Elon Musk dit que « la Chine est cool » alors que Tesla augmente la production à Shanghai : « Plus les États-Unis et la Chine coopèrent, mieux les deux se porteront »",
@@ -258,20 +271,6 @@
       "arizona daily star"
      ],
      "m": 1,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-27T13:04:21.000Z",
-     "title": "Elon Musk says he’s giving 2 SpaceX shares to every American child with an active Trump account",
-     "title_fr": "Elon Musk dit qu'il donne 2 actions SpaceX à chaque enfant américain avec un compte Trump actif",
-     "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOOXl1dUo4RkFxTWkyeXpUeEFLN2phRzZIX3ZxS0djbDAxOHVCNjBFRm52ajJMeDJ0TWo0eVc4M0RINklCUi03SGVKN1RRaGFDZTRCZ3J1dnoyM0daeWQtMVJ2S3piWURLalZPdWVDaWxLVGxsMkgyT3VqbXBCY1BPYjNobmpINWViNndTRl91aFI2cV90NTluNHliQjRBOGVZQTRpaUc0VENuLWd6QnJHa1hyS2EyTDBTYUg5bkQ3U1JKeGJaTDF5Njg5YmlJdnJsTWFyM0xpdHptd9IB3wFBVV95cUxQQk9SNDBnSHFtS1k3eHd3NmwwX3pFUWxIaHhQZWF0MnFXVUdNbWhtU2RZSWdfSjdMWEVCdjBiY0VJbUlhekQtRmNMMUFESk9MVzJHRjN2ZzJxZUd1LUEtaVFicUFYWGVuQWlBXzVuT1BqS2syb0t4bHk5NFJTSHhZSXk3WE5NRzVLZkxDTVBBOEpSRjIwX2VUOUVQMVRTWUxnLXVJSlpJSThZckZONTRlN3N1ZWprUVhkXzU0clp3VUcxWEh0Q1pzSGJlb0Y0Yk5VN2xSSXRIampqSUotdGxZ?oc=5",
-     "source": "FOX40",
-     "kind": "presse",
-     "srcs": [
-      "fox40",
-      "washington examiner"
-     ],
-     "m": 2,
      "e": 1
     }
    ]
