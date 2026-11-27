@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T11:50:29.959Z",
+ "generated_at": "2026-11-27T12:00:51.191Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T12:00:29.959Z",
+ "translate_retry_at": "2026-11-27T12:10:51.191Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T09:08:27.000Z",
+     "title": "SpaceX Shares Soar As Musk Vows To Expand Stock Giveaway—Pledges A Share To Every Child Each Year",
+     "title_fr": "Les actions de SpaceX s'envolent alors que Musk s'engage à élargir la distribution d'actions — promettant une action à chaque enfant chaque année",
+     "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPcHA1RzB6RFRPSDBtOXNkc3dWTGxMQjlscy00ZnktNVdDcldtekQ1VWFfRlFWWEdPdHVQR2xxRnhRcnhGSDYySWJyY0FHb2tST3ZkUGdUT28tSDRhMzdveGtlSmRSekptNmZyQVczdEZGbVhwaU5lRXVzZ2lmNmVoOVBrZUM4VF9PamJTZGxYR3ZsWEx2d2FMSEQ2ME9QSlA2WGpTdDJoOTFkWjdUaHJMeTlYUFlCUjJjaHlWVzJNdGIxWm9UTFktSHZCNFZmYTFFN2dYX1BzVVhEajI5RWdvQUpCMTNMdw?oc=5",
+     "source": "Forbes",
+     "kind": "presse",
+     "srcs": [
+      "forbes"
+     ],
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-27T05:17:31.000Z",
      "title": "‘FSD Is GTA’: Elon Musk Says Teslas Have ‘Superhuman Vision’ - Tesla (NASDAQ:TSLA)",
      "title_fr": "« FSD, c'est GTA » : Elon Musk affirme que les Tesla ont une « vision surhumaine » - Tesla (NASDAQ:TSLA)",
@@ -255,19 +268,6 @@
      "kind": "presse",
      "srcs": [
       "azcentral.com and the arizona republic"
-     ],
-     "m": 1,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-26T20:00:08.000Z",
-     "title": "Elon Musk Says ‘True’ After Jensen Huang Warns You’ll Lose Your Job to Someone Who Uses AI, Not to AI Itself",
-     "title_fr": "Elon Musk dit « Vrai » après que Jensen Huang a prévenu que vous perdrez votre emploi face à quelqu'un qui utilise l'IA, et non face à l'IA elle-même",
-     "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOOVZrS01raWNvQ291YnY3QjZnQ1kxN0V1dGxNSTlBUEpITlM1RzF5Qzd6bVJZRWR6N2FTZEF1V294ZGJlNTdmXzVaOVJvcXVQcGhfNjc2R3RGSkl0ZE5NR2p2ajg2RV81NzR4TGZHVUNSTHI3NlBZZnFzSzNaX1Q2bzJKQmpZODR0ZEl0TG9BamwzaUU1eXpzS1BPS19oaVJSaWd4dS1WWGFrSG9RanVQRmpYLTVNb1VjRkI2Mi12emcxcnVEdVBmdW9tcWF1SW95cnV2Mm5qRzhRTmJTLWZNM3FyVQ?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "srcs": [
-      "benzinga"
      ],
      "m": 1,
      "e": 1

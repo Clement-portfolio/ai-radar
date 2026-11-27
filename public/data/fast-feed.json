@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T11:30:42.528Z",
+ "generated_at": "2026-11-27T12:00:50.553Z",
  "items": [
+  {
+   "id": "56456d505799",
+   "ts": "2026-11-27T11:50:37.000Z",
+   "title": "Construction paused at Google data center in Farciennes, Belgium",
+   "orig": "Construction paused at Google data center in Farciennes, Belgium",
+   "summary": "Company had been building despite a permit being revoked",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/construction-paused-at-google-data-center-in-farciennes-belgium/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "52a481cafd26",
    "ts": "2026-11-27T11:26:59.000Z",
@@ -5227,24 +5242,6 @@
    "title_fr": "DatacenterHawk : L'offre mondiale de centres de données augmente de deux tiers, mais la vacance diminue",
    "title_en": "DatacenterHawk: Global data center supply grows two-thirds, but vacancy shrinks",
    "summary_en": "Demand absorbs new capacity as quickly as it’s built"
-  },
-  {
-   "id": "b08a89e4051d",
-   "ts": "2026-11-24T11:58:00.000Z",
-   "title": "NTT signe un protocole d'accord avec B.Grimm pour un projet de centre de données de 400 MW en Thaïlande",
-   "orig": "NTT signs MoU with B.Grimm for 400MW data center project in Thailand",
-   "summary": "As Aether Holdings targets data center at factory site in Khon Kaen",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/ntt-signs-mou-with-bgrimm-for-400mw-data-center-project-in-thailand/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "NTT signe un protocole d'accord avec B.Grimm pour un projet de centre de données de 400 MW en Thaïlande",
-   "title_en": "NTT signs MoU with B.Grimm for 400MW data center project in Thailand",
-   "summary_en": "As Aether Holdings targets data center at factory site in Khon Kaen"
   }
  ]
 }
