@@ -1,10 +1,48 @@
 {
- "generated_at": "2026-11-27T13:50:30.711Z",
+ "generated_at": "2026-11-27T14:01:45.924Z",
  "items": [
+  {
+   "id": "0f9957586415",
+   "ts": "2026-11-27T14:00:01.000Z",
+   "title": "Ce médecin urgentiste est devenu le premier ingénieur IA clinique d'un hôpital",
+   "orig": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
+   "summary": "When Boston Children’s Hospital posted a job listing for a prompt engineer in 2023, Dinesh Rai decided to apply. He didn’t expect to get the job. At the time, prompt engineering was being touted as one of the hot new jobs created by generative AI. Companies wa",
+   "country": "US",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Modèles",
+   "source": "IEEE Spectrum",
+   "url": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Ce médecin urgentiste est devenu le premier ingénieur IA clinique d'un hôpital",
+   "title_en": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
+   "summary_en": "When Boston Children’s Hospital posted a job listing for a prompt engineer in 2023, Dinesh Rai decided to apply. He didn’t expect to get the job. At the time, prompt engineering was being touted as one of the hot new jobs created by generative AI. Companies wa"
+  },
+  {
+   "id": "cc2646aaf051",
+   "ts": "2026-11-27T14:00:00.000Z",
+   "title": "Les widgets personnalisés d'Android offrent un moment de « vibe-coding » ludique",
+   "orig": "Android’s DIY widgets are a bit of vibe-coding fun",
+   "summary": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right ap",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "The Verge IA",
+   "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les widgets personnalisés d'Android offrent un moment de « vibe-coding » ludique",
+   "title_en": "Android’s DIY widgets are a bit of vibe-coding fun",
+   "summary_en": "Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus. What I need is a widget. It needs to tell me real-time arrivals for the bus stop near my house. Tapping around on my phone screen to open the right ap"
+  },
   {
    "id": "ec91663222f3",
    "ts": "2026-11-27T13:44:13.000Z",
-   "title": "Vodafone to triple Safaricom’s data center footprint to 35MW",
+   "title": "Vodafone va tripler l'empreinte des centres de données de Safaricom pour atteindre 35 MW",
    "orig": "Vodafone to triple Safaricom’s data center footprint to 35MW",
    "summary": "Telco’s footprint currently totals 9.1MW across six facilities",
    "country": "US",
@@ -14,12 +52,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/vodafone-to-triple-safaricoms-data-center-footprint-to-35mw/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Vodafone va tripler l'empreinte des centres de données de Safaricom pour atteindre 35 MW",
+   "title_en": "Vodafone to triple Safaricom’s data center footprint to 35MW",
+   "summary_en": "Telco’s footprint currently totals 9.1MW across six facilities"
   },
   {
    "id": "b2edf8b7a5e5",
    "ts": "2026-11-27T13:42:56.000Z",
-   "title": "Belgian authorities force Google to halt data center construction",
+   "title": "Les autorités belges ordonnent à Google de suspendre la construction d'un centre de données",
    "orig": "Belgian authorities force Google to halt data center construction",
    "summary": "BRUSSELS: Belgian authorities have ordered Google to suspend construction of a data center in the south of the country because of a lack of proper planning permission, a regional official said Friday. “We have identified a major offense: the illegal constructi",
    "country": "GULF",
@@ -29,12 +71,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/media/belgian-authorities-force-google-to-halt-data-center-construction-3014262",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Les autorités belges ordonnent à Google de suspendre la construction d'un centre de données",
+   "title_en": "Belgian authorities force Google to halt data center construction",
+   "summary_en": "BRUSSELS: Belgian authorities have ordered Google to suspend construction of a data center in the south of the country because of a lack of proper planning permission, a regional official said Friday. “We have identified a major offense: the illegal constructi"
   },
   {
    "id": "c019bd875fe9",
    "ts": "2026-11-27T13:40:40.000Z",
-   "title": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
+   "title": "Galaxy Digital dépose une demande pour la prochaine phase de développement du campus de centres de données Helios au Texas",
    "orig": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
    "summary": "Company looks to build another building at CoreWeave-leased campus",
    "country": "US",
@@ -44,12 +90,16 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/galaxy-digital-files-for-next-phase-of-development-at-helios-data-center-campus-in-texas/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Galaxy Digital dépose une demande pour la prochaine phase de développement du campus de centres de données Helios au Texas",
+   "title_en": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
+   "summary_en": "Company looks to build another building at CoreWeave-leased campus"
   },
   {
    "id": "d18510fd9df4",
    "ts": "2026-11-27T13:38:23.000Z",
-   "title": "EU wheat extends gains on Black Sea disruption",
+   "title": "Le blé européen poursuit sa hausse en raison des perturbations en mer Noire",
    "orig": "EU wheat extends gains on Black Sea disruption",
    "summary": "PARIS: Euronext wheat prices climbed to one-month highs on Friday as ongoing war disruption to Black Sea trade maintained expectations of strong demand for European Union supplies. Gains on broader financial markets as AI-related investor worries subsided also",
    "country": "GULF",
@@ -59,7 +109,11 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/world/eu-wheat-extends-gains-on-black-sea-disruption-3014261",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le blé européen poursuit sa hausse en raison des perturbations en mer Noire",
+   "title_en": "EU wheat extends gains on Black Sea disruption",
+   "summary_en": "PARIS: Euronext wheat prices climbed to one-month highs on Friday as ongoing war disruption to Black Sea trade maintained expectations of strong demand for European Union supplies. Gains on broader financial markets as AI-related investor worries subsided also"
   },
   {
    "id": "9b96d66b4554",
@@ -5290,24 +5344,6 @@
    "title_fr": "TSMC dépose une demande pour une future usine de puces de 2 nm dans le comté de Brazos, au Texas",
    "title_en": "TSMC files application for proposed 2nm chip fab in Brazos County, Texas",
    "summary_en": "Chipmaker said no final decision had been made about building a fab in county that neighbors SpaceX’s TeraFab project"
-  },
-  {
-   "id": "d17f4264542f",
-   "ts": "2026-11-24T13:53:02.000Z",
-   "title": "La société taïwanaise d'infrastructure IA Nocera prend une participation de 22 millions de dollars dans le développeur canadien de centres de données IA BitRock",
-   "orig": "Taiwanese AI infrastructure firm Nocera takes $22m stake in Canadian AI data center developer BitRock",
-   "summary": "Transaction will fund 10MW self-powered data center campus",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/taiwanese-ai-infrastructure-firm-nocera-takes-22m-stake-in-canadian-ai-data-center-developer-bitrock/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "La société taïwanaise d'infrastructure IA Nocera prend une participation de 22 millions de dollars dans le développeur canadien de centres de données IA BitRock",
-   "title_en": "Taiwanese AI infrastructure firm Nocera takes $22m stake in Canadian AI data center developer BitRock",
-   "summary_en": "Transaction will fund 10MW self-powered data center campus"
   }
  ]
 }

@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T13:40:29.718Z",
+ "generated_at": "2026-11-27T14:01:46.625Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T13:50:29.718Z",
+ "translate_retry_at": "2026-11-27T14:11:46.625Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,20 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T13:53:00.000Z",
+     "title": "Elon Musk Says All American Kids Will Get Another SpaceX Share Every Year",
+     "title_fr": "Elon Musk dit que tous les enfants américains recevront une autre action SpaceX chaque année",
+     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNT1VYM3NQb09pRjR0WWwwSUNqaU9zRVlvYUhQU0VXTDk4VFU1S2FsWVJpdXVkeFZXREdaWnFCeXQxWWZNQldFZTlQbkNmY011Vkx2Mk1JRHVvWjU0SU80WExHYlJuZEczUjV5dGt1UjRQYWp2VVlMZjlaMXBjR2tRcklfb2lHaUNmWUMtMVpkbnVHM3RsUTZvb2dmbHRxbDJ0QW4zSW40SXhaSkM1U09TUHM1Zmd0ZE4y?oc=5",
+     "source": "24/7 Wall St.",
+     "kind": "presse",
+     "srcs": [
+      "24/7 wall st.",
+      "tradingview"
+     ],
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-27T13:30:00.000Z",
      "title": "Elon Musk reveals name for massive AI data center in southeast Arizona",
      "title_fr": "Elon Musk révèle le nom d'un centre de données d'IA massif dans le sud-est de l'Arizona",
@@ -243,32 +257,6 @@
      "kind": "presse",
      "srcs": [
       "afr"
-     ],
-     "m": 1,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-26T21:31:30.000Z",
-     "title": "Elon Musk Says He Will Be Donating Another Share Of SpaceX To All Kids In America Every Year",
-     "title_fr": "Elon Musk déclare qu'il fera don d'une autre part de SpaceX à tous les enfants américains chaque année",
-     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOZFdfY1JYdU9yaDVYOHdOdWRORk1SeHV0dHhLNjJiSGYxMnFWMGhFREpDMW40clZSaGNOSlRiSFhvdl91UnZ4enJsTDAxVlNjU29BdnRUaGFzWFZocXVLWHM1VndwS2pkQ2loNVY5ZXowTERKSmotNGtJNDFzVGw4a1RsdWhyNjRMR1c0bGhvVEd1RUJxOWtwMlliaVBFaFFnbHA4MFhuel9mYU5fUnhWQVZUTXU3dVd3dEQ5MVpMZlRfS1pUcENadUhjMTZFLUdkU2FkMVRWTEUyTlhyOXdvQXFVYUZHUmRmYWJsNEVrbVJ1elFn?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "srcs": [
-      "tradingview"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-26T21:09:13.000Z",
-     "title": "SpaceX Stock — Elon Musk Predicts $9.5B Share Price as Kids Get Shares",
-     "title_fr": "Action SpaceX : Elon Musk prédit un cours de 9,5 milliards de dollars alors que des enfants reçoivent des actions",
-     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOcDhwQy1aQ0pPLVVGcDdnYWJtQXdlVGZfeUNvaWZzUDlieGg3NDFVQWlHcmU4TUt1Ti0zNDI4aktsNENNci1renE2SUtYeTB6Y244ZE9aSGgzOHg2QTZCWndOYjFPSXRoZUhfbFRHUWY5WVBMTUdmVGVsaTNpQ2I4aUpR?oc=5",
-     "source": "The Korea Daily",
-     "kind": "presse",
-     "srcs": [
-      "the korea daily"
      ],
      "m": 1,
      "e": 1
