@@ -1,6 +1,51 @@
 {
- "generated_at": "2026-11-27T09:30:36.570Z",
+ "generated_at": "2026-11-27T09:40:29.855Z",
  "items": [
+  {
+   "id": "99449969532e",
+   "ts": "2026-11-27T09:20:19.000Z",
+   "title": "China's chip expansion stalls on two-year tool waits, and missing parts are to blame",
+   "orig": "China's chip expansion stalls on two-year tool waits, and missing parts are to blame",
+   "summary": "China's foundries keep adding capacity, but longer equipment lead times are starting to slow them down. SMIC says the global semiconductor equipment supply chain remains tight. Lead times for some tools have stretched to 16-24 months, and a few now exceed 24 m",
+   "country": "CN",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD213/china-semiconductors-capacity-expansion-component-equipment-smic.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "2a002de62996",
+   "ts": "2026-11-27T09:11:21.000Z",
+   "title": "Dutch tool maker Trymax deepens Japan push with Kanematsu PWS",
+   "orig": "Dutch tool maker Trymax deepens Japan push with Kanematsu PWS",
+   "summary": "Dutch plasma equipment maker Trymax Semiconductor Equipment has named Kanematsu PWS its exclusive sales representative in Japan. The deal is a bet on Japanese power and automotive chipmakers at a time when their investment is weak.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127VL216/dutch-automotive-equipment-investment-japan-production.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "62c878c96a71",
+   "ts": "2026-11-27T09:03:45.000Z",
+   "title": "AI cooling will progress toward removal of thermal interface materials, says Jentech president",
+   "orig": "AI cooling will progress toward removal of thermal interface materials, says Jentech president",
+   "summary": "Thermal solutions provider Jentech Precision holds an optimistic outlook for 2027 and will proceed with capacity expansion as planned, with its new plant expected to reach full utilization two to three years after beginning production next year. In addition, t",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 1,
+   "layer": "Énergie",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD224/jentech-precision-cooling-materials-2027.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "284160f656ff",
    "ts": "2026-11-27T08:56:46.000Z",
@@ -5173,42 +5218,6 @@
    "title_fr": "Le boom des centres de données en Grèce irrite les habitants près d'Athènes",
    "title_en": "Greece’s data center boom angers locals near Athens",
    "summary_en": "The construction of multiple data centers near Athens, Greece, has sparked concerns among local residents at a school in Spata. The development is expected to alter the tranquility of the area."
-  },
-  {
-   "id": "b260b6422eb7",
-   "ts": "2026-11-24T09:37:23.000Z",
-   "title": "Analyse : Le retour de Jensen place Nvidia sous un projecteur plus intense",
-   "orig": "Analysis: Jensen&rsquo;s homecoming puts Nvidia under a sharper spotlight",
-   "summary": "Jensen Huang is back at the helm of Nvidia&mdash;the designer of highly advanced AI chips, the world's most valuable company, and a key player underpinning hundreds of billions of US dollars' worth of AI-related financing. Yet with several investigations ongoi",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL225/jensen-huang-nvidia-chips-security-ceo.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Analyse : Le retour de Jensen place Nvidia sous un projecteur plus intense",
-   "title_en": "Analysis: Jensen&rsquo;s homecoming puts Nvidia under a sharper spotlight",
-   "summary_en": "Jensen Huang is back at the helm of Nvidia&mdash;the designer of highly advanced AI chips, the world's most valuable company, and a key player underpinning hundreds of billions of US dollars' worth of AI-related financing. Yet with several investigations ongoi"
-  },
-  {
-   "id": "40ae610a7f32",
-   "ts": "2026-11-24T09:31:50.000Z",
-   "title": "TSMC envisage un campus de 22,6 milliards de dollars au Texas pour des puces de 2 nm",
-   "orig": "TSMC eyes US$22.6 billion Texas campus for 2nm chips",
-   "summary": "TSMC is considering a US$22.6 billion semiconductor manufacturing campus in Texas, including about US$14 billion in machinery and equipment investment, as the chipmaker weighs Texas against Arizona for its next major US expansion.",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Fonderie",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261124VL226/tsmc-texas-arizona-investment-manufacturing.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "TSMC envisage un campus de 22,6 milliards de dollars au Texas pour des puces de 2 nm",
-   "title_en": "TSMC eyes US$22.6 billion Texas campus for 2nm chips",
-   "summary_en": "TSMC is considering a US$22.6 billion semiconductor manufacturing campus in Texas, including about US$14 billion in machinery and equipment investment, as the chipmaker weighs Texas against Arizona for its next major US expansion."
   }
  ]
 }
