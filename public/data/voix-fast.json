@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T01:10:48.630Z",
+ "generated_at": "2026-11-27T01:30:44.455Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T01:20:48.630Z",
+ "translate_retry_at": "2026-11-27T01:40:44.455Z",
  "people": [
   {
    "id": "sam-altman",
@@ -272,6 +272,19 @@
    "actor": "microsoft",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T01:20:14.000Z",
+     "title": "\"Let's add the next human\": Satya Nadella admits new-grad hiring slowed as companies rebuild around AI, and says every company will add its next person after it burns through its AI budget",
+     "title_fr": "\"Ajoutons le prochain humain\" : Satya Nadella admet que le recrutement de jeunes diplômés a ralenti alors que les entreprises se réorganisent autour de l'IA, et affirme que chaque entreprise embauchera sa prochaine personne après avoir épuisé son budget consacré à l'IA",
+     "url": "https://news.google.com/rss/articles/CBMiyAJBVV95cUxQOXMycXNKMHJMWHpqQjBoZ1ZwbjlXYTR2WVNmNHhpUmloMlRMaXhJNUJ4enQyM01KeS1GWHhQLUNRM0RGNHdLV3pEVjl1aDZCRHF2Vko0blBqem9ZMzdvTmYxdTh1TU9tc0pYZy1WVXMxRW1iQTNBZHRMVlZuYmFnY2hUeGVLV2RjUkM4QVVFSl8yeEZrV3FkSUFIMTJkT0lMTE9zcWlrYnY1VXVpWkxMYlI2U0duZjhuOXdmN1FTSEdJdkNsZFBLR2kzVi1JakcwcHp5MnBDaWVIOGdMWjNtV0FuUWl6UjVCeWEydXI1RnZtdzJrWXJTU1M4RW9sd2FJWjFjNkJHTFFSeWV1Q2oyWXlsZmZoWUViV1NuZ0h2OTZqWXhma1hSa3ZzaGJuSE5RTmJiZndEZE4tYjRsUmVPbDJxNS0taVpj?oc=5",
+     "source": "Windows Latest",
+     "kind": "presse",
+     "srcs": [
+      "windows latest"
+     ],
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-25T19:13:24.000Z",
      "title": "Satya Nadella Says “the Floor of Cyber Attacks Has Fallen.” Microsoft Just Declared Code Red After a 24-Hour Outage",
