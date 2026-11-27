@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T07:26:23.535Z",
+ "generated_at": "2026-11-27T10:15:09.144Z",
  "people": [
   {
    "id": "sam-altman",
@@ -958,6 +958,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T10:21:00.000Z",
+     "title": "Intel CEO Lip-Bu Tan bets on 141-member ‘dream team’, says ‘my number one priority…’",
+     "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNR0N5bzFNQ2k2elZXTUUzV0NCVGwxcXpvVGxmbG5jVkE3OFpPeU93RWZIUmJ3bjByVFVULWg0ZmhZVHBSZXVFY013ZjBNdDZnY254dXQ0TFc0YThIektGaWlvOHYyb2hoZVp3ZGhFX3pvMHZ3Rkp2YS1hOGgyemQ2Yzd2TE1PeTVaSzBOVTNzdE44Wi04eHlwU0FIdDV5Vk5aNmsyZzNId0xSTXRmREtTRWNUb21QUTZuaXZkU09lQ1g1dTNwMTBvY1V6X0huUlF1dGpVM1NON0ZONVNYdXpTZ0JGTnVCVDBwTnlFcUhQajZVbG_SAfgBQVVfeXFMTzU0TnZEVXU3cHdqM0JQUE9DNmRHNVZOZXNLeDZUVkRkRHlqXzRRLWJzVmJyYjllYVNjMU1QeDVvYWdkVDZYRUhPMDdfV0R1MWdPU2hONlJwbVBKWDEtQXhibUZ3bklScGx0bGx1d1ZMZDk1U29jRVZST3l0eXpob1FNZm0tUXlCMzVPTVJUaDlnNnJzVWpFVjhWYlZUblgtdW5uR2pOS3Fwa1FTTThmbUNQcElBUWJ4Mlhzcml4YVU1Nmt1aExSVTUtakFzQS1iUUlQTjV2RENhOWRrRm93YjJhSTF3ZWZfekNZSC1nams3TXA4bW54cE8?oc=5",
+     "source": "The Times of India",
+     "kind": "presse",
+     "title_fr": "Le PDG d'Intel Lip-Bu Tan mise sur une « équipe de rêve » de 141 membres et déclare : « ma priorité numéro un... »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T18:33:18.000Z",
      "title": "AI data centres now buy about as many CPUs as GPUs, down from a ratio of 8 to 1, as inference and agents take over, says Intel's Lip-Bu Tan",
      "url": "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOYjI1UEwydnRaaGpHVWpXdTlxWXl0NnhQZEowTWZIMWVzVkJJX280TUVCaUtaWmNyVUQxMzh2VXhUb3I2U1R3MmlfaGpBUUpjYjE4MWZiVnFVTnhyeTc4LTJlbVpkZk9hS3FIbWVKS0FrUVh5cVI1dVBLMGk0bXE5MkMtWHNiZkI3bHBTTjFFNEdyZF9FZHFmS3ptODhwdXdUVXFfN0FhZWtzN0RNQ1JSVmJhRXdxYjBJbzNzLVlvUTRpWFM1c08wbW1tcTQzXzYtcU1KdGw5WFhaTWlReHViM0hSZGNfZzN0aUNSd3dXUEFCY0l5QjNadHlvTU90N1E?oc=5",
@@ -1616,6 +1626,16 @@
      "source": "cwibc.co.id",
      "kind": "presse",
      "title_fr": "Geoffrey Hinton met en garde contre les risques de l'IA avancée",
+     "m": 3,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-24T22:38:00.000Z",
+     "title": "Geoffrey Hinton Warns of Risks From Superintelligent AI",
+     "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1ROTFnYUtBS1NLcEZVTGNBX1hUREQyZ0lrTnpnN2R2WVpmUnJHcEZLckVBN3lJUVFwMWpaa0tycF93SmxLeTk0MGQ2UUxCdF9LU0w4YWVINm5TYnV4NXQxZ1dua1ZXX0k?oc=5",
+     "source": "Peradaban.id",
+     "kind": "presse",
+     "title_fr": "Geoffrey Hinton met en garde contre les risques liés à une IA superintelligente",
      "m": 2,
      "e": 1
     },
@@ -1666,16 +1686,6 @@
      "source": "Crypto Briefing",
      "kind": "presse",
      "title_fr": "Geoffrey Hinton avertit les dirigeants de l'UE que l'IA pourrait surpasser les humains d'ici 18 mois",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-14T03:53:47.000Z",
-     "title": "AI could wipe out humans in next 3 years: Nobel laureate Geoffrey Hinton warns; says we may lose control as...",
-     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNeXBISlljOGZNa1dDTEZKSWJycVVTS3FaU2tSOWtlY3gwNUppT3ZvdXBDV2ZrSk5UUHRKOVpET0lBZl9QT0kyd0J6S0VfYWM2NVNiNXhpT2tVamxhNi1MdVRobFJjMDRBc3RBVmRwbHVnR01VUDlQYUJvaHAzei1Hd1dYME8xYS04aGNaLWF5R0x6S1RGejdmb3k2ZFVfd1VjbFRlSXJ4N3JZdWJFZXY2NndPZThGR2VIMXdWb0dyMlVZbG9OSzRxMVYtN19yaW14N2djb1l30gHbAUFVX3lxTE1RVzU3SVVFNjktQ2ZTX0xBTDg2SzNGMWl2ODVwR3k5ejRtbkZIZzBCUWwxN2N3QjRXeWIyMUU5U3h1cDV0eTlGR3psSnhSZ1BhTFlZY1BFVGl2ODJ4Z3UtZzNEM3NhdXpkUHVGXzc4ZURYbjVuR0NxcmJuaEs4SzVBZkI1V255Q2d3LTd0Wk9HRTBkR2N1Q2hqdFJkZWE4WlpueEpIZUhraU5GVHZCbWlOUE9lOFItbVFoNmh1enU4bW12TlBUaDZGTFY2SmIyOXplSDdjWjB5UkpuTQ?oc=5",
-     "source": "Bhaskar English",
-     "kind": "presse",
-     "title_fr": "L'IA pourrait anéantir les humains au cours des 3 prochaines années : avertit le prix Nobel Geoffrey Hinton ; il affirme que nous pourrions perdre le contrôle alors que...",
      "m": 1,
      "e": 0
     }
@@ -1836,13 +1846,23 @@
    ],
    "items": [
     {
+     "ts": "2026-11-27T00:18:00.000Z",
+     "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
+     "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
+     "source": "ABC News",
+     "kind": "presse",
+     "title_fr": "Le président Donald Trump annonce la création d'un groupe de travail sur l'IA baptisé « Super Intelligence Force »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-24T06:06:12.000Z",
      "title": "Nvidia reinstates Jensen Huang after Trump speaks ‘directly’ to board",
      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOQmNHaTN2YnhWcEZ0QVVkbkdNamZzRU5VWFRYd0JhaDVpaEpveDRzc2F6X21RS1lqZjIxbVZUaXhsYllvelpqQjdfYWtuYm0yVUV4eEdoT00xNV9aalVLSm9SNFVReTZQVXpqU2Z5WXBwNHo0RDBfY2FuaENWUy16UHNPU1E0eV9pUGN5VlByS0RzM09BS1NVQ3FlbENIMjB6WkcyQ2lOb3BRUldJZHJBdW1Ebm8yZVk?oc=5",
      "source": "The Washington Post",
      "kind": "presse",
      "title_fr": "Nvidia réintègre Jensen Huang après que Trump a parlé « directement » au conseil d'administration",
-     "m": 3,
+     "m": 2,
      "e": 1
     },
     {
@@ -1872,7 +1892,7 @@
      "source": "The Washington Post",
      "kind": "presse",
      "title_fr": "Trump exhorte Nvidia à réintégrer Jensen Huang, le qualifiant de « meilleure chose » pour les États-Unis",
-     "m": 3,
+     "m": 2,
      "e": 1
     },
     {
@@ -1892,7 +1912,7 @@
      "source": "NBC News",
      "kind": "presse",
      "title_fr": "Trump affirme avoir parlé « directement et indirectement » avec le conseil d'administration de Nvidia au sujet de la réintégration de Jensen Huang",
-     "m": 3,
+     "m": 2,
      "e": 1
     },
     {
@@ -1902,17 +1922,7 @@
      "source": "BBC",
      "kind": "presse",
      "title_fr": "Donald Trump affirme avoir « convaincu » Nvidia de réintégrer Jensen Huang",
-     "m": 3,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-23T16:40:00.000Z",
-     "title": "Trump says he ‘convinced’ Nvidia board to reinstate Jensen Huang",
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQQnpMZDZ5QWdIdklHQzlnZ3JyYXJSc0d3WHo4cFN1QkY2ejhWbVNlRnVkQ0czeWI0Zm1iOEVsWUFONzhQbjdRTXQyZDA1MDNwR0JYaVVkZ0kyVVRXWEkzWVptMkpNMFNTdmhrMlpDcW01N3NPcFlNSUJTdHZQOWYwWEdsMjZpYkw0U2Nvc3IxSXdJamtIOXdOWWxPX0F3TENUdUZMdFJvUdIBrAFBVV95cUxNUzdkeExVOUJ5a1RjUDhyQ2ZtNmVTanZJT28taVp1bk00MlQyd2xCdHZ2WXpuSEJWR0FSTlNzT1FDdlM1UEFOT045MnU3Z1kwY1laZ0dNMWljdmZQcHNQZlhtRUxsdEd0MWJPN0QtWEVJVzExbFQtaUxwTUQtMjdDdGVvQm9VTU83SDBYcVBfT1d4RXBqeXN2R2I4d1FMcE1LNWxrQ05oR3Rxcy1C?oc=5",
-     "source": "The Hill",
-     "kind": "presse",
-     "title_fr": "Trump affirme avoir « convaincu » le conseil d'administration de Nvidia de réintégrer Jensen Huang",
-     "m": 4,
+     "m": 2,
      "e": 1
     }
    ]
@@ -2461,6 +2471,12 @@
    "actor": null,
    "alerts": [
     {
+     "ts": "2026-11-26T11:30:36.000Z",
+     "title": "Michael Burry Turns Bullish, Exits Nasdaq Shorts but Eyes Nvidia at $200",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOEVtandiRGZfcDliRTkwcnVOYkV5aWFTQ1RmbHUydF9HV3BYYTZQM2VEOE1hS2EzWHBXcTVSMmxHMlVVRUNWaGJyMFpmX3BsZ3NuQjA1TmNoaXFYR196RjYzUkVLakg4VTViUkhrTUhDUV9RcXdIQlZ5QXlGbXJ1ZUVvZ3ZkU0dlTlNpd3RQbkc3LWRRdUFIelNHSVk1WlU?oc=5",
+     "source": "Yahoo Finance"
+    },
+    {
      "ts": "2026-11-24T07:45:33.000Z",
      "title": "Michael Burry cuts Nvidia puts by 75%, exits semiconductor ETF puts (NVDA:NASDAQ)",
      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYkUzbHVfNW0wTm9rLUxqQ2tFcU03NWQ1X2RzenlwS0FUTFgzRmF2OFpyUW9pS0RRNUsydUVDSVY0S01TWllvcHNURDMweXFzc0dXalczZ3F0dl9BR3VObU9NR21YbDZZaXBhVFZiSXFpQUNvQThTSy1rX3I5c2EzSW9IMmp5Um5teWE0TVNRRGVpMXhUYXpGMVZQSHVxQmtEUGx3LVZ3?oc=5",
@@ -2468,6 +2484,16 @@
     }
    ],
    "items": [
+    {
+     "ts": "2026-11-26T11:30:36.000Z",
+     "title": "Michael Burry Turns Bullish, Exits Nasdaq Shorts but Eyes Nvidia at $200",
+     "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOEVtandiRGZfcDliRTkwcnVOYkV5aWFTQ1RmbHUydF9HV3BYYTZQM2VEOE1hS2EzWHBXcTVSMmxHMlVVRUNWaGJyMFpmX3BsZ3NuQjA1TmNoaXFYR196RjYzUkVLakg4VTViUkhrTUhDUV9RcXdIQlZ5QXlGbXJ1ZUVvZ3ZkU0dlTlNpd3RQbkc3LWRRdUFIelNHSVk1WlU?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Michael Burry devient optimiste, clôture ses positions courtes sur le Nasdaq mais surveille Nvidia à 200 dollars",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-25T22:59:31.000Z",
      "title": "Michael Burry closes his Nasdaq bets and shifts to value, but still plans an Nvidia short",
@@ -2535,16 +2561,6 @@
      "source": "Seeking Alpha",
      "kind": "presse",
      "title_fr": "Michael Burry réduit de 75 % ses options de vente sur Nvidia et solde ses options sur l'ETF des semi-conducteurs (NVDA:NASDAQ)",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-24T03:45:00.000Z",
-     "title": "Michael Burry Sold Half His NVIDIA Puts Before Huang's Return Sparked a 31% Rally",
-     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNRXBiY0N5VnRXb2dIaDR5ZVBSSEJ5UW55M24td2lPSGdnZ0tVdXRHd3pKNWRJaHNLYXJFSmpibFhiRlFKOVloY3I2Qno2cVJiRXRjY3E0bFBmU2xhc0NKS1pIVFlsNVUyTDc0WS1KeTh4YWd3a2I3UWV0QW5YREktbmNDMnBVR0pxdGQtZjhMbEp2Qk9yYzlHOXl2aGM?oc=5",
-     "source": "Yahoo Finance",
-     "kind": "presse",
-     "title_fr": "Michael Burry a vendu la moitié de ses options de vente sur Nvidia avant que le retour de Huang ne déclenche une hausse de 31 %",
      "m": 1,
      "e": 0
     }
@@ -3405,6 +3421,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-27T09:05:00.000Z",
+     "title": "Palantir Co-Founder Peter Thiel Buys $122 Million of Stock as Shares Hit Four-Month Low",
+     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVd0FjYmpHdTg1a3o5Q1JhaE5IdlBQaXR4WU5uUlMwd3JiaVpVZlBYNzdKYmlNU1o5U1k4OXVhN0FxNGdyUEdNQVJoWHVtRDRieURLcXlLdDBfdkdDWm1Bd2JURFlhR0ZDZnVEU0F0OGY4R0d0YkE?oc=5",
+     "source": "BigGo Finance",
+     "kind": "presse",
+     "title_fr": "Le cofondateur de Palantir, Peter Thiel, achète pour 122 millions de dollars d'actions alors que le titre atteint son plus bas niveau en quatre mois",
+     "m": 4,
+     "e": 1
+    },
+    {
      "ts": "2026-11-26T00:51:21.000Z",
      "title": "Peter Thiel Buys $122.3 Million in Palantir Stock",
      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPWVo2blZUSFprV2Y0Y1E1UlpGdHFBZHBxRmJsZXlZUkpfNzMwcDlqSnByY2VoLXB6ZEppWE0zMUJVdzZWUi0zWDRWMkoyTm03RjFHekFNVnZVckNFUWtSdWNWdW8xOEZpM05kX2s4X2VLV1JReXd5cDJJYm5wN2FXR253NmhMMm1veDZLeDByMmdkeTZyXzNEZ1g5c3pqTjN4TzJPOFA2Ui10amxzVFZCVEJ4ZHNpUWtmVDdGWjA1NXZ5aTIxdG9ZMkFCanM?oc=5",
@@ -3421,7 +3447,7 @@
      "source": "Techi",
      "kind": "presse",
      "title_fr": "Peter Thiel a acheté pour 122 millions de dollars d'actions Palantir lors de leur point bas de novembre, selon des documents réglementaires",
-     "m": 2,
+     "m": 3,
      "e": 1
     },
     {
@@ -3471,17 +3497,7 @@
      "source": "TipRanks",
      "kind": "presse",
      "title_fr": "Action Palantir : l'investisseur milliardaire Peter Thiel achète pour 122 millions de dollars pendant la baisse",
-     "m": 4,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-25T10:14:22.000Z",
-     "title": "American billionaire Peter Thiel buys $122 million of Palantir shares as stock slides",
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNbVZkR2tBZDNrTjdXV1B5ZnRvMGVzVURRR1FKbFlQbEFmNUE3RnBzUzRzRmlUOFN4UUVaaGJ4ZWNXbnV3aW5xd01wYlpUb0F1ODBDajVwaTZIR3RHSklVTG1Qc2UxUTdtdjJNWFJGUFltR1UzTFdsMFE1d2wwRE5QbmF6YmNVeVcxNk0wSHl0OXdpY0MyNEhfaGFSSFAzMFpQbndoWjBDaVBCak9MZjhzQ1JHeFI5NzVCcURuNXFHWmRYSDF6bzJN?oc=5",
-     "source": "Billionaires.Africa",
-     "kind": "presse",
-     "title_fr": "Le milliardaire américain Peter Thiel achète pour 122 millions de dollars d'actions Palantir alors que le titre chute",
-     "m": 4,
+     "m": 3,
      "e": 1
     }
    ]
@@ -4180,6 +4196,16 @@
      "e": 0
     },
     {
+     "ts": "2026-11-17T14:55:57.000Z",
+     "title": "Kevin Warsh says Fed staff are modelling AI from boom to slowdown",
+     "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQa3hHUTJVTHVXZHdFdjE1TUczNlNjZ3IwMEhqZENzTG16aVZGZFZadVY5RUdpakUwYzI4M00xSEtxZEpsMWhKbDVQQUJFbFhQMnFKVlpFRl92cWNaakVfQ0ZhTndublhqOF9wclNGLUJEblpXdXZpNjJUaTFBU0xMb3loUFpOXzNDTWN4emxR?oc=5",
+     "source": "The Next Web",
+     "kind": "presse",
+     "title_fr": "Kevin Warsh déclare que le personnel de la Fed modélise l'IA, du boom au ralentissement",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-17T03:11:17.000Z",
      "title": "Fed Chair Kevin Warsh warned that AI could trigger job losses or a stock bust if it disappoints",
      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1pWEw0UWFBNENEZnNwRnI2Z3hTb3p0RFdtZjJWUGFiSElqS0JkN2VOd3FheWZQU2pPVlJaUEZveTR6VE5qTHJkaU9BRDRGVjMzN3dlYTVSd3l3ckRzbFpVMWRtRHpHeFZvT2FuRG93?oc=5",
@@ -4225,19 +4251,9 @@
      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOQjdTNjl1UUgxQjFiMEFHRXl6UHlheGRXQ1NkTXJRbnlSaWxIdElaeGh4cjUtYzVEdXM2NlZUdEoyTjhWcXFiMGxtUFIydjhHcF80bmhqb1lpY01ReEF3bTdUV1hNSi1QTVJiUnRYeWl0NHRhMWVWdW9vWFk0aFA3Z082b2htY29zM0ZKMHVKd2JmNnM5U1NBS1owVXlKcy1wZzREazFJSjJzQVIzQlZJ?oc=5",
      "source": "WSJ",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
+     "m": 1,
+     "e": 0,
      "title_fr": "Warsh déclare que la Fed évalue comment l'IA pourrait remodeler l'économie"
-    },
-    {
-     "ts": "2026-11-16T17:53:00.000Z",
-     "title": "How will AI shake up the economy? Warsh says the Fed is starting to figure that out.",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPREVNTGtQT01SYjJvVzZsRENIWFpVY1Z6bUc5YWplU0NEbGY2YzBDc0ZfNkhRZ1YtWkRuOURfX0R2TVM3dWR4S2xRVWFNRHdEOVotS20tcHN1VzJReTZQbF93Rl9tTTFnWERXU1BFSjl5ck5kUzZUR05VU2hpUkdHa1N1MlpBQzZoZFRsVk5tSGZob0pDNFhtT2cydnBLWFdkcWdiZlFmY1I4NC1OeXNiX1RTUks4SndseTIyYjdPRk90aXc?oc=5",
-     "source": "MarketWatch",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Comment l'IA va-t-elle bouleverser l'économie ? Warsh déclare que la Fed commence à le comprendre."
     }
    ]
   },
@@ -6238,14 +6254,24 @@
      "e": 0
     },
     {
+     "ts": "2026-11-26T07:41:38.000Z",
+     "title": "Bernie Sanders Calls For Pause on Advanced AI Development",
+     "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOa2NmMzV5dlFnNFpqQW9peVVUZGdpc0VWMUlaOV9ja3loczNPcnFEN3MxVFlObDlOZTdhMlAwb08xaHl0cVhMZFlnTWF1LTdVUy1CendJOU51VTFTSGNiQ3F5bXViUkFZN0JBN3REeWQtU2Q4WmlNdHMwbVozX0dQYVpR?oc=5",
+     "source": "Times Of AI",
+     "kind": "presse",
+     "title_fr": "Bernie Sanders appelle à une pause dans le développement de l'IA avancée",
+     "m": 2,
+     "e": 1
+    },
+    {
      "ts": "2026-11-25T19:25:35.000Z",
      "title": "Bernie Sanders Urges Congress to Immediately Halt Advanced AI Development",
      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFByTU93MGdUenRDVkZVT19ieHcwU0JsYkNVOXQtTW9vbHZEWGhweElVdFJobmlVRUd4S0QwOGduUktFaS1hUjA0RW43dU1JMjhHb2VRdg?oc=5",
      "source": "bloomingbit",
      "kind": "presse",
      "title_fr": "Bernie Sanders exhorte le Congrès à suspendre immédiatement le développement de l'IA avancée",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-23T01:03:00.000Z",
@@ -6302,7 +6328,21 @@
  ],
  "hot": [
   {
-   "score": 0.97,
+   "score": 1.92,
+   "id": "peter-thiel",
+   "n": "Peter Thiel",
+   "role": "Cofondateur de Palantir, investisseur",
+   "actor": null,
+   "ts": "2026-11-27T09:05:00.000Z",
+   "title": "Palantir Co-Founder Peter Thiel Buys $122 Million of Stock as Shares Hit Four-Month Low",
+   "title_fr": "Le cofondateur de Palantir, Peter Thiel, achète pour 122 millions de dollars d'actions alors que le titre atteint son plus bas niveau en quatre mois",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVd0FjYmpHdTg1a3o5Q1JhaE5IdlBQaXR4WU5uUlMwd3JiaVpVZlBYNzdKYmlNU1o5U1k4OXVhN0FxNGdyUEdNQVJoWHVtRDRieURLcXlLdDBfdkdDWm1Bd2JURFlhR0ZDZnVEU0F0OGY4R0d0YkE?oc=5",
+   "source": "BigGo Finance",
+   "kind": "presse",
+   "outlets": 4
+  },
+  {
+   "score": 0.78,
    "id": "christophe-fouquet",
    "n": "Christophe Fouquet",
    "role": "PDG d'ASML",
@@ -6316,32 +6356,18 @@
    "outlets": 1
   },
   {
-   "score": 0.71,
-   "id": "mustafa-suleyman",
-   "n": "Mustafa Suleyman",
-   "role": "Directeur de Microsoft AI",
-   "actor": "microsoft",
-   "ts": "2026-11-26T18:01:59.000Z",
-   "title": "Microsoft AI CEO Suleyman Says AI Chip Glut Fears Are Misplaced",
-   "title_fr": "Le PDG de Microsoft AI, Suleyman, affirme que les craintes d'une surabondance de puces IA sont infondées",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE4yZ2twclhiNWxZRDBjbUcwSzl5VXh4OHNhN3RmSUlESHJOdmpMYkRJSC05RHd3aGp6Tm1NUVJFX1ZtOEFCQ2tMTlZHZXg0Q1h1WHp4bkJFdEs2aEU?oc=5",
-   "source": "www.tokenpost.com",
-   "kind": "presse",
-   "outlets": 2
-  },
-  {
-   "score": 0.38,
-   "id": "jd-vance",
-   "n": "JD Vance",
-   "role": "Vice-président des États-Unis",
+   "score": 0.74,
+   "id": "donald-trump",
+   "n": "Donald Trump",
+   "role": "Président des États-Unis",
    "actor": null,
-   "ts": "2026-11-26T01:19:41.000Z",
-   "title": "Why does JD Vance say Nvidia CEO Jensen Huang does not need a pardon?",
-   "title_fr": "Pourquoi JD Vance dit-il que le PDG de Nvidia, Jensen Huang, n'a pas besoin de grâce présidentielle ?",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNSWpwbTN0Wk9UVFZEN2gxdTczWl9Yenc0MUVGbkFLM2hCMXFEVE5vNXdSREFhZ3dkdlppd0g1STd1VmtvdERrUHlnX2syQnVuR3JVaW5jMEFPRG55VmpMRXFZMUNSQXNsU01TMEhXemlWRXo3eTZDQ0hRODE0cUkwMW5hdk85ZlJMV3ZaNHg3cDVLYWpqcnZXTG4zT2NLMG1Qal9QM1FR0gGrAUFVX3lxTFBLejNsb1o4WWEzYnJydlo1YmN2LU03TldjZW85UDgtd3MtZ1dyVFdTUEJoZFdweWZ2QTFZR2wzazRfLXctTkFMRGp4RFhydzF3aWpBLUV5VmsyeUtoTDVTRjRoLTV0b0JJaEY2Wjg1N2oxNXZmZzlyWFJXT3RIT3NlQmI1aFd4REpvQkJGbnV5UGtQTVR3dVA5X2VVNWlfbzJpRUlvYlhwRG1qSQ?oc=5",
-   "source": "Mathrubhumi English",
+   "ts": "2026-11-27T00:18:00.000Z",
+   "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force",
+   "title_fr": "Le président Donald Trump annonce la création d'un groupe de travail sur l'IA baptisé « Super Intelligence Force »",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5",
+   "source": "ABC News",
    "kind": "presse",
-   "outlets": 4
+   "outlets": 1
   }
  ]
 }

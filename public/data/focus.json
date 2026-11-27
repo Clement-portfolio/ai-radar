@@ -5,17 +5,17 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-27T07:26:23.535Z",
+ "generated_at": "2026-11-27T10:15:09.144Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "16b9ff9d80af+2102dfd65a58+42272da9d711+71be7d2dfb67+9cbfa8def305+a5c3b4d779ea+db6892e02d02+dc69baa5c634+dc7f497f02ae",
-  "0b2bb97c838c+1c0a1e1598f2+1f4442c16c3a+276b2f2f3253+3a6c6f14ac09+4044a23d60df+4bfe93df2b61+55a943f96493+56b86a5d7fbf+68a0e195ceda+83425ff88d62+86f36aa729ca+8f59468d24fe+9daa256e2871+ac55a4874f2b+ad3978edda31+ad546544b1c7+bf1bbceebeaf+d2a4386c874f+efa75c0d5fa1",
+  "16b9ff9d80af+2102dfd65a58+42272da9d711+71be7d2dfb67+9cbfa8def305+a5c3b4d779ea+db6892e02d02+dc7f497f02ae",
+  "0b2bb97c838c+1c0a1e1598f2+1f4442c16c3a+276b2f2f3253+3a6c6f14ac09+4044a23d60df+4119648053d3+4bfe93df2b61+56b86a5d7fbf+68a0e195ceda+83425ff88d62+86f36aa729ca+8f59468d24fe+9daa256e2871+ac55a4874f2b+ad546544b1c7+bf1bbceebeaf+d2a4386c874f+efa75c0d5fa1",
   "1343f7f3b435+379e55a2e099+506b74d1aabd+740f81f2e5d1+7a7175ef0317+a7509ef32f2e+ac6e047a0164+b0576938c855+c52f36f68e67+d59a9fd96499+e9a493fbbd87+ea7846207d79",
   "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+c8ea64c1c7c6",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
   "0a0218381e56+3430cc86f807+3f483ec94a3c+4d34ad2c63d7+6600f56df21a+76a1ecfd8e4b+7a59d4c41a3e+84e6033d7025+99360c4211a2+a59b740fd89d+b7175444dd03+b8e5519408fd+c9c6101f6d2a+caa508a8959c+e2b7af907e84+ecab1061c917+f4aa87ac0d93+fe2f73778320",
   "767f93adc9c0+7776f1f909fa+78a8ff0c3e9e+bc5bfb43b2ec+ee27956d3b8e",
-  "2f09260e4b9f+d2c99c65552e+d9fad293ecfb"
+  "2401ceb6aca2+7f363c30c38a+a76cae0bb54d"
  ],
  "stories": [
   {
@@ -25,46 +25,22 @@
     "42272da9d711",
     "9cbfa8def305"
    ],
-   "head": "Nvidia suspend ses ventes de serveurs en Asie du Sud-Est face aux restrictions américaines",
+   "head": "Nvidia suspend ses livraisons de serveurs d'IA vers 4 pays d'Asie du Sud-Est",
    "bullets": [
-    "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
-    "Cette décision fait suite à une nouvelle règle d'exportation du Département du Commerce des États-Unis pour empêcher le contournement des sanctions contre la Chine."
+    "La mesure vise la Malaisie, Singapour, la Thaïlande et l'Indonésie, où Nvidia a ordonné l'arrêt des livraisons de serveurs avec ses puces.",
+    "Cette décision applique les règles du Département du Commerce américain pour bloquer le contournement des restrictions visant la Chine."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Nvidia suspends server sales in Southeast Asia amid US restrictions",
+   "head_en": "Nvidia suspends AI server shipments to 4 Southeast Asian countries",
    "bullets_en": [
-    "The measure affects Malaysia, Singapore, Thailand, and Indonesia.",
-    "This decision follows a new export rule from the US Department of Commerce to prevent circumventing sanctions against China."
+    "The measure targets Malaysia, Singapore, Thailand, and Indonesia, where Nvidia ordered a halt to shipments of servers containing its chips.",
+    "This decision enforces rules from the US Department of Commerce to block the evasion of restrictions targeting China."
    ],
    "ctx_ids": [],
    "ts": "2026-11-27T02:45:41.000Z"
-  },
-  {
-   "ids": [
-    "56b86a5d7fbf",
-    "1f4442c16c3a",
-    "68a0e195ceda",
-    "276b2f2f3253"
-   ],
-   "head": "Jensen Huang redevient PDG de Nvidia avec l'appui direct de Donald Trump",
-   "bullets": [
-    "Le Congrès américain annonce le lancement d'une enquête parlementaire sur les conditions du retour de Jensen Huang.",
-    "Cette intervention publique de la Maison Blanche met en lumière l'imbrication croissante entre la politique nationale et l'industrie des semi-conducteurs."
-   ],
-   "kinds": [
-    "detail",
-    "explication"
-   ],
-   "head_en": "Jensen Huang returns as Nvidia CEO with direct backing from Donald Trump",
-   "bullets_en": [
-    "The US Congress announces the launch of a parliamentary investigation into the conditions of Jensen Huang's return.",
-    "This public intervention by the White House highlights the growing intertwining of national politics and the semiconductor industry."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-27T07:11:25.000Z"
   },
   {
    "ids": [
@@ -73,22 +49,51 @@
     "ea7846207d79",
     "740f81f2e5d1"
    ],
-   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des datacenters spatiaux",
+   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données spatiaux",
    "bullets": [
-    "Le projet baptisé Starmind vise à répondre aux besoins croissants en calcul pour l'intelligence artificielle.",
-    "Cette initiative permet de contourner les contraintes énergétiques terrestres face aux besoins massifs futurs."
+    "Le projet est baptisé Starmind et vise à soutenir les besoins en calcul liés à l'intelligence artificielle.",
+    "Cette constellation doit permettre de contourner les contraintes énergétiques terrestres et de répondre à la demande de puissance de calcul."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for space datacenters",
+   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for space-based data centers",
    "bullets_en": [
-    "The project named Starmind aims to meet the growing computing needs for artificial intelligence.",
-    "This initiative helps bypass terrestrial energy constraints in the face of massive future needs."
+    "The project is named Starmind and aims to support computing needs related to artificial intelligence.",
+    "This constellation is intended to bypass terrestrial energy constraints and meet the demand for computing power."
    ],
    "ctx_ids": [],
    "ts": "2026-11-27T04:13:09.000Z"
+  },
+  {
+   "ids": [
+    "6b5ed59faea8",
+    "2734842cc26d",
+    "5d42c8972e7d",
+    "6e8e5a329bec"
+   ],
+   "head": "TSMC envisage une usine de 22,6 milliards de dollars au Texas pour les puces de 2 nm",
+   "bullets": [
+    "Le projet prévoit une implantation dans le comté de Brazos pour un achèvement visé d'ici 2031.",
+    "Cet investissement vise à répondre à la demande de production pour les semi-conducteurs avancés dédiés à l'intelligence artificielle.",
+    "TSMC soulignait déjà une pénurie persistante de capacités de production de puces avancées face à la demande d'IA."
+   ],
+   "kinds": [
+    "detail",
+    "explication",
+    "contexte"
+   ],
+   "head_en": "TSMC considers a 22.6 billion dollar plant in Texas for 2nm chips",
+   "bullets_en": [
+    "The project plans a location in Brazos County with a targeted completion by 2031.",
+    "This investment aims to meet production demand for advanced semiconductors dedicated to artificial intelligence.",
+    "TSMC had already pointed out a persistent shortage of advanced chip manufacturing capacity in the face of AI demand."
+   ],
+   "ctx_ids": [
+    "cbeaa4c5a54e"
+   ],
+   "ts": "2026-11-25T09:42:03.000Z"
   }
  ]
 }

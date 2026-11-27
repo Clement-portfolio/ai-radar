@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-27T01:26:00.189Z",
+ "updated_at": "2026-11-27T10:15:09.144Z",
  "companies": [
   {
    "name": "Nvidia",
@@ -57,7 +57,7 @@
      }
     ],
     "concept": "Revenues",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/0001045810-26-000075-index.htm"
    },
    "capex": {
@@ -69,7 +69,7 @@
     "filed": "2026-08-26",
     "accn": "0001045810-26-000075",
     "concept": "PaymentsToAcquireProductiveAssets",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/0001045810-26-000075-index.htm"
    },
    "backlog": {
@@ -81,7 +81,7 @@
     "filed": "2026-08-26",
     "accn": "0001045810-26-000075",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/0001045810-26-000075-index.htm"
    },
    "stakes": [
@@ -106,7 +106,7 @@
      "filed": "2026-02-25"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "AMD",
@@ -164,7 +164,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/0000002488-26-000191-index.htm"
    },
    "capex": {
@@ -176,7 +176,7 @@
     "filed": "2026-11-04",
     "accn": "0000002488-26-000191",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/0000002488-26-000191-index.htm"
    },
    "backlog": {
@@ -188,7 +188,7 @@
     "filed": "2026-11-04",
     "accn": "0000002488-26-000191",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/0000002488-26-000191-index.htm"
    },
    "stakes": [
@@ -203,7 +203,7 @@
      "filed": "2026-11-04"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Broadcom",
@@ -261,7 +261,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.htm"
    },
    "capex": {
@@ -273,7 +273,7 @@
     "filed": "2026-09-10",
     "accn": "0001730168-26-000080",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.htm"
    },
    "backlog": {
@@ -285,11 +285,11 @@
     "filed": "2026-09-10",
     "accn": "0001730168-26-000080",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.htm"
    },
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Marvell",
@@ -347,7 +347,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/0001835632-26-000025-index.htm"
    },
    "capex": {
@@ -359,7 +359,7 @@
     "filed": "2026-08-28",
     "accn": "0001835632-26-000025",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/0001835632-26-000025-index.htm"
    },
    "backlog": null,
@@ -375,7 +375,7 @@
      "filed": "2026-08-28"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Micron",
@@ -433,7 +433,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm"
    },
    "capex": {
@@ -445,7 +445,7 @@
     "filed": "2026-10-09",
     "accn": "0000723125-26-000023",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm"
    },
    "backlog": {
@@ -457,11 +457,11 @@
     "filed": "2026-10-09",
     "accn": "0000723125-26-000023",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm"
    },
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Intel",
@@ -519,7 +519,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000191/0000050863-26-000191-index.htm"
    },
    "capex": {
@@ -531,7 +531,7 @@
     "filed": "2026-10-30",
     "accn": "0000050863-26-000191",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000191/0000050863-26-000191-index.htm"
    },
    "backlog": null,
@@ -547,7 +547,7 @@
      "filed": "2026-10-30"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Amkor",
@@ -605,7 +605,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/0001047127-26-000052-index.htm"
    },
    "capex": {
@@ -617,12 +617,12 @@
     "filed": "2026-10-27",
     "accn": "0001047127-26-000052",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/0001047127-26-000052-index.htm"
    },
    "backlog": null,
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Microsoft",
@@ -680,7 +680,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm"
    },
    "capex": {
@@ -692,7 +692,7 @@
     "filed": "2026-10-28",
     "accn": "0001193125-26-436133",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm"
    },
    "backlog": {
@@ -704,11 +704,11 @@
     "filed": "2026-10-28",
     "accn": "0001193125-26-436133",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm"
    },
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Alphabet",
@@ -766,7 +766,7 @@
      }
     ],
     "concept": "Revenues",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm"
    },
    "capex": {
@@ -778,7 +778,7 @@
     "filed": "2026-10-29",
     "accn": "0001652044-26-000084",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm"
    },
    "backlog": {
@@ -790,7 +790,7 @@
     "filed": "2026-10-29",
     "accn": "0001652044-26-000084",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm"
    },
    "stakes": [
@@ -805,7 +805,7 @@
      "filed": "2026-10-29"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Amazon",
@@ -863,7 +863,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm"
    },
    "capex": {
@@ -875,7 +875,7 @@
     "filed": "2026-10-30",
     "accn": "0001018724-26-000040",
     "concept": "PaymentsToAcquireProductiveAssets",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm"
    },
    "backlog": null,
@@ -891,7 +891,7 @@
      "filed": "2026-10-30"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Meta",
@@ -949,7 +949,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.htm"
    },
    "capex": {
@@ -961,12 +961,12 @@
     "filed": "2026-10-22",
     "accn": "0001628280-26-066773",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.htm"
    },
    "backlog": null,
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Cisco",
@@ -1024,7 +1024,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000185/0000858877-26-000185-index.htm"
    },
    "capex": {
@@ -1036,7 +1036,7 @@
     "filed": "2026-11-17",
     "accn": "0000858877-26-000185",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000185/0000858877-26-000185-index.htm"
    },
    "backlog": {
@@ -1048,7 +1048,7 @@
     "filed": "2026-11-17",
     "accn": "0000858877-26-000185",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000185/0000858877-26-000185-index.htm"
    },
    "stakes": [
@@ -1063,7 +1063,7 @@
      "filed": "2026-11-17"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Arista",
@@ -1121,7 +1121,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000254/0001596532-26-000254-index.htm"
    },
    "capex": {
@@ -1133,12 +1133,12 @@
     "filed": "2026-11-04",
     "accn": "0001596532-26-000254",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000254/0001596532-26-000254-index.htm"
    },
    "backlog": null,
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Credo",
@@ -1196,7 +1196,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/0001628280-26-060111-index.htm"
    },
    "capex": {
@@ -1208,7 +1208,7 @@
     "filed": "2026-09-02",
     "accn": "0001628280-26-060111",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/0001628280-26-060111-index.htm"
    },
    "backlog": null,
@@ -1224,7 +1224,7 @@
      "filed": "2026-09-02"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Astera Labs",
@@ -1282,7 +1282,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000045/0001736297-26-000045-index.htm"
    },
    "capex": {
@@ -1294,7 +1294,7 @@
     "filed": "2026-11-04",
     "accn": "0001736297-26-000045",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000045/0001736297-26-000045-index.htm"
    },
    "backlog": null,
@@ -1310,7 +1310,7 @@
      "filed": "2026-11-04"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Coherent",
@@ -1368,7 +1368,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000023/0000820318-26-000023-index.htm"
    },
    "capex": {
@@ -1380,12 +1380,12 @@
     "filed": "2026-11-04",
     "accn": "0000820318-26-000023",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000023/0000820318-26-000023-index.htm"
    },
    "backlog": null,
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Lumentum",
@@ -1443,7 +1443,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerIncludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026069615/0001628280-26-069615-index.htm"
    },
    "capex": {
@@ -1455,7 +1455,7 @@
     "filed": "2026-11-03",
     "accn": "0001628280-26-069615",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026069615/0001628280-26-069615-index.htm"
    },
    "backlog": null,
@@ -1471,7 +1471,7 @@
      "filed": "2026-08-17"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Amphenol",
@@ -1529,7 +1529,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/820313/000110465926120646/0001104659-26-120646-index.htm"
    },
    "capex": {
@@ -1541,7 +1541,7 @@
     "filed": "2026-10-30",
     "accn": "0001104659-26-120646",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/820313/000110465926120646/0001104659-26-120646-index.htm"
    },
    "backlog": null,
@@ -1557,7 +1557,7 @@
      "filed": "2026-10-30"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Vertiv",
@@ -1615,7 +1615,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/0001628280-26-067893-index.htm"
    },
    "capex": {
@@ -1627,7 +1627,7 @@
     "filed": "2026-10-28",
     "accn": "0001628280-26-067893",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/0001628280-26-067893-index.htm"
    },
    "backlog": null,
@@ -1643,7 +1643,7 @@
      "filed": "2026-10-28"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Eaton",
@@ -1701,7 +1701,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/0001551182-26-000040-index.htm"
    },
    "capex": {
@@ -1713,7 +1713,7 @@
     "filed": "2026-11-03",
     "accn": "0001551182-26-000040",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/0001551182-26-000040-index.htm"
    },
    "backlog": null,
@@ -1729,7 +1729,7 @@
      "filed": "2026-11-03"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "GE Vernova",
@@ -1787,7 +1787,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/0001996810-26-000163-index.htm"
    },
    "capex": {
@@ -1799,7 +1799,7 @@
     "filed": "2026-10-28",
     "accn": "0001996810-26-000163",
     "concept": "PaymentsToAcquireProductiveAssets",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/0001996810-26-000163-index.htm"
    },
    "backlog": {
@@ -1811,7 +1811,7 @@
     "filed": "2026-10-28",
     "accn": "0001996810-26-000163",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/0001996810-26-000163-index.htm"
    },
    "stakes": [
@@ -1826,7 +1826,7 @@
      "filed": "2026-10-28"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Cadence",
@@ -1884,7 +1884,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/0000813672-26-000121-index.htm"
    },
    "capex": {
@@ -1896,7 +1896,7 @@
     "filed": "2026-10-28",
     "accn": "0000813672-26-000121",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/0000813672-26-000121-index.htm"
    },
    "backlog": {
@@ -1908,7 +1908,7 @@
     "filed": "2026-10-28",
     "accn": "0000813672-26-000121",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/0000813672-26-000121-index.htm"
    },
    "stakes": [
@@ -1923,7 +1923,7 @@
      "filed": "2026-10-28"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Synopsys",
@@ -1981,7 +1981,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.htm"
    },
    "capex": {
@@ -1993,7 +1993,7 @@
     "filed": "2026-08-26",
     "accn": "0000883241-26-000025",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.htm"
    },
    "backlog": {
@@ -2005,7 +2005,7 @@
     "filed": "2026-08-26",
     "accn": "0000883241-26-000025",
     "concept": "RevenueRemainingPerformanceObligation",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.htm"
    },
    "stakes": [
@@ -2020,7 +2020,7 @@
      "filed": "2026-08-26"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "Oklo",
@@ -2035,7 +2035,7 @@
     "filed": "2026-11-06",
     "accn": "0001628280-26-071319",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026071319/0001628280-26-071319-index.htm"
    },
    "backlog": null,
@@ -2061,7 +2061,7 @@
      "filed": "2026-11-06"
     }
    ],
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "NuScale",
@@ -2119,7 +2119,7 @@
      }
     ],
     "concept": "RevenueFromContractWithCustomerExcludingAssessedTax",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1822966/000182296626000091/0001822966-26-000091-index.htm"
    },
    "capex": {
@@ -2131,12 +2131,12 @@
     "filed": "2026-11-05",
     "accn": "0001822966-26-000091",
     "concept": "PaymentsToAcquirePropertyPlantAndEquipment",
-    "fetched_at": "2026-11-26T07:26:42.142Z",
+    "fetched_at": "2026-11-27T10:15:09.144Z",
     "url": "https://www.sec.gov/Archives/edgar/data/1822966/000182296626000091/0001822966-26-000091-index.htm"
    },
    "backlog": null,
    "stakes": null,
-   "read_at": "2026-11-26T07:26:42.142Z"
+   "read_at": "2026-11-27T10:15:09.144Z"
   },
   {
    "name": "CoreWeave",
