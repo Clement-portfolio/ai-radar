@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T15:01:28.694Z",
+ "generated_at": "2026-11-27T15:50:30.249Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T15:11:28.694Z",
+ "translate_retry_at": "2026-11-27T16:00:30.249Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-27T14:59:56.000Z",
+     "title": "Elon Musk Thinks SpaceX Could Be Worth $128 Quintillion",
+     "title_fr": "Elon Musk pense que SpaceX pourrait valoir 128 quintillions de dollars",
+     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYXVLQmxONlB1clVOdUxuUjRtcEhHa3k4Nm9lQWxaRl9ma1RvbDhKV2ZlNEJ5YTI4ZlZJbmNmUXV0QjNYdlZBNnNMbV9PbDdGVUcyck5WT1NRRVlBakIxVXBjTEl5eGthdFRPVkJYYTg1dHBKVHZ1cHllQjFYb3JKVUtjeGVXV2JiQ1kxYUJTdGZRY2RMdzZZSHppdw?oc=5",
+     "source": "www.thewealthadvisor.com",
+     "kind": "presse",
+     "srcs": [
+      "www.thewealthadvisor.com"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-27T14:48:00.000Z",
      "title": "This might be the real reason Elon Musk says Tesla’s AI5 chip is going to Optimus",
      "title_fr": "C'est peut-être la vraie raison pour laquelle Elon Musk affirme que la puce AI5 de Tesla est destinée à Optimus",
@@ -260,19 +273,6 @@
      ],
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-27T01:00:00.000Z",
-     "title": "Musk vows to give away $27b in SpaceX shares in AI charm offensive",
-     "title_fr": "Musk s'engage à céder 27 milliards de dollars d'actions SpaceX lors d'une opération de charme dans l'IA",
-     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOeTF1YVJQWkwxMHFfODhQcG9nMWVIcktiYzdUdDdJQVR5STVLS280Q2JnVHhiVzdYWjFtbWdIYkFncmJpYWdrYWwtX2hxNjVQUnhWdFNkSFJJMXFVRlpJb2FpWEdIY2xscG1xU1B5VGJhQ3kzZGRVT195b29UUllHZndySWF1bDc3dG1wbTNvS3NjTmdIc1RvQi1NeVRIcldtVFlUYVgtOVZwdFlvOGg1b0N6ZWxLZElaRVFrZW1R?oc=5",
-     "source": "AFR",
-     "kind": "presse",
-     "srcs": [
-      "afr"
-     ],
-     "m": 1,
-     "e": 1
     }
    ]
   },

@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-27T15:40:47.094Z",
+ "generated_at": "2026-11-27T15:50:29.336Z",
  "items": [
   {
    "id": "3d6bcf07a0dd",
@@ -38,6 +38,21 @@
    "title_fr": "Solutions de centres de données hyperscale pour un déclassement en toute confiance",
    "title_en": "Hyperscale data center solutions for confident decommissioning",
    "summary_en": "Safe, secure, and seamless"
+  },
+  {
+   "id": "dd0a4889278b",
+   "ts": "2026-11-27T15:27:11.000Z",
+   "title": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+   "orig": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+   "summary": "AI shopping agents from OpenAI, Meta, Google and Instinct promise to help users shop, but they're hitting roadblocks at Amazon and other retailers.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+   "confidence": "moyenne",
+   "pending": true
   },
   {
    "id": "5b94218559e8",
@@ -5313,42 +5328,6 @@
    "title_fr": "L'acquisition de Decart par Amazon est un pari sur l'utilisation du logiciel pour réduire l'écart avec Nvidia dans la course aux puces IA",
    "title_en": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
    "summary_en": "Amazon’s decision to acquire Decart for a reported 7,5 milliards de dollars is part of its efforts to improve the efficiency of its Trainium chips."
-  },
-  {
-   "id": "928911c57a2c",
-   "ts": "2026-11-24T15:49:26.000Z",
-   "title": "Massed Compute déploie des GPU dans le centre de données d'American Tower à Raleigh, en Caroline du Nord",
-   "orig": "Massed Compute deploys GPUs at American Tower data center in Raleigh, North Carolina",
-   "summary": "Scale of deployment not shared",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/massed-compute-deploys-gpus-at-american-tower-data-center-in-raleigh-north-carolina/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Massed Compute déploie des GPU dans le centre de données d'American Tower à Raleigh, en Caroline du Nord",
-   "title_en": "Massed Compute deploys GPUs at American Tower data center in Raleigh, North Carolina",
-   "summary_en": "Scale of deployment not shared"
-  },
-  {
-   "id": "73d308913867",
-   "ts": "2026-11-24T15:47:17.000Z",
-   "title": "Jensen Huang fait face à un interrogatoire à Washington le jour même où Nvidia lance de nouveaux produits au GTC",
-   "orig": "Jensen Huang faces DC grilling the same day Nvidia releases new products at GTC",
-   "summary": "Jensen Huang is back as CEO of Nvidia and immediately faces the challenge of leading the chip giant and defending himself in Washington.",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "CNBC Tech",
-   "url": "https://www.cnbc.com/2026/11/24/jensen-huang-nvidia-congress-gtc.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Jensen Huang fait face à un interrogatoire à Washington le jour même où Nvidia lance de nouveaux produits au GTC",
-   "title_en": "Jensen Huang faces DC grilling the same day Nvidia releases new products at GTC",
-   "summary_en": "Jensen Huang is back as CEO of Nvidia and immediately faces the challenge of leading the chip giant and defending himself in Washington."
   }
  ]
 }
