@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T14:01:46.625Z",
+ "generated_at": "2026-11-27T14:50:35.140Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-27T14:11:46.625Z",
+ "translate_retry_at": "2026-11-27T15:00:35.140Z",
  "people": [
   {
    "id": "sam-altman",
@@ -273,6 +273,19 @@
    "actor": "microsoft",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T08:43:58.000Z",
+     "title": "Satya Nadella Says Microsoft Must Reorganize Staff Before Adding New Hires",
+     "title_fr": "Satya Nadella déclare que Microsoft doit réorganiser ses effectifs avant de procéder à de nouvelles embauches",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTkhnNjdUV0xzUGszUE4wM09UUGJiWFFHZGltM2gtTXdvdUpKaklrMFlGcnhTbmJyNDlnb1h5aTVjNVlISnROdmVUT2R5Z3kzSDdSRlBQN3d5NHBjTTBsNXRySHJJOEdKREVLVHVmbEZvLWl4ek1HU2pLV1I1MklUVDNkOWtaMlBBaVZ4QnEzNkpPRjhCei1ZR04zZjVxYkdVUnQxbVZ0N1N5VWlaa0ozX3ZJQQ?oc=5",
+     "source": "Bitcoin Foundation",
+     "kind": "presse",
+     "srcs": [
+      "bitcoin foundation"
+     ],
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-27T01:20:14.000Z",
      "title": "\"Let's add the next human\": Satya Nadella admits new-grad hiring slowed as companies rebuild around AI, and says every company will add its next person after it burns through its AI budget",
