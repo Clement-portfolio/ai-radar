@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T16:10:28.988Z",
+ "generated_at": "2026-11-27T19:03:33.289Z",
  "people": [
   {
    "id": "sam-altman",
@@ -309,6 +309,16 @@
    ],
    "items": [
     {
+     "ts": "2026-11-27T08:43:58.000Z",
+     "title": "Satya Nadella Says Microsoft Must Reorganize Staff Before Adding New Hires",
+     "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOTkhnNjdUV0xzUGszUE4wM09UUGJiWFFHZGltM2gtTXdvdUpKaklrMFlGcnhTbmJyNDlnb1h5aTVjNVlISnROdmVUT2R5Z3kzSDdSRlBQN3d5NHBjTTBsNXRySHJJOEdKREVLVHVmbEZvLWl4ek1HU2pLV1I1MklUVDNkOWtaMlBBaVZ4QnEzNkpPRjhCei1ZR04zZjVxYkdVUnQxbVZ0N1N5VWlaa0ozX3ZJQQ?oc=5",
+     "source": "Bitcoin Foundation",
+     "kind": "presse",
+     "title_fr": "Satya Nadella affirme que Microsoft doit réorganiser son personnel avant d'embaucher de nouveaux salariés",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-23T21:59:59.000Z",
      "title": "Microsoft Ignite 2026: Satya Nadella predicts rise of the ‘software factory’",
      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOMWZzT1pmRTAzNHFGa1pJQXdXQ01jYUdfNkRnR2xETUJUb0lsRWJndkV5dDhYTkRoSmtncXhDM1VNT09pQTdmaHpXbWd4TnFIclZZNEFBMTh1X3pDSzdmYWo5YTQ5S3VzaDQ0QWxQdnpPdjZpMndXanFRZ0h1Q2d4ZEQwblhLalV3WnJTWUpzWHh2aGJhb01ZTzZPUHl4eFo3ZzBoRGxXa0tGV2FCbHBUS1dEcUQ?oc=5",
@@ -376,16 +386,6 @@
      "m": 1,
      "e": 0,
      "title_fr": "Le conseil d'administration de NVIDIA doit décider de sa direction : déclare Satya Nadella à Jim Cramer"
-    },
-    {
-     "ts": "2026-11-19T07:38:30.000Z",
-     "title": "Satya Nadella Says AI Agents Will Reshape the Web, the Workforce and Cyber Defence",
-     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOLW5DaW9aSXMxNU9LY0xzN1lOZzVTUVpkVldmMndOSnJDQ0FLc01BbHdHY01fY2kyMC02TlIyYThwLWVfbHFBa21EWmc1ZGlkN3hHYjdXcUtfYzdGemUzNXR5TDRRZWtRYzVwZ2RBTmRQbDk2VG5CcUZJZmxPUE5JNnhjZmw1a2dwZml4N1NCWWpyWWQ1bzdCVEJiNUF1UGVTWEhmRjZXeGtCaXlaenFKanQtREpBdTBYbFhJ?oc=5",
-     "source": "AI Insider",
-     "kind": "presse",
-     "title_fr": "Satya Nadella déclare que les agents d'IA vont remodeler le Web, la main-d'œuvre et la cyberdéfense",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -6328,7 +6328,7 @@
  ],
  "hot": [
   {
-   "score": 1.25,
+   "score": 1,
    "id": "palmer-luckey",
    "n": "Palmer Luckey",
    "role": "Fondateur d'Anduril (défense)",
@@ -6342,7 +6342,7 @@
    "outlets": 1
   },
   {
-   "score": 1.05,
+   "score": 0.84,
    "id": "peter-thiel",
    "n": "Peter Thiel",
    "role": "Cofondateur de Palantir, investisseur",
@@ -6356,7 +6356,7 @@
    "outlets": 3
   },
   {
-   "score": 1.02,
+   "score": 0.82,
    "id": "lip-bu-tan",
    "n": "Lip-Bu Tan",
    "role": "PDG d'Intel",
