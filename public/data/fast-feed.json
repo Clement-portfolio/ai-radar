@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T13:00:44.529Z",
+ "generated_at": "2026-11-27T13:10:36.318Z",
  "items": [
+  {
+   "id": "ce94c11617a7",
+   "ts": "2026-11-27T13:00:53.000Z",
+   "title": "FCC approves SpaceX application to deploy one million satellites for data centers in space",
+   "orig": "FCC approves SpaceX application to deploy one million satellites for data centers in space",
+   "summary": "Regulator gives green light for massive constellation",
+   "country": "US",
+   "category": "regul",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/fcc-approves-spacex-application-to-deploy-one-million-satellites-for-data-centers-in-space/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "b8e218b10b9b",
    "ts": "2026-11-27T12:50:33.000Z",
