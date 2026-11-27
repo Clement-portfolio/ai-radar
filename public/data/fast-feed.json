@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-27T17:00:47.556Z",
+ "generated_at": "2026-11-27T17:20:29.701Z",
  "items": [
+  {
+   "id": "1a618304b99a",
+   "ts": "2026-11-27T17:16:00.000Z",
+   "title": "Built different: Inside TRG’s homegrown data center business",
+   "orig": "Built different: Inside TRG’s homegrown data center business",
+   "summary": "From a family-run hosting business in Atlanta to a growing data center operator in Houston",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/analysis/trg-data-center-houston-atlanta/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "7297aba0c067",
    "ts": "2026-11-27T16:30:36.054Z",
@@ -5099,24 +5114,6 @@
    "title_fr": "Tidal interdira la musique entièrement générée par IA le 9 décembre",
    "title_en": "Tidal will ban fully AI-generated music on December 9",
    "summary_en": "AI songs account for 6.3 percent of Tidal's catalog, but it's about to be zero."
-  },
-  {
-   "id": "f0a03c4829a1",
-   "ts": "2026-11-24T17:17:09.000Z",
-   "title": "Tidal commencera à interdire la musique générée par IA le mois prochain",
-   "orig": "Tidal will start banning AI-generated music next month",
-   "summary": "Tidal is officially banning AI-generated music on December 9th. As a result of this change, Tidal will delete around 29 million AI-generated songs and reject an estimated 80,000 to 85,000 tracks per day, according to Tidal music lead Robert Andersen. The move ",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "The Verge IA",
-   "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Tidal commencera à interdire la musique générée par IA le mois prochain",
-   "title_en": "Tidal will start banning AI-generated music next month",
-   "summary_en": "Tidal is officially banning AI-generated music on December 9th. As a result of this change, Tidal will delete around 29 million AI-generated songs and reject an estimated 80,000 to 85,000 tracks per day, according to Tidal music lead Robert Andersen. The move"
   }
  ]
 }
