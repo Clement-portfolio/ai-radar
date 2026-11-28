@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T13:00:47.638Z",
+ "generated_at": "2026-11-28T13:30:42.085Z",
  "items": [
   {
    "id": "3b63749cf052",
@@ -3789,42 +3789,6 @@
    "title_en": "US Army offers more land to private AI data centers, across nine sites - must include power generation",
    "summary_en": "Land next to ammo dumps now available for data center development",
    "title_fr": "L'armée américaine propose plus de terrains à des data centers IA privés sur neuf sites, avec obligation d'inclure de la production d'énergie"
-  },
-  {
-   "id": "1403f89aa6f7",
-   "ts": "2026-11-25T13:27:54.000Z",
-   "title": "Trois projets de data centers prévus autour de Phoenix, en Arizona",
-   "orig": "Three data center projects planned around Phoenix, Arizona",
-   "summary": "Projects planned in Buckeye, Eloy, and Casa Grande",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/three-data-center-projects-planned-around-phoenix-arizona/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_en": "Three data center projects planned around Phoenix, Arizona",
-   "summary_en": "Projects planned in Buckeye, Eloy, and Casa Grande",
-   "title_fr": "Trois projets de data centers prévus autour de Phoenix, en Arizona"
-  },
-  {
-   "id": "5dfeef1bce80",
-   "ts": "2026-11-25T13:22:52.000Z",
-   "title": "Le gouvernement britannique cherche un nouveau secrétaire axé sur les investissements dans l'IA, rattaché au ministre de l'IA",
-   "orig": "UK government seeks new AI investment-focused secretary, reporting to country's AI Minister",
-   "summary": "The role will interface with the Prime Minister and lead on key AI investment initiatives",
-   "country": "EU",
-   "category": "capex",
-   "importance": 1,
-   "layer": "Financement",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/uk-government-seeks-new-ai-investment-focused-secretary-reporting-to-countrys-ai-minister/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Le gouvernement britannique cherche un nouveau secrétaire axé sur les investissements dans l'IA, rattaché au ministre de l'IA",
-   "title_en": "UK government seeks new AI investment-focused secretary, reporting to country's AI Minister",
-   "summary_en": "The role will interface with the Prime Minister and lead on key AI investment initiatives"
   }
  ]
 }
