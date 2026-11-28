@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T01:40:31.134Z",
+ "generated_at": "2026-11-28T06:30:44.170Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T01:50:31.134Z",
+ "translate_retry_at": "2026-11-28T06:40:44.170Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T05:49:23.000Z",
+     "title": "Elon Musk Calls Report on Taliban Restrictions on Afghan Women’s Names ‘Extremely Troubling’",
+     "title_fr": "Elon Musk qualifie d'« extrêmement troublant » le rapport sur les interdictions des talibans concernant le nom des femmes afghanes",
+     "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5SSHFPb1FDVk5JQ2gxcHAyTXlWLXBYcmVvaTJpRnpsNjRpMXhwWDh3TEVoRWJMT1ZtTlh4QjhBSjQ0YUtvNzBNOW82QW1Denc?oc=5",
+     "source": "thekabultribune.com",
+     "kind": "presse",
+     "srcs": [
+      "thekabultribune.com"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-28T01:31:44.000Z",
      "title": "Elon Musk says he’s giving 2 SpaceX shares to every American child with an active Trump account",
      "title_fr": "Elon Musk affirme qu'il donne 2 actions SpaceX à chaque enfant américain ayant un compte Trump actif",
@@ -258,20 +271,6 @@
      ],
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-27T13:53:00.000Z",
-     "title": "Elon Musk Says All American Kids Will Get Another SpaceX Share Every Year",
-     "title_fr": "Elon Musk dit que tous les enfants américains recevront une autre action SpaceX chaque année",
-     "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNT1VYM3NQb09pRjR0WWwwSUNqaU9zRVlvYUhQU0VXTDk4VFU1S2FsWVJpdXVkeFZXREdaWnFCeXQxWWZNQldFZTlQbkNmY011Vkx2Mk1JRHVvWjU0SU80WExHYlJuZEczUjV5dGt1UjRQYWp2VVlMZjlaMXBjR2tRcklfb2lHaUNmWUMtMVpkbnVHM3RsUTZvb2dmbHRxbDJ0QW4zSW40SXhaSkM1U09TUHM1Zmd0ZE4y?oc=5",
-     "source": "24/7 Wall St.",
-     "kind": "presse",
-     "srcs": [
-      "24/7 wall st.",
-      "tradingview"
-     ],
-     "m": 2,
-     "e": 1
     }
    ]
   },
