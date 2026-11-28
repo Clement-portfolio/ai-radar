@@ -1,58 +1,33 @@
 {
  "v": 1,
- "day": "2026-11-27",
- "generated_at": "2026-11-27T07:26:23.535Z",
+ "day": "2026-11-28",
+ "generated_at": "2026-11-28T01:20:42.926Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "JPMorgan : emplois de cols blancs menacés par l'IA",
-   "value": "24 millions",
-   "sub": "Selon une note de JPMorgan, l'adoption croissante de l'intelligence artificielle met en péril ce volume d'emplois qualifiés à travers le monde.",
+   "title": "Nvidia : accord de règlement",
+   "value": "290 M$",
+   "sub": "Un montant accepté par l'entreprise pour clore un recours collectif l'accusant d'avoir trompé les investisseurs sur ses ventes de GPU en 2018.",
    "ids": [
-    "9d59d23ddd11"
+    "cfa5f57a5d29"
    ],
    "links": [
     {
-     "t": "Business Standard",
-     "u": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxObFRzb3NMenYtejh6aS16Z0VCRUZYT182NXZIeW14Nlp3TkF5azhjTjZybFBEMkFSaE9MbnBqZWg1X18xa3M4MHN5WU93dDliZmhMTXpxRXF2NXczdXdDb1IxaVdDbzNMZkJGbWN5cmRNTk1IT0g0dUVUd1pXR0htajBZekN0TEp2TEZ6RlU1bUpaZ3d1SzEtS3hEQ1hVS1YxVE4wOWNQQUtheXpOWG1tYXoyeV93SVgtSkoza0VrMFpTTGllOFdfNzRPaDMzeVZQYTdocy1jRGtndlFBLWo1RHI3NWppcGFSU2hUU3N1WTRJQmPSAfgBQVVfeXFMTlFmSHQ0TjMyYzF3VkZWQjVXZ2VIVU8zSWlvTF9UcUlqQTFDdjJEX3ZQS2FLTzNBNXRMdGo5bWpxWWxBXzV0azJ3bDBfbTJvYVI0Nm5PVExfdkNCSFJtYVp5Yi1USmxzb0JrWXBPeXhDR1VPRldkbzdoQkc2cFRvMkphOFhDV0VEbDBsRFFXNDVFejZvcTVSZVhOZU5QbDdjUjJ1bXJOOFpTY0ZnQ3hFSkJZNWk0aUczemlkbmFMWkUtMHkwcVZESnoxc0dZcU9EblRLT01WcktZajFfTzMtaG9FcEVYdjVoejlfbXRoZlBib1NGMUpCQjk?oc=5"
+     "t": "Tom's Hardware",
+     "u": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-agrees-to-usd290-million-settlement-over-2018-crypto-mining-gpu-sales-ends-eight-year-investor-lawsuit-without-admitting-wrongdoing"
     }
    ],
    "conf": "moyenne",
    "scope": "day",
-   "ts": "2026-11-27T05:07:42.000Z",
-   "title_en": "JPMorgan: White-collar jobs threatened by AI",
-   "value_en": "24 million",
-   "sub_en": "According to a JPMorgan note, the growing adoption of artificial intelligence puts this volume of skilled jobs at risk globally."
+   "ts": "2026-11-27T11:30:00.000Z",
+   "title_en": "Nvidia: settlement agreement",
+   "value_en": "$290 million",
+   "sub_en": "An amount agreed by the company to close a class action lawsuit accusing it of misleading investors over its 2018 GPU sales."
   },
   {
-   "title": "Union européenne : investissement dans l'IA et le quantique",
-   "value": "50 Md€",
-   "sub": "L'Union européenne prévoit un fonds de 50 milliards d'euros pour soutenir les technologies critiques comme l'intelligence artificielle et l'informatique quantique.",
-   "ids": [
-    "a72ddf481a1e",
-    "c60cd8412b39"
-   ],
-   "links": [
-    {
-     "t": "Channel Newsasia",
-     "u": "https://www.channelnewsasia.com/world/eu-plans-50-billion-euro-investment-in-ai-quantum-computing-6581386"
-    },
-    {
-     "t": "Al-sharq Al-awsat",
-     "u": "https://english.aawsat.com/node/5345450"
-    }
-   ],
-   "conf": "moyenne",
-   "scope": "week",
-   "ts": "2026-11-25T10:51:00.000Z",
-   "title_en": "European Union: Investment in AI and quantum",
-   "value_en": "€50B",
-   "sub_en": "The European Union plans a €50 billion fund to support critical technologies such as artificial intelligence and quantum computing."
-  },
-  {
-   "title": "JPMorgan : vague de dettes pour l'IA en 2027",
+   "title": "JPMorgan : dette pour l'IA en 2027",
    "value": "450 Md$",
-   "sub": "Selon JPMorgan, les entreprises devraient emprunter ce montant sur les marchés obligataires en 2027 pour financer leurs dépenses d'investissement en IA.",
+   "sub": "Une vague de dettes que les entreprises devraient émettre sur les marchés obligataires pour financer leurs investissements en IA avant une stabilisation.",
    "ids": [
     "c38765969e36"
    ],
@@ -65,9 +40,29 @@
    "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-25T21:50:36.000Z",
-   "title_en": "JPMorgan: AI debt wave in 2027",
-   "value_en": "$450B",
-   "sub_en": "According to JPMorgan, companies are expected to borrow this amount on bond markets in 2027 to finance their AI capital expenditures."
+   "title_en": "JPMorgan: AI debt in 2027",
+   "value_en": "$450 billion",
+   "sub_en": "A wave of debt that companies are expected to issue on bond markets to fund their AI capital expenditures before a plateau in growth."
+  },
+  {
+   "title": "Nvidia : revenus du trimestre",
+   "value": "115,8 Md$",
+   "sub": "En hausse de 20 % par rapport au trimestre précédent (96,2 Md$) et en hausse de 103 % sur un an. Le bénéfice par action dilué non-GAAP s'est établi à 2,68 $.",
+   "ids": [
+    "55e7265b76e2"
+   ],
+   "links": [
+    {
+     "t": "Nvidia (communiqué de résultats, SEC)",
+     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
+    }
+   ],
+   "conf": "haute",
+   "scope": "month",
+   "ts": "2026-11-17T21:20:51.000Z",
+   "title_en": "Nvidia: quarterly revenue",
+   "value_en": "$115.8 billion",
+   "sub_en": "Up 20% from the previous quarter ($96.2 billion) and up 103% year-over-year. Non-GAAP diluted earnings per share came in at $2.68."
   }
  ]
 }

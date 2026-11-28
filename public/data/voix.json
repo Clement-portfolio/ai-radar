@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-27T19:03:33.289Z",
+ "generated_at": "2026-11-28T01:20:42.926Z",
  "people": [
   {
    "id": "sam-altman",
@@ -784,6 +784,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T01:20:51.000Z",
+     "title": "Amazon’s AI business is growing 440x faster than early AWS, says Jassy",
+     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81NkxTd2ZBSVJYQzZYNGdLRDJlMVVPU2w0TFR3Tm1MQVRIbU13OWhpaWVKRFpLc3JuNk8xbGFkY25pT3VaRlBxU1I1WGt4TGliN2l3b19IVzFDTzMwd1dFTm1sRzl5MVhFcjN3T2dhOA?oc=5",
+     "source": "Crypto Briefing",
+     "kind": "presse",
+     "title_fr": "L'activité de l'IA d'Amazon se développe 440 fois plus vite que les débuts d'AWS, déclare Jassy",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-19T08:02:00.000Z",
      "title": "Amazon’s Andy Jassy has one go-to interview question: if you can’t answer on the spot, it’s over",
      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQem4ycC1jc293Z2NBRGtnRFEwMmJkUDhqOTRVYzM0RnZqbWk5azh6QVF3cE1YLTJLcDVkei1pSW9NTnF2RVFnZTlnSS1RYnl3aGVSYXJQdG9Lajl5R0l2N3h3cDVTaFdQSlMyRjlTQkJUZ0VQTzdxanJ4N3JnQ3BwRWlkUVVHYndJSTdnU1RKLUE2Ymp2VjJ5N3gzNDI0a3N3M3lxOVN3c0VMeU1udnlsTzVOS1R4Z2dKTUprR0lXUXFKRVc4dFRGb25NQktNcU9sVkhYUDhRSVdVVnRTbDkwOUM0UkZ6WnBEZl9xTE5FWjk?oc=5",
@@ -850,16 +860,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "Andy Jassy affirme qu'Amazon « pourrait avoir deux » entreprises d'une valeur de 1 000 milliards de dollars. Voici le calcul derrière cela.",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-05T08:00:00.000Z",
-     "title": "CEO Andy Jassy Just Told Investors That AWS Can Grow Revenue 40% in 2027 and 2028 and Eventually Become a Trillion-Dollar Business. Is It Enough to Get Wall Street on Board?",
-     "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZnhlUzVva1BFWWVIMUJ3Q0Uxa3NQXzRUbWlqSjBXMmI1QW1HWlEycWNjMzlHaGx2RHZ0ODBFZ0wtVzVuUDBKMER2MHFsT3JybzJTaEhUMUxua3c4dWppb2FkdzY5YndockI2R1ExLXl2TnRxbGtIRGlrSXliVlVRcU5TMmd5a1RRM2puc3ZqV2Iwa0NIaFcyMQ?oc=5",
-     "source": "The Motley Fool",
-     "kind": "presse",
-     "title_fr": "Le PDG Andy Jassy vient de dire aux investisseurs qu'AWS peut augmenter son chiffre d'affaires de 40 % en 2027 et 2028 et éventuellement devenir une entreprise de 1 000 milliards de dollars. Est-ce suffisant pour convaincre Wall Street ?",
      "m": 1,
      "e": 0
     }
@@ -1495,6 +1495,16 @@
    "actor": "openai",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-17T08:00:00.000Z",
+     "title": "OpenAI CFO Sarah Friar says the $1.25 trillion raise was unplanned and Anthropic's IPO is good for OpenAI",
+     "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNRnAxYW5xYTlWRm05OGV2ZGZrcFRkbDJ5a2xyQnUzb2VNZk5lYkxoaXFJVE4yUUxMN2NHWXBkamkyTWVmVVg2b3RzckJTeTZrMTBuNDd2TjVlN0ptQjFZc1RsRGt5MUFFMHJTTmFtLUdVZGZpVGNzalFwdGw3Nm9EXzhDaEZtTnVVSjM5ajhvN0VxMlVBZklTb3RLYVBPdkRZbE4tdFd1VzA1cnRJd09rWkNEWWxqb1o4aDFrbnB5LWc?oc=5",
+     "source": "MLQ.ai",
+     "kind": "presse",
+     "title_fr": "La directrice financière d'OpenAI, Sarah Friar, déclare que la levée de fonds de 1 250 milliards de dollars n'était pas prévue et que l'introduction en bourse d'Anthropic est une bonne chose pour OpenAI",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-17T01:44:31.000Z",
      "title": "OpenAI CFO Sarah Friar says a raise at a $1.25T valuation wasn’t planned",
@@ -2235,8 +2245,18 @@
      "source": "WKYC",
      "kind": "presse",
      "title_fr": "La sénatrice Warren : urgence « plus forte » d'enquêter sur Jensen Huang après le retour en force d'Nvidia",
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
+    },
+    {
+     "ts": "2026-11-24T05:16:00.000Z",
+     "title": "Sen. Warren: ‘Stronger’ urgency to investigate Jensen Huang after Nvidia comeback | CNN Politics",
+     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPV3JMSExnQkZFWjNqVktUS2NmaWh2UnY1NXlyS1YwOTh2RWlNcGwwdUQxY0hVSjNuejB4VTJKU3JyS2hrZHdQSGhPaWR2MkJaY0hLNHFnSW9DaUprMXd3RXFXczVlV0N2eUJ0MzljazlZNEFFLVNoMVZwOVpBRDdEckhfQmRyd1lzSWx0TlhCLTg5QnVXYzlURGdjV1VyZ2l2aDllQVg4UUs?oc=5",
+     "source": "CNN",
+     "kind": "presse",
+     "title_fr": "Sénatrice Warren : Urgence « plus forte » d'enquêter sur Jensen Huang après le retour en force de Nvidia | CNN Politics",
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-24T00:54:00.000Z",
@@ -2287,16 +2307,6 @@
      "title_fr": "Elizabeth Warren qualifie la réintégration de Jensen Huang par Nvidia d'imprudente",
      "m": 3,
      "e": 1
-    },
-    {
-     "ts": "2026-11-23T17:41:00.000Z",
-     "title": "‘Deeply reckless’: In Globe interview, Elizabeth Warren says she wants congressional investigation on Nvidia",
-     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbm8za3pET2dMM0F1dlRLLUM3R0Qtd3pBU1l6ZlpMZEtZUHNfTGVLMU9fOEw0T0JrRThxODk1SXRnUGN4VzdPLXR1bl9vX09WTkNyWW1aVFlyd1VTaWMwakdBZ1djVGZJWjE5NkFsSVZsLU1HOWd3SU9QMFFuQlhEckFTTnpMaFlfX19fNU1aTHNlRWRS?oc=5",
-     "source": "The Boston Globe",
-     "kind": "presse",
-     "title_fr": "« Profondément irresponsable » : dans une interview au Globe, Elizabeth Warren déclare vouloir une enquête du Congrès sur Nvidia",
-     "m": 1,
-     "e": 0
     }
    ]
   },
@@ -3512,6 +3522,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-27T22:13:41.000Z",
+     "title": "Vinod Khosla Warns AI, Quantum Computing May Threaten Crypto by 2030",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE83QVZWUlhzUThXemQtRkY5Y1NEVjc5a2tqQ1NKd0dwVlFNOGpfSFdjbnRFejJjMkhSdk9VeHFtVEdMT0xtQjZiMWI5Mkh1WlI1SEY5YVhTVlNvMms?oc=5",
+     "source": "www.tokenpost.com",
+     "kind": "presse",
+     "title_fr": "Vinod Khosla prévient que l'IA et l'informatique quantique pourraient menacer la crypto d'ici 2030",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-11T08:00:00.000Z",
      "title": "Billionaire venture capitalist Vinod Khosla says judge AI by usage, not stock prices",
@@ -6328,7 +6348,21 @@
  ],
  "hot": [
   {
-   "score": 1,
+   "score": 0.72,
+   "id": "vinod-khosla",
+   "n": "Vinod Khosla",
+   "role": "Fondateur de Khosla Ventures",
+   "actor": null,
+   "ts": "2026-11-27T22:13:41.000Z",
+   "title": "Vinod Khosla Warns AI, Quantum Computing May Threaten Crypto by 2030",
+   "title_fr": "Vinod Khosla prévient que l'IA et l'informatique quantique pourraient menacer la crypto d'ici 2030",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE83QVZWUlhzUThXemQtRkY5Y1NEVjc5a2tqQ1NKd0dwVlFNOGpfSFdjbnRFejJjMkhSdk9VeHFtVEdMT0xtQjZiMWI5Mkh1WlI1SEY5YVhTVlNvMms?oc=5",
+   "source": "www.tokenpost.com",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.62,
    "id": "palmer-luckey",
    "n": "Palmer Luckey",
    "role": "Fondateur d'Anduril (défense)",
@@ -6342,7 +6376,7 @@
    "outlets": 1
   },
   {
-   "score": 0.84,
+   "score": 0.52,
    "id": "peter-thiel",
    "n": "Peter Thiel",
    "role": "Cofondateur de Palantir, investisseur",
@@ -6354,20 +6388,6 @@
    "source": "BigGo Finance",
    "kind": "presse",
    "outlets": 3
-  },
-  {
-   "score": 0.82,
-   "id": "lip-bu-tan",
-   "n": "Lip-Bu Tan",
-   "role": "PDG d'Intel",
-   "actor": "intel-foundry",
-   "ts": "2026-11-27T10:21:00.000Z",
-   "title": "Intel CEO Lip-Bu Tan bets on 141-member ‘dream team’, says ‘my number one priority…’",
-   "title_fr": "Le PDG d'Intel Lip-Bu Tan mise sur une « équipe de rêve » de 141 membres et déclare : « ma priorité numéro un... »",
-   "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxNR0N5bzFNQ2k2elZXTUUzV0NCVGwxcXpvVGxmbG5jVkE3OFpPeU93RWZIUmJ3bjByVFVULWg0ZmhZVHBSZXVFY013ZjBNdDZnY254dXQ0TFc0YThIektGaWlvOHYyb2hoZVp3ZGhFX3pvMHZ3Rkp2YS1hOGgyemQ2Yzd2TE1PeTVaSzBOVTNzdE44Wi04eHlwU0FIdDV5Vk5aNmsyZzNId0xSTXRmREtTRWNUb21QUTZuaXZkU09lQ1g1dTNwMTBvY1V6X0huUlF1dGpVM1NON0ZONVNYdXpTZ0JGTnVCVDBwTnlFcUhQajZVbG_SAfgBQVVfeXFMTzU0TnZEVXU3cHdqM0JQUE9DNmRHNVZOZXNLeDZUVkRkRHlqXzRRLWJzVmJyYjllYVNjMU1QeDVvYWdkVDZYRUhPMDdfV0R1MWdPU2hONlJwbVBKWDEtQXhibUZ3bklScGx0bGx1d1ZMZDk1U29jRVZST3l0eXpob1FNZm0tUXlCMzVPTVJUaDlnNnJzVWpFVjhWYlZUblgtdW5uR2pOS3Fwa1FTTThmbUNQcElBUWJ4Mlhzcml4YVU1Nmt1aExSVTUtakFzQS1iUUlQTjV2RENhOWRrRm93YjJhSTF3ZWZfekNZSC1nams3TXA4bW54cE8?oc=5",
-   "source": "The Times of India",
-   "kind": "presse",
-   "outlets": 1
   }
  ]
 }

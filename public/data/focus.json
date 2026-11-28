@@ -5,42 +5,47 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-27T19:03:33.289Z",
+ "generated_at": "2026-11-28T01:20:42.926Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "012a59ac5286+02f0c60f242d+08685ddbf818+0fa20d13e8af+0fa353352571+0fefe3aa5f12+1c0a1e1598f2+1efbd1ef475f+22fd7ca2e2d6+3a6c6f14ac09+412483738c4e+43d32363a274+4401da3fa47f+49fe75757113+56b86a5d7fbf+57d4abf35622+5b97780f20d0+5dc55a044437+68a0e195ceda+69f64fbae113+7078fd2ec4f0+76720683de1f+7c0a81286ce5+8a72a2b77a1e+8bae682544f1+8f59468d24fe+9a46a9d445c1+9daa256e2871+9eed3fb59cee+a078aa976acb+a165733dbba2+ac55a4874f2b+b7175444dd03+b8a8e1606a64+bb2085849fe9+bf1bbceebeaf+ca87ec84f38b+cb73d7922f7d+cb8d7daff59c+cf81369c0f42+d3e466982a76+e5cd248eff02+efa75c0d5fa1+f8cdc496b0bc+fc3a90d264a7",
-  "1343f7f3b435+379e55a2e099+506b74d1aabd+740f81f2e5d1+7a7175ef0317+a7509ef32f2e+ac6e047a0164+b0576938c855+c52f36f68e67+d59a9fd96499+e9a493fbbd87+ea7846207d79",
+  "012a59ac5286+0fa20d13e8af+1c0a1e1598f2+3a6c6f14ac09+56b86a5d7fbf+5b97780f20d0+68a0e195ceda+8f59468d24fe+959f99dc5b4c+9daa256e2871+ac55a4874f2b+ad546544b1c7+adee23ebc131+efa75c0d5fa1+fc3a90d264a7",
   "16b9ff9d80af+42272da9d711+71be7d2dfb67+9cbfa8def305+a5c3b4d779ea+db6892e02d02+dc7f497f02ae",
+  "1343f7f3b435+379e55a2e099+506b74d1aabd+740f81f2e5d1+7a7175ef0317+a7509ef32f2e+ac6e047a0164+b0576938c855+c52f36f68e67+d59a9fd96499+e9a493fbbd87+ea7846207d79",
   "1402902dd8da+65ccb5595a3d+893ca3b5875c+b87df8168574+c5e5e9bb5b36",
+  "7f363c30c38a+a76cae0bb54d+fb282007afd0",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
   "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+c8ea64c1c7c6",
-  "2401ceb6aca2+7f363c30c38a+a76cae0bb54d",
-  "6e77462e5797"
+  "5158ca4033be+b471c00e511c+f10c2cc17f3c"
  ],
  "stories": [
   {
    "ids": [
-    "cb73d7922f7d",
-    "56b86a5d7fbf",
-    "e5cd248eff02",
-    "02f0c60f242d"
+    "71be7d2dfb67",
+    "a5c3b4d779ea",
+    "42272da9d711",
+    "9cbfa8def305"
    ],
-   "head": "Donald Trump soutient publiquement le retour de Jensen Huang à la tête de Nvidia",
+   "head": "Nvidia suspend ses ventes de serveurs en Asie du Sud-Est après de nouvelles restrictions américaines",
    "bullets": [
-    "Donald Trump a déclaré qu'il serait disposé à gracier le PDG de Nvidia si des enquêtes l'exigeaient.",
-    "Les actions taïwanaises ont progressé de plus de 9 pour cent à la suite de cette annonce."
+    "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
+    "Cette décision répond au durcissement des règles d'exportation décidées par le Département du Commerce pour empêcher le contournement des sanctions visant la Chine.",
+    "Le Premier ministre Wong avait affirmé que Singapour ne servirait pas de passerelle pour contourner ces interdictions."
    ],
    "kinds": [
     "detail",
-    "detail"
+    "explication",
+    "contexte"
    ],
-   "head_en": "Donald Trump publicly supports the return of Jensen Huang to the head of Nvidia",
+   "head_en": "Nvidia suspends server sales in Southeast Asia following new US restrictions",
    "bullets_en": [
-    "Donald Trump stated he would be willing to pardon Nvidia's CEO if investigations required it.",
-    "Taiwanese stocks rose by more than 9 percent following this announcement."
+    "The measure affects Malaysia, Singapore, Thailand, and Indonesia.",
+    "This decision responds to the tightening of export rules decided by the Department of Commerce to prevent the circumvention of sanctions targeting China.",
+    "Prime Minister Wong had stated that Singapore would not serve as a gateway to bypass these bans."
    ],
-   "ctx_ids": [],
-   "ts": "2026-11-27T18:10:42.000Z"
+   "ctx_ids": [
+    "d05efe22784c"
+   ],
+   "ts": "2026-11-27T02:45:41.000Z"
   },
   {
    "ids": [
@@ -49,51 +54,49 @@
     "ea7846207d79",
     "740f81f2e5d1"
    ],
-   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données IA",
+   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données spatiaux",
    "bullets": [
-    "Le projet baptisé Starmind vise à exploiter des modules de calcul orbitaux alimentés par l'énergie solaire.",
-    "Cette initiative permet de contourner les contraintes énergétiques terrestres face aux besoins massifs futurs de l'intelligence artificielle."
+    "Le projet est baptisé Starmind.",
+    "Cette constellation vise à alimenter des modules de calcul orbitaux en énergie solaire pour répondre aux besoins massifs de l'IA et contourner les contraintes terrestres."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for AI data centers",
+   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for space data centers",
    "bullets_en": [
-    "The project named Starmind aims to operate orbital computing modules powered by solar energy.",
-    "This initiative makes it possible to bypass terrestrial energy constraints in the face of massive future AI needs."
+    "The project is named Starmind.",
+    "This constellation aims to power orbital computing modules with solar energy to meet massive AI needs and bypass terrestrial constraints."
    ],
    "ctx_ids": [],
    "ts": "2026-11-27T04:13:09.000Z"
   },
   {
    "ids": [
-    "71be7d2dfb67",
-    "a5c3b4d779ea",
-    "42272da9d711",
-    "9cbfa8def305"
+    "2fe930384672",
+    "2ca795adfbbb",
+    "295cb82f7621",
+    "82dc9a9a5cfd"
    ],
-   "head": "Nvidia suspend ses ventes de serveurs en Asie du Sud-Est face aux restrictions américaines",
+   "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire pour trafic de puces Nvidia",
    "bullets": [
-    "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
-    "Cette décision vise à empêcher le contournement des sanctions par les acteurs cherchant à réexporter le matériel vers la Chine.",
-    "Le Premier ministre Wong avait affirmé que Singapour ne permettrait pas d'être utilisé comme une passerelle pour contourner les restrictions américaines."
+    "Le département du Commerce américain a ciblé l'entreprise Megaspeed et une filiale singapourienne d'Alibaba dans le cadre de ces restrictions.",
+    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête nationale visant la société Megaspeed après son placement sur liste noire.",
+    "Cette sanction vise à bloquer les canaux de contrebande et à empêcher les transferts illégaux de technologies avancées vers la Chine."
    ],
    "kinds": [
     "detail",
-    "explication",
-    "contexte"
+    "detail",
+    "explication"
    ],
-   "head_en": "Nvidia suspends server sales in Southeast Asia amid US restrictions",
+   "head_en": "The United States places Megaspeed and an Alibaba subsidiary on blacklist for Nvidia chip trafficking",
    "bullets_en": [
-    "The measure affects Malaysia, Singapore, Thailand, and Indonesia.",
-    "This decision aims to prevent sanctions evasion by actors seeking to re-export the hardware to China.",
-    "Prime Minister Wong had stated that Singapore would not allow itself to be used as a gateway to bypass US restrictions."
+    "The US Department of Commerce targeted Megaspeed and an Alibaba subsidiary in Singapore as part of these restrictions.",
+    "The Prime Minister of Singapore announced the opening of a national investigation targeting Megaspeed following its placement on the blacklist.",
+    "This sanction aims to block smuggling channels and prevent illegal transfers of advanced technologies to China."
    ],
-   "ctx_ids": [
-    "d05efe22784c"
-   ],
-   "ts": "2026-11-27T02:45:41.000Z"
+   "ctx_ids": [],
+   "ts": "2026-11-24T16:53:42.000Z"
   }
  ]
 }
