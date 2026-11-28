@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-28T11:20:37.955Z",
+ "generated_at": "2026-11-28T11:40:43.719Z",
  "items": [
   {
    "id": "fad97191bb4e",
    "ts": "2026-11-28T11:00:27.000Z",
-   "title": "The hidden reliability layer in data centers: why physical connections matter more than ever",
+   "title": "La couche de fiabilité cachée des centres de données : pourquoi les connexions physiques comptent plus que jamais",
    "orig": "The hidden reliability layer in data centers: why physical connections matter more than ever",
    "summary": "The infrastructure layer nobody measures until it fails",
    "country": "US",
@@ -15,9 +15,10 @@
    "url": "https://www.datacenterdynamics.com/en/opinions/the-hidden-reliability-layer-in-data-centers-why-physical-connections-matter-more-than-ever/",
    "confidence": "moyenne",
    "pending": true,
-   "tr_try": 1,
+   "tr_try": 2,
    "title_en": "The hidden reliability layer in data centers: why physical connections matter more than ever",
-   "summary_en": "The infrastructure layer nobody measures until it fails"
+   "summary_en": "The infrastructure layer nobody measures until it fails",
+   "title_fr": "La couche de fiabilité cachée des centres de données : pourquoi les connexions physiques comptent plus que jamais"
   },
   {
    "id": "75dbbe784bf6",
@@ -3946,24 +3947,6 @@
    "title_fr": "Les contrats à terme s'enfoncent dans le rouge alors que les inquiétudes technologiques resurgissent",
    "title_en": "Futures sink further into the red as tech worries resurge",
    "summary_en": "Huang defies calls for Nvidia succession planning, sending shares lower premarket"
-  },
-  {
-   "id": "3c56acdc665a",
-   "ts": "2026-11-25T11:36:38.000Z",
-   "title": "Fluidstack lance un produit de centre de données modulaire, Blackbird",
-   "orig": "Fluidstack launches modular data center product, Blackbird",
-   "summary": "System is designed for rapid deployment",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/fluidstack-launches-modular-data-center-product-blackbird/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Fluidstack lance un produit de centre de données modulaire, Blackbird",
-   "title_en": "Fluidstack launches modular data center product, Blackbird",
-   "summary_en": "System is designed for rapid deployment"
   }
  ]
 }
