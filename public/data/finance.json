@@ -1,0 +1,1837 @@
+{
+ "v": 1,
+ "generated_at": "2026-11-28T14:16:01.545Z",
+ "note": "Scénarios et libellés rédigés par IA à partir de sources citées ; ce ne sont ni des prévisions ni un conseil en investissement.",
+ "companies": [
+  {
+   "id": "alphabet",
+   "n": "Alphabet",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 127,6 Md$ (+24,7 % sur un an, +6,5 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 471,1 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 159,8 Md$, soit 34 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "amazon",
+   "n": "Amazon",
+   "c": "US",
+   "tone": {
+    "haussier": 7,
+    "neutre": 4,
+    "baissier": 1,
+    "n": 12,
+    "net": 0.5,
+    "label": "haussière"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 201,9 Md$ (+12,1 % sur un an, +0,7 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 797,5 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 215,2 Md$, soit 27 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "dd0a4889278b",
+     "ts": "2026-11-27T15:27:11.000Z",
+     "title": "Les agents d'achat dopés à l'IA ont le vent en poupe, mais Amazon et d'autres sites menacent de freiner leur essor",
+     "title_en": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+     "source": "CNBC Tech",
+     "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Les assistants d'achat d'OpenAI, Meta et Google se heurtent à des blocages de la part d'Amazon et d'autres distributeurs."
+    },
+    {
+     "id": "7f5cc3c9ae84",
+     "ts": "2026-11-27T12:20:29.000Z",
+     "title": "Le japonais Jera en discussion avec les hyperscalers américains pour implanter des centres de données près de centrales thermiques",
+     "title_en": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+     "source": "DatacenterDynamics",
+     "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "L'énergétiquet japonais Jera discute avec Meta, Anthropic, Google, Microsoft et Amazon pour co-localiser des datacenters."
+    },
+    {
+     "id": "03c50a0968f3",
+     "ts": "2026-11-26T23:26:04.000Z",
+     "title": "Le japonais JERA en pourparlers avec Anthropic et Meta pour construire des centres de données, selon Nikkei",
+     "title_en": "Japan’s JERA enters talks with Anthropic, Meta to build data centers, Nikkei reports",
+     "source": "Arab News",
+     "url": "https://www.arabnews.com/world/japans-jera-enters-talks-with-anthropic-meta-to-build-data-centers-nikkei-reports-3014204",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "JERA discute avec Anthropic, Meta, Amazon, Microsoft et Google pour construire des centres de données à Tokyo."
+    },
+    {
+     "id": "a2dc3bfc6ff6",
+     "ts": "2026-11-25T20:44:12.000Z",
+     "title": "Walmart ouvre son magasin à Muse de Meta tandis qu'Amazon le bloque",
+     "title_en": "Walmart Opens Store to Meta's Muse While Amazon Shuts It Out",
+     "source": "서울경제",
+     "url": "https://en.sedaily.com/world/2026/11/26/walmart-opens-store-to-metas-muse-while-amazon-shuts-it-out",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Walmart permet à ses clients d'utiliser l'agent IA Muse de Meta, alors qu'Amazon a empêché cet assistant d'agir."
+    },
+    {
+     "id": "9ad64687bb10",
+     "ts": "2026-11-25T14:39:00.000Z",
+     "title": "Amazon et Meta en pourparlers pour mettre fin au blocage de l'assistant IA Muse",
+     "title_en": "Amazon and Meta in talks to end the block on the Muse AI assistant",
+     "source": "العربية",
+     "url": "https://news.google.com/rss/articles/CBMiwgRBVV95cUxPbWVPX0QwZU1kc0lKTjNNbWlCbGt2eHA1aDhiSHVjSkZMN25XN2JZeGo0c2NyMFllWXJkdk1vZm1UQ29zR1J0MTBWS2VPRXJCWHJSSGZEVk9GYnhvZ1hHYnRGWWlteng4cmJ3akZ3cUxrM3J0dEJfME1yZFNERmtRMVlTV3BFN3loN3VKSVN5Qld0UlQ3R0RYNzA0dGxjQ2luenV1Uy13cTN5VE90NFktdHN0d0hXVnA1d0NScHZHUTNsN0t1bHhRZVFWLWJWeXc5dTM4VFZ4NUwtR1UtNmtUTmlqSkd4ZlpJSUVPVzNCRjNNU0Q2czBQNVB4Z1Z3T3JFemNENzFSak96c1UwZHl3SXc1aWdVdFVWWnpjX2ZkZW8zaUNwaGZ6aVUzc3RqUWhJQVpyaXRzMExIMDYtd21JLUpaMWViZnQwZTVwWnRsSjVLM3pCZDh4REk4QlM0czlFaVAzTTdBUk9nd3lnSGJoeEVzVng1S3FORkJIV0VSLXo2VE9sUXlYYVRXMl9vOXpQa1JZSldsQ24wY2N3QWk4MEc5a28tX1Z5S2J0ZEdRUTk1RTFQWFRwc1c5XzliRVpWdjBMU0MwWnRRWUh1aHRiRzdjeUJZVnEzcU5UX3JTWTJBdWZCNHY0TS1pbUpVbTlDekNxckdRWHlfT0U5T0VkdTBiWFVkYUZSdTBvM3hJMXotdV91UDgxcVNCcmtBeDNwazBLWUV6R1VYR0ZVaXJHd2EyQmVfMlRTeWlIZnZnVGpsUdIBwgRBVV95cUxPbWVPX0QwZU1kc0lKTjNNbWlCbGt2eHA1aDhiSHVjSkZMN25XN2JZeGo0c2NyMFllWXJkdk1vZm1UQ29zR1J0MTBWS2VPRXJCWHJSSGZEVk9GYnhvZ1hHYnRGWWlteng4cmJ3akZ3cUxrM3J0dEJfME1yZFNERmtRMVlTV3BFN3loN3VKSVN5Qld0UlQ3R0RYNzA0dGxjQ2luenV1Uy13cTN5VE90NFktdHN0d0hXVnA1d0NScHZHUTNsN0t1bHhRZVFWLWJWeXc5dTM4VFZ4NUwtR1UtNmtUTmlqSkd4ZlpJSUVPVzNCRjNNU0Q2czBQNVB4Z1Z3T3JFemNENzFSak96c1UwZHl3SXc1aWdVdFVWWnpjX2ZkZW8zaUNwaGZ6aVUzc3RqUWhJQVpyaXRzMExIMDYtd21JLUpaMWViZnQwZTVwWnRsSjVLM3pCZDh4REk4QlM0czlFaVAzTTdBUk9nd3lnSGJoeEVzVng1S3FORkJIV0VSLXo2VE9sUXlYYVRXMl9vOXpQa1JZSldsQ24wY2N3QWk4MEc5a28tX1Z5S2J0ZEdRUTk1RTFQWFRwc1c5XzliRVpWdjBMU0MwWnRRWUh1aHRiRzdjeUJZVnEzcU5UX3JTWTJBdWZCNHY0TS1pbUpVbTlDekNxckdRWHlfT0U5T0VkdTBiWFVkYUZSdTBvM3hJMXotdV91UDgxcVNCcmtBeDNwazBLWUV6R1VYR0ZVaXJHd2EyQmVfMlRTeWlIZnZnVGpsUQ?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Amazon et Meta discutent de la levée du blocage de l'assistant d'achat Muse sur la plateforme Amazon."
+    },
+    {
+     "id": "c4937692d5d7",
+     "ts": "2026-11-25T14:12:33.000Z",
+     "title": "Amazon serait en pourparlers pour mettre fin au blocage de l'agent IA Muse",
+     "title_en": "Amazon is reportedly in talks to end Muse AI shopping block",
+     "source": "The Verge IA",
+     "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Amazon négocie avec Meta pour autoriser l'agent d'achat Muse sur sa place de marché."
+    },
+    {
+     "id": "28175a595e60",
+     "ts": "2026-11-25T14:10:18.000Z",
+     "title": "Amazon et Meta en pourparlers pour lever le blocage de l'agent IA Muse",
+     "title_en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+     "source": "TechCrunch IA",
+     "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon et Meta discutent d'un accord pour mettre fin au blocage de l'agent Muse."
+    },
+    {
+     "id": "5845ed4863b4",
+     "ts": "2026-11-24T15:51:07.000Z",
+     "title": "L'acquisition de Decart par Amazon est un pari pour réduire l'écart avec Nvidia dans la course aux puces IA",
+     "title_en": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+     "source": "TechCrunch IA",
+     "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon rachète Decart pour améliorer l'efficacité de ses propres puces Trainium."
+    },
+    {
+     "id": "fb7a1ad02384",
+     "ts": "2026-11-24T12:30:05.000Z",
+     "title": "Amazon déclare que des agents IA de pirates ont trouvé et exploité une faille zero-day avec peu d'intervention humaine",
+     "title_en": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
+     "source": "Ars Technica",
+     "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Amazon rapporte que des agents IA de pirates ont trouvé et exploité une faille de manière autonome."
+    },
+    {
+     "id": "9df24764f639",
+     "ts": "2026-11-24T06:54:04.000Z",
+     "title": "Amazon va acquérir la technologie d'optimisation de Decart et intégrer son équipe",
+     "title_en": "Amazon to acquire Decart optimization technology and bring team aboard",
+     "source": "Digitimes",
+     "url": "https://www.digitimes.com/news/a20261124PR200/amazon-ai-inference-acquisition-optimization.html",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon rachète Decart pour améliorer la vitesse d'inférence et l'efficacité de ses systèmes d'IA."
+    },
+    {
+     "id": "f3f6304a8cca",
+     "ts": "2026-11-24T05:01:14.000Z",
+     "title": "Lancement de l'API Amazon Bedrock Trusted Access avec les garanties d'Anthropic",
+     "title_en": "Introducing the Amazon Bedrock Trusted Access API with Anthropic’s Enterprise Frontier Safeguards and Enterprise Data Controls",
+     "source": "AWS Machine Learning",
+     "url": "https://aws.amazon.com/blogs/machine-learning/introducing-the-amazon-bedrock-trusted-access-api-with-anthropics-enterprise-frontier-safeguards-and-enterprise-data-controls/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon Bedrock introduit des contrôles de données et des garanties pour renforcer la sécurité."
+    },
+    {
+     "id": "c3a2aba6c39e",
+     "ts": "2026-11-24T01:40:00.000Z",
+     "title": "Amazon acquiert les actifs clés de la startup IA Decart pour 7,5 milliards de dollars",
+     "title_en": "Amazon acquires key assets of AI startup Decart for reported $7.5B",
+     "source": "SiliconANGLE",
+     "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOaXR5TS11S0V5ZmZCOERDYlI1OG9vWG9UX3ZQZHoyYndOX0VrdExNYmNVbjBFNzBqdGMwY0ZDM0RjdWhxVWJFU0o0eG04N2oyZzNMVGdTbVRVMV9SUFNld3FaSnlOcl9ZSGQ4OGhLNXdYdzJwNFI2Mkh6M3BfLVIwN0hzVkF3Q3diQmxzN3BNUkVxREZsZHBJRmRfalVMTXc5dE55LQ?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon acquiert les actifs clés de la startup Decart pour 7,5 milliards de dollars."
+    }
+   ],
+   "tries": {
+    "dd0a4889278b": 1,
+    "7f5cc3c9ae84": 1,
+    "03c50a0968f3": 1,
+    "a2dc3bfc6ff6": 1,
+    "9ad64687bb10": 1,
+    "c4937692d5d7": 1,
+    "28175a595e60": 1,
+    "5845ed4863b4": 1,
+    "fb7a1ad02384": 1,
+    "9df24764f639": 1,
+    "f3f6304a8cca": 1,
+    "c3a2aba6c39e": 1
+   },
+   "cases": {
+    "at": "2026-11-28T14:16:01.545Z",
+    "bear": [
+     {
+      "t": "Les assistants d'achat d'OpenAI, Meta et Google se heurtent à des blocages de la part d'Amazon et d'autres distributeurs.",
+      "ref": "n1"
+     }
+    ],
+    "base": [
+     {
+      "t": "Les investissements sur douze mois atteindraient 215,2 milliards de dollars, soit 27 % des revenus.",
+      "ref": "f3"
+     }
+    ],
+    "bull": [
+     {
+      "t": "Amazon rachèterait Decart pour améliorer l'efficacité de ses propres puces Trainium.",
+      "ref": "n8"
+     }
+    ],
+    "ids": [
+     "dd0a4889278b",
+     "7f5cc3c9ae84",
+     "03c50a0968f3",
+     "a2dc3bfc6ff6",
+     "9ad64687bb10",
+     "c4937692d5d7",
+     "28175a595e60",
+     "5845ed4863b4"
+    ],
+    "refs": [
+     [
+      "n1",
+      "dd0a4889278b"
+     ],
+     [
+      "n2",
+      "7f5cc3c9ae84"
+     ],
+     [
+      "n3",
+      "03c50a0968f3"
+     ],
+     [
+      "n4",
+      "a2dc3bfc6ff6"
+     ],
+     [
+      "n5",
+      "9ad64687bb10"
+     ],
+     [
+      "n6",
+      "c4937692d5d7"
+     ],
+     [
+      "n7",
+      "28175a595e60"
+     ],
+     [
+      "n8",
+      "5845ed4863b4"
+     ]
+    ],
+    "sig": "[[\"Revenus du trimestre clos le 30/9/2026 : 201,9 Md$ (+12,1 % sur un an, +0,7 % sur le trimestre).\",\"Revenus sur les douze derniers mois (au 30/9/2026) : 797,5 Md$.\",\"Investissements (capex) sur douze mois (au 30/9/2026) : 215,2 Md$, soit 27 % des revenus.\"],[\"dd0a4889278b\",\"7f5cc3c9ae84\",\"03c50a0968f3\",\"a2dc3bfc6ff6\",\"9ad64687bb10\",\"c4937692d5d7\",\"28175a595e60\",\"5845ed4863b4\"]]"
+   }
+  },
+  {
+   "id": "amd",
+   "n": "AMD",
+   "c": "US",
+   "tone": {
+    "haussier": 5,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 5,
+    "net": 1,
+    "label": "haussière"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 26/9/2026 : 13,4 Md$ (+44,7 % sur un an, +16,0 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/0000002488-26-000191-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 26/9/2026) : 45,4 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/0000002488-26-000191-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 26/9/2026) : 2,1 Md$, soit 5 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000191/0000002488-26-000191-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "96615dc9e677",
+     "ts": "2026-11-26T20:00:00.000Z",
+     "title": "Intel et AMD s'associent pour contrer Arm sur l'inférence et unifier les logiciels d'IA",
+     "title_en": "Intel and AMD partner to counter Arm on inference and unify AI software",
+     "source": "日本経済新聞",
+     "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSE1WeDVKUnJEdmFHMFkzcFNPWWo4Ri1mV0t3a0lab1Y2SFhlOEVidldPeV92X0d5aXAwR3dKY0tqZG5FbUFIQ1VteW9IM1Vxak1NUXdlSF8xVmcxcVJ3Si1ZME9XSXdVMU9wQXJrY1l6ajF4NENFZ1MtYi01Z1VHQ2U5VmJnWFU?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Intel et AMD unissent leurs forces pour créer des solutions d'inférence concurrentes à Arm et standardiser les logiciels."
+    },
+    {
+     "id": "02a088434703",
+     "ts": "2026-11-26T11:37:17.000Z",
+     "title": "Présentation du tableau de bord de benchmark llama.cpp pour AMD Ryzen et Radeon",
+     "title_en": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+     "source": "Hugging Face blog",
+     "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Un nouveau tableau de bord de benchmark est introduit pour optimiser les performances sur le matériel AMD."
+    },
+    {
+     "id": "30c9e3388479",
+     "ts": "2026-11-25T14:05:48.000Z",
+     "title": "AMD MEXT utilise l'IA pour tirer davantage de la DRAM",
+     "title_en": "AMD MEXT Uses AI to Get More from DRAM",
+     "source": "EE Times",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTWhmUFRWRHRFZVhVcmcwWkxRNXlPV0o5TW8xMWhxTWE4YmdBR0ZuREkxUjIyaUhQWll4R01qU1l2azlsV1pTVWhZSExObGREWFZTR1k5Q0RaMVgtTlhsMUdNUzFYdEdWci1qSG1abGQ3X3d5dFZLZkg4WHlYQWdVYUxpNA?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "AMD présente une technologie utilisant l'IA pour optimiser l'utilisation de la mémoire DRAM."
+    },
+    {
+     "id": "9949223886f2",
+     "ts": "2026-11-25T14:00:00.000Z",
+     "title": "AMD s'attaque aux pénuries de DRAM avec l'IA et le stockage flash",
+     "title_en": "AMD Tackles DRAM Shortages with AI and Flash Storage",
+     "source": "EE Times",
+     "url": "https://www.eetimes.com/amd-tackles-dram-shortages-with-ai-and-flash-storage/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "AMD utilise l'IA pour gérer les données en mémoire flash et réduire la dépendance à la DRAM."
+    },
+    {
+     "id": "903b0209f452",
+     "ts": "2026-11-25T11:30:00.000Z",
+     "title": "La Radeon RX 9060 XT d'AMD établit un nouveau record mondial de fréquence GPU à 4,837 GHz",
+     "title_en": "AMD's Radeon RX 9060 XT sets new GPU frequency world record of 4.837 GHz",
+     "source": "Tom's Hardware",
+     "url": "https://www.tomshardware.com/pc-components/gpus/radeon-rx-9060-xt-sets-new-gpu-frequency-world-record-of-4-837-ghz-amd-overclocking-team-pushes-mid-range-rdna-4-gpu-to-the-max-under-liquid-nitrogen",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "AMD bat un record de fréquence GPU, démontrant des avancées dans la performance de ses puces."
+    }
+   ],
+   "tries": {
+    "96615dc9e677": 1,
+    "02a088434703": 1,
+    "30c9e3388479": 1,
+    "9949223886f2": 1,
+    "903b0209f452": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "amkor",
+   "n": "Amkor",
+   "c": "US",
+   "tone": {
+    "haussier": 1,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 1,
+    "net": 1,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 2,0 Md$ (+0,2 % sur un an, +4,9 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/0001047127-26-000052-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 7,5 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/0001047127-26-000052-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 1,7 Md$, soit 22 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1047127/000104712726000052/0001047127-26-000052-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "810939d51e5d",
+     "ts": "2026-11-24T14:37:21.000Z",
+     "title": "L'activité informatique d'Amkor prend de l'élan : d'autres croissances à venir ?",
+     "title_en": "Amkor's Computing Business Gains Momentum: Is More Growth Ahead?",
+     "source": "qz.com",
+     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeHY3RG8tNnVWVXYzR2RUMDIxM1A1R1M2eE9TT0wzczFJZzZxcUVnMkh3VElER3ZDUlFnRFdJZmIxa2dlM3V6aElxQS1mNmw4dWg3N1lpWnJfWTJBM3B2RUN0aDZJdXZFeWtsSF9HTWg1ZTZOVUkyNTFFQWRlUjZyNkswZw?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "L'activité informatique d'Amkor prend de l'élan, ce qui pose la question de sa croissance future."
+    }
+   ],
+   "tries": {
+    "810939d51e5d": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "amphenol",
+   "n": "Amphenol",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 10,2 Md$ (+65,1 % sur un an, +16,8 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/820313/000110465926120646/0001104659-26-120646-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 33,0 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/820313/000110465926120646/0001104659-26-120646-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 1,4 Md$, soit 4 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/820313/000110465926120646/0001104659-26-120646-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "arista",
+   "n": "Arista",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 1,
+    "baissier": 0,
+    "n": 1,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 3,7 Md$ (+58,5 % sur un an, +20,5 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000254/0001596532-26-000254-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 11,9 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000254/0001596532-26-000254-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 118 M$, soit 1 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1596532/000159653226000254/0001596532-26-000254-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "65014f5f0c0b",
+     "ts": "2026-11-26T02:44:20.000Z",
+     "title": "Transcription de la conférence sur les résultats du premier trimestre 2026 d'Arista Networks",
+     "title_en": "Arista Networks (ANET) Q1 2026 Earnings Call Transcript",
+     "source": "Fortune",
+     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBnd0lra00wYUNPUjJiSnNuMThXcnpUTnFybDZqRHh2a2FySHU2S0tKdm81MXlRbEJaWEZPVFF0eXJ5N3Qzak5ZNF9mQ0tHd05ObEstRE85Nm4xQW13LUp1OS1zNmdCek85R0l6YXB3?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Transcription de la conférence sur les résultats financiers du premier trimestre 2026 d'Arista Networks."
+    }
+   ],
+   "tries": {
+    "65014f5f0c0b": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "astera-labs",
+   "n": "Astera Labs",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 585 M$ (+153,7 % sur un an, +49,1 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000045/0001736297-26-000045-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 1,6 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000045/0001736297-26-000045-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 92 M$, soit 6 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1736297/000173629726000045/0001736297-26-000045-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "broadcom",
+   "n": "Broadcom",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 2/8/2026 : 29,6 Md$ (+85,5 % sur un an, +33,4 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 2/8/2026) : 89,1 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 2/8/2026) : 1,3 Md$, soit 1 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016826000080/0001730168-26-000080-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "cadence",
+   "n": "Cadence",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 1,6 Md$ (+22,0 % sur un an, +3,1 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/0000813672-26-000121-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 6,1 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/0000813672-26-000121-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 204 M$, soit 3 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/813672/000081367226000121/0000813672-26-000121-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "cisco",
+   "n": "Cisco",
+   "c": "US",
+   "tone": {
+    "haussier": 1,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 1,
+    "net": 1,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 24/10/2026 : 18,5 Md$ (+24,4 % sur un an, +7,3 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000185/0000858877-26-000185-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 24/10/2026) : 67,0 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000185/0000858877-26-000185-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 24/10/2026) : 1,6 Md$, soit 2 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000185/0000858877-26-000185-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "1997e06493aa",
+     "ts": "2026-11-25T17:41:30.000Z",
+     "title": "Cisco profite du boom des réseaux IA : peut-il surpasser HPE et ANET ?",
+     "title_en": "Cisco Gains From AI Networking Boom: Can It Outpace HPE & ANET?",
+     "source": "The Globe and Mail",
+     "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNc1R4VG5pTk94T0pEUWM3cjRDSUZnLTVQZWhTVTdzRTNMbl9pejA3cWR2VEIzMmdGWFBXZThENDlkZ1ZaRXRSaGFtZUd2ZlJ4emstZ0pKY3FBcXhMX2k4V01ZTUo1WVV2dHpTX1o2T1hzeVV3MjVpTnRYOUhIQk5XdGFlYVVfTnRaTzFvTkR4YmlNN3JiZXpKNEx4Y0lVal9qLWp2QWhEMVNuMzZ0QWozaW9xd21TRVVJdlkzYVBNei1nbHl1MGQyTkVFMFFIVmpHb3hnZVhiWHVPSXNx?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Cisco bénéficie de la demande croissante en infrastructures réseau pour l'IA, face à ses concurrents."
+    }
+   ],
+   "tries": {
+    "1997e06493aa": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "coherent",
+   "n": "Coherent",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 2,4 Md$ (+49,9 % sur un an, +15,9 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000023/0000820318-26-000023-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 7,9 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000023/0000820318-26-000023-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 1,8 Md$, soit 22 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/820318/000082031826000023/0000820318-26-000023-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "coreweave",
+   "n": "CoreWeave",
+   "c": "US",
+   "tone": {
+    "haussier": 1,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 1,
+    "net": 1,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 3,7 Md$ (+168,2 % sur un an, +42,2 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 9,9 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 27,6 Md$, soit 279 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/0001769628-26-000465-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "c019bd875fe9",
+     "ts": "2026-11-27T13:40:40.000Z",
+     "title": "Galaxy Digital dépose une demande pour la prochaine phase de développement du campus de datacenters Helios au Texas",
+     "title_en": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
+     "source": "DatacenterDynamics",
+     "url": "https://www.datacenterdynamics.com/en/news/galaxy-digital-files-for-next-phase-of-development-at-helios-data-center-campus-in-texas/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Galaxy Digital lance une nouvelle tranche de construction sur son campus loué à CoreWeave au Texas."
+    }
+   ],
+   "tries": {
+    "c019bd875fe9": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "credo",
+   "n": "Credo",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 1,
+    "baissier": 0,
+    "n": 1,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 1/8/2026 : 479 M$ (+114,7 % sur un an, +9,6 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/0001628280-26-060111-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 1/8/2026) : 1,6 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/0001628280-26-060111-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 1/8/2026) : 62 M$, soit 4 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1807794/000162828026060111/0001628280-26-060111-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "dc94632d6c49",
+     "ts": "2026-11-24T14:21:29.000Z",
+     "title": "L'expansion optique de Credo : peut-elle gagner du terrain face à ses rivaux ?",
+     "title_en": "Credo's Optical Expansion: Can It Gain Ground Against Rivals?",
+     "source": "The Globe and Mail",
+     "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQWF8ybEdENlpsaG9HYmRRNmtTRVdfUHlJUl9zazhBbXNtLTlsZzNWSUozNURPRXpXNnYzUVhJcnpFSG4xUzdnUzVPQk1QTmlXVmpma0FwMHR3aUlfTzZxeFlmdVA3QWhjUGpjQ0l2eDFMa29OOXk3bTJ2TzRsbVBReTNONzBwUGxkMHU1YjRJZWhRVXl5MHB5alplM1FHLURkS3hSc0NkNkp0dU01a2k3SmZoWEtZNW1ienA5dFNOOVp2eWJUbS0tU1FMdXlHYUR1M1U0NzhOYlJDRU0?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Analyse de la stratégie de Credo dans le secteur des composants optiques pour centres de données."
+    }
+   ],
+   "tries": {
+    "dc94632d6c49": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "eaton",
+   "n": "Eaton",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 8,9 Md$ (+28,0 % sur un an, +4,9 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/0001551182-26-000040-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 32,0 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/0001551182-26-000040-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 1,1 Md$, soit 3 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118226000040/0001551182-26-000040-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "ge-vernova",
+   "n": "GE Vernova",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 12,6 Md$ (+26,8 % sur un an, +13,9 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/0001996810-26-000163-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 44,0 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/0001996810-26-000163-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 2,1 Md$, soit 5 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000163/0001996810-26-000163-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "iren",
+   "n": "IREN",
+   "c": "OTHER",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 200 M$ (+2757,1 % sur un an, +45,7 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 900 M$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 4,9 Md$, soit 550 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "lumentum",
+   "n": "Lumentum",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 26/9/2026 : 1,3 Md$ (+136,5 % sur un an, +25,5 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026069615/0001628280-26-069615-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 26/9/2026) : 3,7 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026069615/0001628280-26-069615-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 26/9/2026) : 605 M$, soit 16 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1633978/000162828026069615/0001628280-26-069615-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "marvell",
+   "n": "Marvell",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 1/8/2026 : 2,7 Md$ (+36,5 % sur un an, +13,3 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/0001835632-26-000025-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 1/8/2026) : 9,5 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/0001835632-26-000025-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 1/8/2026) : 470 M$, soit 5 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1835632/000183563226000025/0001835632-26-000025-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "meta",
+   "n": "Meta",
+   "c": "US",
+   "tone": {
+    "haussier": 5,
+    "neutre": 4,
+    "baissier": 3,
+    "n": 12,
+    "net": 0.17,
+    "label": "mitigée"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 64,6 Md$ (+26,1 % sur un an, +6,2 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 241,6 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 104,4 Md$, soit 43 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/0001628280-26-066773-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "dd0a4889278b",
+     "ts": "2026-11-27T15:27:11.000Z",
+     "title": "Les agents d'achat dopés à l'IA ont le vent en poupe, mais Amazon et d'autres sites menacent de freiner leur essor",
+     "title_en": "AI shopping agents are having a moment, but Amazon and a growing number of sites threaten to stunt their growth",
+     "source": "CNBC Tech",
+     "url": "https://www.cnbc.com/2026/11/27/ai-shopping-agents-retailer-blocks.html",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Les assistants d'achat d'OpenAI, Meta et Google se heurtent à des blocages de la part d'Amazon et d'autres distributeurs."
+    },
+    {
+     "id": "7f5cc3c9ae84",
+     "ts": "2026-11-27T12:20:29.000Z",
+     "title": "Le japonais Jera en discussion avec les hyperscalers américains pour implanter des centres de données près de centrales thermiques",
+     "title_en": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+     "source": "DatacenterDynamics",
+     "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "L'énergétiquet japonais Jera discute avec Meta, Anthropic, Google, Microsoft et Amazon pour co-localiser des datacenters."
+    },
+    {
+     "id": "425ded129c0d",
+     "ts": "2026-11-27T11:25:00.000Z",
+     "title": "Le déploiement par Meta de l'agent IA Muse au Royaume-Uni l'expose à de nouveaux risques juridiques",
+     "title_en": "Meta’s UK rollout for Muse AI agent exposes it to more liability",
+     "source": "POLITICO.eu",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPeDdDZ2hmbzZSUEhXSmNXY3M1ZUNRcHFsU3pvQXVmdHFucDdwS3p4M25PTm9DdWxKbE4xVzRkd0tIbi1OdU9XcUYtVFN2RnduUjg4eEMybUFsb3I1Rm54dVgyUEctcDBOUDJVTFFzRXRXRVAzTlhkazlLSS13LUdOcmJ3dU5wcDdmd3RoNTUyQnB6S3FYWFF5UWhvcE4?oc=5",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Le lancement de l'agent conversationnel Muse par Meta au Royaume-Uni soulève des questions de responsabilité juridique."
+    },
+    {
+     "id": "03c50a0968f3",
+     "ts": "2026-11-26T23:26:04.000Z",
+     "title": "Le japonais JERA en pourparlers avec Anthropic et Meta pour construire des centres de données, selon Nikkei",
+     "title_en": "Japan’s JERA enters talks with Anthropic, Meta to build data centers, Nikkei reports",
+     "source": "Arab News",
+     "url": "https://www.arabnews.com/world/japans-jera-enters-talks-with-anthropic-meta-to-build-data-centers-nikkei-reports-3014204",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "JERA discute avec Anthropic, Meta, Amazon, Microsoft et Google pour construire des centres de données à Tokyo."
+    },
+    {
+     "id": "4c7e2e805f06",
+     "ts": "2026-11-26T22:00:33.741Z",
+     "title": "Le japonais JERA vise à construire des centres de données Anthropic et Meta près de ses centrales électriques",
+     "title_en": "Japan's JERA aims to build Anthropic, Meta data centers near power plants",
+     "source": "Nikkei Asia",
+     "url": "https://asia.nikkei.com/business/technology/artificial-intelligence/japan-s-jera-aims-to-build-anthropic-meta-data-centers-near-power-plants",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "L'entreprise japonaise JERA projette d'implanter des datacenters pour Anthropic et Meta à proximité de ses centrales."
+    },
+    {
+     "id": "4ba826a45a61",
+     "ts": "2026-11-26T10:51:27.000Z",
+     "title": "Meta a refusé de partager Muse pour des tests, déplore le régulateur financier britannique",
+     "title_en": "Meta Refused to Share Muse for Testing, UK Financial Watchdog Complains",
+     "source": "Wired IA",
+     "url": "https://www.wired.com/story/meta-refused-to-share-muse-for-testing-uk-financial-watchdog-complains/",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Le régulateur financier britannique critique le refus de Meta de collaborer à des tests conjoints de son agent d'IA."
+    },
+    {
+     "id": "a4043e9ae146",
+     "ts": "2026-11-26T10:00:52.000Z",
+     "title": "Un groupe vocal de dirigeants technologiques célèbre le retour de Huang chez Nvidia, tandis que d'autres gardent le silence",
+     "title_en": "A vocal cohort of tech leaders celebrates Huang’s Nvidia return, but others are keeping quiet",
+     "source": "Theguardiantheguardian",
+     "url": "https://www.theguardian.com/technology/2026/nov/26/jensen-huang-nvidia-tech",
+     "stance": "neutre",
+     "scope": "secteur",
+     "why": "Elon Musk et Sam Altman saluent le retour de Jensen Huang chez Nvidia, alors que d'autres dirigeants restent silencieux."
+    },
+    {
+     "id": "a2dc3bfc6ff6",
+     "ts": "2026-11-25T20:44:12.000Z",
+     "title": "Walmart ouvre son magasin à Muse de Meta tandis qu'Amazon le bloque",
+     "title_en": "Walmart Opens Store to Meta's Muse While Amazon Shuts It Out",
+     "source": "서울경제",
+     "url": "https://en.sedaily.com/world/2026/11/26/walmart-opens-store-to-metas-muse-while-amazon-shuts-it-out",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Walmart permet à ses clients d'utiliser l'agent IA Muse de Meta, alors qu'Amazon a empêché cet assistant d'agir."
+    },
+    {
+     "id": "9ad64687bb10",
+     "ts": "2026-11-25T14:39:00.000Z",
+     "title": "Amazon et Meta en pourparlers pour mettre fin au blocage de l'assistant IA Muse",
+     "title_en": "Amazon and Meta in talks to end the block on the Muse AI assistant",
+     "source": "العربية",
+     "url": "https://news.google.com/rss/articles/CBMiwgRBVV95cUxPbWVPX0QwZU1kc0lKTjNNbWlCbGt2eHA1aDhiSHVjSkZMN25XN2JZeGo0c2NyMFllWXJkdk1vZm1UQ29zR1J0MTBWS2VPRXJCWHJSSGZEVk9GYnhvZ1hHYnRGWWlteng4cmJ3akZ3cUxrM3J0dEJfME1yZFNERmtRMVlTV3BFN3loN3VKSVN5Qld0UlQ3R0RYNzA0dGxjQ2luenV1Uy13cTN5VE90NFktdHN0d0hXVnA1d0NScHZHUTNsN0t1bHhRZVFWLWJWeXc5dTM4VFZ4NUwtR1UtNmtUTmlqSkd4ZlpJSUVPVzNCRjNNU0Q2czBQNVB4Z1Z3T3JFemNENzFSak96c1UwZHl3SXc1aWdVdFVWWnpjX2ZkZW8zaUNwaGZ6aVUzc3RqUWhJQVpyaXRzMExIMDYtd21JLUpaMWViZnQwZTVwWnRsSjVLM3pCZDh4REk4QlM0czlFaVAzTTdBUk9nd3lnSGJoeEVzVng1S3FORkJIV0VSLXo2VE9sUXlYYVRXMl9vOXpQa1JZSldsQ24wY2N3QWk4MEc5a28tX1Z5S2J0ZEdRUTk1RTFQWFRwc1c5XzliRVpWdjBMU0MwWnRRWUh1aHRiRzdjeUJZVnEzcU5UX3JTWTJBdWZCNHY0TS1pbUpVbTlDekNxckdRWHlfT0U5T0VkdTBiWFVkYUZSdTBvM3hJMXotdV91UDgxcVNCcmtBeDNwazBLWUV6R1VYR0ZVaXJHd2EyQmVfMlRTeWlIZnZnVGpsUdIBwgRBVV95cUxPbWVPX0QwZU1kc0lKTjNNbWlCbGt2eHA1aDhiSHVjSkZMN25XN2JZeGo0c2NyMFllWXJkdk1vZm1UQ29zR1J0MTBWS2VPRXJCWHJSSGZEVk9GYnhvZ1hHYnRGWWlteng4cmJ3akZ3cUxrM3J0dEJfME1yZFNERmtRMVlTV3BFN3loN3VKSVN5Qld0UlQ3R0RYNzA0dGxjQ2luenV1Uy13cTN5VE90NFktdHN0d0hXVnA1d0NScHZHUTNsN0t1bHhRZVFWLWJWeXc5dTM4VFZ4NUwtR1UtNmtUTmlqSkd4ZlpJSUVPVzNCRjNNU0Q2czBQNVB4Z1Z3T3JFemNENzFSak96c1UwZHl3SXc1aWdVdFVWWnpjX2ZkZW8zaUNwaGZ6aVUzc3RqUWhJQVpyaXRzMExIMDYtd21JLUpaMWViZnQwZTVwWnRsSjVLM3pCZDh4REk4QlM0czlFaVAzTTdBUk9nd3lnSGJoeEVzVng1S3FORkJIV0VSLXo2VE9sUXlYYVRXMl9vOXpQa1JZSldsQ24wY2N3QWk4MEc5a28tX1Z5S2J0ZEdRUTk1RTFQWFRwc1c5XzliRVpWdjBMU0MwWnRRWUh1aHRiRzdjeUJZVnEzcU5UX3JTWTJBdWZCNHY0TS1pbUpVbTlDekNxckdRWHlfT0U5T0VkdTBiWFVkYUZSdTBvM3hJMXotdV91UDgxcVNCcmtBeDNwazBLWUV6R1VYR0ZVaXJHd2EyQmVfMlRTeWlIZnZnVGpsUQ?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Amazon et Meta discutent de la levée du blocage de l'assistant d'achat Muse sur la plateforme Amazon."
+    },
+    {
+     "id": "c4937692d5d7",
+     "ts": "2026-11-25T14:12:33.000Z",
+     "title": "Amazon serait en pourparlers pour mettre fin au blocage de l'agent IA Muse",
+     "title_en": "Amazon is reportedly in talks to end Muse AI shopping block",
+     "source": "The Verge IA",
+     "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon négocie avec Meta pour autoriser l'agent d'achat Muse sur sa place de marché."
+    },
+    {
+     "id": "28175a595e60",
+     "ts": "2026-11-25T14:10:18.000Z",
+     "title": "Amazon et Meta en pourparlers pour lever le blocage de l'agent IA Muse",
+     "title_en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+     "source": "TechCrunch IA",
+     "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Amazon et Meta discutent d'un accord pour mettre fin au blocage de l'agent Muse."
+    },
+    {
+     "id": "74005d35caec",
+     "ts": "2026-11-25T07:00:00.000Z",
+     "title": "« C'est un vrai désastre » : les employés de Meta inquiets de la poussée vers la modération de contenu par IA",
+     "title_en": "‘It’s been really a mess’: Meta insiders concerned over push to AI content moderation",
+     "source": "The Guardian",
+     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOT2R1YjJLbjBjWVNaaGdKVUlXLW1xLXRNczUzanM4US1aNU9RT0dHbkNpMXBsaV9nZWVieHlfeWc4TnZGUmlDRHBfNXFLbDc5eENVUVgzZnk4N3psdERKbmFUT0NUYUxHUjZITEZobDVJc1JjYkxLZzJlelRVb3Npd3h1VGZ1b2hkQmd1TDZwdkotMFdic25VZll1ZkdfVlB5ZFlSV0lCMA?oc=5",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Des employés de Meta s'inquiètent de la poussée vers la modération de contenu par IA."
+    }
+   ],
+   "tries": {
+    "dd0a4889278b": 1,
+    "7f5cc3c9ae84": 1,
+    "425ded129c0d": 1,
+    "03c50a0968f3": 1,
+    "4c7e2e805f06": 1,
+    "4ba826a45a61": 1,
+    "a4043e9ae146": 1,
+    "a2dc3bfc6ff6": 1,
+    "9ad64687bb10": 1,
+    "c4937692d5d7": 1,
+    "28175a595e60": 1,
+    "74005d35caec": 1
+   },
+   "cases": {
+    "at": "2026-11-28T14:16:01.545Z",
+    "bear": [
+     {
+      "t": "Le lancement de l'agent conversationnel Muse par Meta au Royaume-Uni soulèverait des questions de responsabilité juridique.",
+      "ref": "n3"
+     },
+     {
+      "t": "Le régulateur financier britannique critiquerait le refus de Meta de collaborer à des tests conjoints de son agent d'intelligence artificielle.",
+      "ref": "n6"
+     }
+    ],
+    "base": [
+     {
+      "t": "Les investissements sur douze mois atteindraient 104,4 milliards de dollars, soit 43 % des revenus.",
+      "ref": "f3"
+     }
+    ],
+    "bull": [
+     {
+      "t": "L'énergéticien japonais Jera discuterait avec Meta, Anthropic, Google, Microsoft et Amazon pour co-localiser des centres de données.",
+      "ref": "n2"
+     }
+    ],
+    "ids": [
+     "dd0a4889278b",
+     "7f5cc3c9ae84",
+     "425ded129c0d",
+     "03c50a0968f3",
+     "4c7e2e805f06",
+     "4ba826a45a61",
+     "a4043e9ae146",
+     "a2dc3bfc6ff6"
+    ],
+    "refs": [
+     [
+      "n1",
+      "dd0a4889278b"
+     ],
+     [
+      "n2",
+      "7f5cc3c9ae84"
+     ],
+     [
+      "n3",
+      "425ded129c0d"
+     ],
+     [
+      "n4",
+      "03c50a0968f3"
+     ],
+     [
+      "n5",
+      "4c7e2e805f06"
+     ],
+     [
+      "n6",
+      "4ba826a45a61"
+     ],
+     [
+      "n7",
+      "a4043e9ae146"
+     ],
+     [
+      "n8",
+      "a2dc3bfc6ff6"
+     ]
+    ],
+    "sig": "[[\"Revenus du trimestre clos le 30/9/2026 : 64,6 Md$ (+26,1 % sur un an, +6,2 % sur le trimestre).\",\"Revenus sur les douze derniers mois (au 30/9/2026) : 241,6 Md$.\",\"Investissements (capex) sur douze mois (au 30/9/2026) : 104,4 Md$, soit 43 % des revenus.\"],[\"dd0a4889278b\",\"7f5cc3c9ae84\",\"425ded129c0d\",\"03c50a0968f3\",\"4c7e2e805f06\",\"4ba826a45a61\",\"a4043e9ae146\",\"a2dc3bfc6ff6\"]]"
+   }
+  },
+  {
+   "id": "micron",
+   "n": "Micron",
+   "c": "US",
+   "tone": {
+    "haussier": 2,
+    "neutre": 1,
+    "baissier": 1,
+    "n": 4,
+    "net": 0.25,
+    "label": "haussière"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 3/9/2026 : 54,2 Md$ (+379,3 % sur un an, +30,8 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm",
+     "src": "SEC (10-K)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 3/9/2026) : 133,2 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 3/9/2026) : 30,7 Md$, soit 23 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/0000723125-26-000023-index.htm",
+     "src": "SEC (10-K)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "37e4e2d72f4f",
+     "ts": "2026-11-26T09:58:19.000Z",
+     "title": "SK Hynix cherche l'expertise 3nm de TSMC alors que Micron intensifie ses recrutements",
+     "title_en": "SK Hynix seeks TSMC 3nm expertise as Micron steps up hiring",
+     "source": "Digitimes",
+     "url": "https://www.digitimes.com/news/a20261126VL224/sk-hynix-tsmc-micron-3nm-hbm.html",
+     "stance": "neutre",
+     "scope": "secteur",
+     "why": "SK Hynix recrute des experts en gravure 3nm de TSMC, tandis que Micron renforce ses équipes en Corée."
+    },
+    {
+     "id": "7673334b6eb7",
+     "ts": "2026-11-26T07:57:31.000Z",
+     "title": "Micron, Samsung et SK Hynix concluent des accords de mémoire pluriannuels",
+     "title_en": "Micron, Samsung, SK Hynix strike multiyear memory deals",
+     "source": "Digitimes",
+     "url": "https://www.digitimes.com/news/a20261126VL222/sk-hynix-micron-chipmakers-demand-chips.html",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "Les trois leaders mondiaux de la mémoire sécurisent des contrats à long terme face à la demande croissante liée à l'IA."
+    },
+    {
+     "id": "e436ff1c8946",
+     "ts": "2026-11-25T21:00:47.000Z",
+     "title": "Le supercycle de la mémoire touche-t-il déjà à sa fin ? Un avertissement de Wall Street",
+     "title_en": "Is the Memory Supercycle Already Nearing Its End? A Warning From Wall Street",
+     "source": "서울경제",
+     "url": "https://en.sedaily.com/world/2026/11/26/is-the-memory-supercycle-already-nearing-its-end-a-warning",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Un analyste prévoit une baisse des prix entraînant une dégradation de la note de Micron et la fin du boom."
+    },
+    {
+     "id": "2116824c50ac",
+     "ts": "2026-11-24T04:22:45.000Z",
+     "title": "Micron intensifie ses investissements dans la HBM à Taïwan et à Singapour",
+     "title_en": "Micron steps up HBM investment in Taiwan, Singapore",
+     "source": "Digitimes",
+     "url": "https://www.digitimes.com/news/a20261124VL216/micron-hbm-investment-taiwan-production.html",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Micron augmente ses capacités de production de mémoire HBM pour rattraper ses concurrents."
+    }
+   ],
+   "tries": {
+    "37e4e2d72f4f": 1,
+    "7673334b6eb7": 1,
+    "e436ff1c8946": 1,
+    "2116824c50ac": 1
+   },
+   "cases": {
+    "at": "2026-11-28T14:16:01.545Z",
+    "bear": [
+     {
+      "t": "Un analyste prévoirait une baisse des prix entraînant une dégradation de la note de Micron et la fin du boom.",
+      "ref": "n3"
+     }
+    ],
+    "base": [
+     {
+      "t": "Les investissements sur douze mois s'élèveraient à 30,7 milliards de dollars, soit 23 % des revenus.",
+      "ref": "f3"
+     }
+    ],
+    "bull": [
+     {
+      "t": "Les trois leaders mondiaux de la mémoire sécuriseraient des contrats à long terme face à la demande croissante liée à l'intelligence artificielle.",
+      "ref": "n2"
+     },
+     {
+      "t": "Micron augmenterait ses capacités de production de mémoire HBM pour rattraper ses concurrents.",
+      "ref": "n4"
+     }
+    ],
+    "ids": [
+     "37e4e2d72f4f",
+     "7673334b6eb7",
+     "e436ff1c8946",
+     "2116824c50ac"
+    ],
+    "refs": [
+     [
+      "n1",
+      "37e4e2d72f4f"
+     ],
+     [
+      "n2",
+      "7673334b6eb7"
+     ],
+     [
+      "n3",
+      "e436ff1c8946"
+     ],
+     [
+      "n4",
+      "2116824c50ac"
+     ]
+    ],
+    "sig": "[[\"Revenus du trimestre clos le 3/9/2026 : 54,2 Md$ (+379,3 % sur un an, +30,8 % sur le trimestre).\",\"Revenus sur les douze derniers mois (au 3/9/2026) : 133,2 Md$.\",\"Investissements (capex) sur douze mois (au 3/9/2026) : 30,7 Md$, soit 23 % des revenus.\"],[\"37e4e2d72f4f\",\"7673334b6eb7\",\"e436ff1c8946\",\"2116824c50ac\"]]"
+   }
+  },
+  {
+   "id": "microsoft",
+   "n": "Microsoft",
+   "c": "US",
+   "tone": {
+    "haussier": 4,
+    "neutre": 1,
+    "baissier": 0,
+    "n": 5,
+    "net": 0.8,
+    "label": "haussière"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 92,3 Md$ (+18,8 % sur un an, +2,5 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 346,4 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 135,9 Md$, soit 39 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "7f5cc3c9ae84",
+     "ts": "2026-11-27T12:20:29.000Z",
+     "title": "Le japonais Jera en discussion avec les hyperscalers américains pour implanter des centres de données près de centrales thermiques",
+     "title_en": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+     "source": "DatacenterDynamics",
+     "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "L'énergétiquet japonais Jera discute avec Meta, Anthropic, Google, Microsoft et Amazon pour co-localiser des datacenters."
+    },
+    {
+     "id": "03c50a0968f3",
+     "ts": "2026-11-26T23:26:04.000Z",
+     "title": "Le japonais JERA en pourparlers avec Anthropic et Meta pour construire des centres de données, selon Nikkei",
+     "title_en": "Japan’s JERA enters talks with Anthropic, Meta to build data centers, Nikkei reports",
+     "source": "Arab News",
+     "url": "https://www.arabnews.com/world/japans-jera-enters-talks-with-anthropic-meta-to-build-data-centers-nikkei-reports-3014204",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "JERA discute avec Anthropic, Meta, Amazon, Microsoft et Google pour construire des centres de données à Tokyo."
+    },
+    {
+     "id": "54a5327eb269",
+     "ts": "2026-11-26T11:49:48.000Z",
+     "title": "Cheyenne Light demande la construction d'infrastructures de transport pour trois centres de données Microsoft dans le Wyoming",
+     "title_en": "Cheyenne Light applies to build transmission infrastructure for three Microsoft data centers in Wyoming",
+     "source": "DatacenterDynamics",
+     "url": "https://www.datacenterdynamics.com/en/news/cheyenne-light-applies-to-build-transmission-infrastructure-for-three-microsoft-data-centers-in-wyoming/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Cheyenne Light sollicite des autorisations pour alimenter en électricité de futurs centres de données Microsoft."
+    },
+    {
+     "id": "c43cf831127f",
+     "ts": "2026-11-25T15:00:39.000Z",
+     "title": "Bright Horizon obtient des contrats de centres de données Microsoft dans le Wyoming",
+     "title_en": "Bright Horizon utility lands Microsoft data center deals amid Wyoming buildout",
+     "source": "Utility Dive",
+     "url": "https://www.utilitydive.com/news/cheyenne-light-microsoft-google-data-center-bright-horizon/875739/",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Le fournisseur d'énergie Bright Horizon développe un pipeline de 3 gigawatts pour répondre aux besoins de Microsoft."
+    },
+    {
+     "id": "1ffa2354dfd2",
+     "ts": "2026-11-24T12:40:44.000Z",
+     "title": "La startup de cloud IA Marlowe obtient 277 millions de dollars en financement d'amorçage",
+     "title_en": "AI cloud startup Marlowe secures $277m in seed funding",
+     "source": "DatacenterDynamics",
+     "url": "https://www.datacenterdynamics.com/en/news/ai-cloud-startup-marlowe-secures-277m-in-seed-funding/",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Marlowe, fondée par d'anciens cadres de Microsoft, lève 277 millions de dollars pour son infrastructure cloud IA."
+    }
+   ],
+   "tries": {
+    "7f5cc3c9ae84": 1,
+    "03c50a0968f3": 1,
+    "54a5327eb269": 1,
+    "c43cf831127f": 1,
+    "1ffa2354dfd2": 1
+   },
+   "cases": null
+  },
+  {
+   "id": "nvidia",
+   "n": "Nvidia",
+   "c": "US",
+   "tone": {
+    "haussier": 5,
+    "neutre": 6,
+    "baissier": 1,
+    "n": 12,
+    "net": 0.33,
+    "label": "haussière"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 25/10/2026 : 115,8 Md$ (+103,0 % sur un an, +20,0 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+     "src": "Communiqué de résultats (SEC)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 26/7/2026) : 303,0 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 26/7/2026) : 7,4 Md$, soit 2 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/0001045810-26-000075-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "4848502bd8c9",
+     "ts": "2026-11-28T13:09:39.000Z",
+     "title": "Jensen Huang est de retour. La thèse haussière sur Nvidia demeure",
+     "title_en": "Jensen Huang Is Back. Nvidia’s (NVDA) Bull Case Remains",
+     "source": "The Globe and Mail",
+     "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOT0tWb0IwVXg3NzVnRmhUYU84MUpseHRJNDhrYm1IbXVXamdQNEk1QUdoQmxpemRHeGsxSzFRX3Yzekhrdkk1ai11eXpSRkFjQ3ltMjNxTlFwT2JQMEFWT3NnbHpkYi03SmpXaUkwRElUZE9oOGxKcS1oanJZUG1MbENWSzVITUdldEJ2TEpxREc4Q1RaTkdXalNTYVphbHl4SEJHaGlxSVVvQXF3eFdDQlZMSDRZMC1GM3o4QlFGT3dMdXBrV1BONjMtUW93VHlfX1E?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Le retour de Jensen Huang conforte la perspective boursière positive et haussière pour l'action Nvidia."
+    },
+    {
+     "id": "eeabad0d9aec",
+     "ts": "2026-11-28T10:45:00.000Z",
+     "title": "Thermaltake’s budget RTX 5060 Ti gaming desktops are as little as $1,299",
+     "title_en": "Thermaltake’s budget RTX 5060 Ti gaming desktops are as little as $1,299",
+     "source": "Tom's Hardware",
+     "url": "https://www.tomshardware.com/desktops/gaming-pcs/thermaltakes-budget-rtx-5060-ti-gaming-desktops-are-as-little-as-usd1-299-choose-between-ddr4-and-ddr5-configurations-with-up-to-usd100-off",
+     "stance": "haussier",
+     "scope": "secteur",
+     "why": "Thermaltake lance des PC de jeu équipés de puces Nvidia et de logiciels IA intégrés à prix compétitif."
+    },
+    {
+     "id": "7db6a3172fb6",
+     "ts": "2026-11-28T08:32:00.000Z",
+     "title": "Trump affirme avoir convaincu le conseil d'administration de Nvidia de réintégrer Jensen Huang",
+     "title_en": "Trump says he talked Nvidia’s board into reinstating Jensen Huang. It’s not the first company he’s stepped into",
+     "source": "Fortune",
+     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByYmdLMURnTXFsSTdqaUtDN3pkcVpNckk1ZjBTTlcybnlYdkNxWm44d1c2cUp3MmNhdkRiQjk5ZXB3WjlYa2tRUU9kMlpJQ3U4VWtpdVhpdUdudkx5Uml6VXNxUTFNTW53bkJoZUtTRURMZ3Q2N2MzcnNB?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Donald Trump déclare être intervenu auprès du conseil d'administration de Nvidia pour persuader Jensen Huang de revenir."
+    },
+    {
+     "id": "6f1c574d5831",
+     "ts": "2026-11-28T07:52:38.000Z",
+     "title": "Rapport : La Chine a cherché à obtenir des puces d'intelligence artificielle bien avant le scandale « Nvidia »",
+     "title_en": "Report: China sought to obtain AI chips years before the Nvidia scandal",
+     "source": "الشرق الأوسط",
+     "url": "https://news.google.com/rss/articles/CBMimgVBVV95cUxObEJuUkZ1MG5OalM2b3Mzd044WGt5TTdpd01DYXphTkdyMklNMllKZlgzTHotY1RKVFlHbTdJNVdEUkg5ckZmMnNWZ25CclV2THFEdm9fTHlqckdEbzV0a2x2S2lFYVlMdmNHZUdBMG5sRnotZEo3Rk1yRldwZ1pwMldtT1RkWGdBeE1QdW1iamprbXVCdDhlVEhxQzM4WU9tb2xwV18yWVV0dEo1UnV4VGN4S1dPS0oyUGZFVUpqN1FyUXVtRlU1ajl5dVRkS2hPWWdtTU1CZWw2TlZBNko4anF0RG5QYVFJUXRFT0dmWS03MnVITHIxM0pnMnB3d0lwZktTZmx1Wi1lWlFGNnViVGNxNjU1YkVidXpfd283S0xNaUF4S1owb3pZYUpwQ0lNS2xidzh0RHVZU0k3V2VNVDBjZHBON0llblNveUFfM2lZWFl3TjhiaFJFLVprVDdIdzNWemRyTU9KcnZ6cl91ZW9LYmJIR2lRalhtT01YQUttWlE4ZmZCOEpWUk1DdnJQTWJ2OTNzc0JfV1ItajZZUHlJaE8tUl9QbzJMX0Y2QWxLQUdKaUttLUZkZmpwazQ3V1NOai1ZcWdUVDliNjNEb0ZidG9pRl85bG9tbVBDUkI1NXNJV2ItWGpDQTJmWjZSbGlhajBzWXJxTngxZ3FmWm5HWnhOZUZCSFJ0cTg3U0dnLUpaUUFvT2REMkZnamdZS25YUTlIZ0FCTFNsQ1NacDVzemh3UURyQU01YVpZTmF0RVRPS1RubFMyQ0tLc0Z5Tm1VVlh5Ry1fNy1OYm1Ha1ZURXZZT3MzLU03Q2VueS13Q3BfUFRfZFVzcHZSa0R5LWJEUWxscmNDbVBrSXAwSU5VVDJ6VEVDeUE?oc=5",
+     "stance": "neutre",
+     "scope": "secteur",
+     "why": "Un rapport indique que la Chine s'est activement approvisionnée en puces d'IA plusieurs années avant les restrictions."
+    },
+    {
+     "id": "53db48ceb94a",
+     "ts": "2026-11-28T07:20:01.000Z",
+     "title": "Le gel des expéditions de Nvidia en Asie du Sud-Est met à l'épreuve la stratégie de couverture des serveurs IA taïwanais",
+     "title_en": "Nvidia's Southeast Asia shipment freeze tests Taiwan's AI-server manufacturing hedge",
+     "source": "Digitimes",
+     "url": "https://www.digitimes.com/news/a20261127VL214/ai-server-capacity-manufacturing-regulation-nvidia-taiwan.html",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Les restrictions sur les expéditions de Nvidia en Asie du Sud-Est testent la résilience des fabricants face aux tensions."
+    },
+    {
+     "id": "ea9034469061",
+     "ts": "2026-11-28T07:19:12.000Z",
+     "title": "Samsung hésite à concurrencer Nvidia sur le marché des puces pour la robotique",
+     "title_en": "Samsung hesitates to take on Nvidia in robot chips",
+     "source": "Digitimes",
+     "url": "https://www.digitimes.com/news/a20261127VL217/samsung-robot-chips-nvidia-demand.html",
+     "stance": "neutre",
+     "scope": "secteur",
+     "why": "Sollicité pour concevoir une alternative à la plateforme robotique Jetson Thor, Samsung exprime des réserves."
+    },
+    {
+     "id": "9fcfba1bb1f5",
+     "ts": "2026-11-28T03:18:58.000Z",
+     "title": "Le Kazakhstan planifie un pôle d'IA souverain de 2 milliards de dollars avec des puces Nvidia B300",
+     "title_en": "Kazakhstan plans $2 billion sovereign AI hub with Nvidia B300 chips",
+     "source": "ET Datacenters",
+     "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUklEb1RYQjJsaUZrU3RQN3dkX0pmb2ZDR3Nic0hRNjNfbEFFNGw0Q2IyV0U5S1lwU0FDc3pJOERTckViM2l4RVBQcnpkcXcwZXloZHg3M293YVRONGZfTHc2Ylc0aW1WUHdtWU0teXFhU2F2Sm5DNThjbDc5RjRkbU1pNFl4aGpIRlJraTZJMFlzb0FmZ3FXVmQ1NFR3eGZKb2hJLXpwMDZNYUUxU2xQWDZzTzNXMnN1M0tNd0hra014V3Yyck1lQ3FxVjJqaHpUOUxQR0gwcE1LWERLSnRYT0pRMlF0QWthODI2WtIB8gFBVV95cUxPbUhZNU1EaWNhc2JFTFFLYlNKSlp3anJfOVRYYmlKYnNsc1R5NlhMSTBGenhJR1BwZUdyeVNzSmtJNVMtRlJaa3NSc052MU1CZjljamZfdHRKV2swUFdYcklkeGZpVEswcTJzZi1HMk5iUHBqXzhNdnVub0tOc08zWFBObXl4eHVWd0gxaEEyaVZhZTIzbXR0eWg0TzlPN25kZ1hpTmc2aDM4cEg4RTg3UUVsZXBudENsaVBlUVJlR0VsVjVIdHZZQzVXbnE1LWFEVTh4T0s1TWMyU3ozT3RjNHVGam9fVGtEa0F1bi0zTi1xdw?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Le Kazakhstan prévoit d'investir 2 milliards de dollars dans un hub souverain équipé de puces Nvidia B300."
+    },
+    {
+     "id": "05f9d8df6cd1",
+     "ts": "2026-11-28T02:40:52.000Z",
+     "title": "Des puces Blackwell de Nvidia découvertes dans un centre de données en Chine lié à Alice Huang",
+     "title_en": "Nvidia's Blackwell chips found at China data center linked to Alice Huang",
+     "source": "Korea JoongAng Daily",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNY1BadkNUbVhaMnJsLUJvaEJvVGtobHVkYzByYWpZYm8wdEc1V085eHZDbEJidTJLT0FIendsU28yX0kzTzctam1OS2JUWjZ2Yl94ZHZGWjhUWDdyX1g5aTVFZTN1ZF9pUkkyUEM5WTc5ZVV6d1hvd21EdmpabDU4cVVfR1dnNG83OGpnb29ORXZldUtHMHh2TUhhLVVwbmN0RVF4alJISHk1NTBtUlR4Q1kyYnU4c1VZaXBTUFgwT3lwNUk?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Des processeurs Blackwell ont été repérés dans une structure chinoise associée à Alice Huang."
+    },
+    {
+     "id": "2281f7f4357d",
+     "ts": "2026-11-28T02:06:12.000Z",
+     "title": "Des puces Blackwell de NVIDIA découvertes dans un centre de données chinois",
+     "title_en": "NVIDIA Blackwell Chips Found in Chinese Data Center",
+     "source": "조선일보",
+     "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcEFDaFBMUDhjeWszZndmOE9IUWJNQm5ENi03WU1iR1hRZmlrSG5rV2JNOVZrNi15LVNPem0tYmVRTUhHanVYYlEwd1B2MGY4Vnlobzd1QTBGcjd3Q3d3THN3TG1WZEZXQ3l5NUQxSDQyQXVRYUZxczI1SEwzb2dDUVNvRjg?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "La présence de puces Blackwell de Nvidia a été identifiée au sein d'un datacenter en Chine."
+    },
+    {
+     "id": "a2bcc204862b",
+     "ts": "2026-11-28T01:21:00.000Z",
+     "title": "La technologie Blackwell de Nvidia utilisée sur un site en Chine lié à Alice Huang",
+     "title_en": "Nvidia Blackwell tech used at China site tied to Alice Huang",
+     "source": "The Straits Times",
+     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQYzZXSFp0bTNueE5VLVRNS0xmWFhqcks0TDlURDFRS2I4Y3MyWTJ2Y3BCdE1HZ3JLeGRJbWxuTjZYUzNUTkh2dnl5ek1kOFdwQXd6NGVaMHI0cjBGUHlGR3EtZVdyMDNXeThjQ0R4NmNqa1dsTXlfbWlsQTd0WWw3dVIyUVN5NmxMaDZCS0ZyZ1haYUFaTmhhbi14d0VrU0haUTZ1cVZBN0VXS0I2eWc?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Des équipements Nvidia Blackwell ont été repérés dans un site en Chine relié à Alice Huang."
+    },
+    {
+     "id": "14d077de8a23",
+     "ts": "2026-11-28T01:16:33.000Z",
+     "title": "Les revenus cloud IA de Nvidia presque triplés : Nvidia peut-il maintenir le rythme ?",
+     "title_en": "NVIDIA's AI Cloud Revenues Nearly Triple: Can NVDA Keep the Pace Ahead?",
+     "source": "The Globe and Mail",
+     "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxPdUpadGw0UXdtbVVzOHplS1hRRHN2OGF6TmFYdWg2eWJ2WTFfQ05UdWptc1Y4dC1yRVJuQnp0SmZRMEFPLUFLYV92UEtvVzkyWHBEWXVWYTh0ZkpMSXRVSTdIWHZ3LXZxeWp2cks2b3FnRUhhVWh1N1dQVFpiZXpHd0l2Z0xSU1Z4OHdPM1R1WnhOZmdsRHVUVGdjRTBieHMzOVRPbFctSXV3dTgxNWxadnFwdm01ZVA0cHMtV2dIc1I4OGhJdm93WUxFQ3BtNXFCNkJ3WlVFNTZOR0dyQTR6dUhYQ0lfRlcxZTFv?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Les revenus cloud de l'IA de Nvidia ont presque triplé, soulevant la question de la pérennité de cette croissance."
+    },
+    {
+     "id": "498bfcd64994",
+     "ts": "2026-11-28T01:11:28.000Z",
+     "title": "L'action Nvidia est toujours en baisse de 38 % malgré le retour de Jensen Huang",
+     "title_en": "Nvidia Stock Is Still Down 38% From Its Peak Despite Jensen Huang's Return. History Suggests a $10,000 Investment Today Will Be Worth This Much by Year-End 2027.",
+     "source": "The Globe and Mail",
+     "url": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxPM19EdG11UTFxZElCSk9zdVBCYnlGUnFLRXVVbWt4cnk0YmlNYmhTTzJpRU53TllDb3l3NUNrb1d6U0lxYnFicC1haTEyS0drMERFamlwTkN0RmlEMHNtM240VHhmdklGcUV5b1ZjN1M1UjVjYlZKcG9tNkpvdmpWTC1vd3VzdDVneWRoZm9mSGtZazB0bE5fek5HXzh0OTFsdUhqM01wZFU5dHJmbjNDbFp2ZVJZNUxVQWItQm52UlgtTER2QjFHMnh3bjNrYWxteFVGVzYwbHV3MEFKczlkblZkWVNSTjZSRm45WloxX0RZMWZ0QzFDT0U5UW96LXBCZ0FlNnN2bUlIZllXakhmZzZyR1Vqakg4dzdobkswV0tLRzZrblJFN0FNWWNqSkRiWGVEdEtoMm1qYXFtWmtfUW4tcXpsc2ZoWThRWlJodUVsbGhvcEJrTm1wTkxHWHZf?oc=5",
+     "stance": "neutre",
+     "scope": "societe",
+     "why": "Analyse boursière sur la performance de l'action Nvidia et les perspectives d'investissement."
+    }
+   ],
+   "tries": {
+    "4848502bd8c9": 1,
+    "eeabad0d9aec": 1,
+    "7db6a3172fb6": 1,
+    "6f1c574d5831": 1,
+    "53db48ceb94a": 1,
+    "ea9034469061": 1,
+    "9fcfba1bb1f5": 1,
+    "05f9d8df6cd1": 1,
+    "2281f7f4357d": 1,
+    "a2bcc204862b": 1,
+    "14d077de8a23": 1,
+    "498bfcd64994": 1
+   },
+   "cases": {
+    "at": "2026-11-28T14:16:01.545Z",
+    "bear": [
+     {
+      "t": "Les restrictions sur les expéditions de Nvidia en Asie du Sud-Est testeraient la résilience des fabricants face aux tensions.",
+      "ref": "n5"
+     }
+    ],
+    "base": [
+     {
+      "t": "Les investissements sur douze mois s'élèveraient à 7,4 milliards de dollars, soit 2 % des revenus.",
+      "ref": "f3"
+     }
+    ],
+    "bull": [
+     {
+      "t": "Le retour de Jensen Huang conforterait la perspective boursière positive et haussière pour l'action Nvidia.",
+      "ref": "n1"
+     },
+     {
+      "t": "Le Kazakhstan prévoirait d'investir 2 milliards de dollars dans un hub souverain équipé de puces Nvidia B300.",
+      "ref": "n7"
+     }
+    ],
+    "ids": [
+     "4848502bd8c9",
+     "eeabad0d9aec",
+     "7db6a3172fb6",
+     "6f1c574d5831",
+     "53db48ceb94a",
+     "ea9034469061",
+     "9fcfba1bb1f5",
+     "05f9d8df6cd1"
+    ],
+    "refs": [
+     [
+      "n1",
+      "4848502bd8c9"
+     ],
+     [
+      "n2",
+      "eeabad0d9aec"
+     ],
+     [
+      "n3",
+      "7db6a3172fb6"
+     ],
+     [
+      "n4",
+      "6f1c574d5831"
+     ],
+     [
+      "n5",
+      "53db48ceb94a"
+     ],
+     [
+      "n6",
+      "ea9034469061"
+     ],
+     [
+      "n7",
+      "9fcfba1bb1f5"
+     ],
+     [
+      "n8",
+      "05f9d8df6cd1"
+     ]
+    ],
+    "sig": "[[\"Revenus du trimestre clos le 25/10/2026 : 115,8 Md$ (+103,0 % sur un an, +20,0 % sur le trimestre).\",\"Revenus sur les douze derniers mois (au 26/7/2026) : 303,0 Md$.\",\"Investissements (capex) sur douze mois (au 26/7/2026) : 7,4 Md$, soit 2 % des revenus.\"],[\"4848502bd8c9\",\"eeabad0d9aec\",\"7db6a3172fb6\",\"6f1c574d5831\",\"53db48ceb94a\",\"ea9034469061\",\"9fcfba1bb1f5\",\"05f9d8df6cd1\"]]"
+   }
+  },
+  {
+   "id": "synopsys",
+   "n": "Synopsys",
+   "c": "US",
+   "tone": {
+    "haussier": 0,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 0,
+    "net": 0,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 31/7/2026 : 2,5 Md$ (+42,4 % sur un an, +8,8 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 31/7/2026) : 9,4 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 31/7/2026) : 191 M$, soit 2 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/883241/000088324126000025/0000883241-26-000025-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [],
+   "tries": {},
+   "cases": null
+  },
+  {
+   "id": "vertiv",
+   "n": "Vertiv",
+   "c": "US",
+   "tone": {
+    "haussier": 1,
+    "neutre": 0,
+    "baissier": 0,
+    "n": 1,
+    "net": 1,
+    "label": "peu d'articles"
+   },
+   "fund": [
+    {
+     "k": "f1",
+     "text": "Revenus du trimestre clos le 30/9/2026 : 4,3 Md$ (+61,2 % sur un an, +31,7 % sur le trimestre).",
+     "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/0001628280-26-067893-index.htm",
+     "src": "SEC (10-Q)"
+    },
+    {
+     "k": "f2",
+     "text": "Revenus sur les douze derniers mois (au 30/9/2026) : 13,1 Md$.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/0001628280-26-067893-index.htm",
+     "src": "SEC"
+    },
+    {
+     "k": "f3",
+     "text": "Investissements (capex) sur douze mois (au 30/9/2026) : 518 M$, soit 4 % des revenus.",
+     "url": "https://www.sec.gov/Archives/edgar/data/1674101/000162828026067893/0001628280-26-067893-index.htm",
+     "src": "SEC (10-Q)"
+    }
+   ],
+   "labels": [
+    {
+     "id": "4d460604e427",
+     "ts": "2026-11-26T12:34:05.000Z",
+     "title": "Vertiv élargit sa gamme d'alimentation 800VDC pour le marché des centres de données IA",
+     "title_en": "Vertiv expands 800VDC power portfolio for AI data center market",
+     "source": "Data Center Dynamics",
+     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVVpOc3prakU1X2lzbmhCX2FRbENmU3QwbTM3SmZyMEd2eUt3cFFpS0ZkN1dYV3hxRFlvcjFUY0lpMDk3OW14MEM5OHBRbktUYjB4UF91Y3VtWmNXNUFSRExZbDE2UHBJbDBUY2gtbGFQWFlJNHJNdWJKZlUza05qUUJoVkRubmlJZ3NPcFd0d0xnczlDNzh3a1VENGdSRU1HdFd5VW9abzJPbDg?oc=5",
+     "stance": "haussier",
+     "scope": "societe",
+     "why": "Vertiv élargit son offre d'alimentation 800VDC pour répondre aux besoins accrus des centres de données dédiés à l'IA."
+    }
+   ],
+   "tries": {
+    "4d460604e427": 1
+   },
+   "cases": null
+  }
+ ],
+ "macro": [
+  {
+   "k": "m1",
+   "text": "Fed : Réunion de la Fed (FOMC) : 8–9 décembre — Taux actuel : 3,75–4,00 % (hausse de septembre, maintien le 28 oct.). Réunion avec nouvelles projections de la Fed. Autre mesure citée par la presse : environ 99 % de hausse selon CME FedWatch au 10 nov. (StockWireX)."
+  },
+  {
+   "k": "m2",
+   "text": "Modèles : Nouveau modèle phare d'OpenAI (GPT Astra 6.1 ou plus) — Date de sortie non annoncée par OpenAI : la probabilité est celle d'un pari sur une sortie avant fin 2026."
+  },
+  {
+   "k": "m3",
+   "text": "Modèles : Nouveau Claude Opus (5.6 ou plus) — Date de sortie non annoncée par Anthropic : la probabilité est celle d'un pari sur une sortie avant fin 2026."
+  },
+  {
+   "k": "m4",
+   "text": "Introduction en Bourse : Moonshot AI : introduction à Hong Kong envisagée — La société, valorisée 35 Md$ en juillet, discuterait d'une levée à 50 Md$ avant une cotation à Hong Kong."
+  }
+ ]
+}

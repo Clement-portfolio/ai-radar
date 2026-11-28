@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T13:17:51.249Z",
+ "generated_at": "2026-11-28T14:16:01.545Z",
  "people": [
   {
    "id": "sam-altman",
@@ -224,6 +224,16 @@
      "e": 1
     },
     {
+     "ts": "2026-11-23T16:20:54.000Z",
+     "title": "Jensen Huang's Nvidia Return: Elon Musk Says ‘Mistake’ Corrected, But Michael Burry Calls Company ‘Weak, Craven’",
+     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWXZfQkNwVlJCelV5bFRwdG9TTnU0MmFmRk1NYXZlbVFlYUpodm5MSUJSb0RwTXRiN09GTXRSc3phRkdKVzN3djRVT0JmcTN1WXFKdGhoNmluRHpDVUliTm12ZkZhWXZhcU5CdXpCUVZldDMxZU1nU1hHMXFJRWxGMHEyLUMzV2w5NXVKdHYyZEg3WUluZGhXVXFIOWh4dw?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "title_fr": "Le retour de Jensen Huang chez Nvidia : Elon Musk évoque une « erreur » corrigée, mais Michael Burry qualifie l'entreprise de « faible et lâche »",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-23T02:32:00.000Z",
      "title": "Elon Musk Says 2027 AI Cash Crunch Will Be ‘Nuts’ — Analysts Still See SpaceX Emerging As The Biggest AI Hyperscaler",
      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQajVmOVlwUDIzNmZ0QXN1SjRWNU1RaDNieEdPZ3JGRHUwV1NkcDRQOE9uY1MxTmVFY1I2MWJ1SHhjbmZQZHJfYURpTDJ3d2dBZWJUV3FXYS1wbjRvSUp3M0hrQWpWZzdCNm4xTFpuNUZLdHg2VzBLU0F0VldsQkFqUndrWndoRU0xeTM0NDZvYw?oc=5",
@@ -270,16 +280,6 @@
      "source": "The Hill",
      "kind": "presse",
      "title_fr": "Musk : « Il n'y a personne qui puisse vraiment remplacer » Huang chez Nvidia",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-18T08:00:00.000Z",
-     "title": "Elon Musk says ousting Jensen Huang is like ‘kicking Michael Jordan off your team’",
-     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQa3VvcGJNZlJiaXZoWFBfdDFoWWpRTkcxby1rcVJNMGFGRWdoYmpOam5VWjlXNTVONWFfd0hLaTRnOFFnRUtPNEhsdmhNUWwyeDFJZE1HME45RnV5TF80dzBUUVJSVjFwc1B1VVkycnNXTzJiMGJfS0czM1JkS3BZMl9BdUktVUVrMlZWajB5eGp2NmVydm1Fcng2TXpwZmlIR3RVeGhFUEdkZDdSZVNiZTVkWXhaQQ?oc=5",
-     "source": "TechCrunch",
-     "kind": "presse",
-     "title_fr": "Elon Musk déclare que évincer Jensen Huang revient à « écarter Michael Jordan de votre équipe »",
      "m": 1,
      "e": 0
     }
@@ -6357,7 +6357,7 @@
  ],
  "hot": [
   {
-   "score": 1.05,
+   "score": 0.97,
    "id": "andy-jassy",
    "n": "Andy Jassy",
    "role": "PDG d'Amazon",
@@ -6371,7 +6371,7 @@
    "outlets": 1
   },
   {
-   "score": 0.84,
+   "score": 0.78,
    "id": "stuart-russell",
    "n": "Stuart Russell",
    "role": "Professeur à Berkeley, sécurité de l'IA",
@@ -6385,7 +6385,7 @@
    "outlets": 1
   },
   {
-   "score": 0.8,
+   "score": 0.74,
    "id": "kai-fu-lee",
    "n": "Kai-Fu Lee",
    "role": "Fondateur de 01.AI, ex-Google Chine",

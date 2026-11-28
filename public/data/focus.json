@@ -5,15 +5,15 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-28T13:17:51.249Z",
+ "generated_at": "2026-11-28T14:16:01.545Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
   "379e55a2e099+506b74d1aabd+7a7175ef0317+a09eb5e47b90+ac6e047a0164+e9a493fbbd87+ea7846207d79",
   "02f0c60f242d+08685ddbf818+0fefe3aa5f12+1efbd1ef475f+22fd7ca2e2d6+412483738c4e+43d32363a274+4401da3fa47f+49fe75757113+76720683de1f+7c0a81286ce5+8bae682544f1+9a46a9d445c1+9eed3fb59cee+a078aa976acb+bb2085849fe9+ca87ec84f38b+cb73d7922f7d+cf81369c0f42+e5cd248eff02+f8cdc496b0bc",
+  "2632bdf5bf48+30f42de1c504+9006be75a409+9bac313532fe",
   "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+9fcfba1bb1f5+c8ea64c1c7c6",
   "16b9ff9d80af+42272da9d711+71be7d2dfb67+9cbfa8def305+a5c3b4d779ea+db6892e02d02+dc7f497f02ae",
   "7f363c30c38a+a76cae0bb54d+c22420547b9c+fb282007afd0",
-  "2632bdf5bf48+30f42de1c504+9bac313532fe",
   "1402902dd8da+65ccb5595a3d+893ca3b5875c+b87df8168574+c5e5e9bb5b36",
   "05e8bcaf8862+22b3e91f8822+7c3f069f322a+9a846c49257a+a033e5a89094+b1edc9637cc5+c1dc41f0728a+c89240affac7"
  ],
@@ -27,17 +27,17 @@
    ],
    "head": "Donald Trump intervient directement pour orchestrer le retour de Jensen Huang à la tête de Nvidia",
    "bullets": [
-    "Les actions taïwanaises ont enregistré une hausse de plus de 9 % sur les marchés à la suite de cette annonce.",
-    "Cette ingérence de l'exécutif américain dans la gouvernance d'une entreprise privée stratégique soulève des questions sur l'indépendance du conseil d'administration et illustre la politisation de l'intelligence artificielle."
+    "Donald Trump a déclaré qu'il serait ouvert à l'idée de gracier le PDG de Nvidia si des enquêtes parlementaires l'exigeaient.",
+    "Cette ingérence politique de l'exécutif américain dans la gouvernance d'une entreprise technologique privée soulève des interrogations sur son indépendance face au pouvoir."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "Donald Trump directly intervenes to orchestrate the return of Jensen Huang at the head of Nvidia",
+   "head_en": "Donald Trump directly intervenes to orchestrate the return of Jensen Huang to the head of Nvidia",
    "bullets_en": [
-    "Taiwanese stocks recorded an increase of more than 9 percent on the markets following this announcement.",
-    "This interference by the US executive in the governance of a strategic private company raises questions about the independence of the board of directors and illustrates the politicization of artificial intelligence."
+    "Donald Trump stated he would be open to pardoning Nvidia's CEO if parliamentary investigations required it.",
+    "This political interference by the US executive branch in the governance of a private technology company raises questions about its independence from power."
    ],
    "ctx_ids": [],
    "ts": "2026-11-27T18:10:42.000Z"
@@ -49,22 +49,19 @@
     "5d42c8972e7d",
     "6e8e5a329bec"
    ],
-   "head": "TSMC envisage la construction d'une usine de puces de 22,6 milliards de dollars au Texas",
+   "head": "TSMC envisage une usine de 22,6 milliards de dollars au Texas",
    "bullets": [
-    "Le projet prévoit la fabrication de puces de 2 nm et au-delà avec une mise en service visée d'ici 2031.",
-    "Le nouveau campus serait implanté dans le comté de Brazos.",
-    "Cet investissement vise à renforcer la production locale de semi-conducteurs avancés indispensables à l'intelligence artificielle tout en intensifiant la concurrence avec Samsung."
+    "Le projet prévoit la production de puces de 2 nm et plus dans le comté de Brazos d'ici 2031.",
+    "Cet investissement intensifie la concurrence avec Samsung et vise à renforcer la production de puces pour l'intelligence artificielle aux États-Unis."
    ],
    "kinds": [
     "detail",
-    "detail",
     "explication"
    ],
-   "head_en": "TSMC plans a 22,6 billion dollar chip plant in Texas",
+   "head_en": "TSMC considers a 22.6 billion dollar plant in Texas",
    "bullets_en": [
-    "The project involves manufacturing 2 nm chips and beyond with an operational target by 2031.",
-    "The new campus would be located in Brazos County.",
-    "This investment aims to strengthen local production of advanced semiconductors essential for artificial intelligence while intensifying competition with Samsung."
+    "The project plans for the production of 2nm and beyond chips in Brazos County by 2031.",
+    "This investment intensifies competition with Samsung and aims to strengthen the production of chips for artificial intelligence in the United States."
    ],
    "ctx_ids": [],
    "ts": "2026-11-28T03:18:58.000Z"
@@ -76,22 +73,22 @@
     "42272da9d711",
     "9cbfa8def305"
    ],
-   "head": "Nvidia suspend ses ventes de serveurs vers 4 pays d'Asie du Sud-Est",
+   "head": "Nvidia suspend ses ventes de serveurs en Asie du Sud-Est face aux restrictions américaines",
    "bullets": [
-    "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
-    "Cette décision fait suite à une règle d'exportation émise par le Département du Commerce des États-Unis.",
-    "Le Premier ministre Wong a affirmé que Singapour ne permettrait pas d'être utilisé comme passerelle pour contourner les restrictions américaines."
+    "L'arrêt des livraisons concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
+    "La mesure vise à se conformer au durcissement des règles d'exportation du Département du Commerce américain pour empêcher le contournement des sanctions contre la Chine.",
+    "Le Premier ministre Wong avait affirmé que Singapour ne serait pas utilisé comme une passerelle pour contourner les restrictions américaines."
    ],
    "kinds": [
     "detail",
-    "detail",
+    "explication",
     "contexte"
    ],
-   "head_en": "Nvidia suspends server sales to 4 Southeast Asian countries",
+   "head_en": "Nvidia suspends server sales in Southeast Asia amid US restrictions",
    "bullets_en": [
-    "The measure affects Malaysia, Singapore, Thailand and Indonesia.",
-    "This decision follows an export rule issued by the US Department of Commerce.",
-    "Prime Minister Wong stated that Singapore would not allow itself to be used as a gateway to bypass US restrictions."
+    "The delivery halt concerns Malaysia, Singapore, Thailand, and Indonesia.",
+    "The measure aims to comply with tighter export rules from the US Department of Commerce to prevent bypassing sanctions against China.",
+    "Prime Minister Wong had stated that Singapore would not be used as a gateway to bypass US restrictions."
    ],
    "ctx_ids": [
     "d05efe22784c"

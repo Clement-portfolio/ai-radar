@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "id": "0357becfa8e6",
+   "ts": "2026-11-28T14:00:00.000Z",
+   "title": "Un utilisateur réutilise une vieille configuration de minage pour l'IA locale en mutualisant de la mémoire VRAM",
+   "orig": "Caveman repurposes old mining rig for local AI, pools 72GB VRAM across mismatched GPUs",
+   "summary": "Un passionné réutilise une ancienne plateforme de minage de cryptomonnaies pour faire tourner des modèles d'IA locaux en combinant la mémoire VRAM.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Tom's Hardware",
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/caveman-repurposes-old-mining-rig-for-local-ai-pools-72gb-vram-across-mismatched-gpus-pcie-x1-slot-hits-just-10-percent-load-while-running-a-120b-model",
+   "confidence": "moyenne",
+   "title_en": "Caveman repurposes old mining rig for local AI, pools 72GB VRAM across mismatched GPUs",
+   "summary_en": "Caveman repurposes old mining rig for local AI, pools 72GB VRAM across mismatched GPUs."
+  },
+  {
    "id": "4848502bd8c9",
    "ts": "2026-11-28T13:09:39.000Z",
    "title": "Jensen Huang est de retour. La thèse haussière sur Nvidia demeure",
@@ -109,6 +125,24 @@
    "why_en": "Exploring orbital data centers illustrates radical approaches to solving terrestrial energy and cooling constraints for AI."
   },
   {
+   "id": "032dd0d9e5a5",
+   "ts": "2026-11-28T12:02:05.000Z",
+   "title": "Des experts avertissent que l'intelligence artificielle est capable de décoder les secrets des gouvernements et des banques",
+   "orig": "خبراء يحذرون من قدرة الذكاء الاصطناعي على فك تشفير أسرار الحكومات والبنوك",
+   "summary": "Des experts alertent sur la capacité potentielle de l'intelligence artificielle à déchiffrer les données sécurisées des institutions financières et étatiques.",
+   "country": "GULF",
+   "category": "regul",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "الشرق الأوسط",
+   "url": "https://news.google.com/rss/articles/CBMiiAVBVV95cUxNVEhXeXBDWndvYTFZbXk1M2FzUXVDUktSTktJcE8wUlo5VFVJbXhZckdFZzRrLVh2ekI1ZWpsbVk4U2JoM1BrWEZ3OTRlUXI1TjlrZWhZOE9KNmdQYldxdVlXMzRBbTV4dHFiZ3NFTnhhYUM1elYtLWt5RWNiUVFvN0FURmRNeVh1TEdDNUZKRE9MNFZWVlJBUGF6TW83UFNpeURiaWpoSTh2bEZ1Slo0U0ZoTmdteVBGYzljQmpwaVYzcGlNa3NGMTJZTVpVdHlpaTNLN2FROUNVLUhoWUVTSHJvYjUwenBpODVTN0NKREdRci1wYXJ3YVlKOFMzOS0wVnNrRG5YeC1KcS1uYXlCaUY5aXV2cWxEck5FMGZYcDRtdDhxUlJNTGxuR3YxcHp3aWtQVThtLWtTRm1XVU1paFZjRFlRVWZjaXBGY05PY2xfekwxMmk5RDlBRHJ4Z0l4RHJ6S0N4RkFrRzNVSFRkY0FScllPN1h2MmNpLVgtR0h4a0YwbVlqYW9ORTZIVEpfQS1hd0c1ZEZlVjBreXpPd0RzazZkZEpNMTI2LVhqV0daa20xd0F0bjV4cVZtMU0wWkdqZXQ2T0diTEFFT3dsUmxpenBlVHA3YlZ5UW1WS2F0bm1MeUlDbXdDTGhFa0E1VTEwQkRnQ2NFc2Vhekw5cnZMelZkOGFqV296eUdIUDFfYURrTmpQTElTTmdpTVFWZWFYeGt2ZWk2MEdBMlF0UXNaQWVublVPaklyS2p3azRYVF85ei0wV1dabUl1MjY1dVY0Z21Md29jVzZidF9UMFFHbk51NE11NmVla29PSUJjVGJQV043b0VEMDZlaFRGaG8zX0x0U2k?oc=5",
+   "confidence": "moyenne",
+   "why": "Les risques potentiels de piratage et de décryptage par l'IA posent une menace directe pour la cybersécurité des infrastructures critiques.",
+   "title_en": "Experts warn of AI's ability to crack government and bank secrets",
+   "summary_en": "Experts warn of AI's ability to crack government and bank secrets.",
+   "why_en": "Potential cybersecurity threats from advanced AI capable of breaking encryption pose severe risks for critical state and financial assets."
+  },
+  {
    "id": "9eb91df6ba20",
    "ts": "2026-11-28T12:02:00.000Z",
    "title": "Résumé des startups : les transactions dans la fintech et l'IA en Arabie saoudite dominent l'activité de financement régionale",
@@ -177,6 +211,22 @@
    "title_fr": "OpenAI poursuit Apple en retour pour vol présumé de secrets commerciaux",
    "title_en": "OpenAI counter-sues Apple over alleged theft of trade secrets",
    "summary_en": "OpenAI is taking legal action against Apple, accusing the firm of stealing AI-related trade secrets."
+  },
+  {
+   "id": "17c8e80cb5b6",
+   "ts": "2026-11-28T11:14:32.000Z",
+   "title": "La newsletter Checks and Balance : comment GTA a aidé à construire la révolution de l'IA",
+   "orig": "Checks and Balance newsletter: How GTA helped build the AI revolution",
+   "summary": "Une analyse sur la manière dont les jeux vidéo de type GTA ont contribué aux progrès technologiques de la révolution de l'intelligence artificielle.",
+   "country": "EU",
+   "category": "recherche",
+   "importance": 1,
+   "layer": "Recherche",
+   "source": "The Economist",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNa3pKQ29acmlBRW84OUxNd1ZTVlJQTERKb01ieVBaeng3QVJseFR1aGpiQ2Y4M2duS2VlMTlDNTJRRU9UZzdoQWRpa2tHY2F4N0VkMTdCeEZTY2k1QnJLb0QwUXoxaGRjeW4yMk5KSXhidmhtS1RacE9CQWI3MWFGZVNFSlNnX0tLNnVESnBaUnVMcHNOZXFuWjJPQ0N3Z0Y4OHZ6bnRSeHZuODVPTU9FaDRYVkRWQVZNQjU0?oc=5",
+   "confidence": "moyenne",
+   "title_en": "Checks and Balance newsletter: How GTA helped build the AI revolution",
+   "summary_en": "Checks and Balance newsletter: How GTA helped build the AI revolution."
   },
   {
    "id": "fad97191bb4e",
@@ -886,6 +936,24 @@
    "why_en": "Raises serious compliance and enforcement concerns regarding U.S. export controls on high-end semiconductors."
   },
   {
+   "id": "9006be75a409",
+   "ts": "2026-11-28T02:09:29.000Z",
+   "title": "OpenAI contre Apple : quel est le litige sur les secrets commerciaux et pourquoi les deux géants vont s'affronter en justice",
+   "orig": "OpenAI vs Apple: What is the trade secrets dispute, and why are the two tech giants heading for a legal battle?",
+   "summary": "OpenAI a déposé une contre-attaque contre Apple pour vol présumé de secrets commerciaux et restrictions d'embauche dans le secteur de l'IA.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "Mint",
+   "url": "https://www.livemint.com/companies/news/openai-vs-apple-what-is-the-trade-secrets-dispute-and-why-are-the-two-tech-giants-heading-for-a-legal-battle-11795830326678.html",
+   "confidence": "moyenne",
+   "why": "Le conflit juridique entre OpenAI et Apple marque une escalade majeure dans la concurrence pour les talents et le marché du matériel d'IA.",
+   "title_en": "OpenAI vs Apple: What is the trade secrets dispute, and why are the two tech giants heading for a legal battle?",
+   "summary_en": "OpenAI vs Apple: What is the trade secrets dispute, and why are the two tech giants heading for a legal battle?",
+   "why_en": "The legal escalation between OpenAI and Apple highlights intense competition for top talent and strategic positioning in AI hardware."
+  },
+  {
    "id": "2281f7f4357d",
    "ts": "2026-11-28T02:06:12.000Z",
    "title": "Des puces Blackwell de NVIDIA découvertes dans un centre de données chinois",
@@ -904,6 +972,40 @@
    "why_en": "Highlights potential violations or loopholes in US export controls concerning advanced chips."
   },
   {
+   "id": "83d4ac61df6d",
+   "ts": "2026-11-28T02:05:10.000Z",
+   "title": "Une surveillance propulsée par l'IA pour renforcer la sécurité et la gestion des foules lors du Magh Mela 2027",
+   "orig": "AI-powered surveillance to bolster security and crowd management in Magh Mela 2027",
+   "summary": "Des technologies de surveillance basées sur l'intelligence artificielle seront déployées pour assurer la sécurité du Magh Mela 2027.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Hindustan Times",
+   "url": "https://www.hindustantimes.com/cities/others/aipowered-surveillance-to-bolster-security-and-crowd-management-in-magh-mela-2027-101795801858732.html",
+   "confidence": "moyenne",
+   "title_en": "AI-powered surveillance to bolster security and crowd management in Magh Mela 2027",
+   "summary_en": "AI-powered surveillance to bolster security and crowd management in Magh Mela 2027."
+  },
+  {
+   "id": "8a71293beb78",
+   "ts": "2026-11-28T02:00:18.000Z",
+   "title": "Nota étend sa technologie de compression d'IA à la robotique",
+   "orig": "Nota Expands AI Compression Technology Into Robotics",
+   "summary": "Nota élargit l'application de sa technologie de compression de modèles d'IA aux agents intelligents et à la robotique.",
+   "country": "OTHER",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/business/2026/11/28/nota-expands-ai-compression-technology-into-robotics",
+   "confidence": "moyenne",
+   "why": "La compression des modèles pour la robotique répond à la hausse des coûts d'inférence et facilite le déploiement sur les équipements périphériques.",
+   "title_en": "Nota Expands AI Compression Technology Into Robotics",
+   "summary_en": "Nota Expands AI Compression Technology Into Robotics.",
+   "why_en": "Expanding model compression to robotics addresses rising inference costs and enables efficient edge deployments."
+  },
+  {
    "id": "be14b1acf90b",
    "ts": "2026-11-28T02:00:11.000Z",
    "title": "DeepSeek est le dernier développeur chinois à s'inquiéter de perdre le contrôle de l'IA",
@@ -920,6 +1022,24 @@
    "title_en": "DeepSeek is China’s latest developer to worry about losing control of AI",
    "summary_en": "Chinese startup DeepSeek commissioned a third-party evaluation to assess safety risks on its V4 Pro model.",
    "why_en": "Demonstrates that Chinese AI labs are actively addressing alignment and control risks in advanced models."
+  },
+  {
+   "id": "8963c14496a2",
+   "ts": "2026-11-28T02:00:00.000Z",
+   "title": "Le pari du président Trump sur l'intelligence artificielle risque de provoquer des réactions négatives sur l'emploi et les conflits d'intérêts",
+   "orig": "President Trump’s bet on artificial intelligence risks backlash from Americans worried about jobs and self-dealing",
+   "summary": "Les choix politiques du président Trump en matière d'intelligence artificielle suscitent l'inquiétude des citoyens face aux risques sur l'emploi.",
+   "country": "US",
+   "category": "politique",
+   "importance": 2,
+   "layer": "Régulation",
+   "source": "Wsj",
+   "url": "https://www.wsj.com/politics/policy/the-high-political-cost-of-trumps-loyalty-to-jensen-huang-7f0327db?mod=rss_socialpoliticsfeed",
+   "confidence": "moyenne",
+   "why": "Les tensions politiques et sociales autour des politiques fédérales en faveur de l'IA soulignent les craintes liées à l'automatisation de l'emploi.",
+   "title_en": "President Trump’s bet on artificial intelligence risks backlash from Americans worried about jobs and self-dealing",
+   "summary_en": "President Trump’s bet on artificial intelligence risks backlash from Americans worried about jobs and self-dealing.",
+   "why_en": "Political backlash against federal AI policies reflects growing public anxiety over employment security and governance ethics."
   },
   {
    "id": "73a780ac4c07",
@@ -1831,7 +1951,7 @@
    "why": "La restructuration des géants du logiciel pour s'adapter à l'IA entraîne des changements sociaux et économiques majeurs.",
    "title_en": "Sources say SAP mulling cuts of at least 10,000 roles",
    "summary_en": "SAP is planning massive layoffs to restructure its software business for the AI era.",
-   "why_en": "The restructuring of software giants to adapt to AI brings major social and economic changes."
+   "why_en": "The restructuring of software giants to adapt to AI leads to major social and economic changes."
   },
   {
    "id": "68a72b4f6d21",
@@ -3146,8 +3266,8 @@
    "confidence": "moyenne",
    "why": "Souligne l'afflux massif de projets de construction de datacenters et les pressions politiques locales associées.",
    "title_en": "Texas lifts freeze on 1,800+ data center projects in Greg Abbott U-turn",
-   "summary_en": "Texas is allowing the approval of new permits for data centers again after suspending the procedure in August.",
-   "why_en": "Highlights the massive influx of data center construction projects and associated local political pressures."
+   "summary_en": "Texas is allowing the approval of new data center permits again after suspending the procedure in August.",
+   "why_en": "Highlights the massive influx of data center construction projects and related local political pressures."
   },
   {
    "id": "5f0c43dd487b",
@@ -7116,7 +7236,7 @@
    "confidence": "moyenne",
    "why": "C'est l'une des premières interdictions législatives directes ciblant les produits d'IA grand public pour protéger les mineurs.",
    "title_en": "New York Governor Kathy Hochul signs ban on AI chatbot toys backed by $15,000 daily fines",
-   "summary_en": "The Governor of New York has signed a law banning the sale of toys equipped with integrated AI chatbots due to risks for children.",
+   "summary_en": "The Governor of New York signed a law banning the sale of toys equipped with integrated AI chatbots due to risks for children.",
    "why_en": "This is one of the first direct legislative bans targeting consumer AI products to protect minors."
   },
   {
@@ -8373,6 +8493,22 @@
    "why": "L'industrialisation des robots humanoïdes par des acteurs de l'automobile marque une étape vers l'adoption de l'IA physique dans la production.",
    "title_en": "Xpeng targets 2026 year-end mass production for Iron humanoid robot",
    "summary_en": "Chinese manufacturer Xpeng plans to launch mass production of its Iron humanoid robot before the end of 2026."
+  },
+  {
+   "id": "6edb4f78c96c",
+   "ts": "2026-11-26T09:14:46.000Z",
+   "title": "Retour de Jensen Huang : pourquoi l'industrie des modules optiques stagne encore en phase de reprise",
+   "orig": "Jensen Huang Returns: Why the Optical Module Industry Leader Is Still Stuck in Recovery Limbo",
+   "summary": "Analyse sur le secteur des modules optiques et les défis de sa reprise dans l'écosystème de l'intelligence artificielle.",
+   "country": "US",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "36Kr",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9XSU9na1pvUmJTdHdibVZZSU5DX0Y4YlRPZ2Z3RGk5ZFJiTWVGVV9XQTNZNE5JTlRyY2hsSWxzcThwVERUclUtRWpleU1RNUFDMFFv?oc=5",
+   "confidence": "moyenne",
+   "title_en": "Jensen Huang Returns: Why the Optical Module Industry Leader Is Still Stuck in Recovery Limbo",
+   "summary_en": "Analysis of the optical module sector and its recovery challenges within the artificial intelligence ecosystem."
   },
   {
    "id": "c31d6345e1ad",
@@ -13305,7 +13441,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410434/28124/en/point-of-care-medical-software-market-size-share-industry-trends-and-growth-forecasts-2026-2031-cloud-and-ai-adoption-drive-17-33-cagr-and-a-usd-12-77-billion-opportunity.html",
    "confidence": "moyenne",
    "title_en": "Point-of-Care Medical Software Market Size, Share, Industry Trends, and Growth Forecasts, 2026-2031 | Cloud and AI Adoption Drive 17.33% CAGR and a USD 12.77 Billion Opportunity",
-   "summary_en": "The adoption of AI and cloud computing is fostering growth in the medical software market."
+   "summary_en": "The adoption of AI and cloud computing is driving growth in the medical software market."
   },
   {
    "id": "448ca2963316",
@@ -13321,7 +13457,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410424/28124/en/the-global-online-gambling-market-2026-2034-size-share-competition-and-revenue-forecast-by-type-device-and-country-mobile-adoption-and-legalization-fuel-8-93-cagr-to-220-99-billion.html",
    "confidence": "moyenne",
    "title_en": "The Global Online Gambling Market 2026-2034: Size, Share, Competition and Revenue Forecast by Type, Device, and Country | Mobile Adoption and Legalization Fuel 8.93% CAGR to $220.99 Billion",
-   "summary_en": "AI-driven personalization is stimulating growth in the global online gambling market."
+   "summary_en": "AI-driven personalization is boosting growth in the global online gambling market."
   },
   {
    "id": "a05f839240ee",
@@ -20608,7 +20744,7 @@
    "why": "La nécessité pour les entreprises d'IA de devenir des acheteurs d'énergie directe souligne la tension croissante sur les ressources électriques pour les centres de données.",
    "title_en": "Anthropic posts $405,000-a-year job for gas specialist to secure fuel for AI",
    "summary_en": "Anthropic is hiring a natural gas expert to secure the energy supply for its data centers, illustrating the race for computing power.",
-   "why_en": "The need for AI companies to become direct energy buyers underlines the growing pressure on electrical resources for data centers."
+   "why_en": "The need for AI companies to become direct energy buyers highlights the growing tension over electrical resources for data centers."
   },
   {
    "id": "613b95800cde",
@@ -23198,7 +23334,7 @@
    "why": "Montre l'investissement public massif des régions pour répondre aux besoins en compétences critiques de l'écosystème de l'IA et des semi-conducteurs.",
    "title_en": "North Gyeongsang Province to Train 42,000 Workers for Five Advanced Industries",
    "summary_en": "The South Korean province will invest 236 billion won over four years to train technicians in AI chips, robotics, and mobility.",
-   "why_en": "Shows the massive public investment by regions to meet critical skill needs in the AI and semiconductor ecosystem."
+   "why_en": "Shows massive public investment by regions to meet critical skills needs in the AI and semiconductor ecosystem."
   },
   {
    "id": "67d3e91e0150",
@@ -25089,144 +25225,6 @@
    "trading": true,
    "title_en": "Jim Cramer sees more upside for Nvidia stock with Jensen Huang back as CEO",
    "summary_en": "Jim Cramer says Jensen Huang's return as Nvidia CEO could help revive the chipmaker's stock."
-  },
-  {
-   "id": "3a6c6f14ac09",
-   "ts": "2026-11-23T23:10:27.000Z",
-   "title": "Nvidia réintègre son PDG Jensen Huang après les déclarations de Donald Trump",
-   "orig": "Nvidia reinstates CEO Jensen Huang after Trump says he 'made' the deal",
-   "summary": "Nvidia a rétabli Jensen Huang dans ses fonctions après l'intervention publique de Donald Trump.",
-   "country": "US",
-   "category": "politique",
-   "importance": 3,
-   "layer": "Puces",
-   "source": "BBC",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBGLU9yX2djdGRQV01hM0llUENSZ0U3a1YzQU1WdWx5Z0dMMVJGUFduWkhJTjBxOHVVeE9SN1lyaE1sNjdJYWVENzhrRUJ2cXNUZEZHaUpRUHE0UXM?oc=5",
-   "confidence": "moyenne",
-   "why": "Démontre une interférence et une influence politique directe de l'administration américaine dans la gouvernance tech.",
-   "title_en": "Nvidia reinstates CEO Jensen Huang after Trump says he 'made' the deal",
-   "summary_en": "Nvidia reinstates CEO Jensen Huang after Donald Trump claims responsibility for brokering the deal.",
-   "why_en": "Demonstrates direct political interference and influence from the US administration in tech corporate governance."
-  },
-  {
-   "id": "708bdf8a3dbc",
-   "ts": "2026-11-23T23:00:00.000Z",
-   "title": "Les aspirants à l'IA en Chine attirent des investissements massifs pour concurrencer DeepSeek",
-   "orig": "The Chinese AI Aspirants Drawing Big Bets to Take on DeepSeek",
-   "summary": "De jeunes entreprises chinoises d'intelligence artificielle lèvent des fonds importants pour rivaliser avec DeepSeek.",
-   "country": "CN",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Modèles",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGh4OFdnTFBETXN3eURLLTF2MG8wOEFxTGRNT2F0NUNuUS1lTEhBWU0xWEc0S2xfM3B3NlVHZXVOQ1hkdHhVc25mNkZrVzlUTWZlQld0dVZNdTZFTDhhVk0taTJKd0ZjeENHNGY4LVBTem9scnh5U2NpY2UzZXdaYVZwRloyTDRRRjhzU2ExOTNXYTVkYW5lUWhMbU9FUUtHaUtJaS1hSnBybUNxX0Joa0R3?oc=5",
-   "confidence": "moyenne",
-   "why": "Met en lumière l'allocation intense de capitaux et la concurrence acharnée entre les développeurs de modèles en Chine.",
-   "title_en": "The Chinese AI Aspirants Drawing Big Bets to Take on DeepSeek",
-   "summary_en": "Chinese AI startups are drawing significant venture capital bets to compete against DeepSeek.",
-   "why_en": "Highlights the intense capital allocation and competitive landscape among Chinese foundational AI developers."
-  },
-  {
-   "id": "7f29e492dadb",
-   "ts": "2026-11-23T23:00:00.000Z",
-   "title": "Jensen Huang chez Nvidia : le parrain indispensable de l'IA",
-   "orig": "Nvidia’s Jensen Huang - the indispensable godfather of AI",
-   "summary": "Analyse du rôle central de Jensen Huang dans l'essor et l'écosystème mondial de l'intelligence artificielle.",
-   "country": "US",
-   "category": "politique",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "The Straits Times",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNYndvQ1pPTnZPaXhaM3hRRmh1Q0Q2dTZyVk9kbE1yS1k5TzhYNlhnRXFYb29JQ01JTzAtcHI1Y09lc0tXSTVpUXVnakgtcU94MnNKbEFNMllhNHZoSnppQWdnbk1xTFJ0TWRiQXcxM0F0SDlUaWd3SVhzbzQ3NzdGYl82eFJnSzJ3ckZaRF9WUUM1SEFJcWpmMUctNnd2cXdRNmdJbVBn?oc=5",
-   "confidence": "moyenne",
-   "title_en": "Nvidia’s Jensen Huang - the indispensable godfather of AI",
-   "summary_en": "An overview of Jensen Huang's irreplaceable role in building the global AI hardware empire."
-  },
-  {
-   "id": "3f7fd49f5433",
-   "ts": "2026-11-23T22:45:24.000Z",
-   "title": "Le ministère du Commerce ajoute Megaspeed à la liste noire commerciale suite au scandale Nvidia",
-   "orig": "Commerce Department adds Megaspeed to trade backlist amid Nvidia scandal",
-   "summary": "Le ministère américain du Commerce a placé Megaspeed sur sa liste noire commerciale dans le cadre du scandale impliquant Nvidia.",
-   "country": "US",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Régulation",
-   "source": "The Hill",
-   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPZTVCRTNZa082VGU1SGRJMTJGSmRuZU51MVJoT3hRSHhUSFlZaWhpS1JoVE45MElyQm50dVl2SVZLNERwaXJPREk2MmpYSVRtVGRwWGZvVlpKLVRqTzZIRUtISExOOENJSEloUmQwdGE3MWprOGlWRkhGcGtmQXI5aUNVbVZuMnkyVG5YcUU5VGPSAZABQVVfeXFMT2U1QkUzWWtPNlRlNUhkSTEyRkpkbmVOdTFSaE94UUh4VEhZWWloaUtSaFROOTBJckJudHVZdklWSzREcGlyT0RJNjJqWElUbVRkcFhmb1ZaSi1Uak82SEVLSEhMTjhDSUhJaFJkMHRhNzFqazhpVkZIRnBrZkFyOWlDVW1WbjJ5MlRuWHFFOVRj?oc=5",
-   "confidence": "moyenne",
-   "title_en": "Commerce Department adds Megaspeed to trade backlist amid Nvidia scandal"
-  },
-  {
-   "id": "e944a6d6b432",
-   "ts": "2026-11-23T22:41:58.000Z",
-   "title": "Les États-Unis renforcent leurs partenariats dans le Golfe avec un cadre sur les minéraux critiques avec le Qatar",
-   "orig": "US deepens Gulf partnerships with Qatar critical minerals framework",
-   "summary": "Les États-Unis et le Qatar ont signé un accord sur les minéraux critiques pour sécuriser leurs chaînes d'approvisionnement.",
-   "country": "GULF",
-   "category": "politique",
-   "importance": 2,
-   "layer": "Énergie",
-   "source": "The National",
-   "url": "https://www.thenationalnews.com/business/energy/2026/11/23/us-qatar-critical-minerals-framework/",
-   "confidence": "moyenne",
-   "why": "Sécurise les chaînes d'approvisionnement en ressources critiques nécessaires à l'expansion mondiale de l'IA.",
-   "title_en": "US deepens Gulf partnerships with Qatar critical minerals framework",
-   "summary_en": "The US and Qatar signed a critical minerals framework to align supply chain strategies in the region.",
-   "why_en": "Secures critical resource supply chains necessary for global high-tech and AI infrastructure expansion."
-  },
-  {
-   "id": "d4a1c68e67c3",
-   "ts": "2026-11-23T22:39:00.000Z",
-   "title": "António Guterres demande un pacte mondial contre les risques de l'intelligence artificielle",
-   "orig": "Künstliche Intelligenz: António Guterres fordert globalen Pakt gegen KI-Risiken",
-   "summary": "Le secrétaire général de l'ONU exhorte à la mise en place d'un accord international pour encadrer les risques liés à l'IA.",
-   "country": "EU",
-   "category": "regul",
-   "importance": 2,
-   "layer": "Régulation",
-   "source": "Spiegel",
-   "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQdnlZa1NRSEwzR1djSWkxemEyd04tdk9mY0dPSHlzT3VPdENCVHRuQzFzd1ZEc0JBQURfTlVrZ1dsdV81RkRqSmJINnlNY1MzWmVBR2R4cFZDSTRUMWRoaWJZekFjOEF6RlFaNmJaa2dTRGlUREltQ2xsNXpfTVJQZ3dzU0JBZGs1QjlKTW5VcG9aLWF2MXctMVJDRjdEQzhsRDFHVjVBWlFCTGRGUkVQYUczQkFEak1ranRsLUd6WFhVTksyZEwtbmhMWm5pc3hkRWpXTlVlT0JBbnlWbW9Qdk9QWXJydmt1OVB6X3ZwV0ZrbnZa?oc=5",
-   "confidence": "moyenne",
-   "why": "Reflète les efforts diplomatiques internationaux pour établir des cadres mondiaux pour les technologies d'IA.",
-   "title_en": "Künstliche Intelligenz: António Guterres fordert globalen Pakt gegen KI-Risiken",
-   "summary_en": "UN chief António Guterres demands a global pact to address and mitigate artificial intelligence risks.",
-   "why_en": "Reflects international diplomatic efforts to establish global guardrails and treaties for emerging AI technologies."
-  },
-  {
-   "id": "5f3c29c3325d",
-   "ts": "2026-11-23T22:38:26.000Z",
-   "title": "Le S&P 500 bondit de 5 % avec la reprise des actions IA et le retour de Huang",
-   "orig": "«ستاندرد آند بورز 500» يقفز نحو 5 % مع تعافي أسهم الذكاء الاصطناعي وعودة هوانغ",
-   "summary": "Le marché boursier américain progresse fortement, porté par le retour de Jensen Huang et la reprise des valeurs liées à l'IA.",
-   "country": "US",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Financement",
-   "source": "الشرق الأوسط",
-   "url": "https://news.google.com/rss/articles/CBMi4ARBVV95cUxPcnVlOEJLQWtqTVc1NlR2ZkRCQVFHNVVZRDJ6Y1VXR3B6V1hWaGsyMkEwWE0zMFVNTmNGUHZYWG1YSEotOGRUblNESS04eVNMc0V6TTNSaWEydTNxMWtVZ2xNNWd5N0lycUxQUXByN3lwZDBlUlJYNHcyck5TSE1mSk0td05QdXp3VG02UG1fMmhFd3Iyb3lfcmhXRDBRak5nMGk3ekZuZ0FBaGRLTEVLV0tnRmdnNTVBQmJlRkYyRm5scVNFeGxhdHplWEpoTE5oNTBJeE02SzRSc3hiNmtIR1VVM0dxYTRMWEZmV05faHZuLWwyc01GVnBhR0g1MTVMaktDYWFva2NOSF9naHlqa0lpM2RTMGNsNFFBZ3pxNE5kbC1UTkwwSTF2WjNjOTJaYlA0UVhOZVdQbmtCeGE5VmRoS1R3aXZPUmZFbzhFdlBWOU41aDlIcWZRb0tsRV9rLVkwVXJ1bGNZT2FWUll0bkdJMU9jT09KUG1ZTmxIWjN3TlZ0VUcxWVRXd3RyTU5RSXNxckUyTTZVTno3ZzBKeDFyRW9MalE0M3NJTV9xZDhTUE5TUlB0b1NMamJhVkhVR002ZWFGU041WjhfWU1aRVdaOGE0QmNId202eWdnMFZOZFhwZUNUc2JtaDRJR21WNGEzamNWM0tlSVhNZ2pKSFk2TTlLNXB1eE5NNmFfVl8wN2pucnJrN1FOSHVSeHpiOUp4V2hyUm1nZzI4dUVMMUx5cHZqU29IcGV1QkZteXJoOGFlY0I2cGRoRHBUUnhjaEtIRkRzdEhDNDlyMDA2TA?oc=5",
-   "confidence": "moyenne",
-   "trading": true,
-   "title_en": "S&P 500 jumps nearly 5% as AI stocks recover and Huang returns",
-   "summary_en": "The US stock market rises sharply, driven by Jensen Huang's return and the recovery of AI-related stocks."
-  },
-  {
-   "id": "e60d3707a6f0",
-   "ts": "2026-11-23T22:30:00.000Z",
-   "title": "Les États-Unis placent Megaspeed sur liste noire pour détournement présumé de puces",
-   "orig": "US puts Megaspeed on export control list over alleged chip diversion",
-   "summary": "Le gouvernement américain restreint Megaspeed en raison de soupçons de contournement des contrôles à l'exportation.",
-   "country": "US",
-   "category": "regul",
-   "importance": 3,
-   "layer": "Régulation",
-   "source": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNRmVVSWVja09QTXNYOFhsZ2k5QWVYV0pVYlF2dF9maFl2RzYtSGZlcVRWbm9iTnpiemNFRXhmQlB0QnZRS21WX2lPdUdfN0czOVVkcFdEUzlqazhYNExxNGZuWTZHVkJ6RGFJQXBfRThmNWpxQTNxcXB0N2N3TnpxV2E1YkE5MG030gGcAUFVX3lxTE0tRDZBUWo5eks4N3VJZk0wRlY1eHNLVDAzQnZFZHdYZXRDcmZabkFjMTIzdEJvY01XNlc5dHNaTHNWUXdCWVRCUUUtN09IcXRwemF2dkJmci1BQ3haTHFweEE1UEtBdjNLNi14YzA0VWp2WWRaeG92YkwyRnZydEJaRTRFLWJydXBmN0haWi0ydS1TbzQ3QVoxdjJ6UA?oc=5",
-   "confidence": "moyenne",
-   "why": "Applique des politiques strictes de contrôle à l'export pour empêcher les puces haut de gamme de marchés interdits.",
-   "title_en": "US puts Megaspeed on export control list over alleged chip diversion",
-   "summary_en": "The US puts Megaspeed on an export control list over alleged chip smuggling and diversion.",
-   "why_en": "Enforces strict export enforcement policies to prevent restricted high-end chips from reaching prohibited markets."
   }
  ]
 }
