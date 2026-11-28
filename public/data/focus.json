@@ -5,16 +5,16 @@
   "min_bullets": 2,
   "max_bullets": 4
  },
- "generated_at": "2026-11-28T01:20:42.926Z",
+ "generated_at": "2026-11-28T04:01:30.542Z",
  "model": "gemini-3.5-flash-lite",
  "sig": [
-  "012a59ac5286+0fa20d13e8af+1c0a1e1598f2+3a6c6f14ac09+56b86a5d7fbf+5b97780f20d0+68a0e195ceda+8f59468d24fe+959f99dc5b4c+9daa256e2871+ac55a4874f2b+ad546544b1c7+adee23ebc131+efa75c0d5fa1+fc3a90d264a7",
+  "012a59ac5286+0fa20d13e8af+1c0a1e1598f2+2fcce60751eb+3a6c6f14ac09+56b86a5d7fbf+5b97780f20d0+68a0e195ceda+8f59468d24fe+959f99dc5b4c+9daa256e2871+ac55a4874f2b+ad546544b1c7+adee23ebc131+efa75c0d5fa1+fc3a90d264a7",
   "16b9ff9d80af+42272da9d711+71be7d2dfb67+9cbfa8def305+a5c3b4d779ea+db6892e02d02+dc7f497f02ae",
+  "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+9fcfba1bb1f5+c8ea64c1c7c6",
   "1343f7f3b435+379e55a2e099+506b74d1aabd+740f81f2e5d1+7a7175ef0317+a7509ef32f2e+ac6e047a0164+b0576938c855+c52f36f68e67+d59a9fd96499+e9a493fbbd87+ea7846207d79",
-  "1402902dd8da+65ccb5595a3d+893ca3b5875c+b87df8168574+c5e5e9bb5b36",
+  "05f9d8df6cd1+21d875db4194+2281f7f4357d+8eeadb435408+a2bcc204862b",
   "7f363c30c38a+a76cae0bb54d+fb282007afd0",
   "08f69edf5cd8+295cb82f7621+2a6ea8dac20b+2ca795adfbbb+2fe930384672+390761ac5d39+3f7fd49f5433+5b442a18644a+753d126084f4+7646bfa59b7a+7d1b0e758ce7+82dc9a9a5cfd+bcbe955e1657+cd9e34803b9b+dd245aec9e89+e60d3707a6f0",
-  "2734842cc26d+40ae610a7f32+552a793c7572+5d42c8972e7d+6b5ed59faea8+6e8e5a329bec+c8ea64c1c7c6",
   "5158ca4033be+b471c00e511c+f10c2cc17f3c"
  ],
  "stories": [
@@ -25,27 +25,46 @@
     "42272da9d711",
     "9cbfa8def305"
    ],
-   "head": "Nvidia suspend ses ventes de serveurs en Asie du Sud-Est après de nouvelles restrictions américaines",
+   "head": "Nvidia suspend ses ventes de serveurs en Asie du Sud-Est face aux restrictions américaines",
    "bullets": [
     "La mesure concerne la Malaisie, Singapour, la Thaïlande et l'Indonésie.",
-    "Cette décision répond au durcissement des règles d'exportation décidées par le Département du Commerce pour empêcher le contournement des sanctions visant la Chine.",
-    "Le Premier ministre Wong avait affirmé que Singapour ne servirait pas de passerelle pour contourner ces interdictions."
+    "Cette décision vise à empêcher le contournement des embargos sur les puces d'intelligence artificielle."
    ],
    "kinds": [
     "detail",
-    "explication",
-    "contexte"
+    "explication"
    ],
-   "head_en": "Nvidia suspends server sales in Southeast Asia following new US restrictions",
+   "head_en": "Nvidia suspends server sales in Southeast Asia due to US restrictions",
    "bullets_en": [
     "The measure affects Malaysia, Singapore, Thailand, and Indonesia.",
-    "This decision responds to the tightening of export rules decided by the Department of Commerce to prevent the circumvention of sanctions targeting China.",
-    "Prime Minister Wong had stated that Singapore would not serve as a gateway to bypass these bans."
+    "This decision aims to prevent the circumvention of embargos on artificial intelligence chips."
    ],
-   "ctx_ids": [
-    "d05efe22784c"
-   ],
+   "ctx_ids": [],
    "ts": "2026-11-27T02:45:41.000Z"
+  },
+  {
+   "ids": [
+    "6b5ed59faea8",
+    "2734842cc26d",
+    "5d42c8972e7d",
+    "6e8e5a329bec"
+   ],
+   "head": "TSMC envisage la construction d'une usine de puces de 22,6 milliards de dollars au Texas",
+   "bullets": [
+    "Le projet prévoit la fabrication de puces de 2 nm et au-delà d'ici 2031 dans le comté de Brazos.",
+    "Cet investissement intensifie la concurrence avec Samsung et renforce la production de semi-conducteurs avancés aux États-Unis."
+   ],
+   "kinds": [
+    "detail",
+    "explication"
+   ],
+   "head_en": "TSMC plans a 22.6 billion dollar chip plant in Texas",
+   "bullets_en": [
+    "The project plans for the manufacturing of 2nm and beyond chips by 2031 in Brazos County.",
+    "This investment intensifies competition with Samsung and strengthens the production of advanced semiconductors in the United States."
+   ],
+   "ctx_ids": [],
+   "ts": "2026-11-28T03:18:58.000Z"
   },
   {
    "ids": [
@@ -54,49 +73,22 @@
     "ea7846207d79",
     "740f81f2e5d1"
    ],
-   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données spatiaux",
+   "head": "La FCC autorise SpaceX à déployer 1 million de satellites pour des centres de données IA dans l'espace",
    "bullets": [
     "Le projet est baptisé Starmind.",
-    "Cette constellation vise à alimenter des modules de calcul orbitaux en énergie solaire pour répondre aux besoins massifs de l'IA et contourner les contraintes terrestres."
+    "Cette initiative vise à répondre à la demande insatiable de puissance de calcul et à contourner les contraintes énergétiques terrestres."
    ],
    "kinds": [
     "detail",
     "explication"
    ],
-   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for space data centers",
+   "head_en": "The FCC authorizes SpaceX to deploy 1 million satellites for AI data centers in space",
    "bullets_en": [
     "The project is named Starmind.",
-    "This constellation aims to power orbital computing modules with solar energy to meet massive AI needs and bypass terrestrial constraints."
+    "This initiative aims to meet the insatiable demand for computing power and bypass terrestrial energy constraints."
    ],
    "ctx_ids": [],
    "ts": "2026-11-27T04:13:09.000Z"
-  },
-  {
-   "ids": [
-    "2fe930384672",
-    "2ca795adfbbb",
-    "295cb82f7621",
-    "82dc9a9a5cfd"
-   ],
-   "head": "Les États-Unis placent Megaspeed et une filiale d'Alibaba sur liste noire pour trafic de puces Nvidia",
-   "bullets": [
-    "Le département du Commerce américain a ciblé l'entreprise Megaspeed et une filiale singapourienne d'Alibaba dans le cadre de ces restrictions.",
-    "Le Premier ministre de Singapour a annoncé l'ouverture d'une enquête nationale visant la société Megaspeed après son placement sur liste noire.",
-    "Cette sanction vise à bloquer les canaux de contrebande et à empêcher les transferts illégaux de technologies avancées vers la Chine."
-   ],
-   "kinds": [
-    "detail",
-    "detail",
-    "explication"
-   ],
-   "head_en": "The United States places Megaspeed and an Alibaba subsidiary on blacklist for Nvidia chip trafficking",
-   "bullets_en": [
-    "The US Department of Commerce targeted Megaspeed and an Alibaba subsidiary in Singapore as part of these restrictions.",
-    "The Prime Minister of Singapore announced the opening of a national investigation targeting Megaspeed following its placement on the blacklist.",
-    "This sanction aims to block smuggling channels and prevent illegal transfers of advanced technologies to China."
-   ],
-   "ctx_ids": [],
-   "ts": "2026-11-24T16:53:42.000Z"
   }
  ]
 }

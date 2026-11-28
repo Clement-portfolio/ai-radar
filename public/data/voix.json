@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T01:20:42.926Z",
+ "generated_at": "2026-11-28T04:01:30.542Z",
  "people": [
   {
    "id": "sam-altman",
@@ -1390,6 +1390,16 @@
      "title_fr": "La PDG par intérim de Nvidia, Colette Kress, s'exprime sur le chiffre d'affaires trimestriel atteignant 116 milliards de dollars",
      "m": 2,
      "e": 1
+    },
+    {
+     "ts": "2026-11-17T08:00:00.000Z",
+     "title": "Nvidia interim CEO Kress tells Cramer demand is only increasing",
+     "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQb3lkZ2Q3UVIxeERQRmd0UVdzNnBuSy1kQi1EV3Fxb29SVFNlMUdBeWdQTjVOa2RUTFBoMi1BWHMtRkJmRGdpcVZQQWdUdkJwQW1jbndjUk9VSW5ZTVFMaXpWT2Y1VkRxd01wX2pEaDVNMnZBd1FobTdabFJ6bW5NX0Zsa1NJRjZiZ1V5MzR4U0g2V3pwM1pIa2ZZOVRuZjlYOXgzVWV3RmJUdw?oc=5",
+     "source": "CNBC",
+     "kind": "presse",
+     "title_fr": "Kress, PDG par intérim de Nvidia, déclare à Cramer que la demande ne fait qu'augmenter",
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -2235,7 +2245,7 @@
      "source": "Tekedia",
      "kind": "presse",
      "title_fr": "Elizabeth Warren qualifie la réintégration de Jensen Huang chez Nvidia de « téméraire », affirme que cela soulève des préoccupations de sécurité nationale pour les États-Unis",
-     "m": 3,
+     "m": 2,
      "e": 1
     },
     {
@@ -2247,6 +2257,16 @@
      "title_fr": "La sénatrice Warren : urgence « plus forte » d'enquêter sur Jensen Huang après le retour en force d'Nvidia",
      "m": 2,
      "e": 1
+    },
+    {
+     "ts": "2026-11-24T07:06:00.000Z",
+     "title": "‘Deeply reckless’: In Globe interview, Elizabeth Warren says she wants congressional investigation on Nvidia",
+     "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQbm8za3pET2dMM0F1dlRLLUM3R0Qtd3pBU1l6ZlpMZEtZUHNfTGVLMU9fOEw0T0JrRThxODk1SXRnUGN4VzdPLXR1bl9vX09WTkNyWW1aVFlyd1VTaWMwakdBZ1djVGZJWjE5NkFsSVZsLU1HOWd3SU9QMFFuQlhEckFTTnpMaFlfX19fNU1aTHNlRWRS?oc=5",
+     "source": "The Boston Globe",
+     "kind": "presse",
+     "title_fr": "« Profondément irresponsable » : dans une interview au Globe, Elizabeth Warren déclare vouloir une enquête du Congrès sur Nvidia",
+     "m": 1,
+     "e": 0
     },
     {
      "ts": "2026-11-24T05:16:00.000Z",
@@ -2295,17 +2315,7 @@
      "source": "Crave Online",
      "kind": "presse",
      "title_fr": "Elizabeth Warren interpelle Nvidia après le retour de Jensen Huang en tant que PDG",
-     "m": 3,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-23T17:50:08.000Z",
-     "title": "Elizabeth Warren calls Nvidia’s reinstatement of Jensen Huang reckless",
-     "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQbnFLcG8xMTJsWk5oVm9FSjR2Tks2N3ByVnBDakk5aG9QajFiUDlDRXAtQU9qMDlnMlNadkJFQnBUWEJYb0FXTm14ZGxDWlFMVDNMa0FxS25OZzRTb180bGJUWnVMbjBYWXpQd01oRmEySTk4VXNTWEp3ZXNEMk04b0ZNUQ?oc=5",
-     "source": "Crypto Briefing",
-     "kind": "presse",
-     "title_fr": "Elizabeth Warren qualifie la réintégration de Jensen Huang par Nvidia d'imprudente",
-     "m": 3,
+     "m": 2,
      "e": 1
     }
    ]
@@ -3582,6 +3592,26 @@
    ],
    "items": [
     {
+     "ts": "2026-11-28T03:06:00.000Z",
+     "title": "Chamath Palihapitiya Warns AI Could Shorten Cryptography Timeline",
+     "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5KejllMTZRajNtRWdwUEdBV0xfd0xQZzNRUUw5cGxTZ2hWRHp1NXh1cndTVzdnWDZ2UERXNldRS0x2Q2t6aUdaRGM4RlFrSEJDdkZsRDlTM0lRRzA?oc=5",
+     "source": "www.tokenpost.com",
+     "kind": "presse",
+     "title_fr": "Chamath Palihapitiya prévient que l'IA pourrait raccourcir le calendrier de la cryptographie",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-28T00:02:13.000Z",
+     "title": "Chamath Palihapitiya Warns AI’s ‘Alien Mathematics’ Could Break Bitcoin As AI Tackles 167-Year-Old Riemann Hypothesis",
+     "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQXzhEeFVwb1BOai1EY0UyaGdxNkRBWE85RlJJQjZ1Z1JQcFh2ZWZVNUNwaDVFdS1idnp5WTlHYzZxVzU3YzIyeHBSU0U0U2ZwMmd6cGs1VmlyTGdHTmFEMlp3dVFXVTJBX3ZIODVrZTNOUERzc19BcS1qeFRHRUdJY01PU1E0UUJDZ05IZVdsUHpLajhFVXF6eVYzX1pqSUZCNFIzeHJiV3BsaGJOZmZOVnF4WXJJTlVfWGFhSFhOMEFUX3FCdE9Xay01M0ZhZzU4SERxdmk3dw?oc=5",
+     "source": "Stocktwits",
+     "kind": "presse",
+     "title_fr": "Chamath Palihapitiya prévient que les « mathématiques extraterrestres » de l'IA pourraient casser Bitcoin alors que l'IA s'attaque à l'hypothèse de Riemann vieille de 167 ans",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-26T10:44:35.000Z",
      "title": "Chamath Palihapitiya Says Anthropic’s Valuation in Near-Term Has ‘Mostly Nothing to Do’ With ANT Stock as",
      "url": "https://news.google.com/rss/articles/CBMiugJBVV95cUxQaGVFM3VYbnFXRHNESXhENktHd3QyanNHUDN5bDA3NHVHZW1NaEcxWUJuZm9LRXBVb3ZkbEhMdGtVb3hUc20yU0pPRFQ3cFdpZTFVdVZYdVJFN0tXbVVXVEhpejBaVDBLZEpNTG9hRnhxUl9SU2JxekJCOEtQMVBIbW9UMHhjWTgtd0ROcTg4YUVfSFR1Q1ZpaWFZM2xnUXFlaENJQnFBOFZQYW9rV1V3NDd1SU95UjdaNU5ULURvc3MxM29UQXJjekJRR1lrODhwMEtoMmJ1Tl9YZG81R1RxTlVLREREVXBiS1hIcVlITmt1MEdwaF83ZTNHNklFV2hnVHFONDVwQVZZVmNXX0ZFMlhMVnc4R1BhcTBTSDM0T19wMmhZRVNNRHZ3Ykl1OGI5UWh0Q2lnTm5CUQ?oc=5",
@@ -3640,26 +3670,6 @@
      "m": 2,
      "e": 1,
      "title_fr": "La controverse sur Jensen Huang de Nvidia pourrait se retourner contre la Chine, déclare Chamath Palihapitiya — Washington pourrait obtenir les contrôles sur les puces qu'il recherche"
-    },
-    {
-     "ts": "2026-11-13T12:15:18.000Z",
-     "title": "Chamath Palihapitiya Says Nvidia Oversight Would Be A ‘Disaster’ After Jensen Huang's Exit, Warns Against",
-     "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQc2o3YkpvRjhYbGJlMlk5c3FMa2k3SUxuUDcxN0VOLTY0akxDVUl3OWMxVHh3WS1YR2h4S1BpVzBzckxmREk3TWVmdEYwTEJWckdKR2FfeXNsYUhNRjVVazVJOFNROGo5VHljX2NPZ1U0eGRzUEc1NjlVWlgtaUhJOHJ4d1JBQmFpME5DekUzR1V4UFBGVUw0R3ZZVm9wczQ2b2ZfYU9sYWdVWWhTVnI0OC1MQktmWnI3VV9vbE5XQWFvSmVjUy1EaW54QjI1MmExY0FLUk1EX01kQ2EzM0gtZlJlVTBVVDFSX1hmWENSNlBoWHZJR0FyalRxcFY4THc4ZDMwV2ZJR08zSThES01FVWZsT3JhZw?oc=5",
-     "source": "Benzinga",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Chamath Palihapitiya déclare qu'une surveillance de Nvidia serait un « désastre » après le départ de Jensen Huang, met en garde contre"
-    },
-    {
-     "ts": "2026-11-13T12:15:18.000Z",
-     "title": "Chamath Palihapitiya Says Nvidia Oversight Would Be A ‘Disaster’ After Jensen Huang's Exit, Warns Against Repeating Microsoft’s DOJ Era",
-     "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxQY0JuLUlOclYwQ3hweXZBR3h0eVoyYTk4UDRkWnAtWHNZcTdoeHhERXBsYVFOTGFPMWoxSG1ZWDZsUV9VQ0ZCYmVaeElYSXFCNlJyQmtId1FtRWZMZTEwRW5teHJvb2hnWEMxOS1MX1l4M3FWMGtFTVZKMFRQN1JZU2pXLVQtZm5GSldPYmNsZkpncFhwTFR2V2EtZXgtb1Blc0h4OU43TWhQVXpoY3dqVDVFNVBfUzNETDlmOGphRllpa3lTRGxCSHFlWTZPN1VNWGJCVzc1QTktRURqSDBmbFprdC1QWkthdUVrSEdlUVlmNWRvenRScFRjYk14Vm1IZS0yZFFuY0l4U2Y1ZnFidzZIME9XaXBHdVFj?oc=5",
-     "source": "TradingView",
-     "kind": "presse",
-     "title_fr": "Chamath Palihapitiya déclare qu'une tutelle sur Nvidia serait un « désastre » après le départ de Jensen Huang, et met en garde contre la répétition de l'ère du DOJ pour Microsoft",
-     "m": 2,
-     "e": 1
     }
    ]
   },
@@ -6348,7 +6358,35 @@
  ],
  "hot": [
   {
-   "score": 0.72,
+   "score": 1.3,
+   "id": "andy-jassy",
+   "n": "Andy Jassy",
+   "role": "PDG d'Amazon",
+   "actor": "amazon",
+   "ts": "2026-11-28T01:20:51.000Z",
+   "title": "Amazon’s AI business is growing 440x faster than early AWS, says Jassy",
+   "title_fr": "L'activité de l'IA d'Amazon se développe 440 fois plus vite que les débuts d'AWS, déclare Jassy",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE81NkxTd2ZBSVJYQzZYNGdLRDJlMVVPU2w0TFR3Tm1MQVRIbU13OWhpaWVKRFpLc3JuNk8xbGFkY25pT3VaRlBxU1I1WGt4TGliN2l3b19IVzFDTzMwd1dFTm1sRzl5MVhFcjN3T2dhOA?oc=5",
+   "source": "Crypto Briefing",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.85,
+   "id": "chamath-palihapitiya",
+   "n": "Chamath Palihapitiya",
+   "role": "Fondateur de Social Capital",
+   "actor": null,
+   "ts": "2026-11-28T03:06:00.000Z",
+   "title": "Chamath Palihapitiya Warns AI Could Shorten Cryptography Timeline",
+   "title_fr": "Chamath Palihapitiya prévient que l'IA pourrait raccourcir le calendrier de la cryptographie",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5KejllMTZRajNtRWdwUEdBV0xfd0xQZzNRUUw5cGxTZ2hWRHp1NXh1cndTVzdnWDZ2UERXNldRS0x2Q2t6aUdaRGM4RlFrSEJDdkZsRDlTM0lRRzA?oc=5",
+   "source": "www.tokenpost.com",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.58,
    "id": "vinod-khosla",
    "n": "Vinod Khosla",
    "role": "Fondateur de Khosla Ventures",
@@ -6360,34 +6398,6 @@
    "source": "www.tokenpost.com",
    "kind": "presse",
    "outlets": 1
-  },
-  {
-   "score": 0.62,
-   "id": "palmer-luckey",
-   "n": "Palmer Luckey",
-   "role": "Fondateur d'Anduril (défense)",
-   "actor": null,
-   "ts": "2026-11-27T15:41:24.000Z",
-   "title": "Palmer Luckey Warns CEOs of an AI Mismatch Heading Into 2027",
-   "title_fr": "Palmer Luckey avertit les PDG d'un décalage lié à l'IA à l'approche de 2027",
-   "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcHRsLXFuR04wTkRGRmlmMzFndlgtSjdFMC1IZ0ZKTHFManFVZ0xUNkVqV0pKRzlNYUwteC1DNy1DQkt6ZTNtbmcxdFJqUldhSkFkdGY5VjN1VjhSd1hVUFVlVVRLcnJqamNQYTBXR0lCdnhOTDBxTW1mNDNOUC1BUTRTNm9keUtOd1NDcDB1ZVpEcWhTcUIxdUU3WQ?oc=5",
-   "source": "Business Chief",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.52,
-   "id": "peter-thiel",
-   "n": "Peter Thiel",
-   "role": "Cofondateur de Palantir, investisseur",
-   "actor": null,
-   "ts": "2026-11-27T09:05:00.000Z",
-   "title": "Palantir Co-Founder Peter Thiel Buys $122 Million of Stock as Shares Hit Four-Month Low",
-   "title_fr": "Le cofondateur de Palantir, Peter Thiel, achète pour 122 millions de dollars d'actions alors que le titre atteint son plus bas niveau en quatre mois",
-   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVd0FjYmpHdTg1a3o5Q1JhaE5IdlBQaXR4WU5uUlMwd3JiaVpVZlBYNzdKYmlNU1o5U1k4OXVhN0FxNGdyUEdNQVJoWHVtRDRieURLcXlLdDBfdkdDWm1Bd2JURFlhR0ZDZnVEU0F0OGY4R0d0YkE?oc=5",
-   "source": "BigGo Finance",
-   "kind": "presse",
-   "outlets": 3
   }
  ]
 }
