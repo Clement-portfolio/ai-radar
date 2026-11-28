@@ -1,6 +1,43 @@
 {
  "items": [
   {
+   "id": "01e747fc1ebd",
+   "ts": "2026-11-28T14:26:45.000Z",
+   "title": "IA et semi-conducteurs : face à l'explosion de la demande d'électricité, Taïwan abandonne sa politique de sortie du nucléaire",
+   "orig": "AI·반도체 전력 폭증에...대만도 탈원전 정책 폐기",
+   "summary": "Face à l'explosion de la demande électrique de l'IA et des semi-conducteurs, Taïwan abandonne sa politique de sortie du nucléaire.",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 3,
+   "layer": "Énergie",
+   "source": "파이낸셜뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OZlE2NnlTX3U4NEZJdzgwbmJ2QjFtVkIzTHdQczAtMVZ5TERTTy1TUVgzeWJsVjdMVkN2cnNBUC1CT1N4WGVGb2FnQnQ5MVBLYzlNMTF5LXRqUQ?oc=5",
+   "confidence": "moyenne",
+   "why": "Il montre un changement majeur de politique gouvernementale énergétique directement motivé par les besoins en électricité de l'IA.",
+   "title_en": "AI and Semiconductor Power Surge... Taiwan Drops Nuclear Phase-Out Policy",
+   "summary_en": "Facing the explosion of electricity demand from AI and semiconductors, Taiwan is abandoning its nuclear phase-out policy.",
+   "why_en": "It shows a major shift in government energy policy directly motivated by AI's electricity needs.",
+   "title_fr": "IA et semi-conducteurs : face à l'explosion de la demande d'électricité, Taïwan abandonne sa politique de sortie du nucléaire"
+  },
+  {
+   "id": "0f61395ce8dc",
+   "ts": "2026-11-28T14:00:01.000Z",
+   "title": "AI data center boom strains construction labor across the U.S.",
+   "orig": "AI data center boom strains construction labor across the U.S.",
+   "summary": "Le boom des centres de données d'IA met sous tension la main-d'œuvre du bâtiment à travers les États-Unis.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/28/ai-data-center-construction-worker-shortage-texas.html",
+   "confidence": "moyenne",
+   "why": "Il met en évidence un goulot d'étranglement physique dans le déploiement des infrastructures d'IA en raison de pénuries de main-d'œuvre.",
+   "title_en": "AI data center boom strains construction labor across the U.S.",
+   "summary_en": "AI data center boom strains construction labor across the U.S.",
+   "why_en": "It highlights a physical bottleneck in AI infrastructure deployment due to labor shortages in construction."
+  },
+  {
    "id": "0357becfa8e6",
    "ts": "2026-11-28T14:00:00.000Z",
    "title": "Un utilisateur réutilise une vieille configuration de minage pour l'IA locale en mutualisant de la mémoire VRAM",
@@ -15,6 +52,25 @@
    "confidence": "moyenne",
    "title_en": "Caveman repurposes old mining rig for local AI, pools 72GB VRAM across mismatched GPUs",
    "summary_en": "Caveman repurposes old mining rig for local AI, pools 72GB VRAM across mismatched GPUs."
+  },
+  {
+   "id": "3973f080fe72",
+   "ts": "2026-11-28T14:00:00.000Z",
+   "title": "Le PDG de Sakana AI affirme que ses modèles locaux vont au-delà de la sécurité nationale du Japon",
+   "orig": "Sakana AI’s CEO says its homegrown models are about more than Japan’s national security",
+   "summary": "Le PDG de Sakana AI affirme que ses modèles développés en interne visent à renforcer la compétitivité industrielle du Japon.",
+   "country": "OTHER",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Modèles",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/28/sakana-ais-ceo-says-its-homegrown-models-are-about-more-than-japans-national-security/",
+   "confidence": "moyenne",
+   "why": "Il met en lumière les efforts de développement d'une IA souveraine visant à renforcer la compétitivité industrielle nationale.",
+   "title_en": "Sakana AI’s CEO says its homegrown models are about more than Japan’s national security",
+   "summary_en": "Sakana AI's CEO states that its in-house developed models aim to strengthen Japan's industrial competitiveness.",
+   "why_en": "It highlights the efforts to develop sovereign AI aimed at strengthening national industrial competitiveness.",
+   "title_fr": "Le PDG de Sakana AI affirme que ses modèles locaux vont au-delà de la sécurité nationale du Japon"
   },
   {
    "id": "4848502bd8c9",
@@ -160,6 +216,23 @@
    "title_en": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
    "summary_en": "The Saudi technology sector is recording several significant fundraising rounds, particularly for startups specializing in AI and fintech.",
    "why_en": "The acceleration of AI investments in the Middle East reflects the region's commitment to diversifying its economy through cutting-edge technologies."
+  },
+  {
+   "id": "1cccb7248634",
+   "ts": "2026-11-28T12:00:56.000Z",
+   "title": "Le boom de l'IA semble bien vivant en Asie",
+   "orig": "The AI Boom Looks Alive and Well in Asia",
+   "summary": "Le boom de l'intelligence artificielle se porte bien en Asie selon un article d'analyse.",
+   "country": "OTHER",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMzcxanlfNkJiU3dmTFRfQnJvQmZZb3dHYUpzWFdfZUs4SGNMN2x4TzJCYzRHYV9sN1JaMmw0SHptNzdQUWZsWUdzWldLTmZCZ0l2TUdUUXdoMFNDSVlLYUZNOUlnQUtYM3FJNWtRdHNWX19rbFI1YjA0NDZEQlJKLWNSUQ?oc=5",
+   "confidence": "moyenne",
+   "title_en": "The AI Boom Looks Alive and Well in Asia",
+   "summary_en": "The artificial intelligence boom is doing well in Asia according to an analytical article.",
+   "title_fr": "Le boom de l'IA semble bien vivant en Asie"
   },
   {
    "id": "4b3a8918b3c6",
@@ -934,6 +1007,38 @@
    "title_en": "Nvidia's Blackwell chips found at China data center linked to Alice Huang",
    "summary_en": "Nvidia Blackwell processors were reportedly located at a Chinese data center connected to Alice Huang.",
    "why_en": "Raises serious compliance and enforcement concerns regarding U.S. export controls on high-end semiconductors."
+  },
+  {
+   "id": "c81748a755c7",
+   "ts": "2026-11-28T02:25:10.000Z",
+   "title": "AI Swaps Actors' Clothes After Filming Wraps, Rewriting Ad Rules",
+   "orig": "AI Swaps Actors' Clothes After Filming Wraps, Rewriting Ad Rules",
+   "summary": "Le placement de produits virtuel de CJ ENM utilise l'IA pour modifier les vêtements des acteurs après le tournage.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/business/2026/11/28/ai-swaps-actors-clothes-after-filming-wraps-rewriting-ad",
+   "confidence": "moyenne",
+   "title_en": "AI Swaps Actors' Clothes After Filming Wraps, Rewriting Ad Rules",
+   "summary_en": "AI Swaps Actors' Clothes After Filming Wraps, Rewriting Ad Rules"
+  },
+  {
+   "id": "30fb1543779c",
+   "ts": "2026-11-28T02:18:40.000Z",
+   "title": "AI-assisted cyberattack suspected in Haryana’s public fund siphoning",
+   "orig": "AI-assisted cyberattack suspected in Haryana’s public fund siphoning",
+   "summary": "Des experts en cybersécurité soupçonnent l'utilisation d'outils d'IA dans un détournement de fonds publics à Haryana.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Hindustan Times",
+   "url": "https://www.hindustantimes.com/cities/chandigarh-news/aiassisted-cyberattack-suspected-in-haryana-s-public-fund-siphoning-101795806115516.html",
+   "confidence": "moyenne",
+   "title_en": "AI-assisted cyberattack suspected in Haryana’s public fund siphoning",
+   "summary_en": "AI-assisted cyberattack suspected in Haryana’s public fund siphoning"
   },
   {
    "id": "9006be75a409",
@@ -1951,7 +2056,7 @@
    "why": "La restructuration des géants du logiciel pour s'adapter à l'IA entraîne des changements sociaux et économiques majeurs.",
    "title_en": "Sources say SAP mulling cuts of at least 10,000 roles",
    "summary_en": "SAP is planning massive layoffs to restructure its software business for the AI era.",
-   "why_en": "The restructuring of software giants to adapt to AI leads to major social and economic changes."
+   "why_en": "The restructuring of software giants to adapt to AI brings about major social and economic changes."
   },
   {
    "id": "68a72b4f6d21",
@@ -2035,7 +2140,7 @@
   {
    "id": "656afc3f14a7",
    "ts": "2026-11-27T16:25:00.000Z",
-   "title": "Global In Vitro Diagnostics (IVD) Market Forecast and Strategy Report 2026-2031 | Market to Reach USD 132.9 Billion as Molecular, Point-of-Care, AI, and Oncology Testing Expand",
+   "title": "Rapport de prévision et de stratégie du marché mondial du diagnostic in vitro 2026-2031 | Le marché atteindra 132,9 milliards de dollars grâce à l'expansion des tests moléculaires, sur site, par IA et en oncologie",
    "orig": "Global In Vitro Diagnostics (IVD) Market Forecast and Strategy Report 2026-2031 | Market to Reach USD 132.9 Billion as Molecular, Point-of-Care, AI, and Oncology Testing Expand",
    "summary": "",
    "country": "OTHER",
@@ -2045,7 +2150,8 @@
    "source": "Globenewswire_fr",
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/27/3411410/28124/en/global-in-vitro-diagnostics-ivd-market-forecast-and-strategy-report-2026-2031-market-to-reach-usd-132-9-billion-as-molecular-point-of-care-ai-and-oncology-testing-expand.html",
    "confidence": "moyenne",
-   "title_en": "Global In Vitro Diagnostics (IVD) Market Forecast and Strategy Report 2026-2031 | Market to Reach USD 132.9 Billion as Molecular, Point-of-Care, AI, and Oncology Testing Expand"
+   "title_en": "Global In Vitro Diagnostics (IVD) Market Forecast and Strategy Report 2026-2031 | Market to Reach USD 132.9 Billion as Molecular, Point-of-Care, AI, and Oncology Testing Expand",
+   "title_fr": "Rapport de prévision et de stratégie du marché mondial du diagnostic in vitro 2026-2031 | Le marché atteindra 132,9 milliards de dollars grâce à l'expansion des tests moléculaires, sur site, par IA et en oncologie"
   },
   {
    "id": "f10c2cc17f3c",
@@ -3266,8 +3372,8 @@
    "confidence": "moyenne",
    "why": "Souligne l'afflux massif de projets de construction de datacenters et les pressions politiques locales associées.",
    "title_en": "Texas lifts freeze on 1,800+ data center projects in Greg Abbott U-turn",
-   "summary_en": "Texas is allowing the approval of new data center permits again after suspending the procedure in August.",
-   "why_en": "Highlights the massive influx of data center construction projects and related local political pressures."
+   "summary_en": "Texas is authorizing the approval of new data center permits again after suspending the process in August.",
+   "why_en": "Highlights the massive influx of data center construction projects and the associated local political pressures."
   },
   {
    "id": "5f0c43dd487b",
@@ -7236,7 +7342,7 @@
    "confidence": "moyenne",
    "why": "C'est l'une des premières interdictions législatives directes ciblant les produits d'IA grand public pour protéger les mineurs.",
    "title_en": "New York Governor Kathy Hochul signs ban on AI chatbot toys backed by $15,000 daily fines",
-   "summary_en": "The Governor of New York signed a law banning the sale of toys equipped with integrated AI chatbots due to risks for children.",
+   "summary_en": "The Governor of New York has signed a law banning the sale of toys equipped with integrated AI chatbots due to risks for children.",
    "why_en": "This is one of the first direct legislative bans targeting consumer AI products to protect minors."
   },
   {
@@ -13441,7 +13547,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410434/28124/en/point-of-care-medical-software-market-size-share-industry-trends-and-growth-forecasts-2026-2031-cloud-and-ai-adoption-drive-17-33-cagr-and-a-usd-12-77-billion-opportunity.html",
    "confidence": "moyenne",
    "title_en": "Point-of-Care Medical Software Market Size, Share, Industry Trends, and Growth Forecasts, 2026-2031 | Cloud and AI Adoption Drive 17.33% CAGR and a USD 12.77 Billion Opportunity",
-   "summary_en": "The adoption of AI and cloud computing is driving growth in the medical software market."
+   "summary_en": "The adoption of AI and cloud is driving growth in the medical software market."
   },
   {
    "id": "448ca2963316",
@@ -13457,7 +13563,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410424/28124/en/the-global-online-gambling-market-2026-2034-size-share-competition-and-revenue-forecast-by-type-device-and-country-mobile-adoption-and-legalization-fuel-8-93-cagr-to-220-99-billion.html",
    "confidence": "moyenne",
    "title_en": "The Global Online Gambling Market 2026-2034: Size, Share, Competition and Revenue Forecast by Type, Device, and Country | Mobile Adoption and Legalization Fuel 8.93% CAGR to $220.99 Billion",
-   "summary_en": "AI-driven personalization is boosting growth in the global online gambling market."
+   "summary_en": "AI personalization is driving growth in the global online gambling market."
   },
   {
    "id": "a05f839240ee",
@@ -15082,7 +15188,7 @@
    "url": "https://www.tomshardware.com/laptops/gaming-laptops/this-acer-nitro-v-laptop-with-nvidia-rtx-5060-gpu-is-usd1-049-at-best-buy-16-inch-boasts-16gb-ddr5-ram-and-a-512gb-ssd",
    "confidence": "moyenne",
    "title_en": "This Acer Nitro V laptop with Nvidia RTX 5060 GPU is $1,049 at Best Buy",
-   "summary_en": "Promotion on an Acer laptop equipped with an Nvidia RTX 5060 GPU."
+   "summary_en": "Discount on an Acer laptop equipped with an Nvidia RTX 5060 GPU."
   },
   {
    "id": "1d2b3c7b611b",
@@ -17323,7 +17429,7 @@
    "url": "https://www.digitimes.com/news/a20261125VL214/huawei-foldable-shipments-price-display.html",
    "confidence": "moyenne",
    "title_en": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
-   "summary_en": "Huawei is maintaining the price of its new foldable smartphone despite an overall decline in the Chinese foldable device market."
+   "summary_en": "Huawei is maintaining the price of its new foldable smartphone despite a general decline in the Chinese foldable device market."
   },
   {
    "id": "5b815313129d",
@@ -17388,7 +17494,7 @@
    "confidence": "moyenne",
    "why": "Soulève un goulot d'étranglement majeur dans la chaîne d'approvisionnement des mémoires HBM pour les puces d'IA.",
    "title_en": "[Breaking] Samsung Grapples with HBM Base Die Crunch as Internal Demand Seen Doubling to 30K per Month in 2027",
-   "summary_en": "Samsung is facing a shortage of HBM base dies with internal demand expected to double.",
+   "summary_en": "Samsung is facing an HBM base die shortage with internal demand expected to double.",
    "why_en": "Highlights a major bottleneck in the HBM memory supply chain for AI chips."
   },
   {
@@ -20743,7 +20849,7 @@
    "confidence": "moyenne",
    "why": "La nécessité pour les entreprises d'IA de devenir des acheteurs d'énergie directe souligne la tension croissante sur les ressources électriques pour les centres de données.",
    "title_en": "Anthropic posts $405,000-a-year job for gas specialist to secure fuel for AI",
-   "summary_en": "Anthropic is hiring a natural gas expert to secure the energy supply for its data centers, illustrating the race for computing power.",
+   "summary_en": "Anthropic is hiring a natural gas expert to secure energy supplies for its data centers, illustrating the race for computing power.",
    "why_en": "The need for AI companies to become direct energy buyers highlights the growing tension over electrical resources for data centers."
   },
   {
@@ -25124,107 +25230,6 @@
    "confidence": "moyenne",
    "title_en": "What Jensen Huang’s return means for Nvidia’s Colette Kress",
    "summary_en": "Colette Kress returns to her full-time CFO role after steering Nvidia through financing deals and leadership turmoil."
-  },
-  {
-   "id": "fe788f8ffe52",
-   "ts": "2026-11-23T23:45:06.000Z",
-   "title": "Les ADR de SK Hynix s'envolent suite au retour de Huang",
-   "orig": "SK hynix ADRs soar on Huang’s return",
-   "summary": "Les actions de SK Hynix progressent fortement à la suite du retour médiatisé de Jensen Huang.",
-   "country": "OTHER",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Mémoire HBM",
-   "source": "Korea JoongAng Daily",
-   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNTTZsX2ExdWNxNEc3cEZBeEFXS3ZULW5JM2I2Rll4cUZWNDd2dG5PMXM0WTF0S2hMNkwwU1ZWaU5BZEtsQ2k4WnNQWUJJVlgzSm1rOWFIeWpMc0d0S0NmWXFQX1FjUjFTcWhJTlVJUDZsaFlDNEZZdzlTQi1JY2Y2UzYtemVvQ0VjXy1LNi1uVndMUQ?oc=5",
-   "confidence": "moyenne",
-   "why": "Le rebond d'un fournisseur clé de mémoire illustre la sensibilité de l'écosystème aux actualités sectorielles.",
-   "trading": true,
-   "title_en": "SK hynix ADRs soar on Huang’s return",
-   "why_en": "Key memory supplier shares rally following sector developments, highlighting high sensitivity to ecosystem news."
-  },
-  {
-   "id": "8ecad1077200",
-   "ts": "2026-11-23T23:42:27.000Z",
-   "title": "L'adoption de l'IA progresse en Asie mais la mesure des retours sur investissement reste complexe",
-   "orig": "AI adoption grows in Asia, but measuring the gains remains tricky",
-   "summary": "Selon une enquête d'AWS, les entreprises d'Asie-Pacifique constatent des gains grâce à l'IA malgré des difficultés d'évaluation.",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "CNBC Tech",
-   "url": "https://www.cnbc.com/2026/11/24/aws-asia-gains-roi.html",
-   "confidence": "moyenne",
-   "title_en": "AI adoption grows in Asia, but measuring the gains remains tricky",
-   "summary_en": "Businesses across Asia-Pacific see AI returns, though measuring the financial gains remains challenging according to AWS."
-  },
-  {
-   "id": "08685ddbf818",
-   "ts": "2026-11-23T23:36:00.000Z",
-   "title": "Le conseil d'administration de Nvidia réintègre Jensen Huang comme PDG",
-   "orig": "Nvidia board reinstates Jensen Huang as CEO just days after rejecting his offer to return",
-   "summary": "Nvidia a réintégré Jensen Huang au poste de PDG, quelques jours après avoir refusé son offre de retour.",
-   "country": "US",
-   "category": "politique",
-   "importance": 3,
-   "layer": "Puces",
-   "source": "AP News",
-   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbUdPNnFZNXVRRHJqeGNYX0ptRk1oUW85OHlueHM2aW5teGxVWmViTWdKOGVTTVBYdWNVTjA3M2d4NUFfQ1Fac2g2ZzVZZ0hMdnZ6V1RQdFRmdWNfZlFzNnRYNmR0YWsxUjFIaTNYR2c5V3RQUHdVVUx4X1loaHF6dEcyNF9fQQ?oc=5",
-   "confidence": "moyenne",
-   "why": "Une mise à jour majeure sur la gouvernance du premier fournisseur mondial de matériel pour l'intelligence artificielle.",
-   "title_en": "Nvidia board reinstates Jensen Huang as CEO just days after rejecting his offer to return",
-   "summary_en": "Nvidia's board reinstates Jensen Huang as CEO days after initially rejecting his return.",
-   "why_en": "A critical governance update regarding the leadership of the world's most vital AI hardware supplier."
-  },
-  {
-   "id": "88c37963cafb",
-   "ts": "2026-11-23T23:28:13.000Z",
-   "title": "Hausse des prix de la RAM : le point sur la pénurie mondiale de mémoire",
-   "orig": "RAM price hikes: the latest on the global memory shortage",
-   "summary": "Le marché mondial de la mémoire subit des hausses de prix dues à une pénurie persistante.",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 2,
-   "layer": "Mémoire HBM",
-   "source": "The Verge",
-   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE5CVmg0WVdDUlNmTkV0c21IbWFsc1cwamg4cUUxbVZ3NHRBbU5oNGh2anZVME9pSUZuX1IwbHlPb0E5QUYxRE1hRWlBd1VFcWRxZXQtOWFKb21rX29wYzBaX2dNaVNmakMwam1JUGp5cER6YnZJRDlBU19MNA?oc=5",
-   "confidence": "moyenne",
-   "why": "La pénurie de mémoire est un goulot d'étranglement majeur pour la production de serveurs et de systèmes IA.",
-   "title_en": "RAM price hikes: the latest on the global memory shortage"
-  },
-  {
-   "id": "3074a2422f9f",
-   "ts": "2026-11-23T23:23:46.000Z",
-   "title": "Applied Digital obtient un bail de 5,4 milliards de dollars pour un centre de données IA avec un hyperscaler",
-   "orig": "Applied Digital Secures $5.4 Billion AI Data Center Lease with Hyperscaler",
-   "summary": "Applied Digital a signé un contrat de location de 5,4 milliards de dollars pour un centre de données dédié à l'IA avec un fournisseur cloud majeur.",
-   "country": "US",
-   "category": "capex",
-   "importance": 3,
-   "layer": "Financement",
-   "source": "The Fast Mode",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSThjM00tUExUMWxvdkF6NDFDVHR2VlIxbmtydW1yQlMxVEQ5WmducnlVU3VXQXhEWGdRbzNLNlJHclk3RVVtY1ZuUDNUVVU0VWl6SktXQTVGRk9GRW1ub1M0SzBrTGMxVW11RFdxaDRITEtPVVRVRVY1TXZBV3dGeE1BUURjUHBCVHJqY3huR2RuQ2pIMEMzenhuRy1WNUh4b0pKZ00tQ3Q4RnJfaVZtUy16cEg0Nk1uSGo5cXplLXFfdl8tazZr?oc=5",
-   "confidence": "moyenne",
-   "why": "Ce contrat massif illustre la demande continue et le financement à grande échelle des infrastructures physiques nécessaires à l'IA générative par les hyperscalers.",
-   "title_en": "Applied Digital Secures $5.4 Billion AI Data Center Lease with Hyperscaler"
-  },
-  {
-   "id": "8351dcc9a2c5",
-   "ts": "2026-11-23T23:14:34.000Z",
-   "title": "Jim Cramer voit un potentiel de hausse pour l'action Nvidia avec le retour de Jensen Huang",
-   "orig": "Jim Cramer sees more upside for Nvidia stock with Jensen Huang back as CEO",
-   "summary": "L'analyste Jim Cramer estime que le retour de Jensen Huang comme PDG peut redresser le cours de l'action Nvidia.",
-   "country": "US",
-   "category": "capex",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "CNBC Tech",
-   "url": "https://www.cnbc.com/2026/11/23/jim-cramer-nvidia-jensen-huang-ceo-return.html",
-   "confidence": "moyenne",
-   "trading": true,
-   "title_en": "Jim Cramer sees more upside for Nvidia stock with Jensen Huang back as CEO",
-   "summary_en": "Jim Cramer says Jensen Huang's return as Nvidia CEO could help revive the chipmaker's stock."
   }
  ]
 }

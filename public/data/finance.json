@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T14:16:01.545Z",
+ "generated_at": "2026-11-28T14:31:42.238Z",
  "note": "Scénarios et libellés rédigés par IA à partir de sources citées ; ce ne sont ni des prévisions ni un conseil en investissement.",
  "companies": [
   {
@@ -382,7 +382,57 @@
     "9949223886f2": 1,
     "903b0209f452": 1
    },
-   "cases": null
+   "cases": {
+    "at": "2026-11-28T14:31:42.238Z",
+    "bear": [
+     {
+      "t": "Les investissements de la société s'élèveraient à 2,1 milliards de dollars sur douze mois, représentant 5 pour cent des revenus.",
+      "ref": "f3"
+     }
+    ],
+    "base": [
+     {
+      "t": "Les revenus de la société atteindraient 13,4 milliards de dollars pour le trimestre clos le 26 septembre 2026.",
+      "ref": "f1"
+     }
+    ],
+    "bull": [
+     {
+      "t": "La société pourrait bénéficier d'une association avec Intel pour contrer Arm et unifier les logiciels d'intelligence artificielle.",
+      "ref": "n1"
+     }
+    ],
+    "ids": [
+     "96615dc9e677",
+     "02a088434703",
+     "30c9e3388479",
+     "9949223886f2",
+     "903b0209f452"
+    ],
+    "refs": [
+     [
+      "n1",
+      "96615dc9e677"
+     ],
+     [
+      "n2",
+      "02a088434703"
+     ],
+     [
+      "n3",
+      "30c9e3388479"
+     ],
+     [
+      "n4",
+      "9949223886f2"
+     ],
+     [
+      "n5",
+      "903b0209f452"
+     ]
+    ],
+    "sig": "[[\"Revenus du trimestre clos le 26/9/2026 : 13,4 Md$ (+44,7 % sur un an, +16,0 % sur le trimestre).\",\"Revenus sur les douze derniers mois (au 26/9/2026) : 45,4 Md$.\",\"Investissements (capex) sur douze mois (au 26/9/2026) : 2,1 Md$, soit 5 % des revenus.\"],[\"96615dc9e677\",\"02a088434703\",\"30c9e3388479\",\"9949223886f2\",\"903b0209f452\"]]"
+   }
   },
   {
    "id": "amkor",
@@ -1476,7 +1526,57 @@
     "c43cf831127f": 1,
     "1ffa2354dfd2": 1
    },
-   "cases": null
+   "cases": {
+    "at": "2026-11-28T14:31:42.238Z",
+    "bear": [
+     {
+      "t": "Les investissements de la société s'élèveraient à 135,9 milliards de dollars sur douze mois, soit 39 pour cent des revenus.",
+      "ref": "f3"
+     }
+    ],
+    "base": [
+     {
+      "t": "Les revenus de la société s'établiraient à 92,3 milliards de dollars pour le trimestre clos le 30 septembre 2026.",
+      "ref": "f1"
+     }
+    ],
+    "bull": [
+     {
+      "t": "La société pourrait implanter des centres de données près de centrales thermiques grâce à des discussions avec le japonais Jera.",
+      "ref": "n1"
+     }
+    ],
+    "ids": [
+     "7f5cc3c9ae84",
+     "03c50a0968f3",
+     "54a5327eb269",
+     "c43cf831127f",
+     "1ffa2354dfd2"
+    ],
+    "refs": [
+     [
+      "n1",
+      "7f5cc3c9ae84"
+     ],
+     [
+      "n2",
+      "03c50a0968f3"
+     ],
+     [
+      "n3",
+      "54a5327eb269"
+     ],
+     [
+      "n4",
+      "c43cf831127f"
+     ],
+     [
+      "n5",
+      "1ffa2354dfd2"
+     ]
+    ],
+    "sig": "[[\"Revenus du trimestre clos le 30/9/2026 : 92,3 Md$ (+18,8 % sur un an, +2,5 % sur le trimestre).\",\"Revenus sur les douze derniers mois (au 30/9/2026) : 346,4 Md$.\",\"Investissements (capex) sur douze mois (au 30/9/2026) : 135,9 Md$, soit 39 % des revenus.\"],[\"7f5cc3c9ae84\",\"03c50a0968f3\",\"54a5327eb269\",\"c43cf831127f\",\"1ffa2354dfd2\"]]"
+   }
   },
   {
    "id": "nvidia",

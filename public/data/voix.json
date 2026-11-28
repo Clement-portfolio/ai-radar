@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T14:16:01.545Z",
+ "generated_at": "2026-11-28T14:31:42.238Z",
  "people": [
   {
    "id": "sam-altman",
@@ -5423,6 +5423,16 @@
      "title_fr": "Chey Tae-won appelle à une « boucle de rétroaction de l'IA » pour stimuler le cycle de croissance de SK Group",
      "m": 1,
      "e": 0
+    },
+    {
+     "ts": "2026-11-15T08:00:00.000Z",
+     "title": "Chey Tae-won: “Install an AI Flywheel”... SK Rebalancing 2.0 Kicks Off",
+     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9LWXpkQTRfeEF5bEVqcEtzdDFJSmJfNGdJejFSb2owWjJMMjE4bEg0UmItN0VjTjZmdnhnX1lKM2c1OU5sV29BSjlaVW4telRnaURJ?oc=5",
+     "source": "매일경제",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won : « Installez un volant d'inertie d'IA »... Le rééquilibrage 2.0 de SK est lancé",
+     "m": 1,
+     "e": 0
     }
    ]
   },
@@ -6357,7 +6367,7 @@
  ],
  "hot": [
   {
-   "score": 0.97,
+   "score": 0.95,
    "id": "andy-jassy",
    "n": "Andy Jassy",
    "role": "PDG d'Amazon",
@@ -6371,7 +6381,7 @@
    "outlets": 1
   },
   {
-   "score": 0.78,
+   "score": 0.76,
    "id": "stuart-russell",
    "n": "Stuart Russell",
    "role": "Professeur à Berkeley, sécurité de l'IA",
@@ -6385,7 +6395,7 @@
    "outlets": 1
   },
   {
-   "score": 0.74,
+   "score": 0.73,
    "id": "kai-fu-lee",
    "n": "Kai-Fu Lee",
    "role": "Fondateur de 01.AI, ex-Google Chine",
