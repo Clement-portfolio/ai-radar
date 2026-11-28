@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T08:30:36.202Z",
+ "generated_at": "2026-11-28T08:40:28.117Z",
  "items": [
   {
    "id": "75dbbe784bf6",
@@ -4144,59 +4144,6 @@
    "title_fr": "Google projette un centre de données de 1,2 GW près de Châteauroux en France, selon un rapport",
    "title_en": "Google planning 1.2GW data center near Châteauroux, France - report",
    "summary_en": "Company applies for connection request for second data center in area"
-  },
-  {
-   "id": "6a1f2f006d64",
-   "ts": "2026-11-25T08:35:22.630Z",
-   "title": "La fusion d'opérateurs télécoms à Singapour met en lumière la poussée des infrastructures d'IA sur fond d'incertitude",
-   "orig": "Singapore telco merger highlights AI infrastructure push amid uncertainty",
-   "summary": "",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "Nikkei Asia",
-   "url": "https://asia.nikkei.com/business/telecommunication/singapore-telco-merger-highlights-ai-infrastructure-push-amid-uncertainty",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "La fusion d'opérateurs télécoms à Singapour met en lumière la poussée des infrastructures d'IA sur fond d'incertitude",
-   "title_en": "Singapore telco merger highlights AI infrastructure push amid uncertainty"
-  },
-  {
-   "id": "22bb4ef37313",
-   "ts": "2026-11-25T08:35:00.000Z",
-   "title": "La rétrogradation d'AI4.5 de Tesla révèle le goulot d'étranglement mémoire derrière l'IA physique",
-   "orig": "Tesla's AI4.5 downgrade exposes the memory bottleneck behind physical AI",
-   "summary": "The ramifications of the prolonged memory squeeze are reverberating further across supply chains serving applications at the edge, as Elon Musk's ambitions in physical AI increasingly collide with the constraints imposed by the global memory shortage.",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261125VL221/tesla-hardware-automotive-silicon-cost.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "La rétrogradation d'AI4.5 de Tesla révèle le goulot d'étranglement mémoire derrière l'IA physique",
-   "title_en": "Tesla's AI4.5 downgrade exposes the memory bottleneck behind physical AI",
-   "summary_en": "The ramifications of the prolonged memory squeeze are reverberating further across supply chains serving applications at the edge, as Elon Musk's ambitions in physical AI increasingly collide with the constraints imposed by the global memory shortage."
-  },
-  {
-   "id": "4dbe354d285c",
-   "ts": "2026-11-25T08:32:31.000Z",
-   "title": "Huawei et CXMT visent leurs rivaux coréens avec de nouveaux designs de mémoire",
-   "orig": "Huawei, CXMT take aim at Korean rivals with new memory designs",
-   "summary": "Huawei Technologies and ChangXin Memory Technologies (CXMT) are set to present new memory chip designs in February 2027 as they seek to compete with South Korean rivals in customized high-bandwidth memory (HBM) and advanced DRAM manufacturing.",
-   "country": "CN",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Mémoire HBM",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261125VL226/huawei-cxmt-dram-hbm-design.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Huawei et CXMT visent leurs rivaux coréens avec de nouveaux designs de mémoire",
-   "title_en": "Huawei, CXMT take aim at Korean rivals with new memory designs",
-   "summary_en": "Huawei Technologies and ChangXin Memory Technologies (CXMT) are set to present new memory chip designs in February 2027 as they seek to compete with South Korean rivals in customized high-bandwidth memory (HBM) and advanced DRAM manufacturing."
   }
  ]
 }
