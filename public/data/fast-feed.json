@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T07:30:46.265Z",
+ "generated_at": "2026-11-28T07:50:28.704Z",
  "items": [
   {
    "id": "145866ef2483",
@@ -4099,24 +4099,6 @@
    "title_fr": "Revue d'articles techniques sur l'industrie des puces : 25 nov.",
    "title_en": "Chip Industry Technical Paper Roundup: Nov. 25",
    "summary_en": "Hybrid-bonded 3D NAND analog IMC; defect-aware chiplet matching for HI yield; HBF latency reduction for GPU systems; backside clock meshes for BSPDN; LLM-agent verification for post-quantum HW; self-supervised CMP virtual metrology; e-beam stitching losses in"
-  },
-  {
-   "id": "1a7561546565",
-   "ts": "2026-11-25T07:50:00.000Z",
-   "title": "Analyse : la direction de Nvidia stabilisée, mais les règles d'exportation américaines assombrissent toujours les perspectives des fabricants de serveurs taïwanais",
-   "orig": "Analysis: Nvidia leadership settled, but US export rules still cloud outlook for Taiwan server makers",
-   "summary": "Jensen Huang's return as Nvidia CEO has eased uncertainty over the chipmaker's leadership, but Taiwan's AI server manufacturers are more concerned about whether Washington will revise its new AI chip export rules.",
-   "country": "OTHER",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "Digitimes",
-   "url": "https://www.digitimes.com/news/a20261125PD214/jensen-huang-nvidia-taiwan-ceo-chips.html",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Analyse : la direction de Nvidia stabilisée, mais les règles d'exportation américaines assombrissent toujours les perspectives des fabricants de serveurs taïwanais",
-   "title_en": "Analysis: Nvidia leadership settled, but US export rules still cloud outlook for Taiwan server makers",
-   "summary_en": "Jensen Huang's return as Nvidia CEO has eased uncertainty over the chipmaker's leadership, but Taiwan's AI server manufacturers are more concerned about whether Washington will revise its new AI chip export rules."
   }
  ]
 }
