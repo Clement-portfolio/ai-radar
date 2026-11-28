@@ -1,33 +1,33 @@
 {
  "v": 1,
  "day": "2026-11-28",
- "generated_at": "2026-11-28T01:20:42.926Z",
+ "generated_at": "2026-11-28T13:05:04.722Z",
  "model": "gemini-3.5-flash-lite",
  "figures": [
   {
-   "title": "Nvidia : accord de règlement",
-   "value": "290 M$",
-   "sub": "Un montant accepté par l'entreprise pour clore un recours collectif l'accusant d'avoir trompé les investisseurs sur ses ventes de GPU en 2018.",
+   "title": "Kazakhstan : pôle d'IA souverain",
+   "value": "2 Md$",
+   "sub": "Somme que le Kazakhstan prévoit d'investir dans la création d'un hub souverain équipé de puces Nvidia B300.",
    "ids": [
-    "cfa5f57a5d29"
+    "9fcfba1bb1f5"
    ],
    "links": [
     {
-     "t": "Tom's Hardware",
-     "u": "https://www.tomshardware.com/tech-industry/big-tech/nvidia-agrees-to-usd290-million-settlement-over-2018-crypto-mining-gpu-sales-ends-eight-year-investor-lawsuit-without-admitting-wrongdoing"
+     "t": "ET Datacenters",
+     "u": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUklEb1RYQjJsaUZrU3RQN3dkX0pmb2ZDR3Nic0hRNjNfbEFFNGw0Q2IyV0U5S1lwU0FDc3pJOERTckViM2l4RVBQcnpkcXcwZXloZHg3M293YVRONGZfTHc2Ylc0aW1WUHdtWU0teXFhU2F2Sm5DNThjbDc5RjRkbU1pNFl4aGpIRlJraTZJMFlzb0FmZ3FXVmQ1NFR3eGZKb2hJLXpwMDZNYUUxU2xQWDZzTzNXMnN1M0tNd0hra014V3Yyck1lQ3FxVjJqaHpUOUxQR0gwcE1LWERLSnRYT0pRMlF0QWthODI2WtIB8gFBVV95cUxPbUhZNU1EaWNhc2JFTFFLYlNKSlp3anJfOVRYYmlKYnNsc1R5NlhMSTBGenhJR1BwZUdyeVNzSmtJNVMtRlJaa3NSc052MU1CZjljamZfdHRKV2swUFdYcklkeGZpVEswcTJzZi1HMk5iUHBqXzhNdnVub0tOc08zWFBObXl4eHVWd0gxaEEyaVZhZTIzbXR0eWg0TzlPN25kZ1hpTmc2aDM4cEg4RTg3UUVsZXBudENsaVBlUVJlR0VsVjVIdHZZQzVXbnE1LWFEVTh4T0s1TWMyU3ozT3RjNHVGam9fVGtEa0F1bi0zTi1xdw?oc=5"
     }
    ],
    "conf": "moyenne",
    "scope": "day",
-   "ts": "2026-11-27T11:30:00.000Z",
-   "title_en": "Nvidia: settlement agreement",
-   "value_en": "$290 million",
-   "sub_en": "An amount agreed by the company to close a class action lawsuit accusing it of misleading investors over its 2018 GPU sales."
+   "ts": "2026-11-28T03:18:58.000Z",
+   "title_en": "Kazakhstan: Sovereign AI hub",
+   "value_en": "$2B",
+   "sub_en": "Sum Kazakhstan plans to invest in establishing a sovereign hub equipped with Nvidia B300 chips."
   },
   {
-   "title": "JPMorgan : dette pour l'IA en 2027",
+   "title": "JPMorgan : prévision de dettes pour l'IA",
    "value": "450 Md$",
-   "sub": "Une vague de dettes que les entreprises devraient émettre sur les marchés obligataires pour financer leurs investissements en IA avant une stabilisation.",
+   "sub": "Montant que les entreprises devraient emprunter sur les marchés obligataires en 2027 pour financer leurs dépenses d'investissement en intelligence artificielle.",
    "ids": [
     "c38765969e36"
    ],
@@ -40,29 +40,29 @@
    "conf": "moyenne",
    "scope": "week",
    "ts": "2026-11-25T21:50:36.000Z",
-   "title_en": "JPMorgan: AI debt in 2027",
-   "value_en": "$450 billion",
-   "sub_en": "A wave of debt that companies are expected to issue on bond markets to fund their AI capital expenditures before a plateau in growth."
+   "title_en": "JPMorgan: AI debt forecast",
+   "value_en": "$450B",
+   "sub_en": "Amount companies are expected to borrow in the bond markets in 2027 to finance their artificial intelligence capital expenditures."
   },
   {
-   "title": "Nvidia : revenus du trimestre",
-   "value": "115,8 Md$",
-   "sub": "En hausse de 20 % par rapport au trimestre précédent (96,2 Md$) et en hausse de 103 % sur un an. Le bénéfice par action dilué non-GAAP s'est établi à 2,68 $.",
+   "title": "TSMC : part de marché des fonderies pures",
+   "value": "75 %",
+   "sub": "Part atteinte au troisième trimestre, alors que le secteur global des fonderies a progressé de 36 % sous l'impulsion de la demande en IA.",
    "ids": [
-    "55e7265b76e2"
+    "a0caa0d29138"
    ],
    "links": [
     {
-     "t": "Nvidia (communiqué de résultats, SEC)",
-     "u": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/q3fy27pr.htm"
+     "t": "Digitimes",
+     "u": "https://www.digitimes.com/news/a20261127PR203/tsmc-pure-play-foundry-market-revenue-2026.html"
     }
    ],
-   "conf": "haute",
-   "scope": "month",
-   "ts": "2026-11-17T21:20:51.000Z",
-   "title_en": "Nvidia: quarterly revenue",
-   "value_en": "$115.8 billion",
-   "sub_en": "Up 20% from the previous quarter ($96.2 billion) and up 103% year-over-year. Non-GAAP diluted earnings per share came in at $2.68."
+   "conf": "moyenne",
+   "scope": "week",
+   "ts": "2026-11-27T03:30:38.000Z",
+   "title_en": "TSMC: Pure-play foundry market share",
+   "value_en": "75%",
+   "sub_en": "Share reached in the third quarter, while the overall foundry sector grew by 36% driven by AI demand."
   }
  ]
 }

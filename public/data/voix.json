@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T09:56:57.420Z",
+ "generated_at": "2026-11-28T13:05:04.722Z",
  "people": [
   {
    "id": "sam-altman",
@@ -625,7 +625,7 @@
    "actor": "amd",
    "alerts": [
     {
-     "ts": "2026-11-20T18:25:00.000Z",
+     "ts": "2026-11-20T08:00:00.000Z",
      "title": "AMD CEO Lisa Su Breaks Silence on Jensen Huang's Resignation: \"The Noise Will Subside Soon\"",
      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1rU1A4MWt6V1lHVm4ycTBsNzdmWnd6S2tDVHgxclV4Uk11bmFMTXVrWDVGamR6OVZGM3ZWTnRURzhfVW9SbjJrZ0IzS1hLMjdpb2dFVTRadjlMRTg0aFhZdnRXOG8wZVo0RHRJUVJPc0RDVDNLVnc?oc=5",
      "source": "BigGo Finance"
@@ -2173,16 +2173,16 @@
    "actor": null,
    "alerts": [
     {
-     "ts": "2026-11-20T19:23:08.000Z",
-     "title": "Missouri’s Josh Hawley leaves door open for presidential run after midterm losses",
-     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56YUtGdmxFTzBKdXJLRDlTc0hPRWg1LS1DajBjUlNyWE5KNXNtS3ctRW1wM3FTRVNySUExSnpUZlZtNG5OVFhBeDJsV2xWZDR6Wi1xNmt2TFBTYXRtX3hQeDA3N2hUbnFUdjR6MjlLVjAxUTBqTHNBWnlDZzRnUdIBfkFVX3lxTE00ZWZWd0tOSGdDUl81ZVZRS1ZZWUVDZERwdTF6eUdTUDBKMHFudDVmZmpFdjc5ajdtQjB4aERTNzhTcXpzRk9rNmkwcmc3NTdBcHB4bDJXWjZZaTVzT2dMLVBlVXBjRU0zLWZmZFZBRzJOcl9aWGp5WlJlUVM2QQ?oc=5",
-     "source": "Kansas City Star"
-    },
-    {
      "ts": "2026-11-20T15:34:59.000Z",
      "title": "Josh Hawley leaves door open to 2028 presidential bid after previously ruling it out",
      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNMFZEQkZ5czBwY05LVzZuRjFfLUV2REZlbmEwRTgxa0ZDYjRLM2Z6X3dmMU9qazZzbUJUVWFCdnNSQVJhUmsxS2doamttdjRQcDdVc3dlV29YLTl0QkF1V1d2aE1XSEl0YVExRE80a0NzVXJBb090US1pRUp1RklueWh5RQ?oc=5",
      "source": "Mezha.net"
+    },
+    {
+     "ts": "2026-11-20T08:00:00.000Z",
+     "title": "Missouri’s Josh Hawley leaves door open for presidential run after midterm losses",
+     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE56YUtGdmxFTzBKdXJLRDlTc0hPRWg1LS1DajBjUlNyWE5KNXNtS3ctRW1wM3FTRVNySUExSnpUZlZtNG5OVFhBeDJsV2xWZDR6Wi1xNmt2TFBTYXRtX3hQeDA3N2hUbnFUdjR6MjlLVjAxUTBqTHNBWnlDZzRnUdIBfkFVX3lxTE00ZWZWd0tOSGdDUl81ZVZRS1ZZWUVDZERwdTF6eUdTUDBKMHFudDVmZmpFdjc5ajdtQjB4aERTNzhTcXpzRk9rNmkwcmc3NTdBcHB4bDJXWjZZaTVzT2dMLVBlVXBjRU0zLWZmZFZBRzJOcl9aWGp5WlJlUVM2QQ?oc=5",
+     "source": "Kansas City Star"
     }
    ],
    "items": [
@@ -3350,6 +3350,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T10:31:56.000Z",
+     "title": "‘AI is like a psychotic 6-year-old’: Stuart Russell warns businesses about AI risks | HTLS 2026 | Hindustan Times",
+     "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQMXUycnRUMjMydEZfZ3NDa1pWYUtkNHpKT0xSZV83UzV4YTBIRkcxREppekgxeVlCWTQ2SnZQT0YzMGJGOUwzQUVyazNkZzNzeHJJb2g1N2pnZEZVVFIzMXpPci1NaVJJUlRHU2xhMWgwU0VEeWR1SlpldjdrVk9xbHJZR1NobWN6ejR0NkZyQ2VsNTQycDdJdlVJMTNrWmp5ZE5zbWZVa3pjRkVuRnkwdVh3Mld2d1ZIY05Mc2NRcDM4d3VKVW1UYlhVSnlJM24zOGVuam1GWnF4QUpncngxRzkxTWNxU195RmfSAe8BQVVfeXFMUFNFVkkyM3pQaFBac0RMLWxsSDhCbGU1VUlldXBtTkxicU5uRG13WWJ1V1Zjbjc1T1pvckVmQzFZZTh3Qy0tTktTOTVGYTNPOGp3cnJkZzBfTHpXQmlTTklwSUpPa1BEQmxhTExabjlRVzZaNDIxa1I1THc2MjNLaURRU2dBdnUwaEtwcUpmWUgtVkdrdUhnOHNoaXNjZERWV1h4c2FTYWJtRnRGcjRZc0JERzFMRkMxYjRRVEx2NEhTZmItTmZ5c0ZUcWxiZUNEd1hPVlUteFBXT1hvbVZtZzhYSFFrYXl5QTh1Y1dsR2M?oc=5",
+     "source": "Hindustan Times",
+     "kind": "presse",
+     "title_fr": "« L'IA est comme un enfant de 6 ans psychotique » : Stuart Russell met en garde les entreprises contre les risques de l'IA | HTLS 2026 | Hindustan Times",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-25T07:56:00.000Z",
      "title": "\"They're seeing disturbing signs\": OpenAI and Anthropic have reportedly halted training on some models, says expert Stuart Russell",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxON2ptaGl2clhBc1RjYVV1ZUhMY29FQThkdy1lbWRDejFETGlON1RtaE43RFotN0dLaE5PRlhfRHJiWkJ1RjU0c3BTNHV6VGVWa00tZElrdllXMktPbmVBZ1laQXBNUG9TaUJ1WE5uOXEyMmR0OVNhQnRJc0xVek5MQV9LMXBBdVZv?oc=5",
@@ -3401,6 +3411,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-28T11:33:39.000Z",
+     "title": "SemiAnalysis’s Dylan Patel Thinks Anthropic Could “Beat the $300 Billion” Run Rate by 2027’s End. Here’s What That’s Worth",
+     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNNzhHLUVkcXBsWlM2ZnhKUm5mZFJ2cHo4Um5wd1lPczRzRjNmZUptTWNyeEpScmNyLWdOOGRiU2c0UUhCbUh5WjFjTVgybXpvSFh1NS1CdkU4T044UVYtOWxFQUNQd29iRnJ2X2VDSVRRNDh1bzhfOTRnZ3FlZXNKNDl5eG94bkszUVhfdjRkT2tCVnp6WTBQVXpFNWFKNWxFb2JRSjF6OWpUMHQ5ZFkwaG84Z1lCeDdNcVdVemhyWDJqN3lseWIzQ3JpRXBlWTN1T25oaE5FOTlhd0gyTjYwc24wdF9NTGxy?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse",
+     "title_fr": "Dylan Patel de SemiAnalysis pense qu'Anthropic pourrait « dépasser les 300 milliards de dollars » de chiffre d'affaires annualisé d'ici fin 2027. Voici ce que cela vaut",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-13T17:08:00.000Z",
      "title": "Jensen Huang Is Out at NVIDIA. Dylan Patel Says the Fight Over China's GPUs Has Only Just Begun.",
@@ -6378,7 +6398,7 @@
  ],
  "hot": [
   {
-   "score": 1.36,
+   "score": 1.07,
    "id": "andy-jassy",
    "n": "Andy Jassy",
    "role": "PDG d'Amazon",
@@ -6392,30 +6412,30 @@
    "outlets": 1
   },
   {
-   "score": 0.6,
-   "id": "chamath-palihapitiya",
-   "n": "Chamath Palihapitiya",
-   "role": "Fondateur de Social Capital",
+   "score": 0.85,
+   "id": "stuart-russell",
+   "n": "Stuart Russell",
+   "role": "Professeur à Berkeley, sécurité de l'IA",
    "actor": null,
-   "ts": "2026-11-28T04:30:00.000Z",
-   "title": "Chamath Palihapitiya Warns AI Could Crack Bitcoin as Leaders Push Back",
-   "title_fr": "Chamath Palihapitiya prévient que l'IA pourrait percer Bitcoin alors que des dirigeants s'y opposent",
-   "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUTRHYkhUcFRzOGxHTWNRSTd6Nlg3TVhKZG41bTZZSHBKVWJ3eTRPa2JRdnc1WEFZV0F0NUQzTmlRc0NqeTFuam84dE8zVkYxUExrMHIzZFlMQVNINXoyMGo3bmM3dTNBREpqWU1VR2xQWkRQTTl6NC1QR0VGY0xBWkRzNm8xZ1dTWk9iTjNLN0lqcHQtcFk0UGdBSkZ5SkRsVFVYZUR5dWI?oc=5",
-   "source": "Bitcoin News",
+   "ts": "2026-11-28T10:31:56.000Z",
+   "title": "‘AI is like a psychotic 6-year-old’: Stuart Russell warns businesses about AI risks | HTLS 2026 | Hindustan Times",
+   "title_fr": "« L'IA est comme un enfant de 6 ans psychotique » : Stuart Russell met en garde les entreprises contre les risques de l'IA | HTLS 2026 | Hindustan Times",
+   "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQMXUycnRUMjMydEZfZ3NDa1pWYUtkNHpKT0xSZV83UzV4YTBIRkcxREppekgxeVlCWTQ2SnZQT0YzMGJGOUwzQUVyazNkZzNzeHJJb2g1N2pnZEZVVFIzMXpPci1NaVJJUlRHU2xhMWgwU0VEeWR1SlpldjdrVk9xbHJZR1NobWN6ejR0NkZyQ2VsNTQycDdJdlVJMTNrWmp5ZE5zbWZVa3pjRkVuRnkwdVh3Mld2d1ZIY05Mc2NRcDM4d3VKVW1UYlhVSnlJM24zOGVuam1GWnF4QUpncngxRzkxTWNxU195RmfSAe8BQVVfeXFMUFNFVkkyM3pQaFBac0RMLWxsSDhCbGU1VUlldXBtTkxicU5uRG13WWJ1V1Zjbjc1T1pvckVmQzFZZTh3Qy0tTktTOTVGYTNPOGp3cnJkZzBfTHpXQmlTTklwSUpPa1BEQmxhTExabjlRVzZaNDIxa1I1THc2MjNLaURRU2dBdnUwaEtwcUpmWUgtVkdrdUhnOHNoaXNjZERWV1h4c2FTYWJtRnRGcjRZc0JERzFMRkMxYjRRVEx2NEhTZmItTmZ5c0ZUcWxiZUNEd1hPVlUteFBXT1hvbVZtZzhYSFFrYXl5QTh1Y1dsR2M?oc=5",
+   "source": "Hindustan Times",
    "kind": "presse",
    "outlets": 1
   },
   {
-   "score": 0.37,
-   "id": "vinod-khosla",
-   "n": "Vinod Khosla",
-   "role": "Fondateur de Khosla Ventures",
+   "score": 0.62,
+   "id": "dylan-patel",
+   "n": "Dylan Patel",
+   "role": "Fondateur de SemiAnalysis",
    "actor": null,
-   "ts": "2026-11-27T22:13:41.000Z",
-   "title": "Vinod Khosla Warns AI, Quantum Computing May Threaten Crypto by 2030",
-   "title_fr": "Vinod Khosla prévient que l'IA et l'informatique quantique pourraient menacer la crypto d'ici 2030",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE83QVZWUlhzUThXemQtRkY5Y1NEVjc5a2tqQ1NKd0dwVlFNOGpfSFdjbnRFejJjMkhSdk9VeHFtVEdMT0xtQjZiMWI5Mkh1WlI1SEY5YVhTVlNvMms?oc=5",
-   "source": "www.tokenpost.com",
+   "ts": "2026-11-28T11:33:39.000Z",
+   "title": "SemiAnalysis’s Dylan Patel Thinks Anthropic Could “Beat the $300 Billion” Run Rate by 2027’s End. Here’s What That’s Worth",
+   "title_fr": "Dylan Patel de SemiAnalysis pense qu'Anthropic pourrait « dépasser les 300 milliards de dollars » de chiffre d'affaires annualisé d'ici fin 2027. Voici ce que cela vaut",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNNzhHLUVkcXBsWlM2ZnhKUm5mZFJ2cHo4Um5wd1lPczRzRjNmZUptTWNyeEpScmNyLWdOOGRiU2c0UUhCbUh5WjFjTVgybXpvSFh1NS1CdkU4T044UVYtOWxFQUNQd29iRnJ2X2VDSVRRNDh1bzhfOTRnZ3FlZXNKNDl5eG94bkszUVhfdjRkT2tCVnp6WTBQVXpFNWFKNWxFb2JRSjF6OWpUMHQ5ZFkwaG84Z1lCeDdNcVdVemhyWDJqN3lseWIzQ3JpRXBlWTN1T25oaE5FOTlhd0gyTjYwc24wdF9NTGxy?oc=5",
+   "source": "TIKR.com",
    "kind": "presse",
    "outlets": 1
   }
