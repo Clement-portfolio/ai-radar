@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseFeed } from "./collect.mjs";
-import { PEOPLE, isStatement, INVEST_CUE, TOPIC, HOT_RULES, STRONG, toks, jac, translateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
+import { PEOPLE, isStatement, INVEST_CUE, TOPIC, onTopic, HOT_RULES, STRONG, toks, jac, translateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { makeClassifier } from "./collect.mjs";
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const DATA=path.join(HERE,"..","public","data");
@@ -26,11 +26,11 @@ const entries=await fetchFeed(url);let added=0;
 for(const x of entries.slice(0,100)){const ts=Date.parse(x.date);if(!Number.isFinite(ts)||ts<cutoff||ts>now+3600000||!x.link||!x.title)continue;
  const suffix=x.source&&x.title.endsWith(" - "+x.source)?" - "+x.source:null;
  const title=(suffix?x.title.slice(0,-suffix.length):x.title.replace(/\s+-\s+[^-]{2,40}$/,"")).trim();
- for(const p of selected){if(!p.re.test(title))continue;if((p.cat==="pouvoirs"||p.cat==="investisseurs"||p.topic)&&!TOPIC.test(title))continue;if(!isStatement(title,p.re,p.cat==="investisseurs"?INVEST_CUE:""))continue;
+ for(const p of selected){if(!p.re.test(title))continue;if(!onTopic(p,title))continue;if(!isStatement(title,p.re,p.cat==="investisseurs"?INVEST_CUE:""))continue;
   const m=byPerson.get(p.id),key=canon(x.link);if(m.has(key)||[...m.values()].some(it=>norm(it.title)===norm(title)))continue;
   m.set(key,{ts:new Date(ts).toISOString(),title,title_fr:knownFrench.get(key)||"",url:x.link,source:String(x.source||"").split(/\s[-–|]\s/)[0]||"Presse",kind:"presse"});added++;
  }}
-const people=selected.map(p=>({id:p.id,cat:p.cat,w:p.w??1,n:p.n,role:p.role,co:p.co,actor:p.actor,alerts:[],items:[...byPerson.get(p.id).values()].filter(it=>Date.parse(it.ts)>=now-30*DAY).sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,8)}));
+const people=selected.map(p=>({id:p.id,cat:p.cat,w:p.w??1,n:p.n,role:p.role,co:p.co,actor:p.actor,alerts:[],items:[...byPerson.get(p.id).values()].filter(it=>Date.parse(it.ts)>=now-30*DAY&&onTopic(p,it.title)).sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,8)}));
 // Regroupement : un même propos repris par plusieurs médias n'occupe qu'une ligne ; `m` = médias distincts, `e` = essentielle (comme à la collecte complète).
 // Un propos déjà présent dans la collecte complète (même personne, titres proches, moins de 48 h) n'est pas répété ici.
 const fullBy=new Map((full.people||[]).map(p=>[p.id,p.items||[]]));

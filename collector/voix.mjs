@@ -10,11 +10,11 @@ export const VOIX_RULES = { days: 30, perPerson: 8, perQuery: 30 };
 export const PEOPLE = [
   { id: "sam-altman", w: 1.6, cat: "dirigeants", n: "Sam Altman", role: "PDG d'OpenAI", co: "OpenAI", actor: "openai", re: /\bAltman\b/ },
   { id: "dario-amodei", w: 1.6, cat: "dirigeants", n: "Dario Amodei", role: "PDG d'Anthropic", co: "Anthropic", actor: null, re: /(?<!Daniela )\bAmodei\b/ },
-  { id: "elon-musk", w: 1.6, cat: "dirigeants", n: "Elon Musk", role: "PDG de Tesla et de SpaceX", co: "SpaceX / xAI", actor: null, re: /\bMusk\b/, q: '"Elon Musk" (xAI OR Grok OR "AI" OR OpenAI OR Nvidia)' },
+  { id: "elon-musk", w: 1.6, cat: "dirigeants", n: "Elon Musk", role: "PDG de Tesla et de SpaceX", co: "SpaceX / xAI", actor: null, re: /\bMusk\b/, q: '"Elon Musk" (xAI OR Grok OR "AI" OR OpenAI OR Nvidia)', topic: true },
   { id: "satya-nadella", w: 1.6, cat: "dirigeants", n: "Satya Nadella", role: "PDG de Microsoft", co: "Microsoft", actor: "microsoft", re: /\bNadella\b/ },
   { id: "sundar-pichai", w: 1.6, cat: "dirigeants", n: "Sundar Pichai", role: "PDG d'Alphabet (Google)", co: "Alphabet", actor: "alphabet", re: /\bPichai\b/ },
   { id: "demis-hassabis", w: 1.6, cat: "dirigeants", n: "Demis Hassabis", role: "PDG de Google DeepMind", co: "Google DeepMind", actor: "alphabet", re: /\bHassabis\b/ },
-  { id: "mark-zuckerberg", w: 1.6, cat: "dirigeants", n: "Mark Zuckerberg", role: "PDG de Meta", co: "Meta", actor: "meta", re: /\bZuckerberg\b/ },
+  { id: "mark-zuckerberg", w: 1.6, cat: "dirigeants", n: "Mark Zuckerberg", role: "PDG de Meta", co: "Meta", actor: "meta", re: /\bZuckerberg\b/, q: '"Mark Zuckerberg" (AI OR Meta OR superintelligence OR "data center")', topic: true },
   { id: "lisa-su", w: 1.6, cat: "dirigeants", n: "Lisa Su", role: "PDG d'AMD", co: "AMD", actor: "amd", re: /\bLisa Su\b/ },
   { id: "hock-tan", w: 1.6, cat: "dirigeants", n: "Hock Tan", role: "PDG de Broadcom", co: "Broadcom", actor: "broadcom", re: /\bHock Tan\b/ },
   { id: "cc-wei", w: 1.6, cat: "dirigeants", n: "C.C. Wei", role: "PDG de TSMC", co: "TSMC", actor: "tsmc", re: /\bC\.?\s?C\.? Wei\b/, q: '"C.C. Wei" TSMC' },
@@ -96,14 +96,14 @@ export const PEOPLE = [
   { id: "benedict-evans", cat: "investisseurs", n: "Benedict Evans", role: "Analyste indépendant de la tech", co: "", actor: null, re: /\bBenedict Evans\b/, q: "\"Benedict Evans\" AI" },
   { id: "nathan-lambert", cat: "chercheurs", n: "Nathan Lambert", role: "Chercheur à Ai2", co: "Ai2", actor: null, re: /\bNathan Lambert\b/, q: "\"Nathan Lambert\" (AI OR Ai2 OR OLMo)" },
   { id: "xi-jinping", cat: "pouvoirs", n: "Xi Jinping", role: "Président de la Chine", co: "", actor: null, re: /\bXi Jinping\b|\bPresident Xi\b/, q: "\"Xi Jinping\" (AI OR \"artificial intelligence\" OR chips OR Nvidia)" },
-  { id: "chey-tae-won", cat: "dirigeants", n: "Chey Tae-won", role: "Président du groupe SK", co: "SK", actor: "sk-hynix", re: /\bChey Tae[- ]won\b/, q: "\"Chey Tae-won\" (AI OR SK OR Nvidia OR HBM)" },
+  { id: "chey-tae-won", cat: "dirigeants", n: "Chey Tae-won", role: "Président du groupe SK", co: "SK", actor: "sk-hynix", re: /\bChey Tae[- ]won\b/, q: "\"Chey Tae-won\" (AI OR SK OR Nvidia OR HBM)", topic: true },
   { id: "wang-xingxing", cat: "dirigeants", n: "Wang Xingxing", role: "Fondateur d'Unitree (robots humanoïdes)", co: "Unitree", actor: null, re: /\bWang Xingxing\b/, q: "\"Wang Xingxing\" Unitree" },
-  { id: "pony-ma", cat: "dirigeants", n: "Pony Ma", role: "PDG de Tencent", co: "Tencent", actor: null, re: /\bPony Ma\b|\bMa Huateng\b/, q: "\"Pony Ma\" (AI OR Tencent)" },
+  { id: "pony-ma", cat: "dirigeants", n: "Pony Ma", role: "PDG de Tencent", co: "Tencent", actor: null, re: /\bPony Ma\b|\bMa Huateng\b/, q: "\"Pony Ma\" (AI OR Tencent)", topic: true },
   { id: "young-liu", cat: "dirigeants", n: "Young Liu", role: "Président de Foxconn (Hon Hai)", co: "Foxconn", actor: null, re: /\bYoung Liu\b/, q: "\"Young Liu\" Foxconn (AI OR Nvidia)" },
-  { id: "jay-y-lee", cat: "dirigeants", n: "Jay Y. Lee", role: "Président de Samsung Electronics", co: "Samsung", actor: "samsung", re: /\bJay Y\. Lee\b|\bLee Jae-yong\b/, q: "\"Jay Y. Lee\" OR \"Lee Jae-yong\" Samsung" },
+  { id: "jay-y-lee", cat: "dirigeants", n: "Jay Y. Lee", role: "Président de Samsung Electronics", co: "Samsung", actor: "samsung", re: /\bJay Y\. Lee\b|\bLee Jae-yong\b/, q: "\"Jay Y. Lee\" OR \"Lee Jae-yong\" Samsung", topic: true },
   { id: "joe-tsai", cat: "dirigeants", n: "Joe Tsai", role: "Président d'Alibaba", co: "Alibaba", actor: "alibaba", re: /\bJoe Tsai\b/, q: "\"Joe Tsai\" Alibaba (AI OR capex)" },
   { id: "eddie-wu", cat: "dirigeants", n: "Eddie Wu", role: "PDG d'Alibaba", co: "Alibaba", actor: "alibaba", re: /\bEddie Wu\b/, q: "\"Eddie Wu\" Alibaba (AI OR cloud)" },
-  { id: "mukesh-ambani", cat: "dirigeants", n: "Mukesh Ambani", role: "Président de Reliance Industries (Inde)", co: "Reliance", actor: null, re: /\bAmbani\b/, q: "\"Mukesh Ambani\" (AI OR Jio OR \"data center\")" },
+  { id: "mukesh-ambani", cat: "dirigeants", n: "Mukesh Ambani", role: "Président de Reliance Industries (Inde)", co: "Reliance", actor: null, re: /\bAmbani\b/, q: "\"Mukesh Ambani\" (AI OR Jio OR \"data center\")", topic: true },
   { id: "tahnoon-bin-zayed", cat: "investisseurs", n: "Tahnoon bin Zayed", role: "Président de MGX et de G42 (Émirats)", co: "G42", actor: "g42", re: /\bTahnoon\b/, q: "\"Tahnoon bin Zayed\" (AI OR G42 OR MGX)" },
   { id: "austan-goolsbee", w: 0.8, cat: "pouvoirs", n: "Austan Goolsbee", role: "Président de la Fed de Chicago", co: "", actor: null, re: /\bGoolsbee\b/, q: "\"Goolsbee\" (AI OR \"artificial intelligence\" OR productivity)" },
   { id: "michael-barr", w: 0.8, cat: "pouvoirs", n: "Michael Barr", role: "Gouverneur de la Réserve fédérale", co: "", actor: null, re: /\bMichael Barr\b/, q: "\"Michael Barr\" Fed (AI OR \"artificial intelligence\")" },
@@ -131,7 +131,15 @@ const CUE = "says?|said|warns?|warned|predicts?|predicted|tells?|told|expects?|e
 // Pour les investisseurs et analystes, une prise de position compte aussi : achat, vente, pari, relèvement ou abaissement d'objectif.
 export const INVEST_CUE = "buys?|bought|sells?|sold|shorts?|shorted|bets?|dumps?|dumped|trims?|adds?|boosts?|raises?|cuts?|lowers?|upgrades?|downgrades?|initiates?|reiterates?|backs?|stakes?|invests?|exits?|loads?|doubles?|piles?";
 // Pouvoirs publics et investisseurs parlent de tout : on ne garde que ce qui touche à l'IA, aux puces, aux datacenters et aux grandes sociétés de l'IA.
-export const TOPIC = /\b(?:A\.?I\.?|artificial intelligence|chatbots?|Nvidia|OpenAI|Anthropic|Gemini|ChatGPT|Claude|xAI|Grok|chips?|semiconductors?|GPUs?|data ?cent(?:er|re)s?|Huang|Microsoft|Alphabet|Google|Meta|AMD|Broadcom|TSMC|Micron|Intel|Oracle|CoreWeave|Palantir|SoftBank|Samsung|SK hynix|ASML|hyperscalers?|robots?|robotics|super ?intelligence|preempt\w*|export controls?|large loads?|AI Act|tech(?:nology)?)\b/i;
+export const TOPIC = /\b(?:A\.?I\.?|artificial intelligence|chatbots?|Nvidia|OpenAI|Anthropic|Gemini|ChatGPT|Claude|xAI|Grok|chips?|semiconductors?|GPUs?|data ?cent(?:er|re)s?|Huang|Microsoft|Alphabet|Google|Meta|AMD|Broadcom|TSMC|Micron|Intel|Oracle|CoreWeave|Palantir|SoftBank|Samsung|SK hynix|ASML|hyperscalers?|robots?|robotics|singularity|AGI|LLMs?|compute|HBM|DRAM|Optimus|self-driving|FSD|Tencent|Alibaba|Baidu|DeepSeek|super ?intelligence|preempt\w*|export controls?|large loads?|AI Act|tech(?:nology)?)\b/i;
+// Garde-fou de dernier recours, pour tout le monde : un titre qui parle de société, de guerre ou de faits divers sans rien d'IA est écarté.
+export const OFFTOPIC = /\b(?:Taliban|Afghan\w*|women|girls|abortion|transgender|Gaza|Hamas|Ukraine|Putin|election|campaign|immigra\w*|deport\w*|racis\w*|murder|rape|shooting|assassinat\w*|Epstein|divorce|girlfriend|pregnan\w*|vaccine|religion|church|Pope|Israel|Iran|war)\b/i;
+/** Le titre a-t-il sa place sur un site consacré à l'IA ? (utilisé à la collecte et pour purger les anciennes entrées) */
+export function onTopic(p, title) {
+  const ai = TOPIC.test(title);
+  if ((p.cat === "pouvoirs" || p.cat === "investisseurs" || p.topic) && !ai) return false;
+  return ai || !OFFTOPIC.test(title);
+}
 const cueRe = new RegExp(`\\b(?:${CUE})\\b`, "i");
 
 /** La personne est-elle celle qui parle dans ce titre ? */
@@ -195,7 +203,7 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
         const title = (sfx ? x.title.slice(0, -sfx.length) : x.title.replace(/\s+-\s+[^-]{2,40}$/, "")).trim();
         // alerte de poste : un titre récent annonce peut-être un changement (démission, nomination…) pour cette personne
         if (p.watch !== false && ts > Date.parse(ROLES_AS_OF + "T23:59:59Z") && p.re.test(title) && CHANGE.test(title)) alerts.get(p.id).set(canon(x.link), { ts: new Date(ts).toISOString(), title, url: x.link, source: x.source || "Presse" });
-        if ((p.cat === "pouvoirs" || p.cat === "investisseurs" || p.topic) && !TOPIC.test(title)) continue;
+        if (!onTopic(p, title)) continue;
         if (!isStatement(title, p.re, p.cat === "investisseurs" ? INVEST_CUE : "")) continue;
         add(p, { ts: new Date(ts).toISOString(), title, url: x.link, source: String(x.source || "").split(/\s[-–|]\s/)[0] || (x.title.match(/\s-\s([^-]{2,40})$/) || [])[1] || "Presse", kind: "presse" });
       }
@@ -207,14 +215,14 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
       const xml = await http(`https://www.youtube.com/feeds/videos.xml?channel_id=${c.id}`);
       for (const x of parseFeed(xml).slice(0, 15)) {
         const ts = Date.parse(x.date); if (!(ts >= cutoff) || ts > now + DAY) continue;
-        for (const p of PEOPLE) if (p.re.test(x.title)) add(p, { ts: new Date(ts).toISOString(), title: x.title, url: x.link, source: c.name, kind: "video" });
+        for (const p of PEOPLE) if (p.re.test(x.title) && onTopic(p, x.title)) add(p, { ts: new Date(ts).toISOString(), title: x.title, url: x.link, source: c.name, kind: "video" });
       }
     } catch (e) { failed++; log(`Voix ${c.name} : ${String(e.message || e).slice(0, 80)}`); }
   }
   const people = PEOPLE.map((p) => ({
     id: p.id, cat: p.cat, w: p.w ?? 1, n: p.n, role: p.role, co: p.co, actor: p.actor,
     alerts: [...alerts.get(p.id).values()].filter((a) => Date.parse(a.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 2),
-    items: [...byPerson.get(p.id).values()].filter((it) => Date.parse(it.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, VOIX_RULES.perPerson),
+    items: [...byPerson.get(p.id).values()].filter((it) => Date.parse(it.ts) >= cutoff && onTopic(p, it.title)).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, VOIX_RULES.perPerson),
   }));
   const total = people.reduce((s, p) => s + p.items.length, 0);
   return { doc: { v: 1, generated_at: new Date(now).toISOString(), people }, summary: { added, failed, total, reason: failed >= PEOPLE.length + CHANNELS.length ? "toutes les sources en échec" : "" } };

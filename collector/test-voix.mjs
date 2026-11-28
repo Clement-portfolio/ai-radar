@@ -1,6 +1,6 @@
 // Tests hors ligne de « Voix » : seuls les titres où la personne s'exprime sont retenus ; fusion, fenêtre de 30 jours, traduction contrôlée.
 import assert from "node:assert/strict";
-import { isStatement, collectVoix, translateVoix, hotVoix, annotateVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
+import { onTopic, isStatement, collectVoix, translateVoix, hotVoix, annotateVoix, PEOPLE, INVEST_CUE, TOPIC } from "./voix.mjs";
 import { parseFeed } from "./collect.mjs";
 
 // noms sortis du roster (liste resserrée à 100 le 19 nov. 2026) : motif de secours pour garder les cas de test
@@ -105,4 +105,12 @@ assert.equal(a3.m, 1); assert.equal(a3.e, 0, "voix majeure mais verbe neutre");
 assert.equal(a4.e, 1, "voix majeure + verbe fort");
 assert.equal(adoc.people[1].items[0].e, 0, "voix mineure, un seul média : pas essentiel");
 console.log("test-voix (insiders) OK");
+// Garde-fou de pertinence : rien de hors IA, même pour un dirigeant très médiatisé
+const MUSK = PEOPLE.find((p) => p.id === "elon-musk");
+assert.equal(onTopic(MUSK, "Elon Musk Calls Situation of Women in Afghanistan Under Taliban Rule ‘Very Concerning’"), false, "Taliban : hors sujet");
+assert.equal(onTopic(MUSK, "Elon Musk says he is giving 2 SpaceX shares to every American child"), false, "SpaceX seul : hors sujet");
+assert.equal(onTopic(MUSK, "Elon Musk Says Grok 5 will reach AGI next year"), true, "IA : gardé");
+assert.equal(onTopic(MUSK, "Elon Musk Says GOOGL Has Expressed Interest In Renting More Compute From SpaceX"), true, "compute : gardé");
+assert.equal(onTopic(PEOPLE.find((p) => p.id === "sam-altman"), "Sam Altman says he is worried about the future"), true, "dirigeant d'une société d'IA : pas de filtre de mot-clé");
+assert.equal(onTopic(PEOPLE.find((p) => p.id === "sam-altman"), "Sam Altman responds to Gaza war question"), false, "liste noire sans mot d'IA");
 console.log("test-voix OK");
