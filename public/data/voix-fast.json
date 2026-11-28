@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T15:20:32.026Z",
+ "generated_at": "2026-11-28T15:38:30.431Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T15:30:32.026Z",
+ "translate_retry_at": "2026-11-28T15:48:30.431Z",
  "people": [
   {
    "id": "sam-altman",
@@ -145,8 +145,8 @@
     },
     {
      "ts": "2026-11-26T04:13:14.000Z",
-     "title": "Does Anthropic Want AI to Run the World? CEO Dario Amodei Pushes Back Against ‘Surrender Human Free Will’",
-     "title_fr": "Anthropic veut-il que l'IA dirige le monde ? Le PDG Dario Amodei rejette l'idée d'« abandonner le libre arbitre humain »",
+     "title": "Does Anthropic Want AI to Run the World? CEO Dario Amodei Pushes Back Against ‘Surrender Human Free…",
+     "title_fr": "Anthropic veut-elle que l'IA dirige le monde ? Le PDG Dario Amodei rejette l'idée d'un « abandon de la liberté humaine... »…",
      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaWhLVnVINC1WWFU0ci1lU3RwRHpCano1MFRoaDlXVmkyREFpR1V6bEhyWFBIY3dRYWs2Q2dsVTFqVjBlSS0wRVdVWnk3eTRFaWtQbzJEa1BXRmhBbXRaWUVwM3B0eFY4WDY1T1lOekpwUGczOHMtbkt6MlFqY0dmaXNncUs?oc=5",
      "source": "Benzinga",
      "kind": "presse",
@@ -154,7 +154,8 @@
       "benzinga"
      ],
      "m": 1,
-     "e": 0
+     "e": 0,
+     "cut": 1
     }
    ]
   },
