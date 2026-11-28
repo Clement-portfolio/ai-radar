@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T08:00:49.377Z",
+ "generated_at": "2026-11-28T10:20:29.028Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T08:10:49.377Z",
+ "translate_retry_at": "2026-11-28T10:30:29.028Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T10:08:04.000Z",
+     "title": "Elon Musk says Google is interested in renting more computing capacity from SpaceX",
+     "title_fr": "Elon Musk dit que Google est intéressé par la location de plus de capacité de calcul auprès de SpaceX",
+     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXVwYWxTQ29HWjRtTE9nRV9OZk9qeVlraldQankzZ09ONU1FaU43MHZFeHJvSTBPV1gxY3gtUUR1R1VtQ2FJS0gwZEVta2V5SVJZTVBDZk9PcW1lZWxwMVNIbUlBSWh0X2lxU1VTUGkwcnAzYUtVOEh5TEcwamp3dm5qSThMVlJyd09LNWlZT3BGWVZCVjkteEdkQlAyT3R4ajBtS2pnSVBnUERpVXR0MmlLZ2FXWkI4YlBSa0lVcm1UTk9xTF80?oc=5",
+     "source": "Deccan Herald",
+     "kind": "presse",
+     "srcs": [
+      "deccan herald"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-28T07:48:00.000Z",
      "title": "Elon Musk Says GOOGL Has ‘Expressed Interest’ In Renting More Compute From SPCX",
      "title_fr": "Elon Musk déclare que GOOGL a « exprimé son intérêt » pour louer plus de puissance de calcul auprès de SPCX",
@@ -255,19 +268,6 @@
      "kind": "presse",
      "srcs": [
       "gadget review"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-27T15:43:06.000Z",
-     "title": "Elon Musk says he will expand on Trump Account share donations",
-     "title_fr": "Elon Musk affirme qu'il développera les dons d'actions du compte de Trump",
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQX2NHY1ozODhCSlEwWjE4NG92aXFLSjJWWE5QTlJmaUUyaFhMQjRZZ0NoSEpHS0JjNTJqM1I1QXN4Vjl0dHJFdnl3OTdwRlNZRDdnR3FzdnYtcjQ4TWZ0TmdpRVk3eVpMSS0wOG5VVnNSSmNfemhJbkYzTEdRNV9vb3plWFV4bGUzZWxtS1hQQURTQTV6Q1MzMzdTMA?oc=5",
-     "source": "CNBC",
-     "kind": "presse",
-     "srcs": [
-      "cnbc"
      ],
      "m": 1,
      "e": 0
@@ -400,21 +400,7 @@
    "co": "Amazon",
    "actor": "amazon",
    "alerts": [],
-   "items": [
-    {
-     "ts": "2026-11-28T07:49:00.000Z",
-     "title": "Satya Nadella declines to pick between Amazon's Andy Jassy and Elon Musk; says: At this point, I don't kn",
-     "title_fr": "Satya Nadella refuse de choisir entre Andy Jassy d'Amazon et Elon Musk ; déclare : À ce stade, je ne sa",
-     "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxONThpam0xUkgzclBGZUx4UEtUeTQwSS1mTnY3ajVDR0tLRjJseUM1QW1heXNqamJKMDU4NkZ2ajF2LWRUSklRSFhCUXFrOFdIOXpIODJsWXc1YUE1WW1VRFM1QklaU25UZGNZT0s4MjctN2RhN2JqUS1wLTFPSUoycXdiQmlmOEltZ0JzaWFkZXl6TWdwOE9xZmM2a3RZX25qYmJtbWUyWGVCVVFJMk9MNXdERDA2RVdpdHBUTWtkUnBENm1VclQ4NVdQakhFRVl3M00xMkZLekpvRDFVcGg1MGdoclh1eWZ0bnFuLXRHZDlEUDYwOXZRTi1kVUdvTExyT0RmZ1B4OGtudGNuY1R3a056ZHFMeVVfaGJWYjVHYXdMZTDSAagCQVVfeXFMUDRVUDBmMko4dFpSbzFtV0ROMnhFeW5CbVBOVnNpd29mRFFibDBsYnlESmFYUmc2WkNNaTA4cnJRVVdBR3V1WkVVLU02T2huaG1wOGlDNzY1WG1QNHV2NkR5RG5pTnQtOENaSEREZDdMYlhqY21lUFcxRS1jXzZrX2psYkM2cVQ5U0VzbzFLck54cFNVeDR3aS1HaUJoVDVCNWhkQlVVNVl6dG14MjhUUUozZlV4d2lxNVJOdm1IX3NQa09MUEJURW1VVWhjZ3BnWWZkM3g1VTVfZ0FuTjdWY3VuNkZoN1lUVHI5TmNQeGI2RkFhUjE2NDVCWER5SEdGZnE2Tno2dTF6dzRTUEJzdGtSckpVd0NTelBnOHJBc3VqZk5laXFJdWs?oc=5",
-     "source": "The Times of India",
-     "kind": "presse",
-     "srcs": [
-      "the times of india"
-     ],
-     "m": 1,
-     "e": 0
-    }
-   ]
+   "items": []
   },
   {
    "id": "lip-bu-tan",
