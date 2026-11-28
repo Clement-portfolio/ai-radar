@@ -85,16 +85,19 @@ export function tone(labels, now, storyOf = null, days = FIN_RULES.days) {
 }
 /** Classement de la semaine : par société, nombre d'histoires haussières / baissières (une histoire = un compte). */
 export function weekRanking({ companies, now, storyOf, days = 7, top = 3 }) {
+  const pick = (x, st) => { const l = x.labels.slice().sort((a, b) => (a.stance === st ? 0 : 1) - (b.stance === st ? 0 : 1) || b.ts.localeCompare(a.ts))[0];
+    return { id: l.id, title: l.title, title_en: l.title_en || "", source: l.source, url: l.url, ts: x.ts, media: x.labels.length }; };
   const rank = companies.map((c) => {
     const L = (c.labels || []).filter((l) => now - Date.parse(l.ts) <= days * DAY);
     const G = groupLabels(L, storyOf);
     const bull = G.filter((x) => x.stance === "haussier").sort((a, b) => b.ts.localeCompare(a.ts));
-    const lead = (x) => x.labels.slice().sort((a, b) => (a.stance === "haussier" ? 0 : 1) - (b.stance === "haussier" ? 0 : 1) || b.ts.localeCompare(a.ts))[0];
-    return { id: c.id, n: c.n, bull: bull.length, bear: G.filter((x) => x.stance === "baissier").length, neu: G.filter((x) => x.stance === "neutre").length, total: G.length,
-      top: bull.slice(0, top).map((x) => { const l = lead(x); return { id: l.id, title: l.title, title_en: l.title_en || "", source: l.source, url: l.url, ts: x.ts, media: x.labels.length }; }) };
+    const bear = G.filter((x) => x.stance === "baissier").sort((a, b) => b.ts.localeCompare(a.ts));
+    return { id: c.id, n: c.n, bull: bull.length, bear: bear.length, neu: G.filter((x) => x.stance === "neutre").length, total: G.length,
+      top: bull.slice(0, top).map((x) => pick(x, "haussier")), topBear: bear.slice(0, top).map((x) => pick(x, "baissier")) };
   }).filter((r) => r.total > 0);
+  const byBear = rank.slice().sort((a, b) => b.bear - a.bear || (a.bull - a.bear) - (b.bull - b.bear) || a.bull - b.bull || b.total - a.total);
   rank.sort((a, b) => b.bull - a.bull || (b.bull - b.bear) - (a.bull - a.bear) || a.bear - b.bear || b.total - a.total);
-  return { days, ranking: rank, top: rank[0] && rank[0].bull >= 1 ? rank[0].id : null };
+  return { days, ranking: rank, top: rank[0] && rank[0].bull >= 1 ? rank[0].id : null, bear: byBear[0] && byBear[0].bear >= 1 ? byBear[0].id : null };
 }
 
 /** Articles du fil qui nomment la société (30 jours, les plus récents d'abord). */

@@ -94,6 +94,13 @@ assert.equal(wk.top, "B", "2 histoires haussières battent 3 articles d'une seul
 assert.deepEqual(wk.ranking.map((r) => r.id), ["B", "A"], "sociétés sans actualité de la semaine écartées");
 assert.equal(wk.ranking[1].bull, 1); assert.equal(wk.ranking[0].top.length, 2);
 assert.equal(weekRanking({ companies: [D], now, storyOf }).top, null);
+assert.equal(wk.bear, null, "aucune histoire baissière : pas de perdant");
+const F = { id: "F", n: "Fox", labels: [mk("f1", "baissier"), mk("f2", "baissier"), mk("f3", "haussier")] };
+const G2 = { id: "G", n: "Golf", labels: [mk("g1", "baissier"), mk("g2", "neutre")] };
+const wk2 = weekRanking({ companies: [A, B, F, G2], now, storyOf, days: 7 });
+assert.equal(wk2.bear, "F", "2 histoires baissières battent 1"); assert.equal(wk2.top, "B");
+assert.equal(wk2.ranking.find((r) => r.id === "F").topBear.length, 2); assert.equal(wk2.ranking.find((r) => r.id === "A").topBear.length, 0);
+
 assert.equal(weekRanking({ companies: [{ id: "E", n: "E", labels: [mk("e1", "baissier")] }], now, storyOf }).top, null, "aucune histoire haussière : pas de gagnant");
 
 // actualités générales (secteur, macro) : libellées une fois, hors sociétés suivies, compactées au-delà de la limite

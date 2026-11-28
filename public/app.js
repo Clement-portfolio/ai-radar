@@ -122,7 +122,7 @@ function rUne(){
   if(!st.length)st=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,3).map(function(it){return{s:{head:tx(it,'title'),bullets:it.summary?[tx(it,'summary')]:[]},arts:[it]}});
   var h='<section class="hero"><span class="hdate">'+esc(fmtDay(u||new Date().toISOString()))+'</span><h1>'+(en?'AI, today':'L’IA, aujourd’hui')+'</h1><p>'+(en?'What’s happening, what’s being said, and what the numbers show.':'Ce qu’il se passe, ce qu’il se dit, et ce que les chiffres montrent.')+'</p></section>';
   var RS=S.resume,rtx=RS&&((en&&RS.text_en)||RS.text);
-  if(S.fin)h+=fHomeBox();
+  if(S.fin)h+=fHomeDuo();
   if(rtx&&Date.now()-Date.parse(RS.generated_at)<30*36e5)h+='<section class="tile resume">'+tHead(en?'Summary':'Résumé du jour',en?'The essentials, in one paragraph':'L’essentiel, en un paragraphe')+'<p class="rtext">'+esc(rtx)+'</p><span class="rmeta">'+(en?'Written by AI from today’s stories · updated ':'Rédigé par IA à partir des actualités du jour · mis à jour ')+esc(ago(RS.generated_at))+'</span></section>';
   h+='<section class="tile">'+tHead(en?'Top stories':'La une',en?'The three stories of the day':'Les trois histoires du jour')+'<div class="tgrid3">'+st.map(function(x,i){
     var s=x.s,lead=x.arts[0],ok=en&&s.head_en&&s.bullets_en&&s.bullets_en.length===(s.bullets||[]).length;
@@ -856,23 +856,63 @@ function rActeurs(){
 
 /* Mode Finance : encadrés de tête (accueil, Actualités) */
 function fPl(n,w,wp){return n+" "+(n>1?(wp||w+"s"):w)}
-function fWeek(){var W=S.fin&&S.fin.week;return W&&W.top?W.ranking.filter(function(x){return x.id===W.top})[0]:null}
-function fHomeBox(){
-  var en=isEn(),r=fWeek(),eb=en?"Finance · last 7 days":"Finance · 7 derniers jours";
-  if(!r)return'<section class="tile fbox fonly">'+tHead(eb,en?"No standout company yet":"Pas encore de société en tête")+'<p class="fsub">'+(en?"Not enough labelled news this week.":"Pas assez d’actualités libellées cette semaine.")+'</p>'+cta("finance",en?"Company ranking":"Classement des sociétés")+'</section>';
-  var sub=en?fPl(r.bull,"bullish story","bullish stories")+" out of "+r.total+" this week"+(r.bear?", "+r.bear+" bearish":"")+". Articles about the same story count once.":fPl(r.bull,"histoire haussière")+" sur "+r.total+" cette semaine"+(r.bear?", "+fPl(r.bear,"baissière")+"":"")+". Les articles d’une même histoire ne comptent qu’une fois.";
-  var rows=(r.top||[]).map(function(t){return'<a class="fhl" href="'+esc(link(t.url))+'" target="_blank" rel="noopener"><span>'+esc((en&&t.title_en)||t.title)+'</span><i>'+esc(t.source||"")+' ↗</i></a>'}).join("");
-  return'<section class="tile fbox fonly" data-s="bull">'+tHead(eb,en?"Most bullish news: "+r.n:"Le plus d’actualités haussières : "+r.n)+'<p class="fsub">'+esc(sub)+'</p><div class="fhls">'+rows+'</div><p class="fgolinks"><a href="#finance/'+esc(r.id)+'">'+(en?"Bear, base and bull cases →":"Cas baissier, de base et haussier →")+'</a><a href="#finance">'+(en?"Company ranking →":"Classement des sociétés →")+'</a></p></section>';
+function fToneOf(x){var n=x.haussier+x.neutre+x.baissier,net=n?(x.haussier-x.baissier)/n:0;return{haussier:x.haussier,neutre:x.neutre,baissier:x.baissier,n:n,net:net,label:n<FIN_MIN?"peu d'articles":net>=.25?"haussière":net<=-.25?"baissière":"mitigée"}}
+function fWk(kind){
+  var W=S.fin&&S.fin.week,R=(W&&W.ranking)||[],id=kind==="bull"?W&&W.top:W&&W.bear;
+  if(id===undefined&&W&&kind==="bear"){var c=R.filter(function(x){return x.bear>=1}).sort(function(a,b){return b.bear-a.bear||(a.bull-a.bear)-(b.bull-b.bear)||a.bull-b.bull})[0];id=c&&c.id}
+  return id?R.filter(function(x){return x.id===id})[0]:null;
+}
+function fHomeTile(kind){
+  var en=isEn(),bull=kind==="bull",r=fWk(kind),eb=en?"Finance · last 7 days":"Finance · 7 derniers jours",
+    ttl=bull?(en?"Most bullish news":"Le plus d’actualités haussières"):(en?"Most bearish news":"Le plus d’actualités baissières");
+  if(!r)return'<section class="tile half hpf">'+tHead(eb,ttl)+'<p class="hpsub">'+(en?"No standout company this week: not enough labelled news.":"Aucune société ne ressort cette semaine : pas assez d’actualités libellées.")+'</p><div class="hfoot"><button class="tlink" data-go="finance">'+(en?"Company ranking":"Classement des sociétés")+' ›</button><button class="arw lg" data-go="finance" aria-label="Finance">'+ARW+'</button></div></section>';
+  var t=fToneOf({haussier:r.bull,neutre:r.neu,baissier:r.bear}),n=bull?r.bull:r.bear,
+    sub=en?fPl(n,bull?"bullish story":"bearish story",bull?"bullish stories":"bearish stories")+" out of "+r.total+". Articles about the same story count once.":fPl(n,bull?"histoire haussière":"histoire baissière",bull?"histoires haussières":"histoires baissières")+" sur "+r.total+". Les articles d’une même histoire ne comptent qu’une fois.",
+    L=((bull?r.top:r.topBear)||[]).slice(0,2),
+    rows=L.map(function(x){return'<a class="fhl" href="'+esc(link(x.url))+'" target="_blank" rel="noopener"><span>'+esc((en&&x.title_en)||x.title)+'</span><i>'+esc(x.source||"")+' ↗</i></a>'}).join("");
+  return'<section class="tile half hpf" data-s="'+(bull?"bull":"bear")+'">'+tHead(eb,ttl)+'<p class="fname">'+esc(r.n)+'</p><div class="fprog">'+fTbar(t)+'</div><p class="hpsub">'+esc(sub)+'</p><div class="fhls">'+rows+'</div>'+
+   '<div class="hfoot"><button class="tlink" data-go="finance/'+esc(r.id)+'">'+(en?"Bear, base and bull cases":"Cas baissier, de base et haussier")+' ›</button><button class="arw lg" data-go="finance/'+esc(r.id)+'" aria-label="'+esc(r.n)+'">'+ARW+'</button></div></section>';
+}
+function fHomeDuo(){return'<div class="duo fonly">'+fHomeTile("bull")+fHomeTile("bear")+'</div>'}
+function fLeg(t){var en=isEn();return'<ul class="leg">'+[["baissier",en?"Bearish":"Baissières"],["neutre",en?"Neutral":"Neutres"],["haussier",en?"Bullish":"Haussières"]].map(function(x){return'<li><i style="background:'+FCOL[x[0]]+'"></i><span>'+x[1]+'</span><b>'+t[x[0]]+'</b></li>'}).join("")+'</ul>'}
+function fDonut(t,sm){
+  var en=isEn(),R=52,r=32,c=60,tot=t.n,out="";
+  if(!tot)out='<circle cx="60" cy="60" r="42" fill="none" stroke="var(--pill)" stroke-width="20"/>';
+  else{
+    var segs=[["baissier",t.baissier],["neutre",t.neutre],["haussier",t.haussier]].filter(function(x){return x[1]>0}),a0=-Math.PI/2;
+    if(segs.length===1)out='<circle cx="60" cy="60" r="42" fill="none" stroke="'+FCOL[segs[0][0]]+'" stroke-width="20"/>';
+    else segs.forEach(function(x){
+      var a1=a0+x[1]/tot*2*Math.PI,big=(a1-a0)>Math.PI?1:0,P=function(rad,a){return(c+rad*Math.cos(a)).toFixed(2)+" "+(c+rad*Math.sin(a)).toFixed(2)};
+      out+='<path d="M'+P(R,a0)+' A'+R+' '+R+' 0 '+big+' 1 '+P(R,a1)+' L'+P(r,a1)+' A'+r+' '+r+' 0 '+big+' 0 '+P(r,a0)+' Z" style="fill:'+FCOL[x[0]]+'" stroke="var(--bg)" stroke-width="1.5"><title>'+esc(x[0])+' : '+x[1]+'</title></path>';a0=a1;
+    });
+    out+='<text x="60" y="66" text-anchor="middle" class="dn">'+tot+'</text>';
+  }
+  return'<svg class="donut fd" viewBox="0 0 120 120" role="img" aria-label="'+(en?"Bearish, neutral and bullish split":"Répartition baissier, neutre, haussier")+'">'+out+'</svg>';
+}
+function fDonTile(key,t,withGo){
+  var en=isEn(),nm=key==="macro"?"Macro":(en?"AI sector":"Secteur de l’IA"),m=FTONE[t.label]||FTONE["peu d'articles"],
+    st=t.n?(en?fPl(t.n,"story","stories"):fPl(t.n,"histoire"))+" · "+(en?"last 7 days":"7 derniers jours"):(en?"No labelled article yet":"Pas encore d’article libellé"),
+    mk=t.n>=FIN_MIN?(t.label==="haussière"?"bull":t.label==="baissière"?"bear":"neu"):"";
+  return'<section class="tile half hpm hpf fdt"'+(mk?' data-s="'+mk+'"':'')+'>'+tHead(nm,m[isEn()?1:0])+'<p class="hpsub">'+esc(st)+'</p><div class="hpbody">'+fDonut(t)+fLeg(t)+'</div>'+
+   (withGo?'<div class="hfoot"><button class="tlink" data-go="finance/secteur">'+(en?"Macro and sector details":"Détail macro et secteur")+' ›</button><button class="arw lg" data-go="finance/secteur" aria-label="'+esc(nm)+'">'+ARW+'</button></div>':'')+'</section>';
+}
+function fGenDuo(withGo){
+  var M=(S.fin&&S.fin.market)||{},z={haussier:0,neutre:0,baissier:0,n:0,net:0,label:"peu d'articles"};
+  return'<div class="duo">'+fDonTile("secteur",M.secteur||z,withGo)+fDonTile("macro",M.macro||z,withGo)+'</div>';
 }
 function fNewsBoxes(){
-  var en=isEn(),F=S.fin,W=F&&F.week,M=F&&F.market;if(!F)return"";
-  var top=((W&&W.ranking)||[]).slice(0,3).map(function(r){return'<a class="fmini" href="#finance/'+esc(r.id)+'"><b>'+esc(r.n)+'</b><span><i class="bull">'+r.bull+'</i> '+(en?"bullish":"haussières")+' · <i class="bear">'+r.bear+'</i> '+(en?"bearish":"baissières")+'</span></a>'}).join("")||'<p class="fsub">'+(en?"Not enough labelled news yet.":"Pas encore assez d’actualités libellées.")+'</p>';
-  var line=function(lab,t){return t&&t.n?'<div class="fmline"><span class="fml">'+lab+'</span>'+fToneChip(t)+fCounts(t)+'</div>':""};
-  var mk=M&&M.all&&M.all.n>=FIN_MIN?(M.all.label==="haussière"?"bull":M.all.label==="baissière"?"bear":"neu"):"";
-  return'<div class="fboxes fonly"><section class="fbx" data-s="'+(W&&W.top?"bull":"")+'"><span class="eb">'+(en?"Ranking":"Classement")+'</span><h3>'+(en?"Most bullish companies this week":"Sociétés les plus haussières cette semaine")+'</h3>'+top+'<p class="fgolinks"><a href="#finance">'+(en?"Full ranking →":"Classement complet →")+'</a></p></section>'+
-   '<section class="fbx"'+(mk?' data-s="'+mk+'"':'')+'><span class="eb">'+(en?"Macro and sector":"Macro et secteur")+'</span><h3>'+(en?"AI in general":"L’IA en général")+'</h3>'+(line(en?"Sector":"Secteur",M&&M.secteur)+line("Macro",M&&M.macro)||'<p class="fsub">'+(en?"Not enough labelled news yet.":"Pas encore assez d’actualités libellées.")+'</p>')+'<p class="fgolinks"><a href="#finance/secteur">'+(en?"Details →":"Voir le détail →")+'</a></p></section></div>';
+  var en=isEn(),F=S.fin,W=F&&F.week;if(!F)return"";
+  var R=((W&&W.ranking)||[]).slice(0,3),M=F.market||{},z={haussier:0,neutre:0,baissier:0,n:0,net:0,label:"peu d'articles"};
+  var rows=R.map(function(r){return fLayer(r.id,r.n,fToneOf({haussier:r.bull,neutre:r.neu,baissier:r.bear}),"")}).join("")||'<p class="hpsub">'+(en?"Not enough labelled news yet.":"Pas encore assez d’actualités libellées.")+'</p>';
+  var left='<section class="tile half hpinf hpf">'+tHead(en?"Finance · last 7 days":"Finance · 7 derniers jours",en?"Most bullish companies":"Sociétés les plus haussières")+'<div class="hpl">'+rows+'</div><div class="hfoot"><button class="tlink" data-go="finance">'+(en?"Full ranking":"Classement complet")+' ›</button><button class="arw lg" data-go="finance" aria-label="Finance">'+ARW+'</button></div></section>';
+  var one=function(k,nm,t){var m=FTONE[t.label]||FTONE["peu d'articles"];return'<div class="fdon">'+fDonut(t)+'<b>'+nm+'</b><span class="ftone '+m[2]+'">'+esc(m[en?1:0])+'</span></div>'};
+  var right='<section class="tile half hpm hpf">'+tHead(en?"Macro and sector":"Macro et secteur",en?"AI in general":"L’IA en général")+'<p class="hpsub">'+(en?"How the news leans, last 7 days. Articles about the same story count once.":"De quel côté penche l’actualité, 7 derniers jours. Les articles d’une même histoire ne comptent qu’une fois.")+'</p><div class="fdons">'+one("secteur",en?"AI sector":"Secteur",M.secteur||z)+one("macro","Macro",M.macro||z)+'</div>'+fLeg(fSum(M.secteur,M.macro))+
+   '<div class="hfoot"><button class="tlink" data-go="finance/secteur">'+(en?"See the details":"Voir le détail")+' ›</button><button class="arw lg" data-go="finance/secteur" aria-label="'+(en?"AI in general":"L’IA en général")+'">'+ARW+'</button></div></section>';
+  return'<div class="duo fonly">'+left+right+'</div>';
 }
+function fSum(a,b){var o={haussier:0,neutre:0,baissier:0};[a,b].forEach(function(t){if(t){o.haussier+=t.haussier;o.neutre+=t.neutre;o.baissier+=t.baissier}});return o}
 var FIN_MIN=3;
+var FCOL={baissier:"var(--neg)",neutre:"#C7C7CC",haussier:"var(--pos)"};
 
 /* Finance : libellé haussier / neutre / baissier par article, scénarios par société cotée (sources citées, ni prévision ni conseil) */
 var FST={haussier:["Haussier","Bullish"],neutre:["Neutre","Neutral"],baissier:["Baissier","Bearish"]};
@@ -883,7 +923,10 @@ function fBar(t){
   if(!t.n||t.label==="peu d'articles")return'';var w=function(k){return(t[k]/t.n*100).toFixed(1)+'%'};
   return'<span class="fbar" aria-hidden="true"><i class="b" style="width:'+w("baissier")+'"></i><i class="n" style="width:'+w("neutre")+'"></i><i class="h" style="width:'+w("haussier")+'"></i></span>';
 }
-function fCounts(t){var en=isEn();return'<span class="fcnt"><b class="bear">'+t.baissier+'</b> '+(en?'bearish':'baissiers')+' · <b>'+t.neutre+'</b> '+(en?'neutral':'neutres')+' · <b class="bull">'+t.haussier+'</b> '+(en?'bullish':'haussiers')+'</span>'}
+function fTbar(t){if(!t.n)return'<span class="tbar f3"></span>';var w=function(k){return(t[k]/t.n*100).toFixed(1)+'%'};return'<span class="tbar f3" aria-hidden="true"><i class="b" style="width:'+w("baissier")+'"></i><i class="n" style="width:'+w("neutre")+'"></i><i class="h" style="width:'+w("haussier")+'"></i></span>'}
+function fCnt(t){var en=isEn(),f=function(n,a,b){return n+' '+(en?a:(n>1?b[1]:b[0]))};if(!t.n)return en?'No labelled article':'Aucune actualité libellée';return f(t.baissier,'bearish',['baissière','baissières'])+' · '+f(t.neutre,'neutral',['neutre','neutres'])+' · '+f(t.haussier,'bullish',['haussière','haussières'])}
+function fLayer(id,name,t,sub){var m=FTONE[t.label]||FTONE["peu d'articles"];return'<div class="layer"><button class="lhead" data-go="finance/'+esc(id)+'" aria-label="'+esc(name)+'"><span class="lmain"><span class="lname">'+esc(name)+'</span><span class="lstat">'+esc((sub?sub+' · ':'')+fCnt(t))+'</span></span><span class="lm">'+fTbar(t)+'<span class="tlab '+m[2]+'">'+esc(m[isEn()?1:0])+'</span></span><span class="lgo">'+ARW+'</span></button></div>'}
+function fCounts(t){return'<span class="fcnt">'+esc(fCnt(t))+'</span>'}
 function fRef(c,ref){
   var f=(c.fund||[]).filter(function(x){return x.k===ref})[0];
   if(f)return f.url?'<a class="fref" href="'+esc(link(f.url))+'" target="_blank" rel="noopener">'+esc(f.src||"SEC")+' ↗</a>':'<span class="fref">'+esc(f.src||"SEC")+'</span>';
@@ -895,9 +938,6 @@ function fCase(c,k,ttl){
   var pts=(c.cases&&c.cases[k])||[];
   return'<div class="fcase '+k+'"><h4>'+esc(ttl)+'</h4><ul>'+pts.map(function(p){return'<li>'+esc(p.t)+' '+fRef(c,p.ref)+'</li>'}).join("")+'</ul></div>';
 }
-function fRow(c){
-  return'<a class="fcrow" href="#finance/'+esc(c.id)+'"><span class="fn"><b>'+esc(c.n)+'</b><i>'+esc(CLABEL[c.c]||c.c||"")+'</i></span><span class="ft">'+fToneChip(c.tone)+fBar(c.tone)+'</span>'+fCounts(c.tone)+'<span class="fgo">'+ARW+'</span></a>';
-}
 function fArt(l){
   var st=FST[l.stance]||FST.neutre;
   return'<div class="row fa"><span class="time">'+esc(new Date(l.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><span class="fst '+esc(l.stance)+'">'+esc(st[isEn()?1:0])+'</span><div class="rtxt"><a class="ttl" href="'+esc(link(l.url))+'" target="_blank" rel="noopener">'+esc(tx(l,"title"))+'</a><p class="rsm">'+esc(l.why)+'</p></div><span class="rsrc">'+esc(l.source||"")+'</span></div>';
@@ -905,10 +945,8 @@ function fArt(l){
 function fNote(){return'<p class="fnote">'+(isEn()?'Labels and scenarios are written by AI from the cited sources. They describe what the news and the filings could imply; they are not forecasts, price targets or investment advice.':'Libellés et scénarios rédigés par IA à partir des sources citées. Ils décrivent ce que les actualités et les dépôts officiels pourraient impliquer ; ce ne sont ni des prévisions, ni des objectifs de cours, ni un conseil en investissement.')+'</p>'}
 
 function fSector(){
-  var en=isEn(),F=S.fin,M=F.market||{},gen=(F.general||[]).filter(function(l){return l.title});
-  var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+(en?'Macro and AI sector':'Macro et secteur de l’IA')+'</h2><p class="lede">'+(M.all?fToneChip(M.all)+' '+fCounts(M.all)+' · '+(en?'last 7 days':'7 derniers jours'):'')+'</p>';
-  var line=function(lab,t){return t&&t.n?'<div class="fmline"><span class="fml">'+lab+'</span>'+fToneChip(t)+fCounts(t)+'</div>':''};
-  h+='<section class="tile">'+tHead(en?'Overview':'Vue d’ensemble',en?'How the news leans':'De quel côté penche l’actualité')+line(en?'Sector':'Secteur',M.secteur)+line('Macro',M.macro)+'<p class="small">'+(en?'Articles about the same story count once.':'Les articles d’une même histoire ne comptent qu’une fois.')+'</p></section>';
+  var en=isEn(),F=S.fin,gen=(F.general||[]).filter(function(l){return l.title});
+  var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+(en?'Macro and AI sector':'Macro et secteur de l’IA')+'</h2><p class="lede">'+(en?'How the general news leans, last 7 days. Articles about the same story count once.':'De quel côté penche l’actualité générale, 7 derniers jours. Les articles d’une même histoire ne comptent qu’une fois.')+'</p>'+fGenDuo(false);
   if((F.macro||[]).length)h+='<section class="tile">'+tHead('Macro',en?'Upcoming events and risks':'Rendez-vous et risques')+'<ul class="ffund">'+F.macro.map(function(m){return'<li>'+esc(m.text)+'</li>'}).join("")+'</ul></section>';
   h+='<section class="tile">'+tHead(en?'News':'Actualités',en?'Labelled articles':'Articles libellés')+(gen.length?'<div class="rows">'+gen.slice(0,40).map(fArt).join("")+'</div>':'<p class="empty">'+(en?'No labelled article yet.':'Aucun article libellé pour l’instant.')+'</p>')+'</section>'+fNote();
   return h;
@@ -919,7 +957,7 @@ function rFinance(){
   if(S.fco==="secteur"){el.innerHTML=fSector();return}
   var c=S.fco&&fById(S.fco);
   if(c){
-    var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+esc(c.n)+'</h2><p class="lede">'+fToneChip(c.tone)+' '+fCounts(c.tone)+' · '+(en?'last 30 days':'30 derniers jours')+'</p>';
+    var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+esc(c.n)+'</h2><p class="lede">'+fToneChip(c.tone)+' '+fCounts(c.tone)+' · '+(en?'last 30 days':'30 derniers jours')+'</p><div class="fprog fprog-c">'+fTbar(c.tone)+'</div>';
     if(c.cases)h+='<section class="tile">'+tHead(en?'Scenarios':'Scénarios',en?'Bear, base and bull cases':'Cas baissier, de base et haussier')+'<div class="fcases">'+fCase(c,"bear",en?'Bear':'Baissier')+fCase(c,"base",en?'Base':'De base')+fCase(c,"bull",en?'Bull':'Haussier')+'</div><p class="small">'+(en?'Written ':'Rédigé ')+esc(ago(c.cases.at))+'. '+(en?'Each point cites its source.':'Chaque point renvoie à sa source.')+'</p></section>';
     else h+='<section class="tile">'+tHead(en?'Scenarios':'Scénarios',en?'Not enough sourced material yet':'Pas encore assez de matière sourcée')+'<p class="empty">'+(en?'Scenarios are written once at least three recent articles about the company have been labelled.':'Les scénarios sont rédigés dès que trois articles récents sur la société ont été libellés.')+'</p></section>';
     h+='<section class="tile">'+tHead(en?'Fundamentals':'Fondamentaux',en?'Official figures':'Chiffres officiels')+((c.fund||[]).length?'<ul class="ffund">'+c.fund.map(function(f){return'<li>'+esc(f.text)+' '+(f.url?'<a class="fref" href="'+esc(link(f.url))+'" target="_blank" rel="noopener">'+esc(f.src||"SEC")+' ↗</a>':'')+'</li>'}).join("")+'</ul>':'<p class="empty">'+(en?'Not available':'Non disponible')+'</p>')+'<p class="small"><a href="#acteurs/'+esc(c.id)+'">'+(en?'Full company profile →':'Fiche complète de la société →')+'</a></p></section>';
@@ -928,7 +966,7 @@ function rFinance(){
   }
   var fk=function(c){return c.tone.label==="peu d'articles"?-9:c.tone.net};var sorted=cos.slice().sort(function(a,b){return fk(b)-fk(a)||b.tone.n-a.tone.n});
   var h2='<h2 class="sec">Finance</h2><p class="lede">'+(en?'For each listed company in the AI chain: how the recent news leans, and three sourced scenarios (bear, base, bull) built from official filings, company news and the macro backdrop.':'Pour chaque société cotée de la chaîne de l\'IA : de quel côté penche l\'actualité récente, et trois scénarios sourcés (baissier, de base, haussier) bâtis sur les dépôts officiels, les nouvelles de la société et le contexte macro.')+'</p>'+
-   '<div class="fcrows">'+(F.market&&F.market.all?fRow({id:"secteur",n:en?"Macro and AI sector":"Macro et secteur de l’IA",c:"",tone:F.market.all}):"")+sorted.map(fRow).join("")+'</div><p class="small" style="text-align:center">'+(en?"Articles about the same story count once.":"Les articles d’une même histoire ne comptent qu’une fois.")+'</p>';
+   fGenDuo(true)+'<section class="lyall fl"><div class="lyh"><span class="lyk">'+(en?'Listed companies':'Sociétés cotées')+'</span><h3 class="lyt">'+(en?'Where the news leans.':'Où penche l’actualité.')+'</h3></div><div class="lstack">'+sorted.map(function(c){return fLayer(c.id,c.n,c.tone,CLABEL[c.c]||c.c||"")}).join("")+'</div><p class="small" style="text-align:center;margin-top:20px">'+(en?"Last 30 days. Articles about the same story count once.":"30 derniers jours. Les articles d’une même histoire ne comptent qu’une fois.")+'</p></section>';
   if((F.macro||[]).length)h2+='<section class="tile">'+tHead(en?'Macro':'Macro',en?'Backdrop used in every scenario':'Contexte utilisé dans tous les scénarios')+'<ul class="ffund">'+F.macro.map(function(m){return'<li>'+esc(m.text)+'</li>'}).join("")+'</ul></section>';
   el.innerHTML=h2+fNote()+'<p class="small">'+(en?'Updated ':'Mis à jour ')+esc(ago(F.generated_at))+'.</p>';
 }
