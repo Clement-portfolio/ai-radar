@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T04:01:30.542Z",
+ "generated_at": "2026-11-28T07:20:46.250Z",
  "people": [
   {
    "id": "sam-altman",
@@ -4928,6 +4928,16 @@
      "title_fr": "L'IA pourrait déplacer jusqu'à 20 % des emplois au cours de la prochaine décennie, déclare le PDG d'IBM, Arvind Krishna"
     },
     {
+     "ts": "2026-11-16T08:00:00.000Z",
+     "title": "Jensen Huang’s exit from NVIDIA unlikely to disrupt AI investment cycle in near term, says IBM CEO Arvind Krishna",
+     "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQTWF3VHNyRXR5TndwbXpJVHpXM29mU0Z1c0ljTV80UHJfVHBqWHQ4NjczalNvLW9pejJlUi15blFJWnZ0U2VJQ2RWbUtUeUN5U3J6YUx5TmdkYTNYMFhRV2JHNGxySTk0TW1ERmxIYmFSLWdlQXdHWGJIR3M1M292aFF6RVVmQ2FCV3MxcFk4c192ZlV1eWxLZVVuN2R4YzU4c3c5S09FUnppWFVZSXl0Y2dTMW1YWXVPNWx1YjlKUVo0d2I5cTE4V01kM0NzVUZ0VkRsb3dDUC0wRXVmaDAzNzJBWXRqckVGZkZRVmxPT1lzUTUxR0UxcW5zTC1Ldw?oc=5",
+     "source": "Moneycontrol.com",
+     "kind": "presse",
+     "title_fr": "Le départ de Jensen Huang de NVIDIA ne devrait pas perturber le cycle d'investissement dans l'IA à court terme, selon le PDG d'IBM Arvind Krishna",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-16T07:55:02.000Z",
      "title": "Arvind Krishna says India must boost semiconductors and AI",
      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNdmZ4bkl5WG03VnJfMjExTkt4MndBZkZmV0F6cEJTWHRUTHU3LXNUa0RHOVBTT3h1QlhZN21kU2sxYjZvemJPdDJMdC1zTDgtelUtSXBjS05kVGZxQU5JVTZya1VvazBmdGprOEdjSTBkbml0SElMXzlKS01KMTk3ZFlocGQzRTF6SXozekJGajFjWlVmeWhFeHlIRzdLRzVlM29tTDM0cXhUQQ?oc=5",
@@ -4936,16 +4946,6 @@
      "title_fr": "Arvind Krishna déclare que l'Inde doit stimuler les semi-conducteurs et l'IA",
      "m": 1,
      "e": 0
-    },
-    {
-     "ts": "2026-11-16T06:57:09.000Z",
-     "title": "India Poised to Lead Global AI, Says IBM Chief Arvind Krishna",
-     "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQjM4aHFWVWRia1dKd2JOT2todl81UGpKV0U0VHVVZzBibDMtUHVxWUJyT1BnVVlOdEFaLVVKcWFuMXVVc3M5YV9oMkF2OVFfYktSdzRBaFFySDNSMHFLaE5Hd1BvSEV2QXJSbllBelhfY0JXOWY5emFIbkV4TnFwcjFqeHBrUDQtV1pWV3NDMDJYNXpLQ0ZZRVltWXZaVXQ2QW5PMWhwUlM3Y203NlHSAbMBQVVfeXFMTU53THFGNDl5VnA2YmZoNFlfRzM3MHZQX2NkMUl2ZkRKYnhaNFRsMXpydU9iTm9BZ0ZRdFpzMkt3M0NkNTZoSWhfVXRPRmRVclh5UFFEY0tpTXFRQjdTeTl4MG5tSURRRmJodEtKMVhlWEd2bnJTMEdoM0dGcWhreUQ2cEJtM0FaZ2xFWkRRdHgwZ3FHSW54YWktVkxYUkFYc3A3QUlNSF9Sd1NXV21ucFpfSkk?oc=5",
-     "source": "Lokmat Times",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "L'Inde est prête à mener l'IA mondiale, déclare le chef d'IBM, Arvind Krishna"
     }
    ]
   },
@@ -6358,7 +6358,7 @@
  ],
  "hot": [
   {
-   "score": 1.3,
+   "score": 1.01,
    "id": "andy-jassy",
    "n": "Andy Jassy",
    "role": "PDG d'Amazon",
@@ -6372,7 +6372,7 @@
    "outlets": 1
   },
   {
-   "score": 0.85,
+   "score": 0.66,
    "id": "chamath-palihapitiya",
    "n": "Chamath Palihapitiya",
    "role": "Fondateur de Social Capital",
@@ -6386,7 +6386,7 @@
    "outlets": 1
   },
   {
-   "score": 0.58,
+   "score": 0.45,
    "id": "vinod-khosla",
    "n": "Vinod Khosla",
    "role": "Fondateur de Khosla Ventures",
