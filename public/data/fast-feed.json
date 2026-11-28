@@ -1,6 +1,24 @@
 {
- "generated_at": "2026-11-28T11:00:42.582Z",
+ "generated_at": "2026-11-28T11:11:44.279Z",
  "items": [
+  {
+   "id": "fad97191bb4e",
+   "ts": "2026-11-28T11:00:27.000Z",
+   "title": "The hidden reliability layer in data centers: why physical connections matter more than ever",
+   "orig": "The hidden reliability layer in data centers: why physical connections matter more than ever",
+   "summary": "The infrastructure layer nobody measures until it fails",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/opinions/the-hidden-reliability-layer-in-data-centers-why-physical-connections-matter-more-than-ever/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_en": "The hidden reliability layer in data centers: why physical connections matter more than ever",
+   "summary_en": "The infrastructure layer nobody measures until it fails"
+  },
   {
    "id": "75dbbe784bf6",
    "ts": "2026-11-28T08:00:00.000Z",
