@@ -1,6 +1,36 @@
 {
- "generated_at": "2026-11-28T12:00:44.866Z",
+ "generated_at": "2026-11-28T12:10:28.962Z",
  "items": [
+  {
+   "id": "9eb91df6ba20",
+   "ts": "2026-11-28T12:02:00.000Z",
+   "title": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
+   "orig": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
+   "summary": "This week in the regional startup scene, Saudi fintech Tamara secured $400 million in debt financing to enhance its offerings, while OORI partnered with Oumla to develop investment technology for banks. Other notable developments include AI startup 009 raising",
+   "country": "GULF",
+   "category": "capex",
+   "importance": 1,
+   "layer": "Financement",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/startups/startup-wrap-saudi-fintech-and-ai-deals-headline-latest-regional-startup-funding-activity-3014142",
+   "confidence": "moyenne",
+   "pending": true
+  },
+  {
+   "id": "4b3a8918b3c6",
+   "ts": "2026-11-28T12:00:47.000Z",
+   "title": "Federal state of Vienna, Austria, publishes new data center strategy",
+   "orig": "Federal state of Vienna, Austria, publishes new data center strategy",
+   "summary": "The new plan is designed to boost the sustainability and efficiency of projects in the capital city",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/sebastian-gemkow/",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "fad97191bb4e",
    "ts": "2026-11-28T11:00:27.000Z",
@@ -3857,42 +3887,6 @@
    "title_fr": "Le mineur de cryptomonnaies Sato Technologies obtient le client neocloud Datum pour son centre de données canadien",
    "title_en": "Cryptominer Sato Technologies secures neocloud Datum as customer for Canadian data center",
    "summary_en": "Company looking to pivot towards AI cloud and colocation"
-  },
-  {
-   "id": "9c61cf01347a",
-   "ts": "2026-11-25T12:06:48.000Z",
-   "title": "Décision reportée sur le projet de Prime Group de convertir une installation de self-stockage en centre de données en Caroline du Sud",
-   "orig": "Decision delayed on Prime Group plan to convert self-storage facility into data center in South Carolina",
-   "summary": "Councilors allow more time for discussion and feedback",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/decision-delayed-on-prime-group-plan-to-convert-self-storage-facility-into-data-center-in-south-carolina/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Décision reportée sur le projet de Prime Group de convertir une installation de self-stockage en centre de données en Caroline du Sud",
-   "title_en": "Decision delayed on Prime Group plan to convert self-storage facility into data center in South Carolina",
-   "summary_en": "Councilors allow more time for discussion and feedback"
-  },
-  {
-   "id": "e076ce336403",
-   "ts": "2026-11-25T12:01:30.000Z",
-   "title": "La société de trading quantitatif XTX Markets lance un centre de données de 22,5 MW à Kajaani, en Finlande",
-   "orig": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
-   "summary": "Second building to be operational in 2027",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/quant-trading-firm-xtx-markets-launches-225mw-data-center-in-kajaani-finland/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "La société de trading quantitatif XTX Markets lance un centre de données de 22,5 MW à Kajaani, en Finlande",
-   "title_en": "Quant trading firm XTX Markets launches 22.5MW data center in Kajaani, Finland",
-   "summary_en": "Second building to be operational in 2027"
   }
  ]
 }
