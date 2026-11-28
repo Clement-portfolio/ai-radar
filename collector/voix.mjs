@@ -1,6 +1,7 @@
 // Voix : ce que disent les dirigeants de l'IA. Presse (Google Actualités) et vidéos (chaînes YouTube vérifiées).
 // Règle : un titre n'est retenu que si la personne en est le sujet qui parle (« X says… », « …, says X », citation) ou si la vidéo porte son nom.
 // Rien n'est inventé ni résumé : titre du média, date, média, lien.
+import { markCut, withCutMark } from "./titles.mjs";
 import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 export const VOIX_RULES = { days: 30, perPerson: 8, perQuery: 30 };
 
@@ -187,6 +188,7 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
   for (const p of prev?.people || []) if (alerts.has(p.id)) for (const a of p.alerts || []) alerts.get(p.id).set(canon(a.url), a);
   let added = 0, failed = 0;
   const add = (p, it) => {
+    markCut(it);
     const m = byPerson.get(p.id), k = canon(it.url);
     const dup = [...m.values()].some((x) => norm(x.title) === norm(it.title));
     if (m.has(k) || dup) return;
@@ -202,7 +204,7 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
         const sfx = x.source && x.title.endsWith(" - " + x.source) ? " - " + x.source : null;
         const title = (sfx ? x.title.slice(0, -sfx.length) : x.title.replace(/\s+-\s+[^-]{2,40}$/, "")).trim();
         // alerte de poste : un titre récent annonce peut-être un changement (démission, nomination…) pour cette personne
-        if (p.watch !== false && ts > Date.parse(ROLES_AS_OF + "T23:59:59Z") && p.re.test(title) && CHANGE.test(title)) alerts.get(p.id).set(canon(x.link), { ts: new Date(ts).toISOString(), title, url: x.link, source: x.source || "Presse" });
+        if (p.watch !== false && ts > Date.parse(ROLES_AS_OF + "T23:59:59Z") && p.re.test(title) && CHANGE.test(title)) alerts.get(p.id).set(canon(x.link), markCut({ ts: new Date(ts).toISOString(), title, url: x.link, source: x.source || "Presse" }));
         if (!onTopic(p, title)) continue;
         if (!isStatement(title, p.re, p.cat === "investisseurs" ? INVEST_CUE : "")) continue;
         add(p, { ts: new Date(ts).toISOString(), title, url: x.link, source: String(x.source || "").split(/\s[-–|]\s/)[0] || (x.title.match(/\s-\s([^-]{2,40})$/) || [])[1] || "Presse", kind: "presse" });
@@ -224,6 +226,7 @@ export async function collectVoix({ http, parseFeed, now, prev, log = () => {}, 
     alerts: [...alerts.get(p.id).values()].filter((a) => Date.parse(a.ts) >= cutoff).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, 2),
     items: [...byPerson.get(p.id).values()].filter((it) => Date.parse(it.ts) >= cutoff && onTopic(p, it.title)).sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, VOIX_RULES.perPerson),
   }));
+  for (const p of people) { p.items.forEach(markCut); p.alerts.forEach(markCut); } // anciens éléments déjà enregistrés tronqués
   const total = people.reduce((s, p) => s + p.items.length, 0);
   return { doc: { v: 1, generated_at: new Date(now).toISOString(), people }, summary: { added, failed, total, reason: failed >= PEOPLE.length + CHANNELS.length ? "toutes les sources en échec" : "" } };
 }
@@ -248,7 +251,7 @@ export async function translateVoix({ doc, generate, max = 140 }) {
     const fixed = normalizeFr(it.title, fr);
     const a = digits(stripAmounts(it.title)), b = digits(stripAmounts(fixed));
     if (a.length !== b.length || !a.every((x, k) => x === b[k]) || !unitsOk(it.title, fixed, "fr", true)) continue;
-    it.title_fr = fixed; n++;
+    it.title_fr = withCutMark(it, fixed); n++;
   }
   return { changed: n, reason: n ? `${n} titre(s) traduit(s)` : "aucune traduction valide" };
 }

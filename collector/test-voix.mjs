@@ -113,4 +113,17 @@ assert.equal(onTopic(MUSK, "Elon Musk Says Grok 5 will reach AGI next year"), tr
 assert.equal(onTopic(MUSK, "Elon Musk Says GOOGL Has Expressed Interest In Renting More Compute From SpaceX"), true, "compute : gardé");
 assert.equal(onTopic(PEOPLE.find((p) => p.id === "sam-altman"), "Sam Altman says he is worried about the future"), true, "dirigeant d'une société d'IA : pas de filtre de mot-clé");
 assert.equal(onTopic(PEOPLE.find((p) => p.id === "sam-altman"), "Sam Altman responds to Gaza war question"), false, "liste noire sans mot d'IA");
+// titres tronqués à la source (105 caractères) : terminés au dernier mot entier avec « … », jamais « je ne sa »
+import { isCutTitle, trimCut, markCut, withCutMark } from "./titles.mjs";
+const cutT = "Satya Nadella declines to pick between Amazon's Andy Jassy and Elon Musk; says: At this point, I don't kn";
+assert.equal(cutT.length, 105);
+assert.equal(isCutTitle(cutT, "The Times of India"), true); assert.equal(isCutTitle(cutT, "Benzinga"), true);
+assert.equal(isCutTitle(cutT, "Billboard"), false, "média qui ne coupe pas : titre laissé tel quel");
+assert.equal(isCutTitle(cutT.slice(0, 100), "Benzinga"), false, "longueur différente : complet");
+assert.equal(trimCut(cutT), "Satya Nadella declines to pick between Amazon's Andy Jassy and Elon Musk; says: At this point, I don't…");
+const mi = markCut({ title: cutT, source: "The Times of India", title_fr: "ancienne traduction" });
+assert.equal(mi.cut, 1); assert.ok(mi.title.endsWith("…")); assert.equal(mi.title_fr, "", "traduction de l'ancien titre effacée");
+assert.equal(markCut(mi).title, mi.title, "idempotent");
+assert.equal(withCutMark(mi, "Satya Nadella refuse de choisir ; déclare : À ce stade, je ne sais pas"), "Satya Nadella refuse de choisir ; déclare : À ce stade, je ne sais pas…");
+assert.equal(withCutMark({ title: "x" }, "Texte."), "Texte.");
 console.log("test-voix OK");

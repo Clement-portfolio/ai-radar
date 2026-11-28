@@ -699,8 +699,8 @@ export async function run(opts = {}) {
   try {
     voix = await collectVoix({ http, parseFeed, now: nowMs, prev: voixPrev, log, ...(opts.sleep ? { sleep: opts.sleep } : {}) });
     // les titres déjà traduits restent traduits
-    const known = new Map(((voixPrev && voixPrev.people) || []).flatMap((p) => p.items).filter((i) => i.title_fr).map((i) => [i.url, i.title_fr]));
-    for (const it of voix.doc.people.flatMap((p) => p.items)) if (known.has(it.url)) it.title_fr = known.get(it.url);
+    const known = new Map(((voixPrev && voixPrev.people) || []).flatMap((p) => p.items).filter((i) => i.title_fr).map((i) => [i.url, i]));
+    for (const it of voix.doc.people.flatMap((p) => p.items)) { const k = known.get(it.url); if (k && k.title === it.title) it.title_fr = k.title_fr; } // seulement si le titre n'a pas changé (titres raccourcis : retraduits)
     voix.summary.translate = (await translateVoix({ doc: voix.doc, generate: mkGen(VOIX_SYSTEM, VOIX_SCHEMA) })).reason;
     await resolveGoogleLinks({ items: voix.doc.people.flatMap((p) => p.items), fetchImpl, max: +env.GNEWS_MAX || 0, log });
     annotateVoix(voix.doc);

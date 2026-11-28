@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import { parseFeed } from "./collect.mjs";
 import { PEOPLE, isStatement, INVEST_CUE, TOPIC, onTopic, HOT_RULES, STRONG, toks, jac, translateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { makeClassifier } from "./collect.mjs";
+import { markCut } from "./titles.mjs";
 const HERE=path.dirname(fileURLToPath(import.meta.url));
 const DATA=path.join(HERE,"..","public","data");
 const FAST_IDS=new Set(["sam-altman","dario-amodei","elon-musk","satya-nadella","sundar-pichai","demis-hassabis","mark-zuckerberg","jensen-huang","lisa-su","hock-tan","cc-wei","andy-jassy","lip-bu-tan","kwak-noh-jung","michael-intrator","stacy-rasgon","dylan-patel"]);
@@ -31,6 +32,7 @@ for(const x of entries.slice(0,100)){const ts=Date.parse(x.date);if(!Number.isFi
   m.set(key,{ts:new Date(ts).toISOString(),title,title_fr:knownFrench.get(key)||"",url:x.link,source:String(x.source||"").split(/\s[-–|]\s/)[0]||"Presse",kind:"presse"});added++;
  }}
 const people=selected.map(p=>({id:p.id,cat:p.cat,w:p.w??1,n:p.n,role:p.role,co:p.co,actor:p.actor,alerts:[],items:[...byPerson.get(p.id).values()].filter(it=>Date.parse(it.ts)>=now-30*DAY&&onTopic(p,it.title)).sort((a,b)=>b.ts.localeCompare(a.ts)).slice(0,8)}));
+for(const p of people)p.items.forEach(markCut); // titres tronqués à la source (Times of India, Benzinga…) : terminés proprement
 // Regroupement : un même propos repris par plusieurs médias n'occupe qu'une ligne ; `m` = médias distincts, `e` = essentielle (comme à la collecte complète).
 // Un propos déjà présent dans la collecte complète (même personne, titres proches, moins de 48 h) n'est pas répété ici.
 const fullBy=new Map((full.people||[]).map(p=>[p.id,p.items||[]]));
