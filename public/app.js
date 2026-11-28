@@ -870,7 +870,7 @@ function fCase(c,k,ttl){
   return'<div class="fcase '+k+'"><h4>'+esc(ttl)+'</h4><ul>'+pts.map(function(p){return'<li>'+esc(p.t)+' '+fRef(c,p.ref)+'</li>'}).join("")+'</ul></div>';
 }
 function fRow(c){
-  return'<a class="frow" href="#finance/'+esc(c.id)+'"><span class="fn"><b>'+esc(c.n)+'</b><i>'+esc(CLABEL[c.c]||c.c||"")+'</i></span><span class="ft">'+fToneChip(c.tone)+fBar(c.tone)+'</span>'+fCounts(c.tone)+'<span class="fgo">'+ARW+'</span></a>';
+  return'<a class="fcrow" href="#finance/'+esc(c.id)+'"><span class="fn"><b>'+esc(c.n)+'</b><i>'+esc(CLABEL[c.c]||c.c||"")+'</i></span><span class="ft">'+fToneChip(c.tone)+fBar(c.tone)+'</span>'+fCounts(c.tone)+'<span class="fgo">'+ARW+'</span></a>';
 }
 function fArt(l){
   var st=FST[l.stance]||FST.neutre;
@@ -891,7 +891,7 @@ function rFinance(){
   }
   var fk=function(c){return c.tone.label==="peu d'articles"?-9:c.tone.net};var sorted=cos.slice().sort(function(a,b){return fk(b)-fk(a)||b.tone.n-a.tone.n});
   var h2='<h2 class="sec">Finance</h2><p class="lede">'+(en?'For each listed company in the AI chain: how the recent news leans, and three sourced scenarios (bear, base, bull) built from official filings, company news and the macro backdrop.':'Pour chaque société cotée de la chaîne de l\'IA : de quel côté penche l\'actualité récente, et trois scénarios sourcés (baissier, de base, haussier) bâtis sur les dépôts officiels, les nouvelles de la société et le contexte macro.')+'</p>'+
-   '<div class="frows">'+sorted.map(fRow).join("")+'</div>';
+   '<div class="fcrows">'+sorted.map(fRow).join("")+'</div>';
   if((F.macro||[]).length)h2+='<section class="tile">'+tHead(en?'Macro':'Macro',en?'Backdrop used in every scenario':'Contexte utilisé dans tous les scénarios')+'<ul class="ffund">'+F.macro.map(function(m){return'<li>'+esc(m.text)+'</li>'}).join("")+'</ul></section>';
   el.innerHTML=h2+fNote()+'<p class="small">'+(en?'Updated ':'Mis à jour ')+esc(ago(F.generated_at))+'.</p>';
 }

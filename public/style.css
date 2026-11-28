@@ -1236,11 +1236,11 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 #v-finance .back{display:inline-flex;align-items:center;height:36px;padding:0 16px;margin:0 0 20px;border-radius:999px;background:#fff;font-size:14px;color:var(--ink);text-decoration:none}
 #v-finance .back:hover{background:#EDEDF0}
 #v-finance h2.sec,#v-finance h2.sec+.lede{text-align:center}
-.frows{display:flex;flex-direction:column;gap:10px;margin:8px 0 24px}
-.frow{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(220px,1.4fr) minmax(0,1.6fr) 32px;gap:6px 18px;align-items:center;padding:16px 22px;border-radius:var(--r-l);background:var(--card);color:var(--ink);text-decoration:none}
-.frow:hover{background:#EDEDF0}
-.frow .fn{display:flex;flex-direction:column;gap:2px}.frow .fn b{font-size:17px;font-weight:600;letter-spacing:-.01em}.frow .fn i{font-style:normal;font-size:12px;color:var(--mute)}
-.frow .ft{display:flex;align-items:center;gap:12px}
+.fcrows{display:flex;flex-direction:column;gap:10px;margin:8px 0 24px}
+.fcrow{display:grid;grid-template-columns:minmax(150px,1.1fr) minmax(220px,1.4fr) minmax(0,1.6fr) 32px;gap:6px 18px;align-items:center;padding:16px 22px;border-radius:var(--r-l);background:var(--card);color:var(--ink);text-decoration:none}
+.fcrow:hover{background:#EDEDF0}
+.fcrow .fn{display:flex;flex-direction:column;gap:2px}.fcrow .fn b{font-size:17px;font-weight:600;letter-spacing:-.01em}.fcrow .fn i{font-style:normal;font-size:12px;color:var(--mute)}
+.fcrow .ft{display:flex;align-items:center;gap:12px}
 .fgo{display:inline-flex;justify-content:center;color:var(--mute)}
 .ftone{display:inline-block;padding:3px 11px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap;background:var(--pill);color:var(--ink2)}
 .ftone.bull{background:rgba(26,127,55,.12);color:var(--pos)}.ftone.bear{background:rgba(215,0,21,.10);color:var(--neg)}.ftone.none{color:var(--mute);font-weight:500}
@@ -1259,7 +1259,7 @@ a.fref:hover{color:var(--ink);text-decoration:underline}
 .fst{font-size:12px;font-weight:600;color:var(--mute)}.fst.haussier{color:var(--pos)}.fst.baissier{color:var(--neg)}
 .fnote{max-width:720px;margin:8px auto 12px;font-size:12.5px;line-height:1.5;color:var(--mute);text-align:center}
 .fline{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-@media(max-width:900px){.fcases{grid-template-columns:1fr}.frow{grid-template-columns:1fr 32px;padding:14px 18px}.frow .ft,.frow .fcnt{grid-column:1}.frow .fgo{grid-column:2;grid-row:1}.row.fa{grid-template-columns:60px 1fr;}.row.fa .rsrc{grid-column:2}}
+@media(max-width:900px){.fcases{grid-template-columns:1fr}.fcrow{grid-template-columns:1fr 32px;padding:14px 18px}.fcrow .ft,.fcrow .fcnt{grid-column:1}.fcrow .fgo{grid-column:2;grid-row:1}.row.fa{grid-template-columns:60px 1fr;}.row.fa .rsrc{grid-column:2}}
 
 /* Actualités regroupées : chaque article de l'histoire dans son propre encadré */
 .gsub{display:none}
