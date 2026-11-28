@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { buildFinance, fundamentals, tone, companyArticles, macroFacts, FIN_RULES } from "./finance.mjs";
+import { buildFinance, fundamentals, tone, companyArticles, macroFacts, FIN_RULES, storyIndex, groupLabels, weekRanking } from "./finance.mjs";
 
 const now = Date.parse("2026-11-28T12:00:00Z"), iso = (d) => new Date(now - d * 864e5).toISOString();
 const fin = { quarter: { end: "2026-09-30", value: 127577000000, qoq: 6.5, yoy: 24.7, url: "https://sec.example/q", src: "SEC (10-Q)" }, ttm: { value: 471098000000, end: "2026-09-30" }, capex: { value: 159804000000, end: "2026-09-30", form: "10-Q", url: "https://sec.example/c" } };
@@ -62,7 +62,7 @@ assert.equal(Object.keys(r5.doc.companies[0].tries).length, 4, "essais comptés"
 
 // ton
 assert.equal(tone([], now).label, "peu d'articles");
-const L = (s, d = 1) => ({ stance: s, ts: iso(d) });
+let _n = 0; const L = (s, d = 1) => ({ id: "t" + (_n++), stance: s, ts: iso(d) });
 assert.equal(tone([L("haussier"), L("haussier"), L("neutre")], now).label, "haussière");
 assert.equal(tone([L("baissier"), L("baissier"), L("neutre")], now).label, "baissière");
 assert.equal(tone([L("haussier"), L("baissier"), L("neutre")], now).label, "mitigée");
@@ -73,4 +73,39 @@ const r6 = await buildFinance({ acteurs, feed, outlook, prev: r.doc, now, genera
 assert.equal(r6.doc.companies[0].labels.length, 4);
 const r7 = await buildFinance({ acteurs: { actors: [] }, feed, outlook, prev: r.doc, now });
 assert.equal(r7.doc, r.doc);
+// regroupement : plusieurs articles d'une même histoire = un seul compte
+const stories = { stories: [{ id: "S1", ids: ["a1", "a2", "a3"] }, { id: "S2", ids: ["x1", "x2"] }] };
+const storyOf = storyIndex(stories);
+assert.equal(storyOf("a2"), "S1"); assert.equal(storyOf("zzz"), null);
+const mk = (id, stance, d = 1) => ({ id, ts: iso(d), stance, title: "T" + id, source: "Src", url: "https://x/" + id });
+const lab = [mk("a1", "haussier"), mk("a2", "haussier"), mk("a3", "haussier"), mk("x1", "haussier"), mk("x2", "baissier"), mk("z", "baissier")];
+assert.equal(tone(lab, now).haussier, 4, "sans index : chaque article compte");
+const t2 = tone(lab, now, storyOf);
+assert.equal(t2.haussier, 1 + 0, "S1 (3 articles haussiers) = 1 histoire haussière ; S2 (1 pour, 1 contre) = neutre");
+assert.equal(t2.neutre, 1); assert.equal(t2.baissier, 1); assert.equal(t2.n, 3);
+assert.equal(groupLabels(lab, storyOf).find((g) => g.key === "S1").labels.length, 3);
+// classement de la semaine : l'entreprise avec le plus d'histoires haussières (pas d'articles)
+const A = { id: "A", n: "Alpha", labels: [mk("a1", "haussier"), mk("a2", "haussier"), mk("a3", "haussier")] };           // 3 articles, 1 histoire
+const B = { id: "B", n: "Beta", labels: [mk("b1", "haussier"), mk("b2", "haussier"), mk("b3", "neutre")] };              // 2 histoires haussières
+const C = { id: "C", n: "Gamma", labels: [mk("c1", "haussier", 9), mk("c2", "haussier", 9), mk("c3", "haussier", 9)] };  // trop ancien pour la semaine
+const D = { id: "D", n: "Delta", labels: [] };
+const wk = weekRanking({ companies: [A, B, C, D], now, storyOf, days: 7 });
+assert.equal(wk.top, "B", "2 histoires haussières battent 3 articles d'une seule histoire");
+assert.deepEqual(wk.ranking.map((r) => r.id), ["B", "A"], "sociétés sans actualité de la semaine écartées");
+assert.equal(wk.ranking[1].bull, 1); assert.equal(wk.ranking[0].top.length, 2);
+assert.equal(weekRanking({ companies: [D], now, storyOf }).top, null);
+assert.equal(weekRanking({ companies: [{ id: "E", n: "E", labels: [mk("e1", "baissier")] }], now, storyOf }).top, null, "aucune histoire haussière : pas de gagnant");
+
+// actualités générales (secteur, macro) : libellées une fois, hors sociétés suivies, compactées au-delà de la limite
+const gfeed = { items: [...feed.items, art("g1", 1, "La Fed maintient ses taux", "Décision de la banque centrale."), art("g2", 1, "Pénurie d'électricité pour les centres de données", "Le réseau est saturé."), { ...art("g3", 1, "Article mineur", "Peu important."), importance: 1 }] };
+const gen = async (inputs) => inputs.map((x) => ({ i: x.i, stance: /Fed/.test(x.titre) ? "neutre" : "baissier", scope: /Fed/.test(x.titre) ? "macro" : "secteur", why: "Selon l'article : " + x.titre.slice(0, 40) }));
+const g1 = await buildFinance({ acteurs, feed: gfeed, outlook, prev: null, now, generateLabels: labelsFor(["neutre"]), generateGeneral: gen, generateCases: null, stories });
+assert.deepEqual(g1.doc.general.map((l) => l.id).sort(), ["g1", "g2", "other"], "importance 1 et articles de société suivie exclus");
+assert.equal(g1.doc.market.macro.n, 1); assert.equal(g1.doc.market.secteur.baissier, 2);
+assert.ok(g1.doc.week && Array.isArray(g1.doc.week.ranking));
+let gcalls = 0;
+const g2 = await buildFinance({ acteurs, feed: gfeed, outlook, prev: g1.doc, now: now + 36e5, generateLabels: labelsFor(["neutre"]), generateGeneral: async () => { gcalls++; return []; }, generateCases: null, stories });
+assert.equal(gcalls, 0, "déjà libellées : aucun nouvel appel");
+const g3 = await buildFinance({ acteurs, feed: gfeed, outlook, prev: g1.doc, now, generateLabels: null, generateGeneral: null, generateCases: null, stories });
+assert.equal(g3.doc.general.length, 3, "sans IA : libellés conservés");
 console.log("test-finance : OK");

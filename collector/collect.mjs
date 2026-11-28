@@ -16,7 +16,7 @@ import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
 import { collectResults } from "./resultats.mjs";
 import { collectSec, SEC_ACTORS } from "./sec.mjs";
 import { buildActeurs } from "./acteurs.mjs";
-import { buildFinance, LABEL_SYSTEM, LABEL_SCHEMA, CASES_SYSTEM, CASES_SCHEMA } from "./finance.mjs";
+import { buildFinance, LABEL_SYSTEM, LABEL_SCHEMA, GENERAL_SYSTEM, CASES_SYSTEM, CASES_SCHEMA } from "./finance.mjs";
 import { collectVoix, translateVoix, hotVoix, annotateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectDatacenters } from "./datacenters.mjs";
@@ -718,7 +718,7 @@ export async function run(opts = {}) {
   const finPrev = await readJson("finance.json", null);
   let fin = { doc: finPrev, reason: "erreur" };
   try {
-    fin = await buildFinance({ acteurs, feed: { items: keep }, outlook: await readJson("outlook.json", {}), prev: finPrev, now: nowMs, generateLabels: mkGen(LABEL_SYSTEM, LABEL_SCHEMA), generateCases: mkGen(CASES_SYSTEM, CASES_SCHEMA) });
+    fin = await buildFinance({ acteurs, feed: { items: keep }, outlook: await readJson("outlook.json", {}), prev: finPrev, now: nowMs, generateLabels: mkGen(LABEL_SYSTEM, LABEL_SCHEMA), generateGeneral: mkGen(GENERAL_SYSTEM, LABEL_SCHEMA), stories: stories.doc || storiesPrev, generateCases: mkGen(CASES_SYSTEM, CASES_SCHEMA) });
   } catch (e) { fin.reason = String(e.message || e).slice(0, 120); }
   log("Finance : " + fin.reason);
 
@@ -745,7 +745,7 @@ export async function run(opts = {}) {
   const enPrev = await readJson("en.json", {});
   let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
   try {
-    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}, { roles: [...new Set(((await readJson("voix.json", {})).people || []).map((p) => p.role).filter(Boolean))] }, acteurs ? { actors: acteurs.actors.map((a) => ({ ...a, news: undefined, rivals: undefined })) } : {}, fin.doc ? { fin: fin.doc.companies.map((c) => ({ f: c.fund.map((f) => f.text), w: c.labels.map((l) => l.why), c: ["bear", "base", "bull"].flatMap((k) => (c.cases?.[k] || []).map((p) => p.t)) })), m: (fin.doc.macro || []).map((m) => m.text) } : {}];
+    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}, { roles: [...new Set(((await readJson("voix.json", {})).people || []).map((p) => p.role).filter(Boolean))] }, acteurs ? { actors: acteurs.actors.map((a) => ({ ...a, news: undefined, rivals: undefined })) } : {}, fin.doc ? { fin: fin.doc.companies.map((c) => ({ f: c.fund.map((f) => f.text), w: c.labels.map((l) => l.why), c: ["bear", "base", "bull"].flatMap((k) => (c.cases?.[k] || []).map((p) => p.t)) })), m: (fin.doc.macro || []).map((m) => m.text), g: (fin.doc.general || []).map((l) => l.why).filter(Boolean) } : {}];
     enRes = await translateData({ docs, prev: enPrev, generate: mkGen(I18N_SYSTEM, I18N_SCHEMA), batch: +env.I18N_BATCH || 50, rounds: +env.I18N_ROUNDS || 3 });
   } catch (e) { enRes.reason = String(e.message || e).slice(0, 120); }
   log("Textes en anglais : " + enRes.reason + (enRes.left ? ` (reste ${enRes.left})` : ""));

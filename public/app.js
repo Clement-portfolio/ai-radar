@@ -6,6 +6,11 @@ var CATS={modeles:"LLMs",puces:"Puces",energie:"Énergie",capex:"Finance",politi
 var TABS=["une","actualites","recherche","marche","finance","infrastructure","acteurs","carte","methode"];
 var S={xfo:false,xq:"",lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"tension",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100,vsrc:"decl",xk:"ALL",xnr:false,xlimit:100};
 
+try{S.fmode=localStorage.getItem("fmode")==="1"}catch(e){}
+function fApply(){if(document.body)document.body.classList.toggle("fin",!!S.fmode);var b=document.getElementById("fbtn");if(b)b.setAttribute("aria-pressed",S.fmode?"true":"false")}
+function fSet(on){S.fmode=!!on;try{localStorage.setItem("fmode",on?"1":"0")}catch(e){}fApply()}
+function fBuild(){if(S._fi===S.fin)return;S._fi=S.fin;var m={},add=function(l){var o=m[l.id]||(m[l.id]={h:0,b:0,n:0});if(l.stance==="haussier")o.h++;else if(l.stance==="baissier")o.b++;else o.n++};((S.fin&&S.fin.companies)||[]).forEach(function(c){(c.labels||[]).forEach(add)});((S.fin&&S.fin.general)||[]).forEach(add);S.fm=m}
+function fAttr(ids){fBuild();var h=0,b=0,n=0;(ids||[]).forEach(function(id){var o=S.fm[id];if(o){h+=o.h;b+=o.b;n+=o.n}});if(!(h+b+n))return"";return' data-s="'+(h>b?"bull":b>h?"bear":"neu")+'"'}
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
 function isEn(){return S.lang==="en"}
 function loc(){return isEn()?"en-GB":"fr-FR"}
@@ -26,7 +31,7 @@ function imp(n){return '<span class="imp" title="Importance '+n+'/3">'+[1,2,3].m
 function cdot(c){var L={haute:'Source primaire',moyenne:'Presse',faible:'Non vérifié'};return '<i class="cd '+esc(c)+'" title="'+esc(L[c]||c)+'"></i>'}
 function rowHTML(it){
   var k='f'+it.id,open=S.open[k]?' open':'';
-  return '<div class="row i'+it.importance+open+'"><span class="time">'+esc(fmtTime(it.ts))+'</span>'+ctag(it.country)+
+  return '<div class="row i'+it.importance+open+'"'+fAttr([it.id])+'><span class="time">'+esc(fmtTime(it.ts))+'</span>'+ctag(it.country)+
    '<a class="ttl" href="'+esc(link(it.url))+'" target="_blank" rel="noopener">'+esc(tx(it,'title'))+'</a>'+
    '<span class="rsrc">'+esc(it.source)+cdot(it.confidence)+'</span>'+
    '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="Afficher le résumé">'+ARW+'</button>'+(it.why?'<p class="rwhy">'+esc(tx(it,'why'))+'</p>':'')+
@@ -117,11 +122,12 @@ function rUne(){
   if(!st.length)st=S.feed.filter(function(x){return!x.pending}).slice().sort(function(a,b){return (b.importance-a.importance)||b.ts.localeCompare(a.ts)}).slice(0,3).map(function(it){return{s:{head:tx(it,'title'),bullets:it.summary?[tx(it,'summary')]:[]},arts:[it]}});
   var h='<section class="hero"><span class="hdate">'+esc(fmtDay(u||new Date().toISOString()))+'</span><h1>'+(en?'AI, today':'L’IA, aujourd’hui')+'</h1><p>'+(en?'What’s happening, what’s being said, and what the numbers show.':'Ce qu’il se passe, ce qu’il se dit, et ce que les chiffres montrent.')+'</p></section>';
   var RS=S.resume,rtx=RS&&((en&&RS.text_en)||RS.text);
+  if(S.fin)h+=fHomeBox();
   if(rtx&&Date.now()-Date.parse(RS.generated_at)<30*36e5)h+='<section class="tile resume">'+tHead(en?'Summary':'Résumé du jour',en?'The essentials, in one paragraph':'L’essentiel, en un paragraphe')+'<p class="rtext">'+esc(rtx)+'</p><span class="rmeta">'+(en?'Written by AI from today’s stories · updated ':'Rédigé par IA à partir des actualités du jour · mis à jour ')+esc(ago(RS.generated_at))+'</span></section>';
   h+='<section class="tile">'+tHead(en?'Top stories':'La une',en?'The three stories of the day':'Les trois histoires du jour')+'<div class="tgrid3">'+st.map(function(x,i){
     var s=x.s,lead=x.arts[0],ok=en&&s.head_en&&s.bullets_en&&s.bullets_en.length===(s.bullets||[]).length;
     var head=ok?s.head_en:s.head,bl=(ok?s.bullets_en:s.bullets)||[];
-    return'<article class="tcard"><span class="kick">'+esc(CLABEL[lead.country]||lead.country)+' · '+esc(CATS[lead.category]||lead.category)+'</span><h3>'+esc(head)+'</h3>'+(bl[0]?'<p>'+esc(bl[0])+'</p>':'')+
+    return'<article class="tcard"'+fAttr(x.arts.map(function(a){return a.id}))+'><span class="kick">'+esc(CLABEL[lead.country]||lead.country)+' · '+esc(CATS[lead.category]||lead.category)+'</span><h3>'+esc(head)+'</h3>'+(bl[0]?'<p>'+esc(bl[0])+'</p>':'')+
      '<div class="tfoot"><span>'+esc(x.arts.slice(0,3).map(function(a){return a.source}).join(", "))+' · '+esc(ago(s.ts||lead.ts))+'</span>'+arrowA(link(lead.url),en?'Read':'Lire l’histoire',true)+'</div></article>';
   }).join("")+'</div>'+cta("actualites",en?'All news':'Toutes les actualités')+'</section>';
   var H=((S.voix&&S.voix.hot)||[]).slice(0,3);
@@ -218,10 +224,10 @@ function groupHTML(g,arts){
   var nm=Object.keys(media).length,head=tx(g,'head')||tx(lead,'title'),sum=tx(g,'summary')||(lead.pending?"":tx(lead,'summary'))||"";
   var badge=arts.length+(en?' articles':' articles')+' · '+nm+(en?' outlets':' médias');
   var MENU='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>';
-  var subs=arts.map(function(a){return'<div class="row gsubrow i'+(a.importance||1)+'"><span class="time">'+esc(fmtTime(a.ts))+'</span>'+ctag(a.country)+
+  var subs=arts.map(function(a){return'<div class="row gsubrow i'+(a.importance||1)+'"'+fAttr([a.id])+'><span class="time">'+esc(fmtTime(a.ts))+'</span>'+ctag(a.country)+
    '<a class="ttl" href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(tx(a,'title'))+'</a><span class="rsrc">'+esc(a.source)+cdot(a.confidence)+'</span>'+
    '<a class="rtog" href="'+esc(link(a.url))+'" target="_blank" rel="noopener" aria-label="'+(en?'Read the article':'Lire l\'article')+'">'+ARW+'</a></div>'}).join("");
-  return '<div class="row grp i'+imax+open+'"><span class="time">'+esc(fmtTime(arts[0].ts))+'</span>'+ctag(lead.country)+
+  return '<div class="row grp i'+imax+open+'"'+fAttr(arts.map(function(a){return a.id}))+'><span class="time">'+esc(fmtTime(arts[0].ts))+'</span>'+ctag(lead.country)+
    '<button class="ttl gt" data-toggle="'+esc(k)+'">'+esc(head)+'</button><span class="rsrc gb">'+esc(badge)+'</span>'+
    '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="'+(en?'Show the articles':'Afficher les articles')+'">'+MENU+'</button>'+
    '<div class="sum">'+(sum?'<p>'+esc(sum)+'</p>':'')+'</div></div><div class="gsub">'+subs+'</div>';
@@ -235,7 +241,7 @@ function rFeed(){
   var panel="";
   if(S.fo==="pays")panel='<div class="fpanel">'+COUNTRIES.map(function(c){return'<button class="chip'+(S.country===c[0]?' on':'')+'" data-c="'+c[0]+'">'+c[1]+'</button>'}).join("")+'</div>';
   if(S.fo==="cat")panel='<div class="fpanel">'+cats.map(function(c){return'<button class="chip'+(S.cat===c[0]?' on':'')+'" data-cat="'+c[0]+'">'+c[1]+'</button>'}).join("")+'</div>';
-  var h='<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l\'article.</p>'+
+  var h=fNewsBoxes()+'<h2 class="sec">Actualités</h2><p class="lede">Les informations collectées, de la plus récente à la plus ancienne. Cliquez sur un titre pour lire l\'article.</p>'+
    '<div class="toolbar frow"><button class="chip fb'+(S.fo==="pays"?' open':'')+(S.country!=="ALL"?' set':'')+'" data-fo="pays">Pays : '+esc(cn)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><button class="chip fb'+(S.fo==="cat"?' open':'')+(S.cat!=="ALL"?' set':'')+'" data-fo="cat">Catégorie : '+esc(cl)+' <span><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span></button><span class="sp"></span><a class="chip insl" href="#recherche" title="Percées scientifiques et recherche en IA">Recherche<span class="insa"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a><a class="chip insl" href="#acteurs/voix" title="'+nDup+' article(s) déjà dans Insiders, non répétés ici">Insiders<span class="insa"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a><button class="chip'+(S.top?' on':'')+'" data-top="1">Essentiel seulement</button></div>'+panel;
   if(!items.length)h+='<div class="empty">Aucune actualité pour ces filtres.</div>';
   var dayCount={};items.forEach(function(x){var d=dayKey(x.ts);dayCount[d]=(dayCount[d]||0)+1});var day="";
@@ -848,6 +854,26 @@ function rActeurs(){
    '<div class="toolbar frow">'+chips+'<span class="sp"></span><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div><div id="alist" class="agrid">'+aList()+'</div>';
 }
 
+/* Mode Finance : encadrés de tête (accueil, Actualités) */
+function fPl(n,w,wp){return n+" "+(n>1?(wp||w+"s"):w)}
+function fWeek(){var W=S.fin&&S.fin.week;return W&&W.top?W.ranking.filter(function(x){return x.id===W.top})[0]:null}
+function fHomeBox(){
+  var en=isEn(),r=fWeek(),eb=en?"Finance · last 7 days":"Finance · 7 derniers jours";
+  if(!r)return'<section class="tile fbox fonly">'+tHead(eb,en?"No standout company yet":"Pas encore de société en tête")+'<p class="fsub">'+(en?"Not enough labelled news this week.":"Pas assez d’actualités libellées cette semaine.")+'</p>'+cta("finance",en?"Company ranking":"Classement des sociétés")+'</section>';
+  var sub=en?fPl(r.bull,"bullish story","bullish stories")+" out of "+r.total+" this week"+(r.bear?", "+r.bear+" bearish":"")+". Articles about the same story count once.":fPl(r.bull,"histoire haussière")+" sur "+r.total+" cette semaine"+(r.bear?", "+fPl(r.bear,"baissière")+"":"")+". Les articles d’une même histoire ne comptent qu’une fois.";
+  var rows=(r.top||[]).map(function(t){return'<a class="fhl" href="'+esc(link(t.url))+'" target="_blank" rel="noopener"><span>'+esc((en&&t.title_en)||t.title)+'</span><i>'+esc(t.source||"")+' ↗</i></a>'}).join("");
+  return'<section class="tile fbox fonly" data-s="bull">'+tHead(eb,en?"Most bullish news: "+r.n:"Le plus d’actualités haussières : "+r.n)+'<p class="fsub">'+esc(sub)+'</p><div class="fhls">'+rows+'</div><p class="fgolinks"><a href="#finance/'+esc(r.id)+'">'+(en?"Bear, base and bull cases →":"Cas baissier, de base et haussier →")+'</a><a href="#finance">'+(en?"Company ranking →":"Classement des sociétés →")+'</a></p></section>';
+}
+function fNewsBoxes(){
+  var en=isEn(),F=S.fin,W=F&&F.week,M=F&&F.market;if(!F)return"";
+  var top=((W&&W.ranking)||[]).slice(0,3).map(function(r){return'<a class="fmini" href="#finance/'+esc(r.id)+'"><b>'+esc(r.n)+'</b><span><i class="bull">'+r.bull+'</i> '+(en?"bullish":"haussières")+' · <i class="bear">'+r.bear+'</i> '+(en?"bearish":"baissières")+'</span></a>'}).join("")||'<p class="fsub">'+(en?"Not enough labelled news yet.":"Pas encore assez d’actualités libellées.")+'</p>';
+  var line=function(lab,t){return t&&t.n?'<div class="fmline"><span class="fml">'+lab+'</span>'+fToneChip(t)+fCounts(t)+'</div>':""};
+  var mk=M&&M.all&&M.all.n>=FIN_MIN?(M.all.label==="haussière"?"bull":M.all.label==="baissière"?"bear":"neu"):"";
+  return'<div class="fboxes fonly"><section class="fbx" data-s="'+(W&&W.top?"bull":"")+'"><span class="eb">'+(en?"Ranking":"Classement")+'</span><h3>'+(en?"Most bullish companies this week":"Sociétés les plus haussières cette semaine")+'</h3>'+top+'<p class="fgolinks"><a href="#finance">'+(en?"Full ranking →":"Classement complet →")+'</a></p></section>'+
+   '<section class="fbx"'+(mk?' data-s="'+mk+'"':'')+'><span class="eb">'+(en?"Macro and sector":"Macro et secteur")+'</span><h3>'+(en?"AI in general":"L’IA en général")+'</h3>'+(line(en?"Sector":"Secteur",M&&M.secteur)+line("Macro",M&&M.macro)||'<p class="fsub">'+(en?"Not enough labelled news yet.":"Pas encore assez d’actualités libellées.")+'</p>')+'<p class="fgolinks"><a href="#finance/secteur">'+(en?"Details →":"Voir le détail →")+'</a></p></section></div>';
+}
+var FIN_MIN=3;
+
 /* Finance : libellé haussier / neutre / baissier par article, scénarios par société cotée (sources citées, ni prévision ni conseil) */
 var FST={haussier:["Haussier","Bullish"],neutre:["Neutre","Neutral"],baissier:["Baissier","Bearish"]};
 var FTONE={"haussière":["Plutôt haussière","Leaning bullish","bull"],"baissière":["Plutôt baissière","Leaning bearish","bear"],"mitigée":["Mitigée","Mixed","mix"],"peu d'articles":["Peu d'articles","Few articles","none"]};
@@ -877,9 +903,20 @@ function fArt(l){
   return'<div class="row fa"><span class="time">'+esc(new Date(l.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><span class="fst '+esc(l.stance)+'">'+esc(st[isEn()?1:0])+'</span><div class="rtxt"><a class="ttl" href="'+esc(link(l.url))+'" target="_blank" rel="noopener">'+esc(tx(l,"title"))+'</a><p class="rsm">'+esc(l.why)+'</p></div><span class="rsrc">'+esc(l.source||"")+'</span></div>';
 }
 function fNote(){return'<p class="fnote">'+(isEn()?'Labels and scenarios are written by AI from the cited sources. They describe what the news and the filings could imply; they are not forecasts, price targets or investment advice.':'Libellés et scénarios rédigés par IA à partir des sources citées. Ils décrivent ce que les actualités et les dépôts officiels pourraient impliquer ; ce ne sont ni des prévisions, ni des objectifs de cours, ni un conseil en investissement.')+'</p>'}
+
+function fSector(){
+  var en=isEn(),F=S.fin,M=F.market||{},gen=(F.general||[]).filter(function(l){return l.title});
+  var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+(en?'Macro and AI sector':'Macro et secteur de l’IA')+'</h2><p class="lede">'+(M.all?fToneChip(M.all)+' '+fCounts(M.all)+' · '+(en?'last 7 days':'7 derniers jours'):'')+'</p>';
+  var line=function(lab,t){return t&&t.n?'<div class="fmline"><span class="fml">'+lab+'</span>'+fToneChip(t)+fCounts(t)+'</div>':''};
+  h+='<section class="tile">'+tHead(en?'Overview':'Vue d’ensemble',en?'How the news leans':'De quel côté penche l’actualité')+line(en?'Sector':'Secteur',M.secteur)+line('Macro',M.macro)+'<p class="small">'+(en?'Articles about the same story count once.':'Les articles d’une même histoire ne comptent qu’une fois.')+'</p></section>';
+  if((F.macro||[]).length)h+='<section class="tile">'+tHead('Macro',en?'Upcoming events and risks':'Rendez-vous et risques')+'<ul class="ffund">'+F.macro.map(function(m){return'<li>'+esc(m.text)+'</li>'}).join("")+'</ul></section>';
+  h+='<section class="tile">'+tHead(en?'News':'Actualités',en?'Labelled articles':'Articles libellés')+(gen.length?'<div class="rows">'+gen.slice(0,40).map(fArt).join("")+'</div>':'<p class="empty">'+(en?'No labelled article yet.':'Aucun article libellé pour l’instant.')+'</p>')+'</section>'+fNote();
+  return h;
+}
 function rFinance(){
   var el=$("v-finance");if(!el)return;var en=isEn(),F=S.fin,cos=(F&&F.companies)||[];
   if(!cos.length){el.innerHTML='<h2 class="sec">Finance</h2><p class="empty">'+(en?'No data yet: the first scenarios appear after the next full collection.':'Pas encore de données : les premiers scénarios apparaissent après la prochaine collecte complète.')+'</p>';return}
+  if(S.fco==="secteur"){el.innerHTML=fSector();return}
   var c=S.fco&&fById(S.fco);
   if(c){
     var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+esc(c.n)+'</h2><p class="lede">'+fToneChip(c.tone)+' '+fCounts(c.tone)+' · '+(en?'last 30 days':'30 derniers jours')+'</p>';
@@ -891,7 +928,7 @@ function rFinance(){
   }
   var fk=function(c){return c.tone.label==="peu d'articles"?-9:c.tone.net};var sorted=cos.slice().sort(function(a,b){return fk(b)-fk(a)||b.tone.n-a.tone.n});
   var h2='<h2 class="sec">Finance</h2><p class="lede">'+(en?'For each listed company in the AI chain: how the recent news leans, and three sourced scenarios (bear, base, bull) built from official filings, company news and the macro backdrop.':'Pour chaque société cotée de la chaîne de l\'IA : de quel côté penche l\'actualité récente, et trois scénarios sourcés (baissier, de base, haussier) bâtis sur les dépôts officiels, les nouvelles de la société et le contexte macro.')+'</p>'+
-   '<div class="fcrows">'+sorted.map(fRow).join("")+'</div>';
+   '<div class="fcrows">'+(F.market&&F.market.all?fRow({id:"secteur",n:en?"Macro and AI sector":"Macro et secteur de l’IA",c:"",tone:F.market.all}):"")+sorted.map(fRow).join("")+'</div><p class="small" style="text-align:center">'+(en?"Articles about the same story count once.":"Les articles d’une même histoire ne comptent qu’une fois.")+'</p>';
   if((F.macro||[]).length)h2+='<section class="tile">'+tHead(en?'Macro':'Macro',en?'Backdrop used in every scenario':'Contexte utilisé dans tous les scénarios')+'<ul class="ffund">'+F.macro.map(function(m){return'<li>'+esc(m.text)+'</li>'}).join("")+'</ul></section>';
   el.innerHTML=h2+fNote()+'<p class="small">'+(en?'Updated ':'Mis à jour ')+esc(ago(F.generated_at))+'.</p>';
 }
@@ -996,13 +1033,13 @@ function xHtml(){
   return h;
 }
 function renderAll(){
-  if(!S.market)return;
+  if(!S.market)return;fApply();
   rUne();rFeed();rResearch();rMarket();rFinance();rInfra();rCarte();rActeurs();rMethod();
 }
 function show(tab){
   var parts=String(tab||"").split("/");tab=parts[0];var toRace=tab==="usa-chine";if(toRace)tab="marche";
   if(TABS.indexOf(tab)<0)tab="une";
-  if(tab==="finance"){S.fco=parts[1]||null;if(S.fin)rFinance()}
+  if(tab==="finance"){S.fco=parts[1]||null;fSet(true);if(S.fin)rFinance()}
   if(tab==="acteurs"){S.actor=parts[1]||null;S.vsrc=(parts[1]==="voix"&&parts[2]==="x")?"x":"decl";S.arv=false;if(S.acteurs)rActeurs()}
   S.tab=tab;if(typeof mSet==="function")mSet(false);if(typeof sClose==="function")sClose();
   TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});
@@ -1143,6 +1180,7 @@ function sSug(){
 function sOpen(){var o=$("sov");o.hidden=false;document.body.style.overflow="hidden";var i=$("sq");i.value="";sRun("");i.focus()}
 function sClose(){var o=$("sov");if(o.hidden)return;o.hidden=true;document.body.style.overflow=""}
 document.addEventListener("click",function(e){
+  if(e.target.closest("#fbtn")){fSet(!S.fmode);return}
   if(e.target.closest("#mbtn")){var m=$("mnu");mSet(m.hidden);if(!m.hidden)sClose();return}
   if(e.target.closest("#sbtn")){mSet(false);sOpen();return}
   if(e.target.closest("[data-sclose]")){sClose();return}

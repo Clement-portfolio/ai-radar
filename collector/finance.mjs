@@ -7,7 +7,7 @@ import { foreignScript } from "./translate.mjs";
 import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { nameRe } from "./acteurs.mjs";
 
-export const FIN_RULES = { days: 30, perCompany: 12, keepLabels: 40, labelBatch: 40, maxLabelCalls: 3, tries: 2, minLabeled: 3, minNew: 2, regenH: 20, maxCases: 6, whyMax: 140, pointMax: 170, pointsMax: 3, tone: 0.25, macro: 4 };
+export const FIN_RULES = { days: 30, perCompany: 12, keepLabels: 40, labelBatch: 40, maxLabelCalls: 3, tries: 2, minLabeled: 3, minNew: 2, genDays: 7, keepGeneral: 700, fullGeneral: 80, maxGeneralCalls: 3, regenH: 20, maxCases: 6, whyMax: 140, pointMax: 170, pointsMax: 3, tone: 0.25, macro: 4 };
 const STANCES = ["haussier", "neutre", "baissier"], SCOPES = ["societe", "secteur", "macro"];
 const clean = (s) => String(s || "").trim().replace(/\s+/g, " ");
 const DAY = 864e5, HOUR = 36e5;
@@ -22,6 +22,13 @@ export const LABEL_SCHEMA = {
   type: "ARRAY",
   items: { type: "OBJECT", properties: { i: { type: "INTEGER" }, stance: { type: "STRING", enum: STANCES }, scope: { type: "STRING", enum: SCOPES }, why: { type: "STRING" } }, required: ["i", "stance", "scope", "why"] },
 };
+
+export const GENERAL_SYSTEM = `Tu classes des articles de presse pour la page « Finance » d'un site sur l'infrastructure de l'intelligence artificielle (puces, mémoire, serveurs, réseaux, centres de données, énergie, financement). Pour chaque article (i, titre, resume), juge ce qu'il implique pour la dynamique de CETTE industrie en général (demande, financement, capacité de production, contraintes d'énergie ou de réglementation), pas pour une société en particulier.
+Renvoie :
+- stance : « haussier » si l'article apporte un élément favorable à cette dynamique, « baissier » s'il apporte un élément défavorable, « neutre » s'il ne change rien de clair, s'il est mitigé ou s'il ne concerne pas cette industrie de façon importante.
+- scope : « macro » si l'article parle de l'économie, des taux, du commerce, des droits de douane, des sanctions ou de la politique publique ; « secteur » s'il parle de l'industrie de l'IA ou de ses acteurs.
+- why : une phrase française de 140 caractères au plus qui dit pourquoi, en reprenant uniquement ce que disent le titre et le résumé.
+Règles : aucun chiffre, nom ou date absent du texte ; aucune prédiction ; en cas de doute, « neutre ». ${UNITS_RULE} Réponds uniquement par un tableau JSON, un objet par article, avec le même champ i.`;
 
 export const CASES_SYSTEM = `Tu rédiges, pour la page « Finance » d'un site sur l'infrastructure de l'intelligence artificielle, trois scénarios pour une société cotée : baissier, de base, haussier. Pour chaque société (i, nom, faits), les faits sont des éléments sourcés, chacun avec une référence (ref) : « f… » = chiffres officiels, « n… » = articles déjà classés, « m… » = contexte macro.
 Renvoie, pour chaque société, trois listes de 1 à 3 points chacune (bear, base, bull). Chaque point a :
@@ -49,13 +56,45 @@ export function fundamentals(fin) {
   return out;
 }
 
-/** Ton des articles libellés : comptes sur 30 jours et indice net (haussiers − baissiers) / total. */
-export function tone(labels, now) {
-  const L = labels.filter((l) => now - Date.parse(l.ts) <= FIN_RULES.days * DAY);
+/** Index article → histoire (stories.json) : plusieurs articles d'une même histoire ne comptent qu'une fois. */
+export function storyIndex(stories) {
+  const m = new Map();
+  for (const st of stories?.stories || []) for (const id of st.ids || []) m.set(id, st.id);
+  return (id) => m.get(id) || null;
+}
+/** Regroupe des libellés par histoire ; le sens d'une histoire = le solde de ses libellés (haussier − baissier). */
+export function groupLabels(labels, storyOf) {
+  const g = new Map();
+  for (const l of labels) {
+    const key = (storyOf && storyOf(l.id)) || l.id;
+    const o = g.get(key) || { key, ts: l.ts, h: 0, b: 0, labels: [] };
+    if (l.stance === "haussier") o.h++; else if (l.stance === "baissier") o.b++;
+    if (l.ts > o.ts) o.ts = l.ts;
+    o.labels.push(l); g.set(key, o);
+  }
+  return [...g.values()].map((o) => ({ ...o, stance: o.h > o.b ? "haussier" : o.b > o.h ? "baissier" : "neutre" }));
+}
+/** Ton des actualités libellées sur `days` jours, comptées par histoire : comptes et indice net (haussiers − baissiers) / total. */
+export function tone(labels, now, storyOf = null, days = FIN_RULES.days) {
+  const L = labels.filter((l) => now - Date.parse(l.ts) <= days * DAY);
   const c = { haussier: 0, neutre: 0, baissier: 0 };
-  for (const l of L) c[l.stance]++;
-  const n = L.length, net = n ? (c.haussier - c.baissier) / n : 0;
+  const G = groupLabels(L, storyOf);
+  for (const x of G) c[x.stance]++;
+  const n = G.length, net = n ? (c.haussier - c.baissier) / n : 0;
   return { ...c, n, net: +net.toFixed(2), label: n < FIN_RULES.minLabeled ? "peu d'articles" : net >= FIN_RULES.tone ? "haussière" : net <= -FIN_RULES.tone ? "baissière" : "mitigée" };
+}
+/** Classement de la semaine : par société, nombre d'histoires haussières / baissières (une histoire = un compte). */
+export function weekRanking({ companies, now, storyOf, days = 7, top = 3 }) {
+  const rank = companies.map((c) => {
+    const L = (c.labels || []).filter((l) => now - Date.parse(l.ts) <= days * DAY);
+    const G = groupLabels(L, storyOf);
+    const bull = G.filter((x) => x.stance === "haussier").sort((a, b) => b.ts.localeCompare(a.ts));
+    const lead = (x) => x.labels.slice().sort((a, b) => (a.stance === "haussier" ? 0 : 1) - (b.stance === "haussier" ? 0 : 1) || b.ts.localeCompare(a.ts))[0];
+    return { id: c.id, n: c.n, bull: bull.length, bear: G.filter((x) => x.stance === "baissier").length, neu: G.filter((x) => x.stance === "neutre").length, total: G.length,
+      top: bull.slice(0, top).map((x) => { const l = lead(x); return { id: l.id, title: l.title, title_en: l.title_en || "", source: l.source, url: l.url, ts: x.ts, media: x.labels.length }; }) };
+  }).filter((r) => r.total > 0);
+  rank.sort((a, b) => b.bull - a.bull || (b.bull - b.bear) - (a.bull - a.bear) || a.bear - b.bear || b.total - a.total);
+  return { days, ranking: rank, top: rank[0] && rank[0].bull >= 1 ? rank[0].id : null };
 }
 
 /** Articles du fil qui nomment la société (30 jours, les plus récents d'abord). */
@@ -78,8 +117,8 @@ export function macroFacts(outlook, now = Date.now()) {
  * Le périmètre = les acteurs qui ont des chiffres SEC. Les libellés déjà posés ne sont jamais refaits ; les scénarios ne sont réécrits
  * que s'il y a au moins `minNew` nouveaux articles libellés (ou de nouveaux chiffres) depuis la dernière rédaction.
  */
-export async function buildFinance({ acteurs, feed, outlook, prev, now, generateLabels, generateCases }) {
-  const R = FIN_RULES, actors = (acteurs?.actors || []).filter((a) => a.fin && (a.fin.quarter || a.fin.ttm));
+export async function buildFinance({ acteurs, feed, outlook, prev, now, generateLabels, generateCases, generateGeneral, stories }) {
+  const R = FIN_RULES, storyOf = storyIndex(stories), actors = (acteurs?.actors || []).filter((a) => a.fin && (a.fin.quarter || a.fin.ttm));
   if (!actors.length) return { doc: prev || null, reason: "aucune société avec chiffres SEC", stats: {} };
   const prevBy = new Map((prev?.companies || []).map((c) => [c.id, c]));
   const cos = actors.map((a) => {
@@ -118,6 +157,33 @@ export async function buildFinance({ acteurs, feed, outlook, prev, now, generate
   }
   for (const co of cos) { co.labels = co.labels.sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, R.keepLabels); const keep = new Set(co._arts.map((x) => x.id)); for (const k of Object.keys(co.tries)) if (!keep.has(k) && !co.labels.some((l) => l.id === k)) delete co.tries[k]; }
 
+  // 1b) actualités générales (secteur de l'IA, macro) : importance ≥ 2, qui ne nomment aucune société suivie
+  const compIds = new Set(cos.flatMap((co) => co._arts.map((x) => x.id)));
+  let gen = (prev?.general || []).filter((l) => now - Date.parse(l.ts) <= R.genDays * DAY);
+  const gTries = { ...(prev?.general_tries || {}) }, gHave = new Set(gen.map((l) => l.id)); let gLabeled = 0, gRejected = 0, gCalls = 0;
+  const gTodo = (feed?.items || []).filter((i) => (i.importance || 1) >= 2 && now - Date.parse(i.ts) <= R.genDays * DAY && !compIds.has(i.id) && !gHave.has(i.id) && (gTries[i.id] || 0) < R.tries).sort((a, b) => b.ts.localeCompare(a.ts));
+  if (generateGeneral) {
+    for (let off = 0; off < gTodo.length && gCalls < R.maxGeneralCalls; off += R.labelBatch, gCalls++) {
+      const batch = gTodo.slice(off, off + R.labelBatch);
+      const inputs = batch.map((it, i) => ({ i, titre: it.title, resume: String(it.summary || "").slice(0, 260) }));
+      let res = null;
+      try { res = await generateGeneral(inputs); } catch { res = null; }
+      if (!Array.isArray(res)) break;
+      const seen = new Set();
+      for (const r of res) {
+        const it = batch[Number(r?.i)], inp = inputs[Number(r?.i)];
+        if (!it || seen.has(r.i)) continue;
+        seen.add(r.i); gTries[it.id] = (gTries[it.id] || 0) + 1;
+        const why = clean(r.why), src = `${inp.titre} ${inp.resume}`, pool = new Set(digitsOf(stripAmounts(src)));
+        if (!STANCES.includes(r.stance) || !SCOPES.includes(r.scope) || !why || why.length > R.whyMax || foreignScript(why) || !digitsOf(stripAmounts(why)).every((d) => pool.has(d)) || !unitsOk(src, why, "fr", false)) { gRejected++; continue; }
+        gen.push({ id: it.id, ts: it.ts, title: it.title, title_en: it.title_en || "", source: it.source, url: it.url, stance: r.stance, scope: r.scope === "macro" ? "macro" : "secteur", why: normalizeFr(src, why) });
+        gLabeled++;
+      }
+    }
+  }
+  gen = gen.sort((a, b) => b.ts.localeCompare(a.ts)).slice(0, R.keepGeneral).map((l, k) => (k < R.fullGeneral || !l.title ? l : { id: l.id, ts: l.ts, stance: l.stance, scope: l.scope }));
+  for (const k of Object.keys(gTries)) if (!gen.some((l) => l.id === k) && !gTodo.some((i) => i.id === k)) delete gTries[k];
+
   // 2) scénarios : sociétés avec assez d'articles libellés et de la nouveauté, les plus anciennes d'abord
   const macro = macroFacts(outlook, now);
   const sigOf = (co) => JSON.stringify([co.fund.map((f) => f.text), co.labels.slice(0, 8).map((l) => l.id)]);
@@ -151,8 +217,11 @@ export async function buildFinance({ acteurs, feed, outlook, prev, now, generate
     }
   }
 
-  const doc = { v: 1, generated_at: new Date(now).toISOString(), note: "Scénarios et libellés rédigés par IA à partir de sources citées ; ce ne sont ni des prévisions ni un conseil en investissement.", companies: cos.map((co) => ({ id: co.id, n: co.n, c: co.c, tone: tone(co.labels, now), fund: co.fund, labels: co.labels, tries: co.tries, cases: co.cases })) };
+  const doc = { v: 1, generated_at: new Date(now).toISOString(), note: "Scénarios et libellés rédigés par IA à partir de sources citées ; ce ne sont ni des prévisions ni un conseil en investissement.", companies: cos.map((co) => ({ id: co.id, n: co.n, c: co.c, tone: tone(co.labels, now, storyOf), fund: co.fund, labels: co.labels, tries: co.tries, cases: co.cases })) };
   doc.macro = macro;
+  doc.general = gen; doc.general_tries = gTries;
+  doc.market = { all: tone(gen, now, storyOf, R.genDays), macro: tone(gen.filter((l) => l.scope === "macro"), now, storyOf, R.genDays), secteur: tone(gen.filter((l) => l.scope !== "macro"), now, storyOf, R.genDays) };
+  doc.week = weekRanking({ companies: doc.companies, now, storyOf, days: R.genDays });
   const same = prev && JSON.stringify({ ...prev, generated_at: 0 }) === JSON.stringify({ ...doc, generated_at: 0 });
-  return { doc: same ? prev : doc, reason: `${cos.length} société(s) ; ${labeled} libellé(s) posé(s)${rejected ? `, ${rejected} rejeté(s)` : ""} ; ${written} scénario(s) rédigé(s)`, stats: { labeled, rejected, written, todo: todo.length, due: due.length } };
+  return { doc: same ? prev : doc, reason: `${cos.length} société(s) ; ${labeled} libellé(s) posé(s)${rejected ? `, ${rejected} rejeté(s)` : ""} ; ${written} scénario(s) rédigé(s) ; ${gLabeled} actualité(s) générale(s) libellée(s)${gRejected ? `, ${gRejected} rejetée(s)` : ""}`, stats: { labeled, rejected, written, todo: todo.length, due: due.length, gLabeled, gRejected, gTodo: gTodo.length } };
 }
