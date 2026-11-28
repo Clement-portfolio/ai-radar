@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T13:05:04.722Z",
+ "generated_at": "2026-11-28T13:17:51.249Z",
  "people": [
   {
    "id": "sam-altman",
@@ -274,14 +274,14 @@
      "e": 0
     },
     {
-     "ts": "2026-11-19T14:30:00.000Z",
-     "title": "Elon Musk's Latest Calls For Tesla-SpaceX Merger; Explains Pay Package",
-     "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZHNBWjNqazh6LUZkMmhnTWNGZnAtRFRxbGU1TzBIbVRFeTdud0dmc08wbXNOYmt4M1JzNVh1Uk1JdmoxUnVFUnlab0lvSVlfUXVkeFVpYnBTLURINTd0ZUsyYmdYRVptLXY2dzcwSVNQdjNWOVZtd3JjVElmUWFGX0xaUnh3TFZmX2hQM1MwMlN6UQ?oc=5",
-     "source": "Investor's Business Daily",
+     "ts": "2026-11-18T08:00:00.000Z",
+     "title": "Elon Musk says ousting Jensen Huang is like ‘kicking Michael Jordan off your team’",
+     "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQa3VvcGJNZlJiaXZoWFBfdDFoWWpRTkcxby1rcVJNMGFGRWdoYmpOam5VWjlXNTVONWFfd0hLaTRnOFFnRUtPNEhsdmhNUWwyeDFJZE1HME45RnV5TF80dzBUUVJSVjFwc1B1VVkycnNXTzJiMGJfS0czM1JkS3BZMl9BdUktVUVrMlZWajB5eGp2NmVydm1Fcng2TXpwZmlIR3RVeGhFUEdkZDdSZVNiZTVkWXhaQQ?oc=5",
+     "source": "TechCrunch",
      "kind": "presse",
-     "title_fr": "Les derniers appels d'Elon Musk en faveur d'une fusion entre Tesla et SpaceX ; il s'explique sur sa rémunération",
+     "title_fr": "Elon Musk déclare que évincer Jensen Huang revient à « écarter Michael Jordan de votre équipe »",
      "m": 1,
-     "e": 1
+     "e": 0
     }
    ]
   },
@@ -602,16 +602,6 @@
      "title_fr": "Mark Zuckerberg admet que la restructuration de l'IA ne se passe pas si bien que ça, selon un rapport",
      "m": 1,
      "e": 1
-    },
-    {
-     "ts": "2026-11-23T17:45:00.000Z",
-     "title": "Mark Zuckerberg reveals his New Year's resolution",
-     "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB5RndUeGJXY2M0RVZRREJ5MHZodWFUOFJSLXJhWUpIT0xKYTl0T0RNWVp6V0VJbmdpQ1BuWTB0M2NnX2FnY09kZmdYYnUxYk5KUjV4RFFaSmRWQ2dLVDAzTWpvMUFwTU40?oc=5",
-     "source": "Mashable",
-     "kind": "presse",
-     "title_fr": "Mark Zuckerberg révèle sa résolution du Nouvel An",
-     "m": 1,
-     "e": 1
     }
    ]
   },
@@ -638,6 +628,16 @@
     }
    ],
    "items": [
+    {
+     "ts": "2026-11-25T11:39:41.000Z",
+     "title": "AI demand looks generational, not cyclical, and the CPU market could reach $220B as agents spread, says AMD's Lisa Su",
+     "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxNSEROLWhBclVHQVBLdW8yQ3lISWljam9raDBaV3BHSkZzNUdzR0hFN2RKQmN3eVdDbzJERDY5aVh0d2t3RTJ3b0pTUGRoS19uSEdGYmdPVVM1czN0dVVLSVFXSHdWV3Z6aVU3bURSSUN2Y3QtNVFnTklzcm9TdkFmZWgxay1ST2l1REdYQ2phVTNwYUNZMV9HVmtjQVBkOGQ5QVpBSmdqZjFMQVpvVHpOQUdpQm45TkxxZVpab1FkNlZ2Tk9jS1RqVjJfcDJZSjExOHpxR1NZRC1tVXFldmNuYg?oc=5",
+     "source": "Dealroom",
+     "kind": "presse",
+     "title_fr": "La demande en IA semble générationnelle et non cyclique, et le marché des processeurs pourrait atteindre 220 milliards de dollars à mesure que les agents se propagent, déclare Lisa Su d'AMD",
+     "m": 1,
+     "e": 1
+    },
     {
      "ts": "2026-11-20T01:03:57.000Z",
      "title": "AMD CEO Lisa Su Praises Huang, Says NVIDIA Noise Will Subside",
@@ -705,16 +705,6 @@
      "source": "Yahoo Finance",
      "kind": "presse",
      "title_fr": "La PDG d'AMD, le Dr Lisa Su, revient sur ses plus grands enseignements de 2026",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-10T08:00:00.000Z",
-     "title": "AMD CEO Lisa Su says, 'We are a data center-first company'",
-     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQVGdsQWxINE5fT1c0Y2MwX3FVQkRUNnhxUjdpMzkyMXBzLUJiNFdFdmg3azJJVmtlTjYwc0lEQVBHUmUweS1pSXprSnhJMWhjaWVpeWFFVEVwVjBER3BGVzZ3V3ZoLUVjSDd5YXRHdlpfcjk3OG1iRi1FVlJlbnVZUkNjY3hWbXlHSW1pT2I2bGtSdm9LQy04dlF0R2NqVEY5NjQ2cll6TQ?oc=5",
-     "source": "TweakTown",
-     "kind": "presse",
-     "title_fr": "La PDG d'AMD, Lisa Su, déclare : « Nous sommes une entreprise axée sur les centres de données »",
      "m": 1,
      "e": 0
     }
@@ -2575,12 +2565,12 @@
      "e": 0
     },
     {
-     "ts": "2026-11-24T07:45:33.000Z",
-     "title": "Michael Burry cuts Nvidia puts by 75%, exits semiconductor ETF puts (NVDA:NASDAQ)",
-     "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYkUzbHVfNW0wTm9rLUxqQ2tFcU03NWQ1X2RzenlwS0FUTFgzRmF2OFpyUW9pS0RRNUsydUVDSVY0S01TWllvcHNURDMweXFzc0dXalczZ3F0dl9BR3VObU9NR21YbDZZaXBhVFZiSXFpQUNvQThTSy1rX3I5c2EzSW9IMmp5Um5teWE0TVNRRGVpMXhUYXpGMVZQSHVxQmtEUGx3LVZ3?oc=5",
-     "source": "Seeking Alpha",
+     "ts": "2026-11-24T11:56:11.000Z",
+     "title": "Michael Burry Cuts Nvidia Puts by 75% Before Stock's 31% Rally",
+     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPa1BScmdqczB1WlhndUU2aDk5NklmbGdyT0NnYnRGWkZxVHFwWElPN1RtWlM1aWtpMHBEcjdveTZ2QnFqc25XbDA4UXR1enhNMy1EN3VqYlBsTkNHS1JRNHZldV84QmpodlZ6OUlBV3FCMGZPcEloQnNERmFjWlZxWHJJam5BWW5OUDE1UFNOWVNJUmVyOThweVc4UnY?oc=5",
+     "source": "Yahoo Finance",
      "kind": "presse",
-     "title_fr": "Michael Burry réduit de 75 % ses options de vente sur Nvidia et solde ses options sur l'ETF des semi-conducteurs (NVDA:NASDAQ)",
+     "title_fr": "Michael Burry réduit ses options de vente sur Nvidia de 75 % avant la hausse de 31 % de l'action",
      "m": 1,
      "e": 0
     }
@@ -3317,6 +3307,16 @@
    "actor": null,
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-28T13:16:06.000Z",
+     "title": "Kai-Fu Lee says China is near or ahead of the US on multiple AI fronts",
+     "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1jQTRmcm9KTkh5S1NvSjFkRzJHUXNaOHZtVzRLY0E4MXp1cFJRR0VMMGxGQ1BiZnFhSjR6MTIzejRiQQ?oc=5",
+     "source": "Digg",
+     "kind": "presse",
+     "title_fr": "Kai-Fu Lee déclare que la Chine est proche ou en avance sur les États-Unis sur plusieurs fronts de l'IA",
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-12T06:51:53.000Z",
      "title": "Kai-Fu Lee Says China AI Makes Money; Zhipu Revenue Rose 5x",
@@ -5365,36 +5365,6 @@
    "alerts": [],
    "items": [
     {
-     "ts": "2026-11-23T16:12:00.000Z",
-     "title": "Chey Tae-won Announces Plan to Pay 944 Billion Won, Potentially Ending 9-Year Legal Battle",
-     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1KaEE4ZGMzOHQ4eEgxRXlIZjhPYlNvZkgtdlNNbmtMSjJJbGM0a3MzclBXdXpOZlBEWVUzNm1uYmZfRDNuQ1oxU3RzbFNkejFOaFlYeDFtRnRoLWdyZDdfOC12cnlBeUF4S0hSRlhR0gFmQVVfeXFMTkppRDVLWDRWNURNZW1Ic0RyUk1CVW5CLW11TUFvMVlXSzFsN2JDNjh6MG1tMVZIdmVqWDlxdDFGOEdXcEo2U0d4REdoaGEwNWl5TlZhVElGcGZ6UF9sWllrM1FjR3JR?oc=5",
-     "source": "SBS 뉴스",
-     "kind": "presse",
-     "title_fr": "Chey Tae-won annonce un plan pour verser 944 milliards de wons, mettant potentiellement fin à une bataille juridique de 9 ans",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-23T13:11:00.000Z",
-     "title": "Chey Tae-won Says He Will Pay Full 944 Billion Won... Will 9-Year Legal Battle Finally End?",
-     "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9fVm9vamJGME9pUHRiSVNGUW5IeHlKN2VpUFFiRjFGajdCVHUtNHBtQjZPNUZ6OFBtTE9OVWk5UTY3V2VjWUhPY3pCNTNGSWZzRzdPZWQ4NFF1ZHF5eDdsWERJdVhDaWNOcVY1MmdB0gFmQVVfeXFMTlJPUlpnaTVaVW9RZE9QQ3E4eVUyQjlJZ0pNajh1Ul82dm1hY1pTQ2xRbFZjYVR4SU80RndzdUFMa0dZRmc3WXV6R0duWUFhZDhRVThoLThMNE5KZ1otVEVMYUdodXBn?oc=5",
-     "source": "SBS 뉴스",
-     "kind": "presse",
-     "title_fr": "Chey Tae-won affirme qu'il paiera la totalité des 944 milliards de wons... La bataille juridique de 9 ans va-t-elle enfin prendre fin ?",
-     "m": 2,
-     "e": 1
-    },
-    {
-     "ts": "2026-11-23T07:22:25.000Z",
-     "title": "Chey Tae-won: “I’ll Pay 944 Billion Won in Property Division”; Nine-Year Legal Battle Nears End",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1JNEoxenItY2RrNzFadzQtVzhXUXZxUnQ0WWI1Nm82UnhXQU9ldmxnbURTZ214QzBidjFveHBjc0xJRlhuYzB0cXhUSElqRlVsUmd3?oc=5",
-     "source": "매일경제",
-     "kind": "presse",
-     "title_fr": "Chey Tae-won : « Je paierai 944 milliards de wons pour le partage des biens » ; une bataille juridique de neuf ans touche à sa fin",
-     "m": 2,
-     "e": 1
-    },
-    {
      "ts": "2026-11-22T15:34:23.000Z",
      "title": "Chey Tae-won Urges Overhaul of University Education for AI Era",
      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPRTJrZjB6T09Kb0NyUEtCMjFYbzdGdlFGSVRwNEZvOWRZZnFGZk02TjR1bDJXX3k3bUk2a0lXdEVGMHVUU3lFWlhGSVFRTHRxNkgxb2lvZHo3VE5rakdGdHRGVlQxZ1NoeFZTSU9ESGMzWl9mMmtzdllDaUNocUVnYkFrRGt5RkpP?oc=5",
@@ -5435,12 +5405,22 @@
      "e": 0
     },
     {
-     "ts": "2026-11-19T08:40:08.000Z",
-     "title": "Chey Tae-won: \"Will Take SK Governance Up a Level\"",
-     "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFA5LWhTN0h2bDZVNThFMEw1TnJDYXVkTGdTV1Zyb0g3VmtPeTlkenE2UHlNSm5kdDVwQXdGM1dPWVZWYng2UDRlaWFXVlRpNUl3Q1Nj?oc=5",
-     "source": "매일경제",
+     "ts": "2026-11-18T01:24:32.000Z",
+     "title": "Chey Tae-won calls for cash incentives to tackle social problems, says AI can maximize efficiency",
+     "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9FR0lvVmk4R3duV04tX1g0ZXFjQVk1NERyQ040YURPR05MTTRZNDliYWI0cTl0cVd6WkVXZTd5Rmwtell4WnhHZEt2b1hqZnN3cUtTSEt3?oc=5",
+     "source": "헤럴드경제",
      "kind": "presse",
-     "title_fr": "Chey Tae-won : « Je ferai progresser la gouvernance de SK d'un cran »",
+     "title_fr": "Chey Tae-won appelle à des incitations financières pour s'attaquer aux problèmes sociaux et affirme que l'IA peut maximiser l'efficacité",
+     "m": 1,
+     "e": 0
+    },
+    {
+     "ts": "2026-11-15T08:00:00.000Z",
+     "title": "Chey Tae-won calls for 'AI flywheel' to drive SK Group's growth cycle",
+     "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ITUVwZXhiTGNRV2ZSYTBYNmx3SzV0OXY0enpCUFF3Y3djVGRGQXN0WXhYZF9MdVlMUlMzRWpkYzEtblJMTnFrLVJKZnVRekVsYzVmcUVxOA?oc=5",
+     "source": "헤럴드경제",
+     "kind": "presse",
+     "title_fr": "Chey Tae-won appelle à une « boucle de rétroaction de l'IA » pour stimuler le cycle de croissance de SK Group",
      "m": 1,
      "e": 0
     }
@@ -5588,19 +5568,9 @@
      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9PZlZ2LXlDT0c5d3UwcEdSTVhxM0YyMFd1d3U4RlZjMTVnREplVUIweS1Na2xBbkNxOWViM3ZBcVFtRy1xVldRQ3RWQ3hLdWM1RVRxRzRIMno?oc=5",
      "source": "파이낸셜뉴스",
      "kind": "presse",
-     "m": 2,
-     "e": 1,
+     "m": 1,
+     "e": 0,
      "title_fr": "Le président Lee déjeune avec de la poitrine de bœuf à la cafétéria de Samsung ; Lee Jae-yong déclare : « Gwangju avancera plus vite avec le président qui supervisera personnellement »"
-    },
-    {
-     "ts": "2026-11-12T07:36:00.000Z",
-     "title": "Lee Jae-yong says lunch with President Lee to speed Gwangju progress",
-     "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8yWmY5VTBnSkIydXdMWmxCRmJ5bzRpVFB5dm91MnNaRUhjOGdCOHBpaWRaRnIxYldnVUZJQWJneHROZzhQMUJqcktEY0xxczZMT1JaaUgtSXhYcVRlZXVCRlYtNF9kdGN4V2RKZGN3NWE3cWl5M3dnaURLVXd1WnPSAZMBQVVfeXFMUDUwY2ZiLWc5emF4aTJWaVp2Rlo1Rm96MXJNZ0ZpTkpRNnhvelB2WGxwS0wzLThHUy1qcTRDVTRYajlLckdZREo1Mjk4MzVkMld6LUpvTHJuaEdXeUs1RlJlT05kcFZpQVptSXJ6Ri1BYnRqVmJWa0VCQURLZGlDZEwtajZ2VE1DMmtvY0FMbldZekRv?oc=5",
-     "source": "Chosunbiz",
-     "kind": "presse",
-     "m": 2,
-     "e": 1,
-     "title_fr": "Lee Jae-yong déclare que le déjeuner avec le président Lee accélérera les progrès de Gwangju"
     },
     {
      "ts": "2026-11-12T04:37:58.000Z",
@@ -5676,18 +5646,7 @@
    "co": "Reliance",
    "actor": null,
    "alerts": [],
-   "items": [
-    {
-     "ts": "2026-11-16T05:34:57.000Z",
-     "title": "Mukesh Ambani Says Telecom Companies Ragging Jio; Praises Modi, Nilekani And Arnab",
-     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPeHB5eVhXWkNuV3FGTkZGNUxwOFRyM2ZWWEQ4YUdGMkdNZmlGcHhtZVdhQXVLeHVvQ1RKZTVHakx1RHg3Z2hGSlFXempRX0NHVmpmMjFHdTJHank4VlJJQjh3THdkdF93YXpsLVlUT0hFUFdYZFNsUU1YLTJGOHRMcDdtbXk2eUVISHpJLVpGVjlibFpaTXVrWVN0bGwyY3o4MnBLbDlXQUFsYzRkN082eENaakpiM3IyMkREdUdoZGhxVFk?oc=5",
-     "source": "NDTV Profit",
-     "kind": "presse",
-     "m": 1,
-     "e": 0,
-     "title_fr": "Mukesh Ambani déclare que les entreprises de télécommunications harcèlent Jio ; fait l'éloge de Modi, Nilekani et Arnab"
-    }
-   ]
+   "items": []
   },
   {
    "id": "tahnoon-bin-zayed",
@@ -6398,7 +6357,7 @@
  ],
  "hot": [
   {
-   "score": 1.07,
+   "score": 1.05,
    "id": "andy-jassy",
    "n": "Andy Jassy",
    "role": "PDG d'Amazon",
@@ -6412,7 +6371,7 @@
    "outlets": 1
   },
   {
-   "score": 0.85,
+   "score": 0.84,
    "id": "stuart-russell",
    "n": "Stuart Russell",
    "role": "Professeur à Berkeley, sécurité de l'IA",
@@ -6426,16 +6385,16 @@
    "outlets": 1
   },
   {
-   "score": 0.62,
-   "id": "dylan-patel",
-   "n": "Dylan Patel",
-   "role": "Fondateur de SemiAnalysis",
+   "score": 0.8,
+   "id": "kai-fu-lee",
+   "n": "Kai-Fu Lee",
+   "role": "Fondateur de 01.AI, ex-Google Chine",
    "actor": null,
-   "ts": "2026-11-28T11:33:39.000Z",
-   "title": "SemiAnalysis’s Dylan Patel Thinks Anthropic Could “Beat the $300 Billion” Run Rate by 2027’s End. Here’s What That’s Worth",
-   "title_fr": "Dylan Patel de SemiAnalysis pense qu'Anthropic pourrait « dépasser les 300 milliards de dollars » de chiffre d'affaires annualisé d'ici fin 2027. Voici ce que cela vaut",
-   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxNNzhHLUVkcXBsWlM2ZnhKUm5mZFJ2cHo4Um5wd1lPczRzRjNmZUptTWNyeEpScmNyLWdOOGRiU2c0UUhCbUh5WjFjTVgybXpvSFh1NS1CdkU4T044UVYtOWxFQUNQd29iRnJ2X2VDSVRRNDh1bzhfOTRnZ3FlZXNKNDl5eG94bkszUVhfdjRkT2tCVnp6WTBQVXpFNWFKNWxFb2JRSjF6OWpUMHQ5ZFkwaG84Z1lCeDdNcVdVemhyWDJqN3lseWIzQ3JpRXBlWTN1T25oaE5FOTlhd0gyTjYwc24wdF9NTGxy?oc=5",
-   "source": "TIKR.com",
+   "ts": "2026-11-28T13:16:06.000Z",
+   "title": "Kai-Fu Lee says China is near or ahead of the US on multiple AI fronts",
+   "title_fr": "Kai-Fu Lee déclare que la Chine est proche ou en avance sur les États-Unis sur plusieurs fronts de l'IA",
+   "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1jQTRmcm9KTkh5S1NvSjFkRzJHUXNaOHZtVzRLY0E4MXp1cFJRR0VMMGxGQ1BiZnFhSjR6MTIzejRiQQ?oc=5",
+   "source": "Digg",
    "kind": "presse",
    "outlets": 1
   }

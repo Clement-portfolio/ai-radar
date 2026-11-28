@@ -1,6 +1,43 @@
 {
  "items": [
   {
+   "id": "4848502bd8c9",
+   "ts": "2026-11-28T13:09:39.000Z",
+   "title": "Jensen Huang est de retour. La thèse haussière sur Nvidia demeure",
+   "orig": "Jensen Huang Is Back. Nvidia’s (NVDA) Bull Case Remains",
+   "summary": "Le retour de Jensen Huang conforte la perspective boursière positive et haussière pour l'action Nvidia.",
+   "country": "US",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Puces",
+   "source": "The Globe and Mail",
+   "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOT0tWb0IwVXg3NzVnRmhUYU84MUpseHRJNDhrYm1IbXVXamdQNEk1QUdoQmxpemRHeGsxSzFRX3Yzekhrdkk1ai11eXpSRkFjQ3ltMjNxTlFwT2JQMEFWT3NnbHpkYi03SmpXaUkwRElUZE9oOGxKcS1oanJZUG1MbENWSzVITUdldEJ2TEpxREc4Q1RaTkdXalNTYVphbHl4SEJHaGlxSVVvQXF3eFdDQlZMSDRZMC1GM3o4QlFGT3dMdXBrV1BONjMtUW93VHlfX1E?oc=5",
+   "confidence": "moyenne",
+   "why": "Le maintien d'une analyse boursière favorable autour du retour de Jensen Huang illustre la confiance des marchés dans le leadership de Nvidia.",
+   "trading": true,
+   "title_en": "Jensen Huang Is Back. Nvidia’s (NVDA) Bull Case Remains",
+   "summary_en": "Jensen Huang is back, and the bull case for Nvidia's stock remains intact.",
+   "why_en": "Sustained bullish market analysis around Jensen Huang's return highlights investor confidence in Nvidia's market leadership."
+  },
+  {
+   "id": "2ea085189ac5",
+   "ts": "2026-11-28T13:00:07.000Z",
+   "title": "DefenseAI aux Émirats arabes unis promet une « vision opérationnelle unifiée » sur le champ de bataille",
+   "orig": "UAE's defenseAI pledges 'unified operational picture' on the battlefield",
+   "summary": "La nouvelle entreprise DefenseAI aux Émirats arabes unis lance des systèmes de gestion des opérations de défense basés sur l'intelligence artificielle.",
+   "country": "GULF",
+   "category": "adoption",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "The National",
+   "url": "https://www.thenationalnews.com/future/technology/2026/11/28/uaes-defenseai-pledges-unified-operational-picture-on-the-battlefield/",
+   "confidence": "moyenne",
+   "why": "Cette initiative montre l'investissement souverain des pays du Golfe dans les technologies de défense dopées à l'IA.",
+   "title_en": "UAE's defenseAI pledges 'unified operational picture' on the battlefield",
+   "summary_en": "UAE's defenseAI starts operations to build proprietary, AI-native defense management systems.",
+   "why_en": "This initiative highlights sovereign investments by Gulf nations into specialized, AI-driven defense technologies."
+  },
+  {
    "id": "932a08453515",
    "ts": "2026-11-28T13:00:00.000Z",
    "title": "FCC approves Elon Musk’s 1-million-satellite 'Starmind' orbital data center plan",
@@ -52,6 +89,24 @@
    "title_fr": "Au-delà de la volatilité du marché : pourquoi le PDG de Longbridge Group, Nowa Zhu, estime que la prochaine vague de demande en IA est si difficile à prévoir",
    "title_en": "Beyond the Market Volatility: Why Longbridge Group CEO and Co-Founder Nowa Zhu Believes the Next Wave of AI Demand Is So Difficult to Predict",
    "summary_en": "The CEO of Longbridge Group highlights the uncertainty surrounding the sustainability and nature of future AI demand despite market volatility."
+  },
+  {
+   "id": "a09eb5e47b90",
+   "ts": "2026-11-28T12:13:29.000Z",
+   "title": "Quelle est la faisabilité des centres de données d'IA dans l'espace ? Analyse du projet de SpaceX",
+   "orig": "How feasible are AI data centers in space? Unpacking SpaceX's plan to launch a million satellites",
+   "summary": "Un article analyse la faisabilité du projet de SpaceX visant à lancer un million de satellites pour héberger des centres de données d'IA.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "DW.com",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZjBEa29Pd0FpdFlTNzRkeHoySXFJVEhvS0ZTYWVoN085cm5peVVUeW9PeWdPX3BwVzV5YzdEeUZRQzczNnZ1SEZkdXVLRGhPMnk2RWQ1YWhwMnJha2ZqV1JCNE1BNU10M0FnLXFmU3RaU3p2T2Q2RElkaDZXOHRvRVVpM1NMdTZfcnZMdktCUnFUbU5vdXZ2ZVhqLUN6VktHQ0Y00gGjAUFVX3lxTE8tMlJCa2ZhQWZFa19XLWxLdWVFM2RsTUUwbUtsT2FfYzgwRndjWHFkb3dkR0Zkd2Z2N19TZkFSVW52cXpfNk9kS1FfUXRjUnQyc1RPUkM4RC1mWUxGMGcyVWVEUXprMTF1cmZtUzZKWXM2Z2x5QXBvYi1fTEY2My1RYnZOUTI0bll4NGdoZjBWSHhOZjlTYkpnVFRYVHItT1BKSXM?oc=5",
+   "confidence": "moyenne",
+   "why": "Explorer des datacenters spatiaux illustre la recherche de solutions énergétiques et radicales face à la saturation terrestre.",
+   "title_en": "How feasible are AI data centers in space? Unpacking SpaceX's plan to launch a million satellites",
+   "summary_en": "An analysis explores the feasibility of SpaceX's plan to launch a million satellites for space-based AI data centers.",
+   "why_en": "Exploring orbital data centers illustrates radical approaches to solving terrestrial energy and cooling constraints for AI."
   },
   {
    "id": "9eb91df6ba20",
@@ -228,6 +283,26 @@
    "title_en": "At XPeng AI Day 2026, He Xiaopeng Says the Brain and Body Must Evolve Together",
    "summary_en": "At its AI Day, XPeng showcased a shared physical AI stack for vehicles, humanoids, and robotaxis, emphasizing physical AI evolution.",
    "why_en": "Demonstrates the integration of advanced robotics and physical AI applications by major automotive players."
+  },
+  {
+   "id": "20517261694d",
+   "ts": "2026-11-28T09:46:45.000Z",
+   "title": "La bulle de l'intelligence artificielle... La vague d'explosion a-t-elle commencé ?",
+   "orig": "فقاعة الذكاء الاصطناعي... هل بدأت موجة الانفجار؟",
+   "summary": "Un article examine les risques d'une explosion de la bulle spéculative autour du secteur de l'intelligence artificielle.",
+   "country": "GULF",
+   "category": "capex",
+   "importance": 2,
+   "layer": "Financement",
+   "source": "الشرق الأوسط",
+   "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxObVN2VkFwT0pWME82MFVyZ1N1YXBweVNxTEtzc0N6b0pyTDZoQ0Zmdnd2VXR4bEpqNjdMTGM0STdMdkFUR3dNUF90RDhSc3B3eUhXMV9aYnZ4NlZ3ZF80b1Y0eVJ0dW41WUJsTVJiTzRLelB5ekZHbEdtQnQtZUFFaFB2SWR4Si15RGdyQlhkR2R0cWltY201T0RuYnJMOFZVd01zeUJnUmRPNlpzdWJzeFJqMFZOUkx6bVQ1SXh2VXlOWmV6QTdtS005eFJfMzc0LWNxWl96aU5aeWdZd2Z4Yzc2OHI2VmpnOVMtWVBzbWVFVmduWFdLdUJWYVBucndweEVNVm4yankxR3QzYUh4Skhva3M2cjRZSlhFeC0wQzdvOV9fNlVwREJubnpBZXhjZkN2Z0JMdWVSS19GRXdJUmZnUVNBRHhmOFJlQ3FTOGx4QkNidWRnTk5ZYVBKWWVjdEh2REpuNy1VMzdPY0pxRzdzSm5zckpHWk9wWWZMMFdFOEx6SGltZE4xN2Nldi1QM2R3Y0dHMk1wcEFaZERpRWthUXZaY0t4M0tLelpnNF9fQ0pQMm9tTklQVzFhMUNFcEE?oc=5",
+   "confidence": "moyenne",
+   "why": "Ce questionnement médiatique reflète les inquiétudes croissantes des marchés financiers sur la surévaluation des investissements en IA.",
+   "trading": true,
+   "title_fr": "La bulle de l'intelligence artificielle... La vague d'explosion a-t-elle commencé ?",
+   "title_en": "The artificial intelligence bubble... Has the explosion wave begun?",
+   "summary_en": "An article examines the risks of an explosion of the speculative bubble around the artificial intelligence sector.",
+   "why_en": "This media questioning reflects growing concerns in financial markets about the overvaluation of AI investments."
   },
   {
    "id": "101d46d1c84e",
@@ -441,6 +516,22 @@
    "title_en": "Lebanon and the UAE launch an initiative to train one million people in artificial intelligence",
    "summary_en": "Lebanon and the United Arab Emirates join forces in a program to train one million people in AI skills.",
    "why_en": "Illustration of mass adoption and training programs supported by Gulf countries in the region."
+  },
+  {
+   "id": "700363b52a86",
+   "ts": "2026-11-28T07:30:00.000Z",
+   "title": "Ouverture d'un programme de formation aux médias sur l'IA entre la Chine et l'Afrique au Sénégal",
+   "orig": "China-Africa AI media training program opens in Senegal",
+   "summary": "Un programme de formation aux médias centré sur l'intelligence artificielle a été inauguré au Sénégal pour renforcer la coopération sino-africaine.",
+   "country": "CN",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "Global Times",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9NRURHOHJkcWp4d3M2ejNOelV2dkxjWGg4WXlVajRPZGMwQ3pMMlhzUXJhb1hhUTZGeTJuQWxaZlRNZ1lMcGE5VHptYlY2aWU2R1VjRVozQndXWEdMYVA2U3Fn?oc=5",
+   "confidence": "moyenne",
+   "title_en": "China-Africa AI media training program opens in Senegal",
+   "summary_en": "A China-Africa AI media training program has officially opened in Senegal."
   },
   {
    "id": "a036e8b8dbb4",
@@ -865,6 +956,22 @@
    "why_en": "Points to potential breaches in U.S. restrictions regarding the flow of advanced processors to China."
   },
   {
+   "id": "33bb0eb5edbd",
+   "ts": "2026-11-28T01:18:22.000Z",
+   "title": "Les acheteurs américains bravent le mauvais temps et l'inflation pour chasser les bonnes affaires du Black Friday",
+   "orig": "US shoppers brave bad weather and inflation to chase Black Friday bargains",
+   "summary": "Les consommateurs américains ont profité du Black Friday pour faire leurs achats, s'appuyant notamment sur des outils d'IA pour optimiser leur expérience.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "The Economic Times",
+   "url": "https://economictimes.indiatimes.com/news/international/world-news/us-shoppers-brave-bad-weather-and-inflation-to-chase-black-friday-bargains/articleshow/136236252.cms",
+   "confidence": "moyenne",
+   "title_en": "US shoppers brave bad weather and inflation to chase Black Friday bargains",
+   "summary_en": "US shoppers braved bad weather and inflation for Black Friday bargains, with many utilizing AI tools to enhance their shopping experience."
+  },
+  {
    "id": "14d077de8a23",
    "ts": "2026-11-28T01:16:33.000Z",
    "title": "Les revenus cloud IA de Nvidia presque triplés : Nvidia peut-il maintenir le rythme ?",
@@ -897,6 +1004,24 @@
    "confidence": "moyenne",
    "trading": true,
    "title_en": "Nvidia Stock Is Still Down 38% From Its Peak Despite Jensen Huang's Return. History Suggests a $10,000 Investment Today Will Be Worth This Much by Year-End 2027."
+  },
+  {
+   "id": "792564956a94",
+   "ts": "2026-11-28T01:09:00.000Z",
+   "title": "OpenAI affirme qu'Apple a fait pression sur ses fournisseurs pour rejeter ses appareils",
+   "orig": "OpenAI says Apple pressured suppliers to shun its devices",
+   "summary": "OpenAI indique qu'Apple aurait exercé des pressions sur des fournisseurs pour écarter ses propres projets de terminaux.",
+   "country": "US",
+   "category": "modeles",
+   "importance": 2,
+   "layer": "Applications",
+   "source": "The Japan Times",
+   "url": "https://www.japantimes.co.jp/business/2026/11/28/tech/openai-apple-pressured-suppliers/",
+   "confidence": "moyenne",
+   "why": "Ce différend illustre la concurrence féroce entre les fabricants de smartphones et les laboratoires d'IA sur le marché des terminaux intelligents.",
+   "title_en": "OpenAI says Apple pressured suppliers to shun its devices",
+   "summary_en": "OpenAI claims that Apple pressured suppliers to shun its devices, overshadowing its bid to build hardware.",
+   "why_en": "This conflict highlights the intense commercial rivalry between hardware giants and AI labs moving into consumer devices."
   },
   {
    "id": "4014fc316b4f",
@@ -1706,7 +1831,7 @@
    "why": "La restructuration des géants du logiciel pour s'adapter à l'IA entraîne des changements sociaux et économiques majeurs.",
    "title_en": "Sources say SAP mulling cuts of at least 10,000 roles",
    "summary_en": "SAP is planning massive layoffs to restructure its software business for the AI era.",
-   "why_en": "The restructuring of software giants to adapt to AI leads to major social and economic changes."
+   "why_en": "The restructuring of software giants to adapt to AI brings major social and economic changes."
   },
   {
    "id": "68a72b4f6d21",
@@ -3021,8 +3146,8 @@
    "confidence": "moyenne",
    "why": "Souligne l'afflux massif de projets de construction de datacenters et les pressions politiques locales associées.",
    "title_en": "Texas lifts freeze on 1,800+ data center projects in Greg Abbott U-turn",
-   "summary_en": "Texas is authorizing the approval of new permits for data centers again after suspending the process in August.",
-   "why_en": "Highlights the massive influx of data center construction projects and related local political pressures."
+   "summary_en": "Texas is allowing the approval of new permits for data centers again after suspending the procedure in August.",
+   "why_en": "Highlights the massive influx of data center construction projects and associated local political pressures."
   },
   {
    "id": "5f0c43dd487b",
@@ -6991,7 +7116,7 @@
    "confidence": "moyenne",
    "why": "C'est l'une des premières interdictions législatives directes ciblant les produits d'IA grand public pour protéger les mineurs.",
    "title_en": "New York Governor Kathy Hochul signs ban on AI chatbot toys backed by $15,000 daily fines",
-   "summary_en": "The Governor of New York has signed a law banning the sale of toys equipped with integrated AI chatbots, due to risks for children.",
+   "summary_en": "The Governor of New York has signed a law banning the sale of toys equipped with integrated AI chatbots due to risks for children.",
    "why_en": "This is one of the first direct legislative bans targeting consumer AI products to protect minors."
   },
   {
@@ -13180,7 +13305,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410434/28124/en/point-of-care-medical-software-market-size-share-industry-trends-and-growth-forecasts-2026-2031-cloud-and-ai-adoption-drive-17-33-cagr-and-a-usd-12-77-billion-opportunity.html",
    "confidence": "moyenne",
    "title_en": "Point-of-Care Medical Software Market Size, Share, Industry Trends, and Growth Forecasts, 2026-2031 | Cloud and AI Adoption Drive 17.33% CAGR and a USD 12.77 Billion Opportunity",
-   "summary_en": "The adoption of AI and the cloud is driving growth in the medical software market."
+   "summary_en": "The adoption of AI and cloud computing is fostering growth in the medical software market."
   },
   {
    "id": "448ca2963316",
@@ -13196,7 +13321,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410424/28124/en/the-global-online-gambling-market-2026-2034-size-share-competition-and-revenue-forecast-by-type-device-and-country-mobile-adoption-and-legalization-fuel-8-93-cagr-to-220-99-billion.html",
    "confidence": "moyenne",
    "title_en": "The Global Online Gambling Market 2026-2034: Size, Share, Competition and Revenue Forecast by Type, Device, and Country | Mobile Adoption and Legalization Fuel 8.93% CAGR to $220.99 Billion",
-   "summary_en": "AI personalization is driving growth in the global online gambling market."
+   "summary_en": "AI-driven personalization is stimulating growth in the global online gambling market."
   },
   {
    "id": "a05f839240ee",
@@ -17062,7 +17187,7 @@
    "url": "https://www.digitimes.com/news/a20261125VL214/huawei-foldable-shipments-price-display.html",
    "confidence": "moyenne",
    "title_en": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
-   "summary_en": "Huawei is maintaining the price of its new foldable smartphone despite a general decline in the Chinese foldable devices market."
+   "summary_en": "Huawei is maintaining the price of its new foldable smartphone despite an overall decline in the Chinese foldable device market."
   },
   {
    "id": "5b815313129d",
@@ -20282,7 +20407,7 @@
    "url": "https://www.arabnews.com/saudi-arabia/saif-opens-in-riyadh-with-1200-solutions-from-55-countries-3013852",
    "confidence": "moyenne",
    "title_en": "SAIF opens in Riyadh with 1,200 solutions from 55 countries",
-   "summary_en": "Riyadh is hosting an international exhibition showcasing security and AI innovations."
+   "summary_en": "Riyadh is hosting an international exhibition showcasing innovations in security and AI."
   },
   {
    "id": "ea0e9c53cfa0",
@@ -20483,7 +20608,7 @@
    "why": "La nécessité pour les entreprises d'IA de devenir des acheteurs d'énergie directe souligne la tension croissante sur les ressources électriques pour les centres de données.",
    "title_en": "Anthropic posts $405,000-a-year job for gas specialist to secure fuel for AI",
    "summary_en": "Anthropic is hiring a natural gas expert to secure the energy supply for its data centers, illustrating the race for computing power.",
-   "why_en": "The need for AI companies to become direct energy buyers highlights the growing tension over electrical resources for data centers."
+   "why_en": "The need for AI companies to become direct energy buyers underlines the growing pressure on electrical resources for data centers."
   },
   {
    "id": "613b95800cde",
@@ -21894,6 +22019,24 @@
    "title_en": "The AI hardware loop that threatens Nvidia's future, even with Jensen Huang back"
   },
   {
+   "id": "387e9340eb06",
+   "ts": "2026-11-24T10:00:00.000Z",
+   "title": "Alternatives émergentes aux onduleurs (UPS) dans les centres de données",
+   "orig": "Emerging Alternatives to UPS in Data Centers",
+   "summary": "Les centres de données explorent de nouvelles solutions de stockage d'énergie et de micro-réseaux pour remplacer les onduleurs traditionnels.",
+   "country": "US",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Énergie",
+   "source": "Data Center Knowledge",
+   "url": "https://www.datacenterknowledge.com/uptime/emerging-alternatives-to-ups-in-data-centers",
+   "confidence": "moyenne",
+   "why": "L'évolution des architectures de secours énergétique est cruciale pour répondre aux besoins massifs et continus des datacenters d'IA.",
+   "title_en": "Emerging Alternatives to UPS in Data Centers",
+   "summary_en": "Data centers are exploring BESS, rack batteries, and microgrids as practical alternatives to traditional UPS systems.",
+   "why_en": "Evolving power backup architectures are crucial for addressing the massive, continuous energy demands of AI data centers."
+  },
+  {
    "id": "6600f56df21a",
    "ts": "2026-11-24T09:52:54.000Z",
    "title": "Les démocrates promettent une enquête alors que Jensen Huang fait face à cinq investigations",
@@ -23055,7 +23198,7 @@
    "why": "Montre l'investissement public massif des régions pour répondre aux besoins en compétences critiques de l'écosystème de l'IA et des semi-conducteurs.",
    "title_en": "North Gyeongsang Province to Train 42,000 Workers for Five Advanced Industries",
    "summary_en": "The South Korean province will invest 236 billion won over four years to train technicians in AI chips, robotics, and mobility.",
-   "why_en": "Shows massive public investment by regions to meet critical skills needs in the AI and semiconductor ecosystem."
+   "why_en": "Shows the massive public investment by regions to meet critical skill needs in the AI and semiconductor ecosystem."
   },
   {
    "id": "67d3e91e0150",
@@ -25084,141 +25227,6 @@
    "title_en": "US puts Megaspeed on export control list over alleged chip diversion",
    "summary_en": "The US puts Megaspeed on an export control list over alleged chip smuggling and diversion.",
    "why_en": "Enforces strict export enforcement policies to prevent restricted high-end chips from reaching prohibited markets."
-  },
-  {
-   "id": "8f20e5199f55",
-   "ts": "2026-11-23T22:29:48.000Z",
-   "title": "Introspection latente : les LLM peuvent détecter les injections de concepts préalables",
-   "orig": "Latent Introspection: LLMs Can Detect Prior Concept Injections",
-   "summary": "Une étude montre que les grands modèles de langage sont capables d'identifier des injections de concepts effectuées lors de leur entraînement.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "Arxiv",
-   "url": "https://arxiv.org/abs/2602.20031",
-   "confidence": "moyenne",
-   "title_en": "Latent Introspection: LLMs Can Detect Prior Concept Injections",
-   "summary_en": "A study shows that large language models are capable of identifying concept injections made during their training."
-  },
-  {
-   "id": "012a59ac5286",
-   "ts": "2026-11-23T22:25:12.000Z",
-   "title": "Donald Trump orchestre un retour risqué pour Jensen Huang",
-   "orig": "Trump engineered a risky comeback for Jensen Huang",
-   "summary": "Le président Donald Trump a favorisé le retour de Jensen Huang à la tête de Nvidia malgré les controverses récentes.",
-   "country": "US",
-   "category": "politique",
-   "importance": 3,
-   "layer": "Puces",
-   "source": "The Verge IA",
-   "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
-   "confidence": "moyenne",
-   "why": "Illustre l'implication directe et inédite de l'exécutif américain dans la gouvernance des géants de l'IA.",
-   "title_en": "Trump engineered a risky comeback for Jensen Huang",
-   "summary_en": "President Donald Trump intervened to engineer a risky comeback for Nvidia CEO Jensen Huang.",
-   "why_en": "Illustrates unprecedented direct involvement of the US executive branch in corporate leadership of AI giants."
-  },
-  {
-   "id": "7078fd2ec4f0",
-   "ts": "2026-11-23T22:23:29.000Z",
-   "title": "Un ancien conseiller de la Maison-Blanche commente la sécurité nationale suite au retour de Jensen Huang",
-   "orig": "Ex-White House AI advisor weighs in on national security as Huang is back as Nvidia CEO",
-   "summary": "Analyse des implications de sécurité nationale après la réintégration de Jensen Huang à la direction de Nvidia.",
-   "country": "US",
-   "category": "politique",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "NPR",
-   "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOX21kd3VvbzQyLUlIZ2hPV1dhbm1QdUFKZVJyaFBoQXA5cC1WMUNjRnJGbnFvczI0Y0IySmltTmRoSERrb3JoVDBTZjZZYXRpZHY2MkZVSkhjcjIySXc2bDloem9BS1o1UUNtS1dNNWUwYi1GU19xTkdVTm53SFd5M0NXaDR2Rk5uT25aRVVjRHJVbzRkRk0wVGZ4djRIcGhNekZQMkwyeWljU0RLejQtdTBDSDJEOXFFRzRRUzFqajZzQXpMMTFadktrSjU?oc=5",
-   "confidence": "moyenne",
-   "why": "Relie les décisions de gouvernance chez Nvidia directement à la sécurité nationale américaine et l'intégrité des puces.",
-   "title_en": "Ex-White House AI advisor weighs in on national security as Huang is back as Nvidia CEO",
-   "summary_en": "Former White House AI advisor weighs in on national security following Jensen Huang's return to Nvidia.",
-   "why_en": "Connects corporate executive decisions at Nvidia directly to US national security and supply chain integrity."
-  },
-  {
-   "id": "d3e466982a76",
-   "ts": "2026-11-23T22:21:44.000Z",
-   "title": "Trump a gagné jusqu'à 15 millions de dollars sur des actions Nvidia après le retour de Huang",
-   "orig": "Trump made up to $15mn on Nvidia shares after Huang’s return",
-   "summary": "Donald Trump aurait réalisé un gain significatif sur ses actions Nvidia suite au retour de Jensen Huang à la direction de l'entreprise.",
-   "country": "US",
-   "category": "capex",
-   "importance": 2,
-   "layer": "Financement",
-   "source": "Financial Times",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPOTVXN3ZnNk1vM0tIYXhEUmJBdXdLVjAyRFhldGZxTk5MQ2dZSk1MS2N1dUZDQXZDcExvY281Sm85clMzUlNtcV9TS29pSURsclE3R3N4VVpTTGZtR294MzhSVmU4VE13dmF5cGEzR3d6WWFRa0wzTU11cXltX3dUZUlVdTY?oc=5",
-   "confidence": "moyenne",
-   "trading": true,
-   "title_en": "Trump made up to $15mn on Nvidia shares after Huang’s return"
-  },
-  {
-   "id": "db1bb3b145f2",
-   "ts": "2026-11-23T22:20:12.000Z",
-   "title": "La NAND 3D à liaison hybride augmente la densité de calcul analogique en mémoire",
-   "orig": "Hybrid-Bonded 3D NAND Boosts Analog In-Memory Compute Density (IBM, Micron, U. of Patras)",
-   "summary": "IBM, Micron et l'Université de Patras collaborent sur une technologie de mémoire NAND 3D pour améliorer la densité de calcul en mémoire.",
-   "country": "US",
-   "category": "puces",
-   "importance": 2,
-   "layer": "Mémoire HBM",
-   "source": "Semiconductor Engineering",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNLS1NS3B3ajRJOGczSmM5OEtfOEVkY0FMa1BGak5fT1Y4d2RySHl4MEpMSVp3OU1ZYUxPZDFUdWNZcGstdmFDMldqa3ZOVUJXUWtwMGtpWE5NLTdhRk9yOWtpY0lBV3FvelRtSElfMERrTE94NHNKVEkwbWY1MWtFY3NWZWdpSmJQWTI4UGEtaWw1bWli?oc=5",
-   "confidence": "moyenne",
-   "why": "L'innovation dans le stockage et le calcul en mémoire est essentielle pour surmonter les goulots d'étranglement des performances des systèmes IA.",
-   "title_en": "Hybrid-Bonded 3D NAND Boosts Analog In-Memory Compute Density (IBM, Micron, U. of Patras)"
-  },
-  {
-   "id": "bf1bbceebeaf",
-   "ts": "2026-11-23T22:19:47.000Z",
-   "title": "Jensen Huang revient chez Nvidia, montrant ce que Trump fera pour l'IA",
-   "orig": "Jensen Huang Returns to Nvidia, Showing What Trump Will Do for AI",
-   "summary": "Le retour de Jensen Huang chez Nvidia est perçu comme une démonstration du soutien actif de Trump à l'industrie de l'IA.",
-   "country": "US",
-   "category": "politique",
-   "importance": 2,
-   "layer": "Autre",
-   "source": "The New York Times",
-   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE4xWFBzU1YweGFUcWx4ZGQwNG8wRmxRdkdpdEkxR0JLUkNvMWNGWGZJZGdjeExBZmc4TGRJeTNoT094MDl1Vy1HYnhxS1doMUFSdy1RUkoxRUQxc21wejJCS2RxMjQzLVNfTmFsSmU2R2NaVW5NQW5iSWpuckRIYjA?oc=5",
-   "confidence": "moyenne",
-   "why": "Cela souligne l'alignement entre la nouvelle administration américaine et le leadership de l'industrie de l'IA.",
-   "title_en": "Jensen Huang Returns to Nvidia, Showing What Trump Will Do for AI",
-   "why_en": "It underscores the alignment between the new US administration and the AI industry's leadership."
-  },
-  {
-   "id": "0b16d4da95c2",
-   "ts": "2026-11-23T22:19:10.000Z",
-   "title": "Nvidia contre SpaceX : la révolution de l'IA est assez vaste pour les deux",
-   "orig": "Nvidia vs. SpaceX: The AI Revolution Is Big Enough for Both. Here's the Better Buy.",
-   "summary": "Comparaison financière et stratégique entre Nvidia et SpaceX dans le cadre des mutations technologiques.",
-   "country": "US",
-   "category": "capex",
-   "importance": 1,
-   "layer": "Financement",
-   "source": "The Globe and Mail",
-   "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPUjB2YzZrcVRoM0xJc3UwT29JdnhId0t4YmM4R3dEcWRrZkJ0WmZmRGw2Q3hHeFVwYXNWdmZ3aXZFNEJpd3ZuWmxoYVdCVEpwS2FkWGI5VkkyalVMQnB0LWZQdDFtak9TeWVSWkNMWFB5OEtmMHhkaklHMkxwNTNWVFIwbDBmVWNkSW1mSWhoU1NlaURrMUd4OTU0eWVVeHRrOVhLNFl4ZHEwaWVOMk0wT05YLUxtYzJ6N0x2M0V1MnBTbXZERmZWZlF6TkpsUEZUMS1FdzBtVFpKd2pHWlNrSkJOall1S3NCdjF1dl84WGdpa3NadWc?oc=5",
-   "confidence": "moyenne",
-   "trading": true,
-   "title_en": "Nvidia vs. SpaceX: The AI Revolution Is Big Enough for Both. Here's the Better Buy.",
-   "summary_en": "Analysis comparing Nvidia and SpaceX as major investment opportunities within the tech revolution."
-  },
-  {
-   "id": "bcbe955e1657",
-   "ts": "2026-11-23T22:16:00.000Z",
-   "title": "Le Commerce va mettre sur liste noire Megaspeed, client de Nvidia au centre du scandale d'espionnage",
-   "orig": "Commerce to Blacklist Megaspeed, Nvidia Customer at Center of Spy Scandal",
-   "summary": "Le département du Commerce américain s'apprête à sanctionner Megaspeed suite à son implication dans une affaire d'espionnage.",
-   "country": "US",
-   "category": "regul",
-   "importance": 3,
-   "layer": "Régulation",
-   "source": "Business Insider",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNaU1pd0k3eVd5TUdORHJDN0VvRXNzYzA3Yk1JMGVMdGtuYlJLdlY5TkRzRGpmRUZ4eXhEaUozeTJ2VVp2R295UW9tdURDa3RXbUVLS2ZRcVdXbHZpTmZNWmhXblZlcDUtUzNoejQyeXZWYkRsNG5obHRIS0JfaEFEZFYtV1ZBb21fTzlmc2lBWE1rS3FXdk91eDAtaTdINjdFSlIwTzMxaHd6NXdUM1E?oc=5",
-   "confidence": "moyenne",
-   "why": "Cette action réglementaire renforce les mesures de sécurité nationale autour des technologies IA et de leurs chaînes d'approvisionnement.",
-   "title_en": "Commerce to Blacklist Megaspeed, Nvidia Customer at Center of Spy Scandal",
-   "summary_en": "The US Department of Commerce is preparing to sanction Megaspeed following its involvement in an espionage case."
   }
  ]
 }
