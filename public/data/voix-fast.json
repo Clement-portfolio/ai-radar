@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T14:30:37.183Z",
+ "generated_at": "2026-11-28T15:20:32.026Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T14:40:37.183Z",
+ "translate_retry_at": "2026-11-28T15:30:32.026Z",
  "people": [
   {
    "id": "sam-altman",
@@ -220,6 +220,19 @@
    "actor": "microsoft",
    "alerts": [],
    "items": [
+    {
+     "ts": "2026-11-28T15:08:52.000Z",
+     "title": "Satya Nadella: “If Amazon Doesn’t, Shop Will.” Shopify Just Gained 15% in a Week. Time to Buy?",
+     "title_fr": "Satya Nadella : \"Si Amazon ne le fait pas, Shop le fera.\" Shopify vient de gagner 15 % en une semaine. Le moment d'acheter ?",
+     "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxORnhoNWtqS3lreC1PM2E0bFpnY3dmUS0wMVh6d3lieVRQV2ZQeGViQlVnaHUwUENIZmNkekpvM054Z19ETUxVNDNGZExCdDFJYTBBWWhRWDhuMGhGSDJGUDhMQy1oNVJoN2xvRXY0c1JzZjBzREljZ2F1bkxTWEY4WGNYNkI3Rl9jaWVKaXVwOWdwYTRYWjJicjREYkhvaWlHTXZaTVhxcVE5Z1M5dG81U0RWU1NZM2J0QUwyYkNoYWdhQlVVRlhKTjlnX1c5MXdvc3VPOW5iRmJwbU5iTkRhOUpGT3g3ZVFtZWJmTnJDZTRNdUVC?oc=5",
+     "source": "TIKR.com",
+     "kind": "presse",
+     "srcs": [
+      "tikr.com"
+     ],
+     "m": 1,
+     "e": 0
+    },
     {
      "ts": "2026-11-27T01:20:14.000Z",
      "title": "\"Let's add the next human\": Satya Nadella admits new-grad hiring slowed as companies rebuild around AI, and says every company will add its next person after it burns through its AI budget",
