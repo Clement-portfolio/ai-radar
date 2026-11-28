@@ -1,6 +1,25 @@
 {
- "generated_at": "2026-11-28T13:40:27.593Z",
+ "generated_at": "2026-11-28T14:01:31.215Z",
  "items": [
+  {
+   "id": "3973f080fe72",
+   "ts": "2026-11-28T14:00:00.000Z",
+   "title": "Le PDG de Sakana AI affirme que ses modèles souverains vont au-delà de la sécurité nationale du Japon",
+   "orig": "Sakana AI’s CEO says its homegrown models are about more than Japan’s national security",
+   "summary": "Sakana AI aims to strengthen Japan’s industrial competitiveness with homegrown AI models.",
+   "country": "OTHER",
+   "category": "modeles",
+   "importance": 1,
+   "layer": "Modèles",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/28/sakana-ais-ceo-says-its-homegrown-models-are-about-more-than-japans-national-security/",
+   "confidence": "moyenne",
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Le PDG de Sakana AI affirme que ses modèles souverains vont au-delà de la sécurité nationale du Japon",
+   "title_en": "Sakana AI’s CEO says its homegrown models are about more than Japan’s national security",
+   "summary_en": "Sakana AI aims to strengthen Japan’s industrial competitiveness with homegrown AI models."
+  },
   {
    "id": "3b63749cf052",
    "ts": "2026-11-28T12:48:40.000Z",
@@ -3753,24 +3772,6 @@
    "title_fr": "Le gouvernement sud-africain envisage de convertir d'anciennes centrales électriques en datacenters",
    "title_en": "South African gov't floats converting old power stations into data centers",
    "summary_en": "President Cyril Ramaphosa suggested the move during a recent visit to San Jose, California"
-  },
-  {
-   "id": "9949223886f2",
-   "ts": "2026-11-25T14:00:00.000Z",
-   "title": "AMD s'attaque aux pénuries de DRAM grâce à l'IA et au stockage flash",
-   "orig": "AMD Tackles DRAM Shortages with AI and Flash Storage",
-   "summary": "AMD MEXT uses AI to park cold memory pages in flash, cutting DRAM costs and easing data center shortages. The post AMD Tackles DRAM Shortages with AI and Flash Storage appeared first on EE Times .",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "EE Times",
-   "url": "https://www.eetimes.com/amd-tackles-dram-shortages-with-ai-and-flash-storage/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "AMD s'attaque aux pénuries de DRAM grâce à l'IA et au stockage flash",
-   "title_en": "AMD Tackles DRAM Shortages with AI and Flash Storage",
-   "summary_en": "AMD MEXT uses AI to park cold memory pages in flash, cutting DRAM costs and easing data center shortages. The post AMD Tackles DRAM Shortages with AI and Flash Storage appeared first on EE Times ."
   }
  ]
 }
