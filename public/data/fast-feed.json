@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T14:30:36.661Z",
+ "generated_at": "2026-11-28T15:50:58.290Z",
  "items": [
   {
    "id": "0f61395ce8dc",
@@ -14,7 +14,11 @@
    "source": "CNBC Tech",
    "url": "https://www.cnbc.com/2026/11/28/ai-data-center-construction-worker-shortage-texas.html",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "AI data center boom strains construction labor across the U.S.",
+   "title_en": "AI data center boom strains construction labor across the U.S.",
+   "summary_en": "CNBC traveled to Abilene, Texas to see how the AI data center construction boom is impacting the local economy in both positive and negative ways."
   },
   {
    "id": "3973f080fe72",
@@ -3679,24 +3683,6 @@
    "title_fr": "Google et Blue Origin prévoient un test de calcul IA en orbite",
    "title_en": "Google, Blue Origin Plan Orbital AI Compute Test",
    "summary_en": "The 2029 mission will deploy rack-scale computing satellites, with cooling, autonomous recovery, and hardware longevity likely to determine whether orbital infrastructure can support commercial workloads."
-  },
-  {
-   "id": "f6730ac844fe",
-   "ts": "2026-11-25T15:41:43.000Z",
-   "title": "Les data centers IA deviennent plus difficiles à construire, et les néoclouds en ressentent l'impact",
-   "orig": "AI data centers are becoming harder to build, and neoclouds are feeling it",
-   "summary": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt. The message to developers is that land, power and a finished building matter mo",
-   "country": "US",
-   "category": "puces",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Les data centers IA deviennent plus difficiles à construire, et les néoclouds en ressentent l'impact",
-   "title_en": "AI data centers are becoming harder to build, and neoclouds are feeling it",
-   "summary_en": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt. The message to developers is that land, power and a finished building matter mo"
   }
  ]
 }
