@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T13:07:31.267Z",
+ "generated_at": "2026-11-28T14:30:37.183Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T11:30:38.621Z",
+ "translate_retry_at": "2026-11-28T14:40:37.183Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,17 +169,18 @@
    "alerts": [],
    "items": [
     {
-     "ts": "2026-11-28T10:08:04.000Z",
-     "title": "Elon Musk says Google is interested in renting more computing capacity from SpaceX",
-     "title_fr": "Elon Musk dit que Google est intéressé par la location de plus de capacité de calcul auprès de SpaceX",
-     "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQVXVwYWxTQ29HWjRtTE9nRV9OZk9qeVlraldQankzZ09ONU1FaU43MHZFeHJvSTBPV1gxY3gtUUR1R1VtQ2FJS0gwZEVta2V5SVJZTVBDZk9PcW1lZWxwMVNIbUlBSWh0X2lxU1VTUGkwcnAzYUtVOEh5TEcwamp3dm5qSThMVlJyd09LNWlZT3BGWVZCVjkteEdkQlAyT3R4ajBtS2pnSVBnUERpVXR0MmlLZ2FXWkI4YlBSa0lVcm1UTk9xTF80?oc=5",
-     "source": "Deccan Herald",
+     "ts": "2026-11-28T13:53:20.000Z",
+     "title": "Elon Musk says Google willing to rent more compute from SpaceX",
+     "title_fr": "Elon Musk dit que Google est prêt à louer plus de puissance de calcul auprès de SpaceX",
+     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNTHo4dm4yUnl5X3lEeDFCZk9mZ29KUXppSUFsUV9FQmQtRi0tT1Z6U2RNc3FqRWdKUWRETzhZQUZaMndVc2lRQzA4OG15TXJfNVZFQWE3TU9xQ1ZHa01GM0hucXg1SnhKLXdORnBKUVhuc2tQcWlqZ1JqR0tlUVN2eG8tX1ZHVXozd1lpemV1MklyY2htbWVGM1RtUmFEdFdPa1VqRHVfWmdMa3owNDg4c1VsN0xtd2hEY1pCZ2RvSWNuNkk?oc=5",
+     "source": "TradingView",
      "kind": "presse",
      "srcs": [
+      "tradingview",
       "deccan herald"
      ],
-     "m": 1,
-     "e": 0
+     "m": 2,
+     "e": 1
     },
     {
      "ts": "2026-11-28T07:48:00.000Z",

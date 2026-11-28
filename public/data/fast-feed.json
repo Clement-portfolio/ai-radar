@@ -1,6 +1,21 @@
 {
- "generated_at": "2026-11-28T14:15:58.079Z",
+ "generated_at": "2026-11-28T14:30:36.661Z",
  "items": [
+  {
+   "id": "0f61395ce8dc",
+   "ts": "2026-11-28T14:00:01.000Z",
+   "title": "AI data center boom strains construction labor across the U.S.",
+   "orig": "AI data center boom strains construction labor across the U.S.",
+   "summary": "CNBC traveled to Abilene, Texas to see how the AI data center construction boom is impacting the local economy in both positive and negative ways.",
+   "country": "US",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/28/ai-data-center-construction-worker-shortage-texas.html",
+   "confidence": "moyenne",
+   "pending": true
+  },
   {
    "id": "3973f080fe72",
    "ts": "2026-11-28T14:00:00.000Z",
@@ -3682,24 +3697,6 @@
    "title_fr": "Les data centers IA deviennent plus difficiles à construire, et les néoclouds en ressentent l'impact",
    "title_en": "AI data centers are becoming harder to build, and neoclouds are feeling it",
    "summary_en": "⁠Nvidia has made clear⁠ it won’t backstop an AI data center until it’s nearly ready to run, and that’s landing just as neoclouds report construction delays and more expensive debt. The message to developers is that land, power and a finished building matter mo"
-  },
-  {
-   "id": "8ddb2a889c1f",
-   "ts": "2026-11-25T14:20:36.000Z",
-   "title": "Nexent Capital lance un fonds de 1 milliard de dollars pour l'IA et les infrastructures énergétiques",
-   "orig": "Nexent Capital launches $1 billion AI and energy infrastructure fund",
-   "summary": "Fund targeting AI infrastructure and energy projects across North America and India",
-   "country": "OTHER",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Énergie",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/nexent-capital-launches-1-billion-ai-and-energy-infrastructure-fund/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Nexent Capital lance un fonds de 1 milliard de dollars pour l'IA et les infrastructures énergétiques",
-   "title_en": "Nexent Capital launches $1 billion AI and energy infrastructure fund",
-   "summary_en": "Fund targeting AI infrastructure and energy projects across North America and India"
   }
  ]
 }
