@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T15:11:31.129Z",
+ "generated_at": "2026-11-28T15:38:27.854Z",
  "note": "Scénarios et libellés rédigés par IA à partir de sources citées ; ce ne sont ni des prévisions ni un conseil en investissement.",
  "companies": [
   {
@@ -1584,10 +1584,10 @@
    "c": "US",
    "tone": {
     "haussier": 5,
-    "neutre": 4,
-    "baissier": 1,
+    "neutre": 3,
+    "baissier": 2,
     "n": 10,
-    "net": 0.4,
+    "net": 0.3,
     "label": "haussière"
    },
    "fund": [
@@ -1611,6 +1611,17 @@
     }
    ],
    "labels": [
+    {
+     "id": "d4628155d367",
+     "ts": "2026-11-28T15:22:32.000Z",
+     "title": "Des racks d'IA Nvidia Blackwell interdits repérés en Chine — un centre de données lié à un prêt de 14 millions de dollars et à une espionne présumée Alice Huang",
+     "title_en": "Banned Nvidia Blackwell AI racks surface in China — data center tied to $14M loan and alleged spy Alice Huang",
+     "source": "Tom's Hardware",
+     "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/banned-nvidia-blackwell-ai-racks-surface-in-china-data-center-tied-to-usd14m-loan-and-alleged-spy-alice-huang",
+     "stance": "baissier",
+     "scope": "societe",
+     "why": "Des puces Nvidia Blackwell sous embargo ont ete installees en Chine malgre les controles."
+    },
     {
      "id": "4848502bd8c9",
      "ts": "2026-11-28T13:09:39.000Z",
@@ -1756,7 +1767,8 @@
     "2281f7f4357d": 1,
     "a2bcc204862b": 1,
     "14d077de8a23": 1,
-    "498bfcd64994": 1
+    "498bfcd64994": 1,
+    "d4628155d367": 1
    },
    "cases": {
     "at": "2026-11-28T14:16:01.545Z",
@@ -1935,6 +1947,28 @@
   }
  ],
  "general": [
+  {
+   "id": "0ceedb784de8",
+   "ts": "2026-11-28T15:15:00.000Z",
+   "title": "OpenAI contre-poursuit Apple et toutes deux s'accusent de vol de secrets commerciaux",
+   "title_en": "OpenAI contra - processa Apple e ambas trocam acusaes de roubo de segredos comerciais",
+   "source": "pt.euronews.com",
+   "url": "https://pt.euronews.com/2026/11/28/openai-contra-processa-apple-e-ambas-trocam-acusacoes-de-roubo-de-segredos-comerciais",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI et Apple s'engagent dans une action en justice mutuelle pour vol présumé de secrets commerciaux."
+  },
+  {
+   "id": "ca68b10e8734",
+   "ts": "2026-11-28T14:47:07.000Z",
+   "title": "Google suspend la construction de son centre de données en Belgique sur ordre des autorités",
+   "title_en": "Google halts construction of Belgian data centre on authorities’ order",
+   "source": "Euractiv",
+   "url": "https://www.rapporteur.com/news/google-halts-construction-of-belgian-data-centre-on-authorities-order/",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Google a arrêté un projet de datacenter en Belgique en raison de préoccupations locales liées à l'eau."
+  },
   {
    "id": "01e747fc1ebd",
    "ts": "2026-11-28T14:26:45.000Z",
@@ -2431,6 +2465,17 @@
    "why": "OpenAI riposte en justice contre Apple dans le cadre d'un différend juridique lié aux technologies d'intelligence artificielle."
   },
   {
+   "id": "8fe2abca294b",
+   "ts": "2026-11-27T21:54:29.000Z",
+   "title": "Où la science rencontre l'entreprise : les startups saoudiennes transforment la recherche en impact concret",
+   "title_en": "Where science meets enterprise: Saudi startups transform research into real-world impact",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/green-blue/where-science-meets-enterprise-saudi-startups-transform-research-into-real-world-impact-3014323",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "L'Arabie saoudite investit massivement dans la recherche et le développement, permettant de lever 1,4 milliard de dollars."
+  },
+  {
    "id": "1bcd9807b5c5",
    "ts": "2026-11-27T21:52:00.000Z",
    "title": "Opinion | Nvidia et l'échec des contrôles à l'exportation américains",
@@ -2785,35 +2830,20 @@
   {
    "id": "5b94218559e8",
    "ts": "2026-11-27T15:12:39.000Z",
-   "title": "Altair, filiale de Sony, vise la connectivité Edge AI grâce à une levée de 100 millions de dollars",
-   "title_en": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/sony-spin-off-altair-targets-edge-ai-connectivity-with-100m-raise-report/",
    "stance": "haussier",
-   "scope": "secteur",
-   "why": "Une filiale de Sony lève 100 millions de dollars pour développer des puces destinées aux objets connectés dotés d'intelligence artificielle."
+   "scope": "secteur"
   },
   {
    "id": "84f1b61b04c5",
    "ts": "2026-11-27T15:06:06.000Z",
-   "title": "Des chercheurs en semi-conducteurs demandent des horaires flexibles et une exemption",
-   "title_en": "Semiconductor Researchers Ask for Flexible Hours. Give Them an Exemption",
-   "source": "서울경제",
-   "url": "https://en.sedaily.com/opinion/2026/11/28/semiconductor-researchers-ask-for-flexible-hours-give-them",
    "stance": "haussier",
-   "scope": "secteur",
-   "why": "En Corée, les chercheurs en semi-conducteurs demandent une exemption pour dynamiser la recherche et développement."
+   "scope": "secteur"
   },
   {
    "id": "3dc1aecdb903",
    "ts": "2026-11-27T15:01:00.000Z",
-   "title": "L'utilisation de l'intelligence artificielle explose, mais les dépenses stagnent. Pourquoi une règle fondamentale de l'économie se brise.",
-   "title_en": "Artificial intelligence usage is exploding, yet spending is stalling. Why a foundational rule of economics is breaking.",
-   "source": "MarketWatch",
-   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNUG5XMF9nWG1sSkZ6U0xTNlc0RGtwVXp2NlNqSFhoZTVfbFNJaWQxS0VWOVlLSkJOQVg3YWJlWGV0OWV1cjNobkJsaEt2UEQ4dndyUUxOQUhFV3YxbVJRa2FSNkRHS3JNU2hzVVJuaG9hcHQwQ2dKLVJiRnN0QXd1YW1VZ19qanctUjdCaWJNY2dzcEphMVBrMlM0OThuVjFUWVVLZERtTVJ5ME9aSkg5TXFPY2JyYm9DNzhwZHBJNFhDbG8xeURLWlpsc081dWpVb1BZV2NfSFRZbVpOblJNbGRyMjFVN0RKNmN0eV9Kak8?oc=5",
    "stance": "baissier",
-   "scope": "secteur",
-   "why": "Le décalage entre l'adoption massive de l'IA et la stagnation des dépenses interroge la dynamique financière de l'industrie."
+   "scope": "secteur"
   },
   {
    "id": "5e1491a246e2",
@@ -3048,6 +3078,708 @@
    "ts": "2026-11-27T10:05:54.000Z",
    "stance": "haussier",
    "scope": "secteur"
+  },
+  {
+   "id": "774e96bf2d0e",
+   "ts": "2026-11-27T10:05:18.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "4e6e8ea2283f",
+   "ts": "2026-11-27T10:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "82abb95dd5cd",
+   "ts": "2026-11-27T09:59:58.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "e5c567e9395b",
+   "ts": "2026-11-27T09:42:51.000Z",
+   "stance": "haussier",
+   "scope": "macro"
+  },
+  {
+   "id": "fb282007afd0",
+   "ts": "2026-11-27T09:25:06.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "99449969532e",
+   "ts": "2026-11-27T09:20:19.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "62c878c96a71",
+   "ts": "2026-11-27T09:03:45.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "657d6014697e",
+   "ts": "2026-11-27T09:02:28.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "3b5d07e87785",
+   "ts": "2026-11-27T09:00:13.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "284160f656ff",
+   "ts": "2026-11-27T08:56:46.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "0ecd22c1bd1a",
+   "ts": "2026-11-27T08:53:14.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a600e54ee3d0",
+   "ts": "2026-11-27T08:40:40.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "3c18ed75783e",
+   "ts": "2026-11-27T08:30:07.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "936ef0fc38f1",
+   "ts": "2026-11-27T08:13:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "65ccb5595a3d",
+   "ts": "2026-11-27T08:03:44.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "a7d66aac5403",
+   "ts": "2026-11-27T08:01:50.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "a5d6378a020e",
+   "ts": "2026-11-27T08:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "31c50a88f23f",
+   "ts": "2026-11-27T07:53:57.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "41d5e16b7dd2",
+   "ts": "2026-11-27T07:35:34.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "b5b8776f2987",
+   "ts": "2026-11-27T07:31:00.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "dbcb39636987",
+   "ts": "2026-11-27T07:19:36.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a76cae0bb54d",
+   "ts": "2026-11-27T07:15:44.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "56b86a5d7fbf",
+   "ts": "2026-11-27T07:11:25.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "4119648053d3",
+   "ts": "2026-11-27T07:11:25.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "355eb2e5ee20",
+   "ts": "2026-11-27T07:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "f5ec46ca05e8",
+   "ts": "2026-11-27T06:57:43.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "6aee77221ea9",
+   "ts": "2026-11-27T06:55:08.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "92e31d898859",
+   "ts": "2026-11-27T06:47:03.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "d8e08770ba79",
+   "ts": "2026-11-27T06:45:42.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "f6f99100f173",
+   "ts": "2026-11-27T06:41:37.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "c22420547b9c",
+   "ts": "2026-11-27T06:34:05.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "2401ceb6aca2",
+   "ts": "2026-11-27T06:30:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "87538e1ea7cc",
+   "ts": "2026-11-27T06:30:00.000Z",
+   "stance": "haussier",
+   "scope": "macro"
+  },
+  {
+   "id": "0ac57d894e04",
+   "ts": "2026-11-27T06:30:00.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "c500d99bfac8",
+   "ts": "2026-11-27T06:24:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "533b6513caa5",
+   "ts": "2026-11-27T06:12:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "78c43f7fc484",
+   "ts": "2026-11-27T06:09:26.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "4c7242acf115",
+   "ts": "2026-11-27T05:29:03.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "f3793d3b9647",
+   "ts": "2026-11-27T05:13:01.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "9d59d23ddd11",
+   "ts": "2026-11-27T05:07:42.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "ab1ffa9cf3c8",
+   "ts": "2026-11-27T05:01:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "8fda4b0b0a89",
+   "ts": "2026-11-27T04:45:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "1ad58af02f9d",
+   "ts": "2026-11-27T04:33:10.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "7776f1f909fa",
+   "ts": "2026-11-27T04:27:44.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "8f41c7d4a639",
+   "ts": "2026-11-27T04:27:27.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a7509ef32f2e",
+   "ts": "2026-11-27T04:13:09.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "95787bafe9c6",
+   "ts": "2026-11-27T04:09:08.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "aaf0a51c4c2f",
+   "ts": "2026-11-27T04:07:07.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "561a30842f24",
+   "ts": "2026-11-27T03:47:03.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "02d7dcc78552",
+   "ts": "2026-11-27T03:40:56.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "475421bfbe5f",
+   "ts": "2026-11-27T03:40:10.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "d38663a78ad8",
+   "ts": "2026-11-27T03:30:56.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a0caa0d29138",
+   "ts": "2026-11-27T03:30:38.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "9abd6872262e",
+   "ts": "2026-11-27T03:24:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "09529de18177",
+   "ts": "2026-11-27T03:15:39.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "7373fe8c22da",
+   "ts": "2026-11-27T03:04:17.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "b2c1055811f6",
+   "ts": "2026-11-27T03:00:11.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "b87df8168574",
+   "ts": "2026-11-27T02:59:58.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "71cad4d18f33",
+   "ts": "2026-11-27T02:58:22.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "e83b89a95473",
+   "ts": "2026-11-27T02:57:33.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a800e243c752",
+   "ts": "2026-11-27T02:53:00.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "a0b571abb7ed",
+   "ts": "2026-11-27T02:45:50.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "71be7d2dfb67",
+   "ts": "2026-11-27T02:45:41.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "abed495c4287",
+   "ts": "2026-11-27T02:40:33.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "e56e2858c390",
+   "ts": "2026-11-27T02:32:35.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "30b3b285ebe6",
+   "ts": "2026-11-27T02:05:32.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "a6751f535fcc",
+   "ts": "2026-11-27T01:51:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "eb1d737237de",
+   "ts": "2026-11-27T01:15:49.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "e46ae62e1098",
+   "ts": "2026-11-27T01:00:11.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "969427a2be7c",
+   "ts": "2026-11-27T01:00:08.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "bb6d1d5435b1",
+   "ts": "2026-11-27T00:40:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "8f59468d24fe",
+   "ts": "2026-11-27T00:39:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "020d9a33d660",
+   "ts": "2026-11-27T00:25:01.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "d1b965b5649b",
+   "ts": "2026-11-27T00:07:41.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "6bac70b0e180",
+   "ts": "2026-11-27T00:03:18.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "2d7f8b4f8454",
+   "ts": "2026-11-27T00:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "43660ff0cca4",
+   "ts": "2026-11-27T00:00:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "8d9ab3032fe3",
+   "ts": "2026-11-27T00:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "643f10bb17e6",
+   "ts": "2026-11-26T23:57:02.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "94da0298cb7c",
+   "ts": "2026-11-26T23:15:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "518a34e780cf",
+   "ts": "2026-11-26T23:08:12.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "1402902dd8da",
+   "ts": "2026-11-26T23:02:20.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "4a405679c04d",
+   "ts": "2026-11-26T22:41:23.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "049885e86e43",
+   "ts": "2026-11-26T22:40:56.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "8ad5696493b0",
+   "ts": "2026-11-26T22:39:55.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "d7b7ae638c81",
+   "ts": "2026-11-26T22:38:34.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "e9f5aca90fca",
+   "ts": "2026-11-26T22:00:16.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "b3fef228f240",
+   "ts": "2026-11-26T21:51:00.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "25244c6b7022",
+   "ts": "2026-11-26T21:46:05.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "65031202fe85",
+   "ts": "2026-11-26T21:33:08.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "65e8994f8542",
+   "ts": "2026-11-26T21:30:32.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "bcdc6caab26e",
+   "ts": "2026-11-26T21:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "c881f1e71110",
+   "ts": "2026-11-26T20:03:54.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "be9a1982856e",
+   "ts": "2026-11-26T19:21:00.000Z",
+   "stance": "haussier",
+   "scope": "macro"
+  },
+  {
+   "id": "8b94b63f7cd2",
+   "ts": "2026-11-26T18:30:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "3cc7b684195d",
+   "ts": "2026-11-26T18:05:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "3c1314294b32",
+   "ts": "2026-11-26T18:01:13.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "22fe6710567b",
+   "ts": "2026-11-26T18:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "e16756a06e1f",
+   "ts": "2026-11-26T18:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "8976cd5c91a0",
+   "ts": "2026-11-26T17:43:45.655Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "6f99f08b0c5d",
+   "ts": "2026-11-26T17:43:45.655Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "5ebdf811219b",
+   "ts": "2026-11-26T17:33:45.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "1628f884c44a",
+   "ts": "2026-11-26T17:26:32.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "3c4561dec21e",
+   "ts": "2026-11-26T17:07:51.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "7ccf066bac78",
+   "ts": "2026-11-26T17:03:28.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "87e5e9715d89",
+   "ts": "2026-11-26T17:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a5c3b4d779ea",
+   "ts": "2026-11-26T16:51:38.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "7f363c30c38a",
+   "ts": "2026-11-26T16:15:48.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "eef343ed47bc",
+   "ts": "2026-11-26T16:11:07.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "5b81b63ae575",
+   "ts": "2026-11-26T16:11:07.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "8759b0fb7d50",
+   "ts": "2026-11-26T16:08:42.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a6af92392ea0",
+   "ts": "2026-11-26T16:02:00.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "6c33a4cd2610",
+   "ts": "2026-11-26T16:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "ec74e9ba2187",
+   "ts": "2026-11-26T16:00:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "a6c8bd777031",
+   "ts": "2026-11-26T16:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "c546670b1e66",
+   "ts": "2026-11-26T16:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "4d216b0ccfb1",
+   "ts": "2026-11-26T16:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
   }
  ],
  "general_tries": {
@@ -3096,7 +3828,7 @@
   "adee23ebc131": 1,
   "e529abc756b0": 1,
   "bf7f07790701": 1,
-  "8fe2abca294b": 1,
+  "8fe2abca294b": 2,
   "1bcd9807b5c5": 1,
   "be134de8b289": 1,
   "ede2204f5144": 1,
@@ -3170,31 +3902,150 @@
   "f1987065a107": 1,
   "0e04d689569c": 1,
   "3e4d6004fd36": 1,
-  "94f53e905281": 1
+  "94f53e905281": 1,
+  "0ceedb784de8": 1,
+  "ca68b10e8734": 1,
+  "774e96bf2d0e": 1,
+  "4e6e8ea2283f": 1,
+  "82abb95dd5cd": 1,
+  "e5c567e9395b": 1,
+  "fb282007afd0": 1,
+  "99449969532e": 1,
+  "62c878c96a71": 1,
+  "657d6014697e": 1,
+  "3b5d07e87785": 1,
+  "284160f656ff": 1,
+  "0ecd22c1bd1a": 1,
+  "a600e54ee3d0": 1,
+  "3c18ed75783e": 1,
+  "936ef0fc38f1": 1,
+  "65ccb5595a3d": 1,
+  "a7d66aac5403": 1,
+  "a5d6378a020e": 1,
+  "31c50a88f23f": 1,
+  "41d5e16b7dd2": 1,
+  "b5b8776f2987": 1,
+  "dbcb39636987": 1,
+  "a76cae0bb54d": 1,
+  "56b86a5d7fbf": 1,
+  "4119648053d3": 1,
+  "355eb2e5ee20": 1,
+  "f5ec46ca05e8": 1,
+  "6aee77221ea9": 1,
+  "92e31d898859": 1,
+  "d8e08770ba79": 1,
+  "f6f99100f173": 1,
+  "c22420547b9c": 1,
+  "2401ceb6aca2": 1,
+  "87538e1ea7cc": 1,
+  "0ac57d894e04": 1,
+  "c500d99bfac8": 1,
+  "533b6513caa5": 1,
+  "78c43f7fc484": 1,
+  "4c7242acf115": 1,
+  "f3793d3b9647": 1,
+  "9d59d23ddd11": 1,
+  "ab1ffa9cf3c8": 1,
+  "8fda4b0b0a89": 1,
+  "1ad58af02f9d": 1,
+  "7776f1f909fa": 1,
+  "8f41c7d4a639": 1,
+  "a7509ef32f2e": 1,
+  "95787bafe9c6": 1,
+  "aaf0a51c4c2f": 1,
+  "561a30842f24": 1,
+  "02d7dcc78552": 1,
+  "475421bfbe5f": 1,
+  "d38663a78ad8": 1,
+  "a0caa0d29138": 1,
+  "9abd6872262e": 1,
+  "09529de18177": 1,
+  "7373fe8c22da": 1,
+  "b2c1055811f6": 1,
+  "b87df8168574": 1,
+  "71cad4d18f33": 1,
+  "e83b89a95473": 1,
+  "a800e243c752": 1,
+  "a0b571abb7ed": 1,
+  "71be7d2dfb67": 1,
+  "abed495c4287": 1,
+  "e56e2858c390": 1,
+  "30b3b285ebe6": 1,
+  "a6751f535fcc": 1,
+  "eb1d737237de": 1,
+  "e46ae62e1098": 1,
+  "969427a2be7c": 1,
+  "bb6d1d5435b1": 1,
+  "8f59468d24fe": 1,
+  "020d9a33d660": 1,
+  "d1b965b5649b": 1,
+  "6bac70b0e180": 1,
+  "2d7f8b4f8454": 1,
+  "43660ff0cca4": 1,
+  "8d9ab3032fe3": 1,
+  "643f10bb17e6": 1,
+  "94da0298cb7c": 1,
+  "518a34e780cf": 1,
+  "1402902dd8da": 1,
+  "4a405679c04d": 1,
+  "049885e86e43": 1,
+  "8ad5696493b0": 1,
+  "d7b7ae638c81": 1,
+  "e9f5aca90fca": 1,
+  "b3fef228f240": 1,
+  "25244c6b7022": 1,
+  "65031202fe85": 1,
+  "65e8994f8542": 1,
+  "bcdc6caab26e": 1,
+  "c881f1e71110": 1,
+  "be9a1982856e": 1,
+  "8b94b63f7cd2": 1,
+  "3cc7b684195d": 1,
+  "3c1314294b32": 1,
+  "22fe6710567b": 1,
+  "e16756a06e1f": 1,
+  "8976cd5c91a0": 1,
+  "6f99f08b0c5d": 1,
+  "5ebdf811219b": 1,
+  "1628f884c44a": 1,
+  "3c4561dec21e": 1,
+  "7ccf066bac78": 1,
+  "87e5e9715d89": 1,
+  "a5c3b4d779ea": 1,
+  "7f363c30c38a": 1,
+  "eef343ed47bc": 1,
+  "5b81b63ae575": 1,
+  "8759b0fb7d50": 1,
+  "a6af92392ea0": 1,
+  "6c33a4cd2610": 1,
+  "ec74e9ba2187": 1,
+  "a6c8bd777031": 1,
+  "c546670b1e66": 1,
+  "4d216b0ccfb1": 1
  },
  "market": {
   "all": {
-   "haussier": 47,
-   "neutre": 40,
-   "baissier": 28,
-   "n": 115,
-   "net": 0.17,
+   "haussier": 95,
+   "neutre": 75,
+   "baissier": 59,
+   "n": 229,
+   "net": 0.16,
    "label": "mitigée"
   },
   "macro": {
-   "haussier": 3,
-   "neutre": 14,
-   "baissier": 14,
-   "n": 31,
-   "net": -0.35,
+   "haussier": 6,
+   "neutre": 21,
+   "baissier": 25,
+   "n": 52,
+   "net": -0.37,
    "label": "baissière"
   },
   "secteur": {
-   "haussier": 44,
-   "neutre": 26,
-   "baissier": 14,
-   "n": 84,
-   "net": 0.36,
+   "haussier": 89,
+   "neutre": 54,
+   "baissier": 34,
+   "n": 177,
+   "net": 0.31,
    "label": "haussière"
   }
  },
@@ -3279,8 +4130,8 @@
     "id": "nvidia",
     "n": "Nvidia",
     "bull": 5,
-    "bear": 1,
-    "neu": 4,
+    "bear": 2,
+    "neu": 3,
     "total": 10,
     "top": [
      {

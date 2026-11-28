@@ -1,6 +1,72 @@
 {
  "items": [
   {
+   "id": "d4628155d367",
+   "ts": "2026-11-28T15:22:32.000Z",
+   "title": "Des racks d'IA Nvidia Blackwell interdits repérés en Chine — un centre de données lié à un prêt de 14 millions de dollars et à une espionne présumée Alice Huang",
+   "orig": "Banned Nvidia Blackwell AI racks surface in China — data center tied to $14M loan and alleged spy Alice Huang",
+   "summary": "Des puces Nvidia Blackwell sous embargo ont été installées dans un centre de données en Chine malgré les contrôles.",
+   "country": "CN",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Puces",
+   "source": "Tom's Hardware",
+   "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/banned-nvidia-blackwell-ai-racks-surface-in-china-data-center-tied-to-usd14m-loan-and-alleged-spy-alice-huang",
+   "confidence": "moyenne",
+   "why": "Mise en évidence d'un contournement potentiel des restrictions à l'exportation de puces de pointe vers la Chine.",
+   "title_en": "Banned Nvidia Blackwell AI racks surface in China — data center tied to $14M loan and alleged spy Alice Huang",
+   "summary_en": "Banned Nvidia Blackwell chips were found installed in a Chinese data center despite export controls.",
+   "why_en": "Highlights a potential circumvention of export controls on advanced AI chips to China."
+  },
+  {
+   "id": "7c7ded1b274d",
+   "ts": "2026-11-28T15:15:00.000Z",
+   "title": "L'Inde doit construire une infrastructure d'IA domestique pour fabriquer des jetons : le cofondateur de Sarvam AI",
+   "orig": "India must build domestic AI infrastructure to manufacture tokens : Sarvam AI co - founder",
+   "summary": "Un responsable de Sarvam AI appelle l'Inde à développer ses propres infrastructures locales pour l'IA.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Datacenters",
+   "source": "thehindu.com",
+   "url": "https://www.thehindu.com/business/Industry/india-must-build-domestic-ai-infrastructure-to-manufacture-tokens-sarvam-ai-co-founder/article71754741.ece",
+   "confidence": "moyenne",
+   "title_en": "India must build domestic AI infrastructure to manufacture tokens : Sarvam AI co - founder",
+   "summary_en": "A Sarvam AI executive calls on India to develop local infrastructure for AI."
+  },
+  {
+   "id": "b149a4719a7f",
+   "ts": "2026-11-28T15:15:00.000Z",
+   "title": "L'accent technologique est la clé d'un placement rapide, selon le vice-président de Prajna Semiconductors",
+   "orig": "Tech focus key to quick placements , says Prajna Semiconductors VP",
+   "summary": "Prajna Semiconductors souligne l'importance des compétences technologiques pour l'emploi.",
+   "country": "OTHER",
+   "category": "puces",
+   "importance": 1,
+   "layer": "Puces",
+   "source": "thehindu.com",
+   "url": "https://www.thehindu.com/news/national/andhra-pradesh/tech-focus-key-to-quick-placements-says-prajna-semiconductors-vp/article71754549.ece",
+   "confidence": "moyenne",
+   "title_en": "Tech focus key to quick placements , says Prajna Semiconductors VP",
+   "summary_en": "Prajna Semiconductors highlights the importance of tech skills for employment."
+  },
+  {
+   "id": "0ceedb784de8",
+   "ts": "2026-11-28T15:15:00.000Z",
+   "title": "OpenAI contre-poursuit Apple et toutes deux s'accusent de vol de secrets commerciaux",
+   "orig": "OpenAI contra - processa Apple e ambas trocam acusaes de roubo de segredos comerciais",
+   "summary": "OpenAI et Apple s'engagent dans une action en justice mutuelle pour vol présumé de secrets commerciaux.",
+   "country": "US",
+   "category": "regul",
+   "importance": 3,
+   "layer": "Régulation",
+   "source": "pt.euronews.com",
+   "url": "https://pt.euronews.com/2026/11/28/openai-contra-processa-apple-e-ambas-trocam-acusacoes-de-roubo-de-segredos-comerciais",
+   "confidence": "moyenne",
+   "title_en": "OpenAI contra - processa Apple e ambas trocam acusaes de roubo de segredos comerciais",
+   "summary_en": "OpenAI and Apple file counterclaims against each other over alleged trade secret theft."
+  },
+  {
    "id": "b0770ccb7d49",
    "ts": "2026-11-28T15:00:00.000Z",
    "title": "Un équilibre délicat sur l'IA se profile pour Hochul",
@@ -15,6 +81,24 @@
    "confidence": "moyenne",
    "title_en": "An AI tightrope looms for Hochul",
    "summary_en": "Governor Hochul faces complex political challenges regarding AI regulation and adoption."
+  },
+  {
+   "id": "ca68b10e8734",
+   "ts": "2026-11-28T14:47:07.000Z",
+   "title": "Google suspend la construction de son centre de données en Belgique sur ordre des autorités",
+   "orig": "Google halts construction of Belgian data centre on authorities’ order",
+   "summary": "Google a arrêté un projet de datacenter en Belgique en raison de préoccupations locales liées à l'eau.",
+   "country": "EU",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "Euractiv",
+   "url": "https://www.rapporteur.com/news/google-halts-construction-of-belgian-data-centre-on-authorities-order/",
+   "confidence": "moyenne",
+   "why": "Illustration des blocages réglementaires et environnementaux auxquels font face les datacenters d'IA en Europe.",
+   "title_en": "Google halts construction of Belgian data centre on authorities’ order",
+   "summary_en": "Google halted a Belgian data center project due to local water use concerns.",
+   "why_en": "Illustrates the regulatory and environmental hurdles faced by AI data centers in Europe."
   },
   {
    "id": "01e747fc1ebd",
@@ -34,6 +118,22 @@
    "summary_en": "Facing the explosion of electricity demand from AI and semiconductors, Taiwan is abandoning its nuclear phase-out policy.",
    "why_en": "It shows a major shift in government energy policy directly motivated by AI's electricity needs.",
    "title_fr": "IA et semi-conducteurs : face à l'explosion de la demande d'électricité, Taïwan abandonne sa politique de sortie du nucléaire"
+  },
+  {
+   "id": "072f56bc0df3",
+   "ts": "2026-11-28T14:14:52.000Z",
+   "title": "Des poursuites générées par l'IA inondent les tribunaux allemands",
+   "orig": "AI-generated lawsuits flood German courts",
+   "summary": "Les juridictions allemandes font face à une forte augmentation de requêtes juridiques rédigées par l'IA.",
+   "country": "EU",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "DW.com",
+   "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE8tU0d4Sm4yMnkxRnlRb2g4QnE3R0JvRmJFRUN5WTZSanFZVGRDMGM4LThEcnN6TVcyT2wyZFRucGlJZkl3R3k3MHZPR0ZoME52U0c3ZVN1amxNOUIyUm1wbWlYMVV2b0tzOGV4b1dVYmRBMkIyMUlLd054eThyN0nSAX9BVV95cUxPLVNHeEpuMjJ5MUZ5UW9oOEJxN0dCb0ZiRUVDeVk2UmpxWVRkQzBjOC04RHJzek1XMk9sMmRUbnBpSWZJd0d5NzB2T0dGaDBOdlNHN2VTdWpsTTlCMlJtcG1pWDFVdm9LczhleG9XVWJkQTJCMjFJS3dOeHk4cjdJ?oc=5",
+   "confidence": "moyenne",
+   "title_en": "AI-generated lawsuits flood German courts",
+   "summary_en": "German courts are facing a surge in AI-generated legal filings."
   },
   {
    "id": "0f61395ce8dc",
@@ -956,6 +1056,22 @@
    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPQ2pUZmRKbXRHSDhtWi1pN3ZHV0JXdjdwNlV1eUFpTUJCb09FQnF5dnZ3WnZLaTJEYnNKdmowT1NSWm8xTHNvMzBxanVXdTQxajJQbldCNEZIOXJiOC1vWjh5aTFSTDltSjBBdE1iMWVMekxpbFJENHdhWWFuaXdUVlI3Q1ZxbFhuNWdaN1VzSURvdDJ0ZGhhZGlVU0VLRjJCRHpwSzJGajVDMnNGcTh4LS0zNTBtb0hNT3hKenhCOA?oc=5",
    "confidence": "moyenne",
    "title_en": "The day AI wrecked my pizza dough and revealed the problem with its confident answers"
+  },
+  {
+   "id": "295e110c9254",
+   "ts": "2026-11-28T03:32:24.000Z",
+   "title": "La crainte de la triche high-tech transforme les salles d'examen en Corée",
+   "orig": "High-tech cheating fears reshape Korea’s exam halls",
+   "summary": "La Corée du Sud renforce la sécurité des examens en raison des risques de fraude assistée par l'intelligence artificielle.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "The Korea Herald",
+   "url": "https://www.koreaherald.com/article/10952433",
+   "confidence": "moyenne",
+   "title_en": "High-tech cheating fears reshape Korea’s exam halls",
+   "summary_en": "South Korea tightens exam security due to growing risks of AI-assisted cheating."
   },
   {
    "id": "be11fe4a89c7",
@@ -2139,7 +2255,7 @@
    "why": "La restructuration des géants du logiciel pour s'adapter à l'IA entraîne des changements sociaux et économiques majeurs.",
    "title_en": "Sources say SAP mulling cuts of at least 10,000 roles",
    "summary_en": "SAP is planning massive layoffs to restructure its software business for the AI era.",
-   "why_en": "The restructuring of software giants to adapt to AI leads to major social and economic changes."
+   "why_en": "The restructuring of software giants to adapt to AI is driving major social and economic changes."
   },
   {
    "id": "68a72b4f6d21",
@@ -3455,7 +3571,7 @@
    "confidence": "moyenne",
    "why": "Souligne l'afflux massif de projets de construction de datacenters et les pressions politiques locales associées.",
    "title_en": "Texas lifts freeze on 1,800+ data center projects in Greg Abbott U-turn",
-   "summary_en": "Texas is allowing new data center permits to be approved again after suspending the process in August.",
+   "summary_en": "Texas is again authorizing the approval of new data center permits after suspending the process in August.",
    "why_en": "Highlights the massive influx of data center construction projects and associated local political pressures."
   },
   {
@@ -7425,7 +7541,7 @@
    "confidence": "moyenne",
    "why": "C'est l'une des premières interdictions législatives directes ciblant les produits d'IA grand public pour protéger les mineurs.",
    "title_en": "New York Governor Kathy Hochul signs ban on AI chatbot toys backed by $15,000 daily fines",
-   "summary_en": "The Governor of New York has signed a law banning the sale of toys equipped with integrated AI chatbots due to risks for children.",
+   "summary_en": "The Governor of New York has signed a law banning the sale of toys equipped with integrated AI chatbots due to risks to children.",
    "why_en": "This is one of the first direct legislative bans targeting consumer AI products to protect minors."
   },
   {
@@ -13630,7 +13746,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410434/28124/en/point-of-care-medical-software-market-size-share-industry-trends-and-growth-forecasts-2026-2031-cloud-and-ai-adoption-drive-17-33-cagr-and-a-usd-12-77-billion-opportunity.html",
    "confidence": "moyenne",
    "title_en": "Point-of-Care Medical Software Market Size, Share, Industry Trends, and Growth Forecasts, 2026-2031 | Cloud and AI Adoption Drive 17.33% CAGR and a USD 12.77 Billion Opportunity",
-   "summary_en": "The adoption of AI and cloud is driving growth in the medical software market."
+   "summary_en": "The adoption of AI and cloud computing is boosting growth in the medical software market."
   },
   {
    "id": "448ca2963316",
@@ -13646,7 +13762,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410424/28124/en/the-global-online-gambling-market-2026-2034-size-share-competition-and-revenue-forecast-by-type-device-and-country-mobile-adoption-and-legalization-fuel-8-93-cagr-to-220-99-billion.html",
    "confidence": "moyenne",
    "title_en": "The Global Online Gambling Market 2026-2034: Size, Share, Competition and Revenue Forecast by Type, Device, and Country | Mobile Adoption and Legalization Fuel 8.93% CAGR to $220.99 Billion",
-   "summary_en": "AI-driven personalization is fueling growth in the global online gambling market."
+   "summary_en": "AI-driven personalization is stimulating growth in the global online gambling market."
   },
   {
    "id": "a05f839240ee",
@@ -15271,7 +15387,7 @@
    "url": "https://www.tomshardware.com/laptops/gaming-laptops/this-acer-nitro-v-laptop-with-nvidia-rtx-5060-gpu-is-usd1-049-at-best-buy-16-inch-boasts-16gb-ddr5-ram-and-a-512gb-ssd",
    "confidence": "moyenne",
    "title_en": "This Acer Nitro V laptop with Nvidia RTX 5060 GPU is $1,049 at Best Buy",
-   "summary_en": "Discount on an Acer laptop equipped with an Nvidia RTX 5060 GPU."
+   "summary_en": "Promotion on an Acer laptop equipped with an Nvidia RTX 5060 GPU."
   },
   {
    "id": "1d2b3c7b611b",
@@ -17577,7 +17693,7 @@
    "confidence": "moyenne",
    "why": "Soulève un goulot d'étranglement majeur dans la chaîne d'approvisionnement des mémoires HBM pour les puces d'IA.",
    "title_en": "[Breaking] Samsung Grapples with HBM Base Die Crunch as Internal Demand Seen Doubling to 30K per Month in 2027",
-   "summary_en": "Samsung is facing a shortage of HBM base dies with internal demand expected to double.",
+   "summary_en": "Samsung is facing an HBM base die shortage with internal demand expected to double.",
    "why_en": "Highlights a major bottleneck in the HBM memory supply chain for AI chips."
   },
   {
@@ -20933,7 +21049,7 @@
    "why": "La nécessité pour les entreprises d'IA de devenir des acheteurs d'énergie directe souligne la tension croissante sur les ressources électriques pour les centres de données.",
    "title_en": "Anthropic posts $405,000-a-year job for gas specialist to secure fuel for AI",
    "summary_en": "Anthropic is hiring a natural gas expert to secure the energy supply for its data centers, illustrating the race for computing power.",
-   "why_en": "The need for AI companies to become direct energy buyers underlines the growing tension over electrical resources for data centers."
+   "why_en": "The need for AI companies to become direct energy buyers highlights the growing strain on electrical resources for data centers."
   },
   {
    "id": "613b95800cde",
@@ -25118,124 +25234,6 @@
    "confidence": "moyenne",
    "title_en": "Global Power Semiconductor Maker Monolithic Power Systems Names SK keyfoundry Its Best Supplier",
    "summary_en": "Semiconductor manufacturer Monolithic Power Systems rewards SK Keyfoundry for its production quality."
-  },
-  {
-   "id": "8df7ea90a749",
-   "ts": "2026-11-24T00:11:00.000Z",
-   "title": "Adobe intègre un agent IA d'expérience client dans ses principales plateformes",
-   "orig": "Adobe integrates customer experience AI agent into major platforms",
-   "summary": "Adobe déploie un nouvel agent d'intelligence artificielle dédié à l'expérience client au sein de ses logiciels phares.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1LSWhxQ2Fwc3l5QWdISHNvTUJYVFVoT215MGV6SmM2YjNYWnZlWDRRUWtDU3g0OG8wSS10Vlh6dUhKRTVPZlMwWEk1Y05sSFFaajFPZ2ZBdmpSSWd1V3pmaFduSzUxRmtEY2lrRzJVWWRFUkRnc0Z2V2dn0gGOAUFVX3lxTE0xRDlIcEVuR0lVTVlxazdOVzliLW9RMjlvMHZLUWRPWEdZdGVPQ1VzMmpfcG1FWXdqNjJ6N0FXbVdPaXhHdjd0RnFrekh0djJuWUV6TktMRjVrb2tRZDdld0txUDduWGpQaXBST09GSXg3ajlmaUNlam1xTVdlMHJlanhhUHU5RjJieTd6bHc?oc=5",
-   "confidence": "moyenne",
-   "why": "Illustre la tendance des éditeurs de logiciels à intégrer des agents d'IA autonomes dans leurs solutions.",
-   "title_en": "Adobe integrates customer experience AI agent into major platforms",
-   "summary_en": "Adobe integrates a customer experience AI agent into its major software platforms.",
-   "why_en": "Demonstrates the enterprise software industry trend toward embedding autonomous workflow AI agents."
-  },
-  {
-   "id": "28aa07b5b740",
-   "ts": "2026-11-24T00:10:56.000Z",
-   "title": "Cerebras : ce fondateur « paranoïaque » a-t-il connu un succès massif grâce à une chance insolente ou à une réelle innovation ?",
-   "orig": "Cerebras: Did This \"Paranoid\" Founder Achieve Massive Success Through Sheer Dumb Luck or Real Innovation?",
-   "summary": "Un retour sur le parcours de Cerebras et de son fondateur s'interroge sur l'origine de leur succès dans le domaine des puces pour l'IA.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Puces",
-   "source": "36Kr",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5QeG9iS0ZfWWZqdTRPQ1ktbndRWmNFY0hLbU82UTl2TkRBYUFBVVpkX2t5V01ySlp0UjFlWGFmNnVnVW55cG0yLXdIX1JZbkhSa1pB?oc=5",
-   "confidence": "moyenne",
-   "title_en": "Cerebras: Did This \"Paranoid\" Founder Achieve Massive Success Through Sheer Dumb Luck or Real Innovation?",
-   "summary_en": "An overview of Cerebras and its founder questions the origin of their success in AI chips."
-  },
-  {
-   "id": "57196f919a04",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "Singapour relève ses prévisions de croissance du PIB à environ 6 % grâce au boom de l'IA",
-   "orig": "Singapore Raises GDP Growth Outlook to ‘Around 6%’ on AI Boom",
-   "summary": "Singapour revoit à la hausse ses prévisions de croissance économique, soutenue par le dynamisme de l'intelligence artificielle.",
-   "country": "OTHER",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaFpBRDNkTk81ZHpHaWxhQTJPb0Q2dEVONl9USmxFbl9uaDBsVEtrdkg1RFVUcTNSbWpuR3hSZVhKWHRDdzdaR09uYlN6djQ5SWh4OW1NRTNaZ25QS25IRHVGaWZXUzhSeS04SXlmbW1iNUVBakpsa0xIbnlhRGlPLWdMVEg0cWZFUG9JUFRNSUFQRVRkM0N1NXZ4LUtWRUM2cXNUTk1hVThCNTVSc2c?oc=5",
-   "confidence": "moyenne",
-   "why": "Fournit une preuve tangible de la conversion de la demande en infrastructures d'IA en hausse économique nationale.",
-   "title_en": "Singapore Raises GDP Growth Outlook to ‘Around 6%’ on AI Boom",
-   "summary_en": "Singapore raises its GDP growth outlook to around 6% driven by the ongoing AI boom.",
-   "why_en": "Provides tangible evidence of AI infrastructure demand translating into national economic upgrades."
-  },
-  {
-   "id": "99b93f3e1098",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "Clay aide les équipes commerciales à gagner avec Codex et ChatGPT",
-   "orig": "Clay helps sales teams win with Codex and ChatGPT",
-   "summary": "Les intégrations de ChatGPT et Codex aident les utilisateurs de Clay à rechercher des contrats et à automatiser des actions commerciales, gérées par les modèles GPT-6.",
-   "country": "US",
-   "category": "modeles",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "OpenAI",
-   "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
-   "confidence": "haute",
-   "title_en": "Clay helps sales teams win with Codex and ChatGPT",
-   "summary_en": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 models handling the reasoning."
-  },
-  {
-   "id": "ec442b764e04",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "Comment Intentful utilise l'intelligence artificielle pour gagner du temps",
-   "orig": "How Intentful uses dots to make more time for growth",
-   "summary": "L'entreprise Intentful intègre un assistant virtuel pour effectuer des recherches web et rédiger des propositions commerciales.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "OpenAI",
-   "url": "https://openai.com/business/customer-stories/intentful-dots",
-   "confidence": "haute",
-   "title_en": "How Intentful uses dots to make more time for growth",
-   "summary_en": "Intentful leverages an AI assistant named Aria to research websites, draft proposals, and resolve issues proactively."
-  },
-  {
-   "id": "7a6462e387eb",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "How iFood scales coding agents across 15,000 repositories",
-   "orig": "How iFood scales coding agents across 15,000 repositories",
-   "summary": "La plateforme iFood déploie à grande échelle des agents de codage autonomes sur ses nombreux dépôts logiciels.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 2,
-   "layer": "Applications",
-   "source": "OpenAI",
-   "url": "https://openai.com/business/customer-stories/ifood",
-   "confidence": "haute",
-   "why": "Montre le déploiement d'agents de codage de niveau entreprise sur de vastes bases de code.",
-   "title_en": "How iFood scales coding agents across 15,000 repositories",
-   "summary_en": "iFood scales automated coding agents across 15,000 code repositories to optimize software engineering operations.",
-   "why_en": "Shows enterprise-grade deployment of coding agents across large codebases for developer productivity."
-  },
-  {
-   "id": "5bdf8def5044",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "L'IA incarnée échoue au test du miroir : comment un simple miroir perturbe les politiques robotiques",
-   "orig": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
-   "summary": "Une étude montre que les politiques de manipulation robotique échouent à gérer les reflets, introduisant un nouveau benchmark nommé RoboDojo-Mirror.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "Hugging Face Papers",
-   "url": "https://huggingface.co/papers/2611.33010",
-   "confidence": "moyenne",
-   "title_en": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
-   "summary_en": "A study shows that robotic manipulation policies fail to handle reflections, introducing a new benchmark called RoboDojo-Mirror."
   }
  ]
 }
