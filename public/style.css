@@ -1227,3 +1227,7 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
   .glist .time{display:none}
 }
 .essmode .row .gt{color:#fff}.essmode .glist a{color:#C7C7CC}.essmode .glist li{border-color:#333}
+
+.resume .rtext{font-family:var(--display);font-size:19px;line-height:1.6;letter-spacing:-.01em;margin:0;max-width:820px;color:var(--ink)}
+.resume .rmeta{font-size:12px;color:var(--mute)}
+@media(max-width:620px){.resume .rtext{font-size:16.5px}}

@@ -133,4 +133,5 @@ await import("./test-chainauto.mjs");
 await import("./test-recherche.mjs");
 await import("./test-x.mjs");
 await import("./test-stories.mjs");
+await import("./test-resume.mjs");
 console.log("TOUS LES TESTS PASSENT");

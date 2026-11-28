@@ -38,6 +38,7 @@ jobs:
           node collector/test-x.mjs
           node collector/test-voix.mjs
           node collector/test-stories.mjs
+          node collector/test-resume.mjs
 
   collect:
     if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch')

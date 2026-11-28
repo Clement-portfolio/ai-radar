@@ -9,6 +9,7 @@ import { unitsOk, normalizeFr, stripAmounts, UNITS_RULE } from "./units.mjs";
 import { translateData, I18N_SYSTEM, I18N_SCHEMA } from "./i18n.mjs";
 import { resolveGoogleLinks } from "./gnews.mjs";
 import { translateMissing, TRANSLATE_SYSTEM, TRANSLATE_SCHEMA, foreignScript } from "./translate.mjs";
+import { buildResume, RESUME_SYSTEM, RESUME_SCHEMA } from "./resume.mjs";
 import { buildStories, summarizeStories, STORY_SYSTEM, STORY_SCHEMA } from "./stories.mjs";
 import { makeFocus, FOCUS_SYSTEM, FOCUS_SCHEMA } from "./focus.mjs";
 import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
@@ -705,6 +706,13 @@ export async function run(opts = {}) {
     voix.doc.hot = hotVoix(voix.doc, nowMs); // les titres déjà traduits et les liens résolus sont repris tels quels
   } catch (e) { voix.summary.reason = String(e.message || e).slice(0, 120); }
   log(`Voix : ${voix.summary.total} déclaration(s), ${voix.summary.added} nouvelle(s)${voix.summary.reason ? " — " + voix.summary.reason : ""}`);
+  // Résumé du jour : un paragraphe de synthèse (au plus toutes les 11 h) ; ne bloque jamais la collecte
+  const resumePrev = await readJson("resume.json", null);
+  let resume = { doc: resumePrev, regenerated: false, reason: "erreur" };
+  try {
+    resume = await buildResume({ prev: resumePrev, stories: stories.doc || storiesPrev, voix: voix.doc, x: await readJson("x.json", { items: [] }), now: nowMs, generate: mkGen(RESUME_SYSTEM, RESUME_SCHEMA) });
+  } catch (e) { resume.reason = String(e.message || e).slice(0, 120); }
+  log("Résumé du jour : " + resume.reason);
 
   // Recherche : papiers, labos de modèles, recherche des hyperscalers, agences ; ne bloque jamais la collecte
   const rechPrev = await readJson("recherche.json", null);
@@ -753,6 +761,8 @@ export async function run(opts = {}) {
     if (okCount > 0 && (added.length || tr.changed || gl.changed || gl.failed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
+    if (resume.regenerated && resume.doc) await fs.writeFile(path.join(dataDir, "resume.json"), JSON.stringify(resume.doc, null, 1));
+    else if (!resume.doc && resumePrev) await fs.rm(path.join(dataDir, "resume.json"), { force: true }); // trop ancien : retiré plutôt que périmé
     if (stories.doc && JSON.stringify({ ...stories.doc, generated_at: 0 }) !== JSON.stringify({ ...(storiesPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "stories.json"), JSON.stringify(stories.doc));
     if (figs.doc) await fs.writeFile(path.join(dataDir, "chiffres.json"), JSON.stringify(figs.doc, null, 1));
     if (resSrc.doc) await fs.writeFile(path.join(dataDir, "chiffres-src.json"), JSON.stringify(resSrc.doc, null, 1));
