@@ -711,7 +711,7 @@ export async function run(opts = {}) {
   const resumePrev = await readJson("resume.json", null);
   let resume = { doc: resumePrev, regenerated: false, reason: "erreur" };
   try {
-    resume = await buildResume({ prev: resumePrev, stories: stories.doc || storiesPrev, voix: voix.doc, x: await readJson("x.json", { items: [] }), now: nowMs, generate: mkGen(RESUME_SYSTEM, RESUME_SCHEMA) });
+    resume = await buildResume({ prev: resumePrev, stories: stories.doc || storiesPrev, voix: voix.doc, x: await readJson("x.json", { items: [] }), outlook: await readJson("outlook.json", {}), now: nowMs, generate: mkGen(RESUME_SYSTEM, RESUME_SCHEMA) });
   } catch (e) { resume.reason = String(e.message || e).slice(0, 120); }
   log("Résumé du jour : " + resume.reason);
   // Finance : libellés haussier/neutre/baissier par article et scénarios par société cotée ; ne bloque jamais la collecte

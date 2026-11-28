@@ -1228,8 +1228,8 @@ h1.page,h2.sec{font-size:clamp(36px,4.6vw,56px);letter-spacing:-.04em}
 }
 .essmode .row .gt{color:#fff}.essmode .glist a{color:#C7C7CC}.essmode .glist li{border-color:#333}
 
-.resume .rtext{font-family:var(--display);font-size:19px;line-height:1.6;letter-spacing:-.01em;margin:0;max-width:820px;color:var(--ink)}
-.resume .rmeta{font-size:12px;color:var(--mute)}
+.resume .rtext{font-family:var(--display);font-size:19px;line-height:1.6;letter-spacing:-.01em;margin:0 auto;max-width:820px;color:var(--ink);text-align:center;text-wrap:pretty}
+.resume .rmeta{font-size:12px;color:var(--mute);text-align:center}
 @media(max-width:620px){.resume .rtext{font-size:16.5px}}
 
 /* ----- Finance ----- */
@@ -1260,3 +1260,12 @@ a.fref:hover{color:var(--ink);text-decoration:underline}
 .fnote{max-width:720px;margin:8px auto 12px;font-size:12.5px;line-height:1.5;color:var(--mute);text-align:center}
 .fline{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 @media(max-width:900px){.fcases{grid-template-columns:1fr}.frow{grid-template-columns:1fr 32px;padding:14px 18px}.frow .ft,.frow .fcnt{grid-column:1}.frow .fgo{grid-column:2;grid-row:1}.row.fa{grid-template-columns:60px 1fr;}.row.fa .rsrc{grid-column:2}}
+
+/* Actualités regroupées : chaque article de l'histoire dans son propre encadré */
+.gsub{display:none}
+.row.grp.open+.gsub{display:block}
+.row.grp.open .rtog{transform:none;background:var(--ink);color:var(--bg)}
+.row.grp .rtog svg{width:16px;height:16px}
+.gsubrow{margin-left:28px}
+.gsubrow .rtog{text-decoration:none}
+@media(max-width:700px){.gsubrow{margin-left:12px}}

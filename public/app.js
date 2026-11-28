@@ -217,11 +217,14 @@ function groupHTML(g,arts){
   arts.forEach(function(a){media[a.source]=1;if((a.importance||1)>imax)imax=a.importance||1;if((a.importance||1)>(lead.importance||1))lead=a});
   var nm=Object.keys(media).length,head=tx(g,'head')||tx(lead,'title'),sum=tx(g,'summary')||(lead.pending?"":tx(lead,'summary'))||"";
   var badge=arts.length+(en?' articles':' articles')+' · '+nm+(en?' outlets':' médias');
-  var list=arts.map(function(a){return'<li><span class="time">'+esc(fmtTime(a.ts))+'</span><a href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(tx(a,'title'))+'</a><span class="rsrc">'+esc(a.source)+cdot(a.confidence)+'</span></li>'}).join("");
+  var MENU='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>';
+  var subs=arts.map(function(a){return'<div class="row gsubrow i'+(a.importance||1)+'"><span class="time">'+esc(fmtTime(a.ts))+'</span>'+ctag(a.country)+
+   '<a class="ttl" href="'+esc(link(a.url))+'" target="_blank" rel="noopener">'+esc(tx(a,'title'))+'</a><span class="rsrc">'+esc(a.source)+cdot(a.confidence)+'</span>'+
+   '<a class="rtog" href="'+esc(link(a.url))+'" target="_blank" rel="noopener" aria-label="'+(en?'Read the article':'Lire l\'article')+'">'+ARW+'</a></div>'}).join("");
   return '<div class="row grp i'+imax+open+'"><span class="time">'+esc(fmtTime(arts[0].ts))+'</span>'+ctag(lead.country)+
    '<button class="ttl gt" data-toggle="'+esc(k)+'">'+esc(head)+'</button><span class="rsrc gb">'+esc(badge)+'</span>'+
-   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="'+(en?'Show the articles':'Afficher les articles')+'">'+ARW+'</button>'+
-   '<div class="sum">'+(sum?'<p>'+esc(sum)+'</p>':'')+'<ul class="glist">'+list+'</ul></div></div>';
+   '<button class="rtog" data-toggle="'+esc(k)+'" aria-label="'+(en?'Show the articles':'Afficher les articles')+'">'+MENU+'</button>'+
+   '<div class="sum">'+(sum?'<p>'+esc(sum)+'</p>':'')+'</div></div><div class="gsub">'+subs+'</div>';
 }
 function rFeed(){
   var el=$("v-actualites");el.classList.toggle("essmode",!!S.top);

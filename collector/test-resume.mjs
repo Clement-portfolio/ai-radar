@@ -41,4 +41,12 @@ r = await buildResume({ prev: { ...prev, generated_at: iso(RESUME_RULES.maxAgeH 
 assert.equal(r.doc, null, "résumé trop ancien : retiré");
 r = await buildResume({ prev: null, stories: { stories: [] }, voix, x, now, generate: gen(good) });
 assert.equal(r.doc, null); assert.match(r.reason, /pas assez/);
+// ancien format (v1) : régénéré même s'il est récent ; rendez-vous à venir fournis sans les dates passées
+const outlook = { catalysts: [{ date: "2026-11-17", label: "17 nov.", title: "Passé", detail: "x" }, { date: "2026-12-10", label: "10 déc.", title: "Décision de la Fed", detail: "Réunion" }] };
+assert.deepEqual(resumeInputs({ stories, voix, x, now, outlook }).prochains_rendez_vous.map((c) => c.evenement), ["Décision de la Fed"]);
+const callsBefore = calls;
+r = await buildResume({ prev: { v: 1, generated_at: iso(1), text: "ancien format" }, stories, voix, x, now, generate: gen(good), outlook });
+assert.equal(r.regenerated, true); assert.equal(calls, callsBefore + 1); assert.equal(r.doc.v, RESUME_RULES.version);
+r = await buildResume({ prev: r.doc, stories, voix, x, now: now + 36e5, generate: gen(good), outlook });
+assert.equal(r.regenerated, false, "format courant et récent : conservé");
 console.log("test-resume : OK");
