@@ -1,10 +1,10 @@
 {
- "generated_at": "2026-11-28T12:10:28.962Z",
+ "generated_at": "2026-11-28T12:20:43.475Z",
  "items": [
   {
    "id": "9eb91df6ba20",
    "ts": "2026-11-28T12:02:00.000Z",
-   "title": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
+   "title": "Synthèse startups : les transactions saoudiennes dans la fintech et l'IA en tête de la récente activité de financement régional",
    "orig": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
    "summary": "This week in the regional startup scene, Saudi fintech Tamara secured $400 million in debt financing to enhance its offerings, while OORI partnered with Oumla to develop investment technology for banks. Other notable developments include AI startup 009 raising",
    "country": "GULF",
@@ -14,12 +14,16 @@
    "source": "Arab News",
    "url": "https://www.arabnews.com/startups/startup-wrap-saudi-fintech-and-ai-deals-headline-latest-regional-startup-funding-activity-3014142",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "Synthèse startups : les transactions saoudiennes dans la fintech et l'IA en tête de la récente activité de financement régional",
+   "title_en": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
+   "summary_en": "This week in the regional startup scene, Saudi fintech Tamara secured $400 million in debt financing to enhance its offerings, while OORI partnered with Oumla to develop investment technology for banks. Other notable developments include AI startup 009 raising"
   },
   {
    "id": "4b3a8918b3c6",
    "ts": "2026-11-28T12:00:47.000Z",
-   "title": "Federal state of Vienna, Austria, publishes new data center strategy",
+   "title": "L'État fédéral de Vienne, en Autriche, publie une nouvelle stratégie pour les centres de données",
    "orig": "Federal state of Vienna, Austria, publishes new data center strategy",
    "summary": "The new plan is designed to boost the sustainability and efficiency of projects in the capital city",
    "country": "US",
@@ -29,7 +33,11 @@
    "source": "DatacenterDynamics",
    "url": "https://www.datacenterdynamics.com/en/news/sebastian-gemkow/",
    "confidence": "moyenne",
-   "pending": true
+   "pending": true,
+   "tr_try": 1,
+   "title_fr": "L'État fédéral de Vienne, en Autriche, publie une nouvelle stratégie pour les centres de données",
+   "title_en": "Federal state of Vienna, Austria, publishes new data center strategy",
+   "summary_en": "The new plan is designed to boost the sustainability and efficiency of projects in the capital city"
   },
   {
    "id": "fad97191bb4e",
@@ -3869,24 +3877,6 @@
    "title_fr": "Un homme inculpé suite à l'explosion d'une sous-station électrique alimentant un centre de données Apple à Mesa, en Arizona",
    "title_en": "Man charged over explosion at electrical substation serving Apple data center in Mesa, Arizona",
    "summary_en": "Incident caused $148,000 worth of damage"
-  },
-  {
-   "id": "5da63334eee3",
-   "ts": "2026-11-25T12:12:22.000Z",
-   "title": "Le mineur de cryptomonnaies Sato Technologies obtient le client neocloud Datum pour son centre de données canadien",
-   "orig": "Cryptominer Sato Technologies secures neocloud Datum as customer for Canadian data center",
-   "summary": "Company looking to pivot towards AI cloud and colocation",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/cryptominer-sato-technologies-secures-neocloud-datum-as-customer-for-canadian-data-center/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Le mineur de cryptomonnaies Sato Technologies obtient le client neocloud Datum pour son centre de données canadien",
-   "title_en": "Cryptominer Sato Technologies secures neocloud Datum as customer for Canadian data center",
-   "summary_en": "Company looking to pivot towards AI cloud and colocation"
   }
  ]
 }
