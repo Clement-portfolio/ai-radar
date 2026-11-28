@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-28T14:01:31.215Z",
+ "generated_at": "2026-11-28T14:10:28.670Z",
  "items": [
   {
    "id": "3973f080fe72",
@@ -3736,42 +3736,6 @@
    "title_fr": "Promera acquiert l'entrepreneur électricien irlandais B&G pour étendre son offre de datacenters",
    "title_en": "Promera acquires Irish electrical contractor B&G to expand data center offering",
    "summary_en": "B&G provides critical power infrastructure services for the data center market"
-  },
-  {
-   "id": "28175a595e60",
-   "ts": "2026-11-25T14:10:18.000Z",
-   "title": "Amazon et Meta seraient en pourparlers pour lever le blocage de l'agent IA Muse",
-   "orig": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
-   "summary": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
-   "country": "US",
-   "category": "adoption",
-   "importance": 1,
-   "layer": "Applications",
-   "source": "TechCrunch IA",
-   "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Amazon et Meta seraient en pourparlers pour lever le blocage de l'agent IA Muse",
-   "title_en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
-   "summary_en": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse."
-  },
-  {
-   "id": "626d05b76d45",
-   "ts": "2026-11-25T14:01:01.000Z",
-   "title": "Le gouvernement sud-africain envisage de convertir d'anciennes centrales électriques en datacenters",
-   "orig": "South African gov't floats converting old power stations into data centers",
-   "summary": "President Cyril Ramaphosa suggested the move during a recent visit to San Jose, California",
-   "country": "US",
-   "category": "energie",
-   "importance": 1,
-   "layer": "Datacenters",
-   "source": "DatacenterDynamics",
-   "url": "https://www.datacenterdynamics.com/en/news/south-african-govt-floats-converting-old-power-stations-into-data-centers/",
-   "confidence": "moyenne",
-   "pending": true,
-   "title_fr": "Le gouvernement sud-africain envisage de convertir d'anciennes centrales électriques en datacenters",
-   "title_en": "South African gov't floats converting old power stations into data centers",
-   "summary_en": "President Cyril Ramaphosa suggested the move during a recent visit to San Jose, California"
   }
  ]
 }
