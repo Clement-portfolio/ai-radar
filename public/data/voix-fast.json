@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T07:30:46.928Z",
+ "generated_at": "2026-11-28T08:00:49.377Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T07:40:46.928Z",
+ "translate_retry_at": "2026-11-28T08:10:49.377Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T07:48:00.000Z",
+     "title": "Elon Musk Says GOOGL Has ‘Expressed Interest’ In Renting More Compute From SPCX",
+     "title_fr": "Elon Musk déclare que GOOGL a « exprimé son intérêt » pour louer plus de puissance de calcul auprès de SPCX",
+     "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPV1RLSXEyTmtuTHhNczF6WG9jdFJjaVdCOFQyWUF6N3pqOFlGQlJxdUxFeDFRZXI1NjZ6cDdtWWJMSzRlTFliVHg0SVZjZjZmdFZIbWpqa1VQYTFndXA0bF9hNklzTVgzSUpOeTFnR2V5SnJYS0UtVmR3bGo3T3VPNnhBZk1RYkZsR3JaZlZoTFhwNVZrdDcxZmpR?oc=5",
+     "source": "Yahoo Finance",
+     "kind": "presse",
+     "srcs": [
+      "yahoo finance"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-28T06:52:01.000Z",
      "title": "Elon Musk Calls Situation of Women in Afghanistan Under Taliban Rule ‘Very Concerning’",
      "title_fr": "Elon Musk qualifie la situation des femmes en Afghanistan sous le régime des talibans de \"très préoccupante\"",
@@ -255,19 +268,6 @@
      "kind": "presse",
      "srcs": [
       "cnbc"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-27T14:59:56.000Z",
-     "title": "Elon Musk Thinks SpaceX Could Be Worth $128 Quintillion",
-     "title_fr": "Elon Musk pense que SpaceX pourrait valoir 128 quintillions de dollars",
-     "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNYXVLQmxONlB1clVOdUxuUjRtcEhHa3k4Nm9lQWxaRl9ma1RvbDhKV2ZlNEJ5YTI4ZlZJbmNmUXV0QjNYdlZBNnNMbV9PbDdGVUcyck5WT1NRRVlBakIxVXBjTEl5eGthdFRPVkJYYTg1dHBKVHZ1cHllQjFYb3JKVUtjeGVXV2JiQ1kxYUJTdGZRY2RMdzZZSHppdw?oc=5",
-     "source": "www.thewealthadvisor.com",
-     "kind": "presse",
-     "srcs": [
-      "www.thewealthadvisor.com"
      ],
      "m": 1,
      "e": 0
@@ -400,7 +400,21 @@
    "co": "Amazon",
    "actor": "amazon",
    "alerts": [],
-   "items": []
+   "items": [
+    {
+     "ts": "2026-11-28T07:49:00.000Z",
+     "title": "Satya Nadella declines to pick between Amazon's Andy Jassy and Elon Musk; says: At this point, I don't kn",
+     "title_fr": "Satya Nadella refuse de choisir entre Andy Jassy d'Amazon et Elon Musk ; déclare : À ce stade, je ne sa",
+     "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxONThpam0xUkgzclBGZUx4UEtUeTQwSS1mTnY3ajVDR0tLRjJseUM1QW1heXNqamJKMDU4NkZ2ajF2LWRUSklRSFhCUXFrOFdIOXpIODJsWXc1YUE1WW1VRFM1QklaU25UZGNZT0s4MjctN2RhN2JqUS1wLTFPSUoycXdiQmlmOEltZ0JzaWFkZXl6TWdwOE9xZmM2a3RZX25qYmJtbWUyWGVCVVFJMk9MNXdERDA2RVdpdHBUTWtkUnBENm1VclQ4NVdQakhFRVl3M00xMkZLekpvRDFVcGg1MGdoclh1eWZ0bnFuLXRHZDlEUDYwOXZRTi1kVUdvTExyT0RmZ1B4OGtudGNuY1R3a056ZHFMeVVfaGJWYjVHYXdMZTDSAagCQVVfeXFMUDRVUDBmMko4dFpSbzFtV0ROMnhFeW5CbVBOVnNpd29mRFFibDBsYnlESmFYUmc2WkNNaTA4cnJRVVdBR3V1WkVVLU02T2huaG1wOGlDNzY1WG1QNHV2NkR5RG5pTnQtOENaSEREZDdMYlhqY21lUFcxRS1jXzZrX2psYkM2cVQ5U0VzbzFLck54cFNVeDR3aS1HaUJoVDVCNWhkQlVVNVl6dG14MjhUUUozZlV4d2lxNVJOdm1IX3NQa09MUEJURW1VVWhjZ3BnWWZkM3g1VTVfZ0FuTjdWY3VuNkZoN1lUVHI5TmNQeGI2RkFhUjE2NDVCWER5SEdGZnE2Tno2dTF6dzRTUEJzdGtSckpVd0NTelBnOHJBc3VqZk5laXFJdWs?oc=5",
+     "source": "The Times of India",
+     "kind": "presse",
+     "srcs": [
+      "the times of india"
+     ],
+     "m": 1,
+     "e": 0
+    }
+   ]
   },
   {
    "id": "lip-bu-tan",
