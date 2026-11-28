@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T10:20:29.028Z",
+ "generated_at": "2026-11-28T11:20:38.621Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T10:30:29.028Z",
+ "translate_retry_at": "2026-11-28T11:30:38.621Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T11:14:00.000Z",
+     "title": "Elon Musk vows a SpaceX share for 'all kids in America every year'—and shareholders help foot the bill",
+     "title_fr": "Elon Musk promet une action SpaceX pour 'tous les enfants d'Amérique chaque année' — et les actionnaires aident à payer la facture",
+     "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbXNEVVpMSjZ3SlZjQVZIenZaVDg2TXF1Wnotc2JUTjVUdGxSZUNyYWZGa0JDRzNvUlZ1WGJpekhySzdjU1dPYVdtcWRxS1dBNWVfbUxpOERvaUZfYUxtSk5OUGhMbWlTZXgzY2JIV09NQ09CNUM0ejYwcWcwWXdOZExUNW9Vdw?oc=5",
+     "source": "Fortune",
+     "kind": "presse",
+     "srcs": [
+      "fortune"
+     ],
+     "m": 1,
+     "e": 1
+    },
+    {
      "ts": "2026-11-28T10:08:04.000Z",
      "title": "Elon Musk says Google is interested in renting more computing capacity from SpaceX",
      "title_fr": "Elon Musk dit que Google est intéressé par la location de plus de capacité de calcul auprès de SpaceX",
@@ -255,19 +268,6 @@
      "kind": "presse",
      "srcs": [
       "barchart.com"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-27T16:22:31.000Z",
-     "title": "Elon Musk Doubles Down on Giving Back With Plan to Distribute SpaceX Shares to Children",
-     "title_fr": "Elon Musk insiste sur le partage avec son plan de distribution d'actions SpaceX aux enfants",
-     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPS1NjMUY1LUw2cHU3UU1ZSGc3dEF4S0FWOFB6TDRoblNIRkNKNDJXaDYtV2c4T1FkQVpKVGVVTUJ6VFFMd0dTLUpELTA3aHRva1JQa0lRVFNKTnVWMDlwWXN6UzdGNkpaLTh6eVI4MVphUy1pdDV5eGd2S2JIbUFzTExYTlhYb0tHV3gwSWpVanNSYU44VUJWS3pCaTJXYnY4MFR3T3pmdktuTjA4QXZPaUd1ZTRvREk?oc=5",
-     "source": "Gadget Review",
-     "kind": "presse",
-     "srcs": [
-      "gadget review"
      ],
      "m": 1,
      "e": 0
