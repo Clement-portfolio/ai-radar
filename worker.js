@@ -4,7 +4,7 @@ import { isGnewsUrl, resolveOne } from "./collector/gnews.mjs";
 
 const DATA_URL = "https://raw.githubusercontent.com/Clement-portfolio/ai-radar/main/public/data/";
 const IMG_URL = "https://raw.githubusercontent.com/Clement-portfolio/ai-radar/main/public/img/actors/";
-const DATA_FILES = new Set(["feed.json", "fast-feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "focus.json", "chiffres.json", "acteurs.json", "voix.json", "voix-fast.json", "stories.json", "resume.json", "recherche.json", "x.json", "sec.json", "shares.json", "series.json", "indicators.json", "outlook.json", "chain.json", "en.json", "watch.json", "watchlist.json", "datacenters.json", "fabs.json", "dc-extra.json"]);
+const DATA_FILES = new Set(["feed.json", "fast-feed.json", "market.json", "layers.json", "race.json", "status.json", "brief.json", "focus.json", "chiffres.json", "acteurs.json", "voix.json", "voix-fast.json", "stories.json", "resume.json", "finance.json", "recherche.json", "x.json", "sec.json", "shares.json", "series.json", "indicators.json", "outlook.json", "chain.json", "en.json", "watch.json", "watchlist.json", "datacenters.json", "fabs.json", "dc-extra.json"]);
 const SEC = { "x-content-type-options": "nosniff", "referrer-policy": "no-referrer" };
 const GO = new Map(); // lien Google News → adresse réelle (mémoire de l'instance)
 

@@ -3,7 +3,7 @@
 var COUNTRIES=[["ALL","Tous"],["US","États-Unis"],["CN","Chine"],["EU","Europe"],["GULF","Golfe"],["OTHER","Autres"]];
 var CLABEL={US:"États-Unis",CN:"Chine",EU:"Europe",GULF:"Golfe",OTHER:"Autres",UK:"Royaume-Uni"};
 var CATS={modeles:"LLMs",puces:"Puces",energie:"Énergie",capex:"Finance",politique:"Politique",regul:"Régulation",adoption:"Adoption",recherche:"Recherche"};
-var TABS=["une","actualites","recherche","marche","infrastructure","acteurs","carte","methode"];
+var TABS=["une","actualites","recherche","marche","finance","infrastructure","acteurs","carte","methode"];
 var S={xfo:false,xq:"",lang:"fr",feed:[],brief:null,sec:null,market:null,layers:null,race:null,status:null,country:"ALL",cat:"ALL",top:false,tab:"une",layerSort:"tension",open:{},limit:120,run:null,fo:null,focus:null,figs:null,acteurs:null,voix:null,vc:"ALL",vv:"flux",vfo:null,vq:"",ve:false,vlimit:80,actor:null,aq:"",ab:"ALL",afo:false,arv:false,rech:null,rd:"ALL",rk:"ALL",rtop:false,rfo:null,rlimit:100,vsrc:"decl",xk:"ALL",xnr:false,xlimit:100};
 
 try{var ql=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang");if(ql==="en"||ql==="fr")S.lang=ql}catch(e){}
@@ -37,7 +37,7 @@ function srcLinks(a){return (a||[]).map(function(s){return'<a href="'+esc(link(s
 function getJSON(p){return fetch(p+"?t="+Date.now(),{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error(p+" "+r.status);return r.json()})}
 
 function loadData(){
-  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null}),getJSON("data/x.json").catch(function(){return null}),getJSON("data/fast-feed.json").catch(function(){return {items:[]}}),getJSON("data/voix-fast.json").catch(function(){return null}),getJSON("data/stories.json").catch(function(){return null}),getJSON("data/resume.json").catch(function(){return null})]).then(function(r){
+  return Promise.all([getJSON("data/feed.json"),getJSON("data/market.json"),getJSON("data/layers.json"),getJSON("data/race.json"),getJSON("data/status.json"),getJSON("data/brief.json").catch(function(){return null}),getJSON("data/sec.json").catch(function(){return null}),getJSON("data/shares.json").catch(function(){return null}),getJSON("data/series.json").catch(function(){return null}),getJSON("data/focus.json").catch(function(){return null}),getJSON("data/en.json").catch(function(){return {}}),getJSON("data/indicators.json").catch(function(){return null}),getJSON("data/outlook.json").catch(function(){return null}),getJSON("data/chiffres.json").catch(function(){return null}),getJSON("data/acteurs.json").catch(function(){return null}),getJSON("data/voix.json").catch(function(){return null}),getJSON("data/recherche.json").catch(function(){return null}),getJSON("data/chain.json").catch(function(){return null}),getJSON("data/x.json").catch(function(){return null}),getJSON("data/fast-feed.json").catch(function(){return {items:[]}}),getJSON("data/voix-fast.json").catch(function(){return null}),getJSON("data/stories.json").catch(function(){return null}),getJSON("data/resume.json").catch(function(){return null}),getJSON("data/finance.json").catch(function(){return null})]).then(function(r){
     var merged=new Map();(r[19].items||[]).forEach(function(x){merged.set(x.id||x.url,x)});(r[0].items||[]).forEach(function(x){merged.set(x.id||x.url,x)});S.feed=Array.from(merged.values()).sort(function(a,b){return b.ts.localeCompare(a.ts)});
     S.market=r[1];S.layers=r[2];S.race=r[3];S.status=r[4];S.brief=r[5];S.sec=r[6];S.shares=r[7];S.series=r[8];S.focus=r[9];S.ind=r[11];S.outlook=r[12];S.figs=r[13];S.acteurs=r[14];
     var voix=r[15]||{people:[]},fastVoix=r[20]||{people:[]},people=new Map((voix.people||[]).map(function(p){return[p.id,p]}));
@@ -49,7 +49,7 @@ function loadData(){
       p.items=Array.from(items.values()).sort(function(a,b){return b.ts.localeCompare(a.ts)}).slice(0,8);
     });
     voix.people=Array.from(people.values());voix.fast_generated_at=fastVoix.generated_at||null;
-    S.voix=voix;S.rech=r[16];S.chain=r[17];S.x=r[18]||null;S.stories=r[21]||null;S.resume=r[22]||null;if(window.I18N)I18N.extra(r[10]);
+    S.voix=voix;S.rech=r[16];S.chain=r[17];S.x=r[18]||null;S.stories=r[21]||null;S.resume=r[22]||null;S.fin=r[23]||null;if(window.I18N)I18N.extra(r[10]);
   });
 }
 function setStatus(kind,txt,title){
@@ -748,6 +748,8 @@ function aFiche(a){
   h+='<section class="tile">'+tHead('Parts de marché',en?'Against its competitors':'Face aux concurrents')+(a.markets&&a.markets.length?'<div class="cards3">'+a.markets.map(aMarketCard).join("")+'</div>':'<p class="empty">Aucune part de marché sourcée pour cet acteur.</p>')+'</section>';
   h+='<section class="tile">'+tHead('Clients principaux',en?'Who buys from it':'Qui lui achète')+aClients(a)+'</section>';
   h+='<section class="tile">'+tHead('Actualités',en?'Latest news':'Les dernières nouvelles')+aNews(a)+'</section>';
+  var fc=fById(a.id);
+  if(fc)h+='<section class="tile">'+tHead('Finance',en?'How the news leans':'De quel côté penche l\'actualité')+'<p class="fline">'+fToneChip(fc.tone)+' '+fCounts(fc.tone)+'</p><p class="small"><a href="#finance/'+esc(fc.id)+'">'+(en?'Bear, base and bull cases →':'Cas baissier, de base et haussier →')+'</a></p></section>';
   h+=aRivals(a);
   return h;
 }
@@ -841,6 +843,54 @@ function rActeurs(){
   var chips=subs.length>1?'<span class="achs"><button class="chip'+(S.ab==="ALL"?' on':'')+'" data-ab="ALL">'+(en?'All':'Tous')+'</button>'+subs.map(function(b){var f=g==="infra"&&aFilt(b);return'<button class="chip'+(S.ab===b?' on':'')+'" data-ab="'+esc(b)+'"'+(f?' title="'+esc(f.tip[en?1:0])+'"':'')+'>'+(f?esc(f[en?'en':'fr']):'<span>'+esc(b)+'</span>')+'</button>'}).join("")+'</span>':'';
   el.innerHTML='<h2 class="sec">Acteurs</h2><p class="lede">Les entreprises de la chaîne de l\'IA : ce qu\'elles font, leurs chiffres, leurs parts de marché et leurs clients.</p>'+seg+
    '<div class="toolbar frow">'+chips+'<span class="sp"></span><input id="aq" class="asearch" type="search" placeholder="Rechercher" value="'+esc(S.aq)+'" aria-label="Rechercher un acteur"></div><div id="alist" class="agrid">'+aList()+'</div>';
+}
+
+/* Finance : libellé haussier / neutre / baissier par article, scénarios par société cotée (sources citées, ni prévision ni conseil) */
+var FST={haussier:["Haussier","Bullish"],neutre:["Neutre","Neutral"],baissier:["Baissier","Bearish"]};
+var FTONE={"haussière":["Plutôt haussière","Leaning bullish","bull"],"baissière":["Plutôt baissière","Leaning bearish","bear"],"mitigée":["Mitigée","Mixed","mix"],"peu d'articles":["Peu d'articles","Few articles","none"]};
+function fById(id){return((S.fin&&S.fin.companies)||[]).filter(function(c){return c.id===id})[0]}
+function fToneChip(t){var m=FTONE[t.label]||FTONE["peu d'articles"];return'<span class="ftone '+m[2]+'">'+esc(m[isEn()?1:0])+'</span>'}
+function fBar(t){
+  if(!t.n||t.label==="peu d'articles")return'';var w=function(k){return(t[k]/t.n*100).toFixed(1)+'%'};
+  return'<span class="fbar" aria-hidden="true"><i class="b" style="width:'+w("baissier")+'"></i><i class="n" style="width:'+w("neutre")+'"></i><i class="h" style="width:'+w("haussier")+'"></i></span>';
+}
+function fCounts(t){var en=isEn();return'<span class="fcnt"><b class="bear">'+t.baissier+'</b> '+(en?'bearish':'baissiers')+' · <b>'+t.neutre+'</b> '+(en?'neutral':'neutres')+' · <b class="bull">'+t.haussier+'</b> '+(en?'bullish':'haussiers')+'</span>'}
+function fRef(c,ref){
+  var f=(c.fund||[]).filter(function(x){return x.k===ref})[0];
+  if(f)return f.url?'<a class="fref" href="'+esc(link(f.url))+'" target="_blank" rel="noopener">'+esc(f.src||"SEC")+' ↗</a>':'<span class="fref">'+esc(f.src||"SEC")+'</span>';
+  var m=((c.cases&&c.cases.refs)||[]).filter(function(x){return x[0]===ref})[0],l=m&&(c.labels||[]).filter(function(x){return x.id===m[1]})[0];
+  if(l)return'<a class="fref" href="'+esc(link(l.url))+'" target="_blank" rel="noopener">'+esc(l.source||"Source")+' ↗</a>';
+  return'<span class="fref">'+(isEn()?'Macro backdrop':'Contexte macro')+'</span>';
+}
+function fCase(c,k,ttl){
+  var pts=(c.cases&&c.cases[k])||[];
+  return'<div class="fcase '+k+'"><h4>'+esc(ttl)+'</h4><ul>'+pts.map(function(p){return'<li>'+esc(p.t)+' '+fRef(c,p.ref)+'</li>'}).join("")+'</ul></div>';
+}
+function fRow(c){
+  return'<a class="frow" href="#finance/'+esc(c.id)+'"><span class="fn"><b>'+esc(c.n)+'</b><i>'+esc(CLABEL[c.c]||c.c||"")+'</i></span><span class="ft">'+fToneChip(c.tone)+fBar(c.tone)+'</span>'+fCounts(c.tone)+'<span class="fgo">'+ARW+'</span></a>';
+}
+function fArt(l){
+  var st=FST[l.stance]||FST.neutre;
+  return'<div class="row fa"><span class="time">'+esc(new Date(l.ts).toLocaleDateString(loc(),{day:"numeric",month:"short"}))+'</span><span class="fst '+esc(l.stance)+'">'+esc(st[isEn()?1:0])+'</span><div class="rtxt"><a class="ttl" href="'+esc(link(l.url))+'" target="_blank" rel="noopener">'+esc(tx(l,"title"))+'</a><p class="rsm">'+esc(l.why)+'</p></div><span class="rsrc">'+esc(l.source||"")+'</span></div>';
+}
+function fNote(){return'<p class="fnote">'+(isEn()?'Labels and scenarios are written by AI from the cited sources. They describe what the news and the filings could imply; they are not forecasts, price targets or investment advice.':'Libellés et scénarios rédigés par IA à partir des sources citées. Ils décrivent ce que les actualités et les dépôts officiels pourraient impliquer ; ce ne sont ni des prévisions, ni des objectifs de cours, ni un conseil en investissement.')+'</p>'}
+function rFinance(){
+  var el=$("v-finance");if(!el)return;var en=isEn(),F=S.fin,cos=(F&&F.companies)||[];
+  if(!cos.length){el.innerHTML='<h2 class="sec">Finance</h2><p class="empty">'+(en?'No data yet: the first scenarios appear after the next full collection.':'Pas encore de données : les premiers scénarios apparaissent après la prochaine collecte complète.')+'</p>';return}
+  var c=S.fco&&fById(S.fco);
+  if(c){
+    var h='<a class="back" href="#finance">'+(en?'← All companies':'← Toutes les sociétés')+'</a><h2 class="sec">'+esc(c.n)+'</h2><p class="lede">'+fToneChip(c.tone)+' '+fCounts(c.tone)+' · '+(en?'last 30 days':'30 derniers jours')+'</p>';
+    if(c.cases)h+='<section class="tile">'+tHead(en?'Scenarios':'Scénarios',en?'Bear, base and bull cases':'Cas baissier, de base et haussier')+'<div class="fcases">'+fCase(c,"bear",en?'Bear':'Baissier')+fCase(c,"base",en?'Base':'De base')+fCase(c,"bull",en?'Bull':'Haussier')+'</div><p class="small">'+(en?'Written ':'Rédigé ')+esc(ago(c.cases.at))+'. '+(en?'Each point cites its source.':'Chaque point renvoie à sa source.')+'</p></section>';
+    else h+='<section class="tile">'+tHead(en?'Scenarios':'Scénarios',en?'Not enough sourced material yet':'Pas encore assez de matière sourcée')+'<p class="empty">'+(en?'Scenarios are written once at least three recent articles about the company have been labelled.':'Les scénarios sont rédigés dès que trois articles récents sur la société ont été libellés.')+'</p></section>';
+    h+='<section class="tile">'+tHead(en?'Fundamentals':'Fondamentaux',en?'Official figures':'Chiffres officiels')+((c.fund||[]).length?'<ul class="ffund">'+c.fund.map(function(f){return'<li>'+esc(f.text)+' '+(f.url?'<a class="fref" href="'+esc(link(f.url))+'" target="_blank" rel="noopener">'+esc(f.src||"SEC")+' ↗</a>':'')+'</li>'}).join("")+'</ul>':'<p class="empty">'+(en?'Not available':'Non disponible')+'</p>')+'<p class="small"><a href="#acteurs/'+esc(c.id)+'">'+(en?'Full company profile →':'Fiche complète de la société →')+'</a></p></section>';
+    h+='<section class="tile">'+tHead(en?'News':'Actualités',en?'Labelled articles':'Articles libellés')+((c.labels||[]).length?'<div class="rows">'+c.labels.map(fArt).join("")+'</div>':'<p class="empty">'+(en?'No labelled article yet.':'Aucun article libellé pour l\'instant.')+'</p>')+'</section>'+fNote();
+    el.innerHTML=h;return;
+  }
+  var fk=function(c){return c.tone.label==="peu d'articles"?-9:c.tone.net};var sorted=cos.slice().sort(function(a,b){return fk(b)-fk(a)||b.tone.n-a.tone.n});
+  var h2='<h2 class="sec">Finance</h2><p class="lede">'+(en?'For each listed company in the AI chain: how the recent news leans, and three sourced scenarios (bear, base, bull) built from official filings, company news and the macro backdrop.':'Pour chaque société cotée de la chaîne de l\'IA : de quel côté penche l\'actualité récente, et trois scénarios sourcés (baissier, de base, haussier) bâtis sur les dépôts officiels, les nouvelles de la société et le contexte macro.')+'</p>'+
+   '<div class="frows">'+sorted.map(fRow).join("")+'</div>';
+  if((F.macro||[]).length)h2+='<section class="tile">'+tHead(en?'Macro':'Macro',en?'Backdrop used in every scenario':'Contexte utilisé dans tous les scénarios')+'<ul class="ffund">'+F.macro.map(function(m){return'<li>'+esc(m.text)+'</li>'}).join("")+'</ul></section>';
+  el.innerHTML=h2+fNote()+'<p class="small">'+(en?'Updated ':'Mis à jour ')+esc(ago(F.generated_at))+'.</p>';
 }
 
 /* Recherche : papiers, labos de modèles, recherche des hyperscalers, agences */
@@ -944,11 +994,12 @@ function xHtml(){
 }
 function renderAll(){
   if(!S.market)return;
-  rUne();rFeed();rResearch();rMarket();rInfra();rCarte();rActeurs();rMethod();
+  rUne();rFeed();rResearch();rMarket();rFinance();rInfra();rCarte();rActeurs();rMethod();
 }
 function show(tab){
   var parts=String(tab||"").split("/");tab=parts[0];var toRace=tab==="usa-chine";if(toRace)tab="marche";
   if(TABS.indexOf(tab)<0)tab="une";
+  if(tab==="finance"){S.fco=parts[1]||null;if(S.fin)rFinance()}
   if(tab==="acteurs"){S.actor=parts[1]||null;S.vsrc=(parts[1]==="voix"&&parts[2]==="x")?"x":"decl";S.arv=false;if(S.acteurs)rActeurs()}
   S.tab=tab;if(typeof mSet==="function")mSet(false);if(typeof sClose==="function")sClose();
   TABS.forEach(function(t){$("v-"+t).classList.toggle("on",t===tab)});

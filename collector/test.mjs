@@ -134,4 +134,5 @@ await import("./test-recherche.mjs");
 await import("./test-x.mjs");
 await import("./test-stories.mjs");
 await import("./test-resume.mjs");
+await import("./test-finance.mjs");
 console.log("TOUS LES TESTS PASSENT");

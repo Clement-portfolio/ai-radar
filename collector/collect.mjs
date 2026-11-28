@@ -16,6 +16,7 @@ import { makeFigures, FIG_SYSTEM, FIG_SCHEMA } from "./chiffres.mjs";
 import { collectResults } from "./resultats.mjs";
 import { collectSec, SEC_ACTORS } from "./sec.mjs";
 import { buildActeurs } from "./acteurs.mjs";
+import { buildFinance, LABEL_SYSTEM, LABEL_SCHEMA, CASES_SYSTEM, CASES_SCHEMA } from "./finance.mjs";
 import { collectVoix, translateVoix, hotVoix, annotateVoix, VOIX_SYSTEM, VOIX_SCHEMA } from "./voix.mjs";
 import { collectShares } from "./shares.mjs";
 import { collectDatacenters } from "./datacenters.mjs";
@@ -713,6 +714,13 @@ export async function run(opts = {}) {
     resume = await buildResume({ prev: resumePrev, stories: stories.doc || storiesPrev, voix: voix.doc, x: await readJson("x.json", { items: [] }), now: nowMs, generate: mkGen(RESUME_SYSTEM, RESUME_SCHEMA) });
   } catch (e) { resume.reason = String(e.message || e).slice(0, 120); }
   log("Résumé du jour : " + resume.reason);
+  // Finance : libellés haussier/neutre/baissier par article et scénarios par société cotée ; ne bloque jamais la collecte
+  const finPrev = await readJson("finance.json", null);
+  let fin = { doc: finPrev, reason: "erreur" };
+  try {
+    fin = await buildFinance({ acteurs, feed: { items: keep }, outlook: await readJson("outlook.json", {}), prev: finPrev, now: nowMs, generateLabels: mkGen(LABEL_SYSTEM, LABEL_SCHEMA), generateCases: mkGen(CASES_SYSTEM, CASES_SCHEMA) });
+  } catch (e) { fin.reason = String(e.message || e).slice(0, 120); }
+  log("Finance : " + fin.reason);
 
   // Recherche : papiers, labos de modèles, recherche des hyperscalers, agences ; ne bloque jamais la collecte
   const rechPrev = await readJson("recherche.json", null);
@@ -737,7 +745,7 @@ export async function run(opts = {}) {
   const enPrev = await readJson("en.json", {});
   let enRes = { dict: enPrev, changed: false, added: 0, left: 0, reason: "erreur" };
   try {
-    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}, { roles: [...new Set(((await readJson("voix.json", {})).people || []).map((p) => p.role).filter(Boolean))] }, acteurs ? { actors: acteurs.actors.map((a) => ({ ...a, news: undefined, rivals: undefined })) } : {}];
+    const docs = [await readJson("market.json", {}), await readJson("layers.json", {}), await readJson("race.json", {}), evoRes.doc || seriesPrev || {}, sharesRes.doc || sharesPrev || {}, await readJson("indicators.json", {}), await readJson("outlook.json", {}), chainRes.chain || {}, { roles: [...new Set(((await readJson("voix.json", {})).people || []).map((p) => p.role).filter(Boolean))] }, acteurs ? { actors: acteurs.actors.map((a) => ({ ...a, news: undefined, rivals: undefined })) } : {}, fin.doc ? { fin: fin.doc.companies.map((c) => ({ f: c.fund.map((f) => f.text), w: c.labels.map((l) => l.why), c: ["bear", "base", "bull"].flatMap((k) => (c.cases?.[k] || []).map((p) => p.t)) })), m: (fin.doc.macro || []).map((m) => m.text) } : {}];
     enRes = await translateData({ docs, prev: enPrev, generate: mkGen(I18N_SYSTEM, I18N_SCHEMA), batch: +env.I18N_BATCH || 50, rounds: +env.I18N_ROUNDS || 3 });
   } catch (e) { enRes.reason = String(e.message || e).slice(0, 120); }
   log("Textes en anglais : " + enRes.reason + (enRes.left ? ` (reste ${enRes.left})` : ""));
@@ -761,6 +769,7 @@ export async function run(opts = {}) {
     if (okCount > 0 && (added.length || tr.changed || gl.changed || gl.failed || keep.length !== feedDoc.items.length)) await fs.writeFile(path.join(dataDir, "feed.json"), JSON.stringify({ items: keep }, null, 1));
     await fs.writeFile(path.join(dataDir, "state.json"), JSON.stringify({ promptV: PROMPT_V, yield: yieldStats, rejSamples, newsdata: nd, rejected, gemini: classifier ? { date: new Date(nowMs - 8 * 3600e3).toISOString().slice(0, 10), dead: [...classifier.state.dead] } : state.gemini }));
     if (focus.doc) await fs.writeFile(path.join(dataDir, "focus.json"), JSON.stringify(focus.doc, null, 1));
+    if (fin.doc && fin.doc !== finPrev) await fs.writeFile(path.join(dataDir, "finance.json"), JSON.stringify(fin.doc, null, 1));
     if (resume.regenerated && resume.doc) await fs.writeFile(path.join(dataDir, "resume.json"), JSON.stringify(resume.doc, null, 1));
     else if (!resume.doc && resumePrev) await fs.rm(path.join(dataDir, "resume.json"), { force: true }); // trop ancien : retiré plutôt que périmé
     if (stories.doc && JSON.stringify({ ...stories.doc, generated_at: 0 }) !== JSON.stringify({ ...(storiesPrev || {}), generated_at: 0 })) await fs.writeFile(path.join(dataDir, "stories.json"), JSON.stringify(stories.doc));
