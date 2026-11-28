@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T14:31:42.238Z",
+ "generated_at": "2026-11-28T15:11:31.129Z",
  "note": "Scénarios et libellés rédigés par IA à partir de sources citées ; ce ne sont ni des prévisions ni un conseil en investissement.",
  "companies": [
   {
@@ -44,10 +44,10 @@
    "n": "Amazon",
    "c": "US",
    "tone": {
-    "haussier": 7,
-    "neutre": 4,
+    "haussier": 6,
+    "neutre": 3,
     "baissier": 1,
-    "n": 12,
+    "n": 10,
     "net": 0.5,
     "label": "haussière"
    },
@@ -1049,11 +1049,11 @@
    "n": "Meta",
    "c": "US",
    "tone": {
-    "haussier": 5,
+    "haussier": 2,
     "neutre": 4,
     "baissier": 3,
-    "n": 12,
-    "net": 0.17,
+    "n": 9,
+    "net": -0.11,
     "label": "mitigée"
    },
    "fund": [
@@ -1435,11 +1435,11 @@
    "n": "Microsoft",
    "c": "US",
    "tone": {
-    "haussier": 4,
+    "haussier": 3,
     "neutre": 1,
     "baissier": 0,
-    "n": 5,
-    "net": 0.8,
+    "n": 4,
+    "net": 0.75,
     "label": "haussière"
    },
    "fund": [
@@ -1584,10 +1584,10 @@
    "c": "US",
    "tone": {
     "haussier": 5,
-    "neutre": 6,
+    "neutre": 4,
     "baissier": 1,
-    "n": 12,
-    "net": 0.33,
+    "n": 10,
+    "net": 0.4,
     "label": "haussière"
    },
    "fund": [
@@ -1933,5 +1933,1573 @@
    "k": "m4",
    "text": "Introduction en Bourse : Moonshot AI : introduction à Hong Kong envisagée — La société, valorisée 35 Md$ en juillet, discuterait d'une levée à 50 Md$ avant une cotation à Hong Kong."
   }
- ]
+ ],
+ "general": [
+  {
+   "id": "01e747fc1ebd",
+   "ts": "2026-11-28T14:26:45.000Z",
+   "title": "IA et semi-conducteurs : face à l'explosion de la demande d'électricité, Taïwan abandonne sa politique de sortie du nucléaire",
+   "title_en": "AI and Semiconductor Power Surge... Taiwan Drops Nuclear Phase-Out Policy",
+   "source": "파이낸셜뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OZlE2NnlTX3U4NEZJdzgwbmJ2QjFtVkIzTHdQczAtMVZ5TERTTy1TUVgzeWJsVjdMVkN2cnNBUC1CT1N4WGVGb2FnQnQ5MVBLYzlNMTF5LXRqUQ?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Taïwan abandonne sa politique de sortie du nucléaire pour répondre à l'explosion de la demande électrique de l'IA et des semi-conducteurs."
+  },
+  {
+   "id": "0f61395ce8dc",
+   "ts": "2026-11-28T14:00:01.000Z",
+   "title": "AI data center boom strains construction labor across the U.S.",
+   "title_en": "AI data center boom strains construction labor across the U.S.",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/2026/11/28/ai-data-center-construction-worker-shortage-texas.html",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Le boom des centres de données d'IA met sous tension la main-d'œuvre du bâtiment à travers les États-Unis."
+  },
+  {
+   "id": "3973f080fe72",
+   "ts": "2026-11-28T14:00:00.000Z",
+   "title": "Le PDG de Sakana AI affirme que ses modèles locaux vont au-delà de la sécurité nationale du Japon",
+   "title_en": "Sakana AI’s CEO says its homegrown models are about more than Japan’s national security",
+   "source": "TechCrunch IA",
+   "url": "https://techcrunch.com/2026/11/28/sakana-ais-ceo-says-its-homegrown-models-are-about-more-than-japans-national-security/",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Les modèles locaux de Sakana AI visent à renforcer la compétitivité industrielle du Japon."
+  },
+  {
+   "id": "2ea085189ac5",
+   "ts": "2026-11-28T13:00:07.000Z",
+   "title": "DefenseAI aux Émirats arabes unis promet une « vision opérationnelle unifiée » sur le champ de bataille",
+   "title_en": "UAE's defenseAI pledges 'unified operational picture' on the battlefield",
+   "source": "The National",
+   "url": "https://www.thenationalnews.com/future/technology/2026/11/28/uaes-defenseai-pledges-unified-operational-picture-on-the-battlefield/",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "DefenseAI lance des systèmes de gestion des opérations de défense basés sur l'intelligence artificielle."
+  },
+  {
+   "id": "932a08453515",
+   "ts": "2026-11-28T13:00:00.000Z",
+   "title": "FCC approves Elon Musk’s 1-million-satellite 'Starmind' orbital data center plan",
+   "title_en": "FCC approves Elon Musk’s 1-million-satellite 'Starmind' orbital data center plan",
+   "source": "Tom's Hardware",
+   "url": "https://www.tomshardware.com/tech-industry/space/fcc-approves-elon-musks-1-million-satellite-starmind-orbital-data-center-plan-first-747-sized-compute-unit-due-by-2033-despite-kessler-syndrome-fears",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "La FCC a autorisé SpaceX à déployer une constellation de satellites destinée à servir de datacenter spatial pour l'IA."
+  },
+  {
+   "id": "a09eb5e47b90",
+   "ts": "2026-11-28T12:13:29.000Z",
+   "title": "Quelle est la faisabilité des centres de données d'IA dans l'espace ? Analyse du projet de SpaceX",
+   "title_en": "How feasible are AI data centers in space? Unpacking SpaceX's plan to launch a million satellites",
+   "source": "DW.com",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOZjBEa29Pd0FpdFlTNzRkeHoySXFJVEhvS0ZTYWVoN085cm5peVVUeW9PeWdPX3BwVzV5YzdEeUZRQzczNnZ1SEZkdXVLRGhPMnk2RWQ1YWhwMnJha2ZqV1JCNE1BNU10M0FnLXFmU3RaU3p2T2Q2RElkaDZXOHRvRVVpM1NMdTZfcnZMdktCUnFUbU5vdXZ2ZVhqLUN6VktHQ0Y00gGjAUFVX3lxTE8tMlJCa2ZhQWZFa19XLWxLdWVFM2RsTUUwbUtsT2FfYzgwRndjWHFkb3dkR0Zkd2Z2N19TZkFSVW52cXpfNk9kS1FfUXRjUnQyc1RPUkM4RC1mWUxGMGcyVWVEUXprMTF1cmZtUzZKWXM2Z2x5QXBvYi1fTEY2My1RYnZOUTI0bll4NGdoZjBWSHhOZjlTYkpnVFRYVHItT1BKSXM?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Analyse de la faisabilité du projet de SpaceX visant à lancer un million de satellites pour héberger des centres de données d'IA."
+  },
+  {
+   "id": "032dd0d9e5a5",
+   "ts": "2026-11-28T12:02:05.000Z",
+   "title": "Des experts avertissent que l'intelligence artificielle est capable de décoder les secrets des gouvernements et des banques",
+   "title_en": "Experts warn of AI's ability to crack government and bank secrets",
+   "source": "الشرق الأوسط",
+   "url": "https://news.google.com/rss/articles/CBMiiAVBVV95cUxNVEhXeXBDWndvYTFZbXk1M2FzUXVDUktSTktJcE8wUlo5VFVJbXhZckdFZzRrLVh2ekI1ZWpsbVk4U2JoM1BrWEZ3OTRlUXI1TjlrZWhZOE9KNmdQYldxdVlXMzRBbTV4dHFiZ3NFTnhhYUM1elYtLWt5RWNiUVFvN0FURmRNeVh1TEdDNUZKRE9MNFZWVlJBUGF6TW83UFNpeURiaWpoSTh2bEZ1Slo0U0ZoTmdteVBGYzljQmpwaVYzcGlNa3NGMTJZTVpVdHlpaTNLN2FROUNVLUhoWUVTSHJvYjUwenBpODVTN0NKREdRci1wYXJ3YVlKOFMzOS0wVnNrRG5YeC1KcS1uYXlCaUY5aXV2cWxEck5FMGZYcDRtdDhxUlJNTGxuR3YxcHp3aWtQVThtLWtTRm1XVU1paFZjRFlRVWZjaXBGY05PY2xfekwxMmk5RDlBRHJ4Z0l4RHJ6S0N4RkFrRzNVSFRkY0FScllPN1h2MmNpLVgtR0h4a0YwbVlqYW9ORTZIVEpfQS1hd0c1ZEZlVjBreXpPd0RzazZkZEpNMTI2LVhqV0daa20xd0F0bjV4cVZtMU0wWkdqZXQ2T0diTEFFT3dsUmxpenBlVHA3YlZ5UW1WS2F0bm1MeUlDbXdDTGhFa0E1VTEwQkRnQ2NFc2Vhekw5cnZMelZkOGFqV296eUdIUDFfYURrTmpQTElTTmdpTVFWZWFYeGt2ZWk2MEdBMlF0UXNaQWVublVPaklyS2p3azRYVF85ei0wV1dabUl1MjY1dVY0Z21Md29jVzZidF9UMFFHbk51NE11NmVla29PSUJjVGJQV043b0VEMDZlaFRGaG8zX0x0U2k?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Des experts alertent sur la capacité potentielle de l'intelligence artificielle à déchiffrer les données sécurisées."
+  },
+  {
+   "id": "9eb91df6ba20",
+   "ts": "2026-11-28T12:02:00.000Z",
+   "title": "Résumé des startups : les transactions dans la fintech et l'IA en Arabie saoudite dominent l'activité de financement régionale",
+   "title_en": "Startup Wrap: Saudi fintech and AI deals headline latest regional startup funding activity",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/startups/startup-wrap-saudi-fintech-and-ai-deals-headline-latest-regional-startup-funding-activity-3014142",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Le secteur technologique saoudien enregistre des levées de fonds significatives pour des startups spécialisées dans l'IA."
+  },
+  {
+   "id": "30f42de1c504",
+   "ts": "2026-11-28T11:35:34.000Z",
+   "title": "OpenAI poursuit Apple en retour pour vol présumé de secrets commerciaux",
+   "title_en": "OpenAI counter-sues Apple over alleged theft of trade secrets",
+   "source": "BBC",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1ZMTRnUnFSMXZRRkxSclFrOHFnU3dtN3JETUpjbnBYNGF1WU1tMDhqdFQzemRIQUxKTmxlZjdkOXpGNHFIV3hmX211M2tpQnY5NXBnUVlxSWxIR0k?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI engage une action en justice contre Apple concernant des secrets industriels liés à l'IA."
+  },
+  {
+   "id": "50be46b4982a",
+   "ts": "2026-11-28T11:00:00.000Z",
+   "title": "La firme d'IA « parasite » qui mène une guerre contre l'industrie musicale",
+   "title_en": "The ‘parasitic’ AI firm waging war on the music industry",
+   "source": "The Telegraph",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTGNoc29Zcm05V3VFVDFJcmIzbGk1T21FWmh4eEVpQ2xQSDA3aWxoNjlvMVBkMHVXb0tpa24tbFdBYS0xQmVaYWRqZi1xcTJIVnVRUmlvWDhJTEtXbEY5cTZYU2ZnOFVMdDFTbUE0bnpEazlwSm1MdlRJNGZJVXJwRUlDQ0sxVDY4UEdiMm1wTTV0TnFzUW9mdGU1aHFlckxXUEVaVENR?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Une entreprise d'IA est accusée de pratiques prédatrices par l'industrie musicale concernant les droits d'auteur."
+  },
+  {
+   "id": "c0d9d4c1507c",
+   "ts": "2026-11-28T09:58:42.000Z",
+   "title": "China Telecom publie en open source Xing4.1-Preview, un modèle MoE de 285 milliards de paramètres entraîné sur Ascend 910C",
+   "title_en": "China Telecom Open-Sources Xing4.1-Preview, a 285B MoE Trained on Ascend 910C",
+   "source": "Pandaily",
+   "url": "https://pandaily.com/china-telecom-xingchen-xing4-1-preview-ascend-mindspore-oss",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "China Telecom dévoile un modèle d'IA massif entraîné sur des puces chinoises Ascend, marquant une avancée technologique."
+  },
+  {
+   "id": "b77b0dd0d32d",
+   "ts": "2026-11-28T09:56:13.000Z",
+   "title": "Lors de la Journée de l'IA XPeng 2026, He Xiaopeng déclare que le cerveau et le corps doivent évoluer ensemble",
+   "title_en": "At XPeng AI Day 2026, He Xiaopeng Says the Brain and Body Must Evolve Together",
+   "source": "Pandaily",
+   "url": "https://pandaily.com/xpeng-ai-day-2026-he-xiaopeng-brain-and-body-must-evolve-together",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "XPeng a présenté une pile d'IA commune pour ses véhicules, son robot humanoïde IRON et ses robots-taxis."
+  },
+  {
+   "id": "20517261694d",
+   "ts": "2026-11-28T09:46:45.000Z",
+   "title": "La bulle de l'intelligence artificielle... La vague d'explosion a-t-elle commencé ?",
+   "title_en": "The artificial intelligence bubble... Has the explosion wave begun?",
+   "source": "الشرق الأوسط",
+   "url": "https://news.google.com/rss/articles/CBMiwgNBVV95cUxObVN2VkFwT0pWME82MFVyZ1N1YXBweVNxTEtzc0N6b0pyTDZoQ0Zmdnd2VXR4bEpqNjdMTGM0STdMdkFUR3dNUF90RDhSc3B3eUhXMV9aYnZ4NlZ3ZF80b1Y0eVJ0dW41WUJsTVJiTzRLelB5ekZHbEdtQnQtZUFFaFB2SWR4Si15RGdyQlhkR2R0cWltY201T0RuYnJMOFZVd01zeUJnUmRPNlpzdWJzeFJqMFZOUkx6bVQ1SXh2VXlOWmV6QTdtS005eFJfMzc0LWNxWl96aU5aeWdZd2Z4Yzc2OHI2VmpnOVMtWVBzbWVFVmduWFdLdUJWYVBucndweEVNVm4yankxR3QzYUh4Skhva3M2cjRZSlhFeC0wQzdvOV9fNlVwREJubnpBZXhjZkN2Z0JMdWVSS19GRXdJUmZnUVNBRHhmOFJlQ3FTOGx4QkNidWRnTk5ZYVBKWWVjdEh2REpuNy1VMzdPY0pxRzdzSm5zckpHWk9wWWZMMFdFOEx6SGltZE4xN2Nldi1QM2R3Y0dHMk1wcEFaZERpRWthUXZaY0t4M0tLelpnNF9fQ0pQMm9tTklQVzFhMUNFcEE?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Examen des risques d'une explosion de la bulle spéculative autour du secteur de l'intelligence artificielle."
+  },
+  {
+   "id": "30a8811ec85b",
+   "ts": "2026-11-28T09:26:34.000Z",
+   "title": "Les nouvelles données sur l'inflation apportent des nouvelles inquiétantes pour l'économie de Donald Trump et le marché boursier dopé à l'IA",
+   "title_en": "New Inflation Data Brings Worrisome News to President Donald Trump's Economy and the AI-Fueled Stock Market",
+   "source": "The Globe and Mail",
+   "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNOUZsR2tNd3A5a2ZreUQ3dmpYUEVycTFDVlpjM3hfMk9WWVdkUmRVRmdZcWt3aXRoWi1DeTg2TjRzclNTQTh3c0pOZ21MWFhBczk5SWZXNUstUUpDckJVQjVVSEhxNjhYTHB0UkVpU1VQdDBSU1RXSndVbHNfOW9TQWRWVk1iNWkydDZzMy0zZEt4MGdzektyUXBSYzhVZ3NaaHY4b1dQMU5DTmc1MHJkM1hqUGdPRUhEVFVxTXFKZVVYbEVLQzg5dnFIcF9WbElSekd4QlU4UW9CUDktTjBra0NxcDd3T01OU3pGSXA4RlpLRDFqVmIxV1VaRUFENUZGam9jeVNuRGNXV01peEhYa2VLSDJBMTM1akdR?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "L'inflation impacte les perspectives économiques et la valorisation des entreprises technologiques liées à l'IA."
+  },
+  {
+   "id": "6f31e0daee6a",
+   "ts": "2026-11-28T08:39:46.000Z",
+   "title": "Malgré des résultats records portés par les semi-conducteurs IA, les investisseurs étrangers vendent des actions sud-coréennes",
+   "title_en": "Foreign investors sell off South Korean stocks despite record results from Samsung and SK Hynix driven by AI semiconductor boom",
+   "source": "매일경제",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBSTHV4Qk9KLVljN3FkbS1tVEZ0N3hZalZBdTRmQUlvMzduVy1wMVRQVFNQbk4wTDI0RmExSVFyMlBWdXVXRXFQcEFGTW9iMTQ?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Samsung et SK Hynix affichent des performances historiques grâce à la demande en puces d'IA."
+  },
+  {
+   "id": "d045973d75be",
+   "ts": "2026-11-28T08:14:00.000Z",
+   "title": "Les dictateurs de l'IA – comment les milliardaires de la tech façonnent un nouvel ordre mondial",
+   "title_en": "Die KI-Diktatoren – so erschaffen Techmilliardäre eine neue Weltordnung",
+   "source": "Spiegel",
+   "url": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPQlpaR1h4aVI2MzlYRnUxT1VlUjFmTmllZTFmdlNRVkNaOHVmeEUySUdjMDRVVF96TXNTbmJMSUlBeWdxeFAtc05PaHVfdlpqWjFlTVdaWUpobXQ0c1dSVHBvNUs3SFRTWWVXSkNqVjNXeTFsNzM1MWp5T3NOOEFXOHhGV01wQkN2c1BROEhBNVRWYW5JRzNVVXl6ckZxX3NKNEJQRWlWNE0zejlpOTNLZTAxRGYtTEZKRmVtdHc5SGFRTlpXd2dtY0VaQlk3NTFnNEpOOGE3Z25lWXpoeHExT19ENjhfUHhJNm91WVc4Y3dfUndaUTVOeVE5bFEtTlJjdmsyTEdjbFBVZnlzaEZtTFF1a2xLdllNYXc5ODM0S0JsUVVIWUE?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Analyse de l'influence géopolitique croissante et du pouvoir des milliardaires de la technologie dans l'IA."
+  },
+  {
+   "id": "5d631bce0aa1",
+   "ts": "2026-11-28T07:38:00.000Z",
+   "title": "Apple impose des limites quotidiennes aux fonctionnalités d'intelligence artificielle dans iOS 27.3, incluant Siri",
+   "title_en": "Apple imposes daily limits on AI features in iOS 27.3, including Siri",
+   "source": "العربية",
+   "url": "https://news.google.com/rss/articles/CBMi1gRBVV95cUxPTGM1Q0txUFZPZU5GOHlib01CYXd1TDJwSGhLVTg2bFEzbV9jNlZJZy16VDhXbU9LWUJUSTI4SkctMzZJZ2IzM0ktd21fQWNTd0tIWmxaM09tbURqZmI1Uk9waVkxQjl4MnU1bmwydW8zd18wSDYtalVab2UtdjlKbi1WTGRFMUpobnhuc1dLTkRIOWR2ZGlKX3FPOVFSZXctRS1SNzNOUUJPN2FVRGxJRENCaWRCNUNNcVhpU19oTmJpcjBXM1g3RUxQNUEzQVdWQlZYNk5kN1hRR1QxQV9IU0NpRFFteWhTRnQxQTlvR0t5SFV5cE5lcmMzeVgzQ1VIajBsZVRKX2FfTWgxYVd4X080TlhkSzBOOHh4OWhRVmgzRl9fN3pCc2JLNzY2Um9VemVBV28xY1RfeTg0R2ctV20wMUhtck10dlI4c0ozQ1B2ak5tbWtGcDgwSGktS0ZGNVBLb19yWmNIODlWQlpNUWFJUmlMTzNIV1NBYUFLMzNDM3BMTjdoV3JxN0wzeUpLcTVsdUFXb3prS0FDYjMwOFlHSU5qNXFlVHU3VUc2a1Z6TXU4QkhDbmtWNS1lXzJrdkVJZnlDX0lvQ1drNld4ZjFNMHpsOFFNMnVCdnNZakRiSGRYYjVnR1RsYTdxbFpKd0tMQW5wWTFXM2xSWWY4bkIzM3pFd0p0c19TZGdjUnZZVzA3d2d0cUd6WFlNWlZjYWNmRFFhN3l0ZEVpQ2pxd0FPY0RoYVNMZGVrTHJmUTNKYWdhSmo3WmxqZlh6OWxwM2t6VldB0gHWBEFVX3lxTE9MYzVDS3FQVk9lTkY4eWJvTUJhd3VMMnBIaEtVODZsUTNtX2M2VklnLXpUOFdtT0tZQlRJMjhKRy0zNklnYjMzSS13bV9BY1N3S0habFozT21tRGpmYjVST3BpWTFCOXgydTVubDJ1bzN3XzBINi1qVVpvZS12OUpuLVZMZEUxSmhueG5zV0tOREg5ZHZkaUpfcU85UVJldy1FLVI3M05RQk83YVVEbElEQ0JpZEI1Q01xWGlTX2hOYmlyMFczWDdFTFA1QTNBV1ZCVlg2TmQ3WFFHVDFBX0hTQ2lEUW15aFNGdDFBOW9HS3lIVXlwTmVyYzN5WDNDVUhqMGxlVEpfYV9NaDFhV3hfTzROWGRLME44eHg5aFFWaDNGX183ekJzYks3NjZSb1V6ZUFXbzFjVF95ODRHZy1XbTAxSG1yTXR2UjhzSjNDUHZqTm1ta0ZwODBIaS1LRkY1UEtvX3JaY0g4OVZCWk1RYUlSaUxPM0hXU0FhQUszM0MzcExON2hXcnE3TDN5SktxNWx1QVdvemtLQUNiMzA4WUdJTmo1cWVUdTdVRzZrVnpNdThCSENua1Y1LWVfMmt2RUlmeUNfSW9DV2s2V3hmMU0wemw4UU0ydUJ2c1lqRGJIZFhiNWdHVGxhN3FsWkp3S0xBbnBZMVczbFJZZjhuQjMzekV3SnRzX1NkZ2NSdllXMDd3Z3RxR3pYWU1aVmNhY2ZEUWE3eXRkRWlDanF3QU9jRGhhU0xkZWtMcmZRM0phZ2FKajdabGpmWHo5bHAza3pWV0E?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Apple introduit des restrictions d'utilisation journalières sur ses fonctionnalités d'IA au sein de sa mise à jour."
+  },
+  {
+   "id": "5f18ff53dc82",
+   "ts": "2026-11-28T07:35:37.000Z",
+   "title": "Le Liban et les Émirats lancent une initiative pour former un million de personnes à l'intelligence artificielle",
+   "title_en": "Lebanon and the UAE launch an initiative to train one million people in artificial intelligence",
+   "source": "أريبيان بزنس",
+   "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPdVNidkZ3bUJ4ZU5rcHdyMkJEMUpTcGtfdFZYM3cxcDBEb2d5cXF4RXlSdTJlVWN3Z2FqN1FsX294VUM5cjltV0NFVVNDN1ZZSEFDaUlIcmk5WU5oX2ZIZXRNT3ZNZlNoR29iT3JVWlVaWUt0bXNfdkhPdTV2Tms0b3cxNFpXak42SC1nRi04aG03UHZacW8xTFl3X3E4S0hDVUp6cE5DaTFycUlIZ19fdjY3RkFEWnVwSGlST1JGQjItMVdfc2laU2hqTmFsNWFwSFlzU2RMdEVSR0ZOcjVYcmxDVXoySW81YjlneVd3Xzh0UFh2NTF4QTVHbDhTMGNHS2puQlhfZm8xTHp3b0tsa1RZYmdiRGktc0doX3dfNzR6Y2l4dVJOSnFSb1NkRmNFc09ZRmJ5SmtkT1lORG9hYzJGTFRTaWlZOWozUHRsUFdBT0VnZjRiR2JBYw?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Le Liban et les Émirats arabes unis lancent un programme pour former un million de personnes aux compétences en IA."
+  },
+  {
+   "id": "a036e8b8dbb4",
+   "ts": "2026-11-28T07:22:30.000Z",
+   "title": "Comment Israël accélère la construction de centres de données pour devenir une « superpuissance de l'IA »",
+   "title_en": "How Israel is fast-tracking data centres in bid to become ‘AI superpower’",
+   "source": "Al Jazeera",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVUIxemc0QzJUS3FqX0NGVDg0OHF3Z0QzNE1qTVdMQlVRQnhzM0lwd0M0OUp1NWMzVHh4aVFONElMVy1KMnpHUDFvUERJWmprYk4wX3lUR21GbDVOdkcyUzlDeTFtZFBpUkFNM2VRRkRhNnJCbDM1dHV1dGV4SkNzVlVFZ1l5UmRFemJuR2JwTDN0d255Qng2Yll0SkFVSnZCQzFCbVg1dWdjQjVCMTlIRXdUM29GVndW0gG4AUFVX3lxTFBVQjF6ZzRDMlRLcWpfQ0ZUODQ4cXdnRDM0TWpNV0xCVVFCeHMzSXB3QzQ5SnU1YzNUeHhpUU40SUxXLUoyekdQMW9QRElaamtiTjBfeVRHbUZsNU52RzJTOUN5MW1kUGlSQU0zZVFGRGE2ckJsMzV0dXV0ZXhKQ3NWVUVnWXlSZEV6Ym5HYnBMM3R3bnlCeDZiWXRKQVVKdkJDMUJtWDV1Z2NCNUIxOUhFd1Qzb0ZWd1Y?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Israël met en place des procédures accélérées pour développer ses infrastructures de datacenters pour l'IA."
+  },
+  {
+   "id": "e9b4f9cf27ec",
+   "ts": "2026-11-28T07:20:57.000Z",
+   "title": "Au-delà du lithium et des terres rares, la Sparite est un goulet d'étranglement caché pour la production de puces",
+   "title_en": "Column: Beyond lithium and rare earths, fluorspar is a hidden chokepoint for chip production",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD209/lithium-production-cobalt-materials-gallium.html",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "La chaîne d'approvisionnement en fluorspar représente un composant critique et vulnérable pour la fabrication de puces."
+  },
+  {
+   "id": "3f046103a6ed",
+   "ts": "2026-11-28T07:20:38.000Z",
+   "title": "Les risques liés aux circuits imprimés pourraient rivaliser avec les pénuries de puces, menaçant la croissance de l'IA",
+   "title_en": "PCB supply risks may rival chip shortages, threatening next wave of AI and electronics growth",
+   "source": "Digitimes",
+   "url": "https://www.digitimes.com/news/a20261127PD226/pcb-demand-supply-chain-capacity-medical.html",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "La demande fulgurante en IA sature les capacités de production des cartes de circuits imprimés."
+  },
+  {
+   "id": "2632bdf5bf48",
+   "ts": "2026-11-28T06:45:00.000Z",
+   "title": "OpenAI poursuit Apple pour vol de secrets commerciaux et entrave à la concurrence",
+   "title_en": "OpenAI sues Apple over trade secret theft and anti-competitive obstruction in AI devices",
+   "source": "العربية",
+   "url": "https://news.google.com/rss/articles/CBMi-ARBVV95cUxQMUxyaElzc0NiTl9QRVl6RjRhUWhwZE1pVEpsMmM5LTByb3ZTSkdHeTZ1UUdWbkYxSzFoVnN0ejRyLUdYM3c3M1M2WlhGU2RsU00wUWdSc2N0VEViSE1SQlc0bzVDS0k0QXBzOHBaZVo0MWF1OUt0WHpVbjBGNVVlQTlUWGNMWk5IZzBhNHpON3RJczc2WG15MlA1azNjbUxkVko5dmJGaHBGQ0VRNkdqRUNING5sM3I1MDU4LW5KTlRra3R4SzhEZDdaN2FjVGV0eTlMOEVPaDItMEJjNnFNT2NOM2Q1dHRUVXdWWUtBLWEydmhEZXZXVzlaZjdxV1BwUUVCNWFLNkhrUllZOWM5Qm11WnF1dEZ0ek8tZ21rVDBPSWNjelZYUmt4ZnM2UEhJc3NYX1R1YWd3bjgySGJERTJvX1JkSElTTXFqcFBnZG9fTV9fUHNnaWlCYUgtTWN5cE15MGF4MHhfRU1qdEhMYk1kWURQXzR4d3ZMYnMwV25QdkxxclFGNmJvQV9GRHc4NXpvS2xSMjhiWVhmTlBzMGRNT1Q3a3gwUFR2b2JoWUNsZmVWZkQ5TENkdHVad1RyX25xWjFidVpMbGJSUlpNTmFKS29KTlk4RzdoOE8wMGpkdGRCRnVkTHRoVHFlLTVpa1g2eGFwUXFDTDRTVVhKYUxkNVlXdmttbDFkT1VPY1RfemdsNTBMaFlpNG5aS1pLT2hSck4yWDFmNG03Z1AwNGVHTWl3SWs0Q0ZQV2hKOUV6N1JUTjZQRW1VQVFxN1RlMjdONzBvUVh1VmFacXZBV05KMENiT0FpUl9MOTZUQnZtbkl4R0JvWtIB_gRBVV95cUxON0hvZDdfMHhkOVlxYjVQNlQ3NkptZ0ZpUWxudFoyZHoyU1ZBRHJOeTZmQzE0am9mb0tUWEpyczE4SnY4ZTEySUtqUXE2azNPbno1ckVLQUh1alZmek4xVG1wMURCNHRlUjZuZlE2R3ZrWVJId2xWdzFJYXk1ZlVlR19nMnByWjg2VGJNZ2hvcHltWVdYNncySExOZ1hzSmRnM1l3Q2phaTFtVHVRbzNnbzRadDVDclVwZHd1VU5RVHl3QlM3Q2NYWXNxdjZqbk9VZHZoeFNjcXgtekR2dDc1NE9MeFA2aGtuaUNENlUybnBTVV90MDJrbGZpZkZDcVRMRGU0T2hEaXFRd2VYUXNhVEdaVmZWOW5seUpwSkVKX2toOG4xRjRnRW1aOEV5aVVvbGdkd3BCajItLTZ3ZjFUbGZJT0M3UjlmMUtfZ0JUN3h5YWRCZmdNZkktbFlqS0RzTW1WRzE0OExiZjlTNEF4VlNSZDJEV0JYSk1sX1RxaWQzdGZCNXpMczRCTFNSNjFqTE9BaC1WS2xhRi01WU5QaktTS1M5c1g2M1Z4S09uellTbURJcENVWHp2c1phSTVtaW9PRjJDMEhfZE9aWUt3TnRUYjhPWmFDVFEtNFpGZGtXM01fQjg5UjRyT01tamUwQ3ZKNEZKLXpsam1xMnhvWC1mYkZsWUJYdW9oTlNVd2tCRkhHY21udE9lZ0p0Ym9HODRQQUtZdjZwQjNvQXJGWXQzdkQ5cDJRUkt0aEJDeHVFVzg2Vmw3UVU5cV9CRjYwMXd1RE43MTdXUUxibW8tMWZkT0tvSjNmSEZqMkVpVEt6MXBnNXJRbV91ODJfUQ?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI engage des poursuites judiciaires contre Apple concernant des secrets commerciaux et la concurrence."
+  },
+  {
+   "id": "b1edc9637cc5",
+   "ts": "2026-11-28T05:40:21.000Z",
+   "title": "Les contrôles américains sur les puces freineront les investissements dans les datacenters en Asie-Pacifique, selon Fitch",
+   "title_en": "US chip controls to slow Asia-Pacific data center investment: Fitch",
+   "source": "ET Datacenters",
+   "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPTXJMT212ZWlZYkdsUDB1dGRqSVN3a2ZxU09wNjR6bVRsMFVRZEF6SjhtZjhzdFlMYlBtdThTYnRsa2MxUktsMmVUMzJ3ejB6NTRqQ09EY3p4UEFyc3Q4SFF1RmM5NG1Wa1NWVnhaLUdyaF9CTVRfMTVxTGItUzNjUll0cnhBODRQQnd1bUNpallqX1QtNUtPMGtfbzE1SnlmdldJSk8xX2F4ekhBZXhyakYzbTZjMGI5Y1VDd0FCS21HVDhXaDhjV0tOY0Vkcm9YYk11WnZURnJ3QXg0cFhoWDNISWRFdkd4MXBPX9IB8gFBVV95cUxObF9PUDRrM21mTGw2cnFRaEdFNnctN2dXeFJOSnBKVG9Xc3g0cXRqbThTOE5ZZEFJRzBoaktkNm5WbHkyeGthZ3VtNVNONi1LOG9VSnd1NFdia1ZnbEQ4bXJJRUN5XzhKbS1MT05rWndON3Y0cEJoZk11VHMwVVhrYllVcjlBMzZFT3RjdS1HUndOeFBob1FhQzdwdVBfd3pJaXFWMlg3TDYxRmtQT2ZXdXJWOERWc1BMZW9tOWVrOTVYdWwyTjJWdUlXZUtKbW5LamQ5MGQ2UFEyeW5Bd3Z6dk5iQzNaYWFUWkowbEc3dWVTUQ?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Les restrictions américaines sur les semi-conducteurs ralentiront le développement des centres de données en Asie."
+  },
+  {
+   "id": "0c7f5c331a42",
+   "ts": "2026-11-28T05:02:11.000Z",
+   "title": "Comment un ingénieur en sécurité du Gujarat a utilisé l'IA pour exploiter Java en quelques jours",
+   "title_en": "How a security engineer from Gujarat used AI to exploit Java in days, not weeks",
+   "source": "Moneycontrol.com",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxPOTkyZThZS2YyQ3JUNVZhMWdXQjFNS1pOTVNOZE9naGx2QU5mdEVRS01SWWp0Q21rMHA3V0F1cHhGcUZTNE9DZnpmNW5fZk5rU3BBNWJBS3VTRnFTS04yS1BGT0RSemp3OUgtaEtaN3ZjSy1XLUVNcGlCdkRFa19ibDdELWxDcU9KdjlaNkl3NVZ0eXVJSXZHeVpKM19VTWh4eTRoNVpEVUxxbEJJbXFDTVRHdWNUeEwyOWR5TUZvY01Nc3Z2LWRIV3hzQXREb0dOU21od0NRbnJsazFrSnFrWFlhWUhxUFps?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Un ingénieur a démontré comment l'IA peut accélérer la découverte de vulnérabilités logicielles."
+  },
+  {
+   "id": "588fd0acfcc0",
+   "ts": "2026-11-28T05:00:00.000Z",
+   "title": "Les laboratoires d'IA détiennent des révélations explosives pouvant causer un chaos mondial, alertent des experts",
+   "title_en": "AI labs sitting on ‘bombshell’ revelations that could cause global chaos, experts warn",
+   "source": "The Guardian",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPdk5mQnJsSjlGQ1JxaHhFRWI2a0xYVTZQUEVQdWxpNWxFNUVRN1FFYXlhSkwxM2JDNzdQSXdwSTc1TlQzNE9IeV8zd1YzcVVhNXJVSUNTakFTRVNKdmI3M28yUFZmU3hTWXlZcG1SQU81dkdrWjNaRVA3ZEJPazVJQ19ZSlFsdzh2Q3J2LXNuZHNYZHFHWEQ4UFBnWlRzVTBnb2Zr?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Des experts alertent sur les risques systémiques liés aux capacités non divulguées des modèles d'IA."
+  },
+  {
+   "id": "74e21b230faf",
+   "ts": "2026-11-28T04:02:25.000Z",
+   "title": "L'équipe InternLM publie Sage-Interaction, un modèle multimodal 9B",
+   "title_en": "InternLM Team Open-Sources Sage-Interaction, a 9B Full-Duplex Model Built on MiniCPM-o 4.5",
+   "source": "Pandaily",
+   "url": "https://pandaily.com/internlm-sage-interaction-minicpm-o-45-full-duplex",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Le laboratoire d'IA de Shanghai a publié en open-source un nouveau modèle multimodal."
+  },
+  {
+   "id": "567ac948e27d",
+   "ts": "2026-11-28T03:10:13.000Z",
+   "title": "GS lance la construction d'un datacenter IA de 1,2 GW à Donghae",
+   "title_en": "GS Breaks Ground on 1.2GW AI Data Center in Donghae",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/business/2026/11/28/gs-breaks-ground-on-12gw-ai-data-center-in-donghae",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Le groupe GS a débuté la construction d'un datacenter IA massif de 1,2 GW en Corée du Sud."
+  },
+  {
+   "id": "76371a5159be",
+   "ts": "2026-11-28T03:06:41.000Z",
+   "title": "Lee assiste à la cérémonie de pose de la première pierre d'un grand datacenter IA à Gangwon",
+   "title_en": "Lee attends groundbreaking ceremony for major AI data center in Gangwon",
+   "source": "The Korea Herald",
+   "url": "https://www.koreaherald.com/article/10952421",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Inauguration du chantier d'un campus de datacenters IA de 2,4 GW, projet majeur pour la Corée."
+  },
+  {
+   "id": "e1d9661ce4a7",
+   "ts": "2026-11-28T03:02:20.000Z",
+   "title": "L'investissement dans les datacenters en Asie-Pacifique ralentit face aux pressions sur les puces américaines",
+   "title_en": "Data center investment in Asia-Pacific faces slowdown amidst US chip control pressures",
+   "source": "ET CIO",
+   "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxNMV9XaXFhbXJhaGtLeWVWdG5yX3dOcGVZb3JCMVd5QW9vdmlTZlJlZ040a20zb3h2a3FhS3ZqUzNjM2IyUVI3S005MUIxN1Q4WXZDeTIzaWlFMjdJc2hSRXNjMTdTUmhqT2x2UlFScHlTSThqYzI0Y0psWmJvS085N3hwWUcwdDZ4RTFQTnhQMmFJOHB1d2tlUDlPeTRrOFZoNVV5VTlhWVB2a1BsMGFUNTIwcXZKd2dRYlByQWg4NHRkSVZOLTFrTW1qSll5enBDS2ZOZm5NY2I2VGZpZWU3cC1NcWkySmZDSG1GOWszbnlDTHYwRmotWVVmX0dzNUV3aHZUT3RPS18yelVkeTNUOTUxQy1ha2sydlFtbHR6anAtSlnSAe8BQVVfeXFMTjREbEd1eDJGcnZZbmlpdVpoVHJQU2REQW5BSXRUZ2NqS1BXbEh0WE5aQXRncHFRZGJ6WFYzVGREQ2JENmotbXN0ejZYYnFCZnEtRFMxdzRfeFJNNUQ5SVdBQWlOWXlya2NCbFVBaWl1TVQ0UEF4Ry1qSjdmR1BhVmxhQWpteXcxd3Rzcl80cTdzVGRCMmpMTURON2hKbmpDS1E3RFhmbUVsLUhVRmZDd3EzcG1tVldkMExqdXFFYzFrOXRVTGRnRDhWQ3FQLXNEeGFtQ3BGTVkteHFUTlBSekZfOUxlVTdYSDBLY2QzQUE?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Les restrictions américaines sur les exportations de puces freinent les projets de datacenters en Asie."
+  },
+  {
+   "id": "e87471af621e",
+   "ts": "2026-11-28T02:49:11.000Z",
+   "title": "Le président Lee assiste à la pose de la première pierre du datacenter IA de GS à Donghae",
+   "title_en": "President Lee Attends Groundbreaking for GS AI Data Center in Donghae",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/politics/2026/11/28/president-lee-attends-groundbreaking-for-gs-ai-data-center",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Début des travaux du futur plus grand datacenter IA d'Asie, d'une capacité de 2,4 GW en Corée."
+  },
+  {
+   "id": "9006be75a409",
+   "ts": "2026-11-28T02:09:29.000Z",
+   "title": "OpenAI contre Apple : quel est le litige sur les secrets commerciaux et pourquoi les deux géants vont s'affronter en justice",
+   "title_en": "OpenAI vs Apple: What is the trade secrets dispute, and why are the two tech giants heading for a legal battle?",
+   "source": "Mint",
+   "url": "https://www.livemint.com/companies/news/openai-vs-apple-what-is-the-trade-secrets-dispute-and-why-are-the-two-tech-giants-heading-for-a-legal-battle-11795830326678.html",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI a déposé une contre-attaque contre Apple pour secrets commerciaux et restrictions d'embauche."
+  },
+  {
+   "id": "8a71293beb78",
+   "ts": "2026-11-28T02:00:18.000Z",
+   "title": "Nota étend sa technologie de compression d'IA à la robotique",
+   "title_en": "Nota Expands AI Compression Technology Into Robotics",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/business/2026/11/28/nota-expands-ai-compression-technology-into-robotics",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Nota élargit l'application de sa technologie de compression de modèles d'IA à la robotique."
+  },
+  {
+   "id": "be14b1acf90b",
+   "ts": "2026-11-28T02:00:11.000Z",
+   "title": "DeepSeek est le dernier développeur chinois à s'inquiéter de perdre le contrôle de l'IA",
+   "title_en": "DeepSeek is China’s latest developer to worry about losing control of AI",
+   "source": "SCMP Tech",
+   "url": "https://www.scmp.com/tech/article/3376058/deepseek-chinas-latest-developer-worry-about-losing-control-ai",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "DeepSeek mandate un cabinet tiers pour évaluer les risques de perte de contrôle de son modèle."
+  },
+  {
+   "id": "8963c14496a2",
+   "ts": "2026-11-28T02:00:00.000Z",
+   "title": "Le pari du président Trump sur l'intelligence artificielle risque de provoquer des réactions négatives sur l'emploi et les conflits d'intérêts",
+   "title_en": "President Trump’s bet on artificial intelligence risks backlash from Americans worried about jobs and self-dealing",
+   "source": "Wsj",
+   "url": "https://www.wsj.com/politics/policy/the-high-political-cost-of-trumps-loyalty-to-jensen-huang-7f0327db?mod=rss_socialpoliticsfeed",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Les choix politiques en matière d'IA suscitent l'inquiétude face aux risques sur l'emploi."
+  },
+  {
+   "id": "792564956a94",
+   "ts": "2026-11-28T01:09:00.000Z",
+   "title": "OpenAI affirme qu'Apple a fait pression sur ses fournisseurs pour rejeter ses appareils",
+   "title_en": "OpenAI says Apple pressured suppliers to shun its devices",
+   "source": "The Japan Times",
+   "url": "https://www.japantimes.co.jp/business/2026/11/28/tech/openai-apple-pressured-suppliers/",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI indique qu'Apple aurait exercé des pressions sur des fournisseurs pour écarter ses projets."
+  },
+  {
+   "id": "4014fc316b4f",
+   "ts": "2026-11-28T00:58:30.000Z",
+   "title": "Les agents d'achat IA ne représentent que 0,4 % des ventes lors du Black Friday",
+   "title_en": "AI Shopping Agents Account for Just 0.4% of Sales on Black Friday",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/world/2026/11/28/ai-shopping-agents-account-for-just-04-percent-of-sales-on",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "L'adoption des agents d'achat basés sur l'IA reste très faible lors des événements commerciaux."
+  },
+  {
+   "id": "e5aadcf03bda",
+   "ts": "2026-11-28T00:58:17.000Z",
+   "title": "Des puces Blackwell de Nvidia repérées dans un datacenter de Shanghai lié à Alice Huang",
+   "title_en": "Nvidia's Blackwell Chips Spotted at Shanghai Data Center Tied to Alice Huang",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/world/2026/11/28/nvidias-blackwell-chips-spotted-at-shanghai-data-center",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Des puces Nvidia soumises à des restrictions ont été découvertes dans un datacenter chinois."
+  },
+  {
+   "id": "88d2e763558e",
+   "ts": "2026-11-28T00:46:12.000Z",
+   "title": "Pourquoi le projet d'Elon Musk de 1 million de satellites IA suscite des inquiétudes",
+   "title_en": "Why Elon Musk's plan for 1 million AI satellites is raising concerns",
+   "source": "The Economic Times",
+   "url": "https://economictimes.indiatimes.com/tech/technology/why-elon-musks-plan-for-1-million-ai-satellites-is-raising-concerns/articleshow/136240198.cms",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Le projet de constellation satellitaire pour l'IA soulève des questions sur l'impact environnemental."
+  },
+  {
+   "id": "9bac313532fe",
+   "ts": "2026-11-28T00:26:08.000Z",
+   "title": "OpenAI dépose une contre-attaque contre Apple pour secrets commerciaux alors que la course à l'IA s'accélère",
+   "title_en": "OpenAI countersues Apple over trade secrets as AI race hits up",
+   "source": "Al Jazeera",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxON1UyNzVUM1VWYllDUVB5Rl9LVDYwZExiMWt2WFp4eWVUckVjdDhqbFFfSXR1b2NiRm9LbFZQZ2xlZTNkRmtaSkZnb2M4ekJwVkVxbE1jdmNlazc2QUMxallwb1JpTWRvVk9ZOW12SVM5MTZ4RS1CQkNGcW5qZlMySWJZTjBkNXBtZXByR0NuVWdJZWVXWW8zcWRsTUF1ZUJXMlNVNWxEM2l0VThn0gGyAUFVX3lxTE16T05QbEdEbTdCUklBU3kyX05YX2RxaTZrVl9yWTEtWDF4dThXOFAyODNDTjFHTy1LRmJkZEJpd1E0eTBOaWxkS0NXV1BIWFo0V1ZTU01JMzd5bVpkMHFWTEhSNEVBT3E1cXd1NVJFbEJtSXFURGpxMzlKOWtNTXg1amFKZDhEOWttUlhkU1Y2UmVnSUgwRWZqWmJmTzdRaVBNM01pczFxTnh0RzYxRk02MFE?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI engage des poursuites contre Apple dans un litige portant sur la protection des secrets technologiques."
+  },
+  {
+   "id": "aeb87cba36a4",
+   "ts": "2026-11-28T00:21:00.000Z",
+   "title": "US : Wall Street finit en hausse alors que les actions de l'IA malmenées progressent lors d'une semaine volatile",
+   "title_en": "US: Wall Street ends higher as battered AI stocks gain in volatile week",
+   "source": "The Business Times",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPVWZVbjREMUVseEljQnFlNUZuNGVobjkwdGU3M1VpM3VpZEpQU2lrYWlfSFJyNG8zQ2VzNzRLNU5ZT1RxUmNBWTE0TTdmdlFscERhbThIal9leklRWThrMktVend6OHpYLTB2ZGNka3J1aXFDYUlZWFN2MjJrbFVrcVE5STZNQWJNNVZlZWc3QVpnYWlPbDEyYmRJX2l5ZjR4cTVRVFc3Mk45bGp0SmcxQ3JRYWRBUQ?oc=5",
+   "stance": "haussier",
+   "scope": "macro",
+   "why": "Les marchés boursiers américains se reprennent, portés par un rebond des actions liées à l'IA."
+  },
+  {
+   "id": "e0640804905f",
+   "ts": "2026-11-27T23:45:32.000Z",
+   "title": "Bourse du 27 novembre : Anthropic bondit de 11 %, retrouvant son prix d'introduction de 83 dollars alors que Wall Street rebondit",
+   "title_en": "Stock Market Today, Nov. 27: Anthropic Jumps 11%, Reclaiming Its $83 IPO Price as Wall Street Rallies",
+   "source": "The Globe and Mail",
+   "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxObXNTY0pLc1lpRnVaR0VHV3BIT2NFVkRSYkRVNjBoa3JXcnVhRzZIaW9JckpJRnVVWDF0eWxTX3BxMHFGWnhOOHRXT1pEWGlCT1Z6OWhQdWtHUmFINlZKMU9KMUpOTzREa2FYOEFVajdjS3NpN2FwdkhXM2ZWXy1WdS0ySW1FQXE5cS1NazBVMjVJWXZoN3Z5TXd3SkdNVGlMLU5aZTZjOXFYQmExZnIzSXJnUnpIdnFETkxBMVd3NDI0Qm5CVUhxdnRvMXNJZVJhNG94clMyUW9HdXNSSkxCQ0JWbERtYnczd2ZNX1VYbTJVc19CY0stdERRaHoxSXVuYkJUUVJqdFhrbEE?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "L'action Anthropic progresse à Wall Street et retrouve son cours d'introduction, soutenant le secteur de l'intelligence artificielle."
+  },
+  {
+   "id": "d48648422744",
+   "ts": "2026-11-27T23:39:00.000Z",
+   "title": "Le Japon va réviser sa loi sur l'IA pour introduire des sanctions",
+   "title_en": "Japan to revise AI law to introduce penalties",
+   "source": "The Japan Times",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNaXpMcEdaaDRhWS1Jek1FNE1oLU9lNzFNc3h1REUxRlQ0aEZ2UC1CUi0wLUtoa29xVnNhcG5POXRZT3FDZE9qT1pVc0xydmZzd1A3bmVUZHVsUHoxM3pocUdWb0dHbUhkLTFFWk1PZG5IaUk3RVFQbHJnZ2dGcE53cW91Uk1oeGs0aDdPYU9DTVk0aC0t?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Le Japon prépare une révision de sa législation sur l'intelligence artificielle pour y intégrer des sanctions pénales."
+  },
+  {
+   "id": "adee23ebc131",
+   "ts": "2026-11-27T23:07:00.000Z",
+   "title": "Trump devrait s'entretenir avec le PDG de Nvidia Jensen Huang",
+   "title_en": "Trump expected to speak with Nvidia CEO Jensen Huang",
+   "source": "CBS News",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOSzV2ZUFVakx6bUtSeXVBNHJ0c0NQeFAxRXNxMGdnMk1WQk05LXpxXzdwNlAwRFFSS3RLMm9xaU0zdnJ6M2dCZE1jU3hrN01oUFVrbnhfSmxNNGtmb2NiWkNReWd2ekQ5UV9McEVxQ2xYSEhpeF83bjIzRkc2OUhCbjRSY1pEcXItNTVlLUZ1NndUMDctb1VnNg?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Une conversation est prévue entre Donald Trump et Jensen Huang, le directeur général de Nvidia."
+  },
+  {
+   "id": "e529abc756b0",
+   "ts": "2026-11-27T22:25:38.000Z",
+   "title": "La puce d'intelligence artificielle de pointe de Nvidia, Blackwell, visée par les États-Unis",
+   "title_en": "Nvidia's state-of-the-art artificial intelligence chip \"Blackwell,\" which is subject to the U.S..",
+   "source": "매일경제",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE43Wm1mNU9laXdlcDNzRnJsWlk0OGg1VlFoZVlRa2E2M2E2aHB1YXJqbW9zS2dMbXpWRmhYQ3FULXlmQzlpMmk4cjNFRXNlc0E?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "La nouvelle architecture de puces Blackwell de Nvidia fait l'objet de mesures et de restrictions de la part des États-Unis."
+  },
+  {
+   "id": "bf7f07790701",
+   "ts": "2026-11-27T22:13:23.000Z",
+   "title": "Intelligence artificielle : OpenAI dépose une contre-attaque contre Apple dans le litige sur la technologie d'IA",
+   "title_en": "Künstliche Intelligenz: OpenAI reicht im Streit um KI-Technologie Gegenklage gegen Apple ein",
+   "source": "Handelsblatt",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOby0tTE1DbWhHVFVFZUY1SlhuTnJUSUJRdWtVTVRSaWI4bk9KTkVNdFJRUDZfYzRUeWFSOEZ0d1ExRktLcmJMdm1rckJuMjQ4bXVucHVmT01WLTNoMUZucExmTC11ZzdBTGVUb29WN1Nwbk5EeWJkLWRDVzMwVWRfSzlDeXF4ZXJhYlVLMjZERXpFcVZueU5zTHh6VjlnWk1VTGJNY3pQU204akU2OWRWbXl5SnN3ZTRHdzdRbG80clc2Q0dONU5uSmhlalFiSDJwVlNhbFNqX3p0OFE3S2N6WA?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "OpenAI riposte en justice contre Apple dans le cadre d'un différend juridique lié aux technologies d'intelligence artificielle."
+  },
+  {
+   "id": "1bcd9807b5c5",
+   "ts": "2026-11-27T21:52:00.000Z",
+   "title": "Opinion | Nvidia et l'échec des contrôles à l'exportation américains",
+   "title_en": "Opinion | Nvidia and Failing U.S. Export Controls",
+   "source": "WSJ",
+   "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcXdpX0ZyQWtaQVpUaDUzZ29JRWF6QV9odVlReExLZ1ZjLUw4by1ubnhabmx4c3pOU0J5aC16U3hyRFB4eURpeUgtOVpHWUZZYjNnSjdUcmxVWnlrTWlfaFhoanl2MEUtdUZFdDhpYlBiYkJxTDBGMndxNDdXN2xZWWtmOGthUXhrR20tc0RHZnY3QQ?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Un article d'opinion analyse les failles et l'inefficacité apparente des restrictions à l'exportation imposées par les États-Unis."
+  },
+  {
+   "id": "be134de8b289",
+   "ts": "2026-11-27T21:30:00.000Z",
+   "title": "Lutnick et Huang témoignent sur le scandale Nvidia de Trump",
+   "title_en": "Lutnick and Huang are testifying about Trump’s Nvidia scandal. Here’s what Congress needs to ask",
+   "source": "The Independent",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNTkVJMmVwd2Z2aV9oRFFtUzFKejlnQW52Qm5KMXctcFpOUlpLVWhGSGpkcFJCcS1Jei1EWVlMTmNpbHFXMnlERFQtaEswYmJ2aVM5LWxhSWJpcTYxbkxiOFhZWjQ0RXJtc3hDeU5acUpWSkpzbEdtclFVSFNoRzZvVVFOaUd4cldja3NQa25weWF1NW1Jbl9oWXZqbmRXeUd6T2pkQVN2dHd0Z2ZmVHpHMHl2Q3MxNmt4TWVtMVNDRG52X0tvUnVF?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Des auditions au Congrès ont lieu concernant des controverses politiques liées à Nvidia et à l'administration Trump."
+  },
+  {
+   "id": "ede2204f5144",
+   "ts": "2026-11-27T21:20:05.000Z",
+   "title": "La décision radicale de Nvidia : stopper toute transaction en cas de soupçon de lien avec la Chine",
+   "title_en": "Nvidia's radical decision: stopping all transactions in case of suspected ties with China",
+   "source": "매일경제",
+   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE01a2pPS3VjRTNvOHlQdTZNZFQxOXJkNlhQU1Ixd3d4X2Z6b3QxVjYyZG1DcDkwZWptTnNPcmJySE5zcWVBQ2ZEZnRRQTE3VWRtVGc?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Nvidia prend des mesures strictes pour stopper les transactions avec la Chine, ce qui pourrait accélérer l'autonomie chinoise."
+  },
+  {
+   "id": "3e8b325b1556",
+   "ts": "2026-11-27T21:18:43.000Z",
+   "title": "Le dollar s'approche de sa meilleure série mensuelle depuis 2024 en raison des risques liés à l'IA",
+   "title_en": "Dollar Rises Toward Best Monthly Streak Since 2024 on AI Risk",
+   "source": "Mint",
+   "url": "https://www.livemint.com/market/dollar-rises-toward-best-monthly-streak-since-2024-on-ai-risk-11795814323879.html",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Le dollar progresse, soutenu par la recherche de valeurs refuges face aux turbulences sur le marché de l'intelligence artificielle."
+  },
+  {
+   "id": "17ce06b9a022",
+   "ts": "2026-11-27T20:49:41.000Z",
+   "title": "Huawei progresse sur un trio de semi-conducteurs pour l'IA malgré les sanctions américaines",
+   "title_en": "Huawei Advances AI Semiconductor Trio Amid U.S. Sanctions",
+   "source": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNTGw2ZEdLeHQzUzZiUnlXc1FWX19yS1ktNVR6bWRtcE1HUW5YVGdBNUh1RmpzNzd0T2RsakVBMXNUNlBoOE1pOFY3SW5vWFNsZ1pITUFtZ05ucldNRFY5TlJrTmxrQTFZVnh4c0VibnBVMVZOVTdMa1FYWmY5QWVqT3NBREYtTzlr?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Huawei continue de développer de nouvelles puces semi-conductrices pour l'intelligence artificielle en dépit des restrictions."
+  },
+  {
+   "id": "452594a389c1",
+   "ts": "2026-11-27T20:10:00.000Z",
+   "title": "Nvidia est-il le Watergate de Trump ?",
+   "title_en": "Is Nvidia Trump's Watergate?",
+   "source": "ABC News & Headlines – Australian Broadcasting Corporation",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOR2ZkeFdUdUVWVFZ6RGExVkVLQ1V0Z0RDYV8xUEhTR18xbXJUUFp5QkczUGVJbHFNaWpvMXZkSkduVFZ4R2VoelZHR0k1VkwzSmRqRWczUS04ZThzUkRpVlNFR0xTZExPR1JFMUU2c2lVeFlBMkhjZk5fLUtJX0hJVm55OC12bGlON3p6cS11OE1kQU5n?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Un article s'interroge sur les implications politiques et les controverses entourant l'administration Trump et Nvidia."
+  },
+  {
+   "id": "5a12a619e372",
+   "ts": "2026-11-27T19:59:47.000Z",
+   "title": "Wall Street rebondit grâce aux achats à bon compte sur l'IA ; l'indice des semi-conducteurs bondit de 4,7 %",
+   "title_en": "Wall Street Rallies on AI Bargain Hunting; Chip Index Jumps 4.7%",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/world/2026/11/28/wall-street-rallies-on-ai-bargain-hunting-chip-index-jumps",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Les marchés boursiers américains repartent à la hausse alors que les investisseurs rachètent des actions liées à l'IA."
+  },
+  {
+   "id": "7c820734b163",
+   "ts": "2026-11-27T19:21:00.000Z",
+   "title": "« Cela n'aide pas » : appels à des garde-fous et à des réglementations alors que l'utilisation de l'IA augmente chez les détaillants américains",
+   "title_en": "‘It’s not helping’: calls for guardrails and regulations as AI use rises at US retailers",
+   "source": "The Guardian",
+   "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOeDNCYVhQbUE2MU94UkxyalQyWkk3aFNpSk53aTRTaG5YZVp4ME5CdU1wcEVIaFhmam9NdVRweks0Q1M4ZUpMTV9pcnVEWlcwT0NKVUNySE9WcHJLYTd1TVpzZXVGdWQ1eUFhQmFTakVZZkNpelIxa2xVdkxZNFJ6eExEN3ZZQQ?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "L'adoption croissante de l'intelligence artificielle suscite des demandes accrues de régulation et de garde-fous."
+  },
+  {
+   "id": "3f1f24ee4833",
+   "ts": "2026-11-27T19:17:00.000Z",
+   "title": "Penguin redonne vie à la mémoire DDR4 retirée pour les serveurs d'IA",
+   "title_en": "Penguin Revives Retired DDR4 for AI Servers",
+   "source": "EE Times",
+   "url": "https://www.eetimes.com/penguin-revives-retired-ddr4-for-ai-servers/",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Face à la forte demande, Penguin réutilise d'anciennes mémoires pour répondre aux besoins d'extension des serveurs d'IA."
+  },
+  {
+   "id": "7297aba0c067",
+   "ts": "2026-11-27T19:03:33.289Z",
+   "title": "Les subventions japonaises pour les centres de données pèsent sur l'impact local alors que les réactions négatives s'intensifient",
+   "title_en": "Japan's data center subsidies to weigh local impact as backlash grows",
+   "source": "Nikkei Asia",
+   "url": "https://asia.nikkei.com/business/technology/japan-s-data-center-subsidies-to-weigh-local-impact-as-backlash-grows",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Le Japon fait face à une opposition locale croissante concernant ses subventions publiques accordées aux centres de données."
+  },
+  {
+   "id": "6e533c1547f4",
+   "ts": "2026-11-27T18:49:00.000Z",
+   "title": "Trump assistera à la pose de la première pierre d'un fabricant de semi-conducteurs fournissant Nvidia",
+   "title_en": "Trump to visit groundbreaking for semiconductor manufacturer that supplies Nvidia",
+   "source": "The Hill",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWUdjZHEtamo1cF80S3dpX1JYaWdORUJDSXhaTzlfRWJNam1CZ3pXdGVtTGJNSGR1TzJBLU5NdVlXR05za21LYWw3WGF2Z2xFTDZBc0xnUWxlZlotRWl3MVdwdUdYWmFHa1JzUEpIcVgwZWswWkU3MzBmM3phOUFYXzN0b2_SAYoBQVVfeXFMTm53MkdRcUtTRHFSVUFocWo0U2JzanlSdjFQNk1qNExfVTdlOERCSm1HU3lLdkZtb0hYM3dRNGVKWlNnSDE4X19UUnJQVUptRzlYWFF2c3lqUHQzOWpsSk4wdWgxY2ZqLW9XdmIwT2FtNUxxaGJBakI1bDhMVU9CNzR6TU1nbl92YnFR?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Donald Trump participe à la cérémonie de lancement d'un fabricant de puces électroniques partenaire de Nvidia."
+  },
+  {
+   "id": "48cd9ce1156f",
+   "ts": "2026-11-27T18:47:33.000Z",
+   "title": "La course à l'IA en Chine en difficulté ? Les nouvelles restrictions de Trump pourraient frapper l'accès aux puces",
+   "title_en": "China's AI Race In Trouble? Trump's New Restrictions Could Hit Chip Access, Bombshell Report Claims",
+   "source": "Mint",
+   "url": "https://www.livemint.com/videos/chinas-ai-race-in-trouble-trumps-new-restrictions-could-hit-chip-access-bombshell-report-claims-11795805108494.html",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "Les nouvelles restrictions américaines menacent les ambitions des entreprises chinoises dans le domaine de l'intelligence artificielle."
+  },
+  {
+   "id": "f1ac5e7bbd9d",
+   "ts": "2026-11-27T18:46:20.000Z",
+   "title": "Le retour de Jensen Huang n'a guère apaisé les craintes liées à l'IA. Nous avons profité de la faiblesse pour acheter",
+   "title_en": "Jensen Huang's return did little to ease AI jitters. We used the weakness to buy",
+   "source": "CNBC Tech",
+   "url": "https://www.cnbc.com/investingclub/2026/11/27/jensen-huangs-return-did-little-to-ease-ai-jitters-we-bought-on-weakness.html",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "La volatilité du marché persiste mais offre une opportunité d'investissement favorable sur le secteur de l'intelligence artificielle."
+  },
+  {
+   "id": "5adce5305d21",
+   "ts": "2026-11-27T18:43:36.000Z",
+   "title": "Le pari de Trump sur l'IA alimente une semaine de Thanksgiving agitée à Wall Street",
+   "title_en": "Trump’s AI Gambit Fuels Wild Thanksgiving Week on Wall Street",
+   "source": "Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPcFBtQzZXcFliTUQ0S3RaX3ZmZ1dIYlZxT3c2SDFHSElpVzdFajZ3TFRSUG80MHRHZURmankyTFdBMGNrRkZUZzZ3NHRUc2pYUGpJNGtRSTVHc0lHNExhaE10WF8yRUpNUVhaUTk1ZW9WaWdLa3RPem5WTDVIT0g1RlY1RldiWm1vd1ZvajQzaWNnSW1ldlF5SjV5VlBsdm91Mkx2UWs3eXh1cDEyRm5MMEl3?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Les prises de position politiques de Donald Trump concernant l'intelligence artificielle secouent les marchés financiers."
+  },
+  {
+   "id": "d3cf9fb5e92e",
+   "ts": "2026-11-27T18:42:15.000Z",
+   "title": "Opinion : Le rôle de Trump dans la réinstallation de Jensen Huang signale que la régulation de l'IA aux États-Unis est mal partie",
+   "title_en": "Opinion: Trump’s role in reinstalling Jensen Huang signals AI regulation in U.S. is a non-starter",
+   "source": "The Globe and Mail",
+   "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMDNfY2pRT3JyRldIdnNQN2NpV0xmc3dkMGdwUFFJcWozVlg3TFREclE0ckFaMEZSUlpCZGVZQVV5OHZuWnpzSEoya1ZqNDA1SnRZS3R6cVFZc1BTN2pfY0dqVjdtU08weERYT01MdG5pMFp3QVpDVVBrelBoWE12VHk2dUN6bWNlU1dZal9LNUs1cXkyaDRLVlZKbnVDR3YybFE?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "L'intervention de Donald Trump laisse entrevoir un affaiblissement de la régulation de l'intelligence artificielle aux États-Unis."
+  },
+  {
+   "id": "2fcce60751eb",
+   "ts": "2026-11-27T18:30:00.000Z",
+   "title": "Le soutien de Trump à Jensen Huang de Nvidia peut-il se retourner contre lui ?",
+   "title_en": "Can Trump's support for Nvidia's Jensen Huang come back to bite him?",
+   "source": "CBS News",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOVUZyaWdoWTg5Y2JpenUtd3lZTXdOQTk1NGNlVmF4aEFaMlNaUU9Qdm9EaXlxQzF2TmhQMkdJemRISTdlb1V0QzNoYjF1ZmJzN3FSNDhib0ptdDhsSTU0STE5STVqSk14T09YRVJKM3U0Tm92dlhJTlBkWmRpWE9JdFFSYWVwRUNJOENlSDZuRV9tQ2tKQkZVVEJ0VFc?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Une analyse politique évalue les liens et les conséquences entre Donald Trump et le patron de Nvidia, Jensen Huang."
+  },
+  {
+   "id": "8eeadb435408",
+   "ts": "2026-11-27T18:27:02.000Z",
+   "title": "Des puces Nvidia Blackwell interdites découvertes dans un centre de données à Shanghai lié à Alice Huang, selon Bloomberg",
+   "title_en": "Banned Nvidia Blackwell chips turn up in a Shanghai data center linked to Alice Huang, Bloomberg reports",
+   "source": "The Decoder",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOX3BIOFZPRFhScXRuZl90aWgta3FTSDJJLXdpT01UWmVrQ01aVWs3emY3SWxfN3gzVTdrWXVaYTIwNldnUmxfM1dkQTk2QWFiczBDR09oVjhuQkxWelY1eEphLVh4RGhlUEVTSUdIaXNWM2c5MTlQZ0JkcVkyS0xFUXp4R2lua1F2MDhhVVVGMVZQaF9pRXg5Y2xlSnRvR2s4b2VnOUkyX01GWmFMZ3FfNjVGT0dhMVF0bjZCNkk1N1RvZ2xXQ25Z?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Des puces Nvidia Blackwell soumises à des interdictions d'exportation ont été repérées dans un centre de données à Shanghai."
+  },
+  {
+   "id": "cb73d7922f7d",
+   "ts": "2026-11-27T18:10:42.000Z",
+   "title": "Trump s'exprime chez le fabricant de puces Nvidia après avoir poussé au retour du PDG Huang",
+   "title_en": "Trump speaking at Nvidia chipmaker after pushing for CEO Huang's return",
+   "source": "USA Today",
+   "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQS2d4b3dCN0c5VHhmbGp0eWJ5WHRId2NfV2dwM1FuZHZlRUN5Zkk3TFNGdldtdlYxNURfY0tXbHRYVEtHMERrVVlFYzVUUjlBQmJNcjFYaEVQLUFwRmRfSzhWakotRGdhdEFwODdCT294Nks1Y3ByWWFCNUR0NjVMRk4ybGZSTHNYcWc4T1BQLWFVVW5nVDFjLV95b0hkSGdJcTFr?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Donald Trump intervient dans les locaux de Nvidia après avoir soutenu le retour de Jensen Huang à sa direction."
+  },
+  {
+   "id": "6e77462e5797",
+   "ts": "2026-11-27T18:07:29.000Z",
+   "title": "Anthropic a développé Siren, une \"île de la tentation\" pour tester la sécurité de ses modèles de pointe",
+   "title_en": "Anthropic a développé Siren, une \"île de la tentation\" pour tester la sécurité de ses modèles de pointe: deux bacs à sable, 1.700 scénarios et des IA poussées à réussir leur mission en ne respectant pas les règles",
+   "source": "BFM",
+   "url": "https://news.google.com/rss/articles/CBMilANBVV95cUxPVVZBX2xqVldveVNxSWpaRG9zdmxaYnpHM2FZOFI0dDRzaTBfLVBVV3Vrai1zd2NlVk8wMDdvWE1ZWkpvaDhyeGdXcjBtQl9QbVM0eWR5XzBpeXpKRDQxR0F5TmF5aU1sMGpGOXdKQWdPSHdIdVFENmk3ZllQWFNtQl9pOWU5YVpqRVd2Mm50eDJQREdwQ3V2aGs1N085MXVMRWtHdzlPUWhNd1pDYTg0RVBWVHhTQlN4Z3FyeHZuZ1dxb1k4VGNfN0tSUWFiYlFkeVFLS1hacExiM0NWZEMzVm96dlFvaGFYbHliQzNvei1paWhPYkFvbjkzZGVRRXpHd3RfbUl3MFBtbzVxcC1zNTVPMTZPd2J5UzRkLWl0cjlxY0JCVTgwM0pHS3A1YklZY2otSVhvaXkxc2RHTEFVVjREZ3lSdnZoem5MdjFTNDNtdWdNV0N6Z3BuSUpIdFBHNTdtbC16VkdDam5vWXlveVVKajI0WUhMZWpyLTg1M3ZDOTBsYmFlSER1V3h0SndlMVVqQw?oc=5",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Anthropic a conçu un environnement de test rigoureux avec 1 700 scénarios pour pousser ses modèles d'intelligence artificielle."
+  },
+  {
+   "id": "91a553a83b2b",
+   "ts": "2026-11-27T17:43:40.000Z",
+   "title": "Les astronomes « découragés » par la décision autorisant SpaceX à déployer des satellites pour des datacenters spatiaux",
+   "title_en": "Astronomers ‘disheartened’ by decision allowing SpaceX to deploy satellites for space datacenters",
+   "source": "The Guardian",
+   "url": "https://www.theguardian.com/science/2026/nov/27/astronomer-decision-spacex-datacenters",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Des régulateurs ont autorisé SpaceX à placer des serveurs d'intelligence artificielle en orbite malgré les protestations."
+  },
+  {
+   "id": "7f587eebbaae",
+   "ts": "2026-11-27T17:20:29.000Z",
+   "title": "Le Premier ministre néerlandais discutera des contrôles à l'exportation de matériel de fabrication de puces de la loi MATCH avec Trump au G20",
+   "title_en": "Dutch PM to discuss MATCH Act chipmaking export controls with Trump at G20",
+   "source": "Arab News",
+   "url": "https://www.arabnews.com/world/dutch-pm-to-discuss-match-act-chipmaking-export-controls-with-trump-at-g20-3014295",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Le dirigeant néerlandais aborde la question des restrictions américaines sur les équipements de fabrication de puces."
+  },
+  {
+   "id": "2718b2dd52f7",
+   "ts": "2026-11-27T17:00:00.000Z",
+   "title": "La poussée du matériel d'IA en Chine dépasse les GPU pour atteindre les circuits imprimés : Pékin fait la course pour dominer le cuivre et les forets",
+   "title_en": "China’s AI hardware push is moving beyond GPUs to the PCBs underneath them — Beijing races to corner the market on copper foil and micro-drill bits as board complexity explodes",
+   "source": "Tom's Hardware",
+   "url": "https://www.tomshardware.com/tech-industry/manufacturing/chinas-ai-hardware-push-is-moving-beyond-gpus-to-the-pcbs-underneath-them-beijing-races-to-corner-the-market-on-copper-foil-and-micro-drill-bits-as-board-complexity-explodes",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Les goulots d'étranglement matériels en Chine s'étendent aux composants de circuits imprimés pour les serveurs d'intelligence artificielle."
+  },
+  {
+   "id": "6cd2218ce519",
+   "ts": "2026-11-27T16:53:06.000Z",
+   "title": "Sources say SAP mulling cuts of at least 10,000 roles",
+   "title_en": "Sources say SAP mulling cuts of at least 10,000 roles",
+   "source": "Taipeitimes",
+   "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/28/2003868515",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "SAP prévoit des licenciements massifs pour restructurer son activité logicielle vers l'ère de l'intelligence artificielle."
+  },
+  {
+   "id": "68a72b4f6d21",
+   "ts": "2026-11-27T16:53:06.000Z",
+   "title": "Singapour déclare être en discussion avec des entreprises sur les exportations",
+   "title_en": "Singapore says it is ‘engaging’ with firms on exports",
+   "source": "Taipeitimes",
+   "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/28/2003868514",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Singapour réagit aux contrôles américains sur les exportations de puces d'intelligence artificielle vers l'Asie du Sud-Est."
+  },
+  {
+   "id": "7315218f7d02",
+   "ts": "2026-11-27T16:52:21.000Z",
+   "title": "Le déficit commercial des États-Unis se détériore alors que l'IA contribue à porter les importations à un niveau record",
+   "title_en": "US goods trade deficit deteriorates further as AI helps to lift imports to record high",
+   "source": "Reuters",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPOUhkOFctdmNWVmE4V25NYVFPXy1fbmpLZnJubGRnZDZQVkk1alZaNE1hMjNJMkVxMFY5aFZVclJnTmM5WkhEVjM0OUFlMEVXc2pLX3VGMzBZOVFuZ0JqWHFTWWROTmY5dkFzMDdSTFR4THE2WEt6dmd6ZVVob1kwOFdyUHpvaVZndmExTTEtbG80VVN4?oc=5",
+   "stance": "baissier",
+   "scope": "macro",
+   "why": "L'importation massive de technologies liées à l'intelligence artificielle pèse sur la balance commerciale américaine."
+  },
+  {
+   "id": "f10c2cc17f3c",
+   "ts": "2026-11-27T16:19:00.000Z",
+   "title": "Wall Street progresse grâce au soutien des actions technologiques et de l'IA, le Nasdaq bondit de 1,6 %",
+   "title_en": "Wall Street rises with support from tech and AI stocks, Nasdaq jumps 1.6%",
+   "source": "العربية",
+   "url": "https://news.google.com/rss/articles/CBMi-gNBVV95cUxOa2lpbkt5VjZ5UEpsYnkxSGpBSmM3Z1JyNVVVV2RwWlNTWGRjZGZyZkRadDU2VmwyWVM1UzVlX2JlcFpyM2tPYWFNcVlJWTZFQXpUSTlnbjNENHdNR0JCYzNOVjN1T2Q0QXJCMGhVbndVbTlHVGNkcGZ6U3FNbEhrTGxxaFpvblduYWVqWVNIYkJoN3hydnhjclZ5ODVsSTgwQjNkdk1pSnJxQ1p5dldPWFlMS0VWM1NyYlZxV3FsTHRqX0M3My1mTzVsQmtNOU9BOFNQeE5mYXhteHZ4VVEtZnp5eXdNN0dnYS1PMGRQWGlCYVBPcldVLUZIYXJDdFRxOE5LbEJ5VnpMYzgwVXRudUM3MDdpQmdxd0poV3pNckVkYmlQaE9uX1R3N0dhSlp2OGpFSXZvQWxMWE9vdGZ4Ni1lenlaWWRKMjdRSHNOOW5sRUtnMUo5UDdhX0djYzFhTkZYcXNDbGhXUmFSWDlwVjJUUDNEZWZlMkhIUUJEYWNVT1FPdEhwYlNVVTdXV0twVnZsWmxSS3lGdko4XzdkMGFWR3RvdTFPUjlHMWVwNGVJNXBDbGpvU3M2dWRKR0pSQ2Y2UWZNSXYwNm1PSEs3V3FDUlhneDhLQ0pHSzEyREhmbzlZck44M01DUU14REtuaVJIazBnZFlGUdIB-gNBVV95cUxOa2lpbkt5VjZ5UEpsYnkxSGpBSmM3Z1JyNVVVV2RwWlNTWGRjZGZyZkRadDU2VmwyWVM1UzVlX2JlcFpyM2tPYWFNcVlJWTZFQXpUSTlnbjNENHdNR0JCYzNOVjN1T2Q0QXJCMGhVbndVbTlHVGNkcGZ6U3FNbEhrTGxxaFpvblduYWVqWVNIYkJoN3hydnhjclZ5ODVsSTgwQjNkdk1pSnJxQ1p5dldPWFlMS0VWM1NyYlZxV3FsTHRqX0M3My1mTzVsQmtNOU9BOFNQeE5mYXhteHZ4VVEtZnp5eXdNN0dnYS1PMGRQWGlCYVBPcldVLUZIYXJDdFRxOE5LbEJ5VnpMYzgwVXRudUM3MDdpQmdxd0poV3pNckVkYmlQaE9uX1R3N0dhSlp2OGpFSXZvQWxMWE9vdGZ4Ni1lenlaWWRKMjdRSHNOOW5sRUtnMUo5UDdhX0djYzFhTkZYcXNDbGhXUmFSWDlwVjJUUDNEZWZlMkhIUUJEYWNVT1FPdEhwYlNVVTdXV0twVnZsWmxSS3lGdko4XzdkMGFWR3RvdTFPUjlHMWVwNGVJNXBDbGpvU3M2dWRKR0pSQ2Y2UWZNSXYwNm1PSEs3V3FDUlhneDhLQ0pHSzEyREhmbzlZck44M01DUU14REtuaVJIazBnZFlGUQ?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "La bourse de Wall Street enregistre une forte hausse emmenée par la progression des valeurs de l'intelligence artificielle."
+  },
+  {
+   "id": "dac806485c85",
+   "ts": "2026-11-27T16:08:44.000Z",
+   "title": "« Nous avons désormais un point de vue beaucoup plus nuancé sur la mégaforce intelligence artificielle », explique Jean Boivin",
+   "title_en": "« Nous avons désormais un point de vue beaucoup plus nuancé sur la mégaforce intelligence artificielle », explique Jean Boivin, directeur du BlackRock Investment Institute",
+   "source": "Les Echos",
+   "url": "https://news.google.com/rss/articles/CBMiywJBVV95cUxNRHEzRl9ZMG1UMGtUd0o3cjlkTmhRMnZ4OGZ6RWdpdVhkYnJ0Y0tfZW1xZHNKOFU1NmFlU2F1U25ZeXBEbllUMzV1WWt3TW1YbzE5bjRZVXgtUHZ4MGc1bXJHZDRPai1vdDNjZjBxSklZcnY1NzhyQ1VkUkFQVFY5ajRoUGpqVk5Ga0lfWEo2TjV4eDhiSEx3N2gzeFBOWjRscjhFSXQzdVhPOHo0WTBzdnBIZUowbkthdHFTVUJwb2RRcFJManJBQUdVakhYeTRRbHdYTF9ZRTRfVmJMN1RtM1FZTkRteXZqcjZESzQxM2swS2I4VjI0YnN5azRjaDJmZkFCT1d5cmVWZVpjR3BIb0xrS0VyVC1RSjBqTGIwWnFhSk0xa0lBOUNnX01VeW9ieWMwSUhCdF9vWjJtT3ZiUmR1RnVHT0pNdDFr?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Le BlackRock Investment Institute adopte une perspective plus nuancée sur la tendance économique liée à l'intelligence artificielle."
+  },
+  {
+   "id": "36823e18e106",
+   "ts": "2026-11-27T15:57:49.000Z",
+   "title": "Qu'est-ce que Talkie ? Un chatbot IA développé en Chine retiré de l'App Store d'Apple — pourquoi le géant de la tech a-t-il pris cette décision ?",
+   "title_en": "What is Talkie? Chinese-developed AI chatbot removed from Apple App store — why has tech giant taken this decision?",
+   "source": "Mint",
+   "url": "https://www.livemint.com/companies/news/what-is-talkie-chinese-developed-ai-chatbot-removed-from-apple-app-store-why-has-tech-giant-taken-this-decision-11795792987366.html",
+   "stance": "neutre",
+   "scope": "secteur",
+   "why": "Apple a retiré l'application Talkie après des signalements concernant des messages inappropriés envoyés à des mineurs."
+  },
+  {
+   "id": "e7792bf08cf9",
+   "ts": "2026-11-27T15:54:59.000Z",
+   "title": "Challenger d'AWS : Analyse approfondie de l'inférence Trainium3",
+   "title_en": "AWS Challenger: Trainium3 Inference and Microarchitecture Deep Dive",
+   "source": "SemiAnalysis",
+   "url": "https://newsletter.semianalysis.com/p/trainium3-inferencex",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Une analyse technique détaille les performances des puces d'inférence Trainium3 face aux solutions concurrentes."
+  },
+  {
+   "id": "cc1162226c8e",
+   "ts": "2026-11-27T15:37:00.000Z",
+   "title": "Huawei : « Grâce aux sanctions américaines, l'autonomie technologique progresse » et le trio de semi-conducteurs chinois s'accélère",
+   "title_en": "Huawei: 'Thanks to US sanctions, technological autonomy is progressing' and China's AI semiconductor trio accelerates",
+   "source": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQeFB1a3dEWmtSVlg5azBzcWVVeGxhNHlDdURSSnBZenVTcm9iYkpEUEUxeFBucGEwZHowSXF2VFlpRGs2S3FqOURzQnlYcEN2YmJSMnRfS2stekNNUVJwT3AxNGxyMC1naEVDYnFKaXFaRHRnMmMxQUIyekRzbEc0RmlTOA?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Huawei affirme que les sanctions américaines stimulent son autonomie technologique et accélèrent ses puces."
+  },
+  {
+   "id": "5bb9788bbe13",
+   "ts": "2026-11-27T15:37:00.000Z",
+   "title": "Huawei : « Grâce aux sanctions américaines, nous avons atteint l'autonomie technologique » et accélérons le trio de semi-conducteurs chinois",
+   "title_en": "Huawei: \"Thanks to US sanctions, we have achieved technological self-reliance\" and are accelerating the Chinese semiconductor trio",
+   "source": "조선일보",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNa0xYZzZsakx0SThBdzdIbkw2NV8tU2tqRnlEYXlpZ2Y5bTR6X1VuckZvSk1IakxCakZXS0R5akFtWG5MXzY5eHNXZHdUYjZPTmFpUzV1WUJUdmkzVzZGRG9CNnYwWkx2YnRvN1ozWmx1bXRFTzdMZVVndGREWV81NQ?oc=5",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Huawei attribue ses progrès d'indépendance technologique aux sanctions et accélère sa filière de semi-conducteurs."
+  },
+  {
+   "id": "6a284a9bdf65",
+   "ts": "2026-11-27T15:16:41.000Z",
+   "title": "« Jouer avec le feu » : Trump fait face à des réactions négatives du parti républicain suite au retour du PDG de Nvidia",
+   "title_en": "‘Playing with fire’: Trump faces GOP backlash over Nvidia CEO’s return",
+   "source": "Al Jazeera",
+   "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPWEdlM3FlT09EY1cxTklwcFIxZG1WT01hcjNFbkZ5WlF0bXlWN0E2UlhrcHZ5ZmFYeGg2cEhleGswbzBFemQxbGZRVmY2cWV0clEtTDlqOWZ2QldnREFvUlJJeUdNRlo4QmxiaVZOUUJ6dldGcHo3Vzc1U2FteVE0ZzVGb2YtUkwwUXVaMkt3OGFvYm93QklnNkoxdGxreWhqM0NjSXNMeTN4S2NqV0ZwZ2hiTFTSAboBQVVfeXFMUDVQZXUtZklkM3FaOEk0Y0hJMHFwOTlBd1hCaUMyQkJjX3N4N01oWi1VZjFQOS1TcTZ5dzdwS3FaZzBKSXIwRWd3cWFNdHAyOHJFS0tzTG9udEZ0WUF1WHh1aVUxWVllLVJDWG5xUFJmeUVVY3dxNlljOGxGV3hlckZSa2tKNy1Nc2VLbDFWdzJqdkVOX044WG9QR3hpQ2RDM2dYcTN4cHFMNkpPejRlOWlSdzBZVGdmbU1R?oc=5",
+   "stance": "neutre",
+   "scope": "macro",
+   "why": "Donald Trump essuie des critiques au sein de son propre camp politique concernant ses liens avec le patron de Nvidia."
+  },
+  {
+   "id": "5b94218559e8",
+   "ts": "2026-11-27T15:12:39.000Z",
+   "title": "Altair, filiale de Sony, vise la connectivité Edge AI grâce à une levée de 100 millions de dollars",
+   "title_en": "Sony spin-off Altair targets Edge AI connectivity with $100m raise - report",
+   "source": "DatacenterDynamics",
+   "url": "https://www.datacenterdynamics.com/en/news/sony-spin-off-altair-targets-edge-ai-connectivity-with-100m-raise-report/",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "Une filiale de Sony lève 100 millions de dollars pour développer des puces destinées aux objets connectés dotés d'intelligence artificielle."
+  },
+  {
+   "id": "84f1b61b04c5",
+   "ts": "2026-11-27T15:06:06.000Z",
+   "title": "Des chercheurs en semi-conducteurs demandent des horaires flexibles et une exemption",
+   "title_en": "Semiconductor Researchers Ask for Flexible Hours. Give Them an Exemption",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/opinion/2026/11/28/semiconductor-researchers-ask-for-flexible-hours-give-them",
+   "stance": "haussier",
+   "scope": "secteur",
+   "why": "En Corée, les chercheurs en semi-conducteurs demandent une exemption pour dynamiser la recherche et développement."
+  },
+  {
+   "id": "3dc1aecdb903",
+   "ts": "2026-11-27T15:01:00.000Z",
+   "title": "L'utilisation de l'intelligence artificielle explose, mais les dépenses stagnent. Pourquoi une règle fondamentale de l'économie se brise.",
+   "title_en": "Artificial intelligence usage is exploding, yet spending is stalling. Why a foundational rule of economics is breaking.",
+   "source": "MarketWatch",
+   "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNUG5XMF9nWG1sSkZ6U0xTNlc0RGtwVXp2NlNqSFhoZTVfbFNJaWQxS0VWOVlLSkJOQVg3YWJlWGV0OWV1cjNobkJsaEt2UEQ4dndyUUxOQUhFV3YxbVJRa2FSNkRHS3JNU2hzVVJuaG9hcHQwQ2dKLVJiRnN0QXd1YW1VZ19qanctUjdCaWJNY2dzcEphMVBrMlM0OThuVjFUWVVLZERtTVJ5ME9aSkg5TXFPY2JyYm9DNzhwZHBJNFhDbG8xeURLWlpsc081dWpVb1BZV2NfSFRZbVpOblJNbGRyMjFVN0RKNmN0eV9Kak8?oc=5",
+   "stance": "baissier",
+   "scope": "secteur",
+   "why": "Le décalage entre l'adoption massive de l'IA et la stagnation des dépenses interroge la dynamique financière de l'industrie."
+  },
+  {
+   "id": "5e1491a246e2",
+   "ts": "2026-11-27T15:00:00.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "e08261489296",
+   "ts": "2026-11-27T15:00:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "5158ca4033be",
+   "ts": "2026-11-27T14:53:43.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "8efb77a3fc0c",
+   "ts": "2026-11-27T14:22:45.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "aa463f83b618",
+   "ts": "2026-11-27T14:00:38.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "0c807ba9f0f2",
+   "ts": "2026-11-27T13:49:31.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "b2edf8b7a5e5",
+   "ts": "2026-11-27T13:42:56.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "9b96d66b4554",
+   "ts": "2026-11-27T13:20:33.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "21d875db4194",
+   "ts": "2026-11-27T13:11:06.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "497764e233b7",
+   "ts": "2026-11-27T13:08:38.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "a5d399e64304",
+   "ts": "2026-11-27T13:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "327253aa27ac",
+   "ts": "2026-11-27T13:00:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "ed9b6efba061",
+   "ts": "2026-11-27T12:54:35.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "3b8b3d993078",
+   "ts": "2026-11-27T12:54:11.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "f2c1c93675a6",
+   "ts": "2026-11-27T12:51:27.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "b8e218b10b9b",
+   "ts": "2026-11-27T12:50:33.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "ab576e38ff94",
+   "ts": "2026-11-27T12:33:21.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "cdffb76acca1",
+   "ts": "2026-11-27T12:30:57.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "1942287c4910",
+   "ts": "2026-11-27T12:30:08.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "523f4120d369",
+   "ts": "2026-11-27T12:22:25.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "cd2d0083639c",
+   "ts": "2026-11-27T12:12:18.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "2492ba20bf3c",
+   "ts": "2026-11-27T12:06:50.000Z",
+   "stance": "baissier",
+   "scope": "secteur"
+  },
+  {
+   "id": "77abd94719dc",
+   "ts": "2026-11-27T12:00:29.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "34268543c6e1",
+   "ts": "2026-11-27T11:43:26.000Z",
+   "stance": "haussier",
+   "scope": "macro"
+  },
+  {
+   "id": "8844d305552f",
+   "ts": "2026-11-27T11:41:53.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "c22b96f4cc7f",
+   "ts": "2026-11-27T11:37:35.000Z",
+   "stance": "neutre",
+   "scope": "macro"
+  },
+  {
+   "id": "cfa5f57a5d29",
+   "ts": "2026-11-27T11:30:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "7c3f069f322a",
+   "ts": "2026-11-27T11:21:00.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "eb9929263264",
+   "ts": "2026-11-27T11:20:00.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "119a4d26d896",
+   "ts": "2026-11-27T11:00:35.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "ae39f4c21e75",
+   "ts": "2026-11-27T11:00:00.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "5f0c43dd487b",
+   "ts": "2026-11-27T11:00:00.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "a52a24a13bc5",
+   "ts": "2026-11-27T10:39:07.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "517657a2f153",
+   "ts": "2026-11-27T10:31:27.000Z",
+   "stance": "haussier",
+   "scope": "macro"
+  },
+  {
+   "id": "42def3ed8b0c",
+   "ts": "2026-11-27T10:30:00.000Z",
+   "stance": "neutre",
+   "scope": "secteur"
+  },
+  {
+   "id": "f1987065a107",
+   "ts": "2026-11-27T10:17:12.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "0e04d689569c",
+   "ts": "2026-11-27T10:16:57.000Z",
+   "stance": "baissier",
+   "scope": "macro"
+  },
+  {
+   "id": "3e4d6004fd36",
+   "ts": "2026-11-27T10:13:44.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  },
+  {
+   "id": "94f53e905281",
+   "ts": "2026-11-27T10:05:54.000Z",
+   "stance": "haussier",
+   "scope": "secteur"
+  }
+ ],
+ "general_tries": {
+  "01e747fc1ebd": 1,
+  "0f61395ce8dc": 1,
+  "3973f080fe72": 1,
+  "2ea085189ac5": 1,
+  "932a08453515": 1,
+  "a09eb5e47b90": 1,
+  "032dd0d9e5a5": 1,
+  "9eb91df6ba20": 1,
+  "30f42de1c504": 1,
+  "50be46b4982a": 1,
+  "c0d9d4c1507c": 1,
+  "b77b0dd0d32d": 1,
+  "20517261694d": 1,
+  "30a8811ec85b": 1,
+  "6f31e0daee6a": 1,
+  "d045973d75be": 1,
+  "5d631bce0aa1": 1,
+  "5f18ff53dc82": 1,
+  "a036e8b8dbb4": 1,
+  "e9b4f9cf27ec": 1,
+  "3f046103a6ed": 1,
+  "2632bdf5bf48": 1,
+  "b1edc9637cc5": 1,
+  "0c7f5c331a42": 1,
+  "588fd0acfcc0": 1,
+  "74e21b230faf": 1,
+  "567ac948e27d": 1,
+  "76371a5159be": 1,
+  "e1d9661ce4a7": 1,
+  "e87471af621e": 1,
+  "9006be75a409": 1,
+  "8a71293beb78": 1,
+  "be14b1acf90b": 1,
+  "8963c14496a2": 1,
+  "792564956a94": 1,
+  "4014fc316b4f": 1,
+  "e5aadcf03bda": 1,
+  "88d2e763558e": 1,
+  "9bac313532fe": 1,
+  "aeb87cba36a4": 1,
+  "e0640804905f": 1,
+  "d48648422744": 1,
+  "adee23ebc131": 1,
+  "e529abc756b0": 1,
+  "bf7f07790701": 1,
+  "8fe2abca294b": 1,
+  "1bcd9807b5c5": 1,
+  "be134de8b289": 1,
+  "ede2204f5144": 1,
+  "3e8b325b1556": 1,
+  "17ce06b9a022": 1,
+  "452594a389c1": 1,
+  "5a12a619e372": 1,
+  "7c820734b163": 1,
+  "3f1f24ee4833": 1,
+  "7297aba0c067": 1,
+  "6e533c1547f4": 1,
+  "48cd9ce1156f": 1,
+  "f1ac5e7bbd9d": 1,
+  "5adce5305d21": 1,
+  "d3cf9fb5e92e": 1,
+  "2fcce60751eb": 1,
+  "8eeadb435408": 1,
+  "cb73d7922f7d": 1,
+  "6e77462e5797": 1,
+  "91a553a83b2b": 1,
+  "7f587eebbaae": 1,
+  "2718b2dd52f7": 1,
+  "6cd2218ce519": 1,
+  "68a72b4f6d21": 1,
+  "7315218f7d02": 1,
+  "f10c2cc17f3c": 1,
+  "dac806485c85": 1,
+  "36823e18e106": 1,
+  "e7792bf08cf9": 1,
+  "cc1162226c8e": 1,
+  "5bb9788bbe13": 1,
+  "6a284a9bdf65": 1,
+  "5b94218559e8": 1,
+  "84f1b61b04c5": 1,
+  "3dc1aecdb903": 1,
+  "5e1491a246e2": 1,
+  "e08261489296": 1,
+  "5158ca4033be": 1,
+  "8efb77a3fc0c": 1,
+  "aa463f83b618": 1,
+  "0c807ba9f0f2": 1,
+  "b2edf8b7a5e5": 1,
+  "9b96d66b4554": 1,
+  "21d875db4194": 1,
+  "497764e233b7": 1,
+  "a5d399e64304": 1,
+  "327253aa27ac": 1,
+  "ed9b6efba061": 1,
+  "3b8b3d993078": 1,
+  "f2c1c93675a6": 1,
+  "b8e218b10b9b": 1,
+  "ab576e38ff94": 1,
+  "cdffb76acca1": 1,
+  "1942287c4910": 1,
+  "523f4120d369": 1,
+  "cd2d0083639c": 1,
+  "2492ba20bf3c": 1,
+  "77abd94719dc": 1,
+  "34268543c6e1": 1,
+  "8844d305552f": 1,
+  "c22b96f4cc7f": 1,
+  "cfa5f57a5d29": 1,
+  "7c3f069f322a": 1,
+  "eb9929263264": 1,
+  "119a4d26d896": 1,
+  "ae39f4c21e75": 1,
+  "5f0c43dd487b": 1,
+  "a52a24a13bc5": 1,
+  "517657a2f153": 1,
+  "42def3ed8b0c": 1,
+  "f1987065a107": 1,
+  "0e04d689569c": 1,
+  "3e4d6004fd36": 1,
+  "94f53e905281": 1
+ },
+ "market": {
+  "all": {
+   "haussier": 47,
+   "neutre": 40,
+   "baissier": 28,
+   "n": 115,
+   "net": 0.17,
+   "label": "mitigée"
+  },
+  "macro": {
+   "haussier": 3,
+   "neutre": 14,
+   "baissier": 14,
+   "n": 31,
+   "net": -0.35,
+   "label": "baissière"
+  },
+  "secteur": {
+   "haussier": 44,
+   "neutre": 26,
+   "baissier": 14,
+   "n": 84,
+   "net": 0.36,
+   "label": "haussière"
+  }
+ },
+ "week": {
+  "days": 7,
+  "ranking": [
+   {
+    "id": "amazon",
+    "n": "Amazon",
+    "bull": 6,
+    "bear": 1,
+    "neu": 3,
+    "total": 10,
+    "top": [
+     {
+      "id": "7f5cc3c9ae84",
+      "title": "Le japonais Jera en discussion avec les hyperscalers américains pour implanter des centres de données près de centrales thermiques",
+      "title_en": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+      "source": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+      "ts": "2026-11-27T12:20:29.000Z",
+      "media": 2
+     },
+     {
+      "id": "28175a595e60",
+      "title": "Amazon et Meta en pourparlers pour lever le blocage de l'agent IA Muse",
+      "title_en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+      "source": "TechCrunch IA",
+      "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+      "ts": "2026-11-25T14:12:33.000Z",
+      "media": 2
+     },
+     {
+      "id": "5845ed4863b4",
+      "title": "L'acquisition de Decart par Amazon est un pari pour réduire l'écart avec Nvidia dans la course aux puces IA",
+      "title_en": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+      "source": "TechCrunch IA",
+      "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+      "ts": "2026-11-24T15:51:07.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "amd",
+    "n": "AMD",
+    "bull": 5,
+    "bear": 0,
+    "neu": 0,
+    "total": 5,
+    "top": [
+     {
+      "id": "96615dc9e677",
+      "title": "Intel et AMD s'associent pour contrer Arm sur l'inférence et unifier les logiciels d'IA",
+      "title_en": "Intel and AMD partner to counter Arm on inference and unify AI software",
+      "source": "日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQSE1WeDVKUnJEdmFHMFkzcFNPWWo4Ri1mV0t3a0lab1Y2SFhlOEVidldPeV92X0d5aXAwR3dKY0tqZG5FbUFIQ1VteW9IM1Vxak1NUXdlSF8xVmcxcVJ3Si1ZME9XSXdVMU9wQXJrY1l6ajF4NENFZ1MtYi01Z1VHQ2U5VmJnWFU?oc=5",
+      "ts": "2026-11-26T20:00:00.000Z",
+      "media": 1
+     },
+     {
+      "id": "02a088434703",
+      "title": "Présentation du tableau de bord de benchmark llama.cpp pour AMD Ryzen et Radeon",
+      "title_en": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "source": "Hugging Face blog",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench",
+      "ts": "2026-11-26T11:37:17.000Z",
+      "media": 1
+     },
+     {
+      "id": "30c9e3388479",
+      "title": "AMD MEXT utilise l'IA pour tirer davantage de la DRAM",
+      "title_en": "AMD MEXT Uses AI to Get More from DRAM",
+      "source": "EE Times",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPTWhmUFRWRHRFZVhVcmcwWkxRNXlPV0o5TW8xMWhxTWE4YmdBR0ZuREkxUjIyaUhQWll4R01qU1l2azlsV1pTVWhZSExObGREWFZTR1k5Q0RaMVgtTlhsMUdNUzFYdEdWci1qSG1abGQ3X3d5dFZLZkg4WHlYQWdVYUxpNA?oc=5",
+      "ts": "2026-11-25T14:05:48.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "nvidia",
+    "n": "Nvidia",
+    "bull": 5,
+    "bear": 1,
+    "neu": 4,
+    "total": 10,
+    "top": [
+     {
+      "id": "4848502bd8c9",
+      "title": "Jensen Huang est de retour. La thèse haussière sur Nvidia demeure",
+      "title_en": "Jensen Huang Is Back. Nvidia’s (NVDA) Bull Case Remains",
+      "source": "The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOT0tWb0IwVXg3NzVnRmhUYU84MUpseHRJNDhrYm1IbXVXamdQNEk1QUdoQmxpemRHeGsxSzFRX3Yzekhrdkk1ai11eXpSRkFjQ3ltMjNxTlFwT2JQMEFWT3NnbHpkYi03SmpXaUkwRElUZE9oOGxKcS1oanJZUG1MbENWSzVITUdldEJ2TEpxREc4Q1RaTkdXalNTYVphbHl4SEJHaGlxSVVvQXF3eFdDQlZMSDRZMC1GM3o4QlFGT3dMdXBrV1BONjMtUW93VHlfX1E?oc=5",
+      "ts": "2026-11-28T13:09:39.000Z",
+      "media": 1
+     },
+     {
+      "id": "eeabad0d9aec",
+      "title": "Thermaltake’s budget RTX 5060 Ti gaming desktops are as little as $1,299",
+      "title_en": "Thermaltake’s budget RTX 5060 Ti gaming desktops are as little as $1,299",
+      "source": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/desktops/gaming-pcs/thermaltakes-budget-rtx-5060-ti-gaming-desktops-are-as-little-as-usd1-299-choose-between-ddr4-and-ddr5-configurations-with-up-to-usd100-off",
+      "ts": "2026-11-28T10:45:00.000Z",
+      "media": 1
+     },
+     {
+      "id": "7db6a3172fb6",
+      "title": "Trump affirme avoir convaincu le conseil d'administration de Nvidia de réintégrer Jensen Huang",
+      "title_en": "Trump says he talked Nvidia’s board into reinstating Jensen Huang. It’s not the first company he’s stepped into",
+      "source": "Fortune",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFByYmdLMURnTXFsSTdqaUtDN3pkcVpNckk1ZjBTTlcybnlYdkNxWm44d1c2cUp3MmNhdkRiQjk5ZXB3WjlYa2tRUU9kMlpJQ3U4VWtpdVhpdUdudkx5Uml6VXNxUTFNTW53bkJoZUtTRURMZ3Q2N2MzcnNB?oc=5",
+      "ts": "2026-11-28T08:32:00.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "microsoft",
+    "n": "Microsoft",
+    "bull": 3,
+    "bear": 0,
+    "neu": 1,
+    "total": 4,
+    "top": [
+     {
+      "id": "7f5cc3c9ae84",
+      "title": "Le japonais Jera en discussion avec les hyperscalers américains pour implanter des centres de données près de centrales thermiques",
+      "title_en": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+      "source": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+      "ts": "2026-11-27T12:20:29.000Z",
+      "media": 2
+     },
+     {
+      "id": "54a5327eb269",
+      "title": "Cheyenne Light demande la construction d'infrastructures de transport pour trois centres de données Microsoft dans le Wyoming",
+      "title_en": "Cheyenne Light applies to build transmission infrastructure for three Microsoft data centers in Wyoming",
+      "source": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/cheyenne-light-applies-to-build-transmission-infrastructure-for-three-microsoft-data-centers-in-wyoming/",
+      "ts": "2026-11-26T11:49:48.000Z",
+      "media": 1
+     },
+     {
+      "id": "c43cf831127f",
+      "title": "Bright Horizon obtient des contrats de centres de données Microsoft dans le Wyoming",
+      "title_en": "Bright Horizon utility lands Microsoft data center deals amid Wyoming buildout",
+      "source": "Utility Dive",
+      "url": "https://www.utilitydive.com/news/cheyenne-light-microsoft-google-data-center-bright-horizon/875739/",
+      "ts": "2026-11-25T15:00:39.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "micron",
+    "n": "Micron",
+    "bull": 2,
+    "bear": 1,
+    "neu": 1,
+    "total": 4,
+    "top": [
+     {
+      "id": "7673334b6eb7",
+      "title": "Micron, Samsung et SK Hynix concluent des accords de mémoire pluriannuels",
+      "title_en": "Micron, Samsung, SK Hynix strike multiyear memory deals",
+      "source": "Digitimes",
+      "url": "https://www.digitimes.com/news/a20261126VL222/sk-hynix-micron-chipmakers-demand-chips.html",
+      "ts": "2026-11-26T07:57:31.000Z",
+      "media": 1
+     },
+     {
+      "id": "2116824c50ac",
+      "title": "Micron intensifie ses investissements dans la HBM à Taïwan et à Singapour",
+      "title_en": "Micron steps up HBM investment in Taiwan, Singapore",
+      "source": "Digitimes",
+      "url": "https://www.digitimes.com/news/a20261124VL216/micron-hbm-investment-taiwan-production.html",
+      "ts": "2026-11-24T04:22:45.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "meta",
+    "n": "Meta",
+    "bull": 2,
+    "bear": 3,
+    "neu": 4,
+    "total": 9,
+    "top": [
+     {
+      "id": "7f5cc3c9ae84",
+      "title": "Le japonais Jera en discussion avec les hyperscalers américains pour implanter des centres de données près de centrales thermiques",
+      "title_en": "Japan's Jera in talks with US hyperscalers to colocate data centers at thermal power plants in Japan",
+      "source": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/japans-jera-in-talks-with-us-hyperscalers-to-colocate-data-centers-at-thermal-power-plants-in-japan/",
+      "ts": "2026-11-27T12:20:29.000Z",
+      "media": 3
+     },
+     {
+      "id": "c4937692d5d7",
+      "title": "Amazon serait en pourparlers pour mettre fin au blocage de l'agent IA Muse",
+      "title_en": "Amazon is reportedly in talks to end Muse AI shopping block",
+      "source": "The Verge IA",
+      "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+      "ts": "2026-11-25T14:12:33.000Z",
+      "media": 2
+     }
+    ]
+   },
+   {
+    "id": "amkor",
+    "n": "Amkor",
+    "bull": 1,
+    "bear": 0,
+    "neu": 0,
+    "total": 1,
+    "top": [
+     {
+      "id": "810939d51e5d",
+      "title": "L'activité informatique d'Amkor prend de l'élan : d'autres croissances à venir ?",
+      "title_en": "Amkor's Computing Business Gains Momentum: Is More Growth Ahead?",
+      "source": "qz.com",
+      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOeHY3RG8tNnVWVXYzR2RUMDIxM1A1R1M2eE9TT0wzczFJZzZxcUVnMkh3VElER3ZDUlFnRFdJZmIxa2dlM3V6aElxQS1mNmw4dWg3N1lpWnJfWTJBM3B2RUN0aDZJdXZFeWtsSF9HTWg1ZTZOVUkyNTFFQWRlUjZyNkswZw?oc=5",
+      "ts": "2026-11-24T14:37:21.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "cisco",
+    "n": "Cisco",
+    "bull": 1,
+    "bear": 0,
+    "neu": 0,
+    "total": 1,
+    "top": [
+     {
+      "id": "1997e06493aa",
+      "title": "Cisco profite du boom des réseaux IA : peut-il surpasser HPE et ANET ?",
+      "title_en": "Cisco Gains From AI Networking Boom: Can It Outpace HPE & ANET?",
+      "source": "The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNc1R4VG5pTk94T0pEUWM3cjRDSUZnLTVQZWhTVTdzRTNMbl9pejA3cWR2VEIzMmdGWFBXZThENDlkZ1ZaRXRSaGFtZUd2ZlJ4emstZ0pKY3FBcXhMX2k4V01ZTUo1WVV2dHpTX1o2T1hzeVV3MjVpTnRYOUhIQk5XdGFlYVVfTnRaTzFvTkR4YmlNN3JiZXpKNEx4Y0lVal9qLWp2QWhEMVNuMzZ0QWozaW9xd21TRVVJdlkzYVBNei1nbHl1MGQyTkVFMFFIVmpHb3hnZVhiWHVPSXNx?oc=5",
+      "ts": "2026-11-25T17:41:30.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "coreweave",
+    "n": "CoreWeave",
+    "bull": 1,
+    "bear": 0,
+    "neu": 0,
+    "total": 1,
+    "top": [
+     {
+      "id": "c019bd875fe9",
+      "title": "Galaxy Digital dépose une demande pour la prochaine phase de développement du campus de datacenters Helios au Texas",
+      "title_en": "Galaxy Digital files for next phase of development at Helios data center campus in Texas",
+      "source": "DatacenterDynamics",
+      "url": "https://www.datacenterdynamics.com/en/news/galaxy-digital-files-for-next-phase-of-development-at-helios-data-center-campus-in-texas/",
+      "ts": "2026-11-27T13:40:40.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "vertiv",
+    "n": "Vertiv",
+    "bull": 1,
+    "bear": 0,
+    "neu": 0,
+    "total": 1,
+    "top": [
+     {
+      "id": "4d460604e427",
+      "title": "Vertiv élargit sa gamme d'alimentation 800VDC pour le marché des centres de données IA",
+      "title_en": "Vertiv expands 800VDC power portfolio for AI data center market",
+      "source": "Data Center Dynamics",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQVVpOc3prakU1X2lzbmhCX2FRbENmU3QwbTM3SmZyMEd2eUt3cFFpS0ZkN1dYV3hxRFlvcjFUY0lpMDk3OW14MEM5OHBRbktUYjB4UF91Y3VtWmNXNUFSRExZbDE2UHBJbDBUY2gtbGFQWFlJNHJNdWJKZlUza05qUUJoVkRubmlJZ3NPcFd0d0xnczlDNzh3a1VENGdSRU1HdFd5VW9abzJPbDg?oc=5",
+      "ts": "2026-11-26T12:34:05.000Z",
+      "media": 1
+     }
+    ]
+   },
+   {
+    "id": "arista",
+    "n": "Arista",
+    "bull": 0,
+    "bear": 0,
+    "neu": 1,
+    "total": 1,
+    "top": []
+   },
+   {
+    "id": "credo",
+    "n": "Credo",
+    "bull": 0,
+    "bear": 0,
+    "neu": 1,
+    "total": 1,
+    "top": []
+   }
+  ],
+  "top": "amazon"
+ }
 }

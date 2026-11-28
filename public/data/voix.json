@@ -1,6 +1,6 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T14:31:42.238Z",
+ "generated_at": "2026-11-28T15:11:31.129Z",
  "people": [
   {
    "id": "sam-altman",
@@ -3058,6 +3058,16 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T14:45:04.000Z",
+     "title": "\"Better than any human being\": Microsoft co-founder Bill Gates admits AI coding, starting with Claude Code, beats every human, and wants the US to decide if open-source AI should even be allowed",
+     "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPcXhYZWpsblJxblItTUxXNmJ5akRuTUVMa2p5RVJVLUFxcWRuX1RGQkJ1eFp6QTNwbXp0RlprZ1U4dlBEUXYwVGhSa3QzR2gxMWYwS083MXhNZDRIOHYyU2dYR29iYWRlOVgwYjZPaVNkY2txdlc4UkNmQlJldmZSMmk2MVBxUkJWMC1oX2dZZmFCMmhubkFFWnJWZG5nMU8ybXdEOXVlRmVMZ1JzR1ZtbVRuRkFZSGJiVEdGVVpSYVdfRkxrTUVNY1o5UmJfMmhtV2xYa1ZwNTRNV3RTLVlLWW1sZHJVdDlhbTNpRUZ0MXVhSGdjV29ZUnRBLVE3R01KUTFMdEtpdHpUMk9uYWRsdzlZajdiZmVSdWhxN2xvZW5ic1hhVGFieWcyWi1CLW4xMzRBbVd0ZGZZcURwUS1zQXJXZHFBeWY4dmZFTVhGQQ?oc=5",
+     "source": "Windows Latest",
+     "kind": "presse",
+     "title_fr": "\"Meilleur que n'importe quel être humain\" : le cofondateur de Microsoft Bill Gates admet que l'écriture de code par l'IA, en commençant par Claude Code, surpasse tous les humains, et veut que les États-Unis décident si l'IA open source devrait même être autorisée",
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-26T07:56:00.000Z",
      "title": "Mehdi Hasan points to what's \"so frustrating\" after Bill Gates explains why open-source AI will make life living hell for banks, hospitals, and more",
      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRVBfU1NYQWpkUTdla2ZQcDctWFQ3NTkycXhadENVVEUtbGhQSC1lMXp5QUd0dENwUE9zanQ0b0VKblhOTk9qTFdGTS1XV0lLcUJJd3JGYVFHOS1EVHJYVG1CLWgzdVJPcDJwa1l4ZG5ocjhWdllpYjA5U0stT05YNnY1R01pYnM?oc=5",
@@ -3124,16 +3134,6 @@
      "source": "Traders Union",
      "kind": "presse",
      "title_fr": "Bill Gates déclare que l'IA peut guérir des maladies, améliorer l'apprentissage et donner aux gens plus de temps précieux",
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-19T20:07:53.000Z",
-     "title": "INSIGHT: Bill Gates Warns AI Will Eliminate Jobs as North America Faces a Race With China – and an Urgent Need for Regulation",
-     "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQMUNiWUktY2dITXIxQkpjTi1UUFBzckVvcjh3OEtJX1kwZFVHeWpoTnU1bGFEa0pnNTVmZU5fVHJialRQMDFGWTkxUGRWTEpqWmk3bEJwbV9faDY0aEVQTTA0UXFza2lYcUYxVlZsZEJhUTB0RnhDX2VXRndVTzl5X0luUmNRNHpWRDVoUTVFODQ0eXlld0F2SjVOa1JZbV9EUnhqSDNQNWxxZjdDVjI4NFh6T2xaVGpVYzUxYmVrRHF1VTV5bGZ4UmJvdTVzcTMtQm05ZUY5SkNYZDhZSDJlN19DZmlDdU8y?oc=5",
-     "source": "EnergyNow.com",
-     "kind": "presse",
-     "title_fr": "ANALYSE : Bill Gates prévient que l'IA supprimera des emplois alors que l'Amérique du Nord fait face à une course avec la Chine – et à un besoin urgent de régulation",
      "m": 1,
      "e": 0
     }
@@ -6367,7 +6367,21 @@
  ],
  "hot": [
   {
-   "score": 0.95,
+   "score": 1.01,
+   "id": "bill-gates",
+   "n": "Bill Gates",
+   "role": "Cofondateur de Microsoft",
+   "actor": "microsoft",
+   "ts": "2026-11-28T14:45:04.000Z",
+   "title": "\"Better than any human being\": Microsoft co-founder Bill Gates admits AI coding, starting with Claude Code, beats every human, and wants the US to decide if open-source AI should even be allowed",
+   "title_fr": "\"Meilleur que n'importe quel être humain\" : le cofondateur de Microsoft Bill Gates admet que l'écriture de code par l'IA, en commençant par Claude Code, surpasse tous les humains, et veut que les États-Unis décident si l'IA open source devrait même être autorisée",
+   "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPcXhYZWpsblJxblItTUxXNmJ5akRuTUVMa2p5RVJVLUFxcWRuX1RGQkJ1eFp6QTNwbXp0RlprZ1U4dlBEUXYwVGhSa3QzR2gxMWYwS083MXhNZDRIOHYyU2dYR29iYWRlOVgwYjZPaVNkY2txdlc4UkNmQlJldmZSMmk2MVBxUkJWMC1oX2dZZmFCMmhubkFFWnJWZG5nMU8ybXdEOXVlRmVMZ1JzR1ZtbVRuRkFZSGJiVEdGVVpSYVdfRkxrTUVNY1o5UmJfMmhtV2xYa1ZwNTRNV3RTLVlLWW1sZHJVdDlhbTNpRUZ0MXVhSGdjV29ZUnRBLVE3R01KUTFMdEtpdHpUMk9uYWRsdzlZajdiZmVSdWhxN2xvZW5ic1hhVGFieWcyWi1CLW4xMzRBbVd0ZGZZcURwUS1zQXJXZHFBeWY4dmZFTVhGQQ?oc=5",
+   "source": "Windows Latest",
+   "kind": "presse",
+   "outlets": 1
+  },
+  {
+   "score": 0.91,
    "id": "andy-jassy",
    "n": "Andy Jassy",
    "role": "PDG d'Amazon",
@@ -6381,7 +6395,7 @@
    "outlets": 1
   },
   {
-   "score": 0.76,
+   "score": 0.73,
    "id": "stuart-russell",
    "n": "Stuart Russell",
    "role": "Professeur à Berkeley, sécurité de l'IA",
@@ -6391,20 +6405,6 @@
    "title_fr": "« L'IA est comme un enfant de 6 ans psychotique » : Stuart Russell met en garde les entreprises contre les risques de l'IA | HTLS 2026 | Hindustan Times",
    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQMXUycnRUMjMydEZfZ3NDa1pWYUtkNHpKT0xSZV83UzV4YTBIRkcxREppekgxeVlCWTQ2SnZQT0YzMGJGOUwzQUVyazNkZzNzeHJJb2g1N2pnZEZVVFIzMXpPci1NaVJJUlRHU2xhMWgwU0VEeWR1SlpldjdrVk9xbHJZR1NobWN6ejR0NkZyQ2VsNTQycDdJdlVJMTNrWmp5ZE5zbWZVa3pjRkVuRnkwdVh3Mld2d1ZIY05Mc2NRcDM4d3VKVW1UYlhVSnlJM24zOGVuam1GWnF4QUpncngxRzkxTWNxU195RmfSAe8BQVVfeXFMUFNFVkkyM3pQaFBac0RMLWxsSDhCbGU1VUlldXBtTkxicU5uRG13WWJ1V1Zjbjc1T1pvckVmQzFZZTh3Qy0tTktTOTVGYTNPOGp3cnJkZzBfTHpXQmlTTklwSUpPa1BEQmxhTExabjlRVzZaNDIxa1I1THc2MjNLaURRU2dBdnUwaEtwcUpmWUgtVkdrdUhnOHNoaXNjZERWV1h4c2FTYWJtRnRGcjRZc0JERzFMRkMxYjRRVEx2NEhTZmItTmZ5c0ZUcWxiZUNEd1hPVlUteFBXT1hvbVZtZzhYSFFrYXl5QTh1Y1dsR2M?oc=5",
    "source": "Hindustan Times",
-   "kind": "presse",
-   "outlets": 1
-  },
-  {
-   "score": 0.73,
-   "id": "kai-fu-lee",
-   "n": "Kai-Fu Lee",
-   "role": "Fondateur de 01.AI, ex-Google Chine",
-   "actor": null,
-   "ts": "2026-11-28T13:16:06.000Z",
-   "title": "Kai-Fu Lee says China is near or ahead of the US on multiple AI fronts",
-   "title_fr": "Kai-Fu Lee déclare que la Chine est proche ou en avance sur les États-Unis sur plusieurs fronts de l'IA",
-   "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1jQTRmcm9KTkh5S1NvSjFkRzJHUXNaOHZtVzRLY0E4MXp1cFJRR0VMMGxGQ1BiZnFhSjR6MTIzejRiQQ?oc=5",
-   "source": "Digg",
    "kind": "presse",
    "outlets": 1
   }

@@ -1,6 +1,22 @@
 {
  "items": [
   {
+   "id": "b0770ccb7d49",
+   "ts": "2026-11-28T15:00:00.000Z",
+   "title": "Un équilibre délicat sur l'IA se profile pour Hochul",
+   "orig": "An AI tightrope looms for Hochul",
+   "summary": "La gouverneure Hochul fait face à des défis politiques complexes concernant la régulation et l'adoption de l'IA.",
+   "country": "US",
+   "category": "politique",
+   "importance": 1,
+   "layer": "Régulation",
+   "source": "Politico",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUHEzWXlUX0o2UldIOXJxdGZRREdvSmIyVl9ieWFMUnpKZFFHSzI5MDA2RnM5bXlUc01tQnlpUC1zVllPaHpCWFZ6WXZTaktzU2VaUzVTWFB1THFiQnpWdC1UUlYycnlPWjZCUXA1NUI4Qjd4WjA0Tjk0dEFKMnh4Ym9DWUh0ak8ySGc?oc=5",
+   "confidence": "moyenne",
+   "title_en": "An AI tightrope looms for Hochul",
+   "summary_en": "Governor Hochul faces complex political challenges regarding AI regulation and adoption."
+  },
+  {
    "id": "01e747fc1ebd",
    "ts": "2026-11-28T14:26:45.000Z",
    "title": "IA et semi-conducteurs : face à l'explosion de la demande d'électricité, Taïwan abandonne sa politique de sortie du nucléaire",
@@ -975,6 +991,56 @@
    "why_en": "Reflects the global race among emerging nations to establish sovereign AI infrastructure with top-tier hardware."
   },
   {
+   "id": "567ac948e27d",
+   "ts": "2026-11-28T03:10:13.000Z",
+   "title": "GS lance la construction d'un datacenter IA de 1,2 GW à Donghae",
+   "orig": "GS Breaks Ground on 1.2GW AI Data Center in Donghae",
+   "summary": "Le groupe GS a débuté la construction d'un datacenter IA massif de 1,2 GW en Corée du Sud.",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/business/2026/11/28/gs-breaks-ground-on-12gw-ai-data-center-in-donghae",
+   "confidence": "moyenne",
+   "why": "La construction de datacenters à l'échelle du gigawatt marque une nouvelle ère d'infrastructure physique nécessaire pour l'entraînement des modèles IA.",
+   "title_en": "GS Breaks Ground on 1.2GW AI Data Center in Donghae",
+   "summary_en": "GS Group has begun construction of a massive 1.2 GW AI data center in South Korea."
+  },
+  {
+   "id": "76371a5159be",
+   "ts": "2026-11-28T03:06:41.000Z",
+   "title": "Lee assiste à la cérémonie de pose de la première pierre d'un grand datacenter IA à Gangwon",
+   "orig": "Lee attends groundbreaking ceremony for major AI data center in Gangwon",
+   "summary": "Le président Lee Jae-myung a inauguré le chantier d'un campus de datacenters IA de 2,4 GW, projet majeur pour la Corée.",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "The Korea Herald",
+   "url": "https://www.koreaherald.com/article/10952421",
+   "confidence": "moyenne",
+   "why": "L'implication directe du chef de l'État souligne le caractère stratégique national de l'infrastructure IA pour la compétitivité économique.",
+   "title_en": "Lee attends groundbreaking ceremony for major AI data center in Gangwon",
+   "summary_en": "President Lee Jae-myung inaugurated the construction of a 2.4 GW AI data center campus, a major project for Korea."
+  },
+  {
+   "id": "529cac54bc98",
+   "ts": "2026-11-28T03:04:40.000Z",
+   "title": "L'IA bouleverse le marché du travail coréen, réduisant les offres et favorisant la triche",
+   "orig": "AI Shakes Up Korea's Job Market, Cutting Postings and Fueling Cheating",
+   "summary": "L'adoption de l'IA en Corée du Sud entraîne une baisse des offres d'emploi et de nouveaux défis liés à la fraude lors des recrutements.",
+   "country": "OTHER",
+   "category": "adoption",
+   "importance": 1,
+   "layer": "Applications",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/business/2026/11/28/ai-shakes-up-koreas-job-market-cutting-postings-and-fueling",
+   "confidence": "moyenne",
+   "title_en": "AI Shakes Up Korea's Job Market, Cutting Postings and Fueling Cheating",
+   "summary_en": "The adoption of AI in South Korea is leading to a decline in job postings and new challenges related to recruitment fraud."
+  },
+  {
    "id": "e1d9661ce4a7",
    "ts": "2026-11-28T03:02:20.000Z",
    "title": "L'investissement dans les datacenters en Asie-Pacifique ralentit face aux pressions sur les puces américaines",
@@ -989,6 +1055,23 @@
    "confidence": "moyenne",
    "why": "Les contrôles à l'exportation ont un effet domino sur les infrastructures physiques régionales.",
    "title_en": "Data center investment in Asia-Pacific faces slowdown amidst US chip control pressures"
+  },
+  {
+   "id": "e87471af621e",
+   "ts": "2026-11-28T02:49:11.000Z",
+   "title": "Le président Lee assiste à la pose de la première pierre du datacenter IA de GS à Donghae",
+   "orig": "President Lee Attends Groundbreaking for GS AI Data Center in Donghae",
+   "summary": "Le président Lee Jae-myung a marqué le début des travaux du futur plus grand datacenter IA d'Asie, d'une capacité de 2,4 GW.",
+   "country": "OTHER",
+   "category": "energie",
+   "importance": 2,
+   "layer": "Datacenters",
+   "source": "서울경제",
+   "url": "https://en.sedaily.com/politics/2026/11/28/president-lee-attends-groundbreaking-for-gs-ai-data-center",
+   "confidence": "moyenne",
+   "why": "Ce projet illustre la course mondiale aux infrastructures énergétiques massives pour soutenir le développement de l'IA à grande échelle.",
+   "title_en": "President Lee Attends Groundbreaking for GS AI Data Center in Donghae",
+   "summary_en": "President Lee Jae-myung marked the start of construction for what will be Asia's largest AI data center, with a capacity of 2.4 GW."
   },
   {
    "id": "05f9d8df6cd1",
@@ -2056,7 +2139,7 @@
    "why": "La restructuration des géants du logiciel pour s'adapter à l'IA entraîne des changements sociaux et économiques majeurs.",
    "title_en": "Sources say SAP mulling cuts of at least 10,000 roles",
    "summary_en": "SAP is planning massive layoffs to restructure its software business for the AI era.",
-   "why_en": "The restructuring of software giants to adapt to AI brings about major social and economic changes."
+   "why_en": "The restructuring of software giants to adapt to AI leads to major social and economic changes."
   },
   {
    "id": "68a72b4f6d21",
@@ -3372,8 +3455,8 @@
    "confidence": "moyenne",
    "why": "Souligne l'afflux massif de projets de construction de datacenters et les pressions politiques locales associées.",
    "title_en": "Texas lifts freeze on 1,800+ data center projects in Greg Abbott U-turn",
-   "summary_en": "Texas is authorizing the approval of new data center permits again after suspending the process in August.",
-   "why_en": "Highlights the massive influx of data center construction projects and the associated local political pressures."
+   "summary_en": "Texas is allowing new data center permits to be approved again after suspending the process in August.",
+   "why_en": "Highlights the massive influx of data center construction projects and associated local political pressures."
   },
   {
    "id": "5f0c43dd487b",
@@ -13563,7 +13646,7 @@
    "url": "https://www.globenewswire.com/fr/news-release/2026/11/25/3410424/28124/en/the-global-online-gambling-market-2026-2034-size-share-competition-and-revenue-forecast-by-type-device-and-country-mobile-adoption-and-legalization-fuel-8-93-cagr-to-220-99-billion.html",
    "confidence": "moyenne",
    "title_en": "The Global Online Gambling Market 2026-2034: Size, Share, Competition and Revenue Forecast by Type, Device, and Country | Mobile Adoption and Legalization Fuel 8.93% CAGR to $220.99 Billion",
-   "summary_en": "AI personalization is driving growth in the global online gambling market."
+   "summary_en": "AI-driven personalization is fueling growth in the global online gambling market."
   },
   {
    "id": "a05f839240ee",
@@ -17429,7 +17512,7 @@
    "url": "https://www.digitimes.com/news/a20261125VL214/huawei-foldable-shipments-price-display.html",
    "confidence": "moyenne",
    "title_en": "China's foldable phone shipments fall by a third as Huawei holds Mate X8 price at US$1,950",
-   "summary_en": "Huawei is maintaining the price of its new foldable smartphone despite a general decline in the Chinese foldable device market."
+   "summary_en": "Huawei is maintaining the price of its new foldable smartphone despite an overall decline in the Chinese foldable device market."
   },
   {
    "id": "5b815313129d",
@@ -17494,7 +17577,7 @@
    "confidence": "moyenne",
    "why": "Soulève un goulot d'étranglement majeur dans la chaîne d'approvisionnement des mémoires HBM pour les puces d'IA.",
    "title_en": "[Breaking] Samsung Grapples with HBM Base Die Crunch as Internal Demand Seen Doubling to 30K per Month in 2027",
-   "summary_en": "Samsung is facing an HBM base die shortage with internal demand expected to double.",
+   "summary_en": "Samsung is facing a shortage of HBM base dies with internal demand expected to double.",
    "why_en": "Highlights a major bottleneck in the HBM memory supply chain for AI chips."
   },
   {
@@ -20849,8 +20932,8 @@
    "confidence": "moyenne",
    "why": "La nécessité pour les entreprises d'IA de devenir des acheteurs d'énergie directe souligne la tension croissante sur les ressources électriques pour les centres de données.",
    "title_en": "Anthropic posts $405,000-a-year job for gas specialist to secure fuel for AI",
-   "summary_en": "Anthropic is hiring a natural gas expert to secure energy supplies for its data centers, illustrating the race for computing power.",
-   "why_en": "The need for AI companies to become direct energy buyers highlights the growing tension over electrical resources for data centers."
+   "summary_en": "Anthropic is hiring a natural gas expert to secure the energy supply for its data centers, illustrating the race for computing power.",
+   "why_en": "The need for AI companies to become direct energy buyers underlines the growing tension over electrical resources for data centers."
   },
   {
    "id": "613b95800cde",
@@ -23440,7 +23523,7 @@
    "why": "Montre l'investissement public massif des régions pour répondre aux besoins en compétences critiques de l'écosystème de l'IA et des semi-conducteurs.",
    "title_en": "North Gyeongsang Province to Train 42,000 Workers for Five Advanced Industries",
    "summary_en": "The South Korean province will invest 236 billion won over four years to train technicians in AI chips, robotics, and mobility.",
-   "why_en": "Shows massive public investment by regions to meet critical skills needs in the AI and semiconductor ecosystem."
+   "why_en": "Demonstrates massive public investment by regions to meet critical skills needs in the AI and semiconductor ecosystem."
   },
   {
    "id": "67d3e91e0150",
@@ -24452,6 +24535,25 @@
    "title_en": "Amazon acquires key assets of AI startup Decart for reported $7.5B"
   },
   {
+   "id": "3074a2422f9f",
+   "ts": "2026-11-24T01:37:39.000Z",
+   "title": "Applied Digital décroche un contrat de bail de 5,4 milliards de dollars pour un centre de données IA avec un hyperscaler",
+   "orig": "Applied Digital Secures $5.4 Billion AI Data Center Lease with Hyperscaler",
+   "summary": "Applied Digital a conclu un contrat de bail de 5,4 milliards de dollars pour un centre de données dédié à l'IA avec un géant du cloud.",
+   "country": "US",
+   "category": "capex",
+   "importance": 3,
+   "layer": "Datacenters",
+   "source": "The Fast Mode",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQSThjM00tUExUMWxvdkF6NDFDVHR2VlIxbmtydW1yQlMxVEQ5WmducnlVU3VXQXhEWGdRbzNLNlJHclk3RVVtY1ZuUDNUVVU0VWl6SktXQTVGRk9GRW1ub1M0SzBrTGMxVW11RFdxaDRITEtPVVRVRVY1TXZBV3dGeE1BUURjUHBCVHJqY3huR2RuQ2pIMEMzenhuRy1WNUh4b0pKZ00tQ3Q4RnJfaVZtUy16cEg0Nk1uSGo5cXplLXFfdl8tazZr?oc=5",
+   "confidence": "moyenne",
+   "why": "Ce contrat massif illustre la demande persistante et colossale en infrastructures pour alimenter les besoins des acteurs de l'IA de premier plan.",
+   "title_fr": "Applied Digital décroche un contrat de bail de 5,4 milliards de dollars pour un centre de données IA avec un hyperscaler",
+   "title_en": "Applied Digital Secures $5.4 Billion AI Data Center Lease with Hyperscaler",
+   "summary_en": "Applied Digital has secured a $5.4 billion lease agreement for an AI data center with a cloud giant.",
+   "why_en": "This massive contract illustrates the persistent and colossal demand for infrastructure to power the needs of leading AI players."
+  },
+  {
    "id": "b8e5519408fd",
    "ts": "2026-11-24T01:31:52.000Z",
    "title": "Le retour de Huang stabilise l'approvisionnement en HBM de SK Hynix",
@@ -25134,102 +25236,6 @@
    "confidence": "moyenne",
    "title_en": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
    "summary_en": "A study shows that robotic manipulation policies fail to handle reflections, introducing a new benchmark called RoboDojo-Mirror."
-  },
-  {
-   "id": "853993777f31",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "ICLWorld : évaluer l'apprentissage en contexte des agents du monde numérique au monde physique",
-   "orig": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
-   "summary": "Une nouvelle étude propose un benchmark pour évaluer l'apprentissage en contexte des agents IA opérant à la fois sur des ordinateurs et des robots.",
-   "country": "OTHER",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "Hugging Face Papers",
-   "url": "https://huggingface.co/papers/2611.32649",
-   "confidence": "moyenne",
-   "title_en": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds"
-  },
-  {
-   "id": "f717d7d51a9f",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "Les agents paresseux répondent contre leurs propres croyances : l'apprentissage par renforcement avec des croyances vérifiables les aide à agir selon leurs convictions",
-   "orig": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
-   "summary": "Des chercheurs explorent comment réduire la tendance des agents IA à répondre prématurément sans preuves suffisantes grâce à l'apprentissage par renforcement.",
-   "country": "OTHER",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Modèles",
-   "source": "Hugging Face Papers",
-   "url": "https://huggingface.co/papers/2611.32884",
-   "confidence": "moyenne",
-   "title_en": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe"
-  },
-  {
-   "id": "6cb54b6e7431",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "PyRUA-Dex : Apprentissage de politiques programmatiques pour la manipulation bimanuelle",
-   "orig": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-   "summary": "Cadre permettant aux agents de codage de développer des compétences de manipulation robotique sans démonstrations humaines.",
-   "country": "OTHER",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "Hugging Face Papers",
-   "url": "https://huggingface.co/papers/2611.33144",
-   "confidence": "moyenne",
-   "title_fr": "PyRUA-Dex : Apprentissage de politiques programmatiques pour la manipulation bimanuelle",
-   "title_en": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-   "summary_en": "Framework allowing coding agents to develop robotic manipulation skills without human demonstrations."
-  },
-  {
-   "id": "a556368df1d2",
-   "ts": "2026-11-24T00:00:00.000Z",
-   "title": "Le jeu comme feedback pour le développement de jeux par des agents",
-   "orig": "Playfulness as Feedback for Agentic Game Development",
-   "summary": "L'article explore comment les agents de codage peuvent améliorer la qualité des jeux générés en intégrant des critères de jouabilité, de design visuel et de progression.",
-   "country": "US",
-   "category": "recherche",
-   "importance": 1,
-   "layer": "Recherche",
-   "source": "Hugging Face Papers",
-   "url": "https://huggingface.co/papers/2611.33457",
-   "confidence": "moyenne",
-   "title_fr": "Le jeu comme feedback pour le développement de jeux par des agents",
-   "title_en": "Playfulness as Feedback for Agentic Game Development",
-   "summary_en": "The article explores how coding agents can improve the quality of generated games by integrating criteria for playability, visual design, and progression."
-  },
-  {
-   "id": "3ed432491835",
-   "ts": "2026-11-23T23:58:00.000Z",
-   "title": "Le Congrès entre en guerre contre Nvidia",
-   "orig": "Congress is going to war with Nvidia",
-   "summary": "Le Congrès américain intensifie ses actions et ses critiques à l'encontre de Nvidia dans un contexte de tensions politiques.",
-   "country": "US",
-   "category": "politique",
-   "importance": 3,
-   "layer": "Régulation",
-   "source": "Politico",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOeVR4X1QxSE5QdndMMENMQXhvbElkOXN1R3VyUWNhRzRBTjdORnlPZG5QcUNkUGhGM3ZWQmF4cmRDTkhBSWJmcFVqUy14WFJoQk56cXJoZWQ3bVEyY0tuc1hLTXNQYXlKUWJzM3BRN3AwRXVXeGFSZVo5eVJKM3FKMDdoaklhbTZfcXRodUpCNA?oc=5",
-   "confidence": "moyenne",
-   "why": "L'opposition frontale du pouvoir législatif américain envers le leader mondial des puces IA menace la stabilité de l'approvisionnement technologique mondial.",
-   "title_en": "Congress is going to war with Nvidia"
-  },
-  {
-   "id": "76720683de1f",
-   "ts": "2026-11-23T23:50:00.000Z",
-   "title": "Ce que le retour de Jensen Huang signifie pour Colette Kress de Nvidia",
-   "orig": "What Jensen Huang’s return means for Nvidia’s Colette Kress",
-   "summary": "La directrice financière Colette Kress retrouve ses fonctions à plein temps après les turbulences de direction chez Nvidia.",
-   "country": "US",
-   "category": "politique",
-   "importance": 2,
-   "layer": "Puces",
-   "source": "CNBC Tech",
-   "url": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-returns-colette-kress-cfo.html",
-   "confidence": "moyenne",
-   "title_en": "What Jensen Huang’s return means for Nvidia’s Colette Kress",
-   "summary_en": "Colette Kress returns to her full-time CFO role after steering Nvidia through financing deals and leadership turmoil."
   }
  ]
 }
