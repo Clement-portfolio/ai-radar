@@ -1,8 +1,8 @@
 {
  "v": 1,
- "generated_at": "2026-11-28T06:30:44.170Z",
+ "generated_at": "2026-11-28T07:30:46.928Z",
  "query_count": 1,
- "translate_retry_at": "2026-11-28T06:40:44.170Z",
+ "translate_retry_at": "2026-11-28T07:40:46.928Z",
  "people": [
   {
    "id": "sam-altman",
@@ -169,6 +169,19 @@
    "alerts": [],
    "items": [
     {
+     "ts": "2026-11-28T06:52:01.000Z",
+     "title": "Elon Musk Calls Situation of Women in Afghanistan Under Taliban Rule ‘Very Concerning’",
+     "title_fr": "Elon Musk qualifie la situation des femmes en Afghanistan sous le régime des talibans de \"très préoccupante\"",
+     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9ucmR0LWo2bkRSNEExMUpQc2xrLTVNSy12RTNKelB2QXJuRHNFck9KQi0ySGtWR3d0eURvaTl6NDM4WGNTY2Q5MEFSUDRHVFJINUNoLXJFbEFKV0t1NnpDSXI0WWNDQ2ctemgwUmk4RkRXY3lGdGVuLXNiOA?oc=5",
+     "source": "8AM Media",
+     "kind": "presse",
+     "srcs": [
+      "8am media"
+     ],
+     "m": 1,
+     "e": 0
+    },
+    {
      "ts": "2026-11-28T05:49:23.000Z",
      "title": "Elon Musk Calls Report on Taliban Restrictions on Afghan Women’s Names ‘Extremely Troubling’",
      "title_fr": "Elon Musk qualifie d'« extrêmement troublant » le rapport sur les interdictions des talibans concernant le nom des femmes afghanes",
@@ -255,19 +268,6 @@
      "kind": "presse",
      "srcs": [
       "www.thewealthadvisor.com"
-     ],
-     "m": 1,
-     "e": 0
-    },
-    {
-     "ts": "2026-11-27T14:48:00.000Z",
-     "title": "This might be the real reason Elon Musk says Tesla’s AI5 chip is going to Optimus",
-     "title_fr": "C'est peut-être la vraie raison pour laquelle Elon Musk affirme que la puce AI5 de Tesla est destinée à Optimus",
-     "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAtdUp5RnN0bmdvZTNhd283bFZFeGZQQzBmMEo0N0ZNMU1iZDF0bWFwakdPTWg3ZmtLZENjM242N3R5U21SdzU4aFpXY3ZXbXFhSWRSSkhuMTNEbWx2UXcwNXlyUE5LRVkzTmFZOTBBU1lSS3NTVUhERGhR?oc=5",
-     "source": "Electrek",
-     "kind": "presse",
-     "srcs": [
-      "electrek"
      ],
      "m": 1,
      "e": 0
